@@ -34,9 +34,6 @@ open fun getInstance(animationInterface: Animation)
         //nullable =  from not(true or (false and false)) = 
 : Animation
 
-        Updates for KMP build        
-        
-
 }
                 
             

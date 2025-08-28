@@ -40,10 +40,7 @@ open public class ShaderManager
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ShaderManager
-
-        Updates for KMP build        
-        {
+: ShaderManager{
 
 
 
@@ -65,9 +62,6 @@ open fun getInstance()
     val GL_FRAGMENT_SHADER: Int
 public constructor        (GL_VERTEX_SHADER: Int, GL_FRAGMENT_SHADER: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var GL_VERTEX_SHADER = GL_VERTEX_SHADER
     //var GL_FRAGMENT_SHADER = GL_FRAGMENT_SHADER
@@ -78,10 +72,7 @@ this.GL_FRAGMENT_SHADER= GL_FRAGMENT_SHADER
 
 open fun load(gl: GL10, resource: String, shaderAsStringArray: Array<String?>, shaderType: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var gl = gl
     //var resource = resource
     //var shaderAsStringArray = shaderAsStringArray
@@ -96,10 +87,7 @@ open fun load(gl: GL10, resource: String, shaderAsStringArray: Array<String?>, s
 
 open fun loadShader(gl: GL10, resource: String, stringList: BasicArrayList, shaderType: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var gl = gl
     //var resource = resource
     //var stringList = stringList

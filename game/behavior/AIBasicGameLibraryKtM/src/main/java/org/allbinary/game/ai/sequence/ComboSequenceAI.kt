@@ -34,10 +34,7 @@ open public class ComboSequenceAI : SequenceAI {
         
 public constructor        (artificialIntelligenceInterface: Array<ArtificialIntelligenceInterface?>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
-                            : super(artificialIntelligenceInterface, ownerLayerInterface, gameInput)
-
-        Updates for KMP build        
-        {
+                            : super(artificialIntelligenceInterface, ownerLayerInterface, gameInput){
 var artificialIntelligenceInterface = artificialIntelligenceInterface
 var ownerLayerInterface = ownerLayerInterface
 var gameInput = gameInput
@@ -51,10 +48,7 @@ var gameInput = gameInput
                 @Throws(Exception::class)
             override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allBinaryLayerManager = allBinaryLayerManager
 
     var artificialIntelligenceInterfaceArray: Array<ArtificialIntelligenceInterface?> = this.getArtificialIntelligenceInterface()!!
@@ -69,9 +63,6 @@ var allBinaryLayerManager = allBinaryLayerManager
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 this.setIndex(index)
 super.processAI(allBinaryLayerManager)

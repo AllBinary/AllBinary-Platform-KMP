@@ -44,10 +44,7 @@ open public class DeleteFileValidationView : InventoryItemView
     private var id: String
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(transformInfoInterface, StringUtil.getInstance()!!.EMPTY_STRING)
-
-        Updates for KMP build        
-        {
+                            : super(transformInfoInterface, StringUtil.getInstance()!!.EMPTY_STRING){
 var transformInfoInterface = transformInfoInterface
 
 
@@ -61,10 +58,7 @@ this.getFormData()
             
 open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var hashMap: HashMap<Any, Any> = RequestParams(request).
                             toHashMap()!!
@@ -82,10 +76,7 @@ this.id= hashMap!!.get(BasicItemData.ID) as String
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             
@@ -120,10 +111,7 @@ this.itemInterface= InventoryEntityFactory.getInstance()!!.getInventoryEntityIns
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.TRUE
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
@@ -136,10 +124,7 @@ this.itemInterface= InventoryEntityFactory.getInstance()!!.getInventoryEntityIns
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
 
 
@@ -150,10 +135,7 @@ open fun toValidationInfoDoc()
 
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
 
@@ -165,10 +147,7 @@ var document = document
 
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -202,10 +181,7 @@ open fun validationInfo()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 

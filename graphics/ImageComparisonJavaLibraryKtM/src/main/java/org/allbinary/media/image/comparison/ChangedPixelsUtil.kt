@@ -57,10 +57,7 @@ open public class ChangedPixelsUtil
             
 open fun generateBufferedImageChacheables(imageComparisonInfo: ImageComparisonResult)
         //nullable = true from not(false or (false and false)) = true
-: Array<BufferedImageCacheable?>
-
-        Updates for KMP build        
-        {
+: Array<BufferedImageCacheable?>{
 var imageComparisonInfo = imageComparisonInfo
 
     var bufferedImageCacheables: Array<BufferedImageCacheable?>
@@ -81,9 +78,6 @@ bufferedImageCacheables= arrayOfNulls(2)
 
                         for (index in 0 until bufferedImageCacheables!!.size)
 
-        
-
-        Updates for KMP build        
         {
 
     var bufferedImageCacheable: BufferedImageCacheable = poolInterface!!.remove(bufferedImageInfo) as BufferedImageCacheable
@@ -104,9 +98,6 @@ bufferedImageCacheables[index]!!.getBufferedImage()!!.setRGB(START_X, START_Y, b
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var pixelDelta: PixelDelta = vector.get(index) as PixelDelta
@@ -138,9 +129,6 @@ bufferedImageCacheables[1]!!.getBufferedImage()!!.setRGB(pixelDelta!!.getPoint()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

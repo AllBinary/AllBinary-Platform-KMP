@@ -35,20 +35,14 @@ open public class BasicTextJDialog : javax.swing.JDialog {
             
 open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var args = args
 java.awt.EventQueue.invokeLater(object: Runnable()
                                 {
                                 
 open fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 BasicTextJDialog(javax.swing.JFrame(), true, "Test").
                             setVisible(true)
 }
@@ -63,10 +57,7 @@ BasicTextJDialog(javax.swing.JFrame(), true, "Test").
     private var closeListenerInterface: CloseJDialogListenerInterface
 public constructor        (parent: java.awt.Frame, modal: Boolean, text: String)                        
 
-                            : super(parent, modal)
-
-        Updates for KMP build        
-        {
+                            : super(parent, modal){
 var parent = parent
 var modal = modal
 var text = text
@@ -81,10 +72,7 @@ this.setText(text)
 
 open fun setText(text: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var text = text
 this.textJLabel!!.setText(text)
 }
@@ -92,18 +80,12 @@ this.textJLabel!!.setText(text)
 
 open fun addCloseListener(closeListenerInterface: CloseJDialogListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var closeListenerInterface = closeListenerInterface
 this.closeListenerInterface= closeListenerInterface
 }
 
-public constructor        (text: String)
-
-        Updates for KMP build        
-        {
+public constructor        (text: String){
 var text = text
 initComponents()
 this.textJLabel!!.setText(text)
@@ -112,10 +94,7 @@ this.textJLabel!!.setText(text)
 
 open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 jButton1= javax.swing.JButton()
 textJLabel= javax.swing.JLabel()
 setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE)
@@ -125,10 +104,7 @@ jButton1!!.addActionListener(object: java.awt.event.ActionListener()
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 jButton1ActionPerformed(evt)
 }
@@ -148,10 +124,7 @@ pack()
 
 open fun jButton1ActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 this.setVisible(false)
 

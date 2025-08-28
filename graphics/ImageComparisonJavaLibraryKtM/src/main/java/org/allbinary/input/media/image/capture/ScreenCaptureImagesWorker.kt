@@ -52,10 +52,7 @@ open public class ScreenCaptureImagesWorker : BasicEventHandler
     private var running: Boolean= false
 
     private var screenScavangerRobot: ScreenScavangerRobot
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 screenScavangerRobot= ScreenScavangerRobot()
 index= ProcessingFrameIndexFactory.next()
 }
@@ -64,10 +61,7 @@ index= ProcessingFrameIndexFactory.next()
 
 open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -79,10 +73,7 @@ open fun isRunning()
 
 open fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var running = running
 this.running= running
 }
@@ -92,20 +83,14 @@ this.running= running
             
 open fun setThread(thread: Thread)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var thread = thread
 }
 
 
 open fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.RUN)
@@ -115,9 +100,6 @@ setRunning(true)
 
 
         while(isRunning())
-        
-
-        Updates for KMP build        
         {
 timeHelper!!.setStartTime()
 
@@ -138,10 +120,7 @@ setRunning(false)
 
 logUtil!!.put(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
 }
 

@@ -25,10 +25,7 @@ open public class CustomGaugeItem : CustomItem {
         }
             public constructor        (label: String, maxValue: Int, initialValue: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(label, backgroundBasicColor, foregroundBasicColor)
-
-        Updates for KMP build        
-        {
+                            : super(label, backgroundBasicColor, foregroundBasicColor){
 var label = label
 var maxValue = maxValue
 var initialValue = initialValue

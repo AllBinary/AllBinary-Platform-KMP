@@ -44,10 +44,7 @@ open public class GameNotificationEvent : AllBinaryEventObject {
     private val removeable: Boolean
 public constructor        (anyType: Any, string: String, seconds: Integer, basicColor: BasicColor, permanent: Boolean)                        
 
-                            : super(anyType)
-
-        Updates for KMP build        
-        {
+                            : super(anyType){
 var anyType = anyType
 var string = string
 var seconds = seconds
@@ -66,10 +63,7 @@ this.removeable= permanent
 
 open fun getString()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -80,10 +74,7 @@ open fun getString()
 
 open fun getSeconds()
         //nullable = true from not(false or (false and true)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 
 
 
@@ -94,10 +85,7 @@ open fun getSeconds()
 
 open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor
-
-        Updates for KMP build        
-        {
+: BasicColor{
 
 
 
@@ -108,10 +96,7 @@ open fun getBasicColorP()
 
 open fun getPermanent()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -122,10 +107,7 @@ open fun getPermanent()
 
 open fun setString(string: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var string = string
 this.string= string
 }
@@ -133,10 +115,7 @@ this.string= string
 
 open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var basicColor = basicColor
 this.basicColor= basicColor
 }

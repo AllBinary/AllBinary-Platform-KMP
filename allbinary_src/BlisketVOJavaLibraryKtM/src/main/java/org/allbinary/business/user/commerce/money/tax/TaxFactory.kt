@@ -59,10 +59,7 @@ open public class TaxFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TaxFactory
-
-        Updates for KMP build        
-        {
+: TaxFactory{
 
 
 
@@ -80,9 +77,6 @@ open fun getInstance()
     private val TAXATIONFILENAME: String = "taxationMethod.xml"
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -91,10 +85,7 @@ private constructor        ()
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, storeFrontInterface: StoreFrontInterface)
         //nullable =  from not(true or (false and false)) = 
-: TaxModuleInterface
-
-        Updates for KMP build        
-        {
+: TaxModuleInterface{
     //var abeClientInformation = abeClientInformation
     //var storeFrontInterface = storeFrontInterface
 
@@ -130,9 +121,6 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 
                         for (index in 0 until taxNameNodeList!!.getLength()!!)
 
-        
-
-        Updates for KMP build        
         {
 
     var node: Node = taxNameNodeList!!.item(index)!!

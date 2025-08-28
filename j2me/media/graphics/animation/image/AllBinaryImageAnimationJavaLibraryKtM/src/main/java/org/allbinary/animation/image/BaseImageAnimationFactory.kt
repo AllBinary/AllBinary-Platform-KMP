@@ -56,10 +56,7 @@ open public class BaseImageAnimationFactory
     var scaleProperties: ScaleProperties = ScaleProperties.instance
 public constructor        (image: Image, width: Int, height: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(image, PrimitiveIntUtil.getArrayInstance(), width, height, animationBehaviorFactory)
-
-        Updates for KMP build        
-        {
+                            : this(image, PrimitiveIntUtil.getArrayInstance(), width, height, animationBehaviorFactory){
     //var image = image
     //var width = width
     //var height = height
@@ -76,10 +73,7 @@ this.animationFactoryInitializationVisitor!!.dy= dy
 
 public constructor        (image: Image, sequenceArray: IntArray, width: Int, height: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(image, sequenceArray, width, height, animationBehaviorFactory)
-
-        Updates for KMP build        
-        {
+                            : this(image, sequenceArray, width, height, animationBehaviorFactory){
     //var image = image
     //var sequenceArray = sequenceArray
     //var width = width
@@ -97,10 +91,7 @@ this.animationFactoryInitializationVisitor!!.dy= dy
 
 public constructor        (image: Image, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(image, PrimitiveIntUtil.getArrayInstance(), width, height, animationBehaviorFactory)
-
-        Updates for KMP build        
-        {
+                            : this(image, PrimitiveIntUtil.getArrayInstance(), width, height, animationBehaviorFactory){
     //var image = image
     //var width = width
     //var height = height
@@ -113,9 +104,6 @@ public constructor        (image: Image, width: Int, height: Int, animationBehav
 
 public constructor        (image: Image, sequenceArray: IntArray, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var image = image
     //var sequenceArray = sequenceArray
@@ -134,10 +122,7 @@ this.sequenceArray= sequenceArray
                 @Throws(Exception::class)
             override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation
-
-        Updates for KMP build        
-        {
+: Animation{
     //var instanceId = instanceId
 
 
@@ -149,10 +134,7 @@ this.sequenceArray= sequenceArray
 
 open fun getImage()
         //nullable = true from not(false or (false and true)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
 
 
 
@@ -163,10 +145,7 @@ open fun getImage()
 
 open fun getSequenceArray()
         //nullable = true from not(false or (false and true)) = true
-: IntArray
-
-        Updates for KMP build        
-        {
+: IntArray{
 
 
 
@@ -176,10 +155,7 @@ open fun getSequenceArray()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
@@ -203,10 +179,7 @@ stringBuffer!!.append(this.animationFactoryInitializationVisitor!!.toString())
 
 override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var scaleProperties = scaleProperties
 this.scaleProperties= scaleProperties
 
@@ -228,10 +201,7 @@ this.scaleProperties!!.scaleHeight= (this.animationFactoryInitializationVisitor!
 
 open fun getAnimationFactoryInitializationVisitorP()
         //nullable = true from not(false or (false and true)) = true
-: AnimationFactoryInitializationVisitor
-
-        Updates for KMP build        
-        {
+: AnimationFactoryInitializationVisitor{
 
 
 
@@ -242,10 +212,7 @@ open fun getAnimationFactoryInitializationVisitorP()
 
 open fun getScalePropertiesP()
         //nullable = true from not(false or (false and true)) = true
-: ScaleProperties
-
-        Updates for KMP build        
-        {
+: ScaleProperties{
 
 
 

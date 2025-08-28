@@ -42,10 +42,7 @@ open public class AbeClientLicense
             
 open fun hasRequiredKeys(resultHashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var resultHashtable = resultHashtable
 
     var abeClientInformationData: AbeClientInformationData = AbeClientInformationData.getInstance()!!
@@ -88,9 +85,6 @@ var resultHashtable = resultHashtable
     private var licenseType: LicenseType
 public constructor        (hashtable: Hashtable<Any, Any>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var hashtable = hashtable
 this.hashtable= Hashtable<Any, Any>()
@@ -133,9 +127,6 @@ this.servers= BasicArrayList()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 this.servers.add(vector.get(index))
 }
@@ -153,10 +144,7 @@ this.licenseType= LicenseTypeFactory.getInstance()!!.getInstance(licenseTypeStri
 
 open fun hasKey()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -167,10 +155,7 @@ open fun hasKey()
 
 open fun getKey(keyName: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var keyName = keyName
 
 
@@ -182,10 +167,7 @@ var keyName = keyName
 
 open fun getLicenseId()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -196,10 +178,7 @@ open fun getLicenseId()
 
 open fun getServers()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 
@@ -210,10 +189,7 @@ open fun getServers()
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
 
@@ -239,10 +215,7 @@ open fun isValid()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -270,9 +243,6 @@ stringBuffer!!.append(BREAK)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var nextServerString: String = serverVector!!.get(index) as String
@@ -292,10 +262,7 @@ stringBuffer!!.append(BREAK)
 
 open fun setSpecial(special: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var special = special
 this.special= special
 }
@@ -303,10 +270,7 @@ this.special= special
 
 open fun getSpecial()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -317,10 +281,7 @@ open fun getSpecial()
 
 open fun getLicenseType()
         //nullable = true from not(false or (false and true)) = true
-: LicenseType
-
-        Updates for KMP build        
-        {
+: LicenseType{
 
 
 

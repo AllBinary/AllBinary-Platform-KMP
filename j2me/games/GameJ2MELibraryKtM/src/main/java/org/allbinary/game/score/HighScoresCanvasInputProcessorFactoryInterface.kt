@@ -33,9 +33,6 @@ open fun getInstance(highScoresCanvas: HighScoresCanvas)
         //nullable =  from not(true or (false and false)) = 
 : HighScoresCanvasInputProcessor
 
-        Updates for KMP build        
-        
-
 }
                 
             

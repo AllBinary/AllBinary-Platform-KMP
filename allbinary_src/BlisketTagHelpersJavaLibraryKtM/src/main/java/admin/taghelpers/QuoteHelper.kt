@@ -67,10 +67,7 @@ open public class QuoteHelper : BasicTable {
     private val storeFrontInterface: StoreFrontInterface
 
     private val portion: Portion
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
-
-        Updates for KMP build        
-        {
+public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 
@@ -101,10 +98,7 @@ this.portion= Portion(hashMap)
             
 open fun emailUser(quoteRequest: QuoteRequest)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var quoteRequest = quoteRequest
 
     var user: UserInterface = UserEntityFactory.getInstance()!!.getUser(quoteRequest!!.getUserName())!!
@@ -138,10 +132,7 @@ userEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.QUOTEREQUEST, em
             
 open fun emailAdmins(quoteRequest: QuoteRequest)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var quoteRequest = quoteRequest
 
     var adminEmailSubject: String = "Quote Request"
@@ -185,10 +176,7 @@ adminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.QUOTEREQUES
             
 open fun email()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -212,9 +200,6 @@ open fun email()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var nextId: Int = get = vector.get(index)get as Integer
@@ -261,10 +246,7 @@ this.emailAdmins(quoteRequest)
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
@@ -286,10 +268,7 @@ this.emailAdmins(quoteRequest)
 
 open fun drop()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -310,10 +289,7 @@ open fun drop()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to drop QuoteRequest table"
 
@@ -338,10 +314,7 @@ open fun drop()
 
 open fun create()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -362,10 +335,7 @@ open fun create()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to create new QuoteRequest table"
 
@@ -390,10 +360,7 @@ open fun create()
 
 open fun restore()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -417,10 +384,7 @@ open fun restore()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to restore backup"
 
@@ -445,10 +409,7 @@ open fun restore()
 
 open fun backup()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -472,10 +433,7 @@ open fun backup()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to make backup"
 

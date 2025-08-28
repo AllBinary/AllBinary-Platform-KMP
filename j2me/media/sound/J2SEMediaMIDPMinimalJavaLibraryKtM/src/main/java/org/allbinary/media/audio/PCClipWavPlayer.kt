@@ -55,10 +55,7 @@ open public class PCClipWavPlayer : BasicPlayer
     private val audioInputStream: AudioInputStream
 
     private val clip: Clip
-public constructor        (inputStream: InputStream)
-
-        Updates for KMP build        
-        {
+public constructor        (inputStream: InputStream){
 var inputStream = inputStream
 
     var audioInputStream: AudioInputStream = AudioInputStream(ByteArrayInputStream(NullUtil.getInstance()!!.NULL_BYTE_ARRAY), NullAudioFormat.NULL_AUDIO_FORMAT, 0)
@@ -86,10 +83,7 @@ clip= this.create(audioInputStream)
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
@@ -99,26 +93,17 @@ this.clip= clip
 
 override fun close()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 MusicThreadPool.getInstance()!!.runTask(object: Runnable()
                                 {
                                 override fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             close2()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
 }
 
@@ -133,10 +118,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
             
 open fun close2()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.clip.drain()
 this.clip.flush()
 this.clip.close()
@@ -144,10 +126,7 @@ this.clip.close()
 
 override fun getContentType()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -160,26 +139,17 @@ override fun getContentType()
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun start()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 MusicThreadPool.getInstance()!!.runTask(object: Runnable()
                                 {
                                 override fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             start2()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
 }
 
@@ -194,10 +164,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
             
 open fun start2()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.clip.setFramePosition(0)
 this.clip.loop(this.getLoopCount())
 this.clip.start()
@@ -209,10 +176,7 @@ super.start()
             
 open fun create(audioInputStream: AudioInputStream)
         //nullable = true from not(false or (false and false)) = true
-: Clip
-
-        Updates for KMP build        
-        {
+: Clip{
 var audioInputStream = audioInputStream
 
     var clip: Clip = AudioSystem.getClip()!!
@@ -231,26 +195,17 @@ clip.open(audioInputStream)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun stop()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 MusicThreadPool.getInstance()!!.runTask(object: Runnable()
                                 {
                                 override fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             stop2()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
 }
 
@@ -265,20 +220,14 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
             
 open fun stop2()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 clip.stop()
 super.stop()
 }
 
 override fun getControl(controlType: String)
         //nullable = true from not(false or (false and false)) = true
-: Control
-
-        Updates for KMP build        
-        {
+: Control{
 var controlType = controlType
 
 
@@ -289,10 +238,7 @@ var controlType = controlType
 
 override fun getControls()
         //nullable = true from not(false or (false and true)) = true
-: Array<Control?>
-
-        Updates for KMP build        
-        {
+: Array<Control?>{
 
 
 
@@ -302,10 +248,7 @@ override fun getControls()
 
 override fun setVolume(leftVolume: Int, rightVolume: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var leftVolume = leftVolume
     //var rightVolume = rightVolume
 this.setVolume((leftVolume.toFloat()) /100.0f)
@@ -314,10 +257,7 @@ this.setVolume((leftVolume.toFloat()) /100.0f)
 
 open fun getVolume()
         //nullable = true from not(false or (false and true)) = true
-: Float
-
-        Updates for KMP build        
-        {
+: Float{
 
     var masterGainFloatControl: FloatControl = clip.getControl(FloatControl.Type.MASTER_GAIN) as FloatControl
 
@@ -331,10 +271,7 @@ open fun getVolume()
 
 open fun setVolume(volume: Float)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var volume = volume
 
     
@@ -356,10 +293,7 @@ masterGainFloatControl!!.setValue(20f *Math.log10(volume).toFloat())
 
 override fun getDuration()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -369,10 +303,7 @@ override fun getDuration()
 
 override fun update(event: LineEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var event = event
 
     
@@ -388,9 +319,6 @@ var event = event
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var listener: PlayerListener = this.listenersList!!.get(size) as PlayerListener

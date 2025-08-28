@@ -43,10 +43,7 @@ open public class AllBinarySensor
 
 open fun setMax(max: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var max = max
 AllBinarySensor.max= max
 }
@@ -54,10 +51,7 @@ AllBinarySensor.max= max
 
 open fun getMax()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -73,19 +67,13 @@ open fun getMax()
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 protected constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
@@ -93,19 +81,13 @@ open fun init()
             
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun getId()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -116,19 +98,13 @@ open fun getId()
 
 open fun shutdown()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 logUtil!!.put(commonStrings!!.START, this, "shutdown")
 }
 
 override fun onSensorChange()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, this)
 }
 

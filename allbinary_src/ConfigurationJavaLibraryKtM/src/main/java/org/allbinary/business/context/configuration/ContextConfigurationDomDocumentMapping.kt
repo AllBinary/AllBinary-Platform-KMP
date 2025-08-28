@@ -39,9 +39,6 @@ open public class ContextConfigurationDomDocumentMapping
     private var contextConfigurationInterface: ContextConfigurationInterface
 public constructor        (contextConfigurationInterface: ContextConfigurationInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var contextConfigurationInterface = contextConfigurationInterface
 this.contextConfigurationInterface= contextConfigurationInterface
@@ -52,10 +49,7 @@ this.contextConfigurationInterface= contextConfigurationInterface
             
 open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
     var document: Document = DomDocumentHelper.create()!!
 
@@ -76,10 +70,7 @@ document.appendChild(node)
             
 open fun toDomDocumentString()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

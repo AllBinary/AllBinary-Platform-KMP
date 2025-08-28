@@ -35,9 +35,6 @@ open public class BasicAdvertisementWebsite
     private var websiteId: String
 public constructor        (websiteId: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var websiteId = websiteId
 this.websiteId= websiteId
@@ -45,10 +42,7 @@ this.websiteId= websiteId
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

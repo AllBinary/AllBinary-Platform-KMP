@@ -36,29 +36,17 @@ open fun getAdvertisements()
         //nullable = true from not(false or (false and true)) = true
 : StoreFrontAdvertisementsStatisticsInterface
 
-        Updates for KMP build        
-        
-
 open fun getUsers()
         //nullable = true from not(false or (false and true)) = true
 : StoreFrontUsersStatisticsInterface
-
-        Updates for KMP build        
-        
 
 open fun getInventory()
         //nullable = true from not(false or (false and true)) = true
 : StoreFrontInventoryStatisticsInterface
 
-        Updates for KMP build        
-        
-
 open fun getOrders()
         //nullable = true from not(false or (false and true)) = true
 : StoreFrontOrdersHistoryStatisticsInterface
-
-        Updates for KMP build        
-        
 
 }
                 

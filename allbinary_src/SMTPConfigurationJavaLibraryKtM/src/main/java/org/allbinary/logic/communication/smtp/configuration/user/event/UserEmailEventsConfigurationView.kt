@@ -49,9 +49,6 @@ open public class UserEmailEventsConfigurationView
     private var userEmailEventsConfigurationInterface: UserEmailEventsConfigurationInterface
 public constructor        (node: Node)
             : super()
-        
-
-        Updates for KMP build        
         {
 var node = node
 this.userEmailEventsConfigurationInterface= UserEmailEventsConfiguration() as UserEmailEventsConfigurationInterface
@@ -70,9 +67,6 @@ this.userEmailEventsConfigurationInterface= UserEmailEventsConfiguration() as Us
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var userEmailConfigurationNode: Node = emailEventConfigurationNodeVector!!.get(index) as Node
@@ -87,9 +81,6 @@ this.userEmailEventsConfigurationInterface!!.addUserEmailEventConfiguration(user
 
 public constructor        (userEmailEventsConfigurationInterface: UserEmailEventsConfigurationInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var userEmailEventsConfigurationInterface = userEmailEventsConfigurationInterface
 this.userEmailEventsConfigurationInterface= userEmailEventsConfigurationInterface
@@ -98,10 +89,7 @@ this.userEmailEventsConfigurationInterface= userEmailEventsConfigurationInterfac
 
 open fun getUserEmailEventsConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
-: UserEmailEventsConfigurationInterface
-
-        Updates for KMP build        
-        {
+: UserEmailEventsConfigurationInterface{
 
 
 
@@ -114,10 +102,7 @@ open fun getUserEmailEventsConfigurationInterface()
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var userEmailConfigurationMapping: UserEmailEventsConfigurationMapping = UserEmailEventsConfigurationMapping(this.userEmailEventsConfigurationInterface)
@@ -153,9 +138,6 @@ var document = document
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var eventName: String = eventNameArray[index]!! as String

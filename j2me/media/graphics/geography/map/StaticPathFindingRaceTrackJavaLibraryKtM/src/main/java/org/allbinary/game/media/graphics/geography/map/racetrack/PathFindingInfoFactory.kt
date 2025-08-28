@@ -41,10 +41,7 @@ open public class PathFindingInfoFactory : BasePathFindingInfoFactory {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PathFindingInfoFactory
-
-        Updates for KMP build        
-        {
+: PathFindingInfoFactory{
 
 
 
@@ -54,10 +51,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
-
-        Updates for KMP build        
-        {
+            private constructor        (){
 }
 
 
@@ -65,10 +59,7 @@ open fun getInstance()
             
 open fun getInstance(geographicMapInterface: BasicGeographicMap, graphArray: Array<IntArray?>)
         //nullable =  from not(true or (false and false)) = 
-: PathFindingInfo
-
-        Updates for KMP build        
-        {
+: PathFindingInfo{
     //var geographicMapInterface = geographicMapInterface
     //var graphArray = graphArray
 

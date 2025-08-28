@@ -34,10 +34,7 @@ open public class BasicTextEmailHelperFactory : TagHelperFactory {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 
@@ -45,10 +42,7 @@ public constructor        ()
             
 open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 var hashMap = hashMap
 var pageContext = pageContext
 
@@ -59,10 +53,7 @@ var pageContext = pageContext
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return BasicTextEmailHelper(hashMap, pageContext)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))

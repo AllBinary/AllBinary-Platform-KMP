@@ -35,10 +35,7 @@ open public class DebugFactory
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DebugInterface
-
-        Updates for KMP build        
-        {
+: DebugInterface{
 
 
 

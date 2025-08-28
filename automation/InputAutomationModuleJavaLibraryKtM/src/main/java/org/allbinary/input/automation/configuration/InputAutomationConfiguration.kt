@@ -54,10 +54,7 @@ open public class InputAutomationConfiguration
 
 open fun getFile()
         //nullable = true from not(false or (false and true)) = true
-: File
-
-        Updates for KMP build        
-        {
+: File{
 
 
 
@@ -75,19 +72,13 @@ open fun getFile()
     private var inputAutomationModuleConfigurationList: List<InputAutomationModuleConfiguration>
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun isInstalled()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -98,10 +89,7 @@ open fun isInstalled()
 
 open fun setInstalled(installed: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var installed = installed
 this.installed= installed
 logUtil!!.put("Installed: " +installed, this, "setIntalled")
@@ -110,10 +98,7 @@ logUtil!!.put("Installed: " +installed, this, "setIntalled")
 
 open fun getInputAutomationModuleConfigurationList()
         //nullable = true from not(false or (false and true)) = true
-: List<InputAutomationModuleConfiguration>
-
-        Updates for KMP build        
-        {
+: List<InputAutomationModuleConfiguration>{
 
 
 
@@ -126,10 +111,7 @@ open fun getInputAutomationModuleConfigurationList()
             
 open fun save()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var document: Document = DomDocumentHelper.create()!!
 

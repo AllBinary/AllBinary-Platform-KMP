@@ -35,10 +35,7 @@ open public class AndroidUtil
             
 open fun isMemoryRestrictive()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -49,10 +46,7 @@ open fun isMemoryRestrictive()
 
 open fun isAndroid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -64,9 +58,6 @@ open fun isAndroid()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

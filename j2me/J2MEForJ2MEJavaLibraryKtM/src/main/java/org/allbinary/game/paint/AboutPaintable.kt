@@ -40,10 +40,7 @@ open public class AboutPaintable : Paintable {
             
 open fun getInstance(info: Array<String?>, developers: Array<String?>)
         //nullable =  from not(true or (false and false)) = 
-: AboutPaintable
-
-        Updates for KMP build        
-        {
+: AboutPaintable{
 var info = info
 var developers = developers
 
@@ -65,10 +62,7 @@ var developers = developers
     private val paintableArray: Array<Paintable?> = arrayOf(
                                 //Otherwise - values - ThisExpr
 )
-private constructor        (info: Array<String?>, developers: Array<String?>)
-
-        Updates for KMP build        
-        {
+private constructor        (info: Array<String?>, developers: Array<String?>){
 var info = info
 var developers = developers
 this.info= info
@@ -78,10 +72,7 @@ this.developers= developers
 
 open fun getPaintableArrayInstance()
         //nullable = true from not(false or (false and true)) = true
-: Array<Paintable?>
-
-        Updates for KMP build        
-        {
+: Array<Paintable?>{
 
 
 
@@ -93,10 +84,7 @@ open fun getPaintableArrayInstance()
     private var anchor: Int = Anchor.TOP_LEFT
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 
     var myFont: MyFont = MyFont.getInstance()!!
@@ -124,9 +112,6 @@ graphics.drawString(this.ABOUT, halfWidth -beginWidth, 2 *charHeight, anchor)
 
                         for (index in 0 until infoSize)
 
-        
-
-        Updates for KMP build        
         {
 beginWidth= (font.stringWidth(this.info[index]!!) shr 1)
 graphics.drawString(this.info[index]!!, halfWidth -beginWidth, (4 +index) *charHeight, anchor)
@@ -142,9 +127,6 @@ graphics.drawString(this.info[index]!!, halfWidth -beginWidth, (4 +index) *charH
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 beginWidth= (font.stringWidth(this.developers[index]!!) shr 1)
 graphics.drawString(this.developers[index]!!, halfWidth -beginWidth, (5 +infoSize +index) *charHeight, anchor)

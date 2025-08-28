@@ -33,31 +33,19 @@ open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-        Updates for KMP build        
-        
-
 open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-        Updates for KMP build        
-        
-
 open fun getLayerType()
         //nullable = true from not(false or (false and true)) = true
 : LayerPlacementType
-
-        Updates for KMP build        
-        
 
                 @Throws(Exception::class)
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : Hashtable<Any, Any>
-
-        Updates for KMP build        
-        
 
 }
                 

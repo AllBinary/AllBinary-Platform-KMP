@@ -42,10 +42,7 @@ open public class OpenGLESStrings
             
 open fun set(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
 
 
@@ -56,10 +53,7 @@ open fun set(gl: GL10)
 
 open fun initFont(gl: GL10, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
     //var width = width
     //var height = height
@@ -74,10 +68,7 @@ open fun initFont(gl: GL10, width: Int, height: Int)
             
 open fun update(gl: GL10, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
     //var width = width
     //var height = height
@@ -90,10 +81,7 @@ open fun update(gl: GL10, width: Int, height: Int)
 
 open fun drawChar(gl: GL10, graphics: Graphics, character: Char, x: Int, y: Int, anchor: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
     //var graphics = graphics
     //var character = character
@@ -109,10 +97,7 @@ open fun drawChar(gl: GL10, graphics: Graphics, character: Char, x: Int, y: Int,
 
 open fun drawChars(gl: GL10, graphics: Graphics, data: CharArray, offset: Int, length: Int, x: Int, y: Int, anchor: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
     //var graphics = graphics
     //var data = data
@@ -130,10 +115,7 @@ open fun drawChars(gl: GL10, graphics: Graphics, data: CharArray, offset: Int, l
 
 open fun drawString(gl: GL10, graphics: Graphics, string: String, x: Int, y: Int, anchor: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
     //var graphics = graphics
     //var string = string
@@ -149,10 +131,7 @@ open fun drawString(gl: GL10, graphics: Graphics, string: String, x: Int, y: Int
 
 open fun drawSubstring(gl: GL10, graphics: Graphics, string: String, offset: Int, len: Int, x: Int, y: Int, anchor: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
     //var graphics = graphics
     //var string = string

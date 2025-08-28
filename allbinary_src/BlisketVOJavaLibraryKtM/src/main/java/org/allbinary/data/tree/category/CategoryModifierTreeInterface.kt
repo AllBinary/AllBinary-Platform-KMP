@@ -33,15 +33,9 @@ open fun insert(parentCategoryInterface: CategoryInterface, newChildCategoryInte
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun delete(parentCategoryInterface: CategoryInterface, newChildCategoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

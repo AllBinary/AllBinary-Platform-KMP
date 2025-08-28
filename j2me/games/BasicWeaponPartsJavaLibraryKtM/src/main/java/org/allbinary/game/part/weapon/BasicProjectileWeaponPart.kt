@@ -40,10 +40,7 @@ open public class BasicProjectileWeaponPart : BasicWeaponPart {
     private var weaponLayerCircularStaticPool: WeaponLayerCircularPool
 public constructor        (animationInterface: Animation, weaponLayerCircularStaticPool: WeaponLayerCircularPool)                        
 
-                            : super(animationInterface)
-
-        Updates for KMP build        
-        {
+                            : super(animationInterface){
     //var animationInterface = animationInterface
     //var weaponLayerCircularStaticPool = weaponLayerCircularStaticPool
 
@@ -55,10 +52,7 @@ this.weaponLayerCircularStaticPool= weaponLayerCircularStaticPool
 
 public constructor        (animationInterface: Animation, sourceLayerInterface: AllBinaryLayer, weaponLayerCircularStaticPool: WeaponLayerCircularPool, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface, relativeRelationship: RelativeRelationship)                        
 
-                            : super(animationInterface, sourceLayerInterface, weaponProperties, scoreableInterface, relativeRelationship)
-
-        Updates for KMP build        
-        {
+                            : super(animationInterface, sourceLayerInterface, weaponProperties, scoreableInterface, relativeRelationship){
     //var animationInterface = animationInterface
     //var sourceLayerInterface = sourceLayerInterface
     //var weaponLayerCircularStaticPool = weaponLayerCircularStaticPool
@@ -76,10 +70,7 @@ this.weaponLayerCircularStaticPool= weaponLayerCircularStaticPool
                 @Throws(Exception::class)
             override fun process(allbinaryLayerManager: AllBinaryLayerManager, angle: Short, otherAngle: Short, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allbinaryLayerManager = allbinaryLayerManager
     //var angle = angle
 var otherAngle = otherAngle

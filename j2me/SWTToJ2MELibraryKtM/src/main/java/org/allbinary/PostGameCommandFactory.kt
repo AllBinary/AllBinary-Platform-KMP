@@ -39,10 +39,7 @@ open public class PostGameCommandFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PostGameCommandFactory
-
-        Updates for KMP build        
-        {
+: PostGameCommandFactory{
 
 
 
@@ -60,10 +57,7 @@ open fun getInstance()
         
 open fun addCommands(canvas: MyCanvas)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var canvas = canvas
 MultiPlayerGameFeatureFactory.getInstance()!!.addCommands(canvas)
 }

@@ -38,10 +38,7 @@ open public class TouchButtonsBuilderFactory
         
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BaseTouchInput
-
-        Updates for KMP build        
-        {
+: BaseTouchInput{
 
 
 

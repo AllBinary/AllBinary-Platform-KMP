@@ -25,10 +25,7 @@ open public class AndroidNumberKeyToJ2MECanvasNumberKey
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 androidtoJavaMicroEditionKeyMap[KeyEvent.KEYCODE_0]= Canvas.KEY_NUM0
 androidtoJavaMicroEditionKeyMap[KeyEvent.KEYCODE_1]= Canvas.KEY_NUM1
 androidtoJavaMicroEditionKeyMap[KeyEvent.KEYCODE_2]= Canvas.KEY_NUM2
@@ -44,10 +41,7 @@ androidtoJavaMicroEditionKeyMap[KeyEvent.KEYCODE_9]= Canvas.KEY_NUM9
 
 open fun getKey(key: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var key = key
 
     
@@ -84,9 +78,6 @@ var key = key
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

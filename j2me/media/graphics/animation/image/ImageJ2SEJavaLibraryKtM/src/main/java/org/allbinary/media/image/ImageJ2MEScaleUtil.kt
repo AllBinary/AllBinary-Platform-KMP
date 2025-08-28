@@ -38,10 +38,7 @@ open public class ImageJ2MEScaleUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageJ2MEScaleUtil
-
-        Updates for KMP build        
-        {
+: ImageJ2MEScaleUtil{
 
 
 
@@ -53,9 +50,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -64,10 +58,7 @@ open fun getInstance()
             
 open fun scale(images: Array<Image?>, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Array<Image?>
-
-        Updates for KMP build        
-        {
+: Array<Image?>{
     //var images = images
     //var width = width
     //var height = height
@@ -80,9 +71,6 @@ open fun scale(images: Array<Image?>, width: Int, height: Int)
 
                         for (index in images.size  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 scaledImages[index]= this.scale(images[index]!!, width, height)
 }
@@ -99,10 +87,7 @@ scaledImages[index]= this.scale(images[index]!!, width, height)
             
 open fun scale(image: Image, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var image = image
     //var width = width
     //var height = height
@@ -140,9 +125,6 @@ image.getRGB(originalData, 0, image.getWidth(), 0, 0, image.getWidth(), image.ge
 
                         for (index in height  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 dy= (index *heightRatioFactor) shr 3
 
@@ -151,9 +133,6 @@ dy= (index *heightRatioFactor) shr 3
 
                         for (index2 in width  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 dx= (index2 *widthRatioFactor) shr 3
 scaledData[scaledIndex--]= originalData[(sourceWidth *dy) +dx]!!

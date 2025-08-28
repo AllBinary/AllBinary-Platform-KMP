@@ -47,16 +47,10 @@ open public class AndroidMediaPlayerWrapper : BasicPlayer {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var mediaPlayer: MediaPlayer = NullAndroidCanvas.NULL_MEDIA_PLAYER
-private constructor        ()
-
-        Updates for KMP build        
-        {
+private constructor        (){
 }
 
-public constructor        (resource: String)
-
-        Updates for KMP build        
-        {
+public constructor        (resource: String){
 var resource = resource
 
         try {
@@ -84,10 +78,7 @@ var resource = resource
 this.setMediaPlayer(mediaPlayer)
 this.mediaPlayer!!.setLooping(false)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION_LABEL +resource, this, commonStrings!!.CONSTRUCTOR, e)
 
 
@@ -99,10 +90,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION_LABEL +resource, this, commonStrings!!.C
 
 override fun setLoopCount(count: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var count = count
 super.setLoopCount(count)
 
@@ -133,30 +121,21 @@ super.setLoopCount(count)
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun addPlayerListener(playerListener: PlayerListener)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var playerListener = playerListener
 super.addPlayerListener(playerListener)
 }
 
 override fun removePlayerListener(playerListener: PlayerListener)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var playerListener = playerListener
 super.removePlayerListener(playerListener)
 }
 
 override fun getState()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
     
                         if(this.mediaPlayer!!.isPlaying())
@@ -183,19 +162,13 @@ override fun getState()
 
 override fun close()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             this.mediaPlayer!!.release()
 this.mediaPlayer= NullAndroidCanvas.NULL_MEDIA_PLAYER
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CLOSE, e)
 }
 
@@ -206,10 +179,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CLOSE, e)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun start()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             
@@ -225,10 +195,7 @@ this.mediaPlayer!!.seekTo(0)
 this.mediaPlayer!!.start()
 super.start()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME, e)
 }
 
@@ -239,20 +206,14 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun stop()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             this.mediaPlayer!!.stop()
 this.mediaPlayer!!.prepare()
 super.stop()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "stop", e)
 }
 
@@ -261,10 +222,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "stop", e)
 
 open fun update(event: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var event = event
 logUtil!!.put("LineEvent: " +event, this, commonStrings!!.UPDATE)
 
@@ -276,9 +234,6 @@ logUtil!!.put("LineEvent: " +event, this, commonStrings!!.UPDATE)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var listener: PlayerListener = this.listenersList!!.objectArray[index]!! as PlayerListener
@@ -290,10 +245,7 @@ listener.playerUpdate(this, event, NullUtil.getInstance()!!.NULL_OBJECT)
 
 override fun setVolume(leftVolume: Int, rightVolume: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var leftVolume = leftVolume
     //var rightVolume = rightVolume
 this.mediaPlayer!!.setVolume((leftVolume.toFloat()) /100.0f, (rightVolume.toFloat()) /100.0f)
@@ -301,10 +253,7 @@ this.mediaPlayer!!.setVolume((leftVolume.toFloat()) /100.0f, (rightVolume.toFloa
 
 override fun getDuration()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -315,10 +264,7 @@ override fun getDuration()
 
 open fun setMediaPlayer(mediaPlayer: MediaPlayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var mediaPlayer = mediaPlayer
 this.mediaPlayer= mediaPlayer
 }
@@ -326,10 +272,7 @@ this.mediaPlayer= mediaPlayer
 
 open fun getMediaPlayer()
         //nullable = true from not(false or (false and true)) = true
-: MediaPlayer
-
-        Updates for KMP build        
-        {
+: MediaPlayer{
 
 
 

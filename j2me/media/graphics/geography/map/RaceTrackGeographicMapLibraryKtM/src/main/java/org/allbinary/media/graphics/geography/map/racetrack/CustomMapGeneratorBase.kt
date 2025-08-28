@@ -40,19 +40,13 @@ open public class CustomMapGeneratorBase
             
 open fun copyMapIntoCustomMap()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun getCustomMapArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<IntArray?>
-
-        Updates for KMP build        
-        {
+: Array<IntArray?>{
 
 
 
@@ -65,10 +59,7 @@ open fun getCustomMapArray()
             
 open fun getCustomType(column: Int, row: Int, currentType: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var column = column
     //var row = row
     //var currentType = currentType

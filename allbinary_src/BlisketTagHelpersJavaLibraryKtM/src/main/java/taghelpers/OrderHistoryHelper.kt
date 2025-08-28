@@ -67,10 +67,7 @@ open public class OrderHistoryHelper : TagHelper {
     private var status: String
 
     private var newStatus: String
-public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
-
-        Updates for KMP build        
-        {
+public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext){
 var propertiesHashMap = propertiesHashMap
 var pageContext = pageContext
 this.propertiesHashMap= propertiesHashMap
@@ -97,10 +94,7 @@ this.getFormData()
 
 open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.id= request.getParameter(OrderData.ID)
 this.groupId= request.getParameter(ShippingMethodData.GROUP)
 
@@ -119,10 +113,7 @@ this.groupId= request.getParameter(ShippingMethodData.GROUP)
 
 open fun setOrderStatus()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -218,10 +209,7 @@ orderHistoryEntityInterface!!.setStatus(id, this.newStatus)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Error Setting Order Status"
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to set order status"
 

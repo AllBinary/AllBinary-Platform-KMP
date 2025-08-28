@@ -63,9 +63,6 @@ open public class QuoteRequest
     private var comments: String
 public constructor        (userName: String, request: HttpServletRequest)
             : super()
-        
-
-        Updates for KMP build        
         {
 var userName = userName
 var request = request
@@ -93,9 +90,6 @@ this.setComments(request.getParameter(quoteRequestData!!.COMMENTS) as String)
 
 public constructor        (hashMap: HashMap<Any, Any>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var hashMap = hashMap
 
@@ -122,10 +116,7 @@ this.setComments(hashMap!!.get(quoteRequestData!!.COMMENTS) as String)
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             
@@ -203,10 +194,7 @@ open fun isValid()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return valid
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
@@ -228,10 +216,7 @@ open fun isValid()
 
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -309,10 +294,7 @@ open fun validationInfo()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
@@ -334,10 +316,7 @@ open fun validationInfo()
 
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
     var values: Vector = Vector()
 
@@ -368,10 +347,7 @@ values.add(time)
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var quoteRequestData: QuoteRequestData = QuoteRequestData.getInstance()!!
 
@@ -403,10 +379,7 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 open fun setUserName(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.userName= value
 }
@@ -414,10 +387,7 @@ this.userName= value
 
 open fun setProjectInfo(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.projectInfo= value
 }
@@ -425,10 +395,7 @@ this.projectInfo= value
 
 open fun setUserComments(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.userComments= value
 }
@@ -436,10 +403,7 @@ this.userComments= value
 
 open fun setBudget(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.budget= value
 }
@@ -447,10 +411,7 @@ this.budget= value
 
 open fun setTimeFrame(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.timeFrame= value
 }
@@ -458,10 +419,7 @@ this.timeFrame= value
 
 open fun setComments(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.comments= value
 
@@ -478,10 +436,7 @@ this.comments= value
 
 open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -492,10 +447,7 @@ open fun getUserName()
 
 open fun getProjectInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -506,10 +458,7 @@ open fun getProjectInfo()
 
 open fun getUserComments()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -520,10 +469,7 @@ open fun getUserComments()
 
 open fun getBudget()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -534,10 +480,7 @@ open fun getBudget()
 
 open fun getTimeFrame()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -548,10 +491,7 @@ open fun getTimeFrame()
 
 open fun getComments()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

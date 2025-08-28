@@ -37,10 +37,7 @@ open public class TouchScreenTypesFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TouchScreenTypesFactory
-
-        Updates for KMP build        
-        {
+: TouchScreenTypesFactory{
 
 
 

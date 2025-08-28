@@ -37,10 +37,7 @@ open public class LicenseLoadingTypeFactory
 
 open fun getIntance()
         //nullable = true from not(false or (false and true)) = true
-: LicenseLoadingTypeFactory
-
-        Updates for KMP build        
-        {
+: LicenseLoadingTypeFactory{
 
 
 

@@ -42,30 +42,21 @@ open public class NoZBasicConstantVelocityMovement : Movement
     private var speedBasicDecimal: BasicDecimal = BasicDecimal.ZERO_BIGDECIMAL
 
     private val axisMathVectorUtil: AxisMathVectorUtil = AxisMathVectorUtil.getInstance()!!
-public constructor        (basicDecimal: BasicDecimal, velocityProperties: BasicVelocityProperties)
-
-        Updates for KMP build        
-        {
+public constructor        (basicDecimal: BasicDecimal, velocityProperties: BasicVelocityProperties){
 var basicDecimal = basicDecimal
 var velocityProperties = velocityProperties
 this.setSpeedBasicDecimal(basicDecimal)
 this.velocityProperties= velocityProperties
 }
 
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 this.setSpeedBasicDecimal(BasicDecimal.ZERO_BIGDECIMAL)
 this.velocityProperties= BasicVelocityProperties()
 }
 
 override fun init(speedBasicDecimal: BasicDecimal, angle: Int, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var speedBasicDecimal = speedBasicDecimal
 var angle = angle
 var otherAngle = otherAngle
@@ -79,10 +70,7 @@ this.velocityProperties!!.setVelocity(speedBasicDecimal, angleFactory!!.getInsta
 
 open fun moveOutsideRadius(layer: AllBinaryLayer, radius: Long, angle: Int, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var layer = layer
 var radius = radius
 var angle = angle
@@ -103,20 +91,14 @@ layer.move(xVector, yVector, 0)
                 @Throws(Exception::class)
             override fun process(layer: AllBinaryGameLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var layer = layer
 layer.move(this.velocityProperties!!.getVelocityXBasicDecimalP()!!.getScaled(), this.velocityProperties!!.getVelocityYBasicDecimalP()!!.getScaled(), 0)
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -126,19 +108,13 @@ override fun toString()
 
 override fun stop()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.velocityProperties!!.zero()
 }
 
 override fun getVelocityProperties()
         //nullable = true from not(false or (false and true)) = true
-: BasicVelocityProperties
-
-        Updates for KMP build        
-        {
+: BasicVelocityProperties{
 
 
 
@@ -149,10 +125,7 @@ override fun getVelocityProperties()
 
 open fun setVelocityProperties(velocityProperties: BasicVelocityProperties)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var velocityProperties = velocityProperties
 this.velocityProperties= velocityProperties
 }
@@ -160,10 +133,7 @@ this.velocityProperties= velocityProperties
 
 open fun setSpeedBasicDecimal(speedBasicDecimal: BasicDecimal)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var speedBasicDecimal = speedBasicDecimal
 this.speedBasicDecimal= speedBasicDecimal
 }
@@ -171,10 +141,7 @@ this.speedBasicDecimal= speedBasicDecimal
 
 open fun getSpeedBasicDecimal()
         //nullable = true from not(false or (false and true)) = true
-: BasicDecimal
-
-        Updates for KMP build        
-        {
+: BasicDecimal{
 
 
 

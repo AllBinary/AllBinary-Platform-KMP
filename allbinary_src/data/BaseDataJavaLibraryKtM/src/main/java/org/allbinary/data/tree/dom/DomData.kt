@@ -46,9 +46,6 @@ open public class DomData
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

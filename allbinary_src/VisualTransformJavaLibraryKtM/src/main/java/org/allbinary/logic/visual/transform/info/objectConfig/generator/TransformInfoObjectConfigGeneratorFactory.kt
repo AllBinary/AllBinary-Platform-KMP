@@ -42,10 +42,7 @@ open public class TransformInfoObjectConfigGeneratorFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TransformInfoObjectConfigGeneratorFactory
-
-        Updates for KMP build        
-        {
+: TransformInfoObjectConfigGeneratorFactory{
 
 
 
@@ -59,9 +56,6 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -70,10 +64,7 @@ private constructor        ()
             
 open fun getInstance(transformInfoInterface: TransformInfoInterface)
         //nullable =  from not(true or (false and false)) = 
-: TransformInfoObjectConfigGenerator
-
-        Updates for KMP build        
-        {
+: TransformInfoObjectConfigGenerator{
 var transformInfoInterface = transformInfoInterface
 
     var type: String = transformInfoInterface!!.getObjectConfigInterface()!!.getOutputTypeName() as String

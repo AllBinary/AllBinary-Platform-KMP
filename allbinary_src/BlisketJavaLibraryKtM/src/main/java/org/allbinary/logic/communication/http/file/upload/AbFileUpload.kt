@@ -37,10 +37,7 @@ open public class AbFileUpload : FileUpload {
         
 public constructor        (fileItemFactory: FileItemFactory)                        
 
-                            : super(fileItemFactory)
-
-        Updates for KMP build        
-        {
+                            : super(fileItemFactory){
 var fileItemFactory = fileItemFactory
 
 
@@ -53,10 +50,7 @@ var fileItemFactory = fileItemFactory
             
 open fun getItemIterator(request: HttpServletRequest)
         //nullable = true from not(false or (false and false)) = true
-: FileItemIterator
-
-        Updates for KMP build        
-        {
+: FileItemIterator{
 var request = request
 
 

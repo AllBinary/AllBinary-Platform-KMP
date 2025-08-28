@@ -37,10 +37,7 @@ open public class RendererInitializedStupidTimerFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: StupidTimer
-
-        Updates for KMP build        
-        {
+: StupidTimer{
 
 
 

@@ -31,10 +31,7 @@ open public class YAxisMathVector : MathVector {
         
 public constructor        (magnitudeBasicDecimal: BasicDecimal, direction: Int)                        
 
-                            : super(magnitudeBasicDecimal, direction)
-
-        Updates for KMP build        
-        {
+                            : super(magnitudeBasicDecimal, direction){
 var magnitudeBasicDecimal = magnitudeBasicDecimal
 var direction = direction
 
@@ -47,10 +44,7 @@ this.calculate()
 
 open fun getResult()
         //nullable = true from not(false or (false and true)) = true
-: BasicDecimal
-
-        Updates for KMP build        
-        {
+: BasicDecimal{
 
 
 
@@ -61,10 +55,7 @@ open fun getResult()
 
 open fun calculate()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var result: Long = YAxisMathVectorUtil.calculate(this.getMagnitude()!!.getUnscaled(), this.getDirection())!!
 

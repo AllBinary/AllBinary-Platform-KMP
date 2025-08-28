@@ -38,10 +38,7 @@ open public class OneRowSpriteIndexedAnimationFactory : BaseImageAnimationFactor
     private val animationFactorySpriteScaleUtil: AnimationFactorySpriteScaleUtil = AnimationFactorySpriteScaleUtil.getInstance()!!
 public constructor        (image: Image, width: Int, height: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(image, width, height, animationBehaviorFactory)
-
-        Updates for KMP build        
-        {
+                            : super(image, width, height, animationBehaviorFactory){
     //var image = image
     //var width = width
     //var height = height
@@ -58,10 +55,7 @@ this.animationFactoryInitializationVisitor!!.dy= dy
 
 public constructor        (image: Image, dx: Int)                        
 
-                            : this(image, dx, 0)
-
-        Updates for KMP build        
-        {
+                            : this(image, dx, 0){
     //var image = image
     //var dx = dx
 
@@ -73,10 +67,7 @@ this.animationFactoryInitializationVisitor!!.dx +=  -(this.animationFactoryIniti
 
 public constructor        (image: Image, dx: Int, dy: Int, unused: Any)                        
 
-                            : this(image, dx, dy)
-
-        Updates for KMP build        
-        {
+                            : this(image, dx, dy){
     //var image = image
     //var dx = dx
     //var dy = dy
@@ -91,10 +82,7 @@ this.animationFactoryInitializationVisitor!!.dy +=  -(this.animationFactoryIniti
 
 public constructor        (image: Image, dx: Int, dy: Int)                        
 
-                            : this(image, dx, dy, AnimationBehaviorFactory.getInstance())
-
-        Updates for KMP build        
-        {
+                            : this(image, dx, dy, AnimationBehaviorFactory.getInstance()){
     //var image = image
     //var dx = dx
     //var dy = dy
@@ -106,10 +94,7 @@ public constructor        (image: Image, dx: Int, dy: Int)
 
 public constructor        (image: Image, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(image, animationBehaviorFactory)
-
-        Updates for KMP build        
-        {
+                            : this(image, animationBehaviorFactory){
     //var image = image
     //var dx = dx
     //var dy = dy
@@ -124,10 +109,7 @@ this.animationFactoryInitializationVisitor!!.dy= dy
 
 public constructor        (width: Int, height: Int, image: Image)                        
 
-                            : this(width, height, image, AnimationBehaviorFactory.getInstance())
-
-        Updates for KMP build        
-        {
+                            : this(width, height, image, AnimationBehaviorFactory.getInstance()){
     //var width = width
     //var height = height
     //var image = image
@@ -139,10 +121,7 @@ public constructor        (width: Int, height: Int, image: Image)
 
 public constructor        (width: Int, height: Int, image: Image, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(image, width, height, animationBehaviorFactory)
-
-        Updates for KMP build        
-        {
+                            : super(image, width, height, animationBehaviorFactory){
     //var width = width
     //var height = height
     //var image = image
@@ -155,10 +134,7 @@ public constructor        (width: Int, height: Int, image: Image, animationBehav
 
 public constructor        (image: Image)                        
 
-                            : this(image, AnimationBehaviorFactory.getInstance())
-
-        Updates for KMP build        
-        {
+                            : this(image, AnimationBehaviorFactory.getInstance()){
     //var image = image
 
 
@@ -168,10 +144,7 @@ public constructor        (image: Image)
 
 public constructor        (image: Image, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(image, image.getHeight(), image.getHeight(), animationBehaviorFactory)
-
-        Updates for KMP build        
-        {
+                            : super(image, image.getHeight(), image.getHeight(), animationBehaviorFactory){
     //var image = image
     //var animationBehaviorFactory = animationBehaviorFactory
 
@@ -184,10 +157,7 @@ public constructor        (image: Image, animationBehaviorFactory: AnimationBeha
                 @Throws(Exception::class)
             override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation
-
-        Updates for KMP build        
-        {
+: Animation{
     //var instanceId = instanceId
 
     var sprite: Sprite = animationFactorySpriteScaleUtil!!.createImage(this.getImage(), this.animationFactoryInitializationVisitor!!.width, this.animationFactoryInitializationVisitor!!.height, this.scaleProperties!!.scaleWidth, this.scaleProperties!!.scaleHeight)!!

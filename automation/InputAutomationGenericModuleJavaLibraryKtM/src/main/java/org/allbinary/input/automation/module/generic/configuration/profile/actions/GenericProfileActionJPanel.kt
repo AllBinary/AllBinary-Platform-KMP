@@ -41,20 +41,14 @@ open public class GenericProfileActionJPanel : javax.swing.JPanel {
     private var genericProfileAction: GenericProfileAction
 
     private var genericProfileActionScriptJPanel: GenericProfileActionScriptJPanel
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 initComponents()
 }
 
 
 open fun updateProfileActionUI()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.blankProfileActionScriptJPanel!!.removeAll()
 
     var genericProfileActionScriptJPanel: GenericProfileActionScriptJPanel = GenericProfileActionScriptJPanel()
@@ -74,10 +68,7 @@ logUtil!!.put("Updated UI", this, "updateUI")
 
 open fun getGenericProfileAction()
         //nullable = true from not(false or (false and true)) = true
-: GenericProfileAction
-
-        Updates for KMP build        
-        {
+: GenericProfileAction{
 
 
 
@@ -88,10 +79,7 @@ open fun getGenericProfileAction()
 
 open fun setGenericProfileAction(genericProfileAction: GenericProfileAction)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var genericProfileAction = genericProfileAction
 this.genericProfileAction= genericProfileAction
 }
@@ -99,10 +87,7 @@ this.genericProfileAction= genericProfileAction
 
 open fun getGenericProfileActionScriptJPanel()
         //nullable = true from not(false or (false and true)) = true
-: GenericProfileActionScriptJPanel
-
-        Updates for KMP build        
-        {
+: GenericProfileActionScriptJPanel{
 
 
 
@@ -113,10 +98,7 @@ open fun getGenericProfileActionScriptJPanel()
 
 open fun setGenericProfileActionScriptJPanel(genericProfileActionScriptJPanel: GenericProfileActionScriptJPanel)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var genericProfileActionScriptJPanel = genericProfileActionScriptJPanel
 this.genericProfileActionScriptJPanel= genericProfileActionScriptJPanel
 }
@@ -124,10 +106,7 @@ this.genericProfileActionScriptJPanel= genericProfileActionScriptJPanel
 
 open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 genericProfileActionScriptJScrollPane= javax.swing.JScrollPane()
 blankProfileActionScriptJPanel= javax.swing.JPanel()
 ifJLabel= javax.swing.JLabel()
@@ -152,10 +131,7 @@ newColorAtJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 newColorAtJButtonActionPerformed(evt)
 }
@@ -168,10 +144,7 @@ newTimeIntervalJButton!!.addActionListener(object: java.awt.event.ActionListener
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 newTimeIntervalJButtonActionPerformed(evt)
 }
@@ -184,10 +157,7 @@ newAlwaysJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 newAlwaysJButtonActionPerformed(evt)
 }
@@ -205,10 +175,7 @@ layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Align
 
 open fun newTimeIntervalJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 logUtil!!.put("New Time Interval Action Condition", this, "newTimeIntervalJButtonActionPerformed")
 getGenericProfileAction()!!.getGenericProfileActionScript()!!.addCondition(TimeIntervalActionScriptCondition() as ProfileActionScriptConditionInterface)
@@ -218,10 +185,7 @@ this.updateProfileActionUI()
 
 open fun newAlwaysJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 logUtil!!.put("New EveryTime Action Condition", this, "newEveryTimeJButtonActionPerformed")
 getGenericProfileAction()!!.getGenericProfileActionScript()!!.addCondition(AlwaysActionScriptCondition() as ProfileActionScriptConditionInterface)
@@ -231,10 +195,7 @@ this.updateProfileActionUI()
 
 open fun newColorAtJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 logUtil!!.put("New Color At Action Condition", this, "newColorAtJButtonActionPerformed")
 getGenericProfileAction()!!.getGenericProfileActionScript()!!.addCondition(ColorAtActionScriptCondition() as ProfileActionScriptConditionInterface)

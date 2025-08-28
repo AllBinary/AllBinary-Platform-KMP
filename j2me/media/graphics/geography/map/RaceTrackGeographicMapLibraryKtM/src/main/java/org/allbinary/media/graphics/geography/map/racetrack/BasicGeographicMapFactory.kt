@@ -46,10 +46,7 @@ open public class BasicGeographicMapFactory
             
 open fun getInstance(raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrackData, tiledLayerFactoryInterface: AllBinaryTiledLayerFactoryInterface, geographicMapCellPositionFactoryInterface: GeographicMapCellPositionFactoryInterface, geographicMapCellTypeFactory: GeographicMapCellTypeFactory)
         //nullable =  from not(true or (false and false)) = 
-: BasicGeographicMap
-
-        Updates for KMP build        
-        {
+: BasicGeographicMap{
     //var raceTrackInfo = raceTrackInfo
     //var raceTrackData = raceTrackData
     //var tiledLayerFactoryInterface = tiledLayerFactoryInterface

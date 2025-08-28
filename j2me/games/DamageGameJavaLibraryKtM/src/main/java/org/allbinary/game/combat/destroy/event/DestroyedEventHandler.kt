@@ -43,10 +43,7 @@ open public class DestroyedEventHandler : BasicEventHandler {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DestroyedEventHandler
-
-        Updates for KMP build        
-        {
+: DestroyedEventHandler{
 
 
 
@@ -58,19 +55,13 @@ open fun getInstance()
         }
             
     private val list: BasicArrayList = BasicArrayList()
-private constructor        ()
-
-        Updates for KMP build        
-        {
+private constructor        (){
 }
 
 
 open fun addListener(collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
 
     
@@ -86,10 +77,7 @@ var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.list.clear()
 super.removeAllListeners()
 }
@@ -97,10 +85,7 @@ super.removeAllListeners()
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun removeListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventListenerInterface = eventListenerInterface
 this.list.remove(eventListenerInterface)
 super.removeListener(eventListenerInterface)
@@ -110,10 +95,7 @@ super.removeListener(eventListenerInterface)
                 @Throws(Exception::class)
             override fun fireEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventObject = eventObject
 
 
@@ -121,9 +103,6 @@ var eventObject = eventObject
 
                         for (index in this.list.size()!!  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
         try {
@@ -132,10 +111,7 @@ var eventObject = eventObject
 
 collidableDestroyableDamageableLayer!!.onDestroyed(eventObject as DestroyedEvent)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
 }
 
@@ -148,10 +124,7 @@ super.fireEvent(eventObject)
                 @Throws(Exception::class)
             override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventObject = eventObject
 var eventListenerInterface = eventListenerInterface
 

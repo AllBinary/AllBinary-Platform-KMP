@@ -37,10 +37,7 @@ open public class ShowTitleProgressBarRunnable : ProgressRunnable {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        (midletActivity: Activity, progressCanvas: ProgressCanvas)                        
 
-                            : super(midletActivity, progressCanvas)
-
-        Updates for KMP build        
-        {
+                            : super(midletActivity, progressCanvas){
 var midletActivity = midletActivity
 var progressCanvas = progressCanvas
 
@@ -53,18 +50,12 @@ var progressCanvas = progressCanvas
     private val FADE_IN_HALF: IntArray = intArrayOf(TransistionTypes.getInstance()!!.FADE_IN_TO_HALF_ALPHA,TransistionTypes.getInstance()!!.FADE_IN_FROM_HALF_ALPHA)
 override fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             this.midletActivity!!.onShowProgress(false, FADE_IN_HALF)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

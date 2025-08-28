@@ -48,9 +48,6 @@ open public class GameFeatureItemCommandListener
     private var gameOptionsForm: GameOptionsForm
 public constructor        (gameOptionsForm: GameOptionsForm)
             : super()
-        
-
-        Updates for KMP build        
         {
 var gameOptionsForm = gameOptionsForm
 this.gameOptionsForm= gameOptionsForm
@@ -58,10 +55,7 @@ this.gameOptionsForm= gameOptionsForm
 
 override fun commandAction(command: Command, item: Item)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var command = command
 var item = item
 
@@ -81,10 +75,7 @@ logUtil!!.put(StringMaker().
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

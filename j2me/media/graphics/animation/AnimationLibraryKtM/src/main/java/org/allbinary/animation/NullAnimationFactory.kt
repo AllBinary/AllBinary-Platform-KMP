@@ -43,10 +43,7 @@ open public class NullAnimationFactory
 
 open fun getFactoryInstance()
         //nullable = true from not(false or (false and true)) = true
-: NullAnimationFactory
-
-        Updates for KMP build        
-        {
+: NullAnimationFactory{
 
 
 
@@ -62,10 +59,7 @@ open fun getFactoryInstance()
                                 
 open override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var x = x
     //var y = y
@@ -77,18 +71,12 @@ open override fun paint(graphics: Graphics, x: Int, y: Int)
     val EMPTY_ARRAY: Array<Animation?> = arrayOfNulls(0)
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation
-
-        Updates for KMP build        
-        {
+: Animation{
     //var instanceId = instanceId
 
 
@@ -101,10 +89,7 @@ override fun getInstance(instanceId: Int)
                 @Throws(Exception::class)
             override fun getInstance(animationInterface: Animation)
         //nullable =  from not(true or (false and false)) = 
-: Animation
-
-        Updates for KMP build        
-        {
+: Animation{
 var animationInterface = animationInterface
 
 
@@ -115,10 +100,7 @@ var animationInterface = animationInterface
 
 override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var scaleProperties = scaleProperties
 }
 

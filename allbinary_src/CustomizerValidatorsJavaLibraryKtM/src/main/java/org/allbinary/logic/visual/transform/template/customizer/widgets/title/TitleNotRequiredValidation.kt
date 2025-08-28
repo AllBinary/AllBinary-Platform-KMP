@@ -40,10 +40,7 @@ open public class TitleNotRequiredValidation : TitleView
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        ()                        
 
-                            : super()
-
-        Updates for KMP build        
-        {
+                            : super(){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -52,10 +49,7 @@ public constructor        ()
 
 public constructor        (node: Node)                        
 
-                            : super(node)
-
-        Updates for KMP build        
-        {
+                            : super(node){
 var node = node
 
 
@@ -65,10 +59,7 @@ var node = node
 
 public constructor        (hashMap: HashMap<Any, Any>)                        
 
-                            : super(hashMap)
-
-        Updates for KMP build        
-        {
+                            : super(hashMap){
 var hashMap = hashMap
 
 
@@ -79,10 +70,7 @@ var hashMap = hashMap
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             
@@ -128,10 +116,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return valid
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
@@ -153,10 +138,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -169,10 +151,7 @@ stringBuffer!!.append("Title is not valid.")
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
@@ -194,10 +173,7 @@ stringBuffer!!.append("Title is not valid.")
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
 
 
@@ -208,10 +184,7 @@ open fun toValidationInfoDoc()
 
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
 

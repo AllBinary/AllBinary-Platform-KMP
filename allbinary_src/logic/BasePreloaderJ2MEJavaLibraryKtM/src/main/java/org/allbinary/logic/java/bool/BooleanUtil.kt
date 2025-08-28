@@ -38,10 +38,7 @@ open public class BooleanUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BooleanUtil
-
-        Updates for KMP build        
-        {
+: BooleanUtil{
 
 
 
@@ -53,9 +50,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -64,10 +58,7 @@ open fun getInstance()
             
 open fun getFromString(booleanString: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var booleanString = booleanString
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
@@ -132,10 +123,7 @@ open fun getFromString(booleanString: String)
             
 open fun isStringBoolean(booleanString: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var booleanString = booleanString
 
     var booleanFactory: BooleanFactory = BooleanFactory.getInstance()!!

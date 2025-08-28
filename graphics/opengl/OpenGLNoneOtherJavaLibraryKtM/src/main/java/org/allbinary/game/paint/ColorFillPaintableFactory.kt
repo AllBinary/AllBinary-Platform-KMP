@@ -40,10 +40,7 @@ open public class ColorFillPaintableFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ColorFillPaintableFactory
-
-        Updates for KMP build        
-        {
+: ColorFillPaintableFactory{
 
 
 
@@ -61,10 +58,7 @@ open fun getInstance()
         
 open fun getInstance(basicColor: BasicColor, forThreedCanvas: Boolean)
         //nullable =  from not(true or (false and false)) = 
-: ColorFillBasePaintable
-
-        Updates for KMP build        
-        {
+: ColorFillBasePaintable{
     //var basicColor = basicColor
     //var forThreedCanvas = forThreedCanvas
 

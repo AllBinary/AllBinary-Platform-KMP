@@ -36,10 +36,7 @@ open public class GenericTrackingLayerCircularStaticPool : AllBinaryLayerCircula
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GenericTrackingLayerCircularStaticPool
-
-        Updates for KMP build        
-        {
+: GenericTrackingLayerCircularStaticPool{
 
 
 
@@ -49,10 +46,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
-
-        Updates for KMP build        
-        {
+            private constructor        (){
 }
 
 

@@ -41,27 +41,18 @@ open public class ARectangleFilledAnimation : Animation
     var width: Int= 0
 
     var height: Int= 0
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 this.setBasicColorP(BasicColorFactory.getInstance()!!.BLACK)
 }
 
 override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun paint(graphics: Graphics, unusedX: Int, unusedY: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var unusedX = unusedX
     //var unusedY = unusedY

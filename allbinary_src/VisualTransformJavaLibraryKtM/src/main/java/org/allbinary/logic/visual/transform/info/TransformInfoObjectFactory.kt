@@ -44,10 +44,7 @@ open public class TransformInfoObjectFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TransformInfoObjectFactory
-
-        Updates for KMP build        
-        {
+: TransformInfoObjectFactory{
 
 
 
@@ -61,9 +58,6 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -72,10 +66,7 @@ private constructor        ()
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)
         //nullable =  from not(true or (false and false)) = 
-: TransformInterface
-
-        Updates for KMP build        
-        {
+: TransformInterface{
     //var abeClientInformation = abeClientInformation
     //var transformInfoInterface = transformInfoInterface
 
@@ -150,10 +141,7 @@ stringBuffer!!.append(transformInfoInterface!!.getObjectFile())
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return anyType
 } catch(e: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed To Get Instance: "
 
@@ -186,10 +174,7 @@ logUtil!!.put(error, this, commonStrings!!.GET_INSTANCE, e)
                             throw e
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed To Get Instance: "
 

@@ -49,10 +49,7 @@ open public class BasicRandomAI : BasicAI {
     private val keyArray: IntArray = intArrayOf(Canvas.UP,Canvas.DOWN,Canvas.LEFT,Canvas.RIGHT,Canvas.KEY_NUM1,Canvas.KEY_NUM7,Canvas.KEY_NUM9)
 public constructor        (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput, inputProbability: InputProbability, visitor: Visitor)                        
 
-                            : super(ownerLayerInterface, gameInput)
-
-        Updates for KMP build        
-        {
+                            : super(ownerLayerInterface, gameInput){
 var ownerLayerInterface = ownerLayerInterface
 var gameInput = gameInput
 var inputProbability = inputProbability
@@ -71,10 +68,7 @@ this.visitor= visitor
                 @Throws(Exception::class)
             override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allBinaryLayerManager = allBinaryLayerManager
 
     
@@ -119,9 +113,6 @@ i_random= myRandomFactory!!.getAbsoluteNextInt(this.inputProbability!!.getMax())
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var key: Int = keyArray[index]!!

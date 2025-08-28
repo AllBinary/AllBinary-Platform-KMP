@@ -37,10 +37,7 @@ open public class InitEmulatorFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: InitEmulatorFactory
-
-        Updates for KMP build        
-        {
+: InitEmulatorFactory{
 
 
 
@@ -58,10 +55,7 @@ open fun getInstance()
         
 open fun setInitEmulator(initEmulator: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var initEmulator = initEmulator
 this.initEmulator= initEmulator
 }
@@ -69,10 +63,7 @@ this.initEmulator= initEmulator
 
 open fun isInitEmulator()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 

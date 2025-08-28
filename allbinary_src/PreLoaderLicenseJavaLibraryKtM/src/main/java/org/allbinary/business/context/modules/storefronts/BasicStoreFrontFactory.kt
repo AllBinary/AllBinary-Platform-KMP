@@ -39,10 +39,7 @@ open public class BasicStoreFrontFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BasicStoreFrontFactory
-
-        Updates for KMP build        
-        {
+: BasicStoreFrontFactory{
 
 
 
@@ -56,9 +53,6 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -67,10 +61,7 @@ private constructor        ()
             
 open fun getInstance(storeName: String)
         //nullable =  from not(true or (false and false)) = 
-: BasicStoreFrontInterface
-
-        Updates for KMP build        
-        {
+: BasicStoreFrontInterface{
 var storeName = storeName
 
         try {
@@ -83,10 +74,7 @@ var storeName = storeName
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return storeFronts!!.getStoreFrontInterface(storeName)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.FACTORYERROR))

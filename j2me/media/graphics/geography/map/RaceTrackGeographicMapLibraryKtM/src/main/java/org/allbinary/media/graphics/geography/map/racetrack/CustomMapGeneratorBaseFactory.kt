@@ -37,10 +37,7 @@ open public class CustomMapGeneratorBaseFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CustomMapGeneratorBaseFactory
-
-        Updates for KMP build        
-        {
+: CustomMapGeneratorBaseFactory{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -63,10 +57,7 @@ open fun getInstance()
             
 open fun getInstance(raceTrackGeographicMap: RaceTrackGeographicMap)
         //nullable =  from not(true or (false and false)) = 
-: CustomMapGeneratorBase
-
-        Updates for KMP build        
-        {
+: CustomMapGeneratorBase{
     //var raceTrackGeographicMap = raceTrackGeographicMap
 
 

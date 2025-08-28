@@ -40,10 +40,7 @@ open public class DropLayerFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DropLayerFactory
-
-        Updates for KMP build        
-        {
+: DropLayerFactory{
 
 
 
@@ -57,29 +54,20 @@ open fun getInstance()
     private val list: BasicArrayList = BasicArrayList()
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 list.clear()
 }
 
 
 open fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -92,10 +80,7 @@ open fun getSize()
 
 open fun getRandomInstance()
         //nullable = true from not(false or (false and true)) = true
-: PickedUpLayerInterfaceFactoryInterface
-
-        Updates for KMP build        
-        {
+: PickedUpLayerInterfaceFactoryInterface{
 
 
 
@@ -106,10 +91,7 @@ open fun getRandomInstance()
 
 open fun add(layerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
 list.add(layerInterfaceFactoryInterface)
 }
@@ -117,10 +99,7 @@ list.add(layerInterfaceFactoryInterface)
 
 open fun getList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 

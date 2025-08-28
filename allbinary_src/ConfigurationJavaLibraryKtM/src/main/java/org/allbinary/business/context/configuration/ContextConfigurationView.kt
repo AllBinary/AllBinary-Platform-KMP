@@ -43,9 +43,6 @@ open public class ContextConfigurationView
     private var contextConfigurationInterface: ContextConfigurationInterface
 public constructor        (node: Node)
             : super()
-        
-
-        Updates for KMP build        
         {
 var node = node
 
@@ -63,9 +60,6 @@ this.contextConfigurationInterface!!.setEmailServerConfigurationInterface(emailS
 
 public constructor        (contextConfigurationInterface: ContextConfigurationInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var contextConfigurationInterface = contextConfigurationInterface
 this.contextConfigurationInterface= contextConfigurationInterface
@@ -74,10 +68,7 @@ this.contextConfigurationInterface= contextConfigurationInterface
 
 open fun getContextConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
-: ContextConfigurationInterface
-
-        Updates for KMP build        
-        {
+: ContextConfigurationInterface{
 
 
 
@@ -90,10 +81,7 @@ open fun getContextConfigurationInterface()
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var node: Node = document.createElement(ContextConfigurationData.getInstance()!!.NAME)!!

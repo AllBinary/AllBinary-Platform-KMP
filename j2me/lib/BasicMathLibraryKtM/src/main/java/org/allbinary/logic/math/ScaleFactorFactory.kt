@@ -37,10 +37,7 @@ open public class ScaleFactorFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ScaleFactorFactory
-
-        Updates for KMP build        
-        {
+: ScaleFactorFactory{
 
 
 

@@ -37,10 +37,7 @@ open public class CommonSeps
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CommonSeps
-
-        Updates for KMP build        
-        {
+: CommonSeps{
 
 
 

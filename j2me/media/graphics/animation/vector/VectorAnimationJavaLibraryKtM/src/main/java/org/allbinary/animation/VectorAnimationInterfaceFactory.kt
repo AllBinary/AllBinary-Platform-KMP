@@ -42,10 +42,7 @@ open public class VectorAnimationInterfaceFactory
     val animationBehaviorFactory: AnimationBehaviorFactory
 public constructor        (currentPoints: Array<Array<IntArray?>?>, basicColor: BasicColor)                        
 
-                            : this(currentPoints, basicColor, AnimationBehaviorFactory.getInstance())
-
-        Updates for KMP build        
-        {
+                            : this(currentPoints, basicColor, AnimationBehaviorFactory.getInstance()){
     //var currentPoints = currentPoints
     //var basicColor = basicColor
 
@@ -56,9 +53,6 @@ public constructor        (currentPoints: Array<Array<IntArray?>?>, basicColor: 
 
 public constructor        (currentPoints: Array<Array<IntArray?>?>, basicColor: BasicColor, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var currentPoints = currentPoints
     //var basicColor = basicColor
@@ -72,10 +66,7 @@ this.animationBehaviorFactory= animationBehaviorFactory
                 @Throws(Exception::class)
             override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation
-
-        Updates for KMP build        
-        {
+: Animation{
     //var instanceId = instanceId
 
 
@@ -87,10 +78,7 @@ this.animationBehaviorFactory= animationBehaviorFactory
 
 open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var basicColor = basicColor
 this.basicColor= basicColor
 }
@@ -98,10 +86,7 @@ this.basicColor= basicColor
 
 open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor
-
-        Updates for KMP build        
-        {
+: BasicColor{
 
 
 
@@ -111,10 +96,7 @@ open fun getBasicColorP()
 
 override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var scaleProperties = scaleProperties
 }
 

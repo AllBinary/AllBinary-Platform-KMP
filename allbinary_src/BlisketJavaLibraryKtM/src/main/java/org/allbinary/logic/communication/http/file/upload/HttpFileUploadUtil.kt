@@ -42,10 +42,7 @@ open public class HttpFileUploadUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: HttpFileUploadUtil
-
-        Updates for KMP build        
-        {
+: HttpFileUploadUtil{
 
 
 
@@ -58,10 +55,7 @@ open fun getInstance()
             
 open fun log(fileItem: FileItemStream)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var fileItem = fileItem
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
@@ -96,10 +90,7 @@ stringBuffer!!.append(" Not Calculated Yet")
 
 open fun log(fileItem: FileItem)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var fileItem = fileItem
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
@@ -137,9 +128,6 @@ stringBuffer!!.append(fileItem!!.getSize())
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -148,10 +136,7 @@ private constructor        ()
             
 open fun isValid(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var anyType = anyType
 
     

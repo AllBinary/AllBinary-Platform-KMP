@@ -39,10 +39,7 @@ open public class ImageCreationUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageCreationUtil
-
-        Updates for KMP build        
-        {
+: ImageCreationUtil{
 
 
 
@@ -54,9 +51,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -65,10 +59,7 @@ open fun getInstance()
             
 open fun getInstance(width: Int, height: Int)
         //nullable =  from not(true or (false and false)) = 
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var width = width
     //var height = height
 
@@ -86,10 +77,7 @@ open fun getInstance(width: Int, height: Int)
             
 open fun createImage(width: Int, height: Int, maxScaleX: Float, maxScaleY: Float)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var width = width
     //var height = height
     //var maxScaleX = maxScaleX

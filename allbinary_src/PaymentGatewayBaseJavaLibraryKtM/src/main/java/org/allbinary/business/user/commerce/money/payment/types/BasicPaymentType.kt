@@ -48,9 +48,6 @@ open public class BasicPaymentType
     private var paymentGatewayDomNodeFactoryInterface: PaymentGatewayDomNodeFactoryInterface
 protected constructor        (paymentMethod: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var paymentMethod = paymentMethod
 this.init(paymentMethod)
@@ -58,9 +55,6 @@ this.init(paymentMethod)
 
 protected constructor        (paymentMethod: String, paymentGatewayInterfaceFactoryInterface: PaymentGatewayInterfaceFactoryInterface, paymentGatewayDomNodeFactoryInterface: PaymentGatewayDomNodeFactoryInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var paymentMethod = paymentMethod
 var paymentGatewayInterfaceFactoryInterface = paymentGatewayInterfaceFactoryInterface
@@ -73,10 +67,7 @@ this.paymentGatewayDomNodeFactoryInterface= paymentGatewayDomNodeFactoryInterfac
 
 open fun init(paymentMethod: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var paymentMethod = paymentMethod
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
@@ -98,10 +89,7 @@ BasicPaymentTypeUtil.getInstance()!!.add(this)
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -112,10 +100,7 @@ open fun getName()
 
 open fun getValue()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -128,10 +113,7 @@ open fun getValue()
             
 open fun getPaymentGatewayInterfaceFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
-: PaymentGatewayInterfaceFactoryInterface
-
-        Updates for KMP build        
-        {
+: PaymentGatewayInterfaceFactoryInterface{
 
     
                         if(this.paymentGatewayInterfaceFactoryInterface == 
@@ -158,10 +140,7 @@ open fun getPaymentGatewayInterfaceFactoryInterface()
             
 open fun getPaymentGatewayDomNodeFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
-: PaymentGatewayDomNodeFactoryInterface
-
-        Updates for KMP build        
-        {
+: PaymentGatewayDomNodeFactoryInterface{
 
     
                         if(this.paymentGatewayDomNodeFactoryInterface == 
@@ -186,10 +165,7 @@ open fun getPaymentGatewayDomNodeFactoryInterface()
 
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 
 
 
@@ -200,10 +176,7 @@ open fun getKey()
 
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
     var vector: Vector = Vector()
 
@@ -219,10 +192,7 @@ vector.add(this.value)
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -237,10 +207,7 @@ hashMap!!.put(PaymentGatewayData.VALUE.toString(), this.value)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

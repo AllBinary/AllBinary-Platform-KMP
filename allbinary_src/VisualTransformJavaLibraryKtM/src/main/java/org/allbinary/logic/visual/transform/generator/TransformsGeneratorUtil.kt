@@ -44,10 +44,7 @@ open public class TransformsGeneratorUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TransformsGeneratorUtil
-
-        Updates for KMP build        
-        {
+: TransformsGeneratorUtil{
 
 
 
@@ -61,9 +58,6 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -72,10 +66,7 @@ private constructor        ()
             
 open fun generateComponentsFromObjectConfig(abeClientInformation: Object, transformInfoInterface: Object, group: Object)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
     //var abeClientInformation = abeClientInformation
     //var transformInfoInterface = transformInfoInterface
 var group = group
@@ -115,10 +106,7 @@ var group = group
             
 open fun generateComponentsFromObjectConfig(abeClientInformation: Object, transformInfoObjectConfigInterface: Object, transformInfoInterface: Object, group: Object)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
     //var abeClientInformation = abeClientInformation
     //var transformInfoObjectConfigInterface = transformInfoObjectConfigInterface
     //var transformInfoInterface = transformInfoInterface
@@ -172,9 +160,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, "generateComponentsFromObjectConf
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var transformInfoObjectConfigComponent: TransformInfoDomNode = transformInfoObjectConfigComponentVector!!.get(index) as TransformInfoDomNode

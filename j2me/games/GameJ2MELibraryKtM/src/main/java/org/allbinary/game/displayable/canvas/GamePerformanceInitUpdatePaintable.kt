@@ -47,18 +47,12 @@ open public class GamePerformanceInitUpdatePaintable : InitUpdatePaintable {
     private var baseRefreshHelperCharArray: Array<CharArray?> = Array(0) { CharArray(0) }
 override fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun update()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 baseRefreshHelperCharArray= GameStatisticsFactory.getInstance()!!.toCharArray()
 }
 
@@ -66,10 +60,7 @@ baseRefreshHelperCharArray= GameStatisticsFactory.getInstance()!!.toCharArray()
     private val RED: Int = BasicColorFactory.getInstance()!!.RED.toInt()!!
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 
     var myFont: MyFont = MyFont.getInstance()!!
@@ -96,9 +87,6 @@ graphics.setColor(RED)
 
                         for (index in size downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 charArray= baseRefreshHelperCharArray[index]!!
 charArray2= baseRefreshHelperCharArray[index +1]!!

@@ -39,10 +39,7 @@ open public class AdjustedImageArrayRotationAnimation : ImageArrayRotationAnimat
     private var dy: Int= 0
 protected constructor        (anyType: Any, animationBehavior: AnimationBehavior)                        
 
-                            : super(anyType, animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(anyType, animationBehavior){
     //var anyType = anyType
     //var animationBehavior = animationBehavior
 
@@ -57,10 +54,7 @@ this.init(allBinaryImageRotationAnimationInfo!!.getDx(), allBinaryImageRotationA
 
 public constructor        (imageArray: Array<Image?>, animationBehavior: AnimationBehavior)                        
 
-                            : this(imageArray, AngleInfo.getInstance(10.toShort()), AngleFactory.getInstance()!!.TOTAL_ANGLE, 0, 0, animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : this(imageArray, AngleInfo.getInstance(10.toShort()), AngleFactory.getInstance()!!.TOTAL_ANGLE, 0, 0, animationBehavior){
     //var imageArray = imageArray
     //var animationBehavior = animationBehavior
 
@@ -71,10 +65,7 @@ public constructor        (imageArray: Array<Image?>, animationBehavior: Animati
 
 public constructor        (imageArray: Array<Image?>, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
-                            : this(imageArray, AngleInfo.getInstance(10.toShort()), AngleFactory.getInstance()!!.TOTAL_ANGLE, dx, dy, animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : this(imageArray, AngleInfo.getInstance(10.toShort()), AngleFactory.getInstance()!!.TOTAL_ANGLE, dx, dy, animationBehavior){
     //var imageArray = imageArray
     //var dx = dx
     //var dy = dy
@@ -87,10 +78,7 @@ public constructor        (imageArray: Array<Image?>, dx: Int, dy: Int, animatio
 
 public constructor        (imageArray: Array<Image?>, angleInfo: AngleInfo, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
-                            : this(imageArray, angleInfo, AngleFactory.getInstance()!!.TOTAL_ANGLE, dx, dy, animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : this(imageArray, angleInfo, AngleFactory.getInstance()!!.TOTAL_ANGLE, dx, dy, animationBehavior){
     //var imageArray = imageArray
     //var angleInfo = angleInfo
     //var dx = dx
@@ -104,10 +92,7 @@ public constructor        (imageArray: Array<Image?>, angleInfo: AngleInfo, dx: 
 
 public constructor        (imageArray: Array<Image?>, angleInfo: AngleInfo, totalAngle: Int, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
-                            : super(imageArray, angleInfo, totalAngle, animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(imageArray, angleInfo, totalAngle, animationBehavior){
     //var imageArray = imageArray
     //var angleInfo = angleInfo
     //var totalAngle = totalAngle
@@ -123,10 +108,7 @@ this.init(dx, dy)
 
 public constructor        (imageArray: Array<Image?>, angleInfo: AngleInfo, totalAngle: Int, animationBehavior: AnimationBehavior)                        
 
-                            : super(imageArray, angleInfo, totalAngle, animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(imageArray, angleInfo, totalAngle, animationBehavior){
     //var imageArray = imageArray
     //var angleInfo = angleInfo
     //var totalAngle = totalAngle
@@ -143,10 +125,7 @@ this.init( -(imageArray[0]!!.getWidth() shr 2),  -(imageArray[0]!!.getHeight() s
             
 open fun init(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var dx = dx
     //var dy = dy
 this.setDx(dx)
@@ -156,10 +135,7 @@ this.setDy(dy)
 
 open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var x = x
     //var y = y
@@ -169,10 +145,7 @@ super.paint(graphics, x +this.dx, y +this.dy)
 
 open fun setDx(dx: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var dx = dx
 this.dx= dx
 }
@@ -180,10 +153,7 @@ this.dx= dx
 
 open fun getDx()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -194,10 +164,7 @@ open fun getDx()
 
 open fun setDy(dy: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var dy = dy
 this.dy= dy
 }
@@ -205,10 +172,7 @@ this.dy= dy
 
 open fun getDy()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

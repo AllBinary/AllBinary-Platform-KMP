@@ -37,10 +37,7 @@ open public class CollidableDestroyableDamageableBehavior : CollidableBaseBehavi
     val damageUtil: DamageUtil = DamageUtil.getInstance()!!
 public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
 
-                            : super(ownerLayer, collidable)
-
-        Updates for KMP build        
-        {
+                            : super(ownerLayer, collidable){
     //var ownerLayer = ownerLayer
     //var collidable = collidable
 
@@ -51,10 +48,7 @@ public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boo
 
 override fun isCollision(collisionLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var collisionLayer = collisionLayer
 
     
@@ -80,10 +74,7 @@ override fun isCollision(collisionLayer: CollidableCompositeLayer)
                 @Throws(Exception::class)
             override fun collide(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
     var ownerCollidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer = this.ownerLayer as CollidableDestroyableDamageableLayer
@@ -96,10 +87,7 @@ ownerCollidableDestroyableDamageableLayer!!.damage(collidableDestroyableDamageab
 
 override fun isCollision(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 ForcedLogUtil.log("No Longer Used", this)
 
@@ -113,10 +101,7 @@ ForcedLogUtil.log("No Longer Used", this)
                 @Throws(Exception::class)
             override fun collide(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 ForcedLogUtil.log("No Longer Used", this)
 }

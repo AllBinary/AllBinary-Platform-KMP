@@ -42,10 +42,7 @@ open public class RaceTrackGeographicMap : BaseRaceTrackGeographicMap {
 public constructor        (raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrackData, tiledLayerFactoryInterface: AllBinaryTiledLayerFactoryInterface, geographicMapCellPositionFactoryInterface: GeographicMapCellPositionFactoryInterface, geographicMapCellPositionBaseFactory: GeographicMapCellPositionBaseFactory, geographicMapCellTypeFactory: GeographicMapCellTypeFactory, customMapGeneratorBaseFactory: CustomMapGeneratorBaseFactory)                        
 
                             : super(raceTrackInfo, raceTrackData, tiledLayerFactoryInterface!!.getInstance(raceTrackInfo, raceTrackData), BasicGeographicMapFactory().
-                            getInstance(raceTrackInfo, raceTrackData, tiledLayerFactoryInterface, geographicMapCellPositionFactoryInterface, geographicMapCellTypeFactory), geographicMapCellPositionFactoryInterface, geographicMapCellPositionBaseFactory, geographicMapCellTypeFactory)
-
-        Updates for KMP build        
-        {
+                            getInstance(raceTrackInfo, raceTrackData, tiledLayerFactoryInterface, geographicMapCellPositionFactoryInterface, geographicMapCellTypeFactory), geographicMapCellPositionFactoryInterface, geographicMapCellPositionBaseFactory, geographicMapCellTypeFactory){
     //var raceTrackInfo = raceTrackInfo
     //var raceTrackData = raceTrackData
     //var tiledLayerFactoryInterface = tiledLayerFactoryInterface
@@ -62,10 +59,7 @@ this.customMapGenerator= customMapGeneratorBaseFactory!!.getInstance(this)
 
 public constructor        (raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrackData, tiledLayerFactoryInterface: AllBinaryTiledLayerFactoryInterface, geographicMapCellPositionFactoryInterface: GeographicMapCellPositionFactoryInterface, geographicMapCellTypeFactory: GeographicMapCellTypeFactory, customMapGeneratorBaseFactory: CustomMapGeneratorBaseFactory)                        
 
-                            : this(raceTrackInfo, raceTrackData, tiledLayerFactoryInterface, geographicMapCellPositionFactoryInterface, GeographicMapCellPositionBaseFactory(), geographicMapCellTypeFactory, customMapGeneratorBaseFactory)
-
-        Updates for KMP build        
-        {
+                            : this(raceTrackInfo, raceTrackData, tiledLayerFactoryInterface, geographicMapCellPositionFactoryInterface, GeographicMapCellPositionBaseFactory(), geographicMapCellTypeFactory, customMapGeneratorBaseFactory){
     //var raceTrackInfo = raceTrackInfo
     //var raceTrackData = raceTrackData
     //var tiledLayerFactoryInterface = tiledLayerFactoryInterface
@@ -81,10 +75,7 @@ public constructor        (raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrac
 
 open fun getCustomMapGenerator()
         //nullable = true from not(false or (false and true)) = true
-: CustomMapGeneratorBase
-
-        Updates for KMP build        
-        {
+: CustomMapGeneratorBase{
 
 
 
@@ -97,10 +88,7 @@ open fun getCustomMapGenerator()
             
 open fun isValid(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var geographicMapCellPosition = geographicMapCellPosition
 
     

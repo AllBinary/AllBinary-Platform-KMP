@@ -40,17 +40,11 @@ open fun getAdministrators()
         //nullable = true from not(false or (false and true)) = true
 : Vector
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun getStoreManagers(storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
 : Vector
-
-        Updates for KMP build        
-        
 
                 @Throws(Exception::class)
             
@@ -58,17 +52,11 @@ open fun getCustomers()
         //nullable = true from not(false or (false and true)) = true
 : Vector
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun getUsersWithRole(userRole: UserRole)
         //nullable = true from not(false or (false and false)) = true
 : Vector
-
-        Updates for KMP build        
-        
 
                 @Throws(Exception::class)
             
@@ -76,45 +64,27 @@ open fun getUsers(storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
 : Vector
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun getUser(userName: String)
         //nullable = true from not(false or (false and false)) = true
 : UserInterface
 
-        Updates for KMP build        
-        
-
 open fun login(userName: String, password: String)
         //nullable = true from not(false or (false and false)) = true
 : String
-
-        Updates for KMP build        
-        
 
 open fun deleteWhere(key: String, value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun update(userName: String, updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

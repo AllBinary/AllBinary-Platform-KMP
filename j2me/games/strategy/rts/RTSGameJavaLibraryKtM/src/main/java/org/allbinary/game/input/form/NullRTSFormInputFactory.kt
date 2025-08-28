@@ -38,10 +38,7 @@ open public class NullRTSFormInputFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: RTSFormInput
-
-        Updates for KMP build        
-        {
+: RTSFormInput{
 
 
 

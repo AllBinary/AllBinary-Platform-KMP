@@ -62,18 +62,12 @@ open public class PersistentInputMapping
     private val inputPersistance: InputPersistance
 protected constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 inputPersistance= InputPersistance(GamePersistanceStrings.getInstance()!!.SAVED_INPUT_CONFIGURATION_RECORD_ID)
 }
 
 protected constructor        (name: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var name = name
 inputPersistance= InputPersistance(name)
@@ -82,10 +76,7 @@ inputPersistance= InputPersistance(name)
 
 open fun getTotalMapped()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -96,10 +87,7 @@ open fun getTotalMapped()
 
 open fun isDefaultNew()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -110,10 +98,7 @@ open fun isDefaultNew()
 
 open fun getDefault()
         //nullable = true from not(false or (false and true)) = true
-: InputToGameKeyMapping
-
-        Updates for KMP build        
-        {
+: InputToGameKeyMapping{
 
 
 
@@ -126,10 +111,7 @@ open fun getDefault()
             
 open fun setDefault(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
 this.getInputMapping()!!.removeAll()
 this.getInputMapping()!!.add(this.getDefault())
@@ -141,10 +123,7 @@ this.save(abeClientInformation)
             
 open fun update(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
 this.inputPersistance!!.deleteAll(abeClientInformation)
 this.save(abeClientInformation)
@@ -157,10 +136,7 @@ this.save(abeClientInformation)
             
 open fun save(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
 inputPersistance!!.save(abeClientInformation, this.getInputMapping()!!.getHashtable())
 inputMappingEvent!!.setInputToGameKeyMapping(this.getInputMapping())
@@ -182,20 +158,14 @@ inputMappingEvent!!.setInputToGameKeyMapping(this.getInputMapping())
             
 open fun init(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.INIT)
 
         try {
             inputPersistance!!.loadAll(abeClientInformation)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 inputPersistance!!.deleteRecoreStore(abeClientInformation)
 this.setDefault(abeClientInformation)
@@ -217,9 +187,6 @@ inputPersistance!!.loadAll(abeClientInformation)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var hashtable: Hashtable<Any, Any> = list.objectArray[index]!! as Hashtable<Any, Any>
@@ -229,9 +196,6 @@ inputPersistance!!.loadAll(abeClientInformation)
 
 
         while(enumeration.hasMoreElements())
-        
-
-        Updates for KMP build        
         {
 
     var mappedToInput: Input = enumeration.nextElement()!! as Input
@@ -258,10 +222,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 
 open fun setInputMappingEventListenerInterface(inputMappingEventListenerInterface: InputMappingEventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var inputMappingEventListenerInterface = inputMappingEventListenerInterface
 this.inputMappingEventListenerInterface= inputMappingEventListenerInterface
 }
@@ -269,10 +230,7 @@ this.inputMappingEventListenerInterface= inputMappingEventListenerInterface
 
 open fun getInputMappingEventListenerInterface()
         //nullable = true from not(false or (false and true)) = true
-: InputMappingEventListenerInterface
-
-        Updates for KMP build        
-        {
+: InputMappingEventListenerInterface{
 
 
 
@@ -283,10 +241,7 @@ open fun getInputMappingEventListenerInterface()
 
 open fun getInputMapping()
         //nullable = true from not(false or (false and true)) = true
-: InputToGameKeyMapping
-
-        Updates for KMP build        
-        {
+: InputToGameKeyMapping{
 
 
 
@@ -299,10 +254,7 @@ open fun getInputMapping()
             
 open fun isDelete(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var input = input
 
 
@@ -315,10 +267,7 @@ var input = input
             
 open fun isSystemInput(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var input = input
 
 

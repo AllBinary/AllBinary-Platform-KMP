@@ -28,9 +28,6 @@ open public class CustomItem
         }
             protected constructor        (label: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)
             : super()
-        
-
-        Updates for KMP build        
         {
 var label = label
 var backgroundBasicColor = backgroundBasicColor
@@ -40,10 +37,7 @@ var foregroundBasicColor = foregroundBasicColor
 
 open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 var x = x
 var y = y
@@ -52,10 +46,7 @@ var y = y
 
 open fun isFocusable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -66,10 +57,7 @@ open fun isFocusable()
 
 open fun getLabel()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -80,20 +68,14 @@ open fun getLabel()
 
 open fun setLabel(label: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var label = label
 }
 
 
 open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -104,20 +86,14 @@ open fun getHeight()
 
 open fun setHeight(height: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var height = height
 }
 
 
 open fun getValue()
         //nullable = true from not(false or (false and true)) = true
-: Float
-
-        Updates for KMP build        
-        {
+: Float{
 
 
 
@@ -128,20 +104,14 @@ open fun getValue()
 
 open fun setValue(value: Float)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 }
 
 
 open fun getMinimumWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -152,10 +122,7 @@ open fun getMinimumWidth()
 
 open fun getMinimumHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

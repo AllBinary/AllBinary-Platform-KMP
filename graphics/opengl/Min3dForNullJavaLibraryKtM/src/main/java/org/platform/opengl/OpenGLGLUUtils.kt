@@ -27,10 +27,7 @@ open public class OpenGLGLUUtils
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLGLUUtils
-
-        Updates for KMP build        
-        {
+: OpenGLGLUUtils{
 
 
 
@@ -48,10 +45,7 @@ open fun getInstance()
         
 open fun makeByteBuffer(bmp: OpenGLBitmap, flip: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: ByteBuffer
-
-        Updates for KMP build        
-        {
+: ByteBuffer{
     //var bmp = bmp
     //var flip = flip
 
@@ -63,10 +57,7 @@ open fun makeByteBuffer(bmp: OpenGLBitmap, flip: Boolean)
 
 open fun texImage2D(gl: GL10, glVersion: String, target: Int, level: Int, generateMipMap: Boolean, openGLESImage: OpenGLESImage, border: Int, flip: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
     //var glVersion = glVersion
     //var target = target
@@ -84,10 +75,7 @@ open fun texImage2D(gl: GL10, glVersion: String, target: Int, level: Int, genera
 
 open fun texImage2D(gl: GL10, glVersion: String, target: Int, level: Int, generateMipMap: Boolean, bitmap: OpenGLBitmap, border: Int, flip: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
     //var glVersion = glVersion
     //var target = target

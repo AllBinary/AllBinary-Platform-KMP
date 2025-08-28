@@ -37,10 +37,7 @@ open public class LicenseStrings
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LicenseStrings
-
-        Updates for KMP build        
-        {
+: LicenseStrings{
 
 
 

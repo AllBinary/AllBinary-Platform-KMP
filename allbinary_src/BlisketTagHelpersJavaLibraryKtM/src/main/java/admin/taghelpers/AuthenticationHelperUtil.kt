@@ -46,10 +46,7 @@ open public class AuthenticationHelperUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AuthenticationHelperUtil
-
-        Updates for KMP build        
-        {
+: AuthenticationHelperUtil{
 
 
 
@@ -71,10 +68,7 @@ open fun getInstance()
             
 open fun isAuthorized(authenticationHelper: AuthenticationHelper, filePath: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var authenticationHelper = authenticationHelper
 var filePath = filePath
 

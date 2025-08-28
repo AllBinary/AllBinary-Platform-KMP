@@ -37,10 +37,7 @@ open public class AbeClientInformationData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AbeClientInformationData
-
-        Updates for KMP build        
-        {
+: AbeClientInformationData{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

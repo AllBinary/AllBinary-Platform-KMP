@@ -38,9 +38,6 @@ open public class AcceptableResponse
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 protected constructor        (candidate: String, tagName: String, index: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var candidate = candidate
 var tagName = tagName

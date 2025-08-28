@@ -52,10 +52,7 @@ open public class CompositeRTSFormInput : RTSFormInput {
     private val isPrimaryWaypointCreator: Boolean
 public constructor        (groupInterface: Array<Group?>, isPrimaryWaypointCreator: Boolean)                        
 
-                            : this(groupInterface, isPrimaryWaypointCreator, intArrayOf(0))
-
-        Updates for KMP build        
-        {
+                            : this(groupInterface, isPrimaryWaypointCreator, intArrayOf(0)){
     //var groupInterface = groupInterface
     //var isPrimaryWaypointCreator = isPrimaryWaypointCreator
 
@@ -66,10 +63,7 @@ public constructor        (groupInterface: Array<Group?>, isPrimaryWaypointCreat
 
 public constructor        (groupInterface: Array<Group?>, isPrimaryWaypointCreator: Boolean, itemIndex: IntArray)                        
 
-                            : super(groupInterface)
-
-        Updates for KMP build        
-        {
+                            : super(groupInterface){
     //var groupInterface = groupInterface
     //var isPrimaryWaypointCreator = isPrimaryWaypointCreator
     //var itemIndex = itemIndex
@@ -89,10 +83,7 @@ this.rtsFormInputArray[1]= UnitRTSFormInput(this.groupInterfaceArray)
             
 open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
 super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 
@@ -111,9 +102,6 @@ super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 this.rtsFormInputArray[index]!!.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 }
@@ -125,10 +113,7 @@ this.rtsFormInputArray[index]!!.setAllBinaryGameLayerManager(allBinaryGameLayerM
             
 open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var associatedRtsLayer = associatedRtsLayer
 var rtsPlayerLayerInterface = rtsPlayerLayerInterface
 var layerManager = layerManager
@@ -174,10 +159,7 @@ var point = point
             
 open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var associatedRtsLayer = associatedRtsLayer
 var rtsPlayerLayerInterface = rtsPlayerLayerInterface
 var layerManager = layerManager
@@ -222,10 +204,7 @@ logUtil!!.put(CommonLabels.getInstance()!!.INDEX_LABEL +index +" > " +this.itemI
             
 open fun processSticky(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var associatedRtsLayer = associatedRtsLayer
 var rtsPlayerLayerInterface = rtsPlayerLayerInterface
 var layerManager = layerManager
@@ -242,10 +221,7 @@ var point = point
             
 open fun processSticky(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var associatedRtsLayer = associatedRtsLayer
 var rtsPlayerLayerInterface = rtsPlayerLayerInterface
 var layerManager = layerManager
@@ -257,10 +233,7 @@ this.rtsFormInputArray[0]!!.processSticky(associatedRtsLayer, rtsPlayerLayerInte
 
 open fun getSelectedStickyItemIndex()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -271,10 +244,7 @@ open fun getSelectedStickyItemIndex()
 
 open fun isStickyItemSelected()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -285,10 +255,7 @@ open fun isStickyItemSelected()
 
 open fun setStickyItemSelected(stickyItemSelected: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var stickyItemSelected = stickyItemSelected
 this.rtsFormInputArray[0]!!.setStickyItemSelected(stickyItemSelected)
 }
@@ -296,10 +263,7 @@ this.rtsFormInputArray[0]!!.setStickyItemSelected(stickyItemSelected)
 
 open fun getSelectedStickyItem()
         //nullable = true from not(false or (false and true)) = true
-: CustomItem
-
-        Updates for KMP build        
-        {
+: CustomItem{
 
 
 
@@ -310,10 +274,7 @@ open fun getSelectedStickyItem()
 
 open fun setSelectedStickyItem(selectedStickyItem: CustomItem)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var selectedStickyItem = selectedStickyItem
 this.rtsFormInputArray[0]!!.setSelectedStickyItem(selectedStickyItem)
 }

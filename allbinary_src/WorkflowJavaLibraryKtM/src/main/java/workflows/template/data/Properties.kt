@@ -42,9 +42,6 @@ open public class Properties
     private var propertiesHashMap: HashMap<Any, Any>
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     
@@ -61,10 +58,7 @@ this.propertiesHashMap= HashMap<Any, Any>()
 
 open fun getPropertiesHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
 
 
@@ -75,10 +69,7 @@ open fun getPropertiesHashMap()
 
 open fun doEndTag()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))

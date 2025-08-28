@@ -46,9 +46,6 @@ open public class HttpFilePermissions
     private val userRoles: Vector = Vector()
 public constructor        (fullPath: AbPath)
             : super()
-        
-
-        Updates for KMP build        
         {
 var fullPath = fullPath
 file= AbFile(AbPath(fullPath!!.toFileSystemString(), FileUploadData.getInstance()!!.FILE))
@@ -84,10 +81,7 @@ file= AbFile(AbPath(fullPath!!.toFileSystemString(), FileUploadData.getInstance(
 
 open fun isFile()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -98,10 +92,7 @@ open fun isFile()
 
 open fun getUserRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
 
 

@@ -42,9 +42,6 @@ open public class GeographicMapCellPositionTracking
     private var currentCellType: GeographicMapCellType
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -53,10 +50,7 @@ public constructor        ()
             
 open fun getCurrentOverCellType(geographicMap: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
-: GeographicMapCellType
-
-        Updates for KMP build        
-        {
+: GeographicMapCellType{
     //var geographicMap = geographicMap
 
     var geographicMapCellPosition: GeographicMapCellPosition = this.currentGeographicMapCellPosition
@@ -82,10 +76,7 @@ open fun getCurrentOverCellType(geographicMap: BasicGeographicMap)
             
 open fun updateStart(gameCanvasInterface: AllBinaryGameCanvas, layer: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var gameCanvasInterface = gameCanvasInterface
     //var layer = layer
 
@@ -129,10 +120,7 @@ this.newGeographicMapCellPosition= geographicMapInterface!!.getCellPositionAt(la
 
 open fun updateEnd()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(this.currentGeographicMapCellPosition != this.previousGeographicMapCellPosition)
@@ -157,10 +145,7 @@ open fun updateEnd()
 
 open fun getPreviousGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
 
 
 
@@ -171,10 +156,7 @@ open fun getPreviousGeographicMapCellPosition()
 
 open fun getCurrentGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
 
 
 

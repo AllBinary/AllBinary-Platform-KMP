@@ -45,19 +45,13 @@ open public class BasicLayerProcessor
     private val list: BasicArrayList = BasicArrayList()
 protected constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun add(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var layerInterface = layerInterface
 
     
@@ -75,10 +69,7 @@ var layerInterface = layerInterface
             
 open fun process(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allBinaryLayerManager = allBinaryLayerManager
 
 
@@ -89,10 +80,7 @@ var allBinaryLayerManager = allBinaryLayerManager
 
 open fun getList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 

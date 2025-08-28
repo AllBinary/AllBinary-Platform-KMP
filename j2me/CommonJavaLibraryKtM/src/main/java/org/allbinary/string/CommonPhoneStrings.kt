@@ -37,10 +37,7 @@ open public class CommonPhoneStrings
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CommonPhoneStrings
-
-        Updates for KMP build        
-        {
+: CommonPhoneStrings{
 
 
 

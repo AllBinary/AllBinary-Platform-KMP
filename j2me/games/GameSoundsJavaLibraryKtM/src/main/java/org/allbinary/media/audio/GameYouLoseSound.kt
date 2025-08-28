@@ -35,10 +35,7 @@ open public class GameYouLoseSound : CompositeSound {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: Sound
-
-        Updates for KMP build        
-        {
+: Sound{
 
 
 
@@ -50,10 +47,7 @@ open fun getInstance()
         }
             private constructor        ()                        
 
-                            : super("resource:/wav/youlose.wav")
-
-        Updates for KMP build        
-        {
+                            : super("resource:/wav/youlose.wav"){
 
 
                             //For kotlin this is before the body of the constructor.

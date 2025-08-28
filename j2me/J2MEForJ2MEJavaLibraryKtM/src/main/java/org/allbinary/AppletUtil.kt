@@ -35,10 +35,7 @@ open public class AppletUtil
             
 open fun isAppletLoader(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var anyType = anyType
 
 
@@ -51,9 +48,6 @@ var anyType = anyType
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

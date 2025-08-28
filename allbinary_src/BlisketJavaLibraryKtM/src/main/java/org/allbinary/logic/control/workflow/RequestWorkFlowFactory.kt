@@ -48,10 +48,7 @@ open public class RequestWorkFlowFactory
             
 open fun getInstance(request: ServletRequest, response: ServletResponse, servletConfig: ServletConfig, servletContext: ServletContext)
         //nullable =  from not(true or (false and false)) = 
-: WorkFlowInterface
-
-        Updates for KMP build        
-        {
+: WorkFlowInterface{
 var request = request
 var response = response
 var servletConfig = servletConfig
@@ -83,10 +80,7 @@ var servletContext = servletContext
             
 open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
-: WorkFlowInterface
-
-        Updates for KMP build        
-        {
+: WorkFlowInterface{
 var hashMap = hashMap
 var pageContext = pageContext
 
@@ -109,9 +103,6 @@ var pageContext = pageContext
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

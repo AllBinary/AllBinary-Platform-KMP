@@ -40,10 +40,7 @@ open public class CellPositionFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CellPositionFactory
-
-        Updates for KMP build        
-        {
+: CellPositionFactory{
 
 
 
@@ -66,19 +63,13 @@ open fun getInstance()
     private var rows: Int= 0
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun init(columns: Int, rows: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var columns = columns
 var rows = rows
 this.cellPositionArray= Array(columns) { arrayOfNulls<CellPosition?>(rows) }
@@ -102,9 +93,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 
                         for (column in 0 until columns)
 
-        
-
-        Updates for KMP build        
         {
 
 
@@ -112,9 +100,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 
                         for (row in 0 until rows)
 
-        
-
-        Updates for KMP build        
         {
 this.createInstance(column, row)
 }
@@ -126,10 +111,7 @@ this.createInstance(column, row)
 
 open fun getInstance(i_column: Int, i_row: Int)
         //nullable =  from not(true or (false and false)) = 
-: CellPosition
-
-        Updates for KMP build        
-        {
+: CellPosition{
 var i_column = i_column
 var i_row = i_row
 
@@ -140,10 +122,7 @@ var i_row = i_row
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return cellPositionArray[i_column]!![i_row]!!
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -161,10 +140,7 @@ logUtil!!.put(StringMaker().
 
 open fun createInstance(i_column: Int, i_row: Int)
         //nullable = true from not(false or (false and false)) = true
-: CellPosition
-
-        Updates for KMP build        
-        {
+: CellPosition{
 var i_column = i_column
 var i_row = i_row
 
@@ -192,10 +168,7 @@ cellPositionArray[i_column]!![i_row]= cellPositionCanBeNull
 
 open fun getColumns()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -206,10 +179,7 @@ open fun getColumns()
 
 open fun getRows()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

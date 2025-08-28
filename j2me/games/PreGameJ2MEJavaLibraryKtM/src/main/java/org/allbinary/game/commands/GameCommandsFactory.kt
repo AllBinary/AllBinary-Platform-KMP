@@ -40,10 +40,7 @@ open public class GameCommandsFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameCommandsFactory
-
-        Updates for KMP build        
-        {
+: GameCommandsFactory{
 
 
 
@@ -109,9 +106,6 @@ open fun getInstance()
     val BUY_COMMAND: Command = Command("BUY", Command.SCREEN, 1)
 protected constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

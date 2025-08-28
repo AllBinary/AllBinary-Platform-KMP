@@ -37,10 +37,7 @@ open public class TopToBottomImageAnimation : ImageSegmentAnimation {
     private var currentHeight: Int
 public constructor        (image: Image, sequenceArray: IntArray, animationBehavior: AnimationBehavior)                        
 
-                            : super(image, sequenceArray, animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(image, sequenceArray, animationBehavior){
     //var image = image
     //var sequenceArray = sequenceArray
     //var animationBehavior = animationBehavior
@@ -62,10 +59,7 @@ this.currentHeight= 0
 
 override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(this.getSequence()[0] ==  -1)
@@ -85,10 +79,7 @@ this.update()
 
 override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(this.getSequence()[0] ==  -1)
@@ -108,10 +99,7 @@ this.update()
 
 override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var index = index
 super.setFrame(index)
 this.update()
@@ -120,10 +108,7 @@ this.update()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.currentHeight= this.getDrawHeight() *this.getFrame() /this.getSize()
 }
 
@@ -131,10 +116,7 @@ this.currentHeight= this.getDrawHeight() *this.getFrame() /this.getSize()
     private var anchor: Int = Anchor.TOP_LEFT
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var x = x
     //var y = y

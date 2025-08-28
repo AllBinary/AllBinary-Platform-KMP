@@ -52,10 +52,7 @@ open public class ImageCache : ImageCacheBase {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 
@@ -63,10 +60,7 @@ public constructor        ()
             
 open fun get(caller: String, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var caller = caller
     //var width = width
     //var height = height
@@ -121,10 +115,7 @@ listOfList[foundIndex]!!.add(image)
             
 open fun get(key: Any)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var key = key
 
     var resourceUtil: ResourceUtil = ResourceUtil.getInstance()!!
@@ -150,10 +141,7 @@ open fun get(key: Any)
             logUtil!!.put(Memory.getInfo(), this, commonStrings!!.GET)
 image= this.createImage(key, inputStream)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put("Exception: Trying Again After GC", this, commonStrings!!.GET, e)
 logUtil!!.put(StringMaker().
                             append("InputStream: ")!!.append(inputStream!!.toString())!!.toString(), this, commonStrings!!.GET)
@@ -180,10 +168,7 @@ this.hashtable.put(resourceId, image)
             
 open fun createImage(key: Any, inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var key = key
     //var inputStream = inputStream
 
@@ -196,10 +181,7 @@ open fun createImage(key: Any, inputStream: InputStream)
 
 open fun isLazy()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 

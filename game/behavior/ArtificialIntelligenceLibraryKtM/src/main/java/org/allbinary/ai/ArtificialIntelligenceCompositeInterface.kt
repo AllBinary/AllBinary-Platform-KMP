@@ -34,9 +34,6 @@ open fun getArtificialIntelligenceInterface()
         //nullable = true from not(false or (false and true)) = true
 : ArtificialIntelligenceInterface
 
-        Updates for KMP build        
-        
-
 }
                 
             

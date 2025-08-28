@@ -37,9 +37,6 @@ open public class BasicColorArrayIndexer
     private var circularIndexUtil: CircularIndexUtil
 public constructor        (basicColorArray: Array<BasicColor?>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var basicColorArray = basicColorArray
 this.basicColorArray= basicColorArray
@@ -49,20 +46,14 @@ this.circularIndexUtil= CircularIndexUtil.getInstance(this.basicColorArray!!.siz
 
 open fun next()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.circularIndexUtil!!.next()
 }
 
 
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor
-
-        Updates for KMP build        
-        {
+: BasicColor{
 
 
 
@@ -73,10 +64,7 @@ open fun get()
 
 open fun getBasicColorArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<BasicColor?>
-
-        Updates for KMP build        
-        {
+: Array<BasicColor?>{
 
 
 

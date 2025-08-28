@@ -41,10 +41,7 @@ open public class LogUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LogUtil
-
-        Updates for KMP build        
-        {
+: LogUtil{
 
 
 
@@ -58,29 +55,20 @@ open fun getInstance()
     private val logger: Logger = Logger.getLogger(LogUtil::class.toString()!!)!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 PreLogUtil.put("Loggin Initialized", "LogUtil", "init()")
 }
 
 
 open fun put(log: Log)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var log = log
 
     var exception: Any = log.getThrowable()!!
@@ -128,10 +116,7 @@ logger.log(Level.INFO, message)
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 }
 
 }
@@ -139,10 +124,7 @@ logger.log(Level.INFO, message)
 
 open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var specialMessage = specialMessage
     //var anyType = anyType
     //var functionName = functionName
@@ -186,10 +168,7 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 }
 
 }

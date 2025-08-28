@@ -47,10 +47,7 @@ open public class AllBinaryMediaManager
 
 open fun isMuted()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -61,20 +58,14 @@ open fun isMuted()
 
 open fun setMuted(aMuted: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var aMuted = aMuted
 }
 
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -87,10 +78,7 @@ open fun update()
             
 open fun init(soundsFactoryInterface: SoundsFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var soundsFactoryInterface = soundsFactoryInterface
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
@@ -109,10 +97,7 @@ Sounds(soundsFactoryInterface).
             
 open fun shutdown(soundsFactoryInterface: SoundsFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var soundsFactoryInterface = soundsFactoryInterface
 Sounds(soundsFactoryInterface).
                             stopAll()
@@ -126,10 +111,7 @@ System.gc()
             
 open fun createPlayer(resource: String)
         //nullable = true from not(false or (false and false)) = true
-: Player
-
-        Updates for KMP build        
-        {
+: Player{
 var resource = resource
 
     
@@ -178,10 +160,7 @@ var resource = resource
 
 open fun playTone(frequency: Int, time: Int, volume: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var frequency = frequency
 var time = time
 var volume = volume
@@ -200,9 +179,6 @@ var volume = volume
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

@@ -37,10 +37,7 @@ open public class NullOpenGLTextureProcessor
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLTextureProcessor
-
-        Updates for KMP build        
-        {
+: OpenGLTextureProcessor{
 
 
 

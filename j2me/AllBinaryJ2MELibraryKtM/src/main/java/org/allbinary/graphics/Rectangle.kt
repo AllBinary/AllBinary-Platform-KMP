@@ -41,9 +41,6 @@ open public class Rectangle
     private var height: Int
 public constructor        (point: GPoint, width: Int, height: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var point = point
 var width = width
@@ -56,10 +53,7 @@ this.height= height
 
 open fun getPoint()
         //nullable = true from not(false or (false and true)) = true
-: GPoint
-
-        Updates for KMP build        
-        {
+: GPoint{
 
 
 
@@ -70,10 +64,7 @@ open fun getPoint()
 
 open fun setPoint(point: GPoint)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var point = point
 this.point= point
 }
@@ -81,10 +72,7 @@ this.point= point
 
 open fun getMaxX()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -95,10 +83,7 @@ open fun getMaxX()
 
 open fun getMaxY()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -109,10 +94,7 @@ open fun getMaxY()
 
 open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -123,10 +105,7 @@ open fun getWidth()
 
 open fun setWidth(width: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var width = width
 this.width= width
 }
@@ -134,10 +113,7 @@ this.width= width
 
 open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -148,20 +124,14 @@ open fun getHeight()
 
 open fun setHeight(height: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var height = height
 this.height= height
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

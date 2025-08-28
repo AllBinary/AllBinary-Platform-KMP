@@ -32,9 +32,6 @@ open public class ValidatorFactory
         
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

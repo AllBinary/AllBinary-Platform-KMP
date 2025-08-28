@@ -38,10 +38,7 @@ open public class NullHighScoresSingletonFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: HighScores
-
-        Updates for KMP build        
-        {
+: HighScores{
 
 
 

@@ -48,10 +48,7 @@ open public class GameFeatureFormUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameFeatureFormUtil
-
-        Updates for KMP build        
-        {
+: GameFeatureFormUtil{
 
 
 
@@ -71,10 +68,7 @@ open fun getInstance()
 
 open fun getChoiceGroup(hashtable: Hashtable<Any, Any>, name: String, option: Int)
         //nullable = true from not(false or (false and false)) = true
-: ChoiceGroup
-
-        Updates for KMP build        
-        {
+: ChoiceGroup{
 var hashtable = hashtable
 var name = name
 var option = option
@@ -105,9 +99,6 @@ var option = option
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var gameFeature: Feature = list.objectArray[index]!! as Feature
@@ -136,10 +127,7 @@ choiceGroup!!.append(gameFeature!!.toString(), NullCanvas.NULL_IMAGE)
 
 open fun addChoiceGroup(form: CommandForm, hashtable: Hashtable<Any, Any>, option: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var form = form
 var hashtable = hashtable
 var option = option
@@ -164,9 +152,6 @@ var option = option
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var name: String = objectArray[index]!! as String
@@ -183,10 +168,7 @@ form.append(this.getChoiceGroup(hashtable, name, option))
             
 open fun setDefault(form: CommandForm)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var form = form
 
     var size: Int = form.size()!!
@@ -197,9 +179,6 @@ var form = form
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var item: Item = form.get(index)!!

@@ -39,10 +39,7 @@ open public class HttpFilePermissionsUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: HttpFilePermissionsUtil
-
-        Updates for KMP build        
-        {
+: HttpFilePermissionsUtil{
 
 
 
@@ -62,10 +59,7 @@ open fun getInstance()
             
 open fun create(path: AbPath)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var path = path
 
     var file: AbFile = AbFile(path)

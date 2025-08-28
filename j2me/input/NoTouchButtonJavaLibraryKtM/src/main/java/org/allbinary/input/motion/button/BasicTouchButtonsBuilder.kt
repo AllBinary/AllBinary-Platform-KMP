@@ -39,10 +39,7 @@ open public class BasicTouchButtonsBuilder : BaseTouchInput {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BaseTouchInput
-
-        Updates for KMP build        
-        {
+: BaseTouchInput{
 
 
 
@@ -61,10 +58,7 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 override fun getList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
         try {
             logUtil!!.put(commonStrings!!.START, this, commonStrings!!.GET_LIST)
@@ -77,10 +71,7 @@ override fun getList()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return list
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_LIST, e)
 
 

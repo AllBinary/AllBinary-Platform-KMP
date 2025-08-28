@@ -32,29 +32,17 @@ open fun getRatio(ratio: Float)
         //nullable = true from not(false or (false and false)) = true
 : Float
 
-        Updates for KMP build        
-        
-
 open fun getLeft(xOffset: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int
-
-        Updates for KMP build        
-        
 
 open fun getTop(yOffset: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int
 
-        Updates for KMP build        
-        
-
 open fun scale(ratio: Float)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

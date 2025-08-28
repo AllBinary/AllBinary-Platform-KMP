@@ -18,9 +18,6 @@ open public class EGLConfig
         
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
 

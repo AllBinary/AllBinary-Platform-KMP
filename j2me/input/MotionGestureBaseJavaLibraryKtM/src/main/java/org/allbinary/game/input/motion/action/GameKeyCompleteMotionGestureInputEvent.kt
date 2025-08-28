@@ -50,10 +50,7 @@ open public class GameKeyCompleteMotionGestureInputEvent : CompleteMotionGesture
     private var inputToGameKeyMapping: InputToGameKeyMapping
 public constructor        (name: String, motionGestureInput: MotionGestureInput, inputToGameKeyMapping: InputToGameKeyMapping)                        
 
-                            : super(name, motionGestureInput)
-
-        Updates for KMP build        
-        {
+                            : super(name, motionGestureInput){
 var name = name
 var motionGestureInput = motionGestureInput
 var inputToGameKeyMapping = inputToGameKeyMapping
@@ -68,10 +65,7 @@ this.update()
 
 override fun getSourceId()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -82,19 +76,13 @@ override fun getSourceId()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             this.setGameKey(inputToGameKeyMapping!!.getInstance(this.getMotionGestureInput()!!.getId()))
 this.setGameKeyEvent(this.gameKeyEventFactory!!.getInstance(this, getGameKey()))
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -106,10 +94,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
 
 open fun setGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gameKeyEvent = gameKeyEvent
 this.gameKeyEvent= gameKeyEvent
 }
@@ -117,10 +102,7 @@ this.gameKeyEvent= gameKeyEvent
 
 open fun getGameKeyEvent()
         //nullable = true from not(false or (false and true)) = true
-: GameKeyEvent
-
-        Updates for KMP build        
-        {
+: GameKeyEvent{
 
 
 
@@ -131,10 +113,7 @@ open fun getGameKeyEvent()
 
 open fun setGameKey(gameKey: GameKey)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gameKey = gameKey
 this.gameKey= gameKey
 }
@@ -142,10 +121,7 @@ this.gameKey= gameKey
 
 open fun getGameKey()
         //nullable = true from not(false or (false and true)) = true
-: GameKey
-
-        Updates for KMP build        
-        {
+: GameKey{
 
 
 

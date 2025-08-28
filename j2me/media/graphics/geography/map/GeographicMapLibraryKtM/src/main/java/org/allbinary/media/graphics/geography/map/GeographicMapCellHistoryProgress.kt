@@ -36,9 +36,6 @@ open public class GeographicMapCellHistoryProgress
     private var geographicMapCellHistoryArray: Array<GeographicMapCellHistory?>
 public constructor        (geographicMapCellHistoryArray: Array<GeographicMapCellHistory?>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var geographicMapCellHistoryArray = geographicMapCellHistoryArray
 this.geographicMapCellHistoryArray= geographicMapCellHistoryArray
@@ -48,20 +45,14 @@ this.init()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.totalVisitedArray= IntArray(this.geographicMapCellHistoryArray!!.size)
 }
 
 
 open fun isAnyProgress()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     var isProgressing: Boolean = false
 
@@ -81,9 +72,6 @@ open fun isAnyProgress()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 totalVisited= geographicMapCellHistoryArray[index]!!.getTotalVisited()
 currentTotalVisited= this.totalVisitedArray[index]!!

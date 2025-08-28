@@ -48,17 +48,11 @@ open public class GenericBodyValidation : Validation
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var body: String
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 this.body= StringUtil.getInstance()!!.EMPTY_STRING
 }
 
-public constructor        (document: Document)
-
-        Updates for KMP build        
-        {
+public constructor        (document: Document){
 var document = document
 
     var nodeList: NodeList = document.getElementsByTagName(BodyData.getInstance()!!.NAME)!!
@@ -69,9 +63,6 @@ var document = document
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
-        
-
-        Updates for KMP build        
         {
 
     var aBodyNode: Node = nodeList!!.item(index)!!
@@ -84,10 +75,7 @@ this.body= DomNodeHelper.getTextNodeValue(aBodyValueNode)
 
 }
 
-public constructor        (hashMap: HashMap<Any, Any>)
-
-        Updates for KMP build        
-        {
+public constructor        (hashMap: HashMap<Any, Any>){
 var hashMap = hashMap
 this.getFormData(hashMap)
 }
@@ -97,10 +85,7 @@ this.getFormData(hashMap)
             
 open fun getFormData(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var hashMap = hashMap
 this.body= hashMap!!.get(BodyData.getInstance()!!.NAME) as String
 }
@@ -108,10 +93,7 @@ this.body= hashMap!!.get(BodyData.getInstance()!!.NAME) as String
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             
@@ -150,10 +132,7 @@ open fun isValid()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return isValid
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
@@ -175,10 +154,7 @@ open fun isValid()
 
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -200,10 +176,7 @@ stringBuffer!!.append(AbSqlData.MAXBLOB)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
@@ -225,10 +198,7 @@ stringBuffer!!.append(AbSqlData.MAXBLOB)
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
 
 
@@ -239,10 +209,7 @@ open fun toValidationInfoDoc()
 
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
 
@@ -256,10 +223,7 @@ var document = document
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var node: Node = ModDomHelper.createNameValueNodes(document, BodyData.getInstance()!!.NAME, this.body)!!

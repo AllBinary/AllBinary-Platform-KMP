@@ -58,9 +58,6 @@ open public class AndroidHardware
     private val MINHARDWARE: Int = 3
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 this.init(DEVICES)
 
@@ -82,10 +79,7 @@ this.init(DEVICES)
             
 open fun init(filePath: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var filePath = filePath
 
     var lineNumberReader: Closeable = NullCloseable.NULL_CLOSEABLE
@@ -94,10 +88,7 @@ open fun init(filePath: String)
         try {
             lineNumberReader= this.get(filePath)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put("Hardware Data: " +this.toString(), this, commonStrings!!.INIT, e)
 
 
@@ -127,10 +118,7 @@ logUtil!!.put("Hardware Data: " +this.toString(), this, commonStrings!!.INIT, e)
             
 open fun get(filePath: String)
         //nullable = true from not(false or (false and false)) = true
-: LineNumberReader
-
-        Updates for KMP build        
-        {
+: LineNumberReader{
     //var filePath = filePath
 componentInterfaceVector= BasicArrayList()
 
@@ -147,9 +135,6 @@ logUtil!!.put("File Found", this, commonStrings!!.CONSTRUCTOR)
         while(nextLine != 
                                     null
                                 )
-        
-
-        Updates for KMP build        
         {
 nextLine= lineNumberReader!!.readLine()
 componentInterfaceVector!!.add(UnknownHardware(nextLine))
@@ -164,10 +149,7 @@ componentInterfaceVector!!.add(UnknownHardware(nextLine))
 
 override fun getComponent(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: HardwareComponentInterface
-
-        Updates for KMP build        
-        {
+: HardwareComponentInterface{
 var index = index
 
 
@@ -178,10 +160,7 @@ var index = index
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var hardwareBuffer: StringBuilder = StringBuilder()
 
@@ -194,9 +173,6 @@ override fun toString()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var componentInterface: HardwareComponentInterface = this.componentInterfaceVector!!.get(index) as HardwareComponentInterface
@@ -214,10 +190,7 @@ hardwareBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
 
 override fun compareTo(hardwareInterface: HardwareInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var hardwareInterface = hardwareInterface
 
 
@@ -228,10 +201,7 @@ var hardwareInterface = hardwareInterface
 
 override fun difference(hardwareInterface: HardwareInterface)
         //nullable = true from not(false or (false and false)) = true
-: Hashtable<Any, Any>
-
-        Updates for KMP build        
-        {
+: Hashtable<Any, Any>{
 var hardwareInterface = hardwareInterface
 
 

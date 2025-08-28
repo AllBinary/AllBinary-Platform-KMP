@@ -36,9 +36,6 @@ open public class NativeLibraryHelper
     private var library: String
 public constructor        (library: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var library = library
 this.library= library
@@ -47,10 +44,7 @@ this.library= library
 
 open fun load()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 System.loadLibrary(library)
 }
 

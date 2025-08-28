@@ -34,9 +34,6 @@ open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-        Updates for KMP build        
-        
-
 }
                 
             

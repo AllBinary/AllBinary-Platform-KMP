@@ -38,10 +38,7 @@ open public class ComponentFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ComponentFactory
-
-        Updates for KMP build        
-        {
+: ComponentFactory{
 
 
 

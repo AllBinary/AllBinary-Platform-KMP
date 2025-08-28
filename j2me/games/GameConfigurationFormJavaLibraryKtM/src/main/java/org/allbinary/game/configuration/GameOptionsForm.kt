@@ -55,10 +55,7 @@ open public class GameOptionsForm : CommandForm {
         
 public constructor        (commandListener: CommandListener, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(commandListener, title, backgrounBasicColor, foregroundBasicColor)
-
-        Updates for KMP build        
-        {
+                            : super(commandListener, title, backgrounBasicColor, foregroundBasicColor){
 var commandListener = commandListener
 var title = title
 var backgrounBasicColor = backgrounBasicColor
@@ -82,10 +79,7 @@ this.addTextFieldsIfSimulated()
 
 open fun close(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
 super.close()
 this.save(abeClientInformation)
@@ -94,10 +88,7 @@ this.save(abeClientInformation)
 
 open fun addTextFieldsIfSimulated()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var key: String = OrientationData.getInstance()!!.ORIENTATION_SENSOR_INPUT
 
@@ -133,10 +124,7 @@ open fun addTextFieldsIfSimulated()
 
 open fun addTextFields()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var hashtable: Hashtable<Any, Any> = GameConfigurationTextInput.getHashtable()!!
 
@@ -152,9 +140,6 @@ open fun addTextFields()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var gameConfigurationTextInput: GameConfigurationTextInput = hashtable.get(objectArray[index]!! as Object) as GameConfigurationTextInput
@@ -170,10 +155,7 @@ this.append(textField)
 
 open fun addConfiguration()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var METHOD_NAME: String = "addConfiguration"
 
@@ -195,9 +177,6 @@ open fun addConfiguration()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var gameConfiguration: GameConfiguration = list.objectArray[index]!! as GameConfiguration
@@ -216,10 +195,7 @@ this.append(gauge)
 
 override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var cmdListener = cmdListener
 
     var gameCommandsFactory: GameCommandsFactory = GameCommandsFactory.getInstance()!!
@@ -235,10 +211,7 @@ this.setCommandListener(cmdListener)
             
 open fun save(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
 
     var size: Int = this.size()!!
@@ -249,9 +222,6 @@ open fun save(abeClientInformation: AbeClientInformationInterface)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var item: Item = this.get(index)!!
@@ -302,9 +272,6 @@ keyValuePersistance!!.save(abeClientInformation, hashtable)
 
                         for (index in 0 until size2)
 
-        
-
-        Updates for KMP build        
         {
 
     var integer: Integer = list.objectArray[index]!! as Integer

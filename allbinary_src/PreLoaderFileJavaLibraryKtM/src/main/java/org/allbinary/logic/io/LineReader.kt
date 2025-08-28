@@ -49,9 +49,6 @@ open public class LineReader
     private var idData: DataInputStream
 public constructor        (fileName: String)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var fileName = fileName
 
@@ -64,10 +61,7 @@ idFile= AbFileInputStream(fileName)
 idFile!!.read(bytes)
 string= bytes.decodeToString()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put("File: " +fileName, this, "LineReader", e)
 
 
@@ -82,10 +76,7 @@ logUtil!!.put("File: " +fileName, this, "LineReader", e)
 
 open fun hasNext()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             
@@ -110,10 +101,7 @@ open fun hasNext()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "hasNext", e)
 
 
@@ -135,10 +123,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "hasNext", e)
             
 open fun next()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -166,10 +151,7 @@ index= nextIndex +1
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return temp
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "next", e)
 
 

@@ -52,9 +52,6 @@ open public class ComparisonImageInputOutput
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -63,10 +60,7 @@ public constructor        ()
             
 open fun save(frame: Long)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var frame = frame
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -114,10 +108,7 @@ this.save(imageComparisonResult, imageComparisonResultFrameCacheable!!.getFrame(
             
 open fun save(imageComparisonResult: ImageComparisonResult, frame: Long)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var imageComparisonResult = imageComparisonResult
     //var frame = frame
 

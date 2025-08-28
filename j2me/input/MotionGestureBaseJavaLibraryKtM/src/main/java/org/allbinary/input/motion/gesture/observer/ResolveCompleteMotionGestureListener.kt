@@ -44,9 +44,6 @@ open public class ResolveCompleteMotionGestureListener
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -59,10 +56,7 @@ CompleteMotionGestureInputEventHandler.getInstance()!!.addListener(GameKeyFromMo
                 @Throws(Exception::class)
             override fun onMotionGestureCompleted(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var list = list
 
     var configuration: MotionGestureConfiguration = MotionGestureConfigurationFactory.getInstance()!!
@@ -79,9 +73,6 @@ var list = list
 
                         for (index in size -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     var association: MotionGestureToMotionGestureActionAssociation = commandActionsList!!.objectArray[index]!! as MotionGestureToMotionGestureActionAssociation

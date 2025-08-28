@@ -42,19 +42,13 @@ open public class AdvertisementProduct
     private var constraint: TwoDimensionalConstraintInterface
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -65,10 +59,7 @@ open fun getType()
 
 open fun getLink()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -79,10 +70,7 @@ open fun getLink()
 
 open fun getNumber()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -93,10 +81,7 @@ open fun getNumber()
 
 open fun getTwoDimensionalConstraint()
         //nullable = true from not(false or (false and true)) = true
-: TwoDimensionalConstraintInterface
-
-        Updates for KMP build        
-        {
+: TwoDimensionalConstraintInterface{
 
 
 

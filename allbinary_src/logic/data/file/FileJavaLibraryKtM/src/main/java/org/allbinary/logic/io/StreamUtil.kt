@@ -43,10 +43,7 @@ open public class StreamUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: StreamUtil
-
-        Updates for KMP build        
-        {
+: StreamUtil{
 
 
 
@@ -60,9 +57,6 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -71,10 +65,7 @@ private constructor        ()
             
 open fun get(inputStream: InputStream, outputStream: OutputStream, buffer: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: OutputStream
-
-        Updates for KMP build        
-        {
+: OutputStream{
     //var inputStream = inputStream
     //var outputStream = outputStream
 var buffer = buffer
@@ -83,9 +74,6 @@ var buffer = buffer
 
 
         while(true)
-        
-
-        Updates for KMP build        
         {
 len= inputStream!!.read(buffer, 0, buffer.size)
 
@@ -118,10 +106,7 @@ outputStream!!.write(buffer, 0, len)
             
 open fun getByteArray(inputStream: InputStream, outputStream2: ByteArrayOutputStream, byteArray: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray
-
-        Updates for KMP build        
-        {
+: ByteArray{
     //var inputStream = inputStream
     //var outputStream2 = outputStream2
     //var byteArray = byteArray
@@ -137,10 +122,7 @@ open fun getByteArray(inputStream: InputStream, outputStream2: ByteArrayOutputSt
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return outputStream!!.toByteArray()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
@@ -157,10 +139,7 @@ open fun getByteArray(inputStream: InputStream, outputStream2: ByteArrayOutputSt
 
 open fun close(closeable: Closeable)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var closeable = closeable
 
         try {
@@ -181,10 +160,7 @@ var closeable = closeable
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

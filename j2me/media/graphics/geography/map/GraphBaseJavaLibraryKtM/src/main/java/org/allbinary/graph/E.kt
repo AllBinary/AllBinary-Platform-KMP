@@ -30,10 +30,7 @@ open public class E
         
 open fun newInstance()
         //nullable = true from not(false or (false and true)) = true
-: E
-
-        Updates for KMP build        
-        {
+: E{
 
 
 

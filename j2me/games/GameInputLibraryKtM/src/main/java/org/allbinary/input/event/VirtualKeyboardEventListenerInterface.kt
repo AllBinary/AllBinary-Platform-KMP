@@ -35,9 +35,6 @@ open fun onVirtualKeyboardEvent(virtualKeyboardEvent: VirtualKeyboardEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 }
                 
             

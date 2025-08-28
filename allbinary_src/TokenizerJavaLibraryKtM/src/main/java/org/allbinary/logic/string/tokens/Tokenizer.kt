@@ -39,9 +39,6 @@ open public class Tokenizer
     private var endSep: String = StringUtil.getInstance()!!.EMPTY_STRING
 public constructor        (sep: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var sep = sep
 
@@ -64,10 +61,7 @@ this.sep= sep
 
 open fun setSep(sep: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var sep = sep
 this.sep= sep
 }
@@ -75,10 +69,7 @@ this.sep= sep
 
 open fun setEndSep(endSep: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var endSep = endSep
 this.endSep= endSep
 }
@@ -86,10 +77,7 @@ this.endSep= endSep
 
 open fun getInsideSep(string: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 var string = string
 
     var tokenList: BasicArrayList = BasicArrayList()
@@ -102,9 +90,6 @@ var string = string
 
 
         while(index < size)
-        
-
-        Updates for KMP build        
         {
 index= string.indexOf(sep, index)
 
@@ -151,10 +136,7 @@ index= end +endSep!!.length
 
 open fun getTokens(string: String, tokenVector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 var string = string
 var tokenVector = tokenVector
 
@@ -165,9 +147,6 @@ var tokenVector = tokenVector
 
 
         while(index < string.length)
-        
-
-        Updates for KMP build        
         {
 end= string.indexOf(sep, index)
 
@@ -200,10 +179,7 @@ break;
 
 open fun getTokens(stringVector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: Hashtable<Any, Any>
-
-        Updates for KMP build        
-        {
+: Hashtable<Any, Any>{
 var stringVector = stringVector
 
     var tokenHashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
@@ -223,9 +199,6 @@ var stringVector = stringVector
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 string= stringVector!!.objectArray[index]!! as String
 end= string.indexOf(sep)

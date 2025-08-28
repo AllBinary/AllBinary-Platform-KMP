@@ -30,10 +30,7 @@ open public class BasicArrayListResetablePool : AbstractArrayListPool {
         
 public constructor        (cacheableInterfaceFactoryInterface: CacheableInterfaceFactoryInterface)                        
 
-                            : super(cacheableInterfaceFactoryInterface)
-
-        Updates for KMP build        
-        {
+                            : super(cacheableInterfaceFactoryInterface){
 var cacheableInterfaceFactoryInterface = cacheableInterfaceFactoryInterface
 
 
@@ -44,10 +41,7 @@ var cacheableInterfaceFactoryInterface = cacheableInterfaceFactoryInterface
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
@@ -55,10 +49,7 @@ open fun clear()
             
 open fun remove(key: Any)
         //nullable = true from not(false or (false and false)) = true
-: CacheableInterface
-
-        Updates for KMP build        
-        {
+: CacheableInterface{
 var key = key
 
     var size: Int = this.buffers.size()!!

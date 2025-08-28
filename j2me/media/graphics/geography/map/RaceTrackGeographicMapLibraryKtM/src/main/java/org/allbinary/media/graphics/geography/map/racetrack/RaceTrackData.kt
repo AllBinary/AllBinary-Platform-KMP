@@ -60,10 +60,7 @@ public constructor        (id: Integer, cellWidth: Int, cellHeight: Int, miniCel
 
                             : this(id, cellWidth, cellHeight, miniCellWidth, miniCellHeight, 
                             null, 
-                            null)
-
-        Updates for KMP build        
-        {
+                            null){
     //var id = id
     //var cellWidth = cellWidth
     //var cellHeight = cellHeight
@@ -77,9 +74,6 @@ public constructor        (id: Integer, cellWidth: Int, cellHeight: Int, miniCel
 
 public constructor        (id: Integer, cellWidth: Int, cellHeight: Int, miniCellWidth: Int, miniCellHeight: Int, cellTypeIdToGeographicMapCellTypeArray: IntArray, mapArray: Array<IntArray?>)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var id = id
     //var cellWidth = cellWidth
@@ -100,10 +94,7 @@ this.cellTypeIdToGeographicMapCellTypeArray= cellTypeIdToGeographicMapCellTypeAr
 
 open fun setMapArray(mapArray: Array<IntArray?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var mapArray = mapArray
 this.mapArray= mapArray
 }
@@ -111,10 +102,7 @@ this.mapArray= mapArray
 
 open fun getMapArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<IntArray?>
-
-        Updates for KMP build        
-        {
+: Array<IntArray?>{
 
 
 
@@ -125,10 +113,7 @@ open fun getMapArray()
 
 open fun setCellTypeIdToGeographicMapCellTypeArray(cellTypeIdToGeographicMapCellTypeArray: IntArray)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var cellTypeIdToGeographicMapCellTypeArray = cellTypeIdToGeographicMapCellTypeArray
 this.cellTypeIdToGeographicMapCellTypeArray= cellTypeIdToGeographicMapCellTypeArray
 }
@@ -136,10 +121,7 @@ this.cellTypeIdToGeographicMapCellTypeArray= cellTypeIdToGeographicMapCellTypeAr
 
 open fun getCellTypeIdToGeographicMapCellTypeArray()
         //nullable = true from not(false or (false and true)) = true
-: IntArray
-
-        Updates for KMP build        
-        {
+: IntArray{
 
 
 
@@ -150,10 +132,7 @@ open fun getCellTypeIdToGeographicMapCellTypeArray()
 
 open fun setCellWidth(cellWidth: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var cellWidth = cellWidth
 this.cellWidth= cellWidth
 }
@@ -161,10 +140,7 @@ this.cellWidth= cellWidth
 
 open fun getCellWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -175,10 +151,7 @@ open fun getCellWidth()
 
 open fun setCellHeight(cellHeight: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var cellHeight = cellHeight
 this.cellHeight= cellHeight
 }
@@ -186,10 +159,7 @@ this.cellHeight= cellHeight
 
 open fun getCellHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -200,10 +170,7 @@ open fun getCellHeight()
 
 open fun getOverPassGeographicMapCellPositionArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<CellPosition?>
-
-        Updates for KMP build        
-        {
+: Array<CellPosition?>{
 
 
 
@@ -214,10 +181,7 @@ open fun getOverPassGeographicMapCellPositionArray()
 
 open fun setOverPassGeographicMapCellPositionArray(overPassGeographicMapCellPositionArray: Array<CellPosition?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var overPassGeographicMapCellPositionArray = overPassGeographicMapCellPositionArray
 this.overPassGeographicMapCellPositionArray= overPassGeographicMapCellPositionArray
 }
@@ -225,10 +189,7 @@ this.overPassGeographicMapCellPositionArray= overPassGeographicMapCellPositionAr
 
 open fun getTileSetImage()
         //nullable = true from not(false or (false and true)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
 
 
 
@@ -239,10 +200,7 @@ open fun getTileSetImage()
 
 open fun setTileSetImage(tileSetImage: Image)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var tileSetImage = tileSetImage
 this.tileSetImage= tileSetImage
 }
@@ -250,10 +208,7 @@ this.tileSetImage= tileSetImage
 
 open fun getMiniTileSetImage()
         //nullable = true from not(false or (false and true)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
 
 
 
@@ -264,10 +219,7 @@ open fun getMiniTileSetImage()
 
 open fun setMiniTileSetImage(miniTileSetImage: Image)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var miniTileSetImage = miniTileSetImage
 this.miniTileSetImage= miniTileSetImage
 }
@@ -275,10 +227,7 @@ this.miniTileSetImage= miniTileSetImage
 
 open fun getMiniCellWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -289,10 +238,7 @@ open fun getMiniCellWidth()
 
 open fun setMiniCellWidth(miniCellWidth: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var miniCellWidth = miniCellWidth
 this.miniCellWidth= miniCellWidth
 }
@@ -300,10 +246,7 @@ this.miniCellWidth= miniCellWidth
 
 open fun getMiniCellHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -314,10 +257,7 @@ open fun getMiniCellHeight()
 
 open fun setMiniCellHeight(miniCellHeight: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var miniCellHeight = miniCellHeight
 this.miniCellHeight= miniCellHeight
 }
@@ -325,10 +265,7 @@ this.miniCellHeight= miniCellHeight
 
 open fun setId(id: Integer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var id = id
 this.id= id
 }
@@ -336,10 +273,7 @@ this.id= id
 
 open fun getId()
         //nullable = true from not(false or (false and true)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 
 
 

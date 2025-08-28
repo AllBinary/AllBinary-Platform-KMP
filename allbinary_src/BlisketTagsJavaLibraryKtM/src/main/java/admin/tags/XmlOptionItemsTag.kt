@@ -30,10 +30,7 @@ import admin.taghelpers.XmlOptionItemsRequestHelperFactory
 
 open public class XmlOptionItemsTag : TableTag {
         
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 this.setTagHelperFactory(XmlOptionItemsHelperFactory())
 this.setTagRequestHelperFactory(XmlOptionItemsRequestHelperFactory())
 }

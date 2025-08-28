@@ -64,10 +64,7 @@ open public class ColorAtActionScriptCondition : BasicProfileActionScriptConditi
     private var colorRangeInterface: ColorRangeInterface = ColorRange() as ColorRangeInterface
 public constructor        (node: Node)                        
 
-                            : super(ColorAtActionScriptCondition.NAME, node)
-
-        Updates for KMP build        
-        {
+                            : super(ColorAtActionScriptCondition.NAME, node){
 var node = node
 
 
@@ -93,9 +90,6 @@ this.point= Point(0, 0)
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
-        
-
-        Updates for KMP build        
         {
 
     var childNode: Node = nodeList!!.item(index)!!
@@ -214,10 +208,7 @@ this.init()
 
 public constructor        ()                        
 
-                            : super(ColorAtActionScriptCondition.NAME)
-
-        Updates for KMP build        
-        {
+                            : super(ColorAtActionScriptCondition.NAME){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -229,20 +220,14 @@ this.init()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.colorAtActionScriptConditionJPanel= ColorAtActionScriptConditionJPanel(this)
 }
 
 
 open fun getPoint()
         //nullable = true from not(false or (false and true)) = true
-: Point
-
-        Updates for KMP build        
-        {
+: Point{
 
 
 
@@ -253,10 +238,7 @@ open fun getPoint()
 
 open fun setPoint(point: Point)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var point = point
 this.point= point
 }
@@ -264,20 +246,14 @@ this.point= point
 
 open fun showDialog()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.colorAtActionScriptConditionJPanel!!.getColorAtActionJDialog()!!.setVisible(true)
 }
 
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -302,10 +278,7 @@ logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var node: Node = super.toXmlNode(document)!!
@@ -323,10 +296,7 @@ node.appendChild(ModDomHelper.createNodeWithValueNodes(document, ColorAtActionSc
             
 open fun shouldProcess(frame: Long)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var frame = frame
 
     var capturedBufferedImageCacheable: BufferedImageFrameCacheable = 
@@ -372,10 +342,7 @@ var frame = frame
 
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var message: String = "getPoint(): " +this.getPoint() +"\n" +this.getColorRangeInterface()!!.toString()
 
@@ -385,10 +352,7 @@ logUtil!!.put(message, this, "log")
 
 open fun getColorRangeInterface()
         //nullable = true from not(false or (false and true)) = true
-: ColorRangeInterface
-
-        Updates for KMP build        
-        {
+: ColorRangeInterface{
 
 
 
@@ -399,10 +363,7 @@ open fun getColorRangeInterface()
 
 open fun setColorRangeInterface(colorRangeInterface: ColorRangeInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var colorRangeInterface = colorRangeInterface
 this.colorRangeInterface= colorRangeInterface
 }

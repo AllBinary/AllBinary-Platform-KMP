@@ -33,127 +33,73 @@ open fun setShippingMethod(shippingType: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun setPaymentMethod(value: String)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 open fun setSpecial(special: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun setStoreName(value: String)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 open fun setUserComments(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun setUserCancelComments(value: String)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 open fun setStoreComments(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun setStoreCancelComments(value: String)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 open fun getBasket()
         //nullable = true from not(false or (false and true)) = true
 : BasketInterface
 
-        Updates for KMP build        
-        
-
 open fun getShippingMethod()
         //nullable = true from not(false or (false and true)) = true
 : String
-
-        Updates for KMP build        
-        
 
 open fun getPaymentMethod()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-        Updates for KMP build        
-        
-
 open fun getSpecial()
         //nullable = true from not(false or (false and true)) = true
 : String
-
-        Updates for KMP build        
-        
 
 open fun getId()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-        Updates for KMP build        
-        
-
 open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
 : String
-
-        Updates for KMP build        
-        
 
 open fun getUserComments()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-        Updates for KMP build        
-        
-
 open fun getUserCancelComments()
         //nullable = true from not(false or (false and true)) = true
 : String
-
-        Updates for KMP build        
-        
 
 open fun getStoreComments()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-        Updates for KMP build        
-        
-
 open fun getStoreCancelComments()
         //nullable = true from not(false or (false and true)) = true
 : String
-
-        Updates for KMP build        
-        
 
 }
                 

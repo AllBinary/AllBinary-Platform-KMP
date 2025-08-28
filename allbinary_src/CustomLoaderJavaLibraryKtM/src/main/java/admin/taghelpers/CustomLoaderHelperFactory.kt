@@ -46,9 +46,6 @@ open public class CustomLoaderHelperFactory
         }
             public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -57,10 +54,7 @@ open public class CustomLoaderHelperFactory
             
 open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
     //var hashMap = hashMap
     //var pageContext = pageContext
 
@@ -78,10 +72,7 @@ open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface)
         //nullable =  from not(true or (false and false)) = 
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
     //var abeClientInformation = abeClientInformation
 
 

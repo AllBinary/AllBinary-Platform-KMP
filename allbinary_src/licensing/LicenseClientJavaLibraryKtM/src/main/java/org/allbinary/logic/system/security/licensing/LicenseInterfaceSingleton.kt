@@ -37,10 +37,7 @@ open public class LicenseInterfaceSingleton
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AbeLicenseInterface
-
-        Updates for KMP build        
-        {
+: AbeLicenseInterface{
 
 
 
@@ -51,10 +48,7 @@ open fun getInstance()
 
 open fun init(licenseInterface: AbeLicenseInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var licenseInterface = licenseInterface
 
     

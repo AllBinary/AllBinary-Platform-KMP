@@ -47,9 +47,6 @@ open public class Log
     private val exception: Any
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
@@ -62,9 +59,6 @@ this.exception= nullUtil!!.NULL_OBJECT
 
 public constructor        (specialMessage: String, anyType: Any, functionName: String, exception: Any)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var specialMessage = specialMessage
     //var anyType = anyType
@@ -78,9 +72,6 @@ this.exception= exception
 
 public constructor        (specialMessage: String, anyType: Any, functionName: String)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var specialMessage = specialMessage
     //var anyType = anyType
@@ -94,10 +85,7 @@ this.exception= nullUtil!!.NULL_OBJECT
 
 open fun getSpecialMessage()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -108,10 +96,7 @@ open fun getSpecialMessage()
 
 open fun getObject()
         //nullable = true from not(false or (false and true)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 
 
 
@@ -122,10 +107,7 @@ open fun getObject()
 
 open fun getFunctionName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -136,10 +118,7 @@ open fun getFunctionName()
 
 open fun getThrowable()
         //nullable = true from not(false or (false and true)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 
 
 
@@ -149,10 +128,7 @@ open fun getThrowable()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var className: String = CommonStrings.getInstance()!!.EMPTY
 

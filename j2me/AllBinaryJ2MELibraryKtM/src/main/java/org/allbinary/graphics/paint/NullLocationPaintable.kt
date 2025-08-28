@@ -35,10 +35,7 @@ open public class NullLocationPaintable : LocationPaintable {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NullLocationPaintable
-
-        Updates for KMP build        
-        {
+: NullLocationPaintable{
 
 
 

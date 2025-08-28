@@ -36,10 +36,7 @@ open public class UpgradableWideRTSLayerPaintable : RTSLayerCompositePaintable {
     private var cost: String = StringUtil.getInstance()!!.EMPTY_STRING
 public constructor        (upgradableRTSLayerHudPaintable: UpgradableRTSLayerHudPaintable)                        
 
-                            : super(upgradableRTSLayerHudPaintable)
-
-        Updates for KMP build        
-        {
+                            : super(upgradableRTSLayerHudPaintable){
 var upgradableRTSLayerHudPaintable = upgradableRTSLayerHudPaintable
 
 
@@ -50,10 +47,7 @@ var upgradableRTSLayerHudPaintable = upgradableRTSLayerHudPaintable
 
 open fun update(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var rtsLayer = rtsLayer
 super.update(rtsLayer)
 this.setCost(StringMaker().
@@ -63,10 +57,7 @@ this.setCost(StringMaker().
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 graphics.drawString(this.getCost(), this.upgradableRTSLayerHudPaintable!!.textX, this.upgradableRTSLayerHudPaintable!!.costY, 0)
 }
@@ -74,10 +65,7 @@ graphics.drawString(this.getCost(), this.upgradableRTSLayerHudPaintable!!.textX,
 
 open fun setCost(cost: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var cost = cost
 this.cost= cost
 }
@@ -85,10 +73,7 @@ this.cost= cost
 
 open fun getCost()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

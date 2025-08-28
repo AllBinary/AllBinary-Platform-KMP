@@ -57,10 +57,7 @@ open public class VelocityWidget : BasicHud {
     private var offset2: Int= 0
 public constructor        (powerOfTenVelocity: Int, location: Int, direction: Int, basicColor: BasicColor)                        
 
-                            : super(location, direction, 14, MyFont.getInstance()!!.getSize() *(5 +MathUtil.getInstance()!!.getTotalDigits(powerOfTenVelocity) +1), 2, basicColor)
-
-        Updates for KMP build        
-        {
+                            : super(location, direction, 14, MyFont.getInstance()!!.getSize() *(5 +MathUtil.getInstance()!!.getTotalDigits(powerOfTenVelocity) +1), 2, basicColor){
 var powerOfTenVelocity = powerOfTenVelocity
 var location = location
 var direction = direction
@@ -81,10 +78,7 @@ this.offset= myFont!!.stringWidth(this.primitiveLongUtil!!.getMaxDigits()) +myFo
 
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -95,10 +89,7 @@ open fun get()
 
 open fun add(value: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.set(this.velocity +value)
 }
@@ -106,10 +97,7 @@ this.set(this.velocity +value)
 
 open fun set(value: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 
     var lastVelocity: Int = this.velocity
@@ -156,10 +144,7 @@ this.offset2= this.offset -myFont!!.stringWidth(this.totalDigits) -myFont!!.stri
 
 open fun reduce(value: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.set(this.velocity -value)
 }
@@ -167,10 +152,7 @@ this.set(this.velocity -value)
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 super.paint(graphics, string, 0, this.totalDigits, KILOMETERS_PER_HOUR_STR, 0, this.totalChars, offset2, offset)
 }

@@ -45,9 +45,6 @@ open public class CategoryPrivateTree
     var categoryFactoryInterface: CategoryFactoryInterface
 public constructor        (categoryFactoryInterface: CategoryFactoryInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var categoryFactoryInterface = categoryFactoryInterface
 
@@ -71,10 +68,7 @@ this.categoryFactoryInterface= categoryFactoryInterface
 
 open fun save(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var categoryInterface = categoryInterface
 
     
@@ -110,10 +104,7 @@ cryptFileWriter!!.write(categoryInterface!!.getFilePath(), document)
 
 open fun delete(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var categoryInterface = categoryInterface
 
     

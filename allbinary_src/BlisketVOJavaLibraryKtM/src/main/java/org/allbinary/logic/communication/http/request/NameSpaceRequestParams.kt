@@ -48,10 +48,7 @@ open public class NameSpaceRequestParams : RequestParams {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        ()                        
 
-                            : super()
-
-        Updates for KMP build        
-        {
+                            : super(){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -69,10 +66,7 @@ public constructor        ()
 
 public constructor        (httpServletRequest: HttpServletRequest)                        
 
-                            : super(httpServletRequest)
-
-        Updates for KMP build        
-        {
+                            : super(httpServletRequest){
 var httpServletRequest = httpServletRequest
 
 
@@ -91,10 +85,7 @@ var httpServletRequest = httpServletRequest
 
 public constructor        (pageContext: PageContext)                        
 
-                            : super(pageContext)
-
-        Updates for KMP build        
-        {
+                            : super(pageContext){
 var pageContext = pageContext
 
 
@@ -116,10 +107,7 @@ var pageContext = pageContext
             
 open fun createPackageNode(document: Document, packageName: String, packagePropertiesHashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 var packageName = packageName
 var packagePropertiesHashMap = packagePropertiesHashMap
@@ -142,9 +130,6 @@ var packagePropertiesHashMap = packagePropertiesHashMap
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var propertyName: String = propertyKeySetArray[index]!! as String
@@ -170,10 +155,7 @@ node.appendChild(propertyNode)
             
 open fun createPackageMultiNode(document: Document, nameSpaceRequestParam: NameSpaceRequestParam, packageName: String, packagePropertiesHashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 var nameSpaceRequestParam = nameSpaceRequestParam
 var packageName = packageName
@@ -230,10 +212,7 @@ nextNode!!.appendChild(indexNode)
             
 open fun getRootNode(rootElementPackage: String, packagePropertiesHashMap: HashMap<Any, Any>, document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var rootElementPackage = rootElementPackage
 var packagePropertiesHashMap = packagePropertiesHashMap
 var document = document
@@ -302,10 +281,7 @@ document.appendChild(node)
             
 open fun addNewProperties(document: Document, node: Node, nextPackagePropertiesHashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 var node = node
 var nextPackagePropertiesHashMap = nextPackagePropertiesHashMap
@@ -335,9 +311,6 @@ var nextPackagePropertiesHashMap = nextPackagePropertiesHashMap
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var nextPropertyName: String = propertyNameSetArray[index]!! as String
@@ -422,10 +395,7 @@ node.appendChild(newPropertyNode)
             
 open fun isElementValueTextNodeEqual(nextPackagePropertiesHashMap: HashMap<Any, Any>, node: Node)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var nextPackagePropertiesHashMap = nextPackagePropertiesHashMap
 var node = node
 
@@ -499,10 +469,7 @@ var node = node
             
 open fun isElementValueTextNodeUnique(nextPackagePropertiesHashMap: HashMap<Any, Any>, elementNodeVector: Vector)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var nextPackagePropertiesHashMap = nextPackagePropertiesHashMap
 var elementNodeVector = elementNodeVector
 
@@ -523,9 +490,6 @@ var elementNodeVector = elementNodeVector
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var existingElementNode: Node = elementNodeVector!!.get(index) as Node
@@ -557,10 +521,7 @@ var elementNodeVector = elementNodeVector
             
 open fun addChildren(document: Document, rootNode: Node, nameSpaceRequestParam: NameSpaceRequestParam)
         //nullable = true from not(false or (false and false)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 var document = document
 var rootNode = rootNode
 var nameSpaceRequestParam = nameSpaceRequestParam
@@ -579,9 +540,6 @@ var nameSpaceRequestParam = nameSpaceRequestParam
 
                         for (index in 1 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var nextPackageName: String = packageVector!!.get(index) as String
@@ -708,10 +666,7 @@ node= this.addNewProperties(document, nodeNameDuplicateNode, nextPackageProperti
             
 open fun addNameSpace(key: String, value: String, document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 var key = key
 var value = value
 var document = document
@@ -740,9 +695,6 @@ var document = document
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var packageName: String = packageVector!!.get(index) as String
@@ -780,10 +732,7 @@ var document = document
             
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var document: Document = DomDocumentHelper.create()!!
 
@@ -815,9 +764,6 @@ open fun toHashMap()
 
                         for (i in 0 until keySize)
 
-        
-
-        Updates for KMP build        
         {
 
     var key: String = keyArray[i]!! as String

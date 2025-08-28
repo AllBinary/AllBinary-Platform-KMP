@@ -42,10 +42,7 @@ open public class RTSLayerCompositePaintable : Paintable {
     private val DOWNGRADE: String = "Down: $-"
 
     val upgradableRTSLayerHudPaintable: UpgradableRTSLayerHudPaintable
-public constructor        (upgradableRTSLayerHudPaintable: UpgradableRTSLayerHudPaintable)
-
-        Updates for KMP build        
-        {
+public constructor        (upgradableRTSLayerHudPaintable: UpgradableRTSLayerHudPaintable){
 var upgradableRTSLayerHudPaintable = upgradableRTSLayerHudPaintable
 this.upgradableRTSLayerHudPaintable= upgradableRTSLayerHudPaintable
 }
@@ -53,10 +50,7 @@ this.upgradableRTSLayerHudPaintable= upgradableRTSLayerHudPaintable
 
 open fun update(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var rtsLayer = rtsLayer
 
     
@@ -93,10 +87,7 @@ var rtsLayer = rtsLayer
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 graphics.drawString(this.getDownGradeCost(), this.upgradableRTSLayerHudPaintable!!.textX, this.upgradableRTSLayerHudPaintable!!.costY1, 0)
 graphics.drawString(this.getUpgradeCost(), this.upgradableRTSLayerHudPaintable!!.textX, this.upgradableRTSLayerHudPaintable!!.costY, 0)
@@ -105,10 +96,7 @@ graphics.drawString(this.getUpgradeCost(), this.upgradableRTSLayerHudPaintable!!
 
 open fun setUpgradeCost(upgradeCost: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var upgradeCost = upgradeCost
 this.upgradeCost= upgradeCost
 }
@@ -116,10 +104,7 @@ this.upgradeCost= upgradeCost
 
 open fun getUpgradeCost()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -130,10 +115,7 @@ open fun getUpgradeCost()
 
 open fun setDownGradeCost(downGradeCost: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var downGradeCost = downGradeCost
 this.downGradeCost= downGradeCost
 }
@@ -141,10 +123,7 @@ this.downGradeCost= downGradeCost
 
 open fun getDownGradeCost()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

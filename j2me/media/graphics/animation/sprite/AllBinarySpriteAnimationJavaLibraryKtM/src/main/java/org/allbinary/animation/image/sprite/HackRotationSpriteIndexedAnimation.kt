@@ -41,10 +41,7 @@ open public class HackRotationSpriteIndexedAnimation : RotationAnimation {
     private val image: Image
 public constructor        (sprite: Sprite, image: Image, angleInfo: AngleInfo, animationBehavior: AnimationBehavior)                        
 
-                            : super(angleInfo, animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(angleInfo, animationBehavior){
     //var sprite = sprite
     //var image = image
     //var angleInfo = angleInfo
@@ -61,10 +58,7 @@ this.image= image
                 @Throws(Exception::class)
             override fun getAnimationSize()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -75,10 +69,7 @@ this.image= image
 
 open fun paint(g: Graphics, frame: Int, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var g = g
     //var frame = frame
     //var x = x
@@ -89,10 +80,7 @@ this.paint(g, x, y)
 
 override fun paint(g: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var g = g
     //var x = x
     //var y = y
@@ -103,38 +91,26 @@ this.paint(g)
 
 open fun paint(g: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var g = g
 this.sprite.paint(g)
 }
 
 override fun nextRotation()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.sprite.nextFrame()
 }
 
 override fun previousRotation()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.sprite.prevFrame()
 }
 
 override fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -144,20 +120,14 @@ override fun getSize()
 
 override fun setFrame(frame: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var frame = frame
 this.sprite.setFrame(frame)
 }
 
 override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -167,19 +137,13 @@ override fun getFrame()
 
 override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var sequence = sequence
 }
 
 override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
-: IntArray
-
-        Updates for KMP build        
-        {
+: IntArray{
 
 
 

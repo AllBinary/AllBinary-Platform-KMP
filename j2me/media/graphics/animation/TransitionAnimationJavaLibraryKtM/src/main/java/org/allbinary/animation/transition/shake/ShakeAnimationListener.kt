@@ -38,47 +38,32 @@ open public class ShakeAnimationListener
         
 open fun onSmallShakeEvent()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun onMediumShakeEvent()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun onLargeShakeEvent()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun onShakeEvent(shakeEvent: ShakeEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var shakeEvent = shakeEvent
 }
 
 
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

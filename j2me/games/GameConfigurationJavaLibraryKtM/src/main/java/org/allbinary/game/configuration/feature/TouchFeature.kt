@@ -30,10 +30,7 @@ open public class TouchFeature : Feature {
         
  constructor        (name: String)                        
 
-                            : super(name)
-
-        Updates for KMP build        
-        {
+                            : super(name){
 var name = name
 
 

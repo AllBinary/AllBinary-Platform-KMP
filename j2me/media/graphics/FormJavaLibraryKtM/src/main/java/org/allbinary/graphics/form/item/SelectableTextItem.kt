@@ -32,10 +32,7 @@ open public class SelectableTextItem : TextItem {
         
 public constructor        (label: String, layout: Int, altText: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(label, layout, altText, backgroundBasicColor, foregroundBasicColor)
-
-        Updates for KMP build        
-        {
+                            : super(label, layout, altText, backgroundBasicColor, foregroundBasicColor){
 var label = label
 var layout = layout
 var altText = altText
@@ -49,10 +46,7 @@ var foregroundBasicColor = foregroundBasicColor
 
 override fun isFocusable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -62,10 +56,7 @@ override fun isFocusable()
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 var x = x
 var y = y

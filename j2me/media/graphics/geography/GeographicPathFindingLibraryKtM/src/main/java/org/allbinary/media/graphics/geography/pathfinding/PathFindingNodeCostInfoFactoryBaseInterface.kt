@@ -36,17 +36,11 @@ open fun create(geographicMapInterface: BasicGeographicMap, comingFromGeographic
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun getTotalCost(geographicMapInterface: BasicGeographicMap, comingFromGeographicMapCellPosition: GeographicMapCellPosition, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : Long
-
-        Updates for KMP build        
-        
 
 }
                 

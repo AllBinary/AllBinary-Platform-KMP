@@ -30,19 +30,13 @@ import org.w3c.dom.Node
 
 open public class GenericValidator : ValidatorBase {
         
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
 
 
@@ -53,10 +47,7 @@ open fun toValidationInfoDoc()
 
 open fun toValidationInfoNode(document: org.w3c.dom.Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
 

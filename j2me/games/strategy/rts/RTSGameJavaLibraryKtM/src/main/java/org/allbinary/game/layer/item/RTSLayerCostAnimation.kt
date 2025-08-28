@@ -60,10 +60,7 @@ open public class RTSLayerCostAnimation : Animation
     private val adjustedCostX: Int = myFont!!.stringWidth(DOLLAR)!!
 
     private val layerInterfaceFactoryInterface: CostLayerInterfaceFactoryInterface
-public constructor        (image: Image, layerInterfaceFactoryInterface: CostLayerInterfaceFactoryInterface)
-
-        Updates for KMP build        
-        {
+public constructor        (image: Image, layerInterfaceFactoryInterface: CostLayerInterfaceFactoryInterface){
 var image = image
 var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
 this.image= image
@@ -74,10 +71,7 @@ this.update()
 
 open fun onEvent(event: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var event = event
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
@@ -85,19 +79,13 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
 open fun onTechEvent(event: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var event = event
 
         try {
             this.update()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -111,10 +99,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "onTechEvent", e)
             
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.len= 0
 this.costString= this.primitiveLongUtil!!.getCharArray(this.layerInterfaceFactoryInterface!!.getCost())
 this.len= this.primitiveLongUtil!!.getCurrentTotalDigits()
@@ -123,10 +108,7 @@ this.len= this.primitiveLongUtil!!.getCurrentTotalDigits()
 
 open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 var x = x
 var y = y

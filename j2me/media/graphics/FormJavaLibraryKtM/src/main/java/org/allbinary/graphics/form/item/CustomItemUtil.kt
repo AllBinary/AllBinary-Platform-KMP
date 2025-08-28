@@ -37,10 +37,7 @@ open public class CustomItemUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CustomItemUtil
-
-        Updates for KMP build        
-        {
+: CustomItemUtil{
 
 
 

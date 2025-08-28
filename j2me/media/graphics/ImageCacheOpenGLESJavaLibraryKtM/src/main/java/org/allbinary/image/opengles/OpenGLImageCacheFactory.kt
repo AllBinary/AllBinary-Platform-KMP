@@ -38,10 +38,7 @@ open public class OpenGLImageCacheFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageCache
-
-        Updates for KMP build        
-        {
+: ImageCache{
 
 
 
@@ -52,10 +49,7 @@ open fun getInstance()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 

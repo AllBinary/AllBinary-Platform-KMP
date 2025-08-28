@@ -37,10 +37,7 @@ open public class SmallLongFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: SmallLongFactory
-
-        Updates for KMP build        
-        {
+: SmallLongFactory{
 
 
 
@@ -67,10 +64,7 @@ open fun getInstance()
 
 open fun init(value: Int, negativeValue: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 var negativeValue = negativeValue
 
@@ -79,9 +73,6 @@ var negativeValue = negativeValue
 
                         for (index in value -1 downTo lastMin)
 
-        
-
-        Updates for KMP build        
         {
 INTEGER_ARRAY[index +NEGATIVE_MAX]= index as Long
 }
@@ -92,9 +83,6 @@ INTEGER_ARRAY[index +NEGATIVE_MAX]= index as Long
 
                         for (index in negativeValue -1 downTo lastNegativeMin)
 
-        
-
-        Updates for KMP build        
         {
 INTEGER_ARRAY[index]=  -index as Long
 }
@@ -123,10 +111,7 @@ MIN= value
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(INTEGER_ARRAY[0] == 
@@ -145,9 +130,6 @@ open fun init()
 
                         for (index in POSITIVE_MAX -1 downTo lastMin)
 
-        
-
-        Updates for KMP build        
         {
 INTEGER_ARRAY[index +NEGATIVE_MAX]= index as Long
 }
@@ -158,9 +140,6 @@ INTEGER_ARRAY[index +NEGATIVE_MAX]= index as Long
 
                         for (index in NEGATIVE_MAX -1 downTo lastNegativeMin)
 
-        
-
-        Updates for KMP build        
         {
 INTEGER_ARRAY[index]=  -index as Long
 }
@@ -177,19 +156,13 @@ lastNegativeMin= NEGATIVE_MAX
 
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getInstanceNoThrow(index: Long)
         //nullable = true from not(false or (false and false)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 var index = index
 
     
@@ -214,10 +187,7 @@ var index = index
 
 open fun getString(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var index = index
 
     var i: Int = index +NEGATIVE_MAX

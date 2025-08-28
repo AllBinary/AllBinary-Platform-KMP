@@ -23,10 +23,7 @@ open public class RendererStateFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: RendererStateFactory
-
-        Updates for KMP build        
-        {
+: RendererStateFactory{
 
 
 
@@ -48,10 +45,7 @@ open fun getInstance()
 
 open fun setLoaded(loaded: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var loaded = loaded
 this.loaded= loaded
 }
@@ -59,10 +53,7 @@ this.loaded= loaded
 
 open fun isLoaded()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -73,10 +64,7 @@ open fun isLoaded()
 
 open fun setSurfaceChanged(initialized: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var initialized = initialized
 surfaceChanged= initialized
 }
@@ -84,10 +72,7 @@ surfaceChanged= initialized
 
 open fun isSurfaceChanged()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 

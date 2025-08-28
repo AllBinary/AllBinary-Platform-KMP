@@ -38,9 +38,6 @@ open public class BasicPlatormGeographicMapCellType
     private val types: IntArray
 public constructor        (type: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var type = type
 
@@ -52,9 +49,6 @@ this.types[0]= type
 
 public constructor        (types: IntArray)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var types = types
 
@@ -67,9 +61,6 @@ public constructor        (types: IntArray)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
                         //Otherwise - ExpressionStmt - expression - ObjectCreationExpr
@@ -81,9 +72,6 @@ this.types= types
 
 public constructor        (types: BasicArrayList)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var types = types
 
@@ -101,9 +89,6 @@ public constructor        (types: BasicArrayList)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 type= get = types.get(index)get as Integer
 get.
@@ -120,10 +105,7 @@ this.types= typeArray
 
 open fun isType(type: GeographicMapCellType)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var type = type
 
 
@@ -135,10 +117,7 @@ open fun isType(type: GeographicMapCellType)
 
 open fun isType(type: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var type = type
 
     var size: Int = types.size
@@ -150,9 +129,6 @@ open fun isType(type: Int)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     

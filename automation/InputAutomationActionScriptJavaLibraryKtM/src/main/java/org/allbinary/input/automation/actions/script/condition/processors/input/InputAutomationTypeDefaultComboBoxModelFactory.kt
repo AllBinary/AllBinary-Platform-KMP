@@ -40,10 +40,7 @@ open public class InputAutomationTypeDefaultComboBoxModelFactory
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DefaultComboBoxModel
-
-        Updates for KMP build        
-        {
+: DefaultComboBoxModel{
 
     var defaultComboBoxModel: DefaultComboBoxModel = DefaultComboBoxModel()
 
@@ -63,9 +60,6 @@ open fun getInstance()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 defaultComboBoxModel!!.addElement(nameArray[index]!! as String)
 }
@@ -81,9 +75,6 @@ defaultComboBoxModel!!.addElement(nameArray[index]!! as String)
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

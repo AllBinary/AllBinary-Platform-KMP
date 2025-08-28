@@ -46,10 +46,7 @@ open public class PrintLicenseInitInfo
             
 open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var args = args
 
     var initInfo: PrintLicenseInitInfo = PrintLicenseInitInfo(args)
@@ -61,9 +58,6 @@ initInfo!!.printInitInfo()
         }
             public constructor        (options: Array<String?>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var options = options
 LicenseInitInfoUtil.getInstance()!!.setFilePath(PATH +PATH_GLOBALS.getInstance()!!.INIT_PATH)
@@ -74,10 +68,7 @@ LicenseInitInfoUtil.getInstance()!!.setFilePath(PATH +PATH_GLOBALS.getInstance()
             
 open fun getLicenseInitInfo()
         //nullable = true from not(false or (false and true)) = true
-: LicenseInitInfo
-
-        Updates for KMP build        
-        {
+: LicenseInitInfo{
 
     var licenseInitInfoUtil: LicenseInitInfoUtil = LicenseInitInfoUtil.getInstance()!!
 
@@ -109,10 +100,7 @@ open fun getLicenseInitInfo()
 
 open fun printInitInfo()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             
@@ -131,18 +119,12 @@ System.out.println("License ID: " +licenseInitInfo!!.getLicenseId())
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 System.out.println("Lic Serv: " +list.get(index))
 }
 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 System.out.print("Error: " +e)
 e.printStackTrace()
 }

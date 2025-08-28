@@ -40,10 +40,7 @@ open public class CommonButtons
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CommonButtons
-
-        Updates for KMP build        
-        {
+: CommonButtons{
 
 
 
@@ -61,9 +58,6 @@ open fun getInstance()
     val LARGE_BUTTON: Rectangle
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
@@ -73,9 +67,6 @@ private constructor        ()
 
 
         while(commonButtonSize > 64)
-        
-
-        Updates for KMP build        
         {
 
     var totalColumns: Int = displayInfo!!.getLastWidth() /commonButtonSize

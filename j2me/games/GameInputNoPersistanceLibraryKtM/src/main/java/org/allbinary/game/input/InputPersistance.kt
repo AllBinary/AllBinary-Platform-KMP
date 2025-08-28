@@ -45,10 +45,7 @@ open public class InputPersistance : BasicPersitance {
     private val hashtableUtil: HashtableUtil = HashtableUtil.getInstance()!!
 public constructor        (name: String)                        
 
-                            : super(name)
-
-        Updates for KMP build        
-        {
+                            : super(name){
 var name = name
 
 
@@ -61,10 +58,7 @@ var name = name
             
 open fun loadAll(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
 
     var recordStore: RecordStore = RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)!!
@@ -86,9 +80,6 @@ open fun loadAll(abeClientInformation: AbeClientInformationInterface)
 
 
         while(recordEnum!!.hasNextElement())
-        
-
-        Updates for KMP build        
         {
 id= recordEnum!!.nextRecordId()
 stringBuffer!!.delete(0, stringBuffer!!.length())
@@ -106,10 +97,7 @@ recordStore!!.closeRecordStore()
             
 open fun save(abeClientInformation: AbeClientInformationInterface, hashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
 var hashtable = hashtable
 PreLogUtil.put(StringMaker().
@@ -139,9 +127,6 @@ PreLogUtil.put(StringMaker().
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 gameActionInput= inputObjectArray[index]!! as Input
 list= hashtable.get(inputObjectArray[index]!!) as BasicArrayList
@@ -151,9 +136,6 @@ list= hashtable.get(inputObjectArray[index]!!) as BasicArrayList
 
                         for (index2 in 0 until list.size()!!)
 
-        
-
-        Updates for KMP build        
         {
 input= list.get(index2) as Input
 }

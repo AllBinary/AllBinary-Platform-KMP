@@ -32,9 +32,6 @@ open fun getScoreableInterface()
         //nullable = true from not(false or (false and true)) = true
 : Scoreable
 
-        Updates for KMP build        
-        
-
 }
                 
             

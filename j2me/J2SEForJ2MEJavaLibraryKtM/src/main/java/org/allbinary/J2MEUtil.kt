@@ -35,10 +35,7 @@ open public class J2MEUtil
             
 open fun isJ2ME()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -49,10 +46,7 @@ open fun isJ2ME()
 
 open fun isJ2SE()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -64,9 +58,6 @@ open fun isJ2SE()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

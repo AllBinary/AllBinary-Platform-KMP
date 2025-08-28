@@ -39,10 +39,7 @@ open public class ThirdPartyInApplicationPurchase
             }            
         override fun isPurchased(lockableFeature: LockableFeature)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var lockableFeature = lockableFeature
 
 
@@ -53,36 +50,24 @@ var lockableFeature = lockableFeature
 
 override fun onCreate(anyType: Any, stateObject: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var anyType = anyType
 var stateObject = stateObject
 }
 
 override fun onDestroy()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun onStart()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun onActivityResult(requestCode: Int, resultCode: Int, dataObject: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var requestCode = requestCode
     //var resultCode = resultCode
     //var dataObject = dataObject
@@ -90,53 +75,35 @@ override fun onActivityResult(requestCode: Int, resultCode: Int, dataObject: Any
 
 override fun onSaveInstanceState(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var anyType = anyType
 }
 
 override fun onStop()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun requestPurchase(lockableFeature: LockableFeature)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var lockableFeature = lockableFeature
 }
 
 override fun requestReceipts()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun add(lockableFeature: LockableFeature)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var lockableFeature = lockableFeature
 }
 
 override fun getUserName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -146,10 +113,7 @@ override fun getUserName()
 
 override fun isEnabled()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -160,10 +124,7 @@ override fun isEnabled()
 
 open fun requestProducts()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 

@@ -37,9 +37,6 @@ open public class AllBinaryLayerFactory
     private val rectangle: Rectangle
 public constructor        (rectangle: Rectangle)
             : super()
-        
-
-        Updates for KMP build        
         {
 var rectangle = rectangle
 this.rectangle= rectangle
@@ -47,10 +44,7 @@ this.rectangle= rectangle
 
 override fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AllBinaryLayer
-
-        Updates for KMP build        
-        {
+: AllBinaryLayer{
 
 
 

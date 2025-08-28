@@ -41,10 +41,7 @@ open public class ImageJ2SERotationUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageJ2SERotationUtil
-
-        Updates for KMP build        
-        {
+: ImageJ2SERotationUtil{
 
 
 
@@ -60,19 +57,13 @@ open fun getInstance()
     private val imageJ2SEUtil: ImageJ2SEUtil = ImageJ2SEUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getRotatedImage(bufferedImage: Image, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-: BufferedImage
-
-        Updates for KMP build        
-        {
+: BufferedImage{
     //var bufferedImage = bufferedImage
     //var totalAngle = totalAngle
 
@@ -85,10 +76,7 @@ open fun getRotatedImage(bufferedImage: Image, totalAngle: Int)
 
 open fun getRotatedImage(bufferedImage: Image, radians: Double)
         //nullable = true from not(false or (false and false)) = true
-: BufferedImage
-
-        Updates for KMP build        
-        {
+: BufferedImage{
     //var bufferedImage = bufferedImage
     //var radians = radians
 
@@ -106,10 +94,7 @@ open fun getRotatedImage(bufferedImage: Image, radians: Double)
 
 open fun getRotatedImage(bufferedImage: Image, newBufferedImage: BufferedImage, g: Graphics2D, radians: Double)
         //nullable = true from not(false or (false and false)) = true
-: BufferedImage
-
-        Updates for KMP build        
-        {
+: BufferedImage{
     //var bufferedImage = bufferedImage
     //var newBufferedImage = newBufferedImage
     //var g = g
@@ -134,10 +119,7 @@ g.dispose()
 
 open fun rotateImage(bufferedImage: Image, newBufferedImage: BufferedImage, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-: BufferedImage
-
-        Updates for KMP build        
-        {
+: BufferedImage{
     //var bufferedImage = bufferedImage
     //var newBufferedImage = newBufferedImage
     //var totalAngle = totalAngle
@@ -156,10 +138,7 @@ g.clearRect(0, 0, newBufferedImage!!.getWidth(), newBufferedImage!!.getHeight())
 
 open fun getRotatedImage(bufferedImage: Image, newBufferedImage: BufferedImage, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-: BufferedImage
-
-        Updates for KMP build        
-        {
+: BufferedImage{
     //var bufferedImage = bufferedImage
     //var newBufferedImage = newBufferedImage
     //var totalAngle = totalAngle
@@ -176,10 +155,7 @@ open fun getRotatedImage(bufferedImage: Image, newBufferedImage: BufferedImage, 
 
 open fun getRotatedImages(bufferedImage: Image, numberOfFrames: Int, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Array<BufferedImage?>
-
-        Updates for KMP build        
-        {
+: Array<BufferedImage?>{
     //var bufferedImage = bufferedImage
     //var numberOfFrames = numberOfFrames
     //var totalAngle = totalAngle
@@ -199,9 +175,6 @@ open fun getRotatedImages(bufferedImage: Image, numberOfFrames: Int, totalAngle:
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var radians: Double = (arc /size) *index
@@ -219,10 +192,7 @@ bufferedImageArray[index]= this.getRotatedImage(bufferedImage, radians)
 
 open fun createSpriteImage(bufferedImageArray: Array<BufferedImage?>)
         //nullable = true from not(false or (false and false)) = true
-: BufferedImage
-
-        Updates for KMP build        
-        {
+: BufferedImage{
     //var bufferedImageArray = bufferedImageArray
 
     var columns: Int = 9
@@ -279,9 +249,6 @@ rows= (size /columns)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     

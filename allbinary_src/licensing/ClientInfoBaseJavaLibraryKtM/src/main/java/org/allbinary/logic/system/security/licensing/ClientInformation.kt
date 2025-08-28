@@ -59,9 +59,6 @@ open public class ClientInformation
     private var licenseServers: BasicArrayList = BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
 public constructor        (name: String, version: String, specialName: String, shortName: String)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var name = name
     //var version = version
@@ -77,18 +74,12 @@ this.init()
 
 override fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun getOperatingSystemInterface()
         //nullable = true from not(false or (false and true)) = true
-: GenericOperatingSystem
-
-        Updates for KMP build        
-        {
+: GenericOperatingSystem{
 
 
 
@@ -98,10 +89,7 @@ override fun getOperatingSystemInterface()
 
 override fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -111,10 +99,7 @@ override fun getName()
 
 override fun getSpecialName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -124,10 +109,7 @@ override fun getSpecialName()
 
 override fun getVersion()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -137,10 +119,7 @@ override fun getVersion()
 
 override fun getLicenseId()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -150,10 +129,7 @@ override fun getLicenseId()
 
 override fun getLicenseServers()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 
@@ -163,10 +139,7 @@ override fun getLicenseServers()
 
 override fun getLicenseServer(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var index = index
 
 
@@ -177,10 +150,7 @@ var index = index
 
 override fun getNumberOfLicenseServers()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -190,10 +160,7 @@ override fun getNumberOfLicenseServers()
 
 override fun toHashtable()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>
-
-        Updates for KMP build        
-        {
+: Hashtable<Any, Any>{
 
     var abeClientInformationData: AbeClientInformationData = AbeClientInformationData.getInstance()!!
 
@@ -224,10 +191,7 @@ clientInfoHashtable!!.put(abeClientInformationData!!.HARDWARE, hardwareString)
 
 override fun isSameId(alicenseId: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var alicenseId = alicenseId
 
     
@@ -255,10 +219,7 @@ var alicenseId = alicenseId
 
 override fun isLargerOrDifferentServerList(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var list = list
 
     var size: Int = list.size() -1
@@ -285,9 +246,6 @@ var list = list
 
                         for (index in size downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     var newServerName: String = list.objectArray[index]!! as String
@@ -298,9 +256,6 @@ var list = list
 
                         for (index2 in currentSize downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     var nextOldServerName: String = this.licenseServers!!.objectArray[index]!! as String
@@ -332,20 +287,14 @@ var list = list
 
 open fun setHardSale(hardSale: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var hardSale = hardSale
 this.hardSale= hardSale
 }
 
 override fun isHardSale()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -356,10 +305,7 @@ override fun isHardSale()
 
 open fun setOperatingSystemInterface(operatingSystemInterface: GenericOperatingSystem)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var operatingSystemInterface = operatingSystemInterface
 this.operatingSystemInterface= operatingSystemInterface
 }
@@ -367,10 +313,7 @@ this.operatingSystemInterface= operatingSystemInterface
 
 open fun setLicenseId(licenseId: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var licenseId = licenseId
 this.licenseId= licenseId
 }
@@ -378,20 +321,14 @@ this.licenseId= licenseId
 
 open fun setLicenseServers(licenseServers: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var licenseServers = licenseServers
 this.licenseServers= licenseServers
 }
 
 override fun toShortString()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

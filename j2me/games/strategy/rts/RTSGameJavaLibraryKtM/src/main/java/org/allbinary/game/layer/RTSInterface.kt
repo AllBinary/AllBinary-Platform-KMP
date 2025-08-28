@@ -32,85 +32,49 @@ open fun isSelfUpgradeable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-        Updates for KMP build        
-        
-
 open fun isCompleted()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
-
-        Updates for KMP build        
-        
 
 open fun getPercentComplete()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-        Updates for KMP build        
-        
-
 open fun getLevel()
         //nullable = true from not(false or (false and true)) = true
 : Int
-
-        Updates for KMP build        
-        
 
 open fun getMaxLevel()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-        Updates for KMP build        
-        
-
 open fun getCost()
         //nullable = true from not(false or (false and true)) = true
 : Int
-
-        Updates for KMP build        
-        
 
 open fun downgrade()
         //nullable = true from not(false or (false and true)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun getDowngradeCost()
         //nullable = true from not(false or (false and true)) = true
 : Int
-
-        Updates for KMP build        
-        
 
 open fun isDowngradeable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-        Updates for KMP build        
-        
-
 open fun getUpgradeCost()
         //nullable = true from not(false or (false and true)) = true
 : Int
-
-        Updates for KMP build        
-        
 
 open fun isUpgradeable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-        Updates for KMP build        
-        
-
 open fun upgrade()
         //nullable = true from not(false or (false and true)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

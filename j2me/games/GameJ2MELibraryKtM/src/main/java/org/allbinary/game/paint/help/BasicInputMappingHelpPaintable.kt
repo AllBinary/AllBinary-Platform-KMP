@@ -44,10 +44,7 @@ open public class BasicInputMappingHelpPaintable : HelpPaintable {
     private val NONE: GameKey = GameKeyFactory.getInstance()!!.NONE
 protected constructor        (gameInputMappingArray: Array<GameInputMapping?>, basicColor: BasicColor)                        
 
-                            : super(basicColor)
-
-        Updates for KMP build        
-        {
+                            : super(basicColor){
     //var gameInputMappingArray = gameInputMappingArray
     //var basicColor = basicColor
 
@@ -61,10 +58,7 @@ this.update(NONE, NONE)
 
 open fun update(selectedGameKey: GameKey, selectedInput: Input)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var selectedGameKey = selectedGameKey
     //var selectedInput = selectedInput
 
@@ -98,9 +92,6 @@ open fun update(selectedGameKey: GameKey, selectedInput: Input)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 gameInputMapping= gameInputMappingArray[index]!!
 gameKey= gameInputMapping!!.getGameKey()
@@ -115,10 +106,7 @@ super.setInputInfoP(keyInfo)
 
 open fun get(keyList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
     //var keyList = keyList
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
@@ -141,9 +129,6 @@ open fun get(keyList: BasicArrayList)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 key= keyList!!.objectArray[index]!! as Input
 stringBuffer!!.append(key.getName())

@@ -36,10 +36,7 @@ open public class IndexedAnimationBehavior : AnimationBehavior {
     var elapsedTime: Long= 0
 
     var loopIndex: Int= 0
-public constructor        (loopTotal: Int, frameDelayTime: Long)
-
-        Updates for KMP build        
-        {
+public constructor        (loopTotal: Int, frameDelayTime: Long){
     //var loopTotal = loopTotal
     //var frameDelayTime = frameDelayTime
 this.loopTotal= loopTotal
@@ -48,10 +45,7 @@ this.frameDelayTime= frameDelayTime
 
 override fun reset()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.loopIndex= 0
 }
 

@@ -39,9 +39,6 @@ open public class MotionRectanglesResultsFrameCacheable
     private var frame: Long
 public constructor        (motionRectangles: MotionRectangles, frame: Long)
             : super()
-        
-
-        Updates for KMP build        
         {
 var motionRectangles = motionRectangles
 var frame = frame
@@ -52,10 +49,7 @@ this.setMotionRectangles(motionRectangles)
 
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 
 
 
@@ -66,10 +60,7 @@ open fun getKey()
 
 open fun getMotionRectangles()
         //nullable = true from not(false or (false and true)) = true
-: MotionRectangles
-
-        Updates for KMP build        
-        {
+: MotionRectangles{
 
 
 
@@ -80,20 +71,14 @@ open fun getMotionRectangles()
 
 open fun setMotionRectangles(motionRectangles: MotionRectangles)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var motionRectangles = motionRectangles
 this.motionRectangles= motionRectangles
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

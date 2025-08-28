@@ -42,10 +42,7 @@ open public class DragVelocityBehavior : VelocityBehaviorBase {
             }            
         override fun reduce(velocityProperties: BasicVelocityProperties, nominator: Int, denominator: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var velocityProperties = velocityProperties
     //var nominator = nominator
     //var denominator = denominator
@@ -79,10 +76,7 @@ basicDecimal!!.divide(denominator)
 
 override fun reduceX(velocityProperties: BasicVelocityProperties, nominator: Int, denominator: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var velocityProperties = velocityProperties
     //var nominator = nominator
     //var denominator = denominator
@@ -103,10 +97,7 @@ basicDecimal!!.divide(denominator)
 
 override fun reduceY(velocityProperties: BasicVelocityProperties, nominator: Int, denominator: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var velocityProperties = velocityProperties
     //var nominator = nominator
     //var denominator = denominator

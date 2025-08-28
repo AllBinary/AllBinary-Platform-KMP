@@ -33,56 +33,32 @@ open fun hasKey()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-        Updates for KMP build        
-        
-
 open fun getKey(keyName: String)
         //nullable = true from not(false or (false and false)) = true
 : String
-
-        Updates for KMP build        
-        
 
 open fun getLicenseId()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-        Updates for KMP build        
-        
-
 open fun getServers()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList
-
-        Updates for KMP build        
-        
 
 open fun getSpecial()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-        Updates for KMP build        
-        
-
 open fun getLicenseType()
         //nullable = true from not(false or (false and true)) = true
 : LicenseType
 
-        Updates for KMP build        
-        
-
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
-
-        Updates for KMP build        
-        
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String
-
-        Updates for KMP build        
-        
 
 }
                 

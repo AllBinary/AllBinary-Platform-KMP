@@ -53,10 +53,7 @@ open public class NumberStringHud : BasicHud
     private val primitiveLongUtil: PrimitiveLongUtil
 public constructor        (prependString: String, max: Int, location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int, basicColor: BasicColor)                        
 
-                            : super(location, direction, maxHeight, maxWidth, bufferZone, basicColor)
-
-        Updates for KMP build        
-        {
+                            : super(location, direction, maxHeight, maxWidth, bufferZone, basicColor){
 var prependString = prependString
 var max = max
 var location = location
@@ -95,10 +92,7 @@ this.value= 0
 
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -109,10 +103,7 @@ open fun get()
 
 open fun add(value: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.set(this.value +value)
 }
@@ -120,10 +111,7 @@ this.set(this.value +value)
 
 open fun set(value: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.value= value
 
@@ -142,20 +130,14 @@ this.valueTotalDigits= this.primitiveLongUtil!!.getCurrentTotalDigits()
 
 open fun reduce(value: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.set(this.value -value)
 }
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 super.paint(graphics, PREPEND_STRING, 0, PREPEND_STRING.size, this.valueString, 0, this.valueTotalDigits, offset)
 }
@@ -163,10 +145,7 @@ super.paint(graphics, PREPEND_STRING, 0, PREPEND_STRING.size, this.valueString, 
 
 open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 var x = x
 var y = y
@@ -190,10 +169,7 @@ graphics.drawChars(charArray2, 0, len2, x -this.offset, y, 0)
 
 override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 }
 

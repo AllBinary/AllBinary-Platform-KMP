@@ -43,10 +43,7 @@ open public class CategoryModifierTree : CategoryPrivateTree
     private val directory: Directory = Directory.getInstance()!!
 public constructor        (categoryFactoryInterface: CategoryFactoryInterface)                        
 
-                            : super(categoryFactoryInterface)
-
-        Updates for KMP build        
-        {
+                            : super(categoryFactoryInterface){
 var categoryFactoryInterface = categoryFactoryInterface
 
 
@@ -67,10 +64,7 @@ var categoryFactoryInterface = categoryFactoryInterface
 
 open fun insert(parentCategoryInterface: CategoryInterface, newChildCategoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var parentCategoryInterface = parentCategoryInterface
 var newChildCategoryInterface = newChildCategoryInterface
 
@@ -113,10 +107,7 @@ this.save(newChildCategoryInterface)
                         if()
                         
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -134,10 +125,7 @@ this.save(newChildCategoryInterface)
 
 open fun delete(parentCategoryInterface: CategoryInterface, existingChildCategoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var parentCategoryInterface = parentCategoryInterface
 var existingChildCategoryInterface = existingChildCategoryInterface
 
@@ -163,10 +151,7 @@ this.directory.remove(directoryToBeDeletedAbPath)
                         if()
                         
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))

@@ -38,9 +38,6 @@ open public class GlobalsData
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

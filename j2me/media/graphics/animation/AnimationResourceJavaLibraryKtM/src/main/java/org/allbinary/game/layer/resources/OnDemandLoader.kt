@@ -48,9 +48,6 @@ open public class OnDemandLoader
     private val resourceAnimationInterfaceFactoryInterfaceFactory: BaseResourceAnimationInterfaceFactoryInterfaceFactory
 public constructor        (onDemandResourcesFactory: OnDemandResourcesFactory, gameLayerPlacementInterfaceBasicArrayListFactoryInterfaceFactory: GameLayerPlacementInterfaceBasicArrayListFactoryInterfaceFactory, resourceAnimationInterfaceFactoryInterfaceFactory: BaseResourceAnimationInterfaceFactoryInterfaceFactory)
             : super()
-        
-
-        Updates for KMP build        
         {
 var onDemandResourcesFactory = onDemandResourcesFactory
 var gameLayerPlacementInterfaceBasicArrayListFactoryInterfaceFactory = gameLayerPlacementInterfaceBasicArrayListFactoryInterfaceFactory
@@ -65,10 +62,7 @@ this.resourceAnimationInterfaceFactoryInterfaceFactory= resourceAnimationInterfa
             
 open fun init(imageCache: ImageCache, level: Int, loadingString: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var imageCache = imageCache
     //var level = level
     //var loadingString = loadingString
@@ -116,10 +110,7 @@ this.initLevel(layerPlacementInterfaceBasicArrayListFactoryInterface, imageCache
             
 open fun initAll(imageCache: ImageCache, loadingString: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var imageCache = imageCache
     //var loadingString = loadingString
 
@@ -137,9 +128,6 @@ open fun initAll(imageCache: ImageCache, loadingString: String)
 
                         for (onDemandIndex in onDemandResourcesFactory!!.size()!!  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 onDemandResources= onDemandResourcesFactory!!.remove(onDemandIndex)
 
@@ -160,10 +148,7 @@ onDemandResources= onDemandResourcesFactory!!.remove(onDemandIndex)
             
 open fun initLevel(layerPlacementInterfaceBasicArrayListFactoryInterface: LayerPlacementInterfaceBasicArrayListFactoryInterface, imageCache: ImageCache, level: Int, loadingString: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layerPlacementInterfaceBasicArrayListFactoryInterface = layerPlacementInterfaceBasicArrayListFactoryInterface
     //var imageCache = imageCache
     //var level = level
@@ -191,9 +176,6 @@ PreLogUtil.put(StringMaker().
 
                         for (onDemandIndex in onDemandArray!!.size  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 onDemandResources= onDemandResourcesFactory!!.remove(onDemandArray[onDemandIndex]!!)
 

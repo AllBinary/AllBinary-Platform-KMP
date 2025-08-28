@@ -40,10 +40,7 @@ open public class AboutCommandProcessor
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AboutCommandProcessor
-
-        Updates for KMP build        
-        {
+: AboutCommandProcessor{
 
 
 
@@ -61,10 +58,7 @@ open fun getInstance()
         
 open fun process(midletCommandListener: CommandListener, command: Command, canvas: Canvas)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var midletCommandListener = midletCommandListener
     //var command = command
     //var canvas = canvas

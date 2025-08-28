@@ -57,10 +57,7 @@ open public class HorizontaRotationManeuverAI : BasicAI
     private val velocityInterface: VelocityInterface
 public constructor        (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
-                            : super(ownerLayerInterface, gameInput)
-
-        Updates for KMP build        
-        {
+                            : super(ownerLayerInterface, gameInput){
 var ownerLayerInterface = ownerLayerInterface
 var gameInput = gameInput
 
@@ -87,10 +84,7 @@ rotationAnimationInterfaceCompositeInterface!!.setFrame(angleIncrementInfo!!.RIG
 
 override fun transition()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var rotationAnimationInterface: RotationAnimationInterface = this.rotationAnimationInterface as RotationAnimationInterface
 
@@ -111,10 +105,7 @@ allbinaryLayer!!.setPosition(allbinaryLayer!!.getXP(), 1, allbinaryLayer!!.getZP
                 @Throws(Exception::class)
             override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryLayerManager = allBinaryLayerManager
 
     var rotationAnimationInterface: RotationAnimationInterface = (this.rotationAnimationInterface as RotationAnimationInterface)
@@ -189,10 +180,7 @@ this.circularIndexUtil!!.next()
 
 open fun reverse()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var rotationAnimationInterface: RotationAnimationInterface = this.rotationAnimationInterface as RotationAnimationInterface
 
@@ -233,10 +221,7 @@ this.baseVelocityInterface!!.zero()
 
 open fun accelerate()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(currentSpeedDivisor > 1)
@@ -251,10 +236,7 @@ open fun accelerate()
 
 open fun drop()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
 
@@ -283,10 +265,7 @@ ownerLayerInterface!!.setPosition(ownerLayerInterface!!.getXP(), y, ownerLayerIn
 
 override fun getId()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

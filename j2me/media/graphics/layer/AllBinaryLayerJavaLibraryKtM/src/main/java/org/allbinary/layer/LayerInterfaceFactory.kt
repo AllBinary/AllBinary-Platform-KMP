@@ -46,10 +46,7 @@ open public class LayerInterfaceFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LayerInterfaceFactory
-
-        Updates for KMP build        
-        {
+: LayerInterfaceFactory{
 
 
 
@@ -71,10 +68,7 @@ open fun getInstance()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 list= BasicArrayList()
 }
 
@@ -85,10 +79,7 @@ list= BasicArrayList()
             
 open fun getInstance(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
         //nullable =  from not(true or (false and false)) = 
-: AllBinaryLayer
-
-        Updates for KMP build        
-        {
+: AllBinaryLayer{
     //var hashtable = hashtable
     //var x = x
     //var y = y
@@ -114,10 +105,7 @@ logUtil!!.put(StringMaker().
 
 open fun add(layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
 list.add(layerInterfaceFactoryInterface)
 }

@@ -39,9 +39,6 @@ open public class OrientationToGameKeyEvent
     private val MIN: Int = 15
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     
@@ -65,10 +62,7 @@ public constructor        ()
 
 open fun setAllBinaryGyroSensor(allBinaryGyroSensor: AllBinaryOrientationSensor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allBinaryGyroSensor = allBinaryGyroSensor
 this.allBinaryGyroSensor= allBinaryGyroSensor
 }
@@ -76,10 +70,7 @@ this.allBinaryGyroSensor= allBinaryGyroSensor
 
 open fun getAllBinaryGyroSensor()
         //nullable = true from not(false or (false and true)) = true
-: AllBinaryOrientationSensor
-
-        Updates for KMP build        
-        {
+: AllBinaryOrientationSensor{
 
 
 
@@ -92,10 +83,7 @@ open fun getAllBinaryGyroSensor()
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
@@ -103,10 +91,7 @@ open fun process()
             
 open fun updateGameKeyEvents(orientation: Orientation, yaw: Int, pitch: Int, roll: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var orientation = orientation
 var yaw = yaw
 var pitch = pitch

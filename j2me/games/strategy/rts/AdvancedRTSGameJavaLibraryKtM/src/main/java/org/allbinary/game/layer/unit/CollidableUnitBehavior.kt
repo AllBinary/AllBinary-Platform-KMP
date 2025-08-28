@@ -52,10 +52,7 @@ open public class CollidableUnitBehavior : CollidableRTSBehavior {
     private val layerPartialCellPositionsUtil: LayerPartialCellPositionsUtil = LayerPartialCellPositionsUtil.getInstance()!!
 public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
 
-                            : super(ownerLayer, collidable)
-
-        Updates for KMP build        
-        {
+                            : super(ownerLayer, collidable){
     //var ownerLayer = ownerLayer
     //var collidable = collidable
 
@@ -69,10 +66,7 @@ public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boo
             
 open fun collideNone(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 this.chase(collidableInterfaceCompositeInterface)
 
@@ -100,10 +94,7 @@ open public inner class SimpleSteeringVisitor : SteeringVisitor {
         
 open fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
     //var anyType = anyType
 
         try {
@@ -146,10 +137,7 @@ open fun visit(anyType: Any)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "visit", e)
 
 
@@ -170,10 +158,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "visit", e)
             
 open fun steer(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
     var ownerUnitLayer: UnitLayer = this.ownerLayer as UnitLayer
@@ -228,10 +213,7 @@ open fun steer(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
             
 open fun chase(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
     var rtsLayer: AdvancedRTSGameLayer = collidableInterfaceCompositeInterface as AdvancedRTSGameLayer
@@ -275,10 +257,7 @@ open fun chase(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
             
 open fun collideUnit(unitLayer: UnitLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var unitLayer = unitLayer
 
     var ownerUnitLayer: UnitLayer = this.ownerLayer as UnitLayer

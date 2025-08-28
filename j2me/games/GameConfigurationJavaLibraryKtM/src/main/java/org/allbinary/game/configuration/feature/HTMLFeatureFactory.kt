@@ -23,10 +23,7 @@ open public class HTMLFeatureFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: HTMLFeatureFactory
-
-        Updates for KMP build        
-        {
+: HTMLFeatureFactory{
 
 
 
@@ -38,9 +35,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

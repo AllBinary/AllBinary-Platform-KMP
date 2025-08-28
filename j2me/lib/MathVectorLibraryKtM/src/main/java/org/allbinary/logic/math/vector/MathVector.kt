@@ -40,9 +40,6 @@ open public class MathVector
     var resultBasicDecimal: BasicDecimal
 public constructor        (magnitudeBasicDecimal: BasicDecimal, direction: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var magnitudeBasicDecimal = magnitudeBasicDecimal
 var direction = direction
@@ -53,10 +50,7 @@ this.direction= direction
 
 open fun getMagnitude()
         //nullable = true from not(false or (false and true)) = true
-: BasicDecimal
-
-        Updates for KMP build        
-        {
+: BasicDecimal{
 
 
 
@@ -67,10 +61,7 @@ open fun getMagnitude()
 
 open fun getDirection()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -81,10 +72,7 @@ open fun getDirection()
 
 open fun getResult()
         //nullable = true from not(false or (false and true)) = true
-: BasicDecimal
-
-        Updates for KMP build        
-        {
+: BasicDecimal{
 
 
 

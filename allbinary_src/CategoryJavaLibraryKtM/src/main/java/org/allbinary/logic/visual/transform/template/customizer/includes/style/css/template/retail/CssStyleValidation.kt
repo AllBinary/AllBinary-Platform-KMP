@@ -45,25 +45,16 @@ open public class CssStyleValidation : Validation
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     var cssStyleElementVector: Vector
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 this.cssStyleElementVector= Vector()
 }
 
-public constructor        (document: Document)
-
-        Updates for KMP build        
-        {
+public constructor        (document: Document){
 var document = document
 this.cssStyleElementVector= StylesValidationFactory.getInstance()!!.getInstance(document)
 }
 
-public constructor        (hashMap: HashMap<Any, Any>)
-
-        Updates for KMP build        
-        {
+public constructor        (hashMap: HashMap<Any, Any>){
 var hashMap = hashMap
 this.cssStyleElementVector= StylesValidationFactory.getInstance(hashMap)
 }
@@ -71,10 +62,7 @@ this.cssStyleElementVector= StylesValidationFactory.getInstance(hashMap)
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             
@@ -98,9 +86,6 @@ open fun isValid()
 
                         for (i in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var styleValidationInterface: ValidationInterface = cssStyleElementVector!!.get(i) as ValidationInterface
@@ -131,10 +116,7 @@ open fun isValid()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return isValid
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
@@ -156,10 +138,7 @@ open fun isValid()
 
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -171,10 +150,7 @@ open fun validationInfo()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
@@ -196,10 +172,7 @@ open fun validationInfo()
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
 
 
@@ -210,10 +183,7 @@ open fun toValidationInfoDoc()
 
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
 
@@ -227,10 +197,7 @@ var document = document
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var node: Node = document.createElement(StylesData.getInstance()!!.NAME)!!
@@ -248,9 +215,6 @@ node.appendChild(styleNode)
 
                         for (i in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var styleDomNodeInterface: DomNodeInterface = cssStyleElementVector!!.get(i) as DomNodeInterface

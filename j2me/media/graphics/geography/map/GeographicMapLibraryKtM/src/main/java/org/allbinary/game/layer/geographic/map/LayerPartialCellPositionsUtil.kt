@@ -41,10 +41,7 @@ open public class LayerPartialCellPositionsUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LayerPartialCellPositionsUtil
-
-        Updates for KMP build        
-        {
+: LayerPartialCellPositionsUtil{
 
 
 
@@ -64,10 +61,7 @@ open fun getInstance()
             
 open fun getAll(geographicMapInterface: BasicGeographicMap, layerInterface: AllBinaryLayer, reusableList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 var geographicMapInterface = geographicMapInterface
 var layerInterface = layerInterface
 var reusableList = reusableList
@@ -140,10 +134,7 @@ reusableList!!.clear()
             
 open fun getAll(geographicMapInterface: BasicGeographicMap, layerInterface: AllBinaryLayer, dx: Int, dy: Int, reusableList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 var geographicMapInterface = geographicMapInterface
 var layerInterface = layerInterface
 var dx = dx

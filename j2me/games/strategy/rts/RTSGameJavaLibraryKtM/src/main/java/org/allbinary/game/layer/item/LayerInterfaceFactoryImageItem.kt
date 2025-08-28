@@ -40,10 +40,7 @@ open public class LayerInterfaceFactoryImageItem : CustomImageItem {
     private val layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface
 public constructor        (label: String, img: Image, layout: Int, altText: String, basicColor: BasicColor, animationArray: Array<Animation?>, layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface)                        
 
-                            : super(label, img, layout, altText, basicColor)
-
-        Updates for KMP build        
-        {
+                            : super(label, img, layout, altText, basicColor){
 var label = label
 var img = img
 var layout = layout
@@ -62,10 +59,7 @@ this.layerInterfaceFactoryInterface= layerInterfaceFactoryInterface
 
 open fun getLayerInterfaceFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
-: LayerInterfaceFactoryInterface
-
-        Updates for KMP build        
-        {
+: LayerInterfaceFactoryInterface{
 
 
 
@@ -76,10 +70,7 @@ open fun getLayerInterfaceFactoryInterface()
 
 open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 var x = x
 var y = y
@@ -90,9 +81,6 @@ super.paint(graphics, x, y)
 
                         for (index in this.animationArray!!.size  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 this.animationArray[index]!!.paint(graphics, x, y)
 }

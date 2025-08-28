@@ -56,10 +56,7 @@ open public class CustomizersView : HttpStoreComponentView
     val customizersVector: Vector
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(transformInfoInterface)
-
-        Updates for KMP build        
-        {
+                            : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
 
 
@@ -71,10 +68,7 @@ this.customizersVector= TransformInfoEntityBuilder.getInstance()!!.getNames(this
 
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
     //var document = document
 
         try {
@@ -93,9 +87,6 @@ open fun toXmlNode(document: Document)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var viewName: String = customizersVector!!.get(index) as String
@@ -121,9 +112,6 @@ Arrays.sort(objectArray, StringComparator())
 
                         for (index in 0 until objectArray!!.size)
 
-        
-
-        Updates for KMP build        
         {
 
     var viewName: String = objectArray[index]!! as String
@@ -140,10 +128,7 @@ node.appendChild(viewNameNode)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.XSLLOGGINGERROR))
@@ -165,10 +150,7 @@ node.appendChild(viewNameNode)
 
 open fun addDomNodeInterfaces()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.addDomNodeInterface(this as DomNodeInterface)
 }
 
@@ -177,10 +159,7 @@ this.addDomNodeInterface(this as DomNodeInterface)
             
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             this.addDomNodeInterfaces()
@@ -190,10 +169,7 @@ open fun view()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.view()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))

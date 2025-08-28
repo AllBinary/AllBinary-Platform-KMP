@@ -37,10 +37,7 @@ open public class ThreedResources
 
 open fun getThreedResources()
         //nullable = true from not(false or (false and true)) = true
-: ThreedResources
-
-        Updates for KMP build        
-        {
+: ThreedResources{
 
 
 
@@ -58,10 +55,7 @@ open fun getThreedResources()
         
 open fun add()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 

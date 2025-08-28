@@ -43,9 +43,6 @@ open public class TransformInfoHttpComposite
     private var transformInfoInterface: TransformInfoHttpInterface
 public constructor        (transformInfoInterface: TransformInfoInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var transformInfoInterface = transformInfoInterface
 
@@ -65,10 +62,7 @@ this.transformInfoInterface= transformInfoInterface as TransformInfoHttpInterfac
             
 open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformInfoInterface
-
-        Updates for KMP build        
-        {
+: TransformInfoInterface{
 
 
 
@@ -79,10 +73,7 @@ open fun getTransformInfoInterface()
 
 open fun getWeblisketSession()
         //nullable = true from not(false or (false and true)) = true
-: WeblisketSession
-
-        Updates for KMP build        
-        {
+: WeblisketSession{
 
 
 
@@ -93,10 +84,7 @@ open fun getWeblisketSession()
 
 open fun getPageContext()
         //nullable = true from not(false or (false and true)) = true
-: PageContext
-
-        Updates for KMP build        
-        {
+: PageContext{
 
 
 
@@ -107,10 +95,7 @@ open fun getPageContext()
 
 open fun getPropertiesHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
 
 

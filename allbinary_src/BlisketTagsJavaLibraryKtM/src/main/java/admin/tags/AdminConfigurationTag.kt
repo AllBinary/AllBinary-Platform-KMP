@@ -30,10 +30,7 @@ import admin.taghelpers.AdminConfigurationRequestHelperFactory
 
 open public class AdminConfigurationTag : TableTag {
         
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 this.setTagHelperFactory(AdminConfigurationHelperFactory())
 this.setTagRequestHelperFactory(AdminConfigurationRequestHelperFactory())
 }

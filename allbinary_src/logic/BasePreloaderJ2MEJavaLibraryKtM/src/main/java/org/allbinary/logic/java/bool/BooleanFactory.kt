@@ -37,10 +37,7 @@ open public class BooleanFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BooleanFactory
-
-        Updates for KMP build        
-        {
+: BooleanFactory{
 
 
 
@@ -70,10 +67,7 @@ open fun getInstance()
 
 open fun toString(bool: Boolean)
         //nullable = true from not(false or (true and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var bool = bool
 
     

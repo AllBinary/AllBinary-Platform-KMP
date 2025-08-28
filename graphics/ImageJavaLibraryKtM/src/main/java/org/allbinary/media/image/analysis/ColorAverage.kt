@@ -39,9 +39,6 @@ open public class ColorAverage
     private var avgBlue: Float= 0.0f
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 this.setAvgRed(0)
 this.setAvgGreen(0)
@@ -50,10 +47,7 @@ this.setAvgBlue(0)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -76,10 +70,7 @@ stringBuffer!!.append("\n")
 
 open fun getAvgRed()
         //nullable = true from not(false or (false and true)) = true
-: Float
-
-        Updates for KMP build        
-        {
+: Float{
 
 
 
@@ -90,10 +81,7 @@ open fun getAvgRed()
 
 open fun setAvgRed(avgRed: Float)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var avgRed = avgRed
 this.avgRed= avgRed
 }
@@ -101,10 +89,7 @@ this.avgRed= avgRed
 
 open fun getAvgGreen()
         //nullable = true from not(false or (false and true)) = true
-: Float
-
-        Updates for KMP build        
-        {
+: Float{
 
 
 
@@ -115,10 +100,7 @@ open fun getAvgGreen()
 
 open fun setAvgGreen(avgGreen: Float)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var avgGreen = avgGreen
 this.avgGreen= avgGreen
 }
@@ -126,10 +108,7 @@ this.avgGreen= avgGreen
 
 open fun getAvgBlue()
         //nullable = true from not(false or (false and true)) = true
-: Float
-
-        Updates for KMP build        
-        {
+: Float{
 
 
 
@@ -140,10 +119,7 @@ open fun getAvgBlue()
 
 open fun setAvgBlue(avgBlue: Float)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var avgBlue = avgBlue
 this.avgBlue= avgBlue
 }

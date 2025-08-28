@@ -46,10 +46,7 @@ open public class AdminUserEmailEventHandlerSingletons
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AdminUserEmailEventHandlerSingletons
-
-        Updates for KMP build        
-        {
+: AdminUserEmailEventHandlerSingletons{
 
 
 
@@ -67,9 +64,6 @@ open fun getInstance()
     private val userEmailEventHandlerHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     
@@ -87,10 +81,7 @@ private constructor        ()
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, userEmailEventNameData: UserEmailEventNameData)
         //nullable =  from not(true or (false and false)) = 
-: UserEmailEventHandler
-
-        Updates for KMP build        
-        {
+: UserEmailEventHandler{
     //var abeClientInformation = abeClientInformation
 var userEmailEventNameData = userEmailEventNameData
 

@@ -39,10 +39,7 @@ open public class ApplicationConfiguration
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ApplicationConfiguration
-
-        Updates for KMP build        
-        {
+: ApplicationConfiguration{
 
 
 
@@ -64,9 +61,6 @@ open fun getInstance()
     private val FILE: String = "ReloadConfiguration.dat"
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
         try {
@@ -85,10 +79,7 @@ private constructor        ()
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -102,10 +93,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
             
 open fun read()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var fileInputStreamFactory: FileStreamFactory = FileStreamFactory.getInstance()!!
 
@@ -210,10 +198,7 @@ logUtil!!.put("Read Configuration: " +this.toString(), this, "read")
             
 open fun write()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var closeable: Closeable = NullCloseable.NULL_CLOSEABLE
 
@@ -274,10 +259,7 @@ closeable= dataOutputStream
                             
 dataOutputStream!!.flush()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
@@ -296,10 +278,7 @@ dataOutputStream!!.flush()
             
 open fun update(gameFeature: Feature)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gameFeature = gameFeature
 
     
@@ -349,10 +328,7 @@ this.write()
 
 open fun setFullscreen(fullscreen: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var fullscreen = fullscreen
 this.fullscreen= fullscreen
 }
@@ -360,10 +336,7 @@ this.fullscreen= fullscreen
 
 open fun isFullscreen()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -374,10 +347,7 @@ open fun isFullscreen()
 
 open fun setShowTitleBar(showTitleBar: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var showTitleBar = showTitleBar
 this.showTitleBar= showTitleBar
 }
@@ -385,10 +355,7 @@ this.showTitleBar= showTitleBar
 
 open fun isShowTitleBar()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -399,10 +366,7 @@ open fun isShowTitleBar()
 
 open fun setProgressBarView(progressBarView: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var progressBarView = progressBarView
 this.progressBarView= progressBarView
 }
@@ -410,10 +374,7 @@ this.progressBarView= progressBarView
 
 open fun isProgressBarView()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -423,10 +384,7 @@ open fun isProgressBarView()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

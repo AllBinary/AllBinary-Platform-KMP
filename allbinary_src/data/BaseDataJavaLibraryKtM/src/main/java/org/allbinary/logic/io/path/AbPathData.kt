@@ -37,10 +37,7 @@ open public class AbPathData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AbPathData
-
-        Updates for KMP build        
-        {
+: AbPathData{
 
 
 
@@ -60,9 +57,6 @@ open fun getInstance()
     val SEPARATOR: String = "/"
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

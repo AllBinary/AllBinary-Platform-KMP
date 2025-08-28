@@ -33,10 +33,7 @@ open public class SpecialDemoGameMidlet : DemoGameMidlet {
         
 public constructor        (clientInformationFactory: ClientInformationFactory, licenseLoadingType: LicenseLoadingType)                        
 
-                            : super(clientInformationFactory)
-
-        Updates for KMP build        
-        {
+                            : super(clientInformationFactory){
     //var clientInformationFactory = clientInformationFactory
     //var licenseLoadingType = licenseLoadingType
 
@@ -47,10 +44,7 @@ public constructor        (clientInformationFactory: ClientInformationFactory, l
 
 public constructor        (clientInformationFactory: ClientInformationFactory, licenseLoadingType: LicenseLoadingType, demoSetup: DemoSetup, licenseCheckRunnable: RunnableInterface)                        
 
-                            : super(clientInformationFactory)
-
-        Updates for KMP build        
-        {
+                            : super(clientInformationFactory){
     //var clientInformationFactory = clientInformationFactory
     //var licenseLoadingType = licenseLoadingType
     //var demoSetup = demoSetup
@@ -64,18 +58,12 @@ public constructor        (clientInformationFactory: ClientInformationFactory, l
 
 open fun initView()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun preInit()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 LicenseServerInitFileUtil().
                             init()
 }

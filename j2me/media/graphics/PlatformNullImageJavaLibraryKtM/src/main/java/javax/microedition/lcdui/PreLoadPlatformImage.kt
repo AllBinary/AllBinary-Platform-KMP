@@ -35,10 +35,7 @@ open public class PreLoadPlatformImage : PlatformImage {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PreLoadPlatformImage
-
-        Updates for KMP build        
-        {
+: PreLoadPlatformImage{
 
 
 

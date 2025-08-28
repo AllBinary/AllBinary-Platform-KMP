@@ -40,10 +40,7 @@ open public class AllBinaryCollisionManager
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AllBinaryCollisionManager
-
-        Updates for KMP build        
-        {
+: AllBinaryCollisionManager{
 
 
 
@@ -55,9 +52,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -66,10 +60,7 @@ open fun getInstance()
             
 open fun process(layerManager: LayerManager, collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface, startIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var layerManager = layerManager
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 var startIndex = startIndex
@@ -82,9 +73,6 @@ var startIndex = startIndex
 
                         for (index in startIndex +1 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var collidableInterfaceCompositeInterface2: CollidableInterfaceCompositeInterface = layerManager!!.getLayerAt(index) as CollidableInterfaceCompositeInterface
@@ -99,10 +87,7 @@ this.collide(layerManager, collidableInterfaceCompositeInterface, collidableInte
             
 open fun collide(layerManager: LayerManager, collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface, collidableInterfaceCompositeInterface2: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var layerManager = layerManager
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 var collidableInterfaceCompositeInterface2 = collidableInterfaceCompositeInterface2

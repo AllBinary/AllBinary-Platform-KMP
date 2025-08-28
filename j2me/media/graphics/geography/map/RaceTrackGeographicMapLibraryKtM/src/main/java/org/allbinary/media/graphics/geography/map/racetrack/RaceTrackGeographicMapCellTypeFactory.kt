@@ -37,10 +37,7 @@ open public class RaceTrackGeographicMapCellTypeFactory : GeographicMapCellTypeF
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: RaceTrackGeographicMapCellTypeFactory
-
-        Updates for KMP build        
-        {
+: RaceTrackGeographicMapCellTypeFactory{
 
 
 
@@ -72,10 +69,7 @@ open fun getInstance()
     val DEFAULT_FINISH_LINE_ROAD_CELL_TYPE: RaceTrackGeographicMapCellType
 
     var FINISH_LINE_ROAD_CELL_TYPE: RaceTrackGeographicMapCellType
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 
     var raceTrackGeographicMapCellTypes: RaceTrackGeographicMapCellTypes = RaceTrackGeographicMapCellTypes.getInstance()!!
 
@@ -92,10 +86,7 @@ DEFAULT_FINISH_LINE_ROAD_CELL_TYPE= raceTrackGeographicMapCellTypes!!.DEFAULT_FI
 
 open fun getStartType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -106,10 +97,7 @@ open fun getStartType()
 
 open fun getEndType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -120,10 +108,7 @@ open fun getEndType()
 
 open fun getEmptyType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -134,10 +119,7 @@ open fun getEmptyType()
 
 open fun isPath(cellType: GeographicMapCellType)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var cellType = cellType
 
     

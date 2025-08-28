@@ -36,36 +36,21 @@ open fun getPaymentGatewayInterface(storeName: String, paymentType: BasicPayment
         //nullable = true from not(false or (false and false)) = true
 : PaymentGatewayInterface
 
-        Updates for KMP build        
-        
-
 open fun findPaymentTypeVectorByStore(storeName: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector
-
-        Updates for KMP build        
-        
 
 open fun remove(storeName: String, paymentType: BasicPaymentType)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun add(paymentGatewayInterface: PaymentGatewayInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun update(paymentGatewayInterface: PaymentGatewayInterface)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

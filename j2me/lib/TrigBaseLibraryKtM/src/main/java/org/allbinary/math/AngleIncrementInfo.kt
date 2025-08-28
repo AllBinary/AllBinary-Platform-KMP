@@ -52,9 +52,6 @@ open public class AngleIncrementInfo
     val RIGHT_FRAME: Integer
 public constructor        (angleIncrement: Short)
             : super()
-        
-
-        Updates for KMP build        
         {
 var angleIncrement = angleIncrement
 this.angleIncrement= angleIncrement
@@ -75,10 +72,7 @@ this.RIGHT_FRAME= smallIntegerSingletonFactory!!.getInstance(angleFactory!!.RIGH
 
 open fun getFrameAngle(frame: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var frame = frame
 
 
@@ -90,10 +84,7 @@ var frame = frame
 
 open fun getAngleIncrement()
         //nullable = true from not(false or (false and true)) = true
-: Short
-
-        Updates for KMP build        
-        {
+: Short{
 
 
 
@@ -103,10 +94,7 @@ open fun getAngleIncrement()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -118,10 +106,7 @@ override fun toString()
 
 open fun getClosestGeneralDirection(angle: Short)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var angle = angle
 
     var closestDirection: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(360)!!

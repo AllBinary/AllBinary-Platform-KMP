@@ -49,10 +49,7 @@ open public class ResourceUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ResourceUtil
-
-        Updates for KMP build        
-        {
+: ResourceUtil{
 
 
 
@@ -66,19 +63,13 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun setClassLoader(classLoader: ClassLoader)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var classLoader = classLoader
 logUtil!!.put(StringMaker().
                             append("Resource Loader: ")!!.append(classLoader!!::class.toString()!!)!!.toString(), this, "setClassLoader")
@@ -90,10 +81,7 @@ ResourceUtil.classLoader= classLoader
             
 open fun getResourceAsStream(resource: String)
         //nullable = true from not(false or (false and false)) = true
-: InputStream
-
-        Updates for KMP build        
-        {
+: InputStream{
     //var resource = resource
 
     var inputStream: InputStream = this.getResourceAsStream(resource, 2)!!
@@ -136,10 +124,7 @@ open fun getResourceAsStream(resource: String)
             
 open fun getResourceAsStream(resource: String, startIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-: InputStream
-
-        Updates for KMP build        
-        {
+: InputStream{
     //var resource = resource
     //var startIndex = startIndex
 
@@ -214,10 +199,7 @@ inputStream= Thread.currentThread()!!.getContextClassLoader()!!.getResourceAsStr
 
 open fun addResource(resource: String, value: Integer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var resource = resource
     //var value = value
 }

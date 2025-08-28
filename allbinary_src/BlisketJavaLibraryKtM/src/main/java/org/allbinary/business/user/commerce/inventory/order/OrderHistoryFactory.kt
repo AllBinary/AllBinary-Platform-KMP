@@ -38,10 +38,7 @@ open public class OrderHistoryFactory
             
 open fun getInstance(id: String)
         //nullable =  from not(true or (false and false)) = 
-: OrderHistory
-
-        Updates for KMP build        
-        {
+: OrderHistory{
 var id = id
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
@@ -57,10 +54,7 @@ var id = id
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return orderHistoryEntityInterface!!.getOrder(id) as OrderHistory
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -88,9 +82,6 @@ var id = id
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

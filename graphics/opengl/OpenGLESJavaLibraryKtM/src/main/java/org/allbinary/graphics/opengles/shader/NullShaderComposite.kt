@@ -42,10 +42,7 @@ open public class NullShaderComposite : ShaderComposite {
                                 
 open override fun init(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gl = gl
 }
 
@@ -54,10 +51,7 @@ var gl = gl
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ShaderComposite
-
-        Updates for KMP build        
-        {
+: ShaderComposite{
 
 
 
@@ -69,10 +63,7 @@ open fun getInstance()
         }
             public constructor        (requiresOpenGLVersion: String, shaderArray: Array<Shader?>, compositeShaderUpdater: CompositeShaderUpdater, shaderInitializer: ShaderInitializer, modelViewProjection: ModelViewProjection, colorOpenGLProcessor: OpenGLProcessor, vertexOpenGLProcessor: OpenGLProcessor, disableProgramShaderOpenGLProcessor: OpenGLProcessor)                        
 
-                            : super(requiresOpenGLVersion, shaderArray, compositeShaderUpdater, shaderInitializer, modelViewProjection, colorOpenGLProcessor, vertexOpenGLProcessor, disableProgramShaderOpenGLProcessor)
-
-        Updates for KMP build        
-        {
+                            : super(requiresOpenGLVersion, shaderArray, compositeShaderUpdater, shaderInitializer, modelViewProjection, colorOpenGLProcessor, vertexOpenGLProcessor, disableProgramShaderOpenGLProcessor){
     //var requiresOpenGLVersion = requiresOpenGLVersion
     //var shaderArray = shaderArray
     //var compositeShaderUpdater = compositeShaderUpdater

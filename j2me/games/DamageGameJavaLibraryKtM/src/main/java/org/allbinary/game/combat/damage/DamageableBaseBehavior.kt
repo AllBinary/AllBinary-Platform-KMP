@@ -38,10 +38,7 @@ open public class DamageableBaseBehavior
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DamageableBaseBehavior
-
-        Updates for KMP build        
-        {
+: DamageableBaseBehavior{
 
 
 
@@ -58,10 +55,7 @@ open fun getInstance()
             }            
         override fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -73,10 +67,7 @@ open fun getInstance()
                 @Throws(Exception::class)
             override fun damage(damage: Int, damageType: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var damage = damage
 var damageType = damageType
 }
@@ -85,10 +76,7 @@ var damageType = damageType
                 @Throws(Exception::class)
             override fun getDamage(damageType: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var damageType = damageType
 
 

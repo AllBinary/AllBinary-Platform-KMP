@@ -37,10 +37,7 @@ open public class SoundStrings
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: SoundStrings
-
-        Updates for KMP build        
-        {
+: SoundStrings{
 
 
 

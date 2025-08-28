@@ -38,10 +38,7 @@ open public class GameKeyUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameKeyUtil
-
-        Updates for KMP build        
-        {
+: GameKeyUtil{
 
 
 
@@ -59,10 +56,7 @@ open fun getInstance()
         
 open fun isDirectionKey(key: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var key = key
 
     

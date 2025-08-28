@@ -48,10 +48,7 @@ open public class EmailEventHandlerUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: EmailEventHandlerUtil
-
-        Updates for KMP build        
-        {
+: EmailEventHandlerUtil{
 
 
 
@@ -64,10 +61,7 @@ open fun getInstance()
             
 open fun getUserEmailEventListenerVector(abeClientInformation: AbeClientInformationInterface, userEmailEventNameData: UserEmailEventNameData, userInterface: UserInterface)
         //nullable = true from not(false or (false and false)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
     //var abeClientInformation = abeClientInformation
     //var userEmailEventNameData = userEmailEventNameData
     //var userInterface = userInterface
@@ -100,9 +94,6 @@ vector.add(userEmailEventListenerInterface)
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -111,10 +102,7 @@ private constructor        ()
             
 open fun getEventHandler(abeClientInformation: AbeClientInformationInterface, userEmailEventNameData: UserEmailEventNameData, userVector: Vector)
         //nullable = true from not(false or (false and false)) = true
-: UserEmailEventHandler
-
-        Updates for KMP build        
-        {
+: UserEmailEventHandler{
     //var abeClientInformation = abeClientInformation
     //var userEmailEventNameData = userEmailEventNameData
     //var userVector = userVector
@@ -146,9 +134,6 @@ userEmailEventHandler!!.addListener(LogUserEmailEventListenerModule())
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var userInterface: UserInterface = userVector!!.get(index) as UserInterface

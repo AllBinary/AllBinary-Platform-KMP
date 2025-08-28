@@ -40,9 +40,6 @@ open public class StoreFrontInventoryStatisticsView
     private var storeFrontInventoryStatisticsInterface: StoreFrontInventoryStatisticsInterface
 public constructor        (storeFrontInventoryStatisticsInterface: StoreFrontInventoryStatisticsInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var storeFrontInventoryStatisticsInterface = storeFrontInventoryStatisticsInterface
 this.storeFrontInventoryStatisticsInterface= storeFrontInventoryStatisticsInterface
@@ -53,10 +50,7 @@ this.storeFrontInventoryStatisticsInterface= storeFrontInventoryStatisticsInterf
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var hashMap: HashMap<Any, Any> = this.storeFrontInventoryStatisticsInterface!!.toHashMap()!!

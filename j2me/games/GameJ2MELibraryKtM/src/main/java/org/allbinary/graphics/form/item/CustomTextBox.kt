@@ -45,10 +45,7 @@ open public class CustomTextBox : GameCommandCanvas {
     private val textFieldItem: TextFieldItem
 public constructor        (cmdListener: CommandListener, label: String, text: String, maxSize: Int, constraints: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : this(cmdListener, label, text, maxSize, constraints, Font.getDefaultFont(), backgroundBasicColor, foregroundBasicColor)
-
-        Updates for KMP build        
-        {
+                            : this(cmdListener, label, text, maxSize, constraints, Font.getDefaultFont(), backgroundBasicColor, foregroundBasicColor){
     //var cmdListener = cmdListener
     //var label = label
     //var text = text
@@ -64,10 +61,7 @@ public constructor        (cmdListener: CommandListener, label: String, text: St
 
 public constructor        (cmdListener: CommandListener, label: String, text: String, maxSize: Int, constraints: Int, font: Font, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(cmdListener, label, backgroundBasicColor, foregroundBasicColor)
-
-        Updates for KMP build        
-        {
+                            : super(cmdListener, label, backgroundBasicColor, foregroundBasicColor){
     //var cmdListener = cmdListener
     //var label = label
     //var text = text
@@ -94,10 +88,7 @@ this.setTitle(label)
 
 open fun submit()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
@@ -105,10 +96,7 @@ open fun submit()
 
 open fun onEvent(keyCode: Int, deviceId: Int, repeated: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var keyCode = keyCode
     //var deviceId = deviceId
     //var repeated = repeated
@@ -119,40 +107,28 @@ this.keyPressed(keyCode, deviceId)
 
 override fun keyPressed(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var keyCode = keyCode
 this.keyPressed(keyCode, 0)
 }
 
 override fun keyReleased(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var keyCode = keyCode
 this.keyReleased(keyCode, 0)
 }
 
 override fun keyRepeated(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var keyCode = keyCode
 this.keyRepeated(keyCode, 0)
 }
 
 override fun keyPressed(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var keyCode = keyCode
     //var deviceId = deviceId
 
@@ -180,10 +156,7 @@ override fun keyPressed(keyCode: Int, deviceId: Int)
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.KEY_PRESSED, e)
 }
 
@@ -191,20 +164,14 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.KEY_PRESSED, e
 
 override fun keyReleased(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var keyCode = keyCode
     //var deviceId = deviceId
 }
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
 graphics.setColor(this.backgroundColor)
 graphics.fillRect(0, 0, this.displayInfoSingleton!!.getLastWidth(), this.displayInfoSingleton!!.getLastHeight())
@@ -225,10 +192,7 @@ super.paint(graphics)
 
 open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var x = x
     //var y = y
@@ -238,10 +202,7 @@ textFieldItem!!.paint(graphics, x, y)
 
 open fun getTextFieldItem()
         //nullable = true from not(false or (false and true)) = true
-: TextFieldItem
-
-        Updates for KMP build        
-        {
+: TextFieldItem{
 
 
 

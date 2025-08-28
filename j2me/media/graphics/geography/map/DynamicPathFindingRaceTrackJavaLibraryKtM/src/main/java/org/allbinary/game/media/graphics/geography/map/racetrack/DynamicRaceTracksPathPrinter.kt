@@ -51,10 +51,7 @@ open public class DynamicRaceTracksPathPrinter : RaceTracksPathPrinter {
 
 open fun printAllPaths(raceTrackGeographicMapInterfaceFactoryInterface: RaceTrackGeographicMapInterfaceFactoryInterface, pathFindingInfo: PathFindingInfo, size: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var raceTrackGeographicMapInterfaceFactoryInterface = raceTrackGeographicMapInterfaceFactoryInterface
 var pathFindingInfo = pathFindingInfo
 var size = size
@@ -66,9 +63,6 @@ var size = size
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var geographicMapInterface: BasicGeographicMap = raceTrackGeographicMapInterfaceFactoryInterface!!.getTrackInstance(SmallIntegerSingletonFactory.getInstance()!!.getInstance(index))!!
@@ -81,10 +75,7 @@ this.printPaths(list)
 }
 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

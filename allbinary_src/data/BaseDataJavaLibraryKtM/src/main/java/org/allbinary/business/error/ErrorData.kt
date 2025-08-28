@@ -37,10 +37,7 @@ open public class ErrorData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ErrorData
-
-        Updates for KMP build        
-        {
+: ErrorData{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

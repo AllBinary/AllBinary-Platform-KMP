@@ -40,10 +40,7 @@ open public class PreResourceImageUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PreResourceImageUtil
-
-        Updates for KMP build        
-        {
+: PreResourceImageUtil{
 
 
 
@@ -61,10 +58,7 @@ open fun getInstance()
         
 open fun encapsulate(image: Image)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
 var image = image
 
 
@@ -76,10 +70,7 @@ var image = image
 
 open fun update(gl: GL, image: Image)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gl = gl
 var image = image
 }
@@ -87,10 +78,7 @@ var image = image
 
 open fun update(graphics: Graphics, image: Image)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 var image = image
 }

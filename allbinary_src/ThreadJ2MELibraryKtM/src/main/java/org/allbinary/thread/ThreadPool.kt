@@ -68,10 +68,7 @@ open public class ThreadPool
     private var numThreads: Int
 public constructor        (poolName: String, numThreads: Int)                        
 
-                            : this(poolName, numThreads, Thread.NORM_PRIORITY)
-
-        Updates for KMP build        
-        {
+                            : this(poolName, numThreads, Thread.NORM_PRIORITY){
     //var poolName = poolName
     //var numThreads = numThreads
 
@@ -82,9 +79,6 @@ public constructor        (poolName: String, numThreads: Int)
 
 public constructor        (poolName: String, numThreads: Int, priority: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var poolName = poolName
     //var numThreads = numThreads
@@ -97,10 +91,7 @@ this.numThreads= numThreads
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(!this.isAlive)
@@ -117,9 +108,6 @@ this.taskQueue= BasicArrayList()
 
                         for (i in 0 until this.numThreads)
 
-        
-
-        Updates for KMP build        
         {
 pooledThread= PooledThread()
 pooledThread!!.setPriority(priority)
@@ -136,10 +124,7 @@ pooledThread!!.start()
             
 open fun runAPriorityTask()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
 
 
@@ -149,10 +134,7 @@ open fun runAPriorityTask()
 
 open fun runTaskWithPriority(task: PriorityRunnable)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var task = task
 
         
@@ -160,9 +142,6 @@ open fun runTaskWithPriority(task: PriorityRunnable)
         synchronized(this) 
 
         //mutex.withLock
-        
-
-        Updates for KMP build        
         {
 
     
@@ -195,9 +174,6 @@ open fun runTaskWithPriority(task: PriorityRunnable)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 runnable= this.taskQueue!!.get(index) as PriorityRunnable
 
@@ -244,10 +220,7 @@ notify()
 
 open fun runTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var task = task
 
         
@@ -255,9 +228,6 @@ open fun runTask(task: Runnable)
         synchronized(this) 
 
         //mutex.withLock
-        
-
-        Updates for KMP build        
         {
 
     
@@ -289,25 +259,16 @@ notify()
             
 open fun getTask()
         //nullable = true from not(false or (false and true)) = true
-: Runnable
-
-        Updates for KMP build        
-        {
+: Runnable{
 
         
         //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
         synchronized(this) 
 
         //mutex.withLock
-        
-
-        Updates for KMP build        
         {
 
         while(this.taskQueue!!.size() == 0)
-        
-
-        Updates for KMP build        
         {
 
     
@@ -340,19 +301,13 @@ this.wait()
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         
         //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
         synchronized(this) 
 
         //mutex.withLock
-        
-
-        Updates for KMP build        
         {
 
     
@@ -370,19 +325,13 @@ open fun clear()
 
 open fun close()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         
         //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
         synchronized(this) 
 
         //mutex.withLock
-        
-
-        Updates for KMP build        
         {
 
     
@@ -401,19 +350,13 @@ this.taskQueue!!.clear()
 
 open fun join()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         
         //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
         synchronized(this) 
 
         //mutex.withLock
-        
-
-        Updates for KMP build        
         {
 this.isAlive= false
 this.taskQueue!!.clear()
@@ -425,10 +368,7 @@ notifyAll()
 
 open fun isBusy()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(!this.isAlive)
@@ -478,19 +418,13 @@ open fun isBusy()
 
 open fun threadStarted()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun threadStopped()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(this.numThreads == 1)
@@ -506,20 +440,14 @@ taskQueue!!.clear()
 
 open fun startTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var task = task
 }
 
 
 open fun completedTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var task = task
 }
 
@@ -537,10 +465,7 @@ open public inner class PooledThread : Thread {
 public constructor        ()                        
 
                             : super(StringMaker().
-                            append(poolName)!!.append(ROOT_NAME)!!.append(threadID++)!!.toString())
-
-        Updates for KMP build        
-        {
+                            append(poolName)!!.append(ROOT_NAME)!!.append(threadID++)!!.toString()){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -552,19 +477,13 @@ logUtil!!.put(commonStrings!!.CONSTRUCTOR, this, commonStrings!!.CONSTRUCTOR)
     private val INTERRUPT_EXCEPTION: String = "Exit InterruptedException"
 override fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 threadStarted()
 
     var threadObjectUtil: ThreadObjectUtil = ThreadObjectUtil.getInstance()!!
 
 
         while(true)
-        
-
-        Updates for KMP build        
         {
 
     var task2: Runnable = threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
@@ -575,10 +494,7 @@ threadStarted()
 runningTask= true
 startTask(task2)
 } catch(ex: InterruptedException)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(INTERRUPT_EXCEPTION, this, commonStrings!!.RUN)
 break;
 
@@ -602,10 +518,7 @@ break;
 completedTask(task2)
 runningTask= false
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(StringMaker().
                             append(commonStrings!!.EXCEPTION_LABEL)!!.append(StringUtil.getInstance()!!.toString(task2))!!.toString(), this, commonStrings!!.RUN, e)
 }

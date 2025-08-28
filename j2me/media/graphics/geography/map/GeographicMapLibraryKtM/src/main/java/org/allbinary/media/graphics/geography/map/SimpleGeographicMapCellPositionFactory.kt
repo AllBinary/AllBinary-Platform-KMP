@@ -41,10 +41,7 @@ open public class SimpleGeographicMapCellPositionFactory
             
 open fun getInstance(geographicMapInterface: BasicGeographicMap, i_column: Int, i_row: Int, columns: Int, rows: Int, width: Int, height: Int)
         //nullable =  from not(true or (false and false)) = 
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
     //var geographicMapInterface = geographicMapInterface
     //var i_column = i_column
     //var i_row = i_row

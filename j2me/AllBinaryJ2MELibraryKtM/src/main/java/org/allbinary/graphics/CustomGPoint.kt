@@ -42,10 +42,7 @@ open public class CustomGPoint : GPoint {
     private var z: Int= 0
 private constructor        (point: GPoint)                        
 
-                            : super(point)
-
-        Updates for KMP build        
-        {
+                            : super(point){
 var point = point
 
 
@@ -55,10 +52,7 @@ var point = point
 
 public constructor        (x: Int, y: Int)                        
 
-                            : super(x, y)
-
-        Updates for KMP build        
-        {
+                            : super(x, y){
 var x = x
 var y = y
 
@@ -69,10 +63,7 @@ var y = y
 
 public constructor        (x: Int, y: Int, z: Int)                        
 
-                            : super(x, y, z)
-
-        Updates for KMP build        
-        {
+                            : super(x, y, z){
 var x = x
 var y = y
 var z = z
@@ -85,20 +76,14 @@ var z = z
 
 open fun setX(x: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var x = x
 this.x= x
 }
 
 override fun getX()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -109,20 +94,14 @@ override fun getX()
 
 open fun setY(y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var y = y
 this.y= y
 }
 
 override fun getY()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -133,20 +112,14 @@ override fun getY()
 
 open fun setZ(z: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var z = z
 this.z= z
 }
 
 override fun getZ()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

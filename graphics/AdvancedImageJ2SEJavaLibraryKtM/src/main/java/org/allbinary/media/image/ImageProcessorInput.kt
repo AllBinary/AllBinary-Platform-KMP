@@ -38,10 +38,7 @@ open public class ImageProcessorInput
     private var files: Array<File?>
 public constructor        (files: Array<File?>, bufferedImageArray: Array<BufferedImage?>)                        
 
-                            : super()
-
-        Updates for KMP build        
-        {
+                            : super(){
 var files = files
 var bufferedImageArray = bufferedImageArray
 
@@ -55,10 +52,7 @@ this.files= files
 
 open fun getBufferedImageArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<BufferedImage?>
-
-        Updates for KMP build        
-        {
+: Array<BufferedImage?>{
 
 
 
@@ -69,10 +63,7 @@ open fun getBufferedImageArray()
 
 open fun getFiles()
         //nullable = true from not(false or (false and true)) = true
-: Array<File?>
-
-        Updates for KMP build        
-        {
+: Array<File?>{
 
 
 

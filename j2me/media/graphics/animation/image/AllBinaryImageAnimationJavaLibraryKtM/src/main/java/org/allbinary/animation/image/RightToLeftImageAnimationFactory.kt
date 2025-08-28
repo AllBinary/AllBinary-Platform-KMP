@@ -33,10 +33,7 @@ open public class RightToLeftImageAnimationFactory : BaseImageAnimationFactory {
         
 public constructor        (image: Image, dx: Int, dy: Int)                        
 
-                            : this(image, dx, dy, AnimationBehaviorFactory.getInstance())
-
-        Updates for KMP build        
-        {
+                            : this(image, dx, dy, AnimationBehaviorFactory.getInstance()){
     //var image = image
     //var dx = dx
     //var dy = dy
@@ -48,10 +45,7 @@ public constructor        (image: Image, dx: Int, dy: Int)
 
 public constructor        (image: Image, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(image, image.getWidth(), image.getHeight(), dx, dy, animationBehaviorFactory)
-
-        Updates for KMP build        
-        {
+                            : super(image, image.getWidth(), image.getHeight(), dx, dy, animationBehaviorFactory){
     //var image = image
     //var dx = dx
     //var dy = dy
@@ -64,10 +58,7 @@ public constructor        (image: Image, dx: Int, dy: Int, animationBehaviorFact
 
 public constructor        (image: Image)                        
 
-                            : this(image, AnimationBehaviorFactory.getInstance())
-
-        Updates for KMP build        
-        {
+                            : this(image, AnimationBehaviorFactory.getInstance()){
     //var image = image
 
 
@@ -77,10 +68,7 @@ public constructor        (image: Image)
 
 public constructor        (image: Image, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(image, image.getWidth(), image.getHeight(), animationBehaviorFactory)
-
-        Updates for KMP build        
-        {
+                            : super(image, image.getWidth(), image.getHeight(), animationBehaviorFactory){
     //var image = image
     //var animationBehaviorFactory = animationBehaviorFactory
 
@@ -93,10 +81,7 @@ public constructor        (image: Image, animationBehaviorFactory: AnimationBeha
                 @Throws(Exception::class)
             override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation
-
-        Updates for KMP build        
-        {
+: Animation{
     //var instanceId = instanceId
 
     var scaledImage: Image = animationFactoryImageScaleUtil!!.createImage(this.getImage(), this.animationFactoryInitializationVisitor!!.width, this.animationFactoryInitializationVisitor!!.height, this.scaleProperties!!.scaleWidth, this.scaleProperties!!.scaleHeight)!!

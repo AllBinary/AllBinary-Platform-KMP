@@ -33,10 +33,7 @@ open public class BillingAddressesEntity : StreetAddressesEntity {
     private val TABLENAME: String = "billing"
 public constructor        (userName: String)                        
 
-                            : super(userName)
-
-        Updates for KMP build        
-        {
+                            : super(userName){
 var userName = userName
 
 

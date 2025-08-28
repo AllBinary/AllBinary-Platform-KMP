@@ -36,10 +36,7 @@ open public class CollidableCharacterBehavior : CollidableDestroyableDamageableB
         
 public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
 
-                            : super(ownerLayer, collidable)
-
-        Updates for KMP build        
-        {
+                            : super(ownerLayer, collidable){
 var ownerLayer = ownerLayer
 var collidable = collidable
 
@@ -52,10 +49,7 @@ var collidable = collidable
                 @Throws(Exception::class)
             override fun collide(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
     var collisionTypeFactory: CollisionTypeFactory = CollisionTypeFactory.getInstance()!!
@@ -86,10 +80,7 @@ collidableDestroyableDamageableLayer!!.getPickupBehavior()!!.doPickup(collidable
                 @Throws(Exception::class)
             override fun collide(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, this)
 }

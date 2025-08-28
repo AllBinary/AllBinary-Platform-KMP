@@ -68,9 +68,6 @@ open public class Order
     private var storeCancelComment: String
 public constructor        (basket: BasketInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var basket = basket
 this.basket= basket
@@ -82,9 +79,6 @@ shippingType= StringUtil.getInstance()!!.EMPTY_STRING
 
 public constructor        (storeName: String, basket: BasketInterface, id: String, shippingType: String, special: String, paymentMethod: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var storeName = storeName
 var basket = basket
@@ -103,10 +97,7 @@ this.paymentMethod= paymentMethod
 
 open fun isIdValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(this.getId() == 
@@ -132,10 +123,7 @@ open fun isIdValid()
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -146,10 +134,7 @@ open fun isValid()
 
 open fun getIdValidationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var EMPTY_STRING: String = StringUtil.getInstance()!!.EMPTY_STRING
 
@@ -178,10 +163,7 @@ open fun getIdValidationInfo()
 
 open fun setShippingMethod(shippingType: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var shippingType = shippingType
 this.shippingType= shippingType
 }
@@ -189,10 +171,7 @@ this.shippingType= shippingType
 
 open fun setPaymentMethod(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.paymentMethod= value
 }
@@ -200,10 +179,7 @@ this.paymentMethod= value
 
 open fun setSpecial(special: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var special = special
 this.special= special
 }
@@ -211,10 +187,7 @@ this.special= special
 
 open fun setId(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.id= value
 }
@@ -222,10 +195,7 @@ this.id= value
 
 open fun setStoreName(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.storeName= value
 }
@@ -233,10 +203,7 @@ this.storeName= value
 
 open fun setUserComments(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.userComment= value
 }
@@ -244,10 +211,7 @@ this.userComment= value
 
 open fun setUserCancelComments(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.userCancelComment= value
 }
@@ -255,10 +219,7 @@ this.userCancelComment= value
 
 open fun setStoreComments(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.storeComment= value
 }
@@ -266,10 +227,7 @@ this.storeComment= value
 
 open fun setStoreCancelComments(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.storeCancelComment= value
 }
@@ -277,10 +235,7 @@ this.storeCancelComment= value
 
 open fun getBasket()
         //nullable = true from not(false or (false and true)) = true
-: BasketInterface
-
-        Updates for KMP build        
-        {
+: BasketInterface{
 
 
 
@@ -291,10 +246,7 @@ open fun getBasket()
 
 open fun getShippingMethod()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -305,10 +257,7 @@ open fun getShippingMethod()
 
 open fun getPaymentMethod()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -319,10 +268,7 @@ open fun getPaymentMethod()
 
 open fun getSpecial()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -333,10 +279,7 @@ open fun getSpecial()
 
 open fun getId()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -347,10 +290,7 @@ open fun getId()
 
 open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -361,10 +301,7 @@ open fun getStoreName()
 
 open fun getUserComments()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -375,10 +312,7 @@ open fun getUserComments()
 
 open fun getUserCancelComments()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -389,10 +323,7 @@ open fun getUserCancelComments()
 
 open fun getStoreComments()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -403,10 +334,7 @@ open fun getStoreComments()
 
 open fun getStoreCancelComments()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -417,10 +345,7 @@ open fun getStoreCancelComments()
 
 open fun reviewOrder(paymentMethod: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var paymentMethod = paymentMethod
 
 
@@ -432,10 +357,7 @@ var paymentMethod = paymentMethod
 
 open fun viewOrder(paymentMethod: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var paymentMethod = paymentMethod
 
 
@@ -447,10 +369,7 @@ var paymentMethod = paymentMethod
 
 open fun emailOrder(userName: String, paymentMethod: String, storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var userName = userName
 var paymentMethod = paymentMethod
 var storeFrontInterface = storeFrontInterface
@@ -464,10 +383,7 @@ var storeFrontInterface = storeFrontInterface
 
 open fun toHashMapOrder()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -492,10 +408,7 @@ hashMap!!.put(OrderData.STORECANCELCOMMENT, this.storeCancelComment)
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var hashMap: HashMap<Any, Any> = this.toHashMapOrder()!!
@@ -519,9 +432,6 @@ var document = document
 
                         for (i in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var name: String = keyArray[i]!! as String

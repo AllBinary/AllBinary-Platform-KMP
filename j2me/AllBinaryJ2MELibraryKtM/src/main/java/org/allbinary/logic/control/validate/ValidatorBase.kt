@@ -44,10 +44,7 @@ open public class ValidatorBase
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ValidatorBase
-
-        Updates for KMP build        
-        {
+: ValidatorBase{
 
 
 
@@ -59,18 +56,12 @@ open fun getInstance()
         }
             public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 override fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -80,10 +71,7 @@ override fun isValid()
 
 override fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -93,10 +81,7 @@ override fun validationInfo()
 
 override fun toHashtable()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>
-
-        Updates for KMP build        
-        {
+: Hashtable<Any, Any>{
 
 
 
@@ -106,10 +91,7 @@ override fun toHashtable()
 
 override fun toList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 

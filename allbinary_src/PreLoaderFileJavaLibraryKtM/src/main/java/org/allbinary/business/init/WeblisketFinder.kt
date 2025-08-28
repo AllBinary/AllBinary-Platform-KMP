@@ -47,10 +47,7 @@ open public class WeblisketFinder
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: WeblisketFinder
-
-        Updates for KMP build        
-        {
+: WeblisketFinder{
 
 
 
@@ -65,10 +62,7 @@ open fun getInstance()
             
 open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var args = args
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
@@ -89,19 +83,13 @@ System.out.println(vector.size())
     private val subDirectory: SubDirectory = SubDirectory.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun findAll(path: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 var path = path
 
         try {
@@ -112,10 +100,7 @@ var path = path
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return subDirectory!!.search(KEY, AbFile(path))
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "findAll", e)
 
     
@@ -138,10 +123,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "findAll", e)
 
 open fun getInstallationPath(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var file = file
 
         try {
@@ -170,10 +152,7 @@ var file = file
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return filePath!!.substring(0, end)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))

@@ -39,10 +39,7 @@ open public class MyFont
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: MyFont
-
-        Updates for KMP build        
-        {
+: MyFont{
 
 
 
@@ -60,19 +57,13 @@ open fun getInstance()
     private var DEFAULT_CHAR_WIDTH: Int = defaultFont!!.charWidth('C')!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.DEFAULT_CHAR_HEIGHT= defaultFont!!.getHeight()
 this.DEFAULT_CHAR_WIDTH= defaultFont!!.charWidth('C')
 }
@@ -80,10 +71,7 @@ this.DEFAULT_CHAR_WIDTH= defaultFont!!.charWidth('C')
 
 open fun charWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -94,10 +82,7 @@ open fun charWidth()
 
 open fun stringWidth(size: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var size = size
 
 
@@ -109,10 +94,7 @@ open fun stringWidth(size: Int)
 
 open fun stringWidth(string: String)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var string = string
 
 
@@ -124,10 +106,7 @@ open fun stringWidth(string: String)
 
 open fun stringWidth2(string: String)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var string = string
 
 
@@ -139,10 +118,7 @@ open fun stringWidth2(string: String)
 
 open fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -153,10 +129,7 @@ open fun getSize()
 
 open fun charWidth(aChar: Char)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var aChar = aChar
 
 
@@ -168,10 +141,7 @@ open fun charWidth(aChar: Char)
 
 open fun charsWidth(charArray: CharArray, offset: Int, length: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var charArray = charArray
     //var offset = offset
     //var length = length
@@ -184,10 +154,7 @@ open fun charsWidth(charArray: CharArray, offset: Int, length: Int)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

@@ -34,29 +34,20 @@ open public class GLHolder
     var isCreated: Boolean = true
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun runOnSurfaceCreated(renderer: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var renderer = renderer
 }
 
 
 open fun runOnSurfaceChanged(renderer: Any, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var renderer = renderer
     //var width = width
     //var height = height
@@ -65,10 +56,7 @@ open fun runOnSurfaceChanged(renderer: Any, width: Int, height: Int)
 
 open fun run(renderer: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var renderer = renderer
 }
 

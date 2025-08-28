@@ -38,10 +38,7 @@ open public class LockableFeatureFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LockableFeatureFactory
-
-        Updates for KMP build        
-        {
+: LockableFeatureFactory{
 
 
 
@@ -61,10 +58,7 @@ open fun getInstance()
 
 open fun getList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 

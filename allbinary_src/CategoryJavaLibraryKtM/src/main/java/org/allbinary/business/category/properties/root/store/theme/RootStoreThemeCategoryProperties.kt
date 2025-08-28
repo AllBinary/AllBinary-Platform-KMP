@@ -43,10 +43,7 @@ open public class RootStoreThemeCategoryProperties : RootStoreCategoryProperties
         
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(transformInfoInterface)
-
-        Updates for KMP build        
-        {
+                            : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
 
 
@@ -56,10 +53,7 @@ var transformInfoInterface = transformInfoInterface
 
 public constructor        (transformInfoInterface: TransformInfoInterface, abPath: AbPath)                        
 
-                            : super(transformInfoInterface, abPath)
-
-        Updates for KMP build        
-        {
+                            : super(transformInfoInterface, abPath){
 var transformInfoInterface = transformInfoInterface
 var abPath = abPath
 
@@ -70,10 +64,7 @@ var abPath = abPath
 
 public constructor        (transformInfoInterface: TransformInfoInterface, node: Node)                        
 
-                            : super(transformInfoInterface, node)
-
-        Updates for KMP build        
-        {
+                            : super(transformInfoInterface, node){
 var transformInfoInterface = transformInfoInterface
 var node = node
 
@@ -84,10 +75,7 @@ var node = node
 
 public constructor        (transformInfoInterface: TransformInfoInterface, categoryPropertiesHashMap: HashMap<Any, Any>)                        
 
-                            : super(transformInfoInterface, categoryPropertiesHashMap)
-
-        Updates for KMP build        
-        {
+                            : super(transformInfoInterface, categoryPropertiesHashMap){
 var transformInfoInterface = transformInfoInterface
 var categoryPropertiesHashMap = categoryPropertiesHashMap
 
@@ -101,10 +89,7 @@ var categoryPropertiesHashMap = categoryPropertiesHashMap
             
 open fun initPath()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var transformInfoHttpStoreInterface: TransformInfoHttpStoreInterface = this.transformInfoInterface as TransformInfoHttpStoreInterface
 

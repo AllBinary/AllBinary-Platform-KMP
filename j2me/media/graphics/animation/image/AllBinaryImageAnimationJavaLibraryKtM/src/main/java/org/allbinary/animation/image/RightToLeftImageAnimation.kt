@@ -39,10 +39,7 @@ open public class RightToLeftImageAnimation : ImageSegmentAnimation {
     private var currentWidth: Int= 0
 public constructor        (image: Image, animationBehavior: AnimationBehavior)                        
 
-                            : super(image, animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(image, animationBehavior){
     //var image = image
     //var animationBehavior = animationBehavior
 
@@ -54,30 +51,21 @@ this.setFrame(this.getSize() -1)
 
 override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 super.previousFrame()
 this.update()
 }
 
 override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 super.nextFrame()
 this.update()
 }
 
 override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var index = index
 super.setFrame(index)
 this.update()
@@ -86,10 +74,7 @@ this.update()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.startWidth= this.getDrawWidth() *this.getFrame() /this.getSize()
 this.currentWidth= this.getDrawWidth() -this.startWidth
 }
@@ -98,10 +83,7 @@ this.currentWidth= this.getDrawWidth() -this.startWidth
     private var anchor: Int = Anchor.TOP_LEFT
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var x = x
     //var y = y

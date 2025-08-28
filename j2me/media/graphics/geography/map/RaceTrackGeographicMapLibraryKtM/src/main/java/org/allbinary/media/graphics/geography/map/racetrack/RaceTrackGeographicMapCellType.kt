@@ -36,10 +36,7 @@ open public class RaceTrackGeographicMapCellType : GeographicMapCellType {
     private val travelCost: Int
 public constructor        (type: Int, travelCost: Int)                        
 
-                            : super(type)
-
-        Updates for KMP build        
-        {
+                            : super(type){
     //var type = type
     //var travelCost = travelCost
 
@@ -55,10 +52,7 @@ this.name= commonStrings!!.UNKNOWN
 
 public constructor        (name: String, type: Int, travelCost: Int)                        
 
-                            : super(type)
-
-        Updates for KMP build        
-        {
+                            : super(type){
     //var name = name
     //var type = type
     //var travelCost = travelCost
@@ -73,10 +67,7 @@ this.travelCost= travelCost
 
 open fun getTravelCost()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

@@ -31,10 +31,7 @@ open public class TopULayerBounds : LayerBounds {
         
 public constructor        (rectangle: Rectangle)                        
 
-                            : super(rectangle)
-
-        Updates for KMP build        
-        {
+                            : super(rectangle){
 var rectangle = rectangle
 
 
@@ -44,10 +41,7 @@ var rectangle = rectangle
 
 override fun visit(boundsVisitorInterface: BoundsVisitorInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var boundsVisitorInterface = boundsVisitorInterface
 
     

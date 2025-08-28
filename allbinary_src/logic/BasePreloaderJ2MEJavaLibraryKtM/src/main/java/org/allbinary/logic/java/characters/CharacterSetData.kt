@@ -37,10 +37,7 @@ open public class CharacterSetData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CharacterSetData
-
-        Updates for KMP build        
-        {
+: CharacterSetData{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

@@ -35,29 +35,17 @@ open fun getMaxNonMatchingPixelDeltas()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-        Updates for KMP build        
-        
-
 open fun isCollisionWithAvoidRectangles(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
-
-        Updates for KMP build        
-        
 
 open fun isCollisionWithAvoidRectangles(point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
-        Updates for KMP build        
-        
-
 open fun isColorAllowed(frame: Int, point: GPoint, color: Color)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
-
-        Updates for KMP build        
-        
 
                 @Throws(Exception::class)
             
@@ -65,15 +53,9 @@ open fun isImageValid(bufferedImage: BufferedImage)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
-        Updates for KMP build        
-        
-
 open fun isFrameAllowed(frame: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
-
-        Updates for KMP build        
-        
 
 }
                 

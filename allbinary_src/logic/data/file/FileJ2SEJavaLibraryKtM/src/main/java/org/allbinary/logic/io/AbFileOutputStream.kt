@@ -34,10 +34,7 @@ open public class AbFileOutputStream : FileOutputStream {
         
 public constructor        (name: String)                        
 
-                            : super(name)
-
-        Updates for KMP build        
-        {
+                            : super(name){
 var name = name
 
 
@@ -47,10 +44,7 @@ var name = name
 
 public constructor        (name: String, append: Boolean)                        
 
-                            : super(name, append)
-
-        Updates for KMP build        
-        {
+                            : super(name, append){
 var name = name
 var append = append
 
@@ -61,10 +55,7 @@ var append = append
 
 public constructor        (file: AbFile)                        
 
-                            : super(AbFileNativeUtil.get(file))
-
-        Updates for KMP build        
-        {
+                            : super(AbFileNativeUtil.get(file)){
 var file = file
 
 
@@ -74,10 +65,7 @@ var file = file
 
 public constructor        (file: AbFile, append: Boolean)                        
 
-                            : super(AbFileNativeUtil.get(file), append)
-
-        Updates for KMP build        
-        {
+                            : super(AbFileNativeUtil.get(file), append){
 var file = file
 var append = append
 

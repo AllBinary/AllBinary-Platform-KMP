@@ -46,10 +46,7 @@ open public class VectorRotationGenerator
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: VectorRotationGenerator
-
-        Updates for KMP build        
-        {
+: VectorRotationGenerator{
 
 
 
@@ -65,19 +62,13 @@ open fun getInstance()
     private val vectorAnimationUtil: VectorAnimationUtil = VectorAnimationUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getInstance(vectorRotationInfo: VectorInfo)
         //nullable =  from not(true or (false and false)) = 
-: Array<Array<IntArray?>?>
-
-        Updates for KMP build        
-        {
+: Array<Array<IntArray?>?>{
 var vectorRotationInfo = vectorRotationInfo
 
 
@@ -91,10 +82,7 @@ var vectorRotationInfo = vectorRotationInfo
 
 open fun getInstance(width: Int, height: Int, points: Array<IntArray?>, frames: Int)
         //nullable =  from not(true or (false and false)) = 
-: Array<Array<IntArray?>?>
-
-        Updates for KMP build        
-        {
+: Array<Array<IntArray?>?>{
 var width = width
 var height = height
 var points = points
@@ -126,9 +114,6 @@ var frames = frames
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 pointBasicArrayList!!.add(pointFactory!!.getInstance(points[index]!![0]!!, points[index]!![1]!!))
 }
@@ -139,9 +124,6 @@ pointBasicArrayList!!.add(pointFactory!!.getInstance(points[index]!![0]!!, point
 
                         for (index in 0 until totalAngle)
 
-        
-
-        Updates for KMP build        
         {
 pointsBasicArrayList!!.add(getInstance(width, height, pointBasicArrayList, this.angleFactory!!.getInstance(index)))
 }
@@ -155,10 +137,7 @@ pointsBasicArrayList!!.add(getInstance(width, height, pointBasicArrayList, this.
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return newPoints
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -177,10 +156,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
             
 open fun getInstance(width: Int, height: Int, pointBasicArrayList: BasicArrayList, angle: Angle)
         //nullable =  from not(true or (false and false)) = 
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 var width = width
 var height = height
 var pointBasicArrayList = pointBasicArrayList

@@ -37,10 +37,7 @@ open public class AbPathUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AbPathUtil
-
-        Updates for KMP build        
-        {
+: AbPathUtil{
 
 
 

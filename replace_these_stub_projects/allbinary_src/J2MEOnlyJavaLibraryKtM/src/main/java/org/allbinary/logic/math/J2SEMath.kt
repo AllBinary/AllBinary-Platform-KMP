@@ -37,10 +37,7 @@ open public class J2SEMath
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: J2SEMath
-
-        Updates for KMP build        
-        {
+: J2SEMath{
 
 
 
@@ -58,10 +55,7 @@ open fun getInstance()
         
 open fun round(value: Float)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var value = value
 
 
@@ -73,10 +67,7 @@ var value = value
 
 open fun abs(value: Float)
         //nullable = true from not(false or (false and false)) = true
-: Float
-
-        Updates for KMP build        
-        {
+: Float{
 var value = value
 
 

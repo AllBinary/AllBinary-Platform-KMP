@@ -63,10 +63,7 @@ open public class TransformInfoTag : ModifyTag {
     private var type: String
 public constructor        ()                        
 
-                            : super(TransformInfoRequestHelperFactory())
-
-        Updates for KMP build        
-        {
+                            : super(TransformInfoRequestHelperFactory()){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -75,10 +72,7 @@ public constructor        ()
 
 public constructor        (tagHelperFactoryInterface: TagHelperFactoryInterface)                        
 
-                            : super(tagHelperFactoryInterface)
-
-        Updates for KMP build        
-        {
+                            : super(tagHelperFactoryInterface){
 var tagHelperFactoryInterface = tagHelperFactoryInterface
 
 
@@ -89,10 +83,7 @@ var tagHelperFactoryInterface = tagHelperFactoryInterface
 
 open fun setName(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.name= value
 this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.NAME, this.name)
@@ -101,10 +92,7 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.NAME, this.n
 
 open fun setStoreName(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.storeName= value
 this.getPropertiesHashMap()!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName)
@@ -113,10 +101,7 @@ this.getPropertiesHashMap()!!.put(StoreFrontData.getInstance()!!.NAME, this.stor
 
 open fun setObjectFile(value: Object)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.objectFile= value
 this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.OBJECTFILENAME, this.objectFile)
@@ -125,10 +110,7 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.OBJECTFILENA
 
 open fun setObject(value: Object)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.anyType= value
 this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.OBJECT, this.anyType)
@@ -137,10 +119,7 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.OBJECT, this
 
 open fun setTemplateFile(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.templateFile= value
 this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.TEMPLATEFILENAME, this.templateFile)
@@ -149,10 +128,7 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.TEMPLATEFILE
 
 open fun setTemplate(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.template= value
 this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.TEMPLATE, this.template)
@@ -161,10 +137,7 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.TEMPLATE, th
 
 open fun setDataFile(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.dataFile= value
 this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.DATAFILENAME, this.dataFile)
@@ -173,10 +146,7 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.DATAFILENAME
 
 open fun setData(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.data= value
 this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.DATA, this.data)
@@ -185,10 +155,7 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.DATA, this.d
 
 open fun setObjectConfigFile(value: Object)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.objectConfigFile= value
 this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.OBJECTCONFIGFILENAME, this.objectConfigFile)
@@ -197,10 +164,7 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.OBJECTCONFIG
 
 open fun setObjectConfig(value: Object)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.objectConfig= value
 this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.OBJECTCONFIG, this.objectConfig)
@@ -209,10 +173,7 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.OBJECTCONFIG
 
 open fun setType(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.type= value
 this.getPropertiesHashMap()!!.put(OutputTypeData.getInstance()!!.NAME, this.type)
@@ -230,10 +191,7 @@ this.getPropertiesHashMap()!!.put(OutputTypeData.getInstance()!!.NAME, this.type
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -244,10 +202,7 @@ open fun getName()
 
 open fun getObjectFile()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -260,10 +215,7 @@ open fun getObjectFile()
             
 open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
         try {
             
@@ -272,10 +224,7 @@ open fun doStartTag()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.doStartTag()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 
 

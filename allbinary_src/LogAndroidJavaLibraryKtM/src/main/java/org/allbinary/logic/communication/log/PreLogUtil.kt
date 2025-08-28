@@ -36,10 +36,7 @@ open public class PreLogUtil
             
 open fun put(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var specialMessage = specialMessage
     //var anyType = anyType
     //var functionName = functionName
@@ -51,10 +48,7 @@ put(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
 
 open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var specialMessage = specialMessage
     //var anyType = anyType
     //var functionName = functionName
@@ -85,10 +79,7 @@ android.util.Log.i(LABEL, message)
 
 open fun put(specialMessage: String, className: String, functionName: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var specialMessage = specialMessage
     //var className = className
     //var functionName = functionName
@@ -98,10 +89,7 @@ put(specialMessage, className, functionName, NullUtil.getInstance()!!.NULL_OBJEC
 
 open fun put(specialMessage: String, className: String, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var specialMessage = specialMessage
     //var className = className
     //var functionName = functionName
@@ -116,9 +104,6 @@ android.util.Log.i(className, message)
         }
             public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

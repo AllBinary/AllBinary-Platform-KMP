@@ -44,10 +44,7 @@ open public class UserName
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: UserName
-
-        Updates for KMP build        
-        {
+: UserName{
 
 
 
@@ -58,10 +55,7 @@ open fun getInstance()
 
 open fun getValidationInfo(aUserName: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var aUserName = aUserName
 
     
@@ -91,17 +85,11 @@ var aUserName = aUserName
     private var userName: String
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 public constructor        (hashMap: HashMap<Any, Any>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var hashMap = hashMap
 this.userName= hashMap!!.get(UserData.USERNAME) as String
@@ -110,10 +98,7 @@ this.userName= hashMap!!.get(UserData.USERNAME) as String
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             
@@ -122,10 +107,7 @@ open fun isValid()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.isValid(userName)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
@@ -147,10 +129,7 @@ open fun isValid()
 
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -161,10 +140,7 @@ open fun get()
 
 open fun isValid(aUserName: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var aUserName = aUserName
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -210,10 +186,7 @@ valid= booleanFactory!!.FALSE
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return valid
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))

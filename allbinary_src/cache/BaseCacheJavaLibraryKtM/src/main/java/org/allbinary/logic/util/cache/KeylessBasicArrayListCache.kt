@@ -36,18 +36,12 @@ open public class KeylessBasicArrayListCache : IndexedBasicArrayListCache {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val basicArrayListUtil: BasicArrayListUtil = BasicArrayListUtil.getInstance()!!
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 public constructor        (size: Int)                        
 
-                            : super(size)
-
-        Updates for KMP build        
-        {
+                            : super(size){
 var size = size
 
 
@@ -58,10 +52,7 @@ var size = size
 
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
         try {
             
@@ -82,10 +73,7 @@ open fun get()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return list
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET, e)
 
 
@@ -98,10 +86,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET, e)
 
 override fun clear()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 super.clear()
 
     var basicArrayList: BasicArrayList
@@ -112,9 +97,6 @@ super.clear()
 
                         for (index in this.list.size() -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 basicArrayList= (this.list.objectArray[index]!! as BasicArrayList)
 basicArrayList!!.clear()
@@ -124,10 +106,7 @@ basicArrayList!!.clear()
 
 override fun log()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -142,9 +121,6 @@ stringBuffer!!.append(this.list.size())
 
                         for (index in this.list.size() -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 stringBuffer!!.append(" s: ")
 basicArrayList= (this.list.objectArray[index]!! as BasicArrayList)

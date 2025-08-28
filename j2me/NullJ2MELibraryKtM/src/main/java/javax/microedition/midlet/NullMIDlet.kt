@@ -29,28 +29,19 @@ open public class NullMIDlet : MIDlet {
                 @Throws(MIDletStateChangeException::class)
             override fun startApp()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun pauseApp()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
                 @Throws(MIDletStateChangeException::class)
             override fun destroyApp(unconditional: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var unconditional = unconditional
 }
 

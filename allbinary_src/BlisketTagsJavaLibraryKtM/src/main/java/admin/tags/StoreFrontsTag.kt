@@ -39,10 +39,7 @@ open public class StoreFrontsTag : TableTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 this.setTagHelperFactory(StoreFrontsHelperFactory())
 this.setTagRequestHelperFactory(StoreFrontsRequestHelperFactory())
 }
@@ -52,10 +49,7 @@ this.setTagRequestHelperFactory(StoreFrontsRequestHelperFactory())
             
 open fun generateSelect()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -75,20 +69,14 @@ open fun generateSelect()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
                             throw e
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to generate storefronts select"
 
@@ -115,10 +103,7 @@ open fun generateSelect()
             
 open fun install()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -138,20 +123,14 @@ open fun install()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
                             throw e
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to generate storefronts select"
 
@@ -178,10 +157,7 @@ open fun install()
             
 open fun sendStoreCreatedEmails()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -201,20 +177,14 @@ open fun sendStoreCreatedEmails()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
                             throw e
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to send email"
 
@@ -241,10 +211,7 @@ open fun sendStoreCreatedEmails()
             
 open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
         try {
             
@@ -325,10 +292,7 @@ this.install()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 } catch(e: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 
 
@@ -337,10 +301,7 @@ AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
                         return SKIP_BODY
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 
 

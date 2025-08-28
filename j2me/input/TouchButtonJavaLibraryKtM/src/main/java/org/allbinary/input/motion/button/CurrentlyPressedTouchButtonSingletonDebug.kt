@@ -39,10 +39,7 @@ open public class CurrentlyPressedTouchButtonSingletonDebug : CurrentlyPressedTo
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CurrentlyPressedTouchButtonSingleton
-
-        Updates for KMP build        
-        {
+: CurrentlyPressedTouchButtonSingleton{
 
 
 
@@ -78,10 +75,7 @@ open fun getInstance()
 
 open fun append(append: String, touchButtonInput: TouchButtonInput)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var append = append
 var touchButtonInput = touchButtonInput
 
@@ -98,10 +92,7 @@ this.string= StringMaker().
 
 open fun append(append: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var append = append
 this.append= StringMaker().
                             append(this.append)!!.append(append)!!.toString()
@@ -112,10 +103,7 @@ this.string= StringMaker().
 
 open fun clearLog(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var x = x
 var y = y
 this.append= StringMaker().
@@ -127,20 +115,14 @@ this.string= StringMaker().
 
 open fun releaseAndNotFired()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.append(RELEASED_AND_NOT_FIRED)
 }
 
 
 open fun releaseAndFired(touchButtonInput: TouchButtonInput)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var touchButtonInput = touchButtonInput
 this.append(RELEASED_AND_FIRED, touchButtonInput)
 }
@@ -148,10 +130,7 @@ this.append(RELEASED_AND_FIRED, touchButtonInput)
 
 open fun releaseAndFired2(touchButtonInput: TouchButtonInput)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var touchButtonInput = touchButtonInput
 this.append(RELEASED_AND_FIRED_2, touchButtonInput)
 }
@@ -159,10 +138,7 @@ this.append(RELEASED_AND_FIRED_2, touchButtonInput)
 
 open fun releaseAndFiredAssociated(touchButtonInput: TouchButtonInput)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var touchButtonInput = touchButtonInput
 this.append(ASSOCIATED_RELEASED_AND_FIRED, touchButtonInput)
 }
@@ -170,10 +146,7 @@ this.append(ASSOCIATED_RELEASED_AND_FIRED, touchButtonInput)
 
 open fun pressedAndFired(touchButtonInput: TouchButtonInput)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var touchButtonInput = touchButtonInput
 this.append(PRESSED_AND_FIRED, touchButtonInput)
 }
@@ -181,20 +154,14 @@ this.append(PRESSED_AND_FIRED, touchButtonInput)
 
 open fun pressedAndNotFired(touchButtonInput: TouchButtonInput)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var touchButtonInput = touchButtonInput
 this.append(PRESSED_AND_NOT_FIRED, touchButtonInput)
 }
 
 override fun remove(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: TouchButtonInput
-
-        Updates for KMP build        
-        {
+: TouchButtonInput{
 var index = index
 
     var touchButtonInput: TouchButtonInput = super.remove(index)!!
@@ -211,10 +178,7 @@ this.string= StringMaker().
 
 override fun remove(touchButtonInput: TouchButtonInput)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var touchButtonInput = touchButtonInput
 
     var isRemoved: Boolean = super.remove(touchButtonInput)!!
@@ -231,10 +195,7 @@ this.string= StringMaker().
 
 override fun add(touchButtonInput: TouchButtonInput)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var touchButtonInput = touchButtonInput
 super.add(touchButtonInput)
 this.listString= list.toString()
@@ -244,10 +205,7 @@ this.string= StringMaker().
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

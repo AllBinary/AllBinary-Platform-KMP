@@ -47,10 +47,7 @@ open public class ImageSegmentAnimation : ImageAnimation {
     private var sequenceArray: IntArray
 protected constructor        (image: Image, animationBehavior: AnimationBehavior)                        
 
-                            : this(image, PrimitiveIntUtil.getArrayInstance(), animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : this(image, PrimitiveIntUtil.getArrayInstance(), animationBehavior){
     //var image = image
     //var animationBehavior = animationBehavior
 
@@ -61,10 +58,7 @@ protected constructor        (image: Image, animationBehavior: AnimationBehavior
 
 protected constructor        (image: Image, sequenceArray: IntArray, animationBehavior: AnimationBehavior)                        
 
-                            : super(image, animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(image, animationBehavior){
     //var image = image
     //var sequenceArray = sequenceArray
     //var animationBehavior = animationBehavior
@@ -82,38 +76,26 @@ this.sequenceArray= sequenceArray
 
 override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.circularIndexUtil!!.next()
 }
 
 override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.circularIndexUtil!!.previous()
 }
 
 override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var index = index
 this.circularIndexUtil!!.setIndex(index)
 }
 
 override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -123,10 +105,7 @@ override fun getFrame()
 
 override fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -136,20 +115,14 @@ override fun getSize()
 
 override fun setSequence(sequenceArray: IntArray)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var sequenceArray = sequenceArray
 this.sequenceArray= sequenceArray
 }
 
 override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
-: IntArray
-
-        Updates for KMP build        
-        {
+: IntArray{
 
 
 
@@ -159,10 +132,7 @@ override fun getSequence()
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 var x = x
 var y = y
@@ -171,10 +141,7 @@ var y = y
 
 open fun getStartX()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -185,10 +152,7 @@ open fun getStartX()
 
 open fun setStartX(startX: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var startX = startX
 this.startX= startX
 }
@@ -196,10 +160,7 @@ this.startX= startX
 
 open fun getStartY()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -210,10 +171,7 @@ open fun getStartY()
 
 open fun setStartY(startY: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var startY = startY
 this.startY= startY
 }
@@ -221,10 +179,7 @@ this.startY= startY
 
 open fun getDrawWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -235,10 +190,7 @@ open fun getDrawWidth()
 
 open fun setDrawWidth(drawWidth: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var drawWidth = drawWidth
 this.drawWidth= drawWidth
 }
@@ -246,10 +198,7 @@ this.drawWidth= drawWidth
 
 open fun getDrawHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -260,10 +209,7 @@ open fun getDrawHeight()
 
 open fun setDrawHeight(drawHeight: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var drawHeight = drawHeight
 this.drawHeight= drawHeight
 }

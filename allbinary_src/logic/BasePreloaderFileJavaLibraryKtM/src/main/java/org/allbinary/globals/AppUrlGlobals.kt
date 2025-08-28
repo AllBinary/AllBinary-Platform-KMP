@@ -44,10 +44,7 @@ open public class AppUrlGlobals : UrlGlobalsInterface {
     private var path: String = StringUtil.getInstance()!!.EMPTY_STRING
 override fun isTestingMode()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -57,10 +54,7 @@ override fun isTestingMode()
 
 override fun getWebappPath()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -72,10 +66,7 @@ override fun getWebappPath()
 
 open fun setWebappPath(path: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var path = path
 this.path= path
 
@@ -91,10 +82,7 @@ this.path= path
 
 override fun getTestHtmlPath()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -106,10 +94,7 @@ override fun getTestHtmlPath()
                 @Throws(Exception::class)
             override fun getMainPath()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

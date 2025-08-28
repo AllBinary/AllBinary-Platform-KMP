@@ -32,15 +32,9 @@ open fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun getSequence()
         //nullable = true from not(false or (false and true)) = true
 : IntArray
-
-        Updates for KMP build        
-        
 
 }
                 

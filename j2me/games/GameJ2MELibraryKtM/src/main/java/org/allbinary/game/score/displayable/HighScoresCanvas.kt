@@ -88,10 +88,7 @@ open public class HighScoresCanvas : GameCommandCanvas
     private var currentCommand: Command = highScoreCommandsFactory!!.HIGH_SCORE_COMMANDS[0]!!
 public constructor        (commandListener: CommandListener, allBinaryGameLayerManager: AllBinaryGameLayerManager, paintable: HighScoresPaintable, highScoresFactoryInterface: HighScoresFactoryInterface)                        
 
-                            : this(commandListener, allBinaryGameLayerManager, allBinaryGameLayerManager!!.getGameInfo(), paintable, highScoresFactoryInterface, HighScoresCanvasNoInputProcessorFactory())
-
-        Updates for KMP build        
-        {
+                            : this(commandListener, allBinaryGameLayerManager, allBinaryGameLayerManager!!.getGameInfo(), paintable, highScoresFactoryInterface, HighScoresCanvasNoInputProcessorFactory()){
     //var commandListener = commandListener
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
     //var paintable = paintable
@@ -104,10 +101,7 @@ public constructor        (commandListener: CommandListener, allBinaryGameLayerM
 
 public constructor        (commandListener: CommandListener, allBinaryGameLayerManager: AllBinaryGameLayerManager, gameInfo: GameInfo, paintable: HighScoresPaintable, highScoresFactoryInterface: HighScoresFactoryInterface, highScoresCanvasInputProcessorFactoryInterface: HighScoresCanvasInputProcessorFactoryInterface)                        
 
-                            : super(commandListener, HighScoresCanvas.NAME, allBinaryGameLayerManager!!.getBackgroundBasicColor(), allBinaryGameLayerManager!!.getForegroundBasicColor())
-
-        Updates for KMP build        
-        {
+                            : super(commandListener, HighScoresCanvas.NAME, allBinaryGameLayerManager!!.getBackgroundBasicColor(), allBinaryGameLayerManager!!.getForegroundBasicColor()){
     //var commandListener = commandListener
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
     //var gameInfo = gameInfo
@@ -152,10 +146,7 @@ SecondaryThreadPool.getInstance()!!.runTask(object: NullRunnable()
                                 {
                                 override fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             
@@ -165,9 +156,6 @@ SecondaryThreadPool.getInstance()!!.runTask(object: NullRunnable()
                                     {
                                     
         while(!hasPainted)
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -187,9 +175,6 @@ repaintBehavior!!.onChangeRepaint(this@HighScoresCanvas)
                                     {
                                     
         while(!hasPainted)
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -200,10 +185,7 @@ stringMaker!!.delete(0, stringMaker!!.length())
 logUtil!!.put(stringMaker!!.append("HighScoresCanvas - Now that the canvas has completed repaint go ahead and fetch the scores: ")!!.append(System.currentTimeMillis())!!.toString(), this, commonStrings!!.RUN)
 executeUpdate()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
 
@@ -215,10 +197,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 
 override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var cmdListener = cmdListener
 this.removeAllCommands()
 this.addCommand(GameCommandsFactory.getInstance()!!.CLOSE_AND_SHOW_GAME_CANVAS)
@@ -227,20 +206,14 @@ this.setCommandListener(cmdListener)
 
 override fun open()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 super.open()
 this.highScoresCanvasInputProcessor!!.open()
 }
 
 override fun close()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 super.close()
 this.highScoresCanvasInputProcessor!!.close()
 }
@@ -249,10 +222,7 @@ this.highScoresCanvasInputProcessor!!.close()
     var hasPainted: Boolean = false
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 this.colorFillPaintable!!.paint(graphics)
 this.paintable.paint(graphics)
@@ -272,18 +242,12 @@ hasPainted= true
 
 open fun executeUpdate()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             this.highScoresFactoryInterface!!.fetchHighScores(this.getGameInfo(), this)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
 }
 
@@ -292,10 +256,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
 
 open fun getHighScoresPaintable()
         //nullable = true from not(false or (false and true)) = true
-: HighScoresPaintable
-
-        Updates for KMP build        
-        {
+: HighScoresPaintable{
 
 
 
@@ -305,10 +266,7 @@ open fun getHighScoresPaintable()
 
 override fun setHighScoresArray(highScoresArray: Array<HighScores?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var highScoresArray = highScoresArray
 
         try {
@@ -333,10 +291,7 @@ this.highScoresHelper!!.setHighScoresArray(highScoresArray)
 this.updateCommand(this.currentCommand)
 this.setPaintable(this.getHighScoresPaintable())
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
 }
 
@@ -347,10 +302,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
             
 open fun updateCommand(command: Command)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var command = command
 logUtil!!.put(StringMaker().
                             append(commonStrings!!.START)!!.append(this.stringUtil!!.toString(command))!!.toString(), this, commonStrings!!.UPDATE)
@@ -418,10 +370,7 @@ this.repaintBehavior!!.onChangeRepaint(this)
 
 open fun getGameInfo()
         //nullable = true from not(false or (false and true)) = true
-: GameInfo
-
-        Updates for KMP build        
-        {
+: GameInfo{
 
 
 
@@ -432,10 +381,7 @@ open fun getGameInfo()
 
 open fun setPaintable(paintable: Paintable)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var paintable = paintable
 this.paintable= paintable
 this.repaintBehavior!!.onChangeRepaint(this)

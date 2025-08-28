@@ -36,10 +36,7 @@ open public class FullTouchButton : TouchButton {
         
 public constructor        (touchButtonInput: TouchButtonInput, touchButtonResource: TouchButtonResource, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int)                        
 
-                            : super(touchButtonInput, touchButtonResource, rawRectangle, cellPosition, xBorder, yBorder)
-
-        Updates for KMP build        
-        {
+                            : super(touchButtonInput, touchButtonResource, rawRectangle, cellPosition, xBorder, yBorder){
 var touchButtonInput = touchButtonInput
 var touchButtonResource = touchButtonResource
 var rawRectangle = rawRectangle
@@ -54,10 +51,7 @@ var yBorder = yBorder
 
 public constructor        (touchButtonInput: TouchButtonInput, animationInterface: Animation, hintAnimationInterface: Animation, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int)                        
 
-                            : super(touchButtonInput, animationInterface, hintAnimationInterface, rawRectangle, cellPosition, xBorder, yBorder)
-
-        Updates for KMP build        
-        {
+                            : super(touchButtonInput, animationInterface, hintAnimationInterface, rawRectangle, cellPosition, xBorder, yBorder){
 var touchButtonInput = touchButtonInput
 var animationInterface = animationInterface
 var hintAnimationInterface = hintAnimationInterface
@@ -73,10 +67,7 @@ var yBorder = yBorder
 
 override fun updateRectangle()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             
@@ -93,10 +84,7 @@ this.animationX= point.getX() +xBorder
 this.animationY= point.getY() +yBorder
 this.hintAnimationY= animationY -this.rectangleP!!.getHeight() shr 1
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "updateRectangle", e)
 }
 

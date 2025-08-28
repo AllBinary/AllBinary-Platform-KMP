@@ -23,10 +23,7 @@ open public class NullOpenGLProcessorFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLProcessor
-
-        Updates for KMP build        
-        {
+: OpenGLProcessor{
 
 
 

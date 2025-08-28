@@ -56,9 +56,6 @@ open public class BasicPlayer
     val listenersList: BasicArrayList = BasicArrayList()
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 this.setLoopCount(0)
 this.setState(Player.UNREALIZED)
@@ -67,10 +64,7 @@ this.setState(Player.UNREALIZED)
 
 open fun getContentType()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -81,10 +75,7 @@ open fun getContentType()
 
 open fun getControl(controlType: String)
         //nullable = true from not(false or (false and false)) = true
-: Control
-
-        Updates for KMP build        
-        {
+: Control{
 var controlType = controlType
 
 
@@ -96,10 +87,7 @@ var controlType = controlType
 
 open fun getControls()
         //nullable = true from not(false or (false and true)) = true
-: Array<Control?>
-
-        Updates for KMP build        
-        {
+: Array<Control?>{
 
 
 
@@ -110,20 +98,14 @@ open fun getControls()
 
 open fun close()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun addPlayerListener(playerListener: PlayerListener)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var playerListener = playerListener
 
     
@@ -139,10 +121,7 @@ var playerListener = playerListener
 
 open fun removePlayerListener(playerListener: PlayerListener)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var playerListener = playerListener
 this.listenersList!!.remove(playerListener)
 }
@@ -150,10 +129,7 @@ this.listenersList!!.remove(playerListener)
 
 open fun getState()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -165,10 +141,7 @@ open fun getState()
 
 open fun setState(state: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var state = state
 this.state= state
 }
@@ -176,10 +149,7 @@ this.state= state
 
 open fun getDuration()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -190,10 +160,7 @@ open fun getDuration()
 
 open fun getMediaTime()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -204,10 +171,7 @@ open fun getMediaTime()
 
 open fun getTimeBase()
         //nullable = true from not(false or (false and true)) = true
-: TimeBase
-
-        Updates for KMP build        
-        {
+: TimeBase{
 
 
 
@@ -219,10 +183,7 @@ open fun getTimeBase()
 
 open fun setTimeBase(timeBase: TimeBase)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var timeBase = timeBase
 this.timeBase= timeBase
 }
@@ -230,10 +191,7 @@ this.timeBase= timeBase
 
 open fun deallocate()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
@@ -241,10 +199,7 @@ open fun deallocate()
             
 open fun prefetch()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
@@ -252,20 +207,14 @@ open fun prefetch()
             
 open fun realize()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun setLoopCount(count: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var count = count
 this.loopCount= count
 }
@@ -273,10 +222,7 @@ this.loopCount= count
 
 open fun getLoopCount()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -290,10 +236,7 @@ open fun getLoopCount()
 
 open fun setMediaTime(now: Long)
         //nullable = true from not(false or (false and false)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 var now = now
 
 
@@ -308,10 +251,7 @@ var now = now
 
 open fun start()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.setState(Player.STARTED)
 }
 
@@ -321,20 +261,14 @@ this.setState(Player.STARTED)
 
 open fun stop()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.setState(Player.PREFETCHED)
 }
 
 
 open fun setVolume(leftVolume: Int, rightVolume: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var leftVolume = leftVolume
     //var rightVolume = rightVolume
 }

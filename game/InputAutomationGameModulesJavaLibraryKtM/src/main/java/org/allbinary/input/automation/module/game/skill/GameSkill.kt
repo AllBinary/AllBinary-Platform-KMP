@@ -41,10 +41,7 @@ open public class GameSkill
 
 open fun getInstance(gameSkillType: GameSkillType, extra: String)
         //nullable =  from not(true or (false and false)) = 
-: GameSkill
-
-        Updates for KMP build        
-        {
+: GameSkill{
 var gameSkillType = gameSkillType
 var extra = extra
 
@@ -73,9 +70,6 @@ var extra = extra
     private val TIME_LABEL: String = "Time: "
 public constructor        (gameSkillType: GameSkillType, extra: String, time: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var gameSkillType = gameSkillType
 var extra = extra
@@ -91,10 +85,7 @@ hashMap!!.put(StringBuilder().
 
 open fun getGameSkillType()
         //nullable = true from not(false or (false and true)) = true
-: GameSkillType
-
-        Updates for KMP build        
-        {
+: GameSkillType{
 
 
 
@@ -105,10 +96,7 @@ open fun getGameSkillType()
 
 open fun setGameSkillType(gameSkillType: GameSkillType)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gameSkillType = gameSkillType
 this.gameSkillType= gameSkillType
 }
@@ -116,10 +104,7 @@ this.gameSkillType= gameSkillType
 
 open fun getExtra()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -130,10 +115,7 @@ open fun getExtra()
 
 open fun setExtra(extra: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var extra = extra
 this.extra= extra
 }
@@ -141,10 +123,7 @@ this.extra= extra
 
 open fun getTime()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -155,10 +134,7 @@ open fun getTime()
 
 open fun setTime(time: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var time = time
 this.time= time
 }
@@ -166,10 +142,7 @@ this.time= time
 
 open fun addProperty(gameSkillPropertyInterface: GameSkillPropertyInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gameSkillPropertyInterface = gameSkillPropertyInterface
 this.vector.add(gameSkillPropertyInterface)
 }
@@ -177,10 +150,7 @@ this.vector.add(gameSkillPropertyInterface)
 
 open fun getProperties()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
 
 
@@ -190,10 +160,7 @@ open fun getProperties()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

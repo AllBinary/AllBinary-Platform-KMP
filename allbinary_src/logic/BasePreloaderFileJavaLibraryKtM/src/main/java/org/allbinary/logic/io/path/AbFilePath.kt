@@ -30,10 +30,7 @@ open public class AbFilePath : AbPath {
         
 public constructor        (aPath: String)                        
 
-                            : super()
-
-        Updates for KMP build        
-        {
+                            : super(){
 var aPath = aPath
 
 

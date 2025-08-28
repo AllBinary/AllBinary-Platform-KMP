@@ -34,24 +34,15 @@ open fun init(speedBasicDecimal: BasicDecimal, angle: Int, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun process(layer: AllBinaryGameLayer)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun stop()
         //nullable = true from not(false or (false and true)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

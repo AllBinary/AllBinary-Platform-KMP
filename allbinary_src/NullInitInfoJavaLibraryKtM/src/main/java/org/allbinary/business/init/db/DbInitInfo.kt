@@ -31,10 +31,7 @@ open public class DbInitInfo : DbConnectionInfo {
         
 public constructor        (initFileName: String, read: Boolean)                        
 
-                            : super()
-
-        Updates for KMP build        
-        {
+                            : super(){
 var initFileName = initFileName
 var read = read
 
@@ -46,10 +43,7 @@ var read = read
 
 open fun getUrl()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var url: String = super.getUrl()!!
 
@@ -67,10 +61,7 @@ PreLogUtil.put("Url: " +url, this, "getUrl")
 
 open fun write()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
@@ -79,20 +70,14 @@ open fun write()
 
 open fun load()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun setHasRead(value: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 }
 

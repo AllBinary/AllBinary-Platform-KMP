@@ -38,10 +38,7 @@ open public class RemoveActionScriptItemJPanel : java.awt.Panel {
     private var genericProfileActionJPanel: GenericProfileActionJPanel
 
     private var profileActionScriptConditionInterface: ProfileActionScriptConditionInterface
-public constructor        (genericProfileActionJPanel: GenericProfileActionJPanel, profileActionScriptConditionInterface: ProfileActionScriptConditionInterface)
-
-        Updates for KMP build        
-        {
+public constructor        (genericProfileActionJPanel: GenericProfileActionJPanel, profileActionScriptConditionInterface: ProfileActionScriptConditionInterface){
 var genericProfileActionJPanel = genericProfileActionJPanel
 var profileActionScriptConditionInterface = profileActionScriptConditionInterface
 initComponents()
@@ -52,10 +49,7 @@ this.profileActionScriptConditionInterface= profileActionScriptConditionInterfac
 
 open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 removeJButton= javax.swing.JButton()
 setLayout(java.awt.GridLayout())
 removeJButton!!.setText("Remove")
@@ -64,10 +58,7 @@ removeJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 removeJButtonActionPerformed(evt)
 }
@@ -80,10 +71,7 @@ add(removeJButton)
 
 open fun removeJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 
     var genericProfileAction: GenericProfileAction = this.genericProfileActionJPanel!!.getGenericProfileAction()!!

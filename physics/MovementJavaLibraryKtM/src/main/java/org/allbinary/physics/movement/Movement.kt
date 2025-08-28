@@ -35,18 +35,12 @@ open public class Movement
         
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 override fun init(speedBasicDecimal: BasicDecimal, angle: Int, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var speedBasicDecimal = speedBasicDecimal
 var angle = angle
 var otherAngle = otherAngle
@@ -56,19 +50,13 @@ var otherAngle = otherAngle
                 @Throws(Exception::class)
             override fun process(layer: AllBinaryGameLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var layer = layer
 }
 
 override fun stop()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 

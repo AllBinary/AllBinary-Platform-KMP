@@ -32,9 +32,6 @@ open fun getId()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-        Updates for KMP build        
-        
-
 }
                 
             

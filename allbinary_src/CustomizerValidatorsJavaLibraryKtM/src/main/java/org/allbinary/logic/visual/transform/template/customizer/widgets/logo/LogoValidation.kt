@@ -54,10 +54,7 @@ open public class LogoValidation : Validation
     private var logoFile: String
 
     private var isFile: Boolean
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 this.isFile= false
 this.logoAbPath= 
                                         null
@@ -67,20 +64,14 @@ this.logoFile=
                                     
 }
 
-public constructor        (node: Node)
-
-        Updates for KMP build        
-        {
+public constructor        (node: Node){
 var node = node
 this.isFile= false
 this.logoAbPath= AbPath(DomSearchHelper.getNode(LogoData.getInstance()!!.IMAGEPATH, node.getChildNodes())!!.getNodeValue())
 this.logoFile= DomSearchHelper.getNode(LogoData.getInstance()!!.IMAGEFILENAME, node.getChildNodes())!!.getNodeValue()
 }
 
-public constructor        (hashMap: HashMap<Any, Any>)
-
-        Updates for KMP build        
-        {
+public constructor        (hashMap: HashMap<Any, Any>){
 var hashMap = hashMap
 this.isFile= true
 this.getFormData(hashMap)
@@ -91,10 +82,7 @@ this.getFormData(hashMap)
             
 open fun getFormData(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var hashMap = hashMap
 this.logoFileItem= hashMap!!.get(LogoData.getInstance()!!.IMAGE) as FileItem
 this.logoAbPath= AbPath(hashMap!!.get(LogoData.getInstance()!!.IMAGEPATH) as String)
@@ -130,10 +118,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "getFormData()")
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             
@@ -255,10 +240,7 @@ open fun isValid()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return valid
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
@@ -280,10 +262,7 @@ open fun isValid()
 
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -296,10 +275,7 @@ stringBuffer!!.append("Logo is not valid.")
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
@@ -321,10 +297,7 @@ stringBuffer!!.append("Logo is not valid.")
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
 
 
@@ -335,10 +308,7 @@ open fun toValidationInfoDoc()
 
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
 
@@ -350,10 +320,7 @@ var document = document
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
@@ -392,10 +359,7 @@ hashMap!!.put(LogoData.getInstance()!!.IMAGEFILENAME, this.logoFile)
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var hashMap: HashMap<Any, Any> = this.toHashMap()!!
@@ -412,10 +376,7 @@ var document = document
             
 open fun processLogoFile()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))

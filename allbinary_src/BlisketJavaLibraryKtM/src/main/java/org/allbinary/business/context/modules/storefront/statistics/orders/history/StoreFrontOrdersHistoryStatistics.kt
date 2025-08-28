@@ -50,9 +50,6 @@ open public class StoreFrontOrdersHistoryStatistics
     private var totalMoney: Money
 public constructor        (storeFrontInterface: StoreFrontInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var storeFrontInterface = storeFrontInterface
 this.subTotalMoney= Money()
@@ -80,9 +77,6 @@ this.totalMoney= Money()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 orderHistoryInterface= orderHistoryInterfaceVector!!.get(index) as OrderHistoryInterface
 numberOfOrders= numberOfOrders +1
@@ -98,10 +92,7 @@ this.numberOfOrdersLong= numberOfOrders as Long
 
 open fun getNumberOfOrders()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -112,10 +103,7 @@ open fun getNumberOfOrders()
 
 open fun getSubTotal()
         //nullable = true from not(false or (false and true)) = true
-: Money
-
-        Updates for KMP build        
-        {
+: Money{
 
 
 
@@ -126,10 +114,7 @@ open fun getSubTotal()
 
 open fun getShippingCost()
         //nullable = true from not(false or (false and true)) = true
-: Money
-
-        Updates for KMP build        
-        {
+: Money{
 
 
 
@@ -140,10 +125,7 @@ open fun getShippingCost()
 
 open fun getTaxes()
         //nullable = true from not(false or (false and true)) = true
-: Money
-
-        Updates for KMP build        
-        {
+: Money{
 
 
 
@@ -154,10 +136,7 @@ open fun getTaxes()
 
 open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
-: Money
-
-        Updates for KMP build        
-        {
+: Money{
 
 
 
@@ -168,10 +147,7 @@ open fun getTotal()
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -193,10 +169,7 @@ hashMap!!.put(storeFrontOrdersHistoryStatisticsData!!.TOTAL, this.getTotal()!!.t
 
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
 
 
@@ -207,10 +180,7 @@ open fun toVector()
 
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 
 
 

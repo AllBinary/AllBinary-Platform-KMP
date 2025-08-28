@@ -60,10 +60,7 @@ open public class HighScoreNamePersistanceSingleton
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: HighScoreNamePersistanceSingleton
-
-        Updates for KMP build        
-        {
+: HighScoreNamePersistanceSingleton{
 
 
 
@@ -93,10 +90,7 @@ open fun getInstance()
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.name= StringUtil.getInstance()!!.EMPTY_STRING
 }
 
@@ -105,10 +99,7 @@ this.name= StringUtil.getInstance()!!.EMPTY_STRING
             
 open fun deleteAll(abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
     //var gameInfo = gameInfo
 
@@ -120,9 +111,6 @@ open fun deleteAll(abeClientInformation: AbeClientInformationInterface, gameInfo
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var integer: Integer = this.nameBasicArrayList!!.objectArray[index]!! as Integer
@@ -136,10 +124,7 @@ this.clear()
 
 open fun getRecordId(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
     //var abeClientInformation = abeClientInformation
 
 
@@ -153,10 +138,7 @@ open fun getRecordId(abeClientInformation: AbeClientInformationInterface)
             
 open fun delete(abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, deleteId: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
     //var gameInfo = gameInfo
     //var deleteId = deleteId
@@ -170,10 +152,7 @@ open fun delete(abeClientInformation: AbeClientInformationInterface, gameInfo: G
 recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
 recordStore!!.deleteRecord(deleteId)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
@@ -201,10 +180,7 @@ recordStore!!.closeRecordStore()
 
 open fun getIds()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 
@@ -215,10 +191,7 @@ open fun getIds()
 
 open fun load(abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
     //var abeClientInformation = abeClientInformation
     //var gameInfo = gameInfo
 
@@ -252,9 +225,6 @@ recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation),
 
 
         while(recordEnum!!.hasNextElement())
-        
-
-        Updates for KMP build        
         {
 
     var id: Int = recordEnum!!.nextRecordId()!!
@@ -266,9 +236,6 @@ byteArrayInputStream= ByteArrayInputStream(recordAsBytes)
 inputStream= DataInputStream(byteArrayInputStream)
 
         while(inputStream!!.available() > 0)
-        
-
-        Updates for KMP build        
         {
 this.name= inputStream!!.readUTF()
 }
@@ -280,10 +247,7 @@ nameBasicArrayList!!.add(smallIntegerSingletonFactory!!.getInstance(id))
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 this.save(abeClientInformation, gameInfo, this.name)
 logUtil!!.put(StringMaker().
                             append(commonStrings!!.EXCEPTION_LABEL)!!.append(ExceptionUtil.getInstance()!!.getStackTrace(e))!!.toString(), this, commonStrings!!.LOAD)
@@ -305,10 +269,7 @@ recordStore!!.closeRecordStore()
                                     }
                                 
 } catch(e: RecordStoreException)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.LOAD, e)
 }
 
@@ -325,10 +286,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.LOAD, e)
 
 open fun save(abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, name: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
     //var gameInfo = gameInfo
     //var name = name
@@ -353,10 +311,7 @@ outputStream!!.writeUTF(name)
 recordStore!!.addRecord(savedGameBytes, 0, savedGameBytes!!.size)
 this.name= name
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.SAVE, e)
 }
 
@@ -376,10 +331,7 @@ recordStore!!.closeRecordStore()
                                     }
                                 
 } catch(e: RecordStoreException)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.SAVE, e)
 }
 

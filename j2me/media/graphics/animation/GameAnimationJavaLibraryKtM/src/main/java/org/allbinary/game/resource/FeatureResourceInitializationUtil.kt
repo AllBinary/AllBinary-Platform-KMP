@@ -40,10 +40,7 @@ open public class FeatureResourceInitializationUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FeatureResourceInitializationUtil
-
-        Updates for KMP build        
-        {
+: FeatureResourceInitializationUtil{
 
 
 
@@ -65,10 +62,7 @@ open fun getInstance()
             
 open fun init(level: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var level = level
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!

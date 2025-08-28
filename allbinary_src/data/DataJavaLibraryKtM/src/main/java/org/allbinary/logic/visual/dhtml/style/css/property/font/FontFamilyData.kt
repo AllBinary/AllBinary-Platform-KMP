@@ -37,10 +37,7 @@ open public class FontFamilyData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FontFamilyData
-
-        Updates for KMP build        
-        {
+: FontFamilyData{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

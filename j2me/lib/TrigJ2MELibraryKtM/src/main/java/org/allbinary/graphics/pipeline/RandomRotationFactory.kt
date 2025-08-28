@@ -40,10 +40,7 @@ open public class RandomRotationFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: RandomRotationFactory
-
-        Updates for KMP build        
-        {
+: RandomRotationFactory{
 
 
 
@@ -67,10 +64,7 @@ open fun getInstance()
             
 open fun getInstance(vector: BasicArrayList, howMuch: Int)
         //nullable =  from not(true or (false and false)) = 
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 var vector = vector
 var howMuch = howMuch
 
@@ -88,10 +82,7 @@ graphicsPipe!!.rotate(angleFactory!!.getInstance(getNextRandomAngle(howMuch)))
 
 open fun getNextRandomAngle(howMuch: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var howMuch = howMuch
 
 

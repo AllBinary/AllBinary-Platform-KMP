@@ -35,9 +35,6 @@ open public class AnalogLocationInput
     private var leftTrigger: Int= 0
  constructor        (playerId: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var playerId = playerId
 this.playerId= playerId
@@ -47,10 +44,7 @@ this.customGPoint= CustomGPoint(0, 0, 0)
 
 open fun getPlayerId()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -61,10 +55,7 @@ open fun getPlayerId()
 
 open fun getCustomGPoint()
         //nullable = true from not(false or (false and true)) = true
-: CustomGPoint
-
-        Updates for KMP build        
-        {
+: CustomGPoint{
 
 
 
@@ -75,10 +66,7 @@ open fun getCustomGPoint()
 
 open fun getRz()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -89,10 +77,7 @@ open fun getRz()
 
 open fun setRz(rz: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var rz = rz
 this.rz= rz
 }
@@ -100,10 +85,7 @@ this.rz= rz
 
 open fun getRightTrigger()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -114,10 +96,7 @@ open fun getRightTrigger()
 
 open fun setRightTrigger(rightTrigger: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var rightTrigger = rightTrigger
 this.rightTrigger= rightTrigger
 }
@@ -125,10 +104,7 @@ this.rightTrigger= rightTrigger
 
 open fun getLeftTrigger()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -139,10 +115,7 @@ open fun getLeftTrigger()
 
 open fun setLeftTrigger(leftTrigger: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var leftTrigger = leftTrigger
 this.leftTrigger= leftTrigger
 }

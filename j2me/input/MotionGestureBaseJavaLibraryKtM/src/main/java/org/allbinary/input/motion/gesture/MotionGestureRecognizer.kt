@@ -65,9 +65,6 @@ open public class MotionGestureRecognizer
     private val motionEventCircularPool: MotionEventCircularPool
 public constructor        (id: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var id = id
 this.motionEventCircularPool= MotionEventCircularPool.getInstance(id)
@@ -82,10 +79,7 @@ this.motionEventCircularPool= MotionEventCircularPool.getInstance(id)
             motionGesturesHandler= BasicMotionGesturesHandler.getInstance()
 movedMotionGesturesHandler= MovedMotionGesturesHandler.getInstance()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -101,10 +95,7 @@ this.movedMotionGesturesHandler= movedMotionGesturesHandler
             
 open fun processPressedMotionEvent(current: GPoint, deviceId: Int, button: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var current = current
     //var deviceId = deviceId
     //var button = button
@@ -128,10 +119,7 @@ motionGesturesHandler!!.fireEvent(event)
             
 open fun processReleasedMotionEvent(current: GPoint, deviceId: Int, button: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var current = current
     //var deviceId = deviceId
     //var button = button
@@ -153,10 +141,7 @@ motionGesturesHandler!!.fireEvent(event)
             
 open fun processDraggedMotionEvent(current: GPoint, deviceId: Int, buttonMask: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var current = current
     //var deviceId = deviceId
     //var buttonMask = buttonMask
@@ -337,10 +322,7 @@ motionGesturesHandler!!.fireEvent(event)
             
 open fun processMovedMotionEvent(current: GPoint, deviceId: Int, button: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var current = current
     //var deviceId = deviceId
     //var button = button
@@ -360,10 +342,7 @@ movedMotionGesturesHandler!!.fireEvent(event)
 
 open fun getMotionGesturesHandler()
         //nullable = true from not(false or (false and true)) = true
-: BasicMotionGesturesHandler
-
-        Updates for KMP build        
-        {
+: BasicMotionGesturesHandler{
 
 
 

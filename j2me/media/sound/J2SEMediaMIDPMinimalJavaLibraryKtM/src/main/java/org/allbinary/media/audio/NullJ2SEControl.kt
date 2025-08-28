@@ -31,10 +31,7 @@ open public class NullJ2SEControl : Control {
         
  constructor        (type: Type)                        
 
-                            : super(type)
-
-        Updates for KMP build        
-        {
+                            : super(type){
 var type = type
 
 

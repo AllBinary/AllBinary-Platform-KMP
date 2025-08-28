@@ -63,10 +63,7 @@ open public class TouchButton : Paintable {
     var animationX: Int= 0
 
     var animationY: Int= 0
-public constructor        (touchButtonInput: TouchButtonInput, animationInterface: AnimationInterface, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int)
-
-        Updates for KMP build        
-        {
+public constructor        (touchButtonInput: TouchButtonInput, animationInterface: AnimationInterface, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int){
 var touchButtonInput = touchButtonInput
 var animationInterface = animationInterface
 var rawRectangle = rawRectangle
@@ -86,10 +83,7 @@ logUtil!!.put(StringMaker().
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 this.animationInterface!!.paint(graphics, animationX, animationY)
 }
@@ -97,10 +91,7 @@ this.animationInterface!!.paint(graphics, animationX, animationY)
 
 open fun updateRectangle()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             
@@ -116,10 +107,7 @@ this.rectangle= Rectangle(PointFactory.getInstance()!!.getInstance(x +xBorder, y
 this.animationX= point.getX()
 this.animationY= point.getY()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "updateRectangle", e)
 }
 
@@ -128,10 +116,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "updateRectangle", e)
 
 open fun getCellPositionP()
         //nullable = true from not(false or (false and true)) = true
-: CellPosition
-
-        Updates for KMP build        
-        {
+: CellPosition{
 
 
 
@@ -142,10 +127,7 @@ open fun getCellPositionP()
 
 open fun getRectangleP()
         //nullable = true from not(false or (false and true)) = true
-: Rectangle
-
-        Updates for KMP build        
-        {
+: Rectangle{
 
 
 
@@ -156,10 +138,7 @@ open fun getRectangleP()
 
 open fun getTouchButtonInput()
         //nullable = true from not(false or (false and true)) = true
-: TouchButtonInput
-
-        Updates for KMP build        
-        {
+: TouchButtonInput{
 
 
 
@@ -169,10 +148,7 @@ open fun getTouchButtonInput()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

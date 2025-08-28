@@ -42,10 +42,7 @@ open public class GameKeyEventFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameKeyEventFactory
-
-        Updates for KMP build        
-        {
+: GameKeyEventFactory{
 
 
 
@@ -68,19 +65,13 @@ open fun getInstance()
                                                             
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var nullUtil: NullUtil = NullUtil.getInstance()!!
 
@@ -93,9 +84,6 @@ open fun init()
 
                         for (index in MAX_SOURCES  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
 
@@ -103,9 +91,6 @@ open fun init()
 
                         for (index2 in size  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 ARRAY[index]!![index2]= GameKeyEvent(nullUtil!!.NULL_OBJECT, index, index2)
 }
@@ -119,10 +104,7 @@ ARRAY[index]!![index2]= GameKeyEvent(nullUtil!!.NULL_OBJECT, index, index2)
             
 open fun getInstance(anyType: GameKeyEventSourceInterface, key: Int)
         //nullable =  from not(true or (false and false)) = 
-: GameKeyEvent
-
-        Updates for KMP build        
-        {
+: GameKeyEvent{
 var anyType = anyType
 var key = key
 
@@ -140,10 +122,7 @@ var key = key
             
 open fun getInstance(anyType: GameKeyEventSourceInterface, input: Input)
         //nullable =  from not(true or (false and false)) = 
-: GameKeyEvent
-
-        Updates for KMP build        
-        {
+: GameKeyEvent{
 var anyType = anyType
 var input = input
 

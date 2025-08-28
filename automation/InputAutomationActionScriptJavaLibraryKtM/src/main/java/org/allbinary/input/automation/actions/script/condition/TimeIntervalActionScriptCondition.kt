@@ -54,10 +54,7 @@ open public class TimeIntervalActionScriptCondition : BasicProfileActionScriptCo
     private var timeHelper: TimeDelayHelper
 public constructor        (node: Node)                        
 
-                            : super(TimeIntervalActionScriptCondition.NAME, node)
-
-        Updates for KMP build        
-        {
+                            : super(TimeIntervalActionScriptCondition.NAME, node){
 var node = node
 
 
@@ -82,9 +79,6 @@ var node = node
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
-        
-
-        Updates for KMP build        
         {
 
     var childNode: Node = nodeList!!.item(index)!!
@@ -127,10 +121,7 @@ this.init()
 
 public constructor        ()                        
 
-                            : super(TimeIntervalActionScriptCondition.NAME)
-
-        Updates for KMP build        
-        {
+                            : super(TimeIntervalActionScriptCondition.NAME){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -142,30 +133,21 @@ this.init()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.timeIntervalActionScriptConditionJPanel= TimeIntervalActionScriptConditionJPanel(this)
 }
 
 
 open fun showDialog()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.timeIntervalActionScriptConditionJPanel!!.getTimeIntervalActionJDialog()!!.setVisible(true)
 }
 
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -183,10 +165,7 @@ logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var node: Node = super.toXmlNode(document)!!
@@ -202,20 +181,14 @@ node.appendChild(ModDomHelper.createNodeWithValueNodes(document, TimeIntervalAct
 
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 logUtil!!.put("Time Interval: " +this.timeHelper!!.delay, this, "log")
 }
 
 
 open fun getTimeDelayHelper()
         //nullable = true from not(false or (false and true)) = true
-: TimeDelayHelper
-
-        Updates for KMP build        
-        {
+: TimeDelayHelper{
 
 
 
@@ -226,10 +199,7 @@ open fun getTimeDelayHelper()
 
 open fun setTimeDelayHelper(timeHelper: TimeDelayHelper)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var timeHelper = timeHelper
 this.timeHelper= timeHelper
 }
@@ -239,10 +209,7 @@ this.timeHelper= timeHelper
             
 open fun shouldProcess(frame: Long)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var frame = frame
 
     var timeHelper: TimeDelayHelper = this.getTimeDelayHelper()!!

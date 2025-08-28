@@ -38,10 +38,7 @@ open public class SpinnerAI : BasicAI {
     private var direction: IntArray
 public constructor        (direction: IntArray, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
-                            : super(ownerLayerInterface, gameInput)
-
-        Updates for KMP build        
-        {
+                            : super(ownerLayerInterface, gameInput){
 var direction = direction
 var ownerLayerInterface = ownerLayerInterface
 var gameInput = gameInput
@@ -56,10 +53,7 @@ this.direction= direction
                 @Throws(Exception::class)
             override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allBinaryLayerManager = allBinaryLayerManager
 
     

@@ -41,10 +41,7 @@ open public class GameLevelDisplayChangeEventListenersFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameLevelDisplayChangeEventListenersFactory
-
-        Updates for KMP build        
-        {
+: GameLevelDisplayChangeEventListenersFactory{
 
 
 
@@ -64,10 +61,7 @@ open fun getInstance()
 
 open fun add(displayChangeEventListener: DisplayChangeEventListener)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var displayChangeEventListener = displayChangeEventListener
 this.list.add(displayChangeEventListener)
 DisplayChangeEventHandler.getInstance()!!.addListener(displayChangeEventListener)
@@ -76,10 +70,7 @@ DisplayChangeEventHandler.getInstance()!!.addListener(displayChangeEventListener
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var displayChangeEventHandler: BasicEventHandler = DisplayChangeEventHandler.getInstance()!!
 
@@ -92,9 +83,6 @@ open fun clear()
 
                         for (index in this.list.size()!!  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 displayChangeEventListener= this.list.objectArray[index]!! as DisplayChangeEventListener
 displayChangeEventHandler!!.removeListener(displayChangeEventListener)

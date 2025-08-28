@@ -37,10 +37,7 @@ open public class WaypointInfoHudPaintableSingleton
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: WaypointInfoHudPaintable
-
-        Updates for KMP build        
-        {
+: WaypointInfoHudPaintable{
 
 
 

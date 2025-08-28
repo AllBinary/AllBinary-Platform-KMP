@@ -56,10 +56,7 @@ open public class ImageActionScriptOutput : BasicProfileActionScriptOutput
     private var actionScriptOutputJPanel: ImageActionScriptOutputJPanel
 public constructor        (node: Node)                        
 
-                            : super(NAME, node)
-
-        Updates for KMP build        
-        {
+                            : super(NAME, node){
 var node = node
 
 
@@ -85,9 +82,6 @@ logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
-        
-
-        Updates for KMP build        
         {
 
     var childNode: Node = nodeList!!.item(index)!!
@@ -154,10 +148,7 @@ this.actionScriptOutputJPanel= ImageActionScriptOutputJPanel(this)
 
 public constructor        ()                        
 
-                            : super(NAME)
-
-        Updates for KMP build        
-        {
+                            : super(NAME){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -170,10 +161,7 @@ this.actionScriptOutputJPanel= ImageActionScriptOutputJPanel(this)
 
 open fun getActionScriptOutputJPanel()
         //nullable = true from not(false or (false and true)) = true
-: ImageActionScriptOutputJPanel
-
-        Updates for KMP build        
-        {
+: ImageActionScriptOutputJPanel{
 
 
 
@@ -184,10 +172,7 @@ open fun getActionScriptOutputJPanel()
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -206,10 +191,7 @@ logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var node: Node = super.toXmlNode(document)!!
@@ -231,10 +213,7 @@ node.appendChild(newNode)
             
 open fun process(frame: Long)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var frame = frame
 ImageActionScriptOutputProcessor.process(this, frame)
 }
@@ -242,20 +221,14 @@ ImageActionScriptOutputProcessor.process(this, frame)
 
 open fun showDialog()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.actionScriptOutputJPanel!!.getCapturedImageActionJDialog()!!.setVisible(true)
 }
 
 
 open fun isSaved()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -266,10 +239,7 @@ open fun isSaved()
 
 open fun setSaved(saved: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var saved = saved
 this.saved= saved
 }
@@ -277,10 +247,7 @@ this.saved= saved
 
 open fun isDisplay()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -291,10 +258,7 @@ open fun isDisplay()
 
 open fun setDisplay(display: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var display = display
 this.display= display
 }
@@ -302,10 +266,7 @@ this.display= display
 
 open fun future_toString()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -325,20 +286,14 @@ stringBuffer!!.append(this.getImageTypes()!!.toString())
 
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 logUtil!!.put(this.future_toString(), this, "log")
 }
 
 
 open fun getImageTypes()
         //nullable = true from not(false or (false and true)) = true
-: ImageTypes
-
-        Updates for KMP build        
-        {
+: ImageTypes{
 
 
 
@@ -349,10 +304,7 @@ open fun getImageTypes()
 
 open fun setImageTypes(imageTypes: ImageTypes)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var imageTypes = imageTypes
 this.imageTypes= imageTypes
 }

@@ -28,9 +28,6 @@ open public class TouchButtonResource
     val HINT: String
 protected constructor        (resource: String, hint: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var resource = resource
 var hint = hint

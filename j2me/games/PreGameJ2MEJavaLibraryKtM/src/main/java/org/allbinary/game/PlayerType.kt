@@ -37,9 +37,6 @@ open public class PlayerType
     private var name: String = StringUtil.getInstance()!!.EMPTY_STRING
  constructor        (name: String, value: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var name = name
     //var value = value
@@ -50,10 +47,7 @@ this.id= value
 
 open fun getId()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -64,10 +58,7 @@ open fun getId()
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -77,10 +68,7 @@ open fun getName()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

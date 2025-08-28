@@ -39,10 +39,7 @@ open public class OrientationMotionGestureFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OrientationMotionGestureFactory
-
-        Updates for KMP build        
-        {
+: OrientationMotionGestureFactory{
 
 
 
@@ -66,9 +63,6 @@ open fun getInstance()
     val ROLL_RIGHT: MotionGestureInput
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     var MAX: Int = InputFactory.getInstance()!!.MAX

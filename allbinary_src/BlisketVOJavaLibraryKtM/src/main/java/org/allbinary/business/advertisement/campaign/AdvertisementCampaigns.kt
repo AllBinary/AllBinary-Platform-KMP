@@ -39,9 +39,6 @@ open public class AdvertisementCampaigns
     private var advertisementsVector: Vector
 public constructor        (vector: Vector)
             : super()
-        
-
-        Updates for KMP build        
         {
 var vector = vector
 this.advertisementsVector= advertisementsVector
@@ -50,10 +47,7 @@ this.advertisementsVector= advertisementsVector
 
 open fun add(advertisementInterface: AdvertisementInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var advertisementInterface = advertisementInterface
 this.advertisementsVector!!.add(advertisementInterface)
 }
@@ -61,10 +55,7 @@ this.advertisementsVector!!.add(advertisementInterface)
 
 open fun get(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: AdvertisementInterface
-
-        Updates for KMP build        
-        {
+: AdvertisementInterface{
 var index = index
 
 
@@ -76,10 +67,7 @@ var index = index
 
 open fun size()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -90,10 +78,7 @@ open fun size()
 
 open fun isEnabled()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -104,10 +89,7 @@ open fun isEnabled()
 
 open fun search(advertisementSearchInterface: AdvertisementSearchInterface)
         //nullable = true from not(false or (false and false)) = true
-: AdvertisementsInterface
-
-        Updates for KMP build        
-        {
+: AdvertisementsInterface{
 var advertisementSearchInterface = advertisementSearchInterface
 
 

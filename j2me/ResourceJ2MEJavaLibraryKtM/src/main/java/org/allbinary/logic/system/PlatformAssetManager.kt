@@ -39,10 +39,7 @@ open public class PlatformAssetManager
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PlatformAssetManager
-
-        Updates for KMP build        
-        {
+: PlatformAssetManager{
 
 
 
@@ -62,10 +59,7 @@ open fun getInstance()
             
 open fun getResourceAsStream(resource: String)
         //nullable = true from not(false or (false and false)) = true
-: InputStream
-
-        Updates for KMP build        
-        {
+: InputStream{
     //var resource = resource
 
     var resourceUtil: ResourceUtil = ResourceUtil.getInstance()!!

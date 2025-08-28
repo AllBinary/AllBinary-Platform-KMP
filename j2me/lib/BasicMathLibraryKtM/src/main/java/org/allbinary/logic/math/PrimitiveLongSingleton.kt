@@ -38,10 +38,7 @@ open public class PrimitiveLongSingleton
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PrimitiveLongSingleton
-
-        Updates for KMP build        
-        {
+: PrimitiveLongSingleton{
 
 
 
@@ -74,10 +71,7 @@ open fun getInstance()
             
 open fun getNumberFromChar(numberAsChar: Char)
         //nullable = true from not(false or (false and false)) = true
-: Byte
-
-        Updates for KMP build        
-        {
+: Byte{
 var numberAsChar = numberAsChar
 
     var size: Int = NUMBER_CHAR_ARRAY.size
@@ -89,9 +83,6 @@ var numberAsChar = numberAsChar
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     

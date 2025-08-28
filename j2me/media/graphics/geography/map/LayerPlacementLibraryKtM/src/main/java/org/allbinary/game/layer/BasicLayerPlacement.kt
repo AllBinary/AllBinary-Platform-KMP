@@ -38,9 +38,6 @@ open public class BasicLayerPlacement
     private var height: Int
 public constructor        (layerType: LayerPlacementType, width: Int, height: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var layerType = layerType
 var width = width
@@ -53,10 +50,7 @@ this.height= height
 
 open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -67,10 +61,7 @@ open fun getWidth()
 
 open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -81,10 +72,7 @@ open fun getHeight()
 
 open fun getLayerType()
         //nullable = true from not(false or (false and true)) = true
-: LayerPlacementType
-
-        Updates for KMP build        
-        {
+: LayerPlacementType{
 
 
 
@@ -95,10 +83,7 @@ open fun getLayerType()
 
 open fun setLayerType(layerType: LayerPlacementType)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var layerType = layerType
 this.layerType= layerType
 }

@@ -37,10 +37,7 @@ open public class InputFeatureFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: InputFeatureFactory
-
-        Updates for KMP build        
-        {
+: InputFeatureFactory{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -71,10 +65,7 @@ open fun getInstance()
 
 open fun isSingleKeyProcessing()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     var features: Features = Features.getInstance()!!
 

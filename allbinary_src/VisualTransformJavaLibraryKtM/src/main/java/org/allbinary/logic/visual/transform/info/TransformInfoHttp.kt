@@ -49,10 +49,7 @@ open public class TransformInfoHttp : TransformInfo
     private val abContext: AbContext
 public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext, crud: Boolean)                        
 
-                            : super()
-
-        Updates for KMP build        
-        {
+                            : super(){
 var propertiesHashMap = propertiesHashMap
 var pageContext = pageContext
 var crud = crud
@@ -75,10 +72,7 @@ this.override(propertiesHashMap)
 
 public constructor        (request: HttpServletRequest, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
-                            : super()
-
-        Updates for KMP build        
-        {
+                            : super(){
 var request = request
 var propertiesHashMap = propertiesHashMap
 var pageContext = pageContext
@@ -103,10 +97,7 @@ this.override(propertiesHashMap)
 
 public constructor        (databaseHashMap: HashMap<Any, Any>, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
-                            : super()
-
-        Updates for KMP build        
-        {
+                            : super(){
 var databaseHashMap = databaseHashMap
 var propertiesHashMap = propertiesHashMap
 var pageContext = pageContext
@@ -129,10 +120,7 @@ this.set(databaseHashMap)
 
 public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
-                            : super()
-
-        Updates for KMP build        
-        {
+                            : super(){
 var propertiesHashMap = propertiesHashMap
 var pageContext = pageContext
 
@@ -154,10 +142,7 @@ this.set(propertiesHashMap)
 
 public constructor        (parentViewOfThisTransformInfoInterface: TransformInfoHttp)                        
 
-                            : super()
-
-        Updates for KMP build        
-        {
+                            : super(){
 var parentViewOfThisTransformInfoInterface = parentViewOfThisTransformInfoInterface
 
 
@@ -171,10 +156,7 @@ this.abContext= AbContext(parentViewOfThisTransformInfoInterface!!.getProperties
             
 open fun set(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var hashMap = hashMap
 
     
@@ -240,10 +222,7 @@ this.setData(hashMap!!.get(transformInfoData!!.DATA) as String)
 
 open fun getWeblisketSession()
         //nullable = true from not(false or (false and true)) = true
-: WeblisketSessionInterface
-
-        Updates for KMP build        
-        {
+: WeblisketSessionInterface{
 
 
 
@@ -254,10 +233,7 @@ open fun getWeblisketSession()
 
 open fun getPageContext()
         //nullable = true from not(false or (false and true)) = true
-: PageContext
-
-        Updates for KMP build        
-        {
+: PageContext{
 
 
 
@@ -268,10 +244,7 @@ open fun getPageContext()
 
 open fun getPropertiesHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
 
 
@@ -284,10 +257,7 @@ open fun getPropertiesHashMap()
             
 open fun getTemplateFilePath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath
-
-        Updates for KMP build        
-        {
+: AbPath{
 
 
 
@@ -300,10 +270,7 @@ open fun getTemplateFilePath()
             
 open fun getObjectConfigFilePath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath
-
-        Updates for KMP build        
-        {
+: AbPath{
 
 
 
@@ -316,10 +283,7 @@ open fun getObjectConfigFilePath()
             
 open fun getDataFilePath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath
-
-        Updates for KMP build        
-        {
+: AbPath{
 
 
 

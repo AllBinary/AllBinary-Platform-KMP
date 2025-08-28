@@ -53,10 +53,7 @@ open public class MultipassWaypointPathRunnable : WaypointPathRunnableBase {
                                 
 open fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             pathFindingLayer!!.getWaypointRunnableLogHelper()!!.start(pathFindingLayer)
@@ -97,10 +94,7 @@ list= targetLayer!!.getWaypointBehavior()!!.getWaypoint()!!.getPathsList(geograp
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -119,10 +113,7 @@ finish()
                                 
 open fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             
@@ -141,10 +132,7 @@ list= targetLayer!!.getWaypointBehavior()!!.getWaypoint()!!.getPathsList(geograp
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -163,10 +151,7 @@ finish()
                                 
 open fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             
@@ -175,10 +160,7 @@ open fun run()
 waypointBehavior!!.setWaypointPathsList(list)
 pathFindingLayer!!.getWaypointRunnableLogHelper()!!.end(pathFindingLayer)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -197,10 +179,7 @@ finish()
                                 
 open fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
 
 
@@ -211,19 +190,13 @@ open fun run()
                             
 
     private var currentPassRunnable: Runnable = FIRST_RUNNABLE
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 
 open fun setRunning(isRunning: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var isRunning = isRunning
 this.running= isRunning
 
@@ -241,18 +214,12 @@ this.done= false
 
 open fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             this.currentPassRunnable!!.run()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -265,10 +232,7 @@ this.setRunning(false)
 
 open fun reset2()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 multipassState!!.step= 0
 multipassState!!.iteration= 0
 multipassState!!.iteration2= 0
@@ -280,10 +244,7 @@ pathFindingInfo=
 
 open fun finish()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.reset2()
 currentPassRunnable= ALREADY_ENDED_RUNNABLE
 done= true
@@ -292,10 +253,7 @@ done= true
 
 open fun isDone()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -306,10 +264,7 @@ open fun isDone()
 
 open fun reset()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.reset2()
 this.currentPassRunnable= FIRST_RUNNABLE
 this.done= false

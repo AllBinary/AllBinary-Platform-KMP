@@ -41,10 +41,7 @@ open public class TextFieldItemValidator : ValidatorBase {
     private var max: Int
 
     private var allowOnEmpty: Boolean
-public constructor        (textFieldItem: TextFieldItem, min: Int, max: Int, allowOnEmpty: Boolean)
-
-        Updates for KMP build        
-        {
+public constructor        (textFieldItem: TextFieldItem, min: Int, max: Int, allowOnEmpty: Boolean){
 var textFieldItem = textFieldItem
 var min = min
 var max = max
@@ -57,10 +54,7 @@ this.allowOnEmpty= allowOnEmpty
 
 override fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     var booleanFactory: BooleanFactory = BooleanFactory.getInstance()!!
 
@@ -112,10 +106,7 @@ override fun isValid()
 
 override fun toList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
     var list: BasicArrayList = BasicArrayList()
 

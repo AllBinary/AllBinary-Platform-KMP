@@ -40,9 +40,6 @@ open public class CombatBaseBehavior
     private var readyForExplosion: Boolean= false
 public constructor        (damageableBaseBehavior: DamageableBaseBehavior, destroyableBaseBehavior: DestroyableBaseBehavior)
             : super()
-        
-
-        Updates for KMP build        
         {
 var damageableBaseBehavior = damageableBaseBehavior
 var destroyableBaseBehavior = destroyableBaseBehavior
@@ -53,10 +50,7 @@ this.destroyableBaseBehavior= destroyableBaseBehavior
 
 open fun getDamageableBaseBehavior()
         //nullable = true from not(false or (false and true)) = true
-: DamageableBaseBehavior
-
-        Updates for KMP build        
-        {
+: DamageableBaseBehavior{
 
 
 
@@ -67,10 +61,7 @@ open fun getDamageableBaseBehavior()
 
 open fun getDestroyableBaseBehavior()
         //nullable = true from not(false or (false and true)) = true
-: DestroyableBaseBehavior
-
-        Updates for KMP build        
-        {
+: DestroyableBaseBehavior{
 
 
 
@@ -81,10 +72,7 @@ open fun getDestroyableBaseBehavior()
 
 open fun isReadyForExplosion()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -95,10 +83,7 @@ open fun isReadyForExplosion()
 
 open fun setReadyForExplosion(readyForExplosion: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var readyForExplosion = readyForExplosion
 this.readyForExplosion= readyForExplosion
 }

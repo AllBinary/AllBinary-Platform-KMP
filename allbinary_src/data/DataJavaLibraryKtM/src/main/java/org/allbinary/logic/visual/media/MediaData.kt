@@ -40,10 +40,7 @@ open public class MediaData
             
 open fun get(a_Name: String)
         //nullable = true from not(false or (false and false)) = true
-: MediaData
-
-        Updates for KMP build        
-        {
+: MediaData{
 var a_Name = a_Name
 
     var mediaData: MediaData = MediaData.hashMap!!.get(a_Name as Object) as MediaData
@@ -76,10 +73,7 @@ var a_Name = a_Name
 
 open fun getDefault()
         //nullable = true from not(false or (false and true)) = true
-: MediaData
-
-        Updates for KMP build        
-        {
+: MediaData{
 
 
 
@@ -90,10 +84,7 @@ open fun getDefault()
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
 
 
@@ -111,9 +102,6 @@ open fun toHashMap()
     private var extension: String
 protected constructor        (a_Name: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var a_Name = a_Name
 this.name= a_Name
@@ -125,10 +113,7 @@ MediaData.hashMap!!.put(a_Name, this)
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -139,10 +124,7 @@ open fun getName()
 
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -153,10 +135,7 @@ open fun getType()
 
 open fun getExtension()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -167,10 +146,7 @@ open fun getExtension()
 
 open fun isConvertableTo(mediaData: MediaData)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var mediaData = mediaData
 
     
@@ -194,10 +170,7 @@ var mediaData = mediaData
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

@@ -38,9 +38,6 @@ open public class LogUserEmailEventListenerModule
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -49,10 +46,7 @@ public constructor        ()
             
 open fun onEmailSendRequest(userEmailInfoEvent: EmailEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var userEmailInfoEvent = userEmailInfoEvent
 
     

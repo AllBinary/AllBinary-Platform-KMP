@@ -39,10 +39,7 @@ open public class AnalogInputBuilder
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AnalogInputBuilder
-
-        Updates for KMP build        
-        {
+: AnalogInputBuilder{
 
 
 
@@ -60,10 +57,7 @@ open fun getInstance()
         
 open fun disable(inputProcessorArray: Array<GameInputProcessor?>, collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var inputProcessorArray = inputProcessorArray
     //var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
 inputProcessorArray[Canvas.UP]= SpecialUpGameInputProcessor(collidableDestroyableDamageableLayer)
@@ -77,10 +71,7 @@ inputProcessorArray[Canvas.KEY_NUM5]= Special3GameInputProcessor(collidableDestr
 
 open fun enable(inputProcessorArray: Array<GameInputProcessor?>, collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var inputProcessorArray = inputProcessorArray
     //var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
 inputProcessorArray[Canvas.UP]= SpecialAnalogUpGameInputProcessor(collidableDestroyableDamageableLayer)

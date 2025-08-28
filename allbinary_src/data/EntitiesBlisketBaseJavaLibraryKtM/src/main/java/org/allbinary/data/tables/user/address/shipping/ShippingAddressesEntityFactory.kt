@@ -40,10 +40,7 @@ open public class ShippingAddressesEntityFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ShippingAddressesEntityFactory
-
-        Updates for KMP build        
-        {
+: ShippingAddressesEntityFactory{
 
 
 
@@ -57,19 +54,13 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getInstance(userName: String)
         //nullable =  from not(true or (false and false)) = 
-: StreetAddressesEntity
-
-        Updates for KMP build        
-        {
+: StreetAddressesEntity{
 var userName = userName
 
         try {
@@ -79,10 +70,7 @@ var userName = userName
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ShippingAddressesEntity(userName)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

@@ -33,15 +33,9 @@ open fun getUserEmailEventsConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
 : UserEmailEventsConfigurationInterface
 
-        Updates for KMP build        
-        
-
 open fun setUserEmailEventsConfigurationInterface(emailEventsConfigurationInterface: UserEmailEventsConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

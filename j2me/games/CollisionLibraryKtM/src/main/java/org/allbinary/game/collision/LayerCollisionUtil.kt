@@ -41,10 +41,7 @@ open public class LayerCollisionUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LayerCollisionUtil
-
-        Updates for KMP build        
-        {
+: LayerCollisionUtil{
 
 
 
@@ -58,9 +55,6 @@ open fun getInstance()
     private val collisionProcessor: CollisionProcessor
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     var features: Features = Features.getInstance()!!
@@ -87,10 +81,7 @@ private constructor        ()
 
 open fun isCollision(myLayer: AllBinaryLayer, myLayer2: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var myLayer = myLayer
 var myLayer2 = myLayer2
 

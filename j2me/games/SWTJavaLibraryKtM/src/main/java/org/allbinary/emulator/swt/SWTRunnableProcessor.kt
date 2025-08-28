@@ -36,10 +36,7 @@ open public class SWTRunnableProcessor : SWTProcessor {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: SWTRunnableProcessor
-
-        Updates for KMP build        
-        {
+: SWTRunnableProcessor{
 
 
 
@@ -49,19 +46,13 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
-
-        Updates for KMP build        
-        {
+            private constructor        (){
 }
 
 
 open fun process(display: Display)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var display = display
 this.runnable.run()
 }

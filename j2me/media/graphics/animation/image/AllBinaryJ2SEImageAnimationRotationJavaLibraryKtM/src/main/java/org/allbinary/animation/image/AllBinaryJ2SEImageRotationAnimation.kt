@@ -69,10 +69,7 @@ open public class AllBinaryJ2SEImageRotationAnimation : ImageBaseRotationAnimati
     private var scaleProcessor: ScaleBaseProcessor = ScaleProcessor.getInstance()!!
 protected constructor        (originalImage: Image, image: Image, angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
 
-                            : super(image, angleInfo, totalAngle, animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(image, angleInfo, totalAngle, animationBehavior){
     //var originalImage = originalImage
     //var image = image
     //var angleInfo = angleInfo
@@ -91,10 +88,7 @@ this.twoImages[1]= ImageCopyUtil.getInstance()!!.createImageForRotation(image)
 
 override fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var basicColor = basicColor
 
     var changed: Boolean = false
@@ -125,10 +119,7 @@ this.updateImage()
 
 override fun changeBasicColor(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var basicColor = basicColor
 
     var changed: Boolean = false
@@ -159,10 +150,7 @@ this.updateImage()
 
 override fun setAlpha(alpha: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var alpha = alpha
 
     var changed: Boolean = false
@@ -191,10 +179,7 @@ this.updateImage()
 
 override fun setScale(scaleX: Float, scaleY: Float)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var scaleX = scaleX
     //var scaleY = scaleY
 this.scaleX= scaleX
@@ -205,10 +190,7 @@ this.updateImage()
 
 override fun setMaxScale(maxScaleX: Float, maxScaleY: Float)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var maxScaleX = maxScaleX
     //var maxScaleY = maxScaleY
 this.maxScaleX= maxScaleX
@@ -220,10 +202,7 @@ this.updateImage()
 
 open fun nextRotation()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 super.nextRotation()
 this.updateImage()
 }
@@ -231,10 +210,7 @@ this.updateImage()
 
 open fun previousRotation()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 super.previousRotation()
 this.updateImage()
 }
@@ -242,10 +218,7 @@ this.updateImage()
 
 open fun updateImage()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.imageRotationUtil!!.rotateImage(this.originalImageArray[0]!!, this.twoImages[this.bufferedImageIndex]!!, this.angleInfo!!.getAngle() +90)
 this.alphaProcessor!!.update(imageModifierUtil, 
                             null, this.twoImages[this.bufferedImageIndex]!!, 0, this.alphaP)
@@ -259,10 +232,7 @@ this.swap()
 
 open fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var index = index
 super.setFrame(index)
 this.updateImage()
@@ -271,10 +241,7 @@ this.updateImage()
 
 open fun swap()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.imageToShow= this.twoImages[this.bufferedImageIndex]!!
 
     
@@ -295,10 +262,7 @@ this.imageToShow= this.twoImages[this.bufferedImageIndex]!!
 
 open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var x = x
     //var y = y
@@ -308,10 +272,7 @@ graphics.drawImage(this.imageToShow, x, y, anchor)
 
 open fun close()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 super.close()
 
     var disposalUtil: DisposalUtil = DisposalUtil.getInstance()!!
@@ -326,9 +287,6 @@ super.close()
 
                         for (index in 0 until size2)
 
-        
-
-        Updates for KMP build        
         {
 disposalUtil!!.dispose(this.twoImages[index]!!)
 }
@@ -343,9 +301,6 @@ disposalUtil!!.dispose(this.twoImages[index]!!)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 disposalUtil!!.dispose(this.originalImageArray[index]!!)
 }
@@ -359,10 +314,7 @@ disposalUtil!!.dispose(this.imageToShow)
             
 open fun finalize()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 super.finalize()
 
     var disposalUtil: DisposalUtil = DisposalUtil.getInstance()!!
@@ -377,9 +329,6 @@ super.finalize()
 
                         for (index in 0 until size2)
 
-        
-
-        Updates for KMP build        
         {
 disposalUtil!!.dispose(this.twoImages[index]!!)
 }
@@ -394,9 +343,6 @@ disposalUtil!!.dispose(this.twoImages[index]!!)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 disposalUtil!!.dispose(this.originalImageArray[index]!!)
 }

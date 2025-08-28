@@ -51,9 +51,6 @@ open public class RemoteHighScoresProcessor
     private val noCrypt: NoCrypt = NoCrypt()
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -63,10 +60,7 @@ public constructor        ()
 
 open fun process(remoteHighScores: RemoteHighScores, abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var remoteHighScores = remoteHighScores
     //var abeClientInformation = abeClientInformation
     //var gameInfo = gameInfo

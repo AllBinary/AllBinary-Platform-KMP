@@ -46,20 +46,14 @@ open public class SingleKeyPressGameKeyFromMotionGestureEventListener : Complete
     val logUtil: LogUtil = LogUtil.getInstance()!!
 override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
 override fun onCompleteMotionGestureInputEvent(completeMotionGestureInputEvent: CompleteMotionGestureInputEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var completeMotionGestureInputEvent = completeMotionGestureInputEvent
 
         try {
@@ -71,10 +65,7 @@ override fun onCompleteMotionGestureInputEvent(completeMotionGestureInputEvent: 
 
 PressGameKeyEventHandler.getInstance()!!.fireEvent(gameKeyEvent)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

@@ -36,10 +36,7 @@ open public class JvmStatisticsView : JvmStatisticsMapping
         
 public constructor        ()                        
 
-                            : super()
-
-        Updates for KMP build        
-        {
+                            : super(){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -51,10 +48,7 @@ public constructor        ()
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var hashMap: HashMap<Any, Any> = this.toHashMap()!!

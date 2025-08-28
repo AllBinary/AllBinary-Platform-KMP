@@ -42,10 +42,7 @@ open public class ColorDelta
             
 open fun getKey(rgb1: Int, rgb2: Int)
         //nullable = true from not(false or (false and false)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 var rgb1 = rgb1
 var rgb2 = rgb2
 
@@ -66,9 +63,6 @@ var rgb2 = rgb2
     private var key: Any
 public constructor        (rgb1: Int, rgb2: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var rgb1 = rgb1
 var rgb2 = rgb2
@@ -80,10 +74,7 @@ this.key= ColorDelta.getKey(rgb1, rgb2)
 
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 
 
 
@@ -94,10 +85,7 @@ open fun getKey()
 
 open fun getRgb1()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -108,10 +96,7 @@ open fun getRgb1()
 
 open fun setRgb1(rgb1: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var rgb1 = rgb1
 this.rgb1= rgb1
 }
@@ -119,10 +104,7 @@ this.rgb1= rgb1
 
 open fun getRgb2()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -133,20 +115,14 @@ open fun getRgb2()
 
 open fun setRgb2(rgb2: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var rgb2 = rgb2
 this.rgb2= rgb2
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

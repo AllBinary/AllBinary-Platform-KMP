@@ -38,10 +38,7 @@ open public class OpenGLESImageExclusionUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLESImageExclusionUtil
-
-        Updates for KMP build        
-        {
+: OpenGLESImageExclusionUtil{
 
 
 
@@ -59,10 +56,7 @@ open fun getInstance()
         
 open fun isCustomScaling(image: Image)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var image = image
 
 

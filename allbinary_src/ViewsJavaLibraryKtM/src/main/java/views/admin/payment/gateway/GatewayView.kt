@@ -39,10 +39,7 @@ open public class GatewayView : PaymentGatewayViewAbstract {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(transformInfoInterface)
-
-        Updates for KMP build        
-        {
+                            : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
 
 
@@ -53,10 +50,7 @@ var transformInfoInterface = transformInfoInterface
 
 open fun getFormData(request: HttpServletRequest)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var request = request
 super.getFormData(request)
 
@@ -75,10 +69,7 @@ super.getFormData(request)
             
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -91,10 +82,7 @@ open fun view()
                         return PaymentGatewayComponent(this.getTransformInfoInterface(), paymentGatewayInterface).
                             view()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))

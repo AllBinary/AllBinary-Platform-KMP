@@ -46,10 +46,7 @@ open public class RaceTrackRandomDropCellPositionGenerator : RaceTrackDropCellPo
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: RaceTrackRandomDropCellPositionGenerator
-
-        Updates for KMP build        
-        {
+: RaceTrackRandomDropCellPositionGenerator{
 
 
 
@@ -73,10 +70,7 @@ open fun getInstance()
     private var cellWidth: Int= 0
 
     private var cellHeight: Int= 0
-private constructor        ()
-
-        Updates for KMP build        
-        {
+private constructor        (){
 }
 
 
@@ -84,10 +78,7 @@ private constructor        ()
             
 open fun update(allBinaryGameLayerManager: AllBinaryGameLayerManager, geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allBinaryGameLayerManager = allBinaryGameLayerManager
 var geographicMapInterface = geographicMapInterface
 super.update(allBinaryGameLayerManager, geographicMapInterface)
@@ -103,10 +94,7 @@ this.cellHeight= tiledLayer!!.getCellHeight() /this.cellsPerRowOrColumn
             
 open fun drop(allBinaryLayerManager: AllBinaryLayerManager, index: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allBinaryLayerManager = allBinaryLayerManager
 var index = index
 

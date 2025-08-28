@@ -263,10 +263,7 @@ open public class AndroidKeyFactory : ActivityFractureUtil {
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -276,10 +273,7 @@ logUtil!!.put("Start/End", this, commonStrings!!.INIT)
 
 open fun isSubmission(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var input = input
 
     
@@ -317,10 +311,7 @@ var input = input
 
 open fun isDelete(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var input = input
 
 
@@ -332,10 +323,7 @@ var input = input
 
 open fun isBackSpace(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var input = input
 
     
@@ -360,10 +348,7 @@ var input = input
 
 open fun isLeft(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var input = input
 
     
@@ -388,10 +373,7 @@ var input = input
 
 open fun isRight(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var input = input
 
     
@@ -416,10 +398,7 @@ var input = input
 
 open fun isUp(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var input = input
 
     
@@ -444,10 +423,7 @@ var input = input
 
 open fun isDown(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var input = input
 
     
@@ -472,10 +448,7 @@ var input = input
 
 open fun isEnter(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var input = input
 
     

@@ -24,10 +24,7 @@ open public class OpenGLGLU
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLGLU
-
-        Updates for KMP build        
-        {
+: OpenGLGLU{
 
 
 
@@ -45,10 +42,7 @@ open fun getInstance()
         
 open fun gluLookAt(gl: GL10, eyeX: Float, eyeY: Float, eyeZ: Float, centerX: Float, centerY: Float, centerZ: Float, upX: Float, upY: Float, upZ: Float)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
     //var eyeX = eyeX
     //var eyeY = eyeY
@@ -68,10 +62,7 @@ open fun gluLookAt(gl: GL10, eyeX: Float, eyeY: Float, eyeZ: Float, centerX: Flo
 
 open fun gluProject(gl: GL10, objX: Float, objY: Float, objZ: Float, model: FloatArray, modelOffset: Int, project: FloatArray, projectOffset: Int, view: IntArray, viewOffset: Int, win: FloatArray, winOffset: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var gl = gl
 var objX = objX
 var objY = objY
@@ -93,10 +84,7 @@ var winOffset = winOffset
 
 open fun gluUnProject(gl: GL10, winX: Float, winY: Float, winZ: Float, model: FloatArray, modelOffset: Int, project: FloatArray, projectOffset: Int, view: IntArray, viewOffset: Int, obj: FloatArray, objOffset: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var gl = gl
     //var winX = winX
     //var winY = winY

@@ -88,10 +88,7 @@ open public class BuildingRTSFormInput : RTSFormInput {
     private val dropCellPositionHistory: DropCellPositionHistory = DropCellPositionHistory.getInstance()!!
 public constructor        (groupInterface: Array<Group?>, isUnitProducer: Boolean)                        
 
-                            : super(groupInterface)
-
-        Updates for KMP build        
-        {
+                            : super(groupInterface){
     //var groupInterface = groupInterface
     //var isUnitProducer = isUnitProducer
 
@@ -121,10 +118,7 @@ this.mapEdgeGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.ge
             
 open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
 super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 
@@ -149,10 +143,7 @@ this.mapEdgeGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.getF
             
 open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, itemIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedRtsLayer = associatedRtsLayer
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
     //var layerManager = layerManager
@@ -165,10 +156,7 @@ this.buildFromMotionInput(rtsPlayerLayerInterface, layerManager, item, itemIndex
 
 open fun isPositionBlocked()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -179,10 +167,7 @@ open fun isPositionBlocked()
 
 open fun isDemoLocked(item: CustomItem)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var item = item
 
     var factoryItem: LayerInterfaceFactoryImageItem = item as LayerInterfaceFactoryImageItem
@@ -219,10 +204,7 @@ open fun isDemoLocked(item: CustomItem)
             
 open fun buildFromMotionInput(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, itemIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
     //var layerManager = layerManager
     //var item = item
@@ -371,10 +353,7 @@ this.attemptBuild(rtsPlayerLayerInterface, layerManager, this.newUnconstructedRT
             
 open fun attemptBuild(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, layerInterface: RTSLayer, itemIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
     //var layerManager = layerManager
     //var layerInterface = layerInterface
@@ -409,9 +388,6 @@ logUtil!!.put(StringMaker().
 
                         for (index in occupyList!!.size() -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     var geographicMapCompositeInterface: GeographicMapCompositeInterface = layerManager as GeographicMapCompositeInterface
@@ -509,10 +485,7 @@ this.add(rtsPlayerLayerInterface, layerManager, layerInterface)
             
 open fun isBuildAttemptValid(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerInterface: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
     //var layerInterface = layerInterface
 
@@ -606,10 +579,7 @@ open fun isBuildAttemptValid(rtsPlayerLayerInterface: RTSPlayerLayerInterface, l
             
 open fun add(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, layerInterface: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
     //var layerManager = layerManager
     //var layerInterface = layerInterface
@@ -640,10 +610,7 @@ rtsPlayerLayerInterface!!.add(BuildingSound.getInstance())
 
 open fun isSurroundingCellsOffMap(layerInterface: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var layerInterface = layerInterface
 
     var geographicMapCellPositionArea: GeographicMapCellPositionArea = layerInterface!!.geographicMapCellPositionArea

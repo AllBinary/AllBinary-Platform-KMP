@@ -54,9 +54,6 @@ open public class Group
     private var string: String = StringUtil.getInstance()!!.EMPTY_STRING
 public constructor        (teamName: String, teamId: Short)
             : super()
-        
-
-        Updates for KMP build        
         {
 var teamName = teamName
 var teamId = teamId
@@ -66,10 +63,7 @@ this.teamId= teamId
 
 override fun getGroupName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -80,10 +74,7 @@ override fun getGroupName()
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var name = name
 this.name= name
 
@@ -98,10 +89,7 @@ this.string= stringBuffer!!.toString()
 
 override fun getGroupId()
         //nullable = true from not(false or (false and true)) = true
-: Short
-
-        Updates for KMP build        
-        {
+: Short{
 
 
 
@@ -111,10 +99,7 @@ override fun getGroupId()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

@@ -37,10 +37,7 @@ open public class OperatingSystems
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OperatingSystems
-
-        Updates for KMP build        
-        {
+: OperatingSystems{
 
 
 
@@ -72,9 +69,6 @@ open fun getInstance()
     val ANDROID: String = LINUX
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -83,10 +77,7 @@ private constructor        ()
 
 open fun isUnknownSpecificOSAllowed()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -97,10 +88,7 @@ open fun isUnknownSpecificOSAllowed()
 
 open fun setUnknownSpecificOSAllowed(aUnknownSpecificOSAllowed: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var aUnknownSpecificOSAllowed = aUnknownSpecificOSAllowed
 unknownSpecificOSAllowed= aUnknownSpecificOSAllowed
 }

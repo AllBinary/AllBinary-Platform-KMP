@@ -38,10 +38,7 @@ open public class AllBinarySensorManager
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AllBinarySensorManager
-
-        Updates for KMP build        
-        {
+: AllBinarySensorManager{
 
 
 
@@ -57,19 +54,13 @@ open fun getInstance()
     val ORIENTATION_TYPE: String = "Orientation Type"
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
@@ -77,10 +68,7 @@ open fun init()
 
 open fun getSensorNamesList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 
@@ -91,10 +79,7 @@ open fun getSensorNamesList()
 
 open fun shutdown()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 

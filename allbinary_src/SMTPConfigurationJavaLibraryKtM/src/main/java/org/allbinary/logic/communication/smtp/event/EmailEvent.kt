@@ -39,10 +39,7 @@ open public class EmailEvent : EventObject {
     private var attempts: Int= 0
 public constructor        (emailEventHandler: Any, userEmailEventNameData: UserEmailEventNameData, emailInfo: EmailInfo, attempts: Int)                        
 
-                            : super(emailEventHandler)
-
-        Updates for KMP build        
-        {
+                            : super(emailEventHandler){
 var emailEventHandler = emailEventHandler
 var userEmailEventNameData = userEmailEventNameData
 var emailInfo = emailInfo
@@ -58,10 +55,7 @@ this.emailInfo= emailInfo
 
 open fun getEmailInfo()
         //nullable = true from not(false or (false and true)) = true
-: EmailInfo
-
-        Updates for KMP build        
-        {
+: EmailInfo{
 
 
 
@@ -72,10 +66,7 @@ open fun getEmailInfo()
 
 open fun getAttempts()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -86,20 +77,14 @@ open fun getAttempts()
 
 open fun setAttempts(attempts: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var attempts = attempts
 this.attempts= attempts
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

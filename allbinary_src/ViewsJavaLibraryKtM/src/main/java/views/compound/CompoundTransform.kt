@@ -44,10 +44,7 @@ open public class CompoundTransform : AbTransformer {
     private val abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(transformInfoInterface)
-
-        Updates for KMP build        
-        {
+                            : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
 
 

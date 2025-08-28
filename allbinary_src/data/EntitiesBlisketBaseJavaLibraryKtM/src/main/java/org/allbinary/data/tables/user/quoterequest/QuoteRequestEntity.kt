@@ -47,10 +47,7 @@ open public class QuoteRequestEntity : AbSqlBean
     private val tableName: String = "quoterequest"
 public constructor        ()                        
 
-                            : super(UserDbInitInfo())
-
-        Updates for KMP build        
-        {
+                            : super(UserDbInitInfo()){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -61,10 +58,7 @@ this.setTableName(tableName)
 
 open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var values = values
 
         try {
@@ -79,10 +73,7 @@ var values = values
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -101,10 +92,7 @@ var values = values
             
 open fun get(userName: String, id: Int)
         //nullable = true from not(false or (false and false)) = true
-: QuoteRequest
-
-        Updates for KMP build        
-        {
+: QuoteRequest{
 var userName = userName
 var id = id
 
@@ -144,10 +132,7 @@ row.put(QuoteRequestData.getInstance()!!.ID, id.toString())
 
 open fun getIds(userName: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 var userName = userName
 
 
@@ -159,10 +144,7 @@ var userName = userName
 
 open fun deleteWhere(key: String, value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var key = key
 var value = value
 
@@ -178,10 +160,7 @@ var value = value
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -198,10 +177,7 @@ var value = value
 
 open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var quoteRequestData: QuoteRequestData = QuoteRequestData.getInstance()!!
 
@@ -239,10 +215,7 @@ stringBuffer!!.append(this.sqlStrings!!.END)
 
 open fun createTable()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -253,10 +226,7 @@ open fun createTable()
 
 open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var result: String = dropTable.toCharArray()
 
@@ -270,10 +240,7 @@ open fun dropTable()
 
 open fun update(userName: String, updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var userName = userName
 var updatedValues = updatedValues
 super.updateWhere(UserData.USERNAME, userName, updatedValues)

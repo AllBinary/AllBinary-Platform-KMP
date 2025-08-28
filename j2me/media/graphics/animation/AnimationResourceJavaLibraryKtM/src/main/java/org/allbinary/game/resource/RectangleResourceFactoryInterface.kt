@@ -35,17 +35,11 @@ open fun getRectangle(resource: String)
         //nullable = true from not(false or (false and false)) = true
 : Rectangle
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun getRectangleArrayOfArrays(resource: String)
         //nullable = true from not(false or (false and false)) = true
 : Array<Array<Rectangle?>?>
-
-        Updates for KMP build        
-        
 
 }
                 

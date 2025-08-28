@@ -33,15 +33,9 @@ open fun getNumberOfUsers()
         //nullable = true from not(false or (false and true)) = true
 : Long
 
-        Updates for KMP build        
-        
-
 open fun getNumberOfUsersByRole(role: String)
         //nullable = true from not(false or (false and false)) = true
 : Long
-
-        Updates for KMP build        
-        
 
 }
                 

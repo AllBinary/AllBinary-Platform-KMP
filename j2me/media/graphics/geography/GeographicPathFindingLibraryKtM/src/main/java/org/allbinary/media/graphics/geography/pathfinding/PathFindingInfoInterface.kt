@@ -33,22 +33,13 @@ open fun getStartPathFindingNodeList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList
 
-        Updates for KMP build        
-        
-
 open fun getEndPathFindingNodeList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList
 
-        Updates for KMP build        
-        
-
 open fun getPathFinder()
         //nullable = true from not(false or (false and true)) = true
 : GeographicPathFinderBase
-
-        Updates for KMP build        
-        
 
 }
                 

@@ -42,10 +42,7 @@ open public class OSGIActivatorUtil
             
 open fun registerAsService(bundleContext: BundleContext, anyType: Any, serviceName: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var bundleContext = bundleContext
     //var anyType = anyType
     //var serviceName = serviceName
@@ -57,10 +54,7 @@ OSGIActivatorUtil.registerAsService(bundleContext, anyType, serviceName, Hashtab
             
 open fun registerAsService(bundleContext: BundleContext, anyType: Any, serviceName: String, properties: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var bundleContext = bundleContext
     //var anyType = anyType
     //var serviceName = serviceName
@@ -90,9 +84,6 @@ serviceReference= bundleContext!!.getServiceReference(serviceName)
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

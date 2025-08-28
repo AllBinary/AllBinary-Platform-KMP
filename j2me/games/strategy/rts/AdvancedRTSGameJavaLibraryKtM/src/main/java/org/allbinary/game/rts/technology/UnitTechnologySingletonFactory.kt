@@ -37,10 +37,7 @@ open public class UnitTechnologySingletonFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: UnitTechnologySingletonFactory
-
-        Updates for KMP build        
-        {
+: UnitTechnologySingletonFactory{
 
 
 
@@ -62,19 +59,13 @@ open fun getInstance()
     private var speed: Int= 0
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.setDamage(0)
 this.setHealth(0)
 this.setReload(0)
@@ -85,10 +76,7 @@ this.setSpeed(0)
 
 open fun getDamage()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -99,10 +87,7 @@ open fun getDamage()
 
 open fun setDamage(damage: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var damage = damage
 this.damage= damage
 }
@@ -110,10 +95,7 @@ this.damage= damage
 
 open fun getHealth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -124,10 +106,7 @@ open fun getHealth()
 
 open fun setHealth(health: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var health = health
 this.health= health
 }
@@ -135,10 +114,7 @@ this.health= health
 
 open fun getReload()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -149,10 +125,7 @@ open fun getReload()
 
 open fun setReload(reload: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var reload = reload
 this.reload= reload
 }
@@ -160,10 +133,7 @@ this.reload= reload
 
 open fun getRepair()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -174,10 +144,7 @@ open fun getRepair()
 
 open fun setRepair(repair: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var repair = repair
 this.repair= repair
 }
@@ -185,10 +152,7 @@ this.repair= repair
 
 open fun getSpeed()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -199,10 +163,7 @@ open fun getSpeed()
 
 open fun setSpeed(speed: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var speed = speed
 this.speed= speed
 }

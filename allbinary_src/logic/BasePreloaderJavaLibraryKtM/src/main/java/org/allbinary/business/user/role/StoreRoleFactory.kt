@@ -38,10 +38,7 @@ open public class StoreRoleFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: StoreRoleFactory
-
-        Updates for KMP build        
-        {
+: StoreRoleFactory{
 
 
 
@@ -59,9 +56,6 @@ open fun getInstance()
     private val wholesaleRoles: Vector<Any> = Vector<Any>()
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     var basicUserRoleFactory: BasicUserRoleFactory = BasicUserRoleFactory.getInstance()!!
@@ -76,10 +70,7 @@ wholesaleRoles!!.add(basicUserRoleFactory!!.WHOLESALECUSTOMER)
 
 open fun getRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>
-
-        Updates for KMP build        
-        {
+: Vector<Any>{
 
 
 
@@ -90,10 +81,7 @@ open fun getRoles()
 
 open fun getSubscriberRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>
-
-        Updates for KMP build        
-        {
+: Vector<Any>{
 
 
 
@@ -104,10 +92,7 @@ open fun getSubscriberRoles()
 
 open fun getWholesaleRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>
-
-        Updates for KMP build        
-        {
+: Vector<Any>{
 
 
 

@@ -40,10 +40,7 @@ open public class GeographicMapCellPositionBaseFactory
             
 open fun getInstance(geographicMapInterface: BasicGeographicMap)
         //nullable =  from not(true or (false and false)) = 
-: BasicGeographicMapCellPositionFactory
-
-        Updates for KMP build        
-        {
+: BasicGeographicMapCellPositionFactory{
 var geographicMapInterface = geographicMapInterface
 
 

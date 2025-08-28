@@ -33,10 +33,7 @@ open public class ImageArrayRotationAnimationCacheable : AdjustedImageArrayRotat
         
 public constructor        (anyType: Any, animationBehavior: AnimationBehavior)                        
 
-                            : super(anyType, animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(anyType, animationBehavior){
     //var anyType = anyType
     //var animationBehavior = animationBehavior
 
@@ -48,10 +45,7 @@ public constructor        (anyType: Any, animationBehavior: AnimationBehavior)
 
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 
 
 
@@ -61,10 +55,7 @@ open fun getKey()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

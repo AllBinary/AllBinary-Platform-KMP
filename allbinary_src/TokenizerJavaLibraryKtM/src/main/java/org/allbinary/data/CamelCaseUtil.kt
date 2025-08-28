@@ -43,10 +43,7 @@ open public class CamelCaseUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CamelCaseUtil
-
-        Updates for KMP build        
-        {
+: CamelCaseUtil{
 
 
 
@@ -68,10 +65,7 @@ open fun getInstance()
             
 open fun getAsCamelCase(string: String, stringBuilder: StringMaker)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
     //var string = string
     //var stringBuilder = stringBuilder
 
@@ -112,9 +106,6 @@ tokenizer.getTokens(string, list)
 
                         for (i in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 word= list.get(i) as String
 word= if(stringValidationUtil!!.isEmpty(word)) {

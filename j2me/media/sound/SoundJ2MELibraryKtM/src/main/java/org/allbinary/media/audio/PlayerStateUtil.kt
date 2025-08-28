@@ -39,10 +39,7 @@ open public class PlayerStateUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PlayerStateUtil
-
-        Updates for KMP build        
-        {
+: PlayerStateUtil{
 
 
 
@@ -72,10 +69,7 @@ open fun getInstance()
 
 open fun convert(state: Int)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
     //var state = state
 
     

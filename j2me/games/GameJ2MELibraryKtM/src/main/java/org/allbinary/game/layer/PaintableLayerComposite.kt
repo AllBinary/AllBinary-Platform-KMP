@@ -34,20 +34,14 @@ open public class PaintableLayerComposite : Paintable {
         
 
     private val paintableArray: Array<Layer?>
-public constructor        (paintableArray: Array<Layer?>)
-
-        Updates for KMP build        
-        {
+public constructor        (paintableArray: Array<Layer?>){
     //var paintableArray = paintableArray
 this.paintableArray= paintableArray
 }
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
 
 
@@ -55,9 +49,6 @@ override fun paint(graphics: Graphics)
 
                         for (index in paintableArray!!.size  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 this.paintableArray[index]!!.paint(graphics)
 }
@@ -66,10 +57,7 @@ this.paintableArray[index]!!.paint(graphics)
 
 override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
 
     var paintableInterface: PaintableInterface
@@ -80,9 +68,6 @@ override fun paintThreed(graphics: Graphics)
 
                         for (index in paintableArray!!.size  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 paintableInterface= this.paintableArray[index]!! as PaintableInterface
 paintableInterface!!.paintThreed(graphics)

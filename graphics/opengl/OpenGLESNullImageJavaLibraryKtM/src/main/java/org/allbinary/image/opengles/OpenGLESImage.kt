@@ -60,10 +60,7 @@ open public class OpenGLESImage : Image
     var openGLESImageTranslate: OpenGLESImageTranslate = OpenGLESImageTranslate.getInstance()!!
 
     val openGLESImageProperties: OpenGLESImageProperties = OpenGLESImageProperties()
-public constructor        (image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory)
-
-        Updates for KMP build        
-        {
+public constructor        (image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory){
     //var image = image
     //var bitmapFactory = bitmapFactory
     //var textureFactory = textureFactory
@@ -75,10 +72,7 @@ this.textureFactory= textureFactory
                 @Throws(Exception::class)
             override fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gl = gl
 
 
@@ -89,10 +83,7 @@ var gl = gl
 
 open fun initTexture(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var gl = gl
 
 
@@ -104,10 +95,7 @@ var gl = gl
 
 open fun drawRegion(gl: GL10, viewHeight: Int, x_src: Float, y_src: Float, width: Float, height: Float, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gl = gl
 var viewHeight = viewHeight
 var x_src = x_src
@@ -122,10 +110,7 @@ var z = z
 
 open fun draw(gl: GL10, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gl = gl
 var x = x
 var y = y
@@ -135,10 +120,7 @@ var z = z
 
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

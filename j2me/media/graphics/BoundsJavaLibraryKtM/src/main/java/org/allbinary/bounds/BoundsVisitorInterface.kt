@@ -32,43 +32,25 @@ open fun getX()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-        Updates for KMP build        
-        
-
 open fun getY()
         //nullable = true from not(false or (false and true)) = true
 : Int
-
-        Updates for KMP build        
-        
 
 open fun maxX()
         //nullable = true from not(false or (false and true)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun maxY()
         //nullable = true from not(false or (false and true)) = true
 
-
-        Updates for KMP build        
-        
 
 open fun minX()
         //nullable = true from not(false or (false and true)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun minY()
         //nullable = true from not(false or (false and true)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

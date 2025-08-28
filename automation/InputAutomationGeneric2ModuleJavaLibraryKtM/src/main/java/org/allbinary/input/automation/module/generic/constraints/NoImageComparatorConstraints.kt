@@ -36,10 +36,7 @@ open public class NoImageComparatorConstraints : ImageComparatorConstraints {
         
 public constructor        ()                        
 
-                            : super(1)
-
-        Updates for KMP build        
-        {
+                            : super(1){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -50,10 +47,7 @@ this.setMaxNonMatchingPixelDeltas(.MAX_VALUE())
 
 open fun isColorAllowed(frame: Int, point: GPoint, color: Color)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var frame = frame
 var point = point
 var color = color
@@ -67,10 +61,7 @@ var color = color
 
 open fun isImageValid(bufferedImage: BufferedImage)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var bufferedImage = bufferedImage
 
 

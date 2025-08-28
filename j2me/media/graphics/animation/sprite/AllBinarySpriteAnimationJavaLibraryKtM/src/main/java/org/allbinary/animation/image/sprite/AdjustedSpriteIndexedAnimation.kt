@@ -40,10 +40,7 @@ open public class AdjustedSpriteIndexedAnimation : SpriteIndexedAnimation {
     private var dy: Int
 public constructor        (sprite: Sprite, image: Image, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
-                            : this(sprite, image, BasicColorUtil.getInstance()!!.ZERO_ARRAY, dx, dy, animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : this(sprite, image, BasicColorUtil.getInstance()!!.ZERO_ARRAY, dx, dy, animationBehavior){
     //var sprite = sprite
     //var image = image
     //var dx = dx
@@ -57,10 +54,7 @@ public constructor        (sprite: Sprite, image: Image, dx: Int, dy: Int, anima
 
 public constructor        (sprite: Sprite, image: Image, basicColorArray: Array<BasicColor?>, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
-                            : super(sprite, image, basicColorArray, animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(sprite, image, basicColorArray, animationBehavior){
     //var sprite = sprite
     //var image = image
     //var basicColorArray = basicColorArray
@@ -77,10 +71,7 @@ this.dy= dy
 
 override fun paint(graphics: Graphics, frame: Int, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var frame = frame
     //var x = x
@@ -92,10 +83,7 @@ super.paint(graphics)
 
 override fun paint(g: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var g = g
     //var x = x
     //var y = y
@@ -105,10 +93,7 @@ super.paint(g)
 
 override fun paint(g: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var g = g
 this.sprite.setPosition(this.dx, this.dy)
 super.paint(g)

@@ -51,9 +51,6 @@ open public class BasicItemView
     private val vector: Vector
 public constructor        (itemInterface: ItemInterface, vector: Vector)
             : super()
-        
-
-        Updates for KMP build        
         {
 var itemInterface = itemInterface
 var vector = vector
@@ -66,10 +63,7 @@ this.vector= vector
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     
@@ -109,9 +103,6 @@ hashMap!!.put(BasicItemData.IMAGE, EMPTY_STRING)
 
                         for (index in 0 until size2)
 
-        
-
-        Updates for KMP build        
         {
 
     var name: String = nameArray[index]!! as String
@@ -136,9 +127,6 @@ node.appendChild(totalNode)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var domNodeInterface: DomNodeInterface = this.vector.get(index) as DomNodeInterface
@@ -159,10 +147,7 @@ node.appendChild(customNode)
 
 open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
 
 
@@ -173,10 +158,7 @@ open fun toXmlDoc()
 
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

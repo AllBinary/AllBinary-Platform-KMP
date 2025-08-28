@@ -36,10 +36,7 @@ open public class DamageFloaters : Paintable {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DamageFloaters
-
-        Updates for KMP build        
-        {
+: DamageFloaters{
 
 
 
@@ -57,10 +54,7 @@ open fun getInstance()
         
 open fun add(damage: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var damage = damage
 }
 

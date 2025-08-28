@@ -36,16 +36,10 @@ open public class IndexedBasicArrayListCache : BaseBasicArrayListCache
     private var size: Int = 0
 
     var index: Int = 0
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
-public constructor        (size: Int)
-
-        Updates for KMP build        
-        {
+public constructor        (size: Int){
 var size = size
 this.init(size)
 }
@@ -55,10 +49,7 @@ this.init(size)
             
 open fun init(size: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var size = size
 
     
@@ -72,9 +63,6 @@ var size = size
 
                         for (index in size -1 downTo this.size)
 
-        
-
-        Updates for KMP build        
         {
 this.add()
 }
@@ -88,10 +76,7 @@ this.size= size
 
 open fun get(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 var index = index
 
 
@@ -105,10 +90,7 @@ var index = index
             
 open fun add()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
@@ -116,10 +98,7 @@ open fun add()
             
 open fun add(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var anyType = anyType
 this.list.add(anyType)
 }
@@ -128,10 +107,7 @@ this.list.add(anyType)
                 @Throws(Exception::class)
             override fun add(cacheableInterface: CacheableInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var cacheableInterface = cacheableInterface
 this.list.add(cacheableInterface)
 }
@@ -140,10 +116,7 @@ this.list.add(cacheableInterface)
                 @Throws(Exception::class)
             override fun add(cacheableInterfaces: Array<CacheableInterface?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var cacheableInterfaces = cacheableInterfaces
 
 
@@ -153,10 +126,7 @@ var cacheableInterfaces = cacheableInterfaces
 
 override fun clear()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 index= 0
 }
 

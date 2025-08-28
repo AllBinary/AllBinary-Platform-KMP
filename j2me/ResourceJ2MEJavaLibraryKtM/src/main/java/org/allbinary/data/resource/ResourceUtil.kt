@@ -43,10 +43,7 @@ open public class ResourceUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ResourceUtil
-
-        Updates for KMP build        
-        {
+: ResourceUtil{
 
 
 
@@ -60,9 +57,6 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -71,10 +65,7 @@ private constructor        ()
             
 open fun getResourceAsStream(resource: String)
         //nullable = true from not(false or (false and false)) = true
-: InputStream
-
-        Updates for KMP build        
-        {
+: InputStream{
 var resource = resource
 
     var inputStream: InputStream = resource::class.getResourceAsStream(resource)!!
@@ -246,10 +237,7 @@ inputStream= resource::class.getResourceAsStream(resourcePath)
             
 open fun getResourceAsStream(resource: String, startIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-: InputStream
-
-        Updates for KMP build        
-        {
+: InputStream{
 var resource = resource
 var startIndex = startIndex
 
@@ -289,10 +277,7 @@ var startIndex = startIndex
 
 open fun addResource(resource: String, value: Integer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var resource = resource
     //var value = value
 }

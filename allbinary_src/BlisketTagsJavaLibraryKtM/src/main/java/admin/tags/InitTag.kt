@@ -29,10 +29,7 @@ import admin.taghelpers.InitHelperFactory
 
 open public class InitTag : TableTag {
         
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 this.setTagHelperFactory(InitHelperFactory())
 this.setTagRequestHelperFactory(InitHelperFactory())
 }

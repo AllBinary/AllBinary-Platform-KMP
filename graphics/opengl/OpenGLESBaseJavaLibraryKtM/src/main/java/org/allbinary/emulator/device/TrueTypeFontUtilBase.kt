@@ -72,9 +72,6 @@ open public class TrueTypeFontUtilBase
     val actualCellsPerRow: Int
 public constructor        (scale: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var scale = scale
 
@@ -117,10 +114,7 @@ this.actualCellsPerRow= textureSize /cellSize
 
 open fun getAsTextureSize(textureSize: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var textureSize = textureSize
 
     
@@ -177,10 +171,7 @@ var textureSize = textureSize
 
 open fun getCellSize(cellSize: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var cellSize = cellSize
 
     
@@ -237,10 +228,7 @@ var cellSize = cellSize
 
 open fun getYOffset()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

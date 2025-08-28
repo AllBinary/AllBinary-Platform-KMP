@@ -33,10 +33,7 @@ import org.allbinary.input.automation.module.MotionRectangleConstraints
 
 open public class NoMotionRectangleConstraints : MotionRectangleConstraints {
         
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 this.setMinDimension(Dimension(0, 0))
 this.setMinArea(0)
 this.setMaxDimension(Dimension(Integer.MAX_VALUE, Integer.MAX_VALUE))
@@ -46,10 +43,7 @@ this.setMaxMotionRectangles(.MAX_VALUE())
 
 open fun isValid(frame: Long, bufferedImage: BufferedImage, rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var frame = frame
 var bufferedImage = bufferedImage
 var rectangle = rectangle

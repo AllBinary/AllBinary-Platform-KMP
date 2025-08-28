@@ -40,9 +40,6 @@ open public class VisitorFileFilter
     private var booleanVisitorInterface: VisitorInterface
 public constructor        (booleanVisitorInterface: VisitorInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var booleanVisitorInterface = booleanVisitorInterface
 this.booleanVisitorInterface= booleanVisitorInterface
@@ -51,10 +48,7 @@ this.booleanVisitorInterface= booleanVisitorInterface
 
 open fun accept(file: File)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var file = file
 
     var abFile: AbFile = FileWrapperUtil.wrapFile(file)!!
@@ -74,10 +68,7 @@ visit.
 
 open fun accept(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var file = file
 
     var isFileAcceptable: Boolean = visit = this.booleanVisitorInterface!!.visit(file)visit as Boolean

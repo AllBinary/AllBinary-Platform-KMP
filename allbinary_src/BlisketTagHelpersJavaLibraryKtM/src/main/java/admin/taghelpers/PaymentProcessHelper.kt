@@ -35,10 +35,7 @@ open public class PaymentProcessHelper : TagHelper {
         
 
     private var paymentProcessorComponent: PaymentProcessorComponent
-public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
-
-        Updates for KMP build        
-        {
+public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext){
 var propertiesHashMap = propertiesHashMap
 var pageContext = pageContext
 
@@ -52,10 +49,7 @@ this.paymentProcessorComponent= PaymentProcessorComponent(transformInfoInterface
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

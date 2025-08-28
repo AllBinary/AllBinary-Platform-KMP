@@ -35,9 +35,6 @@ open fun onBuildingEvent(event: RTSLayerEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 }
                 
             

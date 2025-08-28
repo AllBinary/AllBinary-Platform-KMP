@@ -38,10 +38,7 @@ open public class HighScoreCommands
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: HighScoreCommands
-
-        Updates for KMP build        
-        {
+: HighScoreCommands{
 
 
 

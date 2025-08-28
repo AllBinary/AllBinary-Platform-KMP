@@ -23,10 +23,7 @@ open public class BasicGeographicMapExtractedPathCacheFactory : BaseBasicArrayLi
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BasicGeographicMapExtractedPathCacheFactory
-
-        Updates for KMP build        
-        {
+: BasicGeographicMapExtractedPathCacheFactory{
 
 
 
@@ -40,19 +37,13 @@ open fun getInstance()
     private var maxConcurrentPaths: Int= 0
 
     private var maxPaths: Int= 0
-private constructor        ()
-
-        Updates for KMP build        
-        {
+private constructor        (){
 }
 
 
 open fun init(maxConcurrentPaths: Int, maxPaths: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var maxConcurrentPaths = maxConcurrentPaths
 var maxPaths = maxPaths
 
@@ -66,9 +57,6 @@ var maxPaths = maxPaths
 
                         for (index in maxConcurrentPaths downTo this.maxConcurrentPaths)
 
-        
-
-        Updates for KMP build        
         {
 this.list.add(BasicArrayList(maxPaths))
 }
@@ -83,10 +71,7 @@ this.maxPaths= maxPaths
 
 open fun getPath()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
     
                         if(this.list.size() > 0)
@@ -114,10 +99,7 @@ open fun getPath()
 
 open fun release(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var list = list
 list.clear()
 this.list.add(list)

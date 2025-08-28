@@ -51,9 +51,6 @@ open public class DownloadableItemView
     private var downloadableItem: DownloadableItem
 public constructor        (downloadableItem: DownloadableItem)
             : super()
-        
-
-        Updates for KMP build        
         {
 var downloadableItem = downloadableItem
 this.downloadableItem= downloadableItem
@@ -64,10 +61,7 @@ this.downloadableItem= downloadableItem
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     
@@ -152,9 +146,6 @@ hashMap!!.put(DownloadItemData.VALID_TIME_SECONDS, Integer(Integer.valueOf(secon
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var name: String = nameArray[index]!! as String
@@ -176,10 +167,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 
 open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
 
 
@@ -190,10 +178,7 @@ open fun toXmlDoc()
 
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

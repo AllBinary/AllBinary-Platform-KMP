@@ -59,9 +59,6 @@ open public class CountedLayersHudPaintable
     private val dropSize: Int
 public constructor        (partInterfaceArray: Array<PartInterface?>, dropSize: Int, startIndex: Int, countedTotalStringColor: Int, countedPartsBorder: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var partInterfaceArray = partInterfaceArray
 var dropSize = dropSize
@@ -77,10 +74,7 @@ this.dropSize= dropSize
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 
     var height: Int = myFont!!.DEFAULT_CHAR_HEIGHT
@@ -128,9 +122,6 @@ var graphics = graphics
 
                         for (index in startIndex until size)
 
-        
-
-        Updates for KMP build        
         {
 countedLayerInterfaceFactory= partInterfaceArray[index]!! as CountedLayerInterfaceFactoryPart
 
@@ -166,10 +157,7 @@ graphics.drawRect(lastWidth -(XXStringWidth +this.dropSize), 40, XXStringWidth +
 
 override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 }
 

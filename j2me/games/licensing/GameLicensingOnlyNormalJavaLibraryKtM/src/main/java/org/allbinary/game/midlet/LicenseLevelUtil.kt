@@ -37,10 +37,7 @@ open public class LicenseLevelUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LicenseLevelUtil
-
-        Updates for KMP build        
-        {
+: LicenseLevelUtil{
 
 
 
@@ -58,10 +55,7 @@ open fun getInstance()
         
 open fun getMaxLevel(maxLevel: Int, demoLevel: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var maxLevel = maxLevel
 var demoLevel = demoLevel
 

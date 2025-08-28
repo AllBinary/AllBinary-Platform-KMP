@@ -18,15 +18,9 @@ open fun updateJTree()
         //nullable = true from not(false or (false and true)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun getActionScriptJTree()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JTree
-
-        Updates for KMP build        
-        
 
 }
                 

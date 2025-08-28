@@ -93,10 +93,7 @@ open public class UnitWaypointBehavior : WaypointBehaviorBase
     private var trackingWaypoint: Boolean= false
 
     val associatedAdvancedRTSGameLayer: UnitLayer
-protected constructor        (associatedAdvancedRTSGameLayer: UnitLayer, fakeWaypoint: CollidableDestroyableDamageableLayer)
-
-        Updates for KMP build        
-        {
+protected constructor        (associatedAdvancedRTSGameLayer: UnitLayer, fakeWaypoint: CollidableDestroyableDamageableLayer){
 var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 var fakeWaypoint = fakeWaypoint
 this.associatedAdvancedRTSGameLayer= associatedAdvancedRTSGameLayer
@@ -111,10 +108,7 @@ this.FAKE_WAYPOINT_LAYER= fakeWaypoint
 
 open fun initRange(weaponRange: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var weaponRange = weaponRange
 this.longWeaponRange= weaponRange /2
 }
@@ -122,10 +116,7 @@ this.longWeaponRange= weaponRange /2
 
 open fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
@@ -135,10 +126,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
             
 open fun onWaypointEvent(event: RTSLayerEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var event = event
 
     var advancedRTSGameLayer: AdvancedRTSGameLayer = event.getRtsLayer() as AdvancedRTSGameLayer
@@ -169,10 +157,7 @@ this.associatedAdvancedRTSGameLayer!!.waypointLogHelper!!.onWaypointEvent(this.a
             
 open fun addWaypointFromUser(advancedRTSGameLayer: AdvancedRTSGameLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var advancedRTSGameLayer = advancedRTSGameLayer
 }
 
@@ -181,10 +166,7 @@ open fun addWaypointFromUser(advancedRTSGameLayer: AdvancedRTSGameLayer)
             
 open fun addWaypointFromBuilding(advancedRTSGameLayer: AdvancedRTSGameLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var advancedRTSGameLayer = advancedRTSGameLayer
 
     
@@ -222,10 +204,7 @@ this.associatedAdvancedRTSGameLayer!!.waypointLogHelper!!.addWaypointFromBuildin
 
 open fun isWaypointListEmptyOrOnlyTargets()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -238,10 +217,7 @@ open fun isWaypointListEmptyOrOnlyTargets()
             
 open fun insertWaypoint(index: Int, rtsLayer: CollidableDestroyableDamageableLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var index = index
     //var rtsLayer = rtsLayer
 
@@ -282,10 +258,7 @@ this.associatedAdvancedRTSGameLayer!!.waypointLogHelper!!.insertWaypoint(this.as
 
 open fun move()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(this.isMoving())
@@ -308,10 +281,7 @@ this.setMoving(false)
             
 open fun setRandomGeographicMapCellHistory(pathsList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var pathsList = pathsList
 
     var size: Int = pathsList!!.size()!!
@@ -336,10 +306,7 @@ this.setGeographicMapCellHistoryPath(geographicMapCellPositionBasicArrayList)
             
 open fun setGeographicMapCellHistoryPath(geographicMapCellPositionBasicArrayList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var geographicMapCellPositionBasicArrayList = geographicMapCellPositionBasicArrayList
 this.lastPathGeographicMapCellPosition= 
                                         null
@@ -362,10 +329,7 @@ this.getCompleteTimeDelayHelper()!!.setStartTime()
 
 open fun canInsertWaypoint(index: Int, rtsLayer: CollidableDestroyableDamageableLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var index = index
     //var rtsLayer = rtsLayer
 
@@ -405,10 +369,7 @@ open fun canInsertWaypoint(index: Int, rtsLayer: CollidableDestroyableDamageable
             
 open fun addBuildingChase(allbinaryLayer: AllBinaryLayer, cellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allbinaryLayer = allbinaryLayer
     //var cellPosition = cellPosition
 }
@@ -418,10 +379,7 @@ open fun addBuildingChase(allbinaryLayer: AllBinaryLayer, cellPosition: Geograph
             
 open fun moveAwayFromBuilding(buildingLayer: BuildingLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var buildingLayer = buildingLayer
 
     var geographicMapCellPosition: GeographicMapCellPosition = this.associatedAdvancedRTSGameLayer!!.getCurrentGeographicMapCellPosition()!!
@@ -458,10 +416,7 @@ this.associatedAdvancedRTSGameLayer!!.setClosestGeographicMapCellHistory(pathsLi
 
 open fun needToMove()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 this.associatedAdvancedRTSGameLayer!!.waypointLogHelper!!.needToMove(this.associatedAdvancedRTSGameLayer, this)
 
     
@@ -501,10 +456,7 @@ ForcedLogUtil.log(message, this.associatedAdvancedRTSGameLayer)
 
 open fun getMovementLogicAsString()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -538,10 +490,7 @@ stringBuffer!!.append(this.longWeaponRange +this.currentTargetLayerInterface!!.g
 
 open fun isMovingFromStopped()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -552,10 +501,7 @@ open fun isMovingFromStopped()
 
 open fun setMovingFromStopped(movingFromStopped: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var movingFromStopped = movingFromStopped
 this.movingFromStopped= movingFromStopped
 }
@@ -563,10 +509,7 @@ this.movingFromStopped= movingFromStopped
 
 open fun setWaypointPathsList(waypointPathsList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var waypointPathsList = waypointPathsList
 this.waypointPathsList= waypointPathsList
 }
@@ -574,10 +517,7 @@ this.waypointPathsList= waypointPathsList
 
 open fun getWaypointPathsList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 
@@ -588,10 +528,7 @@ open fun getWaypointPathsList()
 
 open fun isMoving()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -602,10 +539,7 @@ open fun isMoving()
 
 open fun setMoving(moving: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var moving = moving
 this.moving= moving
 }
@@ -613,10 +547,7 @@ this.moving= moving
 
 open fun isTrackingWaypoint()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -627,10 +558,7 @@ open fun isTrackingWaypoint()
 
 open fun getPossibleTargetList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 
@@ -641,10 +569,7 @@ open fun getPossibleTargetList()
 
 open fun setLastPathGeographicMapCellPosition(lastPathGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var lastPathGeographicMapCellPosition = lastPathGeographicMapCellPosition
 this.lastPathGeographicMapCellPosition= lastPathGeographicMapCellPosition
 }
@@ -652,10 +577,7 @@ this.lastPathGeographicMapCellPosition= lastPathGeographicMapCellPosition
 
 open fun getLastPathGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
 
 
 
@@ -666,10 +588,7 @@ open fun getLastPathGeographicMapCellPosition()
 
 open fun setCurrentPathGeographicMapCellPosition(currentPathGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var currentPathGeographicMapCellPosition = currentPathGeographicMapCellPosition
 this.currentPathGeographicMapCellPosition= currentPathGeographicMapCellPosition
 }
@@ -677,10 +596,7 @@ this.currentPathGeographicMapCellPosition= currentPathGeographicMapCellPosition
 
 open fun getCurrentPathGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
 
 
 
@@ -691,10 +607,7 @@ open fun getCurrentPathGeographicMapCellPosition()
 
 open fun setSensorAction(sensorAction: SensorAction)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var sensorAction = sensorAction
 this.sensorAction= sensorAction
 }
@@ -702,10 +615,7 @@ this.sensorAction= sensorAction
 
 open fun getSensorAction()
         //nullable = true from not(false or (false and true)) = true
-: SensorAction
-
-        Updates for KMP build        
-        {
+: SensorAction{
 
 
 
@@ -716,10 +626,7 @@ open fun getSensorAction()
 
 open fun getTargetList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 
@@ -730,10 +637,7 @@ open fun getTargetList()
 
 open fun setCurrentTargetLayerInterface(currentTargetLayerInterface: CollidableDestroyableDamageableLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var currentTargetLayerInterface = currentTargetLayerInterface
 this.currentTargetLayerInterface= currentTargetLayerInterface
 }
@@ -741,10 +645,7 @@ this.currentTargetLayerInterface= currentTargetLayerInterface
 
 open fun getCurrentTargetLayerInterface()
         //nullable = true from not(false or (false and true)) = true
-: CollidableDestroyableDamageableLayer
-
-        Updates for KMP build        
-        {
+: CollidableDestroyableDamageableLayer{
 
 
 
@@ -755,10 +656,7 @@ open fun getCurrentTargetLayerInterface()
 
 open fun setCurrentTargetDistance(currentTargetDistance: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var currentTargetDistance = currentTargetDistance
 this.currentTargetDistance= currentTargetDistance
 }
@@ -766,10 +664,7 @@ this.currentTargetDistance= currentTargetDistance
 
 open fun getCurrentTargetDistance()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -780,10 +675,7 @@ open fun getCurrentTargetDistance()
 
 open fun getCompleteTimeDelayHelper()
         //nullable = true from not(false or (false and true)) = true
-: TimeDelayHelper
-
-        Updates for KMP build        
-        {
+: TimeDelayHelper{
 
 
 
@@ -794,10 +686,7 @@ open fun getCompleteTimeDelayHelper()
 
 open fun setCurrentGeographicMapCellHistory(currentGeographicMapCellHistory: GeographicMapCellHistory)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var currentGeographicMapCellHistory = currentGeographicMapCellHistory
 this.currentGeographicMapCellHistory= currentGeographicMapCellHistory
 }
@@ -805,10 +694,7 @@ this.currentGeographicMapCellHistory= currentGeographicMapCellHistory
 
 open fun getCurrentGeographicMapCellHistory()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellHistory
-
-        Updates for KMP build        
-        {
+: GeographicMapCellHistory{
 
 
 
@@ -819,10 +705,7 @@ open fun getCurrentGeographicMapCellHistory()
 
 open fun setTrackingWaypoint(trackingWaypoint: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var trackingWaypoint = trackingWaypoint
 this.trackingWaypoint= trackingWaypoint
 }

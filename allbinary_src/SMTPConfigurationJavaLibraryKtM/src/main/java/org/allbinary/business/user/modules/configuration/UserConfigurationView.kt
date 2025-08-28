@@ -46,9 +46,6 @@ open public class UserConfigurationView
     private var userConfigurationInterface: UserConfigurationInterface
 public constructor        (node: Node)
             : super()
-        
-
-        Updates for KMP build        
         {
 var node = node
 this.userConfigurationInterface= UserConfiguration() as UserConfigurationInterface
@@ -83,9 +80,6 @@ this.userConfigurationInterface!!.setTimeLastModified(timeLastModifiedView!!.get
 
 public constructor        (userConfigurationInterface: UserConfigurationInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var userConfigurationInterface = userConfigurationInterface
 this.userConfigurationInterface= userConfigurationInterface
@@ -94,10 +88,7 @@ this.userConfigurationInterface= userConfigurationInterface
 
 open fun getUserConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
-: UserConfigurationInterface
-
-        Updates for KMP build        
-        {
+: UserConfigurationInterface{
 
 
 
@@ -110,10 +101,7 @@ open fun getUserConfigurationInterface()
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var node: Node = document.createElement(UserConfigurationData.NAME)!!

@@ -40,36 +40,21 @@ open fun getCapital()
         //nullable = true from not(false or (false and true)) = true
 : Capital
 
-        Updates for KMP build        
-        
-
 open fun getRTSFormInput()
         //nullable = true from not(false or (false and true)) = true
 : RTSFormInput
-
-        Updates for KMP build        
-        
 
 open fun add(sound: Sound)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun getPlayerOwnedRTSLayers()
         //nullable = true from not(false or (false and true)) = true
 : PlayerOwnedRTSLayers
 
-        Updates for KMP build        
-        
-
 open fun implmentsArtificialIntelligenceCompositeInterface()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
-
-        Updates for KMP build        
-        
 
 }
                 

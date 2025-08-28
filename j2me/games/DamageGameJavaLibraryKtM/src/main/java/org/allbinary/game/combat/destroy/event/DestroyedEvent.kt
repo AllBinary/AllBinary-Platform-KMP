@@ -40,10 +40,7 @@ open public class DestroyedEvent : AllBinaryEventObject {
     private var allBinaryLayerInterface: AllBinaryLayer = AllBinaryLayer.NULL_ALLBINARY_LAYER
 public constructor        (combatGameCanvas: AllBinaryGameCanvas)                        
 
-                            : super(DestroyedEventHandler.getInstance())
-
-        Updates for KMP build        
-        {
+                            : super(DestroyedEventHandler.getInstance()){
 var combatGameCanvas = combatGameCanvas
 
 
@@ -55,10 +52,7 @@ this.setAllBinaryGameCanvas(combatGameCanvas)
 
 open fun getAllBinaryGameCanvas()
         //nullable = true from not(false or (false and true)) = true
-: AllBinaryGameCanvas
-
-        Updates for KMP build        
-        {
+: AllBinaryGameCanvas{
 
 
 
@@ -69,10 +63,7 @@ open fun getAllBinaryGameCanvas()
 
 open fun getLayerInterface()
         //nullable = true from not(false or (false and true)) = true
-: AllBinaryLayer
-
-        Updates for KMP build        
-        {
+: AllBinaryLayer{
 
 
 
@@ -83,10 +74,7 @@ open fun getLayerInterface()
 
 open fun setAllBinaryGameCanvas(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allBinaryGameCanvas = allBinaryGameCanvas
 this.allBinaryGameCanvas= allBinaryGameCanvas
 }
@@ -94,20 +82,14 @@ this.allBinaryGameCanvas= allBinaryGameCanvas
 
 open fun setLayerInterfaceForCircularStaticPool(allBinaryLayerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allBinaryLayerInterface = allBinaryLayerInterface
 this.allBinaryLayerInterface= allBinaryLayerInterface
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

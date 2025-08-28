@@ -102,9 +102,6 @@ open public class PaymentGatewayData
     private var key: String
 private constructor        (value: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var value = value
 this.key= value
@@ -112,10 +109,7 @@ this.key= value
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

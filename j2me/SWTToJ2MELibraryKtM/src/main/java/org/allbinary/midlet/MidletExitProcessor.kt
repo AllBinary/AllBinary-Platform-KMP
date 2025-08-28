@@ -34,10 +34,7 @@ open public class MidletExitProcessor : Processor {
         
 
     private val midlet: MIDlet
-public constructor        (midlet: MIDlet)
-
-        Updates for KMP build        
-        {
+public constructor        (midlet: MIDlet){
 var midlet = midlet
 this.midlet= midlet
 }
@@ -47,10 +44,7 @@ this.midlet= midlet
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 System.exit(0)
 }
 

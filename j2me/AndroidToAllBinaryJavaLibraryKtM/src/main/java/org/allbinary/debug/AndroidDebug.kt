@@ -47,10 +47,7 @@ open public class AndroidDebug
     private var bufferSize: Int = 32 *1024 *1024
 override fun start()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.setStartTime(System.currentTimeMillis())
 Debug.startMethodTracing("trace", bufferSize)
 setRunning(true)
@@ -58,10 +55,7 @@ setRunning(true)
 
 override fun stop()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 startTime= Long.MAX_VALUE
 Debug.stopMethodTracing()
 setRunning(false)
@@ -69,10 +63,7 @@ setRunning(false)
 
 override fun getMaxTime()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -83,20 +74,14 @@ override fun getMaxTime()
 
 open fun setStartTime(startTime: Long)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var startTime = startTime
 this.startTime= startTime
 }
 
 override fun getStartTime()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -107,20 +92,14 @@ override fun getStartTime()
 
 open fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var running = running
 this.running= running
 }
 
 override fun isRunning()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 

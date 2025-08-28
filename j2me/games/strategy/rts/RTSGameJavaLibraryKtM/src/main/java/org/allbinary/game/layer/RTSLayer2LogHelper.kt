@@ -37,10 +37,7 @@ open public class RTSLayer2LogHelper
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: RTSLayer2LogHelper
-
-        Updates for KMP build        
-        {
+: RTSLayer2LogHelper{
 
 
 
@@ -58,40 +55,28 @@ open fun getInstance()
         
 open fun steeringUp(pathFindingLayerInterface: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var pathFindingLayerInterface = pathFindingLayerInterface
 }
 
 
 open fun steeringFireOrStop(pathFindingLayerInterface: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var pathFindingLayerInterface = pathFindingLayerInterface
 }
 
 
 open fun buildingAbove(pathFindingLayerInterface: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var pathFindingLayerInterface = pathFindingLayerInterface
 }
 
 
 open fun buildingChaseLeft(pathFindingLayerInterface: PathFindingLayerInterface, angle: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var pathFindingLayerInterface = pathFindingLayerInterface
     //var angle = angle
 }
@@ -99,10 +84,7 @@ open fun buildingChaseLeft(pathFindingLayerInterface: PathFindingLayerInterface,
 
 open fun buildingChaseRight(pathFindingLayerInterface: PathFindingLayerInterface, angle: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var pathFindingLayerInterface = pathFindingLayerInterface
     //var angle = angle
 }
@@ -110,20 +92,14 @@ open fun buildingChaseRight(pathFindingLayerInterface: PathFindingLayerInterface
 
 open fun buildingDown(pathFindingLayerInterface: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var pathFindingLayerInterface = pathFindingLayerInterface
 }
 
 
 open fun buildingChaseDown(pathFindingLayerInterface: PathFindingLayerInterface, angle: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var pathFindingLayerInterface = pathFindingLayerInterface
     //var angle = angle
 }
@@ -131,10 +107,7 @@ open fun buildingChaseDown(pathFindingLayerInterface: PathFindingLayerInterface,
 
 open fun buildingChaseUp(pathFindingLayerInterface: PathFindingLayerInterface, angle: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var pathFindingLayerInterface = pathFindingLayerInterface
     //var angle = angle
 }
@@ -142,19 +115,13 @@ open fun buildingChaseUp(pathFindingLayerInterface: PathFindingLayerInterface, a
 
 open fun buildingLeft()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun buildingRight()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 

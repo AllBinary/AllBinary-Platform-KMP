@@ -35,10 +35,7 @@ open public class NoAllBinarySensor : AllBinarySensor {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NoAllBinarySensor
-
-        Updates for KMP build        
-        {
+: NoAllBinarySensor{
 
 
 
@@ -48,10 +45,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
-
-        Updates for KMP build        
-        {
+            private constructor        (){
 }
 
 

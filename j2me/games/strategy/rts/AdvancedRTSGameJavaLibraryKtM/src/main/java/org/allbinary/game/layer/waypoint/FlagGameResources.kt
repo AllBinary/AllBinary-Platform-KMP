@@ -50,10 +50,7 @@ open public class FlagGameResources : BasicGameResources {
     var RESOURCE_ICON_BUILD: String
 
     var RESOURCE_ICON: String
-protected constructor        ()
-
-        Updates for KMP build        
-        {
+protected constructor        (){
 }
 
 
@@ -63,10 +60,7 @@ protected constructor        ()
             
 open fun init(ROOT: String, sizeString: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var ROOT = ROOT
 var sizeString = sizeString
 super.init(ROOT, sizeString)

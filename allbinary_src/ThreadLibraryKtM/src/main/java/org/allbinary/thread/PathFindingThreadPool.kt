@@ -38,10 +38,7 @@ open public class PathFindingThreadPool : ThreadPool {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ThreadPool
-
-        Updates for KMP build        
-        {
+: ThreadPool{
 
 
 
@@ -53,10 +50,7 @@ open fun getInstance()
         }
             public constructor        (poolName: String, numThreads: Int, priority: Int)                        
 
-                            : super(poolName, numThreads)
-
-        Updates for KMP build        
-        {
+                            : super(poolName, numThreads){
     //var poolName = poolName
     //var numThreads = numThreads
     //var priority = priority
@@ -68,39 +62,27 @@ open fun getInstance()
 
 override fun runTaskWithPriority(task: PriorityRunnable)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var task = task
 super.runTaskWithPriority(task)
 }
 
 override fun runTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var task = task
 super.runTask(task)
 }
 
 override fun startTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var task = task
 }
 
 override fun completedTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var task = task
 }
 

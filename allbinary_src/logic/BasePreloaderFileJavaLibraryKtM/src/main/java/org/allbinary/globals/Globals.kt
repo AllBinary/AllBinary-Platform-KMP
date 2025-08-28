@@ -45,10 +45,7 @@ open public class Globals
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: Globals
-
-        Updates for KMP build        
-        {
+: Globals{
 
 
 
@@ -62,19 +59,13 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun init(classLoader: ClassLoader, pathString: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var classLoader = classLoader
 var pathString = pathString
 

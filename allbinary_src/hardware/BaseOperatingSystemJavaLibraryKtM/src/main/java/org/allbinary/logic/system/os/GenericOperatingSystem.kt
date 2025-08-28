@@ -48,9 +48,6 @@ open public class GenericOperatingSystem
     var scalable: Boolean = false
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     var systemProperties: SystemProperties = SystemProperties.getInstance()!!
@@ -107,10 +104,7 @@ public constructor        ()
 
 override fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -120,10 +114,7 @@ override fun getName()
 
 override fun getVersion()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -133,10 +124,7 @@ override fun getVersion()
 
 override fun getArch()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -146,10 +134,7 @@ override fun getArch()
 
 override fun getCharacterSet()
         //nullable = true from not(false or (false and true)) = true
-: CharacterSet
-
-        Updates for KMP build        
-        {
+: CharacterSet{
 
 
 
@@ -159,10 +144,7 @@ override fun getCharacterSet()
 
 override fun isOverScan()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -172,10 +154,7 @@ override fun isOverScan()
 
 override fun getOverScanXPercent()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -185,10 +164,7 @@ override fun getOverScanXPercent()
 
 override fun getOverScanYPercent()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -198,10 +174,7 @@ override fun getOverScanYPercent()
 
 override fun isScalable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -211,10 +184,7 @@ override fun isScalable()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var NEW_LINE: String = CommonSeps.getInstance()!!.NEW_LINE
 

@@ -43,10 +43,7 @@ open public class StoreFrontHelper : TagHelper {
     private val currentLocation: String
 
     private val currentHomeLocation: String
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
-
-        Updates for KMP build        
-        {
+public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 
@@ -82,10 +79,7 @@ this.currentHomeLocation= stringUtil!!.EMPTY_STRING
 
 open fun getCurrentLocation()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -96,10 +90,7 @@ open fun getCurrentLocation()
 
 open fun getCurrentHomeLocation()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

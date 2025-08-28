@@ -36,10 +36,7 @@ open public class PrimitiveIntUtil
             
 open fun getArrayInstance()
         //nullable = true from not(false or (false and true)) = true
-: IntArray
-
-        Updates for KMP build        
-        {
+: IntArray{
 
 
 
@@ -50,10 +47,7 @@ open fun getArrayInstance()
 
 open fun getTwoDimensionalArrayInstance()
         //nullable = true from not(false or (false and true)) = true
-: Array<IntArray?>
-
-        Updates for KMP build        
-        {
+: Array<IntArray?>{
 
 
 
@@ -65,9 +59,6 @@ open fun getTwoDimensionalArrayInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

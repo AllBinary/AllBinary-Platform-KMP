@@ -67,10 +67,7 @@ open public class UserNameOrderHistoryView : HttpStoreComponentView
     private val ON: String = "on"
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(transformInfoInterface)
-
-        Updates for KMP build        
-        {
+                            : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
 
 
@@ -88,10 +85,7 @@ this.cancelled= request.getParameter(OrderHistoryData.CANCELLEDNAME)
 
 open fun addDomNodeInterfaces()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.addDomNodeInterface(this as DomNodeInterface)
 }
 
@@ -100,10 +94,7 @@ this.addDomNodeInterface(this as DomNodeInterface)
             
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             this.addDomNodeInterfaces()
@@ -113,10 +104,7 @@ open fun view()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.view()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
@@ -137,10 +125,7 @@ open fun view()
 
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
         try {
@@ -162,9 +147,6 @@ var document = document
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var orderHistory: OrderHistory = orderReviewVector!!.get(index) as OrderHistory
@@ -199,10 +181,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, GLOBALS2.VIEWNAME, 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.XSLLOGGINGERROR))
@@ -224,10 +203,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, GLOBALS2.VIEWNAME, 
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
@@ -260,10 +236,7 @@ open fun isValid()
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
 
 
@@ -274,10 +247,7 @@ open fun toValidationInfoDoc()
 
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
 
@@ -289,10 +259,7 @@ var document = document
 
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     
                         if(this.userName == 

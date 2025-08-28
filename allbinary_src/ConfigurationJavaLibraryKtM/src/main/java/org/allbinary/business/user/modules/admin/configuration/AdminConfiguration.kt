@@ -51,9 +51,6 @@ open public class AdminConfiguration
     private var contextConfigurationInterface: ContextConfigurationInterface
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 this.contextConfigurationInterface= ContextConfigurationInterfaceFactory.getInstance()!!.getInstance(AdminConfigurationData.CONTEXTNAME)
@@ -61,9 +58,6 @@ this.contextConfigurationInterface= ContextConfigurationInterfaceFactory.getInst
 
 public constructor        (request: HttpServletRequest)
             : super()
-        
-
-        Updates for KMP build        
         {
 var request = request
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
@@ -73,9 +67,6 @@ this.getFormData(RequestParams(request).
 
 public constructor        (storeHashMap: HashMap<Any, Any>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var storeHashMap = storeHashMap
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
@@ -87,10 +78,7 @@ this.getFormData(storeHashMap)
             
 open fun getFormData(storeHashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var storeHashMap = storeHashMap
 logUtil!!.put(commonStrings!!.START, this, "getFormData")
 this.setContextConfigurationInterface(ContextConfiguration(storeHashMap) as ContextConfigurationInterface)
@@ -102,10 +90,7 @@ this.setContextConfigurationInterface(ContextConfiguration(storeHashMap) as Cont
 
 open fun write()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var contextConfigurationDomDocumentMapping: ContextConfigurationDomDocumentMapping = ContextConfigurationDomDocumentMapping(this.getContextConfigurationInterface())
 
@@ -118,10 +103,7 @@ cryptFileWriter!!.write(ContextConfigurationPathUtil.getAbPath(AdminConfiguratio
 
 open fun getContextConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
-: ContextConfigurationInterface
-
-        Updates for KMP build        
-        {
+: ContextConfigurationInterface{
 
 
 
@@ -132,10 +114,7 @@ open fun getContextConfigurationInterface()
 
 open fun setContextConfigurationInterface(contextConfigurationInterface: ContextConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var contextConfigurationInterface = contextConfigurationInterface
 this.contextConfigurationInterface= contextConfigurationInterface
 }

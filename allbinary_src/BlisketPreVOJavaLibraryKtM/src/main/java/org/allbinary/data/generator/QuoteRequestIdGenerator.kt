@@ -33,10 +33,7 @@ open public class QuoteRequestIdGenerator : UniqueIdGenerator {
         
 
     private val IDFILE: String = "quoterequestId"
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 
     var stringBuffer: StringMaker = StringMaker()
 

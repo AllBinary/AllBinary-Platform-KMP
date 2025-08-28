@@ -30,10 +30,7 @@ open public class SimpleCompositeShaderUpdater : CompositeShaderUpdater {
         
 public constructor        (uniformBlockArray: Array<String?>, uniformArray: Array<String?>, attributeArray: Array<String?>)                        
 
-                            : super(uniformBlockArray, uniformArray, attributeArray)
-
-        Updates for KMP build        
-        {
+                            : super(uniformBlockArray, uniformArray, attributeArray){
     //var uniformBlockArray = uniformBlockArray
     //var uniformArray = uniformArray
     //var attributeArray = attributeArray
@@ -45,10 +42,7 @@ public constructor        (uniformBlockArray: Array<String?>, uniformArray: Arra
 
 public constructor        (uniformBlockArray: Array<String?>, uniformArray: Array<String?>, attributeArray: Array<String?>, attributeHandleArray: IntArray)                        
 
-                            : super(uniformBlockArray, uniformArray, attributeArray, attributeHandleArray)
-
-        Updates for KMP build        
-        {
+                            : super(uniformBlockArray, uniformArray, attributeArray, attributeHandleArray){
     //var uniformBlockArray = uniformBlockArray
     //var uniformArray = uniformArray
     //var attributeArray = attributeArray

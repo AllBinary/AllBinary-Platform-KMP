@@ -45,10 +45,7 @@ open public class TransformInfoHttpFactory
             
 open fun getInstance(propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
-: TransformInfoInterface
-
-        Updates for KMP build        
-        {
+: TransformInfoInterface{
 var propertiesHashMap = propertiesHashMap
 var pageContext = pageContext
 
@@ -103,10 +100,7 @@ var pageContext = pageContext
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
@@ -131,9 +125,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION, "TransformInfoFactory", commonStrings!!
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

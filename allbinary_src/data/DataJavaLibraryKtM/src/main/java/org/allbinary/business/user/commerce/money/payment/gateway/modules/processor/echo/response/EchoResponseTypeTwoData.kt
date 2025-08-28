@@ -38,9 +38,6 @@ open public class EchoResponseTypeTwoData
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

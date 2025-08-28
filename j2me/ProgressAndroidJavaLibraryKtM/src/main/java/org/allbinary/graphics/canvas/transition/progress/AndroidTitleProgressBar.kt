@@ -49,10 +49,7 @@ open public class AndroidTitleProgressBar : ProgressCanvas {
     private var portion: Int = 0
 protected constructor        (title: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(title, backgroundBasicColor, foregroundBasicColor)
-
-        Updates for KMP build        
-        {
+                            : super(title, backgroundBasicColor, foregroundBasicColor){
 var title = title
 var backgroundBasicColor = backgroundBasicColor
 var foregroundBasicColor = foregroundBasicColor
@@ -65,20 +62,14 @@ var foregroundBasicColor = foregroundBasicColor
 
 open fun init(activity: SimpleProgressActivityInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var activity = activity
 }
 
 
 open fun init(activity: ProgressActivityInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var activity = activity
 this.progressActivity= activity
 }
@@ -86,10 +77,7 @@ this.progressActivity= activity
 
 open fun isInitialized()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(this.progressActivity != NullProgressActivity.NULL_PROGRESS_ACTIVITY)
@@ -116,20 +104,14 @@ open fun isInitialized()
 
 override fun start()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             logUtil!!.put(commonStrings!!.START, this, commonStrings!!.START_METHOD_NAME)
 super.start()
 this.progressActivity!!.runOnUiThread(showTitleProgressBarRunnable)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME, e)
 }
 
@@ -137,20 +119,14 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME
 
 override fun end()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             logUtil!!.put(commonStrings!!.START, this, commonStrings!!.END_METHOD_NAME)
 this.progressActivity!!.runOnUiThread(dismissTitleProgressBarRunnable)
 super.end()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.END_METHOD_NAME, e)
 }
 
@@ -158,10 +134,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.END_METHOD_NAME, 
 
 override fun addPortion(value: Int, text: String, index: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 var text = text
 var index = index
@@ -171,10 +144,7 @@ var index = index
 this.portion= value
 this.progressActivity!!.runOnUiThread(progressDialogPortionSetProgressRunnable)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
 }
 
@@ -182,10 +152,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
 
 override fun addPortion(value: Int, text: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 var text = text
 
@@ -194,10 +161,7 @@ var text = text
 this.portion= value
 this.progressActivity!!.runOnUiThread(progressDialogPortionSetProgressRunnable)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
 }
 
@@ -205,20 +169,14 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
 
 override fun setValue(value: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 
         try {
             super.setValue(value)
 this.progressActivity!!.runOnUiThread(progressDialogSetProgressRunnable)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "setValue", e)
 }
 
@@ -227,18 +185,12 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "setValue", e)
 
 open fun waitUntilDisplayed()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 }
 
@@ -255,10 +207,7 @@ open public inner class TitleProgressBarSetProgressRunnable
             }            
         override fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             
@@ -266,10 +215,7 @@ open public inner class TitleProgressBarSetProgressRunnable
 
 this@AndroidTitleProgressBar.progressActivity!!.onTitleProgressBarSetProgress(value)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
 
@@ -291,10 +237,7 @@ open public inner class TitleProgressBarPortionSetProgressRunnable
             }            
         override fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             
@@ -302,10 +245,7 @@ open public inner class TitleProgressBarPortionSetProgressRunnable
 
 this@AndroidTitleProgressBar.progressActivity!!.onTitleProgressBarSetProgress(value)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
 
@@ -327,10 +267,7 @@ open public inner class ShowTitleProgressBarRunnable
             }            
         override fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             
@@ -338,10 +275,7 @@ open public inner class ShowTitleProgressBarRunnable
 
 this@AndroidTitleProgressBar.progressActivity!!.onShowTitleProgressBar(maxValue, false)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
 
@@ -363,18 +297,12 @@ open public inner class DismissTitleProgressBarRunnable
             }            
         override fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             this@AndroidTitleProgressBar.progressActivity!!.onDismissTitleProgressBar()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
 

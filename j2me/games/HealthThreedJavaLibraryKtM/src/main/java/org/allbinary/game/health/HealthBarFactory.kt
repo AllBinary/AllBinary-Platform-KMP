@@ -43,10 +43,7 @@ open public class HealthBarFactory
             
 open fun getInstance(layerInterface: AllBinaryLayer, healthInterface: Health, location: Int, direction: Int)
         //nullable =  from not(true or (false and false)) = 
-: HealthBar
-
-        Updates for KMP build        
-        {
+: HealthBar{
 var layerInterface = layerInterface
 var healthInterface = healthInterface
 var location = location

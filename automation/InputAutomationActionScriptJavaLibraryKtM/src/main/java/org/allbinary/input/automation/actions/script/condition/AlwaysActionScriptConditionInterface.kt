@@ -32,22 +32,13 @@ open fun setIsOn(isOn: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun isIsOn()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-        Updates for KMP build        
-        
-
 open fun log()
         //nullable = true from not(false or (false and true)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

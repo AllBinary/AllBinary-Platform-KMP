@@ -32,9 +32,6 @@ open fun getDirection()
         //nullable = true from not(false or (false and true)) = true
 : Direction
 
-        Updates for KMP build        
-        
-
 }
                 
             

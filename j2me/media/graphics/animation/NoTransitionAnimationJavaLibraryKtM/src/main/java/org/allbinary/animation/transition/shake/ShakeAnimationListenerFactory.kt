@@ -35,10 +35,7 @@ open public class ShakeAnimationListenerFactory
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ShakeAnimationListener
-
-        Updates for KMP build        
-        {
+: ShakeAnimationListener{
 
 
 

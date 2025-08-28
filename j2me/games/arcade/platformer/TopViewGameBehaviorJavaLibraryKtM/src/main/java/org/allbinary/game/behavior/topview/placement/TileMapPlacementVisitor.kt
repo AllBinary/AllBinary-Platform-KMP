@@ -39,10 +39,7 @@ open public class TileMapPlacementVisitor
         
 open fun visit(lastMap: TiledMap, mapData: Array<IntArray?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var lastMap = lastMap
     //var mapData = mapData
 }

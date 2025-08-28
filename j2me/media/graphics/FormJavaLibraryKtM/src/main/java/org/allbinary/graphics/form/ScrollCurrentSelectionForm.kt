@@ -44,10 +44,7 @@ open public class ScrollCurrentSelectionForm : ScrollSelectionForm {
     private val moveForSmallScreen: Boolean
 public constructor        (title: String, items: Array<CustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, formType: FormType, border: Int, moveForSmallScreen: Boolean, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(title, items, formPaintableFactory, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor)
-
-        Updates for KMP build        
-        {
+                            : super(title, items, formPaintableFactory, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor){
     //var title = title
     //var items = items
     //var formPaintableFactory = formPaintableFactory
@@ -67,10 +64,7 @@ this.init()
 
 public constructor        (title: String, items: Array<CustomItem?>, rectangle: Rectangle, formType: FormType, border: Int, moveForSmallScreen: Boolean, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(title, items, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor)
-
-        Updates for KMP build        
-        {
+                            : super(title, items, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor){
     //var title = title
     //var items = items
     //var rectangle = rectangle
@@ -91,10 +85,7 @@ this.init()
                 @Throws(Exception::class)
             override fun init(rectangle: Rectangle, formType: FormType)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var rectangle = rectangle
     //var formType = formType
 super.init(rectangle, formType)
@@ -104,10 +95,7 @@ this.init()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var formTypeFactory: FormTypeFactory = FormTypeFactory.getInstance()!!
 
@@ -138,9 +126,6 @@ dy= y
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var item: CustomItemInterface = this.get(index) as CustomItemInterface
@@ -190,9 +175,6 @@ dy= y +(this.rectangle.getHeight() shr 1)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var item2: CustomItem = this.get(index)!!
@@ -256,10 +238,7 @@ dx= ((this.rectangle.getWidth() -maxWidth) /2)
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
 
         try {
@@ -284,9 +263,6 @@ override fun paint(graphics: Graphics)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var item: CustomItemInterface = this.get(index) as CustomItemInterface
@@ -381,10 +357,7 @@ this.paintable.paint(graphics, index, deltaX +diffX, deltaY)
 }
 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, canvasStrings!!.PAINT, e)
 }
 
@@ -392,10 +365,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, canvasStrings!!.PAINT, e)
 
 override fun getDiffX(item: CustomItemInterface)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var item = item
 
 
@@ -406,10 +376,7 @@ var item = item
 
 override fun getDx()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -419,10 +386,7 @@ override fun getDx()
 
 override fun getDy()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

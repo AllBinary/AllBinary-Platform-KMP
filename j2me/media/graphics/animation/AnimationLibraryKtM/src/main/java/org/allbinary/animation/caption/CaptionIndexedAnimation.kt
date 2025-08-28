@@ -60,10 +60,7 @@ open public class CaptionIndexedAnimation : IndexedAnimation {
     private var player: Player
 public constructor        (animationInterface: Animation, movieIndexedAnimationInterface: IndexedAnimation, player: Player, captionDx: Int, captionDy: Int, dx: Int, dy: Int, time: Int, animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(animationBehavior){
     //var animationInterface = animationInterface
     //var movieIndexedAnimationInterface = movieIndexedAnimationInterface
     //var player = player
@@ -97,10 +94,7 @@ this.player.start()
                 @Throws(Exception::class)
             override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(this.timeDelayHelper!!.isTime(GameTickTimeDelayHelperFactory.getInstance()!!.startTime))
@@ -123,10 +117,7 @@ this.player.start()
 
 override fun isLastFrame()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(this.movieIndexedAnimationInterface!!.getFrame() == this.getSize() -1)
@@ -153,29 +144,20 @@ override fun isLastFrame()
 
 override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.movieIndexedAnimationInterface!!.previousFrame()
 }
 
 override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var index = index
 this.movieIndexedAnimationInterface!!.setFrame(index)
 }
 
 override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -185,10 +167,7 @@ override fun getFrame()
 
 override fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -198,19 +177,13 @@ override fun getSize()
 
 override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var sequence = sequence
 }
 
 override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
-: IntArray
-
-        Updates for KMP build        
-        {
+: IntArray{
 
 
 
@@ -220,10 +193,7 @@ override fun getSequence()
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var x = x
     //var y = y
@@ -233,10 +203,7 @@ this.movieIndexedAnimationInterface!!.paint(graphics, x +this.captionDx +dx, y +
 
 override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var x = x
     //var y = y

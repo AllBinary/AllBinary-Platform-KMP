@@ -38,9 +38,6 @@ open public class MESSAGES
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

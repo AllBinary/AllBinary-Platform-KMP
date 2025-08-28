@@ -44,10 +44,7 @@ open public class StoreCustomizerComponentUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: StoreCustomizerComponentUtil
-
-        Updates for KMP build        
-        {
+: StoreCustomizerComponentUtil{
 
 
 
@@ -61,9 +58,6 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -72,10 +66,7 @@ private constructor        ()
             
 open fun generate(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
     //var abeClientInformation = abeClientInformation
 var transformInfoInterface = transformInfoInterface
 
@@ -102,9 +93,6 @@ var transformInfoInterface = transformInfoInterface
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var nextTransformInfoInterface: TransformInfo = allCustomizedViews!!.get(index) as TransformInfo
@@ -136,10 +124,7 @@ generate(abeClientInformation, transformInfoInterface, allViewsToBeModified)
             
 open fun generate(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, allViewsToBeModifiedVector: Vector)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
 var transformInfoInterface = transformInfoInterface
 var allViewsToBeModifiedVector = allViewsToBeModifiedVector
@@ -155,9 +140,6 @@ var allViewsToBeModifiedVector = allViewsToBeModifiedVector
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var nextTransformInfoInterface: TransformInfo = allViewsToBeModifiedVector!!.get(index) as TransformInfo

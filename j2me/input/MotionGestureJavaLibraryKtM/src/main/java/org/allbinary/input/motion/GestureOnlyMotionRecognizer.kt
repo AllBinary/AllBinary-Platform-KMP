@@ -43,10 +43,7 @@ open public class GestureOnlyMotionRecognizer : MotionRecognizer {
     private val motionGestureRecognizer: MotionGestureRecognizer
 
     private val id: Int
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 this.id= index++
 this.motionGestureRecognizer= MotionGestureRecognizer(id)
 }
@@ -55,10 +52,7 @@ this.motionGestureRecognizer= MotionGestureRecognizer(id)
                 @Throws(Exception::class)
             override fun processStartMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var x = x
 var y = y
 var deviceId = deviceId
@@ -75,10 +69,7 @@ this.motionGestureRecognizer!!.processPressedMotionEvent(point, deviceId, modifi
                 @Throws(Exception::class)
             override fun processEndMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var x = x
 var y = y
 var deviceId = deviceId
@@ -95,10 +86,7 @@ this.motionGestureRecognizer!!.processReleasedMotionEvent(point, deviceId, modif
                 @Throws(Exception::class)
             override fun processDraggedMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var x = x
 var y = y
 var deviceId = deviceId

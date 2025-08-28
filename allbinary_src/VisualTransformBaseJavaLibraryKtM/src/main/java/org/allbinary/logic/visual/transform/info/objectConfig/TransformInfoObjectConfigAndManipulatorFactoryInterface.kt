@@ -38,26 +38,17 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, transf
         //nullable =  from not(true or (false and false)) = 
 : TransformInfoObjectConfigInterface
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)
         //nullable =  from not(true or (false and false)) = 
 : TransformInfoObjectConfigInterface
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, document: Document)
         //nullable =  from not(true or (false and false)) = 
 : TransformInfoObjectConfigInterface
-
-        Updates for KMP build        
-        
 
 }
                 

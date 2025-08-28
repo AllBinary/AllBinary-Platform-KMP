@@ -33,10 +33,7 @@ open public class MiddleRelativeLayerRelationship : RelativeLayerRelationship {
         
 public constructor        (layer: AllBinaryLayer)                        
 
-                            : super(layer, PointFactory.getInstance()!!.getInstance(layer.getHalfWidth(), layer.getHalfHeight()), BasicArrayListUtil.getInstance()!!.getImmutableInstance())
-
-        Updates for KMP build        
-        {
+                            : super(layer, PointFactory.getInstance()!!.getInstance(layer.getHalfWidth(), layer.getHalfHeight()), BasicArrayListUtil.getInstance()!!.getImmutableInstance()){
 var layer = layer
 
 

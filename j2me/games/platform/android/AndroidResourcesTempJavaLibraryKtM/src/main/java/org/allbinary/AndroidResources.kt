@@ -24,10 +24,7 @@ open public class AndroidResources
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AndroidResources
-
-        Updates for KMP build        
-        {
+: AndroidResources{
 
 
 

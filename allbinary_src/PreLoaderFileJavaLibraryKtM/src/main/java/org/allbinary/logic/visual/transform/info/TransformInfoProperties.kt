@@ -44,9 +44,6 @@ open public class TransformInfoProperties
     private var templateFileName: String
 public constructor        (name: String, label: String, description: String, objectFileName: String, objectConfigFileName: String, templateFileName: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var name = name
 var label = label
@@ -65,10 +62,7 @@ this.objectConfigFileName= objectConfigFileName
 
 open fun setName(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.name= value
 }
@@ -76,10 +70,7 @@ this.name= value
 
 open fun setDescription(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.description= value
 }
@@ -87,10 +78,7 @@ this.description= value
 
 open fun setViewFile(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.objectFileName= value
 }
@@ -98,10 +86,7 @@ this.objectFileName= value
 
 open fun setTemplateFile(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.templateFileName= value
 }
@@ -109,10 +94,7 @@ this.templateFileName= value
 
 open fun setObjectConfigFile(value: Object)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.objectConfigFileName= value
 }
@@ -120,10 +102,7 @@ this.objectConfigFileName= value
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -134,10 +113,7 @@ open fun getName()
 
 open fun getLabel()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -148,10 +124,7 @@ open fun getLabel()
 
 open fun getDescription()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -162,10 +135,7 @@ open fun getDescription()
 
 open fun getViewFile()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -176,10 +146,7 @@ open fun getViewFile()
 
 open fun getTemplateFile()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -190,10 +157,7 @@ open fun getTemplateFile()
 
 open fun getObjectConfigFile()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

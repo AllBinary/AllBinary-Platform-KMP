@@ -37,10 +37,7 @@ open public class TransformInfoCustomUriTransformer : BasicTransformer {
         
 public constructor        (abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(abeClientInformation, transformInfoInterface)
-
-        Updates for KMP build        
-        {
+                            : super(abeClientInformation, transformInfoInterface){
     //var abeClientInformation = abeClientInformation
     //var transformInfoInterface = transformInfoInterface
 

@@ -56,10 +56,7 @@ open public class BasicTopViewGeographicMapCellTypeFactory : GeographicMapCellTy
     val OTHER_CELL_TYPE: BasicTopViewGeographicMapCellType
 
     private val maxTileId: Int
-private constructor        ()
-
-        Updates for KMP build        
-        {
+private constructor        (){
 this.maxTileId= 9
 
     var basicTopViewGeographicMapStrings: BasicTopViewGeographicMapStrings = BasicTopViewGeographicMapStrings.getInstance()!!
@@ -97,10 +94,7 @@ this.STAIRS_DOWN_CELL_TYPE= STAIRS_DOWN_CELL_TYPE
 this.OTHER_CELL_TYPE= OTHER_CELL_TYPE
 }
 
-public constructor        (tileTypeToTileIdsMap: Hashtable<Any, Any>, maxTileId: Int)
-
-        Updates for KMP build        
-        {
+public constructor        (tileTypeToTileIdsMap: Hashtable<Any, Any>, maxTileId: Int){
     //var tileTypeToTileIdsMap = tileTypeToTileIdsMap
     //var maxTileId = maxTileId
 
@@ -180,9 +174,6 @@ this.maxTileId= maxTileId
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 key= keyArray[index]!! as String
 idsWithTypeList= tileTypeToTileIdsMap!!.get(key) as BasicArrayList
@@ -306,10 +297,7 @@ type= this.maxTileId -2
 
 open fun getStartType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -320,10 +308,7 @@ open fun getStartType()
 
 open fun getEndType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -334,10 +319,7 @@ open fun getEndType()
 
 open fun getEmptyType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -348,10 +330,7 @@ open fun getEmptyType()
 
 open fun isPath(cellType: GeographicMapCellType)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var cellType = cellType
 
     
@@ -375,10 +354,7 @@ var cellType = cellType
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

@@ -33,10 +33,7 @@ import org.allbinary.logic.communication.http.request.AbResponseHandler
 
 open public class DownloadItemsTag : TableTag {
         
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 this.setTagHelperFactory(DownloadItemsHelperFactory())
 this.setTagRequestHelperFactory(DownloadItemsRequestHelperFactory())
 }
@@ -46,10 +43,7 @@ this.setTagRequestHelperFactory(DownloadItemsRequestHelperFactory())
             
 open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
         try {
             
@@ -94,10 +88,7 @@ this.getPropertiesHashMap()!!.put(AbTagData.PARENT, parentTag)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 
 

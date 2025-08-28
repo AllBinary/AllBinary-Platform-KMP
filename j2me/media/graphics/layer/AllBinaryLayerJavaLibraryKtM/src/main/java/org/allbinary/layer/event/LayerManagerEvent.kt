@@ -38,10 +38,7 @@ open public class LayerManagerEvent : AllBinaryEventObject {
     private val crud: String
 public constructor        (layerManager: LayerManager, crud: String)                        
 
-                            : super(layerManager)
-
-        Updates for KMP build        
-        {
+                            : super(layerManager){
 var layerManager = layerManager
 var crud = crud
 
@@ -54,10 +51,7 @@ this.crud= crud
 
 open fun getLayerInterface()
         //nullable = true from not(false or (false and true)) = true
-: AllBinaryLayer
-
-        Updates for KMP build        
-        {
+: AllBinaryLayer{
 
 
 
@@ -68,20 +62,14 @@ open fun getLayerInterface()
 
 open fun setLayerInterface(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var layerInterface = layerInterface
 this.layerInterface= layerInterface
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

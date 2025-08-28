@@ -39,10 +39,7 @@ open public class DropLayerProcessor : BasicLayerProcessor {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BasicLayerProcessor
-
-        Updates for KMP build        
-        {
+: BasicLayerProcessor{
 
 
 
@@ -52,20 +49,14 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
-
-        Updates for KMP build        
-        {
+            private constructor        (){
 }
 
 
                 @Throws(Exception::class)
             override fun process(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allBinaryLayerManager = allBinaryLayerManager
 
     var list: BasicArrayList = this.getList()!!
@@ -79,9 +70,6 @@ var allBinaryLayerManager = allBinaryLayerManager
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var layerInterface: AllBinaryLayer = list.objectArray[index]!! as AllBinaryLayer

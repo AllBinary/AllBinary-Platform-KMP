@@ -35,18 +35,12 @@ open public class TrackingEventFactory
         
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 override fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AllBinaryEventObject
-
-        Updates for KMP build        
-        {
+: AllBinaryEventObject{
 
 
 

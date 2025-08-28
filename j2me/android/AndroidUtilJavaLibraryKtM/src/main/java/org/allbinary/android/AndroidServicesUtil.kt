@@ -44,10 +44,7 @@ open public class AndroidServicesUtil
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AndroidServicesUtil
-
-        Updates for KMP build        
-        {
+: AndroidServicesUtil{
 
 
 
@@ -79,10 +76,7 @@ open fun getInstance()
 
 open fun isServiceRunning(name: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var name = name
 
     var activityManager: ActivityManager = resourceUtil!!.getContext()!!.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
@@ -108,9 +102,6 @@ var name = name
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 runningServiceInfo= runningServicesList!!.get(index)
 serviceComponent= runningServiceInfo!!.service

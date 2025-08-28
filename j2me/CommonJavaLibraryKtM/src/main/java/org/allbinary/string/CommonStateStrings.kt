@@ -37,10 +37,7 @@ open public class CommonStateStrings
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CommonStateStrings
-
-        Updates for KMP build        
-        {
+: CommonStateStrings{
 
 
 

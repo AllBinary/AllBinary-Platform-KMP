@@ -36,15 +36,9 @@ open fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

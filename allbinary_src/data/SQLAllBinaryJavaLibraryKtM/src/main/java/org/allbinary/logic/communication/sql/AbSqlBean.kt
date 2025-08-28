@@ -42,10 +42,7 @@ open public class AbSqlBean : AbSqlRow {
     private val METHOD_IS_SUBSET_OF_ENTRY: String = "isSubsetOfEntry"
 public constructor        (databaseConnectionInfoInterface: DbConnectionInfo)                        
 
-                            : super(databaseConnectionInfoInterface)
-
-        Updates for KMP build        
-        {
+                            : super(databaseConnectionInfoInterface){
     //var databaseConnectionInfoInterface = databaseConnectionInfoInterface
 
 
@@ -56,10 +53,7 @@ public constructor        (databaseConnectionInfoInterface: DbConnectionInfo)
 
 open fun getField(key: String, value: String, requestedField: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
     //var key = key
     //var value = value
     //var requestedField = requestedField
@@ -88,9 +82,6 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
 
         while(rset.next())
-        
-
-        Updates for KMP build        
         {
 field= rset.getString(requestedField)
 
@@ -120,10 +111,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET_FIELD)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
@@ -145,10 +133,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET_FIELD)
 
 open fun getField(keysAndValues: HashMap<Any, Any>, requestedField: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
     //var keysAndValues = keysAndValues
     //var requestedField = requestedField
 
@@ -186,9 +171,6 @@ stringBuffer!!.append(sqlStrings!!.WHERE)
 
                         for (i in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 key= keyArray[i]!! as String
 value= .toCharArray()
@@ -215,9 +197,6 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
 
         while(rset.next())
-        
-
-        Updates for KMP build        
         {
 field= rset.getString(requestedField)
 
@@ -247,10 +226,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET_FIELD)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var sqlStatement: String = stringBuffer!!.toString()!!
 
@@ -275,10 +251,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET_FIELD)
 
 open fun isSubsetOfEntry(key: String, value: String, columnsAndValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
     //var key = key
     //var value = value
     //var columnsAndValues = columnsAndValues
@@ -303,9 +276,6 @@ stringBuffer!!.append(key)
 
                         for (i in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 stringBuffer!!.append(this.commonSeps!!.SPACE)
 stringBuffer!!.append(keyArray[i]!!.toString())
@@ -332,9 +302,6 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
 
         while(rset.next())
-        
-
-        Updates for KMP build        
         {
 
     var keyArray2: Array<Any?> = columnsAndValues!!.keySet()!!.toArray()!!
@@ -349,9 +316,6 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
                         for (i in 0 until size2)
 
-        
-
-        Updates for KMP build        
         {
 columnName= keyArray2[i]!!.toString()
 field= rset.getObject(columnName)!!.toString()
@@ -395,10 +359,7 @@ field= rset.getObject(columnName)!!.toString()
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var sqlStatement: String = stringBuffer!!.toString()!!
 

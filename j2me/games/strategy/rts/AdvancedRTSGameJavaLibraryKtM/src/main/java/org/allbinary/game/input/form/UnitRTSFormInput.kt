@@ -72,10 +72,7 @@ open public class UnitRTSFormInput : RTSFormInput {
     val newUnitGameNotificationEvent: GameNotificationEvent
 public constructor        (groupInterface: Array<Group?>)                        
 
-                            : super(groupInterface)
-
-        Updates for KMP build        
-        {
+                            : super(groupInterface){
     //var groupInterface = groupInterface
 
 
@@ -97,10 +94,7 @@ this.getHashtable()!!.put(WorkWaypoint.ID, smallIntegerSingletonFactory!!.getIns
             
 open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
 super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 
@@ -118,10 +112,7 @@ this.newUnitGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.getF
             
 open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, itemIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedRtsLayer = associatedRtsLayer
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
     //var layerManager = layerManager
@@ -175,10 +166,7 @@ this.attemptBuild(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, thi
             
 open fun attemptBuild(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, layerInterface: RTSLayer, itemIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedRtsLayer = associatedRtsLayer
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
     //var layerManager = layerManager

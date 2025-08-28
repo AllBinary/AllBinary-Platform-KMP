@@ -41,10 +41,7 @@ open public class BaseGameBehavior : DemoGameBehavior {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DemoGameBehavior
-
-        Updates for KMP build        
-        {
+: DemoGameBehavior{
 
 
 
@@ -63,10 +60,7 @@ open fun getInstance()
                 @Throws(Exception::class)
             override fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var gameAdState: GameAdState = GameAdStateFactory.getInstance()!!.getCurrentInstance()!!
 
@@ -75,10 +69,7 @@ gameAdState!!.playingAdState()
 
 override fun pause(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryGameCanvas = allBinaryGameCanvas
 
     var features: Features = Features.getInstance()!!
@@ -99,10 +90,7 @@ currentDisplayableFactory!!.setRunnable(allBinaryGameCanvas!!.gamePauseRunnable)
 
 override fun unPause(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryGameCanvas = allBinaryGameCanvas
 
     
@@ -123,10 +111,7 @@ currentDisplayableFactory!!.setDisplayable(allBinaryGameCanvas)
                 @Throws(Exception::class)
             override fun updateTouch(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryGameCanvas = allBinaryGameCanvas
 allBinaryGameCanvas!!.updateTouch2()
 }
@@ -135,10 +120,7 @@ allBinaryGameCanvas!!.updateTouch2()
                 @Throws(Exception::class)
             override fun updateScreenButtonPaintable(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryGameCanvas = allBinaryGameCanvas
 allBinaryGameCanvas!!.updateScreenButtonPaintable2()
 }
@@ -147,20 +129,14 @@ allBinaryGameCanvas!!.updateScreenButtonPaintable2()
                 @Throws(Exception::class)
             override fun setGameState(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryGameCanvas = allBinaryGameCanvas
 allBinaryGameCanvas!!.setGameState()
 }
 
 override fun removeAllGameKeyInputListeners(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryGameCanvas = allBinaryGameCanvas
 allBinaryGameCanvas!!.removeAllGameKeyInputListeners2()
 }
@@ -169,10 +145,7 @@ allBinaryGameCanvas!!.removeAllGameKeyInputListeners2()
                 @Throws(Exception::class)
             override fun updateEndGameProcessor(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryGameCanvas = allBinaryGameCanvas
 allBinaryGameCanvas!!.updateEndGameProcessor2()
 }
@@ -181,10 +154,7 @@ allBinaryGameCanvas!!.updateEndGameProcessor2()
                 @Throws(Exception::class)
             override fun buildGame(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryGameCanvas = allBinaryGameCanvas
 allBinaryGameCanvas!!.buildGame2()
 }
@@ -193,10 +163,7 @@ allBinaryGameCanvas!!.buildGame2()
                 @Throws(Exception::class)
             override fun run(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryGameCanvas = allBinaryGameCanvas
 allBinaryGameCanvas!!.run2()
 }
@@ -205,10 +172,7 @@ allBinaryGameCanvas!!.run2()
                 @Throws(Exception::class)
             override fun setHighScore(abeClientInformation: AbeClientInformationInterface, allBinaryGameCanvas: AllBinaryGameCanvas, name: String, score: Long, autoSubmit: Boolean, isLast: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
     //var allBinaryGameCanvas = allBinaryGameCanvas
     //var name = name

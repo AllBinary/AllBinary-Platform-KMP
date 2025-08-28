@@ -52,19 +52,13 @@ open public class OpenGLImageCache : ImageCache {
     private val list: BasicArrayList = BasicArrayList()
 
     private var renderer: AllBinaryRendererBase3 = AllBinaryRendererBase3()
-protected constructor        ()
-
-        Updates for KMP build        
-        {
+protected constructor        (){
 }
 
 
 open fun addListener(renderer: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var renderer = renderer
 this.renderer= renderer as AllBinaryRendererBase3
 }
@@ -74,10 +68,7 @@ this.renderer= renderer as AllBinaryRendererBase3
             
 open fun update(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
 this.gl= gl
 
@@ -86,9 +77,6 @@ this.gl= gl
         synchronized(lock) 
 
         //mutex.withLock
-        
-
-        Updates for KMP build        
         {
 
 
@@ -96,9 +84,6 @@ this.gl= gl
 
                         for (index in list.size() -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     var openGLESImage: OpenGLESImage = (list.objectArray[index]!! as OpenGLESImage)
@@ -124,10 +109,7 @@ this.gl= gl
                 @Throws(Exception::class)
             override fun createImage(caller: String, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var caller = caller
 var width = width
 var height = height
@@ -145,9 +127,6 @@ var height = height
                                 
 
         while((textureSize % 4) != 0)
-        
-
-        Updates for KMP build        
         {
 textureSize++
 }
@@ -166,9 +145,6 @@ height= textureSize
         synchronized(lock) 
 
         //mutex.withLock
-        
-
-        Updates for KMP build        
         {
 
     
@@ -189,10 +165,7 @@ height= textureSize
                 @Throws(Exception::class)
             override fun createImage(key: Any, inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var key = key
     //var inputStream = inputStream
 
@@ -207,9 +180,6 @@ height= textureSize
         synchronized(lock) 
 
         //mutex.withLock
-        
-
-        Updates for KMP build        
         {
 
     
@@ -229,10 +199,7 @@ height= textureSize
 
 open fun getGlP()
         //nullable = true from not(false or (false and true)) = true
-: GL10
-
-        Updates for KMP build        
-        {
+: GL10{
 
 
 
@@ -243,10 +210,7 @@ open fun getGlP()
 
 open fun init(image: Image)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var image = image
 
         try {
@@ -256,9 +220,6 @@ open fun init(image: Image)
         synchronized(lock) 
 
         //mutex.withLock
-        
-
-        Updates for KMP build        
         {
 
     
@@ -277,10 +238,7 @@ list.add(image)
 
 this.renderer.add(image)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }
 

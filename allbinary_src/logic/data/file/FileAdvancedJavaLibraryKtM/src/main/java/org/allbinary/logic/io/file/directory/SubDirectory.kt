@@ -42,10 +42,7 @@ open public class SubDirectory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: SubDirectory
-
-        Updates for KMP build        
-        {
+: SubDirectory{
 
 
 
@@ -56,10 +53,7 @@ open fun getInstance()
 
 open fun toString(files: BasicArrayList)
         //nullable = true from not(false or (true and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var files = files
 
     var stringBuffer: StringMaker = StringMaker()
@@ -76,9 +70,6 @@ var files = files
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var file: AbFile = files.get(index) as AbFile
@@ -100,19 +91,13 @@ stringBuffer!!.append(NEW_LINE)
     private val directory: Directory = Directory.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun search(fileFilter: FileFilter, file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 var fileFilter = fileFilter
 var file = file
 
@@ -125,10 +110,7 @@ var file = file
 
 open fun search(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 var file = file
 
 
@@ -140,10 +122,7 @@ var file = file
 
 open fun search(searchValue: String, file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 var searchValue = searchValue
 var file = file
 
@@ -156,10 +135,7 @@ var file = file
 
 open fun search(level: Int, file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 var level = level
 var file = file
 

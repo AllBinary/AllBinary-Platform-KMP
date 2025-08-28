@@ -35,10 +35,7 @@ open public class ToDomHelper
             
 open fun convertNull(value: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var value = value
 
     
@@ -57,9 +54,6 @@ var value = value
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

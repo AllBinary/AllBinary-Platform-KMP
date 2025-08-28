@@ -46,10 +46,7 @@ open public class HitPointGameObject : MeteredGameObject
     private val IS_CLOSE_DEATH_LABEL: String = "isCloseDeath: "
 public constructor        (bufferedImage: Array<BufferedImage?>, minX: Object, maxX: Object, y: Object)                        
 
-                            : super(bufferedImage, minX, maxX, y)
-
-        Updates for KMP build        
-        {
+                            : super(bufferedImage, minX, maxX, y){
 var bufferedImage = bufferedImage
 var minX = minX
 var maxX = maxX
@@ -91,10 +88,7 @@ var y = y
 
 open fun isMoreThan(aFloat: Float)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var aFloat = aFloat
 
     
@@ -123,10 +117,7 @@ var aFloat = aFloat
 
 open fun isCloseDeath()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -137,10 +128,7 @@ open fun isCloseDeath()
 
 open fun setCloseDeath(closeDeath: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var closeDeath = closeDeath
 this.closeDeath= closeDeath
 }
@@ -148,10 +136,7 @@ this.closeDeath= closeDeath
 
 open fun isDamaged()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -162,20 +147,14 @@ open fun isDamaged()
 
 open fun setDamaged(damaged: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var damaged = damaged
 this.damaged= damaged
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

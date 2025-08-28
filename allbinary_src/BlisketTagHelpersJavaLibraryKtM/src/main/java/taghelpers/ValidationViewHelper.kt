@@ -41,10 +41,7 @@ open public class ValidationViewHelper : ViewHelper
     private var viewInterface: ValidationComponentInterface
 public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
-                            : super(hashMap, pageContext)
-
-        Updates for KMP build        
-        {
+                            : super(hashMap, pageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 
@@ -66,10 +63,7 @@ viewInterface= this.getViewObject() as ValidationComponentInterface
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             
@@ -87,10 +81,7 @@ open fun isValid()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return viewInterface!!.isValid()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
@@ -112,10 +103,7 @@ open fun isValid()
 
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -124,10 +112,7 @@ open fun validationInfo()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return viewInterface!!.validationInfo()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
@@ -149,10 +134,7 @@ open fun validationInfo()
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
         try {
             
@@ -161,10 +143,7 @@ open fun toValidationInfoDoc()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return viewInterface!!.toValidationInfoDoc()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
@@ -186,10 +165,7 @@ open fun toValidationInfoDoc()
 
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
         try {
@@ -199,10 +175,7 @@ var document = document
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return viewInterface!!.toValidationInfoNode(document)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))

@@ -34,26 +34,17 @@ open fun add(cacheableInterface: CacheableInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun add(cacheableInterfaces: Array<CacheableInterface?>)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

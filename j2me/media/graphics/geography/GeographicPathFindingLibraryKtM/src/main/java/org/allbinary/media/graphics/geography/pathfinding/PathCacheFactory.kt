@@ -41,10 +41,7 @@ open public class PathCacheFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PathCacheFactory
-
-        Updates for KMP build        
-        {
+: PathCacheFactory{
 
 
 
@@ -58,19 +55,13 @@ open fun getInstance()
     private var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -81,10 +72,7 @@ open fun getSize()
 
 open fun add(pathId: Integer, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var pathId = pathId
 var list = list
 this.hashtable.put(pathId, list)
@@ -93,10 +81,7 @@ this.hashtable.put(pathId, list)
 
 open fun remove(pathId: Integer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var pathId = pathId
 this.hashtable.remove(pathId)
 }
@@ -106,10 +91,7 @@ this.hashtable.remove(pathId)
             
 open fun removeAll()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.hashtable.clear()
 
     
@@ -130,10 +112,7 @@ this.hashtable.clear()
             
 open fun getInstance(pathIdInteger: Integer)
         //nullable =  from not(true or (false and false)) = 
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 var pathIdInteger = pathIdInteger
 
 

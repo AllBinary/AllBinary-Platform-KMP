@@ -42,19 +42,13 @@ open public class CustomLoaderTag : CustomTagSupport {
     private var command: String
 
     private var webappPath: String
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 
 open fun setCommand(command: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var command = command
 this.command= command
 }
@@ -62,10 +56,7 @@ this.command= command
 
 open fun setWebappPath(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.webappPath= value
 }
@@ -75,10 +66,7 @@ this.webappPath= value
             
 open fun setCustomLoaderWebappPath()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             
@@ -87,10 +75,7 @@ open fun setCustomLoaderWebappPath()
 urlGlobals!!.setWebappPath(this.webappPath)
 URLGLOBALS.init(urlGlobals)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
@@ -109,10 +94,7 @@ URLGLOBALS.init(urlGlobals)
             
 open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
         try {
             
@@ -149,10 +131,7 @@ open fun doStartTag()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 } catch(e: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 
 
@@ -161,10 +140,7 @@ AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
                         return SKIP_BODY
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 
 

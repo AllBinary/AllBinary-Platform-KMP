@@ -39,10 +39,7 @@ open public class ImageAnimation : IndexedAnimation {
     private val image: Image
 public constructor        (image: Image, animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(animationBehavior){
     //var image = image
     //var animationBehavior = animationBehavior
 
@@ -56,10 +53,7 @@ this.image= image
                 @Throws(Exception::class)
             override fun getAnimationSize()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -69,35 +63,23 @@ this.image= image
 
 override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var index = index
 }
 
 override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -107,10 +89,7 @@ override fun getFrame()
 
 override fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -120,19 +99,13 @@ override fun getSize()
 
 override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var sequence = sequence
 }
 
 override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
-: IntArray
-
-        Updates for KMP build        
-        {
+: IntArray{
 
 
 
@@ -144,10 +117,7 @@ override fun getSequence()
     private var anchor: Int = Anchor.TOP_LEFT
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 var x = x
 var y = y
@@ -157,10 +127,7 @@ graphics.drawImage(this.image, x, y, anchor)
 
 open fun getImage()
         //nullable = true from not(false or (false and true)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
 
 
 
@@ -171,10 +138,7 @@ open fun getImage()
 
 open fun close()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 DisposalUtil.getInstance()!!.dispose(this.image)
 }
 
@@ -182,10 +146,7 @@ DisposalUtil.getInstance()!!.dispose(this.image)
                 @Throws(Throwable::class)
             override fun finalize()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 DisposalUtil.getInstance()!!.dispose(this.image)
 }
 

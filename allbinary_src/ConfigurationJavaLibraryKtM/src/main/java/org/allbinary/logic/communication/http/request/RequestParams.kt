@@ -49,18 +49,12 @@ open public class RequestParams
     private var map: Map
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 logUtil!!.put("New RequestParams Size: 0", this, this.commonStrings!!.CONSTRUCTOR)
 }
 
 public constructor        (request: HttpServletRequest)
             : super()
-        
-
-        Updates for KMP build        
         {
 var request = request
 map= request.getParameterMap()
@@ -69,9 +63,6 @@ logUtil!!.put("RequestParams Size: " +this.getMap()!!.keySet()!!.size(), this, t
 
 public constructor        (pageContext: PageContext)
             : super()
-        
-
-        Updates for KMP build        
         {
 var pageContext = pageContext
 map= pageContext!!.getRequest()!!.getParameterMap()
@@ -81,10 +72,7 @@ logUtil!!.put("Request Params Size: " +this.getMap()!!.keySet()!!.size(), this, 
 
 open fun setMap(map: Map)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var map = map
 this.map= map
 }
@@ -92,10 +80,7 @@ this.map= map
 
 open fun getMap()
         //nullable = true from not(false or (false and true)) = true
-: Map
-
-        Updates for KMP build        
-        {
+: Map{
 
 
 
@@ -110,10 +95,7 @@ open fun getMap()
 
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
         try {
@@ -139,9 +121,6 @@ var document = document
 
                         for (i in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var key: String = keyArray[i]!! as String
@@ -164,10 +143,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, RequestData.PARAMET
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "toXmlNode(document)", e)
 
 
@@ -183,10 +159,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "toXmlNode(document)", e)
             
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -209,9 +182,6 @@ open fun toHashMap()
 
                         for (i in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var key: String = keyArray[i]!! as String

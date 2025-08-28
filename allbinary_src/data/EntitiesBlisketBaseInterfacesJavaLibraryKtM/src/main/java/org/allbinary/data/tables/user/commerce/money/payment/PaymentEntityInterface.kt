@@ -37,50 +37,29 @@ open fun getLastId(userName: String)
         //nullable = true from not(false or (false and false)) = true
 : String
 
-        Updates for KMP build        
-        
-
 open fun setDefault(userName: String, index: Integer)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 open fun getDefault(userName: String)
         //nullable = true from not(false or (false and false)) = true
 : PaymentInterface
 
-        Updates for KMP build        
-        
-
 open fun get(userName: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector
-
-        Updates for KMP build        
-        
 
 open fun add(userName: String, paymentInterface: PaymentInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun remove(userName: String, index: Integer)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

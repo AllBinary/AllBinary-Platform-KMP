@@ -35,17 +35,11 @@ open fun damage(damage: Int, damageType: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun getDamage(damageType: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int
-
-        Updates for KMP build        
-        
 
 }
                 

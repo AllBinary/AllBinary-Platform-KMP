@@ -41,10 +41,7 @@ open public class InGameFeatureChoiceGroups
 
 open fun getExclusiveInstance()
         //nullable = true from not(false or (false and true)) = true
-: InGameFeatureChoiceGroups
-
-        Updates for KMP build        
-        {
+: InGameFeatureChoiceGroups{
 
 
 
@@ -55,10 +52,7 @@ open fun getExclusiveInstance()
 
 open fun getMultipleInstance()
         //nullable = true from not(false or (false and true)) = true
-: InGameFeatureChoiceGroups
-
-        Updates for KMP build        
-        {
+: InGameFeatureChoiceGroups{
 
 
 
@@ -72,19 +66,13 @@ open fun getMultipleInstance()
     private var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>
-
-        Updates for KMP build        
-        {
+: Hashtable<Any, Any>{
 
 
 
@@ -95,10 +83,7 @@ open fun get()
 
 open fun add(name: String, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var name = name
 var list = list
 hashtable.put(name, list)

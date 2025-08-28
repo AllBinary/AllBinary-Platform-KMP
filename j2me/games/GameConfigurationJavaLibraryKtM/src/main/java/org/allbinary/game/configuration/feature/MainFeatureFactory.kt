@@ -37,10 +37,7 @@ open public class MainFeatureFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: MainFeatureFactory
-
-        Updates for KMP build        
-        {
+: MainFeatureFactory{
 
 
 

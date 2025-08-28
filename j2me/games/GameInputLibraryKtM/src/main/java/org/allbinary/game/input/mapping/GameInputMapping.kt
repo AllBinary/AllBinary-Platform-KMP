@@ -38,9 +38,6 @@ open public class GameInputMapping
     private var gameKey: GameKey = GameKey.NULL_GAME_KEY
 public constructor        (name: String, gameKey: GameKey)
             : super()
-        
-
-        Updates for KMP build        
         {
 var name = name
 var gameKey = gameKey
@@ -51,10 +48,7 @@ this.setGameKey(gameKey)
 
 open fun setGameKey(gameKey: GameKey)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gameKey = gameKey
 this.gameKey= gameKey
 }
@@ -62,10 +56,7 @@ this.gameKey= gameKey
 
 open fun getGameKey()
         //nullable = true from not(false or (false and true)) = true
-: GameKey
-
-        Updates for KMP build        
-        {
+: GameKey{
 
 
 
@@ -76,10 +67,7 @@ open fun getGameKey()
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var name = name
 this.name= name
 }
@@ -87,10 +75,7 @@ this.name= name
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

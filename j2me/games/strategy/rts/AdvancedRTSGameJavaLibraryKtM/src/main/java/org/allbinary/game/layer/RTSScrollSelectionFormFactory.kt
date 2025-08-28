@@ -47,10 +47,7 @@ open public class RTSScrollSelectionFormFactory
             
 open fun getInstance(formLabel: String, items: Array<CustomItem?>)
         //nullable =  from not(true or (false and false)) = 
-: MultipleScrollSelectionHorizontalForm
-
-        Updates for KMP build        
-        {
+: MultipleScrollSelectionHorizontalForm{
     //var formLabel = formLabel
     //var items = items
 

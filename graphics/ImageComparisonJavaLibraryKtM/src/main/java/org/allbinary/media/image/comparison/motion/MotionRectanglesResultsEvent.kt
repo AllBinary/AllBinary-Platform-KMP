@@ -35,10 +35,7 @@ open public class MotionRectanglesResultsEvent : AllBinaryEventObject {
     private var motionRectangles: MotionRectangles
 public constructor        (anyType: Any, frame: Long, motionRectangles: MotionRectangles)                        
 
-                            : super(anyType)
-
-        Updates for KMP build        
-        {
+                            : super(anyType){
 var anyType = anyType
 var frame = frame
 var motionRectangles = motionRectangles
@@ -53,10 +50,7 @@ this.setMotionRectangles(motionRectangles)
 
 open fun getMotionRectangles()
         //nullable = true from not(false or (false and true)) = true
-: MotionRectangles
-
-        Updates for KMP build        
-        {
+: MotionRectangles{
 
 
 
@@ -67,10 +61,7 @@ open fun getMotionRectangles()
 
 open fun setMotionRectangles(motionRectangles: MotionRectangles)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var motionRectangles = motionRectangles
 this.motionRectangles= motionRectangles
 }
@@ -78,10 +69,7 @@ this.motionRectangles= motionRectangles
 
 open fun getFrame()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 

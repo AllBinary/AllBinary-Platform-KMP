@@ -32,36 +32,21 @@ open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-        Updates for KMP build        
-        
-
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 open fun getEventListenerClassPath()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-        Updates for KMP build        
-        
-
 open fun setEventListenerClassPath(eventListenerClassPath: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun log()
         //nullable = true from not(false or (false and true)) = true
 : String
-
-        Updates for KMP build        
-        
 
 }
                 

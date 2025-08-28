@@ -42,10 +42,7 @@ open public class AccelerometerSensorFactory
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var features: Features = Features.getInstance()!!
 
@@ -98,10 +95,7 @@ open fun init()
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AllBinaryOrientationSensor
-
-        Updates for KMP build        
-        {
+: AllBinaryOrientationSensor{
 
 
 

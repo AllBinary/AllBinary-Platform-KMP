@@ -39,10 +39,7 @@ open public class ResourceLoadingLevelFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ResourceLoadingLevelFactory
-
-        Updates for KMP build        
-        {
+: ResourceLoadingLevelFactory{
 
 
 
@@ -74,10 +71,7 @@ open fun getInstance()
 
 open fun getLevelString(level: Int)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var level = level
 
 
@@ -85,9 +79,6 @@ var level = level
 
                         for (index in 0 until RESOURCE_LOADING_LEVEL_ARRAY.size)
 
-        
-
-        Updates for KMP build        
         {
 
     

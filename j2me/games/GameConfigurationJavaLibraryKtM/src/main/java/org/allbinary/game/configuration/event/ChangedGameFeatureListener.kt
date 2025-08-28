@@ -36,10 +36,7 @@ open public class ChangedGameFeatureListener : BaseChangedGameFeatureListener {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ChangedGameFeatureListener
-
-        Updates for KMP build        
-        {
+: ChangedGameFeatureListener{
 
 
 
@@ -57,10 +54,7 @@ open fun getInstance()
         
 open fun isChanged(gameConfiguration: GameConfiguration)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var gameConfiguration = gameConfiguration
 
 

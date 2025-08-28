@@ -17,10 +17,7 @@ open public class NullRotationAnimation : RotationAnimation {
         
  constructor        (angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
 
-                            : super(angleInfo, totalAngle, animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(angleInfo, totalAngle, animationBehavior){
     //var angleInfo = angleInfo
     //var totalAngle = totalAngle
     //var animationBehavior = animationBehavior
@@ -32,10 +29,7 @@ open public class NullRotationAnimation : RotationAnimation {
 
  constructor        (animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(animationBehavior){
     //var animationBehavior = animationBehavior
 
 
@@ -47,10 +41,7 @@ open public class NullRotationAnimation : RotationAnimation {
                 @Throws(Exception::class)
             override fun getAnimationSize()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

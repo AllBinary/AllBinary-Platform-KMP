@@ -37,9 +37,6 @@ open public class VehicleProperties
     private var vehicleFrictionProperties: VehicleFrictionProperties
 public constructor        (velocityProperties: VelocityProperties, vehicleFrictionProperties: VehicleFrictionProperties)
             : super()
-        
-
-        Updates for KMP build        
         {
 var velocityProperties = velocityProperties
 var vehicleFrictionProperties = vehicleFrictionProperties
@@ -50,10 +47,7 @@ this.setVehicleFrictionProperties(vehicleFrictionProperties)
 
 open fun getVehicleFrictionProperties()
         //nullable = true from not(false or (false and true)) = true
-: VehicleFrictionProperties
-
-        Updates for KMP build        
-        {
+: VehicleFrictionProperties{
 
 
 
@@ -64,10 +58,7 @@ open fun getVehicleFrictionProperties()
 
 open fun setVehicleFrictionProperties(vehicleFrictionProperties: VehicleFrictionProperties)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var vehicleFrictionProperties = vehicleFrictionProperties
 this.vehicleFrictionProperties= vehicleFrictionProperties
 }
@@ -75,10 +66,7 @@ this.vehicleFrictionProperties= vehicleFrictionProperties
 
 open fun getVelocityProperties()
         //nullable = true from not(false or (false and true)) = true
-: VelocityProperties
-
-        Updates for KMP build        
-        {
+: VelocityProperties{
 
 
 

@@ -37,10 +37,7 @@ open public class ValidationView : ShippingAddressesView
         
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(transformInfoInterface)
-
-        Updates for KMP build        
-        {
+                            : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
 
 
@@ -51,10 +48,7 @@ var transformInfoInterface = transformInfoInterface
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     var billingAddressesEntity: ShippingAddressesEntity = ShippingAddressesEntity(this.getWeblisketSession()!!.getUserName())
 
@@ -83,9 +77,6 @@ this.streetAddressList= billingAddressesEntity!!.get()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var streetAddress: StreetAddress = streetAddressList!!.get(index) as StreetAddress
@@ -124,10 +115,7 @@ this.streetAddressList= billingAddressesEntity!!.get()
 
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -138,10 +126,7 @@ open fun validationInfo()
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
 
 
@@ -152,10 +137,7 @@ open fun toValidationInfoDoc()
 
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
 

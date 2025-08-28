@@ -38,10 +38,7 @@ open public class Direction
 
 open fun getInstance(direction: Int)
         //nullable =  from not(true or (false and false)) = 
-: Direction
-
-        Updates for KMP build        
-        {
+: Direction{
 var direction = direction
 
 
@@ -62,9 +59,6 @@ var direction = direction
     private var frameFactor: Int
  constructor        (name: String, otherName: String, value: Int, frameFactor: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var name = name
 var otherName = otherName
@@ -79,9 +73,6 @@ directionArray[value]= this
 
  constructor        (name: String, otherName: String, value: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var name = name
 var otherName = otherName
@@ -96,10 +87,7 @@ directionArray[value]= this
 
 open fun getValue()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -110,10 +98,7 @@ open fun getValue()
 
 open fun getFrameFactor()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -124,10 +109,7 @@ open fun getFrameFactor()
 
 open fun getOtherName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -138,10 +120,7 @@ open fun getOtherName()
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -151,10 +130,7 @@ open fun getName()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

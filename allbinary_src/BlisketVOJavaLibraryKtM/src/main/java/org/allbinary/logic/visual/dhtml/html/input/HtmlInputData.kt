@@ -37,10 +37,7 @@ open public class HtmlInputData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: HtmlInputData
-
-        Updates for KMP build        
-        {
+: HtmlInputData{
 
 
 

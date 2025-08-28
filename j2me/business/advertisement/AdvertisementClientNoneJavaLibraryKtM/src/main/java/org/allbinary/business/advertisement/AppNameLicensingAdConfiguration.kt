@@ -17,10 +17,7 @@ open public class AppNameLicensingAdConfiguration : AdConfiguration {
         
 public constructor        ()                        
 
-                            : super(arrayOf(StringUtil.getInstance()!!.EMPTY_STRING,StringUtil.getInstance()!!.EMPTY_STRING,StringUtil.getInstance()!!.EMPTY_STRING))
-
-        Updates for KMP build        
-        {
+                            : super(arrayOf(StringUtil.getInstance()!!.EMPTY_STRING,StringUtil.getInstance()!!.EMPTY_STRING,StringUtil.getInstance()!!.EMPTY_STRING)){
 
 
                             //For kotlin this is before the body of the constructor.

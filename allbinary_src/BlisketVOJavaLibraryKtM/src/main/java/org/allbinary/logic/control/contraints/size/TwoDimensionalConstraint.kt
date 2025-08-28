@@ -38,9 +38,6 @@ open public class TwoDimensionalConstraint
     private var heightSizeConstraintInterface: SizeConstraintInterface
 public constructor        (node: Node)
             : super()
-        
-
-        Updates for KMP build        
         {
 var node = node
 }
@@ -48,10 +45,7 @@ var node = node
 
 open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
-: SizeConstraintInterface
-
-        Updates for KMP build        
-        {
+: SizeConstraintInterface{
 
 
 
@@ -62,10 +56,7 @@ open fun getHeight()
 
 open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: SizeConstraintInterface
-
-        Updates for KMP build        
-        {
+: SizeConstraintInterface{
 
 
 
@@ -76,10 +67,7 @@ open fun getWidth()
 
 open fun setHeight(heightSizeConstraintInterface: SizeConstraintInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var heightSizeConstraintInterface = heightSizeConstraintInterface
 this.heightSizeConstraintInterface= heightSizeConstraintInterface
 }
@@ -87,10 +75,7 @@ this.heightSizeConstraintInterface= heightSizeConstraintInterface
 
 open fun setWidth(widthSizeConstraintInterface: SizeConstraintInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var widthSizeConstraintInterface = widthSizeConstraintInterface
 this.widthSizeConstraintInterface= widthSizeConstraintInterface
 }

@@ -45,10 +45,7 @@ open public class FlockingAI : BasicAI {
     private val allowedDistance: Int
 public constructor        (hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
-                            : super(ownerLayerInterface, gameInput)
-
-        Updates for KMP build        
-        {
+                            : super(ownerLayerInterface, gameInput){
 var hashtable = hashtable
 var ownerLayerInterface = ownerLayerInterface
 var gameInput = gameInput
@@ -66,10 +63,7 @@ this.allowedDistance= allowedDistance!!.toInt()
                 @Throws(Exception::class)
             override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allBinaryLayerManager = allBinaryLayerManager
 
     var maxDistance: Int = 0
@@ -92,9 +86,6 @@ var allBinaryLayerManager = allBinaryLayerManager
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var allBinaryLayer: AllBinaryLayer = list.get(index) as AllBinaryLayer
@@ -193,10 +184,7 @@ farAllbinaryLayer= allBinaryLayer
 
 open fun getXYDistance(allBinaryLayer: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var allBinaryLayer = allBinaryLayer
 
     var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!

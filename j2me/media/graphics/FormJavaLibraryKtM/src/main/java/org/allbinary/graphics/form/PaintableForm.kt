@@ -42,10 +42,7 @@ open public class PaintableForm : CustomForm {
     var formType: FormType = FormTypeFactory.getInstance()!!.NULL_FORM_TYPE
 public constructor        (title: String, items: Array<CustomItem?>, rectangle: Rectangle, formType: FormType, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(title, items, backgroundBasicColor, foregroundBasicColor)
-
-        Updates for KMP build        
-        {
+                            : super(title, items, backgroundBasicColor, foregroundBasicColor){
     //var title = title
     //var items = items
     //var rectangle = rectangle
@@ -61,10 +58,7 @@ this.setSelectedIndex(0)
         try {
             this.init(rectangle, formType)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
@@ -75,10 +69,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
             
 open fun init(rectangle: Rectangle, formType: FormType)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var rectangle = rectangle
     //var formType = formType
 this.rectangle= rectangle
@@ -92,10 +83,7 @@ this.formType= formType
 
 override fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

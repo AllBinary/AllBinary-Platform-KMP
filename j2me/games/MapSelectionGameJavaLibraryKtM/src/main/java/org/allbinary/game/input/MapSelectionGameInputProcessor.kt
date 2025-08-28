@@ -71,10 +71,7 @@ open public class MapSelectionGameInputProcessor : Processor
                                 
 open fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             this.setRunning(true)
@@ -90,10 +87,7 @@ gameCanvas!!.buildGame(false)
 GameKeyEventHandler.getInstance()!!.removeListener(getPlayerGameInput())
 this.setRunning(false)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 this.setRunning(false)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -105,10 +99,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 
                                 }
                             
-public constructor        (gameCanvas: AllBinaryGameCanvas, raceTrackGeographicMapInterfaceFactoryInterface: MultiLevelRaceTrackGeographicMapInterfaceFactoryInterface, mapSelectorPaintable: PreGameSelectorPaintable, lockedIndex: Int)
-
-        Updates for KMP build        
-        {
+public constructor        (gameCanvas: AllBinaryGameCanvas, raceTrackGeographicMapInterfaceFactoryInterface: MultiLevelRaceTrackGeographicMapInterfaceFactoryInterface, mapSelectorPaintable: PreGameSelectorPaintable, lockedIndex: Int){
 var gameCanvas = gameCanvas
 var raceTrackGeographicMapInterfaceFactoryInterface = raceTrackGeographicMapInterfaceFactoryInterface
 var mapSelectorPaintable = mapSelectorPaintable
@@ -125,10 +116,7 @@ this.lockedIndex= lockedIndex
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.getPlayerGameInput()!!.update()
 }
 
@@ -137,10 +125,7 @@ this.getPlayerGameInput()!!.update()
             
 open fun onInput(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var list = list
 
     var size: Int = list.size()!!
@@ -151,9 +136,6 @@ var list = list
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var anyType: Any = list.get(index)!!
@@ -232,29 +214,20 @@ list.clear()
             
 open fun processInput(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var layerManager = layerManager
 }
 
 
 open fun initInputProcessors()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -265,10 +238,7 @@ open fun getName()
 
 open fun getPlayerGameInput()
         //nullable = true from not(false or (false and true)) = true
-: PlayerGameInput
-
-        Updates for KMP build        
-        {
+: PlayerGameInput{
 
 
 

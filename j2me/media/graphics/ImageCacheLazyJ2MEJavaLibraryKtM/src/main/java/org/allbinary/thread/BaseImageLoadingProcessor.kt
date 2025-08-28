@@ -37,10 +37,7 @@ open public class BaseImageLoadingProcessor
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BaseImageLoadingProcessor
-
-        Updates for KMP build        
-        {
+: BaseImageLoadingProcessor{
 
 
 
@@ -58,10 +55,7 @@ open fun getInstance()
         
 open fun runTask()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 

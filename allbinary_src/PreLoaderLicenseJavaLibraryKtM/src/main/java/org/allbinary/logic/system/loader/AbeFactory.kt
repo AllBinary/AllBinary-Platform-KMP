@@ -49,10 +49,7 @@ open public class AbeFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AbeFactory
-
-        Updates for KMP build        
-        {
+: AbeFactory{
 
 
 
@@ -68,9 +65,6 @@ open fun getInstance()
     private var useCustomLoader: Boolean = false
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -80,10 +74,7 @@ private constructor        ()
 
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, className: String)
         //nullable =  from not(true or (false and false)) = 
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
     //var abeClientInformation = abeClientInformation
     //var className = className
 
@@ -94,10 +85,7 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, classN
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this::class.createInstance()
 } catch(e: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
@@ -113,10 +101,7 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, classN
                             throw e
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
@@ -141,10 +126,7 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, classN
 
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, className: String, classes: Array<KClass<*>?>, params: Array<Any?>)
         //nullable =  from not(true or (false and false)) = 
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
     //var abeClientInformation = abeClientInformation
 var className = className
 var classes = classes
@@ -193,10 +175,7 @@ constructor= myClass!!.getConstructor(classes)
                         }
                             
 } catch(e: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
@@ -219,10 +198,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "getInstance(className,params)", 
                             throw e
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
@@ -254,10 +230,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "getInstance(className,params)", 
 
 open fun ::class(abeClientInformation: AbeClientInformationInterface, className: String)
         //nullable = true from not(false or (false and false)) = true
-: KClass<*>
-
-        Updates for KMP build        
-        {
+: KClass<*>{
     //var abeClientInformation = abeClientInformation
     //var className = className
 
@@ -297,10 +270,7 @@ open fun ::class(abeClientInformation: AbeClientInformationInterface, className:
                         }
                             
 } catch(e: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
@@ -316,10 +286,7 @@ open fun ::class(abeClientInformation: AbeClientInformationInterface, className:
                             throw e
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))

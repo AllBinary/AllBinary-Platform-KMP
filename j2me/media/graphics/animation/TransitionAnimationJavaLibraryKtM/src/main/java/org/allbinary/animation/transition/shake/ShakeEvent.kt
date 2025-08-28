@@ -32,9 +32,6 @@ open public class ShakeEvent
         
  constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

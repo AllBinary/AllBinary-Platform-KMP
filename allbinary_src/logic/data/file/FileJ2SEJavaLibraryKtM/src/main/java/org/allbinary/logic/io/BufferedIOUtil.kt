@@ -44,10 +44,7 @@ open public class BufferedIOUtil
             
 open fun copy(backupFile: AbFile, backupFileBak: AbFile)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var backupFile = backupFile
 var backupFileBak = backupFileBak
 
@@ -61,9 +58,6 @@ var backupFileBak = backupFileBak
 
 
         while(true)
-        
-
-        Updates for KMP build        
         {
 line= tmpIn!!.readLine()
 

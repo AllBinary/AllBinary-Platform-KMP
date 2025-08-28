@@ -41,10 +41,7 @@ open public class ImageCopyUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageCopyUtil
-
-        Updates for KMP build        
-        {
+: ImageCopyUtil{
 
 
 
@@ -60,9 +57,6 @@ open fun getInstance()
     private val imageCreationUtil: ImageCreationUtil = ImageCreationUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -73,10 +67,7 @@ private constructor        ()
             
 open fun createImageForRotation(originalImage: Image)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var originalImage = originalImage
 
 
@@ -90,10 +81,7 @@ open fun createImageForRotation(originalImage: Image)
             
 open fun createImage(originalImage: Image)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var originalImage = originalImage
 
     var image: Image = imageCreationUtil!!.getInstance(originalImage!!.getWidth(), originalImage!!.getHeight())!!
@@ -127,10 +115,7 @@ open fun createImage(originalImage: Image)
             
 open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var originalImage = originalImage
     //var canvasScale = canvasScale
     //var resize = resize

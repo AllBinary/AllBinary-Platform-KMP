@@ -50,9 +50,6 @@ open public class Sounds
     private val soundsFactoryInterface: SoundsFactoryInterface
 public constructor        (soundsFactoryInterface: SoundsFactoryInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var soundsFactoryInterface = soundsFactoryInterface
 this.soundsFactoryInterface= soundsFactoryInterface
@@ -63,10 +60,7 @@ this.soundsFactoryInterface= soundsFactoryInterface
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.INIT)
 
     var commonLabels: CommonLabels = CommonLabels.getInstance()!!
@@ -96,9 +90,6 @@ soundsFactoryInterface!!.init()
 
                         for (i in 0 until soundInterfaceArray!!.size)
 
-        
-
-        Updates for KMP build        
         {
 
     var soundInterface: Sound = soundInterfaceArray[i]!!
@@ -135,10 +126,7 @@ logUtil!!.put(commonStrings!!.END, this, commonStrings!!.INIT)
             
 open fun stopAll()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 logUtil!!.put(commonStrings!!.START, this, this.soundStrings!!.STOP_ALL)
 
     var soundInterfaceArray: Array<Sound?> = soundsFactoryInterface!!.getSoundInterfaceArray()!!
@@ -155,9 +143,6 @@ logUtil!!.put(commonStrings!!.START, this, this.soundStrings!!.STOP_ALL)
 
                         for (index in 0 until soundInterfaceArray!!.size)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -191,10 +176,7 @@ progressCanvas!!.addPortion(100, this.soundStrings!!.STOPPING_SOUND, index)
             
 open fun closeAll()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 logUtil!!.put(commonStrings!!.START, this, this.soundStrings!!.CLOSE_ALL)
 
     var soundInterfaceArray: Array<Sound?> = soundsFactoryInterface!!.getSoundInterfaceArray()!!
@@ -211,9 +193,6 @@ logUtil!!.put(commonStrings!!.START, this, this.soundStrings!!.CLOSE_ALL)
 
                         for (index in 0 until soundInterfaceArray!!.size)
 
-        
-
-        Updates for KMP build        
         {
 
     

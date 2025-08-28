@@ -50,10 +50,7 @@ open public class TimedFireAI : BasicAI {
     private val delay: Int
 public constructor        (delay: Int, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
-                            : super(ownerLayerInterface, gameInput)
-
-        Updates for KMP build        
-        {
+                            : super(ownerLayerInterface, gameInput){
 var delay = delay
 var ownerLayerInterface = ownerLayerInterface
 var gameInput = gameInput
@@ -68,10 +65,7 @@ this.delay= delay
                 @Throws(Exception::class)
             override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allBinaryLayerManager = allBinaryLayerManager
 
     var timeFiredInterface: TimeFiredInterface = this.getOwnerLayerInterface() as TimeFiredInterface

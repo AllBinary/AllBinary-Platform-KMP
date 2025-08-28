@@ -55,9 +55,6 @@ open public class MotionRectanglesImageInputOutput
     private val NUMBER_OF_IMAGES: Int = 1
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -66,10 +63,7 @@ public constructor        ()
             
 open fun save(frame: Long)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var frame = frame
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -112,10 +106,7 @@ this.save(motionRectangles, frame)
             
 open fun save(motionRectangles: MotionRectangles, frame: Long)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var motionRectangles = motionRectangles
 var frame = frame
 
@@ -169,9 +160,6 @@ logUtil!!.put("Motion Image File Path 2: " +filePathStringBuffer3!!.toString(), 
 
                         for (index in 0 until NUMBER_OF_IMAGES)
 
-        
-
-        Updates for KMP build        
         {
 bufferedImageCacheables[index]= poolInterface!!.remove(bufferedImageInfo) as BufferedImageCacheable
 }
@@ -196,9 +184,6 @@ bufferedImageGraphicsArray= arrayOfNulls(NUMBER_OF_IMAGES)
 
                         for (index in 0 until NUMBER_OF_IMAGES)
 
-        
-
-        Updates for KMP build        
         {
 bufferedImageGraphicsArray[index]= bufferedImageCacheables[index]!!.getBufferedImage()!!.getGraphics()
 }
@@ -215,9 +200,6 @@ bufferedImageGraphicsArray[index]= bufferedImageCacheables[index]!!.getBufferedI
 
                         for (index2 in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var motionRectangle: MotionRectangle = rectangelList!!.get(index2) as MotionRectangle
@@ -231,9 +213,6 @@ bufferedImageGraphicsArray[index]= bufferedImageCacheables[index]!!.getBufferedI
 
                         for (index in 0 until NUMBER_OF_IMAGES)
 
-        
-
-        Updates for KMP build        
         {
 bufferedImageGraphicsArray[index]!!.setColor(Color.ORANGE)
 bufferedImageGraphicsArray[index]!!.drawRect(rectangle.x, rectangle.y, rectangle.width, rectangle.height)

@@ -38,10 +38,7 @@ open public class CountedPickedUpLayerInterfaceFactoryPool
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CountedPickedUpLayerInterfaceFactoryPool
-
-        Updates for KMP build        
-        {
+: CountedPickedUpLayerInterfaceFactoryPool{
 
 
 
@@ -52,10 +49,7 @@ open fun getInstance()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 SINGLETON= CountedPickedUpLayerInterfaceFactoryPool()
 }
 
@@ -65,9 +59,6 @@ SINGLETON= CountedPickedUpLayerInterfaceFactoryPool()
     private var list: BasicArrayList
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 list= BasicArrayList()
 }
@@ -75,10 +66,7 @@ list= BasicArrayList()
 
 open fun getList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 

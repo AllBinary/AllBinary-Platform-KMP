@@ -37,10 +37,7 @@ open public class RemoteHighScoresData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: RemoteHighScoresData
-
-        Updates for KMP build        
-        {
+: RemoteHighScoresData{
 
 
 

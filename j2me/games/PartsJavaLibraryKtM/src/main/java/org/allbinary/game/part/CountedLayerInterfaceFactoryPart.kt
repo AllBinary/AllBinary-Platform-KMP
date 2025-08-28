@@ -60,9 +60,6 @@ open public class CountedLayerInterfaceFactoryPart
     private val primitiveLongUtil: PrimitiveLongUtil
 public constructor        (total: Int, countedPickedUpLayerInterfaceFactory: CountedPickedUpLayerInterfaceFactory)
             : super()
-        
-
-        Updates for KMP build        
         {
 var total = total
 var countedPickedUpLayerInterfaceFactory = countedPickedUpLayerInterfaceFactory
@@ -73,10 +70,7 @@ this.init(total, countedPickedUpLayerInterfaceFactory)
 
 open fun init(total: Int, countedPickedUpLayerInterfaceFactory: CountedPickedUpLayerInterfaceFactory)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var total = total
 var countedPickedUpLayerInterfaceFactory = countedPickedUpLayerInterfaceFactory
 this.setCountedPickedUpLayerInterfaceFactory(countedPickedUpLayerInterfaceFactory)
@@ -88,10 +82,7 @@ this.total= total
             
 open fun getInstance(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
         //nullable =  from not(true or (false and false)) = 
-: AllBinaryLayer
-
-        Updates for KMP build        
-        {
+: AllBinaryLayer{
 var hashtable = hashtable
 var x = x
 var y = y
@@ -123,10 +114,7 @@ var z = z
 
 open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -137,10 +125,7 @@ open fun getTotal()
 
 open fun setTotal(total: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var total = total
 this.total= total
 this.totalString= this.primitiveLongUtil!!.getCharArray(total)
@@ -152,28 +137,19 @@ this.setXOffset(font.charsWidth(totalString, 0, this.primitiveLongUtil!!.getCurr
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 }
 
 override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 }
 
 override fun getAnimationInterface()
         //nullable = true from not(false or (false and true)) = true
-: Animation
-
-        Updates for KMP build        
-        {
+: Animation{
 
 
 
@@ -184,10 +160,7 @@ override fun getAnimationInterface()
 
 open fun setAnimationInterface(animationInterface: Animation)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var animationInterface = animationInterface
 this.animationInterface= animationInterface
 }
@@ -195,10 +168,7 @@ this.animationInterface= animationInterface
 
 open fun getXOffset()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -209,10 +179,7 @@ open fun getXOffset()
 
 open fun setXOffset(totalStringWidth: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var totalStringWidth = totalStringWidth
 this.xOffset= totalStringWidth
 }
@@ -220,10 +187,7 @@ this.xOffset= totalStringWidth
 
 open fun getTotalString()
         //nullable = true from not(false or (false and true)) = true
-: CharArray
-
-        Updates for KMP build        
-        {
+: CharArray{
 
 
 
@@ -234,10 +198,7 @@ open fun getTotalString()
 
 open fun getCountedPickedUpLayerInterfaceFactory()
         //nullable = true from not(false or (false and true)) = true
-: CountedPickedUpLayerInterfaceFactory
-
-        Updates for KMP build        
-        {
+: CountedPickedUpLayerInterfaceFactory{
 
 
 
@@ -248,10 +209,7 @@ open fun getCountedPickedUpLayerInterfaceFactory()
 
 open fun setCountedPickedUpLayerInterfaceFactory(countedPickedUpLayerInterfaceFactory: CountedPickedUpLayerInterfaceFactory)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var countedPickedUpLayerInterfaceFactory = countedPickedUpLayerInterfaceFactory
 this.countedPickedUpLayerInterfaceFactory= countedPickedUpLayerInterfaceFactory
 }

@@ -37,10 +37,7 @@ open public class AngleIncrementInfoFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AngleIncrementInfoFactory
-
-        Updates for KMP build        
-        {
+: AngleIncrementInfoFactory{
 
 
 
@@ -60,10 +57,7 @@ open fun getInstance()
 
 open fun getInstance(angleIncrement: Short)
         //nullable =  from not(true or (false and false)) = 
-: AngleIncrementInfo
-
-        Updates for KMP build        
-        {
+: AngleIncrementInfo{
 var angleIncrement = angleIncrement
 
     var halfAngleIncrement: Int = (angleIncrement.toInt() shr 1)

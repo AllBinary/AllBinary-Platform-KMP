@@ -36,10 +36,7 @@ open public class TransformInfoDomNodeView : TransformInfoDomNode
         
 public constructor        (transformInfoInterface: TransformInfoInterface, mapping: String)                        
 
-                            : super(transformInfoInterface, mapping)
-
-        Updates for KMP build        
-        {
+                            : super(transformInfoInterface, mapping){
 var transformInfoInterface = transformInfoInterface
 var mapping = mapping
 
@@ -50,10 +47,7 @@ var mapping = mapping
 
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(transformInfoInterface)
-
-        Updates for KMP build        
-        {
+                            : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
 
 
@@ -63,10 +57,7 @@ var transformInfoInterface = transformInfoInterface
 
 public constructor        (name: String, mappedName: String)                        
 
-                            : super(name, mappedName)
-
-        Updates for KMP build        
-        {
+                            : super(name, mappedName){
 var name = name
 var mappedName = mappedName
 
@@ -78,10 +69,7 @@ var mappedName = mappedName
 public constructor        (name: String)                        
 
                             : super(name, 
-                            null)
-
-        Updates for KMP build        
-        {
+                            null){
 var name = name
 
 
@@ -94,10 +82,7 @@ var name = name
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var transformInfoData: TransformInfoData = TransformInfoData.getInstance()!!

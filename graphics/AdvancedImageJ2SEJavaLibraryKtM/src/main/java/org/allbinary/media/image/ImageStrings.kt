@@ -37,10 +37,7 @@ open public class ImageStrings
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageStrings
-
-        Updates for KMP build        
-        {
+: ImageStrings{
 
 
 

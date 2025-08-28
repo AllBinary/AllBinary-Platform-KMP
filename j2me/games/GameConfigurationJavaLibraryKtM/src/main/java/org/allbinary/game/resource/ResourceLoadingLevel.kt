@@ -36,9 +36,6 @@ open public class ResourceLoadingLevel
     private val level: Int
  constructor        (name: String, level: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var name = name
 var level = level
@@ -49,10 +46,7 @@ this.level= level
 
 open fun getLevel()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -63,10 +57,7 @@ open fun getLevel()
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

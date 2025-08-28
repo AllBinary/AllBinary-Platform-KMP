@@ -54,10 +54,7 @@ open public class InputPersistance : BasicPersitance {
     private val hashtableUtil: HashtableUtil = HashtableUtil.getInstance()!!
 public constructor        (name: String)                        
 
-                            : super(name)
-
-        Updates for KMP build        
-        {
+                            : super(name){
     //var name = name
 
 
@@ -70,10 +67,7 @@ public constructor        (name: String)
             
 open fun loadAll(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
 
     var recordStore: RecordStore = NullRecordStore.NULL_RECORD_STORE
@@ -122,9 +116,6 @@ open fun loadAll(abeClientInformation: AbeClientInformationInterface)
 
 
         while(recordEnum!!.hasNextElement())
-        
-
-        Updates for KMP build        
         {
 
     var id: Int = recordEnum!!.nextRecordId()!!
@@ -147,9 +138,6 @@ hashtable= Hashtable<Any, Any>()
 
 
         while(inputStream!!.available() > 0)
-        
-
-        Updates for KMP build        
         {
 
     var gameActionInputIdAsString: String = inputStream!!.readUTF()!!
@@ -220,10 +208,7 @@ this.idList!!.add(smallIntegerSingletonFactory!!.getInstance(id))
 }
 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
@@ -253,10 +238,7 @@ recordStore!!.closeRecordStore()
             
 open fun save(abeClientInformation: AbeClientInformationInterface, hashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
     //var hashtable = hashtable
 
@@ -306,9 +288,6 @@ recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation),
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 gameActionInput= inputObjectArray[index]!! as Input
 list= hashtable.get(inputObjectArray[index]!! as Object) as BasicArrayList
@@ -318,9 +297,6 @@ list= hashtable.get(inputObjectArray[index]!! as Object) as BasicArrayList
 
                         for (index2 in 0 until list.size()!!)
 
-        
-
-        Updates for KMP build        
         {
 
     var gameActionInputIdAsString: String = smallIntegerSingletonFactory!!.getInstance(gameActionInput!!.getId())!!.toString()!!
@@ -339,10 +315,7 @@ outputStream!!.writeUTF(inputIdAsString)
 savedGameBytes= byteArrayOutputStream!!.toByteArray()
 recordStore!!.addRecord(savedGameBytes, 0, savedGameBytes!!.size)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 

@@ -38,10 +38,7 @@ open public class AcceptableResponseUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AcceptableResponseUtil
-
-        Updates for KMP build        
-        {
+: AcceptableResponseUtil{
 
 
 
@@ -50,10 +47,7 @@ open fun getInstance()
 }
 
 
-                init
-
-        Updates for KMP build        
-        {
+                init{
 AcceptableResponseFactory.getInstance()!!.HTML.hashCode()
 }
 
@@ -70,10 +64,7 @@ AcceptableResponseFactory.getInstance()!!.HTML.hashCode()
 
 open fun get(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var index = index
 
 
@@ -85,10 +76,7 @@ var index = index
 
 open fun getTagName(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var index = index
 
 
@@ -100,10 +88,7 @@ var index = index
 
 open fun size()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

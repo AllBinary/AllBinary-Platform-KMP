@@ -38,9 +38,6 @@ open public class ImageAnalysisResults
     private var averageAmbientLevel: Float= 0.0f
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 this.imageColorRangeResults= ImageColorRangeResults()
 this.imageColorResults= ImageColorResults()
@@ -49,10 +46,7 @@ this.imageColorResults= ImageColorResults()
 
 open fun getImageColorRangeResults()
         //nullable = true from not(false or (false and true)) = true
-: ImageColorRangeResults
-
-        Updates for KMP build        
-        {
+: ImageColorRangeResults{
 
 
 
@@ -63,10 +57,7 @@ open fun getImageColorRangeResults()
 
 open fun setImageColorRangeResults(imageColorRangeResults: ImageColorRangeResults)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var imageColorRangeResults = imageColorRangeResults
 this.imageColorRangeResults= imageColorRangeResults
 }
@@ -74,10 +65,7 @@ this.imageColorRangeResults= imageColorRangeResults
 
 open fun getAverageAmbientLevel()
         //nullable = true from not(false or (false and true)) = true
-: Float
-
-        Updates for KMP build        
-        {
+: Float{
 
 
 
@@ -88,10 +76,7 @@ open fun getAverageAmbientLevel()
 
 open fun setAverageAmbientLevel(averageAmbientLevel: Float)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var averageAmbientLevel = averageAmbientLevel
 this.averageAmbientLevel= averageAmbientLevel
 }
@@ -99,10 +84,7 @@ this.averageAmbientLevel= averageAmbientLevel
 
 open fun getImageColorResults()
         //nullable = true from not(false or (false and true)) = true
-: ImageColorResults
-
-        Updates for KMP build        
-        {
+: ImageColorResults{
 
 
 
@@ -113,10 +95,7 @@ open fun getImageColorResults()
 
 open fun setImageColorResults(imageColorResults: ImageColorResults)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var imageColorResults = imageColorResults
 this.imageColorResults= imageColorResults
 }

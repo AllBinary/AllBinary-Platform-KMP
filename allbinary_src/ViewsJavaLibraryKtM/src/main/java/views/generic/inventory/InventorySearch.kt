@@ -57,10 +57,7 @@ open public class InventorySearch
     private val searchRequest: SearchRequest
 public constructor        (searchRequest: SearchRequest)                        
 
-                            : super()
-
-        Updates for KMP build        
-        {
+                            : super(){
 var searchRequest = searchRequest
 
 
@@ -74,10 +71,7 @@ this.searchRequest= searchRequest
             
 open fun searchSingleStaticPage()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -131,10 +125,7 @@ stringBuffer!!.append(InputOutputTypeData.getInstance()!!.DEFAULT)
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
@@ -157,10 +148,7 @@ stringBuffer!!.append(InputOutputTypeData.getInstance()!!.DEFAULT)
             
 open fun searchSingleDynamicPage()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -172,10 +160,7 @@ open fun searchSingleDynamicPage()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return str[this.searchRequest!!.getParams()!!.getStartPageInt()!!.toInt()]!!
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGINGERROR))
@@ -198,10 +183,7 @@ open fun searchSingleDynamicPage()
             
 open fun search()
         //nullable = true from not(false or (false and true)) = true
-: Array<String?>
-
-        Updates for KMP build        
-        {
+: Array<String?>{
 
     var abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
 
@@ -223,10 +205,7 @@ open fun search()
             
 open fun getProduct(product: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var product = product
 
     var abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!

@@ -49,10 +49,7 @@ open public class CompleteMotionGestureInputEvent : AllBinaryEventObject
     private var motionGestureInput: MotionGestureInput = TouchMotionGestureFactory.getInstance()!!.NO_MOTION
 public constructor        (name: String, motionGestureInput: MotionGestureInput)                        
 
-                            : super(motionGestureInput)
-
-        Updates for KMP build        
-        {
+                            : super(motionGestureInput){
 var name = name
 var motionGestureInput = motionGestureInput
 
@@ -64,10 +61,7 @@ this.setName(name)
         try {
             this.setMotionGestureInput(motionGestureInput)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -79,20 +73,14 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "InputToGameKeyEventAction", e)
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var name = name
 this.name= name
 }
 
 override fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -103,10 +91,7 @@ override fun getName()
 
 open fun setMotionGestureInput(motionGestureInput: MotionGestureInput)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var motionGestureInput = motionGestureInput
 this.motionGestureInput= motionGestureInput
 }
@@ -114,10 +99,7 @@ this.motionGestureInput= motionGestureInput
 
 open fun getMotionGestureInput()
         //nullable = true from not(false or (false and true)) = true
-: MotionGestureInput
-
-        Updates for KMP build        
-        {
+: MotionGestureInput{
 
 
 

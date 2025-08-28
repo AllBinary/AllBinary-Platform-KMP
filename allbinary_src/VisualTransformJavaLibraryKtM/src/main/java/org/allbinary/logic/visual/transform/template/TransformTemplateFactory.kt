@@ -45,10 +45,7 @@ open public class TransformTemplateFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TransformTemplateFactory
-
-        Updates for KMP build        
-        {
+: TransformTemplateFactory{
 
 
 
@@ -62,9 +59,6 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -73,10 +67,7 @@ private constructor        ()
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, templateName: String, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
-: TransformTemplateInterface
-
-        Updates for KMP build        
-        {
+: TransformTemplateInterface{
     //var abeClientInformation = abeClientInformation
     //var templateName = templateName
     //var propertiesHashMap = propertiesHashMap
@@ -95,10 +86,7 @@ var pageContext = pageContext
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TransformInfoObjectFactory.getInstance()!!.getInstance(abeClientInformation, transformInfoInterface) as TransformTemplateInterface
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed To Get Instance"
 

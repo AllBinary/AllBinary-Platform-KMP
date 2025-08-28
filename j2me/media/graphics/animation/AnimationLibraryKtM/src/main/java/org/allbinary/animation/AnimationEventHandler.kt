@@ -37,10 +37,7 @@ open public class AnimationEventHandler : BasicEventHandler {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AnimationEventHandler
-
-        Updates for KMP build        
-        {
+: AnimationEventHandler{
 
 
 
@@ -50,10 +47,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
-
-        Updates for KMP build        
-        {
+            private constructor        (){
 }
 
 

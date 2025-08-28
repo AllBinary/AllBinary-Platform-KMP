@@ -42,10 +42,7 @@ open public class VectorExplosionGenerator
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: VectorExplosionGenerator
-
-        Updates for KMP build        
-        {
+: VectorExplosionGenerator{
 
 
 
@@ -63,9 +60,6 @@ open fun getInstance()
     private val vectorAnimationUtil: VectorAnimationUtil = VectorAnimationUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -74,10 +68,7 @@ private constructor        ()
             
 open fun getInstance(list: BasicArrayList, howMuch: Int, type: VectorExplosionType)
         //nullable =  from not(true or (false and false)) = 
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 var list = list
 var howMuch = howMuch
 var type = type
@@ -93,9 +84,6 @@ var type = type
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var point: GPoint = list.objectArray[index]!! as GPoint
@@ -116,10 +104,7 @@ points[index]!![1]= point.getY()
             
 open fun getInstance(points: Array<IntArray?>, howMuch: Int, type: VectorExplosionType)
         //nullable =  from not(true or (false and false)) = 
-: Array<Array<IntArray?>?>
-
-        Updates for KMP build        
-        {
+: Array<Array<IntArray?>?>{
 var points = points
 var howMuch = howMuch
 var type = type
@@ -144,10 +129,7 @@ var type = type
             
 open fun getInstance(points: Array<IntArray?>, howMuch: Int, type: VectorExplosionType, startFrame: Boolean)
         //nullable =  from not(true or (false and false)) = 
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 var points = points
 var howMuch = howMuch
 var type = type
@@ -163,9 +145,6 @@ pointsBasicArrayList!!.add(createPointsBasicArrayList(points))
 
 
         while(frameIndex < howMuch)
-        
-
-        Updates for KMP build        
         {
 
     var tempBasicArrayList: BasicArrayList = pointsBasicArrayList!!.objectArray[frameIndex]!! as BasicArrayList
@@ -192,10 +171,7 @@ frameIndex++
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return pointsBasicArrayList
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
@@ -211,10 +187,7 @@ frameIndex++
             
 open fun getInstance(tempBasicArrayList: BasicArrayList, points: Array<IntArray?>, howMuch: Int, type: VectorExplosionType)
         //nullable =  from not(true or (false and false)) = 
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 var tempBasicArrayList = tempBasicArrayList
 var points = points
 var howMuch = howMuch
@@ -227,18 +200,12 @@ var type = type
 
 
         while(index < points.size)
-        
-
-        Updates for KMP build        
         {
 
     var sectionBasicArrayList: BasicArrayList = BasicArrayList()
 
 
         while(points[index]!![0] != 1000)
-        
-
-        Updates for KMP build        
         {
 sectionBasicArrayList!!.add(tempBasicArrayList!!.objectArray[index]!!)
 index++
@@ -274,9 +241,6 @@ sectionBasicArrayList= RandomTranslation.getInstance(sectionBasicArrayList, howM
 
                         for (index2 in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 pointBasicArrayList!!.add(sectionBasicArrayList!!.objectArray[index2]!!)
 }
@@ -316,10 +280,7 @@ index++
             
 open fun createPointsBasicArrayList(points: Array<IntArray?>)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 var points = points
 
     
@@ -342,9 +303,6 @@ var points = points
 
                         for (index in 0 until points.size)
 
-        
-
-        Updates for KMP build        
         {
 firstPointBasicArrayList!!.add(PointFactory.getInstance()!!.getInstance(points[index]!![0]!!, points[index]!![1]!!))
 }

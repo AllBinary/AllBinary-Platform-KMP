@@ -38,10 +38,7 @@ open public class TransformInfoEntityBuilder
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TransformInfoEntity
-
-        Updates for KMP build        
-        {
+: TransformInfoEntity{
 
 
 

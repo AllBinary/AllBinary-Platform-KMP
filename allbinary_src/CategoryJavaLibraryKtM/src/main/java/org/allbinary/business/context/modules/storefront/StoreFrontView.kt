@@ -45,9 +45,6 @@ open public class StoreFrontView
     private var storeFrontInterface: StoreFrontInterface
 public constructor        (storeFrontInterface: StoreFrontInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var storeFrontInterface = storeFrontInterface
 
@@ -70,10 +67,7 @@ this.storeFrontInterface= storeFrontInterface
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var hashMap: HashMap<Any, Any> = this.storeFrontInterface!!.toHashMap()!!

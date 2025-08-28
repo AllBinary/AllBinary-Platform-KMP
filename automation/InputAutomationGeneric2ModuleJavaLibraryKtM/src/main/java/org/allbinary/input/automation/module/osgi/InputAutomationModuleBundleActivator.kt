@@ -53,9 +53,6 @@ open public class InputAutomationModuleBundleActivator
     private var serviceFactory: ServiceFactory
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 this.init()
 }
@@ -65,10 +62,7 @@ this.init()
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
 
 
@@ -80,10 +74,7 @@ open fun init()
             
 open fun getInputAutomationConfigurationModuleChangeListener(context: BundleContext)
         //nullable = true from not(false or (false and false)) = true
-: InputAutomationConfigurationModuleChangeListener
-
-        Updates for KMP build        
-        {
+: InputAutomationConfigurationModuleChangeListener{
 var context = context
 
     var serviceReference: ServiceReference = context.getServiceReference(InputAutomationConfigurationModuleChangeListener::class.toString()!!)!!
@@ -128,10 +119,7 @@ var context = context
 
 open fun addModules(context: BundleContext)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var context = context
 
         try {
@@ -152,9 +140,6 @@ var context = context
 
                         for (index in 0 until this.getInputAutomationModuleInterface()!!.length)
 
-        
-
-        Updates for KMP build        
         {
 
     var inputAutomationConfigurationModuleChangeEvent: InputAutomationConfigurationModuleChangeEvent = InputAutomationConfigurationUtil.getChangeEvent(this.getInputAutomationModuleInterface()[index]!!)!!
@@ -166,10 +151,7 @@ inputAutomationConfigurationModuleChangeListener!!.onAdd(inputAutomationConfigur
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "addModules")
 }
 
@@ -180,10 +162,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "addModules")
             
 open fun registerAsService(bundleContext: BundleContext)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var bundleContext = bundleContext
 OSGIActivatorUtil.registerAsService(bundleContext, getServiceFactory(), InputAutomationModuleServiceInterface::class.toString()!!)
 }
@@ -191,10 +170,7 @@ OSGIActivatorUtil.registerAsService(bundleContext, getServiceFactory(), InputAut
 
 open fun removeModules(context: BundleContext)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var context = context
 
         try {
@@ -215,9 +191,6 @@ var context = context
 
                         for (index in 0 until this.getInputAutomationModuleInterface()!!.length)
 
-        
-
-        Updates for KMP build        
         {
 
     var inputAutomationConfigurationModuleChangeEvent: InputAutomationConfigurationModuleChangeEvent = InputAutomationConfigurationUtil.getChangeEvent(this.getInputAutomationModuleInterface()[index]!!)!!
@@ -229,10 +202,7 @@ inputAutomationConfigurationModuleChangeListener!!.onRemove(inputAutomationConfi
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "removeModules")
 }
 
@@ -243,10 +213,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "removeModules")
             
 open fun start(context: BundleContext)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var context = context
 logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.START)
 this.addModules(context)
@@ -258,10 +225,7 @@ this.registerAsService(context)
             
 open fun stop(context: BundleContext)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var context = context
 logUtil!!.put(this.commonStrings!!.START, this, "stop")
 this.removeModules(context)
@@ -270,10 +234,7 @@ this.removeModules(context)
 
 open fun getInputAutomationModuleInterface()
         //nullable = true from not(false or (false and true)) = true
-: Array<InputAutomationModuleFactoryInterface?>
-
-        Updates for KMP build        
-        {
+: Array<InputAutomationModuleFactoryInterface?>{
 
 
 
@@ -284,10 +245,7 @@ open fun getInputAutomationModuleInterface()
 
 open fun setInputAutomationModuleInterface(inputAutomationModuleInterface: Array<InputAutomationModuleFactoryInterface?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var inputAutomationModuleInterface = inputAutomationModuleInterface
 this.inputAutomationModuleInterface= inputAutomationModuleInterface
 }
@@ -295,10 +253,7 @@ this.inputAutomationModuleInterface= inputAutomationModuleInterface
 
 open fun getServiceFactory()
         //nullable = true from not(false or (false and true)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 
 
 
@@ -309,10 +264,7 @@ open fun getServiceFactory()
 
 open fun setServiceFactory(serviceObject: ServiceFactory)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var serviceObject = serviceObject
 this.serviceFactory= serviceObject
 }

@@ -49,10 +49,7 @@ open public class ImageSwtRotationUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageSwtRotationUtil
-
-        Updates for KMP build        
-        {
+: ImageSwtRotationUtil{
 
 
 
@@ -76,19 +73,13 @@ open fun getInstance()
     private val NO_COPY: String = "SWT should not copy images after initial loading as the alpha is not honored"
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getRotatedImage(bufferedImage: org.eclipse.swt.graphics.Image, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-: org.eclipse.swt.graphics.Image
-
-        Updates for KMP build        
-        {
+: org.eclipse.swt.graphics.Image{
     //var bufferedImage = bufferedImage
     //var totalAngle = totalAngle
 
@@ -115,10 +106,7 @@ open fun getRotatedImage(bufferedImage: org.eclipse.swt.graphics.Image, totalAng
 
 open fun getRotatedImage2(bufferedImage: org.eclipse.swt.graphics.Image, newBufferedImage: org.eclipse.swt.graphics.Image, gc: GC, angle: Float)
         //nullable = true from not(false or (false and false)) = true
-: org.eclipse.swt.graphics.Image
-
-        Updates for KMP build        
-        {
+: org.eclipse.swt.graphics.Image{
     //var bufferedImage = bufferedImage
     //var newBufferedImage = newBufferedImage
     //var gc = gc
@@ -147,10 +135,7 @@ open fun getRotatedImage2(bufferedImage: org.eclipse.swt.graphics.Image, newBuff
 
 open fun rotateImage(originalSwtImage: org.eclipse.swt.graphics.Image, newSwtImage: org.eclipse.swt.graphics.Image, gc: GC, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-: org.eclipse.swt.graphics.Image
-
-        Updates for KMP build        
-        {
+: org.eclipse.swt.graphics.Image{
     //var originalSwtImage = originalSwtImage
     //var newSwtImage = newSwtImage
     //var gc = gc
@@ -165,10 +150,7 @@ open fun rotateImage(originalSwtImage: org.eclipse.swt.graphics.Image, newSwtIma
 
 open fun getRotatedImage(bufferedImage: org.eclipse.swt.graphics.Image, newSwtImage: org.eclipse.swt.graphics.Image, gc: GC, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-: org.eclipse.swt.graphics.Image
-
-        Updates for KMP build        
-        {
+: org.eclipse.swt.graphics.Image{
     //var bufferedImage = bufferedImage
     //var newSwtImage = newSwtImage
     //var gc = gc
@@ -183,10 +165,7 @@ open fun getRotatedImage(bufferedImage: org.eclipse.swt.graphics.Image, newSwtIm
 
 open fun getRotatedImages(bufferedImage: org.eclipse.swt.graphics.Image, numberOfFrames: Int, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Array<org.eclipse.swt.graphics.Image?>
-
-        Updates for KMP build        
-        {
+: Array<org.eclipse.swt.graphics.Image?>{
     //var bufferedImage = bufferedImage
     //var numberOfFrames = numberOfFrames
     //var totalAngle = totalAngle
@@ -206,9 +185,6 @@ open fun getRotatedImages(bufferedImage: org.eclipse.swt.graphics.Image, numberO
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 angle= (totalAngle /size) *index
 bufferedImageArray[index]= this.getRotatedImage(bufferedImage, angle)
@@ -224,10 +200,7 @@ bufferedImageArray[index]= this.getRotatedImage(bufferedImage, angle)
 
 open fun createSpriteImage(bufferedImageArray: Array<org.eclipse.swt.graphics.Image?>)
         //nullable = true from not(false or (false and false)) = true
-: org.eclipse.swt.graphics.Image
-
-        Updates for KMP build        
-        {
+: org.eclipse.swt.graphics.Image{
     //var bufferedImageArray = bufferedImageArray
 
     var columns: Int = 9
@@ -287,9 +260,6 @@ gc.setInterpolation(SWT.HIGH)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     

@@ -40,10 +40,7 @@ open public class AllBinaryJ2SEImageRotationAnimationFactory : BaseImageAnimatio
     val angleIncrement: Short
 public constructor        (image: Image, dx: Int, dy: Int)                        
 
-                            : this(image, image.getWidth(), image.getHeight(), dx, dy, AnimationBehaviorFactory.getInstance())
-
-        Updates for KMP build        
-        {
+                            : this(image, image.getWidth(), image.getHeight(), dx, dy, AnimationBehaviorFactory.getInstance()){
     //var image = image
     //var dx = dx
     //var dy = dy
@@ -55,10 +52,7 @@ public constructor        (image: Image, dx: Int, dy: Int)
 
 public constructor        (image: Image, dx: Int, dy: Int, unused: Any, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(image, image.getWidth(), image.getHeight(), dx, dy, animationBehaviorFactory)
-
-        Updates for KMP build        
-        {
+                            : this(image, image.getWidth(), image.getHeight(), dx, dy, animationBehaviorFactory){
     //var image = image
     //var dx = dx
     //var dy = dy
@@ -72,10 +66,7 @@ public constructor        (image: Image, dx: Int, dy: Int, unused: Any, animatio
 
 public constructor        (image: Image, dx: Int, dy: Int, angleIncrement: Short, unused: Any)                        
 
-                            : this(image, image.getWidth(), image.getHeight(), dx, dy, angleIncrement, AnimationBehaviorFactory.getInstance())
-
-        Updates for KMP build        
-        {
+                            : this(image, image.getWidth(), image.getHeight(), dx, dy, angleIncrement, AnimationBehaviorFactory.getInstance()){
     //var image = image
     //var dx = dx
     //var dy = dy
@@ -89,10 +80,7 @@ public constructor        (image: Image, dx: Int, dy: Int, angleIncrement: Short
 
 public constructor        (image: Image, dx: Int, dy: Int, angleIncrement: Short, unused: Any, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(image, image.getWidth(), image.getHeight(), dx, dy, angleIncrement, animationBehaviorFactory)
-
-        Updates for KMP build        
-        {
+                            : this(image, image.getWidth(), image.getHeight(), dx, dy, angleIncrement, animationBehaviorFactory){
     //var image = image
     //var dx = dx
     //var dy = dy
@@ -107,10 +95,7 @@ public constructor        (image: Image, dx: Int, dy: Int, angleIncrement: Short
 
 public constructor        (image: Image, width: Int, height: Int, dx: Int, dy: Int, angleIncrement: Short)                        
 
-                            : this(image, width, height, dx, dy, angleIncrement, AnimationBehaviorFactory.getInstance())
-
-        Updates for KMP build        
-        {
+                            : this(image, width, height, dx, dy, angleIncrement, AnimationBehaviorFactory.getInstance()){
     //var image = image
     //var width = width
     //var height = height
@@ -125,10 +110,7 @@ public constructor        (image: Image, width: Int, height: Int, dx: Int, dy: I
 
 public constructor        (image: Image, width: Int, height: Int, dx: Int, dy: Int, angleIncrement: Short, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(image, width, height, angleIncrement, animationBehaviorFactory)
-
-        Updates for KMP build        
-        {
+                            : this(image, width, height, angleIncrement, animationBehaviorFactory){
     //var image = image
     //var width = width
     //var height = height
@@ -146,10 +128,7 @@ this.animationFactoryInitializationVisitor!!.dy= dy
 
 public constructor        (image: Image, width: Int, height: Int, dx: Int, dy: Int)                        
 
-                            : this(image, width, height, dx, dy, AnimationBehaviorFactory.getInstance())
-
-        Updates for KMP build        
-        {
+                            : this(image, width, height, dx, dy, AnimationBehaviorFactory.getInstance()){
     //var image = image
     //var width = width
     //var height = height
@@ -163,10 +142,7 @@ public constructor        (image: Image, width: Int, height: Int, dx: Int, dy: I
 
 public constructor        (image: Image, width: Int, height: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(image, width, height, animationBehaviorFactory)
-
-        Updates for KMP build        
-        {
+                            : this(image, width, height, animationBehaviorFactory){
     //var image = image
     //var width = width
     //var height = height
@@ -183,10 +159,7 @@ this.animationFactoryInitializationVisitor!!.dy= dy
 
 public constructor        (image: Image)                        
 
-                            : this(image, image.getWidth(), image.getHeight(), AnimationBehaviorFactory.getInstance())
-
-        Updates for KMP build        
-        {
+                            : this(image, image.getWidth(), image.getHeight(), AnimationBehaviorFactory.getInstance()){
     //var image = image
 
 
@@ -196,10 +169,7 @@ public constructor        (image: Image)
 
 public constructor        (image: Image, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(image, image.getWidth(), image.getHeight(), animationBehaviorFactory)
-
-        Updates for KMP build        
-        {
+                            : this(image, image.getWidth(), image.getHeight(), animationBehaviorFactory){
     //var image = image
     //var animationBehaviorFactory = animationBehaviorFactory
 
@@ -210,10 +180,7 @@ public constructor        (image: Image, animationBehaviorFactory: AnimationBeha
 
 public constructor        (image: Image, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(image, width, height, animationBehaviorFactory)
-
-        Updates for KMP build        
-        {
+                            : super(image, width, height, animationBehaviorFactory){
     //var image = image
     //var width = width
     //var height = height
@@ -227,10 +194,7 @@ this.angleIncrement= (AngleFactory.getInstance()!!.TOTAL_ANGLE /GameConfiguratio
 
 public constructor        (image: Image, width: Int, height: Int, angleIncrement: Short, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(image, width, height, animationBehaviorFactory)
-
-        Updates for KMP build        
-        {
+                            : super(image, width, height, animationBehaviorFactory){
     //var image = image
     //var width = width
     //var height = height
@@ -248,10 +212,7 @@ this.angleIncrement= angleIncrement
             
 open fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation
-
-        Updates for KMP build        
-        {
+: Animation{
     //var instanceId = instanceId
 
     var scaledImage: Image = animationFactoryImageScaleUtil!!.createImage(this.getImage(), this.animationFactoryInitializationVisitor!!.width, this.animationFactoryInitializationVisitor!!.height, this.scaleProperties!!.scaleWidth, this.scaleProperties!!.scaleHeight)!!
@@ -291,10 +252,7 @@ scaledImage= openGLUtil!!.add(scaledImage)
 
 open fun getAngleIncrement()
         //nullable = true from not(false or (false and true)) = true
-: Short
-
-        Updates for KMP build        
-        {
+: Short{
 
 
 

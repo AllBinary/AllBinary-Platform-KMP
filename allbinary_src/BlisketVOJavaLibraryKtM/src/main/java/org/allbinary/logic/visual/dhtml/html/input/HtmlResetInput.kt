@@ -32,9 +32,6 @@ open public class HtmlResetInput
         
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

@@ -41,9 +41,6 @@ open public class AbstractArrayListPool
     var cacheableInterfaceFactoryInterface: CacheableInterfaceFactoryInterface
 public constructor        (cacheableInterfaceFactoryInterface: CacheableInterfaceFactoryInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var cacheableInterfaceFactoryInterface = cacheableInterfaceFactoryInterface
 this.cacheableInterfaceFactoryInterface= cacheableInterfaceFactoryInterface
@@ -54,10 +51,7 @@ this.cacheableInterfaceFactoryInterface= cacheableInterfaceFactoryInterface
             
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
 
 
@@ -69,10 +63,7 @@ open fun clear()
             
 open fun remove(key: Any)
         //nullable = true from not(false or (false and false)) = true
-: CacheableInterface
-
-        Updates for KMP build        
-        {
+: CacheableInterface{
 var key = key
 
 
@@ -85,10 +76,7 @@ var key = key
             
 open fun add(cacheableInterface: CacheableInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var cacheableInterface = cacheableInterface
 buffers.add(cacheableInterface)
 }
@@ -98,10 +86,7 @@ buffers.add(cacheableInterface)
             
 open fun add(cacheableInterfaces: Array<CacheableInterface?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var cacheableInterfaces = cacheableInterfaces
 
 
@@ -109,9 +94,6 @@ var cacheableInterfaces = cacheableInterfaces
 
                         for (index in 0 until cacheableInterfaces!!.size)
 
-        
-
-        Updates for KMP build        
         {
 buffers.add(cacheableInterfaces[index]!!)
 }

@@ -47,19 +47,13 @@ open public class BasketTag : CustomTagSupport {
     private var storeName: String
 
     private var propertiesHashMap: HashMap<Any, Any>
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 
 open fun setCommand(command: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var command = command
 this.command= command
 }
@@ -67,10 +61,7 @@ this.command= command
 
 open fun setStoreName(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.storeName= value
 }
@@ -80,10 +71,7 @@ this.storeName= value
             
 open fun isBasketEmpty()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             
@@ -104,20 +92,14 @@ open fun isBasketEmpty()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return emptyBoolean
 } catch(e: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
                             throw e
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
@@ -141,10 +123,7 @@ open fun isBasketEmpty()
             
 open fun addItemToBasket()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             
@@ -165,20 +144,14 @@ open fun addItemToBasket()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return emptyBoolean
 } catch(e: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
                             throw e
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to add item from Basket"
 
@@ -205,10 +178,7 @@ open fun addItemToBasket()
             
 open fun removeItemFromBasket()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             
@@ -229,20 +199,14 @@ open fun removeItemFromBasket()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return emptyBoolean
 } catch(e: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
                             throw e
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to remove item from Basket"
 
@@ -269,10 +233,7 @@ open fun removeItemFromBasket()
             
 open fun adjustBasket()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             
@@ -293,20 +254,14 @@ open fun adjustBasket()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return emptyBoolean
 } catch(e: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
                             throw e
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to Adjust Basket"
 
@@ -333,10 +288,7 @@ open fun adjustBasket()
             
 open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
         try {
             
@@ -412,10 +364,7 @@ this.propertiesHashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 } catch(e: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 
 
@@ -424,10 +373,7 @@ AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
                         return SKIP_BODY
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 
 

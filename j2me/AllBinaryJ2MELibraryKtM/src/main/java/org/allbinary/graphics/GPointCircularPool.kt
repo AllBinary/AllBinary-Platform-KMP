@@ -30,10 +30,7 @@ import org.allbinary.util.CircularIndexUtil
 
 open public class GPointCircularPool : BaseCircularPool {
         
-public constructor        (size: Int)
-
-        Updates for KMP build        
-        {
+public constructor        (size: Int){
 var size = size
 this.circularIndexUtil= CircularIndexUtil.getInstance(size)
 this.OBJECT_ARRAY= arrayOfNulls(size)
@@ -43,9 +40,6 @@ this.OBJECT_ARRAY= arrayOfNulls(size)
 
                         for (index in size -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 this.OBJECT_ARRAY[index]= CustomGPoint(0, 0)
 }

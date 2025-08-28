@@ -35,19 +35,13 @@ open public class BasicTouchButtonCellPositionFactory
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

@@ -46,10 +46,7 @@ open public class OrderItemsRequestHelper : TagHelper {
     private var groupId: String
 
     private var status: String
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
-
-        Updates for KMP build        
-        {
+public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 this.request= pageContext!!.getRequest() as HttpServletRequest
@@ -59,10 +56,7 @@ this.getFormData()
 
 open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.id= request.getParameter(OrderData.ID)
 this.groupId= request.getParameter(ShippingMethodData.GROUP)
 this.status= request.getParameter(OrderHistoryData.STATUS)
@@ -71,10 +65,7 @@ this.status= request.getParameter(OrderHistoryData.STATUS)
 
 open fun setOrderStatus(newStatus: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var newStatus = newStatus
 
         try {
@@ -103,10 +94,7 @@ OrderItemsEntityFactory.getInstance()!!.setStatus(id, groupId, newStatus)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to view order table"
 
@@ -131,10 +119,7 @@ OrderItemsEntityFactory.getInstance()!!.setStatus(id, groupId, newStatus)
 
 open fun setOrderStatus()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -156,10 +141,7 @@ OrderItemsEntityFactory.getInstance()!!.setStatus(id, groupId, this.status)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to view order table"
 

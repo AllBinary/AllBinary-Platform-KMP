@@ -37,10 +37,7 @@ open public class SimpleTextPaintable : Paintable {
     private var text: String
 
     private var basicColor: BasicColor
-public constructor        (text: String, basicColor: BasicColor)
-
-        Updates for KMP build        
-        {
+public constructor        (text: String, basicColor: BasicColor){
     //var text = text
     //var basicColor = basicColor
 this.text= text
@@ -53,10 +50,7 @@ this.basicColor= basicColor
     private val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
 
     var myFont: MyFont = MyFont.getInstance()!!
@@ -73,10 +67,7 @@ graphics.drawString(this.text, (width shr 1) -topScoresWidth, myFont!!.DEFAULT_C
 
 override fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var basicColor = basicColor
 this.basicColor= basicColor
 }
@@ -84,10 +75,7 @@ this.basicColor= basicColor
 
 open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor
-
-        Updates for KMP build        
-        {
+: BasicColor{
 
 
 
@@ -98,10 +86,7 @@ open fun getBasicColorP()
 
 open fun setText(text: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var text = text
 this.text= text
 }
@@ -109,10 +94,7 @@ this.text= text
 
 open fun getText()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

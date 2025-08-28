@@ -56,10 +56,7 @@ open public class TableTag : PropertiesTag {
     private var current: Integer
 
     private var total: Integer
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
@@ -74,10 +71,7 @@ public constructor        ()
 
 open fun setIsSelected(enabled: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var enabled = enabled
 this.enabled= enabled
 }
@@ -87,10 +81,7 @@ this.enabled= enabled
             
 open fun isEnabled()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(!StringValidationUtil.getInstance()!!.isEmpty(this.enabled))
@@ -122,10 +113,7 @@ open fun isEnabled()
 
 open fun setTagHelperFactory(tagHelperFactoryInterface: TagHelperFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var tagHelperFactoryInterface = tagHelperFactoryInterface
 this.tagHelperFactoryInterface= tagHelperFactoryInterface
 }
@@ -133,10 +121,7 @@ this.tagHelperFactoryInterface= tagHelperFactoryInterface
 
 open fun getTagHelperFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
-: TagHelperFactoryInterface
-
-        Updates for KMP build        
-        {
+: TagHelperFactoryInterface{
 
 
 
@@ -147,10 +132,7 @@ open fun getTagHelperFactoryInterface()
 
 open fun setTagRequestHelperFactory(tagHelperFactoryInterface: TagHelperFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var tagHelperFactoryInterface = tagHelperFactoryInterface
 this.tagRequestHelperFactoryInterface= tagHelperFactoryInterface
 }
@@ -158,10 +140,7 @@ this.tagRequestHelperFactoryInterface= tagHelperFactoryInterface
 
 open fun getTagRequestHelperFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
-: TagHelperFactoryInterface
-
-        Updates for KMP build        
-        {
+: TagHelperFactoryInterface{
 
 
 
@@ -172,10 +151,7 @@ open fun getTagRequestHelperFactoryInterface()
 
 open fun setCurrent(current: Integer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var current = current
 this.current= current
 }
@@ -183,10 +159,7 @@ this.current= current
 
 open fun getCurrent()
         //nullable = true from not(false or (false and true)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 
 
 
@@ -197,10 +170,7 @@ open fun getCurrent()
 
 open fun setTotal(total: Integer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var total = total
 this.total= total
 }
@@ -208,10 +178,7 @@ this.total= total
 
 open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 
 
 
@@ -224,10 +191,7 @@ open fun getTotal()
             
 open fun drop()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -250,10 +214,7 @@ open fun drop()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to drop table"
 
@@ -280,10 +241,7 @@ open fun drop()
             
 open fun create()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -306,10 +264,7 @@ open fun create()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to create table"
 
@@ -336,10 +291,7 @@ open fun create()
             
 open fun restore()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -362,10 +314,7 @@ open fun restore()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to restore backup"
 
@@ -392,10 +341,7 @@ open fun restore()
             
 open fun backup()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -418,10 +364,7 @@ open fun backup()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to make backup"
 
@@ -448,10 +391,7 @@ open fun backup()
             
 open fun insert()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -471,10 +411,7 @@ open fun insert()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to insert"
 
@@ -501,10 +438,7 @@ open fun insert()
             
 open fun delete()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -524,10 +458,7 @@ open fun delete()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to delete"
 
@@ -554,10 +485,7 @@ open fun delete()
             
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -577,10 +505,7 @@ open fun update()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to update"
 
@@ -607,10 +532,7 @@ open fun update()
             
 open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
         try {
             
@@ -895,10 +817,7 @@ this.getPropertiesHashMap()!!.put("total", this.getTotal())
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return EVAL_BODY_INCLUDE
 } catch(e: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 
 
@@ -907,10 +826,7 @@ AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
                         return SKIP_BODY
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 
 

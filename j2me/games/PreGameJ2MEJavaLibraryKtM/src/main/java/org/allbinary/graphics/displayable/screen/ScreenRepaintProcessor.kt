@@ -32,10 +32,7 @@ open public class ScreenRepaintProcessor : Processor {
         
 
     private val displayable: Displayable
-public constructor        (displayable: Displayable)
-
-        Updates for KMP build        
-        {
+public constructor        (displayable: Displayable){
 var displayable = displayable
 this.displayable= displayable
 }
@@ -44,10 +41,7 @@ this.displayable= displayable
                 @Throws(Exception::class)
             override fun process()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 ScreenRepaintUtil.repaint(displayable)
 }
 

@@ -31,10 +31,7 @@ open public class UnitGameInputProcessor : GameInputProcessor {
         
 
     val unitLayer: UnitLayer
-public constructor        (unitLayer: UnitLayer)
-
-        Updates for KMP build        
-        {
+public constructor        (unitLayer: UnitLayer){
 var unitLayer = unitLayer
 this.unitLayer= unitLayer
 }

@@ -35,10 +35,7 @@ open public class BasicColorUtilFactory
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BasicColorUtil
-
-        Updates for KMP build        
-        {
+: BasicColorUtil{
 
 
 

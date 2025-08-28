@@ -44,10 +44,7 @@ open public class TransformInfoObjectConfigGenerator
             
 open fun process(input: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var input = input
 
 

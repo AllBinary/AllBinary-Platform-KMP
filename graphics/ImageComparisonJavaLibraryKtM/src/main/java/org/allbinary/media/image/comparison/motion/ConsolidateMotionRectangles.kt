@@ -41,10 +41,7 @@ open public class ConsolidateMotionRectangles : MotionRectangles {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        (motionRectangles: MotionRectangles)                        
 
-                            : super(NAME, motionRectangles!!.getImageComparisonResult())
-
-        Updates for KMP build        
-        {
+                            : super(NAME, motionRectangles!!.getImageComparisonResult()){
 var motionRectangles = motionRectangles
 
 
@@ -62,9 +59,6 @@ var motionRectangles = motionRectangles
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var motionRectangle: MotionRectangle = vector.get(index) as MotionRectangle
@@ -78,10 +72,7 @@ consolidateMotionRectangles()
 
 open fun consolidateMotionRectangles()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var vector: Vector = this.getVector()!!
 
@@ -98,9 +89,6 @@ logUtil!!.put("Start - Size Before: " +vector.size, this, "consolidateMotionRect
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var motionRectangle: MotionRectangle = vector.get(index) as MotionRectangle
@@ -111,9 +99,6 @@ logUtil!!.put("Start - Size Before: " +vector.size, this, "consolidateMotionRect
 
                         for (i in index +1 until vector.size!!)
 
-        
-
-        Updates for KMP build        
         {
 
     var motionRectangle2: MotionRectangle = vector.get(i) as MotionRectangle
@@ -155,10 +140,7 @@ this.remove(removeVector)
 
 open fun remove(removeVector: Vector)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var removeVector = removeVector
 
     var vector: Vector = this.getVector()!!
@@ -172,9 +154,6 @@ var removeVector = removeVector
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 vector.remove(removeVector!!.get(index))
 }

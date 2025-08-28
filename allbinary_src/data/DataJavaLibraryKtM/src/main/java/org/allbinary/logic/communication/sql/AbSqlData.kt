@@ -48,9 +48,6 @@ open public class AbSqlData
         }
             public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

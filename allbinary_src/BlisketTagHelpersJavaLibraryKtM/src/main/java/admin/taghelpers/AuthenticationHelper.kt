@@ -65,10 +65,7 @@ open public class AuthenticationHelper : TagHelper {
     private var attemptsInteger: Integer
 public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
-                            : this(hashMap, pageContext!!.getRequest() as HttpServletRequest)
-
-        Updates for KMP build        
-        {
+                            : this(hashMap, pageContext!!.getRequest() as HttpServletRequest){
 var hashMap = hashMap
 var pageContext = pageContext
 
@@ -77,10 +74,7 @@ var pageContext = pageContext
                     
 }
 
-public constructor        (hashMap: HashMap<Any, Any>, httpServletRequest: HttpServletRequest)
-
-        Updates for KMP build        
-        {
+public constructor        (hashMap: HashMap<Any, Any>, httpServletRequest: HttpServletRequest){
 var hashMap = hashMap
 var httpServletRequest = httpServletRequest
 this.weblisketSession= WeblisketSession(hashMap, httpServletRequest)
@@ -101,10 +95,7 @@ this.getFormData()
             
 open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.authenticated= this.weblisketSession!!.getAuthentication()
 this.sessionUserName= this.weblisketSession!!.getUserName()
 this.role= this.weblisketSession!!.getRole()
@@ -117,10 +108,7 @@ this.timeout= this.weblisketSession!!.getTimeout()
             
 open fun invalidateSession()
         //nullable = true from not(false or (false and true)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 
         try {
             this.weblisketSession!!.clear()
@@ -130,10 +118,7 @@ open fun invalidateSession()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Integer(TagSupport.EVAL_BODY_INCLUDE)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
@@ -155,10 +140,7 @@ open fun invalidateSession()
 
 open fun isSessionOld()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(this.role != 
@@ -235,10 +217,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "isSessionOld()")
 
 open fun isRarelyUsedSession()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(this.role != 
@@ -305,10 +284,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "isRarelyUsedSession()")
 
 open fun validRole()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -321,10 +297,7 @@ stringBuffer!!.append("Trying New login<p/>")
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to set valid role"
 
@@ -349,10 +322,7 @@ stringBuffer!!.append("Trying New login<p/>")
 
 open fun invalidRole()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             this.weblisketSession!!.setAuthenticated(false)
@@ -367,10 +337,7 @@ stringBuffer!!.append("Trying New login<p/>")
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to set role invalid"
 
@@ -397,10 +364,7 @@ stringBuffer!!.append("Trying New login<p/>")
             
 open fun isAuthenticated()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(BooleanUtil.getInstance()!!.getFromString(authenticated))
@@ -428,10 +392,7 @@ open fun isAuthenticated()
 
 open fun isAuthenticationSessionValid(roles: Vector)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var roles = roles
 
         try {
@@ -470,9 +431,6 @@ var roles = roles
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var mustBeOfRole: BasicUserRole = basicUserRoleArray[index]!! as BasicUserRole
@@ -552,10 +510,7 @@ var roles = roles
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.FALSE
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
@@ -577,10 +532,7 @@ var roles = roles
 
 open fun nextAttempt()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(attemptsInteger != 
@@ -602,10 +554,7 @@ open fun nextAttempt()
 
 open fun processIfNewLogin(userName: String, password: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var userName = userName
 var password = password
 
@@ -676,10 +625,7 @@ this.nextAttempt()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.FALSE
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
@@ -701,10 +647,7 @@ this.nextAttempt()
 
 open fun processInvalidation()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             
@@ -734,10 +677,7 @@ open fun processInvalidation()
                             }
                     
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
@@ -759,10 +699,7 @@ open fun processInvalidation()
 
 open fun outputSessionInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -815,10 +752,7 @@ stringBuffer!!.append("<br/>\n")
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
@@ -831,10 +765,7 @@ stringBuffer!!.append("<br/>\n")
 
 open fun getRole()
         //nullable = true from not(false or (false and true)) = true
-: UserRole
-
-        Updates for KMP build        
-        {
+: UserRole{
 
 
 

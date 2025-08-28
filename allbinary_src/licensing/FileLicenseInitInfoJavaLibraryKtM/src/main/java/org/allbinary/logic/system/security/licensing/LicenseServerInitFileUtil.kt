@@ -46,10 +46,7 @@ open public class LicenseServerInitFileUtil
             
 open fun nullOutputStream()
         //nullable = true from not(false or (false and true)) = true
-: OutputStream
-
-        Updates for KMP build        
-        {
+: OutputStream{
 
 
 
@@ -60,30 +57,21 @@ open fun nullOutputStream()
                 @Throws(IOException::class)
             override fun write(b: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var b = b
 }
 
                 @Throws(IOException::class)
             override fun write(b: ByteArray, off: Int, len: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var b = b
 var off = off
 var len = len
 }
 override fun close()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
                                 }
@@ -106,10 +94,7 @@ override fun close()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             
@@ -131,10 +116,7 @@ LicenseInitInfoUtil.getInstance()!!.setFilePath(StringUtil.getInstance()!!.EMPTY
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }
 
@@ -143,10 +125,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 
 open fun write()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var fileOutputStream: OutputStream = NULL_OUTPUT_STREAM
 
@@ -174,9 +153,6 @@ fileOutputStream= fileStreamFactory!!.getFileOutputStreamInstance(StringUtil.get
 
 
         while(true)
-        
-
-        Updates for KMP build        
         {
 b= inputStream!!.read()
 
@@ -197,10 +173,7 @@ index++
 logUtil!!.put("Wrote Bytes: " +index, this, commonStrings!!.INIT)
 fileOutputStream!!.flush()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }
 

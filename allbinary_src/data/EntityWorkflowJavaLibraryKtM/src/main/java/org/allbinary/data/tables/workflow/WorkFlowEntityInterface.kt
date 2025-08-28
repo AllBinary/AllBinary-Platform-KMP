@@ -37,38 +37,23 @@ open fun get(storeName: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class, LicensingException::class)
             
 open fun get(name: String, storeName: String)
         //nullable = true from not(false or (false and false)) = true
 : WorkFlowInterface
 
-        Updates for KMP build        
-        
-
 open fun delete(name: String, storeName: String)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

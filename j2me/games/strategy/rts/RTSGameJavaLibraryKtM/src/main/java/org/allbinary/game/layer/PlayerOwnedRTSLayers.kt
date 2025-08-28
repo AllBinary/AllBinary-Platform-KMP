@@ -41,10 +41,7 @@ open public class PlayerOwnedRTSLayers
     val rtsLayerList: BasicArrayList = BasicArrayList()
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

@@ -37,10 +37,7 @@ open public class StoreThemeCategoryView : CategoryView
         
 public constructor        (categoryInterface: StoreThemeCategoryInterface)                        
 
-                            : super(categoryInterface as StoreThemeCategoryInterface)
-
-        Updates for KMP build        
-        {
+                            : super(categoryInterface as StoreThemeCategoryInterface){
     //var categoryInterface = categoryInterface
 
 
@@ -53,10 +50,7 @@ public constructor        (categoryInterface: StoreThemeCategoryInterface)
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
     //var document = document
 
     var node: Node = super.toXmlNode(document)!!
@@ -78,9 +72,6 @@ Arrays.sort(themeValidationArray, ThemeComparator())
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var themeValidation: ThemeValidation = themeValidationArray[index]!! as ThemeValidation

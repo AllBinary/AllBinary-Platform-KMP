@@ -49,9 +49,6 @@ open public class CustomUriResolver
     private var basicURIResolver: BasicUriResolver
 public constructor        (path: String, basicURIResolver: BasicUriResolver)
             : super()
-        
-
-        Updates for KMP build        
         {
 var path = path
 var basicURIResolver = basicURIResolver
@@ -64,10 +61,7 @@ this.basicURIResolver= basicURIResolver
             
 open fun resolve(href: String, base: String)
         //nullable = true from not(false or (false and false)) = true
-: Source
-
-        Updates for KMP build        
-        {
+: Source{
 var href = href
 var base = base
 
@@ -91,20 +85,14 @@ var base = base
                         return StreamSource(CryptFileReader(TransformInfoTemplateData.getInstance()!!.UNCRYPTED_EXTENSION, TransformInfoTemplateData.getInstance()!!.ENCRYPTED_EXTENSION).
                             getInputStream(fileAbPath))
 } catch(e: TransformerException)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
                             throw e
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
@@ -115,10 +103,7 @@ var base = base
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

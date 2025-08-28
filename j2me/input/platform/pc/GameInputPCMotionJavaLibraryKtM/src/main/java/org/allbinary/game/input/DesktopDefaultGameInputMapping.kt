@@ -35,10 +35,7 @@ open public class DesktopDefaultGameInputMapping : PersistentInputMapping {
         
 public constructor        ()                        
 
-                            : super(GamePersistanceStrings.getInstance()!!.DEFAULT_INPUT_MAPPING_RECORD_ID)
-
-        Updates for KMP build        
-        {
+                            : super(GamePersistanceStrings.getInstance()!!.DEFAULT_INPUT_MAPPING_RECORD_ID){
 
 
                             //For kotlin this is before the body of the constructor.

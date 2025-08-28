@@ -37,10 +37,7 @@ open public class ThreadPoolStrings
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ThreadPoolStrings
-
-        Updates for KMP build        
-        {
+: ThreadPoolStrings{
 
 
 

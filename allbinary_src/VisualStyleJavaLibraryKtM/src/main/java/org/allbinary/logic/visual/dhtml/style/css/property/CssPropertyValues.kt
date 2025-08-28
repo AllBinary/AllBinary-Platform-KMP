@@ -51,18 +51,12 @@ open public class CssPropertyValues
     private var propertyValueVector: Vector
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 this.propertyValueVector= Vector()
 }
 
 public constructor        (node: Node)
             : super()
-        
-
-        Updates for KMP build        
         {
 var node = node
 
@@ -90,9 +84,6 @@ this.propertyValueVector= Vector()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var cssPropertyValueNode: Node = cssPropertyNodeVector!!.get(index) as Node
@@ -130,9 +121,6 @@ indexPropertyValueHashMap!!.put(indexValue, propertyValue)
 
                         for (index in 0 until size2)
 
-        
-
-        Updates for KMP build        
         {
 
     var indexInt: Integer = Integer(index)
@@ -148,10 +136,7 @@ this.propertyValueVector!!.add(propertyValue)
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
@@ -173,9 +158,6 @@ open fun toHashMap()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var value: String = propertyValueVector!!.get(index) as String
@@ -201,10 +183,7 @@ index++
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     

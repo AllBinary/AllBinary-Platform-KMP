@@ -49,10 +49,7 @@ open public class GeographicMapTopViewGameLayerBehavior2 : GeographicMapTopViewL
     private var previousGeographicMapCellPosition: GeographicMapCellPosition
 public constructor        ()                        
 
-                            : super(16)
-
-        Updates for KMP build        
-        {
+                            : super(16){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -63,10 +60,7 @@ this.offsetY= 0
 
 public constructor        (maxGravityActionIndex: Int, autoStepBlocks: Boolean, offsetY: Int)                        
 
-                            : super(maxGravityActionIndex)
-
-        Updates for KMP build        
-        {
+                            : super(maxGravityActionIndex){
     //var maxGravityActionIndex = maxGravityActionIndex
     //var autoStepBlocks = autoStepBlocks
     //var offsetY = offsetY
@@ -82,10 +76,7 @@ this.offsetY= offsetY
                 @Throws(Exception::class)
             override fun gravity(velocityProperties: VelocityProperties, geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var velocityProperties = velocityProperties
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var geographicMapCellTypeArray = geographicMapCellTypeArray
@@ -126,10 +117,7 @@ this.gravity()
             
 open fun getPositionTopLeft(geographicMapInterfaceArray: Array<BasicGeographicMap?>, layer: AllBinaryLayer, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var layer = layer
     //var x = x
@@ -152,10 +140,7 @@ open fun getPositionTopLeft(geographicMapInterfaceArray: Array<BasicGeographicMa
             
 open fun getPositionTopRight(geographicMapInterfaceArray: Array<BasicGeographicMap?>, layer: AllBinaryLayer, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var layer = layer
     //var x = x
@@ -178,10 +163,7 @@ open fun getPositionTopRight(geographicMapInterfaceArray: Array<BasicGeographicM
             
 open fun getPositionBottomLeft(geographicMapInterfaceArray: Array<BasicGeographicMap?>, layer: AllBinaryLayer, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var layer = layer
     //var x = x
@@ -204,10 +186,7 @@ open fun getPositionBottomLeft(geographicMapInterfaceArray: Array<BasicGeographi
             
 open fun getPositionBottomRight(geographicMapInterfaceArray: Array<BasicGeographicMap?>, layer: AllBinaryLayer, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var layer = layer
     //var x = x
@@ -230,10 +209,7 @@ open fun getPositionBottomRight(geographicMapInterfaceArray: Array<BasicGeograph
             
 open fun getLeftPosition(geographicMapInterfaceArray: Array<BasicGeographicMap?>, layer: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var layer = layer
 
@@ -254,10 +230,7 @@ open fun getLeftPosition(geographicMapInterfaceArray: Array<BasicGeographicMap?>
             
 open fun getRightPosition(geographicMapInterfaceArray: Array<BasicGeographicMap?>, layer: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var layer = layer
 
@@ -277,10 +250,7 @@ open fun getRightPosition(geographicMapInterfaceArray: Array<BasicGeographicMap?
                 @Throws(Exception::class)
             override fun getGeographicMapCellPositionIfNotSolidBlockOrOffMap(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, velocityProperties: VelocityProperties, layer: AllBinaryLayer, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var geographicMapCellTypeArray = geographicMapCellTypeArray
     //var velocityProperties = velocityProperties
@@ -378,10 +348,7 @@ geographicMapCellPosition= this.getGeographicMapCellPositionIfNotSolidBlockOrOff
                 @Throws(Exception::class)
             override fun getGeographicMapCellPositionIfNotSolidBlockOrOffMap(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, geographicMapCellPosition: GeographicMapCellPosition, velocityProperties: VelocityProperties, layer: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var geographicMapCellTypeArray = geographicMapCellTypeArray
     //var geographicMapCellPosition = geographicMapCellPosition
@@ -462,10 +429,7 @@ this.previousGeographicMapCellPosition=
                 @Throws(Exception::class)
             override fun moveAndLand(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, geographicMapCellPosition: GeographicMapCellPosition, velocityProperties: VelocityProperties, layer: AllBinaryLayer, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var geographicMapCellTypeArray = geographicMapCellTypeArray
     //var geographicMapCellPosition = geographicMapCellPosition
@@ -496,10 +460,7 @@ layer.
                 @Throws(Exception::class)
             override fun move(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, velocityProperties: VelocityProperties, layer: AllBinaryLayer, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var geographicMapCellTypeArray = geographicMapCellTypeArray
     //var velocityProperties = velocityProperties
@@ -540,10 +501,7 @@ this.moveAndLand(geographicMapInterfaceArray, geographicMapCellTypeArray, geogra
                 @Throws(Exception::class)
             override fun left(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, velocityProperties: VelocityProperties, layer: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var geographicMapCellTypeArray = geographicMapCellTypeArray
     //var velocityProperties = velocityProperties
@@ -605,10 +563,7 @@ layer.
                 @Throws(Exception::class)
             override fun right(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, velocityProperties: VelocityProperties, layer: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var geographicMapCellTypeArray = geographicMapCellTypeArray
     //var velocityProperties = velocityProperties

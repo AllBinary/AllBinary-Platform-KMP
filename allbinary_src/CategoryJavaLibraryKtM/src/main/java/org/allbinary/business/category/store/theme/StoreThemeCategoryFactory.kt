@@ -51,9 +51,6 @@ open public class StoreThemeCategoryFactory
     private var transformInfoInterface: TransformInfoInterface
 public constructor        (transformInfoInterface: TransformInfoInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var transformInfoInterface = transformInfoInterface
 
@@ -71,10 +68,7 @@ this.transformInfoInterface= transformInfoInterface
 
 open fun getRootInstance()
         //nullable = true from not(false or (false and true)) = true
-: CategoryInterface
-
-        Updates for KMP build        
-        {
+: CategoryInterface{
 
         try {
             
@@ -86,10 +80,7 @@ open fun getRootInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StoreThemeCategory(this.transformInfoInterface, categoryPropertiesFactoryInterface, 0) as CategoryInterface
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
@@ -111,10 +102,7 @@ open fun getRootInstance()
 
 open fun getRootInstance(categoryAbPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
-: CategoryInterface
-
-        Updates for KMP build        
-        {
+: CategoryInterface{
 var categoryAbPath = categoryAbPath
 
         try {
@@ -130,10 +118,7 @@ var categoryAbPath = categoryAbPath
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StoreThemeCategory(this.transformInfoInterface, categoryPropertiesFactoryInterface, level) as CategoryInterface
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
@@ -155,10 +140,7 @@ var categoryAbPath = categoryAbPath
 
 open fun getRootInstanceFromNode(node: Node)
         //nullable = true from not(false or (false and false)) = true
-: CategoryInterface
-
-        Updates for KMP build        
-        {
+: CategoryInterface{
 var node = node
 
         try {
@@ -177,10 +159,7 @@ var node = node
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StoreThemeCategory(this.transformInfoInterface, node, categoryPropertiesFactoryInterface, level) as CategoryInterface
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
@@ -202,10 +181,7 @@ var node = node
 
 open fun getInstance(categoryPath: String, level: Int)
         //nullable =  from not(true or (false and false)) = 
-: CategoryInterface
-
-        Updates for KMP build        
-        {
+: CategoryInterface{
 var categoryPath = categoryPath
 var level = level
 
@@ -219,10 +195,7 @@ var level = level
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StoreThemeCategory(this.transformInfoInterface, categoryPropertiesFactoryInterface, level) as CategoryInterface
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
@@ -244,10 +217,7 @@ var level = level
 
 open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, categoryPath: String)
         //nullable =  from not(true or (false and false)) = 
-: CategoryInterface
-
-        Updates for KMP build        
-        {
+: CategoryInterface{
 var rootCategoryInterface = rootCategoryInterface
 var parentCategoryInterface = parentCategoryInterface
 var categoryPath = categoryPath
@@ -262,10 +232,7 @@ var categoryPath = categoryPath
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StoreThemeCategory(this.transformInfoInterface, rootCategoryInterface, parentCategoryInterface, categoryPropertiesFactoryInterface) as CategoryInterface
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
@@ -287,10 +254,7 @@ var categoryPath = categoryPath
 
 open fun getInstance(node: Node, level: Int)
         //nullable =  from not(true or (false and false)) = 
-: CategoryInterface
-
-        Updates for KMP build        
-        {
+: CategoryInterface{
 var node = node
 var level = level
 
@@ -304,10 +268,7 @@ var level = level
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StoreThemeCategory(this.transformInfoInterface, categoryPropertiesFactoryInterface, level) as CategoryInterface
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
@@ -329,10 +290,7 @@ var level = level
 
 open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, node: Node)
         //nullable =  from not(true or (false and false)) = 
-: CategoryInterface
-
-        Updates for KMP build        
-        {
+: CategoryInterface{
 var rootCategoryInterface = rootCategoryInterface
 var parentCategoryInterface = parentCategoryInterface
 var node = node
@@ -347,10 +305,7 @@ var node = node
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StoreThemeCategory(this.transformInfoInterface, rootCategoryInterface, parentCategoryInterface, categoryPropertiesFactoryInterface) as CategoryInterface
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
@@ -372,10 +327,7 @@ var node = node
 
 open fun getInstance(categoryPropertiesHashMap: HashMap<Any, Any>, level: Int)
         //nullable =  from not(true or (false and false)) = 
-: CategoryInterface
-
-        Updates for KMP build        
-        {
+: CategoryInterface{
 var categoryPropertiesHashMap = categoryPropertiesHashMap
 var level = level
 
@@ -389,10 +341,7 @@ var level = level
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StoreThemeCategory(this.transformInfoInterface, categoryPropertiesFactoryInterface, level) as CategoryInterface
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
@@ -414,10 +363,7 @@ var level = level
 
 open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, categoryPropertiesHashMap: HashMap<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
-: CategoryInterface
-
-        Updates for KMP build        
-        {
+: CategoryInterface{
 var rootCategoryInterface = rootCategoryInterface
 var parentCategoryInterface = parentCategoryInterface
 var categoryPropertiesHashMap = categoryPropertiesHashMap
@@ -432,10 +378,7 @@ var categoryPropertiesHashMap = categoryPropertiesHashMap
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StoreThemeCategory(this.transformInfoInterface, rootCategoryInterface, parentCategoryInterface, categoryPropertiesFactoryInterface) as CategoryInterface
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))

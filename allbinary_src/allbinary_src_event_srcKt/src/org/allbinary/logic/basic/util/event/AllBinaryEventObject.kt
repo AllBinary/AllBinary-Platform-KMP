@@ -31,10 +31,7 @@ open public class AllBinaryEventObject : EventObject {
         
 public constructor        (anyType: Any)                        
 
-                            : super(anyType)
-
-        Updates for KMP build        
-        {
+                            : super(anyType){
 var anyType = anyType
 
 

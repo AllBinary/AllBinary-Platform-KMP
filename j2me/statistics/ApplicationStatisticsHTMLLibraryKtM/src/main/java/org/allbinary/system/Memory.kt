@@ -36,10 +36,7 @@ open public class Memory
             
 open fun getInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

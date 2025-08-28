@@ -40,10 +40,7 @@ open public class NoCompleteMotionGestureInputEventListener : CompleteMotionGest
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NoCompleteMotionGestureInputEventListener
-
-        Updates for KMP build        
-        {
+: NoCompleteMotionGestureInputEventListener{
 
 
 
@@ -53,28 +50,19 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
-
-        Updates for KMP build        
-        {
+            private constructor        (){
 }
 
 override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
 override fun onCompleteMotionGestureInputEvent(completeMotionGestureInputEvent: CompleteMotionGestureInputEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var completeMotionGestureInputEvent = completeMotionGestureInputEvent
 }
 

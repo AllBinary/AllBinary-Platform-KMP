@@ -34,9 +34,6 @@ open public class Time
     private var timeLong: Long
 public constructor        (time: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var time = time
 this.timeLong= time as Long
@@ -44,9 +41,6 @@ this.timeLong= time as Long
 
 public constructor        (time: Long)
             : super()
-        
-
-        Updates for KMP build        
         {
 var time = time
 this.timeLong= time as Long
@@ -55,10 +49,7 @@ this.timeLong= time as Long
 
 open fun getLong()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -69,10 +60,7 @@ open fun getLong()
 
 open fun getlong()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -82,10 +70,7 @@ open fun getlong()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

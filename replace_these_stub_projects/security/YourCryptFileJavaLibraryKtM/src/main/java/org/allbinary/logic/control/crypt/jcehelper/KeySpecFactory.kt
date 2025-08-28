@@ -40,10 +40,7 @@ open public class KeySpecFactory
 
 open fun getInstance(algorithm: String, keyData: ByteArray)
         //nullable =  from not(true or (false and false)) = 
-: KeySpec
-
-        Updates for KMP build        
-        {
+: KeySpec{
 var algorithm = algorithm
 var keyData = keyData
 
@@ -57,9 +54,6 @@ var keyData = keyData
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

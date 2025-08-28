@@ -73,10 +73,7 @@ open public class BasicHud_1
     private var color: Int
 public constructor        (location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int)                        
 
-                            : this(location, direction, maxHeight, maxWidth, bufferZone, BasicColorFactory.getInstance()!!.WHITE)
-
-        Updates for KMP build        
-        {
+                            : this(location, direction, maxHeight, maxWidth, bufferZone, BasicColorFactory.getInstance()!!.WHITE){
 var location = location
 var direction = direction
 var maxHeight = maxHeight
@@ -90,9 +87,6 @@ var bufferZone = bufferZone
 
 public constructor        (location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int, basicColor: BasicColor)
             : super()
-        
-
-        Updates for KMP build        
         {
 var location = location
 var direction = direction
@@ -113,10 +107,7 @@ this.color= basicColor!!.toInt()
 
 open fun getLocation()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -127,10 +118,7 @@ open fun getLocation()
 
 open fun getDirection()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -143,10 +131,7 @@ open fun getDirection()
             
 open fun getHudGraphicsPosition(width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: HudGraphicsPosition
-
-        Updates for KMP build        
-        {
+: HudGraphicsPosition{
 var width = width
 var height = height
 
@@ -248,10 +233,7 @@ anchor= 0
 
 open fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
@@ -259,10 +241,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
 open fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var displayChangeEvent = displayChangeEvent
 
         try {
@@ -273,10 +252,7 @@ this.hudGraphicsPosition= this.getHudGraphicsPosition(displayInfo!!.getLastWidth
 x= this.hudGraphicsPosition!!.getPoint()!!.getX()
 this.setY(this.hudGraphicsPosition!!.getPoint()!!.getY())
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -288,10 +264,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, this.canvasStrings!!.ON_DISPLAY_C
 
 open fun getPoint(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-: GPoint
-
-        Updates for KMP build        
-        {
+: GPoint{
     //var x = x
     //var y = y
 
@@ -304,10 +277,7 @@ open fun getPoint(x: Int, y: Int)
 
 open fun getBufferZone()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -318,10 +288,7 @@ open fun getBufferZone()
 
 open fun setBufferZone(bufferZone: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var bufferZone = bufferZone
 this.bufferZone= bufferZone
 }
@@ -329,10 +296,7 @@ this.bufferZone= bufferZone
 
 open fun getMaxWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -343,10 +307,7 @@ open fun getMaxWidth()
 
 open fun setMaxWidth(maxWidth: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var maxWidth = maxWidth
 this.maxWidth= maxWidth
 }
@@ -354,10 +315,7 @@ this.maxWidth= maxWidth
 
 open fun getMaxHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -368,10 +326,7 @@ open fun getMaxHeight()
 
 open fun setMaxHeight(maxHeight: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var maxHeight = maxHeight
 this.maxHeight= maxHeight
 }
@@ -379,10 +334,7 @@ this.maxHeight= maxHeight
 
 open fun setLocation(location: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var location = location
 this.location= location
 }
@@ -390,10 +342,7 @@ this.location= location
 
 open fun setDirection(direction: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var direction = direction
 this.direction= direction
 }
@@ -401,10 +350,7 @@ this.direction= direction
 
 open fun paint(graphics: Graphics, string: String, string2: String, offset: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var string = string
     //var string2 = string2
@@ -417,10 +363,7 @@ graphics.drawString(string2, x +offset, getY(), hudGraphicsPosition!!.getAnchor(
 
 open fun paint(graphics: Graphics, string: String, string2: String, offset: Int, offset2: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 var string = string
 var string2 = string2
@@ -434,10 +377,7 @@ graphics.drawString(string2, x +offset2, getY(), hudGraphicsPosition!!.getAnchor
 
 open fun paint(graphics: Graphics, charArray: CharArray, offset: Int, len: Int, charArray2: CharArray, offset2: Int, len2: Int, xOffset: Int, xOffset2: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 var charArray = charArray
 var offset = offset
@@ -458,10 +398,7 @@ graphics.drawChars(charArray2, offset2, len2, x +xOffset2, y, hudGraphicsPositio
 
 open fun paint(graphics: Graphics, charArray: CharArray, offset: Int, len: Int, charArray2: CharArray, offset2: Int, len2: Int, xOffset: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 var charArray = charArray
 var offset = offset
@@ -481,10 +418,7 @@ graphics.drawChars(charArray2, offset2, len2, x +xOffset, y, hudGraphicsPosition
 
 open fun paint(graphics: Graphics, charArray: CharArray, offset: Int, len: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 var charArray = charArray
 var offset = offset
@@ -501,10 +435,7 @@ graphics.drawChars(charArray, offset, len, x, y, hudGraphicsPosition!!.getAnchor
 
 open fun paint(graphics: Graphics, string: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 var string = string
 this.basicSetColorUtil!!.setBasicColorP(graphics, getBasicColorP())
@@ -517,10 +448,7 @@ graphics.drawString(string, x, y, hudGraphicsPosition!!.getAnchor())
 
 open fun getHudGraphicsPosition()
         //nullable = true from not(false or (false and true)) = true
-: HudGraphicsPosition
-
-        Updates for KMP build        
-        {
+: HudGraphicsPosition{
 
 
 
@@ -531,10 +459,7 @@ open fun getHudGraphicsPosition()
 
 open fun getColor()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -545,10 +470,7 @@ open fun getColor()
 
 open fun getX()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -559,10 +481,7 @@ open fun getX()
 
 open fun setX(x: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var x = x
 this.x= x
 }
@@ -570,10 +489,7 @@ this.x= x
 
 open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var basicColor = basicColor
 this.basicColor= basicColor
 }
@@ -581,10 +497,7 @@ this.basicColor= basicColor
 
 open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor
-
-        Updates for KMP build        
-        {
+: BasicColor{
 
 
 
@@ -595,10 +508,7 @@ open fun getBasicColorP()
 
 open fun setY(y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var y = y
 this.y= y
 }
@@ -606,10 +516,7 @@ this.y= y
 
 open fun getY()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

@@ -23,10 +23,7 @@ open public class MultiPlayerGameFeatureFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: MultiPlayerGameFeatureFactory
-
-        Updates for KMP build        
-        {
+: MultiPlayerGameFeatureFactory{
 
 
 
@@ -38,19 +35,13 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun addCommands(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var anyType = anyType
 }
 

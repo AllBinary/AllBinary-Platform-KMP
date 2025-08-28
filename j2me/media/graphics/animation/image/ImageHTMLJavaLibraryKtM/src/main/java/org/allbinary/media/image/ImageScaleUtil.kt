@@ -45,10 +45,7 @@ open public class ImageScaleUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageScaleUtil
-
-        Updates for KMP build        
-        {
+: ImageScaleUtil{
 
 
 
@@ -60,9 +57,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -71,10 +65,7 @@ open fun getInstance()
             
 open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominatorX: Float, scaleDenominatorX: Float, scaleNominatorY: Float, scaleDenominatorY: Float, cached: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var imageCache = imageCache
     //var originalImage = originalImage
     //var scaleNominatorX = scaleNominatorX
@@ -94,10 +85,7 @@ open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominato
             
 open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominatorX: Float, scaleDenominatorX: Float, scaleNominatorY: Float, scaleDenominatorY: Float, cached: Boolean, mutable: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var imageCache = imageCache
     //var originalImage = originalImage
     //var scaleNominatorX = scaleNominatorX
@@ -124,10 +112,7 @@ open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominato
             
 open fun createImage(imageCache: ImageCache, originalImage: Image, scaleX: Float, scaleY: Float, cached: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
 var imageCache = imageCache
 var originalImage = originalImage
 var scaleX = scaleX
@@ -145,10 +130,7 @@ var cached = cached
             
 open fun createImage(originalImage: Image, scaleX: Float, scaleY: Float)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
 var originalImage = originalImage
 var scaleX = scaleX
 var scaleY = scaleY

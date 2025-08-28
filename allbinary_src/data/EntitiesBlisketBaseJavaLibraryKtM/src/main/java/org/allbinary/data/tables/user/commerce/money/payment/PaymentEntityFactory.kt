@@ -39,10 +39,7 @@ open public class PaymentEntityFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PaymentEntityFactory
-
-        Updates for KMP build        
-        {
+: PaymentEntityFactory{
 
 
 
@@ -56,19 +53,13 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getPaymentEntityInstance()
         //nullable = true from not(false or (false and true)) = true
-: PaymentEntity
-
-        Updates for KMP build        
-        {
+: PaymentEntity{
 
         try {
             
@@ -77,10 +68,7 @@ open fun getPaymentEntityInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return org.allbinary.data.tables.user.commerce.money.payment.PaymentEntity()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

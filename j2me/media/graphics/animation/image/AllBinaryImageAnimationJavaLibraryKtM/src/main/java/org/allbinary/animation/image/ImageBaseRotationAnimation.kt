@@ -40,10 +40,7 @@ open public class ImageBaseRotationAnimation : RotationAnimation {
     private val image: Image
 public constructor        (image: Image, angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
 
-                            : super(angleInfo, totalAngle, animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(angleInfo, totalAngle, animationBehavior){
     //var image = image
     //var angleInfo = angleInfo
     //var totalAngle = totalAngle
@@ -59,10 +56,7 @@ this.image= image
                 @Throws(Exception::class)
             override fun getAnimationSize()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -72,19 +66,13 @@ this.image= image
 
 override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var sequence = sequence
 }
 
 override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
-: IntArray
-
-        Updates for KMP build        
-        {
+: IntArray{
 
 
 
@@ -96,10 +84,7 @@ override fun getSequence()
     var anchor: Int = Anchor.TOP_LEFT
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var x = x
     //var y = y
@@ -109,10 +94,7 @@ graphics.drawImage(this.image, x, y, anchor)
 
 open fun getImage()
         //nullable = true from not(false or (false and true)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
 
 
 
@@ -122,10 +104,7 @@ open fun getImage()
 
 override fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -136,10 +115,7 @@ override fun getWidth()
 
 open fun close()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 DisposalUtil.getInstance()!!.dispose(this.image)
 }
 
@@ -147,10 +123,7 @@ DisposalUtil.getInstance()!!.dispose(this.image)
                 @Throws(Throwable::class)
             override fun finalize()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 DisposalUtil.getInstance()!!.dispose(this.image)
 }
 

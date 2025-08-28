@@ -38,10 +38,7 @@ open public class WaypointRunnableLogHelper
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: WaypointRunnableLogHelper
-
-        Updates for KMP build        
-        {
+: WaypointRunnableLogHelper{
 
 
 
@@ -59,20 +56,14 @@ open fun getInstance()
         
 open fun start(pathFindingLayerInterface: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var pathFindingLayerInterface = pathFindingLayerInterface
 }
 
 
 open fun end(pathFindingLayerInterface: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var pathFindingLayerInterface = pathFindingLayerInterface
 }
 

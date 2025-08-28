@@ -39,10 +39,7 @@ open public class ParentInventoryTagHelper
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ParentInventoryTagHelper
-
-        Updates for KMP build        
-        {
+: ParentInventoryTagHelper{
 
 
 
@@ -62,10 +59,7 @@ open fun getInstance()
             
 open fun isValid(tagClass: Any, parentTag: Tag)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var tagClass = tagClass
 var parentTag = parentTag
 

@@ -29,10 +29,7 @@ import org.allbinary.input.AllBinarySensor
 
 open public class AllBinaryMagneticFieldSensor : AllBinarySensor {
         
-protected constructor        ()
-
-        Updates for KMP build        
-        {
+protected constructor        (){
 }
 
 

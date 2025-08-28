@@ -36,10 +36,7 @@ open public class UpgradeSound : CompositeSound {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: Sound
-
-        Updates for KMP build        
-        {
+: Sound{
 
 
 
@@ -51,10 +48,7 @@ open fun getInstance()
         }
             private constructor        ()                        
 
-                            : super("resource:/wav/upgrade.wav")
-
-        Updates for KMP build        
-        {
+                            : super("resource:/wav/upgrade.wav"){
 
 
                             //For kotlin this is before the body of the constructor.

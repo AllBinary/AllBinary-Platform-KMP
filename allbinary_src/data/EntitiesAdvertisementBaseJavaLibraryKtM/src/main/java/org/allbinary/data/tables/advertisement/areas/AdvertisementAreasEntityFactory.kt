@@ -39,10 +39,7 @@ open public class AdvertisementAreasEntityFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AdvertisementAreasEntityInterface
-
-        Updates for KMP build        
-        {
+: AdvertisementAreasEntityInterface{
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -54,10 +51,7 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AdvertisementAreasEntity() as AdvertisementAreasEntityInterface
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
@@ -83,9 +77,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION, "AdvertisementAreasEntityFactory", comm
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

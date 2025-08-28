@@ -41,10 +41,7 @@ open public class AnalogControllerConfigurationEventHandler : BasicEventHandler 
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AnalogControllerConfigurationEventHandler
-
-        Updates for KMP build        
-        {
+: AnalogControllerConfigurationEventHandler{
 
 
 
@@ -56,19 +53,13 @@ open fun getInstance()
         }
             
     private val list: BasicArrayList = BasicArrayList()
-private constructor        ()
-
-        Updates for KMP build        
-        {
+private constructor        (){
 }
 
 
 open fun addListener(analogControllerConfigurationEventListenerInterface: AnalogControllerConfigurationEventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var analogControllerConfigurationEventListenerInterface = analogControllerConfigurationEventListenerInterface
 
     
@@ -83,20 +74,14 @@ var analogControllerConfigurationEventListenerInterface = analogControllerConfig
 
 override fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.list.clear()
 super.removeAllListeners()
 }
 
 override fun removeListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventListenerInterface = eventListenerInterface
 this.list.remove(eventListenerInterface)
 super.removeListener(eventListenerInterface)
@@ -106,10 +91,7 @@ super.removeListener(eventListenerInterface)
                 @Throws(Exception::class)
             override fun fireEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventObject = eventObject
 
 
@@ -117,9 +99,6 @@ var eventObject = eventObject
 
                         for (index in this.list.size()!!  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
         try {
@@ -128,10 +107,7 @@ var eventObject = eventObject
 
 playerGameInput!!.onAnalogControllerConfigurationEvent(eventObject as AnalogControllerConfigurationEvent)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
 }
 
@@ -144,10 +120,7 @@ super.fireEvent(eventObject)
                 @Throws(Exception::class)
             override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var eventObject = eventObject
     //var eventListenerInterface = eventListenerInterface
 

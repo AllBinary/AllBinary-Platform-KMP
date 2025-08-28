@@ -49,10 +49,7 @@ open public class GameConfigurationCentral
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameConfigurationCentral
-
-        Updates for KMP build        
-        {
+: GameConfigurationCentral{
 
 
 
@@ -98,9 +95,6 @@ open fun getInstance()
     private var gameControlFidelity: Int = 36
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
@@ -125,10 +119,7 @@ MAX_LAYERS= GameConfiguration("Max Layers", smallIntegerSingletonFactory!!.getIn
 
 open fun load(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -170,10 +161,7 @@ this.SCALE.setValue(smallIntegerSingletonFactory!!.getInstance(Integer.valueOf(v
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.LOAD, e)
 }
 
@@ -182,10 +170,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.LOAD, e)
 
 open fun setGameControlFidelity(gameControlFidelity: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gameControlFidelity = gameControlFidelity
 this.gameControlFidelity= gameControlFidelity
 }
@@ -193,10 +178,7 @@ this.gameControlFidelity= gameControlFidelity
 
 open fun getGameControlFidelity()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -206,10 +188,7 @@ open fun getGameControlFidelity()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

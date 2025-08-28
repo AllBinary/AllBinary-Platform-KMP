@@ -44,9 +44,6 @@ open public class HudGraphicsPosition
     private var point: GPoint = PointFactory.getInstance()!!.ZERO_ZERO
 public constructor        (point: GPoint, anchor: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var point = point
 var anchor = anchor
@@ -57,10 +54,7 @@ this.setPoint(point)
 
 open fun getAnchor()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -71,10 +65,7 @@ open fun getAnchor()
 
 open fun setAnchor(anchor: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var anchor = anchor
 this.anchor= anchor
 }
@@ -82,10 +73,7 @@ this.anchor= anchor
 
 open fun getPoint()
         //nullable = true from not(false or (false and true)) = true
-: GPoint
-
-        Updates for KMP build        
-        {
+: GPoint{
 
 
 
@@ -96,10 +84,7 @@ open fun getPoint()
 
 open fun setPoint(point: GPoint)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var point = point
 this.point= point
 }

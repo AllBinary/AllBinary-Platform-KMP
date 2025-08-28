@@ -39,10 +39,7 @@ open public class MathData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: MathData
-
-        Updates for KMP build        
-        {
+: MathData{
 
 
 
@@ -54,9 +51,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

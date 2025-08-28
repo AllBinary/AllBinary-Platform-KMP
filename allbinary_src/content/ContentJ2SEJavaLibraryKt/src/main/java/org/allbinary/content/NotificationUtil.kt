@@ -43,10 +43,7 @@ open public class NotificationUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NotificationUtil
-
-        Updates for KMP build        
-        {
+: NotificationUtil{
 
 
 
@@ -66,10 +63,7 @@ open fun getInstance()
 
 open fun notify(command: Command, resource: String, message: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var command = command
 var resource = resource
 var message = message

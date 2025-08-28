@@ -34,10 +34,7 @@ open public class SimpleGravityVelocityMovement : BasicConstantVelocityMovement 
         
 public constructor        (speedBasicDecimal: BasicDecimal)                        
 
-                            : super(speedBasicDecimal, VelocityProperties(speedBasicDecimal!!.getUnscaled().toInt(), speedBasicDecimal!!.getUnscaled().toInt()))
-
-        Updates for KMP build        
-        {
+                            : super(speedBasicDecimal, VelocityProperties(speedBasicDecimal!!.getUnscaled().toInt(), speedBasicDecimal!!.getUnscaled().toInt())){
 var speedBasicDecimal = speedBasicDecimal
 
 
@@ -51,10 +48,7 @@ var speedBasicDecimal = speedBasicDecimal
                 @Throws(Exception::class)
             override fun process(layer: AllBinaryGameLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var layer = layer
 gravityUtil!!.process(this.getVelocityProperties())
 super.process(layer)

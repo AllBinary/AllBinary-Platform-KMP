@@ -32,15 +32,9 @@ open fun getImageProcessorInput()
         //nullable = true from not(false or (false and true)) = true
 : ImageProcessorInput
 
-        Updates for KMP build        
-        
-
 open fun setImageProcessorInput(imageProcessorInput: ImageProcessorInput)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

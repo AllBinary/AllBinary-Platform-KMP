@@ -35,9 +35,6 @@ open public class BasicQueue
     val queueVector: Vector = Vector()
 protected constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -47,10 +44,7 @@ protected constructor        ()
 
 open fun offer(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var anyType = anyType
 this.queueVector!!.add(anyType)
 
@@ -64,10 +58,7 @@ this.queueVector!!.add(anyType)
 
 open fun remove(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var anyType = anyType
 this.queueVector!!.remove(anyType)
 }
@@ -76,10 +67,7 @@ this.queueVector!!.remove(anyType)
 
 open fun removeLast()
         //nullable = true from not(false or (false and true)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 
     var anyType: Any = this.queueVector!!.lastElement()!!
 

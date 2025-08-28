@@ -58,10 +58,7 @@ open public class DirectionalAnalogLocationInputProcessor : AnalogLocationInputP
     private var leftTriggerGameKeyEvent: GameKeyEvent = GameKeyEvent.NONE
 
     private var rightTriggerGameKeyEvent: GameKeyEvent = GameKeyEvent.NONE
-public constructor        (inputProcessorArray: Array<GameInputProcessor?>)
-
-        Updates for KMP build        
-        {
+public constructor        (inputProcessorArray: Array<GameInputProcessor?>){
 var inputProcessorArray = inputProcessorArray
 this.inputProcessorArray= inputProcessorArray
 
@@ -73,10 +70,7 @@ this.downGameKeyEvent= GameKeyEventFactory.getInstance()!!.getInstance(this, gam
 this.leftTriggerGameKeyEvent= GameKeyEventFactory.getInstance()!!.getInstance(this, gameKeyFactory!!.KEY_NUM0)
 this.rightTriggerGameKeyEvent= GameKeyEventFactory.getInstance()!!.getInstance(this, gameKeyFactory!!.KEY_NUM5)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -87,10 +81,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 
 override fun process(allbinaryLayerManager: AllBinaryLayerManager, analogLocationInput: AnalogLocationInput)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allbinaryLayerManager = allbinaryLayerManager
 var analogLocationInput = analogLocationInput
 
@@ -166,10 +157,7 @@ customGPoint= analogLocationInput!!.getCustomGPoint()
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -180,10 +168,7 @@ logUtil!!.put("Unable to process analog input", this, commonStrings!!.PROCESS, e
 
 override fun getSourceId()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

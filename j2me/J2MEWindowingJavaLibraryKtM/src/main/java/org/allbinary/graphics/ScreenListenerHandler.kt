@@ -37,10 +37,7 @@ open public class ScreenListenerHandler
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ScreenListenerHandler
-
-        Updates for KMP build        
-        {
+: ScreenListenerHandler{
 
 
 
@@ -60,10 +57,7 @@ open fun getInstance()
 
 open fun setListener(screenListenerInterface: ScreenListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var screenListenerInterface = screenListenerInterface
 this.screenListenerInterface= screenListenerInterface
 }
@@ -71,10 +65,7 @@ this.screenListenerInterface= screenListenerInterface
 
 open fun fire(isFullScreen: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var isFullScreen = isFullScreen
 this.screenListenerInterface!!.onFullScreen(isFullScreen)
 }
@@ -82,10 +73,7 @@ this.screenListenerInterface!!.onFullScreen(isFullScreen)
 
 open fun fire()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.screenListenerInterface!!.onFullScreenDisplay()
 }
 

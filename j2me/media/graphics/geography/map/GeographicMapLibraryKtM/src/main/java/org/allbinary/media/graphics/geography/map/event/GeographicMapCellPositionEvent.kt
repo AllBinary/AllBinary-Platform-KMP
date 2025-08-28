@@ -36,10 +36,7 @@ open public class GeographicMapCellPositionEvent : AllBinaryEventObject {
     private var geographicMapCellPosition: GeographicMapCellPosition
 public constructor        (anyType: Any, geographicMapCellPosition: GeographicMapCellPosition)                        
 
-                            : super(anyType)
-
-        Updates for KMP build        
-        {
+                            : super(anyType){
 var anyType = anyType
 var geographicMapCellPosition = geographicMapCellPosition
 
@@ -51,10 +48,7 @@ this.setGeographicMapCellPosition(geographicMapCellPosition)
 
 public constructor        (anyType: Any, key: Int)                        
 
-                            : super(anyType)
-
-        Updates for KMP build        
-        {
+                            : super(anyType){
 var anyType = anyType
 var key = key
 
@@ -66,10 +60,7 @@ var key = key
 
 open fun init(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var anyType = anyType
 this.setSource(anyType)
 }
@@ -77,10 +68,7 @@ this.setSource(anyType)
 
 open fun setGeographicMapCellPosition(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var geographicMapCellPosition = geographicMapCellPosition
 this.geographicMapCellPosition= geographicMapCellPosition
 }
@@ -88,10 +76,7 @@ this.geographicMapCellPosition= geographicMapCellPosition
 
 open fun getGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
 
 
 
@@ -101,10 +86,7 @@ open fun getGeographicMapCellPosition()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

@@ -37,10 +37,7 @@ open public class WorkFlowData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: WorkFlowData
-
-        Updates for KMP build        
-        {
+: WorkFlowData{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

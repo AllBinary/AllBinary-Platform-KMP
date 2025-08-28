@@ -53,9 +53,6 @@ open public class CryptService
     private val abCryptUtil: AbCryptUtil = AbCryptUtil.getInstance()!!
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 Globals.getInstance()!!.init(this::class.java.classLoader, "./")
 logUtil!!.put("Set Globals: " +URLGLOBALS.getWebappPath(), this, this.commonStrings!!.CONSTRUCTOR)
@@ -64,10 +61,7 @@ logUtil!!.put("Set Globals: " +URLGLOBALS.getWebappPath(), this, this.commonStri
 
 open fun getDecryptedInputStream(abeClientInformation: AbeClientInformationInterface, name: String, inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
-: InputStream
-
-        Updates for KMP build        
-        {
+: InputStream{
     //var abeClientInformation = abeClientInformation
     //var name = name
     //var inputStream = inputStream
@@ -85,17 +79,11 @@ open fun getDecryptedInputStream(abeClientInformation: AbeClientInformationInter
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ByteArrayInputStream(decrypted)
 } catch(e: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 this.showLicenseDialog(abeClientInformation, e)
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 this.showLicenseDialog(abeClientInformation, e)
 }
 
@@ -109,10 +97,7 @@ this.showLicenseDialog(abeClientInformation, e)
 
 open fun showLicenseDialog(abeClientInformation: AbeClientInformationInterface, e: Exception)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
     //var e = e
 
@@ -144,20 +129,14 @@ open fun showLicenseDialog(abeClientInformation: AbeClientInformationInterface, 
                                     }
                                 
 } catch(e2: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e2)
 }
 
 basicTextJDialog!!.addCloseListener(ExitCloseListener())
 basicTextJDialog!!.setVisible(true)
 } catch(e3: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e3)
 }
 

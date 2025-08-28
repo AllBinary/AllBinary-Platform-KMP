@@ -28,10 +28,7 @@
 
 open public class MoneyException : Exception {
         
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 

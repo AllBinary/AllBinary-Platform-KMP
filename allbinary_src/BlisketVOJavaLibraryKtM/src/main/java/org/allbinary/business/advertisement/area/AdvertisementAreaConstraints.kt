@@ -44,9 +44,6 @@ open public class AdvertisementAreaConstraints
     private var twoDimensionConstraintsInterface: TwoDimensionalConstraintInterface
 public constructor        (document: Document)
             : super()
-        
-
-        Updates for KMP build        
         {
 var document = document
 
@@ -59,10 +56,7 @@ this.twoDimensionConstraintsInterface= TwoDimensionalConstraint(node)
 
 open fun setDisplayInBrowserContraints(displayInBrowserContraintsInterface: DisplayInBrowserContraintsInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var displayInBrowserContraintsInterface = displayInBrowserContraintsInterface
 this.displayInBrowserContraintsInterface= displayInBrowserContraintsInterface
 }
@@ -70,10 +64,7 @@ this.displayInBrowserContraintsInterface= displayInBrowserContraintsInterface
 
 open fun getTwoDimensionContraints(twoDimensionConstraintsInterface: TwoDimensionalConstraintInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var twoDimensionConstraintsInterface = twoDimensionConstraintsInterface
 this.twoDimensionConstraintsInterface= twoDimensionConstraintsInterface
 }
@@ -81,10 +72,7 @@ this.twoDimensionConstraintsInterface= twoDimensionConstraintsInterface
 
 open fun getDisplayInBrowserContraints()
         //nullable = true from not(false or (false and true)) = true
-: DisplayInBrowserContraintsInterface
-
-        Updates for KMP build        
-        {
+: DisplayInBrowserContraintsInterface{
 
 
 
@@ -95,10 +83,7 @@ open fun getDisplayInBrowserContraints()
 
 open fun getTwoDimensionContraints()
         //nullable = true from not(false or (false and true)) = true
-: TwoDimensionalConstraintInterface
-
-        Updates for KMP build        
-        {
+: TwoDimensionalConstraintInterface{
 
 
 

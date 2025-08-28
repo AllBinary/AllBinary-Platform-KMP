@@ -39,9 +39,6 @@ open public class MultiplayerBehavior
         }
             protected constructor        (username: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var username = username
 }
@@ -49,28 +46,19 @@ var username = username
 
 open fun startTick()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun endTick()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun getApproximateElapsed()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 

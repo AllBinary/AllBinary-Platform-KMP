@@ -37,10 +37,7 @@ open public class DomNodeListHelper
             
 open fun getVector(nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 var nodeList = nodeList
 
     var vector: Vector = Vector()
@@ -54,9 +51,6 @@ var nodeList = nodeList
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 vector.add(DomNodeHelper.getTextNodeValue(nodeList!!.item(index)))
 }

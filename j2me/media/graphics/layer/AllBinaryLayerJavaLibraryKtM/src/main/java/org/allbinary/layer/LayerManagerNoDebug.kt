@@ -35,10 +35,7 @@ open public class LayerManagerNoDebug : LayerManagerLoggingBase {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LayerManagerNoDebug
-
-        Updates for KMP build        
-        {
+: LayerManagerNoDebug{
 
 
 

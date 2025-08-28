@@ -35,10 +35,7 @@ open public class SecuredNativeLibraryHelperWrapper : NativeLibraryHelperWrapper
     private var securedNativeLibraryInterface: SecuredNativeLibraryInterface
 public constructor        (securedNativeLibraryInterface: SecuredNativeLibraryInterface)                        
 
-                            : super(securedNativeLibraryInterface!!.getLibraryName())
-
-        Updates for KMP build        
-        {
+                            : super(securedNativeLibraryInterface!!.getLibraryName()){
     //var securedNativeLibraryInterface = securedNativeLibraryInterface
 
 
@@ -52,10 +49,7 @@ this.securedNativeLibraryInterface= securedNativeLibraryInterface
             
 open fun unlock(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var abeClientInformation = abeClientInformation
 
 

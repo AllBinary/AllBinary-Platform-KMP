@@ -37,20 +37,14 @@ open public class FileJDialog : javax.swing.JDialog {
             
 open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var args = args
 java.awt.EventQueue.invokeLater(object: Runnable()
                                 {
                                 
 open fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 FileJDialog(javax.swing.JFrame(), true).
                             setVisible(true)
 }
@@ -67,10 +61,7 @@ FileJDialog(javax.swing.JFrame(), true).
     private var finishedListenerInterface: FileJDialogListenerInterface
 public constructor        ()                        
 
-                            : super()
-
-        Updates for KMP build        
-        {
+                            : super(){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -81,10 +72,7 @@ this.getJFileChooser1()!!.setMultiSelectionEnabled(true)
 
 public constructor        (parent: java.awt.Frame, modal: Boolean)                        
 
-                            : super(parent, modal)
-
-        Updates for KMP build        
-        {
+                            : super(parent, modal){
 var parent = parent
 var modal = modal
 
@@ -98,10 +86,7 @@ this.getJFileChooser1()!!.setMultiSelectionEnabled(true)
 
 open fun addFinishedListener(finishedListenerInterface: FileJDialogListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var finishedListenerInterface = finishedListenerInterface
 this.finishedListenerInterface= finishedListenerInterface
 }
@@ -109,10 +94,7 @@ this.finishedListenerInterface= finishedListenerInterface
 
 open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 jFileChooser1= javax.swing.JFileChooser()
 setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE)
 jFileChooser1!!.addActionListener(object: java.awt.event.ActionListener()
@@ -120,10 +102,7 @@ jFileChooser1!!.addActionListener(object: java.awt.event.ActionListener()
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 jFileChooser1ActionPerformed(evt)
 }
@@ -142,10 +121,7 @@ pack()
 
 open fun jFileChooser1ActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 logUtil!!.put("Starting Action Command: " +evt.getActionCommand(), this, "ActionPerformed")
 
@@ -184,10 +160,7 @@ logUtil!!.put("Starting Action Command: " +evt.getActionCommand(), this, "Action
 
 open fun getJFileChooser1()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JFileChooser
-
-        Updates for KMP build        
-        {
+: javax.swing.JFileChooser{
 
 
 
@@ -198,10 +171,7 @@ open fun getJFileChooser1()
 
 open fun setJFileChooser1(jFileChooser1: javax.swing.JFileChooser)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var jFileChooser1 = jFileChooser1
 this.jFileChooser1= jFileChooser1
 }

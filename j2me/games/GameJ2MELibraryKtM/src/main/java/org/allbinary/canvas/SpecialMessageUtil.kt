@@ -42,10 +42,7 @@ open public class SpecialMessageUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: SpecialMessageUtil
-
-        Updates for KMP build        
-        {
+: SpecialMessageUtil{
 
 
 
@@ -63,10 +60,7 @@ open fun getInstance()
         
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

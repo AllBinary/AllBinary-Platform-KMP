@@ -51,9 +51,6 @@ open public class RemoteHighScoresSubmissionProcessor
     private val noCrypt: NoCrypt = NoCrypt()
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -61,10 +58,7 @@ public constructor        ()
 
 open fun process(remoteHighScores: RemoteHighScores, abeClientInformation: AbeClientInformationInterface, highScore: HighScore)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var remoteHighScores = remoteHighScores
     //var abeClientInformation = abeClientInformation
     //var highScore = highScore
@@ -102,10 +96,7 @@ remoteHighScores!!.update(resultHashtable)
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
 }
 

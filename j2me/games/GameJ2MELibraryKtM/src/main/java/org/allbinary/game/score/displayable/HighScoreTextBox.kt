@@ -60,10 +60,7 @@ open public class HighScoreTextBox : CustomTextBox {
     var submitted: Boolean = false
 public constructor        (highScoresFactoryInterface: HighScoresFactoryInterface, highScoresHelper: HighScoresHelperBase, abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, cmdListener: CommandListener, name: String, highScore: HighScore, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(cmdListener, "New High Score Enter Name:", name, 12, TextField.ANY, backgrounBasicColor, foregroundBasicColor)
-
-        Updates for KMP build        
-        {
+                            : super(cmdListener, "New High Score Enter Name:", name, 12, TextField.ANY, backgrounBasicColor, foregroundBasicColor){
     //var highScoresFactoryInterface = highScoresFactoryInterface
     //var highScoresHelper = highScoresHelper
     //var abeClientInformation = abeClientInformation
@@ -112,10 +109,7 @@ highScoreUtil= HighScoreUtil(highScoresFactoryInterface, highScoresHelper, abeCl
 
 override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var cmdListener = cmdListener
 this.removeAllCommands()
 PostGameCommandFactory.getInstance()!!.addCommands(this)
@@ -125,10 +119,7 @@ this.setCommandListener(cmdListener)
 
 override fun open()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.virtualKeyboardEventHandler!!.open()
 this.paintable= NullPaintable.getInstance()
 super.open()
@@ -136,10 +127,7 @@ super.open()
 
 override fun close()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.virtualKeyboardEventHandler!!.close()
 this.paintable= this.pleaseWait
 this.repaintBehavior!!.onChangeRepaint(this)
@@ -167,10 +155,7 @@ this.repaintBehavior!!.onChangeRepaint(this)
                 @Throws(Exception::class)
             override fun update()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var name: String = this.getTextFieldItem()!!.getString()!!
 
@@ -180,10 +165,7 @@ super.update()
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 super.paint(graphics)
 this.paintable.paint(graphics)
@@ -192,19 +174,13 @@ this.paintable.paint(graphics)
 
 open fun saveHighScore()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.highScoreUtil!!.saveHighScore()
 }
 
 override fun submit()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.highScoreUtil!!.submit(this)
 }
 

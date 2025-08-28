@@ -46,9 +46,6 @@ open public class WaypointBehaviorBase
     private var waypoint: WaypointBase
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 this.ownedWaypointList= BasicArrayList(1)
 }
@@ -56,10 +53,7 @@ this.ownedWaypointList= BasicArrayList(1)
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -70,10 +64,7 @@ open fun getName()
 
 open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -86,20 +77,14 @@ open fun isRunning()
             
 open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryLayerManager = allBinaryLayerManager
 }
 
 
 open fun getOwnedWaypointList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 
@@ -110,10 +95,7 @@ open fun getOwnedWaypointList()
 
 open fun getWaypoint()
         //nullable = true from not(false or (false and true)) = true
-: WaypointBase
-
-        Updates for KMP build        
-        {
+: WaypointBase{
 
 
 
@@ -124,10 +106,7 @@ open fun getWaypoint()
 
 open fun setWaypoint(waypoint: WaypointBase)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var waypoint = waypoint
 this.waypoint= waypoint
 }
@@ -135,10 +114,7 @@ this.waypoint= waypoint
 
 open fun getSteeringVisitorList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 
@@ -149,10 +125,7 @@ open fun getSteeringVisitorList()
 
 open fun getMovementLogicAsString()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -162,10 +135,7 @@ open fun getMovementLogicAsString()
 
 open fun isWaypointListEmptyOrOnlyTargets()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -175,10 +145,7 @@ open fun isWaypointListEmptyOrOnlyTargets()
 
 open fun isInSensorRange(layerInterface: CollidableDestroyableDamageableLayer, targetDistance: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var layerInterface = layerInterface
     //var targetDistance = targetDistance
 
@@ -190,10 +157,7 @@ open fun isInSensorRange(layerInterface: CollidableDestroyableDamageableLayer, t
 
 open fun getCurrentTargetLayerInterface()
         //nullable = true from not(false or (false and true)) = true
-: CollidableDestroyableDamageableLayer
-
-        Updates for KMP build        
-        {
+: CollidableDestroyableDamageableLayer{
 
 
 
@@ -203,10 +167,7 @@ open fun getCurrentTargetLayerInterface()
 
 open fun getCurrentTargetingStateString()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -216,10 +177,7 @@ open fun getCurrentTargetingStateString()
 
 open fun isTrackingWaypoint()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -229,10 +187,7 @@ open fun isTrackingWaypoint()
 
 open fun getCurrentPathGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
 
 
 
@@ -242,10 +197,7 @@ open fun getCurrentPathGeographicMapCellPosition()
 
 open fun getCurrentGeographicMapCellHistory()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellHistory
-
-        Updates for KMP build        
-        {
+: GeographicMapCellHistory{
 
 
 
@@ -255,10 +207,7 @@ open fun getCurrentGeographicMapCellHistory()
 
 open fun isWaypointOverridesAttacking()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -269,10 +218,7 @@ open fun isWaypointOverridesAttacking()
 
 open fun getNextUnvisitedPathGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
 
 
 
@@ -282,10 +228,7 @@ open fun getNextUnvisitedPathGeographicMapCellPosition()
 
 open fun needToMove()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -295,10 +238,7 @@ open fun needToMove()
 
 open fun setWaypointPathsList(waypointPathsList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var waypointPathsList = waypointPathsList
 
 
@@ -309,10 +249,7 @@ open fun setWaypointPathsList(waypointPathsList: BasicArrayList)
 
 open fun getWaypointPathsList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 
@@ -324,10 +261,7 @@ open fun getWaypointPathsList()
             
 open fun setTarget(layerInterface: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layerInterface = layerInterface
 
 
@@ -340,10 +274,7 @@ open fun setTarget(layerInterface: PathFindingLayerInterface)
             
 open fun setTarget(layerInterface: PathFindingLayerInterface, anotherTargetDistance: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layerInterface = layerInterface
     //var anotherTargetDistance = anotherTargetDistance
 
@@ -357,10 +288,7 @@ open fun setTarget(layerInterface: PathFindingLayerInterface, anotherTargetDista
             
 open fun clearTarget()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
 
 
@@ -372,10 +300,7 @@ open fun clearTarget()
             
 open fun updatePathOnTargetMove(reason: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var reason = reason
 }
 

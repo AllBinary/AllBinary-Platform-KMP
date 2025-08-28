@@ -47,9 +47,6 @@ open public class HighScores
     private val columnTwoHeading: String
 public constructor        (name: String, heading: String, columnTwoHeading: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var name = name
 var heading = heading
@@ -62,20 +59,14 @@ this.columnTwoHeading= columnTwoHeading
 
 open fun setList(orderedHighScoresList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var orderedHighScoresList = orderedHighScoresList
 this.orderedHighScoresList= orderedHighScoresList
 }
 
 override fun getList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 
@@ -86,10 +77,7 @@ override fun getList()
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -99,10 +87,7 @@ open fun getName()
 
 override fun getTotal()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -112,10 +97,7 @@ override fun getTotal()
 
 override fun addHighScore(newHighScore: HighScore)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var newHighScore = newHighScore
 this.orderedHighScoresList!!.add(newHighScore)
 }
@@ -123,10 +105,7 @@ this.orderedHighScoresList!!.add(newHighScore)
 
 open fun getHeading()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -137,10 +116,7 @@ open fun getHeading()
 
 open fun getColumnOneHeading()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -151,10 +127,7 @@ open fun getColumnOneHeading()
 
 open fun getColumnTwoHeading()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -166,10 +139,7 @@ open fun getColumnTwoHeading()
                 @Throws(Exception::class)
             override fun isBestScore(newHighScore: HighScore)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var newHighScore = newHighScore
 
 
@@ -180,10 +150,7 @@ var newHighScore = newHighScore
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

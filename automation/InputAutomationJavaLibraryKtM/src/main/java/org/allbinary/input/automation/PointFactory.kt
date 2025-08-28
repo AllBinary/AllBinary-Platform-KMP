@@ -39,10 +39,7 @@ open public class PointFactory
 
 open fun getInstance(x: Int, y: Int)
         //nullable =  from not(true or (false and false)) = 
-: Point
-
-        Updates for KMP build        
-        {
+: Point{
 var x = x
 var y = y
 
@@ -70,9 +67,6 @@ var y = y
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

@@ -24,10 +24,7 @@ open public class OpenGLResources
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLResources
-
-        Updates for KMP build        
-        {
+: OpenGLResources{
 
 
 
@@ -45,19 +42,13 @@ open fun getInstance()
         
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun isExcluded(name: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var name = name
 
 
@@ -68,10 +59,7 @@ open fun isExcluded(name: String)
 
 open fun getIdentifier(name: String, defType: String, defPackage: String)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var name = name
     //var defType = defType
     //var defPackage = defPackage
@@ -86,10 +74,7 @@ open fun getIdentifier(name: String, defType: String, defPackage: String)
             
 open fun openRawResource(id: Int)
         //nullable = true from not(false or (false and false)) = true
-: InputStream
-
-        Updates for KMP build        
-        {
+: InputStream{
     //var id = id
 
 
@@ -102,10 +87,7 @@ open fun openRawResource(id: Int)
             
 open fun openRawResourceFromName(resourceName: String)
         //nullable = true from not(false or (false and false)) = true
-: InputStream
-
-        Updates for KMP build        
-        {
+: InputStream{
     //var resourceName = resourceName
 
 
@@ -118,10 +100,7 @@ open fun openRawResourceFromName(resourceName: String)
             
 open fun getResourceAsStream(resourceName: String)
         //nullable = true from not(false or (false and false)) = true
-: InputStream
-
-        Updates for KMP build        
-        {
+: InputStream{
     //var resourceName = resourceName
 
 
@@ -132,10 +111,7 @@ open fun getResourceAsStream(resourceName: String)
 
 open fun getPackageName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

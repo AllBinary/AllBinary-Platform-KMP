@@ -42,9 +42,6 @@ open public class EmailServerConfigurationView
     private var emailServerConfigurationInterface: EmailServerConfigurationInterface
 public constructor        (node: Node)
             : super()
-        
-
-        Updates for KMP build        
         {
 var node = node
 
@@ -64,9 +61,6 @@ this.emailServerConfigurationInterface= EmailServerConfiguration(accountName, pa
 
 public constructor        (emailServerConfigurationInterface: EmailServerConfigurationInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var emailServerConfigurationInterface = emailServerConfigurationInterface
 this.emailServerConfigurationInterface= emailServerConfigurationInterface
@@ -75,10 +69,7 @@ this.emailServerConfigurationInterface= emailServerConfigurationInterface
 
 open fun getEmailConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
-: EmailServerConfigurationInterface
-
-        Updates for KMP build        
-        {
+: EmailServerConfigurationInterface{
 
 
 
@@ -91,10 +82,7 @@ open fun getEmailConfigurationInterface()
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var emailConfigurationMapping: EmailServerConfigurationMapping = EmailServerConfigurationMapping(this.emailServerConfigurationInterface)

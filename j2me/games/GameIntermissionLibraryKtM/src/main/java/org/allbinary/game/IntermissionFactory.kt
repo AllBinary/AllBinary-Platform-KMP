@@ -39,10 +39,7 @@ open public class IntermissionFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: IntermissionFactory
-
-        Updates for KMP build        
-        {
+: IntermissionFactory{
 
 
 

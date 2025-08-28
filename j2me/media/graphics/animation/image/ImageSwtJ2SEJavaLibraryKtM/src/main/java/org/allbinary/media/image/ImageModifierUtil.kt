@@ -49,10 +49,7 @@ open public class ImageModifierUtil
 
 open fun getInstanceOrCreate()
         //nullable = true from not(false or (false and true)) = true
-: ImageModifierUtil
-
-        Updates for KMP build        
-        {
+: ImageModifierUtil{
 
 
 
@@ -74,20 +71,14 @@ open fun getInstanceOrCreate()
 
 open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var basicColor = basicColor
 }
 
 
 open fun setColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var unusedOriginalImage = unusedOriginalImage
     //var image = image
     //var imageIndex = imageIndex
@@ -156,9 +147,6 @@ newBufferedImage= swtImage!!.getImage() as org.eclipse.swt.graphics.Image
 
                         for (index in 0 until width)
 
-        
-
-        Updates for KMP build        
         {
 
 
@@ -166,9 +154,6 @@ newBufferedImage= swtImage!!.getImage() as org.eclipse.swt.graphics.Image
 
                         for (index2 in 0 until height)
 
-        
-
-        Updates for KMP build        
         {
 index3= (index2 *imageData!!.bytesPerLine) +(index *4)
 rx= (imageData!!.data[index3] and 0xFF) shl 16
@@ -197,10 +182,7 @@ imageData!!.data[index3 +2]= b as Byte
 
 open fun changeColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var unusedOriginalImage = unusedOriginalImage
     //var image = image
     //var imageIndex = imageIndex
@@ -300,9 +282,6 @@ newBufferedImage= swtImage!!.getImage() as org.eclipse.swt.graphics.Image
 
                         for (index in 0 until width)
 
-        
-
-        Updates for KMP build        
         {
 
 
@@ -310,9 +289,6 @@ newBufferedImage= swtImage!!.getImage() as org.eclipse.swt.graphics.Image
 
                         for (index2 in 0 until height)
 
-        
-
-        Updates for KMP build        
         {
 index3= (index2 *imageData!!.bytesPerLine) +(index *4)
 rx= (imageData!!.data[index3] and 0xFF) shl 16
@@ -336,10 +312,7 @@ imageData!!.data[index3 +2]= bx as Byte
 
 open fun setAlpha(unusedOriginalImage: Image, image: Image, imageIndex: Int, alphaInt: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var unusedOriginalImage = unusedOriginalImage
     //var image = image
     //var imageIndex = imageIndex
@@ -376,10 +349,7 @@ this.setAlpha(image, alphaInt)
 
 open fun setAlpha(image: Image, alphaInt: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var image = image
     //var alphaInt = alphaInt
 
@@ -414,10 +384,7 @@ newBufferedImage!!.getImageData()!!.alpha= alpha
 
 open fun getImageArray(originalImageArray: Array<Image?>)
         //nullable = true from not(false or (false and false)) = true
-: Array<Image?>
-
-        Updates for KMP build        
-        {
+: Array<Image?>{
     //var originalImageArray = originalImageArray
 
         try {
@@ -437,9 +404,6 @@ open fun getImageArray(originalImageArray: Array<Image?>)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 originalImage= originalImageArray[index]!!
 
@@ -454,10 +418,7 @@ newImageArray[index]= image
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return newImageArray
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -474,10 +435,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, "getImageArray", e)
 
 open fun handleImage(imageArray: Array<Image?>, index: Int, image: Image)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var imageArray = imageArray
     //var index = index
     //var image = image
@@ -486,10 +444,7 @@ open fun handleImage(imageArray: Array<Image?>, index: Int, image: Image)
 
 open fun reset()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 

@@ -37,10 +37,7 @@ open public class GeologicalResourceInfoHudPaintableSingleton
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GeologicalResourceInfoHudPaintable
-
-        Updates for KMP build        
-        {
+: GeologicalResourceInfoHudPaintable{
 
 
 

@@ -35,31 +35,19 @@ open fun getTypeId()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-        Updates for KMP build        
-        
-
 open fun setTransformDocumentInterface(viewDocumentInterface: TransformDocumentInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun getTransformDocumentInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformDocumentInterface
-
-        Updates for KMP build        
-        
 
                 @Throws(Exception::class)
             
 open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String
-
-        Updates for KMP build        
-        
 
 }
                 

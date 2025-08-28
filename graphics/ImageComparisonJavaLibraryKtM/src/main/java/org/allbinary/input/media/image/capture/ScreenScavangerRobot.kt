@@ -43,9 +43,6 @@ open public class ScreenScavangerRobot
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -54,10 +51,7 @@ public constructor        ()
             
 open fun getScreenAsBufferedImages()
         //nullable = true from not(false or (false and true)) = true
-: Array<BufferedImage?>
-
-        Updates for KMP build        
-        {
+: Array<BufferedImage?>{
 logUtil!!.put(this.commonStrings!!.START, this, "getScreenAsBufferedImages")
 
     var dimScreenSize: Dimension = Toolkit.getDefaultToolkit()!!.getScreenSize()!!

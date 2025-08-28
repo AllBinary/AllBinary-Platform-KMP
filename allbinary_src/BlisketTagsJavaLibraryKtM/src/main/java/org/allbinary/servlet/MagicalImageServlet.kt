@@ -55,10 +55,7 @@ open public class MagicalImageServlet : HttpServlet {
             
 open fun processRequest(request: HttpServletRequest, response: HttpServletResponse)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var request = request
     //var response = response
 
@@ -85,10 +82,7 @@ inputStream= CloudStreamUtil.getInstance()!!.getFileAnyWhere(file)
 response.setContentType("image/jpeg;charset=utf-8")
 response.getOutputStream()!!.write(byteArray)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
@@ -121,10 +115,7 @@ response.getOutputStream()!!.write(byteArray)
             
 open fun doGet(request: HttpServletRequest, response: HttpServletResponse)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var request = request
 var response = response
 processRequest(request, response)
@@ -135,10 +126,7 @@ processRequest(request, response)
             
 open fun doPost(request: HttpServletRequest, response: HttpServletResponse)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var request = request
 var response = response
 processRequest(request, response)
@@ -147,10 +135,7 @@ processRequest(request, response)
 
 open fun getServletInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

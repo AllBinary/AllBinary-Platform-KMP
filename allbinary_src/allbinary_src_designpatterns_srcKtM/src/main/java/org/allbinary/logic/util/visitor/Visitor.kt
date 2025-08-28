@@ -39,10 +39,7 @@ open public class Visitor
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: Visitor
-
-        Updates for KMP build        
-        {
+: Visitor{
 
 
 
@@ -61,10 +58,7 @@ open fun getInstance()
     val nullUtil: NullUtil = NullUtil.getInstance()!!
 override fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 var anyType = anyType
 
 

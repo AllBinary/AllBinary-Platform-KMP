@@ -32,15 +32,9 @@ open fun getHitPointGameObjectInterface()
         //nullable = true from not(false or (false and true)) = true
 : HitPointGameObjectInterface
 
-        Updates for KMP build        
-        
-
 open fun getMagicGameObjectInterface()
         //nullable = true from not(false or (false and true)) = true
 : MagicGameObjectInterface
-
-        Updates for KMP build        
-        
 
 }
                 

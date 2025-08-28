@@ -37,9 +37,6 @@ open public class LogBuffer
     var logEntryVector: Vector
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 this.logEntryVector= Vector()
 }
@@ -47,10 +44,7 @@ this.logEntryVector= Vector()
 
 open fun add(log: Log)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var log = log
 this.logEntryVector!!.add(log)
 }
@@ -58,10 +52,7 @@ this.logEntryVector!!.add(log)
 
 open fun logAll()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var size: Int = this.logEntryVector!!.size!!
 
@@ -71,9 +62,6 @@ open fun logAll()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var log: Log = this.logEntryVector!!.get(index) as Log

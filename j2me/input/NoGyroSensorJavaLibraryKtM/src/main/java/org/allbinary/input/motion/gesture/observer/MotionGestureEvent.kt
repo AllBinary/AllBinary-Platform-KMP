@@ -56,10 +56,7 @@ open public class MotionGestureEvent : AllBinaryEventObject {
     private var currentPoint: GPoint = PointFactory.getInstance()!!.ZERO_ZERO
 public constructor        (source: Any, id: Int, motionGesture: MotionGestureInput)                        
 
-                            : super(source)
-
-        Updates for KMP build        
-        {
+                            : super(source){
 var source = source
 var id = id
 var motionGesture = motionGesture
@@ -74,10 +71,7 @@ this.setMotionGesture(motionGesture)
 
 open fun getMotionGesture()
         //nullable = true from not(false or (false and true)) = true
-: MotionGestureInput
-
-        Updates for KMP build        
-        {
+: MotionGestureInput{
 
 
 
@@ -88,10 +82,7 @@ open fun getMotionGesture()
 
 open fun setMotionGesture(motionGesture: MotionGestureInput)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var motionGesture = motionGesture
 this.motionGesture= motionGesture
 }
@@ -99,10 +90,7 @@ this.motionGesture= motionGesture
 
 open fun getPreviousPoint()
         //nullable = true from not(false or (false and true)) = true
-: GPoint
-
-        Updates for KMP build        
-        {
+: GPoint{
 
 
 
@@ -113,10 +101,7 @@ open fun getPreviousPoint()
 
 open fun setPreviousPoint(previousPoint: GPoint)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var previousPoint = previousPoint
 this.previousPoint= previousPoint
 }
@@ -124,10 +109,7 @@ this.previousPoint= previousPoint
 
 open fun getCurrentPoint()
         //nullable = true from not(false or (false and true)) = true
-: GPoint
-
-        Updates for KMP build        
-        {
+: GPoint{
 
 
 
@@ -138,20 +120,14 @@ open fun getCurrentPoint()
 
 open fun setCurrentPoint(currentPoint: GPoint)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var currentPoint = currentPoint
 this.currentPoint= currentPoint
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -175,10 +151,7 @@ stringBuffer!!.append(this.hashCode())
 
 open fun getId()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

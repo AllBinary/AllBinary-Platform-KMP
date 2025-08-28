@@ -40,10 +40,7 @@ open public class PlatformInputMappingFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PlatformInputMappingFactory
-
-        Updates for KMP build        
-        {
+: PlatformInputMappingFactory{
 
 
 
@@ -65,10 +62,7 @@ open fun getInstance()
 
 open fun getPersistentInputMappingInstance()
         //nullable = true from not(false or (false and true)) = true
-: PersistentInputMapping
-
-        Updates for KMP build        
-        {
+: PersistentInputMapping{
 
         try {
             
@@ -81,10 +75,7 @@ open fun getPersistentInputMappingInstance()
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

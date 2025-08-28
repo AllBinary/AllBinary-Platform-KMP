@@ -46,10 +46,7 @@ open public class GraphicsAnalysisUtil
             
 open fun getNominator(bufferedImage: BufferedImage, min_x: Integer, max_x: Integer, y: Integer)
         //nullable = true from not(false or (false and false)) = true
-: Double
-
-        Updates for KMP build        
-        {
+: Double{
 var bufferedImage = bufferedImage
 var min_x = min_x
 var max_x = max_x
@@ -60,9 +57,6 @@ var y = y
 
                         for (index in max_x.toInt()!! downTo min_x.toInt()!!)
 
-        
-
-        Updates for KMP build        
         {
 
     var colorInteger: Integer = Integer(Integer.valueOf(bufferedImage!!.getRGB(index, y.toInt())))!!
@@ -106,9 +100,6 @@ var y = y
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

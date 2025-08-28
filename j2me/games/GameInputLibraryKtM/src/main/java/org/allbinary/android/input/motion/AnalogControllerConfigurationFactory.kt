@@ -40,10 +40,7 @@ open public class AnalogControllerConfigurationFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AnalogControllerConfigurationFactory
-
-        Updates for KMP build        
-        {
+: AnalogControllerConfigurationFactory{
 
 
 
@@ -63,19 +60,13 @@ open fun getInstance()
     private val analogControllerConfigurationEvent: AnalogControllerConfigurationEvent = AnalogControllerConfigurationEvent(this)
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun isAvailable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -88,10 +79,7 @@ open fun isAvailable()
             
 open fun setAvailable(available: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var available = available
 this.available= available
 AnalogControllerConfigurationEventHandler.getInstance()!!.fireEvent(analogControllerConfigurationEvent)

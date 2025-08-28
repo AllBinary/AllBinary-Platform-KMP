@@ -48,9 +48,6 @@ open public class ImageComparatorConstraints
     private var doImageComparisonEveryNthFrame: Int
 public constructor        (doImageComparisonEveryNthFrame: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var doImageComparisonEveryNthFrame = doImageComparisonEveryNthFrame
 this.doImageComparisonEveryNthFrame= doImageComparisonEveryNthFrame
@@ -60,10 +57,7 @@ this.setAvoidVector(Vector())
 
 open fun getAvoidVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
 
 
@@ -74,10 +68,7 @@ open fun getAvoidVector()
 
 open fun isColorAllowed(frame: Int, point: GPoint, color: Color)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var frame = frame
 var point = point
 var color = color
@@ -90,10 +81,7 @@ var color = color
 
 open fun isCollisionWithAvoidRectangles(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var rectangle = rectangle
 
     var isCollsionWithAvoidRectangles: Boolean = false
@@ -110,9 +98,6 @@ var rectangle = rectangle
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var avoidRectangle: Rectangle = avoidVector!!.get(index) as Rectangle
@@ -138,10 +123,7 @@ var rectangle = rectangle
 
 open fun isCollisionWithAvoidRectangles(point: GPoint)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var point = point
 
     var isCollsionWithAvoidRectangles: Boolean = false
@@ -158,9 +140,6 @@ var point = point
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var avoidRectangle: Rectangle = avoidVector!!.get(index) as Rectangle
@@ -189,10 +168,7 @@ break;
 
 open fun setAvoidVector(avoidVector: Vector)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var avoidVector = avoidVector
 this.avoidVector= avoidVector
 }
@@ -200,10 +176,7 @@ this.avoidVector= avoidVector
 
 open fun getMaxNonMatchingPixelDeltas()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -214,10 +187,7 @@ open fun getMaxNonMatchingPixelDeltas()
 
 open fun setMaxNonMatchingPixelDeltas(maxNonMatchingPixelDeltas: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var maxNonMatchingPixelDeltas = maxNonMatchingPixelDeltas
 this.maxNonMatchingPixelDeltas= maxNonMatchingPixelDeltas
 }
@@ -225,10 +195,7 @@ this.maxNonMatchingPixelDeltas= maxNonMatchingPixelDeltas
 
 open fun isFrameAllowed(frame: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var frame = frame
 
     var remainder: Int = ((frame +1) % this.doImageComparisonEveryNthFrame)
@@ -263,10 +230,7 @@ logUtil!!.put(" Frame: " +frame +" remainder: " +remainder +" this.doImageCompar
             
 open fun isImageValid(bufferedImage: BufferedImage)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var bufferedImage = bufferedImage
 
 
@@ -277,10 +241,7 @@ var bufferedImage = bufferedImage
 
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var avoidVector: Vector = this.getAvoidVector()!!
 
@@ -293,9 +254,6 @@ open fun log()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var avoidRectangle: Rectangle = avoidVector!!.get(index) as Rectangle

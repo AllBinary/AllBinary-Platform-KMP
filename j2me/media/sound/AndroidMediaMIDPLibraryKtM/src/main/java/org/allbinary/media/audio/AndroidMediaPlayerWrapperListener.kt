@@ -42,9 +42,6 @@ open public class AndroidMediaPlayerWrapperListener
     private var androidMediaPlayerWrapper: AndroidMediaPlayerWrapper = AndroidMediaPlayerWrapper.NULL_ANDROID_MEDIA_PLAYER_WRAPPER
 public constructor        (androidMediaPlayerWrapper: AndroidMediaPlayerWrapper, listeningLevel: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var androidMediaPlayerWrapper = androidMediaPlayerWrapper
     //var listeningLevel = listeningLevel
@@ -73,10 +70,7 @@ this.androidMediaPlayerWrapper= androidMediaPlayerWrapper
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
@@ -84,9 +78,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 
 public constructor        (androidMediaPlayerWrapper: AndroidMediaPlayerWrapper)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var androidMediaPlayerWrapper = androidMediaPlayerWrapper
 
@@ -101,10 +92,7 @@ mediaPlayer!!.setOnBufferingUpdateListener(mOnBufferingUpdateListener)
 mediaPlayer!!.setOnPreparedListener(mOnPreparedListener)
 mediaPlayer!!.setOnErrorListener(mOnErrorListener)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
@@ -129,10 +117,7 @@ open public inner class MediaPlayerOnBufferingUpdateListener
             }            
         override fun onBufferingUpdate(mediaPlayer: MediaPlayer, i: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var mediaPlayer = mediaPlayer
     //var i = i
 }
@@ -159,10 +144,7 @@ open public inner class MediaPlayerOnPreparedListener
             }            
         override fun onPrepared(mp: MediaPlayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var mp = mp
 }
 
@@ -188,10 +170,7 @@ open public inner class MediaPlayerOnErrorListener
             }            
         override fun onError(mp: MediaPlayer, what: Int, extra: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var mp = mp
     //var what = what
     //var extra = extra
@@ -224,10 +203,7 @@ open public inner class MediaPlayerOnCompletionListener
             }            
         override fun onCompletion(mp: MediaPlayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var mp = mp
 }
 
@@ -239,10 +215,7 @@ open public inner class MediaPlayerOnCompletionListener
                                 {
                                 override fun onBufferingUpdate(mediaPlayer: MediaPlayer, i: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var mediaPlayer = mediaPlayer
     //var i = i
 logUtil!!.put(StringMaker().
@@ -257,10 +230,7 @@ this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(Player
                                 {
                                 override fun onPrepared(mp: MediaPlayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var mp = mp
 logUtil!!.put(commonStrings!!.START, this, AndroidMediaPlayerWrapperListener.ON_PREPARE)
 this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(PlayerListener.DEVICE_AVAILABLE)
@@ -274,10 +244,7 @@ this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(Player
                                 
 open override fun onError(mp: MediaPlayer, what: Int, extra: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var mp = mp
     //var what = what
     //var extra = extra
@@ -299,10 +266,7 @@ this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(Player
                                 
 open override fun onCompletion(mp: MediaPlayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var mp = mp
 logUtil!!.put(commonStrings!!.START, this, AndroidMediaPlayerWrapperListener.ON_COMPLETE)
 this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(PlayerListener.END_OF_MEDIA)

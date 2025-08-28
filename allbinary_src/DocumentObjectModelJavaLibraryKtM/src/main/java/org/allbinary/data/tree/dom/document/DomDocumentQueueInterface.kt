@@ -35,17 +35,11 @@ open fun offer(domDocumentMappingInterface: DomDocumentMappingInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun remove()
         //nullable = true from not(false or (false and true)) = true
 : DomDocumentMappingInterface
-
-        Updates for KMP build        
-        
 
 }
                 

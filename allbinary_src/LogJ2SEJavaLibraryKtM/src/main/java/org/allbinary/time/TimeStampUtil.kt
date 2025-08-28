@@ -40,10 +40,7 @@ open public class TimeStampUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TimeStampUtil
-
-        Updates for KMP build        
-        {
+: TimeStampUtil{
 
 
 
@@ -57,19 +54,13 @@ open fun getInstance()
     private val simpleDataFormat: SimpleDateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS")
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getAsString()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var calendar: Calendar = Calendar.getInstance()!!
 

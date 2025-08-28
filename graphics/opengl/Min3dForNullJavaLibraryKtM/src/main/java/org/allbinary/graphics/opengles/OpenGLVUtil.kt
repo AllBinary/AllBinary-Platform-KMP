@@ -35,10 +35,7 @@ open public class OpenGLVUtil : OpenGLVUtilBase {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLVUtil
-
-        Updates for KMP build        
-        {
+: OpenGLVUtil{
 
 
 

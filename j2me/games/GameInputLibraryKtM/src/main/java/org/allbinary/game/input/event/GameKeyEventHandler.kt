@@ -40,10 +40,7 @@ open public class GameKeyEventHandler
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameKeyEventHandler
-
-        Updates for KMP build        
-        {
+: GameKeyEventHandler{
 
 
 
@@ -72,10 +69,7 @@ open fun getInstance()
 
 open fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.pressGameKeyEventHandler!!.removeAllListeners()
 this.upGameKeyEventHandler!!.removeAllListeners()
 this.downGameKeyEventHandler!!.removeAllListeners()
@@ -84,10 +78,7 @@ this.downGameKeyEventHandler!!.removeAllListeners()
 
 open fun addListener(eventListenerInterface: EventListenerInterface, playerInputId: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventListenerInterface = eventListenerInterface
 var playerInputId = playerInputId
 logUtil!!.put(eventListenerInterface!!.toString(), this, commonStrings!!.ADD_LISTENER)
@@ -99,10 +90,7 @@ this.downGameKeyEventHandler!!.getInstanceForPlayer(playerInputId)!!.addListener
 
 open fun addListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventListenerInterface = eventListenerInterface
 logUtil!!.put(eventListenerInterface!!.toString(), this, commonStrings!!.ADD_LISTENER)
 this.pressGameKeyEventHandler!!.addListenerSingleThreaded(eventListenerInterface)
@@ -113,10 +101,7 @@ this.downGameKeyEventHandler!!.addListenerSingleThreaded(eventListenerInterface)
 
 open fun removeListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventListenerInterface = eventListenerInterface
 logUtil!!.put(eventListenerInterface!!.toString(), this, commonStrings!!.REMOVE_LISTENER)
 this.pressGameKeyEventHandler!!.removeListenerSingleThreaded(eventListenerInterface)

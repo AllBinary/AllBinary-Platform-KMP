@@ -34,9 +34,6 @@ open public class PoolType
     private var cacheType: CacheType
 public constructor        (cacheType: CacheType)
             : super()
-        
-
-        Updates for KMP build        
         {
 var cacheType = cacheType
 this.setCacheType(cacheType)
@@ -45,10 +42,7 @@ this.setCacheType(cacheType)
 
 open fun getCacheType()
         //nullable = true from not(false or (false and true)) = true
-: CacheType
-
-        Updates for KMP build        
-        {
+: CacheType{
 
 
 
@@ -59,20 +53,14 @@ open fun getCacheType()
 
 open fun setCacheType(cacheType: CacheType)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var cacheType = cacheType
 this.cacheType= cacheType
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var POOL_TYPE: String = "PoolType: "
 

@@ -35,9 +35,6 @@ open fun getInstance(transformInfoInterface: TransformInfoInterface)
         //nullable =  from not(true or (false and false)) = 
 : TransformInfoObjectConfigGenerator
 
-        Updates for KMP build        
-        
-
 }
                 
             

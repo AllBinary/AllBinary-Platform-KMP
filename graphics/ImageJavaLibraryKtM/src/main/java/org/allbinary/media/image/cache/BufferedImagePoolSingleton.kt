@@ -43,10 +43,7 @@ open public class BufferedImagePoolSingleton
                 null
             
 
-                init
-
-        Updates for KMP build        
-        {
+                init{
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -65,10 +62,7 @@ open public class BufferedImagePoolSingleton
 poolInterface= PoolInterfaceFactory.getInstance(BufferedImageCacheableFactory(), PoolTypeFactory.getInstance()!!.VECTOR_POOL, CachePolicyFactory.getInstance()!!.MAX_TIME_THOUSAND_MAX)
 logUtil!!.put(commonStrings!!.END, instance, STATIC_BLOCK)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, instance, STATIC_BLOCK, e)
 }
 
@@ -76,10 +70,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, instance, STATIC_BLOCK, e)
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PoolInterface
-
-        Updates for KMP build        
-        {
+: PoolInterface{
 
 
 
@@ -91,9 +82,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

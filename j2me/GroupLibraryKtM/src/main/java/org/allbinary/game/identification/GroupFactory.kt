@@ -41,10 +41,7 @@ open public class GroupFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GroupFactory
-
-        Updates for KMP build        
-        {
+: GroupFactory{
 
 
 
@@ -68,10 +65,7 @@ open fun getInstance()
 
 open fun getNextGroup()
         //nullable = true from not(false or (false and true)) = true
-: Group
-
-        Updates for KMP build        
-        {
+: Group{
 
     var group: Group = list.objectArray[index]!! as Group
 
@@ -86,10 +80,7 @@ index++
 
 open fun getNextGroup(name: String)
         //nullable = true from not(false or (false and false)) = true
-: Group
-
-        Updates for KMP build        
-        {
+: Group{
     //var name = name
 
     var group: Group = this.getNextGroup()!!
@@ -105,10 +96,7 @@ group.setName(name)
 
 open fun init(groups: Short, nameArray: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var groups = groups
 var nameArray = nameArray
 
@@ -127,9 +115,6 @@ index= 0
 
 
         while(size < groups)
-        
-
-        Updates for KMP build        
         {
 
     var name: String = stringUtil!!.EMPTY_STRING

@@ -36,10 +36,7 @@ open public class TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory :
         
 public constructor        ()                        
 
-                            : super("TouchButton Animations")
-
-        Updates for KMP build        
-        {
+                            : super("TouchButton Animations"){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -48,10 +45,7 @@ public constructor        ()
 
 public constructor        (name: String)                        
 
-                            : super(name)
-
-        Updates for KMP build        
-        {
+                            : super(name){
 var name = name
 
 
@@ -63,10 +57,7 @@ var name = name
                 @Throws(Exception::class)
             override fun init(level: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var level = level
 this.init(ImageCacheFactory.getInstance(), level)
 }
@@ -75,10 +66,7 @@ this.init(ImageCacheFactory.getInstance(), level)
                 @Throws(Exception::class)
             override fun init(imageCache: ImageCache, level: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var imageCache = imageCache
 var level = level
 
@@ -99,10 +87,7 @@ super.init(level)
 
 override fun isLoadingLevel(level: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var level = level
 
     var resourceLoadingLevelFactory: ResourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance()!!
@@ -133,10 +118,7 @@ var level = level
 
 override fun isFeature()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(!Features.getInstance()!!.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL))

@@ -44,9 +44,6 @@ open public class LayerPlacer
     private val dimension: GPoint
 public constructor        (layerInterfaceVisitor: LayerInterfaceVisitor, dimension: GPoint)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var layerInterfaceVisitor = layerInterfaceVisitor
     //var dimension = dimension
@@ -59,10 +56,7 @@ this.dimension= dimension
             
 open fun process(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var list = list
 
     var size: Int = list.size()!!
@@ -76,9 +70,6 @@ open fun process(list: BasicArrayList)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 layerPlacementInterface= list.objectArray[index]!! as LayerPlacementInterface
 this.process(layerPlacementInterface)
@@ -91,10 +82,7 @@ this.process(layerPlacementInterface)
             
 open fun process(layerPlacementInterface: LayerPlacementInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layerPlacementInterface = layerPlacementInterface
 
     var relativePoint: GPoint = this.getPoint(layerPlacementInterface)!!
@@ -128,9 +116,6 @@ open fun process(layerPlacementInterface: LayerPlacementInterface)
 
 
         while(enumeration.hasMoreElements())
-        
-
-        Updates for KMP build        
         {
 point= enumeration.nextElement()!! as GPoint
 layerHashtable= hashtable.get(point as Object) as Hashtable<Any, Any>
@@ -148,10 +133,7 @@ layerInterfaceVisitor!!.visit(layerInterface)
             
 open fun getPoint(layerPlacementInterface: LayerPlacementInterface)
         //nullable = true from not(false or (false and false)) = true
-: GPoint
-
-        Updates for KMP build        
-        {
+: GPoint{
     //var layerPlacementInterface = layerPlacementInterface
 
     var layerPlacementType: LayerPlacementType = layerPlacementInterface!!.getLayerType()!!

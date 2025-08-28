@@ -39,10 +39,7 @@ open public class StoreEmailInfo : BasicEmailInfo {
     private var storeFrontInterface: StoreFrontInterface
 public constructor        (storeFrontInterface: StoreFrontInterface, subject: String, textBody: String)                        
 
-                            : super(subject, textBody)
-
-        Updates for KMP build        
-        {
+                            : super(subject, textBody){
 var storeFrontInterface = storeFrontInterface
 var subject = subject
 var textBody = textBody
@@ -71,10 +68,7 @@ this.init()
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var contextConfigurationInterface: ContextConfigurationInterface = storeFrontInterface!!.getContextConfigurationInterface()!!
 

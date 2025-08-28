@@ -35,10 +35,7 @@ open public class ImageAnimationSingletonInterfaceFactory : SingletonAnimationIn
         
 private constructor        (animationInterface: Animation)                        
 
-                            : super(animationInterface)
-
-        Updates for KMP build        
-        {
+                            : super(animationInterface){
 var animationInterface = animationInterface
 
 
@@ -48,10 +45,7 @@ var animationInterface = animationInterface
 
 public constructor        (image: Image)                        
 
-                            : super(ImageAnimation(image, AnimationBehavior.getInstance()))
-
-        Updates for KMP build        
-        {
+                            : super(ImageAnimation(image, AnimationBehavior.getInstance())){
 var image = image
 
 
@@ -61,10 +55,7 @@ var image = image
 
 public constructor        (animationInterface: Animation, width: Int, height: Int)                        
 
-                            : this(ImageAnimation(AnimationFrameToImageUtil.getInstance()!!.getInstance(width, height, animationInterface), AnimationBehavior.getInstance()))
-
-        Updates for KMP build        
-        {
+                            : this(ImageAnimation(AnimationFrameToImageUtil.getInstance()!!.getInstance(width, height, animationInterface), AnimationBehavior.getInstance())){
 var animationInterface = animationInterface
 var width = width
 var height = height

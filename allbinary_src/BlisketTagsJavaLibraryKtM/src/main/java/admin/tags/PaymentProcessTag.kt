@@ -37,10 +37,7 @@ open public class PaymentProcessTag : StoreValidationTransformTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 
@@ -48,10 +45,7 @@ public constructor        ()
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -75,10 +69,7 @@ open fun process()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LICENSINGERROR))
@@ -94,10 +85,7 @@ open fun process()
                             throw e
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
@@ -120,10 +108,7 @@ open fun process()
             
 open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
         try {
             
@@ -156,10 +141,7 @@ open fun doStartTag()
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 
 

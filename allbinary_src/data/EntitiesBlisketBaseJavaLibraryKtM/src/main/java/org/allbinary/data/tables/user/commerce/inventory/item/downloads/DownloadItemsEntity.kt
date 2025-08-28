@@ -45,10 +45,7 @@ open public class DownloadItemsEntity : AbSqlBean
     val tableName: String = "downloaditems"
 public constructor        ()                        
 
-                            : super(InventoryDbInitInfo())
-
-        Updates for KMP build        
-        {
+                            : super(InventoryDbInitInfo()){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -59,10 +56,7 @@ this.setTableName(tableName)
 
 open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var values = values
 
         try {
@@ -77,10 +71,7 @@ var values = values
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -97,10 +88,7 @@ var values = values
 
 open fun delete(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 
         try {
@@ -115,10 +103,7 @@ var value = value
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -135,10 +120,7 @@ var value = value
 
 open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var updatedValues = updatedValues
 super.updateWhere(DownloadItemData.ID, updatedValues!!.get(DownloadItemData.ID) as String, updatedValues)
 }
@@ -146,10 +128,7 @@ super.updateWhere(DownloadItemData.ID, updatedValues!!.get(DownloadItemData.ID) 
 
 open fun getForItem(id: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 var id = id
 
     var returnVector: Vector = Vector()
@@ -170,9 +149,6 @@ keysAndValues!!.put(BasicItemData.ID, id)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var hashMap: HashMap<Any, Any> = vector.get(index) as HashMap<Any, Any>
@@ -199,10 +175,7 @@ returnVector!!.add(DownloadableItem(hashMap))
 
 open fun getForItem(id: String, downloadItemId: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 var id = id
 var downloadItemId = downloadItemId
 
@@ -225,9 +198,6 @@ keysAndValues!!.put(DownloadItemData.ID, downloadItemId)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var hashMap: HashMap<Any, Any> = vector.get(index) as HashMap<Any, Any>
@@ -254,10 +224,7 @@ returnVector!!.add(DownloadableItem(hashMap))
 
 open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -273,10 +240,7 @@ stringBuffer!!.append(DownloadItemData.FILE)!!.append(this.sqlTypeStrings!!.MAX_
 
 open fun createTable()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -287,10 +251,7 @@ open fun createTable()
 
 open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

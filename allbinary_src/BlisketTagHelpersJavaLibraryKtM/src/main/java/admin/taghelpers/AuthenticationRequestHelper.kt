@@ -55,20 +55,14 @@ open public class AuthenticationRequestHelper : TagHelper {
     private var weblisketSession: WeblisketSession
 
     private var request: HttpServletRequest
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
-
-        Updates for KMP build        
-        {
+public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 this.weblisketSession= WeblisketSession(hashMap, pageContext)
 this.request= pageContext!!.getRequest() as HttpServletRequest
 }
 
-public constructor        (hashMap: HashMap<Any, Any>, httpServletRequest: HttpServletRequest)
-
-        Updates for KMP build        
-        {
+public constructor        (hashMap: HashMap<Any, Any>, httpServletRequest: HttpServletRequest){
 var hashMap = hashMap
 var httpServletRequest = httpServletRequest
 this.weblisketSession= WeblisketSession(hashMap, httpServletRequest)
@@ -80,10 +74,7 @@ this.request= httpServletRequest
             
 open fun generateNewPassword()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     
                         if(this.weblisketSession != 
@@ -133,10 +124,7 @@ open fun generateNewPassword()
 
 open fun newPassword()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             
@@ -217,10 +205,7 @@ NewPasswordEmail(this.abeClientInformation, userInterface, newPassword).
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.TRUE
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
@@ -242,10 +227,7 @@ NewPasswordEmail(this.abeClientInformation, userInterface, newPassword).
 
 open fun changePassword()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             
@@ -372,10 +354,7 @@ NewPasswordEmail(this.abeClientInformation, userInterface, newPassword).
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.FALSE
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
@@ -397,10 +376,7 @@ NewPasswordEmail(this.abeClientInformation, userInterface, newPassword).
 
 open fun isRoleValid(userName: String, password: String, roles: Vector)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var userName = userName
 var password = password
 var roles = roles
@@ -449,9 +425,6 @@ var roles = roles
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var nextRole: BasicUserRole = basicUserRoleArray[index]!! as BasicUserRole
@@ -496,10 +469,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "isRoleValid()")
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.FALSE
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))

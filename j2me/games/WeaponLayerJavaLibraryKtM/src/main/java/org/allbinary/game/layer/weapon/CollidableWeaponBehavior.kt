@@ -51,10 +51,7 @@ open public class CollidableWeaponBehavior : CollidableDestroyableDamageableBeha
     var collisionHelper: CollisionHelper
 public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
 
-                            : super(ownerLayer, collidable)
-
-        Updates for KMP build        
-        {
+                            : super(ownerLayer, collidable){
 var ownerLayer = ownerLayer
 var collidable = collidable
 
@@ -69,10 +66,7 @@ this.collisionHelper= CollidableHelperFactory.getInstance()
 
 open fun init(sourceLayerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var sourceLayerInterface = sourceLayerInterface
 this.setCollided(false)
 this.collisionHelper!!.setOwnerLayerInterface(sourceLayerInterface)
@@ -80,10 +74,7 @@ this.collisionHelper!!.setOwnerLayerInterface(sourceLayerInterface)
 
 override fun isCollision(collisionLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var collisionLayer = collisionLayer
 
     
@@ -117,10 +108,7 @@ var collisionLayer = collisionLayer
                 @Throws(Exception::class)
             override fun collide(collisionLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var collisionLayer = collisionLayer
 super.collide(collisionLayer)
 this.collided= true
@@ -130,10 +118,7 @@ this.collided= true
     private val layerCollisionUtil: LayerCollisionUtil = LayerCollisionUtil.getInstance()!!
 override fun isCollision(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
     
@@ -178,10 +163,7 @@ var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterfac
                 @Throws(Exception::class)
             override fun collide(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 damageUtil!!.process(this.ownerLayer as DamageableInterface, collidableInterfaceCompositeInterface as DamageableInterface)
 this.collided= true
@@ -189,10 +171,7 @@ this.collided= true
 
 override fun getCollisionTypeWith(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: CollisionType
-
-        Updates for KMP build        
-        {
+: CollisionType{
 var layerInterface = layerInterface
 
 
@@ -204,10 +183,7 @@ var layerInterface = layerInterface
 
 open fun isCollided()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -218,10 +194,7 @@ open fun isCollided()
 
 open fun setCollided(collided: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var collided = collided
 this.collided= collided
 }

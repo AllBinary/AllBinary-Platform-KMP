@@ -49,10 +49,7 @@ open public class OpenGLESGL11ExtImage : OpenGLESImage {
     private val rectangle: IntArray
 public constructor        (image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory)                        
 
-                            : super(image, bitmapFactory, textureFactory)
-
-        Updates for KMP build        
-        {
+                            : super(image, bitmapFactory, textureFactory){
     //var image = image
     //var bitmapFactory = bitmapFactory
     //var textureFactory = textureFactory
@@ -68,20 +65,14 @@ rectangle= intArrayOf(0,this.getHeight(), this.getWidth(),  -this.getHeight())
 
 open fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var displayChangeEvent = displayChangeEvent
 
         try {
             logUtil!!.put(commonStrings!!.START, this, "onResize")
 this.a= DisplayInfoSingleton.getInstance()!!.getLastHeight() -this.getHeight()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "onResize", e)
 }
 
@@ -90,10 +81,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "onResize", e)
 
 open fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
 this.onDisplayChangeEvent(
                             null)
@@ -117,10 +105,7 @@ OpenGLLogUtil.getInstance()!!.logError(gl11, this)
 
 open fun draw(gl: GL10, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
     //var x = x
     //var y = y

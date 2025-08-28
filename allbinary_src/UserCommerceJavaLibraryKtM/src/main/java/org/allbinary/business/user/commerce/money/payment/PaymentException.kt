@@ -30,10 +30,7 @@ open public class PaymentException : Exception {
         
 public constructor        (error: String)                        
 
-                            : super(error)
-
-        Updates for KMP build        
-        {
+                            : super(error){
 var error = error
 
 

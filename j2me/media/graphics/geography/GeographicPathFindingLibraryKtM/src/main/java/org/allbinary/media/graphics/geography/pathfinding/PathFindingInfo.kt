@@ -42,9 +42,6 @@ open public class PathFindingInfo
     private val pathFindingNodeCostInfoFactoryInterface: PathFindingNodeCostInfoFactoryBase
 public constructor        (pathFindingNodeCostInfoFactoryInterface: PathFindingNodeCostInfoFactoryBase)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var pathFindingNodeCostInfoFactoryInterface = pathFindingNodeCostInfoFactoryInterface
 this.pathFindingNodeCostInfoFactoryInterface= pathFindingNodeCostInfoFactoryInterface
@@ -55,10 +52,7 @@ this.endPathFindingNodeList= BasicArrayList(1)
 
 open fun getStartPathFindingNodeList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 
@@ -69,10 +63,7 @@ open fun getStartPathFindingNodeList()
 
 open fun getEndPathFindingNodeList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 
@@ -83,10 +74,7 @@ open fun getEndPathFindingNodeList()
 
 open fun getPathFinder()
         //nullable = true from not(false or (false and true)) = true
-: GeographicPathFinderBase
-
-        Updates for KMP build        
-        {
+: GeographicPathFinderBase{
 
 
 
@@ -97,10 +85,7 @@ open fun getPathFinder()
 
 open fun addStartPathFindingNode(startPathFindingNode: PathFindingNode)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var startPathFindingNode = startPathFindingNode
 this.startPathFindingNodeList!!.add(startPathFindingNode)
 }
@@ -108,10 +93,7 @@ this.startPathFindingNodeList!!.add(startPathFindingNode)
 
 open fun addEndPathFindingNode(endPathFindingNode: PathFindingNode)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var endPathFindingNode = endPathFindingNode
 this.endPathFindingNodeList!!.add(endPathFindingNode)
 }
@@ -119,10 +101,7 @@ this.endPathFindingNodeList!!.add(endPathFindingNode)
 
 open fun setPathFinder(pathFinder: GeographicPathFinderBase)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var pathFinder = pathFinder
 this.pathFinder= pathFinder
 }
@@ -130,10 +109,7 @@ this.pathFinder= pathFinder
 
 open fun getPathFindingNodeCostInfoFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
-: PathFindingNodeCostInfoFactoryBase
-
-        Updates for KMP build        
-        {
+: PathFindingNodeCostInfoFactoryBase{
 
 
 

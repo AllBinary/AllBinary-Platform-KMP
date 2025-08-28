@@ -34,18 +34,12 @@ open public class LicensingException : java.lang.Exception {
     val serialVersionUID: Long = 1L
 
         }
-            public constructor        ()
-
-        Updates for KMP build        
-        {
+            public constructor        (){
 }
 
 public constructor        (msg: String)                        
 
-                            : super(msg)
-
-        Updates for KMP build        
-        {
+                            : super(msg){
 var msg = msg
 
 

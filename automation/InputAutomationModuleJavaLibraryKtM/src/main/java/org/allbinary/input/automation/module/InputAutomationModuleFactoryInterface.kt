@@ -41,10 +41,7 @@ open public class InputAutomationModuleFactoryInterface
         
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -55,10 +52,7 @@ open fun getName()
 
 open fun getConfigurationJPanel()
         //nullable = true from not(false or (false and true)) = true
-: JPanel
-
-        Updates for KMP build        
-        {
+: JPanel{
 
 
 
@@ -69,10 +63,7 @@ open fun getConfigurationJPanel()
 
 open fun getHelpSet()
         //nullable = true from not(false or (false and true)) = true
-: HelpSet
-
-        Updates for KMP build        
-        {
+: HelpSet{
 
 
 
@@ -85,10 +76,7 @@ open fun getHelpSet()
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: RunnableInterface
-
-        Updates for KMP build        
-        {
+: RunnableInterface{
 
 
 

@@ -35,10 +35,7 @@ open public class XmlValidationTransformTag : TransformTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 
@@ -46,10 +43,7 @@ public constructor        ()
             
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             
@@ -69,10 +63,7 @@ open fun isValid()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
@@ -95,10 +86,7 @@ open fun isValid()
             
 open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
         try {
             this.setHelper()
@@ -127,10 +115,7 @@ open fun doStartTag()
                         }
                             
 } catch(e: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 
 
@@ -139,10 +124,7 @@ AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
                         return SKIP_BODY
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 
 

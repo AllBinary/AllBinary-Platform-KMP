@@ -35,10 +35,7 @@ open public class TimedVectorAnimation : VectorAnimation {
     private var timeElapsedHelper: TimeDelayHelper = TimeDelayHelper(200)
 public constructor        (currentPoints: Array<Array<IntArray?>?>, basicColor: BasicColor, animationBehavior: AnimationBehavior)                        
 
-                            : super(currentPoints, basicColor, animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(currentPoints, basicColor, animationBehavior){
     //var currentPoints = currentPoints
     //var basicColor = basicColor
     //var animationBehavior = animationBehavior
@@ -50,10 +47,7 @@ public constructor        (currentPoints: Array<Array<IntArray?>?>, basicColor: 
 
 public constructor        (currentPoints: Array<IntArray?>, basicColor: BasicColor, animationBehavior: AnimationBehavior)                        
 
-                            : super(currentPoints, basicColor, animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(currentPoints, basicColor, animationBehavior){
     //var currentPoints = currentPoints
     //var basicColor = basicColor
     //var animationBehavior = animationBehavior
@@ -65,10 +59,7 @@ public constructor        (currentPoints: Array<IntArray?>, basicColor: BasicCol
 
 override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(this.timeElapsedHelper!!.isTime(GameTickTimeDelayHelperFactory.getInstance()!!.startTime))

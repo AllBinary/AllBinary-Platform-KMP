@@ -24,10 +24,7 @@ open public class MediaIOUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: MediaIOUtil
-
-        Updates for KMP build        
-        {
+: MediaIOUtil{
 
 
 
@@ -45,10 +42,7 @@ open fun getInstance()
         
 open fun getReaderFormatNames()
         //nullable = true from not(false or (false and true)) = true
-: Array<String?>
-
-        Updates for KMP build        
-        {
+: Array<String?>{
 
 
 
@@ -59,10 +53,7 @@ open fun getReaderFormatNames()
 
 open fun getWriterFormatNames()
         //nullable = true from not(false or (false and true)) = true
-: Array<String?>
-
-        Updates for KMP build        
-        {
+: Array<String?>{
 
 
 

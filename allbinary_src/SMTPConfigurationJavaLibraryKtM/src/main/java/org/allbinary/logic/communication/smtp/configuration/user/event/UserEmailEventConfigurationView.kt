@@ -42,9 +42,6 @@ open public class UserEmailEventConfigurationView
     private var userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface
 public constructor        (node: Node)
             : super()
-        
-
-        Updates for KMP build        
         {
 var node = node
 
@@ -66,9 +63,6 @@ this.setUserEmailEventConfigurationInterface(UserEmailEventConfiguration(hashMap
 
 public constructor        (userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var userEmailEventConfigurationInterface = userEmailEventConfigurationInterface
 this.setUserEmailEventConfigurationInterface(userEmailEventConfigurationInterface)
@@ -79,10 +73,7 @@ this.setUserEmailEventConfigurationInterface(userEmailEventConfigurationInterfac
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var userEmailEventConfigurationMapping: UserEmailEventConfigurationMapping = UserEmailEventConfigurationMapping(this.getUserEmailEventConfigurationInterface())
@@ -103,10 +94,7 @@ var document = document
 
 open fun getUserEmailEventConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
-: UserEmailEventConfigurationInterface
-
-        Updates for KMP build        
-        {
+: UserEmailEventConfigurationInterface{
 
 
 
@@ -117,10 +105,7 @@ open fun getUserEmailEventConfigurationInterface()
 
 open fun setUserEmailEventConfigurationInterface(userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var userEmailEventConfigurationInterface = userEmailEventConfigurationInterface
 this.userEmailEventConfigurationInterface= userEmailEventConfigurationInterface
 }

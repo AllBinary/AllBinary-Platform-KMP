@@ -38,10 +38,7 @@ open public class AdjustedCircleAnimation : CircleAnimation {
     private var yAdjustment: Int
 public constructor        (width: Int, height: Int, xAdjustment: Int, yAdjustment: Int, basicColor: BasicColor)                        
 
-                            : super(width, height, basicColor)
-
-        Updates for KMP build        
-        {
+                            : super(width, height, basicColor){
 var width = width
 var height = height
 var xAdjustment = xAdjustment
@@ -57,10 +54,7 @@ this.yAdjustment= yAdjustment
 
 public constructor        (width: Int, height: Int, innerWidth: Int, basicColor: BasicColor)                        
 
-                            : super(width, height, basicColor)
-
-        Updates for KMP build        
-        {
+                            : super(width, height, basicColor){
 var width = width
 var height = height
 var innerWidth = innerWidth
@@ -92,10 +86,7 @@ this.yAdjustment= this.xAdjustment
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 var x = x
 var y = y

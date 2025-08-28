@@ -40,10 +40,7 @@ open public class FileStreamFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FileStreamFactory
-
-        Updates for KMP build        
-        {
+: FileStreamFactory{
 
 
 
@@ -57,9 +54,6 @@ open fun getInstance()
     private var context: Any
 private constructor        (context: Context)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var context = context
 this.context= context
@@ -70,10 +64,7 @@ this.context= context
             
 open fun getFileInputStreamInstance(path: String, fileName: String)
         //nullable = true from not(false or (false and false)) = true
-: AbFileInputStream
-
-        Updates for KMP build        
-        {
+: AbFileInputStream{
     //var path = path
     //var fileName = fileName
 
@@ -88,10 +79,7 @@ open fun getFileInputStreamInstance(path: String, fileName: String)
             
 open fun getFileOutputStreamInstance(path: String, fileName: String)
         //nullable = true from not(false or (false and false)) = true
-: AbFileOutputStream
-
-        Updates for KMP build        
-        {
+: AbFileOutputStream{
     //var path = path
     //var fileName = fileName
 
@@ -110,10 +98,7 @@ context.deleteFile(fileName)
             
 open fun delete(path: String, fileName: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var path = path
     //var fileName = fileName
 this.getContext()!!.deleteFile(fileName)
@@ -122,10 +107,7 @@ this.getContext()!!.deleteFile(fileName)
 
 open fun getContext()
         //nullable = true from not(false or (false and true)) = true
-: Context
-
-        Updates for KMP build        
-        {
+: Context{
 
 
 

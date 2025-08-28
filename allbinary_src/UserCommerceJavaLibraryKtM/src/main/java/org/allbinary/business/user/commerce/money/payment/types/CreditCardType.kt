@@ -40,9 +40,6 @@ open public class CreditCardType
     private var name: String
 public constructor        (cardType: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var cardType = cardType
 this.name= cardType
@@ -50,10 +47,7 @@ this.name= cardType
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

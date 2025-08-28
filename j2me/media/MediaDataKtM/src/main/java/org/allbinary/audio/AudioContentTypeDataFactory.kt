@@ -37,10 +37,7 @@ open public class AudioContentTypeDataFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AudioContentTypeDataFactory
-
-        Updates for KMP build        
-        {
+: AudioContentTypeDataFactory{
 
 
 
@@ -64,9 +61,6 @@ open fun getInstance()
     val MIME_AUDIO_SP_MIDI: AudioContentTypeData = AudioContentTypeData("audio/sp-midi")
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

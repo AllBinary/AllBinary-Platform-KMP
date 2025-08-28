@@ -40,10 +40,7 @@ open public class AdvancedRTSLayerUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AdvancedRTSLayerUtil
-
-        Updates for KMP build        
-        {
+: AdvancedRTSLayerUtil{
 
 
 
@@ -61,10 +58,7 @@ open fun getInstance()
         
 open fun createFakeRTSLayerHashtable(baseRaceTrackGeographicMap: BaseRaceTrackGeographicMap)
         //nullable = true from not(false or (false and false)) = true
-: Hashtable<Any, Any>
-
-        Updates for KMP build        
-        {
+: Hashtable<Any, Any>{
     //var baseRaceTrackGeographicMap = baseRaceTrackGeographicMap
 
     var hashtable: Hashtable<Any, Any> = RTSLayerUtil.getInstance()!!.createFakeRTSLayerHashtable(baseRaceTrackGeographicMap)!!

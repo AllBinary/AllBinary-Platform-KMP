@@ -40,10 +40,7 @@ open public class LinePathAnimation
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LinePathAnimation
-
-        Updates for KMP build        
-        {
+: LinePathAnimation{
 
 
 
@@ -61,10 +58,7 @@ open fun getInstance()
         
 open fun paint(graphics: Graphics, point: GPoint, nextPoint: GPoint, tiledLayer: Layer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var point = point
     //var nextPoint = nextPoint

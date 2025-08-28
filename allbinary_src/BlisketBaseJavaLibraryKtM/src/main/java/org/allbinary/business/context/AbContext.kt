@@ -46,9 +46,6 @@ open public class AbContext
     private var pageContext: PageContext
 public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
             : super()
-        
-
-        Updates for KMP build        
         {
 var propertiesHashMap = propertiesHashMap
 var pageContext = pageContext
@@ -68,10 +65,7 @@ this.pageContext= pageContext
 
 open fun getWeblisketSession()
         //nullable = true from not(false or (false and true)) = true
-: WeblisketSessionInterface
-
-        Updates for KMP build        
-        {
+: WeblisketSessionInterface{
 
 
 
@@ -82,10 +76,7 @@ open fun getWeblisketSession()
 
 open fun getPageContext()
         //nullable = true from not(false or (false and true)) = true
-: PageContext
-
-        Updates for KMP build        
-        {
+: PageContext{
 
 
 
@@ -96,10 +87,7 @@ open fun getPageContext()
 
 open fun getPropertiesHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
 
 

@@ -40,9 +40,6 @@ open public class Aggression
     private var drops: Integer
 public constructor        (ram: Integer, projectile: Integer, drops: Integer)
             : super()
-        
-
-        Updates for KMP build        
         {
 var ram = ram
 var projectile = projectile
@@ -55,10 +52,7 @@ this.setDrops(drops)
 
 open fun getRam()
         //nullable = true from not(false or (false and true)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 
 
 
@@ -69,10 +63,7 @@ open fun getRam()
 
 open fun setRam(ram: Integer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var ram = ram
 this.ram= ram
 }
@@ -80,10 +71,7 @@ this.ram= ram
 
 open fun getProjectile()
         //nullable = true from not(false or (false and true)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 
 
 
@@ -94,10 +82,7 @@ open fun getProjectile()
 
 open fun setProjectile(projectile: Integer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var projectile = projectile
 this.projectile= projectile
 }
@@ -105,10 +90,7 @@ this.projectile= projectile
 
 open fun getDrops()
         //nullable = true from not(false or (false and true)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 
 
 
@@ -119,10 +101,7 @@ open fun getDrops()
 
 open fun setDrops(drops: Integer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var drops = drops
 this.drops= drops
 }

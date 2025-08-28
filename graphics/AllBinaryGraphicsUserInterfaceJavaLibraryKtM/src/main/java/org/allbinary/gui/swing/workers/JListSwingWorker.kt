@@ -33,10 +33,7 @@ open public class JListSwingWorker : SwingWorker {
     private var jList: JList
 
     private var listModel: ListModel
-public constructor        (jList: JList, listModel: ListModel)
-
-        Updates for KMP build        
-        {
+public constructor        (jList: JList, listModel: ListModel){
 var jList = jList
 var listModel = listModel
 this.setJList(jList)
@@ -46,10 +43,7 @@ this.setListModel(listModel)
 
 open fun doInBackground()
         //nullable = true from not(false or (false and true)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 
 
 
@@ -60,20 +54,14 @@ open fun doInBackground()
 
 open fun done()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.getJList()!!.setModel(this.getListModel())
 }
 
 
 open fun getJList()
         //nullable = true from not(false or (false and true)) = true
-: JList
-
-        Updates for KMP build        
-        {
+: JList{
 
 
 
@@ -84,10 +72,7 @@ open fun getJList()
 
 open fun setJList(jList: JList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var jList = jList
 this.jList= jList
 }
@@ -95,10 +80,7 @@ this.jList= jList
 
 open fun getListModel()
         //nullable = true from not(false or (false and true)) = true
-: ListModel
-
-        Updates for KMP build        
-        {
+: ListModel{
 
 
 
@@ -109,10 +91,7 @@ open fun getListModel()
 
 open fun setListModel(listModel: ListModel)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var listModel = listModel
 this.listModel= listModel
 }

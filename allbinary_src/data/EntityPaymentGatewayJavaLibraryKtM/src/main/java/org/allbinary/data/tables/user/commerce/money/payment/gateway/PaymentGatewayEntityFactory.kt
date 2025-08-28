@@ -39,10 +39,7 @@ open public class PaymentGatewayEntityFactory
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PaymentGatewayEntity
-
-        Updates for KMP build        
-        {
+: PaymentGatewayEntity{
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -54,10 +51,7 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return org.allbinary.data.tables.user.commerce.money.payment.gateway.PaymentGatewayEntity()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -82,9 +76,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

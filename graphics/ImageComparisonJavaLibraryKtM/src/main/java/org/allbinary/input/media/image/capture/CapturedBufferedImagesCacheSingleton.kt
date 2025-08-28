@@ -46,10 +46,7 @@ open public class CapturedBufferedImagesCacheSingleton
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CacheInterface
-
-        Updates for KMP build        
-        {
+: CacheInterface{
 
 
 
@@ -58,10 +55,7 @@ open fun getInstance()
 }
 
 
-                init
-
-        Updates for KMP build        
-        {
+                init{
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -80,10 +74,7 @@ open fun getInstance()
 cacheInterface= CacheInterfaceFactory.getInstance((), ()) as AutomaticCacheInterface
 logUtil!!.put(commonStrings!!.END, instance, STATIC_BLOCK)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, instance, STATIC_BLOCK, e)
 }
 
@@ -94,9 +85,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION, instance, STATIC_BLOCK, e)
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

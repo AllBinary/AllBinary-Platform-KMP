@@ -40,10 +40,7 @@ open public class OrderedIntArrayPermutationUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OrderedIntArrayPermutationUtil
-
-        Updates for KMP build        
-        {
+: OrderedIntArrayPermutationUtil{
 
 
 
@@ -54,10 +51,7 @@ open fun getInstance()
 
 open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var args = args
 
     var TOTAL: Int = 3
@@ -71,9 +65,6 @@ var args = args
 
                         for (i in 0 until TOTAL)
 
-        
-
-        Updates for KMP build        
         {
 data[i]= i
 }
@@ -97,19 +88,13 @@ OrderedIntArrayPermutationUtil.getInstance()!!.generate(data, permutationVisitor
     private val FINISHED: String = "\nFINISHED"
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getNext(data: IntArray)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var data = data
 
     var length: Int = data.size
@@ -120,9 +105,6 @@ var data = data
 
 
         while(data[i -1] >= data[i])
-        
-
-        Updates for KMP build        
         {
 i= i -1
 }
@@ -132,9 +114,6 @@ i= i -1
 
 
         while(data[j -1] <= data[i -1])
-        
-
-        Updates for KMP build        
         {
 j= j -1
 }
@@ -144,9 +123,6 @@ i++
 j= length
 
         while(i < j)
-        
-
-        Updates for KMP build        
         {
 this.swap(data, i -1, j -1)
 i++
@@ -158,10 +134,7 @@ j--
 
 open fun swap(data: IntArray, a: Int, b: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var data = data
 var a = a
 var b = b
@@ -175,10 +148,7 @@ data[b]= temp
 
 open fun factorial(dataLength: Int)
         //nullable = true from not(false or (false and false)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 var dataLength = dataLength
 
     var temp: Long = 1
@@ -194,9 +164,6 @@ var dataLength = dataLength
 
                         for (i in 1 until dataLength)
 
-        
-
-        Updates for KMP build        
         {
 temp *= i
 }
@@ -214,10 +181,7 @@ temp *= i
 
 open fun generate(data: IntArray, visitor: Visitor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var data = data
 var visitor = visitor
 
@@ -231,9 +195,6 @@ System.out.println(iterations)
 
                         for (count in 0 until iterations -1)
 
-        
-
-        Updates for KMP build        
         {
 this.getNext(data)
 visitor.visit(this)

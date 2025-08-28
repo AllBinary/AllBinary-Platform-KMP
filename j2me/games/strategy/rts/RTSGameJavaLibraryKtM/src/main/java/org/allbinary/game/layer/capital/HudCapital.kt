@@ -31,10 +31,7 @@ open public class HudCapital : Capital {
         
 
     private var capitalGraphic: NumberStringHud
-public constructor        (moneyGraphic: NumberStringHud)
-
-        Updates for KMP build        
-        {
+public constructor        (moneyGraphic: NumberStringHud){
 var moneyGraphic = moneyGraphic
 this.capitalGraphic= moneyGraphic
 }
@@ -42,10 +39,7 @@ this.capitalGraphic= moneyGraphic
 
 open fun removeMoney(points: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var points = points
 super.removeMoney(points)
 this.capitalGraphic!!.reduce(points)
@@ -54,10 +48,7 @@ this.capitalGraphic!!.reduce(points)
 
 open fun getTotalMoney()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -68,10 +59,7 @@ open fun getTotalMoney()
 
 open fun addMoney(points: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var points = points
 super.addMoney(points)
 this.capitalGraphic!!.add(points)

@@ -42,10 +42,7 @@ open public class CommonGameInitialization : BaseGameInitialization {
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 protected constructor        (resourceInitializationArray: Array<ResourceInitialization?>, portion: Int)                        
 
-                            : super(resourceInitializationArray, portion)
-
-        Updates for KMP build        
-        {
+                            : super(resourceInitializationArray, portion){
     //var resourceInitializationArray = resourceInitializationArray
 var portion = portion
 
@@ -58,10 +55,7 @@ var portion = portion
                 @Throws(Exception::class)
             override fun init(abeClientInformation: AbeClientInformationInterface, commandListener: CommandListener, level: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
     //var commandListener = commandListener
     //var level = level
@@ -97,10 +91,7 @@ super.resourceInitialization(level)
             
 open fun initGame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
 
 

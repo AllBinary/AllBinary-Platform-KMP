@@ -35,10 +35,7 @@ open public class TrackingEvent : AllBinaryEventObject {
     private var layerInterface: AllBinaryLayer = AllBinaryLayer.NULL_ALLBINARY_LAYER
 public constructor        ()                        
 
-                            : super(TrackingEventHandler.getInstance())
-
-        Updates for KMP build        
-        {
+                            : super(TrackingEventHandler.getInstance()){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -47,10 +44,7 @@ public constructor        ()
 
 public constructor        (allBinaryLayerInterface: AllBinaryLayer)                        
 
-                            : super(allBinaryLayerInterface)
-
-        Updates for KMP build        
-        {
+                            : super(allBinaryLayerInterface){
 var allBinaryLayerInterface = allBinaryLayerInterface
 
 
@@ -62,10 +56,7 @@ this.setLayerInterface(allBinaryLayerInterface)
 
 open fun init(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var anyType = anyType
 this.setSource(anyType)
 }
@@ -73,10 +64,7 @@ this.setSource(anyType)
 
 open fun getLayerInterface()
         //nullable = true from not(false or (false and true)) = true
-: AllBinaryLayer
-
-        Updates for KMP build        
-        {
+: AllBinaryLayer{
 
 
 
@@ -87,10 +75,7 @@ open fun getLayerInterface()
 
 open fun setLayerInterface(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var layerInterface = layerInterface
 this.layerInterface= layerInterface
 }
@@ -98,20 +83,14 @@ this.layerInterface= layerInterface
 
 open fun setLayerInterfaceForCircularStaticPool(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var layerInterface = layerInterface
 this.layerInterface= layerInterface
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

@@ -44,10 +44,7 @@ open public class TransformInfoPropertiesFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TransformInfoPropertiesFactory
-
-        Updates for KMP build        
-        {
+: TransformInfoPropertiesFactory{
 
 
 
@@ -61,9 +58,6 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -72,10 +66,7 @@ private constructor        ()
             
 open fun getInstance(node: Node)
         //nullable =  from not(true or (false and false)) = 
-: TransformInfoProperties
-
-        Updates for KMP build        
-        {
+: TransformInfoProperties{
 var node = node
 
     var transformInfoChildNodeList: NodeList = node.getChildNodes()!!

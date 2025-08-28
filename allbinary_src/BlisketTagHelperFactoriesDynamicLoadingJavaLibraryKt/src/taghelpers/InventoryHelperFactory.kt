@@ -45,10 +45,7 @@ open public class InventoryHelperFactory
             
 open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 var hashMap = hashMap
 var pageContext = pageContext
 
@@ -62,9 +59,6 @@ var pageContext = pageContext
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

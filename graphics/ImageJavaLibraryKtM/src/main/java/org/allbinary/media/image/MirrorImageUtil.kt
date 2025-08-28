@@ -42,10 +42,7 @@ open public class MirrorImageUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: MirrorImageUtil
-
-        Updates for KMP build        
-        {
+: MirrorImageUtil{
 
 
 
@@ -61,19 +58,13 @@ open fun getInstance()
     private val imageUtil: ImageUtil = ImageUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getImage(bufferedImage: BufferedImage, verticle: Boolean, horizontal: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: BufferedImage
-
-        Updates for KMP build        
-        {
+: BufferedImage{
 var bufferedImage = bufferedImage
 var verticle = verticle
 var horizontal = horizontal
@@ -137,10 +128,7 @@ g.dispose()
 
 open fun getImages(bufferedImage: BufferedImage, verticle: Boolean, horizontal: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Array<BufferedImage?>
-
-        Updates for KMP build        
-        {
+: Array<BufferedImage?>{
 var bufferedImage = bufferedImage
 var verticle = verticle
 var horizontal = horizontal
@@ -183,9 +171,6 @@ logUtil!!.put("numberOfFramesPerOrientation: " +numberOfFramesPerOrientation +" 
 
                         for (index in 0 until numberOfFramesPerOrientation)
 
-        
-
-        Updates for KMP build        
         {
 
     var x: Int = index *cellWidth
@@ -199,9 +184,6 @@ bufferedImageArray[index]= bufferedImage!!.getSubimage(x, y, cellWidth, cellHeig
 
                         for (index in 0 until numberOfFramesPerOrientation)
 
-        
-
-        Updates for KMP build        
         {
 bufferedImageArray[index +numberOfFramesPerOrientation]= this.getImage(bufferedImageArray[index]!!, verticle, horizontal)
 }

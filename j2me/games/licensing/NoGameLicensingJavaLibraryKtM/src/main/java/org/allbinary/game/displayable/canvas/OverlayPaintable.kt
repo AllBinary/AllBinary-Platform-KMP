@@ -34,25 +34,16 @@ open public class OverlayPaintable : InitUpdatePaintable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 override fun update()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -63,10 +54,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 }
 

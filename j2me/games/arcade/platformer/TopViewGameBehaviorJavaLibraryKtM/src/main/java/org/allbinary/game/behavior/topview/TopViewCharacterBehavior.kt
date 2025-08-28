@@ -46,10 +46,7 @@ open public class TopViewCharacterBehavior
             
 open fun terrainEvent(layer: AllBinaryLayer, direction: Direction, x: Int, y: Int, geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layer = layer
     //var direction = direction
     //var x = x
@@ -61,10 +58,7 @@ open fun terrainEvent(layer: AllBinaryLayer, direction: Direction, x: Int, y: In
 
 open fun terrainMove(layer: AllBinaryLayer, geographicMapInterfaceArray: Array<BasicGeographicMap?>, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layer = layer
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var x = x
@@ -74,10 +68,7 @@ open fun terrainMove(layer: AllBinaryLayer, geographicMapInterfaceArray: Array<B
 
 open fun hasSolidBlock(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var geographicMapCellTypeArray = geographicMapCellTypeArray
 
@@ -93,9 +84,6 @@ open fun hasSolidBlock(geographicMapInterfaceArray: Array<BasicGeographicMap?>, 
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 basicTopViewGeographicMapCellTypeFactory= geographicMapInterfaceArray[index]!!.getGeographicMapCellTypeFactory() as BasicTopViewGeographicMapCellTypeFactory
 

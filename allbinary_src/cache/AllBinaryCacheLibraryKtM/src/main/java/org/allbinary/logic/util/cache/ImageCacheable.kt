@@ -34,9 +34,6 @@ open public class ImageCacheable
     private var name: String
 public constructor        (name: String, anyType: Any)
             : super()
-        
-
-        Updates for KMP build        
         {
 var name = name
 var anyType = anyType
@@ -45,10 +42,7 @@ var anyType = anyType
 
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 
 
 
@@ -58,10 +52,7 @@ open fun getKey()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

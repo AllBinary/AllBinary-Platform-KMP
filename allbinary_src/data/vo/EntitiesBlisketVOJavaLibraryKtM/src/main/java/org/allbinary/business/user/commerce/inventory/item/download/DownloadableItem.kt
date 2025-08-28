@@ -67,9 +67,6 @@ open public class DownloadableItem
     private val retries: String
 public constructor        (id: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var id = id
 
@@ -97,9 +94,6 @@ this.retries= EMPTY_STRING
 
 public constructor        (hashMap: HashMap<Any, Any>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var hashMap = hashMap
 this.id= hashMap!!.get(DownloadItemData.ID) as String
@@ -177,10 +171,7 @@ this.retries= hashMap!!.get(DownloadItemData.RETRIES) as String
 
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
     var calendar: Calendar = Calendar.getInstance()!!
 
@@ -216,10 +207,7 @@ values.add(time)
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var values: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -255,10 +243,7 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 open fun getId()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -269,10 +254,7 @@ open fun getId()
 
 open fun getSystem()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -283,10 +265,7 @@ open fun getSystem()
 
 open fun getPlatform()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -297,10 +276,7 @@ open fun getPlatform()
 
 open fun getSpecialName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -311,10 +287,7 @@ open fun getSpecialName()
 
 open fun getVersion()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -325,10 +298,7 @@ open fun getVersion()
 
 open fun getChanges()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -339,10 +309,7 @@ open fun getChanges()
 
 open fun getLicenseFile()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -353,10 +320,7 @@ open fun getLicenseFile()
 
 open fun getFile()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -367,10 +331,7 @@ open fun getFile()
 
 open fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -381,10 +342,7 @@ open fun getSize()
 
 open fun getValidTime()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -395,10 +353,7 @@ open fun getValidTime()
 
 open fun getRetries()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

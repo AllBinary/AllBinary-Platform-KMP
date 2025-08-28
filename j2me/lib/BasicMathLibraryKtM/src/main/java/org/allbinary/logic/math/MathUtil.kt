@@ -23,10 +23,7 @@ open public class MathUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: MathUtil
-
-        Updates for KMP build        
-        {
+: MathUtil{
 
 
 
@@ -44,19 +41,13 @@ open fun getInstance()
         
 open fun getTotalDigits(digits: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var digits = digits
 
     var total: Int = 0
 
 
         while(digits > 0)
-        
-
-        Updates for KMP build        
         {
 digits= digits /10
 total++
@@ -72,10 +63,7 @@ total++
 
 open fun sqrt(value: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var value = value
 
     
@@ -98,9 +86,6 @@ open fun sqrt(value: Int)
 
 
         do
-        
-
-        Updates for KMP build        
         {
 accumulated= result
 result= (accumulated +(value /accumulated)) shr 1
@@ -118,10 +103,7 @@ result= (accumulated +(value /accumulated)) shr 1
 
 open fun abs(value: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var value = value
 
 
@@ -140,10 +122,7 @@ var value = value
 
 open fun abs(value: Long)
         //nullable = true from not(false or (false and false)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 var value = value
 
 
@@ -162,10 +141,7 @@ var value = value
 
 open fun min(value: Int, value2: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var value = value
 var value2 = value2
 
@@ -185,10 +161,7 @@ var value2 = value2
 
 open fun max(value: Int, value2: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var value = value
 var value2 = value2
 

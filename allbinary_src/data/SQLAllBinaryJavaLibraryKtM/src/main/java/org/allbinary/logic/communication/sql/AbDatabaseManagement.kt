@@ -68,10 +68,7 @@ open public class AbDatabaseManagement : AbSqlBean {
     val ADD_TABLES_RESULTS_LABEL: String = "Add Table Results: "
 public constructor        (databaseConnectionInfoInterface: DatabaseConnectionInfoInterface)                        
 
-                            : super(databaseConnectionInfoInterface as DbConnectionInfo)
-
-        Updates for KMP build        
-        {
+                            : super(databaseConnectionInfoInterface as DbConnectionInfo){
 var databaseConnectionInfoInterface = databaseConnectionInfoInterface
 
 
@@ -81,10 +78,7 @@ var databaseConnectionInfoInterface = databaseConnectionInfoInterface
 
 public constructor        (connectionInfo: DbConnectionInfo)                        
 
-                            : super(connectionInfo)
-
-        Updates for KMP build        
-        {
+                            : super(connectionInfo){
 var connectionInfo = connectionInfo
 
 
@@ -95,10 +89,7 @@ var connectionInfo = connectionInfo
 
 open fun getHostName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -110,10 +101,7 @@ open fun getHostName()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return addr.getHostName()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.FAILED, this, GET_HOST_NAME, e)
 
 
@@ -129,10 +117,7 @@ logUtil!!.put(this.FAILED, this, GET_HOST_NAME, e)
             
 open fun addDbUser(hostName: String, db: String, userName: String, password: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var hostName = hostName
 var db = db
 var userName = userName
@@ -165,10 +150,7 @@ super.executeSQLStatement(sqlStatement)
 
 open fun addDbUser(db: String, userName: String, password: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var db = db
 var userName = userName
 var password = password
@@ -195,10 +177,7 @@ var password = password
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.UNABLE_TO_CREATE_USER +userName, this, this.METHOD_ADD_USER, e)
 
 
@@ -212,10 +191,7 @@ logUtil!!.put(this.UNABLE_TO_CREATE_USER +userName, this, this.METHOD_ADD_USER, 
 
 open fun addDb(db: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var db = db
 
         try {
@@ -231,10 +207,7 @@ super.executeSQLStatement(sqlStatement)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.TRUE
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(UNABLE_TO_CREATE_DATABASE +db, this, this.METHOD_ADD_DB, e)
 
 

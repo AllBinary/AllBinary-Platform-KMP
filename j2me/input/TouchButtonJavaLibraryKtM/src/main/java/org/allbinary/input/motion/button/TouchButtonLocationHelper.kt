@@ -46,9 +46,6 @@ open public class TouchButtonLocationHelper
     private var rowsRemainderHalf: Int
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     var buttonSize: Int = CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE
@@ -67,10 +64,7 @@ this.rowsRemainderHalf= (this.rowsRemainder shr 1)
 
 open fun getTotalColumns()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -81,10 +75,7 @@ open fun getTotalColumns()
 
 open fun getTotalRows()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -95,10 +86,7 @@ open fun getTotalRows()
 
 open fun getColumnsRemainder()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -109,10 +97,7 @@ open fun getColumnsRemainder()
 
 open fun getRowsRemainder()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -123,10 +108,7 @@ open fun getRowsRemainder()
 
 open fun getColumnsRemainderHalf()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -137,10 +119,7 @@ open fun getColumnsRemainderHalf()
 
 open fun getRowsRemainderHalf()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -150,10 +129,7 @@ open fun getRowsRemainderHalf()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

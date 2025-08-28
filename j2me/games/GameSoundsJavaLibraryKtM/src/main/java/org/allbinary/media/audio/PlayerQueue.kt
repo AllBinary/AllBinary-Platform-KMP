@@ -49,9 +49,6 @@ open public class PlayerQueue
     private var max: Int
  constructor        (max: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var max = max
 this.max= max
@@ -60,10 +57,7 @@ this.max= max
 
 open fun add(sound: Sound)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var sound = sound
 
         try {
@@ -77,10 +71,7 @@ var sound = sound
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD)
 }
 
@@ -89,10 +80,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD)
 
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     var sound: Sound = NoSound.getInstance()!!
 
@@ -120,9 +108,6 @@ open fun process()
                                 
 
         while(list.size() > max)
-        
-
-        Updates for KMP build        
         {
 list.remove(0)
 }
@@ -137,10 +122,7 @@ played= true
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return played
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var resource: String = StringUtil.getInstance()!!.EMPTY_STRING
 
@@ -169,19 +151,13 @@ PreLogUtil.put(StringMaker().
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.list.clear()
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

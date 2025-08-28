@@ -43,10 +43,7 @@ open public class TestInputAutomationActionWorker : AbstractInputAutomationWorke
     private var sleep: Int
 public constructor        (sleep: Int, inputAutomationActionInterface: InputAutomationActionInterface, imageComparatorConstraintsInterface: ImageComparatorConstraintsInterface, motionRectangleConstraintsInterface: MotionRectangleConstraintsInterface)                        
 
-                            : super(inputAutomationActionInterface)
-
-        Updates for KMP build        
-        {
+                            : super(inputAutomationActionInterface){
 var sleep = sleep
 var inputAutomationActionInterface = inputAutomationActionInterface
 var imageComparatorConstraintsInterface = imageComparatorConstraintsInterface
@@ -64,10 +61,7 @@ this.sleep= sleep
             
 open fun processBetweenWorkers()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 Thread.sleep(2000)
 }
 
@@ -76,10 +70,7 @@ Thread.sleep(2000)
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 logUtil!!.put(this.commonStrings!!.START, this, commonStrings!!.PROCESS)
 
     var hashtable: Hashtable<Any, Any> = InputRobotFactory.getInstance()!!.get()!!
@@ -100,9 +91,6 @@ logUtil!!.put(this.commonStrings!!.START, this, commonStrings!!.PROCESS)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var inputTypeNameString: String = inputTypeNameArray[index]!! as String

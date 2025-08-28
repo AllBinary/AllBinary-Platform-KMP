@@ -40,10 +40,7 @@ open public class PositionWidget : BasicHud {
             
 open fun toString(position: Int)
         //nullable = true from not(false or (true and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var position = position
 
     var stringBuffer: StringMaker = StringMaker()
@@ -96,10 +93,7 @@ stringBuffer!!.append(position.toString())
     private var positionString: String = StringUtil.getInstance()!!.EMPTY_STRING
 public constructor        (position: Int, location: Int, direction: Int, basicColor: BasicColor)                        
 
-                            : super(location, direction, 10, 40, 2, basicColor)
-
-        Updates for KMP build        
-        {
+                            : super(location, direction, 10, 40, 2, basicColor){
 var position = position
 var location = location
 var direction = direction
@@ -113,10 +107,7 @@ var basicColor = basicColor
 
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -127,10 +118,7 @@ open fun get()
 
 open fun set(position: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var position = position
 this.position= position
 this.positionString= PositionWidget.toString(this.get())
@@ -139,10 +127,7 @@ this.positionString= PositionWidget.toString(this.get())
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 super.paint(graphics, positionString)
 }

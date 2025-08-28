@@ -28,27 +28,18 @@ open public class NullCanvas : Canvas {
     val NULL_SCREEN: Form = Form(StringUtil.getInstance()!!.EMPTY_STRING)
 
         }
-            public constructor        ()
-
-        Updates for KMP build        
-        {
+            public constructor        (){
 }
 
 override fun setFullScreenMode(mode: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var mode = mode
 }
 
 override fun sizeChanged(w: Int, h: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var w = w
 var h = h
 }
@@ -56,10 +47,7 @@ var h = h
 
 open fun getCommandStack()
         //nullable = true from not(false or (false and true)) = true
-: Stack<Any>
-
-        Updates for KMP build        
-        {
+: Stack<Any>{
 
 
 
@@ -69,10 +57,7 @@ open fun getCommandStack()
 
 open fun isCommand(command: Command)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var command = command
 
 
@@ -82,47 +67,32 @@ var command = command
 
 override fun addCommand(command: Command)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var command = command
 }
 
 override fun removeCommand(command: Command)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var command = command
 }
 
 
 open fun removeAllCommands()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun setCommandListener(l: CommandListener)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var l = l
 }
 
 
 open fun getCustomCommandListener()
         //nullable = true from not(false or (false and true)) = true
-: CommandListener
-
-        Updates for KMP build        
-        {
+: CommandListener{
 
 
 
@@ -132,10 +102,7 @@ open fun getCustomCommandListener()
 
 open fun isPaused()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -145,28 +112,19 @@ open fun isPaused()
 
 open fun removePauseCommand()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun pause()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun unPause()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
@@ -174,37 +132,25 @@ open fun unPause()
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 }
 
 
 open fun destroy()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun setPaused(isPaused: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var isPaused = isPaused
 
 
@@ -214,30 +160,21 @@ var isPaused = isPaused
 
 override fun pointerDragged(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var x = x
 var y = y
 }
 
 override fun pointerPressed(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var x = x
 var y = y
 }
 
 override fun pointerReleased(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var x = x
 var y = y
 }

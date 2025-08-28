@@ -54,10 +54,7 @@ open public class RaceTrackAdjacentDropCellPositionGenerator : RaceTrackDropCell
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DropCellPositionGeneratorInterface
-
-        Updates for KMP build        
-        {
+: DropCellPositionGeneratorInterface{
 
 
 
@@ -71,10 +68,7 @@ open fun getInstance()
     private val layerCoveringCellPositionsUtil: LayerCoveringCellPositionsUtil = LayerCoveringCellPositionsUtil.getInstance()!!
 
     private var surroundingCellPositions: Array<GeographicMapCellPosition?> = arrayOfNulls(4)
-private constructor        ()
-
-        Updates for KMP build        
-        {
+private constructor        (){
 }
 
 
@@ -82,10 +76,7 @@ private constructor        ()
             
 open fun getFirstNonRoadAdjacentCellPosition(column: Int, row: Int)
         //nullable = true from not(false or (false and false)) = true
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
     //var column = column
     //var row = row
 
@@ -115,9 +106,6 @@ surroundingCellPositions[3]= geographicMapCellPositionFactory!!.getInstance(colu
 
                         for (index in surroundingCellPositions!!.size  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 geographicMapCellPosition= surroundingCellPositions[index]!!
 raceTrackGeographicMapCellType= raceTrackGeographicMap!!.getCellTypeAt(geographicMapCellPosition) as RaceTrackGeographicMapCellType
@@ -149,10 +137,7 @@ break;
             
 open fun update(allBinaryGameLayerManager: AllBinaryGameLayerManager, geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
     //var geographicMapInterface = geographicMapInterface
 hashtable.put(AllBinaryGameLayerManager.ID, allBinaryGameLayerManager)
@@ -166,10 +151,7 @@ super.update(allBinaryGameLayerManager, geographicMapInterface)
             
 open fun drop(allBinaryLayerManager: AllBinaryLayerManager, index: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryLayerManager = allBinaryLayerManager
     //var index = index
 
@@ -245,9 +227,6 @@ hashtable.put(DirectionFactory.getInstance()!!.NAME, direction)
 
                         for (index2 in list.size()!!  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 geographicMapCellType= this.raceTrackGeographicMap!!.getCellTypeAt(list.get(index2) as GeographicMapCellPosition)
 

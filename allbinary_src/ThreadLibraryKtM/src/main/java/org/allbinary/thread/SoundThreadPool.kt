@@ -37,10 +37,7 @@ open public class SoundThreadPool
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ThreadPool
-
-        Updates for KMP build        
-        {
+: ThreadPool{
 
 
 

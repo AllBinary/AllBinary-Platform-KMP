@@ -23,10 +23,7 @@ open public class ThreadObjectUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ThreadObjectUtil
-
-        Updates for KMP build        
-        {
+: ThreadObjectUtil{
 
 
 
@@ -46,10 +43,7 @@ open fun getInstance()
 
 open fun notifyObject(anyType: Object)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var anyType = anyType
 }
 
@@ -58,10 +52,7 @@ var anyType = anyType
             
 open fun waitObject(anyType: Object)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var anyType = anyType
 }
 
@@ -70,10 +61,7 @@ var anyType = anyType
             
 open fun waitObject(anyType: Object, delay: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var anyType = anyType
 var delay = delay
 }

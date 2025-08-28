@@ -52,10 +52,7 @@ open public class TouchButtonAndroidResources : Init {
             }            
         override fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var resourceUtil: ResourceUtil = ResourceUtil.getInstance()!!
 
@@ -113,9 +110,6 @@ RESOURCE_ARRAY[8]= androidResources!!.raw.touch_button_strafe_right_arrow_64_by_
 
                         for (index in 0 until RESOURCE_ARRAY.size)
 
-        
-
-        Updates for KMP build        
         {
 resourceUtil!!.addResource(RESOURCE_STRING_ARRAY[index]!!.RESOURCE, Integer(Integer.valueOf(RESOURCE_ARRAY[index]!!)))
 }

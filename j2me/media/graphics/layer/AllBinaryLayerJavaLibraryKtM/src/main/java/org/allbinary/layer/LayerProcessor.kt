@@ -38,9 +38,6 @@ open public class LayerProcessor
     private val layerManager: LayerManager
 public constructor        (layerManager: LayerManager)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var layerManager = layerManager
 this.layerManager= layerManager
@@ -50,10 +47,7 @@ this.layerManager= layerManager
                 @Throws(Exception::class)
             override fun process(allBinaryLayerManager: AllBinaryLayerManager, layerInterface: AllBinaryLayer, index: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allBinaryLayerManager = allBinaryLayerManager
 var layerInterface = layerInterface
 var index = index
@@ -67,10 +61,7 @@ var index = index
                 @Throws(Exception::class)
             override fun isProcessorLayer(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var layerInterface = layerInterface
 
 
@@ -80,10 +71,7 @@ var layerInterface = layerInterface
 
 override fun getLayerManager()
         //nullable = true from not(false or (false and true)) = true
-: LayerManager
-
-        Updates for KMP build        
-        {
+: LayerManager{
 
 
 
@@ -95,10 +83,7 @@ override fun getLayerManager()
                 @Throws(Exception::class)
             override fun process(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allBinaryLayerManager = allBinaryLayerManager
 
     var layerManager: LayerManager = this.getLayerManager()!!
@@ -112,9 +97,6 @@ var allBinaryLayerManager = allBinaryLayerManager
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 this.process(allBinaryLayerManager, layerManager!!.getLayerAt(index) as AllBinaryLayer, index)
 }

@@ -43,10 +43,7 @@ open public class FileListFetcher
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FileListFetcher
-
-        Updates for KMP build        
-        {
+: FileListFetcher{
 
 
 
@@ -66,10 +63,7 @@ open fun getInstance()
 
 open fun getFiles(path: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 var path = path
 
         try {
@@ -82,10 +76,7 @@ var path = path
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return files
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 e.printStackTrace()
 System.out.println("Error: " +e +"\nMsg: " +e.message)
 }
@@ -100,10 +91,7 @@ System.out.println("Error: " +e +"\nMsg: " +e.message)
 
 open fun getFiles(path: String, includeExtension: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
     //var path = path
     //var includeExtension = includeExtension
 
@@ -124,10 +112,7 @@ includeExtensionBasicArrayList!!.add(includeExtension)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return files
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 e.printStackTrace()
 System.out.println("Error: " +e +"\nMsg: " +e.message)
 }
@@ -142,10 +127,7 @@ System.out.println("Error: " +e +"\nMsg: " +e.message)
 
 open fun getFiles(path: String, pathIncludes: String, includeExtension: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
     //var path = path
     //var pathIncludes = pathIncludes
     //var includeExtension = includeExtension
@@ -167,10 +149,7 @@ includeExtensionBasicArrayList!!.add(includeExtension)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return files
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 e.printStackTrace()
 System.out.println("Error: " +e +"\nMsg: " +e.message)
 }

@@ -38,10 +38,7 @@ open public class ThreedObjResources
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ThreedObjResources
-
-        Updates for KMP build        
-        {
+: ThreedObjResources{
 
 
 
@@ -61,10 +58,7 @@ open fun getInstance()
 
 open fun get(resourceName: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
     //var resourceName = resourceName
 
     var resourceName2: String = this.hashtable.get(resourceName as Object) as String

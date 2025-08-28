@@ -57,10 +57,7 @@ open public class WeaponProperties : SimpleWeaponProperties {
     private val MAX: Long = 10240L
 
     private val ZERO: Short = 0
-public constructor        (reloadTime: Long, targetingTime: Long, speed: Long, damage: Int, dissipation: Short)
-
-        Updates for KMP build        
-        {
+public constructor        (reloadTime: Long, targetingTime: Long, speed: Long, damage: Int, dissipation: Short){
 var reloadTime = reloadTime
 var targetingTime = targetingTime
 var speed = speed
@@ -110,10 +107,7 @@ this.setRange((value *9).toInt() /10)
 
 public constructor        (speed: Long, damage: Int, dissipation: Short)                        
 
-                            : this( -1L,  -1L, speed, damage, dissipation)
-
-        Updates for KMP build        
-        {
+                            : this( -1L,  -1L, speed, damage, dissipation){
 var speed = speed
 var damage = damage
 var dissipation = dissipation
@@ -126,10 +120,7 @@ var dissipation = dissipation
 
 open fun setReloadTime(reloadTime: Long)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var reloadTime = reloadTime
 this.reloadTime= reloadTime
 }
@@ -137,10 +128,7 @@ this.reloadTime= reloadTime
 
 open fun getReloadTime()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -151,10 +139,7 @@ open fun getReloadTime()
 
 open fun setTargetingTime(targetingTime: Long)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var targetingTime = targetingTime
 this.targetingTime= targetingTime
 }
@@ -162,10 +147,7 @@ this.targetingTime= targetingTime
 
 open fun getTargetingTime()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -176,10 +158,7 @@ open fun getTargetingTime()
 
 open fun getSpeed()
         //nullable = true from not(false or (false and true)) = true
-: BasicDecimal
-
-        Updates for KMP build        
-        {
+: BasicDecimal{
 
 
 
@@ -190,10 +169,7 @@ open fun getSpeed()
 
 open fun setSpeed(speed: BasicDecimal)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var speed = speed
 this.speed= speed
 }
@@ -201,10 +177,7 @@ this.speed= speed
 
 open fun getDamage(range: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var range = range
 
 
@@ -216,10 +189,7 @@ var range = range
 
 open fun toStringArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<String?>
-
-        Updates for KMP build        
-        {
+: Array<String?>{
 
     var index: Int = 0
 
@@ -243,10 +213,7 @@ stringArray[index++]= stringBuffer!!.append(RELOAD)!!.append(this.getReloadTime(
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

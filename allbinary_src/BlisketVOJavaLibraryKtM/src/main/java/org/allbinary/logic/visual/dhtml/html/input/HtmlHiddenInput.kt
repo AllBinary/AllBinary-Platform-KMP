@@ -32,9 +32,6 @@ open public class HtmlHiddenInput
         
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

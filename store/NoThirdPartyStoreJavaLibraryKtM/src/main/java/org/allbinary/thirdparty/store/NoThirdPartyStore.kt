@@ -32,10 +32,7 @@ open public class NoThirdPartyStore : ThirdPartyStore {
         
  constructor        ()                        
 
-                            : super(StringUtil.getInstance()!!.EMPTY_STRING)
-
-        Updates for KMP build        
-        {
+                            : super(StringUtil.getInstance()!!.EMPTY_STRING){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -44,10 +41,7 @@ open public class NoThirdPartyStore : ThirdPartyStore {
 
 override fun authorize(clientInformationInterface: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var clientInformationInterface = clientInformationInterface
 this.setAuthorized(true)
 }

@@ -46,9 +46,6 @@ open public class Scoreable
     private var points: Int
 public constructor        (points: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var points = points
 this.points= points
@@ -56,20 +53,14 @@ this.points= points
 
 override fun addPoints(points: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var points = points
 this.points += points
 }
 
 override fun removePoints(points: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var points = points
 this.points -= points
 }
@@ -77,20 +68,14 @@ this.points -= points
 
 open fun setPoints(points: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var points = points
 this.points= points
 }
 
 override fun getPoints()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

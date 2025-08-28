@@ -37,34 +37,22 @@ open public class ThemesValidation : Validation
         
 
     private var themeVector: Vector
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 this.themeVector= Vector()
 }
 
-public constructor        (node: Node)
-
-        Updates for KMP build        
-        {
+public constructor        (node: Node){
 var node = node
 }
 
-public constructor        (hashMap: HashMap<Any, Any>)
-
-        Updates for KMP build        
-        {
+public constructor        (hashMap: HashMap<Any, Any>){
 var hashMap = hashMap
 }
 
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -75,10 +63,7 @@ open fun isValid()
 
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -89,10 +74,7 @@ open fun validationInfo()
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
 
 
@@ -103,10 +85,7 @@ open fun toValidationInfoDoc()
 
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
 
@@ -120,10 +99,7 @@ var document = document
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var node: Node = document.createElement(ThemesData.getInstance()!!.NAME)!!
@@ -137,9 +113,6 @@ var document = document
 
                         for (i in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var themeDomNodeInterface: DomNodeInterface = themeVector!!.get(i) as DomNodeInterface

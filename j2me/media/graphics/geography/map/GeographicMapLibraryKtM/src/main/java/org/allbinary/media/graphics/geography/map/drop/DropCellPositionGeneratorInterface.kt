@@ -36,17 +36,11 @@ open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun update(allBinaryGameLayerManager: AllBinaryGameLayerManager, geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
                 @Throws(Exception::class)
             
@@ -54,17 +48,11 @@ open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun isDropAllowedAt(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
-
-        Updates for KMP build        
-        
 
 }
                 

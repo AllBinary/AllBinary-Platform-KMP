@@ -37,10 +37,7 @@ open public class CollidableNeverCollideBehaviorFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CollidableNeverCollideBehavior
-
-        Updates for KMP build        
-        {
+: CollidableNeverCollideBehavior{
 
 
 

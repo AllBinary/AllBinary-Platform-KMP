@@ -40,10 +40,7 @@ open public class OrderProcessorUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OrderProcessorUtil
-
-        Updates for KMP build        
-        {
+: OrderProcessorUtil{
 
 
 
@@ -65,10 +62,7 @@ open fun getInstance()
             
 open fun process(userName: String, order: Order)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var userName = userName
 var order = order
 

@@ -34,19 +34,13 @@ open public class UserTag : StoreValidationTransformTag {
         
 
     private var role: String
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 
 open fun setRole(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.role= value
 this.getPropertiesHashMap()!!.put(UserRoleData.NAME, this.role)
@@ -57,10 +51,7 @@ this.getPropertiesHashMap()!!.put(UserRoleData.NAME, this.role)
             
 open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
         try {
             
@@ -209,10 +200,7 @@ this.setObjectFile("views.generic.user.DeleteValidationUserView")
 
                             throw Exception("Command Null")
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 
 

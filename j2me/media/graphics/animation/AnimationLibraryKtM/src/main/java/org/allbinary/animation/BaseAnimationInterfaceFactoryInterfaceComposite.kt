@@ -36,9 +36,6 @@ open public class BaseAnimationInterfaceFactoryInterfaceComposite
     private var basicAnimationInterfaceFactoryInterfaceArray: Array<BasicAnimationInterfaceFactoryInterface?>
 public constructor        (basicAnimationInterfaceFactoryInterfaceArray: Array<BasicAnimationInterfaceFactoryInterface?>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var basicAnimationInterfaceFactoryInterfaceArray = basicAnimationInterfaceFactoryInterfaceArray
 this.basicAnimationInterfaceFactoryInterfaceArray= basicAnimationInterfaceFactoryInterfaceArray
@@ -48,10 +45,7 @@ this.basicAnimationInterfaceFactoryInterfaceArray= basicAnimationInterfaceFactor
                 @Throws(Exception::class)
             override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation
-
-        Updates for KMP build        
-        {
+: Animation{
     //var instanceId = instanceId
 
 
@@ -63,10 +57,7 @@ this.basicAnimationInterfaceFactoryInterfaceArray= basicAnimationInterfaceFactor
 
 open fun getBasicAnimationInterfaceFactoryInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<BasicAnimationInterfaceFactoryInterface?>
-
-        Updates for KMP build        
-        {
+: Array<BasicAnimationInterfaceFactoryInterface?>{
 
 
 
@@ -77,20 +68,14 @@ open fun getBasicAnimationInterfaceFactoryInterfaceArray()
 
 open fun setBasicAnimationInterfaceFactoryInterfaceArray(basicAnimationInterfaceFactoryInterfaceArray: Array<BasicAnimationInterfaceFactoryInterface?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var basicAnimationInterfaceFactoryInterfaceArray = basicAnimationInterfaceFactoryInterfaceArray
 this.basicAnimationInterfaceFactoryInterfaceArray= basicAnimationInterfaceFactoryInterfaceArray
 }
 
 override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var scaleProperties = scaleProperties
 }
 

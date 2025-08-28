@@ -42,10 +42,7 @@ open public class PlayerGameInputGameLayer : AllBinaryGameLayer
     private var playerGameInput: PlayerGameInput
 public constructor        (playerInputId: Int)                        
 
-                            : super(Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 0, 0), StaticViewPosition(0, 0, 0))
-
-        Updates for KMP build        
-        {
+                            : super(Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 0, 0), StaticViewPosition(0, 0, 0)){
 var playerInputId = playerInputId
 
 
@@ -60,10 +57,7 @@ logUtil!!.put("Danger Danger Danger: Should Not Be Called Except For Testing Inp
 
 override fun getPlayerGameInput()
         //nullable = true from not(false or (false and true)) = true
-: PlayerGameInput
-
-        Updates for KMP build        
-        {
+: PlayerGameInput{
 
 
 
@@ -73,29 +67,20 @@ override fun getPlayerGameInput()
 
 override fun initInputProcessors()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
                 @Throws(Exception::class)
             override fun processInput(myManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var myManager = myManager
 }
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 }
 

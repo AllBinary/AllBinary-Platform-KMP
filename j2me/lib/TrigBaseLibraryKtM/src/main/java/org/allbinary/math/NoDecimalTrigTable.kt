@@ -44,10 +44,7 @@ open public class NoDecimalTrigTable
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NoDecimalTrigTable
-
-        Updates for KMP build        
-        {
+: NoDecimalTrigTable{
 
 
 
@@ -67,9 +64,6 @@ open fun getInstance()
     private val noDecimalTan: LongArray
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     var TOTAL_ANGLE: Int = AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt()
@@ -1166,10 +1160,7 @@ noDecimalTan[0]=  -174
 
 open fun sin(angle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 var angle = angle
 
 
@@ -1181,10 +1172,7 @@ var angle = angle
 
 open fun cos(angle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 var angle = angle
 
 
@@ -1196,10 +1184,7 @@ var angle = angle
 
 open fun tan(angle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 var angle = angle
 
 
@@ -1215,10 +1200,7 @@ var angle = angle
             
 open fun antiTan(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
-: Short
-
-        Updates for KMP build        
-        {
+: Short{
 var dx = dx
 var dy = dy
 
@@ -1262,9 +1244,6 @@ ratio= SCALE *dxl /dy
 
                         for (index in 180 downTo 90)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -1316,9 +1295,6 @@ ratio= SCALE *dxl /dy
 
                         for (index in 270 downTo 180)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -1349,9 +1325,6 @@ ratio= SCALE *dxl /dy
 
                         for (index in (noDecimalTan!!.size -1) downTo 270)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -1403,9 +1376,6 @@ ratio= SCALE *dxl /dy
 
                         for (index in 90 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -1447,10 +1417,7 @@ stringBuffer!!.append(dy)
             
 open fun antiTanDebug(screenX: Int, screenY: Int, targetX: Int, targetY: Int)
         //nullable = true from not(false or (false and false)) = true
-: Short
-
-        Updates for KMP build        
-        {
+: Short{
 var screenX = screenX
 var screenY = screenY
 var targetX = targetX
@@ -1506,9 +1473,6 @@ dy[3]= (screenY2 -targetY2)
 
                         for (index in 0 until dx.size)
 
-        
-
-        Updates for KMP build        
         {
 
 
@@ -1516,9 +1480,6 @@ dy[3]= (screenY2 -targetY2)
 
                         for (index2 in 0 until dy.size)
 
-        
-
-        Updates for KMP build        
         {
 angleOfTarget= this.antiTan(dx[index]!!, dy[index2]!!)
 angle= angleFactory!!.getInstance(angleOfTarget.toInt())

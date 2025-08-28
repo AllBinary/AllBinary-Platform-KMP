@@ -37,10 +37,7 @@ open public class BasicColorUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BasicColorUtil
-
-        Updates for KMP build        
-        {
+: BasicColorUtil{
 
 
 
@@ -66,10 +63,7 @@ open fun getInstance()
 
 open fun get(red: Int, green: Int, blue: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var red = red
 var green = green
 var blue = blue
@@ -106,10 +100,7 @@ value= blue or value
 
 open fun get(alphaValue: Int, r: Int, g: Int, b: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var alphaValue = alphaValue
     //var r = r
     //var g = g
@@ -124,10 +115,7 @@ open fun get(alphaValue: Int, r: Int, g: Int, b: Int)
 
 open fun get(alphaValue: Int, color: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var alphaValue = alphaValue
     //var color = color
 
@@ -140,10 +128,7 @@ open fun get(alphaValue: Int, color: Int)
 
 open fun invert(color: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var color = color
 
 

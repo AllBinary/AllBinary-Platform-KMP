@@ -42,10 +42,7 @@ open public class ArtificialIntelligenceInterfaceFactoryInterfaceFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ArtificialIntelligenceInterfaceFactoryInterfaceFactory
-
-        Updates for KMP build        
-        {
+: ArtificialIntelligenceInterfaceFactoryInterfaceFactory{
 
 
 
@@ -65,20 +62,14 @@ open fun getInstance()
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 list= BasicArrayList()
 }
 
 
 open fun getInstance(hashtable: Hashtable<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
-: ArtificialIntelligenceInterfaceFactoryInterface
-
-        Updates for KMP build        
-        {
+: ArtificialIntelligenceInterfaceFactoryInterface{
 var hashtable = hashtable
 
     var typeInteger: Integer = hashtable.get(BasicAI.ID as Object) as Integer
@@ -99,10 +90,7 @@ var hashtable = hashtable
 
 open fun add(artificialIntelligenceInterfaceFactoryInterface: ArtificialIntelligenceInterfaceFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var artificialIntelligenceInterfaceFactoryInterface = artificialIntelligenceInterfaceFactoryInterface
 list.add(artificialIntelligenceInterfaceFactoryInterface)
 }

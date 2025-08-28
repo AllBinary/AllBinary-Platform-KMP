@@ -38,10 +38,7 @@ open public class ImageMiniMapLayer : MiniMapLayer {
     private var image: Image
 public constructor        (geographicMapInterface: BasicGeographicMap, viewPosition: ViewPosition)                        
 
-                            : super(geographicMapInterface, viewPosition)
-
-        Updates for KMP build        
-        {
+                            : super(geographicMapInterface, viewPosition){
 var geographicMapInterface = geographicMapInterface
 var viewPosition = viewPosition
 
@@ -55,10 +52,7 @@ var viewPosition = viewPosition
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var aWidth: Int = allBinaryTiledLayer!!.getWidth()!!
 
@@ -73,10 +67,7 @@ this.image= PaintableToImageUtil.getImage(allBinaryTiledLayer, aWidth, aHeight)
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 graphics.drawImage(image, x, y, anchor)
 this.paintDots(graphics)

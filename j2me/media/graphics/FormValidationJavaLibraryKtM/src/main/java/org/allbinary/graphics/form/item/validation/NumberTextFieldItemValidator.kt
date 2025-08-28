@@ -45,10 +45,7 @@ open public class NumberTextFieldItemValidator : ValidatorBase {
     private val max: Int
 
     private val maxChars: Int
-public constructor        (textFieldItem: TextFieldItem, maxChars: Int, min: Int, max: Int)
-
-        Updates for KMP build        
-        {
+public constructor        (textFieldItem: TextFieldItem, maxChars: Int, min: Int, max: Int){
 var textFieldItem = textFieldItem
 var maxChars = maxChars
 var min = min
@@ -62,10 +59,7 @@ this.maxChars= maxChars
 
 open fun isNumberValid(value: Integer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var value = value
 
 
@@ -77,10 +71,7 @@ var value = value
 
 open fun toNumberVector(value: Integer)
         //nullable = true from not(false or (false and false)) = true
-: Vector<Any>
-
-        Updates for KMP build        
-        {
+: Vector<Any>{
 var value = value
 
 
@@ -91,10 +82,7 @@ var value = value
 
 override fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     var result: Boolean = BooleanFactory.getInstance()!!.TRUE
 
@@ -113,10 +101,7 @@ override fun isValid()
         try {
             Integer.parseInt(this.textFieldItem!!.getString())
 } catch(e: NumberFormatException)
-            
-
-        Updates for KMP build        
-        {
+            {
 result= BooleanFactory.getInstance()!!.FALSE
 }
 
@@ -154,10 +139,7 @@ result= BooleanFactory.getInstance()!!.FALSE
 
 override fun toList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
     var list: BasicArrayList = BasicArrayList()
 
@@ -210,10 +192,7 @@ list.add(stringMaker!!.append(name)!!.append(" is to large")!!.toString())
                                     }
                                 
 } catch(e: NumberFormatException)
-            
-
-        Updates for KMP build        
-        {
+            {
 stringMaker!!.delete(0, stringMaker!!.length())
 list.add(stringMaker!!.append(name)!!.append(" is not a number")!!.toString())
 }

@@ -37,10 +37,7 @@ open public class DemoGameMidletStateFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DemoGameMidletStateFactory
-
-        Updates for KMP build        
-        {
+: DemoGameMidletStateFactory{
 
 
 
@@ -60,9 +57,6 @@ open fun getInstance()
     val START_INPUT_MAPPING: DemoGameMidletState = DemoGameMidletState()
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

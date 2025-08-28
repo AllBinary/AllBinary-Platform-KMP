@@ -45,9 +45,6 @@ open public class UserConfiguration
     private var timeLastModified: TimeLastModified
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 this.userEmailConfigurationInterface= UserEmailConfiguration() as UserEmailConfigurationInterface
 this.timeCreated= TimeCreated(0)
@@ -56,9 +53,6 @@ this.timeLastModified= TimeLastModified(0)
 
 public constructor        (hashMap: HashMap<Any, Any>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var hashMap = hashMap
 this.userEmailConfigurationInterface= UserEmailConfiguration(hashMap) as UserEmailConfigurationInterface
@@ -69,10 +63,7 @@ this.timeLastModified= TimeLastModified(hashMap!!.get(EntryData.getInstance()!!.
 
 open fun getUserEmailConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
-: UserEmailConfigurationInterface
-
-        Updates for KMP build        
-        {
+: UserEmailConfigurationInterface{
 
 
 
@@ -83,10 +74,7 @@ open fun getUserEmailConfigurationInterface()
 
 open fun setUserEmailConfigurationInterface(userEmailConfigurationInterface: UserEmailConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var userEmailConfigurationInterface = userEmailConfigurationInterface
 this.userEmailConfigurationInterface= userEmailConfigurationInterface
 }
@@ -94,10 +82,7 @@ this.userEmailConfigurationInterface= userEmailConfigurationInterface
 
 open fun getTimeCreated()
         //nullable = true from not(false or (false and true)) = true
-: TimeCreated
-
-        Updates for KMP build        
-        {
+: TimeCreated{
 
 
 
@@ -108,10 +93,7 @@ open fun getTimeCreated()
 
 open fun getTimeLastModified()
         //nullable = true from not(false or (false and true)) = true
-: TimeLastModified
-
-        Updates for KMP build        
-        {
+: TimeLastModified{
 
 
 
@@ -122,10 +104,7 @@ open fun getTimeLastModified()
 
 open fun setTimeCreated(timeCreated: TimeCreated)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var timeCreated = timeCreated
 this.timeCreated= timeCreated
 }
@@ -133,10 +112,7 @@ this.timeCreated= timeCreated
 
 open fun setTimeLastModified(timeLastModified: TimeLastModified)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var timeLastModified = timeLastModified
 this.timeLastModified= timeLastModified
 }

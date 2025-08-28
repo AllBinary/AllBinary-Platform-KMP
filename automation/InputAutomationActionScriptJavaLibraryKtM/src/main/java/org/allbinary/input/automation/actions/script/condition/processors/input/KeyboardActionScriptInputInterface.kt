@@ -34,78 +34,45 @@ open fun getDelayBetweenKeys()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-        Updates for KMP build        
-        
-
 open fun getKeyArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<Integer?>
-
-        Updates for KMP build        
-        
 
 open fun isPress()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-        Updates for KMP build        
-        
-
 open fun isRelease()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
-
-        Updates for KMP build        
-        
 
 open fun isNormal()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-        Updates for KMP build        
-        
-
 open fun setPress(press: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 open fun setRelease(release: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun setNormal()
         //nullable = true from not(false or (false and true)) = true
 
-
-        Updates for KMP build        
-        
 
 open fun getText()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-        Updates for KMP build        
-        
-
 open fun setText(text: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun log()
         //nullable = true from not(false or (false and true)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

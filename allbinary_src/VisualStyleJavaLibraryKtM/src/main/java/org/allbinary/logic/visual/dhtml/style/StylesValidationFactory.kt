@@ -49,10 +49,7 @@ open public class StylesValidationFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: StylesValidationFactory
-
-        Updates for KMP build        
-        {
+: StylesValidationFactory{
 
 
 
@@ -65,10 +62,7 @@ open fun getInstance()
             
 open fun getInstance(hashMap: HashMap<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 var hashMap = hashMap
 
     var stylesDocument: Document = hashMap!!.get(NameSpaceRequestParamData.DOCUMENT) as Document
@@ -86,9 +80,6 @@ var hashMap = hashMap
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -97,10 +88,7 @@ private constructor        ()
             
 open fun getInstance(document: Document)
         //nullable =  from not(true or (false and false)) = 
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 var document = document
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -132,9 +120,6 @@ var document = document
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
-        
-
-        Updates for KMP build        
         {
 
     var stylesNode: Node = nodeList!!.item(index)!!
@@ -157,9 +142,6 @@ var document = document
 
                         for (styleNodesIndex in 0 until styleNodeList!!.size!!)
 
-        
-
-        Updates for KMP build        
         {
 
     var styleNode: Node = styleNodeList!!.get(styleNodesIndex) as Node

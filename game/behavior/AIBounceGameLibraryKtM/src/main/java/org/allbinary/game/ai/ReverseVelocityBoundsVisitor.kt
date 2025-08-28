@@ -44,9 +44,6 @@ open public class ReverseVelocityBoundsVisitor
     private var layerInterface: LayerInterface
 public constructor        (layerInterface: LayerInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var layerInterface = layerInterface
 this.layerInterface= layerInterface
@@ -58,10 +55,7 @@ this.velocityInterface= velocityInterfaceCompositeInterface!!.getVelocityPropert
 
 override fun getX()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -71,10 +65,7 @@ override fun getX()
 
 override fun getY()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -84,10 +75,7 @@ override fun getY()
 
 override fun minX()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(this.velocityInterface!!.getVelocityXBasicDecimalP()!!.getUnscaled() < 0)
@@ -96,10 +84,7 @@ override fun minX()
 
 override fun maxX()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(this.velocityInterface!!.getVelocityXBasicDecimalP()!!.getUnscaled() > 0)
@@ -108,10 +93,7 @@ override fun maxX()
 
 override fun minY()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(this.velocityInterface!!.getVelocityYBasicDecimalP()!!.getUnscaled() < 0)
@@ -120,10 +102,7 @@ override fun minY()
 
 override fun maxY()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(this.velocityInterface!!.getVelocityYBasicDecimalP()!!.getUnscaled() > 0)

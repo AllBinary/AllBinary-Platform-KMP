@@ -47,10 +47,7 @@ open public class DomDocumentFileHelper
             
 open fun create(xmlFile: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 var xmlFile = xmlFile
 
         try {
@@ -60,10 +57,7 @@ var xmlFile = xmlFile
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return DomDocumentHelper.create(AbFileInputStream(xmlFile))
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
@@ -77,10 +71,7 @@ var xmlFile = xmlFile
             
 open fun save(file: AbFile, document: Document)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var file = file
 var document = document
 
@@ -116,10 +107,7 @@ dataOutputStream= DataOutputStreamFactory.getInstance()!!.getInstance(file)
 copyTransformer!!.transform(domSource, streamResult)
 dataOutputStream!!.flush()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
@@ -137,9 +125,6 @@ dataOutputStream!!.flush()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

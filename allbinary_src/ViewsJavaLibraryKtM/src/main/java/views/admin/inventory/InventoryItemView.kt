@@ -74,10 +74,7 @@ open public class InventoryItemView : HttpStoreComponentView
     private var requestHashMap: HashMap<Any, Any>
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(transformInfoInterface)
-
-        Updates for KMP build        
-        {
+                            : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
 
 
@@ -89,10 +86,7 @@ this.getFormData()
 
 public constructor        (transformInfoInterface: TransformInfoInterface, empty: String)                        
 
-                            : super(transformInfoInterface)
-
-        Updates for KMP build        
-        {
+                            : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
 var empty = empty
 
@@ -105,10 +99,7 @@ this.request= this.getPageContext()!!.getRequest() as HttpServletRequest
 
 open fun getTypeId()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -121,10 +112,7 @@ open fun getTypeId()
             
 open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.setRequestHashMap(MultipartRequestParams(request).
                             toHashMap())
 
@@ -179,10 +167,7 @@ this.itemInterface= BasicItem(this.getRequestHashMap()) as ItemInterface
 
 open fun addDomNodeInterfaces()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var vector: Vector = Vector()
 
@@ -198,9 +183,6 @@ open fun addDomNodeInterfaces()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 downloadableItem= this.downloadableItemVector!!.get(index) as DownloadableItem
 vector.add(DownloadableItemView(downloadableItem))
@@ -212,10 +194,7 @@ this.addDomNodeInterface(BasicItemView(itemInterface, vector))
 
 open fun getItemInterface()
         //nullable = true from not(false or (false and true)) = true
-: ItemInterface
-
-        Updates for KMP build        
-        {
+: ItemInterface{
 
 
 
@@ -228,10 +207,7 @@ open fun getItemInterface()
             
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             this.addDomNodeInterfaces()
@@ -241,10 +217,7 @@ open fun view()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.view()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
@@ -267,10 +240,7 @@ open fun view()
             
 open fun processImageFiles()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var set: Set = this.getRequestHashMap()!!.keys!!
 
@@ -287,9 +257,6 @@ open fun processImageFiles()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var fieldName: String = fieldNameArray[index]!! as String
@@ -319,10 +286,7 @@ this.itemInterface= inventoryUploadMediaUtil!!.saveFiles(fileItem!!.get(), this.
 
 open fun setRequestHashMap(requestHashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var requestHashMap = requestHashMap
 this.requestHashMap= requestHashMap
 }
@@ -330,10 +294,7 @@ this.requestHashMap= requestHashMap
 
 open fun getRequestHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
 
 

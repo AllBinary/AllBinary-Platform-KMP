@@ -38,10 +38,7 @@ open public class DistanceUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DistanceUtil
-
-        Updates for KMP build        
-        {
+: DistanceUtil{
 
 
 
@@ -61,10 +58,7 @@ open fun getInstance()
 
 open fun getDistance(x1: Int, y1: Int, x2: Int, y2: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var x1 = x1
     //var y1 = y1
     //var x2 = x2

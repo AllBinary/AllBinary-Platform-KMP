@@ -56,10 +56,7 @@ open public class ShippingMethodsFactory
             
     private val SHIPPINGMETHODSFILEPATHSTRING: String
 
-                init
-
-        Updates for KMP build        
-        {
+                init{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -85,9 +82,6 @@ SHIPPINGMETHODSFILEPATHSTRING= stringBuffer!!.toString()
     private var shippingVector: Vector
 public constructor        (abeClientInformation: AbeClientInformationInterface, storeFrontInterface: StoreFrontInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var abeClientInformation = abeClientInformation
     //var storeFrontInterface = storeFrontInterface
@@ -120,9 +114,6 @@ this.shippingVector= Vector()
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
-        
-
-        Updates for KMP build        
         {
 
     var node: Node = nodeList!!.item(index)!!
@@ -175,10 +166,7 @@ shippingVector!!.add(NoShippingModuleView())
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
 
 
@@ -189,10 +177,7 @@ open fun getInstance()
 
 open fun getDefaultInstance()
         //nullable = true from not(false or (false and true)) = true
-: ShippingInterface
-
-        Updates for KMP build        
-        {
+: ShippingInterface{
 
 
 

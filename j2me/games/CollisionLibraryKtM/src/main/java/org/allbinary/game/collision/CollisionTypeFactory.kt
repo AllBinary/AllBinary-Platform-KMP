@@ -37,10 +37,7 @@ open public class CollisionTypeFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CollisionTypeFactory
-
-        Updates for KMP build        
-        {
+: CollisionTypeFactory{
 
 
 

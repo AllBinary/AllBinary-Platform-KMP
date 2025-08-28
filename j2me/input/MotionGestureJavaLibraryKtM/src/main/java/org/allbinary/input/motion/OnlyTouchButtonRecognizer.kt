@@ -33,10 +33,7 @@ open public class OnlyTouchButtonRecognizer : MotionRecognizer {
     private val touchButtonRecognizer: TouchButtonRecognizer
 
     private var touchButtonProcessing: Boolean = false
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 this.touchButtonRecognizer= TouchButtonRecognizer()
 }
 
@@ -44,10 +41,7 @@ this.touchButtonRecognizer= TouchButtonRecognizer()
                 @Throws(Exception::class)
             override fun processStartMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var x = x
 var y = y
 var deviceId = deviceId
@@ -67,10 +61,7 @@ var modifiers = modifiers
                 @Throws(Exception::class)
             override fun processEndMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var x = x
 var y = y
 var deviceId = deviceId
@@ -103,10 +94,7 @@ var modifiers = modifiers
                 @Throws(Exception::class)
             override fun processDraggedMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var x = x
 var y = y
 var deviceId = deviceId

@@ -40,10 +40,7 @@ open public class TransformInfoRequestHelper : ModifyTable {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var transformInfoInterface: TransformInfoHttpInterface
-public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
-
-        Updates for KMP build        
-        {
+public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext){
 var propertiesHashMap = propertiesHashMap
 var pageContext = pageContext
 this.transformInfoInterface= TransformInfoHttpStoreNoManipulation(propertiesHashMap, pageContext)
@@ -52,10 +49,7 @@ this.transformInfoInterface= TransformInfoHttpStoreNoManipulation(propertiesHash
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -80,10 +74,7 @@ TransformInfoEntityBuilder.getInstance()!!.update(hashMapData)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to update storefronts table"
 
@@ -108,10 +99,7 @@ TransformInfoEntityBuilder.getInstance()!!.update(hashMapData)
 
 open fun insert()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -136,10 +124,7 @@ TransformInfoEntityBuilder.getInstance()!!.insert(values)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to add storefronts table"
 
@@ -164,10 +149,7 @@ TransformInfoEntityBuilder.getInstance()!!.insert(values)
 
 open fun delete()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -189,10 +171,7 @@ TransformInfoEntityBuilder.getInstance()!!.delete(this.transformInfoInterface!!.
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to delete storefronts table"
 

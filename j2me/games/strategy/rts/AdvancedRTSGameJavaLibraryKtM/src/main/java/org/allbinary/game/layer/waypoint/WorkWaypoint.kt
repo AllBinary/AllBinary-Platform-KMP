@@ -47,10 +47,7 @@ open public class WorkWaypoint : Waypoint {
         }
             public constructor        (ownerLayer: PathFindingLayerInterface)                        
 
-                            : super(ownerLayer, WorkSound.getInstance())
-
-        Updates for KMP build        
-        {
+                            : super(ownerLayer, WorkSound.getInstance()){
     //var ownerLayer = ownerLayer
 
 
@@ -63,10 +60,7 @@ open public class WorkWaypoint : Waypoint {
             
 open fun visit(unitLayer: UnitLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var unitLayer = unitLayer
 
     
@@ -107,9 +101,6 @@ open fun visit(unitLayer: UnitLayer)
 
                         for (index in occupyList!!.size()!!  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 geologicalGeographicMapCellPosition= occupyList!!.get(index) as GeologicalGeographicMapCellPosition
 geologicalResource= geologicalGeographicMapCellPosition!!.getGeologicalResource()
@@ -151,9 +142,6 @@ unitLayer!!.setLoad(unitLayer!!.getMaxResourceLoad())
 
 
         while(this.getConnectedWaypointList()!!.size() > 0)
-        
-
-        Updates for KMP build        
         {
 rtsLayer= this.getConnectedWaypointList()!!.get(0) as RTSLayer
 
@@ -186,10 +174,7 @@ break;
 
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

@@ -40,10 +40,7 @@ open public class AbeNoLicense
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AbeNoLicense
-
-        Updates for KMP build        
-        {
+: AbeNoLicense{
 
 
 
@@ -57,19 +54,13 @@ open fun getInstance()
     var serverVector: BasicArrayList = BasicArrayList()
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun hasKey()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -80,10 +71,7 @@ open fun hasKey()
 
 open fun getKey(keyName: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var keyName = keyName
 
 
@@ -95,10 +83,7 @@ var keyName = keyName
 
 open fun getLicenseId()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -109,10 +94,7 @@ open fun getLicenseId()
 
 open fun getSpecial()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -123,10 +105,7 @@ open fun getSpecial()
 
 open fun getServers()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 
@@ -137,10 +116,7 @@ open fun getServers()
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -151,10 +127,7 @@ open fun isValid()
 
 open fun getLicenseType()
         //nullable = true from not(false or (false and true)) = true
-: LicenseType
-
-        Updates for KMP build        
-        {
+: LicenseType{
 
 
 

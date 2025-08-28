@@ -52,9 +52,6 @@ open public class GameMotionGestureListener
     private var signed: CompleteMotionGestureListenerInterface
 public constructor        (signed: CompleteMotionGestureListenerInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var signed = signed
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
@@ -63,110 +60,77 @@ this.signed= signed
 
 override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventObject = eventObject
 ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, this)
 }
 
 override fun onUpMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var ev = ev
 onMotionGestureEvent(ev)
 }
 
 override fun onDownMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var ev = ev
 onMotionGestureEvent(ev)
 }
 
 override fun onLeftMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var ev = ev
 onMotionGestureEvent(ev)
 }
 
 override fun onRightMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var ev = ev
 onMotionGestureEvent(ev)
 }
 
 override fun onDiagonalDownRightMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var ev = ev
 onMotionGestureEvent(ev)
 }
 
 override fun onDiagonalDownLeftMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var ev = ev
 onMotionGestureEvent(ev)
 }
 
 override fun onDiagonalUpRightMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var ev = ev
 onMotionGestureEvent(ev)
 }
 
 override fun onDiagonalUpLeftMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var ev = ev
 onMotionGestureEvent(ev)
 }
 
 override fun onPressedMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var ev = ev
 touchGestureCollection!!.add(ev.getMotionGesture())
 }
 
 override fun released(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var ev = ev
 
         try {
@@ -174,10 +138,7 @@ var ev = ev
 signed.onMotionGestureCompleted(touchGestureCollection)
 touchGestureCollection!!.clear()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -190,10 +151,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "release", e)
 
 override fun onMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var ev = ev
 
         try {
@@ -227,10 +185,7 @@ touchGestureCollection!!.clear()
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var stringBuffer: StringMaker = StringMaker()
 

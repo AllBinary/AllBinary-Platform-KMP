@@ -41,10 +41,7 @@ open public class ByteUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ByteUtil
-
-        Updates for KMP build        
-        {
+: ByteUtil{
 
 
 
@@ -56,19 +53,13 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun xor(array: ByteArray, mask: Byte)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray
-
-        Updates for KMP build        
-        {
+: ByteArray{
     //var array = array
     //var mask = mask
 
@@ -86,9 +77,6 @@ open fun xor(array: ByteArray, mask: Byte)
 
 
         while(index < size)
-        
-
-        Updates for KMP build        
         {
 currentByte= array[index]!!
 bytes[index]= (currentByte xor mask) as Byte
@@ -105,10 +93,7 @@ index++
 
 open fun not(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray
-
-        Updates for KMP build        
-        {
+: ByteArray{
     //var array = array
 
     var bytes: ByteArray = ByteArray(array.size)
@@ -122,9 +107,6 @@ open fun not(array: ByteArray)
 
 
         while(index < size)
-        
-
-        Updates for KMP build        
         {
 bytes[index]= array[index].inv() as Byte
 index++
@@ -140,10 +122,7 @@ index++
 
 open fun xorByte(array: ByteArray, index: Int)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray
-
-        Updates for KMP build        
-        {
+: ByteArray{
     //var array = array
     //var index = index
 
@@ -191,10 +170,7 @@ open fun xorByte(array: ByteArray, index: Int)
 
 open fun compare(newByteArray: ByteArray, oldByteArray: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var newByteArray = newByteArray
     //var oldByteArray = oldByteArray
 
@@ -224,9 +200,6 @@ open fun compare(newByteArray: ByteArray, oldByteArray: ByteArray)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -253,10 +226,7 @@ open fun compare(newByteArray: ByteArray, oldByteArray: ByteArray)
 
 open fun compare(newByteArray: ByteArray, newSize: Int, oldByteArray: ByteArray, stats: IntArray)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var newByteArray = newByteArray
     //var newSize = newSize
     //var oldByteArray = oldByteArray
@@ -292,9 +262,6 @@ stats[1]= 0
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     

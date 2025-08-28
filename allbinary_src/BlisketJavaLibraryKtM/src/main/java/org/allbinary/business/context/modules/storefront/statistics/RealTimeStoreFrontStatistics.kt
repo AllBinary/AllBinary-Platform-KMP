@@ -50,9 +50,6 @@ open public class RealTimeStoreFrontStatistics
     private var storeFrontOrderHistoryStatisticsInterface: StoreFrontOrdersHistoryStatisticsInterface
 public constructor        (storeFrontInterface: StoreFrontInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var storeFrontInterface = storeFrontInterface
 this.storeFrontAdvertisementsStatisticsInterface= StoreFrontAdvertisementsStatistics(storeFrontInterface) as StoreFrontAdvertisementsStatisticsInterface
@@ -64,10 +61,7 @@ this.storeFrontOrderHistoryStatisticsInterface= StoreFrontOrdersHistoryStatistic
 
 open fun getAdvertisements()
         //nullable = true from not(false or (false and true)) = true
-: StoreFrontAdvertisementsStatisticsInterface
-
-        Updates for KMP build        
-        {
+: StoreFrontAdvertisementsStatisticsInterface{
 
 
 
@@ -78,10 +72,7 @@ open fun getAdvertisements()
 
 open fun getUsers()
         //nullable = true from not(false or (false and true)) = true
-: StoreFrontUsersStatisticsInterface
-
-        Updates for KMP build        
-        {
+: StoreFrontUsersStatisticsInterface{
 
 
 
@@ -92,10 +83,7 @@ open fun getUsers()
 
 open fun getInventory()
         //nullable = true from not(false or (false and true)) = true
-: StoreFrontInventoryStatisticsInterface
-
-        Updates for KMP build        
-        {
+: StoreFrontInventoryStatisticsInterface{
 
 
 
@@ -106,10 +94,7 @@ open fun getInventory()
 
 open fun getOrders()
         //nullable = true from not(false or (false and true)) = true
-: StoreFrontOrdersHistoryStatisticsInterface
-
-        Updates for KMP build        
-        {
+: StoreFrontOrdersHistoryStatisticsInterface{
 
 
 

@@ -38,10 +38,7 @@ open public class TouchMotionGestureFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TouchMotionGestureFactory
-
-        Updates for KMP build        
-        {
+: TouchMotionGestureFactory{
 
 
 
@@ -77,9 +74,6 @@ open fun getInstance()
     val LAST_MOTION: MotionGestureInput
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     var MAX: Int = InputFactory.getInstance()!!.MAX

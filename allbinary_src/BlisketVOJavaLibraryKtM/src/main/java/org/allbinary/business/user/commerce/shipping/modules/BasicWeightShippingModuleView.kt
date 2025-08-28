@@ -38,19 +38,13 @@ open public class BasicWeightShippingModuleView : BasicWeightShippingModule
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -61,10 +55,7 @@ open fun isValid()
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: org.w3c.dom.Document
-
-        Updates for KMP build        
-        {
+: org.w3c.dom.Document{
 
 
 
@@ -75,10 +66,7 @@ open fun toValidationInfoDoc()
 
 open fun toValidationInfoNode(document: org.w3c.dom.Document)
         //nullable = true from not(false or (false and false)) = true
-: org.w3c.dom.Node
-
-        Updates for KMP build        
-        {
+: org.w3c.dom.Node{
 var document = document
 
 
@@ -90,10 +78,7 @@ var document = document
 
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -104,10 +89,7 @@ open fun validationInfo()
 
 open fun toXmlNode(document: org.w3c.dom.Document)
         //nullable = true from not(false or (false and false)) = true
-: org.w3c.dom.Node
-
-        Updates for KMP build        
-        {
+: org.w3c.dom.Node{
 var document = document
 
         try {
@@ -122,10 +104,7 @@ shippingMethodNode!!.appendChild(ModDomHelper.createNameValueNodes(document, Shi
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return shippingMethodNode
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -147,10 +126,7 @@ shippingMethodNode!!.appendChild(ModDomHelper.createNameValueNodes(document, Shi
 
 open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: org.w3c.dom.Document
-
-        Updates for KMP build        
-        {
+: org.w3c.dom.Document{
 
         try {
             
@@ -162,10 +138,7 @@ open fun toXmlDoc()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return document
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -187,10 +160,7 @@ open fun toXmlDoc()
 
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -199,10 +169,7 @@ open fun view()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return commonStrings!!.NOT_IMPLEMENTED
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))

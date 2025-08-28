@@ -38,10 +38,7 @@ open public class LogTableEntity : AbSqlBean
     private val tableName: String = "log"
 public constructor        ()                        
 
-                            : super(LogDbInitInfo())
-
-        Updates for KMP build        
-        {
+                            : super(LogDbInitInfo()){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -52,10 +49,7 @@ this.setTableName(tableName)
 
 open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var abeHttpRequestInfoData: AbeHttpRequestInfoData = AbeHttpRequestInfoData.getInstance()!!
 
@@ -73,10 +67,7 @@ stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.appe
 
 open fun createTable()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

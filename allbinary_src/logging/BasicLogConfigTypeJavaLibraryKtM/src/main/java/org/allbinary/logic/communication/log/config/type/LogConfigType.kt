@@ -36,9 +36,6 @@ open public class LogConfigType
     private var description: String
 public constructor        (name: String, description: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var name = name
 var description = description
@@ -49,10 +46,7 @@ this.description= description
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -63,10 +57,7 @@ open fun getName()
 
 open fun getDescription()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -77,10 +68,7 @@ open fun getDescription()
 
 open fun setName(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.name= value
 }
@@ -88,10 +76,7 @@ this.name= value
 
 open fun setDescription(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.description= value
 }

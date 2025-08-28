@@ -28,10 +28,7 @@ open public class OpenGLTextureProcessor
 
 open fun process(gl: GL10, object3d: Any, index: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gl = gl
 var object3d = object3d
 var index = index

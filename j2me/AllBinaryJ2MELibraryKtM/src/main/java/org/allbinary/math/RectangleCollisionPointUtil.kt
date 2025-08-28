@@ -37,10 +37,7 @@ open public class RectangleCollisionPointUtil
             
 open fun allPointsInside(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var rectX1 = rectX1
 var rectY1 = rectY1
 var rectX2 = rectX2
@@ -58,9 +55,6 @@ var list = list
 
                         for (index in list.size()!!  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 point= list.objectArray[index]!! as GPoint
 
@@ -88,10 +82,7 @@ point= list.objectArray[index]!! as GPoint
 
 open fun allPointsInside(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, list: BasicArrayList, xCellSize: Int, yCellSize: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var rectX1 = rectX1
 var rectY1 = rectY1
 var rectX2 = rectX2
@@ -111,9 +102,6 @@ var yCellSize = yCellSize
 
                         for (index in list.size()!!  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 point= list.objectArray[index]!! as GPoint
 
@@ -142,9 +130,6 @@ point= list.objectArray[index]!! as GPoint
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

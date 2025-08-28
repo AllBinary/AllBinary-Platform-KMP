@@ -43,9 +43,6 @@ open public class PaymentType
     private val paymentProcessorInterfaceFactoryInterface: PaymentProcessorInterfaceFactoryInterface
 protected constructor        (basicPaymentType: BasicPaymentType)
             : super()
-        
-
-        Updates for KMP build        
         {
 var basicPaymentType = basicPaymentType
 this.basicPaymentType= basicPaymentType
@@ -60,9 +57,6 @@ PaymentTypeUtil.getInstance()!!.add(this)
 
 protected constructor        (basicPaymentType: BasicPaymentType, paymentTransactionInterfaceFactoryInterface: PaymentTransactionInterfaceFactoryInterface, paymentProcessorInterfaceFactoryInterface: PaymentProcessorInterfaceFactoryInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var basicPaymentType = basicPaymentType
 var paymentTransactionInterfaceFactoryInterface = paymentTransactionInterfaceFactoryInterface
@@ -78,10 +72,7 @@ PaymentTypeUtil.getInstance()!!.add(this)
             
 open fun getPaymentTransactionInterfaceFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
-: PaymentTransactionInterfaceFactoryInterface
-
-        Updates for KMP build        
-        {
+: PaymentTransactionInterfaceFactoryInterface{
 
     
                         if(this.paymentTransactionInterfaceFactoryInterface == 
@@ -108,10 +99,7 @@ open fun getPaymentTransactionInterfaceFactoryInterface()
             
 open fun getPaymentProcessorInterfaceFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
-: PaymentProcessorInterfaceFactoryInterface
-
-        Updates for KMP build        
-        {
+: PaymentProcessorInterfaceFactoryInterface{
 
     
                         if(this.paymentProcessorInterfaceFactoryInterface == 
@@ -136,10 +124,7 @@ open fun getPaymentProcessorInterfaceFactoryInterface()
 
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
     var vector: Vector = Vector()
 
@@ -176,10 +161,7 @@ vector.addAll(this.getBasicPaymentType()!!.toVector())
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -216,10 +198,7 @@ hashMap!!.putAll(this.getBasicPaymentType()!!.toHashMap())
 
 open fun getBasicPaymentType()
         //nullable = true from not(false or (false and true)) = true
-: BasicPaymentType
-
-        Updates for KMP build        
-        {
+: BasicPaymentType{
 
 
 

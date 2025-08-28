@@ -37,10 +37,7 @@ open public class HtmlMetasData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: HtmlMetasData
-
-        Updates for KMP build        
-        {
+: HtmlMetasData{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

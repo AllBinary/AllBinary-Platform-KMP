@@ -39,10 +39,7 @@ open public class RaceTrackGameFeature : GameFeature {
         }
             protected constructor        (name: String)                        
 
-                            : super(name)
-
-        Updates for KMP build        
-        {
+                            : super(name){
 var name = name
 
 

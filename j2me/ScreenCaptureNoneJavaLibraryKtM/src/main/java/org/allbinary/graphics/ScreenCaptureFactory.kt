@@ -37,10 +37,7 @@ open public class ScreenCaptureFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ScreenCapture
-
-        Updates for KMP build        
-        {
+: ScreenCapture{
 
 
 

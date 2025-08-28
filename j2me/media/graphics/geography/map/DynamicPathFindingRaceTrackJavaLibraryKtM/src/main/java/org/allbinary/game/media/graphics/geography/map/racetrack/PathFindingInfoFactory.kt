@@ -55,10 +55,7 @@ open public class PathFindingInfoFactory : BasePathFindingInfoFactory {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PathFindingInfoFactory
-
-        Updates for KMP build        
-        {
+: PathFindingInfoFactory{
 
 
 
@@ -69,10 +66,7 @@ open fun getInstance()
 
 open fun init(max: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var max = max
 instance= PathFindingInfoFactory(SimplePathFinderGraphVisitorFactory(1, 1, Integer.MAX_VALUE), max)
 }
@@ -89,10 +83,7 @@ instance= PathFindingInfoFactory(SimplePathFinderGraphVisitorFactory(1, 1, Integ
     private val basicGeographicMapPathFinder: BasicGeographicMapPathFinder
 
     private val pathFinderGraphVisitorFactoryInterface: PathFinderGraphVisitorFactoryBase
-private constructor        (pathFinderGraphVisitorFactoryInterface: PathFinderGraphVisitorFactoryBase, max: Int)
-
-        Updates for KMP build        
-        {
+private constructor        (pathFinderGraphVisitorFactoryInterface: PathFinderGraphVisitorFactoryBase, max: Int){
     //var pathFinderGraphVisitorFactoryInterface = pathFinderGraphVisitorFactoryInterface
     //var max = max
 
@@ -110,10 +101,7 @@ this.pathFinderGraphVisitorFactoryInterface= pathFinderGraphVisitorFactoryInterf
             
 open fun getInstance(geographicMapInterface: BasicGeographicMap, mapArray: Array<IntArray?>)
         //nullable =  from not(true or (false and false)) = 
-: PathFindingInfo
-
-        Updates for KMP build        
-        {
+: PathFindingInfo{
     //var geographicMapInterface = geographicMapInterface
     //var mapArray = mapArray
 
@@ -135,10 +123,7 @@ pathFindingInfo!!.setPathFinder(basicGeographicMapPathFinder)
             
 open fun init(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, mapArray: Array<IntArray?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var geographicMapInterface = geographicMapInterface
     //var pathFindingInfo = pathFindingInfo
     //var mapArray = mapArray
@@ -151,10 +136,7 @@ this.buildPathFindingNodes(geographicMapInterface, pathFindingInfo, mapArray)
             
 open fun buildPathFindingNodes(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, mapArray: Array<IntArray?>, cellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var geographicMapInterface = geographicMapInterface
     //var pathFindingInfo = pathFindingInfo
     //var mapArray = mapArray
@@ -201,9 +183,6 @@ open fun buildPathFindingNodes(geographicMapInterface: BasicGeographicMap, pathF
 
                         for (index in 0 until MAX_DIRECTIONS)
 
-        
-
-        Updates for KMP build        
         {
 row= basicGeographicMapUtil!!.getBorderingRow(index, cellPosition)
 column= basicGeographicMapUtil!!.getBorderingColumn(index, cellPosition)
@@ -228,10 +207,7 @@ pathFindingNodeCostInfoFactoryInterface!!.create(geographicMapInterface, goingTo
             
 open fun buildPathFindingNodes(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, mapArray: Array<IntArray?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var geographicMapInterface = geographicMapInterface
     //var pathFindingInfo = pathFindingInfo
     //var mapArray = mapArray
@@ -253,9 +229,6 @@ open fun buildPathFindingNodes(geographicMapInterface: BasicGeographicMap, pathF
 
                         for (column in 0 until totalColumns)
 
-        
-
-        Updates for KMP build        
         {
 
 
@@ -263,9 +236,6 @@ open fun buildPathFindingNodes(geographicMapInterface: BasicGeographicMap, pathF
 
                         for (row in 0 until totalRows)
 
-        
-
-        Updates for KMP build        
         {
 this.buildPathFindingNodes(geographicMapInterface, pathFindingInfo, mapArray, geographicMapCellPositionFactory!!.getInstance(column, row))
 }

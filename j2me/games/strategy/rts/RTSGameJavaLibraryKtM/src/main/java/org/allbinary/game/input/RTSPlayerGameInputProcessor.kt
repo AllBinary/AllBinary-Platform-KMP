@@ -31,10 +31,7 @@ open public class RTSPlayerGameInputProcessor : GameInputProcessor {
         
 
     val rtsPlayerGameInput: RTSPlayerGameInput
-public constructor        (rtsPlayerGameInput: RTSPlayerGameInput)
-
-        Updates for KMP build        
-        {
+public constructor        (rtsPlayerGameInput: RTSPlayerGameInput){
 var rtsPlayerGameInput = rtsPlayerGameInput
 this.rtsPlayerGameInput= rtsPlayerGameInput
 }

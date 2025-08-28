@@ -62,10 +62,7 @@ open public class AllBinaryGameLayer : AllBinaryLayer
 
 open override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 basicSetColorUtil!!.setBasicColorP(graphics, BLACK)
 }
@@ -81,10 +78,7 @@ basicSetColorUtil!!.setBasicColorP(graphics, BLACK)
     private val gameKeyEventList: BasicArrayList = BasicArrayList()
 public constructor        (layerInfo: Rectangle)                        
 
-                            : this(layerInfo, ViewPosition())
-
-        Updates for KMP build        
-        {
+                            : this(layerInfo, ViewPosition()){
     //var layerInfo = layerInfo
 
 
@@ -94,10 +88,7 @@ public constructor        (layerInfo: Rectangle)
 
 public constructor        (layerInfo: Rectangle, viewPosition: ViewPosition)                        
 
-                            : super(layerInfo, viewPosition)
-
-        Updates for KMP build        
-        {
+                            : super(layerInfo, viewPosition){
     //var layerInfo = layerInfo
     //var viewPosition = viewPosition
 
@@ -108,10 +99,7 @@ public constructor        (layerInfo: Rectangle, viewPosition: ViewPosition)
 
 public constructor        (name: String, layerInfo: Rectangle, viewPosition: ViewPosition)                        
 
-                            : super(name, layerInfo, viewPosition)
-
-        Updates for KMP build        
-        {
+                            : super(name, layerInfo, viewPosition){
     //var name = name
     //var layerInfo = layerInfo
     //var viewPosition = viewPosition
@@ -124,19 +112,13 @@ public constructor        (name: String, layerInfo: Rectangle, viewPosition: Vie
 
 open fun move()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun getGameKeyEventList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 
@@ -149,10 +131,7 @@ open fun getGameKeyEventList()
             
 open fun processInput(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryLayerManager = allBinaryLayerManager
 
 
@@ -165,10 +144,7 @@ open fun processInput(allBinaryLayerManager: AllBinaryLayerManager)
             
 open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryLayerManager = allBinaryLayerManager
 
 
@@ -178,10 +154,7 @@ open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
 
 override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
@@ -191,10 +164,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
             
 open fun onViewPositionChangeEvent()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.onChangeEvent(this.viewPositionEvent)
 }
 
@@ -202,10 +172,7 @@ this.onChangeEvent(this.viewPositionEvent)
                 @Throws(Exception::class)
             override fun onChangeEvent(layerManagerEvent: ViewPositionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layerManagerEvent = layerManagerEvent
 
     
@@ -226,10 +193,7 @@ this.onChangeEvent(this.viewPositionEvent)
 
 open fun paintFirst(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
 this.paintable.paint(graphics)
 }
@@ -237,10 +201,7 @@ this.paintable.paint(graphics)
 
 open fun paintDebug(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
 
     var viewPosition: ViewPosition = this.getViewPosition()!!
@@ -258,10 +219,7 @@ graphics.drawRect(viewX, viewY, this.getWidth(), this.getHeight())
 
 open fun setWidth(width: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var width = width
 super.setLayerWidth(width)
 this.setHalfWidth(width shr 1)
@@ -270,10 +228,7 @@ this.setHalfWidth(width shr 1)
 
 open fun setHeight(height: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var height = height
 super.setLayerHeight(height)
 this.setHalfHeight(height shr 1)

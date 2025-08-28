@@ -36,17 +36,11 @@ open fun getLevelInstance(id: Integer)
         //nullable = true from not(false or (false and false)) = true
 : RaceTrackGeographicMap
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun getTrackInstance(id: Integer)
         //nullable = true from not(false or (false and false)) = true
 : RaceTrackGeographicMap
-
-        Updates for KMP build        
-        
 
 }
                 

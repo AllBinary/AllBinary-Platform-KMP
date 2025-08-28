@@ -46,10 +46,7 @@ open public class GameGraphicsResourceUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameGraphicsResourceUtil
-
-        Updates for KMP build        
-        {
+: GameGraphicsResourceUtil{
 
 
 
@@ -69,18 +66,12 @@ open fun getInstance()
     private var name: String = StringUtil.getInstance()!!.EMPTY_STRING
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
         try {
             this.name= this.getString()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -94,10 +85,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
             
 open fun getString()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var graphicsFeatureFactory: GraphicsFeatureFactory = GraphicsFeatureFactory.getInstance()!!
 
@@ -155,10 +143,7 @@ open fun getString()
             
 open fun getString(graphicsFeature: GraphicsFeature)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var graphicsFeature = graphicsFeature
 
     var stringBuffer: StringMaker = StringMaker()
@@ -248,10 +233,7 @@ stringBuffer!!.append(SPRITE)
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

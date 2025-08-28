@@ -33,10 +33,7 @@ open public class DemoGameMidletEvent : AllBinaryEventObject {
     private var demoGameMidletState: DemoGameMidletState
 public constructor        (anyType: Any, demoGameMidletState: DemoGameMidletState)                        
 
-                            : super(anyType)
-
-        Updates for KMP build        
-        {
+                            : super(anyType){
 var anyType = anyType
 var demoGameMidletState = demoGameMidletState
 
@@ -49,10 +46,7 @@ this.demoGameMidletState= demoGameMidletState
 
 open fun init(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var anyType = anyType
 this.setSource(anyType)
 }
@@ -60,10 +54,7 @@ this.setSource(anyType)
 
 open fun setDemoGameMidletState(demoGameMidletState: DemoGameMidletState)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var demoGameMidletState = demoGameMidletState
 this.demoGameMidletState= demoGameMidletState
 }
@@ -71,10 +62,7 @@ this.demoGameMidletState= demoGameMidletState
 
 open fun getDemoGameMidletState()
         //nullable = true from not(false or (false and true)) = true
-: DemoGameMidletState
-
-        Updates for KMP build        
-        {
+: DemoGameMidletState{
 
 
 

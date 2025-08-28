@@ -30,10 +30,7 @@ open public class FileItemUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FileItemUtil
-
-        Updates for KMP build        
-        {
+: FileItemUtil{
 
 
 
@@ -57,10 +54,7 @@ open fun getInstance()
             
 open fun getString(byteArray: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var byteArray = byteArray
 
 
@@ -74,10 +68,7 @@ var byteArray = byteArray
             
 open fun getString(fileItem: FileItemStream)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var fileItem = fileItem
 
 
@@ -91,10 +82,7 @@ var fileItem = fileItem
             
 open fun getBytes(fileItem: FileItemStream)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray
-
-        Updates for KMP build        
-        {
+: ByteArray{
 var fileItem = fileItem
 
     var streamUtil: StreamUtil = StreamUtil.getInstance()!!
@@ -154,10 +142,7 @@ streamUtil!!.close(inputStream)
             
 open fun write(fileItem: FileItem, file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var fileItem = fileItem
 var file = file
 fileItem!!.write(AbFileNativeUtil.get(file))

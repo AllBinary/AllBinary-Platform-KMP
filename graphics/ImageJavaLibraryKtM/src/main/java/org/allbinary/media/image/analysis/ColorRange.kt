@@ -47,9 +47,6 @@ open public class ColorRange
     private var maxBlue: Int
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 this.minRed= 0
 this.maxRed= 0
@@ -62,10 +59,7 @@ this.maxBlue= 0
 
 open fun getMinRed()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -76,10 +70,7 @@ open fun getMinRed()
 
 open fun setMinRed(minRed: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var minRed = minRed
 this.minRed= minRed
 }
@@ -87,10 +78,7 @@ this.minRed= minRed
 
 open fun getMaxRed()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -101,10 +89,7 @@ open fun getMaxRed()
 
 open fun setMaxRed(maxRed: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var maxRed = maxRed
 this.maxRed= maxRed
 }
@@ -112,10 +97,7 @@ this.maxRed= maxRed
 
 open fun getMinGreen()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -126,10 +108,7 @@ open fun getMinGreen()
 
 open fun setMinGreen(minGreen: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var minGreen = minGreen
 this.minGreen= minGreen
 }
@@ -137,10 +116,7 @@ this.minGreen= minGreen
 
 open fun getMaxGreen()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -151,10 +127,7 @@ open fun getMaxGreen()
 
 open fun setMaxGreen(maxGreen: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var maxGreen = maxGreen
 this.maxGreen= maxGreen
 }
@@ -162,10 +135,7 @@ this.maxGreen= maxGreen
 
 open fun getMinBlue()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -176,10 +146,7 @@ open fun getMinBlue()
 
 open fun setMinBlue(minBlue: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var minBlue = minBlue
 this.minBlue= minBlue
 }
@@ -187,10 +154,7 @@ this.minBlue= minBlue
 
 open fun getMaxBlue()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -201,10 +165,7 @@ open fun getMaxBlue()
 
 open fun setMaxBlue(maxBlue: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var maxBlue = maxBlue
 this.maxBlue= maxBlue
 }
@@ -212,10 +173,7 @@ this.maxBlue= maxBlue
 
 open fun isInRange(color: Color)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var color = color
 
     
@@ -243,10 +201,7 @@ var color = color
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

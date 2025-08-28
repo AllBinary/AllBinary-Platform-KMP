@@ -32,10 +32,7 @@ open public class HealthBarTwodAnimation : HealthBarAnimation {
         
 public constructor        (layerInterface: AllBinaryLayer, location: Int)                        
 
-                            : super(layerInterface, location)
-
-        Updates for KMP build        
-        {
+                            : super(layerInterface, location){
     //var layerInterface = layerInterface
     //var location = location
 
@@ -46,10 +43,7 @@ public constructor        (layerInterface: AllBinaryLayer, location: Int)
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var x = x
     //var y = y

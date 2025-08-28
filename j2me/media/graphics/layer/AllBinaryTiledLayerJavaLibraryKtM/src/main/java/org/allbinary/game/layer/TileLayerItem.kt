@@ -38,10 +38,7 @@ open public class TileLayerItem : CustomItem
     private val tiledLayer: AllBinaryTiledLayer
 public constructor        (label: String, tiledLayer: AllBinaryTiledLayer, layout: Int, altText: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(label, backgroundBasicColor, foregroundBasicColor)
-
-        Updates for KMP build        
-        {
+                            : super(label, backgroundBasicColor, foregroundBasicColor){
 var label = label
 var tiledLayer = tiledLayer
 var layout = layout
@@ -58,20 +55,14 @@ this.tiledLayer= tiledLayer
 
 open fun setOwner(owner: Screen)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var owner = owner
 }
 
 
 open fun getMinimumWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -82,10 +73,7 @@ open fun getMinimumWidth()
 
 open fun getMinimumHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -96,10 +84,7 @@ open fun getMinimumHeight()
 
 open fun getMinContentHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -110,10 +95,7 @@ open fun getMinContentHeight()
 
 open fun getMinContentWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -124,10 +106,7 @@ open fun getMinContentWidth()
 
 open fun getPrefContentHeight(width: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var width = width
 
 
@@ -139,10 +118,7 @@ var width = width
 
 open fun getPrefContentWidth(height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var height = height
 
 
@@ -154,10 +130,7 @@ var height = height
 
 open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 var x = x
 var y = y
@@ -168,10 +141,7 @@ this.tiledLayer!!.paint(graphics)
 
 open fun paintUnselected(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 var x = x
 var y = y

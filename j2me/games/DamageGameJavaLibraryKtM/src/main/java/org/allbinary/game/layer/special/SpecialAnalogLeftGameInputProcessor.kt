@@ -32,10 +32,7 @@ open public class SpecialAnalogLeftGameInputProcessor : SpecialGameInputProcesso
         
 public constructor        (collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer)                        
 
-                            : super(collidableDestroyableDamageableLayer)
-
-        Updates for KMP build        
-        {
+                            : super(collidableDestroyableDamageableLayer){
 var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
 
 
@@ -47,10 +44,7 @@ var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
                 @Throws(Exception::class)
             override fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent, xAnalogValue: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allbinaryLayerManager = allbinaryLayerManager
 var gameKeyEvent = gameKeyEvent
 var xAnalogValue = xAnalogValue

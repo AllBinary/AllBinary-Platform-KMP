@@ -47,9 +47,6 @@ open public class ShippingMethods
     private var defaultShippingMethodInterface: ShippingInterface
 public constructor        (abeClientInformation: AbeClientInformationInterface, storeFrontInterface: StoreFrontInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var abeClientInformation = abeClientInformation
     //var storeFrontInterface = storeFrontInterface
@@ -62,10 +59,7 @@ this.shippingVector= ShippingMethodsFactory(abeClientInformation, storeFrontInte
 
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
 
 
@@ -78,10 +72,7 @@ open fun get()
             
 open fun getShippingInterface(name: String)
         //nullable = true from not(false or (false and false)) = true
-: ShippingInterface
-
-        Updates for KMP build        
-        {
+: ShippingInterface{
 var name = name
 
     var shipping: ShippingInterface
@@ -95,9 +86,6 @@ var name = name
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 shipping= shippingVector!!.get(index) as ShippingInterface
 
@@ -133,10 +121,7 @@ shipping= shippingVector!!.get(index) as ShippingInterface
             
 open fun getDefault()
         //nullable = true from not(false or (false and true)) = true
-: ShippingInterface
-
-        Updates for KMP build        
-        {
+: ShippingInterface{
 
 
 

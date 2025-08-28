@@ -37,10 +37,7 @@ open public class GraphicsStrings
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GraphicsStrings
-
-        Updates for KMP build        
-        {
+: GraphicsStrings{
 
 
 

@@ -28,20 +28,14 @@
 
 open public class InputAutomationTypeJPanel : javax.swing.JPanel {
         
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 initComponents()
 }
 
 
 open fun getInputAutomationTypeJComboBox()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JComboBox
-
-        Updates for KMP build        
-        {
+: javax.swing.JComboBox{
 
 
 
@@ -52,10 +46,7 @@ open fun getInputAutomationTypeJComboBox()
 
 open fun setInputAutomationTypeJComboBox(inputAutomationTypeJComboBox: javax.swing.JComboBox)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var inputAutomationTypeJComboBox = inputAutomationTypeJComboBox
 this.inputAutomationTypeJComboBox= inputAutomationTypeJComboBox
 }
@@ -63,10 +54,7 @@ this.inputAutomationTypeJComboBox= inputAutomationTypeJComboBox
 
 open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 inputAutomationTypeJComboBox= javax.swing.JComboBox()
 jLabel1= javax.swing.JLabel()
 inputAutomationTypeJComboBox!!.setModel(javax.swing.DefaultComboBoxModel(arrayOf("DirectX","DirectX 8","Low Level","Java Robot")))

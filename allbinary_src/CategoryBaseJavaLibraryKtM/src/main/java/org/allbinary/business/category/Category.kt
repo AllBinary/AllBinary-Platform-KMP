@@ -70,9 +70,6 @@ open public class Category
     private val CATEGORY: Integer = Integer(0)
 public constructor        (categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var categoryPropertiesFactoryInterface = categoryPropertiesFactoryInterface
 
@@ -91,9 +88,6 @@ this.log()
 
 public constructor        (categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface, level: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var categoryPropertiesFactoryInterface = categoryPropertiesFactoryInterface
 var level = level
@@ -104,9 +98,6 @@ this.log()
 
 public constructor        (rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var rootCategoryInterface = rootCategoryInterface
 var parentCategoryInterface = parentCategoryInterface
@@ -121,10 +112,7 @@ this.log()
             
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 
 
 
@@ -137,10 +125,7 @@ open fun getKey()
             
 open fun getRootFilePath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath
-
-        Updates for KMP build        
-        {
+: AbPath{
 
     var rootAbPath: AbPath = AbPath(NOT_ROOT)
 
@@ -171,10 +156,7 @@ rootAbPath= rootCategoryPropertiesInterface!!.getRootFilePath()
             
 open fun getFilePath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath
-
-        Updates for KMP build        
-        {
+: AbPath{
 
 
 
@@ -187,10 +169,7 @@ open fun getFilePath()
             
 open fun getWebAppPath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath
-
-        Updates for KMP build        
-        {
+: AbPath{
 
     var categoryInterface: CategoryInterface = this.categoryHierarchyInterface!!.getRoot()!!
 
@@ -206,10 +185,7 @@ open fun getWebAppPath()
             
 open fun getPath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath
-
-        Updates for KMP build        
-        {
+: AbPath{
 
 
 
@@ -221,10 +197,7 @@ open fun getPath()
 
 open fun addChildProperty(categoryPropertiesInterface: CategoryPropertiesInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var categoryPropertiesInterface = categoryPropertiesInterface
 this.typeVector!!.add(this.PROPERTIES)
 
@@ -238,10 +211,7 @@ this.typeVector!!.add(this.PROPERTIES)
 
 open fun addChild(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var categoryInterface = categoryInterface
 this.removeDuplicateChild(categoryInterface)
 
@@ -270,10 +240,7 @@ this.typeVector!!.add(this.CATEGORY)
 
 open fun getChildNodes()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
 
 
@@ -285,10 +252,7 @@ open fun getChildNodes()
 
 open fun removeChild(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var categoryInterface = categoryInterface
 
     var removalVector: Vector = Vector()
@@ -305,9 +269,6 @@ var categoryInterface = categoryInterface
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -346,10 +307,7 @@ this.removal(removalVector)
 
 open fun removal(removalVector: Vector)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var removalVector = removalVector
 
     var removalSize: Int = removalVector!!.size!!
@@ -360,9 +318,6 @@ var removalVector = removalVector
 
                         for (index in 0 until removalSize)
 
-        
-
-        Updates for KMP build        
         {
 
     var anyType: Any = removalVector!!.get(index)!!
@@ -380,10 +335,7 @@ this.childCategoryVector!!.remove(objectIndex)
 
 open fun removeDuplicateChild(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var categoryInterface = categoryInterface
 
     var removalVector: Vector = Vector()
@@ -400,9 +352,6 @@ var categoryInterface = categoryInterface
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var anyType: Any = this.childCategoryVector!!.get(index)!!
@@ -473,10 +422,7 @@ this.removal(removalVector)
             
 open fun isLeaf()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(this.childCategoryVector == 
@@ -518,10 +464,7 @@ open fun isLeaf()
 
 open fun getProperties()
         //nullable = true from not(false or (false and true)) = true
-: CategoryPropertiesInterface
-
-        Updates for KMP build        
-        {
+: CategoryPropertiesInterface{
 
 
 
@@ -532,10 +475,7 @@ open fun getProperties()
 
 open fun setProperties(categoryPropertiesInterface: CategoryPropertiesInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var categoryPropertiesInterface = categoryPropertiesInterface
 this.categoryPropertiesInterface= categoryPropertiesInterface
 }
@@ -543,10 +483,7 @@ this.categoryPropertiesInterface= categoryPropertiesInterface
 
 open fun getHierarchy()
         //nullable = true from not(false or (false and true)) = true
-: CategoryHierarchyInterface
-
-        Updates for KMP build        
-        {
+: CategoryHierarchyInterface{
 
 
 
@@ -557,10 +494,7 @@ open fun getHierarchy()
 
 open fun setHierarchy(categoryHierarchyInterface: CategoryHierarchyInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var categoryHierarchyInterface = categoryHierarchyInterface
 this.categoryHierarchyInterface= categoryHierarchyInterface
 }
@@ -571,10 +505,7 @@ this.categoryHierarchyInterface= categoryHierarchyInterface
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(!this.categoryPropertiesInterface!!.isValid())
@@ -597,9 +528,6 @@ open fun isValid()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var anyType: Any = this.childCategoryVector!!.get(index)!!
@@ -666,10 +594,7 @@ open fun isValid()
             
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
 
 
@@ -682,10 +607,7 @@ open fun toValidationInfoDoc()
             
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
 
@@ -699,10 +621,7 @@ var document = document
             
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -715,10 +634,7 @@ open fun validationInfo()
             
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var categoryHashMap: HashMap<Any, Any> = this.categoryPropertiesInterface!!.toHashMap()!!
 
@@ -734,10 +650,7 @@ open fun toHashMap()
             
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
     var categoryVector: Vector = this.categoryPropertiesInterface!!.toVector()!!
 
@@ -754,10 +667,7 @@ categoryVector!!.add(this.childCategoryVector)
             
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))

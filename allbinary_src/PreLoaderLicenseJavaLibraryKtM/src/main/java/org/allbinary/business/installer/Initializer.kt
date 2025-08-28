@@ -128,9 +128,6 @@ open public class Initializer
     private var staticPagesPort: String
 public constructor        (map: Map)
             : super()
-        
-
-        Updates for KMP build        
         {
 var map = map
 
@@ -155,9 +152,6 @@ var map = map
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var key: String = keyArray[index]!! as String
@@ -179,9 +173,6 @@ this.getFormData(hashMap)
 
 public constructor        (initHashMap: HashMap<Any, Any>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var initHashMap = initHashMap
 this.getFormData(initHashMap)
@@ -190,10 +181,7 @@ this.getFormData(initHashMap)
 
 open fun getFormData(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var hashMap = hashMap
 
         try {
@@ -236,10 +224,7 @@ staticPagesSchema= hashMap!!.get(initializerData!!.STATICPAGESSCHEMA) as String
 staticPagesServer= hashMap!!.get(initializerData!!.STATICPAGESSERVER) as String
 staticPagesPort= hashMap!!.get(initializerData!!.STATICPAGESPORT) as String
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put("Unable to get form data", this, "getFormData()", e)
 }
 
@@ -248,10 +233,7 @@ logUtil!!.put("Unable to get form data", this, "getFormData()", e)
 
 open fun isJdbcDriverValid(jdbcDriverClassPathString: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var jdbcDriverClassPathString = jdbcDriverClassPathString
 
         try {
@@ -262,10 +244,7 @@ var jdbcDriverClassPathString = jdbcDriverClassPathString
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
@@ -290,10 +269,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     var isValid: Boolean = true
 
@@ -490,10 +466,7 @@ open fun isValid()
 
 open fun getJdbcDriverValidationInfo(jdbcDriver: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var jdbcDriver = jdbcDriver
 
     var stringBuffer: StringMaker = StringMaker()
@@ -511,10 +484,7 @@ stringBuffer!!.append(") you have provided is not valid.<br/>")
 
 open fun getJdbcDriverSolutionInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -537,10 +507,7 @@ stringBuffer!!.append("Solution: Use a valid JDBC driver.<p/>")
 
 open fun getInvalidInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var isJdbcDriversValid: Boolean = true
 
@@ -756,10 +723,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.staticPagesJdbcDrive
             
 open fun set()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 logUtil!!.put("Creating DB connection files", this, "set()")
 
     var userDbInitInfo: UserDbInitInfo = UserDbInitInfo(false)

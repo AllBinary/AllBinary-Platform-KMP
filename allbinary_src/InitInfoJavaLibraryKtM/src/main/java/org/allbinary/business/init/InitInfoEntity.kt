@@ -58,10 +58,7 @@ open public class InitInfoEntity : InitSql {
     private val FAILED_TO_CREATE: String = "Failed to create "
 public constructor        ()                        
 
-                            : super(UserDbInitInfo())
-
-        Updates for KMP build        
-        {
+                            : super(UserDbInitInfo()){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -90,10 +87,7 @@ this.setTable(this.tableName)
 
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             
@@ -138,10 +132,7 @@ keyAndValue!!.put(NOTHING, NOTHING)
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
@@ -163,10 +154,7 @@ keyAndValue!!.put(NOTHING, NOTHING)
 
 open fun is()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             
@@ -210,10 +198,7 @@ keyAndValue!!.put(NOTHING, NOTHING)
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
@@ -235,20 +220,14 @@ keyAndValue!!.put(NOTHING, NOTHING)
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 updateWhere(NOTHING, NOTHING, InitInfo.getInstance()!!.toHashMap())
 }
 
 
 open fun add()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             
@@ -260,10 +239,7 @@ values.add(InitInfo.getInstance()!!.getTestHtmlPath())
 values.add(InitInfo.getInstance()!!.getMainPath())
 insert(values)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
@@ -280,10 +256,7 @@ insert(values)
 
 open fun createTable()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     
                         if(super.createTable(tableData))

@@ -42,10 +42,7 @@ open public class NullRTSGameLayerPositionFinder
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NullRTSGameLayerPositionFinder
-
-        Updates for KMP build        
-        {
+: NullRTSGameLayerPositionFinder{
 
 
 
@@ -57,19 +54,13 @@ open fun getInstance()
         }
             protected constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getLayerInterface(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: AllBinaryLayer
-
-        Updates for KMP build        
-        {
+: AllBinaryLayer{
 var geographicMapCellPosition = geographicMapCellPosition
 
     var layerInterface: AllBinaryLayer = DropCellPositionHistory.getInstance()!!.getLayerInterface(geographicMapCellPosition)!!

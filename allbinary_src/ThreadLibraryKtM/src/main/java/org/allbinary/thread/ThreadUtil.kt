@@ -40,10 +40,7 @@ open public class ThreadUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ThreadUtil
-
-        Updates for KMP build        
-        {
+: ThreadUtil{
 
 
 
@@ -65,10 +62,7 @@ open fun getInstance()
 
 open fun isRunning(thread: Thread)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var thread = thread
 
     
@@ -101,10 +95,7 @@ var thread = thread
             
 open fun join(thread: Thread)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var thread = thread
 
     

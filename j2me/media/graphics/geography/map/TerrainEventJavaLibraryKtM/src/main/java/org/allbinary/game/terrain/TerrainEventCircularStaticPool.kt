@@ -38,10 +38,7 @@ open public class TerrainEventCircularStaticPool
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TerrainEventCircularStaticPool
-
-        Updates for KMP build        
-        {
+: TerrainEventCircularStaticPool{
 
 
 
@@ -61,10 +58,7 @@ open fun getInstance()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 EVENT_POOL.init(TerrainEventFactory())
 }
 
@@ -74,10 +68,7 @@ EVENT_POOL.init(TerrainEventFactory())
 
 open fun getInstance(basicTerrainInfo: BasicTerrainInfo)
         //nullable =  from not(true or (false and false)) = 
-: TerrainEvent
-
-        Updates for KMP build        
-        {
+: TerrainEvent{
 var basicTerrainInfo = basicTerrainInfo
 
     var trackingEvent: TerrainEvent = EVENT_POOL.getNextInstance() as TerrainEvent

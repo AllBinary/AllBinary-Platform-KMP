@@ -22,10 +22,7 @@ open public class GameStatisticsFactory : BaseGameStatistics {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameStatisticsFactory
-
-        Updates for KMP build        
-        {
+: GameStatisticsFactory{
 
 
 
@@ -44,10 +41,7 @@ open fun getInstance()
     private var stringBuffer: StringMaker = StringMaker()
 override fun add(string: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var string = string
 
     
@@ -64,10 +58,7 @@ this.stringBuffer!!.append(string)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

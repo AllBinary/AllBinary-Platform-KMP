@@ -51,10 +51,7 @@ open public class SetLicenseInitInfo
             
 open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var args = args
 
     var initInfo: SetLicenseInitInfo = SetLicenseInitInfo(args)
@@ -68,9 +65,6 @@ initInfo!!.createNewLicenseInitInfo(BasicArrayList())
     private var vector: BasicArrayList = BasicArrayList()
 public constructor        (options: Array<String?>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var options = options
 LicenseInitInfoUtil.getInstance()!!.setFilePath(PrintLicenseInitInfo.PATH +PATH_GLOBALS.getInstance()!!.INIT_PATH)
@@ -80,9 +74,6 @@ LicenseInitInfoUtil.getInstance()!!.setFilePath(PrintLicenseInitInfo.PATH +PATH_
 
                         for (index in 1 until options.size)
 
-        
-
-        Updates for KMP build        
         {
 vector.add(options[index]!!)
 }
@@ -94,10 +85,7 @@ vector.add(options[index]!!)
             
 open fun getLicenseInitInfo()
         //nullable = true from not(false or (false and true)) = true
-: LicenseInitInfo
-
-        Updates for KMP build        
-        {
+: LicenseInitInfo{
 
     var licenseInitInfoUtil: LicenseInitInfoUtil = LicenseInitInfoUtil.getInstance()!!
 
@@ -128,10 +116,7 @@ open fun getLicenseInitInfo()
 
 open fun createNewLicenseInitInfo(licenceServerVector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var licenceServerVector = licenceServerVector
 
         try {
@@ -165,9 +150,6 @@ licenseInitInfo!!.clearServers()
 
 
         while(true)
-        
-
-        Updates for KMP build        
         {
 
     var line: String = lineNumberReader!!.readLine()!!
@@ -195,10 +177,7 @@ licenseInitInfo!!.clearServers()
 LicenseInitInfoUtil.getInstance()!!.write(licenseInitInfo)
 LicenseInitInfoUtil.getInstance()!!.read()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 System.out.print("Error: " +e)
 e.printStackTrace()
 }

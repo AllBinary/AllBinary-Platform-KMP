@@ -36,17 +36,11 @@ open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node
-
-        Updates for KMP build        
-        
 
                 @Throws(Exception::class)
             
@@ -54,17 +48,11 @@ open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String
-
-        Updates for KMP build        
-        
 
 }
                 

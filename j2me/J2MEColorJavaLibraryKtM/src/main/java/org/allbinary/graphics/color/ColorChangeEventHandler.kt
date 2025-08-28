@@ -37,10 +37,7 @@ open public class ColorChangeEventHandler : BasicEventHandler {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ColorChangeEventHandler
-
-        Updates for KMP build        
-        {
+: ColorChangeEventHandler{
 
 
 
@@ -50,10 +47,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
-
-        Updates for KMP build        
-        {
+            private constructor        (){
 }
 
 

@@ -41,10 +41,7 @@ open public class ImagesRatioUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImagesRatioUtil
-
-        Updates for KMP build        
-        {
+: ImagesRatioUtil{
 
 
 
@@ -58,9 +55,6 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -69,10 +63,7 @@ private constructor        ()
 
 open fun isEqual(bufferedImageArray: Array<BufferedImage?>, totalImages: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var bufferedImageArray = bufferedImageArray
     //var totalImages = totalImages
 
@@ -91,9 +82,6 @@ open fun isEqual(bufferedImageArray: Array<BufferedImage?>, totalImages: Int)
 
                         for (index in 1 until end)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -120,10 +108,7 @@ open fun isEqual(bufferedImageArray: Array<BufferedImage?>, totalImages: Int)
 
 open fun getAverage(bufferedImageArray: Array<BufferedImage?>, totalImages: Int)
         //nullable = true from not(false or (false and false)) = true
-: Double
-
-        Updates for KMP build        
-        {
+: Double{
     //var bufferedImageArray = bufferedImageArray
     //var totalImages = totalImages
 
@@ -142,9 +127,6 @@ open fun getAverage(bufferedImageArray: Array<BufferedImage?>, totalImages: Int)
 
                         for (index in 0 until end)
 
-        
-
-        Updates for KMP build        
         {
 ratio += (bufferedImageArray[index]!!.getWidth().toDouble() /bufferedImageArray[index]!!.getHeight())
 }
@@ -161,10 +143,7 @@ ratio += (bufferedImageArray[index]!!.getWidth().toDouble() /bufferedImageArray[
             
 open fun fudge(bufferedImage: BufferedImage, ratio: Double)
         //nullable = true from not(false or (false and false)) = true
-: BufferedImage
-
-        Updates for KMP build        
-        {
+: BufferedImage{
 var bufferedImage = bufferedImage
 var ratio = ratio
 
@@ -223,9 +202,6 @@ logUtil!!.put("Draw some columns to fill in gap", this, "fudge")
 
                         for (index in 0 until point.x)
 
-        
-
-        Updates for KMP build        
         {
 g.drawImage(firstColumnBufferedImage, index, 0, 
                             null)
@@ -254,9 +230,6 @@ logUtil!!.put("Draw some rows to fill in gap", this, "fudge")
 
                         for (index in 0 until point.y)
 
-        
-
-        Updates for KMP build        
         {
 g.drawImage(firstRowBufferedImage, 0, index, 
                             null)
@@ -281,10 +254,7 @@ g.drawImage(bufferedImage, point.x, point.y, bufferedImage!!.getWidth(), buffere
             
 open fun fudge(bufferedImageArray: Array<BufferedImage?>, totalImages: Int, ratio: Double)
         //nullable = true from not(false or (false and false)) = true
-: Array<BufferedImage?>
-
-        Updates for KMP build        
-        {
+: Array<BufferedImage?>{
     //var bufferedImageArray = bufferedImageArray
     //var totalImages = totalImages
     //var ratio = ratio
@@ -304,9 +274,6 @@ open fun fudge(bufferedImageArray: Array<BufferedImage?>, totalImages: Int, rati
 
                         for (index in 0 until end)
 
-        
-
-        Updates for KMP build        
         {
 fudgedBufferedImageArray[index]= fudge(bufferedImageArray[index]!!, ratio)
 }

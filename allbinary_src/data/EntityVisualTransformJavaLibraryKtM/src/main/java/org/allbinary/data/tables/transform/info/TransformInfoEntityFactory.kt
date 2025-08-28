@@ -40,10 +40,7 @@ open public class TransformInfoEntityFactory
             
 open fun getInstance(transformInfoObjectConfigGeneratorFactoryInterface: TransformInfoObjectConfigGeneratorFactoryInterface, transformInfoObjectConfigAndManipulatorFactoryInterface: TransformInfoObjectConfigAndManipulatorFactoryBase, transformInfoFactoryInterface: TransformInfoFactoryInterface)
         //nullable =  from not(true or (false and false)) = 
-: TransformInfoEntity
-
-        Updates for KMP build        
-        {
+: TransformInfoEntity{
 var transformInfoObjectConfigGeneratorFactoryInterface = transformInfoObjectConfigGeneratorFactoryInterface
 var transformInfoObjectConfigAndManipulatorFactoryInterface = transformInfoObjectConfigAndManipulatorFactoryInterface
 var transformInfoFactoryInterface = transformInfoFactoryInterface
@@ -58,10 +55,7 @@ var transformInfoFactoryInterface = transformInfoFactoryInterface
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TransformInfoEntity(transformInfoObjectConfigGeneratorFactoryInterface, transformInfoObjectConfigAndManipulatorFactoryInterface, transformInfoFactoryInterface)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -87,9 +81,6 @@ var transformInfoFactoryInterface = transformInfoFactoryInterface
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

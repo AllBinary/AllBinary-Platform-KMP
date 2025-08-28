@@ -44,10 +44,7 @@ open public class OpenGLUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLUtil
-
-        Updates for KMP build        
-        {
+: OpenGLUtil{
 
 
 
@@ -87,10 +84,7 @@ open fun getInstance()
 
 open fun onSurfaceCreated(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
 
         try {
@@ -105,10 +99,7 @@ PreLogUtil.put(CommonLabels.getInstance()!!.START_LABEL +OpenGLCapabilities.getI
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, this.renderStrings!!.ON_SURFACE_CREATED, e)
 }
 
@@ -117,10 +108,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, this.renderStrings!!.ON_SURFACE_C
 
 open fun onSurfaceCreated(gl: GL10, loadTextures: LoadTextures)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
     //var loadTextures = loadTextures
 
@@ -128,10 +116,7 @@ open fun onSurfaceCreated(gl: GL10, loadTextures: LoadTextures)
             loadTextures!!.load(gl)
 OpenGLLogUtil.getInstance()!!.logError(gl)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, this.renderStrings!!.ON_SURFACE_CREATED, e)
 }
 
@@ -144,10 +129,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, this.renderStrings!!.ON_SURFACE_C
             
 open fun onSurfaceChanged(gl: GL10, graphics: OpenGLESGraphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
     //var graphics = graphics
 
@@ -175,10 +157,7 @@ this.set(gl)
 
 open fun add(image: Image)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var image = image
 
     var encapsulateImage: Image = preResourceImageUtil!!.encapsulate(image)!!
@@ -194,9 +173,6 @@ open fun add(image: Image)
         synchronized(anyType) 
 
         //mutex.withLock
-        
-
-        Updates for KMP build        
         {
 list.add(encapsulateImage)
 }
@@ -219,19 +195,13 @@ list.add(encapsulateImage)
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         
         //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
         synchronized(anyType) 
 
         //mutex.withLock
-        
-
-        Updates for KMP build        
         {
 list.clear()
 }
@@ -241,10 +211,7 @@ list.clear()
 
 open fun add(runnable: Runnable)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var runnable = runnable
 
         
@@ -252,9 +219,6 @@ open fun add(runnable: Runnable)
         synchronized(lockObject) 
 
         //mutex.withLock
-        
-
-        Updates for KMP build        
         {
 
     
@@ -273,19 +237,13 @@ displayInfoSingleton!!.add(this.canvasStrings!!.SCALED_IMAGES)
 
 open fun processRunnables()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         
         //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
         synchronized(lockObject) 
 
         //mutex.withLock
-        
-
-        Updates for KMP build        
         {
 
     var runnable: Runnable
@@ -299,9 +257,6 @@ open fun processRunnables()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 runnable= this.runnableList!!.get(index) as Runnable
 runnable.run()
@@ -317,10 +272,7 @@ this.runnableList!!.clear()
             
 open fun set(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gl = gl
 
     var size: Int = this.list.size()!!
@@ -334,9 +286,6 @@ var gl = gl
 
                         for (index2 in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 image= this.list.get(index2)
 image = imageimage as OpenGLESImage

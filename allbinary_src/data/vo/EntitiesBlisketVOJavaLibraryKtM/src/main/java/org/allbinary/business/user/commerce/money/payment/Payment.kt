@@ -79,9 +79,6 @@ open public class Payment
     private var isDefault: Boolean = false
 public constructor        (payment: HashMap<Any, Any>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var payment = payment
 this.name= payment.get(PaymentData.NAME) as String
@@ -125,9 +122,6 @@ this.magneticInkCheckReader= payment.get(PaymentData.MAGNETICINKCHECKREADER) as 
 
 public constructor        (request: ServletRequest)
             : super()
-        
-
-        Updates for KMP build        
         {
 var request = request
 this.name= request.getParameter(PaymentData.NAME)
@@ -148,19 +142,13 @@ this.magneticInkCheckReader= request.getParameter(PaymentData.MAGNETICINKCHECKRE
 
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
@@ -250,10 +238,7 @@ open fun isValid()
 
 open fun setTenderType(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.tenderType= value
 }
@@ -261,10 +246,7 @@ this.tenderType= value
 
 open fun setTransactionType(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.transactionType= value
 }
@@ -272,10 +254,7 @@ this.transactionType= value
 
 open fun setAuthorizationCode(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.authorizationCode= value
 }
@@ -283,10 +262,7 @@ this.authorizationCode= value
 
 open fun setCheckType(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.checkType= value
 }
@@ -294,10 +270,7 @@ this.checkType= value
 
 open fun setCheckNumber(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.checkNumber= value
 }
@@ -305,10 +278,7 @@ this.checkNumber= value
 
 open fun setDriversLicense(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.driversLicense= value
 }
@@ -316,10 +286,7 @@ this.driversLicense= value
 
 open fun setMagneticInkCheckReader(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.magneticInkCheckReader= value
 }
@@ -327,10 +294,7 @@ this.magneticInkCheckReader= value
 
 open fun setAba(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.aba= value
 }
@@ -338,10 +302,7 @@ this.aba= value
 
 open fun setAccountType(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.accountType= value
 }
@@ -349,10 +310,7 @@ this.accountType= value
 
 open fun setName(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.name= value
 }
@@ -360,10 +318,7 @@ this.name= value
 
 open fun setType(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.type= value
 }
@@ -371,10 +326,7 @@ this.type= value
 
 open fun setExpiration(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.expiration= value
 }
@@ -382,10 +334,7 @@ this.expiration= value
 
 open fun setNumber(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.number= value
 }
@@ -393,10 +342,7 @@ this.number= value
 
 open fun getId()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -407,10 +353,7 @@ open fun getId()
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -421,10 +364,7 @@ open fun getName()
 
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -435,10 +375,7 @@ open fun getType()
 
 open fun getExpiration()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -449,10 +386,7 @@ open fun getExpiration()
 
 open fun getEncryption()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -463,10 +397,7 @@ open fun getEncryption()
 
 open fun getNumber()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -477,10 +408,7 @@ open fun getNumber()
 
 open fun getTenderType()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -491,10 +419,7 @@ open fun getTenderType()
 
 open fun getTransactionType()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -505,10 +430,7 @@ open fun getTransactionType()
 
 open fun getAba()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -519,10 +441,7 @@ open fun getAba()
 
 open fun getAccount()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -533,10 +452,7 @@ open fun getAccount()
 
 open fun getAccountType()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -547,10 +463,7 @@ open fun getAccountType()
 
 open fun getAuthorizationCode()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -561,10 +474,7 @@ open fun getAuthorizationCode()
 
 open fun getCheckNumber()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -575,10 +485,7 @@ open fun getCheckNumber()
 
 open fun getCheckType()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -589,10 +496,7 @@ open fun getCheckType()
 
 open fun getDriversLicense()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -603,10 +507,7 @@ open fun getDriversLicense()
 
 open fun getMagneticInkCheckReader()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -617,10 +518,7 @@ open fun getMagneticInkCheckReader()
 
 open fun getLastFour()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     
                         if(this.number.length > PaymentData.MIN && this.number.length <= PaymentData.MAX)
@@ -648,10 +546,7 @@ open fun getLastFour()
 
 open fun isDefault()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -662,10 +557,7 @@ open fun isDefault()
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -708,10 +600,7 @@ hashMap!!.put(PaymentData.MAGNETICINKCHECKREADER, this.magneticInkCheckReader)
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var hashMap: HashMap<Any, Any> = this.toHashMap()!!
@@ -729,10 +618,7 @@ var document = document
 
 open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
 
 
@@ -743,10 +629,7 @@ open fun toXmlDoc()
 
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -757,10 +640,7 @@ open fun view()
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
 
 
@@ -771,10 +651,7 @@ open fun toValidationInfoDoc()
 
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
 
@@ -786,10 +663,7 @@ var document = document
 
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

@@ -39,10 +39,7 @@ open public class PathFindingNodeCost : PathFindingNode
     var pathFindingNodeCostInfo: PathFindingNodeCostInfo
 public constructor        (parent: PathFindingNodeCost, geographicMapCellPosition: GeographicMapCellPosition, pathFindingNodeCostInfo: PathFindingNodeCostInfo)                        
 
-                            : super(parent, geographicMapCellPosition)
-
-        Updates for KMP build        
-        {
+                            : super(parent, geographicMapCellPosition){
     //var parent = parent
     //var geographicMapCellPosition = geographicMapCellPosition
     //var pathFindingNodeCostInfo = pathFindingNodeCostInfo
@@ -84,10 +81,7 @@ this.pathFindingNodeCostInfo= pathFindingNodeCostInfo
 
 open fun getPathFindingNodeCostInfo()
         //nullable = true from not(false or (false and true)) = true
-: PathFindingNodeCostInfo
-
-        Updates for KMP build        
-        {
+: PathFindingNodeCostInfo{
 
 
 
@@ -98,20 +92,14 @@ open fun getPathFindingNodeCostInfo()
 
 open fun setPathFindingNodeCostInfo(pathFindingNodeCostInfo: PathFindingNodeCostInfo)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var pathFindingNodeCostInfo = pathFindingNodeCostInfo
 this.pathFindingNodeCostInfo= pathFindingNodeCostInfo
 }
 
 override fun compareTo(pathFindingNodeCost: PathFindingNodeCost)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var pathFindingNodeCost = pathFindingNodeCost
 
 
@@ -122,10 +110,7 @@ var pathFindingNodeCost = pathFindingNodeCost
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -141,9 +126,6 @@ stringBuffer!!.append(this.geographicMapCellPosition!!.toString())
         while(pathFindingNode != 
                                     null
                                 )
-        
-
-        Updates for KMP build        
         {
 stringBuffer!!.append(pathFindingNode!!.geographicMapCellPosition!!.toString())
 stringBuffer!!.append(commonSeps!!.SPACE)

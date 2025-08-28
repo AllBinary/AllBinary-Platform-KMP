@@ -34,9 +34,6 @@ open public class AudioContentTypeData
     private val name: String
  constructor        (name: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var name = name
 this.name= name
@@ -45,10 +42,7 @@ this.name= name
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

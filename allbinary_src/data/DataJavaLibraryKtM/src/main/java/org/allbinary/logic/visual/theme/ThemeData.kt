@@ -37,10 +37,7 @@ open public class ThemeData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ThemeData
-
-        Updates for KMP build        
-        {
+: ThemeData{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

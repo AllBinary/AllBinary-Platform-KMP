@@ -40,10 +40,7 @@ open public class SteeringVisitor : Visitor {
 
 open fun getList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 

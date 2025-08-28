@@ -48,10 +48,7 @@ open public class AnimationDamageFloaters : DamageFloaters {
     private var dx: Int
 
     private var dy: Int
-public constructor        (layerInterface: AllBinaryLayer, animationInterfaceArray: Array<IndexedAnimation?>, dx: Int, dy: Int)
-
-        Updates for KMP build        
-        {
+public constructor        (layerInterface: AllBinaryLayer, animationInterfaceArray: Array<IndexedAnimation?>, dx: Int, dy: Int){
 var layerInterface = layerInterface
 var animationInterfaceArray = animationInterfaceArray
 var dx = dx
@@ -63,9 +60,6 @@ this.animationInterfaceArray= animationInterfaceArray
 
                         for (index in this.animationInterfaceArray!!.size -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 this.animationInterfaceArray[index]!!.setFrame(this.animationInterfaceArray[index]!!.getSize() -1)
 }
@@ -78,10 +72,7 @@ this.dy= dy
 
 override fun add(damage: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var damage = damage
 
     var i: Int = this.circularIndexUtil!!.getIndex()!!
@@ -92,10 +83,7 @@ this.circularIndexUtil!!.next()
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 
         try {
@@ -114,9 +102,6 @@ var graphics = graphics
 
                         for (index in 0 until this.animationInterfaceArray!!.size)
 
-        
-
-        Updates for KMP build        
         {
 
     var animationInterface: IndexedAnimation = animationInterfaceArray[index]!!
@@ -137,10 +122,7 @@ animationInterface!!.nextFrame()
 }
 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

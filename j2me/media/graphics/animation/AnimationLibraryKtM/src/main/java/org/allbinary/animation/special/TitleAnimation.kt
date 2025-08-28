@@ -69,10 +69,7 @@ open public class TitleAnimation : SpecialAnimation {
     private val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 public constructor        (animationInterfaceArray: Array<IndexedAnimation?>, basicColorArray: Array<BasicColor?>, dxArray: IntArray, dyArray: IntArray)                        
 
-                            : this(animationInterfaceArray, basicColorArray, dxArray, dyArray, 0, Integer.MIN_VALUE, IndexedAnimationBehavior(1, 250))
-
-        Updates for KMP build        
-        {
+                            : this(animationInterfaceArray, basicColorArray, dxArray, dyArray, 0, Integer.MIN_VALUE, IndexedAnimationBehavior(1, 250)){
     //var animationInterfaceArray = animationInterfaceArray
     //var basicColorArray = basicColorArray
     //var dxArray = dxArray
@@ -85,10 +82,7 @@ public constructor        (animationInterfaceArray: Array<IndexedAnimation?>, ba
 
 public constructor        (animationInterfaceArray: Array<IndexedAnimation?>, basicColorArray: Array<BasicColor?>, dxArray: IntArray, dyArray: IntArray, y: Int, width: Int)                        
 
-                            : this(animationInterfaceArray, basicColorArray, dxArray, dyArray, y, width, IndexedAnimationBehavior(1, 250))
-
-        Updates for KMP build        
-        {
+                            : this(animationInterfaceArray, basicColorArray, dxArray, dyArray, y, width, IndexedAnimationBehavior(1, 250)){
     //var animationInterfaceArray = animationInterfaceArray
     //var basicColorArray = basicColorArray
     //var dxArray = dxArray
@@ -103,10 +97,7 @@ public constructor        (animationInterfaceArray: Array<IndexedAnimation?>, ba
 
 public constructor        (animationInterfaceArray: Array<IndexedAnimation?>, basicColorArray: Array<BasicColor?>, dxArray: IntArray, dyArray: IntArray, y: Int, width: Int, animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(animationBehavior){
     //var animationInterfaceArray = animationInterfaceArray
     //var basicColorArray = basicColorArray
     //var dxArray = dxArray
@@ -131,10 +122,7 @@ this.reset()
 
 override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var currentTime: Long = System.currentTimeMillis()!!
 
@@ -167,10 +155,7 @@ this.lastFrameStartTime= currentTime
 
 override fun isComplete()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     var indexedAnimationBehavior: IndexedAnimationBehavior = this.getAnimationBehavior() as IndexedAnimationBehavior
 
@@ -200,19 +185,13 @@ override fun isComplete()
 
 override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var sequence = sequence
 }
 
 override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
-: IntArray
-
-        Updates for KMP build        
-        {
+: IntArray{
 
 
 
@@ -222,10 +201,7 @@ override fun getSequence()
 
 override fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -235,10 +211,7 @@ override fun getSize()
 
 override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -248,10 +221,7 @@ override fun getFrame()
 
 override fun setFrame(frame: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var frame = frame
 
 
@@ -259,9 +229,6 @@ override fun setFrame(frame: Int)
 
                         for (index in 0 until sizeP)
 
-        
-
-        Updates for KMP build        
         {
 this.animationInterfaceArray[index]!!.setFrame(frame)
 }
@@ -270,19 +237,13 @@ this.animationInterfaceArray[index]!!.setFrame(frame)
 
 override fun setLastFrame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.setFrame(this.getSize() -1)
 }
 
 override fun reset()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.setLastFrame()
 
     var indexedAnimationBehavior: IndexedAnimationBehavior = (this.getAnimationBehavior() as IndexedAnimationBehavior)
@@ -292,19 +253,13 @@ indexedAnimationBehavior!!.reset()
 
 override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
 
 
 
                         for (index in 0 until sizeP)
 
-        
-
-        Updates for KMP build        
         {
 this.animationInterfaceArray[index]!!.previousFrame()
 }
@@ -314,10 +269,7 @@ this.animationInterfaceArray[index]!!.previousFrame()
 
 open fun paint(graphics: Graphics, frame: Int, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var frame = frame
     //var x = x
@@ -330,10 +282,7 @@ this.paint(graphics, x, y)
     val CLEAR_COLOR: BasicColor = BasicColorFactory.getInstance()!!.CLEAR_COLOR
 override fun paint(graphics: Graphics, ax: Int, ay: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var ax = ax
     //var ay = ay
@@ -361,9 +310,6 @@ override fun paint(graphics: Graphics, ax: Int, ay: Int)
 
                         for (index in 0 until sizeP)
 
-        
-
-        Updates for KMP build        
         {
 deltaX= this.dxArray[index] +x
 deltaY= this.dyArray[index] +y

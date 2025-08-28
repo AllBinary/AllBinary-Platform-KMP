@@ -52,10 +52,7 @@ open public class ShippingHelper : TagHelper {
     private var request: HttpServletRequest
 
     private var shippingType: String
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
-
-        Updates for KMP build        
-        {
+public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 this.propertiesHashMap= propertiesHashMap
@@ -82,20 +79,14 @@ this.getFormData()
 
 open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.shippingType= request.getParameter(ShippingMethodData.NAME)
 }
 
 
 open fun setShippingType()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -120,10 +111,7 @@ order.setShippingMethod(shippingType)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to view Shipping Type"
 

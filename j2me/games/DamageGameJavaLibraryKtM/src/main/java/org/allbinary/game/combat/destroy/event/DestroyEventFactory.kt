@@ -38,9 +38,6 @@ open public class DestroyEventFactory
     private var combatGameCanvas: AllBinaryGameCanvas
 public constructor        (combatGameCanvas: AllBinaryGameCanvas)
             : super()
-        
-
-        Updates for KMP build        
         {
 var combatGameCanvas = combatGameCanvas
 this.combatGameCanvas= combatGameCanvas
@@ -48,10 +45,7 @@ this.combatGameCanvas= combatGameCanvas
 
 override fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AllBinaryEventObject
-
-        Updates for KMP build        
-        {
+: AllBinaryEventObject{
 
 
 

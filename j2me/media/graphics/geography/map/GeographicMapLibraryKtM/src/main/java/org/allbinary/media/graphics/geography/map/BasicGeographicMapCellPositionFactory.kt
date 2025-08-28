@@ -50,9 +50,6 @@ open public class BasicGeographicMapCellPositionFactory
     private val tiledLayer: AllBinaryTiledLayer
 protected constructor        (geographicMapInterface: BasicGeographicMap)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var geographicMapInterface = geographicMapInterface
 this.geographicMapInterface= geographicMapInterface
@@ -70,10 +67,7 @@ this.init()
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var tiledLayer: AllBinaryTiledLayer = this.tiledLayer
 
@@ -95,9 +89,6 @@ open fun init()
 
                         for (column in 0 until columns)
 
-        
-
-        Updates for KMP build        
         {
 
 
@@ -105,9 +96,6 @@ open fun init()
 
                         for (row in 0 until rows)
 
-        
-
-        Updates for KMP build        
         {
 this.createInstance(column, row, width, height)
 }
@@ -121,10 +109,7 @@ this.createInstance(column, row, width, height)
             
 open fun visit(geographicMapCelPositionFactoryInitVisitorInterface: GeographicMapCellPositionFactoryInitVisitorInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var geographicMapCelPositionFactoryInitVisitorInterface = geographicMapCelPositionFactoryInitVisitorInterface
 
     var tiledLayer: AllBinaryTiledLayer = this.tiledLayer
@@ -146,9 +131,6 @@ open fun visit(geographicMapCelPositionFactoryInitVisitorInterface: GeographicMa
 
                         for (column in 0 until columns)
 
-        
-
-        Updates for KMP build        
         {
 
 
@@ -156,9 +138,6 @@ open fun visit(geographicMapCelPositionFactoryInitVisitorInterface: GeographicMa
 
                         for (row in 0 until rows)
 
-        
-
-        Updates for KMP build        
         {
 cellPosition= this.getInstance(column, row)
 geographicMapCelPositionFactoryInitVisitorInterface!!.visit(tiledLayer, cellPosition)
@@ -167,10 +146,7 @@ geographicMapCelPositionFactoryInitVisitorInterface!!.visit(tiledLayer, cellPosi
 }
 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(StringMaker().
                             append("[")!!.append(rows)!!.append("][")!!.append(columns)!!.append("]")!!.toString(), this, "visit", e)
 
@@ -186,10 +162,7 @@ logUtil!!.put(StringMaker().
             
 open fun getInstance(i_column: Int, i_row: Int)
         //nullable =  from not(true or (false and false)) = 
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
     //var i_column = i_column
     //var i_row = i_row
 
@@ -204,10 +177,7 @@ open fun getInstance(i_column: Int, i_row: Int)
             
 open fun getInstance(anotherMapGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable =  from not(true or (false and false)) = 
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
     //var anotherMapGeographicMapCellPosition = anotherMapGeographicMapCellPosition
 
 
@@ -221,10 +191,7 @@ open fun getInstance(anotherMapGeographicMapCellPosition: GeographicMapCellPosit
             
 open fun createInstance(i_column: Int, i_row: Int, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
     //var i_column = i_column
     //var i_row = i_row
     //var width = width
@@ -254,10 +221,7 @@ geographicMapCellPositionArray[i_row]!![i_column]= cellPosition
 
 open fun getColumns()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -268,10 +232,7 @@ open fun getColumns()
 
 open fun getRows()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

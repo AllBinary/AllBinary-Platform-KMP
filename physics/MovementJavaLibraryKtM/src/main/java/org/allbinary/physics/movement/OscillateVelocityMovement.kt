@@ -41,10 +41,7 @@ open public class OscillateVelocityMovement : BasicConstantVelocityMovement {
     private var oscillatePositive: Boolean= false
 public constructor        (speedBasicDecimal: BasicDecimal, oscillateMin: Int, oscillateMax: Int)                        
 
-                            : super(speedBasicDecimal, VelocityProperties(speedBasicDecimal!!.getUnscaled().toInt(), speedBasicDecimal!!.getUnscaled().toInt()))
-
-        Updates for KMP build        
-        {
+                            : super(speedBasicDecimal, VelocityProperties(speedBasicDecimal!!.getUnscaled().toInt(), speedBasicDecimal!!.getUnscaled().toInt())){
 var speedBasicDecimal = speedBasicDecimal
 var oscillateMin = oscillateMin
 var oscillateMax = oscillateMax
@@ -60,10 +57,7 @@ this.oscillateMax= oscillateMax
                 @Throws(Exception::class)
             override fun process(layer: AllBinaryGameLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var layer = layer
 super.process(layer)
 

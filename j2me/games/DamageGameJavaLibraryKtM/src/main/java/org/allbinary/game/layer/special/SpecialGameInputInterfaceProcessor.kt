@@ -31,10 +31,7 @@ open public class SpecialGameInputInterfaceProcessor : GameInputProcessor {
         
 
     val specialGameInputInterface: SpecialGameInputInterface
-public constructor        (collidableDestroyableDamageableLayer: SpecialGameInputInterface)
-
-        Updates for KMP build        
-        {
+public constructor        (collidableDestroyableDamageableLayer: SpecialGameInputInterface){
 var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
 this.specialGameInputInterface= collidableDestroyableDamageableLayer
 }

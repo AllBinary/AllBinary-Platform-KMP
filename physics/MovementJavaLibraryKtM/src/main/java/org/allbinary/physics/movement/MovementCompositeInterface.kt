@@ -32,9 +32,6 @@ open fun getMovement()
         //nullable = true from not(false or (false and true)) = true
 : Movement
 
-        Updates for KMP build        
-        
-
 }
                 
             

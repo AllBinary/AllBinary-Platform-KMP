@@ -39,10 +39,7 @@ open public class CanvasStrings
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CanvasStrings
-
-        Updates for KMP build        
-        {
+: CanvasStrings{
 
 
 

@@ -23,10 +23,7 @@ open public class EnableFacesShaderOpenGLProcessor : ObjectThreedOpenGLProcessor
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: EnableFacesShaderOpenGLProcessor
-
-        Updates for KMP build        
-        {
+: EnableFacesShaderOpenGLProcessor{
 
 
 
@@ -36,18 +33,12 @@ open fun getInstance()
 
 
         }
-            public constructor        ()
-
-        Updates for KMP build        
-        {
+            public constructor        (){
 }
 
 override fun process(gl: GL10, anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
     //var anyType = anyType
 }

@@ -36,20 +36,14 @@ open public class WaypointInfoHudPaintable : SelectionHudPaintable {
     private val keyvalueDrawString: KeyValueDrawString
 
     private var rtsLayer: RTSLayer
-protected constructor        ()
-
-        Updates for KMP build        
-        {
+protected constructor        (){
 keyvalueDrawString= KeyValueDrawString("Owner: ", this.textX)
 }
 
 
 open fun updateSelectionInfo()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.setName(this.getRtsLayer()!!.getName())
 this.setAnimationInterface(this.getRtsLayer()!!.getVerticleBuildAnimationInterface())
 this.keyvalueDrawString!!.update(getRtsLayer = this.getRtsLayer()getRtsLayer as WaypointLayer
@@ -60,10 +54,7 @@ getRtsLayer.
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 super.paint(graphics)
 
@@ -76,10 +67,7 @@ this.getAnimationInterface()!!.paint(graphics, this.imageX, y)
 
 open fun setRtsLayer(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var rtsLayer = rtsLayer
 this.rtsLayer= rtsLayer
 }
@@ -87,10 +75,7 @@ this.rtsLayer= rtsLayer
 
 open fun getRtsLayer()
         //nullable = true from not(false or (false and true)) = true
-: RTSLayer
-
-        Updates for KMP build        
-        {
+: RTSLayer{
 
 
 

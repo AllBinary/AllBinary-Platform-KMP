@@ -36,10 +36,7 @@ open public class InGameMenuBehavior : BaseMenuBehavior {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: InGameMenuBehavior
-
-        Updates for KMP build        
-        {
+: InGameMenuBehavior{
 
 
 
@@ -58,10 +55,7 @@ open fun getInstance()
                 @Throws(Exception::class)
             override fun onDisplayChangeEvent(allBinaryGameCanvas: AllBinaryGameCanvas, displayChangeEvent: DisplayChangeEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryGameCanvas = allBinaryGameCanvas
     //var displayChangeEvent = displayChangeEvent
 allBinaryGameCanvas!!.updateMenu(displayChangeEvent)
@@ -69,10 +63,7 @@ allBinaryGameCanvas!!.updateMenu(displayChangeEvent)
 
 override fun initSpecialPaint(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryGameCanvas = allBinaryGameCanvas
 allBinaryGameCanvas!!.setNonBotPaintableP(GameCanvasNonBotPaintable(allBinaryGameCanvas))
 }
@@ -81,10 +72,7 @@ allBinaryGameCanvas!!.setNonBotPaintableP(GameCanvasNonBotPaintable(allBinaryGam
                 @Throws(Exception::class)
             override fun initMenu(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryGameCanvas = allBinaryGameCanvas
 allBinaryGameCanvas!!.initMenu2()
 }
@@ -93,10 +81,7 @@ allBinaryGameCanvas!!.initMenu2()
                 @Throws(Exception::class)
             override fun updateMenu(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryGameCanvas = allBinaryGameCanvas
 allBinaryGameCanvas!!.initMenu2()
 }
@@ -105,20 +90,14 @@ allBinaryGameCanvas!!.initMenu2()
                 @Throws(Exception::class)
             override fun popupMenu(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryGameCanvas = allBinaryGameCanvas
 allBinaryGameCanvas!!.popupMenu2()
 }
 
 override fun closeMenu(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryGameCanvas = allBinaryGameCanvas
 allBinaryGameCanvas!!.closeMenu2()
 }

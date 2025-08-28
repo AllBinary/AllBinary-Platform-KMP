@@ -59,10 +59,7 @@ open public class StoreFileGenerator : TransformInfoObjectConfigGenerator {
     private val fileAbPath: AbPath
 
     private val file: AbFile
-public constructor        (transformInfoInterface: TransformInfoInterface)
-
-        Updates for KMP build        
-        {
+public constructor        (transformInfoInterface: TransformInfoInterface){
 var transformInfoInterface = transformInfoInterface
 
     var httpTransformInfoInterface: TransformInfoHttpInterface = transformInfoInterface as TransformInfoHttpInterface
@@ -167,10 +164,7 @@ this.file= AbFile(this.fileAbPath)
             
 open fun process(input: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var input = input
 
     

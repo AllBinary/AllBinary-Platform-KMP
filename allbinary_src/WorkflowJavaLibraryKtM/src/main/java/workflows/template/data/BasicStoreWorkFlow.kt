@@ -35,10 +35,7 @@ open public class BasicStoreWorkFlow : BasicWorkFlow
         
 public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
-                            : super(propertiesHashMap, pageContext)
-
-        Updates for KMP build        
-        {
+                            : super(propertiesHashMap, pageContext){
 var propertiesHashMap = propertiesHashMap
 var pageContext = pageContext
 
@@ -52,10 +49,7 @@ var pageContext = pageContext
             
 open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

@@ -48,9 +48,6 @@ open public class CssProperty
     private var cssPropertyValues: CssPropertyValues
 public constructor        (name: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var name = name
 this.propertyName= name
@@ -59,9 +56,6 @@ this.cssPropertyValues= CssPropertyValues()
 
 public constructor        (node: Node)
             : super()
-        
-
-        Updates for KMP build        
         {
 var node = node
 
@@ -86,10 +80,7 @@ this.cssPropertyValues= CssPropertyValues(propertyValuesNode)
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -100,10 +91,7 @@ open fun getName()
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -120,10 +108,7 @@ hashMap!!.put(CssPropertyData.getInstance()!!.NAME, this.propertyName)
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var hashMap: HashMap<Any, Any> = this.toHashMap()!!

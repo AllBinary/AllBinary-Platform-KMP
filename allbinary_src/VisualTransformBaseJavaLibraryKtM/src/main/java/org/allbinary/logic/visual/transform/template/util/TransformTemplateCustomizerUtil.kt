@@ -47,10 +47,7 @@ open public class TransformTemplateCustomizerUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TransformTemplateCustomizerUtil
-
-        Updates for KMP build        
-        {
+: TransformTemplateCustomizerUtil{
 
 
 
@@ -80,9 +77,6 @@ open fun getInstance()
     private val GLOBALS_UPDATE: String
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -103,10 +97,7 @@ GLOBALS_UPDATE= commonStrings!!.UPDATE +SPACE
 
 open fun getPageNameHack(viewName: String, storeName: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var viewName = viewName
 var storeName = storeName
 

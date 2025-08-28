@@ -40,10 +40,7 @@ open public class ModifierBaseProcessor
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ModifierBaseProcessor
-
-        Updates for KMP build        
-        {
+: ModifierBaseProcessor{
 
 
 
@@ -61,10 +58,7 @@ open fun getInstance()
         
 open fun update(imageModifierUtil: ImageModifierUtil, originalImage: Image, imageToShow: Image, index: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var imageModifierUtil = imageModifierUtil
     //var originalImage = originalImage
     //var imageToShow = imageToShow
@@ -75,10 +69,7 @@ open fun update(imageModifierUtil: ImageModifierUtil, originalImage: Image, imag
 
 open fun update(imageModifierUtil: ImageModifierUtil, originalImage: Image, imageToShow: Image, index: Int, alpha: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var imageModifierUtil = imageModifierUtil
     //var originalImage = originalImage
     //var imageToShow = imageToShow

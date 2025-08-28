@@ -48,10 +48,7 @@ open public class TimeHudWidget : BasicHud {
     private val timer: Timer
 public constructor        (location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int, basicColor: BasicColor, timer: Timer)                        
 
-                            : super(location, direction, maxHeight, maxWidth, bufferZone, basicColor)
-
-        Updates for KMP build        
-        {
+                            : super(location, direction, maxHeight, maxWidth, bufferZone, basicColor){
 var location = location
 var direction = direction
 var maxHeight = maxHeight
@@ -85,10 +82,7 @@ this.offset= myFont!!.stringWidth(this.TIME_STRING) +myFont!!.stringWidth(3)
 
 public constructor        (location: Int, direction: Int, maxWidth: Int, basicColor: BasicColor, timer: Timer)                        
 
-                            : this(location, direction, 14, maxWidth, 2, basicColor, timer)
-
-        Updates for KMP build        
-        {
+                            : this(location, direction, 14, maxWidth, 2, basicColor, timer){
 var location = location
 var direction = direction
 var maxWidth = maxWidth
@@ -102,10 +96,7 @@ var timer = timer
 
 public constructor        (location: Int, direction: Int, basicColor: BasicColor, timer: Timer)                        
 
-                            : this(location, direction, 14, MyFont.getInstance()!!.getSize() *5, 2, basicColor, timer)
-
-        Updates for KMP build        
-        {
+                            : this(location, direction, 14, MyFont.getInstance()!!.getSize() *5, 2, basicColor, timer){
 var location = location
 var direction = direction
 var basicColor = basicColor
@@ -119,10 +110,7 @@ var timer = timer
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.timer.update()
 this.set()
 }
@@ -130,10 +118,7 @@ this.set()
 
 open fun set()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.string= timer.getTimeChars()
 totalDigits= timer.getCurrentTotalDigits()
 }
@@ -141,10 +126,7 @@ totalDigits= timer.getCurrentTotalDigits()
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 super.paint(graphics, TIME_CHAR_ARRAY, 0, TIME_CHAR_ARRAY.size, string, 0, totalDigits, offset)
 }
@@ -152,10 +134,7 @@ super.paint(graphics, TIME_CHAR_ARRAY, 0, TIME_CHAR_ARRAY.size, string, 0, total
 
 open fun getTimer()
         //nullable = true from not(false or (false and true)) = true
-: Timer
-
-        Updates for KMP build        
-        {
+: Timer{
 
 
 

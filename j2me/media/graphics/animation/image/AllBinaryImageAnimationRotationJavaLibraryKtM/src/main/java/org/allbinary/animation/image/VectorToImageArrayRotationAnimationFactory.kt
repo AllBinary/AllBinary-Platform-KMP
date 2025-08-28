@@ -46,10 +46,7 @@ open public class VectorToImageArrayRotationAnimationFactory : BaseImageAnimatio
     private var angleIncrement: Int= 0
 public constructor        (vectorInfo: VectorInfo, basicColor: BasicColor, dx: Int, dy: Int)                        
 
-                            : this(vectorInfo, basicColor, dx, dy, AnimationBehaviorFactory.getInstance())
-
-        Updates for KMP build        
-        {
+                            : this(vectorInfo, basicColor, dx, dy, AnimationBehaviorFactory.getInstance()){
     //var vectorInfo = vectorInfo
     //var basicColor = basicColor
     //var dx = dx
@@ -62,10 +59,7 @@ public constructor        (vectorInfo: VectorInfo, basicColor: BasicColor, dx: I
 
 public constructor        (vectorInfo: VectorInfo, basicColor: BasicColor, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(vectorInfo, basicColor, animationBehaviorFactory)
-
-        Updates for KMP build        
-        {
+                            : this(vectorInfo, basicColor, animationBehaviorFactory){
     //var vectorInfo = vectorInfo
     //var basicColor = basicColor
     //var dx = dx
@@ -81,10 +75,7 @@ this.animationFactoryInitializationVisitor!!.dy= dy
 
 public constructor        (vectorInfo: VectorInfo, basicColor: BasicColor)                        
 
-                            : this(vectorInfo, basicColor, AnimationBehaviorFactory.getInstance())
-
-        Updates for KMP build        
-        {
+                            : this(vectorInfo, basicColor, AnimationBehaviorFactory.getInstance()){
     //var vectorInfo = vectorInfo
     //var basicColor = basicColor
 
@@ -95,10 +86,7 @@ public constructor        (vectorInfo: VectorInfo, basicColor: BasicColor)
 
 public constructor        (vectorInfo: VectorInfo, basicColor: BasicColor, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(AnimationFrameToImageUtil.getInstance()!!.getInstanceTranslate(vectorInfo!!.getWidth(), vectorInfo!!.getHeight(), VectorAnimation(vectorInfo!!.getPoints(), basicColor, animationBehaviorFactory!!.getOrCreateInstance())), 0, 0, animationBehaviorFactory)
-
-        Updates for KMP build        
-        {
+                            : super(AnimationFrameToImageUtil.getInstance()!!.getInstanceTranslate(vectorInfo!!.getWidth(), vectorInfo!!.getHeight(), VectorAnimation(vectorInfo!!.getPoints(), basicColor, animationBehaviorFactory!!.getOrCreateInstance())), 0, 0, animationBehaviorFactory){
     //var vectorInfo = vectorInfo
     //var basicColor = basicColor
     //var animationBehaviorFactory = animationBehaviorFactory
@@ -114,10 +102,7 @@ this.init()
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var angleFactory: AngleFactory = AngleFactory.getInstance()!!
 
@@ -130,10 +115,7 @@ this.imageArray= ImageToRotationImageArrayUtil.getInstance()!!.generate(this.get
             
 open fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation
-
-        Updates for KMP build        
-        {
+: Animation{
     //var instanceId = instanceId
 
     
@@ -162,10 +144,7 @@ open fun getInstance(instanceId: Int)
 
 open fun getAngleIncrement()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -176,10 +155,7 @@ open fun getAngleIncrement()
 
 open fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var scaleProperties = scaleProperties
 }
 

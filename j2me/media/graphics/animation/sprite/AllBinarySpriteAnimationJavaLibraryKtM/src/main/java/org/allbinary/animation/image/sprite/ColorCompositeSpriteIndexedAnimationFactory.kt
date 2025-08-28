@@ -43,10 +43,7 @@ open public class ColorCompositeSpriteIndexedAnimationFactory : BaseImageAnimati
     private val basicColorArray: Array<BasicColor?>
 public constructor        (image: Image, basicColorArray: Array<BasicColor?>, width: Int, height: Int)                        
 
-                            : this(image, basicColorArray, width, height, AnimationBehaviorFactory.getInstance())
-
-        Updates for KMP build        
-        {
+                            : this(image, basicColorArray, width, height, AnimationBehaviorFactory.getInstance()){
     //var image = image
     //var basicColorArray = basicColorArray
     //var width = width
@@ -59,10 +56,7 @@ public constructor        (image: Image, basicColorArray: Array<BasicColor?>, wi
 
 public constructor        (image: Image, basicColorArray: Array<BasicColor?>, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(image, width, height, animationBehaviorFactory)
-
-        Updates for KMP build        
-        {
+                            : super(image, width, height, animationBehaviorFactory){
     //var image = image
     //var basicColorArray = basicColorArray
     //var width = width
@@ -79,10 +73,7 @@ this.basicColorArray= basicColorArray
                 @Throws(Exception::class)
             override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation
-
-        Updates for KMP build        
-        {
+: Animation{
     //var instanceId = instanceId
 
     var sprite: Sprite = animationFactorySpriteScaleUtil!!.createImage(this.getImage(), this.animationFactoryInitializationVisitor!!.width, this.animationFactoryInitializationVisitor!!.height, this.scaleProperties!!.scaleWidth, this.scaleProperties!!.scaleHeight)!!
@@ -98,10 +89,7 @@ this.basicColorArray= basicColorArray
                 @Throws(Exception::class)
             override fun getInstance(animationInterface: Animation)
         //nullable =  from not(true or (false and false)) = 
-: Animation
-
-        Updates for KMP build        
-        {
+: Animation{
     //var animationInterface = animationInterface
 
 

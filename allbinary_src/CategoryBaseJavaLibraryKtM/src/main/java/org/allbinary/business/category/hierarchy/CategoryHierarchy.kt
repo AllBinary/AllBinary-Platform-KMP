@@ -45,9 +45,6 @@ open public class CategoryHierarchy
     private var level: Int
 public constructor        (rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var rootCategoryInterface = rootCategoryInterface
 var parentCategoryInterface = parentCategoryInterface
@@ -58,9 +55,6 @@ this.setParent(parentCategoryInterface)
 
 public constructor        (rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, level: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var rootCategoryInterface = rootCategoryInterface
 var parentCategoryInterface = parentCategoryInterface
@@ -72,9 +66,6 @@ this.setParent(parentCategoryInterface)
 
 public constructor        (rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, categoryPropertiesHashMap: HashMap<Any, Any>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var rootCategoryInterface = rootCategoryInterface
 var parentCategoryInterface = parentCategoryInterface
@@ -90,10 +81,7 @@ this.setParent(parentCategoryInterface)
 
 open fun getLevel()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -104,10 +92,7 @@ open fun getLevel()
 
 open fun getLevelString()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -118,10 +103,7 @@ open fun getLevelString()
 
 open fun setLevel(level: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var level = level
 this.level= level
 }
@@ -129,10 +111,7 @@ this.level= level
 
 open fun setParent(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var categoryInterface = categoryInterface
 this.parentCategoryInterface= categoryInterface
 }
@@ -140,10 +119,7 @@ this.parentCategoryInterface= categoryInterface
 
 open fun setRoot(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var categoryInterface = categoryInterface
 this.rootCategoryInterface= categoryInterface
 }
@@ -151,10 +127,7 @@ this.rootCategoryInterface= categoryInterface
 
 open fun getRoot()
         //nullable = true from not(false or (false and true)) = true
-: CategoryInterface
-
-        Updates for KMP build        
-        {
+: CategoryInterface{
 
 
 
@@ -165,10 +138,7 @@ open fun getRoot()
 
 open fun getParent()
         //nullable = true from not(false or (false and true)) = true
-: CategoryInterface
-
-        Updates for KMP build        
-        {
+: CategoryInterface{
 
 
 

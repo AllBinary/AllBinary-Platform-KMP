@@ -73,10 +73,7 @@ open public class ProfileActionScriptItem : DefaultMutableTreeNode
     private var jPopupMenu: JPopupMenu
 public constructor        (label: String, node: Node)                        
 
-                            : super(label)
-
-        Updates for KMP build        
-        {
+                            : super(label){
 var label = label
 var node = node
 
@@ -89,10 +86,7 @@ logUtil!!.put("Label: " +label, this, this.commonStrings!!.CONSTRUCTOR)
 
 public constructor        (label: String)                        
 
-                            : super(label)
-
-        Updates for KMP build        
-        {
+                            : super(label){
 var label = label
 
 
@@ -105,10 +99,7 @@ logUtil!!.put("Label: " +label, this, this.commonStrings!!.CONSTRUCTOR)
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 setJPopupMenu(JPopupMenu())
 
     var jMenuItemEdit: JMenuItem = JMenuItem(EDIT)
@@ -127,10 +118,7 @@ getJPopupMenu()!!.add(jMenuItemDelete)
             
 open fun process(frame: Long)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var frame = frame
 
 
@@ -141,10 +129,7 @@ var frame = frame
 
 open fun getJPopupMenu()
         //nullable = true from not(false or (false and true)) = true
-: JPopupMenu
-
-        Updates for KMP build        
-        {
+: JPopupMenu{
 
 
 
@@ -155,10 +140,7 @@ open fun getJPopupMenu()
 
 open fun showDialog()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
 
 
@@ -168,10 +150,7 @@ open fun showDialog()
 
 open fun actionPerformed(actionEvent: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var actionEvent = actionEvent
 
     
@@ -187,10 +166,7 @@ var actionEvent = actionEvent
 
 open fun setJPopupMenu(jPopupMenu: JPopupMenu)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var jPopupMenu = jPopupMenu
 this.jPopupMenu= jPopupMenu
 }

@@ -31,10 +31,7 @@ open public class ScrollMapGameInputProcessor : GameInputProcessor {
         
 
     val scrollMapPlayerGameInput: ScrollMapPlayerGameInput
-public constructor        (scrollMapPlayerGameInput: ScrollMapPlayerGameInput)
-
-        Updates for KMP build        
-        {
+public constructor        (scrollMapPlayerGameInput: ScrollMapPlayerGameInput){
 var scrollMapPlayerGameInput = scrollMapPlayerGameInput
 this.scrollMapPlayerGameInput= scrollMapPlayerGameInput
 }

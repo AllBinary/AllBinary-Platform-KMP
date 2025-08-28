@@ -44,10 +44,7 @@ open public class SqlConnectionPool
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: SqlConnectionPool
-
-        Updates for KMP build        
-        {
+: SqlConnectionPool{
 
 
 
@@ -85,9 +82,6 @@ open fun getInstance()
     private val METHOD_ADD: String = "add()"
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -97,10 +91,7 @@ private constructor        ()
 
 open fun get(url: String)
         //nullable = true from not(false or (false and false)) = true
-: Connection
-
-        Updates for KMP build        
-        {
+: Connection{
 var url = url
 
     
@@ -199,9 +190,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET)
 
                         for (i in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var sqlConnection: Connection = connectionVector!!.get(i) as Connection
@@ -272,10 +260,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET)
 
 open fun add(url: String, sqlConnection: Connection)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var url = url
 var sqlConnection = sqlConnection
 

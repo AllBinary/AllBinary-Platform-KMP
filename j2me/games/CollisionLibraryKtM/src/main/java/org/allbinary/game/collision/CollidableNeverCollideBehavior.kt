@@ -32,10 +32,7 @@ open public class CollidableNeverCollideBehavior : CollidableBaseBehavior {
         
  constructor        (isCollidable: Boolean)                        
 
-                            : super(CollidableCompositeLayer(RectangleFactory.SINGLETON), isCollidable)
-
-        Updates for KMP build        
-        {
+                            : super(CollidableCompositeLayer(RectangleFactory.SINGLETON), isCollidable){
 var isCollidable = isCollidable
 
 
@@ -45,10 +42,7 @@ var isCollidable = isCollidable
 
 override fun isCollision(allbinaryCollidableLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var allbinaryCollidableLayer = allbinaryCollidableLayer
 
 
@@ -61,28 +55,19 @@ var allbinaryCollidableLayer = allbinaryCollidableLayer
                 @Throws(Exception::class)
             override fun collide(allbinaryCollidableLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allbinaryCollidableLayer = allbinaryCollidableLayer
 }
 
 override fun collide(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 }
 
 override fun isCollision(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
 

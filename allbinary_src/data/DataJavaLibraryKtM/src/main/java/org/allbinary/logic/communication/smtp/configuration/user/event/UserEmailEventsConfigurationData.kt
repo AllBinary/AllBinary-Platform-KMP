@@ -38,9 +38,6 @@ open public class UserEmailEventsConfigurationData
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

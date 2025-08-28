@@ -60,19 +60,13 @@ open public class DbConnectionInfo
     private val PASSWORD_KEY: String = "&password="
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun updateUrl()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.updateHost()
 
     var stringBuffer: StringMaker = StringMaker()
@@ -89,10 +83,7 @@ this.url= stringBuffer!!.toString()
 
 open fun getUrl()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -103,10 +94,7 @@ open fun getUrl()
 
 open fun getJdbcDriver()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -117,10 +105,7 @@ open fun getJdbcDriver()
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -131,10 +116,7 @@ open fun getName()
 
 open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -145,10 +127,7 @@ open fun getUserName()
 
 open fun getPassword()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -159,10 +138,7 @@ open fun getPassword()
 
 open fun updateHost()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -188,10 +164,7 @@ this.host= stringBuffer!!.toString()
 
 open fun getHost()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -202,10 +175,7 @@ open fun getHost()
 
 open fun getSchema()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -216,10 +186,7 @@ open fun getSchema()
 
 open fun getServer()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -230,10 +197,7 @@ open fun getServer()
 
 open fun getPort()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -244,10 +208,7 @@ open fun getPort()
 
 open fun setJdbcDriver(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.jdbcDriver= value
 }
@@ -255,10 +216,7 @@ this.jdbcDriver= value
 
 open fun setName(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.name= value
 this.updateUrl()
@@ -267,10 +225,7 @@ this.updateUrl()
 
 open fun setUserName(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.userName= value
 this.updateUrl()
@@ -279,10 +234,7 @@ this.updateUrl()
 
 open fun setPassword(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.password= value
 this.updateUrl()
@@ -291,10 +243,7 @@ this.updateUrl()
 
 open fun setSchema(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.schema= value
 this.updateUrl()
@@ -303,10 +252,7 @@ this.updateUrl()
 
 open fun setServer(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.server= value
 this.updateUrl()
@@ -315,10 +261,7 @@ this.updateUrl()
 
 open fun setPort(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.port= value
 this.updateUrl()
@@ -327,10 +270,7 @@ this.updateUrl()
 
 open fun getUserNameKey()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -341,10 +281,7 @@ open fun getUserNameKey()
 
 open fun getPasswordKey()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

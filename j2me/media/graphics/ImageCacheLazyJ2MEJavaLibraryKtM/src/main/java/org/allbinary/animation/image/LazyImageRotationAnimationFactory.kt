@@ -43,9 +43,6 @@ open public class LazyImageRotationAnimationFactory
     var scaleProperties: ScaleProperties = ScaleProperties.instance
 public constructor        (layoutIndex: Int, associatedLazyAnimationId: Int, animationInterfaceFactoryInterface: BaseImageAnimationFactory)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var layoutIndex = layoutIndex
     //var associatedLazyAnimationId = associatedLazyAnimationId
@@ -60,10 +57,7 @@ ImageCacheFactory.getInstance()!!.hasAnyLazyAnimationFactories= true
             
 open fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation
-
-        Updates for KMP build        
-        {
+: Animation{
     //var instanceId = instanceId
 
     
@@ -93,10 +87,7 @@ open fun getInstance(instanceId: Int)
 
 open fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var scaleProperties = scaleProperties
 this.scaleProperties= scaleProperties
 }

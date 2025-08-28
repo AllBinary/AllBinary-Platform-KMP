@@ -37,10 +37,7 @@ open public class LicenseInitInfoUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LicenseInitInfoUtil
-
-        Updates for KMP build        
-        {
+: LicenseInitInfoUtil{
 
 
 
@@ -62,18 +59,12 @@ open fun getInstance()
 
 open fun setFilePath(filePath: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var filePath = filePath
 }
 
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -83,10 +74,7 @@ private constructor        ()
 
 open fun write(initData: LicenseInitInfo)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var initData = initData
 }
 
@@ -96,10 +84,7 @@ var initData = initData
 
 open fun read()
         //nullable = true from not(false or (false and true)) = true
-: LicenseInitInfo
-
-        Updates for KMP build        
-        {
+: LicenseInitInfo{
 
 
 
@@ -113,10 +98,7 @@ open fun read()
 
 open fun readAgain(initializeCounter: Int)
         //nullable = true from not(false or (false and false)) = true
-: LicenseInitInfo
-
-        Updates for KMP build        
-        {
+: LicenseInitInfo{
 var initializeCounter = initializeCounter
 
     var licenseInitInfo: LicenseInitInfo = LicenseInitInfo()

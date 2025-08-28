@@ -37,10 +37,7 @@ open public class ThirdPartyStoreFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ThirdPartyStore
-
-        Updates for KMP build        
-        {
+: ThirdPartyStore{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

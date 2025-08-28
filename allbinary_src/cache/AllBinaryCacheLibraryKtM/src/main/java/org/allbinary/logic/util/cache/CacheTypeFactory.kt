@@ -24,10 +24,7 @@ open public class CacheTypeFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CacheTypeFactory
-
-        Updates for KMP build        
-        {
+: CacheTypeFactory{
 
 
 

@@ -43,10 +43,7 @@ open public class TransformInfoHttpStore : TransformInfoHttp
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
-                            : super(propertiesHashMap, pageContext, true)
-
-        Updates for KMP build        
-        {
+                            : super(propertiesHashMap, pageContext, true){
 var propertiesHashMap = propertiesHashMap
 var pageContext = pageContext
 
@@ -66,10 +63,7 @@ var pageContext = pageContext
 
 public constructor        (databaseHashMap: HashMap<Any, Any>, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
-                            : super(databaseHashMap, propertiesHashMap, pageContext)
-
-        Updates for KMP build        
-        {
+                            : super(databaseHashMap, propertiesHashMap, pageContext){
 var databaseHashMap = databaseHashMap
 var propertiesHashMap = propertiesHashMap
 var pageContext = pageContext
@@ -98,10 +92,7 @@ this.setStoreName(databaseHashMap!!.get(StoreFrontData.getInstance()!!.NAME) as 
 
 public constructor        (storeFrontInterface: StoreFrontInterface, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
-                            : super(propertiesHashMap, pageContext)
-
-        Updates for KMP build        
-        {
+                            : super(propertiesHashMap, pageContext){
 var storeFrontInterface = storeFrontInterface
 var propertiesHashMap = propertiesHashMap
 var pageContext = pageContext
@@ -126,10 +117,7 @@ this.setStoreName(storeFrontInterface!!.getName())
             
 open fun getPath()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -149,10 +137,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
             
 open fun getTemplateFilePath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath
-
-        Updates for KMP build        
-        {
+: AbPath{
 
 
 
@@ -165,10 +150,7 @@ open fun getTemplateFilePath()
             
 open fun getObjectConfigFilePath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath
-
-        Updates for KMP build        
-        {
+: AbPath{
 
 
 
@@ -181,10 +163,7 @@ open fun getObjectConfigFilePath()
             
 open fun getDataFilePath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath
-
-        Updates for KMP build        
-        {
+: AbPath{
 
 
 

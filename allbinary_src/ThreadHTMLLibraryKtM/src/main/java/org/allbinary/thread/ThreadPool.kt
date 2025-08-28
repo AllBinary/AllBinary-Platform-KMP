@@ -55,10 +55,7 @@ open public class ThreadPool
     private var runningTask: Boolean= false
 public constructor        (poolName: String, numThreads: Int)                        
 
-                            : this(poolName, numThreads, 5)
-
-        Updates for KMP build        
-        {
+                            : this(poolName, numThreads, 5){
     //var poolName = poolName
     //var numThreads = numThreads
 
@@ -69,9 +66,6 @@ public constructor        (poolName: String, numThreads: Int)
 
 public constructor        (poolName: String, numThreads: Int, priority: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var poolName = poolName
     //var numThreads = numThreads
@@ -85,10 +79,7 @@ public constructor        (poolName: String, numThreads: Int, priority: Int)
             
 open fun runAPriorityTask()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(!currentPriorityRunnable!!.isDone())
@@ -122,10 +113,7 @@ currentPriorityRunnable!!.run()
             
 open fun runATask()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var runnable: Runnable = this.getTask()!!
 
@@ -145,10 +133,7 @@ open fun runATask()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(!this.isAlive)
@@ -165,10 +150,7 @@ taskQueue= BasicArrayList()
 
 open fun runTaskWithPriority(task: PriorityRunnable)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var task = task
 
     
@@ -201,9 +183,6 @@ open fun runTaskWithPriority(task: PriorityRunnable)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 runnable= this.taskQueue!!.get(index) as PriorityRunnable
 
@@ -248,10 +227,7 @@ this.taskQueue!!.add(index, task)
 
 open fun runTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var task = task
 
     
@@ -281,10 +257,7 @@ open fun runTask(task: Runnable)
 
 open fun getTask()
         //nullable = true from not(false or (false and true)) = true
-: Runnable
-
-        Updates for KMP build        
-        {
+: Runnable{
 
     
                         if(taskQueue!!.isEmpty())
@@ -309,10 +282,7 @@ open fun getTask()
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 taskQueue!!.clear()
 }
 
@@ -320,10 +290,7 @@ taskQueue!!.clear()
 
 open fun close()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(isAlive)
@@ -340,19 +307,13 @@ this.currentPriorityRunnable= threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
 
 open fun join()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         
         //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
         synchronized(this) 
 
         //mutex.withLock
-        
-
-        Updates for KMP build        
         {
 isAlive= false
 taskQueue!!.clear()
@@ -364,10 +325,7 @@ this.currentPriorityRunnable= threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
 
 open fun isBusy()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(!this.isAlive)
@@ -417,19 +375,13 @@ open fun isBusy()
 
 open fun threadStarted()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun threadStopped()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(this.numThreads == 1)
@@ -446,20 +398,14 @@ this.currentPriorityRunnable= threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
 
 open fun startTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var task = task
 }
 
 
 open fun completedTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var task = task
 }
 

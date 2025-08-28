@@ -42,9 +42,6 @@ open public class GameState
     private var name: String
 public constructor        (name: String, state: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var name = name
 var state = state
@@ -53,10 +50,7 @@ this.name= name
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

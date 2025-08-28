@@ -36,10 +36,7 @@ open public class LaptopGameInputMapping : PCGameInputMapping {
             }            
         override fun getDefault()
         //nullable = true from not(false or (false and true)) = true
-: InputToGameKeyMapping
-
-        Updates for KMP build        
-        {
+: InputToGameKeyMapping{
 
 
 

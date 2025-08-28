@@ -39,10 +39,7 @@ open public class AlphaBaseProcessor
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AlphaBaseProcessor
-
-        Updates for KMP build        
-        {
+: AlphaBaseProcessor{
 
 
 
@@ -60,10 +57,7 @@ open fun getInstance()
         
 open fun setAlpha(imageModifierUtil: ImageModifierUtil, originalImage: Image, imageToShow: Image, alpha: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var imageModifierUtil = imageModifierUtil
     //var originalImage = originalImage
     //var imageToShow = imageToShow

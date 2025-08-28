@@ -38,9 +38,6 @@ open public class JvmStatistics
     private var runtime: Runtime
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 runtime= Runtime.getRuntime()
 }
@@ -48,10 +45,7 @@ runtime= Runtime.getRuntime()
 
 open fun getFreeMemoryBytes()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -62,10 +56,7 @@ open fun getFreeMemoryBytes()
 
 open fun getFreeMemoryKilobytes()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -76,10 +67,7 @@ open fun getFreeMemoryKilobytes()
 
 open fun getFreeMemoryMegabytes()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -90,10 +78,7 @@ open fun getFreeMemoryMegabytes()
 
 open fun getMaxMemoryBytes()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -104,10 +89,7 @@ open fun getMaxMemoryBytes()
 
 open fun getMaxMemoryKilobytes()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -118,10 +100,7 @@ open fun getMaxMemoryKilobytes()
 
 open fun getMaxMemoryMegabytes()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -132,10 +111,7 @@ open fun getMaxMemoryMegabytes()
 
 open fun getTotalMemoryBytes()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -146,10 +122,7 @@ open fun getTotalMemoryBytes()
 
 open fun getTotalMemoryKilobytes()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -160,10 +133,7 @@ open fun getTotalMemoryKilobytes()
 
 open fun getTotalMemoryMegabytes()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -174,10 +144,7 @@ open fun getTotalMemoryMegabytes()
 
 open fun getFreeMemoryBytesLong()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -188,10 +155,7 @@ open fun getFreeMemoryBytesLong()
 
 open fun getFreeMemoryKilobytesLong()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -202,10 +166,7 @@ open fun getFreeMemoryKilobytesLong()
 
 open fun getFreeMemoryMegabytesLong()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -216,10 +177,7 @@ open fun getFreeMemoryMegabytesLong()
 
 open fun getMaxMemoryBytesLong()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -230,10 +188,7 @@ open fun getMaxMemoryBytesLong()
 
 open fun getMaxMemoryKilobytesLong()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -244,10 +199,7 @@ open fun getMaxMemoryKilobytesLong()
 
 open fun getMaxMemoryMegabytesLong()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -258,10 +210,7 @@ open fun getMaxMemoryMegabytesLong()
 
 open fun getTotalMemoryBytesLong()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -272,10 +221,7 @@ open fun getTotalMemoryBytesLong()
 
 open fun getTotalMemoryKilobytesLong()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -286,10 +232,7 @@ open fun getTotalMemoryKilobytesLong()
 
 open fun getTotalMemoryMegabytesLong()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -300,10 +243,7 @@ open fun getTotalMemoryMegabytesLong()
 
 open fun getFreeMemoryBytesString()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -314,10 +254,7 @@ open fun getFreeMemoryBytesString()
 
 open fun getFreeMemoryKilobytesString()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -328,10 +265,7 @@ open fun getFreeMemoryKilobytesString()
 
 open fun getFreeMemoryMegabytesString()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -342,10 +276,7 @@ open fun getFreeMemoryMegabytesString()
 
 open fun getMaxMemoryBytesString()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -356,10 +287,7 @@ open fun getMaxMemoryBytesString()
 
 open fun getMaxMemoryKilobytesString()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -370,10 +298,7 @@ open fun getMaxMemoryKilobytesString()
 
 open fun getMaxMemoryMegabytesString()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -384,10 +309,7 @@ open fun getMaxMemoryMegabytesString()
 
 open fun getTotalMemoryBytesString()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -398,10 +320,7 @@ open fun getTotalMemoryBytesString()
 
 open fun getTotalMemoryKilobytesString()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -412,10 +331,7 @@ open fun getTotalMemoryKilobytesString()
 
 open fun getTotalMemoryMegabytesString()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -426,10 +342,7 @@ open fun getTotalMemoryMegabytesString()
 
 open fun getNumberOfThreads()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -440,10 +353,7 @@ open fun getNumberOfThreads()
 
 open fun getNumberOfThreadsLong()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -454,10 +364,7 @@ open fun getNumberOfThreadsLong()
 
 open fun getNumberOfThreadsString()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -468,10 +375,7 @@ open fun getNumberOfThreadsString()
 
 open fun collectGarbage()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 runtime.gc()
 }
 

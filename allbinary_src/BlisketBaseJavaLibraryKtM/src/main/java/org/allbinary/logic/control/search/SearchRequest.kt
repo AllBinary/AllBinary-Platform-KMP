@@ -47,10 +47,7 @@ open public class SearchRequest : AbContext {
     private var storeFront: StoreFrontInterface
 public constructor        (storeFront: StoreFrontInterface, searchParams: SearchParams, xslFile: String, contentType: String, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
-                            : super(propertiesHashMap, pageContext)
-
-        Updates for KMP build        
-        {
+                            : super(propertiesHashMap, pageContext){
 var storeFront = storeFront
 var searchParams = searchParams
 var xslFile = xslFile
@@ -71,10 +68,7 @@ this.contentType= contentType
 
 open fun setStoreFront(storeFront: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var storeFront = storeFront
 this.storeFront= storeFront
 }
@@ -82,10 +76,7 @@ this.storeFront= storeFront
 
 open fun setParams(searchParams: SearchParams)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var searchParams = searchParams
 this.searchParams= searchParams
 }
@@ -93,10 +84,7 @@ this.searchParams= searchParams
 
 open fun setXslFile(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.xslFile= value
 }
@@ -104,10 +92,7 @@ this.xslFile= value
 
 open fun setFileBaseName(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.pageName= value
 }
@@ -115,10 +100,7 @@ this.pageName= value
 
 open fun setContentType(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.contentType= value
 }
@@ -126,10 +108,7 @@ this.contentType= value
 
 open fun getStoreFront()
         //nullable = true from not(false or (false and true)) = true
-: StoreFrontInterface
-
-        Updates for KMP build        
-        {
+: StoreFrontInterface{
 
 
 
@@ -140,10 +119,7 @@ open fun getStoreFront()
 
 open fun getParams()
         //nullable = true from not(false or (false and true)) = true
-: SearchParams
-
-        Updates for KMP build        
-        {
+: SearchParams{
 
 
 
@@ -154,10 +130,7 @@ open fun getParams()
 
 open fun getXslFile()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -168,10 +141,7 @@ open fun getXslFile()
 
 open fun getFileBaseName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -182,10 +152,7 @@ open fun getFileBaseName()
 
 open fun getContentType()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -198,10 +165,7 @@ open fun getContentType()
             
 open fun getFileBaseNameNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
 

@@ -42,10 +42,7 @@ open public class ImageThreadPool : ThreadPool {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ThreadPool
-
-        Updates for KMP build        
-        {
+: ThreadPool{
 
 
 
@@ -59,10 +56,7 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        (poolName: String, numThreads: Int)                        
 
-                            : super(poolName, numThreads)
-
-        Updates for KMP build        
-        {
+                            : super(poolName, numThreads){
     //var poolName = poolName
     //var numThreads = numThreads
 
@@ -75,10 +69,7 @@ public constructor        (poolName: String, numThreads: Int)
 
 open fun runTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var task = task
 super.runTask(task)
 }
@@ -86,20 +77,14 @@ super.runTask(task)
 
 open fun startTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var task = task
 }
 
 
 open fun completedTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var task = task
 }
 

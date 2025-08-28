@@ -47,10 +47,7 @@ open public class TransactionEntity : AbSqlBean
     private val tableName: String = "vtrans"
 public constructor        ()                        
 
-                            : super(UserDbInitInfo())
-
-        Updates for KMP build        
-        {
+                            : super(UserDbInitInfo()){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -61,10 +58,7 @@ this.setTableName(tableName)
 
 open fun remove(userName: String, orderNumber: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var userName = userName
 var orderNumber = orderNumber
 
@@ -85,10 +79,7 @@ super.deleteWhere(whereHashMap)
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -105,10 +96,7 @@ super.deleteWhere(whereHashMap)
 
 open fun add(userName: String, orderNumber: String, paymentTransactionInterface: PaymentTransactionInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var userName = userName
 var orderNumber = orderNumber
 var paymentTransactionInterface = paymentTransactionInterface
@@ -141,10 +129,7 @@ super.insert(values)
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -161,10 +146,7 @@ super.insert(values)
 
 open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var paymentTransactionKeysFactory: PaymentTransactionKeysFactory = PaymentTransactionKeysFactory.getInstance()!!
 
@@ -185,10 +167,7 @@ stringBuffer!!.append(OrderData.ID)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLU
 
 open fun createTable()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -199,10 +178,7 @@ open fun createTable()
 
 open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

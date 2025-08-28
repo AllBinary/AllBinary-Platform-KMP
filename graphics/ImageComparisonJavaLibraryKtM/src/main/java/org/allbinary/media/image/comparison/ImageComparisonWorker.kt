@@ -53,10 +53,7 @@ open public class ImageComparisonWorker : BasicEventHandler
     private var running: Boolean= false
 
     private var index2: Int= 0
-public constructor        (imageComparatorConstraintsInterface: ImageComparatorConstraintsInterface)
-
-        Updates for KMP build        
-        {
+public constructor        (imageComparatorConstraintsInterface: ImageComparatorConstraintsInterface){
     //var imageComparatorConstraintsInterface = imageComparatorConstraintsInterface
 this.imageComparatorConstraintsInterface= imageComparatorConstraintsInterface
 this.imageComparator= ImageComparator(imageComparatorConstraintsInterface)
@@ -66,10 +63,7 @@ this.imageComparator= ImageComparator(imageComparatorConstraintsInterface)
 
 open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -81,10 +75,7 @@ open fun isRunning()
 
 open fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var running = running
 this.running= running
 }
@@ -93,10 +84,7 @@ this.running= running
 
 open fun onCaptureEvent(capturedImageWorkerResultsEvent: CapturedImageWorkerResultsEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var capturedImageWorkerResultsEvent = capturedImageWorkerResultsEvent
 this.bufferedImageVector!!.add(capturedImageWorkerResultsEvent)
 
@@ -114,10 +102,7 @@ this.bufferedImageVector!!.add(capturedImageWorkerResultsEvent)
 
 open fun onEvent(allBinaryEventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryEventObject = allBinaryEventObject
 this.onCaptureEvent(allBinaryEventObject as CapturedImageWorkerResultsEvent)
 }
@@ -125,10 +110,7 @@ this.onCaptureEvent(allBinaryEventObject as CapturedImageWorkerResultsEvent)
 
 open fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.RUN)
@@ -186,10 +168,7 @@ logUtil!!.put(message, this, this.commonStrings!!.RUN)
 this.setRunning(false)
 logUtil!!.put(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
 }
 

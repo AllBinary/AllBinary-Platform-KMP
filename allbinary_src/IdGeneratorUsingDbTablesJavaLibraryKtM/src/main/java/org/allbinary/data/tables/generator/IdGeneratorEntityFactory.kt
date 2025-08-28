@@ -38,10 +38,7 @@ open public class IdGeneratorEntityFactory
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: IdGeneratorEntityInterface
-
-        Updates for KMP build        
-        {
+: IdGeneratorEntityInterface{
 
         try {
             
@@ -50,10 +47,7 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return org.allbinary.data.tables.generator.IdGeneratorEntity() as IdGeneratorEntityInterface
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -74,9 +68,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION, "ServerLicenseRequestEntityFactory", co
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

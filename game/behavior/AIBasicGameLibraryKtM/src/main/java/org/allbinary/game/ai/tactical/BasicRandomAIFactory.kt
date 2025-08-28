@@ -48,10 +48,7 @@ open public class BasicRandomAIFactory
                 @Throws(Exception::class)
             override fun getInstance(hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)
         //nullable =  from not(true or (false and false)) = 
-: ArtificialIntelligenceInterface
-
-        Updates for KMP build        
-        {
+: ArtificialIntelligenceInterface{
 var hashtable = hashtable
 var ownerLayerInterface = ownerLayerInterface
 var gameInput = gameInput

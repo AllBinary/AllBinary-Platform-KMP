@@ -40,10 +40,7 @@ open public class ImageSwtUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageSwtUtil
-
-        Updates for KMP build        
-        {
+: ImageSwtUtil{
 
 
 

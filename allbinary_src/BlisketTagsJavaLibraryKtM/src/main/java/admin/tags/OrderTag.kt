@@ -47,19 +47,13 @@ open public class OrderTag : CustomTagSupport {
     private var storeName: String
 
     private var propertiesHashMap: HashMap<Any, Any>
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 
 open fun setCommand(command: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var command = command
 this.command= command
 }
@@ -67,10 +61,7 @@ this.command= command
 
 open fun setStoreName(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.storeName= value
 }
@@ -80,10 +71,7 @@ this.storeName= value
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -107,20 +95,14 @@ open fun process()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
                             throw e
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to Process Order: "
 
@@ -147,10 +129,7 @@ open fun process()
             
 open fun setPaymentGateway()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             
@@ -174,20 +153,14 @@ open fun setPaymentGateway()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
                             throw e
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to setPaymentGateway for Order"
 
@@ -214,10 +187,7 @@ open fun setPaymentGateway()
             
 open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
         try {
             
@@ -268,10 +238,7 @@ this.propertiesHashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TagSupport.SKIP_BODY
 } catch(e: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 
 
@@ -280,10 +247,7 @@ AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
                         return SKIP_BODY
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 
 

@@ -41,10 +41,7 @@ open public class KeyPressesAI : BasicAI {
     var keys: Array<Integer?>
 public constructor        (hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
-                            : super(ownerLayerInterface, gameInput)
-
-        Updates for KMP build        
-        {
+                            : super(ownerLayerInterface, gameInput){
 var hashtable = hashtable
 var ownerLayerInterface = ownerLayerInterface
 var gameInput = gameInput
@@ -66,9 +63,6 @@ this.keys= arrayOfNulls(hashtable.size)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 keys[index]= hashtable.get(objectArray[index]!! as Object) as Integer
 }
@@ -79,10 +73,7 @@ keys[index]= hashtable.get(objectArray[index]!! as Object) as Integer
                 @Throws(Exception::class)
             override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allBinaryLayerManager = allBinaryLayerManager
 
     
@@ -95,9 +86,6 @@ var allBinaryLayerManager = allBinaryLayerManager
 
                         for (index in 0 until keys.size)
 
-        
-
-        Updates for KMP build        
         {
 super.processAI(keys[index]!!.toInt())
 }
@@ -112,10 +100,7 @@ super.processAI(keys[index]!!.toInt())
             
 open fun toggle()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(isOn())
@@ -137,10 +122,7 @@ open fun toggle()
             
 open fun disable()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 setOn(false)
 }
 
@@ -149,20 +131,14 @@ setOn(false)
             
 open fun enable()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 setOn(true)
 }
 
 
 open fun setOn(on: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var on = on
 this.on= on
 }
@@ -170,10 +146,7 @@ this.on= on
 
 open fun isOn()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 

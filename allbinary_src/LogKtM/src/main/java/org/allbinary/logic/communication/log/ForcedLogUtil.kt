@@ -36,10 +36,7 @@ open public class ForcedLogUtil
             
 open fun log(message: String, anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var message = message
 var anyType = anyType
 
@@ -49,10 +46,7 @@ var anyType = anyType
 
                             throw Exception(message)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 PreLogUtil.put(CommonStrings.getInstance()!!.EXCEPTION, anyType, "log", e)
 }
 

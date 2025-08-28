@@ -38,9 +38,6 @@ open public class GroupData
         }
             public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

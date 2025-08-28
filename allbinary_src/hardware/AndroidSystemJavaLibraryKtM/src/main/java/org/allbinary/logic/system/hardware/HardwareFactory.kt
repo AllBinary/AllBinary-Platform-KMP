@@ -42,10 +42,7 @@ open public class HardwareFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: HardwareFactory
-
-        Updates for KMP build        
-        {
+: HardwareFactory{
 
 
 
@@ -59,9 +56,6 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -70,10 +64,7 @@ private constructor        ()
             
 open fun getInstance(os: GenericOperatingSystem)
         //nullable =  from not(true or (false and false)) = 
-: HardwareInterface
-
-        Updates for KMP build        
-        {
+: HardwareInterface{
 var os = os
 
         try {
@@ -95,10 +86,7 @@ var os = os
 
                             throw Exception("No Hardware Imp for: " +os.getName())
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

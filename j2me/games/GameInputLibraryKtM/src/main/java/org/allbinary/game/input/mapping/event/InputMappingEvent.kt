@@ -34,10 +34,7 @@ open public class InputMappingEvent : AllBinaryEventObject {
     private var inputToGameKeyMapping: InputToGameKeyMapping = InputToGameKeyMapping.NULL_INPUT_TO_GAME_KEY_MAPPING
 public constructor        (anyType: Any)                        
 
-                            : super(anyType)
-
-        Updates for KMP build        
-        {
+                            : super(anyType){
 var anyType = anyType
 
 
@@ -48,10 +45,7 @@ var anyType = anyType
 
 open fun setInputToGameKeyMapping(inputToGameKeyMapping: InputToGameKeyMapping)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var inputToGameKeyMapping = inputToGameKeyMapping
 this.inputToGameKeyMapping= inputToGameKeyMapping
 }
@@ -59,10 +53,7 @@ this.inputToGameKeyMapping= inputToGameKeyMapping
 
 open fun getInputToGameKeyMapping()
         //nullable = true from not(false or (false and true)) = true
-: InputToGameKeyMapping
-
-        Updates for KMP build        
-        {
+: InputToGameKeyMapping{
 
 
 

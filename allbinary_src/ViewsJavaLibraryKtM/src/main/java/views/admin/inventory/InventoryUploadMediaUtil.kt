@@ -73,9 +73,6 @@ open public class InventoryUploadMediaUtil
     private var itemInterface: ItemInterface
 public constructor        (storeFrontInterface: StoreFrontInterface, itemInterface: ItemInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var storeFrontInterface = storeFrontInterface
 var itemInterface = itemInterface
@@ -88,10 +85,7 @@ this.itemInterface= itemInterface
             
 open fun saveFiles(byteArray: ByteArray, fileName: String, mediaData: MediaData)
         //nullable = true from not(false or (false and false)) = true
-: ItemInterface
-
-        Updates for KMP build        
-        {
+: ItemInterface{
 var byteArray = byteArray
 var fileName = fileName
 var mediaData = mediaData
@@ -317,10 +311,7 @@ logUtil!!.put(commonStrings!!.END, this, "saveFiles()")
 
 open fun setFileNames(fileName: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var fileName = fileName
 
     var stringBuffer: StringMaker = StringMaker()

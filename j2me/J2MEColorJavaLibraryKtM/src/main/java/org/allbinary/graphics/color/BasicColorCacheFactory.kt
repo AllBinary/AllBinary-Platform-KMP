@@ -40,10 +40,7 @@ open public class BasicColorCacheFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BasicColorCacheFactory
-
-        Updates for KMP build        
-        {
+: BasicColorCacheFactory{
 
 
 
@@ -57,19 +54,13 @@ open fun getInstance()
     private val hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun add(basicDefaultColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var basicDefaultColor = basicDefaultColor
 hashtable.put(Integer(basicDefaultColor!!.toInt()), basicDefaultColor)
 }
@@ -78,10 +69,7 @@ hashtable.put(Integer(basicDefaultColor!!.toInt()), basicDefaultColor)
 
 open fun getInstance(integer: Integer)
         //nullable =  from not(true or (false and false)) = 
-: BasicColor
-
-        Updates for KMP build        
-        {
+: BasicColor{
     //var integer = integer
 
     var basicColor: BasicColor = hashtable.get(integer as Object) as BasicColor

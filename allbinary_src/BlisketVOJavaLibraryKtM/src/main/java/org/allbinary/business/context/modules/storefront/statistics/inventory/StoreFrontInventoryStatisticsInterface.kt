@@ -34,15 +34,9 @@ open fun getNumber()
         //nullable = true from not(false or (false and true)) = true
 : Long
 
-        Updates for KMP build        
-        
-
 open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
 : Money
-
-        Updates for KMP build        
-        
 
 }
                 

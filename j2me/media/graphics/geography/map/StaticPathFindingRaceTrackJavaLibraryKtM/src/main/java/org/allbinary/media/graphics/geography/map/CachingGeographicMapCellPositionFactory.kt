@@ -30,10 +30,7 @@ open public class CachingGeographicMapCellPositionFactory : BasicGeographicMapCe
         
 protected constructor        (geographicMapInterface: BasicGeographicMap)                        
 
-                            : super(geographicMapInterface)
-
-        Updates for KMP build        
-        {
+                            : super(geographicMapInterface){
 var geographicMapInterface = geographicMapInterface
 
 
@@ -46,10 +43,7 @@ var geographicMapInterface = geographicMapInterface
             
 open fun createInstance(i_column: Int, i_row: Int, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
 var i_column = i_column
 var i_row = i_row
 var width = width

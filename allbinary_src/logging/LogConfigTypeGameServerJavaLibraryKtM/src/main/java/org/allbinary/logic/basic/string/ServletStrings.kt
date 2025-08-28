@@ -37,10 +37,7 @@ open public class ServletStrings
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ServletStrings
-
-        Updates for KMP build        
-        {
+: ServletStrings{
 
 
 

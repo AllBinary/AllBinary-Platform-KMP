@@ -41,10 +41,7 @@ open public class Waypoint2LogHelper
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: Waypoint2LogHelper
-
-        Updates for KMP build        
-        {
+: Waypoint2LogHelper{
 
 
 
@@ -62,10 +59,7 @@ open fun getInstance()
         
 open fun initRange(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, closeRange: Int, sensorRange: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
     //var closeRange = closeRange
     //var sensorRange = sensorRange
@@ -74,10 +68,7 @@ open fun initRange(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, cl
 
 open fun processPossibleTarget(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior2: WaypointBehaviorBase, layerInterface: PathFindingLayerInterface, anotherTargetDistance: Int, isShorterThanCurrentTargetDistance: Boolean, isCurrentTargetDestroyed: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
     //var unitWaypointBehavior2 = unitWaypointBehavior2
     //var layerInterface = layerInterface
@@ -89,10 +80,7 @@ open fun processPossibleTarget(associatedAdvancedRTSGameLayer: PathFindingLayerI
 
 open fun processPossibleTarget(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior2: WaypointBehaviorBase, layerInterface: PathFindingLayerInterface, anotherTargetDistance: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
     //var unitWaypointBehavior2 = unitWaypointBehavior2
     //var layerInterface = layerInterface
@@ -102,10 +90,7 @@ open fun processPossibleTarget(associatedAdvancedRTSGameLayer: PathFindingLayerI
 
 open fun processPossibleTargetCloser(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior2: WaypointBehaviorBase, layerInterface: PathFindingLayerInterface, anotherTargetDistance: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
     //var unitWaypointBehavior2 = unitWaypointBehavior2
     //var layerInterface = layerInterface
@@ -115,10 +100,7 @@ open fun processPossibleTargetCloser(associatedAdvancedRTSGameLayer: PathFinding
 
 open fun setTarget(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior2: WaypointBehaviorBase, layerInterface: PathFindingLayerInterface, anotherTargetDistance: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
     //var unitWaypointBehavior2 = unitWaypointBehavior2
     //var layerInterface = layerInterface
@@ -128,20 +110,14 @@ open fun setTarget(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, un
 
 open fun setTargetPath(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 }
 
 
 open fun setTargetPath(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior2: WaypointBehaviorBase)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
     //var unitWaypointBehavior2 = unitWaypointBehavior2
 }
@@ -149,10 +125,7 @@ open fun setTargetPath(associatedAdvancedRTSGameLayer: PathFindingLayerInterface
 
 open fun processWaypoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior2: WaypointBehaviorBase, targetLayer: PathFindingLayerInterface, size: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
     //var unitWaypointBehavior2 = unitWaypointBehavior2
     //var targetLayer = targetLayer
@@ -162,10 +135,7 @@ open fun processWaypoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterfa
 
 open fun processWaypointTracked(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior2: WaypointBehaviorBase)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
     //var unitWaypointBehavior2 = unitWaypointBehavior2
 }
@@ -173,10 +143,7 @@ open fun processWaypointTracked(associatedAdvancedRTSGameLayer: PathFindingLayer
 
 open fun processWaypointTracked(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
     //var geographicMapCellPosition = geographicMapCellPosition
 }
@@ -184,10 +151,7 @@ open fun processWaypointTracked(associatedAdvancedRTSGameLayer: PathFindingLayer
 
 open fun processWaypointTrackedWithoutProgress(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, reason: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
     //var reason = reason
 }
@@ -195,30 +159,21 @@ open fun processWaypointTrackedWithoutProgress(associatedAdvancedRTSGameLayer: P
 
 open fun wander(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 }
 
 
 open fun targetDestroyed(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 }
 
 
 open fun processTargeting(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
     //var dx = dx
     //var dy = dy
@@ -227,10 +182,7 @@ open fun processTargeting(associatedAdvancedRTSGameLayer: PathFindingLayerInterf
 
 open fun processTargetingNonWayPoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
     //var dx = dx
     //var dy = dy
@@ -239,10 +191,7 @@ open fun processTargetingNonWayPoint(associatedAdvancedRTSGameLayer: PathFinding
 
 open fun removeWaypoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior2: WaypointBehaviorBase, waypointLayer: PathFindingLayerInterface, reason: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
     //var unitWaypointBehavior2 = unitWaypointBehavior2
     //var waypointLayer = waypointLayer
@@ -252,10 +201,7 @@ open fun removeWaypoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterfac
 
 open fun removeWaypoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior2: WaypointBehaviorBase, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
     //var unitWaypointBehavior2 = unitWaypointBehavior2
     //var list = list
@@ -264,30 +210,21 @@ open fun removeWaypoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterfac
 
 open fun removeWaypointClear(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 }
 
 
 open fun clearTarget(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 }
 
 
 open fun addWaypointFromUser(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, advancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
     //var advancedRTSGameLayer = advancedRTSGameLayer
 }
@@ -295,10 +232,7 @@ open fun addWaypointFromUser(associatedAdvancedRTSGameLayer: PathFindingLayerInt
 
 open fun targetMovedSoRetarget(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 }
 

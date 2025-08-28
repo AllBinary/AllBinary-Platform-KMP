@@ -43,18 +43,12 @@ open public class AllBinaryOrientationSensor : AllBinarySensor {
 
 open fun setListener(completeMotionGestureInputEventListenerInterface: CompleteMotionGestureInputEventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var completeMotionGestureInputEventListenerInterface = completeMotionGestureInputEventListenerInterface
 this.listener= completeMotionGestureInputEventListenerInterface
 }
 
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 
@@ -62,10 +56,7 @@ public constructor        ()
             
 open fun getOrientation()
         //nullable = true from not(false or (false and true)) = true
-: Orientation
-
-        Updates for KMP build        
-        {
+: Orientation{
 
 
 

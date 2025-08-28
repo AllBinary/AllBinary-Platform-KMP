@@ -68,9 +68,6 @@ open public class SimpleStateTaxModule
     private var document: Document
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -79,10 +76,7 @@ public constructor        ()
             
 open fun getTaxRate(streetAddress: StreetAddress, storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
-: Float
-
-        Updates for KMP build        
-        {
+: Float{
 var streetAddress = streetAddress
 var storeFrontInterface = storeFrontInterface
 this.streetAddress= streetAddress
@@ -120,9 +114,6 @@ state= state.uppercase()
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
-        
-
-        Updates for KMP build        
         {
 
     var node: Node = nodeList!!.item(index)!!
@@ -186,10 +177,7 @@ state= state.uppercase()
 
 open fun isValid(streetAddress: StreetAddress, storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var streetAddress = streetAddress
 var storeFrontInterface = storeFrontInterface
 
@@ -228,9 +216,6 @@ this.document= DomDocumentHelper.create(data)
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
-        
-
-        Updates for KMP build        
         {
 
     var node: Node = nodeList!!.item(index)!!
@@ -312,10 +297,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.FALSE
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))

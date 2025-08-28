@@ -39,10 +39,7 @@ open public class GameConfigurationSingleton
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameConfigurationSingleton
-
-        Updates for KMP build        
-        {
+: GameConfigurationSingleton{
 
 
 
@@ -58,9 +55,6 @@ open fun getInstance()
     private var hashtable: Hashtable<Any, Any>
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 list= BasicArrayList()
 hashtable= Hashtable<Any, Any>()
@@ -69,10 +63,7 @@ hashtable= Hashtable<Any, Any>()
 
 open fun getInstance(name: String)
         //nullable =  from not(true or (false and false)) = 
-: GameConfiguration
-
-        Updates for KMP build        
-        {
+: GameConfiguration{
 var name = name
 
 
@@ -84,10 +75,7 @@ var name = name
 
 open fun getOptionsBasicArrayList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 
@@ -98,10 +86,7 @@ open fun getOptionsBasicArrayList()
 
 open fun add(gameConfiguration: GameConfiguration)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gameConfiguration = gameConfiguration
 list.add(gameConfiguration)
 }
@@ -109,10 +94,7 @@ list.add(gameConfiguration)
 
 open fun getHashtable()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>
-
-        Updates for KMP build        
-        {
+: Hashtable<Any, Any>{
 
 
 

@@ -37,10 +37,7 @@ open public class StoreFrontsData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: StoreFrontsData
-
-        Updates for KMP build        
-        {
+: StoreFrontsData{
 
 
 

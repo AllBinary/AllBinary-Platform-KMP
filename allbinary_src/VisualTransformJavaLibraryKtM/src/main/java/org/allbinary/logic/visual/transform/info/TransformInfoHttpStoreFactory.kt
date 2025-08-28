@@ -40,10 +40,7 @@ open public class TransformInfoHttpStoreFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TransformInfoHttpStoreFactory
-
-        Updates for KMP build        
-        {
+: TransformInfoHttpStoreFactory{
 
 
 
@@ -55,9 +52,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -66,10 +60,7 @@ open fun getInstance()
             
 open fun getInstance(databaseHashMap: HashMap<Any, Any>, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
-: TransformInfoInterface
-
-        Updates for KMP build        
-        {
+: TransformInfoInterface{
 var databaseHashMap = databaseHashMap
 var propertiesHashMap = propertiesHashMap
 var pageContext = pageContext

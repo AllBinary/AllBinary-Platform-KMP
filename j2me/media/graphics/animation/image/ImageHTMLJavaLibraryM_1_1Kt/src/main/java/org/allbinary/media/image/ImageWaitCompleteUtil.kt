@@ -46,20 +46,14 @@ open public class ImageWaitCompleteUtil : ImageCompleteUtil {
     private val timeDelayHelper: TimeDelayHelper = TimeDelayHelper(18000)
 
     private val allTimeDelayHelper: TimeDelayHelper = TimeDelayHelper(120000)
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 
                 @Throws(Exception::class)
             override fun waitFor(image: Image, name: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var image = image
     //var name = name
 this.timeDelayHelper!!.setStartTime()
@@ -71,10 +65,7 @@ this.waitFor(image, name, this.timeDelayHelper)
             
 open fun handleTimeout(name: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var name = name
 
     
@@ -95,10 +86,7 @@ open fun handleTimeout(name: String)
             
 open fun waitFor(image: Image, name: String, timeDelayHelper: TimeDelayHelper)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var image = image
     //var name = name
     //var timeDelayHelper = timeDelayHelper
@@ -110,9 +98,6 @@ open fun waitFor(image: Image, name: String, timeDelayHelper: TimeDelayHelper)
 
 
         while(!playnCoreImage!!.isReady() || playnCoreImage!!.width() +playnCoreImage!!.height() <= 0)
-        
-
-        Updates for KMP build        
         {
 
     
@@ -144,10 +129,7 @@ open fun waitFor(image: Image, name: String, timeDelayHelper: TimeDelayHelper)
             
 open fun waitForAll()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.allTimeDelayHelper!!.setStartTime()
 
     var hashtable: Hashtable<Any, Any> = GameFeatureImageCacheFactory.getInstance()!!.getHashtableP()!!
@@ -166,9 +148,6 @@ PreLogUtil.put("Image Total: " +size, this, "waitForAll")
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 this.waitFor(hashtable.get(objectArray[index]!!) as Image, objectArray[index]!! as String, this.allTimeDelayHelper)
 }

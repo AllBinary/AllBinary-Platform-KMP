@@ -41,10 +41,7 @@ open public class CssElementsValidationFactory
             
 open fun getInstance(cssElementStyleNodeList: Vector)
         //nullable =  from not(true or (false and false)) = 
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
     //var cssElementStyleNodeList = cssElementStyleNodeList
 
     var styles: Vector = Vector()
@@ -64,9 +61,6 @@ open fun getInstance(cssElementStyleNodeList: Vector)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 cssElementStyleNode= cssElementStyleNodeList!!.get(index) as Node
 cssValidationInterface= CssElementValidationFactory.getInstance(cssElementStyleNode) as ValidationInterface
@@ -83,10 +77,7 @@ styles.add(cssValidationInterface)
 
 open fun getInstance(hashMap: HashMap<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
     //var hashMap = hashMap
 
     var styles: Vector = Vector()
@@ -102,9 +93,6 @@ open fun getInstance(hashMap: HashMap<Any, Any>)
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

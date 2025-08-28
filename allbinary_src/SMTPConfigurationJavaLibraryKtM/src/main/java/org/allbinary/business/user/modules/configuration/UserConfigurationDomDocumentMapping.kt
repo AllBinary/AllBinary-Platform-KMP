@@ -39,9 +39,6 @@ open public class UserConfigurationDomDocumentMapping
     private var userConfigurationInterface: UserConfigurationInterface
 public constructor        (userConfigurationInterface: UserConfigurationInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var userConfigurationInterface = userConfigurationInterface
 this.userConfigurationInterface= userConfigurationInterface
@@ -52,10 +49,7 @@ this.userConfigurationInterface= userConfigurationInterface
             
 open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
     var document: Document = DomDocumentHelper.create()!!
 
@@ -76,10 +70,7 @@ document.appendChild(node)
             
 open fun toDomDocumentString()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

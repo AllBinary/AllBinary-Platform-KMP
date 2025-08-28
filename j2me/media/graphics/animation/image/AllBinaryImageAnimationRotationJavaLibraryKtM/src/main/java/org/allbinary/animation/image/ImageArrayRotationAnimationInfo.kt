@@ -44,9 +44,6 @@ open public class ImageArrayRotationAnimationInfo
     private var dy: Int
 public constructor        (imageArray: Array<Image?>, angleIncrement: Int, totalAngle: Int, dx: Int, dy: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var imageArray = imageArray
 var angleIncrement = angleIncrement
@@ -63,10 +60,7 @@ this.dy= dy
 
 open fun setImageArray(imageArray: Array<Image?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var imageArray = imageArray
 this.imageArray= imageArray
 }
@@ -74,10 +68,7 @@ this.imageArray= imageArray
 
 open fun getImageArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<Image?>
-
-        Updates for KMP build        
-        {
+: Array<Image?>{
 
 
 
@@ -88,10 +79,7 @@ open fun getImageArray()
 
 open fun getAngleInfoP()
         //nullable = true from not(false or (false and true)) = true
-: AngleInfo
-
-        Updates for KMP build        
-        {
+: AngleInfo{
 
 
 
@@ -102,10 +90,7 @@ open fun getAngleInfoP()
 
 open fun setTotalAngle(totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var totalAngle = totalAngle
 this.totalAngle= totalAngle
 }
@@ -113,10 +98,7 @@ this.totalAngle= totalAngle
 
 open fun getTotalAngle()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -127,10 +109,7 @@ open fun getTotalAngle()
 
 open fun setDx(dx: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var dx = dx
 this.dx= dx
 }
@@ -138,10 +117,7 @@ this.dx= dx
 
 open fun getDx()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -152,10 +128,7 @@ open fun getDx()
 
 open fun setDy(dy: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var dy = dy
 this.dy= dy
 }
@@ -163,10 +136,7 @@ this.dy= dy
 
 open fun getDy()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

@@ -47,9 +47,6 @@ open public class NativeLibraryHelperWrapper
     private var anyType: Any
 public constructor        (libraryName: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var libraryName = libraryName
 this.setLibraryName(libraryName)
@@ -60,10 +57,7 @@ this.setLibraryName(libraryName)
             
 open fun load()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var params: Array<Any?> = arrayOfNulls(1)
 
@@ -94,10 +88,7 @@ method.invoke(anyType,
 
 open fun unload()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.anyType= 
                                         null
                                     
@@ -110,10 +101,7 @@ System.gc()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -124,10 +112,7 @@ override fun toString()
 
 open fun getLibraryName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -138,10 +123,7 @@ open fun getLibraryName()
 
 open fun setLibraryName(libraryName: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var libraryName = libraryName
 this.libraryName= libraryName
 }

@@ -30,10 +30,7 @@ open public class InApplicationPurchaseFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: InApplicationPurchaseFactory
-
-        Updates for KMP build        
-        {
+: InApplicationPurchaseFactory{
 
 
 
@@ -45,19 +42,13 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun init(anyType: Any, stateObject: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var anyType = anyType
 var stateObject = stateObject
 }
@@ -65,10 +56,7 @@ var stateObject = stateObject
 
 open fun onCreate(anyType: Any, stateObject: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var anyType = anyType
 var stateObject = stateObject
 }
@@ -76,19 +64,13 @@ var stateObject = stateObject
 
 open fun onStart()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun onResult(requestCode: Int, resultCode: Int, data: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var requestCode = requestCode
     //var resultCode = resultCode
     //var data = data
@@ -97,48 +79,33 @@ open fun onResult(requestCode: Int, resultCode: Int, data: Any)
 
 open fun onSaveState(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var anyType = anyType
 }
 
 
 open fun onStop()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun onDestroy()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun purchase(lockableFeature: LockableFeature)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var lockableFeature = lockableFeature
 }
 
 
 open fun isPurchased(lockableFeature: LockableFeature)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var lockableFeature = lockableFeature
 
 
@@ -150,20 +117,14 @@ var lockableFeature = lockableFeature
 
 open fun add(lockableFeature: LockableFeature)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var lockableFeature = lockableFeature
 }
 
 
 open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -174,10 +135,7 @@ open fun getUserName()
 
 open fun isEnabled()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 

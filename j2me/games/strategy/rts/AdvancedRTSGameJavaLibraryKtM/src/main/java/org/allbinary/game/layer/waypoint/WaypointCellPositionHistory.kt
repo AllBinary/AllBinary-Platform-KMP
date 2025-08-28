@@ -40,10 +40,7 @@ open public class WaypointCellPositionHistory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: WaypointCellPositionHistory
-
-        Updates for KMP build        
-        {
+: WaypointCellPositionHistory{
 
 
 
@@ -65,10 +62,7 @@ open fun getInstance()
 
 open fun add(cellPosition: CellPosition, layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var cellPosition = cellPosition
 var layerInterface = layerInterface
 this.positionList!!.add(cellPosition)
@@ -78,10 +72,7 @@ this.layerList!!.add(layerInterface)
 
 open fun add(list: BasicArrayList, layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var list = list
 var layerInterface = layerInterface
 
@@ -90,9 +81,6 @@ var layerInterface = layerInterface
 
                         for (index in list.size() -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 this.add(list.get(index) as CellPosition, layerInterface)
 }
@@ -102,10 +90,7 @@ this.add(list.get(index) as CellPosition, layerInterface)
 
 open fun remove(cellPosition: CellPosition)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var cellPosition = cellPosition
 
     var index: Int = this.positionList!!.indexOf(cellPosition)!!
@@ -125,19 +110,13 @@ this.layerList!!.remove(index)
 
 open fun remove(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var layerInterface = layerInterface
 
     var index: Int = 0
 
 
         while(index !=  -1)
-        
-
-        Updates for KMP build        
         {
 index= this.layerList!!.indexOf(layerInterface)
 
@@ -157,10 +136,7 @@ this.layerList!!.remove(index)
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.positionList!!.clear()
 this.layerList!!.clear()
 }
@@ -168,10 +144,7 @@ this.layerList!!.clear()
 
 open fun isCellPositionWithDrop(cellPosition: CellPosition)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var cellPosition = cellPosition
 
 
@@ -183,10 +156,7 @@ var cellPosition = cellPosition
 
 open fun anyCellPositionWithDrop(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var list = list
 
 
@@ -194,9 +164,6 @@ var list = list
 
                         for (index in list.size() -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -223,10 +190,7 @@ var list = list
 
 open fun getLayerInterface(cellPosition: CellPosition)
         //nullable = true from not(false or (false and false)) = true
-: AllBinaryLayer
-
-        Updates for KMP build        
-        {
+: AllBinaryLayer{
 var cellPosition = cellPosition
 
     var index: Int = this.positionList!!.indexOf(cellPosition)!!

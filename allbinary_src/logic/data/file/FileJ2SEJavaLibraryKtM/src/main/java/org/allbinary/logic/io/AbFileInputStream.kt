@@ -35,10 +35,7 @@ open public class AbFileInputStream : FileInputStream {
         
 public constructor        (name: String)                        
 
-                            : super(name)
-
-        Updates for KMP build        
-        {
+                            : super(name){
 var name = name
 
 
@@ -48,10 +45,7 @@ var name = name
 
 public constructor        (file: AbFile)                        
 
-                            : super(AbFileNativeUtil.get(file))
-
-        Updates for KMP build        
-        {
+                            : super(AbFileNativeUtil.get(file)){
 var file = file
 
 
@@ -61,10 +55,7 @@ var file = file
 
 protected constructor        (file: File)                        
 
-                            : super(file)
-
-        Updates for KMP build        
-        {
+                            : super(file){
 var file = file
 
 

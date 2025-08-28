@@ -28,10 +28,7 @@ open public class MultipleScrollSelectionHorizontalForm : ScrollSelectionForm {
     private val backgroundColor: Int = BasicColorFactory.getInstance()!!.TRANSPARENT_GREY.toInt()!!
 public constructor        (title: String, items: Array<CustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(title, items, formPaintableFactory, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor)
-
-        Updates for KMP build        
-        {
+                            : super(title, items, formPaintableFactory, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor){
     //var title = title
     //var items = items
     //var formPaintableFactory = formPaintableFactory
@@ -48,10 +45,7 @@ public constructor        (title: String, items: Array<CustomItem?>, formPaintab
 
 public constructor        (title: String, items: Array<CustomItem?>, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(title, items, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor)
-
-        Updates for KMP build        
-        {
+                            : super(title, items, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor){
     //var title = title
     //var items = items
     //var rectangle = rectangle
@@ -67,10 +61,7 @@ public constructor        (title: String, items: Array<CustomItem?>, rectangle: 
 
 override fun getStartIndex()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -80,10 +71,7 @@ override fun getStartIndex()
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
 
         try {
@@ -129,9 +117,6 @@ graphics.drawString(this.getTitle(), x, y -myFont!!.DEFAULT_CHAR_HEIGHT, 0)
 
                         for (index in start until size)
 
-        
-
-        Updates for KMP build        
         {
 item= this.get(index) as CustomItemInterface
 
@@ -178,10 +163,7 @@ this.paintable.paint(graphics, index, dx, dy)
 }
 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 PreLogUtil.put(commonStrings!!.EXCEPTION, this, canvasStrings!!.PAINT)
 }
 

@@ -52,10 +52,7 @@ open public class MusicManager
                                 
 open override fun playerUpdate(player: Player, event: String, eventData: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var player = player
     //var event = event
     //var eventData = eventData
@@ -103,9 +100,6 @@ PreLogUtil.put(event, this, commonStrings!!.PROCESS)
     private var stopped: Boolean = true
 public constructor        (musicServiceClass: KClass<*>, songList: BasicArrayList)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var musicServiceClass = musicServiceClass
     //var songList = songList
@@ -115,10 +109,7 @@ this.songList= songList
 
 open fun startNewSong()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(this.nextSongSound == NoSound.getInstance())
@@ -137,10 +128,7 @@ this.process()
 
 open fun nextSong(nextSongSound: Sound, leftVolume: Int, rightVolume: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var nextSongSound = nextSongSound
     //var leftVolume = leftVolume
     //var rightVolume = rightVolume
@@ -154,20 +142,14 @@ this.stopped= false
 
 open fun reset()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.reset= true
 }
 
 
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             
@@ -312,10 +294,7 @@ this.currentSongSound!!.getPlayerP()!!.start()
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var resource: String = StringUtil.getInstance()!!.EMPTY_STRING
 
@@ -338,17 +317,11 @@ PreLogUtil.put(commonStrings!!.EXCEPTION_LABEL +resource, this, commonStrings!!.
             
 open fun waitForStateChange(endingCurrentSongSound: Sound, startingCurrentSongSound: Sound)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var endingCurrentSongSound = endingCurrentSongSound
     //var startingCurrentSongSound = startingCurrentSongSound
 
         while(endingCurrentSongSound!!.getPlayerP()!!.getState() == Player.STARTED)
-        
-
-        Updates for KMP build        
         {
 PreLogUtil.put(WAITING_FOR_MEDIA_TO_END, this, commonStrings!!.PROCESS)
 Thread.sleep(100)
@@ -364,10 +337,7 @@ startingCurrentSongSound!!.getPlayerP()!!.start()
             
 open fun stop()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             
@@ -389,10 +359,7 @@ this.timeDelayHelper!!.setStartTime(0)
 PreLogUtil.put(StringMaker().
                             append(commonStrings!!.END)!!.append(StringUtil.getInstance()!!.toString(currentSongSound))!!.toString(), this, commonStrings!!.END)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var resource: String = StringUtil.getInstance()!!.EMPTY_STRING
 

@@ -49,9 +49,6 @@ open public class ColorsView
     val delta: Int = 20
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -60,10 +57,7 @@ public constructor        ()
             
 open fun getColorNode(document: Document, redIndex: Int, greenIndex: Int, blueIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 var redIndex = redIndex
 var greenIndex = greenIndex
@@ -116,10 +110,7 @@ hexColorStringBuffer!!.append(blueIndex, HEXRADIX.toString())
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var node: Node = ModDomHelper.createNameValueNodes(document, ColorsData.getInstance()!!.NAME, "RGB Colors In Hex")!!
@@ -134,9 +125,6 @@ node.appendChild(blackNode)
 
                         for (index in 0 until MAX)
 
-        
-
-        Updates for KMP build        
         {
 
     var hexColorStringBuffer: StringMaker = StringMaker()
@@ -187,9 +175,6 @@ node.appendChild(whiteNode)
 
                         for (blueIndex in MAX /2 until MAX)
 
-        
-
-        Updates for KMP build        
         {
 
 
@@ -197,9 +182,6 @@ node.appendChild(whiteNode)
 
                         for (greenIndex in 0 until MAX /2)
 
-        
-
-        Updates for KMP build        
         {
 
 
@@ -207,9 +189,6 @@ node.appendChild(whiteNode)
 
                         for (redIndex in 0 until MAX /2)
 
-        
-
-        Updates for KMP build        
         {
 node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
 }
@@ -224,9 +203,6 @@ node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
 
                         for (redIndex in MAX /2 until MAX)
 
-        
-
-        Updates for KMP build        
         {
 
 
@@ -234,9 +210,6 @@ node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
 
                         for (greenIndex in 0 until MAX /2)
 
-        
-
-        Updates for KMP build        
         {
 
 
@@ -244,9 +217,6 @@ node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
 
                         for (blueIndex in 0 until MAX /2)
 
-        
-
-        Updates for KMP build        
         {
 node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
 }
@@ -261,9 +231,6 @@ node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
 
                         for (greenIndex in MAX /2 until MAX)
 
-        
-
-        Updates for KMP build        
         {
 
 
@@ -271,9 +238,6 @@ node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
 
                         for (redIndex in 0 until MAX /2)
 
-        
-
-        Updates for KMP build        
         {
 
 
@@ -281,9 +245,6 @@ node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
 
                         for (blueIndex in 0 until MAX /2)
 
-        
-
-        Updates for KMP build        
         {
 node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
 }
@@ -298,9 +259,6 @@ node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
 
                         for (greenIndex in 0 until MAX)
 
-        
-
-        Updates for KMP build        
         {
 
 
@@ -308,9 +266,6 @@ node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
 
                         for (redIndex in 0 until MAX)
 
-        
-
-        Updates for KMP build        
         {
 
 
@@ -318,9 +273,6 @@ node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
 
                         for (blueIndex in 0 until MAX)
 
-        
-
-        Updates for KMP build        
         {
 node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
 }

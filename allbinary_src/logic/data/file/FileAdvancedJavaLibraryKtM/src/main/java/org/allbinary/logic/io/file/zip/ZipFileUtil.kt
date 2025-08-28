@@ -51,10 +51,7 @@ open public class ZipFileUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ZipFileUtil
-
-        Updates for KMP build        
-        {
+: ZipFileUtil{
 
 
 
@@ -76,10 +73,7 @@ open fun getInstance()
 
 open fun create(outFilename: String, fileBasicArrayList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var outFilename = outFilename
 var fileBasicArrayList = fileBasicArrayList
 
@@ -124,9 +118,6 @@ zipFile!!.createNewFile()
 
                         for (i in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var file: AbFile = fileBasicArrayList!!.get(i) as AbFile
@@ -157,10 +148,7 @@ streamUtil!!.get(fileInputStream, outputStream, byteArray)
 outputStream!!.closeEntry()
 streamUtil!!.close(fileInputStream)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put("Skipping File (Probably Local): " +file.getPath(), this, "create()")
 }
 
@@ -172,10 +160,7 @@ current++
 
 streamUtil!!.close(outputStream)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "create", e)
 }
 
@@ -186,10 +171,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "create", e)
             
 open fun unzip(path: String, zipFile: AbFile, fileName: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var path = path
 var zipFile = zipFile
 var fileName = fileName
@@ -217,9 +199,6 @@ var fileName = fileName
         while((zipEntry= inputStream!!.getNextEntry()) != 
                                     null
                                 )
-        
-
-        Updates for KMP build        
         {
 
     var entryName: String = zipEntry!!.getName()!!

@@ -56,10 +56,7 @@ open public class WorkFlowEntity : AbSqlBean
     private val METHOD_UPDATE: String = "update"
 public constructor        ()                        
 
-                            : super(UserDbInitInfo())
-
-        Updates for KMP build        
-        {
+                            : super(UserDbInitInfo()){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -70,10 +67,7 @@ this.setTableName(tableName)
 
 open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var values = values
 
         try {
@@ -88,10 +82,7 @@ open fun insert(values: Vector)
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -108,10 +99,7 @@ open fun insert(values: Vector)
 
 open fun delete(name: String, storeName: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var name = name
     //var storeName = storeName
 
@@ -132,10 +120,7 @@ super.deleteWhere(keysAndValues)
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -154,10 +139,7 @@ super.deleteWhere(keysAndValues)
             
 open fun get(name: String, storeName: String)
         //nullable = true from not(false or (false and false)) = true
-: WorkFlowInterface
-
-        Updates for KMP build        
-        {
+: WorkFlowInterface{
     //var name = name
     //var storeName = storeName
 
@@ -176,10 +158,7 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return DbWorkFlowFactory.getInstance()!!.getInstance(abeClientInformation, hashMap) as WorkFlowInterface
 } catch(e: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -195,10 +174,7 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
                             throw e
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -219,10 +195,7 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
 
 open fun get(storeName: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 var storeName = storeName
 
         try {
@@ -245,9 +218,6 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
 
                         for (i in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var workFlowHashMap: HashMap<Any, Any> = hashMapVector!!.get(i as Object) as HashMap<Any, Any>
@@ -271,10 +241,7 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return workFlowsVector
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -296,10 +263,7 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
 
 open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var updatedValues = updatedValues
 
         try {
@@ -310,10 +274,7 @@ wherekeysAndValues!!.put(WorkFlowData.getInstance()!!.NAME, updatedValues!!.get(
 wherekeysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, updatedValues!!.get(StoreFrontData.getInstance()!!.NAME) as String)
 super.updateWhere(wherekeysAndValues, updatedValues)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -330,10 +291,7 @@ super.updateWhere(wherekeysAndValues, updatedValues)
 
 open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var workFlowData: WorkFlowData = WorkFlowData.getInstance()!!
 
@@ -351,10 +309,7 @@ stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.appe
 
 open fun createTable()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -365,10 +320,7 @@ open fun createTable()
 
 open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

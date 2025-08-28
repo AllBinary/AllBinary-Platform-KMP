@@ -38,10 +38,7 @@ open public class GeneratorStoreFrontContextView : HttpStoreComponentView {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(transformInfoInterface)
-
-        Updates for KMP build        
-        {
+                            : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
 
 
@@ -63,10 +60,7 @@ var transformInfoInterface = transformInfoInterface
             
 open fun view(group: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var group = group
 
     var result: String = TransformsGeneratorUtil.getInstance()!!.generateComponentsFromObjectConfig(this.abeClientInformation, this.getTransformInfoInterface(), group)!!
@@ -100,10 +94,7 @@ var group = group
             
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -112,10 +103,7 @@ open fun view()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.view(TransformInfosData.getInstance()!!.ALL)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))

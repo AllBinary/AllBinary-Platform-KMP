@@ -68,10 +68,7 @@ open public class LazyImageRotationAnimation : RotationAnimation {
     var scaleProperties: ScaleProperties = ScaleProperties.instance
 public constructor        (layoutIndex: Int, instanceId: Int, scaleProperties: ScaleProperties, animationInterfaceFactoryInterface: BaseImageAnimationFactory, animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(animationBehavior){
     //var layoutIndex = layoutIndex
     //var instanceId = instanceId
     //var scaleProperties = scaleProperties
@@ -94,10 +91,7 @@ NULL_INDEX_ANIMATION= object: NullIndexedAnimation(animationBehavior)
                                 
 open override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var x = x
     //var y = y
@@ -112,20 +106,14 @@ animation= object: IndexedAnimation(animationBehavior)
 
 open override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var index = index
 this.index= index
 }
 
 open override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -135,10 +123,7 @@ open override fun getFrame()
 
 open override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var x = x
     //var y = y
@@ -147,10 +132,7 @@ open override fun paint(graphics: Graphics, x: Int, y: Int)
             ImageCacheFactory.getInstance()!!.insertFirst(this@LazyImageRotationAnimation)
 animation= NULL_INDEX_ANIMATION
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
 }
 
@@ -158,10 +140,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
 
 open override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var x = x
     //var y = y
@@ -171,10 +150,7 @@ open override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
             ImageCacheFactory.getInstance()!!.insertFirst(this@LazyImageRotationAnimation)
 animation= NULL_INDEX_ANIMATION
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
 }
 
@@ -187,10 +163,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
 
 open fun setRealAnimation()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             
@@ -200,10 +173,7 @@ this.animationInterfaceFactoryInterface!!.setInitialScale(scaleProperties)
 this.animation= this.animationInterfaceFactoryInterface!!.getInstance(this.instanceId) as IndexedAnimation
 this.animation.setState(animation)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, SET_REAL_ANIMATION, e)
 }
 
@@ -211,10 +181,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, SET_REAL_ANIMATION, e)
 
 override fun setScale(scaleX: Float, scaleY: Float)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var scaleX = scaleX
     //var scaleY = scaleY
 this.animation.setScale(scaleX, scaleY)
@@ -222,10 +189,7 @@ this.animation.setScale(scaleX, scaleY)
 
 override fun getAnimationBehavior()
         //nullable = true from not(false or (false and true)) = true
-: AnimationBehavior
-
-        Updates for KMP build        
-        {
+: AnimationBehavior{
 
 
 
@@ -237,50 +201,35 @@ override fun getAnimationBehavior()
                 @Throws(Exception::class)
             override fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
 this.animation.set(gl)
 }
 
 override fun setAlpha(alpha: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var alpha = alpha
 this.animation.setAlpha(alpha)
 }
 
 override fun setDx(dx: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var dx = dx
 this.animation.setDx(dx)
 }
 
 override fun setDy(dy: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var dy = dy
 this.animation.setDy(dy)
 }
 
 override fun setMaxScale(maxScaleX: Float, maxScaleY: Float)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var maxScaleX = maxScaleX
     //var maxScaleY = maxScaleY
 this.animation.setMaxScale(maxScaleX, maxScaleY)
@@ -288,20 +237,14 @@ this.animation.setMaxScale(maxScaleX, maxScaleY)
 
 override fun changeBasicColor(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var basicColor = basicColor
 this.animation.changeBasicColor(basicColor)
 }
 
 override fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor
-
-        Updates for KMP build        
-        {
+: BasicColor{
 
 
 
@@ -311,10 +254,7 @@ override fun getBasicColorP()
 
 override fun getChangeBasicColor()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor
-
-        Updates for KMP build        
-        {
+: BasicColor{
 
 
 
@@ -324,10 +264,7 @@ override fun getChangeBasicColor()
 
 override fun getChangeColor()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -337,10 +274,7 @@ override fun getChangeColor()
 
 override fun getColor()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -350,10 +284,7 @@ override fun getColor()
 
 override fun getDx()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -363,10 +294,7 @@ override fun getDx()
 
 override fun getDy()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -376,10 +304,7 @@ override fun getDy()
 
 override fun isThreed()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -391,38 +316,26 @@ override fun isThreed()
                 @Throws(Exception::class)
             override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.animation.nextFrame()
 }
 
 override fun reset()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.animation.reset()
 }
 
 override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var index = index
 this.animation.setFrame(index)
 }
 
 override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -434,10 +347,7 @@ override fun getFrame()
                 @Throws(Exception::class)
             override fun getAnimationSize()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -447,10 +357,7 @@ override fun getFrame()
 
 override fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -460,19 +367,13 @@ override fun getSize()
 
 override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.animation.previousFrame()
 }
 
 override fun isLastFrame()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -482,20 +383,14 @@ override fun isLastFrame()
 
 override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var sequence = sequence
 this.animation.setSequence(sequence)
 }
 
 override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
-: IntArray
-
-        Updates for KMP build        
-        {
+: IntArray{
 
 
 
@@ -505,10 +400,7 @@ override fun getSequence()
 
 override fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -519,10 +411,7 @@ override fun getWidth()
 
 open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var x = x
     //var y = y
@@ -530,10 +419,7 @@ open fun paint(graphics: Graphics, x: Int, y: Int)
         try {
             this.animation.paint(graphics, x, y)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS, e)
 }
 
@@ -542,10 +428,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS, e)
 
 open fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var x = x
     //var y = y
@@ -554,10 +437,7 @@ open fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
         try {
             this.animation.paintThreed(graphics, x, y, z)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS, e)
 }
 
@@ -565,10 +445,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS, e)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 

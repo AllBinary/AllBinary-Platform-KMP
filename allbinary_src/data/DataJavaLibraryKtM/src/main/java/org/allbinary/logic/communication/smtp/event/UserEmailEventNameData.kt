@@ -92,10 +92,7 @@ open public class UserEmailEventNameData
 
 open fun getInstance(userEmailEventNameString: String)
         //nullable =  from not(true or (false and false)) = 
-: UserEmailEventNameData
-
-        Updates for KMP build        
-        {
+: UserEmailEventNameData{
 var userEmailEventNameString = userEmailEventNameString
 
     var userEmailEventNameData: UserEmailEventNameData = UserEmailEventNameData.userNameEvenNameHashMap!!.get(userEmailEventNameString as Object) as UserEmailEventNameData
@@ -133,9 +130,6 @@ var userEmailEventNameString = userEmailEventNameString
     private var eventHandlerName: String
 public constructor        (eventHandlerName: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var eventHandlerName = eventHandlerName
 this.eventHandlerName= eventHandlerName
@@ -147,10 +141,7 @@ this.userNameEvenNameHashMap!!.put(this.eventHandlerName, this)
 
 open fun initNextId()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.eventNameId= UserEmailEventNameData.nextId
 UserEmailEventNameData.nextId++
 }
@@ -158,10 +149,7 @@ UserEmailEventNameData.nextId++
 
 open fun isEvent(userEmailEventNameString: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var userEmailEventNameString = userEmailEventNameString
 
 
@@ -172,10 +160,7 @@ var userEmailEventNameString = userEmailEventNameString
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

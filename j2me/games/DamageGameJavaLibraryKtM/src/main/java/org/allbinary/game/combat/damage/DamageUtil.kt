@@ -41,10 +41,7 @@ open public class DamageUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DamageUtil
-
-        Updates for KMP build        
-        {
+: DamageUtil{
 
 
 
@@ -60,9 +57,6 @@ open fun getInstance()
     val COLLIDE: String = "collide"
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -71,10 +65,7 @@ private constructor        ()
             
 open fun process(damageableInterface: DamageableInterface, damageableInterface2: DamageableInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var damageableInterface = damageableInterface
 var damageableInterface2 = damageableInterface2
 damageableInterface!!.damage(damageableInterface2!!.getDamage(0), 0)
@@ -85,10 +76,7 @@ damageableInterface!!.damage(damageableInterface2!!.getDamage(0), 0)
             
 open fun debugDamage(collidableInterfaceCompositeInterface1: CollidableCompositeLayer, collidableInterfaceCompositeInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var collidableInterfaceCompositeInterface1 = collidableInterfaceCompositeInterface1
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 

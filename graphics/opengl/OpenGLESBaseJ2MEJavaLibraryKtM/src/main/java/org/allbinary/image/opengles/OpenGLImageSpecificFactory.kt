@@ -40,10 +40,7 @@ open public class OpenGLImageSpecificFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLImageSpecificFactory
-
-        Updates for KMP build        
-        {
+: OpenGLImageSpecificFactory{
 
 
 
@@ -65,10 +62,7 @@ open fun getInstance()
 
 open fun setImageFactory(imageFactory: OpenGLImageFactory)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var imageFactory = imageFactory
 this.imageFactory= imageFactory
 PreLogUtil.put(StringMaker().
@@ -78,10 +72,7 @@ PreLogUtil.put(StringMaker().
 
 open fun getImageFactory()
         //nullable = true from not(false or (false and true)) = true
-: OpenGLImageFactory
-
-        Updates for KMP build        
-        {
+: OpenGLImageFactory{
 
 
 

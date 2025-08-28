@@ -45,9 +45,6 @@ open public class KeyValueDrawString
     private var value: String = StringUtil.getInstance()!!.EMPTY_STRING
 public constructor        (label: String, x: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var label = label
 var x = x
@@ -60,10 +57,7 @@ this.valueX= this.labelWidth +x
 
 open fun paint(graphics: Graphics, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var y = y
 graphics.drawString(this.LABEL, this.labelX, y, 0)
@@ -73,10 +67,7 @@ graphics.drawString(this.value, this.valueX, y, 0)
 
 open fun update(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 
     

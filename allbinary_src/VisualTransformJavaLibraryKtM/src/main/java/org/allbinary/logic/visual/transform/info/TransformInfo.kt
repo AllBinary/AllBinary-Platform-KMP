@@ -89,17 +89,11 @@ open public class TransformInfo
     private var data: String = StringUtil.getInstance()!!.EMPTY_STRING
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 public constructor        (name: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var name = name
 this.setName(name)
@@ -107,9 +101,6 @@ this.setName(name)
 
 public constructor        (name: String, objectFileName: String, objectConfigFileName: String, templateFileName: String, dataFileName: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var name = name
 var objectFileName = objectFileName
@@ -128,10 +119,7 @@ this.setDataFile(dataFileName)
             
 open fun override(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var hashMap = hashMap
 
     var transformInfoData: TransformInfoData = TransformInfoData.getInstance()!!
@@ -427,10 +415,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "TransformInfoInterface(HashMap)"
 
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -460,10 +445,7 @@ stringBuffer!!.append("TransformInfoInterface(HashMap)")
 
 open fun setName(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.name= value
 }
@@ -471,10 +453,7 @@ this.name= value
 
 open fun setStoreName(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.storeName= value
 }
@@ -482,10 +461,7 @@ this.storeName= value
 
 open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -496,10 +472,7 @@ open fun getStoreName()
 
 open fun setObject(anyType: Object)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var anyType = anyType
 this.anyType= anyType
 }
@@ -507,10 +480,7 @@ this.anyType= anyType
 
 open fun setObjectFile(value: Object)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.objectFileName= value
 }
@@ -518,10 +488,7 @@ this.objectFileName= value
 
 open fun setTemplate(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.template= value
 }
@@ -529,10 +496,7 @@ this.template= value
 
 open fun setTemplateFile(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.templateFileName= value
 }
@@ -542,10 +506,7 @@ this.templateFileName= value
             
 open fun setObjectConfigFileName(value: Object)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.objectConfigFileName= value
 }
@@ -555,10 +516,7 @@ this.objectConfigFileName= value
             
 open fun setObjectConfigFile(value: Object)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.objectConfigFileName= value
 this.setObjectConfigInterface(TransformInfoObjectConfigAndManipulatorFactory.getInstance()!!.getInstance(abeClientInformation, this, this.getObjectConfigFilePath()))
@@ -569,10 +527,7 @@ this.setObjectConfigInterface(TransformInfoObjectConfigAndManipulatorFactory.get
             
 open fun setObjectConfig(value: Object)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 
     var document: Document = DomDocumentHelper.create(value)!!
@@ -583,10 +538,7 @@ this.setObjectConfigInterface(TransformInfoObjectConfigAndManipulatorFactory.get
 
 open fun setDataFile(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.dataFileName= value
 }
@@ -594,10 +546,7 @@ this.dataFileName= value
 
 open fun setData(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.data= value
 }
@@ -605,10 +554,7 @@ this.data= value
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -619,10 +565,7 @@ open fun getName()
 
 open fun getObject()
         //nullable = true from not(false or (false and true)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 
 
 
@@ -633,10 +576,7 @@ open fun getObject()
 
 open fun getObjectFile()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -647,10 +587,7 @@ open fun getObjectFile()
 
 open fun getTemplate()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -661,10 +598,7 @@ open fun getTemplate()
 
 open fun getTemplateFile()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -677,10 +611,7 @@ open fun getTemplateFile()
             
 open fun getTemplateFilePath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath
-
-        Updates for KMP build        
-        {
+: AbPath{
 
 
 
@@ -693,10 +624,7 @@ open fun getTemplateFilePath()
             
 open fun getObjectConfigFilePath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath
-
-        Updates for KMP build        
-        {
+: AbPath{
 
 
 
@@ -709,10 +637,7 @@ open fun getObjectConfigFilePath()
             
 open fun getDataFilePath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath
-
-        Updates for KMP build        
-        {
+: AbPath{
 
 
 
@@ -723,10 +648,7 @@ open fun getDataFilePath()
 
 open fun getObjectConfigFile()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -737,10 +659,7 @@ open fun getObjectConfigFile()
 
 open fun getData()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
 
@@ -777,10 +696,7 @@ open fun getData()
                                 
 this.data= fileData
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
@@ -845,10 +761,7 @@ stringBuffer!!.append(this.getDataFilePath()!!.toFileSystemString())
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
@@ -872,10 +785,7 @@ stringBuffer!!.append(this.getDataFilePath()!!.toFileSystemString())
             
 open fun getDataDocument()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
     var localData: String = this.getData()!!
 
@@ -921,10 +831,7 @@ open fun getDataDocument()
 
 open fun getDataFile()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -935,10 +842,7 @@ open fun getDataFile()
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var transformInfoData: TransformInfoData = TransformInfoData.getInstance()!!
 
@@ -974,10 +878,7 @@ hashMap!!.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: java.util.Vector
-
-        Updates for KMP build        
-        {
+: java.util.Vector{
 
     var vector: Vector = Vector()
 
@@ -1011,10 +912,7 @@ vector.add(time)
 
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 
 
 
@@ -1025,20 +923,14 @@ open fun getKey()
 
 open fun setChild()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.isChild= true
 }
 
 
 open fun isChild()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -1049,10 +941,7 @@ open fun isChild()
 
 open fun getObjectConfigInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformInfoObjectConfigInterface
-
-        Updates for KMP build        
-        {
+: TransformInfoObjectConfigInterface{
 
 
 
@@ -1063,10 +952,7 @@ open fun getObjectConfigInterface()
 
 open fun setObjectConfigInterface(objectConfigInterface: Object)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var objectConfigInterface = objectConfigInterface
 this.objectConfigInterface= objectConfigInterface
 }

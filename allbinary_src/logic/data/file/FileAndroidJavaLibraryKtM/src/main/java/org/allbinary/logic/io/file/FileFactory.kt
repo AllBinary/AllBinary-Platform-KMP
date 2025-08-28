@@ -41,10 +41,7 @@ open public class FileFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FileFactory
-
-        Updates for KMP build        
-        {
+: FileFactory{
 
 
 
@@ -58,9 +55,6 @@ open fun getInstance()
     private var context: Context
 private constructor        (context: Context)
             : super()
-        
-
-        Updates for KMP build        
         {
 var context = context
 this.context= context
@@ -71,10 +65,7 @@ this.context= context
             
 open fun isFile(path: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var path = path
 
         try {
@@ -85,10 +76,7 @@ var path = path
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: FileNotFoundException)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
@@ -101,10 +89,7 @@ var path = path
 
 open fun getContext()
         //nullable = true from not(false or (false and true)) = true
-: Context
-
-        Updates for KMP build        
-        {
+: Context{
 
 
 
@@ -117,10 +102,7 @@ open fun getContext()
             
 open fun getFile(filePath: String)
         //nullable = true from not(false or (false and false)) = true
-: AbFile
-
-        Updates for KMP build        
-        {
+: AbFile{
 var filePath = filePath
 
 
@@ -134,10 +116,7 @@ var filePath = filePath
             
 open fun getInstance(file: AbFile, childFilePath: String)
         //nullable =  from not(true or (false and false)) = 
-: AbFile
-
-        Updates for KMP build        
-        {
+: AbFile{
 var file = file
 var childFilePath = childFilePath
 

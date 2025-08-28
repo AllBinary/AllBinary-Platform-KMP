@@ -30,10 +30,7 @@ open public class HtmlPostForm : HtmlForm {
         
 public constructor        (action: String)                        
 
-                            : super(action)
-
-        Updates for KMP build        
-        {
+                            : super(action){
 var action = action
 
 

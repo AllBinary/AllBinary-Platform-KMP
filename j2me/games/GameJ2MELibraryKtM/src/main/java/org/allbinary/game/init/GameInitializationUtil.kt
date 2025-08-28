@@ -45,10 +45,7 @@ open public class GameInitializationUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameInitializationUtil
-
-        Updates for KMP build        
-        {
+: GameInitializationUtil{
 
 
 
@@ -70,10 +67,7 @@ open fun getInstance()
             
 open fun initDemo(abeClientInformation: AbeClientInformationInterface, canvas: MyCanvas, gameInitializationInterfaceFactoryInterface: BasicBuildGameInitializerFactory)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
     //var canvas = canvas
     //var gameInitializationInterfaceFactoryInterface = gameInitializationInterfaceFactoryInterface
@@ -132,10 +126,7 @@ GameInitializedEventHandler.getInstance()!!.fireEvent(EVENT)
             
 open fun initGame(abeClientInformation: AbeClientInformationInterface, canvas: MyCanvas, gameInitializationInterfaceFactoryInterface: BasicBuildGameInitializerFactory)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
     //var canvas = canvas
     //var gameInitializationInterfaceFactoryInterface = gameInitializationInterfaceFactoryInterface

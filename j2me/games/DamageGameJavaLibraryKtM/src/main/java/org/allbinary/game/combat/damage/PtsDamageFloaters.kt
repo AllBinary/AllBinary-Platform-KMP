@@ -59,10 +59,7 @@ open public class PtsDamageFloaters : DamageFloaters {
     private var circularIndexUtil: CircularIndexUtil = CircularIndexUtil.getInstance(5)!!
 
     private val primitiveLongUtil: PrimitiveLongUtil
-public constructor        (layerInterface: AllBinaryLayer)
-
-        Updates for KMP build        
-        {
+public constructor        (layerInterface: AllBinaryLayer){
 var layerInterface = layerInterface
 this.primitiveLongUtil= PrimitiveLongUtil(100000)
 this.layerInterface= layerInterface
@@ -75,9 +72,6 @@ this.layerInterface= layerInterface
 
                         for (index in this.lastDamageString!!.size -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 this.lastDamageString[index]= CHAR_ARRAY
 }
@@ -86,10 +80,7 @@ this.lastDamageString[index]= CHAR_ARRAY
 
 override fun add(damage: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var damage = damage
 
     var index: Int = this.circularIndexUtil!!.getIndex()!!
@@ -104,10 +95,7 @@ this.circularIndexUtil!!.next()
     private val myRandomFactory: MyRandomFactory = MyRandomFactory.getInstance()!!
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 
     var viewPosition: ViewPosition = this.layerInterface!!.getViewPosition()!!
@@ -124,9 +112,6 @@ var graphics = graphics
 
                         for (index in this.lastDamage!!.size -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     

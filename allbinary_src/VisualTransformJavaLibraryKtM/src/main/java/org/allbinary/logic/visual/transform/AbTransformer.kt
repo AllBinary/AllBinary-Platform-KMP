@@ -50,9 +50,6 @@ open public class AbTransformer
     private var uriResolver: URIResolver
 public constructor        (transformInfoInterface: TransformInfoInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var transformInfoInterface = transformInfoInterface
 this.transformInfoInterface= transformInfoInterface
@@ -61,10 +58,7 @@ this.transformInfoInterface= transformInfoInterface
 
 open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformInfoInterface
-
-        Updates for KMP build        
-        {
+: TransformInfoInterface{
 
 
 
@@ -75,10 +69,7 @@ open fun getTransformInfoInterface()
 
 open fun setInputStream(inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var inputStream = inputStream
 this.inputStream= inputStream
 }
@@ -86,10 +77,7 @@ this.inputStream= inputStream
 
 open fun setURIResolver(uriResolver: URIResolver)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var uriResolver = uriResolver
 this.uriResolver= uriResolver
 }
@@ -97,10 +85,7 @@ this.uriResolver= uriResolver
 
 open fun getInputStream()
         //nullable = true from not(false or (false and true)) = true
-: InputStream
-
-        Updates for KMP build        
-        {
+: InputStream{
 
 
 
@@ -111,10 +96,7 @@ open fun getInputStream()
 
 open fun getURIResolver()
         //nullable = true from not(false or (false and true)) = true
-: URIResolver
-
-        Updates for KMP build        
-        {
+: URIResolver{
 
 
 
@@ -125,10 +107,7 @@ open fun getURIResolver()
 
 open fun getStreamSource()
         //nullable = true from not(false or (false and true)) = true
-: StreamSource
-
-        Updates for KMP build        
-        {
+: StreamSource{
 
 
 
@@ -141,10 +120,7 @@ open fun getStreamSource()
             
 open fun translate(xmlDocumentStr: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var xmlDocumentStr = xmlDocumentStr
 
         try {
@@ -192,10 +168,7 @@ var xmlDocumentStr = xmlDocumentStr
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return transformInfoObjectConfigGeneratorInterface!!.process(result)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))

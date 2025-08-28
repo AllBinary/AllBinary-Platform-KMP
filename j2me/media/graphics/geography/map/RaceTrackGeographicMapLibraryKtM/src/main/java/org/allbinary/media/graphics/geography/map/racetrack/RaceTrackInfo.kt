@@ -51,9 +51,6 @@ open public class RaceTrackInfo
     private var totalLaps: Int= 0
 public constructor        (id: Integer, name: String, raceTrackFrictionProperties: RaceTrackFrictionProperties, foregroundBasicColor: BasicColor, backgroundBasicColor: BasicColor, qualifyTime: Int, worstContinuePosition: Int, totalLaps: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var id = id
 var name = name
@@ -76,10 +73,7 @@ this.setTotalLaps(totalLaps)
 
 open fun getId()
         //nullable = true from not(false or (false and true)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 
 
 
@@ -90,10 +84,7 @@ open fun getId()
 
 open fun setId(id: Integer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var id = id
 this.id= id
 }
@@ -101,10 +92,7 @@ this.id= id
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -115,10 +103,7 @@ open fun getName()
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var name = name
 this.name= name
 }
@@ -126,10 +111,7 @@ this.name= name
 
 open fun getQualifyTime()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -140,10 +122,7 @@ open fun getQualifyTime()
 
 open fun setQualifyTime(qualifyTime: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var qualifyTime = qualifyTime
 this.qualifyTime= qualifyTime
 }
@@ -151,10 +130,7 @@ this.qualifyTime= qualifyTime
 
 open fun getWorstContinuePosition()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -165,10 +141,7 @@ open fun getWorstContinuePosition()
 
 open fun setWorstContinuePosition(worstContinuePosition: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var worstContinuePosition = worstContinuePosition
 this.worstContinuePosition= worstContinuePosition
 }
@@ -176,10 +149,7 @@ this.worstContinuePosition= worstContinuePosition
 
 open fun getTotalLaps()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -190,10 +160,7 @@ open fun getTotalLaps()
 
 open fun setTotalLaps(totalLaps: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var totalLaps = totalLaps
 this.totalLaps= totalLaps
 }
@@ -201,10 +168,7 @@ this.totalLaps= totalLaps
 
 open fun getForegroundBasicColor()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor
-
-        Updates for KMP build        
-        {
+: BasicColor{
 
 
 
@@ -215,10 +179,7 @@ open fun getForegroundBasicColor()
 
 open fun setForegroundBasicColor(foregroundBasicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var foregroundBasicColor = foregroundBasicColor
 this.foregroundBasicColor= foregroundBasicColor
 }
@@ -226,10 +187,7 @@ this.foregroundBasicColor= foregroundBasicColor
 
 open fun getBackgroundBasicColor()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor
-
-        Updates for KMP build        
-        {
+: BasicColor{
 
 
 
@@ -240,10 +198,7 @@ open fun getBackgroundBasicColor()
 
 open fun setBackgroundBasicColor(backgroundBasicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var backgroundBasicColor = backgroundBasicColor
 this.backgroundBasicColor= backgroundBasicColor
 }
@@ -251,10 +206,7 @@ this.backgroundBasicColor= backgroundBasicColor
 
 open fun getRaceTrackFrictionProperties()
         //nullable = true from not(false or (false and true)) = true
-: RaceTrackFrictionProperties
-
-        Updates for KMP build        
-        {
+: RaceTrackFrictionProperties{
 
 
 
@@ -265,10 +217,7 @@ open fun getRaceTrackFrictionProperties()
 
 open fun setRaceTrackFrictionProperties(raceTrackFrictionProperties: RaceTrackFrictionProperties)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var raceTrackFrictionProperties = raceTrackFrictionProperties
 this.raceTrackFrictionProperties= raceTrackFrictionProperties
 }

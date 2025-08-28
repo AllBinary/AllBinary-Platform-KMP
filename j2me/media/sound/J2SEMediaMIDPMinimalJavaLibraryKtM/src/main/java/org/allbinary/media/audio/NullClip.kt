@@ -56,10 +56,7 @@ open public class NullClip
                 @Throws(LineUnavailableException::class)
             override fun open(format: AudioFormat, data: ByteArray, offset: Int, bufferSize: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var format = format
 var data = data
 var offset = offset
@@ -70,19 +67,13 @@ var bufferSize = bufferSize
                 @Throws(LineUnavailableException::class, IOException::class)
             override fun open(stream: AudioInputStream)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var stream = stream
 }
 
 override fun getFrameLength()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -92,10 +83,7 @@ override fun getFrameLength()
 
 override fun getMicrosecondLength()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -105,79 +93,52 @@ override fun getMicrosecondLength()
 
 override fun setFramePosition(frames: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var frames = frames
 }
 
 override fun setMicrosecondPosition(microseconds: Long)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var microseconds = microseconds
 }
 
 override fun setLoopPoints(start: Int, end: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var start = start
 var end = end
 }
 
 override fun loop(count: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var count = count
 }
 
 override fun drain()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun flush()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun start()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun stop()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun isRunning()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -187,10 +148,7 @@ override fun isRunning()
 
 override fun isActive()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -200,10 +158,7 @@ override fun isActive()
 
 override fun getFormat()
         //nullable = true from not(false or (false and true)) = true
-: AudioFormat
-
-        Updates for KMP build        
-        {
+: AudioFormat{
 
 
 
@@ -213,10 +168,7 @@ override fun getFormat()
 
 override fun getBufferSize()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -226,10 +178,7 @@ override fun getBufferSize()
 
 override fun available()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -239,10 +188,7 @@ override fun available()
 
 override fun getFramePosition()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -252,10 +198,7 @@ override fun getFramePosition()
 
 override fun getLongFramePosition()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -265,10 +208,7 @@ override fun getLongFramePosition()
 
 override fun getMicrosecondPosition()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -278,10 +218,7 @@ override fun getMicrosecondPosition()
 
 override fun getLevel()
         //nullable = true from not(false or (false and true)) = true
-: Float
-
-        Updates for KMP build        
-        {
+: Float{
 
 
 
@@ -291,10 +228,7 @@ override fun getLevel()
 
 override fun getLineInfo()
         //nullable = true from not(false or (false and true)) = true
-: Info
-
-        Updates for KMP build        
-        {
+: Info{
 
 
 
@@ -306,26 +240,17 @@ override fun getLineInfo()
                 @Throws(LineUnavailableException::class)
             override fun open()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun close()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun isOpen()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -335,10 +260,7 @@ override fun isOpen()
 
 override fun getControls()
         //nullable = true from not(false or (false and true)) = true
-: Array<Control?>
-
-        Updates for KMP build        
-        {
+: Array<Control?>{
 
 
 
@@ -348,10 +270,7 @@ override fun getControls()
 
 override fun isControlSupported(control: Type)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var control = control
 
 
@@ -362,10 +281,7 @@ var control = control
 
 override fun getControl(control: Type)
         //nullable = true from not(false or (false and false)) = true
-: Control
-
-        Updates for KMP build        
-        {
+: Control{
 var control = control
 
 
@@ -376,19 +292,13 @@ var control = control
 
 override fun addLineListener(listener: LineListener)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var listener = listener
 }
 
 override fun removeLineListener(listener: LineListener)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var listener = listener
 }
 

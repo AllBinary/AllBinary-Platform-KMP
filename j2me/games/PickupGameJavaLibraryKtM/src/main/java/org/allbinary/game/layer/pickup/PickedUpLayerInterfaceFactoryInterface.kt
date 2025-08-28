@@ -34,22 +34,13 @@ open fun getPickedUpLayerType()
         //nullable = true from not(false or (false and true)) = true
 : PickedUpLayerType
 
-        Updates for KMP build        
-        
-
 open fun getIconLayer()
         //nullable = true from not(false or (false and true)) = true
 : AllBinaryLayer
 
-        Updates for KMP build        
-        
-
 open fun getAnimationInterface()
         //nullable = true from not(false or (false and true)) = true
 : Animation
-
-        Updates for KMP build        
-        
 
 }
                 

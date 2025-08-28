@@ -39,10 +39,7 @@ open public class ImageRotationUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageRotationUtil
-
-        Updates for KMP build        
-        {
+: ImageRotationUtil{
 
 
 
@@ -54,9 +51,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -67,10 +61,7 @@ open fun getInstance()
             
 open fun createRotatedImage(originalImage: Image, rotationInDegrees: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var originalImage = originalImage
     //var rotationInDegrees = rotationInDegrees
 

@@ -53,9 +53,6 @@ open public class BasicAIProcessor
     private var basicAI: BasicDirectionAIHelper
 public constructor        (name: String, geographicMapCellHistory: GeographicMapCellHistory, chosenPathList: BasicArrayList, angleInfo: AngleInfo, seed: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var name = name
 var geographicMapCellHistory = geographicMapCellHistory
@@ -70,10 +67,7 @@ this.basicAI= BasicDirectionAIHelper(this.getName(), angleInfo)
 
 open fun setNewPath(geographicMapCellHistory: GeographicMapCellHistory, chosenPathList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var geographicMapCellHistory = geographicMapCellHistory
 var chosenPathList = chosenPathList
 this.setGeographicMapCellHistory(geographicMapCellHistory)
@@ -84,10 +78,7 @@ this.init()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.geographicMapCellPathHistoryInfo= GeographicMapCellPathHistoryInfo()
 this.geographicMapCellPathHistoryInfo!!.setPreviousOnPathGeographicMapCellPosition(geographicMapCellPositionBasicArrayList!!.get(geographicMapCellPositionBasicArrayList!!.size() -1) as GeographicMapCellPosition)
 this.geographicMapCellPathHistoryInfo!!.setNextOnPathGeographicMapCellPosition(geographicMapCellPositionBasicArrayList!!.get(geographicMapCellPositionBasicArrayList!!.size() -1) as GeographicMapCellPosition)
@@ -101,10 +92,7 @@ this.update()
             
 open fun goTowardNextChosenOnPathPosition(currentGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var currentGeographicMapCellPosition = currentGeographicMapCellPosition
 
     var keyDirection: Int =  -1
@@ -135,10 +123,7 @@ keyDirection= this.basicAI!!.getAIKeyPressedFromDirection(geographicMapDirection
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.geographicMapCellPathHistoryInfo!!.setNextUnvisitedOnPathGeographicMapCellPosition(this.getGeographicMapCellHistory()!!.getFirstUnvisited())
 this.geographicMapCellPathHistoryInfo!!.setNextChosenOnPathGeographicMapCellPosition(this.geographicMapCellPathHistoryInfo!!.getNextUnvisitedOnPathGeographicMapCellPosition())
 }
@@ -148,10 +133,7 @@ this.geographicMapCellPathHistoryInfo!!.setNextChosenOnPathGeographicMapCellPosi
             
 open fun processAI(myManager: AllBinaryLayerManager, currentGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var myManager = myManager
 var currentGeographicMapCellPosition = currentGeographicMapCellPosition
 
@@ -183,10 +165,7 @@ this.geographicMapCellPathHistoryInfo!!.setPreviousOnPathGeographicMapCellPositi
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -197,10 +176,7 @@ open fun getName()
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var name = name
 this.name= name
 }
@@ -208,10 +184,7 @@ this.name= name
 
 open fun getGeographicMapCellPathHistoryInfo()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPathHistoryInfo
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPathHistoryInfo{
 
 
 
@@ -222,10 +195,7 @@ open fun getGeographicMapCellPathHistoryInfo()
 
 open fun setGeographicMapCellPathHistoryInfo(geographicMapCellPathHistoryInfo: GeographicMapCellPathHistoryInfo)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var geographicMapCellPathHistoryInfo = geographicMapCellPathHistoryInfo
 this.geographicMapCellPathHistoryInfo= geographicMapCellPathHistoryInfo
 }
@@ -233,10 +203,7 @@ this.geographicMapCellPathHistoryInfo= geographicMapCellPathHistoryInfo
 
 open fun getGeographicMapCellHistory()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellHistory
-
-        Updates for KMP build        
-        {
+: GeographicMapCellHistory{
 
 
 
@@ -247,10 +214,7 @@ open fun getGeographicMapCellHistory()
 
 open fun setGeographicMapCellHistory(geographicMapCellHistory: GeographicMapCellHistory)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var geographicMapCellHistory = geographicMapCellHistory
 this.geographicMapCellHistory= geographicMapCellHistory
 }

@@ -50,10 +50,7 @@ open public class LicenseInitInfoUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LicenseInitInfoUtil
-
-        Updates for KMP build        
-        {
+: LicenseInitInfoUtil{
 
 
 
@@ -82,10 +79,7 @@ open fun getInstance()
 
 open fun setFilePath(filePath: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var filePath = filePath
 this.filePath= filePath
 }
@@ -96,10 +90,7 @@ this.filePath= filePath
 
 open fun write(initData: LicenseInitInfo)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var initData = initData
 
     
@@ -132,9 +123,6 @@ dataOutputStream!!.writeInt(numberOfLicenseServers)
 
                         for (index in 0 until numberOfLicenseServers)
 
-        
-
-        Updates for KMP build        
         {
 
     var licenseServerCrypted: ByteArray = WeakCrypt(3).
@@ -144,10 +132,7 @@ dataOutputStream!!.writeUTF(DatabaseEncoder.encode(licenseServerCrypted))
 }
 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put("Command Failed: " +INITFILENAME, this, "write", e)
 FileStreamFactory.getInstance()!!.delete(this.filePath, INITFILENAME)
 
@@ -164,10 +149,7 @@ FileStreamFactory.getInstance()!!.delete(this.filePath, INITFILENAME)
 
 open fun read()
         //nullable = true from not(false or (false and true)) = true
-: LicenseInitInfo
-
-        Updates for KMP build        
-        {
+: LicenseInitInfo{
 
 
 
@@ -181,10 +163,7 @@ open fun read()
 
 open fun readAgain(initializeCounter: Int)
         //nullable = true from not(false or (false and false)) = true
-: LicenseInitInfo
-
-        Updates for KMP build        
-        {
+: LicenseInitInfo{
 var initializeCounter = initializeCounter
 
     var METHOD_NAME: String = "readAgain"
@@ -245,9 +224,6 @@ initInfo!!.setLicenseId(WeakCrypt(1).
 
                         for (index in 0 until numberOfLicenseServers)
 
-        
-
-        Updates for KMP build        
         {
 decodedByteArray= DatabaseEncoder.decode(iData!!.readUTF())
 licenseServerDecoded= decodedByteArray.decodeToString()
@@ -273,10 +249,7 @@ logUtil!!.put(NEXT_FILE +initInfo!!.getServer(index), this, METHOD_NAME)
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
         try {
             logUtil!!.put("Command Failed: " +INITFILENAME, this, METHOD_NAME, e)
@@ -296,10 +269,7 @@ Thread.sleep(2000)
                                     }
                                 
 } catch(se: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put("LicenseInitInfo Read Retry: " +INITFILENAME, this, "readAgain()", se)
 }
 
@@ -314,10 +284,7 @@ logUtil!!.put("LicenseInitInfo Read Retry: " +INITFILENAME, this, "readAgain()",
 
 open fun getFilePath()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

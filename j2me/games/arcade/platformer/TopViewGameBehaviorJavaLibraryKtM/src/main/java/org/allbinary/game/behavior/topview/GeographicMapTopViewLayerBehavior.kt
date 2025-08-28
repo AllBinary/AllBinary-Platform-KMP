@@ -37,10 +37,7 @@ open public class GeographicMapTopViewLayerBehavior : TopViewGameLayerBehavior {
         
 public constructor        (maxGravityActionIndex: Int)                        
 
-                            : super(maxGravityActionIndex)
-
-        Updates for KMP build        
-        {
+                            : super(maxGravityActionIndex){
     //var maxGravityActionIndex = maxGravityActionIndex
 
 
@@ -53,10 +50,7 @@ public constructor        (maxGravityActionIndex: Int)
             
 open fun getGeographicMapCellPositionIfNotSolidBlockOrOffMap(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, velocityProperties: VelocityProperties, layer: AllBinaryLayer, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var geographicMapCellTypeArray = geographicMapCellTypeArray
     //var velocityProperties = velocityProperties
@@ -75,10 +69,7 @@ var y = y
             
 open fun getGeographicMapCellPositionIfNotSolidBlockOrOffMap(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, geographicMapCellPosition: GeographicMapCellPosition, velocityProperties: VelocityProperties, layer: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var geographicMapCellTypeArray = geographicMapCellTypeArray
     //var geographicMapCellPosition = geographicMapCellPosition
@@ -96,10 +87,7 @@ open fun getGeographicMapCellPositionIfNotSolidBlockOrOffMap(geographicMapInterf
             
 open fun getGeographicMapCellPositionIfNotSolidBlockOrOffMap(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, geographicMapCellPositionList: BasicArrayList, velocityProperties: VelocityProperties, layer: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var geographicMapCellTypeArray = geographicMapCellTypeArray
     //var geographicMapCellPositionList = geographicMapCellPositionList
@@ -117,10 +105,7 @@ open fun getGeographicMapCellPositionIfNotSolidBlockOrOffMap(geographicMapInterf
             
 open fun gravity(velocityProperties: VelocityProperties, geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var velocityProperties = velocityProperties
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var geographicMapCellTypeArray = geographicMapCellTypeArray
@@ -132,10 +117,7 @@ open fun gravity(velocityProperties: VelocityProperties, geographicMapInterfaceA
             
 open fun left(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, velocityProperties: VelocityProperties, layer: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var geographicMapCellTypeArray = geographicMapCellTypeArray
     //var velocityProperties = velocityProperties
@@ -147,10 +129,7 @@ open fun left(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographi
             
 open fun move(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, velocityProperties: VelocityProperties, layer: AllBinaryLayer, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var geographicMapCellTypeArray = geographicMapCellTypeArray
     //var velocityProperties = velocityProperties
@@ -169,10 +148,7 @@ open fun move(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographi
             
 open fun moveAndLand(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, geographicMapCellPosition: GeographicMapCellPosition, velocityProperties: VelocityProperties, layer: AllBinaryLayer, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var geographicMapCellTypeArray = geographicMapCellTypeArray
     //var geographicMapCellPosition = geographicMapCellPosition
@@ -187,10 +163,7 @@ open fun moveAndLand(geographicMapInterfaceArray: Array<BasicGeographicMap?>, ge
             
 open fun right(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, velocityProperties: VelocityProperties, layer: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var geographicMapCellTypeArray = geographicMapCellTypeArray
     //var velocityProperties = velocityProperties
@@ -200,10 +173,7 @@ open fun right(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geograph
 
 open fun hasSolidBlock(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var geographicMapCellTypeArray = geographicMapCellTypeArray
 
@@ -219,9 +189,6 @@ open fun hasSolidBlock(geographicMapInterfaceArray: Array<BasicGeographicMap?>, 
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 basicTopViewGeographicMapCellTypeFactory= geographicMapInterfaceArray[index]!!.getGeographicMapCellTypeFactory() as BasicTopViewGeographicMapCellTypeFactory
 
@@ -249,10 +216,7 @@ basicTopViewGeographicMapCellTypeFactory= geographicMapInterfaceArray[index]!!.g
 
 open fun isOffMap(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var geographicMapCellTypeArray = geographicMapCellTypeArray
 
@@ -268,9 +232,6 @@ open fun isOffMap(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geogr
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 basicTopViewGeographicMapCellTypeFactory= geographicMapInterfaceArray[index]!!.getGeographicMapCellTypeFactory() as BasicTopViewGeographicMapCellTypeFactory
 

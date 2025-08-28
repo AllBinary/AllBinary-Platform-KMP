@@ -48,9 +48,6 @@ open public class Password
     private var password: String
 public constructor        (password: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var password = password
 this.password= password
@@ -59,10 +56,7 @@ this.password= password
 
 open fun set(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.password= value
 }
@@ -70,10 +64,7 @@ this.password= value
 
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -84,10 +75,7 @@ open fun get()
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -129,10 +117,7 @@ valid= Boolean.FALSE
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return valid
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VALIDATIONERROR))
@@ -154,10 +139,7 @@ valid= Boolean.FALSE
 
 open fun getValidationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     
                         if(!StringValidationUtil.getInstance()!!.isValidRequired(this.password, 6, UserData.MAXLEN))
@@ -184,10 +166,7 @@ open fun getValidationInfo()
 
 open fun toVector(secret: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 var secret = secret
 this.password= StringUtil.getInstance()!!.getInstance(this.password)
 
@@ -212,10 +191,7 @@ vector.add(SuperCrypt(random).
 
 open fun toHashMap(secret: String)
         //nullable = true from not(false or (false and false)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 var secret = secret
 this.password= StringUtil.getInstance()!!.getInstance(this.password)
 

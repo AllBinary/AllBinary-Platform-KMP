@@ -176,9 +176,6 @@ open public class EchoPaymentGatewayData
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

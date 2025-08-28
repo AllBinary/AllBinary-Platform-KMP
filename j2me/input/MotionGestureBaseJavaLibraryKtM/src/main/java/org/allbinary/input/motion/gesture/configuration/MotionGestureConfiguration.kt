@@ -54,19 +54,13 @@ open public class MotionGestureConfiguration
     private var activeCommands: BasicArrayList = BasicArrayList()
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getMotionGestureAction(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: CompleteMotionGestureInputEvent
-
-        Updates for KMP build        
-        {
+: CompleteMotionGestureInputEvent{
 var index = index
 
     
@@ -91,10 +85,7 @@ var index = index
 
 open fun addMotionGestureAction(list: BasicArrayList, commandAction: CompleteMotionGestureInputEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var list = list
 var commandAction = commandAction
 activeCommands!!.add(MotionGestureToMotionGestureActionAssociation(list, commandAction))
@@ -103,20 +94,14 @@ activeCommands!!.add(MotionGestureToMotionGestureActionAssociation(list, command
 
 open fun clearMotionGestureAction()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 activeCommands!!.clear()
 }
 
 
 open fun getAssociateCommandActionsList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 
@@ -127,10 +112,7 @@ open fun getAssociateCommandActionsList()
 
 open fun isDiagonalMotionGestureAllowed()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -141,10 +123,7 @@ open fun isDiagonalMotionGestureAllowed()
 
 open fun isExecutingActionsAllowed()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -155,10 +134,7 @@ open fun isExecutingActionsAllowed()
 
 open fun setExecutingActionsAllowed(executingActionAllowed: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var executingActionAllowed = executingActionAllowed
 this.executingActions= executingActionAllowed
 }
@@ -166,10 +142,7 @@ this.executingActions= executingActionAllowed
 
 open fun setDiagonalMotionGestureAllowed(diagonalMotionGestureAllowed: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var diagonalMotionGestureAllowed = diagonalMotionGestureAllowed
 this.diagonalMotionGestureAllowed= diagonalMotionGestureAllowed
 }
@@ -177,10 +150,7 @@ this.diagonalMotionGestureAllowed= diagonalMotionGestureAllowed
 
 open fun getDiagonalTolerance()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -191,10 +161,7 @@ open fun getDiagonalTolerance()
 
 open fun setDiagonalTolerance(diagonalTolerance: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var diagonalTolerance = diagonalTolerance
 this.diagonalTolerance= diagonalTolerance
 }
@@ -202,10 +169,7 @@ this.diagonalTolerance= diagonalTolerance
 
 open fun getMinimumMotionGesture()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -216,10 +180,7 @@ open fun getMinimumMotionGesture()
 
 open fun setMinimumMotionGesture(minimumMotionGesture: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var minimumMotionGesture = minimumMotionGesture
 this.minimumMotionGesture= minimumMotionGesture
 }
@@ -227,10 +188,7 @@ this.minimumMotionGesture= minimumMotionGesture
 
 open fun getButton()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -241,10 +199,7 @@ open fun getButton()
 
 open fun setButton(button: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var button = button
 this.button= button
 }
@@ -252,10 +207,7 @@ this.button= button
 
 open fun getColor()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor
-
-        Updates for KMP build        
-        {
+: BasicColor{
 
 
 
@@ -266,10 +218,7 @@ open fun getColor()
 
 open fun setColor(color: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var color = color
 this.color= color
 }
@@ -277,10 +226,7 @@ this.color= color
 
 open fun getMouseButtonMask()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -291,10 +237,7 @@ open fun getMouseButtonMask()
 
 open fun setMouseButtonMask(mouseButtonMask: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var mouseButtonMask = mouseButtonMask
 this.mouseButtonMask= mouseButtonMask
 }

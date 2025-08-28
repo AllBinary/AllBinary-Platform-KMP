@@ -33,10 +33,7 @@ open public class CollidableRTSBehavior : CollidableDestroyableDamageableBehavio
         
 public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
 
-                            : super(ownerLayer, collidable)
-
-        Updates for KMP build        
-        {
+                            : super(ownerLayer, collidable){
     //var ownerLayer = ownerLayer
     //var collidable = collidable
 
@@ -48,10 +45,7 @@ public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boo
 
 open fun isCollision(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
     var collisionTypeFactory: CollisionTypeFactory = CollisionTypeFactory.getInstance()!!
@@ -118,10 +112,7 @@ open fun isCollision(collidableInterfaceCompositeInterface: CollidableCompositeL
             
 open fun collide(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
     var collisionTypeFactory: CollisionTypeFactory = CollisionTypeFactory.getInstance()!!
@@ -158,10 +149,7 @@ open fun collide(collidableInterfaceCompositeInterface: CollidableCompositeLayer
             
 open fun collideNone(collidableInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var collidableInterface = collidableInterface
 }
 

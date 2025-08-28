@@ -42,9 +42,6 @@ open public class BasicTerrainInfo
     private var angle: Angle
 public constructor        (angle: Angle)
             : super()
-        
-
-        Updates for KMP build        
         {
 var angle = angle
 this.angle= angle
@@ -53,10 +50,7 @@ this.angle= angle
 
 open fun getAngle()
         //nullable = true from not(false or (false and true)) = true
-: Angle
-
-        Updates for KMP build        
-        {
+: Angle{
 
 
 
@@ -67,10 +61,7 @@ open fun getAngle()
 
 open fun setAngle(angle: Angle)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var angle = angle
 this.angle= angle
 }

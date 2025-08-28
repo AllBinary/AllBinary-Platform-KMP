@@ -38,10 +38,7 @@ open public class TiledLayerUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TiledLayerUtil
-
-        Updates for KMP build        
-        {
+: TiledLayerUtil{
 
 
 
@@ -59,10 +56,7 @@ open fun getInstance()
         
 open fun keepOnMapX(terrainTiledLayer: AllBinaryTiledLayer, x: Int, width: Int, mapBorderBufferWidth: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var terrainTiledLayer = terrainTiledLayer
 var x = x
 var width = width
@@ -101,10 +95,7 @@ var mapBorderBufferWidth = mapBorderBufferWidth
 
 open fun keepOnMapY(terrainTiledLayer: AllBinaryTiledLayer, y: Int, height: Int, mapBorderBufferHeight: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var terrainTiledLayer = terrainTiledLayer
 var y = y
 var height = height
@@ -143,10 +134,7 @@ var mapBorderBufferHeight = mapBorderBufferHeight
 
 open fun keepOnMapX(terrainTiledLayer: AllBinaryTiledLayer, x: Int, width: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var terrainTiledLayer = terrainTiledLayer
 var x = x
 var width = width
@@ -184,10 +172,7 @@ var width = width
 
 open fun keepOnMapY(terrainTiledLayer: AllBinaryTiledLayer, y: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var terrainTiledLayer = terrainTiledLayer
 var y = y
 var height = height

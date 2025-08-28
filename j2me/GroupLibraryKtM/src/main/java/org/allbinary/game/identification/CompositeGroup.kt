@@ -51,9 +51,6 @@ open public class CompositeGroup
     private val list: BasicArrayList = BasicArrayList()
 public constructor        (groupInterface: Group)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var groupInterface = groupInterface
 this.groupInterface= groupInterface
@@ -62,20 +59,14 @@ this.groupInterface= groupInterface
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.list.clear()
 }
 
 
 open fun add(groupInterface: Group)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var groupInterface = groupInterface
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -94,10 +85,7 @@ this.list.add(groupInterface)
 
 open fun isInGroup(groupInterface: Group)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var groupInterface = groupInterface
 
     
@@ -126,10 +114,7 @@ open fun isInGroup(groupInterface: Group)
 
 open fun getGroup()
         //nullable = true from not(false or (false and true)) = true
-: Group
-
-        Updates for KMP build        
-        {
+: Group{
 
 
 

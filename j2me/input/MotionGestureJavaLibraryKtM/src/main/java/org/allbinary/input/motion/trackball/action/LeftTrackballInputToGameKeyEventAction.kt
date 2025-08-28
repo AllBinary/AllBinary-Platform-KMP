@@ -38,10 +38,7 @@ open public class LeftTrackballInputToGameKeyEventAction : GameKeyCompleteMotion
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameKeyCompleteMotionGestureInputEvent
-
-        Updates for KMP build        
-        {
+: GameKeyCompleteMotionGestureInputEvent{
 
 
 
@@ -53,10 +50,7 @@ open fun getInstance()
         }
             private constructor        ()                        
 
-                            : super("Left Action", TrackballMotionGestureFactory.getInstance()!!.LEFT, PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping())
-
-        Updates for KMP build        
-        {
+                            : super("Left Action", TrackballMotionGestureFactory.getInstance()!!.LEFT, PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()){
 
 
                             //For kotlin this is before the body of the constructor.

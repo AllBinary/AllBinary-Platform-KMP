@@ -37,19 +37,13 @@ open public class MachineAccessControlAddress
         
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun compareTo(componentInterface: HardwareComponentInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var componentInterface = componentInterface
 
 
@@ -60,10 +54,7 @@ var componentInterface = componentInterface
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

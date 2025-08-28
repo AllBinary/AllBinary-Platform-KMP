@@ -38,10 +38,7 @@ open public class LazyProgressCanvas : ProgressCanvas {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 protected constructor        (title: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(title, backgroundBasicColor, foregroundBasicColor)
-
-        Updates for KMP build        
-        {
+                            : super(title, backgroundBasicColor, foregroundBasicColor){
     //var title = title
     //var backgroundBasicColor = backgroundBasicColor
     //var foregroundBasicColor = foregroundBasicColor
@@ -53,20 +50,14 @@ protected constructor        (title: String, backgroundBasicColor: BasicColor, f
 
 override fun start()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 super.start()
 this.hasPainted= false
 }
 
 override fun end()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             logUtil!!.put(commonStrings!!.START, this, commonStrings!!.END_METHOD_NAME)
@@ -74,10 +65,7 @@ this.endActual()
 this.paintable= GAUGE_PAINTABLE
 ImageCacheFactory.getInstance()!!.runTask()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.END_METHOD_NAME)
 }
 
@@ -86,20 +74,14 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.END_METHOD_NAME)
 
 open fun inGame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 inGameProcessor= Processor.getInstance()
 }
 
 
 open fun endFromInitialLazyLoadingComplete()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 super.endFromInitialLazyLoadingComplete()
 this.paintable= NullPaintable.getInstance()
 }
@@ -107,10 +89,7 @@ this.paintable= NullPaintable.getInstance()
 
 open fun endIfPaintedSinceStart()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(this.paintable == GAUGE_PAINTABLE && this.hasPainted)

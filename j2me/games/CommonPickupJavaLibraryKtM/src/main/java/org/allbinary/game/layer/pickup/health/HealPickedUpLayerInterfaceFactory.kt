@@ -46,20 +46,14 @@ open public class HealPickedUpLayerInterfaceFactory : PickedUpLayerInterfaceFact
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 pickedUpLayerInterfaceFactoryInterface= HealPickedUpLayerInterfaceFactory()
 }
 
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PickedUpLayerInterfaceFactoryInterface
-
-        Updates for KMP build        
-        {
+: PickedUpLayerInterfaceFactoryInterface{
 
 
 
@@ -73,10 +67,7 @@ open fun getInstance()
     private var pool: HealLayerCircularStaticPool = HealLayerCircularStaticPool(HealLayerFactory(), 1)
 private constructor        ()                        
 
-                            : super(PickedUpLayerTypeFactory.getInstance()!!.HEAL, IconLayerFactory.getInstance(FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(HealthResources.getInstance()!!.RESOURCE)!!.getInstance(0), 10, 10), FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(HealthResources.getInstance()!!.RESOURCE)!!.getInstance(0))
-
-        Updates for KMP build        
-        {
+                            : super(PickedUpLayerTypeFactory.getInstance()!!.HEAL, IconLayerFactory.getInstance(FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(HealthResources.getInstance()!!.RESOURCE)!!.getInstance(0), 10, 10), FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(HealthResources.getInstance()!!.RESOURCE)!!.getInstance(0)){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -86,10 +77,7 @@ private constructor        ()
 
 open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -101,10 +89,7 @@ open fun getTotal()
                 @Throws(Exception::class)
             override fun process(sourceLayerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var sourceLayerInterface = sourceLayerInterface
 pool.visit(sourceLayerInterface)
 }

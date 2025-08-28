@@ -50,19 +50,13 @@ open public class ImageCache : ImageCacheBase {
         }
             
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 
 open fun addListener(renderer: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var renderer = renderer
 }
 
@@ -70,10 +64,7 @@ var renderer = renderer
                 @Throws(Exception::class)
             override fun get(caller: String, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var caller = caller
     //var width = width
     //var height = height
@@ -127,10 +118,7 @@ listOfList[foundIndex]!!.add(image)
                 @Throws(Exception::class)
             override fun get(key: Any)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var key = key
 
     var resourceUtil: ResourceUtil = ResourceUtil.getInstance()!!
@@ -154,10 +142,7 @@ listOfList[foundIndex]!!.add(image)
             logUtil!!.put(Memory.getInfo(), this, commonStrings!!.GET)
 image= this.createImage(key, inputStream)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put("Exception: Trying Again After GC", this, commonStrings!!.GET, e)
 logUtil!!.put(StringMaker().
                             append("InputStream: ")!!.append(StringUtil.getInstance()!!.toString(inputStream))!!.toString(), this, commonStrings!!.GET)
@@ -183,19 +168,13 @@ this.hashtable.put(resourceId, image)
 
 open fun runTask()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun isLazy()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 

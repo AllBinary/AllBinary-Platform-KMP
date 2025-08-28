@@ -35,17 +35,11 @@ open public class IndexedAnimation : Animation
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     val animationBehaviorP: AnimationBehavior
-private constructor        ()
-
-        Updates for KMP build        
-        {
+private constructor        (){
 this.animationBehaviorP= AnimationBehavior.getInstance()
 }
 
-protected constructor        (animationBehavior: AnimationBehavior)
-
-        Updates for KMP build        
-        {
+protected constructor        (animationBehavior: AnimationBehavior){
     //var animationBehavior = animationBehavior
 this.animationBehaviorP= animationBehavior
 }
@@ -53,10 +47,7 @@ this.animationBehaviorP= animationBehavior
 
 open fun getAnimationBehavior()
         //nullable = true from not(false or (false and true)) = true
-: AnimationBehavior
-
-        Updates for KMP build        
-        {
+: AnimationBehavior{
 
 
 
@@ -66,29 +57,20 @@ open fun getAnimationBehavior()
 
 override fun reset()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.animationBehaviorP!!.reset()
 this.setFrame(0)
 }
 
 override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var index = index
 }
 
 override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -101,10 +83,7 @@ override fun getFrame()
             
 open fun getAnimationSize()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -113,10 +92,7 @@ open fun getAnimationSize()
 
 override fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -126,19 +102,13 @@ override fun getSize()
 
 override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun isLastFrame()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(this.getFrame() == this.getSize() -1)
@@ -165,19 +135,13 @@ open fun isLastFrame()
 
 override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var sequence = sequence
 }
 
 override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
-: IntArray
-
-        Updates for KMP build        
-        {
+: IntArray{
 
 
 
@@ -188,10 +152,7 @@ override fun getSequence()
 
 open fun setState(indexedAnimation: IndexedAnimation)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var indexedAnimation = indexedAnimation
 this.setFrame(indexedAnimation!!.getFrame())
 this.setDx(indexedAnimation!!.getDx())
@@ -201,10 +162,7 @@ this.setDy(indexedAnimation!!.getDy())
 
 open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

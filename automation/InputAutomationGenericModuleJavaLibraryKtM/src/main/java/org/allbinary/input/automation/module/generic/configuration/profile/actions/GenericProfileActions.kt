@@ -55,10 +55,7 @@ open public class GenericProfileActions
 
 open fun getFile(name: String)
         //nullable = true from not(false or (false and false)) = true
-: File
-
-        Updates for KMP build        
-        {
+: File{
 var name = name
 
     var fileName: String = DEFAULT_PROFILE_ACTIONS_PATH +name +".xml"
@@ -84,9 +81,6 @@ var name = name
     private var hashMap: HashMap<Any, Any>
 public constructor        (genericProfileActionsJPanel: GenericProfileActionsJPanel, name: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var genericProfileActionsJPanel = genericProfileActionsJPanel
 var name = name
@@ -97,9 +91,6 @@ this.load()
 
 public constructor        (genericProfileActionsJPanel: GenericProfileActionsJPanel, abPath: AbPath, name: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var genericProfileActionsJPanel = genericProfileActionsJPanel
 var abPath = abPath
@@ -111,9 +102,6 @@ this.load()
 
 public constructor        (genericProfileActionsJPanel: GenericProfileActionsJPanel, fileInputStream: FileInputStream, name: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var genericProfileActionsJPanel = genericProfileActionsJPanel
 var fileInputStream = fileInputStream
@@ -128,10 +116,7 @@ this.fileInit(fileInputStream)
             
 open fun init(genericProfileActionsJPanel: GenericProfileActionsJPanel)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var genericProfileActionsJPanel = genericProfileActionsJPanel
 this.setGenericProfileActionsJPanel(genericProfileActionsJPanel)
 this.actionsDefaultListModelHelper= DefaultListModelHelper()
@@ -143,10 +128,7 @@ this.setHashMap(HashMap<Any, Any>())
             
 open fun save()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var idFile: FileOutputStream = FileOutputStream(DEFAULT_PROFILE_ACTIONS_PATH +getName() +".xml")
 
@@ -161,10 +143,7 @@ idOutData!!.writeBytes(DomDocumentHelper.toString(this.toXmlDoc()))
             
 open fun load()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var file: File = getFile(getName())!!
 
@@ -192,10 +171,7 @@ this.fileInit(idFile)
             
 open fun fileInit(fileInputStream: FileInputStream)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var fileInputStream = fileInputStream
 
     var bytes: ByteArray = ByteArray(100000)
@@ -222,9 +198,6 @@ logUtil!!.put("Number Of Profiles Specified: " +nameNodeList!!.getLength(), this
 
                         for (index in 0 until nameNodeList!!.getLength()!!)
 
-        
-
-        Updates for KMP build        
         {
 
     var node: Node = nameNodeList!!.item(index)!!
@@ -262,10 +235,7 @@ this.getDefaultListModelHelper()!!.initDefaultModelList()
             
 open fun initActions(nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var nodeList = nodeList
 
 
@@ -273,9 +243,6 @@ var nodeList = nodeList
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
-        
-
-        Updates for KMP build        
         {
 
     var actionNode: Node = nodeList!!.item(index)!!
@@ -310,10 +277,7 @@ this.getDefaultListModelHelper()!!.add(genericConfigurationProfileAction!!.getNa
 
 open fun getDefaultListModelHelper()
         //nullable = true from not(false or (false and true)) = true
-: DefaultListModelHelper
-
-        Updates for KMP build        
-        {
+: DefaultListModelHelper{
 
 
 
@@ -324,10 +288,7 @@ open fun getDefaultListModelHelper()
 
 open fun getAction(string: String)
         //nullable = true from not(false or (false and false)) = true
-: GenericProfileAction
-
-        Updates for KMP build        
-        {
+: GenericProfileAction{
 var string = string
 
 
@@ -341,10 +302,7 @@ var string = string
             
 open fun add(name: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var name = name
 
     var genericProfileAction: GenericProfileAction = GenericProfileAction(name)
@@ -360,10 +318,7 @@ this.save()
             
 open fun remove(name: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var name = name
 this.getHashMap()!!.remove(name)
 this.getDefaultListModelHelper()!!.remove(name)
@@ -374,10 +329,7 @@ this.save()
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -394,10 +346,7 @@ logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var node: Node = document.createElement(GenericProfileActionsData.NAME)!!
@@ -418,9 +367,6 @@ var document = document
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var nextActionName: String = actionNameArray[index]!! as String
@@ -443,10 +389,7 @@ node.appendChild(nextGenericProfileAction!!.toXmlNode(document))
             
 open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
     var document: Document = DomDocumentHelper.create()!!
 
@@ -464,10 +407,7 @@ document.appendChild(node)
 
 open fun getGenericProfileActionsJPanel()
         //nullable = true from not(false or (false and true)) = true
-: GenericProfileActionsJPanel
-
-        Updates for KMP build        
-        {
+: GenericProfileActionsJPanel{
 
 
 
@@ -478,10 +418,7 @@ open fun getGenericProfileActionsJPanel()
 
 open fun setGenericProfileActionsJPanel(genericProfileActionsJPanel: GenericProfileActionsJPanel)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var genericProfileActionsJPanel = genericProfileActionsJPanel
 this.genericProfileActionsJPanel= genericProfileActionsJPanel
 }
@@ -489,10 +426,7 @@ this.genericProfileActionsJPanel= genericProfileActionsJPanel
 
 open fun getHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
 
 
@@ -503,10 +437,7 @@ open fun getHashMap()
 
 open fun setHashMap(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var hashMap = hashMap
 this.hashMap= hashMap
 }
@@ -514,10 +445,7 @@ this.hashMap= hashMap
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -528,10 +456,7 @@ open fun getName()
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var name = name
 this.name= name
 }

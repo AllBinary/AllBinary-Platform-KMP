@@ -36,9 +36,6 @@ open public class InputAutomationModuleService
     private var inputAutomationModuleInterfaceArray: Array<InputAutomationModuleFactoryInterface?>
 public constructor        (inputAutomationModuleInterfaceArray: Array<InputAutomationModuleFactoryInterface?>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var inputAutomationModuleInterfaceArray = inputAutomationModuleInterfaceArray
 this.setInputAutomationModuleInterfaceArray(inputAutomationModuleInterfaceArray)
@@ -47,10 +44,7 @@ this.setInputAutomationModuleInterfaceArray(inputAutomationModuleInterfaceArray)
 
 open fun getInputAutomationModuleInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<InputAutomationModuleFactoryInterface?>
-
-        Updates for KMP build        
-        {
+: Array<InputAutomationModuleFactoryInterface?>{
 
 
 
@@ -61,10 +55,7 @@ open fun getInputAutomationModuleInterfaceArray()
 
 open fun setInputAutomationModuleInterfaceArray(inputAutomationModuleInterfaceArray: Array<InputAutomationModuleFactoryInterface?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var inputAutomationModuleInterfaceArray = inputAutomationModuleInterfaceArray
 this.inputAutomationModuleInterfaceArray= inputAutomationModuleInterfaceArray
 }

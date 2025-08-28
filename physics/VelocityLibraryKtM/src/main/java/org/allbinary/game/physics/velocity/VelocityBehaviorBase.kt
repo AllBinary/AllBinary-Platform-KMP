@@ -38,10 +38,7 @@ open public class VelocityBehaviorBase
         
 open fun reduce(velocityProperties: BasicVelocityProperties, nominator: Int, denominator: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var velocityProperties = velocityProperties
     //var nominator = nominator
     //var denominator = denominator
@@ -50,10 +47,7 @@ open fun reduce(velocityProperties: BasicVelocityProperties, nominator: Int, den
 
 open fun reduceX(velocityProperties: BasicVelocityProperties, nominator: Int, denominator: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var velocityProperties = velocityProperties
     //var nominator = nominator
     //var denominator = denominator
@@ -62,10 +56,7 @@ open fun reduceX(velocityProperties: BasicVelocityProperties, nominator: Int, de
 
 open fun reduceY(velocityProperties: BasicVelocityProperties, nominator: Int, denominator: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var velocityProperties = velocityProperties
     //var nominator = nominator
     //var denominator = denominator

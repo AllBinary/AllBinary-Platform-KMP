@@ -39,19 +39,13 @@ open public class AllBinaryLayerManager : LayerManager {
     private val deleteLayerManagerEvent: LayerManagerEvent = LayerManagerEvent(this, this.layerManagerEventHandler!!.DELETE)
 
     private var basicLayerProcessorArray: Array<LayerProcessor?> = arrayOfNulls(0)
-protected constructor        ()
-
-        Updates for KMP build        
-        {
+protected constructor        (){
 }
 
 
 open fun getLayerProcessorArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<LayerProcessor?>
-
-        Updates for KMP build        
-        {
+: Array<LayerProcessor?>{
 
 
 
@@ -62,10 +56,7 @@ open fun getLayerProcessorArray()
 
 open fun setLayerProcessorArray(layerProcessorArray: Array<LayerProcessor?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layerProcessorArray = layerProcessorArray
 this.basicLayerProcessorArray= layerProcessorArray
 }
@@ -73,10 +64,7 @@ this.basicLayerProcessorArray= layerProcessorArray
 
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var size: Int = this.basicLayerProcessorArray!!.size
                 
@@ -87,9 +75,6 @@ open fun log()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var layerProcessorInterface: LayerProcessor = basicLayerProcessorArray[index]!!
@@ -102,10 +87,7 @@ open fun log()
                 @Throws(Exception::class)
             override fun append(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layerInterface = layerInterface
 
     
@@ -123,10 +105,7 @@ super.append(layerInterface)
                 @Throws(Exception::class)
             override fun append(layerInterface: AllBinaryLayer, index: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layerInterface = layerInterface
     //var index = index
 
@@ -146,10 +125,7 @@ super.append(layerInterface, index)
             
 open fun appendProcessors(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layerInterface = layerInterface
 this.createLayerManagerEvent!!.setLayerInterface(layerInterface)
 layerManagerEventHandler!!.fireEvent(this.createLayerManagerEvent)
@@ -162,9 +138,6 @@ layerManagerEventHandler!!.fireEvent(this.createLayerManagerEvent)
 
                         for (index in this.basicLayerProcessorArray!!.size  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 layerProcessorInterface= basicLayerProcessorArray[index]!!
 
@@ -185,10 +158,7 @@ layerProcessorInterface= basicLayerProcessorArray[index]!!
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun remove(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layerInterface = layerInterface
 deleteLayerManagerEvent!!.setLayerInterface(layerInterface)
 layerManagerEventHandler!!.fireDeleteEvent(this.deleteLayerManagerEvent)
@@ -201,9 +171,6 @@ layerManagerEventHandler!!.fireDeleteEvent(this.deleteLayerManagerEvent)
 
                         for (index in this.basicLayerProcessorArray!!.size  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 layerProcessorInterface= basicLayerProcessorArray[index]!!
 layerProcessorInterface!!.getLayerManager()!!.remove(layerInterface)
@@ -217,10 +184,7 @@ super.remove(layerInterface)
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var layerProcessorInterface: LayerProcessor
 
@@ -234,9 +198,6 @@ open fun process()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 layerProcessorInterface= basicLayerProcessorArray[index]!!
 layerProcessorInterface!!.process(this)
@@ -248,10 +209,7 @@ layerProcessorInterface!!.process(this)
                 @Throws(Exception::class)
             override fun cleanup()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var layerProcessorInterface: LayerProcessor
 
@@ -265,9 +223,6 @@ layerProcessorInterface!!.process(this)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 layerProcessorInterface= basicLayerProcessorArray[index]!!
 layerProcessorInterface!!.getLayerManager()!!.cleanup()

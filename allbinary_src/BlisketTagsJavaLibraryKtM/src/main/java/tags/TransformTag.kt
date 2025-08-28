@@ -40,10 +40,7 @@ open public class TransformTag : TransformInfoTag {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        ()                        
 
-                            : super(ViewHelperFactory())
-
-        Updates for KMP build        
-        {
+                            : super(ViewHelperFactory()){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -61,10 +58,7 @@ public constructor        ()
 
 public constructor        (tagHelperFactoryInterface: TagHelperFactoryInterface)                        
 
-                            : super(tagHelperFactoryInterface)
-
-        Updates for KMP build        
-        {
+                            : super(tagHelperFactoryInterface){
 var tagHelperFactoryInterface = tagHelperFactoryInterface
 
 
@@ -86,10 +80,7 @@ var tagHelperFactoryInterface = tagHelperFactoryInterface
             
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -103,10 +94,7 @@ open fun view()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
@@ -129,10 +117,7 @@ open fun view()
             
 open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
         try {
             
@@ -177,10 +162,7 @@ pageContext!!.getOut()!!.print(this.view())
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 } catch(e: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 
 
@@ -189,10 +171,7 @@ AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
                         return SKIP_BODY
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 
 

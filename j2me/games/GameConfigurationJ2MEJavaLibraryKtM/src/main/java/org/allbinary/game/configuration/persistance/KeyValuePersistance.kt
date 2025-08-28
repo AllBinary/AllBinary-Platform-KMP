@@ -45,10 +45,7 @@ open public class KeyValuePersistance : BasicPersitance {
         
 protected constructor        (recordId: String)                        
 
-                            : super(recordId)
-
-        Updates for KMP build        
-        {
+                            : super(recordId){
     //var recordId = recordId
 
 
@@ -61,10 +58,7 @@ protected constructor        (recordId: String)
             
 open fun loadAll(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
 this.loadAll(abeClientInformation, 1)
 }
@@ -74,10 +68,7 @@ this.loadAll(abeClientInformation, 1)
             
 open fun loadAll(abeClientInformation: AbeClientInformationInterface, size: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
 var size = size
 
@@ -115,9 +106,6 @@ var size = size
 
 
         while(recordEnum!!.hasNextElement())
-        
-
-        Updates for KMP build        
         {
 
     var id: Int = recordEnum!!.nextRecordId()!!
@@ -141,9 +129,6 @@ hashtable= Hashtable<String, String>()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 name= inputStream!!.readUTF()
 inputStream!!.readUTF()
@@ -159,10 +144,7 @@ this.idList!!.add(smallIntegerSingletonFactory!!.getInstance(id))
 }
 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
@@ -192,10 +174,7 @@ recordStore!!.closeRecordStore()
             
 open fun save(abeClientInformation: AbeClientInformationInterface, hashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
     //var hashtable = hashtable
 
@@ -234,9 +213,6 @@ recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation),
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 outputStream!!.writeUTF(objectArray[index]!! as String)
 outputStream!!.writeUTF(commonSeps!!.EQUALS)
@@ -250,10 +226,7 @@ outputStream!!.writeUTF(value)
 
 recordStore!!.addRecord(savedGameBytes, 0, savedGameBytes!!.size)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
@@ -281,10 +254,7 @@ recordStore!!.closeRecordStore()
 
 open fun get(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: Hashtable<Any, Any>
-
-        Updates for KMP build        
-        {
+: Hashtable<Any, Any>{
 var index = index
 
     var hashtable: Hashtable<Any, Any> = this.valueList!!.objectArray[index]!! as Hashtable<Any, Any>

@@ -51,9 +51,6 @@ open public class BasicTopViewGeographicMapCellType
     private val types: IntArray
 public constructor        (name: String, type: Int, cost: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var name = name
     //var type = type
@@ -83,9 +80,6 @@ this.types[0]= type
 
 public constructor        (name: String, types: IntArray, cost: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var name = name
     //var types = types
@@ -103,9 +97,6 @@ public constructor        (name: String, types: IntArray, cost: Int)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 type= types[index]!!
 
@@ -134,9 +125,6 @@ this.cost= cost
 
 public constructor        (name: String, types: BasicArrayList, cost: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var name = name
     //var types = types
@@ -156,9 +144,6 @@ public constructor        (name: String, types: BasicArrayList, cost: Int)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 type= get = types.get(index)get as Integer
 get.
@@ -191,10 +176,7 @@ this.types= typeArray
 
 open fun isType(type: GeographicMapCellType)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var type = type
 
 
@@ -206,10 +188,7 @@ open fun isType(type: GeographicMapCellType)
 
 open fun isType(type: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var type = type
 
     var size: Int = types.size
@@ -221,9 +200,6 @@ open fun isType(type: Int)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -250,10 +226,7 @@ open fun isType(type: Int)
 
 open fun getTypes()
         //nullable = true from not(false or (false and true)) = true
-: IntArray
-
-        Updates for KMP build        
-        {
+: IntArray{
 
 
 
@@ -263,10 +236,7 @@ open fun getTypes()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringMaker: StringMaker = StringMaker()
 
@@ -280,9 +250,6 @@ override fun toString()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 stringMaker!!.append(types[index]!!)!!.append(CommonSeps.getInstance()!!.COMMA)
 }

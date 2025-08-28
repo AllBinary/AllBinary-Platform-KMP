@@ -42,9 +42,6 @@ open public class BooleanFileVisitor
     private var filterStringBasicArrayList: BasicArrayList
 public constructor        (filterStringBasicArrayList: BasicArrayList)
             : super()
-        
-
-        Updates for KMP build        
         {
 var filterStringBasicArrayList = filterStringBasicArrayList
 this.setFilterStringBasicArrayList(filterStringBasicArrayList)
@@ -54,10 +51,7 @@ PreLogUtil.put("Filter BasicArrayList: " +this.getFilterStringBasicArrayList()!!
 
 open fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 var anyType = anyType
 
 
@@ -69,10 +63,7 @@ var anyType = anyType
 
 open fun visit(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var file = file
 
     var list: BasicArrayList = this.getFilterStringBasicArrayList()!!
@@ -89,9 +80,6 @@ var file = file
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 nextFileFilterString= list.get(index) as String
 
@@ -119,10 +107,7 @@ nextFileFilterString= list.get(index) as String
 
 open fun getFilterStringBasicArrayList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 
@@ -133,10 +118,7 @@ open fun getFilterStringBasicArrayList()
 
 open fun setFilterStringBasicArrayList(filterStringBasicArrayList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var filterStringBasicArrayList = filterStringBasicArrayList
 this.filterStringBasicArrayList= filterStringBasicArrayList
 }
@@ -144,10 +126,7 @@ this.filterStringBasicArrayList= filterStringBasicArrayList
 
 open fun visit(file: AbFile, fileNameString: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var file = file
 var fileNameString = fileNameString
 

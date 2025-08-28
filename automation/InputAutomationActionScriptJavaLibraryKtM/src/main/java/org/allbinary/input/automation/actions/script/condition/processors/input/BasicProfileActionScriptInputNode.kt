@@ -35,9 +35,6 @@ open public class BasicProfileActionScriptInputNode
         
 public constructor        (node: Node)
             : super()
-        
-
-        Updates for KMP build        
         {
 var node = node
 
@@ -47,9 +44,6 @@ var node = node
 
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -58,10 +52,7 @@ public constructor        ()
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var node: Node = document.createElement(GenericProfileActionScriptInputData.NAME)!!

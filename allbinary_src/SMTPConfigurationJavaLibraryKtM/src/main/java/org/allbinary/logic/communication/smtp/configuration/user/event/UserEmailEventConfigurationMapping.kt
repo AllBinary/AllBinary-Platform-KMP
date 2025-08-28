@@ -38,9 +38,6 @@ open public class UserEmailEventConfigurationMapping
     private var userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface
 public constructor        (userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var userEmailEventConfigurationInterface = userEmailEventConfigurationInterface
 this.userEmailEventConfigurationInterface= userEmailEventConfigurationInterface
@@ -49,10 +46,7 @@ this.userEmailEventConfigurationInterface= userEmailEventConfigurationInterface
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -70,10 +64,7 @@ hashMap!!.put(UserEmailEventConfigurationData.LISTENER_CLASSPATH, this.userEmail
             
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 
 
 
@@ -86,10 +77,7 @@ open fun getKey()
             
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
     var vector: Vector = Vector()
 

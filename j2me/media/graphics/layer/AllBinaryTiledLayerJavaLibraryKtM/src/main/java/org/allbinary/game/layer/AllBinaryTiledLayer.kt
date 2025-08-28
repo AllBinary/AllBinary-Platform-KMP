@@ -58,10 +58,7 @@ open public class AllBinaryTiledLayer : Layer
     private val dataId: Integer
 public constructor        (dataId: Integer, width: Int, height: Int, cellWidth: Int, cellHeight: Int)                        
 
-                            : super(0, 0)
-
-        Updates for KMP build        
-        {
+                            : super(0, 0){
     //var dataId = dataId
     //var width = width
     //var height = height
@@ -86,10 +83,7 @@ this.halfCellHeight= (cellHeight shr 1)
 
 open fun setCells(mapTwoDArray: Array<IntArray?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var mapTwoDArray = mapTwoDArray
 
     var stringBuffer: StringMaker = StringMaker()
@@ -115,9 +109,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, "setCells")
 
                         for (col in 0 until columns)
 
-        
-
-        Updates for KMP build        
         {
 
 
@@ -125,9 +116,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, "setCells")
 
                         for (row in 0 until rows)
 
-        
-
-        Updates for KMP build        
         {
 this.setCell(col, row, mapTwoDArray[row]!![col]!!)
 }
@@ -139,10 +127,7 @@ this.setCell(col, row, mapTwoDArray[row]!![col]!!)
 
 open fun updateCells(mapTwoDArray: Array<IntArray?>, fromTileId: Int, toTileId: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var mapTwoDArray = mapTwoDArray
     //var fromTileId = fromTileId
     //var toTileId = toTileId
@@ -158,9 +143,6 @@ open fun updateCells(mapTwoDArray: Array<IntArray?>, fromTileId: Int, toTileId: 
 
                         for (col in 0 until columns)
 
-        
-
-        Updates for KMP build        
         {
 
 
@@ -168,9 +150,6 @@ open fun updateCells(mapTwoDArray: Array<IntArray?>, fromTileId: Int, toTileId: 
 
                         for (row in 0 until rows)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -191,10 +170,7 @@ this.setCell(col, row, mapTwoDArray[row]!![col]!!)
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -205,30 +181,21 @@ open fun getName()
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
 }
 
 
 open fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
 }
 
 
 open fun getX2()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -239,10 +206,7 @@ open fun getX2()
 
 open fun getY2()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -253,10 +217,7 @@ open fun getY2()
 
 open fun getZ2()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -267,10 +228,7 @@ open fun getZ2()
 
 open fun getCellWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -281,10 +239,7 @@ open fun getCellWidth()
 
 open fun getCellHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -295,10 +250,7 @@ open fun getCellHeight()
 
 open fun getCell(col: Int, row: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var col = col
     //var row = row
 
@@ -311,10 +263,7 @@ open fun getCell(col: Int, row: Int)
 
 open fun getColumns()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -325,10 +274,7 @@ open fun getColumns()
 
 open fun getRows()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -339,10 +285,7 @@ open fun getRows()
 
 open fun setCell(col: Int, row: Int, tileIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var col = col
     //var row = row
     //var tileIndex = tileIndex
@@ -351,10 +294,7 @@ open fun setCell(col: Int, row: Int, tileIndex: Int)
 
 open fun getHalfWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -365,10 +305,7 @@ open fun getHalfWidth()
 
 open fun getHalfHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -379,10 +316,7 @@ open fun getHalfHeight()
 
 open fun getDataId()
         //nullable = true from not(false or (false and true)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 
 
 
@@ -393,10 +327,7 @@ open fun getDataId()
 
 open fun getHalfCellWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -407,10 +338,7 @@ open fun getHalfCellWidth()
 
 open fun getHalfCellHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -421,10 +349,7 @@ open fun getHalfCellHeight()
 
 open fun isOnTileLayer(column: Int, row: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var column = column
     //var row = row
 
@@ -454,10 +379,7 @@ open fun isOnTileLayer(column: Int, row: Int)
 
 open fun getAnimatedTile(animationTileIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var animationTileIndex = animationTileIndex
 
 

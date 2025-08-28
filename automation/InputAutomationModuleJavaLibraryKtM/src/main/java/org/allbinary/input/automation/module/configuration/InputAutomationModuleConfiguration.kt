@@ -61,17 +61,11 @@ open public class InputAutomationModuleConfiguration
     private var inputAutomationModuleInterface: InputAutomationModuleFactoryInterface
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 public constructor        (abeClientInformation: AbeClientInformationInterface, node: Node)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var abeClientInformation = abeClientInformation
     //var node = node
@@ -80,9 +74,6 @@ this.init(abeClientInformation, node)
 
 public constructor        (abeClientInformation: AbeClientInformationInterface, name: String, className: String)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var abeClientInformation = abeClientInformation
     //var name = name
@@ -94,9 +85,6 @@ this.init(abeClientInformation)
 
 public constructor        (inputAutomationModuleInterface: InputAutomationModuleFactoryInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var inputAutomationModuleInterface = inputAutomationModuleInterface
 this.setInputAutomationModuleInterface(inputAutomationModuleInterface)
@@ -108,10 +96,7 @@ this.setClassName(this.inputAutomationModuleInterface!!.::class.toString()!!)
             
 open fun init(abeClientInformation: AbeClientInformationInterface, node: Node)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
     //var node = node
 
@@ -157,10 +142,7 @@ this.init(abeClientInformation)
 
 open fun init(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
 
         try {
@@ -168,10 +150,7 @@ open fun init(abeClientInformation: AbeClientInformationInterface)
 logUtil!!.put("ClassName: " +className, this, this.commonStrings!!.INIT)
 this.setInputAutomationModuleInterface(AbeFactory.getInstance()!!.getInstance()!!.getInstance(abeClientInformation, getClassName()) as InputAutomationModuleFactoryInterface)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e)
 
 
@@ -186,10 +165,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e)
             
 open fun toDomNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var node: Node = document.createElement(InputAutomationModuleData.NAME)!!
@@ -208,10 +184,7 @@ node.appendChild(classNameNode)
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -222,10 +195,7 @@ open fun getName()
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var name = name
 logUtil!!.put("Name: " +name, this, "setName")
 this.name= name
@@ -234,10 +204,7 @@ this.name= name
 
 open fun getClassName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -248,10 +215,7 @@ open fun getClassName()
 
 open fun setClassName(className: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var className = className
 logUtil!!.put("ClassName : " +className, this, "setClassName")
 this.className= className
@@ -260,10 +224,7 @@ this.className= className
 
 open fun getInputAutomationModuleInterface()
         //nullable = true from not(false or (false and true)) = true
-: InputAutomationModuleFactoryInterface
-
-        Updates for KMP build        
-        {
+: InputAutomationModuleFactoryInterface{
 
 
 
@@ -274,10 +235,7 @@ open fun getInputAutomationModuleInterface()
 
 open fun setInputAutomationModuleInterface(inputAutomationModuleInterface: InputAutomationModuleFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var inputAutomationModuleInterface = inputAutomationModuleInterface
 logUtil!!.put("InputAutomationModuleFactoryInterface : " +inputAutomationModuleInterface, this, "setInputAutomationModuleInterface")
 this.inputAutomationModuleInterface= inputAutomationModuleInterface

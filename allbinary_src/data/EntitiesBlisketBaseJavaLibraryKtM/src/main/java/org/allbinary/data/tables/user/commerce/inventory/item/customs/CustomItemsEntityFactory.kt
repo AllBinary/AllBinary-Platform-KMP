@@ -39,10 +39,7 @@ open public class CustomItemsEntityFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CustomItemsEntityFactory
-
-        Updates for KMP build        
-        {
+: CustomItemsEntityFactory{
 
 
 
@@ -56,19 +53,13 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getCustomItemsEntityInstance()
         //nullable = true from not(false or (false and true)) = true
-: CustomItemsEntity
-
-        Updates for KMP build        
-        {
+: CustomItemsEntity{
 
         try {
             
@@ -77,10 +68,7 @@ open fun getCustomItemsEntityInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return org.allbinary.data.tables.user.commerce.inventory.item.customs.CustomItemsEntity()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

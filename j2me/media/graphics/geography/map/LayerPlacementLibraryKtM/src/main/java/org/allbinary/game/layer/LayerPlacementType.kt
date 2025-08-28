@@ -34,9 +34,6 @@ open public class LayerPlacementType
     private var type: Int
  constructor        (type: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var type = type
 this.type= type
@@ -45,10 +42,7 @@ this.type= type
 
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -59,10 +53,7 @@ open fun getType()
 
 open fun setType(type: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var type = type
 this.type= type
 }

@@ -67,10 +67,7 @@ open public class TechnologyRTSInterfaceImageItem : CustomImageItem {
     private val DOLLAR: String = "$"
 public constructor        (label: String, img: Image, layout: Int, altText: String, basicColor: BasicColor, rtsInterface: RTSInterface)                        
 
-                            : super(label, img, layout, altText, basicColor)
-
-        Updates for KMP build        
-        {
+                            : super(label, img, layout, altText, basicColor){
 var label = label
 var img = img
 var layout = layout
@@ -113,10 +110,7 @@ this.update()
 
 open fun getRtsInterface()
         //nullable = true from not(false or (false and true)) = true
-: RTSInterface
-
-        Updates for KMP build        
-        {
+: RTSInterface{
 
 
 
@@ -127,10 +121,7 @@ open fun getRtsInterface()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.costString= this.primitiveLongUtil!!.getCharArray(this.getRtsInterface()!!.getUpgradeCost())
 this.levelString= this.primitiveLongUtil!!.getCharArray(this.getRtsInterface()!!.getLevel())
 }
@@ -138,10 +129,7 @@ this.levelString= this.primitiveLongUtil!!.getCharArray(this.getRtsInterface()!!
 
 open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 var x = x
 var y = y

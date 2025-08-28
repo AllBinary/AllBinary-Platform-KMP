@@ -38,10 +38,7 @@ open public class CurrentlyPressedTouchButtonSingleton
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CurrentlyPressedTouchButtonSingleton
-
-        Updates for KMP build        
-        {
+: CurrentlyPressedTouchButtonSingleton{
 
 
 
@@ -55,19 +52,13 @@ open fun getInstance()
     val list: BasicArrayList = BasicArrayList()
 protected constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun size()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -78,10 +69,7 @@ open fun size()
 
 open fun remove(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: TouchButtonInput
-
-        Updates for KMP build        
-        {
+: TouchButtonInput{
 var index = index
 
 
@@ -93,10 +81,7 @@ var index = index
 
 open fun remove(touchButtonInput: TouchButtonInput)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var touchButtonInput = touchButtonInput
 
 
@@ -108,10 +93,7 @@ var touchButtonInput = touchButtonInput
 
 open fun get(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: TouchButtonInput
-
-        Updates for KMP build        
-        {
+: TouchButtonInput{
 var index = index
 
 
@@ -123,10 +105,7 @@ var index = index
 
 open fun contains(touchButtonInput: TouchButtonInput)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var touchButtonInput = touchButtonInput
 
 
@@ -138,10 +117,7 @@ var touchButtonInput = touchButtonInput
 
 open fun add(touchButtonInput: TouchButtonInput)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var touchButtonInput = touchButtonInput
 this.list.add(touchButtonInput)
 }

@@ -54,10 +54,7 @@ open public class HealthHudWidget : BasicHud
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
 public constructor        (animationInterface: Animation, healthInterface: Health, location: Int, direction: Int)                        
 
-                            : super(location, direction, 16, healthInterface!!.getMaxHealth() *16, 2)
-
-        Updates for KMP build        
-        {
+                            : super(location, direction, 16, healthInterface!!.getMaxHealth() *16, 2){
 var animationInterface = animationInterface
 var healthInterface = healthInterface
 var location = location
@@ -78,10 +75,7 @@ this.update()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(this.xArray != 
@@ -95,9 +89,6 @@ open fun update()
 
                         for (index in 0 until this.xArray!!.size)
 
-        
-
-        Updates for KMP build        
         {
 this.xArray[index]= this.getX() +(index *16)
 }
@@ -109,10 +100,7 @@ this.xArray[index]= this.getX() +(index *16)
 
 override fun setX(x: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var x = x
 super.setX(x)
 this.update()
@@ -128,10 +116,7 @@ this.update()
     private val fastBeatTimeDelayHelper: TimeDelayHelper = TimeDelayHelper(320)
 override fun onHealthChange()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 max= (this.healthInterface!!.getHealth() /this.healthScale)
 timeDelayHelper= NoTimeDelayHelper.SINGLETON
 
@@ -170,10 +155,7 @@ timeDelayHelper= NoTimeDelayHelper.SINGLETON
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 
 
@@ -181,9 +163,6 @@ var graphics = graphics
 
                         for (index in 0 until max)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -200,10 +179,7 @@ var graphics = graphics
 
 override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 }
 

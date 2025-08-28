@@ -37,10 +37,7 @@ open public class ForwardData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ForwardData
-
-        Updates for KMP build        
-        {
+: ForwardData{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

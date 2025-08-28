@@ -47,10 +47,7 @@ open public class ResourceRelativeRelationshipFactory
                 @Throws(Exception::class)
             override fun init(level: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var level = level
 this.setInitialized(true)
 }
@@ -59,10 +56,7 @@ this.setInitialized(true)
                 @Throws(Exception::class)
             override fun getResourceRelativeRelationshipList(resource: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 var resource = resource
 
 
@@ -75,10 +69,7 @@ var resource = resource
                 @Throws(Exception::class)
             override fun addResourceRelativeRelationship(resource: String, hardPoint: RelativeRelationship)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var resource = resource
 var hardPoint = hardPoint
 
@@ -101,10 +92,7 @@ this.hashtable.put(resource, list)
 
 override fun isLoadingLevel(level: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var level = level
 
 
@@ -115,10 +103,7 @@ var level = level
 
 override fun isFeature()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -129,10 +114,7 @@ override fun isFeature()
 
 open fun setInitialized(initialized: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var initialized = initialized
 this.initialized= initialized
 }
@@ -140,10 +122,7 @@ this.initialized= initialized
 
 open fun isInitialized()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 

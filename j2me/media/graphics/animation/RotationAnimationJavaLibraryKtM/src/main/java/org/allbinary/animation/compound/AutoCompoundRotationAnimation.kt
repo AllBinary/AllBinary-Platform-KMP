@@ -43,10 +43,7 @@ open public class AutoCompoundRotationAnimation : RotationAnimation
     private var animationInterfaceArray: Array<RotationAnimation?>
 public constructor        (animationInterfaceArray: Array<RotationAnimation?>, animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(animationBehavior){
     //var animationInterfaceArray = animationInterfaceArray
     //var animationBehavior = animationBehavior
 
@@ -59,20 +56,14 @@ this.circularIndexUtil= CircularIndexUtil.getInstance(this.animationInterfaceArr
 
 override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var index = index
 this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.setFrame(index)
 }
 
 override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -84,10 +75,7 @@ override fun getFrame()
                 @Throws(Exception::class)
             override fun getAnimationSize()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -97,10 +85,7 @@ override fun getFrame()
 
 override fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -110,10 +95,7 @@ override fun getSize()
 
 override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.circularIndexUtil!!.previous()
 this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.previousFrame()
 }
@@ -122,47 +104,32 @@ this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.previousFram
                 @Throws(Exception::class)
             override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.circularIndexUtil!!.next()
 this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.nextFrame()
 }
 
 override fun previousRotation()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.previousRotation()
 }
 
 override fun nextRotation()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.nextRotation()
 }
 
 override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var sequence = sequence
 }
 
 override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
-: IntArray
-
-        Updates for KMP build        
-        {
+: IntArray{
 
 
 
@@ -172,10 +139,7 @@ override fun getSequence()
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var x = x
     //var y = y
@@ -184,10 +148,7 @@ this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.paint(graphi
 
 override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var x = x
     //var y = y
@@ -197,10 +158,7 @@ this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.paintThreed(
 
 override fun getCurrentAnimation()
         //nullable = true from not(false or (false and true)) = true
-: IndexedAnimation
-
-        Updates for KMP build        
-        {
+: IndexedAnimation{
 
 
 
@@ -210,10 +168,7 @@ override fun getCurrentAnimation()
 
 override fun nextAnimation()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var frame: Int = this.getFrame()!!
 
@@ -223,10 +178,7 @@ this.setFrame(frame)
 
 override fun previousAnimation()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var frame: Int = this.getFrame()!!
 
@@ -236,10 +188,7 @@ this.setFrame(frame)
 
 override fun setAnimation(index: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var index = index
 
     var frame: Int = this.getFrame()!!
@@ -250,50 +199,35 @@ this.setFrame(frame)
 
 override fun setFrame(direction: Direction)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var direction = direction
 this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.setFrame(direction)
 }
 
 override fun setFrame(angle: Angle)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var angle = angle
 this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.setFrame(angle)
 }
 
 override fun adjustFrame(newAngle: Angle)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var newAngle = newAngle
 this.adjustFrame(newAngle!!.getValue())
 }
 
 override fun adjustFrame(angle: Short)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var angle = angle
 this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.adjustFrame(angle)
 }
 
 override fun getAngleInfoP()
         //nullable = true from not(false or (false and true)) = true
-: AngleInfo
-
-        Updates for KMP build        
-        {
+: AngleInfo{
 
 
 
@@ -304,10 +238,7 @@ override fun getAngleInfoP()
 
 open fun getAnimationInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<RotationAnimation?>
-
-        Updates for KMP build        
-        {
+: Array<RotationAnimation?>{
 
 
 
@@ -318,10 +249,7 @@ open fun getAnimationInterfaceArray()
 
 open fun setAnimationInterfaceArray(animationInterfaceArray: Array<RotationAnimation?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var animationInterfaceArray = animationInterfaceArray
 this.animationInterfaceArray= animationInterfaceArray
 }
@@ -330,10 +258,7 @@ this.animationInterfaceArray= animationInterfaceArray
                 @Throws(Exception::class)
             override fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
 
 
@@ -341,9 +266,6 @@ this.animationInterfaceArray= animationInterfaceArray
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 this.animationInterfaceArray[index]!!.set(gl)
 }

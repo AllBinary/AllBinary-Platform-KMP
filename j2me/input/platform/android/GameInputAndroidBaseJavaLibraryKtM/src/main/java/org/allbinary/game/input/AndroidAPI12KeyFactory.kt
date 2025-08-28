@@ -22,10 +22,7 @@ open public class AndroidAPI12KeyFactory : AndroidAPI9KeyFactory {
 
 open fun getAPI12Instance()
         //nullable = true from not(false or (false and true)) = true
-: AndroidAPI12KeyFactory
-
-        Updates for KMP build        
-        {
+: AndroidAPI12KeyFactory{
 
 
 
@@ -35,10 +32,7 @@ open fun getAPI12Instance()
 
 
         }
-            private constructor        ()
-
-        Updates for KMP build        
-        {
+            private constructor        (){
 KEYCODE_BUTTON_1= AndroidGameKey(KeyEvent.KEYCODE_BUTTON_1, "BUTTON 1")
 KEYCODE_BUTTON_10= AndroidGameKey(KeyEvent.KEYCODE_BUTTON_10, "BUTTON 10")
 KEYCODE_BUTTON_11= AndroidGameKey(KeyEvent.KEYCODE_BUTTON_11, "BUTTON 11")

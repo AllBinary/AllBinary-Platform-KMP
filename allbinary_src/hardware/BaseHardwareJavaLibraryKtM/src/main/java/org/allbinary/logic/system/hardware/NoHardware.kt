@@ -42,10 +42,7 @@ open public class NoHardware
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: HardwareInterface
-
-        Updates for KMP build        
-        {
+: HardwareInterface{
 
 
 
@@ -62,10 +59,7 @@ open fun getInstance()
             }            
         override fun getComponent(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: HardwareComponentInterface
-
-        Updates for KMP build        
-        {
+: HardwareComponentInterface{
 var index = index
 
 
@@ -76,10 +70,7 @@ var index = index
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -89,10 +80,7 @@ override fun toString()
 
 override fun compareTo(hardwareInterface: HardwareInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var hardwareInterface = hardwareInterface
 
 
@@ -103,10 +91,7 @@ var hardwareInterface = hardwareInterface
 
 override fun difference(hardwareInterface: HardwareInterface)
         //nullable = true from not(false or (false and false)) = true
-: Hashtable<Any, Any>
-
-        Updates for KMP build        
-        {
+: Hashtable<Any, Any>{
 var hardwareInterface = hardwareInterface
 
 

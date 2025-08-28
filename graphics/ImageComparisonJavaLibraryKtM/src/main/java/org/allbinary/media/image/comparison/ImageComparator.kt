@@ -47,9 +47,6 @@ open public class ImageComparator
     private val imageComparatorConstraintsInterface: ImageComparatorConstraintsInterface
 public constructor        (imageComparatorConstraintsInterface: ImageComparatorConstraintsInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var imageComparatorConstraintsInterface = imageComparatorConstraintsInterface
 this.imageComparatorConstraintsInterface= imageComparatorConstraintsInterface
@@ -60,10 +57,7 @@ this.imageComparatorConstraintsInterface= imageComparatorConstraintsInterface
             
 open fun process(imageComparisonInfo: ImageComparisonResult, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var imageComparisonInfo = imageComparisonInfo
     //var point = point
 
@@ -138,10 +132,7 @@ open fun process(imageComparisonInfo: ImageComparisonResult, point: GPoint)
             
 open fun compare(bufferedImage1: BufferedImage, bufferedImage2: BufferedImage, frameOne: Long, frameTwo: Long, tolerance: Int)
         //nullable = true from not(false or (false and false)) = true
-: ImageComparisonResult
-
-        Updates for KMP build        
-        {
+: ImageComparisonResult{
     //var bufferedImage1 = bufferedImage1
     //var bufferedImage2 = bufferedImage2
     //var frameOne = frameOne
@@ -159,10 +150,7 @@ open fun compare(bufferedImage1: BufferedImage, bufferedImage2: BufferedImage, f
             
 open fun compare(bufferedImage1: BufferedImage, bufferedImage2: BufferedImage, frameOne: Long, frameTwo: Long, tolerance: Int, name: String)
         //nullable = true from not(false or (false and false)) = true
-: ImageComparisonResult
-
-        Updates for KMP build        
-        {
+: ImageComparisonResult{
     //var bufferedImage1 = bufferedImage1
     //var bufferedImage2 = bufferedImage2
     //var frameOne = frameOne
@@ -194,9 +182,6 @@ open fun compare(bufferedImage1: BufferedImage, bufferedImage2: BufferedImage, f
 
                         for (indexY in 0 until imageComparisonInfo!!.imageHeight)
 
-        
-
-        Updates for KMP build        
         {
 
 
@@ -204,9 +189,6 @@ open fun compare(bufferedImage1: BufferedImage, bufferedImage2: BufferedImage, f
 
                         for (indexX in 0 until imageComparisonInfo!!.imageWidth)
 
-        
-
-        Updates for KMP build        
         {
 this.process(imageComparisonInfo, PointFactory.getInstance()!!.getInstance(indexX, indexY))
 

@@ -51,10 +51,7 @@ open public class PCComponentFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PCComponentFactory
-
-        Updates for KMP build        
-        {
+: PCComponentFactory{
 
 
 
@@ -70,19 +67,13 @@ open fun getInstance()
     private val componentFactory: ComponentFactory = ComponentFactory.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getInstance(component: String, componentData: String)
         //nullable =  from not(true or (false and false)) = 
-: HardwareComponentInterface
-
-        Updates for KMP build        
-        {
+: HardwareComponentInterface{
 var component = component
 var componentData = componentData
 
@@ -207,10 +198,7 @@ var componentData = componentData
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Unknown(componentData) as HardwareComponentInterface
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -235,10 +223,7 @@ var componentData = componentData
 
 open fun getComponentType(component: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var component = component
 
     

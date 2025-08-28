@@ -46,10 +46,7 @@ open public class PropsTileMapPlacementVisitor : TileMapPlacementVisitor {
 
 open fun visit(lastMap: TiledMap, mapData: Array<IntArray?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var lastMap = lastMap
     //var mapData = mapData
 
@@ -75,9 +72,6 @@ open fun visit(lastMap: TiledMap, mapData: Array<IntArray?>)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
 
@@ -85,9 +79,6 @@ open fun visit(lastMap: TiledMap, mapData: Array<IntArray?>)
 
                         for (index2 in 0 until size2)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -250,10 +241,7 @@ open fun visit(lastMap: TiledMap, mapData: Array<IntArray?>)
 
 open fun visit2(mapArray: Array<IntArray?>, mapData: Array<IntArray?>, index: Int, index2: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var mapArray = mapArray
     //var mapData = mapData
     //var index = index
@@ -276,9 +264,6 @@ open fun visit2(mapArray: Array<IntArray?>, mapData: Array<IntArray?>, index: In
 
                         for (index4 in index2 -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 index3--
 
@@ -310,9 +295,6 @@ index3--
 
                         for (index5 in index3 +1 until index -1)
 
-        
-
-        Updates for KMP build        
         {
 
 
@@ -320,9 +302,6 @@ index3--
 
                         for (index6 in index4 +1 until index2 -1)
 
-        
-
-        Updates for KMP build        
         {
 
     

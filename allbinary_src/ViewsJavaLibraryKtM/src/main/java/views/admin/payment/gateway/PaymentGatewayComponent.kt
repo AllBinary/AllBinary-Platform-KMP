@@ -42,10 +42,7 @@ open public class PaymentGatewayComponent : HttpStoreComponentView {
     private var paymentGatewayInterface: PaymentGatewayInterface
 public constructor        (transformInfoInterface: TransformInfoInterface, paymentGatewayInterface: PaymentGatewayInterface)                        
 
-                            : super(transformInfoInterface)
-
-        Updates for KMP build        
-        {
+                            : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
 var paymentGatewayInterface = paymentGatewayInterface
 
@@ -60,10 +57,7 @@ this.paymentGatewayInterface= paymentGatewayInterface
             
 open fun addDomNodeInterfaces()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var paymentType: BasicPaymentType = BasicPaymentTypeUtil.getInstance()!!.get(this.paymentGatewayInterface!!.getName())!!
 
@@ -79,10 +73,7 @@ this.addDomNodeInterface(domNodeInterface)
 
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             this.addDomNodeInterfaces()
@@ -92,10 +83,7 @@ open fun view()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.view()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to view payment gateway"
 

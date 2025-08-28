@@ -46,28 +46,19 @@ open public class NullEmulatorView
             }            
         override fun setMidlet(midlet: MIDlet)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var midlet = midlet
 }
 
 override fun onEmulatorInitComplete(midletActivity: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var midletActivity = midletActivity
 }
 
 override fun onSetDisplayable(displayable: Displayable)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var displayable = displayable
 }
 

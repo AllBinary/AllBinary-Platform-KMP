@@ -32,64 +32,37 @@ open fun getProcessor()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-        Updates for KMP build        
-        
-
 open fun getVendorId()
         //nullable = true from not(false or (false and true)) = true
 : String
-
-        Updates for KMP build        
-        
 
 open fun getCpuFamily()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-        Updates for KMP build        
-        
-
 open fun getModel()
         //nullable = true from not(false or (false and true)) = true
 : String
-
-        Updates for KMP build        
-        
 
 open fun getModelName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-        Updates for KMP build        
-        
-
 open fun getStepping()
         //nullable = true from not(false or (false and true)) = true
 : String
-
-        Updates for KMP build        
-        
 
 open fun getCpuSpeed()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-        Updates for KMP build        
-        
-
 open fun getCacheSize()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-        Updates for KMP build        
-        
-
 open fun compareTo(cpuInterface: CpuInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
-
-        Updates for KMP build        
-        
 
 }
                 

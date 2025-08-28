@@ -142,9 +142,6 @@ open public class AuthorizeNetData
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

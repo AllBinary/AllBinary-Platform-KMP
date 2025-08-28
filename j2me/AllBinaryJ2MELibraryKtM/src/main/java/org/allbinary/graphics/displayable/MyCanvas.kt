@@ -64,20 +64,14 @@ open public class MyCanvas : Canvas
     private var isPaused: Boolean= false
 public constructor        ()                        
 
-                            : this(CommonStrings.getInstance()!!.UNKNOWN, BasicArrayList())
-
-        Updates for KMP build        
-        {
+                            : this(CommonStrings.getInstance()!!.UNKNOWN, BasicArrayList()){
 
 
                             //For kotlin this is before the body of the constructor.
                     
 }
 
-public constructor        (name: String, childNameList: BasicArrayList)
-
-        Updates for KMP build        
-        {
+public constructor        (name: String, childNameList: BasicArrayList){
     //var name = name
     //var childNameList = childNameList
 logUtil!!.put(commonStrings!!.CONSTRUCTOR, this, commonStrings!!.CONSTRUCTOR)
@@ -89,10 +83,7 @@ this.commandStack= Stack()
 
 override fun setFullScreenMode(mode: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var mode = mode
 super.setFullScreenMode(mode)
 displayInfoSingleton!!.update(this, canvasStrings!!.SET_FULL_SCREEN_MODE)
@@ -100,10 +91,7 @@ displayInfoSingleton!!.update(this, canvasStrings!!.SET_FULL_SCREEN_MODE)
 
 override fun sizeChanged(w: Int, h: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var w = w
 var h = h
 displayInfoSingleton!!.update(this, canvasStrings!!.SIZE_CHANGED)
@@ -112,10 +100,7 @@ displayInfoSingleton!!.update(this, canvasStrings!!.SIZE_CHANGED)
 
 open fun getCommandStack()
         //nullable = true from not(false or (false and true)) = true
-: Stack<Any>
-
-        Updates for KMP build        
-        {
+: Stack<Any>{
 
 
 
@@ -127,10 +112,7 @@ open fun getCommandStack()
 
 open fun isCommand(command: Command)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var command = command
 
 
@@ -142,10 +124,7 @@ var command = command
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun addCommand(command: Command)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var command = command
 
     
@@ -162,10 +141,7 @@ super.addCommand(command)
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun removeCommand(command: Command)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var command = command
 commandStack!!.removeElement(command)
 super.removeCommand(command)
@@ -174,10 +150,7 @@ super.removeCommand(command)
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun removeAllCommands()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var size: Int = commandStack!!.size!!
 
@@ -187,9 +160,6 @@ override fun removeAllCommands()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 super.removeCommand(commandStack!!.pop() as Command)
 }
@@ -200,10 +170,7 @@ super.removeCommand(commandStack!!.pop() as Command)
     private var listener: CommandListener = NullCommandListener.NULL_COMMAND_LISTENER
 override fun setCommandListener(l: CommandListener)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var l = l
 super.setCommandListener(l)
 listener= l
@@ -212,10 +179,7 @@ listener= l
 
 open fun getCustomCommandListener()
         //nullable = true from not(false or (false and true)) = true
-: CommandListener
-
-        Updates for KMP build        
-        {
+: CommandListener{
 
 
 
@@ -227,10 +191,7 @@ open fun getCustomCommandListener()
 
 open fun isPaused()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -241,10 +202,7 @@ open fun isPaused()
 
 open fun removePauseCommand()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.removeCommand(MyCommandsFactory.getInstance()!!.PAUSE_COMMAND)
 }
 
@@ -252,10 +210,7 @@ this.removeCommand(MyCommandsFactory.getInstance()!!.PAUSE_COMMAND)
 
 open fun pause()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 logUtil!!.put(commonStrings!!.START, this, canvasStrings!!.PAUSE)
 this.removePauseCommand()
 this.addCommand(MyCommandsFactory.getInstance()!!.RESUME_COMMAND)
@@ -266,10 +221,7 @@ this.setPaused(true)
 
 open fun unPause()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 logUtil!!.put(commonStrings!!.START, this, canvasStrings!!.UN_PAUSE)
 this.removeCommand(MyCommandsFactory.getInstance()!!.RESUME_COMMAND)
 this.addCommand(MyCommandsFactory.getInstance()!!.PAUSE_COMMAND)
@@ -281,39 +233,27 @@ this.setPaused(false)
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 displayInfoSingleton!!.process()
 }
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 }
 
 
 open fun draw(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 }
 
 
 open fun hasChild(displayable: MyCanvas)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var displayable = displayable
 
 
@@ -325,20 +265,14 @@ var displayable = displayable
 
 open fun destroy()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 logUtil!!.put("Destroyed MyCanvas", this, "destroy")
 }
 
 
 open fun setPaused(isPaused: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var isPaused = isPaused
 this.isPaused= isPaused
 }
@@ -346,10 +280,7 @@ this.isPaused= isPaused
 
 open fun keyPressed(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var keyCode = keyCode
 var deviceId = deviceId
 }
@@ -357,10 +288,7 @@ var deviceId = deviceId
 
 open fun keyRepeated(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var keyCode = keyCode
 var deviceId = deviceId
 }
@@ -368,10 +296,7 @@ var deviceId = deviceId
 
 open fun keyReleased(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var keyCode = keyCode
 var deviceId = deviceId
 }
@@ -380,10 +305,7 @@ var deviceId = deviceId
     private val touchME: TouchJ2ME = TouchJ2ME()
 override fun pointerDragged(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var x = x
 var y = y
 touchME!!.pointerDragged(x, y)
@@ -391,10 +313,7 @@ touchME!!.pointerDragged(x, y)
 
 override fun pointerPressed(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var x = x
 var y = y
 touchME!!.pointerPressed(x, y)
@@ -402,10 +321,7 @@ touchME!!.pointerPressed(x, y)
 
 override fun pointerReleased(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var x = x
 var y = y
 touchME!!.pointerReleased(x, y)
@@ -414,10 +330,7 @@ touchME!!.pointerReleased(x, y)
 
 open fun nextSong(nextSongSound: Sound, leftVolume: Int, rightVolume: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var nextSongSound = nextSongSound
     //var leftVolume = leftVolume
     //var rightVolume = rightVolume

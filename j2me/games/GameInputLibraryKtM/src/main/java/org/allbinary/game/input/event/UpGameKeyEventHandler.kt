@@ -39,10 +39,7 @@ open public class UpGameKeyEventHandler : UpGameKeyEventHandlerBase {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: UpGameKeyEventHandler
-
-        Updates for KMP build        
-        {
+: UpGameKeyEventHandler{
 
 
 
@@ -57,10 +54,7 @@ open fun getInstance()
 
 open fun getInstance(deviceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: UpGameKeyEventHandlerBase
-
-        Updates for KMP build        
-        {
+: UpGameKeyEventHandlerBase{
 var deviceId = deviceId
 
     var playerInputId: Int = playerInputIdFactory!!.getPlayerForDevice(deviceId)!!
@@ -75,10 +69,7 @@ var deviceId = deviceId
 
 open fun getInstanceForPlayer(playerInputId: Int)
         //nullable = true from not(false or (false and false)) = true
-: UpGameKeyEventHandlerBase
-
-        Updates for KMP build        
-        {
+: UpGameKeyEventHandlerBase{
 var playerInputId = playerInputId
 
 
@@ -87,18 +78,12 @@ var playerInputId = playerInputId
                         return instanceArray[playerInputId]!!
 }
 
-private constructor        ()
-
-        Updates for KMP build        
-        {
+private constructor        (){
 }
 
 override fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 super.removeAllListeners()
 
 
@@ -106,9 +91,6 @@ super.removeAllListeners()
 
                         for (index in instanceArray!!.size -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 instanceArray[index]!!.removeAllListeners()
 }
@@ -117,10 +99,7 @@ instanceArray[index]!!.removeAllListeners()
 
 override fun removeListenerSingleThreaded(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventListenerInterface = eventListenerInterface
 super.removeListenerSingleThreaded(eventListenerInterface)
 
@@ -129,9 +108,6 @@ super.removeListenerSingleThreaded(eventListenerInterface)
 
                         for (index in instanceArray!!.size -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 instanceArray[index]!!.removeListenerSingleThreaded(eventListenerInterface)
 }
@@ -140,10 +116,7 @@ instanceArray[index]!!.removeListenerSingleThreaded(eventListenerInterface)
 
 override fun removeListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventListenerInterface = eventListenerInterface
 super.removeListener(eventListenerInterface)
 
@@ -152,9 +125,6 @@ super.removeListener(eventListenerInterface)
 
                         for (index in instanceArray!!.size -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 instanceArray[index]!!.removeListener(eventListenerInterface)
 }

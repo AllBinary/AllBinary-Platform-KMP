@@ -35,10 +35,7 @@ open public class NullDropCellPositionGenerator : BaseDropCellPositionGenerator 
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NullDropCellPositionGenerator
-
-        Updates for KMP build        
-        {
+: NullDropCellPositionGenerator{
 
 
 

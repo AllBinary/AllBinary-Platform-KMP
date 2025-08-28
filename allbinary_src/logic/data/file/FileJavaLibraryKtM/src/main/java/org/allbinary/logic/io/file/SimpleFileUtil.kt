@@ -49,10 +49,7 @@ open public class SimpleFileUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: SimpleFileUtil
-
-        Updates for KMP build        
-        {
+: SimpleFileUtil{
 
 
 
@@ -63,10 +60,7 @@ open fun getInstance()
 
 open fun nullWriter()
         //nullable = true from not(false or (false and true)) = true
-: Writer
-
-        Updates for KMP build        
-        {
+: Writer{
 
 
 
@@ -79,10 +73,7 @@ open fun nullWriter()
                 @Throws(IOException::class)
             override fun append(c: Char)
         //nullable = true from not(false or (false and false)) = true
-: Writer
-
-        Updates for KMP build        
-        {
+: Writer{
 var c = c
 
 
@@ -94,10 +85,7 @@ var c = c
                 @Throws(IOException::class)
             override fun append(csq: CharSequence)
         //nullable = true from not(false or (false and false)) = true
-: Writer
-
-        Updates for KMP build        
-        {
+: Writer{
 var csq = csq
 
 
@@ -109,10 +97,7 @@ var csq = csq
                 @Throws(IOException::class)
             override fun append(csq: CharSequence, start: Int, end: Int)
         //nullable = true from not(false or (false and false)) = true
-: Writer
-
-        Updates for KMP build        
-        {
+: Writer{
 var csq = csq
 var start = start
 var end = end
@@ -126,20 +111,14 @@ var end = end
                 @Throws(IOException::class)
             override fun write(c: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var c = c
 }
 
                 @Throws(IOException::class)
             override fun write(cbuf: CharArray, off: Int, len: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var cbuf = cbuf
 var off = off
 var len = len
@@ -148,20 +127,14 @@ var len = len
                 @Throws(IOException::class)
             override fun write(str: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var str = str
 }
 
                 @Throws(IOException::class)
             override fun write(str: String, off: Int, len: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var str = str
 var off = off
 var len = len
@@ -170,17 +143,11 @@ var len = len
                 @Throws(IOException::class)
             override fun flush()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 override fun close()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
                                 }
@@ -190,10 +157,7 @@ override fun close()
 
 open fun nullReader()
         //nullable = true from not(false or (false and true)) = true
-: Reader
-
-        Updates for KMP build        
-        {
+: Reader{
 
 
 
@@ -204,10 +168,7 @@ open fun nullReader()
                 @Throws(IOException::class)
             override fun read()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -218,10 +179,7 @@ open fun nullReader()
                 @Throws(IOException::class)
             override fun read(cbuf: CharArray, off: Int, len: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var cbuf = cbuf
 var off = off
 var len = len
@@ -235,10 +193,7 @@ var len = len
                 @Throws(IOException::class)
             override fun read(target: CharBuffer)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var target = target
 
 
@@ -250,10 +205,7 @@ var target = target
                 @Throws(IOException::class)
             override fun ready()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -264,10 +216,7 @@ var target = target
                 @Throws(IOException::class)
             override fun skip(n: Long)
         //nullable = true from not(false or (false and false)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 var n = n
 
 
@@ -277,10 +226,7 @@ var n = n
 }
 override fun close()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
                                 }
@@ -309,10 +255,7 @@ override fun close()
 
 open fun loadFileAsList(inputStream: InputStream, max: Int, byteArray1: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
     //var inputStream = inputStream
     //var max = max
     //var byteArray1 = byteArray1
@@ -326,10 +269,7 @@ open fun loadFileAsList(inputStream: InputStream, max: Int, byteArray1: ByteArra
 
 open fun loadFileAsList(inputStream: InputStream, max: Int, byteArray1: ByteArray, includeReturnLine: Int)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
     //var inputStream = inputStream
     //var max = max
     //var byteArray1 = byteArray1
@@ -363,10 +303,7 @@ open fun loadFileAsList(inputStream: InputStream, max: Int, byteArray1: ByteArra
 byteArray= streamUtil!!.getByteArray(inputStream, outputStream2, byteArray1)
 streamUtil!!.close(inputStream)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 streamUtil!!.close(inputStream)
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
 }
@@ -401,16 +338,10 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
 
 
         while(index < size)
-        
-
-        Updates for KMP build        
         {
 startIndex= index
 
         while(index < size -1 && byteArray[index] != '\n'.code as Byte)
-        
-
-        Updates for KMP build        
         {
 index++
 }
@@ -454,10 +385,7 @@ index++
 
 open fun createStringFromArrayOfStrings(stringArray: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
     //var stringArray = stringArray
 
     var stringMaker: StringMaker = StringMaker()
@@ -472,9 +400,6 @@ open fun createStringFromArrayOfStrings(stringArray: Array<String?>)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 stringMaker!!.append(stringArray[index]!!)
 }

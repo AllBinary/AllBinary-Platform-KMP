@@ -42,10 +42,7 @@ open public class AbXslHelper
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AbXslHelper
-
-        Updates for KMP build        
-        {
+: AbXslHelper{
 
 
 
@@ -65,10 +62,7 @@ open fun getInstance()
             
 open fun translate(xslFile: AbFile, xmlFile: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
     //var xslFile = xslFile
     //var xmlFile = xmlFile
 
@@ -83,10 +77,7 @@ open fun translate(xslFile: AbFile, xmlFile: AbFile)
             
 open fun translate(xslPath: AbPath, xmlPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
     //var xslPath = xslPath
     //var xmlPath = xmlPath
 
@@ -101,10 +92,7 @@ open fun translate(xslPath: AbPath, xmlPath: AbPath)
             
 open fun translate(xsltFilePath: String, xmlFilePath: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
     //var xsltFilePath = xsltFilePath
     //var xmlFilePath = xmlFilePath
 
@@ -118,10 +106,7 @@ open fun translate(xsltFilePath: String, xmlFilePath: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return XslHelper.getInstance()!!.translate(StreamSource(xsltFilePath), StreamSource(xmlFilePath), StreamResult(outputStream))!!.toString()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 

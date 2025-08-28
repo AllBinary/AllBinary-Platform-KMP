@@ -43,9 +43,6 @@ open public class UserConfigurationData
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

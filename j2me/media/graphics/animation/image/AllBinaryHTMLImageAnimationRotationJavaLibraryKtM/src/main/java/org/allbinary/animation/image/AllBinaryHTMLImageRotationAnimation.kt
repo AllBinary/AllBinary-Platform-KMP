@@ -58,10 +58,7 @@ open public class AllBinaryHTMLImageRotationAnimation : ImageBaseRotationAnimati
     private var alphaProcessor: AlphaBaseProcessor = AlphaBaseProcessor.getInstance()!!
 protected constructor        (originalImage: Image, image: Image, angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
 
-                            : super(image, angleInfo, totalAngle, animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(image, angleInfo, totalAngle, animationBehavior){
     //var originalImage = originalImage
     //var image = image
     //var angleInfo = angleInfo
@@ -82,10 +79,7 @@ this.canvasSurfaceArray[1]= this.getCanvasSurface(this.twoImages[1]!!)
 
 open fun getCanvasSurface(image: Image)
         //nullable = true from not(false or (false and false)) = true
-: CanvasSurface
-
-        Updates for KMP build        
-        {
+: CanvasSurface{
     //var image = image
 
     var htmlImage: PlaynMutableImage = image as PlaynMutableImage
@@ -107,10 +101,7 @@ canvasSurface!!.translate(originalImage!!.getWidth() /2, originalImage!!.getHeig
 
 open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var basicColor = basicColor
 
     var changed: Boolean = false
@@ -141,10 +132,7 @@ super.setBasicColorP(basicColor)
 
 open fun setAlpha(alpha: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var alpha = alpha
 
     var changed: Boolean = false
@@ -174,10 +162,7 @@ this.updateImage()
 
 open fun nextRotation()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 super.nextRotation()
 this.updateImage()
 }
@@ -185,10 +170,7 @@ this.updateImage()
 
 open fun previousRotation()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 super.previousRotation()
 this.updateImage()
 }
@@ -196,10 +178,7 @@ this.updateImage()
 
 open fun updateImage()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var canvasSurface: CanvasSurface = this.canvasSurfaceArray[this.bufferedImageIndex]!!
 
@@ -214,10 +193,7 @@ this.swap()
 
 open fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var index = index
 super.setFrame(index)
 this.updateImage()
@@ -226,10 +202,7 @@ this.updateImage()
 
 open fun swap()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.imageToShow= this.twoImages[this.bufferedImageIndex]!!
 
     
@@ -250,10 +223,7 @@ this.imageToShow= this.twoImages[this.bufferedImageIndex]!!
 
 open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 var x = x
 var y = y

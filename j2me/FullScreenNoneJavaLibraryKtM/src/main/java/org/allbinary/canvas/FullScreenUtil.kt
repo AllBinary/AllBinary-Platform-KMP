@@ -41,10 +41,7 @@ open public class FullScreenUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FullScreenUtil
-
-        Updates for KMP build        
-        {
+: FullScreenUtil{
 
 
 
@@ -64,10 +61,7 @@ open fun getInstance()
             
 open fun init(fullScreenInterface: Canvas, commandListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var fullScreenInterface = fullScreenInterface
     //var commandListener = commandListener
 
@@ -86,20 +80,14 @@ open fun init(fullScreenInterface: Canvas, commandListener: CommandListener)
 
 open fun init(fullScreenInterface: Canvas)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var fullScreenInterface = fullScreenInterface
 }
 
 
 open fun isScreenChange(isFullScreen: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var isFullScreen = isFullScreen
 
     var mainFeatureFactory: MainFeatureFactory = MainFeatureFactory.getInstance()!!
@@ -130,10 +118,7 @@ open fun isScreenChange(isFullScreen: Boolean)
 
 open fun isScreenChange(fullScreenInterface: Canvas)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var fullScreenInterface = fullScreenInterface
 
 

@@ -40,10 +40,7 @@ open public class CustomMapGenerator : CustomMapGeneratorBase {
     private val raceTrackGeographicMap: RaceTrackGeographicMap
 
     private val geographicMapCellTypeFactory: GeographicMapCellTypeFactory
-public constructor        (raceTrackGeographicMap: RaceTrackGeographicMap)
-
-        Updates for KMP build        
-        {
+public constructor        (raceTrackGeographicMap: RaceTrackGeographicMap){
     //var raceTrackGeographicMap = raceTrackGeographicMap
 this.raceTrackGeographicMap= raceTrackGeographicMap
 this.geographicMapCellTypeFactory= this.raceTrackGeographicMap!!.getGeographicMapCellTypeFactory()
@@ -69,10 +66,7 @@ this.customMapArray= Array(mapArray!!.size) { IntArray(mapArray[0]!!.length) }
                 @Throws(Exception::class)
             override fun copyMapIntoCustomMap()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var mapArray: Array<IntArray?> = raceTrackGeographicMap!!.getRaceTrackData()!!.getMapArray()!!
 
@@ -85,9 +79,6 @@ this.customMapArray= Array(mapArray!!.size) { IntArray(mapArray[0]!!.length) }
 
                         for (index in mapArray!!.size -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
 
@@ -95,9 +86,6 @@ this.customMapArray= Array(mapArray!!.size) { IntArray(mapArray[0]!!.length) }
 
                         for (index2 in startIndex2 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 this.customMapArray[index]!![index2]= this.getCustomType(index2, index, mapArray[index]!![index2]!!)
 }
@@ -112,10 +100,7 @@ this.customMapArray[index]!![index2]= this.getCustomType(index2, index, mapArray
                 @Throws(Exception::class)
             override fun getCustomType(column: Int, row: Int, currentType: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var column = column
     //var row = row
     //var currentType = currentType
@@ -161,10 +146,7 @@ this.customMapArray[index]!![index2]= this.getCustomType(index2, index, mapArray
 
 override fun getCustomMapArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<IntArray?>
-
-        Updates for KMP build        
-        {
+: Array<IntArray?>{
 
 
 

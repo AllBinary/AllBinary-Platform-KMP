@@ -40,45 +40,27 @@ open fun getItem(id: String)
         //nullable = true from not(false or (false and false)) = true
 : ItemInterface
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun getItems(storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
 : Vector
 
-        Updates for KMP build        
-        
-
 open fun getWeight(id: String)
         //nullable = true from not(false or (false and false)) = true
 : String
-
-        Updates for KMP build        
-        
 
 open fun deleteWhere(key: String, value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

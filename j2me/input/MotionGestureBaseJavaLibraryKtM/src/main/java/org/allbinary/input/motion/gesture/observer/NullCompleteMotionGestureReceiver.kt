@@ -38,9 +38,6 @@ open public class NullCompleteMotionGestureReceiver
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -52,10 +49,7 @@ logUtil!!.put("Null Gesture Reciever", this, commonStrings!!.CONSTRUCTOR)
                 @Throws(Exception::class)
             override fun onMotionGestureCompleted(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var list = list
 }
 

@@ -36,10 +36,7 @@ open public class CapturedImageWorkerResultsEvent : AllBinaryEventObject {
     private var bufferedImage: BufferedImage
 public constructor        (anyType: Any, frame: Long, bufferedImage: BufferedImage)                        
 
-                            : super(anyType)
-
-        Updates for KMP build        
-        {
+                            : super(anyType){
 var anyType = anyType
 var frame = frame
 var bufferedImage = bufferedImage
@@ -54,10 +51,7 @@ setBufferedImage(bufferedImage)
 
 open fun getBufferedImage()
         //nullable = true from not(false or (false and true)) = true
-: BufferedImage
-
-        Updates for KMP build        
-        {
+: BufferedImage{
 
 
 
@@ -68,10 +62,7 @@ open fun getBufferedImage()
 
 open fun setBufferedImage(bufferedImage: BufferedImage)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var bufferedImage = bufferedImage
 this.bufferedImage= bufferedImage
 }
@@ -79,10 +70,7 @@ this.bufferedImage= bufferedImage
 
 open fun getFrame()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 

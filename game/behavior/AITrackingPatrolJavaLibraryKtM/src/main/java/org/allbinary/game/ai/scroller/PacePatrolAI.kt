@@ -55,10 +55,7 @@ open public class PacePatrolAI : BasePatrolAI
     var isFollowLimitedByTerrain: Boolean = false
 public constructor        (hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
-                            : super(hashtable, ownerLayerInterface, gameInput)
-
-        Updates for KMP build        
-        {
+                            : super(hashtable, ownerLayerInterface, gameInput){
 var hashtable = hashtable
 var ownerLayerInterface = ownerLayerInterface
 var gameInput = gameInput
@@ -74,10 +71,7 @@ this.trackingList= BasicArrayList()
                 @Throws(Exception::class)
             override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allBinaryLayerManager = allBinaryLayerManager
 this.update()
 
@@ -138,10 +132,7 @@ super.processAI(Canvas.KEY_NUM1)
 
 open fun setFiringDirectionForTargetIfInRange()
         //nullable = true from not(false or (false and true)) = true
-: Direction
-
-        Updates for KMP build        
-        {
+: Direction{
 
     var directionFactory: DirectionFactory = DirectionFactory.getInstance()!!
 
@@ -169,9 +160,6 @@ open fun setFiringDirectionForTargetIfInRange()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 lastTrackingEvent= this.trackingList!!.get(0) as TrackingEvent
 lastTrackingLayerInterface= lastTrackingEvent!!.getLayerInterface()
@@ -239,28 +227,19 @@ lastTrackingLayerInterface= lastTrackingEvent!!.getLayerInterface()
 
 override fun disable()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
 override fun onMovement(trackingEvent: TrackingEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var trackingEvent = trackingEvent
 this.trackingList!!.clear()
 this.trackingList!!.add(trackingEvent)
@@ -269,10 +248,7 @@ this.trackingList!!.add(trackingEvent)
 
 open fun getFiringDistance()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -283,10 +259,7 @@ open fun getFiringDistance()
 
 open fun setFiringDistance(firingDistance: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var firingDistance = firingDistance
 this.firingDistance= firingDistance
 }

@@ -33,10 +33,7 @@ open public class BasicGroupItemsTag : TableTag {
         
 
     private var propertiesHashMap: HashMap<Any, Any>
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 this.setTagHelperFactory(BasicGroupItemsHelperFactory())
 this.setTagRequestHelperFactory(BasicGroupItemsRequestHelperFactory())
 }

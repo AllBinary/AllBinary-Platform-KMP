@@ -39,10 +39,7 @@ open public class TestRemoteHighScoresNotFinished
             
 open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var args = args
 
                         //Otherwise - ExpressionStmt - expression - ObjectCreationExpr
@@ -53,9 +50,6 @@ var args = args
         }
             public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

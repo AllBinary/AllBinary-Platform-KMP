@@ -40,10 +40,7 @@ open public class ColorFromEventUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ColorFromEventUtil
-
-        Updates for KMP build        
-        {
+: ColorFromEventUtil{
 
 
 
@@ -65,10 +62,7 @@ open fun getInstance()
 
 open fun getForegroundColor(gameCanvasInterface: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-: BasicColor
-
-        Updates for KMP build        
-        {
+: BasicColor{
     //var gameCanvasInterface = gameCanvasInterface
 
     var color: BasicColor = YELLOW

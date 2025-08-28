@@ -39,10 +39,7 @@ open public class PreGameSelectorPaintable : InitUpdatePaintable {
     private var canvasDrawLineString: CanvasDrawLineString
 
     private val preGameScrollSelectionForm: PreGameScrollSelectionForm
-public constructor        (title: String, preGameScrollSelectionForm: PreGameScrollSelectionForm)
-
-        Updates for KMP build        
-        {
+public constructor        (title: String, preGameScrollSelectionForm: PreGameScrollSelectionForm){
 var title = title
 var preGameScrollSelectionForm = preGameScrollSelectionForm
 this.title= title
@@ -56,10 +53,7 @@ this.preGameScrollSelectionForm= preGameScrollSelectionForm
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
@@ -69,10 +63,7 @@ this.canvasDrawLineString= CanvasDrawLineString(displayInfo!!.getLastHalfWidth()
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 graphics.setColor(BasicColorFactory.getInstance()!!.WHITE.toInt())
 this.canvasDrawLineString!!.paint(graphics, title, 0)
@@ -82,10 +73,7 @@ this.getPreGameSelectionForm()!!.paint(graphics)
 
 open fun getPreGameSelectionForm()
         //nullable = true from not(false or (false and true)) = true
-: PreGameScrollSelectionForm
-
-        Updates for KMP build        
-        {
+: PreGameScrollSelectionForm{
 
 
 

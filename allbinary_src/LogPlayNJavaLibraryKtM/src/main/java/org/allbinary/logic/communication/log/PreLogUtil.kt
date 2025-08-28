@@ -40,10 +40,7 @@ open public class PreLogUtil
             
 open fun put(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var specialMessage = specialMessage
     //var anyType = anyType
     //var functionName = functionName
@@ -74,10 +71,7 @@ PlayN.log()!!.debug(LOG_SUCCESS +message)
 
 open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var specialMessage = specialMessage
     //var anyType = anyType
     //var functionName = functionName
@@ -107,10 +101,7 @@ PlayN.log()!!.error(LOG_SUCCESS +message, exception as Throwable)
 
 open fun put(specialMessage: String, className: String, functionName: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var specialMessage = specialMessage
     //var className = className
     //var functionName = functionName
@@ -123,10 +114,7 @@ PlayN.log()!!.debug(LOG_SUCCESS +message)
 
 open fun put(specialMessage: String, className: String, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var specialMessage = specialMessage
     //var className = className
     //var functionName = functionName
@@ -151,15 +139,9 @@ open fun getClassName(anyType: Any)
                 //native - END
                 
 
-        Updates for KMP build        
-        
-
         }
             public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

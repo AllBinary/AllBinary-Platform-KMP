@@ -38,10 +38,7 @@ open public class DataOutputStreamFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DataOutputStreamFactory
-
-        Updates for KMP build        
-        {
+: DataOutputStreamFactory{
 
 
 
@@ -61,10 +58,7 @@ open fun getInstance()
             
 open fun getInstance(file: AbFile)
         //nullable =  from not(true or (false and false)) = 
-: AbDataOutputStream
-
-        Updates for KMP build        
-        {
+: AbDataOutputStream{
 var file = file
 
     var idFileOutputStream: AbFileOutputStream = AbFileOutputStream(file)
@@ -84,10 +78,7 @@ var file = file
             
 open fun getInstance(filePath: String, fileName: String)
         //nullable =  from not(true or (false and false)) = 
-: AbDataOutputStream
-
-        Updates for KMP build        
-        {
+: AbDataOutputStream{
 var filePath = filePath
 var fileName = fileName
 

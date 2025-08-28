@@ -43,10 +43,7 @@ open public class InGameFeatures : Init {
             }            
         override fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var LABEL: String = "Screen Buttons"
 
@@ -125,10 +122,7 @@ inGameFeatureChoiceGroups!!.add(LABEL, exclusiveScreenButtonsVector)
 
 open fun addToInGameMenu()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var orientationData: OrientationData = OrientationData.getInstance()!!
 
@@ -143,10 +137,7 @@ InGameFeatureChoiceGroups.getExclusiveInstance()!!.add(orientationData!!.ORIENTA
 
 open fun isAny()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     var features: Features = Features.getInstance()!!
 

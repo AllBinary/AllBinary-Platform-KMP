@@ -48,10 +48,7 @@ open public class BaseRaceTrackGeographicMap : BasicGeographicMap
     private var miniGeographicMap: BasicGeographicMap
 public constructor        (raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrackData, tiledLayer: AllBinaryTiledLayer, miniGeographicMap: BasicGeographicMap, geographicMapCellPositionFactoryInterface: GeographicMapCellPositionFactoryInterface, geographicMapCellPositionBaseFactory: GeographicMapCellPositionBaseFactory, geographicMapCellTypeFactory: GeographicMapCellTypeFactory)                        
 
-                            : super(raceTrackInfo!!.getId(), raceTrackInfo!!.getName(), raceTrackData!!.getCellTypeIdToGeographicMapCellTypeArray(), tiledLayer, raceTrackInfo!!.getForegroundBasicColor(), raceTrackInfo!!.getBackgroundBasicColor(), geographicMapCellPositionFactoryInterface, geographicMapCellPositionBaseFactory, geographicMapCellTypeFactory)
-
-        Updates for KMP build        
-        {
+                            : super(raceTrackInfo!!.getId(), raceTrackInfo!!.getName(), raceTrackData!!.getCellTypeIdToGeographicMapCellTypeArray(), tiledLayer, raceTrackInfo!!.getForegroundBasicColor(), raceTrackInfo!!.getBackgroundBasicColor(), geographicMapCellPositionFactoryInterface, geographicMapCellPositionBaseFactory, geographicMapCellTypeFactory){
     //var raceTrackInfo = raceTrackInfo
     //var raceTrackData = raceTrackData
     //var tiledLayer = tiledLayer
@@ -113,10 +110,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR)
 
 open fun getRaceTrackInfo()
         //nullable = true from not(false or (false and true)) = true
-: RaceTrackInfo
-
-        Updates for KMP build        
-        {
+: RaceTrackInfo{
 
 
 
@@ -127,10 +121,7 @@ open fun getRaceTrackInfo()
 
 open fun setRaceTrackInfo(aRaceTrackInfo: RaceTrackInfo)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var aRaceTrackInfo = aRaceTrackInfo
 raceTrackInfo= aRaceTrackInfo
 }
@@ -138,10 +129,7 @@ raceTrackInfo= aRaceTrackInfo
 
 open fun setMiniBasicGeographicMap(miniBasicGeographicMap: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var miniBasicGeographicMap = miniBasicGeographicMap
 this.miniGeographicMap= miniBasicGeographicMap
 }
@@ -149,10 +137,7 @@ this.miniGeographicMap= miniBasicGeographicMap
 
 open fun getMiniBasicGeographicMap()
         //nullable = true from not(false or (false and true)) = true
-: BasicGeographicMap
-
-        Updates for KMP build        
-        {
+: BasicGeographicMap{
 
 
 
@@ -163,10 +148,7 @@ open fun getMiniBasicGeographicMap()
 
 open fun getRaceTrackData()
         //nullable = true from not(false or (false and true)) = true
-: RaceTrackData
-
-        Updates for KMP build        
-        {
+: RaceTrackData{
 
 
 
@@ -177,10 +159,7 @@ open fun getRaceTrackData()
 
 open fun setRaceTrackData(raceTrackData: RaceTrackData)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var raceTrackData = raceTrackData
 this.raceTrackData= raceTrackData
 }

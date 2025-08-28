@@ -38,22 +38,13 @@ open fun insert(userName: String, order: Order)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun setStatus(orderId: String, status: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun setPaymentMethod(orderId: String, status: String)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
                 @Throws(Exception::class)
             
@@ -61,17 +52,11 @@ open fun getStoreOrders(storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
 : Vector
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun getOrders(userName: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector
-
-        Updates for KMP build        
-        
 
                 @Throws(Exception::class)
             
@@ -79,26 +64,17 @@ open fun getOrders(status: String, fromDate: String, toDate: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun getOrder(id: String)
         //nullable = true from not(false or (false and false)) = true
 : OrderHistory
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun update(whereHashMap: HashMap<Any, Any>, orderHashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

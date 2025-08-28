@@ -37,10 +37,7 @@ open public class BasicProfileActionScriptProcessor : ProfileActionScriptItem
         
 public constructor        (label: String, node: Node)                        
 
-                            : super(label, node)
-
-        Updates for KMP build        
-        {
+                            : super(label, node){
 var label = label
 var node = node
 
@@ -51,10 +48,7 @@ var node = node
 
 public constructor        (label: String)                        
 
-                            : super(label)
-
-        Updates for KMP build        
-        {
+                            : super(label){
 var label = label
 
 
@@ -65,10 +59,7 @@ var label = label
 
 open fun actionPerformed(actionEvent: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var actionEvent = actionEvent
 super.actionPerformed(actionEvent)
 
@@ -99,10 +90,7 @@ JTreeInterfaceFactory.getInstance()!!.getJTreeInterface()!!.updateJTree()
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var node: Node = document.createElement(GenericProfileActionScriptProcessorData.NAME)!!

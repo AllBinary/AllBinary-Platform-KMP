@@ -34,9 +34,6 @@ open public class GameType
     private var name: String
  constructor        (name: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var name = name
 this.name= name
@@ -44,10 +41,7 @@ this.name= name
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

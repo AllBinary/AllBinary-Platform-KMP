@@ -43,10 +43,7 @@ open public class GeographicMapEventHandler : BasicEventHandler {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GeographicMapEventHandler
-
-        Updates for KMP build        
-        {
+: GeographicMapEventHandler{
 
 
 
@@ -60,19 +57,13 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val list: BasicArrayList = BasicArrayList()
-private constructor        ()
-
-        Updates for KMP build        
-        {
+private constructor        (){
 }
 
 
 open fun addListener(gameLayer: AllBinaryGameLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gameLayer = gameLayer
 
     
@@ -88,10 +79,7 @@ var gameLayer = gameLayer
 
 open fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.list.clear()
 super.removeAllListeners()
 }
@@ -99,10 +87,7 @@ super.removeAllListeners()
 
 open fun removeListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventListenerInterface = eventListenerInterface
 this.list.remove(eventListenerInterface)
 super.removeListener(eventListenerInterface)
@@ -111,19 +96,13 @@ super.removeListener(eventListenerInterface)
 
 open fun fireEvent()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
 
 
 
                         for (index in this.list.size()!!  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
         try {
@@ -132,10 +111,7 @@ open fun fireEvent()
 
 gameLayer!!.move()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
 }
 

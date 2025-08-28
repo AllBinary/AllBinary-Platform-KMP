@@ -53,9 +53,6 @@ open public class StoreUriResolver
     private var parentTransformInfoInterface: TransformInfoInterface
 public constructor        (parentTransformInfoInterface: TransformInfoInterface, basicURIResolver: BasicUriResolver)
             : super()
-        
-
-        Updates for KMP build        
         {
 var parentTransformInfoInterface = parentTransformInfoInterface
 var basicURIResolver = basicURIResolver
@@ -68,10 +65,7 @@ this.basicURIResolver= basicURIResolver
             
 open fun resolve(href: String, base: String)
         //nullable = true from not(false or (false and false)) = true
-: Source
-
-        Updates for KMP build        
-        {
+: Source{
 var href = href
 var base = base
 
@@ -98,20 +92,14 @@ var base = base
                         return StreamSource(CryptFileReader(TransformInfoTemplateData.getInstance()!!.UNCRYPTED_EXTENSION, TransformInfoTemplateData.getInstance()!!.ENCRYPTED_EXTENSION).
                             getInputStream(fileAbPath))
 } catch(e: TransformerException)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
                             throw e
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
@@ -122,10 +110,7 @@ var base = base
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -134,10 +119,7 @@ override fun toString()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return URLGLOBALS.getMainPath() +FREEBLISKET_PATH_GLOBALS.getInstance()!!.XSLPATH +"{Store Name if Any}/{import url}"
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 

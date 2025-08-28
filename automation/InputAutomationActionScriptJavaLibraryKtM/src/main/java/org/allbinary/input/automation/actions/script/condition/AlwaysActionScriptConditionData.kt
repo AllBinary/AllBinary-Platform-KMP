@@ -40,9 +40,6 @@ open public class AlwaysActionScriptConditionData
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

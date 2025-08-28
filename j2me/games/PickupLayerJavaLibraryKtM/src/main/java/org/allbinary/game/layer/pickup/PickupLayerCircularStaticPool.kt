@@ -36,10 +36,7 @@ open public class PickupLayerCircularStaticPool : AllBinaryLayerCircularPool {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PickupLayerCircularStaticPool
-
-        Updates for KMP build        
-        {
+: PickupLayerCircularStaticPool{
 
 
 
@@ -49,10 +46,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
-
-        Updates for KMP build        
-        {
+            private constructor        (){
 }
 
 
@@ -60,10 +54,7 @@ open fun getInstance()
             
 open fun getInstance(pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface, x: Int, y: Int, z: Int)
         //nullable =  from not(true or (false and false)) = 
-: PickedUpLayerInterface
-
-        Updates for KMP build        
-        {
+: PickedUpLayerInterface{
 var pickedUpLayerInterfaceFactoryInterface = pickedUpLayerInterfaceFactoryInterface
 var x = x
 var y = y

@@ -45,10 +45,7 @@ open public class DomDocumentHelper
             
 open fun create()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
         try {
             
@@ -66,10 +63,7 @@ open fun create()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return document
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
@@ -84,10 +78,7 @@ open fun create()
             
 open fun create(inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 var inputStream = inputStream
 
         try {
@@ -106,10 +97,7 @@ var inputStream = inputStream
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return document
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
@@ -123,10 +111,7 @@ var inputStream = inputStream
             
 open fun create(xmlString: String)
         //nullable = true from not(false or (false and false)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 var xmlString = xmlString
 
         try {
@@ -145,10 +130,7 @@ var xmlString = xmlString
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return document
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
@@ -162,10 +144,7 @@ var xmlString = xmlString
             
 open fun toString(document: Document)
         //nullable = true from not(false or (true and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var document = document
 
         try {
@@ -191,10 +170,7 @@ copyTransformer!!.transform(domSource, streamResult)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return byteArrayOutputStream!!.toString()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
@@ -207,9 +183,6 @@ copyTransformer!!.transform(domSource, streamResult)
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

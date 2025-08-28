@@ -40,9 +40,6 @@ open public class TimeIntervalActionScriptConditionData
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

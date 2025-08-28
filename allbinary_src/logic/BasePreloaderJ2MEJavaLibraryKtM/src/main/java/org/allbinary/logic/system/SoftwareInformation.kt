@@ -40,9 +40,6 @@ open public class SoftwareInformation
     private val version: String
 public constructor        (name: String, version: String, shortName: String)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var name = name
     //var version = version
@@ -55,10 +52,7 @@ this.shortName= shortName
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -69,10 +63,7 @@ open fun getName()
 
 open fun getVersion()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -83,10 +74,7 @@ open fun getVersion()
 
 open fun toShortString()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -96,10 +84,7 @@ open fun toShortString()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var NAME: String = "Name: "
 

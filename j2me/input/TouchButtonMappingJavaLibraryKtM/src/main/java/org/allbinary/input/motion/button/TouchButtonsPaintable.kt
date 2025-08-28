@@ -41,10 +41,7 @@ open public class TouchButtonsPaintable : Paintable {
     val basicSetColorUtil: BasicColorSetUtil = BasicColorSetUtil.getInstance()!!
 
     private val touchButtonFactory: TouchButtonFactory = TouchButtonFactory.getInstance()!!
-public constructor        (basicColor: BasicColor)
-
-        Updates for KMP build        
-        {
+public constructor        (basicColor: BasicColor){
 var basicColor = basicColor
 this.foregroundBasicColor= basicColor
 this.foregroundColor= basicColor!!.toInt()
@@ -52,10 +49,7 @@ this.foregroundColor= basicColor!!.toInt()
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 
     var list: BasicArrayList = touchButtonFactory!!.getList()!!
@@ -70,9 +64,6 @@ this.basicSetColorUtil!!.setBasicColorP(graphics, this.foregroundBasicColor, thi
 
                         for (index in list.size()!!  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 touchButton= list.objectArray[index]!! as TouchButton
 touchButton!!.paint(graphics)
@@ -84,9 +75,6 @@ touchButton!!.paint(graphics)
 
                         for (index in list.size()!!  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 touchButton= list.objectArray[index]!! as TouchButton
 touchButton!!.paintHint(graphics)

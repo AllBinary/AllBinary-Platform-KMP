@@ -38,10 +38,7 @@ open public class ExceptionUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ExceptionUtil
-
-        Updates for KMP build        
-        {
+: ExceptionUtil{
 
 
 
@@ -53,9 +50,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -66,10 +60,7 @@ open fun getInstance()
 
 open fun getStackTrace(e: Throwable)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var e = e
 
     var bs: ByteArrayOutputStream = ByteArrayOutputStream()

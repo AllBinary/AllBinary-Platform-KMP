@@ -37,10 +37,7 @@ open public class MotionGestureConfigurationFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: MotionGestureConfiguration
-
-        Updates for KMP build        
-        {
+: MotionGestureConfiguration{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

@@ -35,10 +35,7 @@ open public class HtmlValueInput : HtmlInput {
     private val VALUE: String = "VALUE"
 public constructor        (before: String, type: String, name: String, value: String, after: String)                        
 
-                            : super(before, type, name, after)
-
-        Updates for KMP build        
-        {
+                            : super(before, type, name, after){
 var before = before
 var type = type
 var name = name

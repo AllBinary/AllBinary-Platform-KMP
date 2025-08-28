@@ -39,10 +39,7 @@ open public class OpenGLVUtilBase
         
 open fun glTexEnvix(gl: GL10, target: Int, pname: Int, param: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
     //var target = target
     //var pname = pname
@@ -52,10 +49,7 @@ open fun glTexEnvix(gl: GL10, target: Int, pname: Int, param: Int)
 
 open fun glTexParameterix(gl: GL10, target: Int, pname: Int, param: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
     //var target = target
     //var pname = pname
@@ -65,10 +59,7 @@ open fun glTexParameterix(gl: GL10, target: Int, pname: Int, param: Int)
 
 open fun glGenerateMipmap(gl: GL10, textureId: Int, target: Int, generateMipMap: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
     //var textureId = textureId
     //var target = target

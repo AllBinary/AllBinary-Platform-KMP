@@ -40,10 +40,7 @@ open public class PlatformBitmapBase
         
 open fun getImage()
         //nullable = true from not(false or (false and true)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
 
 
 

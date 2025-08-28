@@ -47,9 +47,6 @@ open public class SmallInsert
     private var string: String
 public constructor        (fileName: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var fileName = fileName
 this.fileName= fileName
@@ -59,10 +56,7 @@ string= FileUtil.getInstance()!!.readAsString(fileName)
 
 open fun atBeginning(text: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var text = text
 
         try {
@@ -79,10 +73,7 @@ idOutData!!.writeBytes(text +this.string)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.IDLOGGING))
@@ -104,10 +95,7 @@ idOutData!!.writeBytes(text +this.string)
 
 open fun after(text: String, after: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var text = text
 var after = after
 
@@ -151,10 +139,7 @@ idFile!!.close()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.IDLOGGING))
@@ -176,10 +161,7 @@ idFile!!.close()
 
 open fun atEnd(text: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var text = text
 
         try {
@@ -196,10 +178,7 @@ idOutData!!.writeBytes(this.string +text)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.IDLOGGING))

@@ -33,22 +33,13 @@ open fun onDemoStart()
         //nullable = true from not(false or (false and true)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun onGameStart()
         //nullable = true from not(false or (false and true)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun onDemoGameMidletEvent(demoGameMidletEvent: DemoGameMidletEvent)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

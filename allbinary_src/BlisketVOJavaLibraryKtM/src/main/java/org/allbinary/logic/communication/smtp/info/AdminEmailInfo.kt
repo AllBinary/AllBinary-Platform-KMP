@@ -38,10 +38,7 @@ open public class AdminEmailInfo : BasicEmailInfo {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        (subject: String, textBody: String)                        
 
-                            : super(subject, textBody)
-
-        Updates for KMP build        
-        {
+                            : super(subject, textBody){
 var subject = subject
 var textBody = textBody
 
@@ -68,10 +65,7 @@ this.init()
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var adminConfigurationInterface: AdminConfigurationInterface = AdminConfiguration() as AdminConfigurationInterface
 

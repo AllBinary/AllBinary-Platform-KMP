@@ -35,10 +35,7 @@ open public class SimpleWeaponLayer : WeaponLayer {
         
 public constructor        (name: String, movement: Movement, animationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition)                        
 
-                            : super(name, movement, animationInterface, rectangle, viewPosition)
-
-        Updates for KMP build        
-        {
+                            : super(name, movement, animationInterface, rectangle, viewPosition){
     //var name = name
     //var movement = movement
     //var animationInterface = animationInterface
@@ -53,10 +50,7 @@ this.setCollidableInferface(CollidableWeaponBehavior(this, true))
 
 public constructor        (name: String, movement: Movement, animationInterface: Animation, destroyedAnimationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition)                        
 
-                            : super(name, movement, animationInterface, destroyedAnimationInterface, rectangle, viewPosition)
-
-        Updates for KMP build        
-        {
+                            : super(name, movement, animationInterface, destroyedAnimationInterface, rectangle, viewPosition){
     //var name = name
     //var movement = movement
     //var animationInterface = animationInterface
@@ -72,10 +66,7 @@ this.setCollidableInferface(CollidableWeaponBehavior(this, true))
 
 public constructor        (name: String, remoteInfo: RemoteInfo, multiPlayerType: Int, movement: Movement, animationInterface: Animation, destroyedAnimationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition)                        
 
-                            : super(name, remoteInfo, multiPlayerType, movement, animationInterface, destroyedAnimationInterface, rectangle, viewPosition)
-
-        Updates for KMP build        
-        {
+                            : super(name, remoteInfo, multiPlayerType, movement, animationInterface, destroyedAnimationInterface, rectangle, viewPosition){
     //var name = name
     //var remoteInfo = remoteInfo
     //var multiPlayerType = multiPlayerType

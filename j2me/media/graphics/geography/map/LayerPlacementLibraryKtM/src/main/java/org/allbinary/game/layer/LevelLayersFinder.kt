@@ -44,10 +44,7 @@ open public class LevelLayersFinder
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LevelLayersFinder
-
-        Updates for KMP build        
-        {
+: LevelLayersFinder{
 
 
 
@@ -65,10 +62,7 @@ open fun getInstance()
         
 open fun get(hashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 var hashtable = hashtable
 
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
@@ -81,9 +75,6 @@ var hashtable = hashtable
 
 
         while(enumeration.hasMoreElements())
-        
-
-        Updates for KMP build        
         {
 
     var layerHashtable: Hashtable<Any, Any> = hashtable.get(enumeration.nextElement()!! as Object) as Hashtable<Any, Any>

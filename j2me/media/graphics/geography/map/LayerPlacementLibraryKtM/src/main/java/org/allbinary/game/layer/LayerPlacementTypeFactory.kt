@@ -40,10 +40,7 @@ open public class LayerPlacementTypeFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LayerPlacementTypeFactory
-
-        Updates for KMP build        
-        {
+: LayerPlacementTypeFactory{
 
 
 

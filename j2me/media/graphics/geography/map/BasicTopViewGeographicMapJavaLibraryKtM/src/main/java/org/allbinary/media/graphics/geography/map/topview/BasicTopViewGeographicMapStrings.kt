@@ -37,10 +37,7 @@ open public class BasicTopViewGeographicMapStrings
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BasicTopViewGeographicMapStrings
-
-        Updates for KMP build        
-        {
+: BasicTopViewGeographicMapStrings{
 
 
 

@@ -39,10 +39,7 @@ open public class DemoCanvasProgressUtil
             
 open fun showProgress(demoCanvas: DemoCanvas)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var demoCanvas = demoCanvas
 DemoCanvasProgressUtil.showProgress(demoCanvas, false)
 }
@@ -50,10 +47,7 @@ DemoCanvasProgressUtil.showProgress(demoCanvas, false)
 
 open fun showProgress(demoCanvas: DemoCanvas, background: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var demoCanvas = demoCanvas
 var background = background
 

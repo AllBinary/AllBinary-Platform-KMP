@@ -41,9 +41,6 @@ open public class IIOImageCacheable
     private var iioImage: IIOImage
 public constructor        (key: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var key = key
 this.key= key
@@ -52,10 +49,7 @@ this.key= key
 
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 
 
 
@@ -66,10 +60,7 @@ open fun getKey()
 
 open fun setBufferedImage(bufferedImage: BufferedImage)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var bufferedImage = bufferedImage
 this.setIioImage(IIOImage(bufferedImage, 
                             null, 
@@ -79,10 +70,7 @@ this.setIioImage(IIOImage(bufferedImage,
 
 open fun getIioImage()
         //nullable = true from not(false or (false and true)) = true
-: IIOImage
-
-        Updates for KMP build        
-        {
+: IIOImage{
 
 
 
@@ -93,20 +81,14 @@ open fun getIioImage()
 
 open fun setIioImage(iioImage: IIOImage)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var iioImage = iioImage
 this.iioImage= iioImage
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

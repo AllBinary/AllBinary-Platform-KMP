@@ -40,10 +40,7 @@ open public class GameNotificationEventHandler : BasicEventHandler {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameNotificationEventHandler
-
-        Updates for KMP build        
-        {
+: GameNotificationEventHandler{
 
 
 
@@ -53,10 +50,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
-
-        Updates for KMP build        
-        {
+            private constructor        (){
 }
 
 
@@ -64,10 +58,7 @@ open fun getInstance()
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var eventListenerInterface: EventListenerInterface = NullEventListener.NULL_EVENT_LISTENER
 
@@ -99,10 +90,7 @@ super.removeAllListeners()
                 @Throws(Exception::class)
             override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventObject = eventObject
 var eventListenerInterface = eventListenerInterface
 

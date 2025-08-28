@@ -35,30 +35,21 @@ open public class AbFileInputStream : InputStream {
         
 
     private var fileInputStream: FileInputStream
-public constructor        (fileInputStream: FileInputStream)
-
-        Updates for KMP build        
-        {
+public constructor        (fileInputStream: FileInputStream){
 var fileInputStream = fileInputStream
 this.fileInputStream= fileInputStream
 }
 
 override fun mark(readlimit: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var readlimit = readlimit
 this.fileInputStream!!.mark(readlimit)
 }
 
 override fun markSupported()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -71,10 +62,7 @@ override fun markSupported()
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun reset()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.fileInputStream!!.reset()
 }
 
@@ -82,10 +70,7 @@ this.fileInputStream!!.reset()
                 @Throws(IOException::class)
             override fun available()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -95,20 +80,14 @@ this.fileInputStream!!.reset()
 
 override fun close()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.fileInputStream!!.close()
 }
 
 
 open fun getChannel()
         //nullable = true from not(false or (false and true)) = true
-: FileChannel
-
-        Updates for KMP build        
-        {
+: FileChannel{
 
 
 
@@ -120,10 +99,7 @@ open fun getChannel()
                 @Throws(IOException::class)
             override fun read()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -135,10 +111,7 @@ open fun getChannel()
                 @Throws(IOException::class)
             override fun read(b: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var b = b
 
 
@@ -151,10 +124,7 @@ var b = b
                 @Throws(IOException::class)
             override fun read(buffer: ByteArray, offset: Int, count: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var buffer = buffer
 var offset = offset
 var count = count
@@ -169,10 +139,7 @@ var count = count
                 @Throws(IOException::class)
             override fun skip(n: Long)
         //nullable = true from not(false or (false and false)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 var n = n
 
 

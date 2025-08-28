@@ -33,10 +33,7 @@ open public class GameFeatureEvent : AllBinaryEventObject {
     private val whatChanged: String
 public constructor        (anyType: Any, whatChanged: String)                        
 
-                            : super(anyType)
-
-        Updates for KMP build        
-        {
+                            : super(anyType){
 var anyType = anyType
 var whatChanged = whatChanged
 
@@ -49,10 +46,7 @@ this.whatChanged= whatChanged
 
 open fun getWhatChanged()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -63,10 +57,7 @@ open fun getWhatChanged()
 
 open fun getGameOption()
         //nullable = true from not(false or (false and true)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 
 
 

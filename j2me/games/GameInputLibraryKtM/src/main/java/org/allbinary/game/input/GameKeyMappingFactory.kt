@@ -37,10 +37,7 @@ open public class GameKeyMappingFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameKeyMappingFactory
-
-        Updates for KMP build        
-        {
+: GameKeyMappingFactory{
 
 
 
@@ -54,9 +51,6 @@ open fun getInstance()
     private var intKeyToGameKey: Array<GameKey?> = arrayOfNulls(InputFactory.getInstance()!!.MAX)
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     var gameKeyFactory: GameKeyFactory = GameKeyFactory.getInstance()!!
@@ -90,10 +84,7 @@ this.set(gameKeyFactory!!.LEVEL_UP)
 
 open fun getInstance(key: Int)
         //nullable =  from not(true or (false and false)) = 
-: GameKey
-
-        Updates for KMP build        
-        {
+: GameKey{
 var key = key
 
 
@@ -105,10 +96,7 @@ var key = key
 
 open fun set(gameKey: GameKey)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gameKey = gameKey
 intKeyToGameKey[gameKey!!.getId()]= gameKey
 }

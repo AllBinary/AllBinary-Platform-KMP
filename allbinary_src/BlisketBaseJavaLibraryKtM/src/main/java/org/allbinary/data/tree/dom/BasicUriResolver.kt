@@ -65,9 +65,6 @@ open public class BasicUriResolver
     private var extension: String
 public constructor        (extension: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var extension = extension
 this.extension= extension
@@ -76,10 +73,7 @@ this.extension= extension
 
 open fun getExtension()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -92,10 +86,7 @@ open fun getExtension()
             
 open fun resolve(href: String, base: String)
         //nullable = true from not(false or (false and false)) = true
-: Source
-
-        Updates for KMP build        
-        {
+: Source{
 var href = href
 var base = base
 
@@ -137,20 +128,14 @@ logUtil!!.put(stringBuffer!!.toString(), this, RESOLVE)
                         return StreamSource(CryptFileReader(TransformInfoTemplateData.getInstance()!!.UNCRYPTED_EXTENSION, TransformInfoTemplateData.getInstance()!!.ENCRYPTED_EXTENSION).
                             getInputStream(abPath))
 } catch(e: TransformerException)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
                             throw e
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
@@ -161,10 +146,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, RESOLVE)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -179,10 +161,7 @@ stringBuffer!!.append(IMPORT_URL)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 

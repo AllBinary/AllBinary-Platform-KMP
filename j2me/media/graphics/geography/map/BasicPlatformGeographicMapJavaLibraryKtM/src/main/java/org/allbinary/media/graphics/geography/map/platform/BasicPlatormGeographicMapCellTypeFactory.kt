@@ -46,10 +46,7 @@ open public class BasicPlatormGeographicMapCellTypeFactory : GeographicMapCellTy
     val LADDER_CELL_TYPE: BasicPlatormGeographicMapCellType
 
     private val maxTileId: Int
-public constructor        (tileTypeToTileIdsMap: Hashtable<Any, Any>, maxTileId: Int)
-
-        Updates for KMP build        
-        {
+public constructor        (tileTypeToTileIdsMap: Hashtable<Any, Any>, maxTileId: Int){
     //var tileTypeToTileIdsMap = tileTypeToTileIdsMap
     //var maxTileId = maxTileId
 
@@ -92,9 +89,6 @@ this.maxTileId= maxTileId
 
 
         while(enumeration.hasMoreElements())
-        
-
-        Updates for KMP build        
         {
 key= enumeration.nextElement()!! as String
 logUtil!!.put(key, this, commonStrings!!.INIT)
@@ -143,10 +137,7 @@ this.LADDER_CELL_TYPE= LADDER_CELL_TYPE
 
 open fun getStartType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -157,10 +148,7 @@ open fun getStartType()
 
 open fun getEndType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -171,10 +159,7 @@ open fun getEndType()
 
 open fun getEmptyType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -185,10 +170,7 @@ open fun getEmptyType()
 
 open fun isPath(cellType: GeographicMapCellType)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var cellType = cellType
 
     

@@ -35,9 +35,6 @@ open public class LayerManager
     private val anyType: SynchObject = SynchObject()
 public constructor        (layerManagerLogging: LayerManagerLogging)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var layerManagerLogging = layerManagerLogging
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
@@ -46,9 +43,6 @@ this.layerManagerLogging= layerManagerLogging
 
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 this.layerManagerLogging= LayerManagerNoDebug.getInstance()
 }
@@ -56,10 +50,7 @@ this.layerManagerLogging= LayerManagerNoDebug.getInstance()
 
 open fun contains(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var layerInterface = layerInterface
 
 
@@ -73,10 +64,7 @@ open fun contains(layerInterface: AllBinaryLayer)
             
 open fun insert(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layerInterface = layerInterface
 
     var nextLayerInterface: AllBinaryLayer
@@ -90,9 +78,6 @@ open fun insert(layerInterface: AllBinaryLayer)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 nextLayerInterface= this.list.get(index) as AllBinaryLayer
 
@@ -119,10 +104,7 @@ this.append(layerInterface)
             
 open fun append(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layerInterface = layerInterface
 this.layerManagerLogging!!.append(layerInterface)
 this.list.add(layerInterface)
@@ -133,10 +115,7 @@ this.list.add(layerInterface)
             
 open fun append(layerInterface: AllBinaryLayer, index: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layerInterface = layerInterface
     //var index = index
 this.layerManagerLogging!!.append(layerInterface, index)
@@ -148,10 +127,7 @@ this.list.add(index, layerInterface)
             
 open fun remove(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layerInterface = layerInterface
 
         
@@ -159,9 +135,6 @@ open fun remove(layerInterface: AllBinaryLayer)
         synchronized(anyType) 
 
         //mutex.withLock
-        
-
-        Updates for KMP build        
         {
 this.layerManagerLogging!!.remove(layerInterface)
 
@@ -175,10 +148,7 @@ this.layerManagerLogging!!.remove(this, layerInterface, result)
 
 open fun getLayerAt(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: Layer
-
-        Updates for KMP build        
-        {
+: Layer{
     //var index = index
 
 
@@ -190,10 +160,7 @@ open fun getLayerAt(index: Int)
 
 open fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -206,19 +173,13 @@ open fun getSize()
             
 open fun cleanup()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         
         //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
         synchronized(anyType) 
 
         //mutex.withLock
-        
-
-        Updates for KMP build        
         {
 this.list.clear()
 this.layerManagerLogging!!.clear()
@@ -231,10 +192,7 @@ System.gc()
 
 open fun paint(g: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var g = g
 var x = x
 var y = y
@@ -244,9 +202,6 @@ var y = y
         synchronized(anyType) 
 
         //mutex.withLock
-        
-
-        Updates for KMP build        
         {
 
     var comp: Layer
@@ -257,9 +212,6 @@ var y = y
 
                         for (index in this.list.size()!!  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 comp= list.objectArray[index]!! as Layer
 

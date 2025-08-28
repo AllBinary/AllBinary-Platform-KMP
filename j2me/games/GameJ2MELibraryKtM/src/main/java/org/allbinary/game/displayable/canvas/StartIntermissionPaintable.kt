@@ -63,10 +63,7 @@ open public class StartIntermissionPaintable : InitUpdatePaintable {
     val lastWidth: IntArray
 public constructor        (gameCanvas: AllBinaryGameCanvas, stringArray: Array<String?>, lineArray: IntArray, basicColor: BasicColor)                        
 
-                            : this(gameCanvas, stringArray, lineArray, basicColor, Font.getDefaultFont())
-
-        Updates for KMP build        
-        {
+                            : this(gameCanvas, stringArray, lineArray, basicColor, Font.getDefaultFont()){
     //var gameCanvas = gameCanvas
     //var stringArray = stringArray
     //var lineArray = lineArray
@@ -77,10 +74,7 @@ public constructor        (gameCanvas: AllBinaryGameCanvas, stringArray: Array<S
                     
 }
 
-public constructor        (gameCanvas: AllBinaryGameCanvas, stringArray: Array<String?>, lineArray: IntArray, basicColor: BasicColor, font: Font)
-
-        Updates for KMP build        
-        {
+public constructor        (gameCanvas: AllBinaryGameCanvas, stringArray: Array<String?>, lineArray: IntArray, basicColor: BasicColor, font: Font){
     //var gameCanvas = gameCanvas
     //var stringArray = stringArray
     //var lineArray = lineArray
@@ -100,10 +94,7 @@ this.font= font
     private var anchor: Int = Anchor.TOP_LEFT
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 
     var existingFont: Font = graphics.getFont()!!
@@ -122,9 +113,6 @@ basicSetColorUtil!!.setBasicColorP(graphics, this.basicColor, this.color)
 
                         for (index in this.stringArray!!.size -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -149,10 +137,7 @@ fontDebugFactory!!.setFont(existingFont, graphics)
     private val EMPTY_STRING: String = StringUtil.getInstance()!!.EMPTY_STRING
 override fun update()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var level: Int = gameCanvas!!.getLayerManager()!!.getGameInfo()!!.getCurrentLevel()!!
 
@@ -164,9 +149,6 @@ this.stringArray[0]= StringMaker().
 
                         for (index in this.stringArray!!.size -1 downTo 1)
 
-        
-
-        Updates for KMP build        
         {
 this.stringArray[index]= this.EMPTY_STRING
 }
@@ -175,10 +157,7 @@ this.stringArray[index]= this.EMPTY_STRING
 
 override fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var basicColor = basicColor
 this.basicColor= basicColor
 }
@@ -186,10 +165,7 @@ this.basicColor= basicColor
 
 open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor
-
-        Updates for KMP build        
-        {
+: BasicColor{
 
 
 

@@ -42,10 +42,7 @@ open public class ProgressMidlet : AllBinaryMidlet {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val abeClientInformation: AbeClientInformationInterface
-public constructor        (clientInformationFactory: ClientInformationFactory)
-
-        Updates for KMP build        
-        {
+public constructor        (clientInformationFactory: ClientInformationFactory){
     //var clientInformationFactory = clientInformationFactory
 this.preInit()
 this.abeClientInformation= clientInformationFactory!!.getInstance()
@@ -54,19 +51,13 @@ this.abeClientInformation= clientInformationFactory!!.getInstance()
 
 open fun preInit()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun exit(isProgress: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var isProgress = isProgress
 
     var processor: Processor = MidletExitProcessorFactory.getInstance()!!.getInstance(this)!!
@@ -81,19 +72,13 @@ var isProgress = isProgress
 
 primaryThreadPool!!.runTask(runnable)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "exit", e)
 
         try {
             processor.process()
 } catch(e2: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "exit", e)
 }
 

@@ -43,10 +43,7 @@ open public class BoundBounceAI : BasicAI {
     private var boundsVisitorInterface: BoundsVisitorInterface
 public constructor        (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput, layerBounds: LayerBounds, boundsVisitorInterface: BoundsVisitorInterface)                        
 
-                            : super(ownerLayerInterface, gameInput)
-
-        Updates for KMP build        
-        {
+                            : super(ownerLayerInterface, gameInput){
 var ownerLayerInterface = ownerLayerInterface
 var gameInput = gameInput
 var layerBounds = layerBounds
@@ -62,10 +59,7 @@ this.boundsVisitorInterface= boundsVisitorInterface
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 
     var rectange: Rectangle = this.layerBounds!!.getRectangleP()!!
@@ -77,10 +71,7 @@ graphics.drawRect(rectange.getPoint()!!.getX(), rectange.getPoint()!!.getY(), re
                 @Throws(Exception::class)
             override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allBinaryLayerManager = allBinaryLayerManager
 this.layerBounds!!.visit(this.boundsVisitorInterface)
 }

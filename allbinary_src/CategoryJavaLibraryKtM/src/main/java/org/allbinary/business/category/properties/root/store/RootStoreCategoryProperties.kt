@@ -69,9 +69,6 @@ open public class RootStoreCategoryProperties
     var transformInfoInterface: TransformInfoInterface
 public constructor        (transformInfoInterface: TransformInfoInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var transformInfoInterface = transformInfoInterface
 this.transformInfoInterface= transformInfoInterface
@@ -84,9 +81,6 @@ this.log()
 
 public constructor        (transformInfoInterface: TransformInfoInterface, categoryAbPath: AbPath)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var transformInfoInterface = transformInfoInterface
     //var categoryAbPath = categoryAbPath
@@ -109,9 +103,6 @@ this.log()
 
 public constructor        (transformInfoInterface: TransformInfoInterface, node: Node)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var transformInfoInterface = transformInfoInterface
     //var node = node
@@ -137,9 +128,6 @@ this.log()
 
 public constructor        (transformInfoInterface: TransformInfoInterface, categoryPropertiesHashMap: HashMap<Any, Any>)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var transformInfoInterface = transformInfoInterface
     //var categoryPropertiesHashMap = categoryPropertiesHashMap
@@ -168,10 +156,7 @@ this.log()
             
 open fun initPath()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var transformInfoHttpStoreInterface: TransformInfoHttpInterface = this.transformInfoInterface as TransformInfoHttpInterface
 
@@ -191,10 +176,7 @@ this.setRootFilePath(AbPath(URLGLOBALS.getMainPath() +postPath))
 
 open fun isRealRoot()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -205,10 +187,7 @@ open fun isRealRoot()
 
 open fun isRoot()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -219,10 +198,7 @@ open fun isRoot()
 
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 
 
 
@@ -233,10 +209,7 @@ open fun getKey()
 
 open fun setPath(path: AbPath)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var path = path
 this.abPath= path
 }
@@ -244,10 +217,7 @@ this.abPath= path
 
 open fun setRootFilePath(value: AbPath)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.fileAbPath= value
 }
@@ -255,10 +225,7 @@ this.fileAbPath= value
 
 open fun getRootFilePath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath
-
-        Updates for KMP build        
-        {
+: AbPath{
 
 
 
@@ -269,10 +236,7 @@ open fun getRootFilePath()
 
 open fun getValue()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -285,10 +249,7 @@ open fun getValue()
             
 open fun getWebAppPath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath
-
-        Updates for KMP build        
-        {
+: AbPath{
 
 
 
@@ -299,10 +260,7 @@ open fun getWebAppPath()
 
 open fun getPath(categoryHierarchyInterface: CategoryHierarchyInterface)
         //nullable = true from not(false or (false and false)) = true
-: AbPath
-
-        Updates for KMP build        
-        {
+: AbPath{
     //var categoryHierarchyInterface = categoryHierarchyInterface
 
 
@@ -314,10 +272,7 @@ open fun getPath(categoryHierarchyInterface: CategoryHierarchyInterface)
 
 open fun getFileName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -328,10 +283,7 @@ open fun getFileName()
 
 open fun setValue(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.category= value
 }
@@ -339,10 +291,7 @@ this.category= value
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -353,10 +302,7 @@ open fun isValid()
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var categoryHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -371,10 +317,7 @@ categoryHashMap!!.put(CategoryData.getInstance()!!.NAME, this.getValue())
 
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
     var categoryVector: Vector = Vector()
 
@@ -391,10 +334,7 @@ categoryVector!!.add(this.getValue())
             
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
 
 
@@ -407,10 +347,7 @@ open fun toValidationInfoDoc()
             
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
 
@@ -424,10 +361,7 @@ var document = document
             
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -438,10 +372,7 @@ open fun validationInfo()
 
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))

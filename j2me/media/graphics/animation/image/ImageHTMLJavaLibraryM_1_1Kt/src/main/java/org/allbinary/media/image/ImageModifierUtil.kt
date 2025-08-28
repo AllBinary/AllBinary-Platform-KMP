@@ -48,10 +48,7 @@ open public class ImageModifierUtil
             
 open fun getInstanceOrCreate()
         //nullable = true from not(false or (false and true)) = true
-: ImageModifierUtil
-
-        Updates for KMP build        
-        {
+: ImageModifierUtil{
 
 
 
@@ -77,10 +74,7 @@ open fun getInstanceOrCreate()
 
 open fun setColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var unusedOriginalImage = unusedOriginalImage
     //var image = image
     //var imageIndex = imageIndex
@@ -90,10 +84,7 @@ open fun setColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, bas
 
 open fun changeColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var unusedOriginalImage = unusedOriginalImage
     //var image = image
     //var imageIndex = imageIndex
@@ -103,10 +94,7 @@ open fun changeColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, 
 
 open fun setAlpha(originalImage: Image, image: Image, imageIndex: Int, alpha: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var originalImage = originalImage
     //var image = image
     //var imageIndex = imageIndex
@@ -123,10 +111,7 @@ this.setAlpha(originalImage, image, imageIndex, alphaFloat)
 
 open fun setAlpha(originalImage: Image, image: Image, imageIndex: Int, alpha: Float)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var originalImage = originalImage
     //var image = image
     //var imageIndex = imageIndex
@@ -146,10 +131,7 @@ this.setAlpha2(originalImage, image, imageIndex, alpha)
 
 open fun setAlpha2(originalImage: Image, image: Image, imageIndex: Int, alpha: Float)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var originalImage = originalImage
     //var image = image
     //var imageIndex = imageIndex
@@ -175,10 +157,7 @@ canvas.drawImage(originalPlaynImage, 0, 0)
 
 open fun setAlpha3(image: Image, alpha: Float)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var image = image
     //var alpha = alpha
 
@@ -202,10 +181,7 @@ canvas.setAlpha(alphaFloat)
 
 open fun getImageArray(originalImageArray: Array<Image?>)
         //nullable = true from not(false or (false and false)) = true
-: Array<Image?>
-
-        Updates for KMP build        
-        {
+: Array<Image?>{
     //var originalImageArray = originalImageArray
 
     var size: Int = originalImageArray!!.size
@@ -221,9 +197,6 @@ this.alphaArray= BooleanArray(size)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 imageArray[index]= originalImageArray[index]!!
 this.handleImage(imageArray, index, originalImageArray[index]!!)
@@ -239,10 +212,7 @@ this.handleImage(imageArray, index, originalImageArray[index]!!)
 
 open fun handleImage(imageArray: Array<Image?>, index: Int, image: Image)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var imageArray = imageArray
     //var index = index
     //var image = image
@@ -272,20 +242,14 @@ open fun handleImage(imageArray: Array<Image?>, index: Int, image: Image)
                                 {
                                 override fun done(resource: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var resource = resource
 logUtil!!.put(resourceCallbackStrings!!.DONE +image.getName(), this, resourceCallbackStrings!!.HANDLE_IMAGE)
 copy(imageArray, index, image, image3)
 }
 override fun error(e: Throwable)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var e = e
 logUtil!!.put(StringMaker().
                             append(commonStrings!!.EXCEPTION_LABEL)!!.append(resourceCallbackStrings!!.ERROR)!!.append(image.getName())!!.toString(), this, resourceCallbackStrings!!.HANDLE_IMAGE)
@@ -311,10 +275,7 @@ image3.addCallback(callback)
 
 open fun copy(imageArray: Array<Image?>, index: Int, image: Image, image3: playn.core.Image)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var imageArray = imageArray
     //var index = index
     //var image = image
@@ -330,10 +291,7 @@ open fun copy(imageArray: Array<Image?>, index: Int, image: Image, image3: playn
 graphics.drawImage(image, 0, 0, Anchor.TOP_LEFT)
 imageArray[index]= image2
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION_LABEL +resourceCallbackStrings!!.DONE, this, resourceCallbackStrings!!.HANDLE_IMAGE)
 }
 
@@ -342,10 +300,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION_LABEL +resourceCallbackStrings!!.DONE, t
 
 open fun reset()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var size: Int = this.alphaArray!!.size
                 
@@ -356,9 +311,6 @@ open fun reset()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 this.alphaArray[index]= true
 }

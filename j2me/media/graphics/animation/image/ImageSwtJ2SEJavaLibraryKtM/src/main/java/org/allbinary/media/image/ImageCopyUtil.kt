@@ -57,10 +57,7 @@ open public class ImageCopyUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageCopyUtil
-
-        Updates for KMP build        
-        {
+: ImageCopyUtil{
 
 
 
@@ -74,9 +71,6 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -99,10 +93,7 @@ private constructor        ()
             
 open fun createImageForRotation(originalImage: Image)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var originalImage = originalImage
 
     
@@ -137,10 +128,7 @@ image= openGLUtil!!.add(image)
             
 open fun createImage(originalImage: Image)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var originalImage = originalImage
 
     
@@ -217,10 +205,7 @@ image= openGLUtil!!.add(image)
             
 open fun createImage(originalImage: Image, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var originalImage = originalImage
     //var width = width
     //var height = height
@@ -236,10 +221,7 @@ open fun createImage(originalImage: Image, width: Int, height: Int)
             
 open fun createImage(originalImage: Image, width: Int, height: Int, mutable: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var originalImage = originalImage
     //var width = width
     //var height = height
@@ -372,10 +354,7 @@ image= openGLUtil!!.add(image)
             
 open fun createImage2(originalImage: Image, width: Int, height: Int, mutable: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var originalImage = originalImage
     //var width = width
     //var height = height
@@ -584,10 +563,7 @@ image= openGLUtil!!.add(image)
             
 open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var originalImage = originalImage
     //var canvasScale = canvasScale
     //var resize = resize
@@ -676,9 +652,6 @@ open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
 
                         for (i in 0 until height)
 
-        
-
-        Updates for KMP build        
         {
 originalImageData!!.getPixels(0, i, width, originalPixelArray, (i *width))
 }
@@ -689,9 +662,6 @@ originalImageData!!.getPixels(0, i, width, originalPixelArray, (i *width))
 
                         for (index in halfWidthDelta until width)
 
-        
-
-        Updates for KMP build        
         {
 
 
@@ -699,9 +669,6 @@ originalImageData!!.getPixels(0, i, width, originalPixelArray, (i *width))
 
                         for (index2 in halfHeightDelta until height)
 
-        
-
-        Updates for KMP build        
         {
 newPixelArray[index +(index2 *width)]= originalPixelArray[(index -halfWidthDelta) +((index2 -halfHeightDelta) *width)]!!
 }

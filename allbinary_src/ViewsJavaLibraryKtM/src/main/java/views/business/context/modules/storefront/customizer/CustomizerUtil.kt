@@ -49,10 +49,7 @@ open public class CustomizerUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CustomizerUtil
-
-        Updates for KMP build        
-        {
+: CustomizerUtil{
 
 
 
@@ -66,9 +63,6 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -77,10 +71,7 @@ private constructor        ()
             
 open fun getTransformInfoInterfaceToCustomize(customizerTransformInfoInterface: TransformInfoInterface, transformInfoInterface: TransformInfoInterface)
         //nullable = true from not(false or (false and false)) = true
-: TransformInfoInterface
-
-        Updates for KMP build        
-        {
+: TransformInfoInterface{
 var customizerTransformInfoInterface = customizerTransformInfoInterface
 var transformInfoInterface = transformInfoInterface
 
@@ -116,10 +107,7 @@ var transformInfoInterface = transformInfoInterface
             
 open fun getTransformInfoObjectConfigComponentNodesToCustomize(customizerTransformInfoInterface: Object, transformInfoInterface: Object)
         //nullable = true from not(false or (false and false)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 var customizerTransformInfoInterface = customizerTransformInfoInterface
 var transformInfoInterface = transformInfoInterface
 
@@ -155,10 +143,7 @@ var transformInfoInterface = transformInfoInterface
             
 open fun getTransformInfoObjectConfigComponentNodes(transformInfoInterface: Object)
         //nullable = true from not(false or (false and false)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 var transformInfoInterface = transformInfoInterface
 
     
@@ -184,10 +169,7 @@ var transformInfoInterface = transformInfoInterface
             
 open fun getTransformInfoObjectConfigGroupComponentNodes(transformInfoInterface: Object)
         //nullable = true from not(false or (false and false)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 var transformInfoInterface = transformInfoInterface
 
     
@@ -213,10 +195,7 @@ var transformInfoInterface = transformInfoInterface
             
 open fun insert(transformInfoInterface: TransformInfoInterface, domNodeInterface: DomNodeInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var transformInfoInterface = transformInfoInterface
 var domNodeInterface = domNodeInterface
 
@@ -267,9 +246,6 @@ transformInfoInterface!!.setData(documentString)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var transformInfo: TransformInfo = allViewsToBeModified!!.get(index) as TransformInfo
@@ -358,10 +334,7 @@ this.write(specifiedTransformInfoInterface, documentString)
             
 open fun write(specifiedTransformInfoInterface: TransformInfoInterface, documentString: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var specifiedTransformInfoInterface = specifiedTransformInfoInterface
 var documentString = documentString
 
@@ -385,10 +358,7 @@ transformInfoEntityInterface!!.update(specifiedTransformInfoInterface!!.toHashMa
             
 open fun getViewDataForComponentsInObjectConfig(transformInfoInterface: Object)
         //nullable = true from not(false or (false and false)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 var transformInfoInterface = transformInfoInterface
 
     
@@ -417,9 +387,6 @@ var transformInfoInterface = transformInfoInterface
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var nextTransformInfoInterface: TransformInfo = allViewsToBeModified!!.get(index) as TransformInfo

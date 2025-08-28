@@ -38,10 +38,7 @@ open public class NumberInSameGroupSequence
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NumberInSameGroupSequence
-
-        Updates for KMP build        
-        {
+: NumberInSameGroupSequence{
 
 
 
@@ -75,9 +72,6 @@ open fun getInstance()
     var NUMBER_ON_SAME_TEAM_SEQUENCE: Array<Integer?>
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!

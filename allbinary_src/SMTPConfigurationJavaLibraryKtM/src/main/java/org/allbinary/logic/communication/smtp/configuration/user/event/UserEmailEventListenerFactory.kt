@@ -41,10 +41,7 @@ open public class UserEmailEventListenerFactory
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface, userInterface: UserInterface)
         //nullable =  from not(true or (false and false)) = 
-: UserEmailEventListenerInterface
-
-        Updates for KMP build        
-        {
+: UserEmailEventListenerInterface{
     //var abeClientInformation = abeClientInformation
     //var userEmailEventConfigurationInterface = userEmailEventConfigurationInterface
     //var userInterface = userInterface
@@ -69,9 +66,6 @@ params[0]= userInterface as Object
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

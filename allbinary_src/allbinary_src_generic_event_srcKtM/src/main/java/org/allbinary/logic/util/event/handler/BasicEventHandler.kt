@@ -51,19 +51,13 @@ open public class BasicEventHandler
     private var eventListenerInterfaceList: BasicArrayList
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 this.eventListenerInterfaceList= BasicArrayList()
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -80,9 +74,6 @@ stringBuffer!!.append(this.eventListenerInterfaceList!!.size())
 
 
         while(index < this.eventListenerInterfaceList!!.size())
-        
-
-        Updates for KMP build        
         {
 
         try {
@@ -90,10 +81,7 @@ stringBuffer!!.append(this.eventListenerInterfaceList!!.size())
 stringBuffer!!.append(LISTENER)
 stringBuffer!!.append(StringUtil.getInstance()!!.toString(eventListenerInterface))
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -114,20 +102,14 @@ index++
 
 open fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.eventListenerInterfaceList= BasicArrayList()
 }
 
 
 open fun addListenerSingleThreaded(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventListenerInterface = eventListenerInterface
 
     
@@ -144,10 +126,7 @@ var eventListenerInterface = eventListenerInterface
 
 open fun addListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventListenerInterface = eventListenerInterface
 
     
@@ -163,10 +142,7 @@ var eventListenerInterface = eventListenerInterface
 
 open fun removeListenerSingleThreaded(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventListenerInterface = eventListenerInterface
 this.eventListenerInterfaceList!!.remove(eventListenerInterface)
 }
@@ -175,10 +151,7 @@ this.eventListenerInterfaceList!!.remove(eventListenerInterface)
 
 open fun removeListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventListenerInterface = eventListenerInterface
 this.eventListenerInterfaceList!!.remove(eventListenerInterface)
 }
@@ -189,10 +162,7 @@ this.eventListenerInterfaceList!!.remove(eventListenerInterface)
 
 open fun fireEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventObject = eventObject
 
     var index: Int = 0
@@ -202,19 +172,13 @@ var eventObject = eventObject
 
 
         while(index < this.eventListenerInterfaceList!!.size())
-        
-
-        Updates for KMP build        
         {
 
         try {
             eventListenerInterface= this.eventListenerInterfaceList!!.objectArray[index]!! as EventListenerInterface
 this.process(eventObject, eventListenerInterface)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -231,10 +195,7 @@ index++
             
 open fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventObject = eventObject
 var eventListenerInterface = eventListenerInterface
 eventListenerInterface!!.onEvent(eventObject)
@@ -243,10 +204,7 @@ eventListenerInterface!!.onEvent(eventObject)
 
 open fun getEventListenerInterfaceListP()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 

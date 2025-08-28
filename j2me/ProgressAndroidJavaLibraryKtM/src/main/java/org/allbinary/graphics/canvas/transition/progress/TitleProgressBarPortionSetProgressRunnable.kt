@@ -36,10 +36,7 @@ open public class TitleProgressBarPortionSetProgressRunnable : ProgressRunnable 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        (midletActivity: Activity, progressCanvas: ProgressCanvas)                        
 
-                            : super(midletActivity, progressCanvas)
-
-        Updates for KMP build        
-        {
+                            : super(midletActivity, progressCanvas){
 var midletActivity = midletActivity
 var progressCanvas = progressCanvas
 
@@ -50,10 +47,7 @@ var progressCanvas = progressCanvas
 
 override fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             
@@ -61,10 +55,7 @@ override fun run()
 
 this.midletActivity!!.onSetProgress((this.progressCanvas!!.getValue() +this.progressCanvas!!.getMaxValue() /progressCanvas!!.getPortion()).toInt(), this.progressCanvas!!.getText())
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

@@ -51,9 +51,6 @@ open public class InputAutomationServiceConsumer
     private var osgiServiceVisitorInterface: OSGIServiceVisitorInterface
 public constructor        (registryName: String, bundleContext: BundleContext, osgiServiceVisitorInterface: OSGIServiceVisitorInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var registryName = registryName
     //var bundleContext = bundleContext
@@ -68,10 +65,7 @@ this.setOsgiServiceVisitorInterface(osgiServiceVisitorInterface)
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 logUtil!!.put(this.commonStrings!!.START, this, commonStrings!!.PROCESS)
 
     var vector: Vector = osgiServiceUtil!!.getServicesObjectVector(this.getBundleContext(), this.getServiceReferences())!!
@@ -89,9 +83,6 @@ logUtil!!.put("Processing " +vector.size +" Services", this, commonStrings!!.PRO
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 osgiServiceInterface= vector.get(index) as OSGIServiceInterface
 
@@ -115,10 +106,7 @@ osgiServiceInterface= vector.get(index) as OSGIServiceInterface
             
 open fun getServiceReferences()
         //nullable = true from not(false or (false and true)) = true
-: Array<ServiceReference?>
-
-        Updates for KMP build        
-        {
+: Array<ServiceReference?>{
 
 
 
@@ -130,10 +118,7 @@ open fun getServiceReferences()
 
 open fun getBundleContext()
         //nullable = true from not(false or (false and true)) = true
-: BundleContext
-
-        Updates for KMP build        
-        {
+: BundleContext{
 
 
 
@@ -144,10 +129,7 @@ open fun getBundleContext()
 
 open fun setBundleContext(aBundleContext: BundleContext)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var aBundleContext = aBundleContext
 bundleContext= aBundleContext
 }
@@ -155,10 +137,7 @@ bundleContext= aBundleContext
 
 open fun getRegistryName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -169,10 +148,7 @@ open fun getRegistryName()
 
 open fun setRegistryName(registryName: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var registryName = registryName
 this.registryName= registryName
 }
@@ -180,10 +156,7 @@ this.registryName= registryName
 
 open fun getOsgiServiceVisitorInterface()
         //nullable = true from not(false or (false and true)) = true
-: OSGIServiceVisitorInterface
-
-        Updates for KMP build        
-        {
+: OSGIServiceVisitorInterface{
 
 
 
@@ -194,10 +167,7 @@ open fun getOsgiServiceVisitorInterface()
 
 open fun setOsgiServiceVisitorInterface(osgiServiceVisitorInterface: OSGIServiceVisitorInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var osgiServiceVisitorInterface = osgiServiceVisitorInterface
 this.osgiServiceVisitorInterface= osgiServiceVisitorInterface
 }

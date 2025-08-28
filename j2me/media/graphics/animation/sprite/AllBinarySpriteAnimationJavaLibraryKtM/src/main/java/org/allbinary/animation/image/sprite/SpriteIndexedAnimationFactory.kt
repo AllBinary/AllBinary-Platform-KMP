@@ -45,10 +45,7 @@ open public class SpriteIndexedAnimationFactory : BaseImageAnimationFactory
     private var basicColorArray: Array<BasicColor?> = BasicColorUtil.getInstance()!!.ZERO_ARRAY
 public constructor        (image: Image, basicColorArray: Array<BasicColor?>, width: Int, height: Int, dx: Int, dy: Int)                        
 
-                            : this(image, basicColorArray, width, height, dx, dy, AnimationBehaviorFactory.getInstance())
-
-        Updates for KMP build        
-        {
+                            : this(image, basicColorArray, width, height, dx, dy, AnimationBehaviorFactory.getInstance()){
     //var image = image
     //var basicColorArray = basicColorArray
     //var width = width
@@ -63,10 +60,7 @@ public constructor        (image: Image, basicColorArray: Array<BasicColor?>, wi
 
 public constructor        (image: Image, basicColorArray: Array<BasicColor?>, width: Int, height: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(image, width, height, animationBehaviorFactory)
-
-        Updates for KMP build        
-        {
+                            : super(image, width, height, animationBehaviorFactory){
     //var image = image
     //var basicColorArray = basicColorArray
     //var width = width
@@ -85,10 +79,7 @@ this.animationFactoryInitializationVisitor!!.dy= dy
 
 public constructor        (image: Image, basicColorArray: Array<BasicColor?>, width: Int, height: Int)                        
 
-                            : this(image, basicColorArray, width, height, AnimationBehaviorFactory.getInstance())
-
-        Updates for KMP build        
-        {
+                            : this(image, basicColorArray, width, height, AnimationBehaviorFactory.getInstance()){
     //var image = image
     //var basicColorArray = basicColorArray
     //var width = width
@@ -101,10 +92,7 @@ public constructor        (image: Image, basicColorArray: Array<BasicColor?>, wi
 
 public constructor        (image: Image, basicColorArray: Array<BasicColor?>, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(image, width, height, animationBehaviorFactory)
-
-        Updates for KMP build        
-        {
+                            : this(image, width, height, animationBehaviorFactory){
     //var image = image
     //var basicColorArray = basicColorArray
     //var width = width
@@ -130,10 +118,7 @@ this.animationFactoryInitializationVisitor!!.dy=  -(this.animationFactoryInitial
 
 public constructor        (image: Image, width: Int, height: Int, dx: Int, dy: Int)                        
 
-                            : this(image, width, height, dx, dy, AnimationBehaviorFactory.getInstance())
-
-        Updates for KMP build        
-        {
+                            : this(image, width, height, dx, dy, AnimationBehaviorFactory.getInstance()){
     //var image = image
     //var width = width
     //var height = height
@@ -147,10 +132,7 @@ public constructor        (image: Image, width: Int, height: Int, dx: Int, dy: I
 
 public constructor        (image: Image, width: Int, height: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(image, width, height, animationBehaviorFactory)
-
-        Updates for KMP build        
-        {
+                            : this(image, width, height, animationBehaviorFactory){
     //var image = image
     //var width = width
     //var height = height
@@ -167,10 +149,7 @@ this.animationFactoryInitializationVisitor!!.dy= dy
 
 public constructor        (image: Image, width: Int, height: Int)                        
 
-                            : this(image, width, height, AnimationBehaviorFactory.getInstance())
-
-        Updates for KMP build        
-        {
+                            : this(image, width, height, AnimationBehaviorFactory.getInstance()){
     //var image = image
     //var width = width
     //var height = height
@@ -182,10 +161,7 @@ public constructor        (image: Image, width: Int, height: Int)
 
 public constructor        (image: Image, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(image, width, height, animationBehaviorFactory)
-
-        Updates for KMP build        
-        {
+                            : super(image, width, height, animationBehaviorFactory){
     //var image = image
     //var width = width
     //var height = height
@@ -200,10 +176,7 @@ public constructor        (image: Image, width: Int, height: Int, animationBehav
                 @Throws(Exception::class)
             override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation
-
-        Updates for KMP build        
-        {
+: Animation{
     //var instanceId = instanceId
 
     var sprite: Sprite = animationFactorySpriteScaleUtil!!.createImage(this.getImage(), this.animationFactoryInitializationVisitor!!.width, this.animationFactoryInitializationVisitor!!.height, this.scaleProperties!!.scaleWidth, this.scaleProperties!!.scaleHeight)!!
@@ -236,10 +209,7 @@ public constructor        (image: Image, width: Int, height: Int, animationBehav
                 @Throws(Exception::class)
             override fun getInstance(animationInterface: Animation)
         //nullable =  from not(true or (false and false)) = 
-: Animation
-
-        Updates for KMP build        
-        {
+: Animation{
     //var animationInterface = animationInterface
 
 

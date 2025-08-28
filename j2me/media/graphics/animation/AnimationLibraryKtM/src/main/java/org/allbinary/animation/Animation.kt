@@ -52,19 +52,13 @@ open public class Animation
     var alphaP: Int= 0
 protected constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun setAlpha(alpha: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var alpha = alpha
 this.alphaP= alpha
 }
@@ -73,18 +67,12 @@ this.alphaP= alpha
                 @Throws(Exception::class)
             override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var x = x
     //var y = y
@@ -93,10 +81,7 @@ this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP(), this.ge
 
 override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var x = x
     //var y = y
@@ -106,10 +91,7 @@ override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
 
 open fun isThreed()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -120,10 +102,7 @@ open fun isThreed()
 
 open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor
-
-        Updates for KMP build        
-        {
+: BasicColor{
 
 
 
@@ -134,10 +113,7 @@ open fun getBasicColorP()
 
 open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var basicColor = basicColor
 this.basicColor= basicColor
 this.colorP= this.basicColor!!.toInt()
@@ -146,10 +122,7 @@ this.colorP= this.basicColor!!.toInt()
 
 open fun getChangeBasicColor()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor
-
-        Updates for KMP build        
-        {
+: BasicColor{
 
 
 
@@ -160,10 +133,7 @@ open fun getChangeBasicColor()
 
 open fun changeBasicColor(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var basicColor = basicColor
 this.changeBasicColorP= basicColor
 this.changeColorP= this.changeBasicColorP!!.toInt()
@@ -172,10 +142,7 @@ this.changeColorP= this.changeBasicColorP!!.toInt()
 
 open fun getChangeColor()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -186,10 +153,7 @@ open fun getChangeColor()
 
 open fun getColor()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -200,10 +164,7 @@ open fun getColor()
 
 open fun setScale(scaleX: Float, scaleY: Float)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var scaleX = scaleX
     //var scaleY = scaleY
 }
@@ -211,10 +172,7 @@ open fun setScale(scaleX: Float, scaleY: Float)
 
 open fun setMaxScale(maxScaleX: Float, maxScaleY: Float)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var maxScaleX = maxScaleX
     //var maxScaleY = maxScaleY
 }
@@ -223,30 +181,21 @@ open fun setMaxScale(maxScaleX: Float, maxScaleY: Float)
                 @Throws(Exception::class)
             override fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gl = gl
 }
 
 
 open fun setDx(dx: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var dx = dx
 }
 
 
 open fun getDx()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -257,20 +206,14 @@ open fun getDx()
 
 open fun setDy(dy: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var dy = dy
 }
 
 
 open fun getDy()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

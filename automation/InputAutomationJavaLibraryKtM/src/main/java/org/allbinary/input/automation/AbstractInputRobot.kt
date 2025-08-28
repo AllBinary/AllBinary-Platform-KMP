@@ -41,9 +41,6 @@ open public class AbstractInputRobot
     private var helpSet: HelpSet
 public constructor        (helpSet: HelpSet)
             : super()
-        
-
-        Updates for KMP build        
         {
 var helpSet = helpSet
 this.setHelpSet(helpSet)
@@ -52,10 +49,7 @@ this.setHelpSet(helpSet)
 
 open fun getHelpSet()
         //nullable = true from not(false or (false and true)) = true
-: HelpSet
-
-        Updates for KMP build        
-        {
+: HelpSet{
 
 
 
@@ -66,10 +60,7 @@ open fun getHelpSet()
 
 open fun mouseMove(point: Point)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var point = point
 this.mouseMove(point.x, point.y)
 logUtil!!.put("Moved Mouse To: x: " +point.x +" y: " +point.y, this, "moveMouse")
@@ -80,10 +71,7 @@ logUtil!!.put("Moved Mouse To: x: " +point.x +" y: " +point.y, this, "moveMouse"
             
 open fun mouseMoveToTarget(rectangle: Rectangle, x: Integer, y: Integer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var rectangle = rectangle
 var x = x
 var y = y
@@ -99,10 +87,7 @@ logUtil!!.put("Moved Mouse To: x: " +point.x +" y: " +point.y +" in the middle o
             
 open fun mouseMoveToTarget(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var rectangle = rectangle
 this.mouseMoveToTarget(rectangle, 0, 0)
 }
@@ -110,10 +95,7 @@ this.mouseMoveToTarget(rectangle, 0, 0)
 
 open fun mouseMove(x: Integer, y: Integer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var x = x
 var y = y
 
@@ -125,10 +107,7 @@ var y = y
 
 open fun setHelpSet(helpSet: HelpSet)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var helpSet = helpSet
 this.helpSet= helpSet
 }

@@ -31,10 +31,7 @@ open public class BasicArrayListPool : AbstractArrayListPool {
         
 public constructor        (cacheableInterfaceFactoryInterface: CacheableInterfaceFactoryInterface)                        
 
-                            : super(cacheableInterfaceFactoryInterface)
-
-        Updates for KMP build        
-        {
+                            : super(cacheableInterfaceFactoryInterface){
 var cacheableInterfaceFactoryInterface = cacheableInterfaceFactoryInterface
 
 
@@ -45,10 +42,7 @@ var cacheableInterfaceFactoryInterface = cacheableInterfaceFactoryInterface
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.buffers.clear()
 }
 
@@ -57,10 +51,7 @@ this.buffers.clear()
             
 open fun remove(key: Any)
         //nullable = true from not(false or (false and false)) = true
-: CacheableInterface
-
-        Updates for KMP build        
-        {
+: CacheableInterface{
 var key = key
 
     var size: Int = this.buffers.size()!!
@@ -94,10 +85,7 @@ var key = key
             
 open fun addAll(usedList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var usedList = usedList
 
 
@@ -105,9 +93,6 @@ var usedList = usedList
 
                         for (index in usedList!!.size()!!  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     var anyType: CacheableInterface = usedList!!.objectArray[index]!! as CacheableInterface
@@ -123,10 +108,7 @@ usedList!!.clear()
             
 open fun releaseUsedBackToPool(usedList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var usedList = usedList
 
 
@@ -134,9 +116,6 @@ var usedList = usedList
 
                         for (index in usedList!!.size()!!  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     var list: BasicArrayListCacheable = usedList!!.objectArray[index]!! as BasicArrayListCacheable

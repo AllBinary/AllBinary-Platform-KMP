@@ -83,9 +83,6 @@ open public class ProductListing
     private val INVENTORY: String = ".InventoryView"
 public constructor        (searchRequest: SearchRequest)
             : super()
-        
-
-        Updates for KMP build        
         {
 var searchRequest = searchRequest
 this.searchRequest= searchRequest
@@ -99,10 +96,7 @@ this.inventory= InventoryEntity()
             
 open fun getHashSet(storeFront: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
-: HashSet
-
-        Updates for KMP build        
-        {
+: HashSet{
 var storeFront = storeFront
 
     var inventoryColumnUtil: InventoryColumnUtil = InventoryColumnUtil.getInstance()!!
@@ -122,9 +116,6 @@ var storeFront = storeFront
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var subStore: String = subStoreVector!!.get(index) as String
@@ -153,10 +144,7 @@ keywords.addAll(substoreKeywords)
             
 open fun savePage(file: String, data: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var file = file
 var data = data
 
@@ -219,10 +207,7 @@ StreamUtil.getInstance()!!.close(idOutData)
             
 open fun create(keywordData: String, keywordFilenameHashMap: HashMap<Any, Any>, vector: Vector, staticPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var keywordData = keywordData
 var keywordFilenameHashMap = keywordFilenameHashMap
 var vector = vector
@@ -260,9 +245,6 @@ this.searchRequest!!.setFileBaseName(pageName)
 
                         for (index in 0 until productListingPages!!.size)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -329,10 +311,7 @@ this.savePage(file, productListingPages[index]!!)
 
 open fun addStaticPageInfoToDatabase(storeFront: StoreFrontInterface, keywordFilenameHashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var storeFront = storeFront
 var keywordFilenameHashMap = keywordFilenameHashMap
 
@@ -351,9 +330,6 @@ var keywordFilenameHashMap = keywordFilenameHashMap
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var insertVector: Vector = Vector()
@@ -377,10 +353,7 @@ this.staticPages!!.insert(insertVector)
             
 open fun generateAll()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -447,9 +420,6 @@ stringBuffer!!.append(" Store Not Found")
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var keywordData: String = keywordArray[index]!! as String
@@ -478,10 +448,7 @@ stringBuffer!!.append(INVENTORY)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
@@ -495,10 +462,7 @@ stringBuffer!!.append(INVENTORY)
             
 open fun generateAll(storeName: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var storeName = storeName
 
         try {
@@ -536,9 +500,6 @@ stringBuffer!!.append("<br />")
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 storeName= storeFrontVector!!.get(index) as String
 this.searchRequest!!.setStoreFront(this.storeFronts!!.getStoreFrontInterface(storeName))
@@ -568,10 +529,7 @@ stringBuffer!!.append("All Static Pages Generated<br/>")
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 

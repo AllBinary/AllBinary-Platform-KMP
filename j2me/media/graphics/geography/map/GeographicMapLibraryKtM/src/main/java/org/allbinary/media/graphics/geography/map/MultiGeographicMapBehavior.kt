@@ -40,10 +40,7 @@ open public class MultiGeographicMapBehavior
             
 open fun getCellTypeAt(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: Array<GeographicMapCellType?>
-
-        Updates for KMP build        
-        {
+: Array<GeographicMapCellType?>{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var geographicMapCellTypeArray = geographicMapCellTypeArray
     //var geographicMapCellPosition = geographicMapCellPosition
@@ -62,9 +59,6 @@ open fun getCellTypeAt(geographicMapInterfaceArray: Array<BasicGeographicMap?>, 
 
                         for (index in size  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 cellType= geographicMapInterfaceArray[index]!!.getCellTypeAt(geographicMapCellPosition)
 geographicMapCellTypeArray[index]= cellType

@@ -48,10 +48,7 @@ open public class XmlRpcRemoteLicenseRegistrationClient : XmlRpcAbeClient {
     private val PAGE: String = "licenseregistrationserverssl.php"
 public constructor        (clientInfo: AbeClientInformationInterface)                        
 
-                            : super(clientInfo, "LicenseRegistrationServer.process")
-
-        Updates for KMP build        
-        {
+                            : super(clientInfo, "LicenseRegistrationServer.process"){
 var clientInfo = clientInfo
 
 
@@ -65,10 +62,7 @@ this.setServer(0)
             
 open fun get(anyType: Any, cryptInterface: CryptInterface)
         //nullable = true from not(false or (false and false)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
     //var anyType = anyType
     //var cryptInterface = cryptInterface
 
@@ -117,10 +111,7 @@ isOnline= true
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: IOException)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(TRYING_OTHER_SERVERS +ExceptionUtil.getInstance()!!.getStackTrace(e), this, commonStrings!!.GET)
 
     
@@ -145,10 +136,7 @@ logUtil!!.put(TRYING_OTHER_SERVERS +ExceptionUtil.getInstance()!!.getStackTrace(
                             
 }
  catch(e: XmlRpcException)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(SERVER_REPORTED_ERROR, this, commonStrings!!.GET, e)
 
 
@@ -157,10 +145,7 @@ logUtil!!.put(SERVER_REPORTED_ERROR, this, commonStrings!!.GET, e)
                         return this.tryAnother(anyType)
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(UNKNOWN_ERROR, this, commonStrings!!.GET, e)
 
 

@@ -46,10 +46,7 @@ open public class TransformGeneratorUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TransformGeneratorUtil
-
-        Updates for KMP build        
-        {
+: TransformGeneratorUtil{
 
 
 
@@ -63,9 +60,6 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -74,10 +68,7 @@ private constructor        ()
             
 open fun generate(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, ownerTransformInfoInterface: TransformInfoInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
     //var transformInfoInterface = transformInfoInterface
     //var ownerTransformInfoInterface = ownerTransformInfoInterface
@@ -121,10 +112,7 @@ open fun generate(abeClientInformation: AbeClientInformationInterface, transform
 StoreFileGenerator(componentInterface!!.getTransformInfoInterface()).
                             process(result)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
@@ -147,10 +135,7 @@ StoreFileGenerator(componentInterface!!.getTransformInfoInterface()).
             
 open fun generate(abeClientInformation: AbeClientInformationInterface, transformInfoDomNode: TransformInfoDomNode, ownerTransformInfoInterface: TransformInfoInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
     //var transformInfoDomNode = transformInfoDomNode
     //var ownerTransformInfoInterface = ownerTransformInfoInterface

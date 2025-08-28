@@ -37,10 +37,7 @@ open public class MediaTypeData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: MediaTypeData
-
-        Updates for KMP build        
-        {
+: MediaTypeData{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

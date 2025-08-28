@@ -38,9 +38,6 @@ open public class GeneratorTransformInfoData
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

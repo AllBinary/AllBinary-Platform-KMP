@@ -58,10 +58,7 @@ open public class TrueTypeFontUtil : TrueTypeFontUtilBase {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TrueTypeFontUtil
-
-        Updates for KMP build        
-        {
+: TrueTypeFontUtil{
 
 
 
@@ -81,10 +78,7 @@ open fun getInstance()
     private val widthScale: Float
 private constructor        ()                        
 
-                            : super(2)
-
-        Updates for KMP build        
-        {
+                            : super(2){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -120,10 +114,7 @@ this.widthScale= if((this.scale == 2)) {
 
 open fun getFontBitmap(gl: GL10, filename: String, cellSize: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var gl = gl
     //var filename = filename
     //var cellSize = cellSize
@@ -205,10 +196,7 @@ this.fontImage= this.preResourceImageUtil!!.encapsulate(image) as OpenGLESImage
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -224,10 +212,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.EXCEPTION, e)
 
 open fun saveFontAtlasAsFile()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var image: Image = this.getFontBitmap2(
                             null, cellSize, BasicColorFactory.getInstance()!!.WHITE)!!
@@ -248,10 +233,7 @@ imageLoader!!.save(CommonSeps.getInstance()!!.PERIOD +CanvasStrings.getInstance(
 
 open fun getFontBitmap2(filename: String, cellSize: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var filename = filename
     //var cellSize = cellSize
     //var basicColor = basicColor
@@ -298,9 +280,6 @@ graphics.setColor(basicColor!!.toInt())
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 characterArray[0]= pattern[index]
 _characterWidth[index]= bounds.getMaxX()
@@ -355,10 +334,7 @@ graphics.drawChar(characterArray[0]!!, x, y, 0)
 
 open fun getFontWidths(filename: String, fontSize: Int)
         //nullable = true from not(false or (false and false)) = true
-: IntArray
-
-        Updates for KMP build        
-        {
+: IntArray{
 var filename = filename
 var fontSize = fontSize
 
@@ -370,9 +346,6 @@ var fontSize = fontSize
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 characterArray[0]= pattern[index]
 

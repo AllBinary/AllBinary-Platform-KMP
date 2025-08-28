@@ -28,20 +28,14 @@
 
 open public class ActionScriptItemJPanel : javax.swing.JPanel {
         
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 initComponents()
 }
 
 
 open fun getNewActionScriptInputJPanel()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JPanel
-
-        Updates for KMP build        
-        {
+: javax.swing.JPanel{
 
 
 
@@ -52,10 +46,7 @@ open fun getNewActionScriptInputJPanel()
 
 open fun setNewActionScriptInputJPanel(newActionScriptInputJPanel: javax.swing.JPanel)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var newActionScriptInputJPanel = newActionScriptInputJPanel
 this.newActionScriptInputJPanel= newActionScriptInputJPanel
 }
@@ -63,10 +54,7 @@ this.newActionScriptInputJPanel= newActionScriptInputJPanel
 
 open fun getRemoveJPanel()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JPanel
-
-        Updates for KMP build        
-        {
+: javax.swing.JPanel{
 
 
 
@@ -77,10 +65,7 @@ open fun getRemoveJPanel()
 
 open fun setRemoveJPanel(removeJPanel: javax.swing.JPanel)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var removeJPanel = removeJPanel
 this.removeJPanel= removeJPanel
 }
@@ -88,10 +73,7 @@ this.removeJPanel= removeJPanel
 
 open fun getScriptItemJPanel()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JPanel
-
-        Updates for KMP build        
-        {
+: javax.swing.JPanel{
 
 
 
@@ -102,10 +84,7 @@ open fun getScriptItemJPanel()
 
 open fun setScriptItemJPanel(scriptItemJPanel: javax.swing.JPanel)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var scriptItemJPanel = scriptItemJPanel
 this.scriptItemJPanel= scriptItemJPanel
 }
@@ -113,10 +92,7 @@ this.scriptItemJPanel= scriptItemJPanel
 
 open fun getNewActionScriptConditionJPanel()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JPanel
-
-        Updates for KMP build        
-        {
+: javax.swing.JPanel{
 
 
 
@@ -127,10 +103,7 @@ open fun getNewActionScriptConditionJPanel()
 
 open fun setNewActionScriptConditionJPanel(newActionScriptConditionJPanel: javax.swing.JPanel)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var newActionScriptConditionJPanel = newActionScriptConditionJPanel
 this.newActionScriptConditionJPanel= newActionScriptConditionJPanel
 }
@@ -138,10 +111,7 @@ this.newActionScriptConditionJPanel= newActionScriptConditionJPanel
 
 open fun getChildActionScriptConditionJPanel()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JPanel
-
-        Updates for KMP build        
-        {
+: javax.swing.JPanel{
 
 
 
@@ -152,10 +122,7 @@ open fun getChildActionScriptConditionJPanel()
 
 open fun setChildActionScriptConditionJPanel(childActionScriptConditionJPanel: javax.swing.JPanel)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var childActionScriptConditionJPanel = childActionScriptConditionJPanel
 this.childActionScriptConditionJPanel= childActionScriptConditionJPanel
 }
@@ -163,10 +130,7 @@ this.childActionScriptConditionJPanel= childActionScriptConditionJPanel
 
 open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 newActionScriptInputJPanel= javax.swing.JPanel()
 childActionScriptConditionJPanel= javax.swing.JPanel()
 newActionScriptConditionJPanel= javax.swing.JPanel()

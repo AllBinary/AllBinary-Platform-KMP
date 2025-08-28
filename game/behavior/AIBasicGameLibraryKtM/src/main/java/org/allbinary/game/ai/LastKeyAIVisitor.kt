@@ -36,18 +36,12 @@ open public class LastKeyAIVisitor : Visitor {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val TRUE: Boolean = BooleanFactory.getInstance()!!.TRUE
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 override fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 var anyType = anyType
 
         try {
@@ -67,10 +61,7 @@ var anyType = anyType
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

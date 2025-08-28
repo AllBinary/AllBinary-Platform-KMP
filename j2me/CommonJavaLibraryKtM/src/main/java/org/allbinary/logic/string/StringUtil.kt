@@ -37,10 +37,7 @@ open public class StringUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: StringUtil
-
-        Updates for KMP build        
-        {
+: StringUtil{
 
 
 
@@ -60,19 +57,13 @@ open fun getInstance()
     private val stringArray: Array<String?> = arrayOfNulls(0)
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getInstance(string: String)
         //nullable =  from not(true or (false and false)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var string = string
 
     
@@ -103,10 +94,7 @@ var string = string
 
 open fun getArrayInstance()
         //nullable = true from not(false or (false and true)) = true
-: Array<String?>
-
-        Updates for KMP build        
-        {
+: Array<String?>{
 
 
 
@@ -117,10 +105,7 @@ open fun getArrayInstance()
 
 open fun count(string: String, aChar: Char)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var string = string
     //var aChar = aChar
 
@@ -135,9 +120,6 @@ open fun count(string: String, aChar: Char)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -160,10 +142,7 @@ open fun count(string: String, aChar: Char)
 
 open fun toString(anyType: Any)
         //nullable = true from not(false or (true and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
     //var anyType = anyType
 
     

@@ -74,10 +74,7 @@ open public class ImageCaptionIndexedAnimationFactory
     private val animationBehaviorFactory: AnimationBehaviorFactory
 public constructor        (captionImage: Image, spriteMovieImage: Image, soundInterface: Sound, frameWidth: Int, frameHeight: Int, captionDx: Int, captionDy: Int, dx: Int, dy: Int, time: Int)                        
 
-                            : this(captionImage, spriteMovieImage, soundInterface, frameWidth, frameHeight, captionDx, captionDy, dx, dy, time, AnimationBehaviorFactory.getInstance())
-
-        Updates for KMP build        
-        {
+                            : this(captionImage, spriteMovieImage, soundInterface, frameWidth, frameHeight, captionDx, captionDy, dx, dy, time, AnimationBehaviorFactory.getInstance()){
     //var captionImage = captionImage
     //var spriteMovieImage = spriteMovieImage
     //var soundInterface = soundInterface
@@ -96,9 +93,6 @@ public constructor        (captionImage: Image, spriteMovieImage: Image, soundIn
 
 public constructor        (captionImage: Image, spriteMovieImage: Image, soundInterface: Sound, frameWidth: Int, frameHeight: Int, captionDx: Int, captionDy: Int, dx: Int, dy: Int, time: Int, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var captionImage = captionImage
     //var spriteMovieImage = spriteMovieImage
@@ -128,10 +122,7 @@ this.animationBehaviorFactory= animationBehaviorFactory
                 @Throws(Exception::class)
             override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation
-
-        Updates for KMP build        
-        {
+: Animation{
     //var instanceId = instanceId
 
     var scaledImage: Image = animationFactoryImageScaleUtil!!.createImage(this.captionImage, this.captionImage!!.getWidth(), this.captionImage!!.getHeight(), this.scaleProperties!!.scaleWidth, this.scaleProperties!!.scaleHeight)!!
@@ -171,10 +162,7 @@ this.animationBehaviorFactory= animationBehaviorFactory
 
 override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var scaleProperties = scaleProperties
 this.scaleProperties= scaleProperties
 }

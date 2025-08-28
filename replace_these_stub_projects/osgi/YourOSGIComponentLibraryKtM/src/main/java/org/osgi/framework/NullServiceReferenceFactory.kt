@@ -37,10 +37,7 @@ open public class NullServiceReferenceFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NullServiceReferenceFactory
-
-        Updates for KMP build        
-        {
+: NullServiceReferenceFactory{
 
 
 

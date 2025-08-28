@@ -37,10 +37,7 @@ open public class TransformDocumentFactory
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TransformDocumentInterface
-
-        Updates for KMP build        
-        {
+: TransformDocumentInterface{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

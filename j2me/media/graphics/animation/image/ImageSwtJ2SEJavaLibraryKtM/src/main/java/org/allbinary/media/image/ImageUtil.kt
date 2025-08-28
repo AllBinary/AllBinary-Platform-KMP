@@ -53,10 +53,7 @@ open public class ImageUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageUtil
-
-        Updates for KMP build        
-        {
+: ImageUtil{
 
 
 
@@ -78,18 +75,12 @@ open fun getInstance()
     private val CREATE_BUFFERED_IMAGE: String = "createBufferedImage"
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
         try {
             logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
@@ -98,10 +89,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 
 open fun create(width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: org.eclipse.swt.graphics.Image
-
-        Updates for KMP build        
-        {
+: org.eclipse.swt.graphics.Image{
     //var width = width
     //var height = height
 
@@ -119,10 +107,7 @@ open fun create(width: Int, height: Int)
             
 open fun createBufferedImage(bufferedImageArray: Array<org.eclipse.swt.graphics.Image?>, percent: Int, scale: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Array<org.eclipse.swt.graphics.Image?>
-
-        Updates for KMP build        
-        {
+: Array<org.eclipse.swt.graphics.Image?>{
     //var bufferedImageArray = bufferedImageArray
     //var percent = percent
     //var scale = scale
@@ -145,9 +130,6 @@ open fun createBufferedImage(bufferedImageArray: Array<org.eclipse.swt.graphics.
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 bufferedImage= bufferedImageArray[index]!!
 imageData= bufferedImage!!.getImageData()
@@ -172,10 +154,7 @@ scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImage, newWidt
             
 open fun createBufferedImage(bufferedImageArray: Array<org.eclipse.swt.graphics.Image?>, percent: Float, scale: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Array<org.eclipse.swt.graphics.Image?>
-
-        Updates for KMP build        
-        {
+: Array<org.eclipse.swt.graphics.Image?>{
     //var bufferedImageArray = bufferedImageArray
     //var percent = percent
     //var scale = scale
@@ -198,9 +177,6 @@ open fun createBufferedImage(bufferedImageArray: Array<org.eclipse.swt.graphics.
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 bufferedImage= bufferedImageArray[index]!!
 imageData= bufferedImage!!.getImageData()
@@ -225,10 +201,7 @@ scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImage, newWidt
             
 open fun createBufferedImage(bufferedImageArray: Array<org.eclipse.swt.graphics.Image?>, width: Int, height: Int, scale: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Array<org.eclipse.swt.graphics.Image?>
-
-        Updates for KMP build        
-        {
+: Array<org.eclipse.swt.graphics.Image?>{
     //var bufferedImageArray = bufferedImageArray
     //var width = width
     //var height = height
@@ -246,9 +219,6 @@ open fun createBufferedImage(bufferedImageArray: Array<org.eclipse.swt.graphics.
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImageArray[index]!!, width, height, scale)
 }
@@ -265,10 +235,7 @@ scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImageArray[ind
             
 open fun createBufferedImage(bufferedImage: org.eclipse.swt.graphics.Image, newWidth: Int, newHeight: Int)
         //nullable = true from not(false or (false and false)) = true
-: org.eclipse.swt.graphics.Image
-
-        Updates for KMP build        
-        {
+: org.eclipse.swt.graphics.Image{
     //var bufferedImage = bufferedImage
     //var newWidth = newWidth
 var newHeight = newHeight
@@ -284,10 +251,7 @@ var newHeight = newHeight
             
 open fun createBufferedImage(bufferedImage: org.eclipse.swt.graphics.Image, newWidth: Int, newHeight: Int, scale: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: org.eclipse.swt.graphics.Image
-
-        Updates for KMP build        
-        {
+: org.eclipse.swt.graphics.Image{
     //var bufferedImage = bufferedImage
     //var newWidth = newWidth
 var newHeight = newHeight
@@ -304,10 +268,7 @@ var newHeight = newHeight
             
 open fun createBufferedImage(bufferedImage: org.eclipse.swt.graphics.Image, newWidth: Int, newHeight: Int, scale: Boolean, allowTranslate: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: org.eclipse.swt.graphics.Image
-
-        Updates for KMP build        
-        {
+: org.eclipse.swt.graphics.Image{
     //var bufferedImage = bufferedImage
     //var newWidth = newWidth
 var newHeight = newHeight
@@ -396,10 +357,7 @@ gc.dispose()
 
 open fun drawTransformedImage(image: org.eclipse.swt.graphics.Image, parent: Composite, dx: Int, dy: Int, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Canvas
-
-        Updates for KMP build        
-        {
+: Canvas{
     //var image = image
     //var parent = parent
     //var dx = dx
@@ -414,10 +372,7 @@ imageCanvas!!.addPaintListener(object: PaintListener()
                                 
 open override fun paintControl(event: PaintEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var event = event
 
     var gc: GC = event.gc
@@ -443,10 +398,7 @@ gc.drawImage(image, 0, 0, image.getBounds()!!.width, image.getBounds()!!.height,
 
 open fun toString(bufferedImage: org.eclipse.swt.graphics.Image)
         //nullable = true from not(false or (true and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var bufferedImage = bufferedImage
 
     var commonLabels: CommonLabels = CommonLabels.getInstance()!!

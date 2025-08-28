@@ -34,9 +34,6 @@ open public class TenderType
     private var name: String
 public constructor        (name: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var name = name
 this.name= name
@@ -45,10 +42,7 @@ this.name= name
 
 open fun isEqual(tenderType: TenderType)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var tenderType = tenderType
 
     
@@ -76,10 +70,7 @@ var tenderType = tenderType
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

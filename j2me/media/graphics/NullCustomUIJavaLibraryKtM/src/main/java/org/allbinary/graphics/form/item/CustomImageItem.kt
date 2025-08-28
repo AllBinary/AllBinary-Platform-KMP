@@ -21,10 +21,7 @@ open public class CustomImageItem : CustomItem {
     var yOffset: Int = 0
 public constructor        (label: String, image: Image, layout: Int, altText: String, basicColor: BasicColor)                        
 
-                            : super(label, basicColor, basicColor)
-
-        Updates for KMP build        
-        {
+                            : super(label, basicColor, basicColor){
 var label = label
 var image = image
 var layout = layout
@@ -38,10 +35,7 @@ var basicColor = basicColor
 
 public constructor        (label: String, image: Image, layout: Int, altText: String, basicColor: BasicColor, yOffset: Int)                        
 
-                            : super(label, basicColor, basicColor)
-
-        Updates for KMP build        
-        {
+                            : super(label, basicColor, basicColor){
 var label = label
 var image = image
 var layout = layout
@@ -57,10 +51,7 @@ var yOffset = yOffset
 
 open fun getImage()
         //nullable = true from not(false or (false and true)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
 
 
 

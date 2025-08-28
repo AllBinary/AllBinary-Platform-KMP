@@ -40,10 +40,7 @@ open public class ColorUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ColorUtil
-
-        Updates for KMP build        
-        {
+: ColorUtil{
 
 
 
@@ -61,10 +58,7 @@ open fun getInstance()
         
 open fun isGreyishOrWhiteLike(color: Color)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var color = color
 
     
@@ -89,10 +83,7 @@ open fun isGreyishOrWhiteLike(color: Color)
 
 open fun isDark(color: Color)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var color = color
 
     

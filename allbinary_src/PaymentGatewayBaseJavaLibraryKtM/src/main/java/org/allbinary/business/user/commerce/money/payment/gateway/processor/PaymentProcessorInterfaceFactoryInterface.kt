@@ -36,9 +36,6 @@ open fun getInstance(transformInfoInterface: TransformInfoInterface, paymentTran
         //nullable =  from not(true or (false and false)) = 
 : PaymentProcessorInterface
 
-        Updates for KMP build        
-        
-
 }
                 
             

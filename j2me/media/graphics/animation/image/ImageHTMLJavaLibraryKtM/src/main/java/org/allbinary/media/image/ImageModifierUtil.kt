@@ -42,10 +42,7 @@ open public class ImageModifierUtil
 
 open fun getInstanceOrCreate()
         //nullable = true from not(false or (false and true)) = true
-: ImageModifierUtil
-
-        Updates for KMP build        
-        {
+: ImageModifierUtil{
 
 
 
@@ -63,10 +60,7 @@ open fun getInstanceOrCreate()
         
 open fun setColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var unusedOriginalImage = unusedOriginalImage
     //var image = image
     //var imageIndex = imageIndex
@@ -76,10 +70,7 @@ open fun setColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, bas
 
 open fun changeColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var unusedOriginalImage = unusedOriginalImage
     //var image = image
     //var imageIndex = imageIndex
@@ -89,10 +80,7 @@ open fun changeColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, 
 
 open fun setAlpha(originalImage: Image, image: Image, imageIndex: Int, alphaInt: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var originalImage = originalImage
     //var image = image
     //var imageIndex = imageIndex
@@ -102,10 +90,7 @@ open fun setAlpha(originalImage: Image, image: Image, imageIndex: Int, alphaInt:
 
 open fun getImageArray(originalImageArray: Array<Image?>)
         //nullable = true from not(false or (false and false)) = true
-: Array<Image?>
-
-        Updates for KMP build        
-        {
+: Array<Image?>{
     //var originalImageArray = originalImageArray
 
 
@@ -117,10 +102,7 @@ open fun getImageArray(originalImageArray: Array<Image?>)
 
 open fun handleImage(imageArray: Array<Image?>, index: Int, image: Image)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var imageArray = imageArray
     //var index = index
     //var image = image
@@ -129,10 +111,7 @@ open fun handleImage(imageArray: Array<Image?>, index: Int, image: Image)
 
 open fun reset()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 

@@ -38,10 +38,7 @@ open public class DiagonalDownRightTouchInputToGameKeyEventAction : GameKeyCompl
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameKeyCompleteMotionGestureInputEvent
-
-        Updates for KMP build        
-        {
+: GameKeyCompleteMotionGestureInputEvent{
 
 
 
@@ -53,10 +50,7 @@ open fun getInstance()
         }
             private constructor        ()                        
 
-                            : super("Diagonal Down Right Action", TouchMotionGestureFactory.getInstance()!!.DIAGONAL_DOWN_RIGHT, PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping())
-
-        Updates for KMP build        
-        {
+                            : super("Diagonal Down Right Action", TouchMotionGestureFactory.getInstance()!!.DIAGONAL_DOWN_RIGHT, PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()){
 
 
                             //For kotlin this is before the body of the constructor.

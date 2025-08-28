@@ -44,10 +44,7 @@ open public class RaceTracksPathPrinter
         
 open fun printPath(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var list = list
 
     var size: Int = list.size()!!
@@ -58,9 +55,6 @@ var list = list
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var anyType: Any = list.get(index)!!
@@ -74,10 +68,7 @@ PreLogUtil.put(StringMaker().
 
 open fun printPaths(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var list = list
 
     var size: Int = list.size()!!
@@ -88,9 +79,6 @@ var list = list
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 System.out.println(StringMaker().
                             append(" Path ")!!.append(index)!!.append(CommonLabels.getInstance()!!.COLON_SEP)!!.toString())

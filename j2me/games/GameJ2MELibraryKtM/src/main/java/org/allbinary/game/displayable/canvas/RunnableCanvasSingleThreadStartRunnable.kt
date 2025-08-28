@@ -35,28 +35,19 @@ open public class RunnableCanvasSingleThreadStartRunnable : GameRunnable {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val runnableCanvas: RunnableCanvas
-public constructor        (demoCanvas: RunnableCanvas)
-
-        Updates for KMP build        
-        {
+public constructor        (demoCanvas: RunnableCanvas){
 var demoCanvas = demoCanvas
 this.runnableCanvas= demoCanvas
 }
 
 override fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             runnableCanvas!!.run()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -69,10 +60,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
                 @Throws(Exception::class)
             override fun processLoopSleep()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 runnableCanvas!!.processLoopSleep()
 }
 

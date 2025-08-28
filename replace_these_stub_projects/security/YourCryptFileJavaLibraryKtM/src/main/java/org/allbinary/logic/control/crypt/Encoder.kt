@@ -21,10 +21,7 @@ open public class Encoder
             
 open fun encode(value: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var value = value
 
 
@@ -36,10 +33,7 @@ var value = value
 
 open fun decode(value: String)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray
-
-        Updates for KMP build        
-        {
+: ByteArray{
 var value = value
 
 
@@ -52,9 +46,6 @@ var value = value
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

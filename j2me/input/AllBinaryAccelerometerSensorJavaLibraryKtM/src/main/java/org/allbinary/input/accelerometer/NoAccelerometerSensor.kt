@@ -39,10 +39,7 @@ open public class NoAccelerometerSensor : AllBinaryOrientationSensor {
                 @Throws(Exception::class)
             override fun getOrientation()
         //nullable = true from not(false or (false and true)) = true
-: Orientation
-
-        Updates for KMP build        
-        {
+: Orientation{
 
 
 
@@ -52,10 +49,7 @@ open public class NoAccelerometerSensor : AllBinaryOrientationSensor {
 
 override fun onSensorChange()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 

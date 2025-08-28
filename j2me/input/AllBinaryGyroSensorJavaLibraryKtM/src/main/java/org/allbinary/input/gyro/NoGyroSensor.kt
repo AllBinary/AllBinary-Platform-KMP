@@ -32,10 +32,7 @@ import org.allbinary.logic.math.Orientation
 open public class NoGyroSensor : AllBinaryOrientationSensor
                 , AllBinarySensorListener {
         
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 }
 
@@ -43,10 +40,7 @@ logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
                 @Throws(Exception::class)
             override fun getOrientation()
         //nullable = true from not(false or (false and true)) = true
-: Orientation
-
-        Updates for KMP build        
-        {
+: Orientation{
 
 
 
@@ -56,10 +50,7 @@ logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 
 override fun onSensorChange()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 

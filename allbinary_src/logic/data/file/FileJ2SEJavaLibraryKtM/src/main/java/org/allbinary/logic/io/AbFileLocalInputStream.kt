@@ -33,10 +33,7 @@ open public class AbFileLocalInputStream : AbFileInputStream {
         
 public constructor        (file: AbFile)                        
 
-                            : super(AbFileNativeUtil.get(file))
-
-        Updates for KMP build        
-        {
+                            : super(AbFileNativeUtil.get(file)){
 var file = file
 
 

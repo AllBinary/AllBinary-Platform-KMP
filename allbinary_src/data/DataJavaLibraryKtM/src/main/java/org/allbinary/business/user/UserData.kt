@@ -80,9 +80,6 @@ open public class UserData
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

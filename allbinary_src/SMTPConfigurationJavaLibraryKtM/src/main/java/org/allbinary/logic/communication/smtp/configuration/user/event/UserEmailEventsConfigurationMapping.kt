@@ -38,9 +38,6 @@ open public class UserEmailEventsConfigurationMapping
     private var userEmailEventsConfigurationInterface: UserEmailEventsConfigurationInterface
 public constructor        (userEmailEventsConfigurationInterface: UserEmailEventsConfigurationInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var userEmailEventsConfigurationInterface = userEmailEventsConfigurationInterface
 this.userEmailEventsConfigurationInterface= userEmailEventsConfigurationInterface
@@ -49,10 +46,7 @@ this.userEmailEventsConfigurationInterface= userEmailEventsConfigurationInterfac
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -68,10 +62,7 @@ open fun toHashMap()
             
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 
 
 
@@ -84,10 +75,7 @@ open fun getKey()
             
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
     var vector: Vector = Vector()
 

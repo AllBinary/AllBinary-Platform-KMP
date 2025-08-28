@@ -38,10 +38,7 @@ open public class AllBinaryAdjustedSpriteRotationAnimation : AllBinarySpriteRota
     private var dy: Int
 public constructor        (sprite: Sprite, image: Image, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
-                            : super(sprite, image, animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(sprite, image, animationBehavior){
     //var sprite = sprite
     //var image = image
     //var dx = dx
@@ -57,10 +54,7 @@ this.dy= dy
 
 override fun paint(g: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var g = g
     //var x = x
     //var y = y

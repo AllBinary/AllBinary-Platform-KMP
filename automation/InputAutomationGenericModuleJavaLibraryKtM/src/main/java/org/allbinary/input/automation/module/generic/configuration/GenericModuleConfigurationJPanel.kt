@@ -48,10 +48,7 @@ open public class GenericModuleConfigurationJPanel : javax.swing.JPanel
     private var genericProfiles: GenericProfiles
 
     private var selectedGenericProfile: GenericProfile
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 initComponents()
 this.setGenericProfiles(GenericProfiles(GenericProfiles.DEFAULT_FILE))
 this.selectFirstElement()
@@ -60,10 +57,7 @@ this.selectFirstElement()
 
 open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 newProfileJDialog= javax.swing.JDialog()
 okNewProfileJButton= javax.swing.JButton()
 newProfileNameJLabel= javax.swing.JLabel()
@@ -92,10 +86,7 @@ okNewProfileJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 okNewProfileJButtonActionPerformed(evt)
 }
@@ -121,10 +112,7 @@ genericProfilesJList!!.addListSelectionListener(object: javax.swing.event.ListSe
                                 
 open override fun valueChanged(evt: javax.swing.event.ListSelectionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 genericProfilesJListValueChanged(evt)
 }
@@ -139,10 +127,7 @@ newProfileJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 newProfileJButtonActionPerformed(evt)
 }
@@ -156,10 +141,7 @@ deleteProfileJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 deleteProfileJButtonActionPerformed(evt)
 }
@@ -176,10 +158,7 @@ screenCaptureJRadioButton!!.addActionListener(object: java.awt.event.ActionListe
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 screenCaptureJRadioButtonActionPerformed(evt)
 }
@@ -197,10 +176,7 @@ savedCaptureJRadioButton!!.addActionListener(object: java.awt.event.ActionListen
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 savedCaptureJRadioButtonActionPerformed(evt)
 }
@@ -216,10 +192,7 @@ captureMotionAnalysisJCheckBox!!.addActionListener(object: java.awt.event.Action
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 captureMotionAnalysisJCheckBoxActionPerformed(evt)
 }
@@ -235,10 +208,7 @@ captureComparisonJCheckBox!!.addActionListener(object: java.awt.event.ActionList
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 captureComparisonJCheckBoxActionPerformed(evt)
 }
@@ -273,10 +243,7 @@ add(genericJTabbedPane)
 
 open fun savedCaptureJRadioButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 
         try {
@@ -294,10 +261,7 @@ this.getGenericProfiles()!!.save()
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "savedCaptureJRadioButtonActionPerformed", e)
 }
 
@@ -306,10 +270,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "savedCaptureJRadioButtonAct
 
 open fun screenCaptureJRadioButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 
         try {
@@ -327,10 +288,7 @@ this.getGenericProfiles()!!.save()
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "screenCaptureJRadioButtonActionPerformed", e)
 }
 
@@ -339,10 +297,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "screenCaptureJRadioButtonAc
 
 open fun captureMotionAnalysisJCheckBoxActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 
         try {
@@ -362,10 +317,7 @@ var evt = evt
                             
 this.getGenericProfiles()!!.save()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "captureComparisonJCheckBoxActionPerformed", e)
 }
 
@@ -374,10 +326,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "captureComparisonJCheckBoxA
 
 open fun captureComparisonJCheckBoxActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 
         try {
@@ -397,10 +346,7 @@ var evt = evt
                             
 this.getGenericProfiles()!!.save()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "captureComparisonJCheckBoxActionPerformed", e)
 }
 
@@ -411,10 +357,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "captureComparisonJCheckBoxA
             
 open fun updateProfileUI(profileNameString: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var profileNameString = profileNameString
 this.getBlankGenericProfileActionsJPanel()!!.removeAll()
 
@@ -453,10 +396,7 @@ logUtil!!.put("Setting Configuration Profile JPanel", this, "updateProfileUI")
             
 open fun selectFirstElement()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.genericProfilesJList!!.setModel(this.getGenericProfiles()!!.getDefaultListModelHelper()!!.getListModel())
 
     
@@ -475,10 +415,7 @@ this.updateProfileUI(this.genericProfilesJList!!.getModel()!!.getElementAt(0) as
             
 open fun updateProfileOptions()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 logUtil!!.put(this.commonStrings!!.START, this, "updateProfileOptions")
 
     var genericProfile: GenericProfile = this.getSelectedGenericProfile()!!
@@ -499,9 +436,6 @@ this.captureMotionAnalysisJCheckBox!!.setSelected(false)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var genericProfileDataWorkerType: GenericProfileDataWorkerType = vector.get(index) as GenericProfileDataWorkerType
@@ -565,10 +499,7 @@ logUtil!!.put(this.commonStrings!!.END, this, "updateProfileOptions")
 
 open fun getBlankGenericProfileActionsJPanel()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JPanel
-
-        Updates for KMP build        
-        {
+: javax.swing.JPanel{
 
 
 
@@ -579,10 +510,7 @@ open fun getBlankGenericProfileActionsJPanel()
 
 open fun setBlankGenericProfileActionsJPanel(blankGenericProfileActionsJPanel: javax.swing.JPanel)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var blankGenericProfileActionsJPanel = blankGenericProfileActionsJPanel
 this.blankGenericProfileActionsJPanel= blankGenericProfileActionsJPanel
 }
@@ -590,10 +518,7 @@ this.blankGenericProfileActionsJPanel= blankGenericProfileActionsJPanel
 
 open fun getGenericProfiles()
         //nullable = true from not(false or (false and true)) = true
-: GenericProfiles
-
-        Updates for KMP build        
-        {
+: GenericProfiles{
 
 
 
@@ -604,10 +529,7 @@ open fun getGenericProfiles()
 
 open fun setGenericProfiles(genericProfiles: GenericProfiles)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var genericProfiles = genericProfiles
 this.genericProfiles= genericProfiles
 }
@@ -615,10 +537,7 @@ this.genericProfiles= genericProfiles
 
 open fun getSelectedGenericProfile()
         //nullable = true from not(false or (false and true)) = true
-: GenericProfile
-
-        Updates for KMP build        
-        {
+: GenericProfile{
 
 
 
@@ -629,10 +548,7 @@ open fun getSelectedGenericProfile()
 
 open fun setSelectedGenericProfile(selectedGenericProfile: GenericProfile)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var selectedGenericProfile = selectedGenericProfile
 this.selectedGenericProfile= selectedGenericProfile
 }
@@ -640,10 +556,7 @@ this.selectedGenericProfile= selectedGenericProfile
 
 open fun genericProfilesJListValueChanged(evt: javax.swing.event.ListSelectionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 
         try {
@@ -652,10 +565,7 @@ var evt = evt
 
 this.updateProfileUI(profileNameString)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "genericProfilesJListValueChanged", e)
 }
 
@@ -664,10 +574,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "genericProfilesJListValueCh
 
 open fun deleteProfileJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 
         try {
@@ -680,9 +587,6 @@ var evt = evt
 
                         for (index in 0 until anyType!!.size)
 
-        
-
-        Updates for KMP build        
         {
 
     var nextSelectedValueString: String = anyType[index]!! as String
@@ -692,10 +596,7 @@ this.getGenericProfiles()!!.remove(nextSelectedValueString)
 
 this.selectFirstElement()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "deleteProfileJButtonActionPerformed", e)
 }
 
@@ -704,10 +605,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "deleteProfileJButtonActionP
 
 open fun okNewProfileJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 
         try {
@@ -720,10 +618,7 @@ this.genericProfilesJList!!.setSelectedValue(newProfileName, true)
 this.newProfileJDialog!!.setVisible(false)
 this.updateProfileUI(newProfileName)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "okNewProfileJButtonActionPerformed", e)
 }
 
@@ -732,10 +627,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "okNewProfileJButtonActionPe
 
 open fun newProfileJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 this.newProfileJDialog!!.setVisible(true)
 }

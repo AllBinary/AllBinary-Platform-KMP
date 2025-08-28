@@ -38,10 +38,7 @@ open public class ImageHealthGraphic : HealthGraphic {
     private var image: Array<Image?>
 public constructor        (animationInterface: AnimationInterface, healthInterface: HealthInterface, location: Int, direction: Int)                        
 
-                            : super(animationInterface, healthInterface, location, direction)
-
-        Updates for KMP build        
-        {
+                            : super(animationInterface, healthInterface, location, direction){
 var animationInterface = animationInterface
 var healthInterface = healthInterface
 var location = location
@@ -60,9 +57,6 @@ image= arrayOfNulls(this.healthInterface!!.getMaxHealth())
 
                         for (numOfHealth in 0 until max)
 
-        
-
-        Updates for KMP build        
         {
 image[numOfHealth]= imageCacheFactory!!.get(this, numOfHealth +1 *10, 10)
 }
@@ -73,9 +67,6 @@ image[numOfHealth]= imageCacheFactory!!.get(this, numOfHealth +1 *10, 10)
 
                         for (numOfHealth in 0 until max)
 
-        
-
-        Updates for KMP build        
         {
 
 
@@ -83,9 +74,6 @@ image[numOfHealth]= imageCacheFactory!!.get(this, numOfHealth +1 *10, 10)
 
                         for (index in 0 until numOfHealth)
 
-        
-
-        Updates for KMP build        
         {
 this.animationInterface!!.paint(image[numOfHealth]!!.getGraphics(), numOfHealth *10, 0)
 }
@@ -97,10 +85,7 @@ this.animationInterface!!.paint(image[numOfHealth]!!.getGraphics(), numOfHealth 
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 graphics.drawImage(this.image[max]!!, x, y, Anchor.TOP_LEFT)
 }

@@ -37,10 +37,7 @@ open public class J2MEKeyFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: J2MEKeyFactory
-
-        Updates for KMP build        
-        {
+: J2MEKeyFactory{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -63,10 +57,7 @@ open fun getInstance()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var gameKeyArray: Array<GameKey?> = arrayOf(gameKeyFactory!!.DOWN,gameKeyFactory!!.FIRE,gameKeyFactory!!.GAME_A,gameKeyFactory!!.GAME_B,gameKeyFactory!!.GAME_C,gameKeyFactory!!.GAME_D,gameKeyFactory!!.KEY_NUM0,gameKeyFactory!!.KEY_NUM1,gameKeyFactory!!.KEY_NUM2,gameKeyFactory!!.KEY_NUM3,gameKeyFactory!!.KEY_NUM4,gameKeyFactory!!.KEY_NUM5,gameKeyFactory!!.KEY_NUM6,gameKeyFactory!!.KEY_NUM7,gameKeyFactory!!.KEY_NUM8,gameKeyFactory!!.KEY_NUM9,gameKeyFactory!!.KEY_POUND,gameKeyFactory!!.KEY_STAR,gameKeyFactory!!.LEFT,gameKeyFactory!!.LEVEL_DOWN,gameKeyFactory!!.LEVEL_UP,gameKeyFactory!!.NONE,gameKeyFactory!!.RIGHT,gameKeyFactory!!.UP)
 
@@ -79,9 +70,6 @@ open fun init()
 
                         for (index in gameKeyArray!!.size  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 inputFactory!!.add(gameKeyArray[index]!!.getId(), gameKeyArray[index]!!)
 }
@@ -91,10 +79,7 @@ inputFactory!!.add(gameKeyArray[index]!!.getId(), gameKeyArray[index]!!)
 
 open fun isSubmission(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var input = input
 
     
@@ -119,10 +104,7 @@ var input = input
 
 open fun isDelete(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var input = input
 
     
@@ -147,10 +129,7 @@ var input = input
 
 open fun isBackSpace(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var input = input
 
 
@@ -162,10 +141,7 @@ var input = input
 
 open fun isUp(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var input = input
 
     
@@ -190,10 +166,7 @@ var input = input
 
 open fun isDown(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var input = input
 
     
@@ -218,10 +191,7 @@ var input = input
 
 open fun isLeft(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var input = input
 
     
@@ -246,10 +216,7 @@ var input = input
 
 open fun isRight(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var input = input
 
     
@@ -274,10 +241,7 @@ var input = input
 
 open fun isEnter(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var input = input
 
     

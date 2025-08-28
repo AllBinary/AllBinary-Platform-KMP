@@ -36,9 +36,6 @@ open public class AnalogControllerHelper
     private val reduceTimeFactor: Int
 public constructor        (reduceTimeFactor: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var reduceTimeFactor = reduceTimeFactor
 this.reduceTimeFactor= reduceTimeFactor
@@ -59,10 +56,7 @@ this.reduceTimeFactor= reduceTimeFactor
             
 open fun right(collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer, xAnalogValue: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
 var xAnalogValue = xAnalogValue
 this.rightTimeElapsedHelper!!.delay= ((SCALE_VALUE -xAnalogValue) shr this.reduceTimeFactor)
@@ -82,10 +76,7 @@ this.rightTimeElapsedHelper!!.delay= ((SCALE_VALUE -xAnalogValue) shr this.reduc
             
 open fun left(collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer, xAnalogValue: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
 var xAnalogValue = xAnalogValue
 this.leftTimeElapsedHelper!!.delay= ((SCALE_VALUE +xAnalogValue) shr this.reduceTimeFactor)
@@ -105,10 +96,7 @@ this.leftTimeElapsedHelper!!.delay= ((SCALE_VALUE +xAnalogValue) shr this.reduce
             
 open fun up(collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer, xAnalogValue: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
 var xAnalogValue = xAnalogValue
 this.upTimeElapsedHelper!!.delay= ((SCALE_VALUE -xAnalogValue) shr this.reduceTimeFactor)
@@ -128,10 +116,7 @@ this.upTimeElapsedHelper!!.delay= ((SCALE_VALUE -xAnalogValue) shr this.reduceTi
             
 open fun down(collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer, xAnalogValue: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
 var xAnalogValue = xAnalogValue
 this.downTimeElapsedHelper!!.delay= ((SCALE_VALUE +xAnalogValue) shr this.reduceTimeFactor)

@@ -36,10 +36,7 @@ open public class InterfaceUtil
             
 open fun viewAll(myClass: KClass<*>, lineBreak: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
     //var myClass = myClass
     //var lineBreak = lineBreak
 
@@ -57,9 +54,6 @@ stringBuffer!!.append(lineBreak)
 
                         for (index in 0 until interfaces.size)
 
-        
-
-        Updates for KMP build        
         {
 stringBuffer!!.append("Interface: ")
 stringBuffer!!.append(interfaces[index]!!.getName())
@@ -76,10 +70,7 @@ stringBuffer!!.append(lineBreak)
 
 open fun ::class(interfaceName: String, interfaces: Array<KClass<*>?>)
         //nullable = true from not(false or (false and false)) = true
-: KClass<*>
-
-        Updates for KMP build        
-        {
+: KClass<*>{
     //var interfaceName = interfaceName
     //var interfaces = interfaces
 
@@ -97,9 +88,6 @@ open fun ::class(interfaceName: String, interfaces: Array<KClass<*>?>)
 
                         for (index in 0 until interfaces.size)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -129,10 +117,7 @@ open fun ::class(interfaceName: String, interfaces: Array<KClass<*>?>)
 
 open fun isImplemented(clazz: KClass<*>, anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var clazz = clazz
 var anyType = anyType
 
@@ -144,9 +129,6 @@ var anyType = anyType
 
                         for (index in 0 until classes.size)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -168,10 +150,7 @@ var anyType = anyType
 
 open fun isImplemented(className: String, anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var className = className
 var anyType = anyType
 
@@ -183,9 +162,6 @@ var anyType = anyType
 
                         for (index in 0 until classes.size)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -212,10 +188,7 @@ var anyType = anyType
 
 open fun isImplementedView(clazz: KClass<*>, anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var clazz = clazz
 var anyType = anyType
 
@@ -231,9 +204,6 @@ stringBuffer!!.append("isImplementedView: \n")
 
                         for (index in 0 until classes.size)
 
-        
-
-        Updates for KMP build        
         {
 stringBuffer!!.append(clazz.toString()!!)
 stringBuffer!!.append(" should be = ")
@@ -253,9 +223,6 @@ stringBuffer!!.append("\n")
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

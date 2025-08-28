@@ -40,10 +40,7 @@ open public class GeographicMapCellTypeFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GeographicMapCellTypeFactory
-
-        Updates for KMP build        
-        {
+: GeographicMapCellTypeFactory{
 
 
 
@@ -65,10 +62,7 @@ open fun getInstance()
 
 open fun getInstance(type: Int)
         //nullable =  from not(true or (false and false)) = 
-: GeographicMapCellType
-
-        Updates for KMP build        
-        {
+: GeographicMapCellType{
 var type = type
 
 
@@ -80,10 +74,7 @@ var type = type
 
 open fun getGeographicMapCellTypeArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<GeographicMapCellType?>
-
-        Updates for KMP build        
-        {
+: Array<GeographicMapCellType?>{
 
 
 
@@ -94,10 +85,7 @@ open fun getGeographicMapCellTypeArray()
 
 open fun getStartType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -107,10 +95,7 @@ open fun getStartType()
 
 open fun getEndType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -120,10 +105,7 @@ open fun getEndType()
 
 open fun getEmptyType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -133,10 +115,7 @@ open fun getEmptyType()
 
 open fun isPath(cellType: GeographicMapCellType)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var cellType = cellType
 
 

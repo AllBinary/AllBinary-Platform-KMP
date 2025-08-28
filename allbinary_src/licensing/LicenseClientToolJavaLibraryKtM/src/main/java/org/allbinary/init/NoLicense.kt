@@ -40,10 +40,7 @@ open public class NoLicense
             
 open fun init(classLoader: ClassLoader, pathString: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var classLoader = classLoader
 var pathString = pathString
 Globals.init(classLoader, pathString)
@@ -53,9 +50,6 @@ Globals.init(classLoader, pathString)
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

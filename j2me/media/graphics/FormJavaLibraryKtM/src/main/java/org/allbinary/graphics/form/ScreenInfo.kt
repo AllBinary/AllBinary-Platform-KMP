@@ -23,10 +23,7 @@ open public class ScreenInfo
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ScreenInfo
-
-        Updates for KMP build        
-        {
+: ScreenInfo{
 
 
 

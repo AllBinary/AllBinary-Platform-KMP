@@ -36,10 +36,7 @@ open public class ArrayAI : BasicAI {
     private val artificialIntelligenceInterfaceArray: Array<ArtificialIntelligenceInterface?>
 public constructor        (artificialIntelligenceInterface: Array<ArtificialIntelligenceInterface?>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
-                            : super(ownerLayerInterface, gameInput)
-
-        Updates for KMP build        
-        {
+                            : super(ownerLayerInterface, gameInput){
 var artificialIntelligenceInterface = artificialIntelligenceInterface
 var ownerLayerInterface = ownerLayerInterface
 var gameInput = gameInput
@@ -54,10 +51,7 @@ this.artificialIntelligenceInterfaceArray= artificialIntelligenceInterface
                 @Throws(Exception::class)
             override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allBinaryLayerManager = allBinaryLayerManager
 
     var size: Int = this.artificialIntelligenceInterfaceArray!!.size
@@ -69,9 +63,6 @@ var allBinaryLayerManager = allBinaryLayerManager
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 this.artificialIntelligenceInterfaceArray[index]!!.processAI(allBinaryLayerManager)
 }
@@ -81,10 +72,7 @@ this.artificialIntelligenceInterfaceArray[index]!!.processAI(allBinaryLayerManag
 
 open fun getArtificialIntelligenceInterface()
         //nullable = true from not(false or (false and true)) = true
-: Array<ArtificialIntelligenceInterface?>
-
-        Updates for KMP build        
-        {
+: Array<ArtificialIntelligenceInterface?>{
 
 
 

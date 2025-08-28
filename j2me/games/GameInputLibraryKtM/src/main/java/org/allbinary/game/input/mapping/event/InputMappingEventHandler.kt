@@ -38,10 +38,7 @@ open public class InputMappingEventHandler : BasicEventHandler {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: InputMappingEventHandler
-
-        Updates for KMP build        
-        {
+: InputMappingEventHandler{
 
 
 
@@ -51,20 +48,14 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
-
-        Updates for KMP build        
-        {
+            private constructor        (){
 }
 
 
                 @Throws(Exception::class)
             override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var eventObject = eventObject
     //var eventListenerInterface = eventListenerInterface
 

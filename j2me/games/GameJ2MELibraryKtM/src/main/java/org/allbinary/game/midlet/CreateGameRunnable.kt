@@ -51,9 +51,6 @@ open public class CreateGameRunnable
     private val startGameMidletEvent: DemoGameMidletEvent
 public constructor        (demoGameMidlet: DemoGameMidlet, hashtable: Hashtable<Any, Any>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var demoGameMidlet = demoGameMidlet
 var hashtable = hashtable
@@ -64,10 +61,7 @@ this.startGameMidletEvent= DemoGameMidletEvent(this, DemoGameMidletStateFactory.
 
 override fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             logUtil!!.put(commonStrings!!.START_RUNNABLE, this, commonStrings!!.RUN)
@@ -82,10 +76,7 @@ this.demoGameMidlet!!.startGameCanvasRunnableInterface()
 DemoGameMidletEventHandler.getInstance()!!.fireEvent(this.startGameMidletEvent)
 logUtil!!.put(commonStrings!!.END_RUNNABLE, this, commonStrings!!.RUN)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
 

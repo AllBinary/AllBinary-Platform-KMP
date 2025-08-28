@@ -43,10 +43,7 @@ open public class ContextConfigurationInterfaceFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ContextConfigurationInterfaceFactory
-
-        Updates for KMP build        
-        {
+: ContextConfigurationInterfaceFactory{
 
 
 
@@ -58,9 +55,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -69,10 +63,7 @@ open fun getInstance()
             
 open fun getInstance(document: Document)
         //nullable =  from not(true or (false and false)) = 
-: ContextConfigurationInterface
-
-        Updates for KMP build        
-        {
+: ContextConfigurationInterface{
     //var document = document
 
     var contextConfigurationData: ContextConfigurationData = ContextConfigurationData.getInstance()!!
@@ -93,10 +84,7 @@ open fun getInstance(document: Document)
             
 open fun getInstance(contextName: String)
         //nullable =  from not(true or (false and false)) = 
-: ContextConfigurationInterface
-
-        Updates for KMP build        
-        {
+: ContextConfigurationInterface{
     //var contextName = contextName
 
     var abPath: AbPath = ContextConfigurationPathUtil.getAbPath(contextName)!!

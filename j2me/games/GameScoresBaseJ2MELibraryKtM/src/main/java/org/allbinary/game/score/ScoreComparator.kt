@@ -44,9 +44,6 @@ open public class ScoreComparator
     private val isHighestBest: Boolean
 public constructor        (isHighestBest: Boolean)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var isHighestBest = isHighestBest
 this.isHighestBest= isHighestBest
@@ -55,10 +52,7 @@ this.isHighestBest= isHighestBest
 
 open fun getBestScore()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -75,10 +69,7 @@ open fun getBestScore()
 
 override fun compare(recordOne: ByteArray, recordTwo: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var recordOne = recordOne
     //var recordTwo = recordTwo
 
@@ -106,30 +97,21 @@ inputStreamTwo!!.readUTF()
 scoreOne= inputStreamOne!!.readLong()
 scoreTwo= inputStreamTwo!!.readLong()
 } catch(e: EOFException)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "compare", e)
 }
  catch(e: IOException)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "compare", e)
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -163,10 +145,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "compare", e)
 
 open fun getHighTooLow(scoreOne: Long, scoreTwo: Long)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var scoreOne = scoreOne
     //var scoreTwo = scoreTwo
 
@@ -209,10 +188,7 @@ open fun getHighTooLow(scoreOne: Long, scoreTwo: Long)
 
 open fun getLowTooHigh(scoreOne: Long, scoreTwo: Long)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var scoreOne = scoreOne
     //var scoreTwo = scoreTwo
 

@@ -30,10 +30,7 @@ open public class CompositeSound : Sound {
         
 protected constructor        (resource: String)                        
 
-                            : super(resource)
-
-        Updates for KMP build        
-        {
+                            : super(resource){
 var resource = resource
 
 
@@ -45,10 +42,7 @@ var resource = resource
                 @Throws(Exception::class)
             override fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.setPlayerP(PlayerComposite(AllBinaryMediaManager.createPlayer(this.getResource())))
 }
 

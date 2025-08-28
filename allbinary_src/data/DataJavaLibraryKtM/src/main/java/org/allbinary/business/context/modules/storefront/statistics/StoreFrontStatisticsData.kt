@@ -37,10 +37,7 @@ open public class StoreFrontStatisticsData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: StoreFrontStatisticsData
-
-        Updates for KMP build        
-        {
+: StoreFrontStatisticsData{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

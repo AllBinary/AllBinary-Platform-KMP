@@ -37,10 +37,7 @@ open public class ShaderStrings
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ShaderStrings
-
-        Updates for KMP build        
-        {
+: ShaderStrings{
 
 
 

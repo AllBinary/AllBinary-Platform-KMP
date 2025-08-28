@@ -32,9 +32,6 @@ open public class LicenseLoadingType
         
  constructor        (name: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var name = name
 }

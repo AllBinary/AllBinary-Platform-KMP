@@ -40,10 +40,7 @@ open public class RTSLayerHudPaintable : SelectionHudPaintable {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: RTSLayerHudPaintable
-
-        Updates for KMP build        
-        {
+: RTSLayerHudPaintable{
 
 
 
@@ -63,19 +60,13 @@ open fun getInstance()
     var costY: Int= 0
 
     var costY1: Int= 0
-private constructor        ()
-
-        Updates for KMP build        
-        {
+private constructor        (){
 }
 
 
 open fun updateSelectionInfo()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var charHeight: Int = this.myFont!!.DEFAULT_CHAR_HEIGHT
 
@@ -104,10 +95,7 @@ this.costY1= (y +((weaponProperties!!.size +1) *charHeight))
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 super.paint(graphics)
 
@@ -123,9 +111,6 @@ super.paint(graphics)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 graphics.drawString(weaponProperties[index]!!, this.textX, y +((index +1) *charHeight), 0)
 }
@@ -135,10 +120,7 @@ graphics.drawString(weaponProperties[index]!!, this.textX, y +((index +1) *charH
 
 open fun setRtsLayer(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var rtsLayer = rtsLayer
 this.rtsLayer= rtsLayer
 }
@@ -146,10 +128,7 @@ this.rtsLayer= rtsLayer
 
 open fun getRtsLayer()
         //nullable = true from not(false or (false and true)) = true
-: RTSLayer
-
-        Updates for KMP build        
-        {
+: RTSLayer{
 
 
 

@@ -51,10 +51,7 @@ open public class PickupLayer : MultiPlayerGameLayer
     private var animationInterface: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
 public constructor        (name: String, remoteInfo: RemoteInfo, viewPosition: ViewPosition)                        
 
-                            : super(remoteInfo, BasicGroupFactory.getInstance()!!.NONE_ARRAY, name, Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 0, 0), viewPosition)
-
-        Updates for KMP build        
-        {
+                            : super(remoteInfo, BasicGroupFactory.getInstance()!!.NONE_ARRAY, name, Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 0, 0), viewPosition){
     //var name = name
     //var remoteInfo = remoteInfo
     //var viewPosition = viewPosition
@@ -69,10 +66,7 @@ this.setLayerHeight(10)
 
 public constructor        (name: String, remoteInfo: RemoteInfo, total: Int, pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface, animationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition)                        
 
-                            : super(remoteInfo, BasicGroupFactory.getInstance()!!.NONE_ARRAY, name, rectangle, viewPosition)
-
-        Updates for KMP build        
-        {
+                            : super(remoteInfo, BasicGroupFactory.getInstance()!!.NONE_ARRAY, name, rectangle, viewPosition){
     //var name = name
     //var remoteInfo = remoteInfo
     //var total = total
@@ -92,10 +86,7 @@ this.init(pickedUpLayerInterfaceFactoryInterface, animationInterface)
 
 public constructor        (name: String, viewPosition: ViewPosition)                        
 
-                            : this(name, RemoteInfo.REMOTE_INFO, viewPosition)
-
-        Updates for KMP build        
-        {
+                            : this(name, RemoteInfo.REMOTE_INFO, viewPosition){
     //var name = name
     //var viewPosition = viewPosition
 
@@ -106,10 +97,7 @@ public constructor        (name: String, viewPosition: ViewPosition)
 
 public constructor        (name: String, total: Int, pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface, animationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition)                        
 
-                            : this(name, RemoteInfo.REMOTE_INFO, total, pickedUpLayerInterfaceFactoryInterface, animationInterface, rectangle, viewPosition)
-
-        Updates for KMP build        
-        {
+                            : this(name, RemoteInfo.REMOTE_INFO, total, pickedUpLayerInterfaceFactoryInterface, animationInterface, rectangle, viewPosition){
     //var name = name
     //var total = total
     //var pickedUpLayerInterfaceFactoryInterface = pickedUpLayerInterfaceFactoryInterface
@@ -125,10 +113,7 @@ public constructor        (name: String, total: Int, pickedUpLayerInterfaceFacto
 
 open fun init(pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface, animationInterface: Animation)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var pickedUpLayerInterfaceFactoryInterface = pickedUpLayerInterfaceFactoryInterface
     //var animationInterface = animationInterface
 this.pickedUpLayerInterfaceFactoryInterface= pickedUpLayerInterfaceFactoryInterface
@@ -139,10 +124,7 @@ this.setDestroyed(false)
 
 open fun init(x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var x = x
 var y = y
 var z = z
@@ -151,10 +133,7 @@ this.setPosition(x, y, z)
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 
     var viewPosition: ViewPosition = this.getViewPosition()!!
@@ -170,10 +149,7 @@ this.animationInterface!!.paint(graphics, viewX, viewY)
 
 override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 
     var viewPosition: ViewPosition = this.getViewPosition()!!
@@ -189,10 +165,7 @@ this.animationInterface!!.paintThreed(graphics, viewX, viewY, 3)
 
 override fun getPickedUpLayerInterfaceFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
-: PickedUpLayerInterfaceFactoryInterface
-
-        Updates for KMP build        
-        {
+: PickedUpLayerInterfaceFactoryInterface{
 
 
 
@@ -202,19 +175,13 @@ override fun getPickedUpLayerInterfaceFactoryInterface()
 
 override fun setPickedUp()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.setDestroyed(true)
 }
 
 override fun isDestroyed()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -225,10 +192,7 @@ override fun isDestroyed()
 
 open fun setDestroyed(destroyed: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var destroyed = destroyed
 this.destroyed= destroyed
 
@@ -244,20 +208,14 @@ this.destroyed= destroyed
 
 override fun damage(damage: Int, damageType: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var damage = damage
 var damageType = damageType
 }
 
 override fun getDamage(damageType: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var damageType = damageType
 
 
@@ -270,10 +228,7 @@ var damageType = damageType
                 @Throws(Exception::class)
             override fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gl = gl
 
     var openGLSurfaceChangedInterface: OpenGLSurfaceChangedInterface = this.animationInterface as OpenGLSurfaceChangedInterface

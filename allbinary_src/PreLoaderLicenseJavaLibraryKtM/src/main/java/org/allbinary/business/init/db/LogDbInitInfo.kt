@@ -36,10 +36,7 @@ open public class LogDbInitInfo : DbInitInfo {
         }
             public constructor        ()                        
 
-                            : super(INITFILE, true)
-
-        Updates for KMP build        
-        {
+                            : super(INITFILE, true){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -48,10 +45,7 @@ open public class LogDbInitInfo : DbInitInfo {
 
 public constructor        (read: Boolean)                        
 
-                            : super(INITFILE, read)
-
-        Updates for KMP build        
-        {
+                            : super(INITFILE, read){
 var read = read
 
 

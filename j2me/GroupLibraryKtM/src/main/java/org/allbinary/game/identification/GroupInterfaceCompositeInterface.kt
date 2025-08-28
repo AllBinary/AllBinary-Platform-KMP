@@ -32,9 +32,6 @@ open fun getGroupInterface()
         //nullable = true from not(false or (false and true)) = true
 : Array<Group?>
 
-        Updates for KMP build        
-        
-
 }
                 
             

@@ -54,10 +54,7 @@ open public class PlayerTopViewCharacterBehavior : TopViewCharacterBehavior {
             
 open fun terrainEvent(layer: AllBinaryLayer, direction: Direction, x: Int, y: Int, geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layer = layer
     //var direction = direction
     //var x = x
@@ -70,10 +67,7 @@ TrackingEventHandler.getInstance()!!.fireEvent(TrackingEventCircularStaticPool.g
 
 open fun terrainMove(layer: AllBinaryLayer, geographicMapInterfaceArray: Array<BasicGeographicMap?>, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layer = layer
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var x = x
@@ -87,10 +81,7 @@ basicGeographicMapUtil!!.setPosition(geographicMapInterfaceArray, x, y)
 
 open fun moveIfOnScreen(layer: AllBinaryLayer, ax: Int, ay: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layer = layer
     //var ax = ax
     //var ay = ay
@@ -99,10 +90,7 @@ open fun moveIfOnScreen(layer: AllBinaryLayer, ax: Int, ay: Int)
 
 open fun isTiledLayerMoveable(terrainTiledLayer: AllBinaryTiledLayer, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var terrainTiledLayer = terrainTiledLayer
     //var x = x
     //var y = y

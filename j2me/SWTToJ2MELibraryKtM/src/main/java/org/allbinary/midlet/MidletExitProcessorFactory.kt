@@ -42,10 +42,7 @@ open public class MidletExitProcessorFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: MidletExitProcessorFactory
-
-        Updates for KMP build        
-        {
+: MidletExitProcessorFactory{
 
 
 
@@ -63,10 +60,7 @@ open fun getInstance()
         
 open fun getInstance(midlet: MIDlet)
         //nullable =  from not(true or (false and false)) = 
-: Processor
-
-        Updates for KMP build        
-        {
+: Processor{
 var midlet = midlet
 
     

@@ -39,10 +39,7 @@ open public class ImageJ2MEScaleUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageJ2MEScaleUtil
-
-        Updates for KMP build        
-        {
+: ImageJ2MEScaleUtil{
 
 
 
@@ -54,9 +51,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -65,10 +59,7 @@ open fun getInstance()
             
 open fun scale(images: Array<Image?>, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Array<Image?>
-
-        Updates for KMP build        
-        {
+: Array<Image?>{
 var images = images
 var width = width
 var height = height
@@ -78,9 +69,6 @@ var height = height
 
                         for (index in 0 until images.size)
 
-        
-
-        Updates for KMP build        
         {
 
     var image: Image = images[index]!!
@@ -100,10 +88,7 @@ images[index]= ImageScaleUtil.getInstance()!!.createImage(GameFeatureImageCacheF
             
 open fun scale(image: Image, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
 var image = image
 var width = width
 var height = height

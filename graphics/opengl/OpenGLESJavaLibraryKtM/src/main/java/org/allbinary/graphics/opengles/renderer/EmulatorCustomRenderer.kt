@@ -53,10 +53,7 @@ open public class EmulatorCustomRenderer
 
 open fun onSurfaceCreated(gl: GL10, eglConfig: EGLConfig)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
     //var eglConfig = eglConfig
 logUtil!!.put(commonStrings!!.START, this, this.renderStrings!!.ON_SURFACE_CREATED)
@@ -75,19 +72,13 @@ logUtil!!.put(commonStrings!!.START, this, this.renderStrings!!.ON_SURFACE_CREAT
 
 
         while(!initEmulatorFactory!!.isInitEmulator())
-        
-
-        Updates for KMP build        
         {
 PreLogUtil.put(WAIT_FOR_EMULATOR, this, this.renderStrings!!.ON_SURFACE_CREATED)
 Thread.sleep(180)
 }
 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, this.renderStrings!!.ON_SURFACE_CREATED, e)
 }
 

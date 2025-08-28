@@ -26,9 +26,6 @@ open public class StringMaker
     private var currentLength: Int= 0
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 charArray= CharArray(20)
 }
@@ -36,10 +33,7 @@ charArray= CharArray(20)
 
 open fun append(string: String)
         //nullable = true from not(false or (false and false)) = true
-: StringMaker
-
-        Updates for KMP build        
-        {
+: StringMaker{
     //var string = string
 
     var stringLength: Int = string.length!!
@@ -60,10 +54,7 @@ currentLength += stringLength
 
 open fun append(c: Char)
         //nullable = true from not(false or (false and false)) = true
-: StringMaker
-
-        Updates for KMP build        
-        {
+: StringMaker{
     //var c = c
 ensureCapacity(currentLength +1)
 charArray[currentLength++]= c
@@ -77,10 +68,7 @@ charArray[currentLength++]= c
 
 open fun append(b: Byte)
         //nullable = true from not(false or (false and false)) = true
-: StringMaker
-
-        Updates for KMP build        
-        {
+: StringMaker{
     //var b = b
 this.append(b.toString())
 
@@ -93,10 +81,7 @@ this.append(b.toString())
 
 open fun append(b: Short)
         //nullable = true from not(false or (false and false)) = true
-: StringMaker
-
-        Updates for KMP build        
-        {
+: StringMaker{
     //var b = b
 this.append(b.toString())
 
@@ -109,10 +94,7 @@ this.append(b.toString())
 
 open fun append(i: Int)
         //nullable = true from not(false or (false and false)) = true
-: StringMaker
-
-        Updates for KMP build        
-        {
+: StringMaker{
     //var i = i
 this.append(i.toString())
 
@@ -125,10 +107,7 @@ this.append(i.toString())
 
 open fun append(l: Long)
         //nullable = true from not(false or (false and false)) = true
-: StringMaker
-
-        Updates for KMP build        
-        {
+: StringMaker{
     //var l = l
 this.append(l.toString())
 
@@ -141,10 +120,7 @@ this.append(l.toString())
 
 open fun append(f: Float)
         //nullable = true from not(false or (false and false)) = true
-: StringMaker
-
-        Updates for KMP build        
-        {
+: StringMaker{
 var f = f
 this.append(f.toString())
 
@@ -157,10 +133,7 @@ this.append(f.toString())
 
 open fun append(bool: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: StringMaker
-
-        Updates for KMP build        
-        {
+: StringMaker{
     //var bool = bool
 
     
@@ -213,10 +186,7 @@ charArray[currentLength++]=
 
 open fun ensureCapacity(minSize: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var minSize = minSize
 
     var oldCapacity: Int = charArray!!.size
@@ -253,10 +223,7 @@ charArray= copy
 
 open fun min(value: Int, value2: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var value = value
 var value2 = value2
 
@@ -276,10 +243,7 @@ var value2 = value2
 
 open fun delete(start: Int, end: Int)
         //nullable = true from not(false or (false and false)) = true
-: StringMaker
-
-        Updates for KMP build        
-        {
+: StringMaker{
     //var start = start
     //var end = end
 this.currentLength -= (end -start)
@@ -293,10 +257,7 @@ this.currentLength -= (end -start)
 
 open fun length()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -306,10 +267,7 @@ open fun length()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

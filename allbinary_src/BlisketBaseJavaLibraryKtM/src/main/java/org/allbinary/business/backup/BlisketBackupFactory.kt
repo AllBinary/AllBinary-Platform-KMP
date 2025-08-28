@@ -52,10 +52,7 @@ open public class BlisketBackupFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BlisketBackupFactory
-
-        Updates for KMP build        
-        {
+: BlisketBackupFactory{
 
 
 
@@ -81,10 +78,7 @@ open fun getInstance()
             
 open fun getFileBasicArrayList(pathString: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 var pathString = pathString
 
     var path: AbPath = AbPath(pathString)
@@ -102,10 +96,7 @@ var pathString = pathString
 
 open fun backup()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             logUtil!!.put(this.commonStrings!!.START, this, "backup()")
@@ -125,10 +116,7 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
 
 this.backup(fileBasicArrayList, path.toFileSystemString() +"backup.zip")
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backup()", e)
 }
 
@@ -137,10 +125,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backup()", e)
 
 open fun backupViews()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             logUtil!!.put(this.commonStrings!!.START, this, "backupViews()")
@@ -173,9 +158,6 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var nextStore: String = storeFrontNamesBasicArrayList!!.get(index) as String
@@ -198,10 +180,7 @@ fileBasicArrayList!!.addAll(this.getFileBasicArrayList(viewsPath))
 
 this.backup(fileBasicArrayList, path.toFileSystemString() +"backupViews.zip")
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backupViews()", e)
 }
 
@@ -210,10 +189,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backupViews()", e)
 
 open fun backupResources()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             logUtil!!.put(this.commonStrings!!.START, this, "backupResources()")
@@ -246,9 +222,6 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var nextStore: String = storeFrontNamesBasicArrayList!!.get(index) as String
@@ -274,10 +247,7 @@ fileBasicArrayList!!.addAll(this.getFileBasicArrayList(resourcesPath))
 
 this.backup(fileBasicArrayList, path.toFileSystemString() +"backupResources.zip")
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backupResources()", e)
 }
 
@@ -286,10 +256,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backupResources()", e)
 
 open fun backupJsps()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             logUtil!!.put(this.commonStrings!!.START, this, "backupJsps()")
@@ -322,9 +289,6 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var nextStore: String = storeFrontNamesBasicArrayList!!.get(index) as String
@@ -338,10 +302,7 @@ fileBasicArrayList!!.addAll(this.getFileBasicArrayList(stringBuffer!!.toString()
 
 this.backup(fileBasicArrayList, path.toFileSystemString() +"backupJsps.zip")
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backupJsps()", e)
 }
 
@@ -350,10 +311,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backupJsps()", e)
 
 open fun backup(fileBasicArrayList: BasicArrayList, zipFile: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var fileBasicArrayList = fileBasicArrayList
 var zipFile = zipFile
 
@@ -370,10 +328,7 @@ PreLogUtil.put("Creating Backup Zip File: " +stringBuffer!!.toString(), this, "b
 ZipFileUtil.getInstance()!!.create(zipFile, fileBasicArrayList)
 logUtil!!.put("Created Backup Zip File", this, "backup()")
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backup()", e)
 }
 

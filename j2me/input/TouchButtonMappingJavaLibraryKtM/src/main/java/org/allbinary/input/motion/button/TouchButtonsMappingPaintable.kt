@@ -43,10 +43,7 @@ open public class TouchButtonsMappingPaintable : Paintable {
                                                             
 
     private var touchButtonLocationHelper: TouchButtonLocationHelper = TouchButtonLocationHelper()
-public constructor        (basicColor: BasicColor)
-
-        Updates for KMP build        
-        {
+public constructor        (basicColor: BasicColor){
 var basicColor = basicColor
 this.foregroundColor= basicColor!!.toInt()
 this.init()
@@ -55,18 +52,12 @@ this.init()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             this.paintableTable= this.createPaintableTable()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -80,10 +71,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "updateRectangle", e)
             
 open fun createPaintableTable()
         //nullable = true from not(false or (false and true)) = true
-: Array<Array<Paintable?>?>
-
-        Updates for KMP build        
-        {
+: Array<Array<Paintable?>?>{
 
     var totalColumns: Int = touchButtonLocationHelper!!.getTotalColumns()!!
 
@@ -106,9 +94,6 @@ open fun createPaintableTable()
 
                         for (index in totalColumns -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
 
@@ -116,9 +101,6 @@ open fun createPaintableTable()
 
                         for (rowIndex in totalRows -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 paintableTable[index]!![rowIndex]= TouchButton(BasicTouchInputFactory.getInstance()!!.NONE, TouchButtonBlankResource.getInstance(), commonButtons!!.NORMAL_BUTTON, cellPositionFactory!!.getInstance(index, rowIndex), this.touchButtonLocationHelper!!.getColumnsRemainderHalf(), this.touchButtonLocationHelper!!.getRowsRemainderHalf())
 }
@@ -134,10 +116,7 @@ paintableTable[index]!![rowIndex]= TouchButton(BasicTouchInputFactory.getInstanc
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 
     var totalColumns: Int = touchButtonLocationHelper!!.getTotalColumns()!!
@@ -151,9 +130,6 @@ var graphics = graphics
 
                         for (index in totalColumns -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
 
@@ -161,9 +137,6 @@ var graphics = graphics
 
                         for (rowIndex in totalRows -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 paintableTable[index]!![rowIndex]!!.paint(graphics)
 }

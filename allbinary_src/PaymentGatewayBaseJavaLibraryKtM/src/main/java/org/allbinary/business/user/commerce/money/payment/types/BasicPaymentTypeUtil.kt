@@ -36,18 +36,12 @@ open public class BasicPaymentTypeUtil
             
     private val instance: BasicPaymentTypeUtil = BasicPaymentTypeUtil()
 
-                init
-
-        Updates for KMP build        
-        {
+                init{
 }
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BasicPaymentTypeUtil
-
-        Updates for KMP build        
-        {
+: BasicPaymentTypeUtil{
 
 
 
@@ -59,9 +53,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -70,10 +61,7 @@ open fun getInstance()
 
 open fun add(paymentType: BasicPaymentType)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var paymentType = paymentType
 this.paymentTypeVector!!.add(paymentType)
 }
@@ -83,10 +71,7 @@ this.paymentTypeVector!!.add(paymentType)
             
 open fun get(paymentTypeString: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicPaymentType
-
-        Updates for KMP build        
-        {
+: BasicPaymentType{
 var paymentTypeString = paymentTypeString
 
     var size: Int = paymentTypeVector!!.size!!
@@ -97,9 +82,6 @@ var paymentTypeString = paymentTypeString
 
                         for (i in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var paymentType: BasicPaymentType = paymentTypeVector!!.get(i) as BasicPaymentType
@@ -128,10 +110,7 @@ var paymentTypeString = paymentTypeString
 
 open fun isContain(paymentType: BasicPaymentType)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var paymentType = paymentType
 
 
@@ -143,10 +122,7 @@ var paymentType = paymentType
 
 open fun difference(a_PaymentTypeVector: Vector)
         //nullable = true from not(false or (false and false)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 var a_PaymentTypeVector = a_PaymentTypeVector
 
     var diff: Vector = Vector()
@@ -160,9 +136,6 @@ var a_PaymentTypeVector = a_PaymentTypeVector
 
                         for (i in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var paymentType: BasicPaymentType = paymentTypeVector!!.get(i) as BasicPaymentType

@@ -41,10 +41,7 @@ open public class BufferedWriterUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BufferedWriterUtil
-
-        Updates for KMP build        
-        {
+: BufferedWriterUtil{
 
 
 
@@ -64,10 +61,7 @@ open fun getInstance()
             
 open fun overwrite(path: String, data: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var path = path
     //var data = data
 
@@ -90,10 +84,7 @@ this.write(abFile, data)
             
 open fun overwrite(abFile: AbFile, data: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abFile = abFile
     //var data = data
 
@@ -113,10 +104,7 @@ this.write(abFile, data)
             
 open fun write(abFile: AbFile, data: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abFile = abFile
     //var data = data
 

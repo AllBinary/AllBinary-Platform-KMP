@@ -21,10 +21,7 @@ open public class TextFieldItem : TextItem {
         
 public constructor        (canvas: Canvas, visitor: Visitor, label: String, value: String, maxSize: Int, layout: Int, altText: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : this(canvas, visitor, label, value, maxSize, layout, altText, Font.getDefaultFont(), backgroundBasicColor, foregroundBasicColor)
-
-        Updates for KMP build        
-        {
+                            : this(canvas, visitor, label, value, maxSize, layout, altText, Font.getDefaultFont(), backgroundBasicColor, foregroundBasicColor){
 var canvas = canvas
 var visitor = visitor
 var label = label
@@ -42,10 +39,7 @@ var foregroundBasicColor = foregroundBasicColor
 
 public constructor        (canvas: Canvas, visitor: Visitor, label: String, value: String, maxSize: Int, layout: Int, altText: String, font: Font, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(label, layout, altText, backgroundBasicColor, foregroundBasicColor)
-
-        Updates for KMP build        
-        {
+                            : super(label, layout, altText, backgroundBasicColor, foregroundBasicColor){
 var canvas = canvas
 var visitor = visitor
 var label = label
@@ -64,10 +58,7 @@ var foregroundBasicColor = foregroundBasicColor
 
 override fun getLabel()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -77,20 +68,14 @@ override fun getLabel()
 
 override fun setLabel(label: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var label = label
 }
 
 
 open fun getString()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -101,20 +86,14 @@ open fun getString()
 
 open fun setString(string: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var string = string
 }
 
 
 open fun setFocus(state: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var state = state
 }
 

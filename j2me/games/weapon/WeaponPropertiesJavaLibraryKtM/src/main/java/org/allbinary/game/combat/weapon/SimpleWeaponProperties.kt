@@ -44,10 +44,7 @@ open public class SimpleWeaponProperties
 
 open fun set(simpleWeaponProperties: SimpleWeaponProperties)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var simpleWeaponProperties = simpleWeaponProperties
 this.setDamage(simpleWeaponProperties!!.getDamage())
 this.setDissipation(simpleWeaponProperties!!.getDissipation())
@@ -57,10 +54,7 @@ this.setRange(simpleWeaponProperties!!.getRange())
 
 open fun setDamage(damage: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var damage = damage
 this.damage= damage
 }
@@ -68,10 +62,7 @@ this.damage= damage
 
 open fun getDamage()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -82,10 +73,7 @@ open fun getDamage()
 
 open fun setDissipation(dissipation: Short)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var dissipation = dissipation
 this.dissipation= dissipation
 }
@@ -93,10 +81,7 @@ this.dissipation= dissipation
 
 open fun getDissipation()
         //nullable = true from not(false or (false and true)) = true
-: Short
-
-        Updates for KMP build        
-        {
+: Short{
 
 
 
@@ -107,10 +92,7 @@ open fun getDissipation()
 
 open fun getRange()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -121,10 +103,7 @@ open fun getRange()
 
 open fun setRange(range: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var range = range
 this.range= range
 }

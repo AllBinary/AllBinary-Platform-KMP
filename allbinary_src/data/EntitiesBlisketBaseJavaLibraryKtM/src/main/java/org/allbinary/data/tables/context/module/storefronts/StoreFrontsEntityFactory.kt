@@ -39,10 +39,7 @@ open public class StoreFrontsEntityFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: StoreFrontsEntityFactory
-
-        Updates for KMP build        
-        {
+: StoreFrontsEntityFactory{
 
 
 
@@ -56,19 +53,13 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getStoreFrontsEntityInstance()
         //nullable = true from not(false or (false and true)) = true
-: StoreFrontsEntity
-
-        Updates for KMP build        
-        {
+: StoreFrontsEntity{
 
         try {
             
@@ -77,10 +68,7 @@ open fun getStoreFrontsEntityInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return org.allbinary.data.tables.context.module.storefronts.StoreFrontsEntity()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

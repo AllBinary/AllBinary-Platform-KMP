@@ -46,10 +46,7 @@ open public class NullPlayerGameInputComposite
             }            
         override fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -61,27 +58,18 @@ open public class NullPlayerGameInputComposite
                 @Throws(Exception::class)
             override fun processInput(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var layerManager = layerManager
 }
 
 override fun initInputProcessors()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun getPlayerGameInput()
         //nullable = true from not(false or (false and true)) = true
-: PlayerGameInput
-
-        Updates for KMP build        
-        {
+: PlayerGameInput{
 
 
 

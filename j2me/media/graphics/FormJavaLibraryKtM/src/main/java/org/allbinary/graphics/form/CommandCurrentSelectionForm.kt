@@ -47,10 +47,7 @@ open public class CommandCurrentSelectionForm : ScrollCurrentSelectionForm {
     val unSelectedAnimationArray: Array<Animation?> = arrayOfNulls(16)
 public constructor        (title: String, items: Array<CustomItem?>, rectangle: Rectangle, formType: FormType, border: Int, moveForSmallScreen: Boolean, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(title, items, rectangle, formType, border, moveForSmallScreen, backgroundBasicColor, foregroundBasicColor)
-
-        Updates for KMP build        
-        {
+                            : super(title, items, rectangle, formType, border, moveForSmallScreen, backgroundBasicColor, foregroundBasicColor){
     //var title = title
     //var items = items
     //var rectangle = rectangle
@@ -70,10 +67,7 @@ this.update(items)
 
 open fun initAnimations()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var nullAnimation: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
 
@@ -83,9 +77,6 @@ open fun initAnimations()
 
                         for (index in selectedAnimationArray!!.size  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 this.selectedAnimationArray[index]= nullAnimation
 }
@@ -96,9 +87,6 @@ this.selectedAnimationArray[index]= nullAnimation
 
                         for (index in unSelectedAnimationArray!!.size  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 this.unSelectedAnimationArray[index]= nullAnimation
 }
@@ -108,10 +96,7 @@ this.unSelectedAnimationArray[index]= nullAnimation
 
 open fun update(items: Array<CustomItem?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var items = items
 
 
@@ -119,9 +104,6 @@ open fun update(items: Array<CustomItem?>)
 
                         for (index in items.size  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 this.update(index, items[index]!!)
 }
@@ -131,10 +113,7 @@ this.update(index, items[index]!!)
 
 open fun update(index: Int, item: CustomItem)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var index = index
     //var item = item
 
@@ -192,10 +171,7 @@ adjustedBorder= 4
 
 open fun getSelectedCommand()
         //nullable = true from not(false or (false and true)) = true
-: Command
-
-        Updates for KMP build        
-        {
+: Command{
 
     var index: Int = super.getSelectedIndex()!!
 
@@ -211,10 +187,7 @@ open fun getSelectedCommand()
 
 override fun append(item: CustomItem)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var item = item
 
     var result: Int = super.append(item)!!
@@ -229,30 +202,21 @@ this.update(result, item)
 
 override fun delete(itemNum: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var itemNum = itemNum
 super.delete(itemNum)
 }
 
 override fun deleteAll()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.initAnimations()
 super.deleteAll()
 }
 
 override fun insert(itemNum: Int, item: CustomItem)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var itemNum = itemNum
     //var item = item
 super.insert(itemNum, item)
@@ -260,10 +224,7 @@ super.insert(itemNum, item)
 
 override fun set(itemNum: Int, item: CustomItem)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var itemNum = itemNum
     //var item = item
 super.set(itemNum, item)
@@ -273,10 +234,7 @@ super.set(itemNum, item)
                 @Throws(Exception::class)
             override fun paintItem(graphics: Graphics, index: Int, item: CustomItemInterface, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var graphics = graphics
     //var index = index
     //var item = item
@@ -294,10 +252,7 @@ this.selectedAnimationArray[index]!!.paint(graphics, x, y)
                 @Throws(Exception::class)
             override fun paintUnselectedItem(graphics: Graphics, index: Int, item: CustomItemInterface, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var graphics = graphics
     //var index = index
     //var item = item

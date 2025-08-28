@@ -37,9 +37,6 @@ open public class ViewSwapper
     private var topViewArray: Array<View?> = NULL_VIEW_ARRAY
 public constructor        (activity: Activity, rootViewId: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var activity = activity
 var rootViewId = rootViewId
@@ -50,10 +47,7 @@ this.rootViewId= rootViewId
 
 open fun setMainViews(viewArray: Array<View?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var viewArray = viewArray
 this.mainViewArray= viewArray
 }
@@ -61,10 +55,7 @@ this.mainViewArray= viewArray
 
 open fun setTopViewArray(topViewArray: Array<View?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var topViewArray = topViewArray
 this.topViewArray= topViewArray
 }
@@ -72,10 +63,7 @@ this.topViewArray= topViewArray
 
 open fun setMainView(id: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var id = id
 
     var viewGroup: ViewGroup = this.activity.findViewById(rootViewId) as ViewGroup
@@ -91,9 +79,6 @@ var id = id
 
                         for (index in 0 until this.topViewArray!!.size)
 
-        
-
-        Updates for KMP build        
         {
 viewGroup!!.removeView(this.topViewArray[index]!!)
 }
@@ -104,9 +89,6 @@ viewGroup!!.removeView(this.topViewArray[index]!!)
 
                         for (index in 0 until this.mainViewArray!!.size)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -125,9 +107,6 @@ viewGroup!!.removeView(this.topViewArray[index]!!)
 
                         for (index in 0 until this.mainViewArray!!.size)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -147,9 +126,6 @@ this.currentMainViewId= id
 
                         for (index in 0 until this.topViewArray!!.size)
 
-        
-
-        Updates for KMP build        
         {
 viewGroup!!.addView(this.topViewArray[index]!!)
 }

@@ -33,19 +33,13 @@ open public class CenterStaticViewPositionFactory
         
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getInstance(z: Int)
         //nullable =  from not(true or (false and false)) = 
-: ViewPosition
-
-        Updates for KMP build        
-        {
+: ViewPosition{
 var z = z
 
     var displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!

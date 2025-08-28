@@ -37,10 +37,7 @@ open public class CommonLabels
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CommonLabels
-
-        Updates for KMP build        
-        {
+: CommonLabels{
 
 
 

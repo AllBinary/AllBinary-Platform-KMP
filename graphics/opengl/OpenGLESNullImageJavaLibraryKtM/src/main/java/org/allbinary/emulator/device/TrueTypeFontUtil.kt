@@ -39,10 +39,7 @@ open public class TrueTypeFontUtil : TrueTypeFontUtilBase {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TrueTypeFontUtil
-
-        Updates for KMP build        
-        {
+: TrueTypeFontUtil{
 
 
 
@@ -56,10 +53,7 @@ open fun getInstance()
     var fontImage: OpenGLESImage = OpenGLESImage.NULL_OPENGL_IMAGE
 private constructor        ()                        
 
-                            : super(1)
-
-        Updates for KMP build        
-        {
+                            : super(1){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -68,10 +62,7 @@ private constructor        ()
 
 override fun getAsTextureSize(textureSize: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var textureSize = textureSize
 
 
@@ -81,10 +72,7 @@ var textureSize = textureSize
 
 override fun getCellSize(cellSize: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var cellSize = cellSize
 
 
@@ -95,10 +83,7 @@ var cellSize = cellSize
 
 open fun getFontBitmap(filename: String, fontSize: Int, cellSize: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var filename = filename
     //var fontSize = fontSize
     //var cellSize = cellSize
@@ -112,19 +97,13 @@ open fun getFontBitmap(filename: String, fontSize: Int, cellSize: Int, basicColo
 
 open fun saveFontAtlasAsFile()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun getFontBitmap(gl: GL10, filename: String, cellSize: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var gl = gl
     //var filename = filename
     //var cellSize = cellSize
@@ -138,10 +117,7 @@ open fun getFontBitmap(gl: GL10, filename: String, cellSize: Int, basicColor: Ba
 
 open fun getFontWidths(filename: String, fontSize: Int)
         //nullable = true from not(false or (false and false)) = true
-: IntArray
-
-        Updates for KMP build        
-        {
+: IntArray{
     //var filename = filename
     //var fontSize = fontSize
 

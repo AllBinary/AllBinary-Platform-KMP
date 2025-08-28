@@ -35,10 +35,7 @@ open public class NullWaitGameRunnable : GameRunnable {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameRunnable
-
-        Updates for KMP build        
-        {
+: GameRunnable{
 
 
 

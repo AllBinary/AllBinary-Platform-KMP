@@ -50,9 +50,6 @@ open public class AbBasicCrypt
     private var key: ByteArray
 public constructor        (algorithm: String, key: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var algorithm = algorithm
 var key = key
@@ -62,10 +59,7 @@ var key = key
 this.key= key.encodeToByteArray()
 this.init()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -77,10 +71,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, "AbCrypt(alg,key)", e)
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             
@@ -96,10 +87,7 @@ Security.addProvider(sunJce)
 this.secretKey= keyFactory!!.generateSecret(keySpec)
 this.cipher= Cipher.getInstance(algorithm)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -111,10 +99,7 @@ PreLogUtil.put("init Failed", this, commonStrings!!.INIT, e)
 
 open fun encrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray
-
-        Updates for KMP build        
-        {
+: ByteArray{
 var array = array
 
         try {
@@ -135,9 +120,6 @@ PreLogUtil.put("ivArray Length: " +ivArray!!.size, this, "encrypt")
 
                         for (index in 0 until ivArray!!.size)
 
-        
-
-        Updates for KMP build        
         {
 result[index]= ivArray[index]!!
 }
@@ -148,9 +130,6 @@ result[index]= ivArray[index]!!
 
                         for (index in 0 until encrypted.size)
 
-        
-
-        Updates for KMP build        
         {
 result[index +ivArray!!.size]= encrypted[index]!!
 }
@@ -161,10 +140,7 @@ result[index +ivArray!!.size]= encrypted[index]!!
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 PreLogUtil.put("Encrypt Failed", this, "encrypt", e)
 
 
@@ -178,10 +154,7 @@ PreLogUtil.put("Encrypt Failed", this, "encrypt", e)
 
 open fun decrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray
-
-        Updates for KMP build        
-        {
+: ByteArray{
 var array = array
 
         try {
@@ -195,9 +168,6 @@ var array = array
 
                         for (index in 0 until 8)
 
-        
-
-        Updates for KMP build        
         {
 ivArray[index]= array[index]!!
 }
@@ -212,9 +182,6 @@ PreLogUtil.put("ivArray Length: " +ivArray!!.size, this, "encrypt")
 
                         for (index in ivArray!!.size until array.size)
 
-        
-
-        Updates for KMP build        
         {
 result[index -ivArray!!.size]= array[index]!!
 }
@@ -228,10 +195,7 @@ result[index -ivArray!!.size]= array[index]!!
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 PreLogUtil.put("decrypt Failed", this, "decrypt", e)
 
 

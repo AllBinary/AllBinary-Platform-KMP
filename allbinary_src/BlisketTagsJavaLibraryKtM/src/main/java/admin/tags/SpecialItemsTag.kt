@@ -30,10 +30,7 @@ import admin.taghelpers.SpecialItemsRequestHelperFactory
 
 open public class SpecialItemsTag : TableTag {
         
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 this.setTagHelperFactory(SpecialItemsHelperFactory())
 this.setTagRequestHelperFactory(SpecialItemsRequestHelperFactory())
 }

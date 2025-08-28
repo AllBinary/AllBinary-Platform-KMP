@@ -36,10 +36,7 @@ open public class AdjustedVectorAnimation : VectorAnimation {
     private var dy: Int
 public constructor        (currentPoints: Array<Array<IntArray?>?>, basicColor: BasicColor, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
-                            : super(currentPoints, basicColor, animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(currentPoints, basicColor, animationBehavior){
     //var currentPoints = currentPoints
     //var basicColor = basicColor
     //var dx = dx
@@ -55,10 +52,7 @@ this.dy= dy
 
 public constructor        (currentPoints: Array<IntArray?>, basicColor: BasicColor, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
-                            : super(currentPoints, basicColor, animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(currentPoints, basicColor, animationBehavior){
     //var currentPoints = currentPoints
     //var basicColor = basicColor
     //var dx = dx
@@ -74,10 +68,7 @@ this.dy= dy
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var x = x
     //var y = y

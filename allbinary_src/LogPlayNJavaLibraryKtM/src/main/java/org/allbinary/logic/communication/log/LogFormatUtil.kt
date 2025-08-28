@@ -44,10 +44,7 @@ open public class LogFormatUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LogFormatUtil
-
-        Updates for KMP build        
-        {
+: LogFormatUtil{
 
 
 
@@ -77,19 +74,13 @@ open fun getInstance()
     private val SPECIAL_MESSAGE: String = "> "
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun get(className: String, functionName: String, specialMessage: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
     //var className = className
     //var functionName = functionName
     //var specialMessage = specialMessage
@@ -111,10 +102,7 @@ stringBuffer!!.append(this.commonSeps!!.NEW_LINE)
 
 open fun get(className: String, functionName: String, specialMessage: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
     //var className = className
     //var functionName = functionName
     //var specialMessage = specialMessage
@@ -134,10 +122,7 @@ stringBuffer!!.append(this.commonSeps!!.NEW_LINE)
 
 open fun get(className: String, functionName: String)
         //nullable = true from not(false or (false and false)) = true
-: StringMaker
-
-        Updates for KMP build        
-        {
+: StringMaker{
     //var className = className
     //var functionName = functionName
 
@@ -165,10 +150,7 @@ stringBuffer!!.append(functionName)
 
 open fun get(exception: Any)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
     //var exception = exception
 
     

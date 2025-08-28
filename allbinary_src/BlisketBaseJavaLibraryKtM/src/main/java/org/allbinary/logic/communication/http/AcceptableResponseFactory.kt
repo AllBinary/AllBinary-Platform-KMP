@@ -37,10 +37,7 @@ open public class AcceptableResponseFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AcceptableResponseFactory
-
-        Updates for KMP build        
-        {
+: AcceptableResponseFactory{
 
 
 

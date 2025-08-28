@@ -41,9 +41,6 @@ open public class TimeCreatedView
     private var timeCreated: TimeCreated
 public constructor        (timeCreated: TimeCreated)
             : super()
-        
-
-        Updates for KMP build        
         {
 var timeCreated = timeCreated
 this.setTimeCreated(timeCreated)
@@ -51,9 +48,6 @@ this.setTimeCreated(timeCreated)
 
 public constructor        (node: Node)
             : super()
-        
-
-        Updates for KMP build        
         {
 var node = node
 this.setTimeCreated(TimeCreated(DomNodeHelper.getTextNodeValue(node)))
@@ -64,10 +58,7 @@ this.setTimeCreated(TimeCreated(DomNodeHelper.getTextNodeValue(node)))
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
 
@@ -79,10 +70,7 @@ var document = document
 
 open fun getTimeCreated()
         //nullable = true from not(false or (false and true)) = true
-: TimeCreated
-
-        Updates for KMP build        
-        {
+: TimeCreated{
 
 
 
@@ -93,10 +81,7 @@ open fun getTimeCreated()
 
 open fun setTimeCreated(timeCreated: TimeCreated)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var timeCreated = timeCreated
 this.timeCreated= timeCreated
 }

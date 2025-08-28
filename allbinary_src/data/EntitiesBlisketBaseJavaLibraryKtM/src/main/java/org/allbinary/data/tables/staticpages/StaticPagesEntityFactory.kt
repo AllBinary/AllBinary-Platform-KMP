@@ -39,10 +39,7 @@ open public class StaticPagesEntityFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: StaticPagesEntityFactory
-
-        Updates for KMP build        
-        {
+: StaticPagesEntityFactory{
 
 
 
@@ -56,19 +53,13 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getStaticPagesEntityInstance()
         //nullable = true from not(false or (false and true)) = true
-: StaticPagesEntity
-
-        Updates for KMP build        
-        {
+: StaticPagesEntity{
 
         try {
             
@@ -77,10 +68,7 @@ open fun getStaticPagesEntityInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return org.allbinary.data.tables.staticpages.StaticPagesEntity()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

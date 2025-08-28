@@ -24,10 +24,7 @@ open public class ScreenRelationalUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ScreenRelationalUtil
-
-        Updates for KMP build        
-        {
+: ScreenRelationalUtil{
 
 
 
@@ -45,10 +42,7 @@ open fun getInstance()
         
 open fun getScale(image: Image)
         //nullable = true from not(false or (false and false)) = true
-: Float
-
-        Updates for KMP build        
-        {
+: Float{
     //var image = image
 
 
@@ -60,10 +54,7 @@ open fun getScale(image: Image)
 
 open fun getScale(aWidth: Int, aHeight: Int)
         //nullable = true from not(false or (false and false)) = true
-: Float
-
-        Updates for KMP build        
-        {
+: Float{
     //var aWidth = aWidth
     //var aHeight = aHeight
 
@@ -76,10 +67,7 @@ open fun getScale(aWidth: Int, aHeight: Int)
 
 open fun getScale(aWidth: Int, aHeight: Int, add: Int)
         //nullable = true from not(false or (false and false)) = true
-: Float
-
-        Updates for KMP build        
-        {
+: Float{
     //var aWidth = aWidth
     //var aHeight = aHeight
     //var add = add
@@ -120,10 +108,7 @@ open fun getScale(aWidth: Int, aHeight: Int, add: Int)
 
 open fun getScaledHeight(aWidth: Int, aHeight: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var aWidth = aWidth
     //var aHeight = aHeight
 
@@ -136,10 +121,7 @@ open fun getScaledHeight(aWidth: Int, aHeight: Int)
 
 open fun getScaledHeight(aWidth: Int, aHeight: Int, add: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var aWidth = aWidth
     //var aHeight = aHeight
     //var add = add

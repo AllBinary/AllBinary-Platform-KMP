@@ -51,9 +51,6 @@ open public class UserEmailConfigurationView
     private var userEmailConfigurationInterface: UserEmailConfigurationInterface
 public constructor        (node: Node)
             : super()
-        
-
-        Updates for KMP build        
         {
 var node = node
 
@@ -80,9 +77,6 @@ this.userEmailConfigurationInterface!!.setUserEmailEventsConfigurationInterface(
 
 public constructor        (userEmailConfigurationInterface: UserEmailConfigurationInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var userEmailConfigurationInterface = userEmailConfigurationInterface
 this.userEmailConfigurationInterface= userEmailConfigurationInterface
@@ -91,10 +85,7 @@ this.userEmailConfigurationInterface= userEmailConfigurationInterface
 
 open fun getEmailConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
-: UserEmailConfigurationInterface
-
-        Updates for KMP build        
-        {
+: UserEmailConfigurationInterface{
 
 
 
@@ -107,10 +98,7 @@ open fun getEmailConfigurationInterface()
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var emailConfigurationMapping: UserEmailConfigurationMapping = UserEmailConfigurationMapping(this.userEmailConfigurationInterface)

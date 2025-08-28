@@ -40,10 +40,7 @@ open public class BasicPaintablesCanvas : GameCommandCanvas {
     private val colorFillPaintable: ColorFillBasePaintable
 public constructor        (cmdListener: CommandListener, name: String, allBinaryGameLayerManager: AllBinaryGameLayerManager, paintableArray: Array<Paintable?>)                        
 
-                            : super(cmdListener, name, allBinaryGameLayerManager!!.getBackgroundBasicColor(), allBinaryGameLayerManager!!.getForegroundBasicColor())
-
-        Updates for KMP build        
-        {
+                            : super(cmdListener, name, allBinaryGameLayerManager!!.getBackgroundBasicColor(), allBinaryGameLayerManager!!.getForegroundBasicColor()){
     //var cmdListener = cmdListener
     //var name = name
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -58,10 +55,7 @@ this.colorFillPaintable= ColorFillPaintableFactory.getInstance()!!.getInstance(a
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
 this.colorFillPaintable!!.paint(graphics)
 graphics.setColor(this.foregroundColor)
@@ -71,9 +65,6 @@ graphics.setColor(this.foregroundColor)
 
                         for (index in this.paintableArray!!.size -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 this.paintableArray[index]!!.paint(graphics)
 }

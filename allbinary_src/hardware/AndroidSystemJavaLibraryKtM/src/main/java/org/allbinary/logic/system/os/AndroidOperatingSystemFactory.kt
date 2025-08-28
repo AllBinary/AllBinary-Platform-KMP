@@ -39,10 +39,7 @@ open public class AndroidOperatingSystemFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AndroidOperatingSystemFactory
-
-        Updates for KMP build        
-        {
+: AndroidOperatingSystemFactory{
 
 
 
@@ -56,9 +53,6 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -67,10 +61,7 @@ private constructor        ()
             
 open fun getOperatingSystemInstance()
         //nullable = true from not(false or (false and true)) = true
-: GenericOperatingSystem
-
-        Updates for KMP build        
-        {
+: GenericOperatingSystem{
 
         try {
             
@@ -118,10 +109,7 @@ open fun getOperatingSystemInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return GenericOperatingSystem
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

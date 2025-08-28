@@ -42,9 +42,6 @@ open public class BasicCrypt
     private val key: ByteArray
 public constructor        (keyAsString: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var keyAsString = keyAsString
 
@@ -54,10 +51,7 @@ var keyAsString = keyAsString
         try {
             key= keyAsString!!.encodeToByteArray()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -69,10 +63,7 @@ this.key= key
 
 override fun encrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray
-
-        Updates for KMP build        
-        {
+: ByteArray{
     //var array = array
 
         try {
@@ -82,10 +73,7 @@ override fun encrypt(array: ByteArray)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.mutilate(array)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 PreLogUtil.put("Encrypt Failed", this, "encrypt", e)
 
 
@@ -98,10 +86,7 @@ PreLogUtil.put("Encrypt Failed", this, "encrypt", e)
 
 override fun decrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray
-
-        Updates for KMP build        
-        {
+: ByteArray{
     //var array = array
 
         try {
@@ -111,10 +96,7 @@ override fun decrypt(array: ByteArray)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.mutilate(array)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 PreLogUtil.put("decrypt Failed", this, "decrypt", e)
 
 
@@ -128,10 +110,7 @@ PreLogUtil.put("decrypt Failed", this, "decrypt", e)
 
 open fun mutilate(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray
-
-        Updates for KMP build        
-        {
+: ByteArray{
 var array = array
 
     var value: Byte
@@ -142,9 +121,6 @@ var array = array
 
                         for (index in 0 until key.size)
 
-        
-
-        Updates for KMP build        
         {
 value= key[index]!!
 array= byteUtil!!.xor(array, value)

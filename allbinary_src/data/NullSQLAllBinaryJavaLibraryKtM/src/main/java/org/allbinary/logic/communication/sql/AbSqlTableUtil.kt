@@ -42,10 +42,7 @@ open public class AbSqlTableUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AbSqlTableUtil
-
-        Updates for KMP build        
-        {
+: AbSqlTableUtil{
 
 
 
@@ -74,10 +71,7 @@ open fun getInstance()
 
 open fun backupTable(abSqlTable: AbSqlTable)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var abSqlTable = abSqlTable
 
     var tableName: String = abSqlTable!!.getTableName()!!
@@ -93,10 +87,7 @@ var abSqlTable = abSqlTable
 
 open fun restoreTable(abSqlTable: AbSqlTable, portion: Portion)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var abSqlTable = abSqlTable
 var portion = portion
 

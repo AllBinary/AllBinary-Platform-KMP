@@ -37,10 +37,7 @@ open public class OpenGLESGraphicsCompositeFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLESGraphicsCompositeFactory
-
-        Updates for KMP build        
-        {
+: OpenGLESGraphicsCompositeFactory{
 
 
 
@@ -60,10 +57,7 @@ open fun getInstance()
 
 open fun set(openGLESGraphicsFactory: OpenGLESGraphicsFactory)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var openGLESGraphicsFactory = openGLESGraphicsFactory
 this.openGLESGraphicsFactory= openGLESGraphicsFactory
 }
@@ -71,10 +65,7 @@ this.openGLESGraphicsFactory= openGLESGraphicsFactory
 
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: OpenGLESGraphicsFactory
-
-        Updates for KMP build        
-        {
+: OpenGLESGraphicsFactory{
 
 
 

@@ -34,10 +34,7 @@ open public class StoreAppClientInformation : AbeClientInformation
     private val longArrayIdentifier: LongArray
 public constructor        (name: String, version: String, specialName: String, shortName: String, longArrayIdentifier: LongArray)                        
 
-                            : super(name, version, specialName, shortName)
-
-        Updates for KMP build        
-        {
+                            : super(name, version, specialName, shortName){
     //var name = name
     //var version = version
     //var specialName = specialName
@@ -52,10 +49,7 @@ this.longArrayIdentifier= longArrayIdentifier
 
 override fun getLongArrayIdentifier()
         //nullable = true from not(false or (false and true)) = true
-: LongArray
-
-        Updates for KMP build        
-        {
+: LongArray{
 
 
 

@@ -34,17 +34,11 @@ open fun runOnUiThread(action: Runnable)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun onSetProgress(value: Int, text: String)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
                 @Throws(Exception::class)
             
@@ -52,17 +46,11 @@ open fun onDismissProgress(animationSequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun onShowProgress(indeterminate: Boolean, animationSequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

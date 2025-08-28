@@ -43,10 +43,7 @@ open public class LivesHudWidget : BasicHud
     private val animationInterface: Animation
 public constructor        (animationInterface: Animation, lifeInterface: Life, location: Int, direction: Int)                        
 
-                            : super(location, direction, 16, lifeInterface!!.getMaxlives() *16, 2)
-
-        Updates for KMP build        
-        {
+                            : super(location, direction, 16, lifeInterface!!.getMaxlives() *16, 2){
 var animationInterface = animationInterface
 var lifeInterface = lifeInterface
 var location = location
@@ -63,10 +60,7 @@ this.animationInterface= animationInterface
 
 override fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var displayChangeEvent = displayChangeEvent
 super.onDisplayChangeEvent(displayChangeEvent)
 this.update()
@@ -75,10 +69,7 @@ this.update()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(this.xArray != 
@@ -95,9 +86,6 @@ open fun update()
 
                         for (index in 0 until maxLives)
 
-        
-
-        Updates for KMP build        
         {
 this.xArray[index]= this.getX() +(index *16)
 }
@@ -109,10 +97,7 @@ this.xArray[index]= this.getX() +(index *16)
 
 override fun setX(x: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var x = x
 super.setX(x)
 this.update()
@@ -120,10 +105,7 @@ this.update()
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 
 
@@ -131,9 +113,6 @@ var graphics = graphics
 
                         for (index in this.getLifeInterface()!!.get().toInt()  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 this.animationInterface!!.paint(graphics, xArray[index]!!, this.getY())
 }
@@ -142,20 +121,14 @@ this.animationInterface!!.paint(graphics, xArray[index]!!, this.getY())
 
 override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 }
 
 
 open fun getLifeInterface()
         //nullable = true from not(false or (false and true)) = true
-: Life
-
-        Updates for KMP build        
-        {
+: Life{
 
 
 

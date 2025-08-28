@@ -24,10 +24,7 @@ open public class SqlTypeStrings
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: SqlTypeStrings
-
-        Updates for KMP build        
-        {
+: SqlTypeStrings{
 
 
 

@@ -58,9 +58,6 @@ open public class AbeHttpRequestInfo
     private var requestedFilePath: String
 public constructor        (hashMap: HashMap<Any, Any>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var hashMap = hashMap
 
@@ -76,9 +73,6 @@ this.requestedFilePath= stringUtil!!.getInstance(hashMap!!.get(abeHttpRequestInf
 
 public constructor        (httpServletRequest: HttpServletRequest)
             : super()
-        
-
-        Updates for KMP build        
         {
 var httpServletRequest = httpServletRequest
 
@@ -90,9 +84,6 @@ this.httpUserAgent= stringUtil!!.EMPTY_STRING
 
 
         while(enumuration.hasMoreElements())
-        
-
-        Updates for KMP build        
         {
 
     var key: String = enumuration.nextElement()!! as String
@@ -116,10 +107,7 @@ this.remotePort= Integer.toString(httpServletRequest!!.getRemotePort())
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -139,10 +127,7 @@ hashMap!!.put(abeHttpRequestInfoData!!.REQUEST_FILE_PATH, this.requestedFilePath
 
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
     var vector: Vector = Vector()
 
@@ -161,10 +146,7 @@ vector.add(this.requestedFilePath)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

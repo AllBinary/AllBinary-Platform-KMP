@@ -49,9 +49,6 @@ open public class NameSpaceRequestParam
     private var value: String
 public constructor        (nameSpace: String, value: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var nameSpace = nameSpace
 var value = value
@@ -108,9 +105,6 @@ this.value= value
 
 
         while(index < size)
-        
-
-        Updates for KMP build        
         {
 
     var nameSpaceWithProperties: String = nameSpaceWithPropertiesVector!!.get(index++) as String
@@ -186,10 +180,7 @@ packageIndex++
 
 open fun getPackages()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
@@ -209,10 +200,7 @@ open fun getPackages()
 
 open fun getPackageProperties(packageIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 var packageIndex = packageIndex
 
     var packagePropertiesHashMap: HashMap<Any, Any> = this.nameSpacePropertiesHashMap!!.get(packageIndex.toString()) as HashMap<Any, Any>
@@ -247,10 +235,7 @@ var packageIndex = packageIndex
 
 open fun getValue()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
@@ -272,10 +257,7 @@ open fun getValue()
             
 open fun generatePackagePropertiesHashMap(properties: String)
         //nullable = true from not(false or (false and false)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 var properties = properties
 
     var propertiesTokenizer: Tokenizer = Tokenizer(NameSpaceRequestParamData.PROPERTIESSEPARATOR)
@@ -300,9 +282,6 @@ var properties = properties
 
 
         while(index < size)
-        
-
-        Updates for KMP build        
         {
 
     var property: String = propertyVector!!.get(index) as String
@@ -316,9 +295,6 @@ list.clear()
 
 
         while(index2 < propertyNameValueVector!!.size())
-        
-
-        Updates for KMP build        
         {
 
     var propertyName: String = propertyNameValueVector!!.get(index2++) as String

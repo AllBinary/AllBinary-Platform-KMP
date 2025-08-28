@@ -32,22 +32,13 @@ open fun isMoreThan(aFloat: Float)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
-        Updates for KMP build        
-        
-
 open fun isCloseDeath()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-        Updates for KMP build        
-        
-
 open fun isDamaged()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
-
-        Updates for KMP build        
-        
 
 }
                 

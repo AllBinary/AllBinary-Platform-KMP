@@ -32,29 +32,17 @@ open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : SizeConstraintInterface
 
-        Updates for KMP build        
-        
-
 open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : SizeConstraintInterface
-
-        Updates for KMP build        
-        
 
 open fun setHeight(heightSizeConstraintInterface: SizeConstraintInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun setWidth(widthSizeConstraintInterface: SizeConstraintInterface)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

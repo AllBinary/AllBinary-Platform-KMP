@@ -33,29 +33,20 @@ open public class RTSLayerInfoPaintable : InitUpdatePaintable {
         
 
     private var initUpdatePaintable: InitUpdatePaintable = NullInitUpdatePaintable.getInstance()!!
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.initUpdatePaintable!!.update()
 }
 
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 this.initUpdatePaintable!!.paint(graphics)
 }
@@ -63,10 +54,7 @@ this.initUpdatePaintable!!.paint(graphics)
 
 open fun updateRTSLayerInfo(hudPaintable: InitUpdatePaintable)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var hudPaintable = hudPaintable
 this.initUpdatePaintable= hudPaintable
 }
@@ -74,10 +62,7 @@ this.initUpdatePaintable= hudPaintable
 
 open fun updateRTSLayerInfo(hudPaintable: SelectionHudPaintable)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var hudPaintable = hudPaintable
 hudPaintable!!.updateSelectionInfo()
 this.initUpdatePaintable= hudPaintable

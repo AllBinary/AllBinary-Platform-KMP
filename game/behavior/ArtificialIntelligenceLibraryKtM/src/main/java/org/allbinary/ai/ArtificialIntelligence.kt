@@ -39,10 +39,7 @@ open public class ArtificialIntelligence
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ArtificialIntelligence
-
-        Updates for KMP build        
-        {
+: ArtificialIntelligence{
 
 
 
@@ -54,9 +51,6 @@ open fun getInstance()
         }
             public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -64,19 +58,13 @@ open fun getInstance()
                 @Throws(Exception::class)
             override fun processAI(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var layerManager = layerManager
 }
 
 override fun getId()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

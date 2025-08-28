@@ -42,10 +42,7 @@ open public class AngleFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AngleFactory
-
-        Updates for KMP build        
-        {
+: AngleFactory{
 
 
 
@@ -56,10 +53,7 @@ open fun getInstance()
 
 open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var args = args
 
     var stringMaker: StringMaker = StringMaker()
@@ -73,9 +67,6 @@ var args = args
 
                         for (index in 0 until 360)
 
-        
-
-        Updates for KMP build        
         {
 stringMaker!!.append(index)!!.append(CommonSeps.getInstance()!!.FORWARD_SLASH)!!.append(angleFactory!!.getClosestDirection(index)!!.getValue())!!.append(CommonSeps.getInstance()!!.NEW_LINE)
 }
@@ -107,9 +98,6 @@ LogUtil.getInstance()!!.put(stringMaker!!.toString(), "main", "main")
     val RIGHT: NamedAngle
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     var commonPhoneStrings: CommonPhoneStrings = CommonPhoneStrings.getInstance()!!
@@ -125,9 +113,6 @@ angleArray[0]= UP
 
                         for (index in 1 until 90)
 
-        
-
-        Updates for KMP build        
         {
 angleArray[index]= Angle(index.toShort())
 }
@@ -140,9 +125,6 @@ angleArray[90]= RIGHT
 
                         for (index in 91 until 180)
 
-        
-
-        Updates for KMP build        
         {
 angleArray[index]= Angle(index.toShort())
 }
@@ -155,9 +137,6 @@ angleArray[180]= DOWN
 
                         for (index in 181 until 270)
 
-        
-
-        Updates for KMP build        
         {
 angleArray[index]= Angle(index.toShort())
 }
@@ -170,9 +149,6 @@ angleArray[270]= LEFT
 
                         for (index in 271 until total)
 
-        
-
-        Updates for KMP build        
         {
 angleArray[index]= Angle(index.toShort())
 }
@@ -184,10 +160,7 @@ angleArray[index]= Angle(index.toShort())
 
 open fun getInstance(index: Int)
         //nullable =  from not(true or (false and false)) = 
-: Angle
-
-        Updates for KMP build        
-        {
+: Angle{
     //var index = index
 
     var adjustedIndex: Int = frameUtil!!.adjustAngleToFrameAngle(index).toInt()
@@ -202,10 +175,7 @@ open fun getInstance(index: Int)
 
 open fun getClosestDirection(angle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Angle
-
-        Updates for KMP build        
-        {
+: Angle{
 var angle = angle
 
     
@@ -268,10 +238,7 @@ var angle = angle
 
 open fun getGeneralDirection()
         //nullable = true from not(false or (false and true)) = true
-: Angle
-
-        Updates for KMP build        
-        {
+: Angle{
 
 
 

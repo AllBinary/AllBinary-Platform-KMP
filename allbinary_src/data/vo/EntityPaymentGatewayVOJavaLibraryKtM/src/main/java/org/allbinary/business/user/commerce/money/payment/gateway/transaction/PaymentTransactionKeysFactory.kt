@@ -37,10 +37,7 @@ open public class PaymentTransactionKeysFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PaymentTransactionKeysFactory
-
-        Updates for KMP build        
-        {
+: PaymentTransactionKeysFactory{
 
 
 

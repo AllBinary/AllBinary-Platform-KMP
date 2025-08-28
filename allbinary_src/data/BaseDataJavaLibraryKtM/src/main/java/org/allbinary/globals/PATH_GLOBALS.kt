@@ -40,10 +40,7 @@ open public class PATH_GLOBALS
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PATH_GLOBALS
-
-        Updates for KMP build        
-        {
+: PATH_GLOBALS{
 
 
 
@@ -55,9 +52,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     var stringBuffer: StringMaker = StringMaker()

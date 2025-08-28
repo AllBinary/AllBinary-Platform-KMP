@@ -47,9 +47,6 @@ open public class AbeLicenseClient
     private val MINSERVERS: Int = 3
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -59,10 +56,7 @@ public constructor        ()
 
 open fun get(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-: AbeLicenseInterface
-
-        Updates for KMP build        
-        {
+: AbeLicenseInterface{
     //var abeClientInformation = abeClientInformation
 
         try {
@@ -129,10 +123,7 @@ logUtil!!.put(commonStrings!!.END, this, commonStrings!!.GET)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return abeLicenseInterface
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 

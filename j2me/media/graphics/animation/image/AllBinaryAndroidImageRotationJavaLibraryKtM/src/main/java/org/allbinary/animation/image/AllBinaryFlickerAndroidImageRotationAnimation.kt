@@ -51,10 +51,7 @@ open public class AllBinaryFlickerAndroidImageRotationAnimation : ImageBaseRotat
     private val originalImage: Image
 protected constructor        (originalImage: Image, image: Image, angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
 
-                            : super(image, angleInfo, totalAngle, animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(image, angleInfo, totalAngle, animationBehavior){
     //var originalImage = originalImage
     //var image = image
     //var angleInfo = angleInfo
@@ -73,10 +70,7 @@ this.increment= (this.angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement())
 
 open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var basicColor = basicColor
 
     var changed: Boolean = false
@@ -108,10 +102,7 @@ this.updateImage()
 
 open fun setAlpha(alpha: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var alpha = alpha
 
     var changed: Boolean = false
@@ -142,10 +133,7 @@ this.updateImage()
 
 open fun nextRotation()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 super.nextRotation()
 matrix.setRotate(this.increment, this.halfWidth, this.halfHeight)
 this.updateImage()
@@ -154,10 +142,7 @@ this.updateImage()
 
 open fun previousRotation()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 super.previousRotation()
 matrix.setRotate( -this.increment, this.halfWidth, this.halfHeight)
 this.updateImage()
@@ -166,20 +151,14 @@ this.updateImage()
 
 open fun updateImage()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 androidImageUtil!!.rotate(this.getImage(), originalImage, matrix)
 }
 
 
 open fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var index = index
 
     var currentFrame: Int = this.circularIndexUtil!!.getIndex()!!

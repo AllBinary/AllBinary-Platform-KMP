@@ -37,10 +37,7 @@ open public class PrimaryPlayerQueueFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PlayerQueue
-
-        Updates for KMP build        
-        {
+: PlayerQueue{
 
 
 

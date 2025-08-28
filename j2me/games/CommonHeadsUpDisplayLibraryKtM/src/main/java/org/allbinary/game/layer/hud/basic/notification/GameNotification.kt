@@ -59,10 +59,7 @@ open public class GameNotification
 
 open fun add(string: String, seconds: Integer, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var string = string
 var seconds = seconds
 var basicColor = basicColor
@@ -82,10 +79,7 @@ this.colorList!!.add(basicColor)
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.stringList!!.clear()
 this.timeList!!.clear()
 this.colorList!!.clear()
@@ -94,10 +88,7 @@ this.colorList!!.clear()
 
 open fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

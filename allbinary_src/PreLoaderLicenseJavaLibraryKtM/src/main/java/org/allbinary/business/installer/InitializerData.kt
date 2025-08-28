@@ -38,10 +38,7 @@ open public class InitializerData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: InitializerData
-
-        Updates for KMP build        
-        {
+: InitializerData{
 
 
 
@@ -141,10 +138,7 @@ open fun getInstance()
 
 open fun getJdbcDriverSolutionInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

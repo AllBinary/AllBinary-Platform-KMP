@@ -36,9 +36,6 @@ open fun getInstance(groupInterface: Group)
         //nullable =  from not(true or (false and false)) = 
 : Array<CustomItem?>
 
-        Updates for KMP build        
-        
-
 }
                 
             

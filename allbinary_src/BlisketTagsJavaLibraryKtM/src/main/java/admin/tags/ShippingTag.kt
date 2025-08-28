@@ -45,19 +45,13 @@ open public class ShippingTag : CustomTagSupport {
     private var storeName: String
 
     private var propertiesHashMap: HashMap<Any, Any>
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 
 open fun setCommand(command: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var command = command
 this.command= command
 }
@@ -65,10 +59,7 @@ this.command= command
 
 open fun setStoreName(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.storeName= value
 }
@@ -78,10 +69,7 @@ this.storeName= value
             
 open fun setShippingType()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -105,20 +93,14 @@ open fun setShippingType()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
                             throw e
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to view Shipping Type"
 
@@ -145,10 +127,7 @@ open fun setShippingType()
             
 open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
         try {
             
@@ -178,10 +157,7 @@ propertiesHashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 } catch(e: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 
 
@@ -190,10 +166,7 @@ AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
                         return SKIP_BODY
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 
 

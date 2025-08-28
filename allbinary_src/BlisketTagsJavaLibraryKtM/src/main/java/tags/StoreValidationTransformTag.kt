@@ -38,10 +38,7 @@ open public class StoreValidationTransformTag : ValidationTransformTag {
     private var storeName: String
 public constructor        ()                        
 
-                            : super()
-
-        Updates for KMP build        
-        {
+                            : super(){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -51,10 +48,7 @@ public constructor        ()
 
 open fun setStoreName(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.storeName= value
 this.getPropertiesHashMap()!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName)
@@ -65,10 +59,7 @@ this.getPropertiesHashMap()!!.put(StoreFrontData.getInstance()!!.NAME, this.stor
             
 open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
         try {
             
@@ -86,10 +77,7 @@ open fun doStartTag()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.doStartTag()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 
 

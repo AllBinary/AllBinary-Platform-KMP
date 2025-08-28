@@ -32,10 +32,7 @@ open public class OverScanColorFillPaintable : ColorFillPaintable {
         
 public constructor        (basicColor: BasicColor)                        
 
-                            : super(basicColor)
-
-        Updates for KMP build        
-        {
+                            : super(basicColor){
 var basicColor = basicColor
 
 
@@ -45,10 +42,7 @@ var basicColor = basicColor
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 graphics.setColor(this.colorP)
 graphics.fillRect( -graphics.getClipX(),  -graphics.getClipY(), this.displayInfoSingleton!!.getLastWidth() +(graphics.getClipX() *2), this.displayInfoSingleton!!.getLastHeight() +(graphics.getClipY() *2))

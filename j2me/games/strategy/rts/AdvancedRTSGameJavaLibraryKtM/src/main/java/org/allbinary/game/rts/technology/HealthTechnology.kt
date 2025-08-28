@@ -38,9 +38,6 @@ open public class HealthTechnology
     private var maxLevel: Int
 public constructor        (maxLevel: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var maxLevel = maxLevel
 this.maxLevel= maxLevel
@@ -49,10 +46,7 @@ this.maxLevel= maxLevel
 
 open fun isCompleted()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -63,10 +57,7 @@ open fun isCompleted()
 
 open fun getPercentComplete()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -77,10 +68,7 @@ open fun getPercentComplete()
 
 open fun getLevel()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -91,10 +79,7 @@ open fun getLevel()
 
 open fun getMaxLevel()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -105,10 +90,7 @@ open fun getMaxLevel()
 
 open fun getCost()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -119,19 +101,13 @@ open fun getCost()
 
 open fun downgrade()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun getDowngradeCost()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -142,10 +118,7 @@ open fun getDowngradeCost()
 
 open fun isDowngradeable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -156,10 +129,7 @@ open fun isDowngradeable()
 
 open fun getUpgradeCost()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -170,10 +140,7 @@ open fun getUpgradeCost()
 
 open fun isUpgradeable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(this.getLevel() < this.getMaxLevel())
@@ -201,10 +168,7 @@ open fun isUpgradeable()
 
 open fun upgrade()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.level++
 
     var unitTechnologySingletonFactory: UnitTechnologySingletonFactory = UnitTechnologySingletonFactory.getInstance()!!
@@ -215,10 +179,7 @@ unitTechnologySingletonFactory!!.setHealth(unitTechnologySingletonFactory!!.getH
 
 open fun isSelfUpgradeable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 

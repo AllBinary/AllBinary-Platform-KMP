@@ -42,10 +42,7 @@ open public class OwnershipPaintable : Paintable {
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OwnershipPaintable
-
-        Updates for KMP build        
-        {
+: OwnershipPaintable{
 
 
 
@@ -63,20 +60,14 @@ open fun getInstance()
     private var basicColor: BasicColor = BasicColorFactory.getInstance()!!.WHITE
 
     private var color: Int = basicColor!!.toInt()!!
-private constructor        ()
-
-        Updates for KMP build        
-        {
+private constructor        (){
 }
 
 
     private var anchor: Int = Anchor.TOP_LEFT
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
 graphics.setColor(color)
 
@@ -105,10 +96,7 @@ graphics.drawString(COPYRIGHT, halfWidth -beginWidth, height -COPYRIGHT_Y, ancho
 
 override fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var basicColor = basicColor
 this.basicColor= basicColor
 color= basicColor!!.toInt()
@@ -117,10 +105,7 @@ color= basicColor!!.toInt()
 
 open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor
-
-        Updates for KMP build        
-        {
+: BasicColor{
 
 
 

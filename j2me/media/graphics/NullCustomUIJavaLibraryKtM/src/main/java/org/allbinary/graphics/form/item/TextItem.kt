@@ -19,10 +19,7 @@ open public class TextItem : CustomCustomItem
         
 public constructor        (label: String, layout: Int, altText: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(label, backgroundBasicColor, foregroundBasicColor)
-
-        Updates for KMP build        
-        {
+                            : super(label, backgroundBasicColor, foregroundBasicColor){
 var label = label
 var layout = layout
 var altText = altText
@@ -37,19 +34,13 @@ var foregroundBasicColor = foregroundBasicColor
 
 open fun keyPressed(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var keyCode = keyCode
 }
 
 override fun paintUnselected(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 var x = x
 var y = y
@@ -58,10 +49,7 @@ var y = y
 
 open fun getLabelStringComponent()
         //nullable = true from not(false or (false and true)) = true
-: StringComponent
-
-        Updates for KMP build        
-        {
+: StringComponent{
 
 
 

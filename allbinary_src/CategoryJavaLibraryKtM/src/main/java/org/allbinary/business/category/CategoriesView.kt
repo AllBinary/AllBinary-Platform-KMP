@@ -38,9 +38,6 @@ open public class CategoriesView
     private var categoryInterface: CategoryInterface
 public constructor        (categoryInterface: CategoryInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var categoryInterface = categoryInterface
 this.categoryInterface= categoryInterface
@@ -51,10 +48,7 @@ this.categoryInterface= categoryInterface
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var node: Node = CategoryView(categoryInterface).
@@ -73,9 +67,6 @@ var document = document
 
                         for (i in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var childCategoryInterface: CategoryInterface = childArray[i]!! as CategoryInterface

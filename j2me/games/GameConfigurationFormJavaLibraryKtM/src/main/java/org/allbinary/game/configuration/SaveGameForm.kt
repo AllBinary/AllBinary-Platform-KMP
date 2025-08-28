@@ -45,10 +45,7 @@ open public class SaveGameForm : CommandForm {
             
 open fun getInstance(commandListener: CommandListener, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)
         //nullable =  from not(true or (false and false)) = 
-: CommandForm
-
-        Updates for KMP build        
-        {
+: CommandForm{
 var commandListener = commandListener
 var title = title
 var backgrounBasicColor = backgrounBasicColor
@@ -64,10 +61,7 @@ FORM= SaveGameForm(commandListener, title, backgrounBasicColor, foregroundBasicC
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CommandForm
-
-        Updates for KMP build        
-        {
+: CommandForm{
 
 
 
@@ -79,10 +73,7 @@ open fun getInstance()
         }
             private constructor        (commandListener: CommandListener, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(commandListener, title, backgrounBasicColor, foregroundBasicColor)
-
-        Updates for KMP build        
-        {
+                            : super(commandListener, title, backgrounBasicColor, foregroundBasicColor){
 var commandListener = commandListener
 var title = title
 var backgrounBasicColor = backgrounBasicColor
@@ -101,10 +92,7 @@ this.initCommands(commandListener)
 
 override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var cmdListener = cmdListener
 
     var gameCommandsFactory: GameCommandsFactory = GameCommandsFactory.getInstance()!!

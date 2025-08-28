@@ -42,10 +42,7 @@ open public class ImageCompleteUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageCompleteUtil
-
-        Updates for KMP build        
-        {
+: ImageCompleteUtil{
 
 
 
@@ -67,10 +64,7 @@ open fun getInstance()
             
 open fun waitFor(image: Image, name: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var image = image
 var name = name
 }
@@ -82,10 +76,7 @@ var name = name
             
 open fun isReady(image: Image, name: String, timeDelayHelper: TimeDelayHelper)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var image = image
     //var name = name
     //var timeDelayHelper = timeDelayHelper
@@ -143,10 +134,7 @@ PreLogUtil.put(COMPLETE +image.getName(), this, commonStrings!!.SUCCESS)
             
 open fun handleTimeout(name: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var name = name
 }
 
@@ -155,10 +143,7 @@ open fun handleTimeout(name: String)
             
 open fun waitForAll()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 

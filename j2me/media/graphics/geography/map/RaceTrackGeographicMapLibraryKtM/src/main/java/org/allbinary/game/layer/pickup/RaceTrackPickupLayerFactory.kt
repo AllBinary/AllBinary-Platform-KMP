@@ -43,10 +43,7 @@ open public class RaceTrackPickupLayerFactory
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AllBinaryLayer
-
-        Updates for KMP build        
-        {
+: AllBinaryLayer{
 
 
 

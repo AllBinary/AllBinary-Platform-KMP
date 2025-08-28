@@ -58,9 +58,6 @@ open public class TestInputForMotionRectanglesResultsWorker
     private var motionRectanglesVector: Vector
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 this.motionRectanglesVector= Vector()
 }
@@ -68,10 +65,7 @@ this.motionRectanglesVector= Vector()
 
 open fun getMotionRectanglesVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
 
 
@@ -82,10 +76,7 @@ open fun getMotionRectanglesVector()
 
 open fun onMotionRectanglesImageComparisonResultsEvent(motionRectanglesImageComparisonResultsEvent: MotionRectanglesResultsEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var motionRectanglesImageComparisonResultsEvent = motionRectanglesImageComparisonResultsEvent
 this.getMotionRectanglesVector()!!.add(motionRectanglesImageComparisonResultsEvent!!.getMotionRectangles())
 this.run()
@@ -94,10 +85,7 @@ this.run()
 
 open fun onEvent(allBinaryEventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allBinaryEventObject = allBinaryEventObject
 this.onMotionRectanglesImageComparisonResultsEvent(allBinaryEventObject as MotionRectanglesResultsEvent)
 }
@@ -106,10 +94,7 @@ this.onMotionRectanglesImageComparisonResultsEvent(allBinaryEventObject as Motio
 
 open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -121,10 +106,7 @@ open fun isRunning()
 
 open fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var running = running
 this.running= running
 }
@@ -132,10 +114,7 @@ this.running= running
 
 open fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.RUN)
@@ -174,9 +153,6 @@ timeHelper!!.setStartTime()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var inputTypeNameString: String = inputTypeNameArray[index]!! as String
@@ -227,10 +203,7 @@ this.getMotionRectanglesVector()!!.remove(motionRectangles)
 logUtil!!.put(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsed(), this, this.commonStrings!!.RUN)
 logUtil!!.put(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
 }
 

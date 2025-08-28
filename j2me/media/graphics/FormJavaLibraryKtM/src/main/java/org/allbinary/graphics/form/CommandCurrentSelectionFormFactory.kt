@@ -42,10 +42,7 @@ open public class CommandCurrentSelectionFormFactory
             
 open fun getInstance(title: String, items: Array<CustomItem?>, rectangle: Rectangle, formType: FormType, border: Int, moveForSmallScreen: Boolean, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)
         //nullable =  from not(true or (false and false)) = 
-: ScrollSelectionForm
-
-        Updates for KMP build        
-        {
+: ScrollSelectionForm{
     //var title = title
     //var items = items
     //var rectangle = rectangle

@@ -36,10 +36,7 @@ open public class ImageArraySingletonAnimationInterfaceFactory : SingletonAnimat
         
 public constructor        (animationInterface: Animation)                        
 
-                            : super(animationInterface)
-
-        Updates for KMP build        
-        {
+                            : super(animationInterface){
     //var animationInterface = animationInterface
 
 
@@ -49,10 +46,7 @@ public constructor        (animationInterface: Animation)
 
 public constructor        (animationInterface: IndexedAnimation, width: Int, height: Int)                        
 
-                            : this(ImageArrayAnimation(IndexedAnimationToImageArrayUtil.getInstance(width, height, animationInterface), AnimationBehavior.getInstance()))
-
-        Updates for KMP build        
-        {
+                            : this(ImageArrayAnimation(IndexedAnimationToImageArrayUtil.getInstance(width, height, animationInterface), AnimationBehavior.getInstance())){
     //var animationInterface = animationInterface
     //var width = width
     //var height = height
@@ -64,10 +58,7 @@ public constructor        (animationInterface: IndexedAnimation, width: Int, hei
 
 public constructor        (imageArray: Array<Image?>)                        
 
-                            : this(ImageArrayAnimation(imageArray, AnimationBehavior.getInstance()))
-
-        Updates for KMP build        
-        {
+                            : this(ImageArrayAnimation(imageArray, AnimationBehavior.getInstance())){
 var imageArray = imageArray
 
 

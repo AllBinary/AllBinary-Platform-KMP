@@ -58,9 +58,6 @@ open public class BaseResourceAnimationInterfaceFactoryInterfaceFactory
     private var initialized: Boolean= false
 public constructor        (name: String)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var name = name
 this.hashtable= Hashtable<Any, Any>()
@@ -71,9 +68,6 @@ this.name= name
 
 public constructor        (name: String, hashtable: Hashtable<Any, Any>, rectangleHashtable: Hashtable<Any, Any>, rectangleArrayHashtable: Hashtable<Any, Any>)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var name = name
     //var hashtable = hashtable
@@ -88,10 +82,7 @@ this.name= name
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -103,10 +94,7 @@ open fun getName()
                 @Throws(Exception::class)
             override fun init(level: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var level = level
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -121,10 +109,7 @@ this.setInitialized(true)
             
 open fun init(imageCache: ImageCache, level: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var imageCache = imageCache
     //var level = level
 }
@@ -134,10 +119,7 @@ open fun init(imageCache: ImageCache, level: Int)
             
 open fun add(resource: String, animationInterfaceFactoryInterface: BasicAnimationInterfaceFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var resource = resource
     //var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
 
@@ -160,10 +142,7 @@ hashtable.put(resource, animationInterfaceFactoryInterface)
                 @Throws(Exception::class)
             override fun getBasicAnimationInterfaceFactoryInstance(resource: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicAnimationInterfaceFactoryInterface
-
-        Updates for KMP build        
-        {
+: BasicAnimationInterfaceFactoryInterface{
     //var resource = resource
 
     var basicAnimationInterfaceFactoryInterfaceCanBeNull: Any? = hashtable.get(resource as Object)
@@ -194,10 +173,7 @@ hashtable.put(resource, animationInterfaceFactoryInterface)
                 @Throws(Exception::class)
             override fun getRectangle(resource: String)
         //nullable = true from not(false or (false and false)) = true
-: Rectangle
-
-        Updates for KMP build        
-        {
+: Rectangle{
     //var resource = resource
 
     var rectangleCanBeNull: Any? = rectangleHashtable!!.get(resource as Object)
@@ -229,10 +205,7 @@ hashtable.put(resource, animationInterfaceFactoryInterface)
             
 open fun addRectangle(resource: String, rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var resource = resource
     //var rectangle = rectangle
 rectangleHashtable!!.put(resource, rectangle)
@@ -242,10 +215,7 @@ rectangleHashtable!!.put(resource, rectangle)
                 @Throws(Exception::class)
             override fun getRectangleArrayOfArrays(resource: String)
         //nullable = true from not(false or (false and false)) = true
-: Array<Array<Rectangle?>?>
-
-        Updates for KMP build        
-        {
+: Array<Array<Rectangle?>?>{
     //var resource = resource
 
 
@@ -259,10 +229,7 @@ rectangleHashtable!!.put(resource, rectangle)
             
 open fun addRectangleArrayOfArrays(resource: String, rectangleArrayOfArrays: Array<Array<Rectangle?>?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var resource = resource
     //var rectangleArrayOfArrays = rectangleArrayOfArrays
 rectangleArrayOfArraysHashtable!!.put(resource, rectangleArrayOfArrays)
@@ -270,10 +237,7 @@ rectangleArrayOfArraysHashtable!!.put(resource, rectangleArrayOfArrays)
 
 override fun isFeature()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -283,10 +247,7 @@ override fun isFeature()
 
 override fun isLoadingLevel(level: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var level = level
 
     var resourceLoadingLevelFactory: ResourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance()!!
@@ -317,10 +278,7 @@ override fun isLoadingLevel(level: Int)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -331,10 +289,7 @@ override fun toString()
 
 override fun getHashtable()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>
-
-        Updates for KMP build        
-        {
+: Hashtable<Any, Any>{
 
 
 
@@ -345,10 +300,7 @@ override fun getHashtable()
 
 open fun getRectangleHashtable()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>
-
-        Updates for KMP build        
-        {
+: Hashtable<Any, Any>{
 
 
 
@@ -359,10 +311,7 @@ open fun getRectangleHashtable()
 
 open fun getRectangleArrayOfArraysHashtable()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>
-
-        Updates for KMP build        
-        {
+: Hashtable<Any, Any>{
 
 
 
@@ -373,10 +322,7 @@ open fun getRectangleArrayOfArraysHashtable()
 
 open fun setInitialized(initialized: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var initialized = initialized
 this.initialized= initialized
 }
@@ -384,10 +330,7 @@ this.initialized= initialized
 
 open fun isInitialized()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 

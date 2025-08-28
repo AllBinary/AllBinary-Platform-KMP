@@ -30,10 +30,7 @@ import org.allbinary.input.automation.module.osgi.InputAutomationModuleBundleAct
 
 open public class InputAutomationGenericModuleBundleActivator : InputAutomationModuleBundleActivator {
         
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 
@@ -41,10 +38,7 @@ public constructor        ()
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var inputAutomationGenericModuleServiceFactory: InputAutomationGenericModuleServiceFactory = InputAutomationGenericModuleServiceFactory.getInstance()!!
 

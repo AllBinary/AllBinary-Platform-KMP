@@ -65,10 +65,7 @@ open public class AllBinaryLayer : Layer
     private var viewPosition: ViewPosition = ViewPosition.NULL_VIEW_POSITION
 public constructor        (rectangle: Rectangle, viewPosition: ViewPosition)                        
 
-                            : this(StringUtil.getInstance()!!.EMPTY_STRING, rectangle, viewPosition)
-
-        Updates for KMP build        
-        {
+                            : this(StringUtil.getInstance()!!.EMPTY_STRING, rectangle, viewPosition){
     //var rectangle = rectangle
     //var viewPosition = viewPosition
 
@@ -79,10 +76,7 @@ public constructor        (rectangle: Rectangle, viewPosition: ViewPosition)
 
 public constructor        (name: String, rectangle: Rectangle, viewPosition: ViewPosition)                        
 
-                            : super(rectangle.getWidth(), rectangle.getHeight())
-
-        Updates for KMP build        
-        {
+                            : super(rectangle.getWidth(), rectangle.getHeight()){
     //var name = name
     //var rectangle = rectangle
     //var viewPosition = viewPosition
@@ -126,28 +120,19 @@ this.viewPosition!!.setAllbinaryLayer(this)
             
 open fun onChangeEvent(layerManagerEvent: ViewPositionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layerManagerEvent = layerManagerEvent
 }
 
 override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
 }
 
 override fun getX2()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -157,10 +142,7 @@ override fun getX2()
 
 override fun getY2()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -170,10 +152,7 @@ override fun getY2()
 
 override fun getZ2()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -183,10 +162,7 @@ override fun getZ2()
 
 override fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -197,20 +173,14 @@ override fun getName()
 
 open fun setHalfWidth(halfWidth: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var halfWidth = halfWidth
 this.halfWidth= halfWidth
 }
 
 override fun getHalfWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -221,20 +191,14 @@ override fun getHalfWidth()
 
 open fun setHalfHeight(halfHeight: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var halfHeight = halfHeight
 this.halfHeight= halfHeight
 }
 
 override fun getHalfHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -245,10 +209,7 @@ override fun getHalfHeight()
 
 open fun getHalfDepth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -259,10 +220,7 @@ open fun getHalfDepth()
 
 open fun getViewPosition()
         //nullable = true from not(false or (false and true)) = true
-: ViewPosition
-
-        Updates for KMP build        
-        {
+: ViewPosition{
 
 
 
@@ -273,20 +231,14 @@ open fun getViewPosition()
 
 open fun setViewPosition(viewPosition: ViewPosition)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var viewPosition = viewPosition
 this.viewPosition= viewPosition
 }
 
 override fun getGroupInterface()
         //nullable = true from not(false or (false and true)) = true
-: Array<Group?>
-
-        Updates for KMP build        
-        {
+: Array<Group?>{
 
 
 
@@ -296,10 +248,7 @@ override fun getGroupInterface()
 
 override fun implmentsTickableInterface()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -309,10 +258,7 @@ override fun implmentsTickableInterface()
 
 override fun implmentsGameInputInterface()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -322,10 +268,7 @@ override fun implmentsGameInputInterface()
 
 override fun implmentsArtificialIntelligenceCompositeInterface()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -335,10 +278,7 @@ override fun implmentsArtificialIntelligenceCompositeInterface()
 
 override fun implmentsCollidableInterface()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -349,10 +289,7 @@ override fun implmentsCollidableInterface()
 
 open fun implementsThreedInterface()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -362,10 +299,7 @@ open fun implementsThreedInterface()
 
 override fun getType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -376,10 +310,7 @@ override fun getType()
 
 open fun getMultiPlayerType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -389,10 +320,7 @@ open fun getMultiPlayerType()
 
 override fun toString(stringBuffer: StringMaker)
         //nullable = true from not(false or (true and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var stringBuffer = stringBuffer
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
@@ -426,10 +354,7 @@ stringBuffer!!.append(this.getHeight())
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

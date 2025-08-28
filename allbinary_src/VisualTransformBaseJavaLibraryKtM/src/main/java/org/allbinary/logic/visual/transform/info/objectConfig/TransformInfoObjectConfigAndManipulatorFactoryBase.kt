@@ -48,10 +48,7 @@ open public class TransformInfoObjectConfigAndManipulatorFactoryBase
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, objectConfigFileAbPath: AbPath)
         //nullable =  from not(true or (false and false)) = 
-: TransformInfoObjectConfigInterface
-
-        Updates for KMP build        
-        {
+: TransformInfoObjectConfigInterface{
     //var abeClientInformation = abeClientInformation
 var transformInfoInterface = transformInfoInterface
 var objectConfigFileAbPath = objectConfigFileAbPath
@@ -66,10 +63,7 @@ var objectConfigFileAbPath = objectConfigFileAbPath
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)
         //nullable =  from not(true or (false and false)) = 
-: TransformInfoObjectConfigInterface
-
-        Updates for KMP build        
-        {
+: TransformInfoObjectConfigInterface{
     //var abeClientInformation = abeClientInformation
 var transformInfoInterface = transformInfoInterface
 
@@ -83,10 +77,7 @@ var transformInfoInterface = transformInfoInterface
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, document: Document)
         //nullable =  from not(true or (false and false)) = 
-: TransformInfoObjectConfigInterface
-
-        Updates for KMP build        
-        {
+: TransformInfoObjectConfigInterface{
     //var abeClientInformation = abeClientInformation
 var transformInfoInterface = transformInfoInterface
 var document = document

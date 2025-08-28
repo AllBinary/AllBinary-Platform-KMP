@@ -40,10 +40,7 @@ open public class CloudStreamUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CloudStreamUtil
-
-        Updates for KMP build        
-        {
+: CloudStreamUtil{
 
 
 
@@ -65,10 +62,7 @@ open fun getInstance()
             
 open fun getFile(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: InputStream
-
-        Updates for KMP build        
-        {
+: InputStream{
 var file = file
 
     var inputStream: InputStream = AbFileInputStream(file)
@@ -105,10 +99,7 @@ var file = file
             
 open fun getFileAnyWhere(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: InputStream
-
-        Updates for KMP build        
-        {
+: InputStream{
 var file = file
 
     var inputStream: InputStream = AbFileLocalInputStream(file)
@@ -168,10 +159,7 @@ available= inputStream!!.available()
             
 open fun getFileLocal(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: InputStream
-
-        Updates for KMP build        
-        {
+: InputStream{
 var file = file
 
     var inputStream: InputStream = AbFileLocalInputStream(file)

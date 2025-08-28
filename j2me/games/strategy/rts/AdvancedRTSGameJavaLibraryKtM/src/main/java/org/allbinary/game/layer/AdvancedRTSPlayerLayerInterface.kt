@@ -34,29 +34,17 @@ open fun getAdvancedPlayerOwnedRTSLayers()
         //nullable = true from not(false or (false and true)) = true
 : AdvancedPlayerOwnedRTSLayers
 
-        Updates for KMP build        
-        
-
 open fun isLocalPlayer()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
-
-        Updates for KMP build        
-        
 
 open fun getGameType()
         //nullable = true from not(false or (false and true)) = true
 : GameType
 
-        Updates for KMP build        
-        
-
 open fun getDecalBasicColor()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor
-
-        Updates for KMP build        
-        
 
 }
                 

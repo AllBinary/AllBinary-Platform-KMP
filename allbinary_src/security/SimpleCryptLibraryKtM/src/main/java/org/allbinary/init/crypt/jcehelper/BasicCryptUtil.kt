@@ -41,10 +41,7 @@ open public class BasicCryptUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BasicCryptUtil
-
-        Updates for KMP build        
-        {
+: BasicCryptUtil{
 
 
 
@@ -68,10 +65,7 @@ open fun getInstance()
             
 open fun getDecryptedInputStream(inputStream: InputStream, cryptInterface: CryptInterface)
         //nullable = true from not(false or (false and false)) = true
-: InputStream
-
-        Updates for KMP build        
-        {
+: InputStream{
 var inputStream = inputStream
 var cryptInterface = cryptInterface
 
@@ -82,9 +76,6 @@ var cryptInterface = cryptInterface
 
 
         while(true)
-        
-
-        Updates for KMP build        
         {
 ch= inputStream!!.read()
 

@@ -47,10 +47,7 @@ open public class StoreThemeCategory : Category
     private var themeVector: Vector
 public constructor        (transformInfoInterface: TransformInfoInterface, categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface, level: Int)                        
 
-                            : super(categoryPropertiesFactoryInterface, level)
-
-        Updates for KMP build        
-        {
+                            : super(categoryPropertiesFactoryInterface, level){
 var transformInfoInterface = transformInfoInterface
 var categoryPropertiesFactoryInterface = categoryPropertiesFactoryInterface
 var level = level
@@ -64,10 +61,7 @@ this.themeVector= Vector()
 
 public constructor        (transformInfoInterface: TransformInfoInterface, rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface)                        
 
-                            : super(rootCategoryInterface, parentCategoryInterface, categoryPropertiesFactoryInterface)
-
-        Updates for KMP build        
-        {
+                            : super(rootCategoryInterface, parentCategoryInterface, categoryPropertiesFactoryInterface){
 var transformInfoInterface = transformInfoInterface
 var rootCategoryInterface = rootCategoryInterface
 var parentCategoryInterface = parentCategoryInterface
@@ -82,10 +76,7 @@ this.themeVector= Vector()
 
 public constructor        (transformInfoInterface: TransformInfoInterface, node: Node, categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface, level: Int)                        
 
-                            : super(categoryPropertiesFactoryInterface, level)
-
-        Updates for KMP build        
-        {
+                            : super(categoryPropertiesFactoryInterface, level){
 var transformInfoInterface = transformInfoInterface
 var node = node
 var categoryPropertiesFactoryInterface = categoryPropertiesFactoryInterface
@@ -101,10 +92,7 @@ this.addThemes(node)
 
 public constructor        (transformInfoInterface: TransformInfoInterface, node: Node, rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface)                        
 
-                            : super(rootCategoryInterface, parentCategoryInterface, categoryPropertiesFactoryInterface)
-
-        Updates for KMP build        
-        {
+                            : super(rootCategoryInterface, parentCategoryInterface, categoryPropertiesFactoryInterface){
 var transformInfoInterface = transformInfoInterface
 var node = node
 var rootCategoryInterface = rootCategoryInterface
@@ -122,10 +110,7 @@ this.addThemes(node)
 
 open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformInfoInterface
-
-        Updates for KMP build        
-        {
+: TransformInfoInterface{
 
 
 
@@ -138,10 +123,7 @@ open fun getTransformInfoInterface()
             
 open fun addThemes(node: Node)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var node = node
 
     var themesNode: Node = DomSearchHelper.getNode(ThemesData.getInstance()!!.NAME, node.getChildNodes())!!
@@ -155,9 +137,6 @@ var node = node
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
-        
-
-        Updates for KMP build        
         {
 
     var themeNode: Node = nodeList!!.item(index)!!
@@ -178,10 +157,7 @@ var node = node
 
 open fun addTheme(themeValidation: ThemeValidation)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var themeValidation = themeValidation
 this.themeVector!!.add(themeValidation)
 }
@@ -189,10 +165,7 @@ this.themeVector!!.add(themeValidation)
 
 open fun getThemes()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
 
 
@@ -205,10 +178,7 @@ open fun getThemes()
             
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(!super.isValid())
@@ -234,10 +204,7 @@ open fun isValid()
             
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var categoryHashMap: HashMap<Any, Any> = super.toHashMap()!!
 
@@ -254,10 +221,7 @@ categoryHashMap!!.put(ThemesData.getInstance()!!.NAME, this.themeVector)
             
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
     var categoryVector: Vector = super.toVector()!!
 

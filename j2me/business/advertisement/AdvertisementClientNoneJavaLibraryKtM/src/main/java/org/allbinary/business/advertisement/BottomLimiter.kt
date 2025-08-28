@@ -39,10 +39,7 @@ open public class BottomLimiter
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BottomLimiter
-
-        Updates for KMP build        
-        {
+: BottomLimiter{
 
 
 
@@ -62,19 +59,13 @@ open fun getInstance()
     private var higher: Int= 0
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun init(lower: Int, higher: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var lower = lower
 var higher = higher
 this.lower= lower
@@ -84,10 +75,7 @@ this.higher= higher
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
@@ -114,10 +102,7 @@ bottom= displayInfo!!.getLastHeight() -deltaY
 
 open fun getDeltaY()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -128,10 +113,7 @@ open fun getDeltaY()
 
 open fun getBottom()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

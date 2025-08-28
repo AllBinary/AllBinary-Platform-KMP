@@ -52,10 +52,7 @@ open public class EditValidationView : DownloadableInventoryItemView
     private var downloadItemId: String
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(transformInfoInterface, StringUtil.getInstance()!!.EMPTY_STRING)
-
-        Updates for KMP build        
-        {
+                            : super(transformInfoInterface, StringUtil.getInstance()!!.EMPTY_STRING){
 var transformInfoInterface = transformInfoInterface
 
 
@@ -69,10 +66,7 @@ this.getFormData()
             
 open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var hashMap: HashMap<Any, Any> = RequestParams(request).
                             toHashMap()!!
@@ -100,10 +94,7 @@ this.downloadItemId= hashMap!!.get(DownloadItemData.ID) as String
             
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(id == 
@@ -185,10 +176,7 @@ this.downloadableItem= vector.get(0) as DownloadableItem
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
 
 
@@ -199,10 +187,7 @@ open fun toValidationInfoDoc()
 
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
 
@@ -216,10 +201,7 @@ var document = document
             
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

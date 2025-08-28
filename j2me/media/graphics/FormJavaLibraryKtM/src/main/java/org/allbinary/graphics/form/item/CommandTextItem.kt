@@ -34,10 +34,7 @@ open public class CommandTextItem : TextItem {
     private val command: Command
 public constructor        (command: Command, layout: Int, altText: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(command.getLabel(), layout, altText, backgroundBasicColor, foregroundBasicColor)
-
-        Updates for KMP build        
-        {
+                            : super(command.getLabel(), layout, altText, backgroundBasicColor, foregroundBasicColor){
 var command = command
 var layout = layout
 var altText = altText
@@ -52,10 +49,7 @@ this.command= command
 
 override fun isFocusable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -66,10 +60,7 @@ override fun isFocusable()
 
 open fun getCommand()
         //nullable = true from not(false or (false and true)) = true
-: Command
-
-        Updates for KMP build        
-        {
+: Command{
 
 
 

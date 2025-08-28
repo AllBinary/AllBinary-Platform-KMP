@@ -38,10 +38,7 @@ open public class CancelTouchButtonInputFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CancelTouchButtonInputFactory
-
-        Updates for KMP build        
-        {
+: CancelTouchButtonInputFactory{
 
 
 
@@ -55,9 +52,6 @@ open fun getInstance()
     private val cancelInputArray: Array<TouchButtonInput?> = arrayOfNulls(InputFactory.getInstance()!!.MAX)
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     var basicTouchInputFactory: BasicTouchInputFactory = BasicTouchInputFactory.getInstance()!!
@@ -68,9 +62,6 @@ private constructor        ()
 
                         for (index in cancelInputArray!!.size -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 cancelInputArray[index]= basicTouchInputFactory!!.NONE
 }
@@ -84,10 +75,7 @@ cancelInputArray[basicTouchInputFactory!!.RIGHT.getId()]= basicTouchInputFactory
 
 open fun getCancel(touchButtonInput: TouchButtonInput)
         //nullable = true from not(false or (false and false)) = true
-: TouchButtonInput
-
-        Updates for KMP build        
-        {
+: TouchButtonInput{
 var touchButtonInput = touchButtonInput
 
 

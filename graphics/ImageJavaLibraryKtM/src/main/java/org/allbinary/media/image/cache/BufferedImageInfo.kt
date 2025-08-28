@@ -40,9 +40,6 @@ open public class BufferedImageInfo
     private var type: Int
 public constructor        (width: Int, height: Int, type: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var width = width
 var height = height
@@ -55,10 +52,7 @@ this.type= type
 
 open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -69,10 +63,7 @@ open fun getWidth()
 
 open fun setWidth(width: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var width = width
 this.width= width
 }
@@ -80,10 +71,7 @@ this.width= width
 
 open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -94,10 +82,7 @@ open fun getHeight()
 
 open fun setHeight(height: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var height = height
 this.height= height
 }
@@ -105,10 +90,7 @@ this.height= height
 
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -119,20 +101,14 @@ open fun getType()
 
 open fun setType(type: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var type = type
 this.type= type
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var commonLabels: CommonLabels = CommonLabels.getInstance()!!
 

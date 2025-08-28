@@ -43,10 +43,7 @@ open public class ColorCacheFactory
                 null
             
 
-                init
-
-        Updates for KMP build        
-        {
+                init{
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -62,10 +59,7 @@ open public class ColorCacheFactory
 cacheInterface= AutomaticCacheInterfaceFactory.getInstance(ColorCacheableFactory(), CacheTypeFactory.getInstance()!!.CACHE, CachePolicyFactory.getInstance()!!.THIRTY_MINUTES_TEN_THOUSAND_MAX)
 logUtil!!.put(commonStrings!!.END, ColorCacheFactory::class, STATIC_BLOCK)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, ColorCacheFactory::class, STATIC_BLOCK, e)
 }
 
@@ -73,10 +67,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, ColorCacheFactory::class, STATIC_BLOCK,
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AutomaticCacheInterface
-
-        Updates for KMP build        
-        {
+: AutomaticCacheInterface{
 
 
 
@@ -88,9 +79,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

@@ -38,10 +38,7 @@ open public class ImageFileFilter : FileFilter {
         
 open fun accept(f: File)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var f = f
 
     
@@ -91,10 +88,7 @@ var f = f
 
 open fun getDescription()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

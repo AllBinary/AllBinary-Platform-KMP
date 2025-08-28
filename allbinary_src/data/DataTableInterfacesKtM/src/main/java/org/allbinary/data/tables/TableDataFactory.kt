@@ -40,10 +40,7 @@ open public class TableDataFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TableDataFactory
-
-        Updates for KMP build        
-        {
+: TableDataFactory{
 
 
 

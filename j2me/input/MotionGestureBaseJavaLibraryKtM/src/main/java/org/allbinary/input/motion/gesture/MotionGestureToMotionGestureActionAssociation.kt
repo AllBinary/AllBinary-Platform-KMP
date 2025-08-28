@@ -38,9 +38,6 @@ open public class MotionGestureToMotionGestureActionAssociation
     private var motionGestureAction: CompleteMotionGestureInputEvent
 public constructor        (list: BasicArrayList, commandAction: CompleteMotionGestureInputEvent)
             : super()
-        
-
-        Updates for KMP build        
         {
 var list = list
 var commandAction = commandAction
@@ -51,10 +48,7 @@ this.motionGestureAction= commandAction
 
 open fun getMotionGesture()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 
@@ -65,10 +59,7 @@ open fun getMotionGesture()
 
 open fun setMotionGestures(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var list = list
 this.list= list
 }
@@ -76,10 +67,7 @@ this.list= list
 
 open fun getCommandAction()
         //nullable = true from not(false or (false and true)) = true
-: CompleteMotionGestureInputEvent
-
-        Updates for KMP build        
-        {
+: CompleteMotionGestureInputEvent{
 
 
 
@@ -90,10 +78,7 @@ open fun getCommandAction()
 
 open fun setMotionGestureAction(commandAction: CompleteMotionGestureInputEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var commandAction = commandAction
 this.motionGestureAction= commandAction
 }
@@ -101,10 +86,7 @@ this.motionGestureAction= commandAction
 
 open fun isMotionGestureArrayEquals(aList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var aList = aList
 
     var size: Int = aList!!.size()!!
@@ -128,9 +110,6 @@ var aList = aList
 
                         for (i in size -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     

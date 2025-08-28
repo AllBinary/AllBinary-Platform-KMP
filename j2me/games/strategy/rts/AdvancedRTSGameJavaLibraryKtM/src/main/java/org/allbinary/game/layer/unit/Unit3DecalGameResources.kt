@@ -39,10 +39,7 @@ open public class Unit3DecalGameResources : BasicGameResources {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BasicGameResources
-
-        Updates for KMP build        
-        {
+: BasicGameResources{
 
 
 
@@ -52,10 +49,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
-
-        Updates for KMP build        
-        {
+            private constructor        (){
 
     var ROOT: String = "/unit_decal"
 
@@ -85,10 +79,7 @@ super.init(ROOT, SIZE)
             
 open fun init(ROOT: String, sizeString: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var ROOT = ROOT
 var sizeString = sizeString
 super.init(ROOT, sizeString)
@@ -99,10 +90,7 @@ super.init(ROOT, sizeString)
             
 open fun getString()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     
                         if(AndroidUtil.isAndroid())

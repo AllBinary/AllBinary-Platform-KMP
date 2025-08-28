@@ -39,10 +39,7 @@ open public class CompleteMotionGestureInputToGameMotionGestureInput
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CompleteMotionGestureInputToGameMotionGestureInput
-
-        Updates for KMP build        
-        {
+: CompleteMotionGestureInputToGameMotionGestureInput{
 
 
 
@@ -62,10 +59,7 @@ open fun getInstance()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 PreLogUtil.put("No Touch Button = No Compound Motion Gestures", this, this.commonStrings!!.INIT)
 }
 

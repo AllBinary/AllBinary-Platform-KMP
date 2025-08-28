@@ -44,9 +44,6 @@ open public class WorkFlowWrapper
     private var anyType: Any
 public constructor        (anyType: Any)
             : super()
-        
-
-        Updates for KMP build        
         {
 var anyType = anyType
 this.anyType= anyType
@@ -55,10 +52,7 @@ this.anyType= anyType
 
 open fun getWorkFlowObject()
         //nullable = true from not(false or (false and true)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 
 
 
@@ -71,10 +65,7 @@ open fun getWorkFlowObject()
             
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -94,10 +85,7 @@ open fun getName()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Reflection Exception"
 
@@ -123,10 +111,7 @@ open fun getName()
             
 open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -146,10 +131,7 @@ open fun getStoreName()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Reflection Exception"
 
@@ -175,10 +157,7 @@ open fun getStoreName()
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 
         try {
             
@@ -198,10 +177,7 @@ open fun process()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Reflection Exception"
 

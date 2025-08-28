@@ -47,10 +47,7 @@ open public class DrawStringUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DrawStringUtil
-
-        Updates for KMP build        
-        {
+: DrawStringUtil{
 
 
 
@@ -68,10 +65,7 @@ open fun getInstance()
         
 open fun paintVerticle(graphics: Graphics, string: String, x: Int, y: Int, anchor: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var string = string
     //var x = x
@@ -141,9 +135,6 @@ open fun paintVerticle(graphics: Graphics, string: String, x: Int, y: Int, ancho
 
                         for (index in size -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 aChar= string[index]
 
@@ -165,10 +156,7 @@ graphics.drawChar(aChar, x +offsetX, y +(charHeight *index) +offsetY, anchor)
 
 open fun drawCenterString(graphics: Graphics, string: String, offset: Int, length: Int, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var string = string
     //var offset = offset
@@ -182,10 +170,7 @@ var y = y
         try {
             graphics.drawSubstring(string, offset, length, x -width, y, anchor)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 PreLogUtil.put(StringMaker().
                             append("Exception: stringLength: ")!!.append(string.length)!!.append(" offset: ")!!.append(offset)!!.append(" currentLength: ")!!.append(length)!!.toString(), this, "drawCenterString")
 }
@@ -197,10 +182,7 @@ PreLogUtil.put(StringMaker().
 
 open fun drawCenterStrings(graphics: Graphics, stringArray: Array<String?>, maxWidth: Int, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var stringArray = stringArray
     //var maxWidth = maxWidth
@@ -221,9 +203,6 @@ open fun drawCenterStrings(graphics: Graphics, stringArray: Array<String?>, maxW
 
                         for (index in 0 until stringArray!!.size)
 
-        
-
-        Updates for KMP build        
         {
 
     var string: String = stringArray[index]!!
@@ -262,9 +241,6 @@ open fun drawCenterStrings(graphics: Graphics, stringArray: Array<String?>, maxW
 
 
         while(offset < size)
-        
-
-        Updates for KMP build        
         {
 
     
@@ -282,9 +258,6 @@ open fun drawCenterStrings(graphics: Graphics, stringArray: Array<String?>, maxW
                                     {
                                     
         while(currentLength > 0 && stringArray[index]!![offset +currentLength] != ' ')
-        
-
-        Updates for KMP build        
         {
 currentLength--
 }

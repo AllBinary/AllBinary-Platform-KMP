@@ -48,9 +48,6 @@ open public class GenericProfile
     private var genericProfileActions: GenericProfileActions
 public constructor        (node: Node)
             : super()
-        
-
-        Updates for KMP build        
         {
 var node = node
 this.setName(DomNodeHelper.getTextNodeValue(node))
@@ -65,9 +62,6 @@ logUtil!!.put("Name: " +this.getName() +" Child Nodes: " +nodeList!!.getLength()
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
-        
-
-        Updates for KMP build        
         {
 
     var profileNode: Node = nodeList!!.item(index)!!
@@ -91,9 +85,6 @@ this.vector.add(genericProfileDataWorkerType)
 
 public constructor        (name: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var name = name
 this.setName(name)
@@ -103,10 +94,7 @@ this.vector= Vector()
 
 open fun getGenericProfileDataWorkerTypeVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
 
 
@@ -117,10 +105,7 @@ open fun getGenericProfileDataWorkerTypeVector()
 
 open fun add(genericProfileDataWorkerType: GenericProfileDataWorkerType)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var genericProfileDataWorkerType = genericProfileDataWorkerType
 
     
@@ -131,10 +116,7 @@ var genericProfileDataWorkerType = genericProfileDataWorkerType
 
 open fun remove(genericProfileDataWorkerType: GenericProfileDataWorkerType)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var genericProfileDataWorkerType = genericProfileDataWorkerType
 this.vector.remove(genericProfileDataWorkerType)
 }
@@ -144,10 +126,7 @@ this.vector.remove(genericProfileDataWorkerType)
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var node: Node = ModDomHelper.createTextNode(document, GenericProfileData.NAME, name)!!
@@ -161,9 +140,6 @@ var document = document
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var genericProfileDataWorkerType: GenericProfileDataWorkerType = vector.get(index) as GenericProfileDataWorkerType
@@ -181,10 +157,7 @@ node.appendChild(genericProfileDataWorkerType!!.toXmlNode(document))
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -195,10 +168,7 @@ open fun getName()
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var name = name
 this.name= name
 }
@@ -206,10 +176,7 @@ this.name= name
 
 open fun getGenericProfileActions()
         //nullable = true from not(false or (false and true)) = true
-: GenericProfileActions
-
-        Updates for KMP build        
-        {
+: GenericProfileActions{
 
 
 
@@ -220,10 +187,7 @@ open fun getGenericProfileActions()
 
 open fun setGenericProfileActions(genericProfileActions: GenericProfileActions)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var genericProfileActions = genericProfileActions
 this.genericProfileActions= genericProfileActions
 }

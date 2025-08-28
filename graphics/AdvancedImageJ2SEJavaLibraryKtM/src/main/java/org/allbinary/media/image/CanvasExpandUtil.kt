@@ -40,10 +40,7 @@ open public class CanvasExpandUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CanvasExpandUtil
-
-        Updates for KMP build        
-        {
+: CanvasExpandUtil{
 
 
 
@@ -67,10 +64,7 @@ open fun getInstance()
             
 open fun process(imageProcessorInput: ImageProcessorInput, increaseX: Int, increaseY: Int, visitor: ImageProcessedVisitor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var imageProcessorInput = imageProcessorInput
     //var increaseX = increaseX
     //var increaseY = increaseY
@@ -97,9 +91,6 @@ open fun process(imageProcessorInput: ImageProcessorInput, increaseX: Int, incre
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 bufferedImage= bufferedImageArray[index]!!
 subBufferedImageArray[index]= imageUtil!!.createBufferedImage(bufferedImage, bufferedImage!!.getWidth() +increaseX, bufferedImage!!.getHeight() +increaseY, false)

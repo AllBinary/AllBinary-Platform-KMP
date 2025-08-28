@@ -48,19 +48,13 @@ open public class InputMapping
     private val mappedList: BasicArrayList = BasicArrayList()
 protected constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getTotalMapped()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -71,10 +65,7 @@ open fun getTotalMapped()
 
 open fun isDefaultNew()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -85,10 +76,7 @@ open fun isDefaultNew()
 
 open fun getDefault()
         //nullable = true from not(false or (false and true)) = true
-: InputToGameKeyMapping
-
-        Updates for KMP build        
-        {
+: InputToGameKeyMapping{
 
 
 
@@ -99,10 +87,7 @@ open fun getDefault()
 
 open fun removeAll()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.hashtable.clear()
 this.mappedList!!.clear()
 }
@@ -110,10 +95,7 @@ this.mappedList!!.clear()
 
 open fun remove(input: Input, mappedToInput: Input)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var input = input
     //var mappedToInput = mappedToInput
 
@@ -163,10 +145,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "InputMapping::remove")
             
 open fun add(inputToGameKeyMapping: InputToGameKeyMapping)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var inputToGameKeyMapping = inputToGameKeyMapping
 
 
@@ -177,10 +156,7 @@ open fun add(inputToGameKeyMapping: InputToGameKeyMapping)
 
 open fun add(input: Input, mappedToInput: Input)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var input = input
     //var mappedToInput = mappedToInput
 
@@ -201,10 +177,7 @@ this.mappedList!!.add(mappedToInput)
 
 open fun isMapped(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var input = input
 
 
@@ -216,10 +189,7 @@ open fun isMapped(input: Input)
 
 open fun getMappedInput(id: Input)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
     //var id = id
 
     var mappingInputCanBeNullList: Any? = this.hashtable.get(id as Object)
@@ -253,10 +223,7 @@ this.hashtable.put(id, list)
 
 open fun getHashtable()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>
-
-        Updates for KMP build        
-        {
+: Hashtable<Any, Any>{
 
 
 

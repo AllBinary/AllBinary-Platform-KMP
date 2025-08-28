@@ -37,10 +37,7 @@ open public class SimultaneousCompoundIndexAnimation : IndexedAnimation {
     private var animationInterfaceArray: Array<IndexedAnimation?>
 public constructor        (animationInterfaceArray: Array<IndexedAnimation?>, animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(animationBehavior){
     //var animationInterfaceArray = animationInterfaceArray
     //var animationBehavior = animationBehavior
 
@@ -53,10 +50,7 @@ this.animationInterfaceArray= animationInterfaceArray
 
 open fun setFrame(frameIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var frameIndex = frameIndex
 
 
@@ -64,9 +58,6 @@ open fun setFrame(frameIndex: Int)
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 this.animationInterfaceArray[index]!!.setFrame(frameIndex)
 }
@@ -76,10 +67,7 @@ this.animationInterfaceArray[index]!!.setFrame(frameIndex)
 
 open fun getFrame()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -92,10 +80,7 @@ open fun getFrame()
             
 open fun getAnimationSize()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -106,10 +91,7 @@ open fun getAnimationSize()
 
 open fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -120,19 +102,13 @@ open fun getSize()
 
 open fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
 
 
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 this.animationInterfaceArray[index]!!.previousFrame()
 }
@@ -144,19 +120,13 @@ this.animationInterfaceArray[index]!!.previousFrame()
             
 open fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
 
 
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 this.animationInterfaceArray[index]!!.nextFrame()
 }
@@ -166,20 +136,14 @@ this.animationInterfaceArray[index]!!.nextFrame()
 
 open fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var sequence = sequence
 }
 
 
 open fun getSequence()
         //nullable = true from not(false or (false and true)) = true
-: IntArray
-
-        Updates for KMP build        
-        {
+: IntArray{
 
 
 
@@ -190,10 +154,7 @@ open fun getSequence()
 
 open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var x = x
     //var y = y
@@ -203,9 +164,6 @@ open fun paint(graphics: Graphics, x: Int, y: Int)
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 this.animationInterfaceArray[index]!!.paint(graphics, x, y)
 }
@@ -215,10 +173,7 @@ this.animationInterfaceArray[index]!!.paint(graphics, x, y)
 
 open fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var x = x
     //var y = y
@@ -229,9 +184,6 @@ open fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 this.animationInterfaceArray[index]!!.paintThreed(graphics, x, y, z)
 }
@@ -243,10 +195,7 @@ this.animationInterfaceArray[index]!!.paintThreed(graphics, x, y, z)
             
 open fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
 
 
@@ -254,9 +203,6 @@ open fun set(gl: GL)
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 this.animationInterfaceArray[index]!!.set(gl)
 }
@@ -266,10 +212,7 @@ this.animationInterfaceArray[index]!!.set(gl)
 
 open fun getAnimationInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<IndexedAnimation?>
-
-        Updates for KMP build        
-        {
+: Array<IndexedAnimation?>{
 
 
 
@@ -280,10 +223,7 @@ open fun getAnimationInterfaceArray()
 
 open fun setAnimationInterfaceArray(animationInterfaceArray: Array<IndexedAnimation?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var animationInterfaceArray = animationInterfaceArray
 this.animationInterfaceArray= animationInterfaceArray
 }

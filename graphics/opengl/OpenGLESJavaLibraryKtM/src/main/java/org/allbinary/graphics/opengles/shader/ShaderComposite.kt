@@ -77,9 +77,6 @@ open public class ShaderComposite
     var programHandle: Int= 0
 public constructor        (requiresOpenGLVersion: String, shaderArray: Array<Shader?>, compositeShaderUpdater: CompositeShaderUpdater, shaderInitializer: ShaderInitializer, modelViewProjection: ModelViewProjection, colorOpenGLProcessor: OpenGLProcessor, vertexOpenGLProcessor: OpenGLProcessor, disableProgramShaderOpenGLProcessor: OpenGLProcessor)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var requiresOpenGLVersion = requiresOpenGLVersion
     //var shaderArray = shaderArray
@@ -102,10 +99,7 @@ this.disableProgramShaderOpenGLProcessor= disableProgramShaderOpenGLProcessor
 
 open fun init(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gl = gl
 this.programHandle= this.shaderInitializer!!.init(gl, this.shaderArray, this.compositeShaderUpdater!!.attributeArray)
 }

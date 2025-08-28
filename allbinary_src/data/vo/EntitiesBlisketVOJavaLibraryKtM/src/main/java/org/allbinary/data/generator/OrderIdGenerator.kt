@@ -33,10 +33,7 @@ open public class OrderIdGenerator : UniqueIdGenerator {
         
 
     private val IDFILE: String = "orderId"
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 
     var stringBuffer: StringMaker = StringMaker()
 

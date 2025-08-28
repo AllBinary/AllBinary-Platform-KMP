@@ -33,9 +33,6 @@ open fun getInstance(points: Array<Array<IntArray?>?>, basicColor: BasicColor)
         //nullable =  from not(true or (false and false)) = 
 : VectorAnimation
 
-        Updates for KMP build        
-        
-
 }
                 
             

@@ -68,9 +68,6 @@ open public class AuthorizeNetSimData
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

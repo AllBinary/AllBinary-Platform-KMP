@@ -36,17 +36,11 @@ open fun getInstance(orderHistory: OrderHistory)
         //nullable =  from not(true or (false and false)) = 
 : PaymentTransactionInterface
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun getSaleTransaction(tenderType: TenderType)
         //nullable = true from not(false or (false and false)) = true
 : PaymentTransactionInterface
-
-        Updates for KMP build        
-        
 
                 @Throws(Exception::class)
             
@@ -54,17 +48,11 @@ open fun getCreditTransaction(tenderType: TenderType)
         //nullable = true from not(false or (false and false)) = true
 : PaymentTransactionInterface
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun getAuthorizationTransaction(tenderType: TenderType)
         //nullable = true from not(false or (false and false)) = true
 : PaymentTransactionInterface
-
-        Updates for KMP build        
-        
 
                 @Throws(Exception::class)
             
@@ -72,26 +60,17 @@ open fun getCaptureDelayedTransaction(tenderType: TenderType)
         //nullable = true from not(false or (false and false)) = true
 : PaymentTransactionInterface
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun getVoidTransaction(tenderType: TenderType)
         //nullable = true from not(false or (false and false)) = true
 : PaymentTransactionInterface
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun getInquiryTransaction(tenderType: TenderType)
         //nullable = true from not(false or (false and false)) = true
 : PaymentTransactionInterface
-
-        Updates for KMP build        
-        
 
 }
                 

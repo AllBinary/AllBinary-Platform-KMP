@@ -38,10 +38,7 @@ open public class BasicColorFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BasicColorFactory
-
-        Updates for KMP build        
-        {
+: BasicColorFactory{
 
 
 

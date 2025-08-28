@@ -46,9 +46,6 @@ open public class UrlGlobalsData
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

@@ -39,10 +39,7 @@ open public class SpecialAnimation : IndexedAnimation
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: SpecialAnimation
-
-        Updates for KMP build        
-        {
+: SpecialAnimation{
 
 
 
@@ -54,10 +51,7 @@ open fun getInstance()
         }
             public constructor        (animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(animationBehavior){
     //var animationBehavior = animationBehavior
 
 
@@ -67,10 +61,7 @@ open fun getInstance()
 
 override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var indexedAnimationBehavior: IndexedAnimationBehavior = (this.animationBehaviorP as IndexedAnimationBehavior)
 
@@ -79,18 +70,12 @@ indexedAnimationBehavior!!.loopIndex++
 
 override fun setLastFrame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun isComplete()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -101,28 +86,19 @@ override fun isComplete()
 
 open fun open()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun close()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 

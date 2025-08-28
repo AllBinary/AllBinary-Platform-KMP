@@ -38,10 +38,7 @@ open public class TouchButtonsPaintableCompositeFactory
             
 open fun getInstance(inputMappingInterface: InputMappingInterface, basicColor: BasicColor)
         //nullable =  from not(true or (false and false)) = 
-: ProcessPaintable
-
-        Updates for KMP build        
-        {
+: ProcessPaintable{
 var inputMappingInterface = inputMappingInterface
 var basicColor = basicColor
 

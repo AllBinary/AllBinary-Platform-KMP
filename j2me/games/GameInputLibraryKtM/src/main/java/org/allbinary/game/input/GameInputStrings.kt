@@ -37,10 +37,7 @@ open public class GameInputStrings
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameInputStrings
-
-        Updates for KMP build        
-        {
+: GameInputStrings{
 
 
 

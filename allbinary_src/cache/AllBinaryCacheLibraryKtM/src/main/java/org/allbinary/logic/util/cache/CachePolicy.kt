@@ -38,9 +38,6 @@ open public class CachePolicy
     private var maxSize: Long= 0
 public constructor        (name: String, maxTime: Long, maxSize: Long)
             : super()
-        
-
-        Updates for KMP build        
         {
 var name = name
 var maxTime = maxTime
@@ -53,10 +50,7 @@ this.setMaxSize(maxSize)
 
 open fun getMaxTime()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -67,10 +61,7 @@ open fun getMaxTime()
 
 open fun setMaxTime(maxTime: Long)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var maxTime = maxTime
 this.maxTime= maxTime
 }
@@ -78,10 +69,7 @@ this.maxTime= maxTime
 
 open fun getMaxSize()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -92,10 +80,7 @@ open fun getMaxSize()
 
 open fun setMaxSize(maxSize: Long)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var maxSize = maxSize
 this.maxSize= maxSize
 }
@@ -103,10 +88,7 @@ this.maxSize= maxSize
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

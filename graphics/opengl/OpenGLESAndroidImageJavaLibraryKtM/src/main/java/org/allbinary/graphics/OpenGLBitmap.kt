@@ -18,10 +18,7 @@ open public class OpenGLBitmap : PlatformBitmapBase {
         
 
     val bitmap: Bitmap
-public constructor        (bitmap: Any)
-
-        Updates for KMP build        
-        {
+public constructor        (bitmap: Any){
     //var bitmap = bitmap
 this.bitmap= bitmap as Bitmap
 }
@@ -29,10 +26,7 @@ this.bitmap= bitmap as Bitmap
 
 open fun getPixels(pixels: IntArray, offset: Int, stride: Int, x: Int, y: Int, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var pixels = pixels
 var offset = offset
 var stride = stride
@@ -46,10 +40,7 @@ this.bitmap.getPixels(pixels, offset, stride, x, y, width, height)
 
 open fun setPixels(pixels: IntArray, offset: Int, stride: Int, x: Int, y: Int, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var pixels = pixels
 var offset = offset
 var stride = stride
@@ -63,10 +54,7 @@ this.bitmap.setPixels(pixels, offset, stride, x, y, width, height)
 
 open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -77,10 +65,7 @@ open fun getWidth()
 
 open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -91,10 +76,7 @@ open fun getHeight()
 
 open fun recycle()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.bitmap.recycle()
 }
 

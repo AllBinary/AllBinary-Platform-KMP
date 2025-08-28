@@ -43,10 +43,7 @@ open public class FormUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FormUtil
-
-        Updates for KMP build        
-        {
+: FormUtil{
 
 
 
@@ -66,10 +63,7 @@ open fun getInstance()
 
 open fun createFormRectangle()
         //nullable = true from not(false or (false and true)) = true
-: Rectangle
-
-        Updates for KMP build        
-        {
+: Rectangle{
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
@@ -86,10 +80,7 @@ open fun createFormRectangle()
 
 open fun createPopupMenuRectangle()
         //nullable = true from not(false or (false and true)) = true
-: Rectangle
-
-        Updates for KMP build        
-        {
+: Rectangle{
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 

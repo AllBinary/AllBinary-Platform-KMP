@@ -35,10 +35,7 @@ open public class SelectSound : CompositeSound {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: Sound
-
-        Updates for KMP build        
-        {
+: Sound{
 
 
 
@@ -50,10 +47,7 @@ open fun getInstance()
         }
             private constructor        ()                        
 
-                            : super("resource:/wav/select.wav")
-
-        Updates for KMP build        
-        {
+                            : super("resource:/wav/select.wav"){
 
 
                             //For kotlin this is before the body of the constructor.

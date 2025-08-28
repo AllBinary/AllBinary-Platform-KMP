@@ -34,10 +34,7 @@ open public class MainGameDemoStatePaintable : Paintable {
     private val ownershipPaintableInterface: Paintable
 
     private val menuPaintableInterface: Paintable
-public constructor        (ownershipPaintableInterface: Paintable, menuPaintableInterface: Paintable)
-
-        Updates for KMP build        
-        {
+public constructor        (ownershipPaintableInterface: Paintable, menuPaintableInterface: Paintable){
 var ownershipPaintableInterface = ownershipPaintableInterface
 var menuPaintableInterface = menuPaintableInterface
 this.ownershipPaintableInterface= ownershipPaintableInterface
@@ -46,10 +43,7 @@ this.menuPaintableInterface= menuPaintableInterface
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 this.menuPaintableInterface!!.paint(graphics)
 this.ownershipPaintableInterface!!.paint(graphics)
@@ -58,10 +52,7 @@ this.ownershipPaintableInterface!!.paint(graphics)
 
 open fun getOwnershipPaintableInterface()
         //nullable = true from not(false or (false and true)) = true
-: Paintable
-
-        Updates for KMP build        
-        {
+: Paintable{
 
 
 
@@ -72,10 +63,7 @@ open fun getOwnershipPaintableInterface()
 
 open fun getMenuPaintableInterface()
         //nullable = true from not(false or (false and true)) = true
-: Paintable
-
-        Updates for KMP build        
-        {
+: Paintable{
 
 
 

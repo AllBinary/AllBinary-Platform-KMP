@@ -52,10 +52,7 @@ open public class InputAutomationConfigurationFactory
             
 open fun init(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
@@ -101,9 +98,6 @@ logUtil!!.put("isInstalled: " +inputAutomationConfiguration!!.isInstalled(), INP
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 inputAutomationModuleConfiguration= inputAutomationModuleConfigurationList!!.get(index)
 inputAutomationModuleConfiguration!!.init(abeClientInformation)
@@ -124,10 +118,7 @@ inputAutomationConfiguration= InputAutomationConfiguration()
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: InputAutomationConfiguration
-
-        Updates for KMP build        
-        {
+: InputAutomationConfiguration{
 
 
 
@@ -141,9 +132,6 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

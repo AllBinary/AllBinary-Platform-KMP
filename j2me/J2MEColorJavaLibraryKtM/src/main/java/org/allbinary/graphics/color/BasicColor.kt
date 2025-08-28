@@ -56,10 +56,7 @@ open public class BasicColor
     private val basicColorUtil: BasicColorUtil = BasicColorUtil.getInstance()!!
 public constructor        (value: Int)                        
 
-                            : this(value, StringUtil.getInstance()!!.EMPTY_STRING)
-
-        Updates for KMP build        
-        {
+                            : this(value, StringUtil.getInstance()!!.EMPTY_STRING){
     //var value = value
 
 
@@ -69,10 +66,7 @@ public constructor        (value: Int)
 
 public constructor        (alphaValue: Int, value: Int)                        
 
-                            : this(alphaValue, value, StringUtil.getInstance()!!.EMPTY_STRING)
-
-        Updates for KMP build        
-        {
+                            : this(alphaValue, value, StringUtil.getInstance()!!.EMPTY_STRING){
     //var alphaValue = alphaValue
     //var value = value
 
@@ -83,10 +77,7 @@ public constructor        (alphaValue: Int, value: Int)
 
  constructor        (value: Int, name: String)                        
 
-                            : this(BasicColorUtil.getInstance()!!.ALPHA, value, name)
-
-        Updates for KMP build        
-        {
+                            : this(BasicColorUtil.getInstance()!!.ALPHA, value, name){
     //var value = value
     //var name = name
 
@@ -97,9 +88,6 @@ public constructor        (alphaValue: Int, value: Int)
 
  constructor        (alphaValue: Int, value: Int, name: String)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var alphaValue = alphaValue
     //var value = value
@@ -160,9 +148,6 @@ this.value= tempValue
 
 public constructor        (alphaValue: Int, r: Int, g: Int, b: Int, name: String)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var alphaValue = alphaValue
     //var r = r
@@ -196,10 +181,7 @@ this.value= ((alphaValue shl 24) and ALPHA_MASK) +((redInt shl 16) and 0x00FF000
 
 open fun intValue()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -210,10 +192,7 @@ open fun intValue()
 
 open fun toInt()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -223,10 +202,7 @@ open fun toInt()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -251,10 +227,7 @@ stringBuffer!!.append(this.value)
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -265,10 +238,7 @@ open fun getName()
 
 open fun getRedComponent()
         //nullable = true from not(false or (false and true)) = true
-: Float
-
-        Updates for KMP build        
-        {
+: Float{
 
 
 
@@ -279,10 +249,7 @@ open fun getRedComponent()
 
 open fun getGreenComponent()
         //nullable = true from not(false or (false and true)) = true
-: Float
-
-        Updates for KMP build        
-        {
+: Float{
 
 
 
@@ -293,10 +260,7 @@ open fun getGreenComponent()
 
 open fun getBlueComponent()
         //nullable = true from not(false or (false and true)) = true
-: Float
-
-        Updates for KMP build        
-        {
+: Float{
 
 
 
@@ -307,10 +271,7 @@ open fun getBlueComponent()
 
 open fun getAlphaComponent()
         //nullable = true from not(false or (false and true)) = true
-: Float
-
-        Updates for KMP build        
-        {
+: Float{
 
 
 

@@ -34,22 +34,13 @@ open fun getFirstWaveWithTrack(track: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int
 
-        Updates for KMP build        
-        
-
 open fun getTotalTracks()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-        Updates for KMP build        
-        
-
 open fun getTotalLevels()
         //nullable = true from not(false or (false and true)) = true
 : Int
-
-        Updates for KMP build        
-        
 
 }
                 

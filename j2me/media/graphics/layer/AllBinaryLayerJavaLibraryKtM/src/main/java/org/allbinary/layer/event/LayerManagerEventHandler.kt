@@ -41,10 +41,7 @@ open public class LayerManagerEventHandler : BasicEventHandler {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LayerManagerEventHandler
-
-        Updates for KMP build        
-        {
+: LayerManagerEventHandler{
 
 
 
@@ -56,19 +53,13 @@ open fun getInstance()
         }
             
     private val list: BasicArrayList = BasicArrayList()
-private constructor        ()
-
-        Updates for KMP build        
-        {
+private constructor        (){
 }
 
 
 open fun addListener(layerManagerEventListener: LayerManagerEventListener)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layerManagerEventListener = layerManagerEventListener
 
     
@@ -83,20 +74,14 @@ open fun addListener(layerManagerEventListener: LayerManagerEventListener)
 
 override fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.list.clear()
 super.removeAllListeners()
 }
 
 override fun removeListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var eventListenerInterface = eventListenerInterface
 this.list.remove(eventListenerInterface)
 super.removeListener(eventListenerInterface)
@@ -106,10 +91,7 @@ super.removeListener(eventListenerInterface)
                 @Throws(Exception::class)
             override fun fireEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var eventObject = eventObject
 
 
@@ -117,9 +99,6 @@ super.removeListener(eventListenerInterface)
 
                         for (index in this.list.size()!!  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
         try {
@@ -128,10 +107,7 @@ super.removeListener(eventListenerInterface)
 
 layerManagerEventListener!!.onCreateLayerManagerEvent(eventObject as LayerManagerEvent)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
 }
 
@@ -150,10 +126,7 @@ super.fireEvent(eventObject)
 
 open fun fireDeleteEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var eventObject = eventObject
 
 
@@ -161,9 +134,6 @@ open fun fireDeleteEvent(eventObject: AllBinaryEventObject)
 
                         for (index in this.list.size()!!  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
         try {
@@ -172,10 +142,7 @@ open fun fireDeleteEvent(eventObject: AllBinaryEventObject)
 
 layerManagerEventListener!!.onDeleteLayerManagerEvent(eventObject as LayerManagerEvent)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
 }
 
@@ -195,9 +162,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE
 
 
         while(index < eventListenerInterfaceList!!.size())
-        
-
-        Updates for KMP build        
         {
 
         try {
@@ -205,10 +169,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE
 layerManagerEventListenerInterface= (eventListenerInterface as LayerManagerEventListenerInterface)
 layerManagerEventListenerInterface!!.onDeleteLayerManagerEvent(eventObject as LayerManagerEvent)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
 }
 
@@ -221,10 +182,7 @@ index++
                 @Throws(Exception::class)
             override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var eventObject = eventObject
     //var eventListenerInterface = eventListenerInterface
 

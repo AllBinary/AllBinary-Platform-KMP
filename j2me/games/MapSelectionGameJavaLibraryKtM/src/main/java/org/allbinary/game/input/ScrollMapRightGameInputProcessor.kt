@@ -32,10 +32,7 @@ open public class ScrollMapRightGameInputProcessor : ScrollMapGameInputProcessor
         
 public constructor        (scrollMapPlayerGameInput: ScrollMapPlayerGameInput)                        
 
-                            : super(scrollMapPlayerGameInput)
-
-        Updates for KMP build        
-        {
+                            : super(scrollMapPlayerGameInput){
 var scrollMapPlayerGameInput = scrollMapPlayerGameInput
 
 
@@ -48,10 +45,7 @@ var scrollMapPlayerGameInput = scrollMapPlayerGameInput
             
 open fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allbinaryLayerManager = allbinaryLayerManager
 var gameKeyEvent = gameKeyEvent
 this.scrollMapPlayerGameInput!!.right()

@@ -37,10 +37,7 @@ open public class LastFetchHighScoresFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LastFetchHighScoresFactory
-
-        Updates for KMP build        
-        {
+: LastFetchHighScoresFactory{
 
 
 

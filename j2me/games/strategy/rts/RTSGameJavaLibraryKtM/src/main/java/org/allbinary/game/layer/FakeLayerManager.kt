@@ -39,10 +39,7 @@ open public class FakeLayerManager : AllBinaryGameLayerManager
     private var geographicMapCellTypeArray: Array<GeographicMapCellType?>
 public constructor        (gameInfo: GameInfo)                        
 
-                            : super(BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE, gameInfo)
-
-        Updates for KMP build        
-        {
+                            : super(BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE, gameInfo){
 var gameInfo = gameInfo
 
 
@@ -53,10 +50,7 @@ var gameInfo = gameInfo
 
 open fun getGeographicMapInterface()
         //nullable = true from not(false or (false and true)) = true
-: Array<BasicGeographicMap?>
-
-        Updates for KMP build        
-        {
+: Array<BasicGeographicMap?>{
 
 
 
@@ -67,10 +61,7 @@ open fun getGeographicMapInterface()
 
 open fun setGeographicMapInterface(geographicMapInterfaceArray: Array<BasicGeographicMap?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
 this.geographicMapInterfaceArray= geographicMapInterfaceArray
 this.geographicMapCellTypeArray= arrayOfNulls(this.geographicMapInterfaceArray!!.size)
@@ -79,10 +70,7 @@ this.geographicMapCellTypeArray= arrayOfNulls(this.geographicMapInterfaceArray!!
 
 open fun geographicMapCellTypeArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<GeographicMapCellType?>
-
-        Updates for KMP build        
-        {
+: Array<GeographicMapCellType?>{
 
 
 

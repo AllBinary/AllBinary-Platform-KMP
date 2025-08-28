@@ -43,9 +43,6 @@ open public class Sound
     var player: Player = NoPlayer.NO_PLAYER
 protected constructor        (resource: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var resource = resource
 this.resource= resource
@@ -53,10 +50,7 @@ this.resource= resource
 
 override fun getResource()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -66,10 +60,7 @@ override fun getResource()
 
 override fun getPlayerP()
         //nullable = true from not(false or (false and true)) = true
-: Player
-
-        Updates for KMP build        
-        {
+: Player{
 
 
 
@@ -80,10 +71,7 @@ override fun getPlayerP()
 
 open fun setPlayerP(player: Player)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var player = player
 this.player= player
 }
@@ -92,19 +80,13 @@ this.player= player
                 @Throws(Exception::class)
             override fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun getDuration()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -114,18 +96,12 @@ open fun getDuration()
 
 override fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             this.player.start()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

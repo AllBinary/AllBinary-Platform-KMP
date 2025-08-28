@@ -38,10 +38,7 @@ open public class RegistrationConfiguration
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: RegistrationConfiguration
-
-        Updates for KMP build        
-        {
+: RegistrationConfiguration{
 
 
 
@@ -57,9 +54,6 @@ open fun getInstance()
     val NAME: String = "registrationid"
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -68,10 +62,7 @@ private constructor        ()
             
 open fun read()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
@@ -79,18 +70,12 @@ open fun read()
             
 open fun write()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -102,10 +87,7 @@ override fun toString()
 
 open fun setRegistrationCode(registrationCode: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var registrationCode = registrationCode
 this.registrationCode= registrationCode
 }
@@ -113,10 +95,7 @@ this.registrationCode= registrationCode
 
 open fun getRegistrationCode()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

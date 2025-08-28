@@ -38,10 +38,7 @@ open public class LicenseTypeFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LicenseTypeFactory
-
-        Updates for KMP build        
-        {
+: LicenseTypeFactory{
 
 
 
@@ -65,10 +62,7 @@ open fun getInstance()
 
 open fun getInstance(name: String)
         //nullable =  from not(true or (false and false)) = 
-: LicenseType
-
-        Updates for KMP build        
-        {
+: LicenseType{
 var name = name
 
     

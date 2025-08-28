@@ -42,19 +42,13 @@ open public class PickUpShippingModule
     private val description: String = "This shipping method is for pickup orders only."
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getCost(order: OrderInterface)
         //nullable = true from not(false or (false and false)) = true
-: Money
-
-        Updates for KMP build        
-        {
+: Money{
 var order = order
 
 
@@ -66,10 +60,7 @@ var order = order
 
 open fun getDescription()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -80,10 +71,7 @@ open fun getDescription()
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

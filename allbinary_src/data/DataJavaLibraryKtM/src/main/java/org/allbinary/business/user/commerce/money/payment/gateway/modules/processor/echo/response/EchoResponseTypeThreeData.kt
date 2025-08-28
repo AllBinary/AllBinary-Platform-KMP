@@ -38,9 +38,6 @@ open public class EchoResponseTypeThreeData
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

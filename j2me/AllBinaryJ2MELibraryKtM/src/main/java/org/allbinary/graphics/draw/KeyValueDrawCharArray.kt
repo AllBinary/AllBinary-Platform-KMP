@@ -47,9 +47,6 @@ open public class KeyValueDrawCharArray
     private var len: Int= 0
 public constructor        (label: String, x: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var label = label
 var x = x
@@ -62,10 +59,7 @@ this.valueX= this.labelWidth +x
 
 open fun paint(graphics: Graphics, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var y = y
 graphics.drawString(this.LABEL, this.labelX, y, 0)
@@ -75,10 +69,7 @@ graphics.drawChars(this.value, 0, this.len, this.valueX, y, 0)
 
 open fun update(value: CharArray, len: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 var len = len
 this.value= value

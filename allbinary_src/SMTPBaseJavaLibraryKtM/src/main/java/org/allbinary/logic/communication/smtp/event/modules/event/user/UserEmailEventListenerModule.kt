@@ -44,9 +44,6 @@ open public class UserEmailEventListenerModule
     private var userInterface: UserInterface
 public constructor        (userInterface: UserInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var userInterface = userInterface
 this.userInterface= userInterface
@@ -57,10 +54,7 @@ this.userInterface= userInterface
             
 open fun onEmailSendFailure(emailEvent: EmailEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var emailEvent = emailEvent
 
     var to: String = this.userInterface!!.getSecondaryEmail()!!
@@ -76,10 +70,7 @@ EmailQueueFactory.getInstance()!!.offer(email.getEmail() as EmailInterface)
             
 open fun onEmailSendRequest(emailEvent: EmailEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var emailEvent = emailEvent
 
     

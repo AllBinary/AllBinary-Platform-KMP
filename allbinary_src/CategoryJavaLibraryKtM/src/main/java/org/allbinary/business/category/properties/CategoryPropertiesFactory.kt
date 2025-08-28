@@ -41,9 +41,6 @@ open public class CategoryPropertiesFactory
     private var categoryPropertiesInterface: CategoryPropertiesInterface
 public constructor        (name: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var name = name
 this.categoryPropertiesInterface= CategoryProperties(name) as CategoryPropertiesInterface
@@ -51,9 +48,6 @@ this.categoryPropertiesInterface= CategoryProperties(name) as CategoryProperties
 
 public constructor        (node: Node)
             : super()
-        
-
-        Updates for KMP build        
         {
 var node = node
 this.categoryPropertiesInterface= CategoryProperties(node) as CategoryPropertiesInterface
@@ -61,9 +55,6 @@ this.categoryPropertiesInterface= CategoryProperties(node) as CategoryProperties
 
 public constructor        (categoryPropertiesHashMap: HashMap<Any, Any>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var categoryPropertiesHashMap = categoryPropertiesHashMap
 this.categoryPropertiesInterface= CategoryProperties(categoryPropertiesHashMap) as CategoryPropertiesInterface
@@ -72,10 +63,7 @@ this.categoryPropertiesInterface= CategoryProperties(categoryPropertiesHashMap) 
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CategoryPropertiesInterface
-
-        Updates for KMP build        
-        {
+: CategoryPropertiesInterface{
 
         try {
             
@@ -84,10 +72,7 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.categoryPropertiesInterface as CategoryPropertiesInterface
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

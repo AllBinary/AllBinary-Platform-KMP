@@ -41,10 +41,7 @@ open public class InputFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: InputFactory
-
-        Updates for KMP build        
-        {
+: InputFactory{
 
 
 
@@ -70,9 +67,6 @@ open fun getInstance()
     val NO_INPUT: Input = Input(0, commonStrings!!.UNKNOWN)
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     var size: Int = inputIntegerArray!!.size
@@ -84,9 +78,6 @@ private constructor        ()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 inputIntegerArray[index]= NO_INPUT
 }
@@ -96,10 +87,7 @@ inputIntegerArray[index]= NO_INPUT
 
 open fun add(id: Int, input: Input)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var id = id
 var input = input
 this.inputIntegerArray[id]= input
@@ -108,10 +96,7 @@ this.inputIntegerArray[id]= input
 
 open fun getInstance(id: Int)
         //nullable =  from not(true or (false and false)) = 
-: Input
-
-        Updates for KMP build        
-        {
+: Input{
 var id = id
 
     

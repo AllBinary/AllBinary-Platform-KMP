@@ -37,10 +37,7 @@ open public class RemoteHighScoresSubmissionProcessorFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: RemoteHighScoresSubmissionProcessorInterface
-
-        Updates for KMP build        
-        {
+: RemoteHighScoresSubmissionProcessorInterface{
 
 
 

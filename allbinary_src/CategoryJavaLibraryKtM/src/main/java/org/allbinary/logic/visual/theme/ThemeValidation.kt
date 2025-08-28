@@ -83,9 +83,6 @@ open public class ThemeValidation
     private var fileAbPath: AbPath
 public constructor        (transformInfoInterface: TransformInfoInterface, cssStyleValidation: CssStyleValidation, categoryThemePath: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var transformInfoInterface = transformInfoInterface
 var cssStyleValidation = cssStyleValidation
@@ -102,9 +99,6 @@ this.init()
 
 public constructor        (transformInfoInterface: TransformInfoInterface, hashMap: HashMap<Any, Any>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var transformInfoInterface = transformInfoInterface
 var hashMap = hashMap
@@ -140,9 +134,6 @@ this.init()
 
 public constructor        (storeThemeCategoryInterface: StoreThemeCategoryInterface, node: Node)
             : super()
-        
-
-        Updates for KMP build        
         {
 var storeThemeCategoryInterface = storeThemeCategoryInterface
 var node = node
@@ -171,10 +162,7 @@ this.init(storeThemeCategoryInterface)
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var categoryFactoryInterface: CategoryFactoryInterface = StoreThemeCategoryFactory(this.getTransformInfoInterface())
 
@@ -192,10 +180,7 @@ this.init(rootStoreThemeCategoryInterface)
             
 open fun init(storeThemeCategoryInterface: StoreThemeCategoryInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var storeThemeCategoryInterface = storeThemeCategoryInterface
 this.fileAbPath= AbPath(storeThemeCategoryInterface!!.getRootFilePath()!!.toString() +this.categoryAbPath!!.toString())
 this.webAppAbPath= storeThemeCategoryInterface!!.getWebAppPath()
@@ -206,10 +191,7 @@ this.webAppAbPath= storeThemeCategoryInterface!!.getWebAppPath()
             
 open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformInfoInterface
-
-        Updates for KMP build        
-        {
+: TransformInfoInterface{
 
 
 
@@ -220,10 +202,7 @@ open fun getTransformInfoInterface()
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -234,10 +213,7 @@ open fun getName()
 
 open fun getPreviewImageName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -248,10 +224,7 @@ open fun getPreviewImageName()
 
 open fun getPreviewImagePath()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -262,10 +235,7 @@ open fun getPreviewImagePath()
 
 open fun getPath()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -278,10 +248,7 @@ open fun getPath()
             
 open fun getCssStyleValidation()
         //nullable = true from not(false or (false and true)) = true
-: CssStyleValidation
-
-        Updates for KMP build        
-        {
+: CssStyleValidation{
 
     
                         if(this.styleValidationInterface == 
@@ -312,10 +279,7 @@ this.styleValidationInterface= CssStyleValidation(document)
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             
@@ -372,10 +336,7 @@ open fun isValid()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return isValid
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
@@ -397,10 +358,7 @@ open fun isValid()
 
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -413,10 +371,7 @@ stringBuffer!!.append("Theme Validation Error")
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
@@ -438,10 +393,7 @@ stringBuffer!!.append("Theme Validation Error")
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
 
 
@@ -452,10 +404,7 @@ open fun toValidationInfoDoc()
 
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
 
@@ -467,10 +416,7 @@ var document = document
 
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 
 
 
@@ -481,10 +427,7 @@ open fun getKey()
 
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
     var vector: Vector = Vector()
 
@@ -502,10 +445,7 @@ vector.add(this.getPreviewImagePath())
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var themeData: ThemeData = ThemeData.getInstance()!!
 
@@ -528,10 +468,7 @@ hashMap!!.put(themeData!!.PREVIEW_IMAGE_PATH, this.getPreviewImagePath())
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var node: Node = ModDomHelper.createNameValueNodes(document, ThemeData.getInstance()!!.NAME, this.toHashMap())!!

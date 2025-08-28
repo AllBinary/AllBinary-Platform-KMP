@@ -38,9 +38,6 @@ open public class HeadingData
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

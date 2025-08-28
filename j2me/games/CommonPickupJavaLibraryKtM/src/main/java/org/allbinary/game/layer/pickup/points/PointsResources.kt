@@ -37,10 +37,7 @@ open public class PointsResources
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PointsResources
-
-        Updates for KMP build        
-        {
+: PointsResources{
 
 
 
@@ -60,9 +57,6 @@ open fun getInstance()
     var RESOURCE_4: String = "points_4_drop_20_by_20.png"
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

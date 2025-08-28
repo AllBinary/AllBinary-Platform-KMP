@@ -51,10 +51,7 @@ open public class CompoundContextTransformInfoObjectConfig : GenericStoreTransfo
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        (abeClientInformation: Object, transformInfoInterface: Object)                        
 
-                            : super(abeClientInformation, transformInfoInterface)
-
-        Updates for KMP build        
-        {
+                            : super(abeClientInformation, transformInfoInterface){
     //var abeClientInformation = abeClientInformation
 var transformInfoInterface = transformInfoInterface
 
@@ -65,10 +62,7 @@ var transformInfoInterface = transformInfoInterface
 
 public constructor        (abeClientInformation: Object, transformInfoInterface: Object, document: Object)                        
 
-                            : super(abeClientInformation, transformInfoInterface, document)
-
-        Updates for KMP build        
-        {
+                            : super(abeClientInformation, transformInfoInterface, document){
     //var abeClientInformation = abeClientInformation
 var transformInfoInterface = transformInfoInterface
 var document = document
@@ -81,10 +75,7 @@ this.setDocument(this.generate(this.toXmlDoc()))
 
 public constructor        (abeClientInformation: Object, transformInfoInterface: Object, name: Object, type: Object)                        
 
-                            : super(abeClientInformation, transformInfoInterface, name, type)
-
-        Updates for KMP build        
-        {
+                            : super(abeClientInformation, transformInfoInterface, name, type){
     //var abeClientInformation = abeClientInformation
 var transformInfoInterface = transformInfoInterface
 var name = name
@@ -101,10 +92,7 @@ this.setDocument(this.generate(this.toXmlDoc()))
             
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var storeName: String = this.getTransformInfoInterface()!!.getStoreName()!!
 
@@ -154,9 +142,6 @@ stringBuffer!!.append(RootTransformInfoData.NAME)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var objectConfigTransformInfoDomNode: TransformInfoDomNode = viewVector!!.get(index) as TransformInfoDomNode
@@ -219,10 +204,7 @@ rootView= replace.all(rootView)
             
 open fun createInputStream()
         //nullable = true from not(false or (false and true)) = true
-: InputStream
-
-        Updates for KMP build        
-        {
+: InputStream{
 
     var completeTemplateViewBytes: ByteArray = this.get()!!.encodeToByteArray()!!
 

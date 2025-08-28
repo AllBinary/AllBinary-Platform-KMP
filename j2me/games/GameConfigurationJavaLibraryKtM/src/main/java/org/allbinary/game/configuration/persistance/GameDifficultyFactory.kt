@@ -37,10 +37,7 @@ open public class GameDifficultyFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameDifficultyFactory
-
-        Updates for KMP build        
-        {
+: GameDifficultyFactory{
 
 
 
@@ -60,10 +57,7 @@ open fun getInstance()
 
 open fun setLevel(level: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var level = level
 this.level= level
 }
@@ -71,10 +65,7 @@ this.level= level
 
 open fun getLevel()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

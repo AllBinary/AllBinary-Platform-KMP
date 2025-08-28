@@ -38,10 +38,7 @@ open public class PaintableFactory
         
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: Paintable
-
-        Updates for KMP build        
-        {
+: Paintable{
 
 
 

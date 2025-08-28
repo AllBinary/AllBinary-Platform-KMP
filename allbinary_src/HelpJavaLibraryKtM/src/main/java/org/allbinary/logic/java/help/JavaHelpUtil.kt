@@ -48,10 +48,7 @@ open public class JavaHelpUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: JavaHelpUtil
-
-        Updates for KMP build        
-        {
+: JavaHelpUtil{
 
 
 
@@ -62,10 +59,7 @@ open fun getInstance()
 
 open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var args = args
 
         try {
@@ -74,10 +68,7 @@ var args = args
 
 javaHelpUtil!!.show(javaHelpUtil!!.getHelpSet("G:/mnt/bc/mydev/working/automation/InputAutomationJavaApplication/AllBinaryInputAutomationHelp/AllBinaryInputAutomation.hs"))
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 }
 
 }
@@ -97,19 +88,13 @@ javaHelpUtil!!.show(javaHelpUtil!!.getHelpSet("G:/mnt/bc/mydev/working/automatio
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getHelpSet(filePath: String)
         //nullable = true from not(false or (false and false)) = true
-: HelpSet
-
-        Updates for KMP build        
-        {
+: HelpSet{
 var filePath = filePath
 
         try {
@@ -126,10 +111,7 @@ var filePath = filePath
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return getHelpSet(helpSetURL)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, getInstance(), "set", e)
 
 
@@ -143,10 +125,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, getInstance(), "set", e)
 
 open fun getHelpSet(url: URL)
         //nullable = true from not(false or (false and false)) = true
-: HelpSet
-
-        Updates for KMP build        
-        {
+: HelpSet{
 var url = url
 
         try {
@@ -157,10 +136,7 @@ var url = url
                         return HelpSet(
                             null, url)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, getInstance(), "set", e)
 
 
@@ -174,10 +150,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, getInstance(), "set", e)
 
 open fun show(helpSet: HelpSet)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var helpSet = helpSet
 
         try {
@@ -190,10 +163,7 @@ CSH.DisplayHelpFromSource(helpBroker).
                             actionPerformed(contextSensitiveHelpActionEvent)
 logUtil!!.put("CSH Action", getInstance(), "show")
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, getInstance(), "show", e)
 }
 

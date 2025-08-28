@@ -20,9 +20,6 @@ open public class CryptFileWriter
         
 public constructor        (decryptedExtension: String, encryptedExtension: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var decryptedExtension = decryptedExtension
 var encryptedExtension = encryptedExtension
@@ -33,10 +30,7 @@ var encryptedExtension = encryptedExtension
             
 open fun write(fileAbPath: AbPath, document: Document)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var fileAbPath = fileAbPath
 var document = document
 }

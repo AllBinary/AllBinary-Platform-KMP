@@ -41,10 +41,7 @@ open public class GeographicMapDirectionUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GeographicMapDirectionUtil
-
-        Updates for KMP build        
-        {
+: GeographicMapDirectionUtil{
 
 
 
@@ -56,9 +53,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -69,10 +63,7 @@ open fun getInstance()
             
 open fun getDirectionFromCellPositionToAdjacentCellPosition(fromGeographicMapCellPosition: GeographicMapCellPosition, toGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: Direction
-
-        Updates for KMP build        
-        {
+: Direction{
 var fromGeographicMapCellPosition = fromGeographicMapCellPosition
 var toGeographicMapCellPosition = toGeographicMapCellPosition
 
@@ -179,10 +170,7 @@ var toGeographicMapCellPosition = toGeographicMapCellPosition
             
 open fun getEightDirectionFromCellPositionToAdjacentCellPosition(fromGeographicMapCellPosition: GeographicMapCellPosition, toGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: Direction
-
-        Updates for KMP build        
-        {
+: Direction{
 var fromGeographicMapCellPosition = fromGeographicMapCellPosition
 var toGeographicMapCellPosition = toGeographicMapCellPosition
 
@@ -365,10 +353,7 @@ var toGeographicMapCellPosition = toGeographicMapCellPosition
             
 open fun getDirectionFromCellPositionToCellPosition(fromGeographicMapCellPosition: GeographicMapCellPosition, toGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: Direction
-
-        Updates for KMP build        
-        {
+: Direction{
 var fromGeographicMapCellPosition = fromGeographicMapCellPosition
 var toGeographicMapCellPosition = toGeographicMapCellPosition
 
@@ -460,10 +445,7 @@ stringMaker!!.delete(0, stringMaker!!.length())
             
 open fun getEightDirectionFromCellPositionToCellPosition(fromGeographicMapCellPosition: GeographicMapCellPosition, toGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: Direction
-
-        Updates for KMP build        
-        {
+: Direction{
 var fromGeographicMapCellPosition = fromGeographicMapCellPosition
 var toGeographicMapCellPosition = toGeographicMapCellPosition
 

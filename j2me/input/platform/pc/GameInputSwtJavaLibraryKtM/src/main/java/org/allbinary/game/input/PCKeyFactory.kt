@@ -39,10 +39,7 @@ open public class PCKeyFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PCKeyFactory
-
-        Updates for KMP build        
-        {
+: PCKeyFactory{
 
 
 
@@ -220,10 +217,7 @@ open fun getInstance()
 
 open fun isSubmission(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var input = input
 
     
@@ -248,10 +242,7 @@ var input = input
 
 open fun isDelete(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var input = input
 
     
@@ -276,10 +267,7 @@ var input = input
 
 open fun isBackSpace(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var input = input
 
     
@@ -304,10 +292,7 @@ var input = input
 
 open fun isUp(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var input = input
 
     
@@ -332,10 +317,7 @@ var input = input
 
 open fun isDown(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var input = input
 
     
@@ -360,10 +342,7 @@ var input = input
 
 open fun isLeft(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var input = input
 
     
@@ -388,10 +367,7 @@ var input = input
 
 open fun isRight(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var input = input
 
     
@@ -416,10 +392,7 @@ var input = input
 
 open fun isEnter(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var input = input
 
     

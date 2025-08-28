@@ -58,10 +58,7 @@ open public class ShippingAddressHelper : BasicTable {
     private var streetAddress: StreetAddress
 
     private val portion: Portion
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
-
-        Updates for KMP build        
-        {
+public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 this.request= pageContext!!.getRequest() as HttpServletRequest
@@ -73,10 +70,7 @@ this.getAddressForm()
 
 open fun getAddressForm()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.userName= request.getParameter(UserData.USERNAME)
 
     
@@ -95,10 +89,7 @@ this.streetAddress= StreetAddress(request)
 
 open fun drop()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -120,10 +111,7 @@ open fun drop()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to drop Admin table"
 
@@ -148,10 +136,7 @@ open fun drop()
 
 open fun create()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -173,10 +158,7 @@ open fun create()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to create user table"
 
@@ -201,10 +183,7 @@ open fun create()
 
 open fun restore()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -228,10 +207,7 @@ open fun restore()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to restore backup"
 
@@ -256,10 +232,7 @@ open fun restore()
 
 open fun backup()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -283,10 +256,7 @@ open fun backup()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to make backup"
 
@@ -311,10 +281,7 @@ open fun backup()
 
 open fun insert()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -336,10 +303,7 @@ ShippingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to add Shipping streetAddress"
 
@@ -364,10 +328,7 @@ ShippingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -389,10 +350,7 @@ ShippingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed update of a Users Shipping Address Table"
 
@@ -417,10 +375,7 @@ ShippingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession
 
 open fun setToBillingAddress()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -452,10 +407,7 @@ open fun setToBillingAddress()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringUtil.getInstance()!!.EMPTY_STRING
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed Setting Shipping address to Billing Address"
 
@@ -480,10 +432,7 @@ open fun setToBillingAddress()
 
 open fun delete()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -505,10 +454,7 @@ ShippingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to remove Shipping Address"
 
@@ -533,10 +479,7 @@ ShippingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession
 
 open fun set()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -558,10 +501,7 @@ ShippingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to set Shipping Address"
 

@@ -42,10 +42,7 @@ open public class MiniBasketView : HttpStoreComponentView
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(transformInfoInterface)
-
-        Updates for KMP build        
-        {
+                            : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
 
 
@@ -58,10 +55,7 @@ var transformInfoInterface = transformInfoInterface
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
         try {
@@ -101,10 +95,7 @@ basketNode!!.appendChild(subTotalNode)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return basketNode
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.XSLLOGGINGERROR))
@@ -125,10 +116,7 @@ basketNode!!.appendChild(subTotalNode)
 
 open fun addDomNodeInterfaces()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.addDomNodeInterface(this as DomNodeInterface)
 }
 
@@ -137,10 +125,7 @@ this.addDomNodeInterface(this as DomNodeInterface)
             
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             this.addDomNodeInterfaces()
@@ -150,10 +135,7 @@ open fun view()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.view()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))

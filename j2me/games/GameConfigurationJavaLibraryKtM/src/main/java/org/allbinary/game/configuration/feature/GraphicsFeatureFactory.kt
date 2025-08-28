@@ -38,10 +38,7 @@ open public class GraphicsFeatureFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GraphicsFeatureFactory
-
-        Updates for KMP build        
-        {
+: GraphicsFeatureFactory{
 
 
 
@@ -53,9 +50,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

@@ -37,10 +37,7 @@ open public class HtmlMetaAttributeDataFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: HtmlMetaAttributeDataFactory
-
-        Updates for KMP build        
-        {
+: HtmlMetaAttributeDataFactory{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

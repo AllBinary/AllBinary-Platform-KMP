@@ -53,10 +53,7 @@ open public class NullGameCanvasRunnable
             }            
         override fun getTitle()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -66,10 +63,7 @@ open public class NullGameCanvasRunnable
 
 override fun isInitialized()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -79,10 +73,7 @@ override fun isInitialized()
 
 override fun isPaused()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -92,26 +83,17 @@ override fun isPaused()
 
 override fun unPause()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun pause()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun isHighScoreSubmitted()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -123,10 +105,7 @@ override fun isHighScoreSubmitted()
                 @Throws(Exception::class)
             override fun setHighScoreSubmitted(highScoreSubmitted: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var highScoreSubmitted = highScoreSubmitted
 }
 
@@ -134,18 +113,12 @@ var highScoreSubmitted = highScoreSubmitted
                 @Throws(Exception::class)
             override fun setGameOver()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun isGameOver()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -155,10 +128,7 @@ override fun isGameOver()
 
 override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var cmdListener = cmdListener
 }
 
@@ -166,10 +136,7 @@ var cmdListener = cmdListener
                 @Throws(Exception::class)
             override fun getCurrentStateHashtable()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>
-
-        Updates for KMP build        
-        {
+: Hashtable<Any, Any>{
 
 
 
@@ -181,10 +148,7 @@ var cmdListener = cmdListener
                 @Throws(Exception::class)
             override fun getLoadStateHashtable()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>
-
-        Updates for KMP build        
-        {
+: Hashtable<Any, Any>{
 
 
 
@@ -196,19 +160,13 @@ var cmdListener = cmdListener
                 @Throws(Exception::class)
             override fun setLoadStateHashtable(hashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var hashtable = hashtable
 }
 
 override fun getType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -220,19 +178,13 @@ override fun getType()
                 @Throws(Exception::class)
             override fun setGameState(gameState: GameState)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gameState = gameState
 }
 
 override fun getGameState()
         //nullable = true from not(false or (false and true)) = true
-: GameState
-
-        Updates for KMP build        
-        {
+: GameState{
 
 
 
@@ -242,37 +194,25 @@ override fun getGameState()
 
 override fun itemStateChanged(item: Item)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var item = item
 }
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 }
 
 override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 }
 
 override fun isRunning()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -282,10 +222,7 @@ override fun isRunning()
 
 override fun setRunning(isRunning: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var isRunning = isRunning
 }
 
@@ -293,19 +230,13 @@ var isRunning = isRunning
                 @Throws(Exception::class)
             override fun setThread(thread: Thread)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var thread = thread
 }
 
 override fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 

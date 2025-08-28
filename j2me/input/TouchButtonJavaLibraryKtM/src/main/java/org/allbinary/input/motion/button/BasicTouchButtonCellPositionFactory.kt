@@ -82,9 +82,6 @@ open public class BasicTouchButtonCellPositionFactory
     val SECOND_FROM_BOTTOM_SECOND_FROM_LEFT: CellPosition
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 

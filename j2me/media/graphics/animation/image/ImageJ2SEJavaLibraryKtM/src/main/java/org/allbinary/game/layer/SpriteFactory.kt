@@ -40,10 +40,7 @@ open public class SpriteFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: SpriteFactory
-
-        Updates for KMP build        
-        {
+: SpriteFactory{
 
 
 
@@ -63,10 +60,7 @@ open fun getInstance()
 
 open fun create(image: Image, frameWidth: Int, frameHeight: Int)
         //nullable = true from not(false or (false and false)) = true
-: Sprite
-
-        Updates for KMP build        
-        {
+: Sprite{
     //var image = image
     //var frameWidth = frameWidth
     //var frameHeight = frameHeight

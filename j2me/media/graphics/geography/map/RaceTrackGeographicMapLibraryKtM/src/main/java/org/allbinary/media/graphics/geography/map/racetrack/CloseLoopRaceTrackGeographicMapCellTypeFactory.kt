@@ -38,10 +38,7 @@ open public class CloseLoopRaceTrackGeographicMapCellTypeFactory : RaceTrackGeog
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CloseLoopRaceTrackGeographicMapCellTypeFactory
-
-        Updates for KMP build        
-        {
+: CloseLoopRaceTrackGeographicMapCellTypeFactory{
 
 
 
@@ -51,10 +48,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
-
-        Updates for KMP build        
-        {
+            private constructor        (){
 this.EMPTY_CELL_TYPE= EmptyRaceRaceTrackGeographicMapCellTypeFactory.getInstance()!!.EMPTY_CELL_TYPE
 this.EASY_CELL_TYPE= this.EMPTY_CELL_TYPE
 this.FINISH_LINE_ROAD_CELL_TYPE= this.START_LINE_ROAD_CELL_TYPE

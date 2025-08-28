@@ -46,18 +46,12 @@ open public class HighScoresPaintable : Paintable
     private var basicColor: BasicColor = BasicColorFactory.getInstance()!!.WHITE
 
     private var highScores: HighScores = NullHighScoresSingletonFactory.getInstance()!!
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventObject = eventObject
 
     var colorChangeEvent: ColorChangeEvent = eventObject as ColorChangeEvent
@@ -69,10 +63,7 @@ this.basicColor= colorChangeEvent!!.getBasicColorP()
     private var anchor: Int = Anchor.TOP_LEFT
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 
     var charHeight: Int = MyFont.getInstance()!!.DEFAULT_CHAR_HEIGHT
@@ -116,9 +107,6 @@ graphics.drawString(columnTwoHeading, width -10 -columnTwoHeadingWidth, charHeig
 
 
         while(vectorIndex < size && charHeight *index < height -(charHeight *2))
-        
-
-        Updates for KMP build        
         {
 
     var highScore: HighScore = list.objectArray[vectorIndex]!! as HighScore
@@ -141,9 +129,6 @@ vectorIndex++
 vectorIndex= 0
 
         while(vectorIndex < size && charHeight *index < height -(charHeight *2))
-        
-
-        Updates for KMP build        
         {
 
     var highScore: HighScore = list.objectArray[vectorIndex]!! as HighScore
@@ -158,10 +143,7 @@ vectorIndex++
 
 override fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var basicColor = basicColor
 this.basicColor= basicColor
 }
@@ -169,10 +151,7 @@ this.basicColor= basicColor
 
 open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor
-
-        Updates for KMP build        
-        {
+: BasicColor{
 
 
 
@@ -183,10 +162,7 @@ open fun getBasicColorP()
 
 open fun setHighScores(highScores: HighScores)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var highScores = highScores
 this.highScores= highScores
 }

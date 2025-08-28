@@ -54,10 +54,7 @@ open public class PaymentGatewayEntity : AbSqlBean
     private val tableName: String = "paymentgateways"
 public constructor        ()                        
 
-                            : super(UserDbInitInfo())
-
-        Updates for KMP build        
-        {
+                            : super(UserDbInitInfo()){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -77,10 +74,7 @@ this.setTableName(tableName)
 
 open fun add(paymentGatewayInterface: PaymentGatewayInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var paymentGatewayInterface = paymentGatewayInterface
 
         try {
@@ -121,10 +115,7 @@ super.insert(vector)
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -141,10 +132,7 @@ super.insert(vector)
 
 open fun update(paymentGatewayInterface: PaymentGatewayInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var paymentGatewayInterface = paymentGatewayInterface
 
         try {
@@ -191,10 +179,7 @@ super.updateWhere(whereKeyValuePairs, updateHashMap)
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -211,10 +196,7 @@ super.updateWhere(whereKeyValuePairs, updateHashMap)
 
 open fun getPaymentGatewayInterface(storeName: String, paymentType: BasicPaymentType)
         //nullable = true from not(false or (false and false)) = true
-: PaymentGatewayInterface
-
-        Updates for KMP build        
-        {
+: PaymentGatewayInterface{
 var storeName = storeName
 var paymentType = paymentType
 
@@ -314,10 +296,7 @@ paymentGatewayHashMap!!.put(PaymentGatewayData.SPECIAL9.toString(), superCrypt!!
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -339,10 +318,7 @@ paymentGatewayHashMap!!.put(PaymentGatewayData.SPECIAL9.toString(), superCrypt!!
 
 open fun findPaymentTypeVectorByStore(storeName: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 var storeName = storeName
 
         try {
@@ -369,9 +345,6 @@ paymentGatewayNameVector= super.getColumnWhere(PaymentGatewayData.NAME.toString(
 
                         for (i in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var paymentTypeString: String = paymentGatewayNameVector!!.get(i) as String
@@ -409,10 +382,7 @@ paymentGatewayVector!!.add(paymentType)
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -434,10 +404,7 @@ paymentGatewayVector!!.add(paymentType)
 
 open fun remove(storeName: String, paymentType: BasicPaymentType)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var storeName = storeName
 var paymentType = paymentType
 
@@ -458,10 +425,7 @@ super.deleteWhere(whereHashMap)
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -478,10 +442,7 @@ super.deleteWhere(whereHashMap)
 
 open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -571,10 +532,7 @@ stringBuffer!!.append(this.sqlStrings!!.END)
 
 open fun createTable()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -585,10 +543,7 @@ open fun createTable()
 
 open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

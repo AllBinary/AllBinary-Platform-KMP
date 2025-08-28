@@ -17,10 +17,7 @@ open public class CustomCustomItem : CustomItem {
         
 protected constructor        (label: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(label, backgroundBasicColor, foregroundBasicColor)
-
-        Updates for KMP build        
-        {
+                            : super(label, backgroundBasicColor, foregroundBasicColor){
 var label = label
 var backgroundBasicColor = backgroundBasicColor
 var foregroundBasicColor = foregroundBasicColor

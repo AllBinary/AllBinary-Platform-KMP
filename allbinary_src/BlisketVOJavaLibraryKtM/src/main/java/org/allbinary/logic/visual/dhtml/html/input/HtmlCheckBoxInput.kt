@@ -32,9 +32,6 @@ open public class HtmlCheckBoxInput
         
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

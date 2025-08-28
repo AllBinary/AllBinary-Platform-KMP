@@ -29,10 +29,7 @@ open public class JTreeInterfaceFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: JTreeInterfaceFactory
-
-        Updates for KMP build        
-        {
+: JTreeInterfaceFactory{
 
 
 
@@ -52,10 +49,7 @@ open fun getInstance()
 
 open fun set(jTreeInterface: JTreeInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var jTreeInterface = jTreeInterface
 this.jTreeInterface= jTreeInterface
 }
@@ -63,10 +57,7 @@ this.jTreeInterface= jTreeInterface
 
 open fun getJTreeInterface()
         //nullable = true from not(false or (false and true)) = true
-: JTreeInterface
-
-        Updates for KMP build        
-        {
+: JTreeInterface{
 
 
 

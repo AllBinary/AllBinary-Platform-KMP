@@ -36,9 +36,6 @@ open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node
 
-        Updates for KMP build        
-        
-
 }
                 
             

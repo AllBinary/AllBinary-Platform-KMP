@@ -43,10 +43,7 @@ open public class DecalAnimationInterfaceFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DecalAnimationInterfaceFactory
-
-        Updates for KMP build        
-        {
+: DecalAnimationInterfaceFactory{
 
 
 
@@ -66,10 +63,7 @@ open fun getInstance()
             
 open fun getInstance(basicGameResources: BasicGameResources, basicColor: BasicColor)
         //nullable =  from not(true or (false and false)) = 
-: AnimationInterfaceFactoryInterface
-
-        Updates for KMP build        
-        {
+: AnimationInterfaceFactoryInterface{
 var basicGameResources = basicGameResources
 var basicColor = basicColor
 

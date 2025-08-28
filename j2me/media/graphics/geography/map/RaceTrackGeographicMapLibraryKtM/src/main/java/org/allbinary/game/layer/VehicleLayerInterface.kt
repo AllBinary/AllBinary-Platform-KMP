@@ -38,57 +38,33 @@ open fun getGameKeyEventList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList
 
-        Updates for KMP build        
-        
-
 open fun getSpeedBasicDecimal()
         //nullable = true from not(false or (false and true)) = true
 : BasicDecimal
-
-        Updates for KMP build        
-        
 
 open fun isReadyForExplosion()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-        Updates for KMP build        
-        
-
 open fun getRotationAnimationInterface()
         //nullable = true from not(false or (false and true)) = true
 : RotationAnimation
-
-        Updates for KMP build        
-        
 
 open fun setRotationAnimationInterface(animationInterface: RotationAnimation)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun isDestroyed()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
-
-        Updates for KMP build        
-        
 
 open fun isFinish()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-        Updates for KMP build        
-        
-
 open fun getFinalPosition()
         //nullable = true from not(false or (false and true)) = true
 : Int
-
-        Updates for KMP build        
-        
 
                 @Throws(Exception::class)
             
@@ -96,29 +72,17 @@ open fun handleFinish()
         //nullable = true from not(false or (false and true)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun getGeographicMapCellPositionTracking()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPositionTracking
-
-        Updates for KMP build        
-        
 
 open fun getGeographicMapCellHistoryArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<GeographicMapCellHistory?>
 
-        Updates for KMP build        
-        
-
 open fun setGeographicMapCellHistoryArray(geographicMapCellHistory: Array<GeographicMapCellHistory?>)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

@@ -23,10 +23,7 @@ open public class SqlStrings
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: SqlStrings
-
-        Updates for KMP build        
-        {
+: SqlStrings{
 
 
 

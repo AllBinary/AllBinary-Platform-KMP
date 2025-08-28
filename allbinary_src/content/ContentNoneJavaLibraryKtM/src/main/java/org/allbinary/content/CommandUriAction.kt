@@ -39,10 +39,7 @@ open public class CommandUriAction
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CommandUriAction
-
-        Updates for KMP build        
-        {
+: CommandUriAction{
 
 
 
@@ -62,10 +59,7 @@ open fun getInstance()
 
 open fun add(command: Command, url: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var command = command
 var url = url
 }
@@ -73,10 +67,7 @@ var url = url
 
 open fun process(command: Command)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var command = command
 }
 

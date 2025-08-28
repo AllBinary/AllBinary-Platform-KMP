@@ -47,19 +47,13 @@ open public class NullInputMappingEventListener
                 @Throws(Exception::class)
             override fun onInputMappingEvent(inputMappingEvent: InputMappingEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var inputMappingEvent = inputMappingEvent
 }
 
 override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var eventObject = eventObject
 }
 

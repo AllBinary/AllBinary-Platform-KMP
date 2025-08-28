@@ -32,9 +32,6 @@ open fun onSensorChange()
         //nullable = true from not(false or (false and true)) = true
 
 
-        Updates for KMP build        
-        
-
 }
                 
             

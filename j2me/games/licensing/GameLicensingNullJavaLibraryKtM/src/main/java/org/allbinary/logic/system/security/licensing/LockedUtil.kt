@@ -37,10 +37,7 @@ open public class LockedUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LockedUtil
-
-        Updates for KMP build        
-        {
+: LockedUtil{
 
 
 
@@ -58,10 +55,7 @@ open fun getInstance()
         
 open fun isLockedFeature()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -72,10 +66,7 @@ open fun isLockedFeature()
 
 open fun isLockedFeature(lockableFeatrue: LockableFeature)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var lockableFeatrue = lockableFeatrue
 
 

@@ -38,10 +38,7 @@ open public class FormTypeFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FormTypeFactory
-
-        Updates for KMP build        
-        {
+: FormTypeFactory{
 
 
 
@@ -69,10 +66,7 @@ open fun getInstance()
 
 open fun getFormType()
         //nullable = true from not(false or (false and true)) = true
-: FormType
-
-        Updates for KMP build        
-        {
+: FormType{
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 

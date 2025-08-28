@@ -37,20 +37,14 @@ open public class LockablePaintable : ItemPaintable {
     private val animation: Animation = FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(LockedResources.getInstance()!!.LOCKED_DEMO_GAME_FEATURE_RESOURCE)!!.getInstance(0)!!
 
     private val lockedIndex: Int
-public constructor        (lockedIndex: Int)
-
-        Updates for KMP build        
-        {
+public constructor        (lockedIndex: Int){
 var lockedIndex = lockedIndex
 this.lockedIndex= lockedIndex
 }
 
 override fun paint(graphics: Graphics, currentIndex: Int, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 var currentIndex = currentIndex
 var x = x
@@ -69,10 +63,7 @@ var y = y
 
 open fun getLockedIndex()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -83,10 +74,7 @@ open fun getLockedIndex()
 
 open fun getAnimation()
         //nullable = true from not(false or (false and true)) = true
-: Animation
-
-        Updates for KMP build        
-        {
+: Animation{
 
 
 

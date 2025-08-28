@@ -45,9 +45,6 @@ open public class BasicDirectionAIHelper
     private var angleInfo: AngleInfo
 public constructor        (name: String, angleInfo: AngleInfo)
             : super()
-        
-
-        Updates for KMP build        
         {
 var name = name
 var angleInfo = angleInfo
@@ -58,10 +55,7 @@ this.setAngleInfo(angleInfo)
 
 open fun turnAI(frame: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var frame = frame
 
     var keyDirection: Int =  -1
@@ -133,10 +127,7 @@ var frame = frame
 
 open fun getAIKeyPressed(frame: Integer)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var frame = frame
 
     
@@ -165,10 +156,7 @@ var frame = frame
 
 open fun getAIKeyPressedFromDirection(geographicMapDirectionData: Direction)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var geographicMapDirectionData = geographicMapDirectionData
 
     var keyDirection: Int =  -1
@@ -225,10 +213,7 @@ var geographicMapDirectionData = geographicMapDirectionData
 
 open fun getAngleInfoP()
         //nullable = true from not(false or (false and true)) = true
-: AngleInfo
-
-        Updates for KMP build        
-        {
+: AngleInfo{
 
 
 
@@ -239,10 +224,7 @@ open fun getAngleInfoP()
 
 open fun setAngleInfo(angleInfo: AngleInfo)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var angleInfo = angleInfo
 this.angleInfo= angleInfo
 }
@@ -250,10 +232,7 @@ this.angleInfo= angleInfo
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -264,10 +243,7 @@ open fun getName()
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var name = name
 this.name= name
 }

@@ -39,10 +39,7 @@ open public class VectorExplosionAnimationFactory
     val animationBehaviorFactory: AnimationBehaviorFactory
 public constructor        (basicColor: BasicColor)                        
 
-                            : this(basicColor, AnimationBehaviorFactory.getInstance())
-
-        Updates for KMP build        
-        {
+                            : this(basicColor, AnimationBehaviorFactory.getInstance()){
     //var basicColor = basicColor
 
 
@@ -52,9 +49,6 @@ public constructor        (basicColor: BasicColor)
 
 public constructor        (basicColor: BasicColor, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var basicColor = basicColor
     //var animationBehaviorFactory = animationBehaviorFactory
@@ -68,10 +62,7 @@ this.setBasicColorP(basicColor)
                 @Throws(Exception::class)
             override fun getInstance(animationInterface: Animation)
         //nullable =  from not(true or (false and false)) = 
-: Animation
-
-        Updates for KMP build        
-        {
+: Animation{
     //var animationInterface = animationInterface
 
     var vectorRotationAnimationInterface: VectorAnimationInterface = animationInterface as VectorAnimationInterface
@@ -95,10 +86,7 @@ this.setBasicColorP(basicColor)
 
 open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var basicColor = basicColor
 this.basicColor= basicColor
 }
@@ -106,10 +94,7 @@ this.basicColor= basicColor
 
 open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor
-
-        Updates for KMP build        
-        {
+: BasicColor{
 
 
 

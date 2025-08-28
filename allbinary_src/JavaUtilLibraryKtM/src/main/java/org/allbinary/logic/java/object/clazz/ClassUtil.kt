@@ -39,10 +39,7 @@ open public class ClassUtil
             
 open fun viewAll(anyType: Any, lineBreak: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var anyType = anyType
 var lineBreak = lineBreak
 
@@ -69,10 +66,7 @@ var lineBreak = lineBreak
 
 open fun viewAll(myClass: KClass<*>, lineBreak: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var myClass = myClass
 var lineBreak = lineBreak
 
@@ -104,9 +98,6 @@ stringBuffer!!.append(lineBreak)
 
                         for (index in 0 until classes.size)
 
-        
-
-        Updates for KMP build        
         {
 stringBuffer!!.append("Class: ")
 stringBuffer!!.append(classes[index]!!.getName())
@@ -136,9 +127,6 @@ stringBuffer!!.append(MethodUtil.viewAll(myClass::class.java, lineBreak))
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

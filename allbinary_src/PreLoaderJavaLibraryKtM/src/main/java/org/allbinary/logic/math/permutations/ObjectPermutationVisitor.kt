@@ -20,10 +20,7 @@ open public class ObjectPermutationVisitor : Visitor {
         
 
     val data: Array<Any?>
-public constructor        (data: Array<Any?>)
-
-        Updates for KMP build        
-        {
+public constructor        (data: Array<Any?>){
 var data = data
 this.data= data
 }
@@ -33,10 +30,7 @@ this.data= data
 
 open fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 var anyType = anyType
 stringBuilder!!.delete(0, stringBuilder!!.length())
 this.print(data, stringBuilder)
@@ -50,10 +44,7 @@ this.print(data, stringBuilder)
 
 open fun print(data: Array<Any?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var data = data
 
     var stringBuilder: StringBuilder = StringBuilder()
@@ -64,10 +55,7 @@ this.print(data, stringBuilder)
 
 open fun print(data: Array<Any?>, stringBuilder: StringBuilder)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var data = data
 var stringBuilder = stringBuilder
 
@@ -80,9 +68,6 @@ var stringBuilder = stringBuilder
 
                         for (i in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 stringBuilder!!.append(data[i]!!.hashCode())
 stringBuilder!!.append(CommonSeps.getInstance()!!.SPACE)

@@ -60,10 +60,7 @@ open public class OpenGLESGL10Image : OpenGLESImage {
                                 
 open override fun drawRegion(gl: GL10, viewHeight: Int, x_src: Float, y_src: Float, width: Float, height: Float, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
     //var viewHeight = viewHeight
     //var x_src = x_src
@@ -124,10 +121,7 @@ gl.glPopMatrix()
 
 open override fun draw(gl: GL10, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
     //var x = x
     //var y = y
@@ -182,10 +176,7 @@ gl.glPopMatrix()
     private var openGLESImageDraw: OpenGLESImageDraw = OpenGLESImageDraw.getInstance()!!
 public constructor        (image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory)                        
 
-                            : super(image, bitmapFactory, textureFactory)
-
-        Updates for KMP build        
-        {
+                            : super(image, bitmapFactory, textureFactory){
     //var image = image
     //var bitmapFactory = bitmapFactory
     //var textureFactory = textureFactory
@@ -199,10 +190,7 @@ this.initVertices()
 
 open fun initVertices()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 textureVertexFloatBuffer!!.put(0)
 textureVertexFloatBuffer!!.put(1)
 textureVertexFloatBuffer!!.put(1)
@@ -217,10 +205,7 @@ textureVertexFloatBuffer!!.rewind()
 
 open fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
 
     var gl10: GL10 = gl as GL10
@@ -242,10 +227,7 @@ OpenGLLogUtil.getInstance()!!.logError(gl10, this)
 
 open fun drawRegion(gl: GL10, viewHeight: Int, x_src: Float, y_src: Float, width: Float, height: Float, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
     //var viewHeight = viewHeight
     //var x_src = x_src
@@ -261,10 +243,7 @@ this.openGLESImageDraw!!.drawRegion(gl, viewHeight, x_src, y_src, width, height,
 
 open fun draw(gl: GL10, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
     //var x = x
     //var y = y

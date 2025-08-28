@@ -40,10 +40,7 @@ open public class RaceTrackPickupLayer : PickupLayer {
         }
             public constructor        ()                        
 
-                            : super(NAME, TileLayerPositionIntoViewPosition())
-
-        Updates for KMP build        
-        {
+                            : super(NAME, TileLayerPositionIntoViewPosition()){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -55,10 +52,7 @@ open public class RaceTrackPickupLayer : PickupLayer {
 
 open fun setTiledLayer(tiledLayer: AllBinaryTiledLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var tiledLayer = tiledLayer
 
     var viewPosition: TileLayerPositionIntoViewPosition = this.getViewPosition() as TileLayerPositionIntoViewPosition
@@ -70,10 +64,7 @@ viewPositionEventHandler!!.addListener(this as AllBinaryLayer)
 
 open fun setDestroyed(destroyed: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var destroyed = destroyed
 super.setDestroyed(destroyed)
 

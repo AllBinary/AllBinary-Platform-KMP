@@ -29,28 +29,19 @@
 open public class InitUpdatePaintable : Paintable
                 , InitUpdatePaintableInterface {
         
-protected constructor        ()
-
-        Updates for KMP build        
-        {
+protected constructor        (){
 }
 
 
                 @Throws(Exception::class)
             override fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun update()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 

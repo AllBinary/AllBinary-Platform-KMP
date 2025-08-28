@@ -56,18 +56,12 @@ open public class TitleView
     private var title: String
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 this.title= NAME
 }
 
 public constructor        (node: Node)
             : super()
-        
-
-        Updates for KMP build        
         {
 var node = node
 
@@ -99,9 +93,6 @@ this.title= DomNodeHelper.getTextNodeValue(valueNode)
 
 public constructor        (hashMap: HashMap<Any, Any>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var hashMap = hashMap
 
@@ -119,10 +110,7 @@ this.getFormData(hashMap)
 
 open fun getTitle()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -133,10 +121,7 @@ open fun getTitle()
 
 open fun getFormData(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var hashMap = hashMap
 this.title= hashMap!!.get(TitleData.getInstance()!!.TEXT) as String
 
@@ -153,10 +138,7 @@ this.title= hashMap!!.get(TitleData.getInstance()!!.TEXT) as String
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -173,10 +155,7 @@ hashMap!!.put(TitleData.getInstance()!!.TEXT, this.getTitle())
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var hashMap: HashMap<Any, Any> = this.toHashMap()!!

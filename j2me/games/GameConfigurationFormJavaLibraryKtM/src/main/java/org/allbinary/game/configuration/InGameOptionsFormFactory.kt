@@ -43,10 +43,7 @@ open public class InGameOptionsFormFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: InGameOptionsFormFactory
-
-        Updates for KMP build        
-        {
+: InGameOptionsFormFactory{
 
 
 
@@ -68,10 +65,7 @@ open fun getInstance()
 
 open fun init(commandListener: CommandListener, initInterface: Init, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var commandListener = commandListener
 var initInterface = initInterface
 var title = title
@@ -90,10 +84,7 @@ SINGLETON= InGameOptionsForm(commandListener, title, backgrounBasicColor, foregr
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -105,10 +96,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: CommandForm
-
-        Updates for KMP build        
-        {
+: CommandForm{
 
 
 

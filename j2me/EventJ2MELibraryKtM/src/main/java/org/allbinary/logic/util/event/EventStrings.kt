@@ -37,10 +37,7 @@ open public class EventStrings
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: EventStrings
-
-        Updates for KMP build        
-        {
+: EventStrings{
 
 
 

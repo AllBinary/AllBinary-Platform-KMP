@@ -44,10 +44,7 @@ open public class GameConfigurationUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameConfigurationUtil
-
-        Updates for KMP build        
-        {
+: GameConfigurationUtil{
 
 
 
@@ -71,10 +68,7 @@ open fun getInstance()
             
 open fun change(gameOptionsForm: GameOptionsForm, gauge: GameConfigurationGauge)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gameOptionsForm = gameOptionsForm
 var gauge = gauge
 this.update(gauge)
@@ -98,10 +92,7 @@ this.updateChallange(gameOptionsForm, gameConfiguration)
             
 open fun update(gauge: GameConfigurationGauge)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gauge = gauge
 
     var gameConfigurationSingleton: GameConfigurationSingleton = GameConfigurationSingleton.getInstance()!!
@@ -133,10 +124,7 @@ gameConfiguration!!.setValue(value)
             
 open fun setDefault(gauge: GameConfigurationGauge)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gauge = gauge
 
     var gameConfigurationSingleton: GameConfigurationSingleton = GameConfigurationSingleton.getInstance()!!
@@ -161,10 +149,7 @@ gameConfiguration!!.setValue(gameConfiguration!!.getDefaultValue())
             
 open fun updateChallange(gameOptionsForm: GameOptionsForm, gameConfiguration: GameConfiguration)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gameOptionsForm = gameOptionsForm
 var gameConfiguration = gameConfiguration
 
@@ -192,9 +177,6 @@ gameConfigurationCentral!!.SPEED_CHALLENGE_LEVEL.setValue(gameConfiguration!!.ge
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var item: Item = gameOptionsForm!!.get(index)!!
@@ -264,10 +246,7 @@ gameConfigurationCentral!!.SPEED_CHALLENGE_LEVEL.setValue(gameConfiguration!!.ge
 
 open fun updateCompetitionValue()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 logUtil!!.put(commonStrings!!.START, this, "updateCompetitionValue")
 
     var gameConfigurationCentral: GameConfigurationCentral = GameConfigurationCentral.getInstance()!!
@@ -279,10 +258,7 @@ COMPETITION_VALUE= (COMPETITION_VALUE shr 2)
 
 open fun getCompetitionValue()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

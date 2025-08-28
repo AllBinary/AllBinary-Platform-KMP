@@ -38,10 +38,7 @@ open public class RandomPatrolAI : BasePatrolAI {
     private var changedDirection: Boolean = true
 public constructor        (hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
-                            : super(hashtable, ownerLayerInterface, gameInput)
-
-        Updates for KMP build        
-        {
+                            : super(hashtable, ownerLayerInterface, gameInput){
 var hashtable = hashtable
 var ownerLayerInterface = ownerLayerInterface
 var gameInput = gameInput
@@ -55,10 +52,7 @@ this.updateRandomDistance()
 
 open fun updateRandomDistance()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.currentDistance= MyRandomFactory.getInstance()!!.getAbsoluteNextInt(this.maxDistance!!.toInt())
 }
 
@@ -66,10 +60,7 @@ this.currentDistance= MyRandomFactory.getInstance()!!.getAbsoluteNextInt(this.ma
                 @Throws(Exception::class)
             override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allBinaryLayerManager = allBinaryLayerManager
 super.update()
 super.processAI(this.keyDirection)
@@ -88,10 +79,7 @@ this.changedDirection= false
 
 override fun nextDirection()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 super.nextDirection()
 this.changedDirection= true
 }

@@ -48,9 +48,6 @@ open public class RelativeRelationship
     private var z: Int
 public constructor        (point: GPoint, typesAllowedList: BasicArrayList)
             : super()
-        
-
-        Updates for KMP build        
         {
 var point = point
 var typesAllowedList = typesAllowedList
@@ -63,10 +60,7 @@ this.typesAllowedList= typesAllowedList
 
 open fun getX()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -77,10 +71,7 @@ open fun getX()
 
 open fun getY()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -91,10 +82,7 @@ open fun getY()
 
 open fun getZ()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -105,10 +93,7 @@ open fun getZ()
 
 open fun getTypesAllowedList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 
@@ -119,10 +104,7 @@ open fun getTypesAllowedList()
 
 open fun setTypesAllowedList(typesAllowedList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var typesAllowedList = typesAllowedList
 this.typesAllowedList= typesAllowedList
 }

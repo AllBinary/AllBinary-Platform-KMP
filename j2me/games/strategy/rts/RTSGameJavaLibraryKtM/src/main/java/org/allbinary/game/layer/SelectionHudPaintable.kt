@@ -64,10 +64,7 @@ open public class SelectionHudPaintable : InitUpdatePaintable {
     private var name: String = StringUtil.getInstance()!!.EMPTY_STRING
 
     private var animationInterface: Animation
-protected constructor        ()
-
-        Updates for KMP build        
-        {
+protected constructor        (){
 this.update()
 this.setAnimationInterface(NullAnimationFactory.getFactoryInstance()!!.getInstance(0))
 this.primitiveLongUtil= PrimitiveLongUtil(10000)
@@ -76,10 +73,7 @@ this.primitiveLongUtil= PrimitiveLongUtil(10000)
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var touchButtonLocationHelper: TouchButtonLocationHelper = TouchButtonLocationHelper()
 
@@ -96,19 +90,13 @@ this.setHeight(CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE +myFont!!.DEFA
 
 open fun updateSelectionInfo()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun updateInfo()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
@@ -116,10 +104,7 @@ open fun updateInfo()
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 graphics.setColor(backgroundColor)
 graphics.drawRect(this.getX(), y, this.getWidth(), this.getHeight())
@@ -130,10 +115,7 @@ graphics.drawString(getName(), this.textX, y, 0)
 
 open fun getPrimitiveLongUtil()
         //nullable = true from not(false or (false and true)) = true
-: PrimitiveLongUtil
-
-        Updates for KMP build        
-        {
+: PrimitiveLongUtil{
 
 
 
@@ -144,10 +126,7 @@ open fun getPrimitiveLongUtil()
 
 open fun setAnimationInterface(animationInterface: Animation)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var animationInterface = animationInterface
 this.animationInterface= animationInterface
 }
@@ -155,10 +134,7 @@ this.animationInterface= animationInterface
 
 open fun getAnimationInterface()
         //nullable = true from not(false or (false and true)) = true
-: Animation
-
-        Updates for KMP build        
-        {
+: Animation{
 
 
 
@@ -169,10 +145,7 @@ open fun getAnimationInterface()
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var name = name
 this.name= name
 }
@@ -180,10 +153,7 @@ this.name= name
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -194,10 +164,7 @@ open fun getName()
 
 open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var basicColor = basicColor
 this.basicColor= basicColor
 this.setColor(basicColor!!.toInt())
@@ -206,10 +173,7 @@ this.setColor(basicColor!!.toInt())
 
 open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor
-
-        Updates for KMP build        
-        {
+: BasicColor{
 
 
 
@@ -220,10 +184,7 @@ open fun getBasicColorP()
 
 open fun setColor(color: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var color = color
 this.color= color
 }
@@ -231,10 +192,7 @@ this.color= color
 
 open fun getColor()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -245,10 +203,7 @@ open fun getColor()
 
 open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -259,10 +214,7 @@ open fun getWidth()
 
 open fun setHeight(height: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var height = height
 this.height= height
 }
@@ -270,10 +222,7 @@ this.height= height
 
 open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -284,10 +233,7 @@ open fun getHeight()
 
 open fun getX()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

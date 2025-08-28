@@ -43,10 +43,7 @@ open public class ImageTypes
             
 open fun valueOf(anyType: Array<Any?>)
         //nullable = true from not(false or (false and false)) = true
-: ImageTypes
-
-        Updates for KMP build        
-        {
+: ImageTypes{
 var anyType = anyType
 
     var imageTypes: ImageTypes = ImageTypes()
@@ -57,9 +54,6 @@ var anyType = anyType
 
                         for (index in 0 until anyType!!.size)
 
-        
-
-        Updates for KMP build        
         {
 
     var imageType: InputImageType = InputImageType.getInstance(anyType[index]!! as String)!!
@@ -80,17 +74,11 @@ imageTypes!!.getVector()!!.add(imageType)
     private var vector: Vector = Vector()
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 public constructor        (node: Node)
             : super()
-        
-
-        Updates for KMP build        
         {
 var node = node
 
@@ -102,9 +90,6 @@ var node = node
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
-        
-
-        Updates for KMP build        
         {
 
     var childNode: Node = nodeList!!.item(index)!!
@@ -136,10 +121,7 @@ this.getVector()!!.add(InputImageType.getInstance(nextImageTypeString))
 
 open fun getVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
 
 
@@ -152,10 +134,7 @@ open fun getVector()
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var newNode: Node = document.createElement(ImageActionScriptOutputData.TYPES)!!
@@ -169,9 +148,6 @@ var document = document
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var imageType: InputImageType = vector.get(index) as InputImageType
@@ -188,10 +164,7 @@ newNode!!.appendChild(ModDomHelper.createTextNode(document, ImageActionScriptOut
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -205,9 +178,6 @@ stringBuffer!!.append("ImageTypes: ")
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var imageType: InputImageType = vector.get(index) as InputImageType

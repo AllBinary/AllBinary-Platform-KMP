@@ -33,9 +33,6 @@ open fun onBoundsChangeEvent(boundsChangeEvent: BoundsChangeEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 }
                 
             

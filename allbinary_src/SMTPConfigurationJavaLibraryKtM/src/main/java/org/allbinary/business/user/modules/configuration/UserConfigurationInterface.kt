@@ -35,43 +35,25 @@ open fun getUserEmailConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
 : UserEmailConfigurationInterface
 
-        Updates for KMP build        
-        
-
 open fun setUserEmailConfigurationInterface(userEmailConfigurationInterface: UserEmailConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 open fun getTimeCreated()
         //nullable = true from not(false or (false and true)) = true
 : TimeCreated
 
-        Updates for KMP build        
-        
-
 open fun getTimeLastModified()
         //nullable = true from not(false or (false and true)) = true
 : TimeLastModified
-
-        Updates for KMP build        
-        
 
 open fun setTimeCreated(timeCreated: TimeCreated)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun setTimeLastModified(timeLastModified: TimeLastModified)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

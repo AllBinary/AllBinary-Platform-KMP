@@ -32,19 +32,13 @@ open public class TransformInfoFactory
         
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TransformInfoInterface
-
-        Updates for KMP build        
-        {
+: TransformInfoInterface{
 
 
 

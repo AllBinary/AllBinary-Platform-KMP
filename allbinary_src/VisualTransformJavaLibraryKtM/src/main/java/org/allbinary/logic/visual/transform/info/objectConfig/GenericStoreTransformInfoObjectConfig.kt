@@ -51,10 +51,7 @@ open public class GenericStoreTransformInfoObjectConfig : TransformInfoObjectCon
     val abeClientInformation: AbeClientInformationInterface
 public constructor        (abeClientInformation: Object, transformInfoInterface: Object)                        
 
-                            : super(transformInfoInterface)
-
-        Updates for KMP build        
-        {
+                            : super(transformInfoInterface){
     //var abeClientInformation = abeClientInformation
     //var transformInfoInterface = transformInfoInterface
 
@@ -66,10 +63,7 @@ this.abeClientInformation= abeClientInformation
 
 public constructor        (abeClientInformation: Object, transformInfoInterface: Object, document: Object)                        
 
-                            : super(transformInfoInterface, document)
-
-        Updates for KMP build        
-        {
+                            : super(transformInfoInterface, document){
     //var abeClientInformation = abeClientInformation
     //var transformInfoInterface = transformInfoInterface
     //var document = document
@@ -83,10 +77,7 @@ this.setDocument(this.generate(this.toXmlDoc()))
 
 public constructor        (abeClientInformation: Object, transformInfoInterface: Object, name: Object, type: Object)                        
 
-                            : super(transformInfoInterface, name, type)
-
-        Updates for KMP build        
-        {
+                            : super(transformInfoInterface, name, type){
     //var abeClientInformation = abeClientInformation
     //var transformInfoInterface = transformInfoInterface
     //var name = name
@@ -104,10 +95,7 @@ this.setDocument(this.generate(this.toXmlDoc()))
             
 open fun generate(objectConfigDocument: Document)
         //nullable = true from not(false or (false and false)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
     //var objectConfigDocument = objectConfigDocument
 
     
@@ -159,10 +147,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "generate()")
             
 open fun createReplaceHashMap(transformInfoHttpStoreInterface: TransformInfoHttp, objectConfigDocumentString: String)
         //nullable = true from not(false or (false and false)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
     //var transformInfoHttpStoreInterface = transformInfoHttpStoreInterface
     //var objectConfigDocumentString = objectConfigDocumentString
 
@@ -191,10 +176,7 @@ hashMap!!.put(transformInfoObjectConfigData!!.VARKEY +TransformInfoData.getInsta
             
 open fun createHashMap(transformInfoHttpStoreInterface: TransformInfoHttp, objectConfigDocumentString: String)
         //nullable = true from not(false or (false and false)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
     //var transformInfoHttpStoreInterface = transformInfoHttpStoreInterface
     //var objectConfigDocumentString = objectConfigDocumentString
 
@@ -255,10 +237,7 @@ hashMap!!.put(templateNameKey, selectedTemplate)
             
 open fun generate(objectConfigDocumentString: String, hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 var objectConfigDocumentString = objectConfigDocumentString
 var hashMap = hashMap
 

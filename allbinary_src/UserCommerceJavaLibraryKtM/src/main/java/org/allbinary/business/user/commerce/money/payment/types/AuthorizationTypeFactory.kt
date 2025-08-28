@@ -37,10 +37,7 @@ open public class AuthorizationTypeFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AuthorizationTypeFactory
-
-        Updates for KMP build        
-        {
+: AuthorizationTypeFactory{
 
 
 

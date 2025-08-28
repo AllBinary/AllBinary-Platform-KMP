@@ -32,10 +32,7 @@ open public class HtmlTextInput : HtmlLengthInput {
         
 public constructor        (before: String, name: String, value: String, after: String)                        
 
-                            : super(before, HtmlInputData.getInstance()!!.TEXT, name, value, after)
-
-        Updates for KMP build        
-        {
+                            : super(before, HtmlInputData.getInstance()!!.TEXT, name, value, after){
 var before = before
 var name = name
 var value = value

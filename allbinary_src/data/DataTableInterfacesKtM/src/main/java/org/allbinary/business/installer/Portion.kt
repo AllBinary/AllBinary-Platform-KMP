@@ -39,9 +39,6 @@ open public class Portion
     private val total: Integer
 public constructor        (hashMap: HashMap<Any, Any>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var hashMap = hashMap
 this.current= hashMap!!.get("current") as Integer
@@ -51,10 +48,7 @@ this.total= hashMap!!.get("total") as Integer
 
 open fun getCurrent()
         //nullable = true from not(false or (false and true)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 
 
 
@@ -65,10 +59,7 @@ open fun getCurrent()
 
 open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 
 
 

@@ -47,19 +47,13 @@ open public class StatesView
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
         try {
@@ -74,9 +68,6 @@ var document = document
 
 
         while(lineReader!!.hasNext())
-        
-
-        Updates for KMP build        
         {
 
     var option: String = lineReader!!.next()!!
@@ -90,10 +81,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, StreetAddressData.S
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))

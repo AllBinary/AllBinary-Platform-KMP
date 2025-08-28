@@ -30,10 +30,7 @@ open public class FontDebugBase
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FontDebugBase
-
-        Updates for KMP build        
-        {
+: FontDebugBase{
 
 
 
@@ -53,10 +50,7 @@ open fun getInstance()
 
 open fun debugMetrics(currentFont: Font, convertedTextSize: Float, displayMetrics: Any, stringBuffer: StringMaker)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var currentFont = currentFont
     //var convertedTextSize = convertedTextSize
     //var displayMetrics = displayMetrics
@@ -66,10 +60,7 @@ open fun debugMetrics(currentFont: Font, convertedTextSize: Float, displayMetric
 
 open fun debugDpi(densityDpi: Int, stringBuffer: StringMaker)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var densityDpi = densityDpi
     //var stringBuffer = stringBuffer
 }
@@ -77,10 +68,7 @@ open fun debugDpi(densityDpi: Int, stringBuffer: StringMaker)
 
 open fun debugDimension(currentFont: Font, convertedTextSize: Float, longestDimensionTotalPixels: Int, stringBuffer: StringMaker)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var currentFont = currentFont
     //var convertedTextSize = convertedTextSize
     //var longestDimensionTotalPixels = longestDimensionTotalPixels

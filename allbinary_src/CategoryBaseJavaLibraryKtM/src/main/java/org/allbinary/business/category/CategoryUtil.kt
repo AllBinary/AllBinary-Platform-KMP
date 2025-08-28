@@ -45,10 +45,7 @@ open public class CategoryUtil
 
 open fun getPathLevel(categoryPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var categoryPath = categoryPath
 
     var count: Int = StringUtils.countMatches(categoryPath!!.toString(), AbPathData.getInstance()!!.SEPARATOR)!!
@@ -64,10 +61,7 @@ var categoryPath = categoryPath
 
 open fun getNameFromNode(node: Node)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var node = node
 
     var attributes: NamedNodeMap = node.getAttributes()!!
@@ -123,9 +117,6 @@ var node = node
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

@@ -37,10 +37,7 @@ open public class PageData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PageData
-
-        Updates for KMP build        
-        {
+: PageData{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

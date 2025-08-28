@@ -37,10 +37,7 @@ open public class CssElementData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CssElementData
-
-        Updates for KMP build        
-        {
+: CssElementData{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

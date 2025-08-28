@@ -43,9 +43,6 @@ open public class UserEmailEventHandler
     private var userEmailEventNameData: UserEmailEventNameData
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 this.emailVector= Vector()
 }
@@ -56,10 +53,7 @@ this.emailVector= Vector()
 
 open fun receiveEmailInfo(userEmailEventNameData: UserEmailEventNameData, emailInfo: EmailInfo)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var userEmailEventNameData = userEmailEventNameData
 var emailInfo = emailInfo
 this.userEmailEventNameData= userEmailEventNameData
@@ -71,10 +65,7 @@ this.fireEmailEvent()
 
 open fun addListener(vector: Vector)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var vector = vector
 
     var size: Int = vector.size!!
@@ -85,9 +76,6 @@ var vector = vector
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var userEmailEventListenerInterface: UserEmailEventListenerInterface = vector.get(index) as UserEmailEventListenerInterface
@@ -101,10 +89,7 @@ this.addListener(userEmailEventListenerInterface)
 
 open fun addListener(emailEventListenerInterface: UserEmailEventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var emailEventListenerInterface = emailEventListenerInterface
 this.emailVector!!.add(emailEventListenerInterface)
 }
@@ -113,10 +98,7 @@ this.emailVector!!.add(emailEventListenerInterface)
 
 open fun removeListener(emailEventListenerInterface: UserEmailEventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var emailEventListenerInterface = emailEventListenerInterface
 this.emailVector!!.remove(emailEventListenerInterface)
 }
@@ -127,10 +109,7 @@ this.emailVector!!.remove(emailEventListenerInterface)
 
 open fun fireEmailEvent()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var emailEvent: EmailEvent = EmailEvent(this, this.userEmailEventNameData, this.emailInfo, 0)
 
@@ -143,9 +122,6 @@ open fun fireEmailEvent()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var emailEventListenerInterface: UserEmailEventListenerInterface = emailVector!!.get(index) as UserEmailEventListenerInterface

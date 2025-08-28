@@ -40,10 +40,7 @@ open public class StoreFrontViewFactory
             
 open fun getInstance(storeName: String)
         //nullable =  from not(true or (false and false)) = 
-: DomNodeInterface
-
-        Updates for KMP build        
-        {
+: DomNodeInterface{
 var storeName = storeName
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
@@ -59,10 +56,7 @@ var storeName = storeName
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StoreFrontView(storeFronts!!.getStoreFrontInterface(storeName)) as DomNodeInterface
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -90,9 +84,6 @@ var storeName = storeName
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

@@ -59,10 +59,7 @@ open public class CustomTextAnimationFactory
     var scaleProperties: ScaleProperties
 public constructor        (text: String, fontSize: Int, dx: Int, dy: Int)                        
 
-                            : this(text, fontSize, AnimationBehaviorFactory.getInstance())
-
-        Updates for KMP build        
-        {
+                            : this(text, fontSize, AnimationBehaviorFactory.getInstance()){
     //var text = text
     //var fontSize = fontSize
     //var dx = dx
@@ -77,10 +74,7 @@ this.dy= dy
 
 public constructor        (text: String, fontSize: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(text, fontSize, animationBehaviorFactory)
-
-        Updates for KMP build        
-        {
+                            : this(text, fontSize, animationBehaviorFactory){
     //var text = text
     //var fontSize = fontSize
     //var dx = dx
@@ -96,10 +90,7 @@ this.dy= dy
 
 public constructor        (text: String, fontSize: Int)                        
 
-                            : this(text, fontSize, AnimationBehaviorFactory.getInstance())
-
-        Updates for KMP build        
-        {
+                            : this(text, fontSize, AnimationBehaviorFactory.getInstance()){
     //var text = text
     //var fontSize = fontSize
 
@@ -110,9 +101,6 @@ public constructor        (text: String, fontSize: Int)
 
 public constructor        (text: String, fontSize: Int, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var text = text
     //var fontSize = fontSize
@@ -129,10 +117,7 @@ this.font= Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, this.initScaleHeight
                 @Throws(Exception::class)
             override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation
-
-        Updates for KMP build        
-        {
+: Animation{
     //var instanceId = instanceId
 
     var customTextAnimation: CustomTextAnimation
@@ -161,20 +146,14 @@ customTextAnimation!!.setBasicColorP(basicColor)
 
 override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var scaleProperties = scaleProperties
 }
 
 
 open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -185,10 +164,7 @@ open fun getWidth()
 
 open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

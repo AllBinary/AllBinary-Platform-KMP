@@ -65,10 +65,7 @@ open public class SavedCaptureImagesWorker : BasicEventHandler
     private var screenScavangerRobot: ScreenScavangerRobot
 
     private var savedCaptureGenericProfileDataWorkerType: SavedCaptureGenericProfileDataWorkerType
-public constructor        (savedCaptureGenericProfileDataWorkerType: SavedCaptureGenericProfileDataWorkerType)
-
-        Updates for KMP build        
-        {
+public constructor        (savedCaptureGenericProfileDataWorkerType: SavedCaptureGenericProfileDataWorkerType){
 var savedCaptureGenericProfileDataWorkerType = savedCaptureGenericProfileDataWorkerType
 this.savedCaptureGenericProfileDataWorkerType= savedCaptureGenericProfileDataWorkerType
 this.screenScavangerRobot= ScreenScavangerRobot()
@@ -80,10 +77,7 @@ index= ProcessingFrameIndexFactory.next()
             
 open fun setThread(thread: Thread)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var thread = thread
 }
 
@@ -91,10 +85,7 @@ var thread = thread
 
 open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -106,10 +97,7 @@ open fun isRunning()
 
 open fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var running = running
 this.running= running
 }
@@ -117,10 +105,7 @@ this.running= running
 
 open fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.RUN)
@@ -130,9 +115,6 @@ this.setRunning(true)
 
 
         while(this.isRunning())
-        
-
-        Updates for KMP build        
         {
 timeHelper!!.setStartTime()
 
@@ -179,10 +161,7 @@ this.setRunning(false)
 
 logUtil!!.put(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
 }
 

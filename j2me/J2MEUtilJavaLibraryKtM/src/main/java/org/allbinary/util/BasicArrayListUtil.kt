@@ -43,10 +43,7 @@ open public class BasicArrayListUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BasicArrayListUtil
-
-        Updates for KMP build        
-        {
+: BasicArrayListUtil{
 
 
 
@@ -57,10 +54,7 @@ open fun getInstance()
 
 open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var args = args
 
     var commonPhoneStrings: CommonPhoneStrings = CommonPhoneStrings.getInstance()!!
@@ -95,10 +89,7 @@ System.out.println(list)
 
 open fun getRandom(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 var list = list
 
     var i_random: Int = this.getRandomIndex(list)!!
@@ -113,10 +104,7 @@ var list = list
 
 open fun getRandomIndex(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var list = list
 
 
@@ -128,10 +116,7 @@ var list = list
 
 open fun reverse(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var list = list
 
     var lastMinusOneIndex: Int = list.size() -2
@@ -151,9 +136,6 @@ open fun reverse(list: BasicArrayList)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 secondSwapIndex= lastMinusOneIndex -index
 temp= list.remove(index)
@@ -166,10 +148,7 @@ list.add(secondSwapIndex +1, temp)
 
 open fun log(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var list = list
 
     var size: Int = list.size()!!
@@ -185,9 +164,6 @@ stringBuffer!!.append(size)
 
                         for (index in size -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     var usedList: BasicArrayList = list.objectArray[index]!! as BasicArrayList
@@ -206,10 +182,7 @@ stringBuffer!!.append(usedList!!.size())
 
 open fun getImmutableInstance()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 

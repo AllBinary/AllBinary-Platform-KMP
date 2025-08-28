@@ -39,10 +39,7 @@ open public class LayerManagerEventListener
             }            
         override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var eventObject = eventObject
 }
 
@@ -50,10 +47,7 @@ open public class LayerManagerEventListener
                 @Throws(Exception::class)
             override fun onCreateLayerManagerEvent(layerManagerEvent: LayerManagerEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layerManagerEvent = layerManagerEvent
 }
 
@@ -61,10 +55,7 @@ open public class LayerManagerEventListener
                 @Throws(Exception::class)
             override fun onDeleteLayerManagerEvent(layerManagerEvent: LayerManagerEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layerManagerEvent = layerManagerEvent
 }
 

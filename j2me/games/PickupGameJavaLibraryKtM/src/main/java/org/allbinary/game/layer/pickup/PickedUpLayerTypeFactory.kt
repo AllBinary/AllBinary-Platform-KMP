@@ -38,10 +38,7 @@ open public class PickedUpLayerTypeFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PickedUpLayerTypeFactory
-
-        Updates for KMP build        
-        {
+: PickedUpLayerTypeFactory{
 
 
 

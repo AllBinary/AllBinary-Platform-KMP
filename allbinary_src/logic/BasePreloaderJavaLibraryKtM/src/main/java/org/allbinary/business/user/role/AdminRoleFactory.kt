@@ -38,10 +38,7 @@ open public class AdminRoleFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AdminRoleFactory
-
-        Updates for KMP build        
-        {
+: AdminRoleFactory{
 
 
 
@@ -75,9 +72,6 @@ open fun getInstance()
     private val webManagementRoles: Vector<Any> = Vector<Any>()
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     var basicUserRoleFactory: BasicUserRoleFactory = BasicUserRoleFactory.getInstance()!!
@@ -122,10 +116,7 @@ webManagementRoles!!.add(basicUserRoleFactory!!.VIEWEDITOR)
 
 open fun getProductManagementRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>
-
-        Updates for KMP build        
-        {
+: Vector<Any>{
 
 
 
@@ -136,10 +127,7 @@ open fun getProductManagementRoles()
 
 open fun getAdminRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>
-
-        Updates for KMP build        
-        {
+: Vector<Any>{
 
 
 
@@ -150,10 +138,7 @@ open fun getAdminRoles()
 
 open fun getStoreAdminRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>
-
-        Updates for KMP build        
-        {
+: Vector<Any>{
 
 
 
@@ -164,10 +149,7 @@ open fun getStoreAdminRoles()
 
 open fun getStoreManagementRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>
-
-        Updates for KMP build        
-        {
+: Vector<Any>{
 
 
 
@@ -178,10 +160,7 @@ open fun getStoreManagementRoles()
 
 open fun getReviewManagementRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>
-
-        Updates for KMP build        
-        {
+: Vector<Any>{
 
 
 
@@ -192,10 +171,7 @@ open fun getReviewManagementRoles()
 
 open fun getCustomerManagementRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>
-
-        Updates for KMP build        
-        {
+: Vector<Any>{
 
 
 
@@ -206,10 +182,7 @@ open fun getCustomerManagementRoles()
 
 open fun getWorkflowManagementRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>
-
-        Updates for KMP build        
-        {
+: Vector<Any>{
 
 
 
@@ -220,10 +193,7 @@ open fun getWorkflowManagementRoles()
 
 open fun getWebManagementRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>
-
-        Updates for KMP build        
-        {
+: Vector<Any>{
 
 
 
@@ -234,10 +204,7 @@ open fun getWebManagementRoles()
 
 open fun getShippingManagementRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>
-
-        Updates for KMP build        
-        {
+: Vector<Any>{
 
 
 
@@ -248,10 +215,7 @@ open fun getShippingManagementRoles()
 
 open fun getAdjusterManagementRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>
-
-        Updates for KMP build        
-        {
+: Vector<Any>{
 
 
 
@@ -262,10 +226,7 @@ open fun getAdjusterManagementRoles()
 
 open fun getOrderManagementRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>
-
-        Updates for KMP build        
-        {
+: Vector<Any>{
 
 
 

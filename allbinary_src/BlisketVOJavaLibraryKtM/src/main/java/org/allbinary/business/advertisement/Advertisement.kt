@@ -64,9 +64,6 @@ open public class Advertisement
     private val displayInBrowserContraintsInterface: DisplayInBrowserContraintsInterface
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 this.displayInBrowserContraintsInterface= 
                                         null
@@ -76,10 +73,7 @@ this.displayInBrowserContraintsInterface=
 
 open fun getArtist()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -90,10 +84,7 @@ open fun getArtist()
 
 open fun setArtist(artist: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var artist = artist
 this.artist= artist
 }
@@ -101,10 +92,7 @@ this.artist= artist
 
 open fun getArtistLink()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -115,10 +103,7 @@ open fun getArtistLink()
 
 open fun setArtistLink(artistLink: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var artistLink = artistLink
 this.artistLink= artistLink
 }
@@ -126,10 +111,7 @@ this.artistLink= artistLink
 
 open fun getTitle()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -140,10 +122,7 @@ open fun getTitle()
 
 open fun setTitle(title: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var title = title
 this.title= title
 }
@@ -151,10 +130,7 @@ this.title= title
 
 open fun getDateAdded()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -165,10 +141,7 @@ open fun getDateAdded()
 
 open fun setDateAdded(dateAdded: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var dateAdded = dateAdded
 this.dateAdded= dateAdded
 }
@@ -176,10 +149,7 @@ this.dateAdded= dateAdded
 
 open fun getDirectory()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -190,10 +160,7 @@ open fun getDirectory()
 
 open fun setDirectory(directory: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var directory = directory
 this.directory= directory
 }
@@ -201,10 +168,7 @@ this.directory= directory
 
 open fun getFramedLink()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -215,10 +179,7 @@ open fun getFramedLink()
 
 open fun setFramedLink(framedLink: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var framedLink = framedLink
 this.framedLink= framedLink
 }
@@ -226,10 +187,7 @@ this.framedLink= framedLink
 
 open fun getListPrice()
         //nullable = true from not(false or (false and true)) = true
-: Money
-
-        Updates for KMP build        
-        {
+: Money{
 
 
 
@@ -240,10 +198,7 @@ open fun getListPrice()
 
 open fun setListPrice(listPrice: Money)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var listPrice = listPrice
 this.listPrice= listPrice
 }
@@ -251,10 +206,7 @@ this.listPrice= listPrice
 
 open fun getOurPrice()
         //nullable = true from not(false or (false and true)) = true
-: Money
-
-        Updates for KMP build        
-        {
+: Money{
 
 
 
@@ -265,10 +217,7 @@ open fun getOurPrice()
 
 open fun setOurPrice(ourPrice: Money)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var ourPrice = ourPrice
 this.ourPrice= ourPrice
 }
@@ -276,10 +225,7 @@ this.ourPrice= ourPrice
 
 open fun getRank()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -290,10 +236,7 @@ open fun getRank()
 
 open fun setRank(rank: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var rank = rank
 this.rank= rank
 }
@@ -301,10 +244,7 @@ this.rank= rank
 
 open fun getImage()
         //nullable = true from not(false or (false and true)) = true
-: AdvertisementImageInterface
-
-        Updates for KMP build        
-        {
+: AdvertisementImageInterface{
 
 
 
@@ -315,10 +255,7 @@ open fun getImage()
 
 open fun setImage(image: AdvertisementImageInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var image = image
 this.image= image
 }
@@ -326,10 +263,7 @@ this.image= image
 
 open fun getProduct()
         //nullable = true from not(false or (false and true)) = true
-: AdvertisementProductInterface
-
-        Updates for KMP build        
-        {
+: AdvertisementProductInterface{
 
 
 
@@ -340,10 +274,7 @@ open fun getProduct()
 
 open fun setProduct(product: AdvertisementProductInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var product = product
 this.product= product
 }
@@ -351,10 +282,7 @@ this.product= product
 
 open fun getThumbnail()
         //nullable = true from not(false or (false and true)) = true
-: AdvertisementThumbnailInterface
-
-        Updates for KMP build        
-        {
+: AdvertisementThumbnailInterface{
 
 
 
@@ -365,10 +293,7 @@ open fun getThumbnail()
 
 open fun setThumbnail(thumbnail: AdvertisementThumbnailInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var thumbnail = thumbnail
 this.thumbnail= thumbnail
 }
@@ -376,10 +301,7 @@ this.thumbnail= thumbnail
 
 open fun getDisplayInBrowserContraintsInterface()
         //nullable = true from not(false or (false and true)) = true
-: DisplayInBrowserContraintsInterface
-
-        Updates for KMP build        
-        {
+: DisplayInBrowserContraintsInterface{
 
 
 

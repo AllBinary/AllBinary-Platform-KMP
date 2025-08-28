@@ -55,9 +55,6 @@ open public class MultipartRequestParamForwardHelper
     private val paramVector: Vector
 public constructor        (parentHelperTag: HelperTag, page: String, command: String, paramVector: Vector, pageContext: PageContext)
             : super()
-        
-
-        Updates for KMP build        
         {
 var parentHelperTag = parentHelperTag
 var page = page
@@ -76,10 +73,7 @@ this.requestMapInterface= InventoryItemViewParentTagHelper.getInstance()!!.getRe
             
 open fun forward()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             
@@ -100,10 +94,7 @@ this.pageContext!!.forward(stringBuffer!!.toString())
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -123,10 +114,7 @@ this.pageContext!!.forward(stringBuffer!!.toString())
 
 open fun getParams()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var AMP: String = CommonSeps.getInstance()!!.AMP
 
@@ -151,9 +139,6 @@ open fun getParams()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var key: String = this.paramVector!!.get(index) as String
@@ -190,10 +175,7 @@ stringBuffer!!.append(value)
 
 open fun shouldForward()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     var hashMap: HashMap<Any, Any> = this.requestMapInterface!!.getRequestHashMap()!!
 

@@ -38,10 +38,7 @@ open public class BaseScalable
             }            
         override fun getRatio(ratio: Float)
         //nullable = true from not(false or (false and false)) = true
-: Float
-
-        Updates for KMP build        
-        {
+: Float{
     //var ratio = ratio
 
 
@@ -52,10 +49,7 @@ open public class BaseScalable
 
 override fun getLeft(xOffset: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var xOffset = xOffset
 
 
@@ -66,10 +60,7 @@ override fun getLeft(xOffset: Int)
 
 override fun getTop(yOffset: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var yOffset = yOffset
 
 
@@ -80,10 +71,7 @@ override fun getTop(yOffset: Int)
 
 override fun scale(ratio: Float)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var ratio = ratio
 }
 

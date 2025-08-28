@@ -71,9 +71,6 @@ open public class InitializerDatabase
     private var initDb: DynamicInitDb
 public constructor        (abeClientInformation: AbeClientInformationInterface, map: Map)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var abeClientInformation = abeClientInformation
     //var map = map
@@ -99,9 +96,6 @@ public constructor        (abeClientInformation: AbeClientInformationInterface, 
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var key: String = keyArray[index]!! as String
@@ -123,9 +117,6 @@ this.getFormData(abeClientInformation, hashMap)
 
 public constructor        (abeClientInformation: AbeClientInformationInterface, initHashMap: HashMap<Any, Any>)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var abeClientInformation = abeClientInformation
     //var initHashMap = initHashMap
@@ -135,10 +126,7 @@ this.getFormData(abeClientInformation, initHashMap)
 
 open fun getFormData(abeClientInformation: AbeClientInformationInterface, hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
     //var hashMap = hashMap
 
@@ -167,10 +155,7 @@ dbConnectionInfo!!.setServer(getAdminServer())
 dbConnectionInfo!!.setPort(getAdminPort())
 this.initDb= DynamicInitDb(abeClientInformation, dbConnectionInfo as DatabaseConnectionInfoInterface)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put("Unable to get form data", this, "getFormData()", e)
 }
 
@@ -179,10 +164,7 @@ logUtil!!.put("Unable to get form data", this, "getFormData()", e)
 
 open fun isJdbcDriverValid(jdbcDriverClassPathString: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var jdbcDriverClassPathString = jdbcDriverClassPathString
 
         try {
@@ -193,10 +175,7 @@ var jdbcDriverClassPathString = jdbcDriverClassPathString
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
@@ -221,10 +200,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     var isValid: Boolean = true
 
@@ -268,10 +244,7 @@ open fun isValid()
 
 open fun getJdbcDriverValidationInfo(jdbcDriver: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var jdbcDriver = jdbcDriver
 
     var stringBuffer: StringMaker = StringMaker()
@@ -289,10 +262,7 @@ stringBuffer!!.append(") you have provided is not valid.<br/>")
 
 open fun getInvalidInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var isValid: Boolean = true
 
@@ -352,10 +322,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.getAdminJdbcDriver()
 
 open fun createUsers()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             initDb!!.addUsers()
@@ -365,10 +332,7 @@ open fun createUsers()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put("Unable to Create Users", this, "createUsers()", e)
 
 
@@ -382,10 +346,7 @@ logUtil!!.put("Unable to Create Users", this, "createUsers()", e)
 
 open fun createDatabases()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             initDb!!.addDatabases()
@@ -395,10 +356,7 @@ open fun createDatabases()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put("Unable to Create Databases", this, "createDatabases()", e)
 
 
@@ -412,10 +370,7 @@ logUtil!!.put("Unable to Create Databases", this, "createDatabases()", e)
 
 open fun createTables()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             initDb!!.addTables()
@@ -425,10 +380,7 @@ open fun createTables()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put("Unable to Create Tables", this, "createTables()", e)
 
 
@@ -442,10 +394,7 @@ logUtil!!.put("Unable to Create Tables", this, "createTables()", e)
 
 open fun getAdminDbUserName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -456,10 +405,7 @@ open fun getAdminDbUserName()
 
 open fun setAdminDbUserName(adminDbUserName: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var adminDbUserName = adminDbUserName
 this.adminDbUserName= adminDbUserName
 }
@@ -467,10 +413,7 @@ this.adminDbUserName= adminDbUserName
 
 open fun getAdminDbPassword()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -481,10 +424,7 @@ open fun getAdminDbPassword()
 
 open fun setAdminDbPassword(adminDbPassword: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var adminDbPassword = adminDbPassword
 this.adminDbPassword= adminDbPassword
 }
@@ -492,10 +432,7 @@ this.adminDbPassword= adminDbPassword
 
 open fun getAdminJdbcDriver()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -506,10 +443,7 @@ open fun getAdminJdbcDriver()
 
 open fun setAdminJdbcDriver(adminJdbcDriver: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var adminJdbcDriver = adminJdbcDriver
 this.adminJdbcDriver= adminJdbcDriver
 }
@@ -517,10 +451,7 @@ this.adminJdbcDriver= adminJdbcDriver
 
 open fun getAdminSchema()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -531,10 +462,7 @@ open fun getAdminSchema()
 
 open fun setAdminSchema(adminSchema: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var adminSchema = adminSchema
 this.adminSchema= adminSchema
 }
@@ -542,10 +470,7 @@ this.adminSchema= adminSchema
 
 open fun getAdminServer()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -556,10 +481,7 @@ open fun getAdminServer()
 
 open fun setAdminServer(adminServer: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var adminServer = adminServer
 this.adminServer= adminServer
 }
@@ -567,10 +489,7 @@ this.adminServer= adminServer
 
 open fun getAdminPort()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -581,10 +500,7 @@ open fun getAdminPort()
 
 open fun setAdminPort(adminPort: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var adminPort = adminPort
 this.adminPort= adminPort
 }

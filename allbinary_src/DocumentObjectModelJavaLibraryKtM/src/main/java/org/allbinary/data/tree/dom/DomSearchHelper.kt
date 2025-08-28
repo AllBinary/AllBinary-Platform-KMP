@@ -38,10 +38,7 @@ open public class DomSearchHelper
             
 open fun getNodeNoThrow(nodeName: String, nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var nodeName = nodeName
 var nodeList = nodeList
 
@@ -53,9 +50,6 @@ var nodeList = nodeList
 
                         for (index in 0 until numberOfNodes)
 
-        
-
-        Updates for KMP build        
         {
 
     var node: Node = nodeList!!.item(index)!!
@@ -87,10 +81,7 @@ var nodeList = nodeList
             
 open fun getNode(nodeName: String, nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var nodeName = nodeName
 var nodeList = nodeList
 
@@ -126,10 +117,7 @@ var nodeList = nodeList
             
 open fun getChildNodeList(nodeName: String, nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
-: NodeList
-
-        Updates for KMP build        
-        {
+: NodeList{
 var nodeName = nodeName
 var nodeList = nodeList
 
@@ -147,10 +135,7 @@ var nodeList = nodeList
             
 open fun getAllNodes(nodeName: String, nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 var nodeName = nodeName
 var nodeList = nodeList
 
@@ -184,10 +169,7 @@ var nodeList = nodeList
 
 open fun getAllNodesNoThrow(nodeName: String, nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 var nodeName = nodeName
 var nodeList = nodeList
 
@@ -202,9 +184,6 @@ var nodeList = nodeList
 
                         for (index in 0 until numberOfNodes)
 
-        
-
-        Updates for KMP build        
         {
 
     var node: Node = nodeList!!.item(index)!!
@@ -231,9 +210,6 @@ var nodeList = nodeList
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

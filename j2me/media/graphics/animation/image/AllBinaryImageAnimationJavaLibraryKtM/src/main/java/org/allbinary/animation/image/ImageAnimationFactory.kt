@@ -33,10 +33,7 @@ open public class ImageAnimationFactory : BaseImageAnimationFactory {
         
 public constructor        (image: Image)                        
 
-                            : this(image, image.getWidth(), image.getHeight(), 0, 0, AnimationBehaviorFactory.getInstance())
-
-        Updates for KMP build        
-        {
+                            : this(image, image.getWidth(), image.getHeight(), 0, 0, AnimationBehaviorFactory.getInstance()){
     //var image = image
 
 
@@ -46,10 +43,7 @@ public constructor        (image: Image)
 
 public constructor        (image: Image, dx: Int, dy: Int)                        
 
-                            : this(image, image.getWidth(), image.getHeight(), dx, dy, AnimationBehaviorFactory.getInstance())
-
-        Updates for KMP build        
-        {
+                            : this(image, image.getWidth(), image.getHeight(), dx, dy, AnimationBehaviorFactory.getInstance()){
     //var image = image
     //var dx = dx
     //var dy = dy
@@ -61,10 +55,7 @@ public constructor        (image: Image, dx: Int, dy: Int)
 
 public constructor        (image: Image, width: Int, height: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(image, width, height, dx, dy, animationBehaviorFactory)
-
-        Updates for KMP build        
-        {
+                            : super(image, width, height, dx, dy, animationBehaviorFactory){
     //var image = image
     //var width = width
     //var height = height
@@ -81,10 +72,7 @@ public constructor        (image: Image, width: Int, height: Int, dx: Int, dy: I
                 @Throws(Exception::class)
             override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation
-
-        Updates for KMP build        
-        {
+: Animation{
     //var instanceId = instanceId
 
     var scaledImage: Image = animationFactoryImageScaleUtil!!.createImage(this.getImage(), this.animationFactoryInitializationVisitor!!.width, this.animationFactoryInitializationVisitor!!.height, this.scaleProperties!!.scaleWidth, this.scaleProperties!!.scaleHeight)!!

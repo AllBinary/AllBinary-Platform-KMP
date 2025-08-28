@@ -37,10 +37,7 @@ open public class RectangleCollisionUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: RectangleCollisionUtil
-
-        Updates for KMP build        
-        {
+: RectangleCollisionUtil{
 
 
 
@@ -52,19 +49,13 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun isCollision(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, rect2X1: Int, rect2Y1: Int, rect2X2: Int, rect2Y2: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var rectX1 = rectX1
     //var rectY1 = rectY1
     //var rectX2 = rectX2
@@ -100,10 +91,7 @@ open fun isCollision(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, rect2X1
 
 open fun isInside(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var rectX1 = rectX1
     //var rectY1 = rectY1
     //var rectX2 = rectX2

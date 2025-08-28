@@ -34,10 +34,7 @@ open public class SimultaneousCompoundIndexedAnimationInterfaceFactory : Compoun
         
 public constructor        (basicAnimationInterfaceFactoryInterfaceArray: Array<AnimationInterfaceFactoryInterface?>)                        
 
-                            : this(basicAnimationInterfaceFactoryInterfaceArray, AnimationBehaviorFactory.getInstance())
-
-        Updates for KMP build        
-        {
+                            : this(basicAnimationInterfaceFactoryInterfaceArray, AnimationBehaviorFactory.getInstance()){
     //var basicAnimationInterfaceFactoryInterfaceArray = basicAnimationInterfaceFactoryInterfaceArray
 
 
@@ -47,10 +44,7 @@ public constructor        (basicAnimationInterfaceFactoryInterfaceArray: Array<A
 
 public constructor        (basicAnimationInterfaceFactoryInterfaceArray: Array<AnimationInterfaceFactoryInterface?>, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(basicAnimationInterfaceFactoryInterfaceArray, animationBehaviorFactory)
-
-        Updates for KMP build        
-        {
+                            : super(basicAnimationInterfaceFactoryInterfaceArray, animationBehaviorFactory){
     //var basicAnimationInterfaceFactoryInterfaceArray = basicAnimationInterfaceFactoryInterfaceArray
     //var animationBehaviorFactory = animationBehaviorFactory
 
@@ -61,10 +55,7 @@ public constructor        (basicAnimationInterfaceFactoryInterfaceArray: Array<A
 
 override fun createArray(size: Int)
         //nullable = true from not(false or (false and false)) = true
-: Array<Animation?>
-
-        Updates for KMP build        
-        {
+: Array<Animation?>{
     //var size = size
 
 
@@ -75,10 +66,7 @@ override fun createArray(size: Int)
 
 override fun getInstance(animationArray: Array<Animation?>)
         //nullable =  from not(true or (false and false)) = 
-: Animation
-
-        Updates for KMP build        
-        {
+: Animation{
     //var animationArray = animationArray
 
 

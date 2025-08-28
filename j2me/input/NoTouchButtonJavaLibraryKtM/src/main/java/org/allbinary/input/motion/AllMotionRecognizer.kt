@@ -40,9 +40,6 @@ open public class AllMotionRecognizer
     private val id: Int
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 this.id= index++
 }
@@ -52,10 +49,7 @@ this.id= index++
             
 open fun processStartMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var x = x
 var y = y
 var deviceId = deviceId
@@ -67,10 +61,7 @@ var modifiers = modifiers
             
 open fun processEndMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var x = x
 var y = y
 var deviceId = deviceId
@@ -82,10 +73,7 @@ var modifiers = modifiers
             
 open fun processDraggedMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var x = x
 var y = y
 var deviceId = deviceId
@@ -97,10 +85,7 @@ var modifiers = modifiers
             
 open fun processMovedMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var x = x
 var y = y
 var deviceId = deviceId
@@ -110,10 +95,7 @@ var modifiers = modifiers
 
 open fun getId()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

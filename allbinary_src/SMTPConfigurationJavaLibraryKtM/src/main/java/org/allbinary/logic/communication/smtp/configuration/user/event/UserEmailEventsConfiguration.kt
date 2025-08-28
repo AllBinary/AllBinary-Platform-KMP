@@ -46,18 +46,12 @@ open public class UserEmailEventsConfiguration
     private var emailEventHashMap: HashMap<Any, Any>
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 this.init()
 }
 
 public constructor        (hashMap: HashMap<Any, Any>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var hashMap = hashMap
 this.init()
@@ -66,10 +60,7 @@ this.init()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.emailEventHashMap= HashMap<Any, Any>()
 
     
@@ -85,10 +76,7 @@ this.emailEventHashMap= HashMap<Any, Any>()
 
 open fun getEventConfigurationHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
 
 
@@ -99,10 +87,7 @@ open fun getEventConfigurationHashMap()
 
 open fun addUserEmailEventConfiguration(userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var userEmailEventConfigurationInterface = userEmailEventConfigurationInterface
 
     
@@ -121,10 +106,7 @@ this.emailEventHashMap!!.put(userEmailEventConfigurationInterface!!.getName(), u
             
 open fun getEventListener(abeClientInformation: AbeClientInformationInterface, userEmailEventNameData: UserEmailEventNameData, userInterface: UserInterface)
         //nullable = true from not(false or (false and false)) = true
-: UserEmailEventListenerInterface
-
-        Updates for KMP build        
-        {
+: UserEmailEventListenerInterface{
     //var abeClientInformation = abeClientInformation
     //var userEmailEventNameData = userEmailEventNameData
     //var userInterface = userInterface

@@ -45,10 +45,7 @@ open public class TestingInputSingleton : AllBinaryGameLayer
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TestingInputSingleton
-
-        Updates for KMP build        
-        {
+: TestingInputSingleton{
 
 
 
@@ -62,10 +59,7 @@ open fun getInstance()
     val inputProcessorArray: Array<GameInputProcessor?> = arrayOfNulls(InputFactory.getInstance()!!.MAX)
 private constructor        ()                        
 
-                            : super(RectangleFactory.SINGLETON)
-
-        Updates for KMP build        
-        {
+                            : super(RectangleFactory.SINGLETON){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -77,19 +71,13 @@ GameInputProcessorUtil.init(this.inputProcessorArray)
     private var paintable: PaintableInterface = NullPaintable.getInstance()!!
 override fun initInputProcessors()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun initInputProcessors(aTestInputInterface: TestInputInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var aTestInputInterface = aTestInputInterface
 
     var testInputInterface: TestInputInterface = aTestInputInterface
@@ -102,10 +90,7 @@ this.inputProcessorArray[Canvas.UP]= object: GameInputProcessor()
             
 open override fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allbinaryLayerManager = allbinaryLayerManager
 var gameKeyEvent = gameKeyEvent
 testInputInterface!!.up()
@@ -120,10 +105,7 @@ this.inputProcessorArray[Canvas.DOWN]= object: GameInputProcessor()
             
 open override fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allbinaryLayerManager = allbinaryLayerManager
 var gameKeyEvent = gameKeyEvent
 testInputInterface!!.down()
@@ -138,10 +120,7 @@ this.inputProcessorArray[Canvas.LEFT]= object: GameInputProcessor()
             
 open override fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allbinaryLayerManager = allbinaryLayerManager
 var gameKeyEvent = gameKeyEvent
 testInputInterface!!.left()
@@ -156,10 +135,7 @@ this.inputProcessorArray[Canvas.RIGHT]= object: GameInputProcessor()
             
 open override fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allbinaryLayerManager = allbinaryLayerManager
 var gameKeyEvent = gameKeyEvent
 testInputInterface!!.right()
@@ -174,10 +150,7 @@ this.inputProcessorArray[Canvas.KEY_NUM7]= object: GameInputProcessor()
             
 open override fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allbinaryLayerManager = allbinaryLayerManager
 var gameKeyEvent = gameKeyEvent
 testInputInterface!!.strafeLeft()
@@ -192,10 +165,7 @@ this.inputProcessorArray[Canvas.KEY_NUM9]= object: GameInputProcessor()
             
 open override fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allbinaryLayerManager = allbinaryLayerManager
 var gameKeyEvent = gameKeyEvent
 testInputInterface!!.strafeRight()
@@ -212,10 +182,7 @@ GameInputProcessorUtil.init(this.inputProcessorArray)
 
 open fun processInput(allbinaryLayerManager: AllBinaryLayerManager, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allbinaryLayerManager = allbinaryLayerManager
     //var list = list
 
@@ -233,9 +200,6 @@ open fun processInput(allbinaryLayerManager: AllBinaryLayerManager, list: BasicA
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 gameKeyEvent= (list.objectArray[index]!! as GameKeyEvent)
 key= gameKeyEvent!!.getKey()
@@ -249,10 +213,7 @@ inputProcessorArray[key]!!.process(allbinaryLayerManager, GameKeyEvent.NONE)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun processInput(allbinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allbinaryLayerManager = allbinaryLayerManager
 this.processInput(allbinaryLayerManager, this.getGameKeyEventList())
 this.getGameKeyEventList()!!.clear()
@@ -260,20 +221,14 @@ this.getGameKeyEventList()!!.clear()
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 this.paintable.paint(graphics)
 }
 
 override fun implmentsGameInputInterface()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 

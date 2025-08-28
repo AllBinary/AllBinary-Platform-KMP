@@ -41,10 +41,7 @@ open public class RTSGameLayerPositionFinder
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: RTSGameLayerPositionFinder
-
-        Updates for KMP build        
-        {
+: RTSGameLayerPositionFinder{
 
 
 
@@ -56,19 +53,13 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getLayerInterface(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: AllBinaryLayer
-
-        Updates for KMP build        
-        {
+: AllBinaryLayer{
 var geographicMapCellPosition = geographicMapCellPosition
 
 

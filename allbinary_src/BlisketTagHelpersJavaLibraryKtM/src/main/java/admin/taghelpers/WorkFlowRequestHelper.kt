@@ -44,10 +44,7 @@ open public class WorkFlowRequestHelper : ModifyTable {
     private val abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
 
     private var workFlowInterface: WorkFlowInterface
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
-
-        Updates for KMP build        
-        {
+public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 this.workFlowInterface= NewWorkFlowFactory.getInstance()!!.getInstance(this.abeClientInformation, hashMap, pageContext)
@@ -58,10 +55,7 @@ this.workFlowInterface= NewWorkFlowFactory.getInstance()!!.getInstance(this.abeC
             
 open fun delete()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -86,10 +80,7 @@ WorkFlowEntityFactory.getInstance()!!.create2()!!.delete(this.workFlowInterface!
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
         try {
             
@@ -109,10 +100,7 @@ WorkFlowEntityFactory.getInstance()!!.create2()!!.delete(this.workFlowInterface!
 
                             throw Exception(e)
 } catch(ex: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to get data from workflowinterface to set error string"
 
@@ -139,10 +127,7 @@ WorkFlowEntityFactory.getInstance()!!.create2()!!.delete(this.workFlowInterface!
 
 open fun insert()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -163,10 +148,7 @@ open fun insert()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to add User"
 
@@ -191,10 +173,7 @@ open fun insert()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -215,10 +194,7 @@ open fun update()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to update WorkFlow"
 

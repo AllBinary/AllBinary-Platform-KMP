@@ -42,9 +42,6 @@ open public class UserEmailEventConfiguration
     private var eventListenerClassPath: String
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 this.setName(StringUtil.getInstance()!!.EMPTY_STRING)
 this.setEventListenerClassPath(StringUtil.getInstance()!!.EMPTY_STRING)
@@ -61,9 +58,6 @@ this.setEventListenerClassPath(StringUtil.getInstance()!!.EMPTY_STRING)
 
 public constructor        (hashMap: HashMap<Any, Any>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var hashMap = hashMap
 this.setName(hashMap!!.get(UserEmailEventConfigurationData.NAME) as String)
@@ -82,10 +76,7 @@ this.setEventListenerClassPath(hashMap!!.get(UserEmailEventConfigurationData.LIS
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -96,10 +87,7 @@ open fun getName()
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var name = name
 this.name= name
 }
@@ -107,10 +95,7 @@ this.name= name
 
 open fun getEventListenerClassPath()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -121,10 +106,7 @@ open fun getEventListenerClassPath()
 
 open fun setEventListenerClassPath(eventListenerClassPath: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventListenerClassPath = eventListenerClassPath
 this.eventListenerClassPath= eventListenerClassPath
 }
@@ -132,10 +114,7 @@ this.eventListenerClassPath= eventListenerClassPath
 
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

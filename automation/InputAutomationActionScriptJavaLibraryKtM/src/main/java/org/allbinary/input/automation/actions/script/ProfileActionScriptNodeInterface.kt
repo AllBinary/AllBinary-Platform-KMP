@@ -34,15 +34,9 @@ open fun addCondition(profileActionConditionInterface: ProfileActionScriptNodeIn
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun removeCondition(profileActionConditionInterface: ProfileActionScriptNodeInterface)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

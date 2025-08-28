@@ -50,10 +50,7 @@ open public class AnyRandomDropCellPositionGenerator : BaseDropCellPositionGener
             
 open fun update(allBinaryGameLayerManager: AllBinaryGameLayerManager, geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allBinaryGameLayerManager = allBinaryGameLayerManager
 var geographicMapInterface = geographicMapInterface
 this.geographicMapInterface= geographicMapInterface
@@ -84,9 +81,6 @@ this.geographicMapInterface= geographicMapInterface
 
                         for (index in total  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 randomColumn= randomFactory!!.getAbsoluteNextInt(tiledLayer!!.getColumns())
 randomRow= randomFactory!!.getAbsoluteNextInt(tiledLayer!!.getRows())
@@ -109,10 +103,7 @@ geographicMapCellPosition= basicGeographicMapCellPositionFactory!!.getInstance(r
             
 open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allBinaryLayerManager = allBinaryLayerManager
 }
 

@@ -33,10 +33,7 @@ open public class CollidableWaypointBehavior : CollidableRTSBehavior {
         
 public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
 
-                            : super(ownerLayer, collidable)
-
-        Updates for KMP build        
-        {
+                            : super(ownerLayer, collidable){
 var ownerLayer = ownerLayer
 var collidable = collidable
 
@@ -48,10 +45,7 @@ var collidable = collidable
 
 open fun isCollision(collisionLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var collisionLayer = collisionLayer
 
 
@@ -65,20 +59,14 @@ var collisionLayer = collisionLayer
             
 open fun collide(collisionLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var collisionLayer = collisionLayer
 }
 
 
 open fun isCollision(collidableInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var collidableInterface = collidableInterface
 
 
@@ -92,10 +80,7 @@ var collidableInterface = collidableInterface
             
 open fun collide(collidableInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var collidableInterface = collidableInterface
 }
 

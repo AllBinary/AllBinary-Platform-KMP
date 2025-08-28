@@ -44,10 +44,7 @@ open public class JarUtil
             
 open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var args = args
 JarUtil(URL("file:///G:/mnt/bc/mydev/working/j2me/MiniSpaceWars/MiniSpaceWars/dist/MiniSpaceWars.jar")).
                             show()
@@ -59,9 +56,6 @@ JarUtil(URL("file:///G:/mnt/bc/mydev/working/j2me/MiniSpaceWars/MiniSpaceWars/di
     private var jarURL: URL
 public constructor        (jarURL: URL)
             : super()
-        
-
-        Updates for KMP build        
         {
 var jarURL = jarURL
 this.jarURL= jarURL
@@ -70,10 +64,7 @@ this.jarURL= jarURL
 
 open fun show()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var cache: ByteArray = ByteArray(1024)
 
@@ -87,9 +78,6 @@ open fun show()
 
 
         while(true)
-        
-
-        Updates for KMP build        
         {
 
     var entry: JarEntry = jis.getNextJarEntry()!!
@@ -114,9 +102,6 @@ open fun show()
 
 
         while((i= jis.read(cache, offset, cache.size -offset)) !=  -1)
-        
-
-        Updates for KMP build        
         {
 offset += i
 
@@ -155,10 +140,7 @@ System.out.println(entry.getName())
 }
 
 } catch(ex: IOException)
-            
-
-        Updates for KMP build        
-        {
+            {
 System.err.println(ex)
 ex.printStackTrace()
 }

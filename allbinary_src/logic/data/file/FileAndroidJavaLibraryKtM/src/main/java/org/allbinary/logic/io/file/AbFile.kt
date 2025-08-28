@@ -48,9 +48,6 @@ open public class AbFile
     private val file: File
  constructor        (filePath: String, unknown: Boolean)
             : super()
-        
-
-        Updates for KMP build        
         {
 var filePath = filePath
 var unknown = unknown
@@ -59,9 +56,6 @@ this.file= File(filePath)
 
 protected constructor        (file: File)
             : super()
-        
-
-        Updates for KMP build        
         {
 var file = file
 this.file= file
@@ -69,9 +63,6 @@ this.file= file
 
 public constructor        (file: AbFile, childPathName: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var file = file
 var childPathName = childPathName
@@ -80,9 +71,6 @@ this.file= File(file.getFile(), childPathName)
 
 public constructor        (filePath: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var filePath = filePath
 this.file= File(AbPath(filePath).
@@ -91,9 +79,6 @@ this.file= File(AbPath(filePath).
 
 public constructor        (filePath: String, fileName: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var filePath = filePath
 var fileName = fileName
@@ -103,9 +88,6 @@ this.file= File(AbPath(filePath).
 
 public constructor        (abPath: AbPath)
             : super()
-        
-
-        Updates for KMP build        
         {
 var abPath = abPath
 this.file= File(abPath!!.toFileSystemString())
@@ -114,10 +96,7 @@ this.file= File(abPath!!.toFileSystemString())
 
 open fun getFile()
         //nullable = true from not(false or (false and true)) = true
-: File
-
-        Updates for KMP build        
-        {
+: File{
 
 
 
@@ -128,10 +107,7 @@ open fun getFile()
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -141,10 +117,7 @@ open fun getName()
 
 override fun getParent()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -155,10 +128,7 @@ override fun getParent()
 
 open fun getParentFile()
         //nullable = true from not(false or (false and true)) = true
-: File
-
-        Updates for KMP build        
-        {
+: File{
 
 
 
@@ -168,10 +138,7 @@ open fun getParentFile()
 
 override fun getPath()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -181,10 +148,7 @@ override fun getPath()
 
 override fun isAbsolute()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -194,10 +158,7 @@ override fun isAbsolute()
 
 override fun getAbsolutePath()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -208,10 +169,7 @@ override fun getAbsolutePath()
 
 open fun getAbsoluteFile()
         //nullable = true from not(false or (false and true)) = true
-: File
-
-        Updates for KMP build        
-        {
+: File{
 
 
 
@@ -223,10 +181,7 @@ open fun getAbsoluteFile()
                 @Throws(IOException::class)
             override fun getCanonicalPath()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -239,10 +194,7 @@ open fun getAbsoluteFile()
             
 open fun getCanonicalFile()
         //nullable = true from not(false or (false and true)) = true
-: File
-
-        Updates for KMP build        
-        {
+: File{
 
 
 
@@ -252,10 +204,7 @@ open fun getCanonicalFile()
 
 override fun toURI()
         //nullable = true from not(false or (false and true)) = true
-: URI
-
-        Updates for KMP build        
-        {
+: URI{
 
 
 
@@ -265,10 +214,7 @@ override fun toURI()
 
 override fun canRead()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -278,10 +224,7 @@ override fun canRead()
 
 override fun canWrite()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -291,10 +234,7 @@ override fun canWrite()
 
 override fun exists()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -304,10 +244,7 @@ override fun exists()
 
 override fun isDirectory()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -317,10 +254,7 @@ override fun isDirectory()
 
 override fun isFile()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -330,10 +264,7 @@ override fun isFile()
 
 override fun isHidden()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -343,10 +274,7 @@ override fun isHidden()
 
 override fun lastModified()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -356,10 +284,7 @@ override fun lastModified()
 
 override fun length()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -371,10 +296,7 @@ override fun length()
                 @Throws(IOException::class)
             override fun createNewFile()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -386,10 +308,7 @@ override fun length()
                 @Throws(IOException::class)
             override fun delete()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -399,19 +318,13 @@ override fun length()
 
 override fun deleteOnExit()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.file.deleteOnExit()
 }
 
 override fun list()
         //nullable = true from not(false or (false and true)) = true
-: Array<String?>
-
-        Updates for KMP build        
-        {
+: Array<String?>{
 
 
 
@@ -421,10 +334,7 @@ override fun list()
 
 override fun list(filter: FilenameFilter)
         //nullable = true from not(false or (false and false)) = true
-: Array<String?>
-
-        Updates for KMP build        
-        {
+: Array<String?>{
 var filter = filter
 
 
@@ -436,10 +346,7 @@ var filter = filter
 
 open fun listFiles()
         //nullable = true from not(false or (false and true)) = true
-: Array<Any?>
-
-        Updates for KMP build        
-        {
+: Array<Any?>{
 
 
 
@@ -450,10 +357,7 @@ open fun listFiles()
 
 open fun listFiles(filter: FilenameFilter)
         //nullable = true from not(false or (false and false)) = true
-: Array<Any?>
-
-        Updates for KMP build        
-        {
+: Array<Any?>{
 var filter = filter
 
 
@@ -465,10 +369,7 @@ var filter = filter
 
 open fun listFiles(filter: FileFilter)
         //nullable = true from not(false or (false and false)) = true
-: Array<Any?>
-
-        Updates for KMP build        
-        {
+: Array<Any?>{
 var filter = filter
 
 
@@ -479,10 +380,7 @@ var filter = filter
 
 override fun mkdir()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -492,10 +390,7 @@ override fun mkdir()
 
 override fun mkdirs()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -506,10 +401,7 @@ override fun mkdirs()
 
 open fun renameTo(dest: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var dest = dest
 
 
@@ -520,10 +412,7 @@ var dest = dest
 
 override fun setLastModified(time: Long)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var time = time
 
 
@@ -534,10 +423,7 @@ var time = time
 
 override fun setReadOnly()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -548,10 +434,7 @@ override fun setReadOnly()
 
 open fun compareTo(pathname: File)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var pathname = pathname
 
 
@@ -562,10 +445,7 @@ var pathname = pathname
 
 override fun equals(obj: Any?)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var obj = obj
 
 
@@ -576,10 +456,7 @@ var obj = obj
 
 override fun hashCode()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -589,10 +466,7 @@ override fun hashCode()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

@@ -46,9 +46,6 @@ open public class HighScore
     private val scoreString: String
 public constructor        (id: Int, name: String, gameInfo: GameInfo, score: Long)
             : super()
-        
-
-        Updates for KMP build        
         {
 var id = id
 var name = name
@@ -64,10 +61,7 @@ this.scoreString= (this.score).toString()
 
 open fun getId()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -78,10 +72,7 @@ open fun getId()
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -92,10 +83,7 @@ open fun getName()
 
 open fun getScore()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -108,10 +96,7 @@ open fun getScore()
             
 open fun getAsBytes()
         //nullable = true from not(false or (false and true)) = true
-: ByteArray
-
-        Updates for KMP build        
-        {
+: ByteArray{
 
     var byteArrayOutputStream: ByteArrayOutputStream = ByteArrayOutputStream()
 
@@ -130,10 +115,7 @@ outputStream!!.writeLong(this.getScore())
 
 open fun getGameInfo()
         //nullable = true from not(false or (false and true)) = true
-: GameInfo
-
-        Updates for KMP build        
-        {
+: GameInfo{
 
 
 
@@ -144,10 +126,7 @@ open fun getGameInfo()
 
 open fun getScoreString()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -158,20 +137,14 @@ open fun getScoreString()
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var name = name
 this.name= name
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

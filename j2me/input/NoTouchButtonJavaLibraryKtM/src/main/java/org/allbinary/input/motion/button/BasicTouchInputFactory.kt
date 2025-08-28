@@ -43,10 +43,7 @@ open public class BasicTouchInputFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BasicTouchInputFactory
-
-        Updates for KMP build        
-        {
+: BasicTouchInputFactory{
 
 
 
@@ -93,10 +90,7 @@ open fun getInstance()
 
 open fun init(inputToGameKeyMapping: InputToGameKeyMapping)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var inputToGameKeyMapping = inputToGameKeyMapping
 
     
@@ -124,10 +118,7 @@ CancelTouchButtonInputFactory.getInstance()
 
 open fun updateAll(inputToGameKeyMapping: InputToGameKeyMapping)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var inputToGameKeyMapping = inputToGameKeyMapping
 this.updateAll(this.getList(), inputToGameKeyMapping)
 }
@@ -135,10 +126,7 @@ this.updateAll(this.getList(), inputToGameKeyMapping)
 
 open fun updateAll(list: BasicArrayList, inputToGameKeyMapping: InputToGameKeyMapping)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var list = list
 var inputToGameKeyMapping = inputToGameKeyMapping
 logUtil!!.put(StringMaker().
@@ -149,9 +137,6 @@ logUtil!!.put(StringMaker().
 
                         for (index in list.size() -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     var touchButtonInput: TouchButtonInput = list.get(index) as TouchButtonInput
@@ -164,10 +149,7 @@ touchButtonInput!!.update(inputToGameKeyMapping)
 
 open fun getList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 

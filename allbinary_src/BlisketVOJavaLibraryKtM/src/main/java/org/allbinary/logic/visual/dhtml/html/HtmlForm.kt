@@ -58,9 +58,6 @@ open public class HtmlForm
     var inputs: Vector
 public constructor        (action: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var action = action
 this.action= action
@@ -70,30 +67,21 @@ inputs= Vector()
 
 open fun setPost()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 method= POST
 }
 
 
 open fun setGet()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 method= GET
 }
 
 
 open fun addInput(htmlInput: HtmlInput)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var htmlInput = htmlInput
 inputs.add(htmlInput)
 }
@@ -101,20 +89,14 @@ inputs.add(htmlInput)
 
 open fun addTable(htmlTable: HtmlTable)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var htmlTable = htmlTable
 inputs.add(htmlTable)
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
@@ -142,9 +124,6 @@ result += END
 
                         for (i in 0 until inputSize)
 
-        
-
-        Updates for KMP build        
         {
 result += inputArray[i]!!.toString()
 result += " "

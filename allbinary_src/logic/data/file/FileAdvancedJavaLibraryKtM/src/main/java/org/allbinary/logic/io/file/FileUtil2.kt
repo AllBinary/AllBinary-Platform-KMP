@@ -42,10 +42,7 @@ open public class FileUtil2
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FileUtil2
-
-        Updates for KMP build        
-        {
+: FileUtil2{
 
 
 
@@ -63,19 +60,13 @@ open fun getInstance()
     private val streamUtil: StreamUtil = StreamUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun loadFileAsList(file: AbFile, max: Int, byteArray1: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
     //var file = file
     //var max = max
     //var byteArray1 = byteArray1
@@ -88,10 +79,7 @@ open fun loadFileAsList(file: AbFile, max: Int, byteArray1: ByteArray)
         try {
             inputStream= AbFileInputStream(file)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
 }
 

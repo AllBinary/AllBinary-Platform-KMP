@@ -37,10 +37,7 @@ open public class LogConfigTypeData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LogConfigTypeData
-
-        Updates for KMP build        
-        {
+: LogConfigTypeData{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

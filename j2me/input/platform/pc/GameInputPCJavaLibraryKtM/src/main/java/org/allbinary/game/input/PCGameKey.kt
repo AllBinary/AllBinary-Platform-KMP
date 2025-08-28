@@ -34,10 +34,7 @@ open public class PCGameKey : Input {
             
 open fun getString(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var keyCode = keyCode
 
     var input: Input = InputFactory.getInstance()!!.getInstance(keyCode)!!
@@ -72,10 +69,7 @@ var keyCode = keyCode
         }
              constructor        (keyCode: Int, name: String)                        
 
-                            : super(keyCode, name)
-
-        Updates for KMP build        
-        {
+                            : super(keyCode, name){
 var keyCode = keyCode
 var name = name
 
@@ -98,10 +92,7 @@ var name = name
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

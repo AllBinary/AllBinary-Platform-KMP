@@ -43,19 +43,13 @@ open public class BasketReview
     var items: Vector = Vector()
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -66,10 +60,7 @@ open fun isValid()
 
 open fun addItem(item: Item)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var item = item
 items.add(item)
 }
@@ -77,10 +68,7 @@ items.add(item)
 
 open fun getItems()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
 
 
@@ -91,10 +79,7 @@ open fun getItems()
 
 open fun removeItem(id: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var id = id
 
     var itemArray: Array<Any?> = items.toArray()!!
@@ -109,9 +94,6 @@ var id = id
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var item: Item = itemArray[index]!! as Item
@@ -132,10 +114,7 @@ var id = id
 
 open fun adjustItem(id: String, num: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var id = id
 var num = num
 
@@ -151,9 +130,6 @@ var num = num
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var item: Item = itemArray[index]!! as Item
@@ -174,10 +150,7 @@ var num = num
 
 open fun getTotalWeight()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var weightFloat: Float = 0
 
@@ -194,9 +167,6 @@ open fun getTotalWeight()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var item: Item = itemArray[index]!! as Item
@@ -216,10 +186,7 @@ weightFloat += Float(item.getWeight()).
 
 open fun getNumberOfItems()
         //nullable = true from not(false or (false and true)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 
 
 
@@ -230,10 +197,7 @@ open fun getNumberOfItems()
 
 open fun getIds()
         //nullable = true from not(false or (false and true)) = true
-: Set
-
-        Updates for KMP build        
-        {
+: Set{
 
     var idSet: HashSet = HashSet()
 
@@ -250,9 +214,6 @@ open fun getIds()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var item: Item = itemArray[index]!! as Item
@@ -270,10 +231,7 @@ idSet!!.add(item.getId())
 
 open fun getNumberOf(id: String)
         //nullable = true from not(false or (false and false)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 var id = id
 
     var itemArray: Array<Any?> = items.toArray()!!
@@ -288,9 +246,6 @@ var id = id
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var item: Item = itemArray[index]!! as Item
@@ -322,10 +277,7 @@ var id = id
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var node: Node = document.createElement(BasketData.BASKET)!!
@@ -343,9 +295,6 @@ var document = document
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var item: Item = itemArray[index]!! as Item

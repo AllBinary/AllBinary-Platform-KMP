@@ -44,10 +44,7 @@ open public class StoreTagWorkFlowHelper : TagHelper {
     private val abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
 
     private var storeWorkFlowInterface: StoreWorkFlowInterface
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
-
-        Updates for KMP build        
-        {
+public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 
@@ -67,10 +64,7 @@ this.storeWorkFlowInterface= StoreTagWorkFlowFactory.getInstance()!!.getInstance
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 
         try {
             
@@ -88,10 +82,7 @@ open fun process()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.storeWorkFlowInterface!!.process()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to process workflow: "
 

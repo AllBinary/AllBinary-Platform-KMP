@@ -49,10 +49,7 @@ open public class InGameOptionsForm : CommandForm {
         }
              constructor        (commandListener: CommandListener, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(commandListener, title, backgrounBasicColor, foregroundBasicColor)
-
-        Updates for KMP build        
-        {
+                            : super(commandListener, title, backgrounBasicColor, foregroundBasicColor){
 var commandListener = commandListener
 var title = title
 var backgrounBasicColor = backgrounBasicColor
@@ -72,10 +69,7 @@ this.initCommands(commandListener)
 
 override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var cmdListener = cmdListener
 this.removeAllCommands()
 this.addCommand(GameCommandsFactory.getInstance()!!.CLOSE_AND_SHOW_GAME_CANVAS)

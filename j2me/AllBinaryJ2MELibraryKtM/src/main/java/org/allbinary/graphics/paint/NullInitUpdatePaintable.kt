@@ -35,10 +35,7 @@ open public class NullInitUpdatePaintable : InitUpdatePaintable {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: InitUpdatePaintable
-
-        Updates for KMP build        
-        {
+: InitUpdatePaintable{
 
 
 
@@ -48,10 +45,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
-
-        Updates for KMP build        
-        {
+            private constructor        (){
 }
 
 

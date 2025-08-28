@@ -56,9 +56,6 @@ open public class MineVectorData
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

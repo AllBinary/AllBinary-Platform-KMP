@@ -31,10 +31,7 @@ import tags.StoreValidationTransformTag
 
 open public class ViewCustomizersTag : StoreValidationTransformTag {
         
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 
@@ -42,10 +39,7 @@ public constructor        ()
             
 open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
         try {
             this.setName("Add Validation Customizers View")
@@ -56,10 +50,7 @@ this.setObjectFile("views.admin.customizers.CustomizersValidationView")
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.doStartTag()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 
 

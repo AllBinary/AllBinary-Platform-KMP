@@ -32,10 +32,7 @@ open public class BoundsChangeEvent : AllBinaryEventObject {
         
 public constructor        (rectangle: Rectangle)                        
 
-                            : super(rectangle)
-
-        Updates for KMP build        
-        {
+                            : super(rectangle){
 var rectangle = rectangle
 
 
@@ -46,10 +43,7 @@ var rectangle = rectangle
 
 open fun getRectangle()
         //nullable = true from not(false or (false and true)) = true
-: Rectangle
-
-        Updates for KMP build        
-        {
+: Rectangle{
 
 
 

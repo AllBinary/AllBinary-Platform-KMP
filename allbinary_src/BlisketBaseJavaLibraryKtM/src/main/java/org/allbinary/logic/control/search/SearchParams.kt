@@ -53,9 +53,6 @@ open public class SearchParams
     private var endPage: String
 public constructor        (request: HttpServletRequest)
             : super()
-        
-
-        Updates for KMP build        
         {
 var request = request
 this.columnsAndSearchValues= HashMap<Any, Any>()
@@ -80,9 +77,6 @@ this.setSortBy(request.getParameter(SearchData.SORTBY))
         while(columnName != 
                                     null
                                 )
-        
-
-        Updates for KMP build        
         {
 this.add(columnName, columnValue)
 index++
@@ -95,10 +89,7 @@ columnValue= request.getParameter(SearchData.COLUMNVALUE +"[" +index +"]")
 
 open fun add(column: String, value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var column = column
 var value = value
 this.columnsAndSearchValues!!.put(column, value)
@@ -107,10 +98,7 @@ this.columnsAndSearchValues!!.put(column, value)
 
 open fun setOrder(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.order= value
 }
@@ -118,10 +106,7 @@ this.order= value
 
 open fun setSortBy(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.sortBy= value
 }
@@ -129,10 +114,7 @@ this.sortBy= value
 
 open fun setLength(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.listLength= value
 }
@@ -140,10 +122,7 @@ this.listLength= value
 
 open fun setStartPage(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.startPage= value
 }
@@ -151,10 +130,7 @@ this.startPage= value
 
 open fun setEndPage(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.endPage= value
 }
@@ -162,10 +138,7 @@ this.endPage= value
 
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
 
 
@@ -176,10 +149,7 @@ open fun get()
 
 open fun getOrder()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -190,10 +160,7 @@ open fun getOrder()
 
 open fun getSortBy()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -204,10 +171,7 @@ open fun getSortBy()
 
 open fun getLength()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -218,10 +182,7 @@ open fun getLength()
 
 open fun getLengthInt()
         //nullable = true from not(false or (false and true)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 
     
                         if(this.listLength != 
@@ -246,10 +207,7 @@ open fun getLengthInt()
 
 open fun getStartPage()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -260,10 +218,7 @@ open fun getStartPage()
 
 open fun getEndPage()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -274,10 +229,7 @@ open fun getEndPage()
 
 open fun getStartPageInt()
         //nullable = true from not(false or (false and true)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 
     
                         if(this.startPage != 
@@ -302,10 +254,7 @@ open fun getStartPageInt()
 
 open fun getEndPageInt()
         //nullable = true from not(false or (false and true)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 
     
                         if(this.endPage != 
@@ -332,10 +281,7 @@ open fun getEndPageInt()
             
 open fun getParamsNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var paramsNode: Node = ModDomHelper.createNameValueNodes(document, SearchData.PARAMS, SearchData.PARAMS)!!
@@ -356,10 +302,7 @@ paramsNode!!.appendChild(this.getLengthNode(document))
             
 open fun getFieldsNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var fieldsNode: Node = ModDomHelper.createNameValueNodes(document, SearchData.FIELDS, Integer(columnsAndSearchValues!!.size()).
@@ -381,9 +324,6 @@ var document = document
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var key: String = searchValueArray[index]!! as String
@@ -406,10 +346,7 @@ fieldsNode!!.appendChild(ModDomHelper.createNameValueNodes(document, SearchData.
             
 open fun getOrderNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
 
@@ -423,10 +360,7 @@ var document = document
             
 open fun getSortByNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
 
@@ -440,10 +374,7 @@ var document = document
             
 open fun getLengthNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
 

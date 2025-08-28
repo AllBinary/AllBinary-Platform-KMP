@@ -43,10 +43,7 @@ open public class AndroidImageUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AndroidImageUtil
-
-        Updates for KMP build        
-        {
+: AndroidImageUtil{
 
 
 
@@ -64,10 +61,7 @@ open fun getInstance()
         
 open fun paint(bitmap: Bitmap, originalBitmap: Bitmap, paint: Paint)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var bitmap = bitmap
     //var originalBitmap = originalBitmap
     //var paint = paint
@@ -82,10 +76,7 @@ canvas.drawBitmap(originalBitmap, 0.0f, 0.0f, paint)
 
 open fun paint(image: Image, originalImage: Image, paint: Paint)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var image = image
     //var originalImage = originalImage
     //var paint = paint
@@ -99,10 +90,7 @@ canvas.drawBitmap(originalImage!!.getBitmap(), 0.0f, 0.0f, paint)
 
 open fun rotate(image: Image, originalImage: Image, matrix: Matrix, paint: Paint)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var image = image
     //var originalImage = originalImage
     //var matrix = matrix
@@ -118,10 +106,7 @@ canvas.drawBitmap(originalImage!!.getBitmap(), 0.0f, 0.0f, paint)
 
 open fun rotate(image: Image, originalImage: Image, matrix: Matrix)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var image = image
     //var originalImage = originalImage
     //var matrix = matrix

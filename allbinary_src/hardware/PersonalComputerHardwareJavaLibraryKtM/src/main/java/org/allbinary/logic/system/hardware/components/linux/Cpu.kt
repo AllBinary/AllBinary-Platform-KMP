@@ -58,9 +58,6 @@ open public class Cpu
     private var cpuHashMap: HashMap<Any, Any>
 public constructor        (filePath: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var filePath = filePath
 this.init(filePath)
@@ -68,9 +65,6 @@ this.init(filePath)
 
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 this.init(CPUFILE)
 }
@@ -80,10 +74,7 @@ this.init(CPUFILE)
             
 open fun init(filePath: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var filePath = filePath
 
     var lineNumberReader: LineNumberReader = 
@@ -94,10 +85,7 @@ var filePath = filePath
         try {
             init(lineNumberReader, filePath)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.OS))
@@ -121,10 +109,7 @@ var filePath = filePath
             
 open fun init(lineNumberReader: LineNumberReader, filePath: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var lineNumberReader = lineNumberReader
 var filePath = filePath
 
@@ -185,9 +170,6 @@ lineNumberReader= LineNumberReader(FileReader(file.getPath()))
                                  && nextLine != 
                                     null
                                 )
-        
-
-        Updates for KMP build        
         {
 
     var index: Int = nextLine!!.indexOf(':')!!
@@ -263,10 +245,7 @@ nextLine= lineNumberReader!!.readLine()
 
 open fun getProcessor()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -277,10 +256,7 @@ open fun getProcessor()
 
 open fun getVendorId()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -291,10 +267,7 @@ open fun getVendorId()
 
 open fun getCpuFamily()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -305,10 +278,7 @@ open fun getCpuFamily()
 
 open fun getModel()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -319,10 +289,7 @@ open fun getModel()
 
 open fun getModelName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -333,10 +300,7 @@ open fun getModelName()
 
 open fun getStepping()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -347,10 +311,7 @@ open fun getStepping()
 
 open fun getCpuSpeed()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -361,10 +322,7 @@ open fun getCpuSpeed()
 
 open fun getCacheSize()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -375,10 +333,7 @@ open fun getCacheSize()
 
 open fun compareTo(cpuInterface: CpuInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var cpuInterface = cpuInterface
 
 
@@ -390,10 +345,7 @@ var cpuInterface = cpuInterface
 
 open fun compareTo(componentInterface: HardwareComponentInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var componentInterface = componentInterface
 
 
@@ -404,10 +356,7 @@ var componentInterface = componentInterface
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var commonLabels: CommonLabels = CommonLabels.getInstance()!!
 

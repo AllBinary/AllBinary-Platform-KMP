@@ -49,10 +49,7 @@ open public class GeographicMapCellPathHistoryInfo
 
 open fun getPreviousGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
 
 
 
@@ -63,10 +60,7 @@ open fun getPreviousGeographicMapCellPosition()
 
 open fun setPreviousGeographicMapCellPosition(previousGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var previousGeographicMapCellPosition = previousGeographicMapCellPosition
 this.previousGeographicMapCellPosition= previousGeographicMapCellPosition
 }
@@ -74,10 +68,7 @@ this.previousGeographicMapCellPosition= previousGeographicMapCellPosition
 
 open fun getPreviousOnPathGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
 
 
 
@@ -88,10 +79,7 @@ open fun getPreviousOnPathGeographicMapCellPosition()
 
 open fun setPreviousOnPathGeographicMapCellPosition(previousOnPathGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var previousOnPathGeographicMapCellPosition = previousOnPathGeographicMapCellPosition
 this.previousOnPathGeographicMapCellPosition= previousOnPathGeographicMapCellPosition
 }
@@ -99,10 +87,7 @@ this.previousOnPathGeographicMapCellPosition= previousOnPathGeographicMapCellPos
 
 open fun getNextUnvisitedOnPathGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
 
 
 
@@ -113,10 +98,7 @@ open fun getNextUnvisitedOnPathGeographicMapCellPosition()
 
 open fun setNextUnvisitedOnPathGeographicMapCellPosition(nextUnvisitedOnPathGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var nextUnvisitedOnPathGeographicMapCellPosition = nextUnvisitedOnPathGeographicMapCellPosition
 this.nextUnvisitedOnPathGeographicMapCellPosition= nextUnvisitedOnPathGeographicMapCellPosition
 }
@@ -124,10 +106,7 @@ this.nextUnvisitedOnPathGeographicMapCellPosition= nextUnvisitedOnPathGeographic
 
 open fun getNextOnPathGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
 
 
 
@@ -138,10 +117,7 @@ open fun getNextOnPathGeographicMapCellPosition()
 
 open fun setNextOnPathGeographicMapCellPosition(nextOnPathGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var nextOnPathGeographicMapCellPosition = nextOnPathGeographicMapCellPosition
 this.nextOnPathGeographicMapCellPosition= nextOnPathGeographicMapCellPosition
 }
@@ -149,10 +125,7 @@ this.nextOnPathGeographicMapCellPosition= nextOnPathGeographicMapCellPosition
 
 open fun getNextChosenOnPathGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
 
 
 
@@ -163,10 +136,7 @@ open fun getNextChosenOnPathGeographicMapCellPosition()
 
 open fun setNextChosenOnPathGeographicMapCellPosition(nextChosenOnPathGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var nextChosenOnPathGeographicMapCellPosition = nextChosenOnPathGeographicMapCellPosition
 this.nextChosenOnPathGeographicMapCellPosition= nextChosenOnPathGeographicMapCellPosition
 }

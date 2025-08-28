@@ -45,10 +45,7 @@ open public class LockedFeatureNotificationUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LockedFeatureNotificationUtil
-
-        Updates for KMP build        
-        {
+: LockedFeatureNotificationUtil{
 
 
 
@@ -70,10 +67,7 @@ open fun getInstance()
             
 open fun fire()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 PrimaryPlayerQueueFactory.getInstance()!!.add(ErrorSound.getInstance())
 GameNotificationEventHandler.getInstance()!!.fireEvent(gameNotificationEvent)
 }
@@ -83,10 +77,7 @@ GameNotificationEventHandler.getInstance()!!.fireEvent(gameNotificationEvent)
             
 open fun fire(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var basicColor = basicColor
 PrimaryPlayerQueueFactory.getInstance()!!.add(ErrorSound.getInstance())
 gameNotificationEvent!!.setBasicColorP(basicColor)

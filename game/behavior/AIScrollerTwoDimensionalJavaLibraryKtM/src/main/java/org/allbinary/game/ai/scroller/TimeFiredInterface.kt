@@ -32,9 +32,6 @@ open fun getLastFireTime()
         //nullable = true from not(false or (false and true)) = true
 : Long
 
-        Updates for KMP build        
-        
-
 }
                 
             

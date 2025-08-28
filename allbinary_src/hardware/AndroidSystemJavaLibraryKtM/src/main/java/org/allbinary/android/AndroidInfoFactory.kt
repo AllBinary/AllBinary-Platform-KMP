@@ -40,10 +40,7 @@ open public class AndroidInfoFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AndroidInfoFactory
-
-        Updates for KMP build        
-        {
+: AndroidInfoFactory{
 
 
 
@@ -63,10 +60,7 @@ open fun getInstance()
 
 open fun getVersion()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

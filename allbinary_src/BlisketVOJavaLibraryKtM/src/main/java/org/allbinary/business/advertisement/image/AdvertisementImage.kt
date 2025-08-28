@@ -40,19 +40,13 @@ open public class AdvertisementImage
     private var constraint: TwoDimensionalConstraintInterface
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getFileName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -63,10 +57,7 @@ open fun getFileName()
 
 open fun getUrl()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -77,10 +68,7 @@ open fun getUrl()
 
 open fun getTwoDimensionalConstraint()
         //nullable = true from not(false or (false and true)) = true
-: TwoDimensionalConstraintInterface
-
-        Updates for KMP build        
-        {
+: TwoDimensionalConstraintInterface{
 
 
 

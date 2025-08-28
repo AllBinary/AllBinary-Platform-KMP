@@ -38,10 +38,7 @@ open public class NoDebug
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DebugInterface
-
-        Updates for KMP build        
-        {
+: DebugInterface{
 
 
 
@@ -58,26 +55,17 @@ open fun getInstance()
             }            
         override fun start()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun stop()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun getMaxTime()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -87,10 +75,7 @@ override fun getMaxTime()
 
 override fun getStartTime()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -100,10 +85,7 @@ override fun getStartTime()
 
 override fun isRunning()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 

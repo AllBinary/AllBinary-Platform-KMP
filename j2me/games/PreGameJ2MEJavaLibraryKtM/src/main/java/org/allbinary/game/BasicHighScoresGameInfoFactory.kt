@@ -37,10 +37,7 @@ open public class BasicHighScoresGameInfoFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BasicHighScoresGameInfoFactory
-
-        Updates for KMP build        
-        {
+: BasicHighScoresGameInfoFactory{
 
 
 

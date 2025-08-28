@@ -56,10 +56,7 @@ open public class GenericInputAutomationWorker : AbstractInputAutomationWorker {
     private var genericProfile: GenericProfile
 public constructor        (inputAutomationActionInterface: InputAutomationActionInterface, genericProfile: GenericProfile, motionRectangleConstraintsInterface: MotionRectangleConstraintsInterface, imageComparatorConstraintsInterface: ImageComparatorConstraintsInterface)                        
 
-                            : super(inputAutomationActionInterface)
-
-        Updates for KMP build        
-        {
+                            : super(inputAutomationActionInterface){
     //var inputAutomationActionInterface = inputAutomationActionInterface
     //var genericProfile = genericProfile
     //var motionRectangleConstraintsInterface = motionRectangleConstraintsInterface
@@ -86,9 +83,6 @@ this.setGenericProfile(genericProfile)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var genericProfileDataWorkerType: GenericProfileDataWorkerType = vector.get(index) as GenericProfileDataWorkerType
@@ -121,10 +115,7 @@ logUtil!!.put("Adding Listener: " +genericProfileDataWorkerType, this, this.comm
             
 open fun processDataWorkerResults()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 logUtil!!.put(this.commonStrings!!.START, this, this.PROCESS_DATA_WORKER_RESULTS)
 this.waitForDataWorkers()
 
@@ -166,9 +157,6 @@ logUtil!!.put("Processing " +set.size() +"Actions", this, this.PROCESS_DATA_WORK
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var actionNameString: String = actionNameArray[index]!! as String
@@ -205,10 +193,7 @@ lastFrame= getFrame()
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.PROCESS)
 this.startDataWorkers()
 this.processDataWorkerResults()
@@ -217,10 +202,7 @@ this.processDataWorkerResults()
 
 open fun getGenericProfile()
         //nullable = true from not(false or (false and true)) = true
-: GenericProfile
-
-        Updates for KMP build        
-        {
+: GenericProfile{
 
 
 
@@ -231,10 +213,7 @@ open fun getGenericProfile()
 
 open fun setGenericProfile(genericProfile: GenericProfile)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var genericProfile = genericProfile
 this.genericProfile= genericProfile
 }
@@ -242,10 +221,7 @@ this.genericProfile= genericProfile
 
 open fun getFrame()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -256,10 +232,7 @@ open fun getFrame()
 
 open fun setFrame(frame: Long)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var frame = frame
 this.frame= frame
 }

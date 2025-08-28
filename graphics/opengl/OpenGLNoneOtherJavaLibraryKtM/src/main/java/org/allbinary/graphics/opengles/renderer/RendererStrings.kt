@@ -37,10 +37,7 @@ open public class RendererStrings
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: RendererStrings
-
-        Updates for KMP build        
-        {
+: RendererStrings{
 
 
 

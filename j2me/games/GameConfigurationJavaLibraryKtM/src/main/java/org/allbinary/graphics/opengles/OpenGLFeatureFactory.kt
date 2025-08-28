@@ -37,10 +37,7 @@ open public class OpenGLFeatureFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLFeatureFactory
-
-        Updates for KMP build        
-        {
+: OpenGLFeatureFactory{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

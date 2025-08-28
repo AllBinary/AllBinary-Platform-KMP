@@ -58,10 +58,7 @@ open public class RecordStoreHighScores : HighScores {
 
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, highScoreName: String, heading: String, columnTwoHeading: String, recordComparatorInterface: RecordComparator)
         //nullable =  from not(true or (false and false)) = 
-: HighScores
-
-        Updates for KMP build        
-        {
+: HighScores{
     //var abeClientInformation = abeClientInformation
     //var gameInfo = gameInfo
     //var highScoreName = highScoreName
@@ -117,10 +114,7 @@ hashTable!!.put(highScores!!.getName(), highScores)
     private val recordComparatorInterface: RecordComparator
 private constructor        (abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, name: String, heading: String, columnTwoHeading: String, recordComparatorInterface: RecordComparator)                        
 
-                            : super(name, heading, columnTwoHeading)
-
-        Updates for KMP build        
-        {
+                            : super(name, heading, columnTwoHeading){
     //var abeClientInformation = abeClientInformation
     //var gameInfo = gameInfo
     //var name = name
@@ -140,10 +134,7 @@ this.load()
 
 open fun getRecordId(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
     //var abeClientInformation = abeClientInformation
 
 
@@ -156,10 +147,7 @@ open fun getRecordId(abeClientInformation: AbeClientInformationInterface)
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun addHighScore(newHighScore: HighScore)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var newHighScore = newHighScore
 
     var recordStore: RecordStore = NullRecordStore.NULL_RECORD_STORE
@@ -187,24 +175,15 @@ recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation),
 
 this.load()
 } catch(e: RecordStoreException)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
 }
  catch(e: IOException)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
 }
 
@@ -224,10 +203,7 @@ recordStore!!.closeRecordStore()
                                     }
                                 
 } catch(e: RecordStoreException)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
 }
 
@@ -239,10 +215,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
 
 open fun removeLowestHighScore()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var recordStore: RecordStore = NullRecordStore.NULL_RECORD_STORE
 
@@ -269,9 +242,6 @@ open fun removeLowestHighScore()
 
 
         while(recordEnum!!.hasNextElement())
-        
-
-        Updates for KMP build        
         {
 
     var id: Int = recordEnum!!.nextRecordId()!!
@@ -321,17 +291,11 @@ recordStore!!.deleteRecord(bestHighScore!!.getId())
                                     }
                                 
 } catch(e: RecordStoreException)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "removeLowestHighScore", e)
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "removeLowestHighScore", e)
 }
 
@@ -351,10 +315,7 @@ recordStore!!.closeRecordStore()
                                     }
                                 
 } catch(e: RecordStoreException)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "removeLowestHighScore", e)
 }
 
@@ -366,10 +327,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "removeLowestHighScore", e)
 
 open fun load()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var recordStore: RecordStore = NullRecordStore.NULL_RECORD_STORE
 
@@ -391,9 +349,6 @@ this.setList(BasicArrayList())
 
 
         while(recordEnum!!.hasNextElement())
-        
-
-        Updates for KMP build        
         {
 
     var id: Int = recordEnum!!.nextRecordId()!!
@@ -434,9 +389,6 @@ inputStream= DataInputStream(byteArrayInputStream)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var highScore: HighScore = list.objectArray[index]!! as HighScore
@@ -457,10 +409,7 @@ break;
 
 list.add(lastIndex, newHighScore)
 } catch(e: EOFException)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put("EOF", this, commonStrings!!.LOAD, e)
 
 
@@ -474,31 +423,19 @@ logUtil!!.put("EOF", this, commonStrings!!.LOAD, e)
 }
 
 } catch(e: RecordStoreNotFoundException)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put("No High Scores", this, commonStrings!!.LOAD, e)
 }
  catch(e: RecordStoreException)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.UNKNOWN, this, commonStrings!!.LOAD, e)
 }
  catch(e: IOException)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.UNKNOWN, this, commonStrings!!.LOAD, e)
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.UNKNOWN, this, commonStrings!!.LOAD, e)
 }
 
@@ -518,10 +455,7 @@ recordStore!!.closeRecordStore()
                                     }
                                 
 } catch(e: RecordStoreException)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.LOAD, e)
 }
 
@@ -533,10 +467,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.LOAD, e)
 
 open fun isTooManyHighScores()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(this.getList() != 
@@ -570,10 +501,7 @@ open fun isTooManyHighScores()
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun isBestScore(newHighScore: HighScore)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var newHighScore = newHighScore
 
         try {
@@ -604,9 +532,6 @@ var newHighScore = newHighScore
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var highScore: HighScore = list.objectArray[index]!! as HighScore
@@ -637,10 +562,7 @@ logUtil!!.put("Not a High Score", this, "isBestScore")
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
 
 
@@ -652,10 +574,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -672,9 +591,6 @@ stringBuffer!!.append(super.toString())
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var highScore: HighScore = list.objectArray[index]!! as HighScore

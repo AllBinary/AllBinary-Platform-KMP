@@ -34,15 +34,9 @@ open fun remove(userName: String, orderNumber: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun add(userName: String, orderNumber: String, paymentTransactionInterface: PaymentTransactionInterface)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

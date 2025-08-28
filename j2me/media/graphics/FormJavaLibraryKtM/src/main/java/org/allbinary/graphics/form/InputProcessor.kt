@@ -32,10 +32,7 @@ open public class InputProcessor : Processor {
         
 
     private val playerGameInputCompositeInterface: PlayerGameInputCompositeInterface
-public constructor        (playerGameInputCompositeInterface: PlayerGameInputCompositeInterface)
-
-        Updates for KMP build        
-        {
+public constructor        (playerGameInputCompositeInterface: PlayerGameInputCompositeInterface){
 var playerGameInputCompositeInterface = playerGameInputCompositeInterface
 this.playerGameInputCompositeInterface= playerGameInputCompositeInterface
 }
@@ -44,10 +41,7 @@ this.playerGameInputCompositeInterface= playerGameInputCompositeInterface
                 @Throws(Exception::class)
             override fun process()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.playerGameInputCompositeInterface!!.getPlayerGameInput()!!.update()
 }
 

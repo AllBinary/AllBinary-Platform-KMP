@@ -44,10 +44,7 @@ open public class OpenGLESDeviceImageTranslate : OpenGLESImageTranslate {
     var translateY2: Float = 0.0f
 override fun translate(gl: GL10, openGLESImage: OpenGLESImage, x: Float, y: Float)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
     //var openGLESImage = openGLESImage
     //var x = x
@@ -57,10 +54,7 @@ openGLESImage!!.imageProcessor!!.translate(gl, translateX +(openGLESImage!!.open
 
 override fun translate2(gl: GL10, openGLESImage: OpenGLESImage)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
     //var openGLESImage = openGLESImage
 openGLESImage!!.imageProcessor!!.translate(gl, translateX2, translateY2)

@@ -37,10 +37,7 @@ open public class GameTickDisplayInfoSingleton
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameTickDisplayInfoSingleton
-
-        Updates for KMP build        
-        {
+: GameTickDisplayInfoSingleton{
 
 
 
@@ -68,10 +65,7 @@ open fun getInstance()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.lastWidth= displayInfoSingleton!!.getLastWidth()
 this.lastHeight= displayInfoSingleton!!.getLastHeight()
 this.lastHalfWidth= displayInfoSingleton!!.getLastHalfWidth()
@@ -81,10 +75,7 @@ this.lastHalfHeight= displayInfoSingleton!!.getLastHalfHeight()
 
 open fun getLastWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -95,10 +86,7 @@ open fun getLastWidth()
 
 open fun getLastHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -109,10 +97,7 @@ open fun getLastHeight()
 
 open fun getLastHalfWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -123,10 +108,7 @@ open fun getLastHalfWidth()
 
 open fun getLastHalfHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

@@ -41,10 +41,7 @@ open public class MineLayerCircularStaticPool
             
 open fun init(viewPositionFactoryInterface: ViewPositionFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var viewPositionFactoryInterface = viewPositionFactoryInterface
 MineCountedPickedUpLayerInterfaceFactory.init()
 WEAPON_LAYER_CIRCULAR_STATIC_POOL.init(MineLayerFactory(viewPositionFactoryInterface), 20)
@@ -53,10 +50,7 @@ WEAPON_LAYER_CIRCULAR_STATIC_POOL.init(MineLayerFactory(viewPositionFactoryInter
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: WeaponLayerCircularPool
-
-        Updates for KMP build        
-        {
+: WeaponLayerCircularPool{
 
 
 

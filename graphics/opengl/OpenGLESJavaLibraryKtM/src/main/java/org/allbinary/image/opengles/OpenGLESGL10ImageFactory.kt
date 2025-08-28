@@ -40,10 +40,7 @@ open public class OpenGLESGL10ImageFactory : OpenGLImageFactory {
             }            
         override fun getInstance(image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory)
         //nullable =  from not(true or (false and false)) = 
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var image = image
     //var bitmapFactory = bitmapFactory
     //var textureFactory = textureFactory

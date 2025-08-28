@@ -35,10 +35,7 @@ open public class ItemPaintableFactory : ItemPaintable {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ItemPaintable
-
-        Updates for KMP build        
-        {
+: ItemPaintable{
 
 
 
@@ -58,10 +55,7 @@ open fun getInstance()
             
 open fun getInstance(paintableForm: PaintableForm)
         //nullable =  from not(true or (false and false)) = 
-: ItemPaintable
-
-        Updates for KMP build        
-        {
+: ItemPaintable{
 var paintableForm = paintableForm
 
 

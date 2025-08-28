@@ -46,10 +46,7 @@ open public class PathFinderGraphHackVisitor : BasePathFinderGraphVisitor<V, E> 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        (geographicMapInterface: BasicGeographicMap, edgeMinimum: Int, minPathWeight: Int, maxPathWeight: Int)                        
 
-                            : super(geographicMapInterface, edgeMinimum, minPathWeight, maxPathWeight)
-
-        Updates for KMP build        
-        {
+                            : super(geographicMapInterface, edgeMinimum, minPathWeight, maxPathWeight){
     //var geographicMapInterface = geographicMapInterface
 var edgeMinimum = edgeMinimum
 var minPathWeight = minPathWeight
@@ -65,10 +62,7 @@ var maxPathWeight = maxPathWeight
             
 open fun visit(graph: SimpleWeightedGraph, startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graph = graph
 var startPathFindingNodeList = startPathFindingNodeList
 var endPathFindingNodeList = endPathFindingNodeList
@@ -82,10 +76,7 @@ this.fixOverPassEdges(graph)
             
 open fun fixStart(graph: SimpleWeightedGraph<CellPosition, DefaultWeightedEdge>, startPathFindingNodeList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graph = graph
 var startPathFindingNodeList = startPathFindingNodeList
 
@@ -100,9 +91,6 @@ var startPathFindingNodeList = startPathFindingNodeList
 
                         for (index in startPathFindingNodeList!!.size() -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     var startPathFindingNode: PathFindingNode = startPathFindingNodeList!!.get(index) as PathFindingNode
@@ -140,10 +128,7 @@ graph.removeEdge(geographicMapCellPosition, geographicMapCellPositionNeighbor)
             
 open fun fixEnd(graph: SimpleWeightedGraph<CellPosition, DefaultWeightedEdge>, endPathFindingNodeList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graph = graph
 var endPathFindingNodeList = endPathFindingNodeList
 
@@ -158,9 +143,6 @@ var endPathFindingNodeList = endPathFindingNodeList
 
                         for (index in endPathFindingNodeList!!.size() -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     var endPathFindingNode: PathFindingNode = endPathFindingNodeList!!.get(index) as PathFindingNode
@@ -199,10 +181,7 @@ graph.addEdge(geographicMapCellPosition, geographicMapCellPositionNeighbor)
             
 open fun fixOverPassEdges(graph: SimpleWeightedGraph<CellPosition, DefaultWeightedEdge>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graph = graph
 
     var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = this.geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
@@ -219,9 +198,6 @@ var graph = graph
 
                         for (index in CellPositionArray.size -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     var overPassGeographicMapCellPosition: CellPosition = CellPositionArray[index]!!
@@ -250,10 +226,7 @@ graph.addEdge(overPassGeographicMapCellPosition, leftUnderPassGeographicMapCellP
             
 open fun fixPath(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, pathList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var startPathFindingNodeList = startPathFindingNodeList
 var endPathFindingNodeList = endPathFindingNodeList
 var pathList = pathList
@@ -263,9 +236,6 @@ var pathList = pathList
 
                         for (index in startPathFindingNodeList!!.size() -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     var endPathFindingNode: PathFindingNode = endPathFindingNodeList!!.get(index) as PathFindingNode
@@ -301,10 +271,7 @@ this.removeOverPassEdges(pathList)
             
 open fun removeOverPassEdges(pathList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var pathList = pathList
 
     var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = this.geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
@@ -321,9 +288,6 @@ var pathList = pathList
 
                         for (index in CellPositionArray.size -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     var overPassGeographicMapCellPosition: CellPosition = CellPositionArray[index]!!
@@ -350,10 +314,7 @@ var pathList = pathList
 
 open fun isValid(graphPath: GraphPath)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var graphPath = graphPath
 
     

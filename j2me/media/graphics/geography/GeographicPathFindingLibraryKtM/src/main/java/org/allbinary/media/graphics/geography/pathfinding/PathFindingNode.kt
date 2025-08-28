@@ -40,9 +40,6 @@ open public class PathFindingNode
     var geographicMapCellPosition: GeographicMapCellPosition
 public constructor        (parent: PathFindingNode, geographicMapCellPosition: GeographicMapCellPosition)
             : super()
-        
-
-        Updates for KMP build        
         {
 var parent = parent
 var geographicMapCellPosition = geographicMapCellPosition
@@ -67,10 +64,7 @@ this.setGeographicMapCellPosition(geographicMapCellPosition)
 
 open fun setParent(parent: PathFindingNode)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var parent = parent
 this.parent= parent
 }
@@ -78,20 +72,14 @@ this.parent= parent
 
 open fun setGeographicMapCellPosition(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var geographicMapCellPosition = geographicMapCellPosition
 this.geographicMapCellPosition= geographicMapCellPosition
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -106,9 +94,6 @@ stringBuffer!!.append(this.geographicMapCellPosition!!.toString())
         while(pathFindingNode != 
                                     null
                                 )
-        
-
-        Updates for KMP build        
         {
 stringBuffer!!.append(pathFindingNode!!.geographicMapCellPosition!!.toString())
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)

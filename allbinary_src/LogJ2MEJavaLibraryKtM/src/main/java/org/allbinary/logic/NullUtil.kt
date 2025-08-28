@@ -39,10 +39,7 @@ open public class NullUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NullUtil
-
-        Updates for KMP build        
-        {
+: NullUtil{
 
 
 

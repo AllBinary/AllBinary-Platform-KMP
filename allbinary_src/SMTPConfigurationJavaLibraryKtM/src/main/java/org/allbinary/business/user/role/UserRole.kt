@@ -39,9 +39,6 @@ open public class UserRole
     private var userFactoryInterface: UserFactoryInterface
 protected constructor        (aBasicUserRole: BasicUserRole, aUserFactoryInterface: UserFactoryInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var aBasicUserRole = aBasicUserRole
 var aUserFactoryInterface = aUserFactoryInterface
@@ -51,10 +48,7 @@ this.userFactoryInterface= aUserFactoryInterface
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -65,10 +59,7 @@ override fun toString()
 
 open fun getBasicUserRole()
         //nullable = true from not(false or (false and true)) = true
-: BasicUserRole
-
-        Updates for KMP build        
-        {
+: BasicUserRole{
 
 
 
@@ -81,10 +72,7 @@ open fun getBasicUserRole()
             
 open fun getUserFactory()
         //nullable = true from not(false or (false and true)) = true
-: UserFactoryInterface
-
-        Updates for KMP build        
-        {
+: UserFactoryInterface{
 
 
 
@@ -95,10 +83,7 @@ open fun getUserFactory()
 
 open fun getSessionTimeout()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -109,10 +94,7 @@ open fun getSessionTimeout()
 
 open fun getSessionInactivityTimeout()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 

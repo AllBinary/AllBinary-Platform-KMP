@@ -22,10 +22,7 @@ open public class Collision2DProcessor : CollisionProcessor {
             }            
         override fun isCollision(myLayer: AllBinaryLayer, myLayer2: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var myLayer = myLayer
     //var myLayer2 = myLayer2
 

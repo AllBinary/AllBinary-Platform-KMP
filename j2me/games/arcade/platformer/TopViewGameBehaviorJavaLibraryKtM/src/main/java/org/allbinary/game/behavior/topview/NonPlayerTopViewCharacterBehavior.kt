@@ -55,10 +55,7 @@ open public class NonPlayerTopViewCharacterBehavior : TopViewCharacterBehavior {
             
 open fun terrainEvent(layer: AllBinaryLayer, direction: Direction, x: Int, y: Int, geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layer = layer
     //var direction = direction
     //var x = x
@@ -124,10 +121,7 @@ TerrainEventHandler.getInstance(layer)!!.fireEvent(terrainEvent)
 
 open fun terrainMove(layer: AllBinaryLayer, geographicMapInterfaceArray: Array<BasicGeographicMap?>, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layer = layer
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
     //var x = x

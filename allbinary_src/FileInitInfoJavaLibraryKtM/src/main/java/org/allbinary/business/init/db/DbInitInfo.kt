@@ -62,10 +62,7 @@ open public class DbInitInfo : DbConnectionInfo {
     private var hasRead: Boolean = false
 public constructor        (initFileName: String, read: Boolean)                        
 
-                            : super()
-
-        Updates for KMP build        
-        {
+                            : super(){
 var initFileName = initFileName
 var read = read
 
@@ -92,10 +89,7 @@ this.initFileName= initFileName
 
 open fun getUrl()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var url: String = super.getUrl()!!
 
@@ -120,10 +114,7 @@ open fun getUrl()
             
 open fun write()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var PATH: AbPath = AbPath(URLGLOBALS.getWebappPath() +PACKAGE)
 
@@ -185,10 +176,7 @@ hasRead= false
          }
         
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
@@ -207,10 +195,7 @@ hasRead= false
             
 open fun load()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var FILEABPATH: AbPath = AbPath(URLGLOBALS.getWebappPath() +PACKAGE, this.initFileName)
 
@@ -294,10 +279,7 @@ this.setPort(WeakCrypt(7).
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
@@ -314,10 +296,7 @@ this.setPort(WeakCrypt(7).
 
 open fun setHasRead(value: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.hasRead= value
 }
@@ -325,10 +304,7 @@ this.hasRead= value
 
 open fun updateIfNeeded()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             
@@ -342,10 +318,7 @@ this.load()
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
@@ -362,10 +335,7 @@ this.load()
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 this.updateIfNeeded()
 
     
@@ -386,10 +356,7 @@ this.updateIfNeeded()
 
 open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 this.updateIfNeeded()
 
     
@@ -410,10 +377,7 @@ this.updateIfNeeded()
 
 open fun getPassword()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 this.updateIfNeeded()
 
 
@@ -425,10 +389,7 @@ this.updateIfNeeded()
 
 open fun getSchema()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 this.updateIfNeeded()
 
 
@@ -440,10 +401,7 @@ this.updateIfNeeded()
 
 open fun getServer()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 this.updateIfNeeded()
 
 
@@ -455,10 +413,7 @@ this.updateIfNeeded()
 
 open fun getPort()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 this.updateIfNeeded()
 
 

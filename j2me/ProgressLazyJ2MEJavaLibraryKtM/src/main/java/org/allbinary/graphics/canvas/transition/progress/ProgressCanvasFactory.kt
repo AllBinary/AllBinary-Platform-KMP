@@ -40,10 +40,7 @@ open public class ProgressCanvasFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ProgressCanvas
-
-        Updates for KMP build        
-        {
+: ProgressCanvas{
 
 
 
@@ -54,10 +51,7 @@ open fun getInstance()
 
 open fun getLazyInstance()
         //nullable = true from not(false or (false and true)) = true
-: PaintableInterface
-
-        Updates for KMP build        
-        {
+: PaintableInterface{
 
 
 

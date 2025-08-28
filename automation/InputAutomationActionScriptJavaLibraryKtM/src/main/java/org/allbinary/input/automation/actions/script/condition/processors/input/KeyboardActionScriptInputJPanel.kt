@@ -45,10 +45,7 @@ open public class KeyboardActionScriptInputJPanel : javax.swing.JPanel {
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var keyActionScriptInputInterface: KeyboardActionScriptInputInterface
-public constructor        (keyActionScriptInputInterface: KeyboardActionScriptInputInterface)
-
-        Updates for KMP build        
-        {
+public constructor        (keyActionScriptInputInterface: KeyboardActionScriptInputInterface){
 var keyActionScriptInputInterface = keyActionScriptInputInterface
 logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 initComponents()
@@ -100,10 +97,7 @@ this.set()
 
 open fun set()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var inputTypeComboBoxModel: ComboBoxModel = this.inputAutomationTypeJComboBox!!.getModel()!!
 
@@ -119,10 +113,7 @@ this.keyActionScriptInputInterface!!.log()
             
 open fun updateInputType()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var comboBoxModel: ComboBoxModel = this.inputAutomationTypeJComboBox!!.getModel()!!
 
@@ -143,10 +134,7 @@ open fun updateInputType()
 
 open fun getSelectedKey()
         //nullable = true from not(false or (false and true)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 
     var comboBoxModel: ComboBoxModel = this.keyNameJComboBox!!.getModel()!!
 
@@ -176,10 +164,7 @@ open fun getSelectedKey()
 
 open fun updateKeys()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var text: String = this.textJTextField!!.getText()!!
 
@@ -191,10 +176,7 @@ this.keyActionScriptInputInterface!!.setText(text)
             
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.updateInputType()
 this.updateKeys()
 this.keyActionScriptInputInterface!!.setTime(Integer.valueOf(this.timeJTextField!!.getText())!!.toInt())
@@ -204,10 +186,7 @@ this.keyActionScriptInputInterface!!.log()
 
 open fun getKeyActionJDialog()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JDialog
-
-        Updates for KMP build        
-        {
+: javax.swing.JDialog{
 
 
 
@@ -218,10 +197,7 @@ open fun getKeyActionJDialog()
 
 open fun setKeyActionJDialog(keyActionJDialog: javax.swing.JDialog)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var keyActionJDialog = keyActionJDialog
 this.keyActionJDialog= keyActionJDialog
 }
@@ -229,10 +205,7 @@ this.keyActionJDialog= keyActionJDialog
 
 open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 keyActionJDialog= javax.swing.JDialog()
 titleJLabel= javax.swing.JLabel()
 addKeyJLabel= javax.swing.JLabel()
@@ -264,10 +237,7 @@ keyNameJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 keyNameJComboBoxActionPerformed(evt)
 }
@@ -289,10 +259,7 @@ pressJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 pressJRadioButtonActionPerformed(evt)
 }
@@ -307,10 +274,7 @@ releaseJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 releaseJRadioButtonActionPerformed(evt)
 }
@@ -326,10 +290,7 @@ normalJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 normalJRadioButtonActionPerformed(evt)
 }
@@ -345,10 +306,7 @@ simultaneousJRadioButton!!.addActionListener(object: java.awt.event.ActionListen
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 simultaneousJRadioButtonActionPerformed(evt)
 }
@@ -363,10 +321,7 @@ sequenceJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 sequenceJRadioButtonActionPerformed(evt)
 }
@@ -380,10 +335,7 @@ okJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 okJButtonActionPerformed(evt)
 }
@@ -396,10 +348,7 @@ keyIntegerJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 keyIntegerJComboBoxActionPerformed(evt)
 }
@@ -419,10 +368,7 @@ keyActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 keyActionJButtonActionPerformed(evt)
 }
@@ -441,10 +387,7 @@ layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Align
 
 open fun prependText(integer: Integer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var integer = integer
 
     
@@ -465,10 +408,7 @@ this.textJTextField!!.setText(newKey +this.textJTextField!!.getText())
 
 open fun keyIntegerJComboBoxActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 this.keyIntegerJComboBox!!.getSelectedIndex()
 this.keyNameJComboBox!!.setSelectedIndex(this.keyIntegerJComboBox!!.getSelectedIndex())
@@ -477,10 +417,7 @@ this.keyNameJComboBox!!.setSelectedIndex(this.keyIntegerJComboBox!!.getSelectedI
 
 open fun sequenceJRadioButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 
     
@@ -497,10 +434,7 @@ this.simultaneousJRadioButton!!.setSelected(false)
 
 open fun simultaneousJRadioButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 
     
@@ -517,10 +451,7 @@ this.sequenceJRadioButton!!.setSelected(false)
 
 open fun keyNameJComboBoxActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 
     var integer: Integer = getSelectedKey()!!
@@ -532,20 +463,14 @@ this.keyIntegerJComboBox!!.setSelectedIndex(this.keyNameJComboBox!!.getSelectedI
 
 open fun okJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 
         try {
             this.update()
 this.getKeyActionJDialog()!!.setVisible(false)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "okButtonActionPerformed", e)
 }
 
@@ -554,10 +479,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "okButtonActionPerformed", e
 
 open fun keyActionJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 this.getKeyActionJDialog()!!.setVisible(true)
 }
@@ -565,10 +487,7 @@ this.getKeyActionJDialog()!!.setVisible(true)
 
 open fun normalJRadioButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 
     
@@ -586,10 +505,7 @@ this.releaseJRadioButton!!.setSelected(false)
 
 open fun releaseJRadioButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 
     
@@ -608,10 +524,7 @@ this.normalJRadioButton!!.setSelected(false)
 
 open fun pressJRadioButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 
     

@@ -32,18 +32,12 @@ open public class CharacterSet
         
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

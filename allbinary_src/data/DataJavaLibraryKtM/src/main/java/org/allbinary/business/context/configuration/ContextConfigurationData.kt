@@ -38,10 +38,7 @@ open public class ContextConfigurationData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ContextConfigurationData
-
-        Updates for KMP build        
-        {
+: ContextConfigurationData{
 
 
 
@@ -53,9 +50,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

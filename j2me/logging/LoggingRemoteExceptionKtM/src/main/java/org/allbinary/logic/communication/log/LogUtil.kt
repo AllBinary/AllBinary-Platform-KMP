@@ -48,10 +48,7 @@ open public class LogUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LogUtil
-
-        Updates for KMP build        
-        {
+: LogUtil{
 
 
 
@@ -69,9 +66,6 @@ open fun getInstance()
     var abeClientInformation: AbeClientInformationInterface
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -80,10 +74,7 @@ private constructor        ()
 
 open fun put(log: Log)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var log = log
 
     
@@ -118,10 +109,7 @@ this.put(specialMessage, anyType, functionName, exception)
 
 open fun put(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var specialMessage = specialMessage
     //var anyType = anyType
     //var functionName = functionName
@@ -130,10 +118,7 @@ open fun put(specialMessage: String, anyType: Any, functionName: String)
 
 open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var specialMessage = specialMessage
     //var anyType = anyType
     //var functionName = functionName
@@ -225,10 +210,7 @@ hashtable.put("message", stringBuffer!!.toString())
 XmlRpcRemoteLogClient(abeClientInformation).
                             get(hashtable)
 } catch(e: Throwable)
-            
-
-        Updates for KMP build        
-        {
+            {
 System.out.println("Exception")
 e.printStackTrace()
 }

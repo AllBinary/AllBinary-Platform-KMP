@@ -39,10 +39,7 @@ open public class ScaleProcessor : ScaleBaseProcessor {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ScaleBaseProcessor
-
-        Updates for KMP build        
-        {
+: ScaleBaseProcessor{
 
 
 
@@ -65,10 +62,7 @@ open fun getInstance()
     private val imageScaleUtil: ImageScaleUtil = ImageScaleUtil.getInstance()!!
 override fun update(originalImage: Image, originalImageArray: Array<Image?>, ximageToShowArray: Array<Image?>, unused: Int, scaleX: Float, scaleY: Float, maxScaleX: Float, maxScaleY: Float)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var originalImage = originalImage
     //var originalImageArray = originalImageArray
     //var ximageToShowArray = ximageToShowArray
@@ -81,10 +75,7 @@ override fun update(originalImage: Image, originalImageArray: Array<Image?>, xim
         try {
             imageScaleUtil!!.scale(originalImage, originalImageArray, ximageToShowArray, unused, scaleX, scaleY, maxScaleX, maxScaleY)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.UPDATE)
 }
 

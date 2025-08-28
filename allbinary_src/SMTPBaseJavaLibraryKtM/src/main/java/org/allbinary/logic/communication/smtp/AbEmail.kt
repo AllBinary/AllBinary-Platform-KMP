@@ -39,9 +39,6 @@ open public class AbEmail
     private var email: Email
 public constructor        (server: String, from: String, to: String, subject: String, textBody: String, htmlAttachment: String, contentBase: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var server = server
 var from = from
@@ -69,10 +66,7 @@ var contentBase = contentBase
 
 open fun getMimeMessage()
         //nullable = true from not(false or (false and true)) = true
-: MimeMessage
-
-        Updates for KMP build        
-        {
+: MimeMessage{
 
 
 
@@ -83,10 +77,7 @@ open fun getMimeMessage()
 
 open fun getDebugInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -99,10 +90,7 @@ open fun getDebugInfo()
             
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -115,10 +103,7 @@ open fun log()
             
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
 
 
@@ -131,10 +116,7 @@ open fun toHashMap()
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
 
@@ -146,10 +128,7 @@ var document = document
 
 open fun getEmail()
         //nullable = true from not(false or (false and true)) = true
-: Email
-
-        Updates for KMP build        
-        {
+: Email{
 
 
 
@@ -162,10 +141,7 @@ open fun getEmail()
             
 open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
 
 

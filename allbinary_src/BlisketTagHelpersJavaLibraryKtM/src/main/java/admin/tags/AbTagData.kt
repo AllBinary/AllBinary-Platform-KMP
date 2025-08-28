@@ -38,9 +38,6 @@ open public class AbTagData
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

@@ -42,10 +42,7 @@ open public class RTSLayerLogHelper
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: RTSLayerLogHelper
-
-        Updates for KMP build        
-        {
+: RTSLayerLogHelper{
 
 
 
@@ -63,10 +60,7 @@ open fun getInstance()
         
 open fun setClosestGeographicMapCellHistory(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, pathsList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
     //var pathsList = pathsList
 }
@@ -74,10 +68,7 @@ open fun setClosestGeographicMapCellHistory(associatedAdvancedRTSGameLayer: Path
 
 open fun trackTo(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, nextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition, dx: Int, dy: Int, reason: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
     //var nextUnvisitedPathGeographicMapCellPosition = nextUnvisitedPathGeographicMapCellPosition
     //var dx = dx
@@ -88,10 +79,7 @@ open fun trackTo(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, next
 
 open fun turnTo(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, dx: Int, dy: Int, angleInfo: AngleInfo, angle: Int, movementAngle: NamedAngle, evading: Boolean, targetAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
     //var dx = dx
     //var dy = dy
@@ -105,110 +93,77 @@ var targetAngle = targetAngle
 
 open fun doneMoving(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 }
 
 
 open fun closeEnough(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 }
 
 
 open fun movingLeft(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 }
 
 
 open fun movingRight(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 }
 
 
 open fun movingUp(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 }
 
 
 open fun movingDown(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 }
 
 
 open fun currentMoveEnded(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 }
 
 
 open fun evade(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 }
 
 
 open fun rotateLeft(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 }
 
 
 open fun rotateRight(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 }
 
 
 open fun handle(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, movementAngle: NamedAngle)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
     //var movementAngle = movementAngle
 }
@@ -216,20 +171,14 @@ open fun handle(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, movem
 
 open fun noRotation(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 }
 
 
 open fun notOnPath(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, geographicMapCellHistory: GeographicMapCellHistory, currentGeographicMapCellPosition: GeographicMapCellPosition, pathList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
     //var geographicMapCellHistory = geographicMapCellHistory
     //var currentGeographicMapCellPosition = currentGeographicMapCellPosition

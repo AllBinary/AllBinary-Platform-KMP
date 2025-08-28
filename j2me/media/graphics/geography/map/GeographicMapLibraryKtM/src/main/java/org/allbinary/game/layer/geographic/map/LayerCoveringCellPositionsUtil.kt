@@ -43,10 +43,7 @@ open public class LayerCoveringCellPositionsUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LayerCoveringCellPositionsUtil
-
-        Updates for KMP build        
-        {
+: LayerCoveringCellPositionsUtil{
 
 
 
@@ -68,10 +65,7 @@ open fun getInstance()
             
 open fun getAll(geographicMapInterface: BasicGeographicMap, layerInterface: AllBinaryLayer, x: Int, y: Int, reusableList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
     //var geographicMapInterface = geographicMapInterface
     //var layerInterface = layerInterface
     //var x = x
@@ -92,10 +86,7 @@ open fun getAll(geographicMapInterface: BasicGeographicMap, layerInterface: AllB
             
 open fun getAll(geographicMapInterface: BasicGeographicMap, topLeftGeographicMapCellPosition: GeographicMapCellPosition, layerInterface: AllBinaryLayer, reusableList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
     //var geographicMapInterface = geographicMapInterface
     //var topLeftGeographicMapCellPosition = topLeftGeographicMapCellPosition
     //var layerInterface = layerInterface

@@ -34,10 +34,7 @@ open public class InitHelper : BasicTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
-
-        Updates for KMP build        
-        {
+public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 }
@@ -45,10 +42,7 @@ var pageContext = pageContext
 
 open fun drop()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -65,10 +59,7 @@ open fun drop()
                         if()
                         
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to drop log table"
 
@@ -93,10 +84,7 @@ open fun drop()
 
 open fun create()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -106,10 +94,7 @@ open fun create()
                         return InitInfoEntity().
                             createTable()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to create new log table"
 
@@ -134,10 +119,7 @@ open fun create()
 
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -158,10 +140,7 @@ open fun view()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to view Log table"
 
@@ -186,10 +165,7 @@ open fun view()
 
 open fun restore()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -213,10 +189,7 @@ open fun restore()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to restore backup"
 
@@ -241,10 +214,7 @@ open fun restore()
 
 open fun backup()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -268,10 +238,7 @@ open fun backup()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to make backup"
 

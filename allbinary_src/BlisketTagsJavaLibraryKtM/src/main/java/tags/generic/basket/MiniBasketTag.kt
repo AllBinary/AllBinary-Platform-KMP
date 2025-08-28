@@ -32,10 +32,7 @@ import tags.StoreValidationTransformTag
 
 open public class MiniBasketTag : StoreValidationTransformTag {
         
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 
@@ -43,10 +40,7 @@ public constructor        ()
             
 open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
         try {
             this.setName("Mini Basket View")
@@ -87,10 +81,7 @@ this.setObjectFile("views.generic.basket.mini.ValidationView")
 
                             throw Exception("Command Null")
 } catch(e: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 
 
@@ -99,10 +90,7 @@ AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
                         return SKIP_BODY
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 
 

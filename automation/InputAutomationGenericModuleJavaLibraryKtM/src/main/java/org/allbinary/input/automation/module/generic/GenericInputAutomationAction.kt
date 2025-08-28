@@ -35,9 +35,6 @@ open public class GenericInputAutomationAction
         
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -46,19 +43,13 @@ public constructor        ()
             
 open fun test()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun getInputRobotInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<InputRobotInterface?>
-
-        Updates for KMP build        
-        {
+: Array<InputRobotInterface?>{
 
 
 

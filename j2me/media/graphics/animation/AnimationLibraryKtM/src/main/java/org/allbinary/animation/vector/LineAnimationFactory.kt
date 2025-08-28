@@ -39,9 +39,6 @@ open public class LineAnimationFactory
     private var basicColor: BasicColor
 public constructor        (basicColor: BasicColor)
             : super()
-        
-
-        Updates for KMP build        
         {
 var basicColor = basicColor
 this.basicColor= basicColor
@@ -51,10 +48,7 @@ this.basicColor= basicColor
                 @Throws(Exception::class)
             override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation
-
-        Updates for KMP build        
-        {
+: Animation{
     //var instanceId = instanceId
 
 
@@ -65,10 +59,7 @@ this.basicColor= basicColor
 
 override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var scaleProperties = scaleProperties
 }
 

@@ -38,10 +38,7 @@ open public class ProcessingFrameIndexFactory
 
 open fun next()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -53,9 +50,6 @@ open fun next()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

@@ -40,10 +40,7 @@ open public class BasicGameDemoPaintable : StatePaintable {
     private val helpPaintableInterface: Paintable
 
     private var currentStatePaintable: Paintable = NullPaintable.getInstance()!!
-public constructor        (mainDemoStatePaintable: Paintable, ownershipPaintable: Paintable, helpPaintableInterface: Paintable)
-
-        Updates for KMP build        
-        {
+public constructor        (mainDemoStatePaintable: Paintable, ownershipPaintable: Paintable, helpPaintableInterface: Paintable){
 var mainDemoStatePaintable = mainDemoStatePaintable
 var ownershipPaintable = ownershipPaintable
 var helpPaintableInterface = helpPaintableInterface
@@ -55,10 +52,7 @@ this.helpPaintableInterface= helpPaintableInterface
 
 override fun setState(state: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var state = state
 
     
@@ -87,10 +81,7 @@ var state = state
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 this.getCurrentStatePaintable()!!.paint(graphics)
 }
@@ -98,10 +89,7 @@ this.getCurrentStatePaintable()!!.paint(graphics)
 
 open fun getHelpPaintableInterface()
         //nullable = true from not(false or (false and true)) = true
-: Paintable
-
-        Updates for KMP build        
-        {
+: Paintable{
 
 
 
@@ -112,10 +100,7 @@ open fun getHelpPaintableInterface()
 
 open fun setCurrentStatePaintable(currentStatePaintable: Paintable)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var currentStatePaintable = currentStatePaintable
 this.currentStatePaintable= currentStatePaintable
 }
@@ -123,10 +108,7 @@ this.currentStatePaintable= currentStatePaintable
 
 open fun getCurrentStatePaintable()
         //nullable = true from not(false or (false and true)) = true
-: Paintable
-
-        Updates for KMP build        
-        {
+: Paintable{
 
 
 
@@ -137,10 +119,7 @@ open fun getCurrentStatePaintable()
 
 open fun getMainDemoStatePaintable()
         //nullable = true from not(false or (false and true)) = true
-: Paintable
-
-        Updates for KMP build        
-        {
+: Paintable{
 
 
 

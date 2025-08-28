@@ -37,10 +37,7 @@ open public class MediaDataFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: MediaDataFactory
-
-        Updates for KMP build        
-        {
+: MediaDataFactory{
 
 
 

@@ -44,9 +44,6 @@ open public class BasicEmailInfo
     var emailServerConfigurationInterface: EmailServerConfigurationInterface
 public constructor        (subject: String, textBody: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var subject = subject
 var textBody = textBody
@@ -69,10 +66,7 @@ this.textBody= textBody
 
 open fun getSubject()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -83,10 +77,7 @@ open fun getSubject()
 
 open fun getTextBody()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -97,10 +88,7 @@ open fun getTextBody()
 
 open fun getEmailServerConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
-: EmailServerConfigurationInterface
-
-        Updates for KMP build        
-        {
+: EmailServerConfigurationInterface{
 
 
 
@@ -111,20 +99,14 @@ open fun getEmailServerConfigurationInterface()
 
 open fun setEmailServerConfigurationInterface(emailServerConfigurationInterface: EmailServerConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var emailServerConfigurationInterface = emailServerConfigurationInterface
 this.emailServerConfigurationInterface= emailServerConfigurationInterface
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -146,10 +128,7 @@ stringBuffer!!.append(this.getTextBody())
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
 
 

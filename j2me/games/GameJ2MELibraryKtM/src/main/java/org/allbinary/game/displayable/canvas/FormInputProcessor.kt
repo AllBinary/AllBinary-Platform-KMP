@@ -62,20 +62,14 @@ open public class FormInputProcessor : InputProcessor {
     private val platformKeyFactory: PlatformKeyFactory = PlatformKeyFactory.getInstance()!!
 
     private val allBinaryGameCanvas: AllBinaryGameCanvas
-public constructor        (allBinaryGameCanvas: AllBinaryGameCanvas)
-
-        Updates for KMP build        
-        {
+public constructor        (allBinaryGameCanvas: AllBinaryGameCanvas){
 var allBinaryGameCanvas = allBinaryGameCanvas
 this.allBinaryGameCanvas= allBinaryGameCanvas
 }
 
 override fun keyPressed(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var keyCode = keyCode
     //var deviceId = deviceId
 
@@ -90,10 +84,7 @@ override fun keyPressed(keyCode: Int, deviceId: Int)
 
 downKeyEventHandler!!.fireEvent(gameKeyEvent)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
 }
 
@@ -101,10 +92,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, this.gameInputStrings!!.ADD_KEY_E
 
 override fun keyReleased(canvas: Canvas, keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var canvas = canvas
     //var keyCode = keyCode
     //var deviceId = deviceId
@@ -132,10 +120,7 @@ upGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
 }
 

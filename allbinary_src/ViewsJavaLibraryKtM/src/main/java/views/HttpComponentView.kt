@@ -54,10 +54,7 @@ open public class HttpComponentView : TransformInfoHttpComposite
     private var transformDocumentInterface: TransformDocumentInterface
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(transformInfoInterface)
-
-        Updates for KMP build        
-        {
+                            : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
 
 
@@ -81,10 +78,7 @@ this.setTransformDocumentInterface(TransformHttpRequestDocumentFactory.getInstan
 
 open fun getTypeId()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -95,10 +89,7 @@ open fun getTypeId()
 
 open fun getTransformDocumentInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformDocumentInterface
-
-        Updates for KMP build        
-        {
+: TransformDocumentInterface{
 
 
 
@@ -109,10 +100,7 @@ open fun getTransformDocumentInterface()
 
 open fun setTransformDocumentInterface(transformDocumentInterface: TransformDocumentInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var transformDocumentInterface = transformDocumentInterface
 this.transformDocumentInterface= transformDocumentInterface
 }
@@ -120,10 +108,7 @@ this.transformDocumentInterface= transformDocumentInterface
 
 open fun addDomNodeInterface(domNodeInterface: DomNodeInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var domNodeInterface = domNodeInterface
 this.domNodeInterfaceVector!!.add(domNodeInterface)
 }
@@ -133,10 +118,7 @@ this.domNodeInterfaceVector!!.add(domNodeInterface)
             
 open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
         try {
             
@@ -148,9 +130,6 @@ open fun toXmlDoc()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var domNodeInterface: DomNodeInterface = domNodeInterfaceVector!!.get(index) as DomNodeInterface
@@ -164,10 +143,7 @@ this.transformDocumentInterface!!.getBaseNode()!!.appendChild(domNodeInterface!!
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getTransformDocumentInterface()!!.getDoc()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
@@ -190,10 +166,7 @@ this.transformDocumentInterface!!.getBaseNode()!!.appendChild(domNodeInterface!!
             
 open fun getDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
     var document: Document = this.getTransformInfoInterface()!!.getDataDocument()!!
 
@@ -236,10 +209,7 @@ open fun getDoc()
             
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             this.toXmlDoc()
@@ -256,10 +226,7 @@ open fun view()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))

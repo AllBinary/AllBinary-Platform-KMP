@@ -43,9 +43,6 @@ open public class PathFindingNodeCostInfo
     var totalCost: Long= 0
 public constructor        (costFromStart: Long, costToGoal: Long)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var costFromStart = costFromStart
     //var costToGoal = costToGoal
@@ -57,10 +54,7 @@ this.setTotalCost()
 
 open fun setCostToEnd(costToEnd: Long)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var costToEnd = costToEnd
 this.costToEnd= costToEnd
 }
@@ -68,10 +62,7 @@ this.costToEnd= costToEnd
 
 open fun setTotalCost(totalCost: Long)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var totalCost = totalCost
 this.totalCost= totalCost
 }
@@ -81,10 +72,7 @@ this.totalCost= totalCost
             
 open fun setTotalCost()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.totalCost= costFromStart +costToEnd
 
     
@@ -103,10 +91,7 @@ this.totalCost= costFromStart +costToEnd
 
 open fun setCostFromStart(cost: Long)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var cost = cost
 this.costFromStart= cost
 }
@@ -114,20 +99,14 @@ this.costFromStart= cost
 
 open fun addCostFromStart(cost: Long)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var cost = cost
 this.costFromStart += cost
 }
 
 override fun compareTo(pathFindingNodeCostInfo: PathFindingNodeCostInfo)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var pathFindingNodeCostInfo = pathFindingNodeCostInfo
 
 
@@ -138,10 +117,7 @@ var pathFindingNodeCostInfo = pathFindingNodeCostInfo
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

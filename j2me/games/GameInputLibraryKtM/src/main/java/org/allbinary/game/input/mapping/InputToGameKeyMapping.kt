@@ -54,10 +54,7 @@ open public class InputToGameKeyMapping : InputMapping {
     var negativePlatformToGameKeyMapping: Array<GameKey?> = arrayOfNulls(0)
 
     private val platformToGameKeyMapping: Array<GameKey?> = arrayOfNulls(InputFactory.getInstance()!!.MAX)
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 this.clear()
 }
@@ -65,19 +62,13 @@ this.clear()
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
 
 
 
                         for (index in platformToGameKeyMapping!!.size -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 platformToGameKeyMapping[index]= gameKeyFactory!!.NONE
 }
@@ -86,20 +77,14 @@ platformToGameKeyMapping[index]= gameKeyFactory!!.NONE
 
 override fun removeAll()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 super.removeAll()
 this.clear()
 }
 
 override fun add(inputToGameKeyMapping: InputToGameKeyMapping)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var inputToGameKeyMapping = inputToGameKeyMapping
 
 
@@ -107,9 +92,6 @@ override fun add(inputToGameKeyMapping: InputToGameKeyMapping)
 
                         for (index in inputToGameKeyMapping!!.getMaxMappable() -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     var input: Input = inputToGameKeyMapping!!.getInstance(index)!!
@@ -130,10 +112,7 @@ override fun add(inputToGameKeyMapping: InputToGameKeyMapping)
 
 open fun addAll(input: Input, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var input = input
 var list = list
 
@@ -142,9 +121,6 @@ var list = list
 
                         for (index in list.size() -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     var mappedToInput: Input = list.objectArray[index]!! as Input
@@ -156,10 +132,7 @@ this.add(input, mappedToInput)
 
 override fun add(input: Input, mappedToInput: Input)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var input = input
 var mappedToInput = mappedToInput
 super.add(input, mappedToInput)
@@ -168,10 +141,7 @@ this.set(input, mappedToInput)
 
 override fun remove(input: Input, mappedToInput: Input)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var input = input
 var mappedToInput = mappedToInput
 logUtil!!.put(StringMaker().
@@ -183,10 +153,7 @@ this.set(input, gameKeyFactory!!.NONE)
 
 open fun set(input: Input, mappedToInput: Input)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var input = input
 var mappedToInput = mappedToInput
 
@@ -206,10 +173,7 @@ var mappedToInput = mappedToInput
 
 open fun getMaxMappable()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -220,10 +184,7 @@ open fun getMaxMappable()
 
 open fun getReverseInstance(id: Int)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 var id = id
 
     var list: BasicArrayList = BasicArrayList()
@@ -237,9 +198,6 @@ var id = id
 
                         for (index in 0 until platformToGameKeyMapping!!.size)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -277,10 +235,7 @@ var id = id
             
 open fun init(canvas: Canvas, gameKey: GameKey)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var canvas = canvas
 var gameKey = gameKey
 
@@ -325,10 +280,7 @@ var gameKey = gameKey
             
 open fun getSmallestCanvasGameKeyCode(canvas: Canvas)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var canvas = canvas
 
     var nextKey: Int = 0
@@ -342,9 +294,6 @@ var canvas = canvas
 
                         for (index in mappedGameKeys!!.size  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 nextKey= canvas.getKeyCode(mappedGameKeys[index]!!.getId())
 
@@ -368,10 +317,7 @@ nextKey= canvas.getKeyCode(mappedGameKeys[index]!!.getId())
 
 open fun init(canvas: Canvas)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var canvas = canvas
 
         try {
@@ -403,9 +349,6 @@ negativePlatformToGameKeyMapping= arrayOfNulls( -smallestKey)
 
                         for (index in negativePlatformToGameKeyMapping!!.size  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 negativePlatformToGameKeyMapping[index]= gameKeyFactory!!.NONE
 }
@@ -420,18 +363,12 @@ this.negativePlatformToGameKeyMapping= negativePlatformToGameKeyMapping
 
                         for (index in mappedGameKeys!!.size  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 this.init(canvas, mappedGameKeys[index]!!)
 }
 
 } catch(t: Throwable)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, t)
 }
 
@@ -440,10 +377,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, t)
 
 open fun getInstance(canvas: Canvas, id: Int)
         //nullable =  from not(true or (false and false)) = 
-: GameKey
-
-        Updates for KMP build        
-        {
+: GameKey{
 var canvas = canvas
 var id = id
 
@@ -486,10 +420,7 @@ var id = id
 
 open fun getInstance(id: Int)
         //nullable =  from not(true or (false and false)) = 
-: GameKey
-
-        Updates for KMP build        
-        {
+: GameKey{
 var id = id
 
     

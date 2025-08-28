@@ -43,70 +43,49 @@ open public class SpecialGameInput
                 @Throws(Exception::class)
             override fun up()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
                 @Throws(Exception::class)
             override fun down()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
                 @Throws(Exception::class)
             override fun right()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
                 @Throws(Exception::class)
             override fun left()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
                 @Throws(Exception::class)
             override fun strafeLeft()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
                 @Throws(Exception::class)
             override fun strafeRight()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
                 @Throws(Exception::class)
             override fun fire(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layerManager = layerManager
     //var gameKeyEvent = gameKeyEvent
 }
@@ -115,10 +94,7 @@ open public class SpecialGameInput
                 @Throws(Exception::class)
             override fun special1(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layerManager = layerManager
     //var gameKeyEvent = gameKeyEvent
 }
@@ -127,10 +103,7 @@ open public class SpecialGameInput
                 @Throws(Exception::class)
             override fun special2(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layerManager = layerManager
     //var gameKeyEvent = gameKeyEvent
 }
@@ -139,10 +112,7 @@ open public class SpecialGameInput
                 @Throws(Exception::class)
             override fun special3(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layerManager = layerManager
     //var gameKeyEvent = gameKeyEvent
 }
@@ -151,10 +121,7 @@ open public class SpecialGameInput
                 @Throws(Exception::class)
             override fun special4(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layerManager = layerManager
     //var gameKeyEvent = gameKeyEvent
 }
@@ -163,29 +130,20 @@ open public class SpecialGameInput
                 @Throws(Exception::class)
             override fun special5(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layerManager = layerManager
     //var gameKeyEvent = gameKeyEvent
 }
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 }
 
 override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 }
 

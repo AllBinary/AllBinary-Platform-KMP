@@ -31,10 +31,7 @@ open public class TimeCreated : Time {
         
 public constructor        (time: String)                        
 
-                            : super(time)
-
-        Updates for KMP build        
-        {
+                            : super(time){
 var time = time
 
 
@@ -44,10 +41,7 @@ var time = time
 
 public constructor        (time: Long)                        
 
-                            : super(time)
-
-        Updates for KMP build        
-        {
+                            : super(time){
 var time = time
 
 

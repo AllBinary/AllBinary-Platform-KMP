@@ -30,18 +30,12 @@ import javax.microedition.lcdui.Graphics
 
 open public class GameFeatureCanvas : Canvas {
         
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 }
 

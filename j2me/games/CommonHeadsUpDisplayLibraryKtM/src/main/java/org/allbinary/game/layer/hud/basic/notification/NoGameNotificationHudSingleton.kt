@@ -41,10 +41,7 @@ open public class NoGameNotificationHudSingleton
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NoGameNotificationHudSingleton
-
-        Updates for KMP build        
-        {
+: NoGameNotificationHudSingleton{
 
 
 
@@ -60,9 +57,6 @@ open fun getInstance()
     private var gameNotificationHud: GameNotificationHud = GameNotificationHud.NULL_GAME_NOTIFICATION
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
         try {
@@ -71,10 +65,7 @@ private constructor        ()
 
 this.gameNotificationHud= GameNotificationHud(basicHudFactory!!.TOPCENTER, basicHudFactory!!.HORIZONTAL, 14, 40, 2, BasicColorFactory.getInstance()!!.RED)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -86,10 +77,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 
 open fun getGameNotificationHud()
         //nullable = true from not(false or (false and true)) = true
-: GameNotificationHud
-
-        Updates for KMP build        
-        {
+: GameNotificationHud{
 
 
 

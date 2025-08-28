@@ -36,9 +36,6 @@ open public class Unknown
     private var data: String
 public constructor        (data: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var data = data
 this.data= data
@@ -47,10 +44,7 @@ this.data= data
 
 open fun compareTo(componentInterface: HardwareComponentInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var componentInterface = componentInterface
 
 
@@ -61,10 +55,7 @@ var componentInterface = componentInterface
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

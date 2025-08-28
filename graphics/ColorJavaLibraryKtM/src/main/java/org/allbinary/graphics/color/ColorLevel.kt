@@ -46,9 +46,6 @@ open public class ColorLevel
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

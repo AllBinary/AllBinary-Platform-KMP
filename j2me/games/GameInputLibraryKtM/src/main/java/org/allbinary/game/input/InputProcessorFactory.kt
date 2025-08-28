@@ -37,10 +37,7 @@ open public class InputProcessorFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: InputProcessorFactory
-
-        Updates for KMP build        
-        {
+: InputProcessorFactory{
 
 
 
@@ -60,10 +57,7 @@ open fun getInstance()
 
 open fun getInputProcessor()
         //nullable = true from not(false or (false and true)) = true
-: InputProcessor
-
-        Updates for KMP build        
-        {
+: InputProcessor{
 
 
 

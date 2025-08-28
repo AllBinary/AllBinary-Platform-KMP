@@ -40,10 +40,7 @@ open public class ABToGBUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ABToGBUtil
-
-        Updates for KMP build        
-        {
+: ABToGBUtil{
 
 
 

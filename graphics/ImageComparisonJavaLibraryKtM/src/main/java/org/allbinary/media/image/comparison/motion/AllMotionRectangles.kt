@@ -40,10 +40,7 @@ open public class AllMotionRectangles : MotionRectangles {
         }
             public constructor        (imageComparisonResult: ImageComparisonResult)                        
 
-                            : super(NAME, imageComparisonResult)
-
-        Updates for KMP build        
-        {
+                            : super(NAME, imageComparisonResult){
 var imageComparisonResult = imageComparisonResult
 
 
@@ -57,10 +54,7 @@ createMotionRectangles(imageComparisonResult)
             
 open fun createMotionRectangles(imageComparisonInfo: ImageComparisonResult)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var imageComparisonInfo = imageComparisonInfo
 
     var vector: Vector = imageComparisonInfo!!.getNonMatchingPixelVector()!!
@@ -74,9 +68,6 @@ var imageComparisonInfo = imageComparisonInfo
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var pixelDelta: PixelDelta = vector.get(index) as PixelDelta
@@ -91,10 +82,7 @@ addPixelDeltaToAMotionRectangle(pixelDelta)
             
 open fun addPixelDeltaToExistingMotionRectangle(pixelDelta: PixelDelta)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var pixelDelta = pixelDelta
 
     var vector: Vector = this.getVector()!!
@@ -108,9 +96,6 @@ var pixelDelta = pixelDelta
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var motionRectangle: MotionRectangle = vector.get(index) as MotionRectangle
@@ -167,10 +152,7 @@ motionRectangle!!.getRectangle()!!.setSize(newWidth, newHeight)
             
 open fun addPixelDeltaToAMotionRectangle(pixelDelta: PixelDelta)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var pixelDelta = pixelDelta
 
     
@@ -195,10 +177,7 @@ this.getVector()!!.add(motionRectangle)
             
 open fun shouldPixelDeltaPartOfMotionRectangle(motionRectangle: MotionRectangle, pixelDelta: PixelDelta)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var motionRectangle = motionRectangle
 var pixelDelta = pixelDelta
 
@@ -250,10 +229,7 @@ var pixelDelta = pixelDelta
             
 open fun isPixelDeltaLikelyPartOfMotionRectangle(motionRectangle: MotionRectangle, pixelDelta: PixelDelta)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var motionRectangle = motionRectangle
 var pixelDelta = pixelDelta
 

@@ -55,10 +55,7 @@ open public class OpenGLConfiguration
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLConfiguration
-
-        Updates for KMP build        
-        {
+: OpenGLConfiguration{
 
 
 
@@ -86,9 +83,6 @@ open fun getInstance()
     private var versionSelector: OpenGLFeature = OpenGLFeatureFactory.getInstance()!!.OPENGL_AUTO_SELECT
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
         try {
@@ -107,10 +101,7 @@ private constructor        ()
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
@@ -121,10 +112,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
             
 open fun read()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var openGLFeatureFactory: OpenGLFeatureFactory = OpenGLFeatureFactory.getInstance()!!
 
@@ -308,10 +296,7 @@ PreLogUtil.put("Read Configuration: " +this.toString(), this, "read")
             
 open fun write()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var closeable: Closeable = NullCloseable.NULL_CLOSEABLE
 
@@ -348,10 +333,7 @@ dataOutputStream!!.writeUTF(this.getImageColor()!!.getName())
 dataOutputStream!!.writeUTF(this.getColor()!!.getName())
 dataOutputStream!!.flush()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
@@ -370,10 +352,7 @@ dataOutputStream!!.flush()
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var features: Features = Features.getInstance()!!
 
@@ -437,10 +416,7 @@ PreLogUtil.put(this.toString(), this, this.commonStrings!!.INIT)
             
 open fun update(gameFeature: Feature, colorLocked: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gameFeature = gameFeature
     //var colorLocked = colorLocked
 
@@ -637,10 +613,7 @@ modified= true
 
 open fun setOpenGL(opengl: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var opengl = opengl
 this.opengl= opengl
 }
@@ -648,10 +621,7 @@ this.opengl= opengl
 
 open fun isOpenGL()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -662,10 +632,7 @@ open fun isOpenGL()
 
 open fun setImageColor(imageColor: OpenGLFeature)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var imageColor = imageColor
 this.imageColor= imageColor
 }
@@ -673,10 +640,7 @@ this.imageColor= imageColor
 
 open fun getImageColor()
         //nullable = true from not(false or (false and true)) = true
-: OpenGLFeature
-
-        Updates for KMP build        
-        {
+: OpenGLFeature{
 
 
 
@@ -687,10 +651,7 @@ open fun getImageColor()
 
 open fun setColor(color: OpenGLFeature)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var color = color
 this.color= color
 }
@@ -698,10 +659,7 @@ this.color= color
 
 open fun getColor()
         //nullable = true from not(false or (false and true)) = true
-: OpenGLFeature
-
-        Updates for KMP build        
-        {
+: OpenGLFeature{
 
 
 
@@ -712,10 +670,7 @@ open fun getColor()
 
 open fun setVersionSelector(versionSelector: OpenGLFeature)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var versionSelector = versionSelector
 this.versionSelector= versionSelector
 }
@@ -723,10 +678,7 @@ this.versionSelector= versionSelector
 
 open fun getVersionSelector()
         //nullable = true from not(false or (false and true)) = true
-: OpenGLFeature
-
-        Updates for KMP build        
-        {
+: OpenGLFeature{
 
 
 
@@ -737,10 +689,7 @@ open fun getVersionSelector()
 
 open fun setType(type: OpenGLFeature)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var type = type
 this.type= type
 }
@@ -748,10 +697,7 @@ this.type= type
 
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
-: OpenGLFeature
-
-        Updates for KMP build        
-        {
+: OpenGLFeature{
 
 
 
@@ -761,10 +707,7 @@ open fun getType()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

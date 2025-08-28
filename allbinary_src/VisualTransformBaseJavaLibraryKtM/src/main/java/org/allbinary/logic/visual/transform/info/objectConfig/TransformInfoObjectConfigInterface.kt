@@ -35,17 +35,11 @@ open fun containsView(transformInfoInterface: TransformInfoInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String
-
-        Updates for KMP build        
-        
 
                 @Throws(Exception::class)
             
@@ -53,17 +47,11 @@ open fun getTransformsGroup(group: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun getTransforms()
         //nullable = true from not(false or (false and true)) = true
 : Vector
-
-        Updates for KMP build        
-        
 
                 @Throws(Exception::class)
             
@@ -71,17 +59,11 @@ open fun getParentTransforms()
         //nullable = true from not(false or (false and true)) = true
 : Vector
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun getGroupTransforms()
         //nullable = true from not(false or (false and true)) = true
 : Vector
-
-        Updates for KMP build        
-        
 
                 @Throws(Exception::class)
             
@@ -89,15 +71,9 @@ open fun getOutputTypeName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-        Updates for KMP build        
-        
-
 open fun setOutputTypeName(value: String)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
                 @Throws(Exception::class)
             
@@ -105,32 +81,20 @@ open fun getInputOutputTypeName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun getInputOutputTypeFile()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun getImportUriPath()
         //nullable = true from not(false or (false and true)) = true
 : String
-
-        Updates for KMP build        
-        
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String
-
-        Updates for KMP build        
-        
 
 }
                 

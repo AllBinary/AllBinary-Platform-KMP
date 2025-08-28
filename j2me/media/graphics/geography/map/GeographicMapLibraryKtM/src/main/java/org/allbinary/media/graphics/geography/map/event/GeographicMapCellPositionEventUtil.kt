@@ -37,9 +37,6 @@ open public class GeographicMapCellPositionEventUtil
     private val geographicMapCellPositionEventHandler: GeographicMapCellPositionEventHandler = GeographicMapCellPositionEventHandler.getInstance()!!
 public constructor        (anyType: Any)
             : super()
-        
-
-        Updates for KMP build        
         {
 var anyType = anyType
 geographicMapCellPositionEvent= GeographicMapCellPositionEvent(anyType, 
@@ -51,10 +48,7 @@ geographicMapCellPositionEvent= GeographicMapCellPositionEvent(anyType,
             
 open fun update(geographicMapCellPositionTracking: GeographicMapCellPositionTracking)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var geographicMapCellPositionTracking = geographicMapCellPositionTracking
 geographicMapCellPositionEvent!!.setGeographicMapCellPosition(geographicMapCellPositionTracking!!.getCurrentGeographicMapCellPosition())
 geographicMapCellPositionEventHandler!!.fireEvent(geographicMapCellPositionEvent)
@@ -65,10 +59,7 @@ geographicMapCellPositionEventHandler!!.fireEvent(geographicMapCellPositionEvent
             
 open fun remove(geographicMapCellPositionTracking: GeographicMapCellPositionTracking)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var geographicMapCellPositionTracking = geographicMapCellPositionTracking
 geographicMapCellPositionEvent!!.setGeographicMapCellPosition(geographicMapCellPositionTracking!!.getCurrentGeographicMapCellPosition())
 geographicMapCellPositionEventHandler!!.fireRemoveEvent(geographicMapCellPositionEvent)

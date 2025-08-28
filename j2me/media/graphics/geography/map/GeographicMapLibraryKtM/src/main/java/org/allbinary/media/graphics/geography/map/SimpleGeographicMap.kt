@@ -51,9 +51,6 @@ open public class SimpleGeographicMap
     private var backgroundBasicColor: BasicColor
 public constructor        (id: Integer, name: String, cellTypeIdToGeographicMapCellType: IntArray, tiledLayer: AllBinaryTiledLayer, foregroundBasicColor: BasicColor, backgroundBasicColor: BasicColor)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var id = id
     //var name = name
@@ -72,10 +69,7 @@ this.setForegroundBasicColor(foregroundBasicColor)
 
 open fun getId()
         //nullable = true from not(false or (false and true)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 
 
 
@@ -86,10 +80,7 @@ open fun getId()
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -100,19 +91,13 @@ open fun getName()
 
 open fun reset()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun getAllBinaryTiledLayer()
         //nullable = true from not(false or (false and true)) = true
-: AllBinaryTiledLayer
-
-        Updates for KMP build        
-        {
+: AllBinaryTiledLayer{
 
 
 
@@ -127,10 +112,7 @@ open fun getAllBinaryTiledLayer()
             
 open fun getCellTypeAt(cellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: GeographicMapCellType
-
-        Updates for KMP build        
-        {
+: GeographicMapCellType{
     //var cellPosition = cellPosition
 
     var i_column: Int = cellPosition!!.getColumn()!!
@@ -160,10 +142,7 @@ open fun getCellTypeAt(cellPosition: GeographicMapCellPosition)
 
 open fun getCellTypeFromMapCellTypeInt(cellTypeId: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var cellTypeId = cellTypeId
 
 
@@ -175,10 +154,7 @@ open fun getCellTypeFromMapCellTypeInt(cellTypeId: Int)
 
 open fun getForegroundBasicColor()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor
-
-        Updates for KMP build        
-        {
+: BasicColor{
 
 
 
@@ -189,10 +165,7 @@ open fun getForegroundBasicColor()
 
 open fun setForegroundBasicColor(foregroundBasicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var foregroundBasicColor = foregroundBasicColor
 this.foregroundBasicColor= foregroundBasicColor
 }
@@ -200,10 +173,7 @@ this.foregroundBasicColor= foregroundBasicColor
 
 open fun getBackgroundBasicColor()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor
-
-        Updates for KMP build        
-        {
+: BasicColor{
 
 
 
@@ -214,10 +184,7 @@ open fun getBackgroundBasicColor()
 
 open fun setBackgroundBasicColor(backgroundBasicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var backgroundBasicColor = backgroundBasicColor
 this.backgroundBasicColor= backgroundBasicColor
 }

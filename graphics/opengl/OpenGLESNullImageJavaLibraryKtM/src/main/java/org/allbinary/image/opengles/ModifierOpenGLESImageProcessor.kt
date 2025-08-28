@@ -35,10 +35,7 @@ open public class ModifierOpenGLESImageProcessor : OpenGLESImageProcessor {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ModifierOpenGLESImageProcessor
-
-        Updates for KMP build        
-        {
+: ModifierOpenGLESImageProcessor{
 
 
 

@@ -47,19 +47,13 @@ open public class SaveImageComparisonWorker
     private val imageComparisonInfoVector: Vector = Vector()
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun onImageComparisonResultsEvent(imageComparisonResultsEvent: ImageComparisonResultsEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var imageComparisonResultsEvent = imageComparisonResultsEvent
 this.imageComparisonInfoVector!!.add(imageComparisonResultsEvent)
 this.run()
@@ -68,10 +62,7 @@ this.run()
 
 open fun onEvent(allBinaryEventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryEventObject = allBinaryEventObject
 this.onImageComparisonResultsEvent(allBinaryEventObject as ImageComparisonResultsEvent)
 }
@@ -80,10 +71,7 @@ this.onImageComparisonResultsEvent(allBinaryEventObject as ImageComparisonResult
 
 open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -95,10 +83,7 @@ open fun isRunning()
 
 open fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var running = running
 this.running= running
 }
@@ -106,10 +91,7 @@ this.running= running
 
 open fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.RUN)
@@ -131,10 +113,7 @@ this.imageComparisonInfoVector!!.remove(imageComparisonInfo)
 logUtil!!.put(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsed(), this, this.commonStrings!!.RUN)
 logUtil!!.put(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
 }
 

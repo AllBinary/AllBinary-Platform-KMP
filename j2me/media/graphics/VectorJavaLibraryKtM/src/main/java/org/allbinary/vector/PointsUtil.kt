@@ -37,10 +37,7 @@ open public class PointsUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PointsUtil
-
-        Updates for KMP build        
-        {
+: PointsUtil{
 
 
 
@@ -58,10 +55,7 @@ open fun getInstance()
         
 open fun adjust(points: Array<Array<IntArray?>?>, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-: Array<Array<IntArray?>?>
-
-        Updates for KMP build        
-        {
+: Array<Array<IntArray?>?>{
     //var points = points
     //var x = x
     //var y = y
@@ -78,9 +72,6 @@ open fun adjust(points: Array<Array<IntArray?>?>, x: Int, y: Int)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var size2: Int = points[index]!!.size
@@ -93,9 +84,6 @@ newPoints[index]= Array(size2) { IntArray(2) }
 
                         for (index2 in 0 until size2)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -127,10 +115,7 @@ newPoints[index]!![index2]!![1]= 1000
 
 open fun adjust(points: Array<IntArray?>, both: Int)
         //nullable = true from not(false or (false and false)) = true
-: Array<IntArray?>
-
-        Updates for KMP build        
-        {
+: Array<IntArray?>{
 var points = points
 var both = both
 
@@ -143,10 +128,7 @@ var both = both
 
 open fun adjust(points: Array<IntArray?>, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-: Array<IntArray?>
-
-        Updates for KMP build        
-        {
+: Array<IntArray?>{
 var points = points
 var x = x
 var y = y
@@ -159,9 +141,6 @@ var y = y
 
                         for (index2 in 0 until points.size)
 
-        
-
-        Updates for KMP build        
         {
 
     

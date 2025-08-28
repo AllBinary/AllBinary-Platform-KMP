@@ -44,10 +44,7 @@ open public class ImageRotationUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageRotationUtil
-
-        Updates for KMP build        
-        {
+: ImageRotationUtil{
 
 
 
@@ -59,19 +56,13 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun rotateImage(originalImage: Image, image: Image, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var originalImage = originalImage
     //var image = image
     //var totalAngle = totalAngle
@@ -116,10 +107,7 @@ this.drawImage(originalImage, image, canvasSurface)
 
 open fun rotateImageClear(originalImage: Image, image: Image, canvasSurface: CanvasSurface, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var originalImage = originalImage
     //var image = image
     //var canvasSurface = canvasSurface
@@ -154,10 +142,7 @@ canvasSurface!!.translate(originalImage!!.getWidth() /2, originalImage!!.getHeig
 
 open fun rotateImage(originalImage: Image, image: Image, canvasSurface: CanvasSurface, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var originalImage = originalImage
     //var image = image
     //var canvasSurface = canvasSurface
@@ -190,10 +175,7 @@ open fun rotateImage(originalImage: Image, image: Image, canvasSurface: CanvasSu
 
 open fun drawImage(originalImage: Image, image: Image, canvasSurface: CanvasSurface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var originalImage = originalImage
     //var image = image
     //var canvasSurface = canvasSurface
@@ -230,10 +212,7 @@ canvasSurface!!.drawImage(originalPlayNImage,  -originalImage!!.getWidth() /2,  
             
 open fun createRotatedImage(originalImage: Image, rotationInDegrees: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var originalImage = originalImage
     //var rotationInDegrees = rotationInDegrees
 

@@ -47,10 +47,7 @@ open public class RTSLayerSelectedLogHelper : RTSLayerLogHelper {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: RTSLayerSelectedLogHelper
-
-        Updates for KMP build        
-        {
+: RTSLayerSelectedLogHelper{
 
 
 
@@ -76,10 +73,7 @@ open fun getInstance()
 
 open fun setClosestGeographicMapCellHistory(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, pathsList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
     //var pathsList = pathsList
 
@@ -97,10 +91,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: setClosestGeographicMa
 
 open fun trackTo(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, nextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition, dx: Int, dy: Int, reason: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
     //var nextUnvisitedPathGeographicMapCellPosition = nextUnvisitedPathGeographicMapCellPosition
     //var dx = dx
@@ -125,10 +116,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: trackTo")
 
 open fun turnTo(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, dx: Int, dy: Int, angleInfo: AngleInfo, angle: Int, movementAngle: NamedAngle, evading: Boolean, targetAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
     //var dx = dx
     //var dy = dy
@@ -176,10 +164,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, TRACKTO_TURNTO)
 
 open fun doneMoving(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 logUtil!!.put(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - done moving 0,0")!!.toString(), this, TRACKTO_TURNTO)
@@ -188,10 +173,7 @@ logUtil!!.put(StringMaker().
 
 open fun closeEnough(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 logUtil!!.put(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - close enough")!!.toString(), this, TRACKTO_TURNTO)
@@ -200,10 +182,7 @@ logUtil!!.put(StringMaker().
 
 open fun movingLeft(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 logUtil!!.put(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - allow movingLeft")!!.toString(), this, TRACKTO_TURNTO)
@@ -212,10 +191,7 @@ logUtil!!.put(StringMaker().
 
 open fun movingRight(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 logUtil!!.put(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - allow movingRight")!!.toString(), this, TRACKTO_TURNTO)
@@ -224,10 +200,7 @@ logUtil!!.put(StringMaker().
 
 open fun movingUp(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 logUtil!!.put(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - allow movingUp")!!.toString(), this, TRACKTO_TURNTO)
@@ -236,10 +209,7 @@ logUtil!!.put(StringMaker().
 
 open fun movingDown(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 logUtil!!.put(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - allow movingDown")!!.toString(), this, TRACKTO_TURNTO)
@@ -248,10 +218,7 @@ logUtil!!.put(StringMaker().
 
 open fun currentMoveEnded(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 logUtil!!.put(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - correct angle, but movement not needed for current deltas so reseting movement angle")!!.toString(), this, TRACKTO_TURNTO)
@@ -260,10 +227,7 @@ logUtil!!.put(StringMaker().
 
 open fun evade(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 logUtil!!.put(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - evade")!!.toString(), this, TRACKTO_TURNTO)
@@ -272,10 +236,7 @@ logUtil!!.put(StringMaker().
 
 open fun rotateLeft(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 logUtil!!.put(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - rotating left")!!.toString(), this, TRACKTO_TURNTO)
@@ -284,10 +245,7 @@ logUtil!!.put(StringMaker().
 
 open fun rotateRight(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 logUtil!!.put(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - rotating right")!!.toString(), this, TRACKTO_TURNTO)
@@ -296,10 +254,7 @@ logUtil!!.put(StringMaker().
 
 open fun handle(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, movementAngle: NamedAngle)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
     //var movementAngle = movementAngle
 logUtil!!.put(StringMaker().
@@ -309,10 +264,7 @@ logUtil!!.put(StringMaker().
 
 open fun noRotation(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 logUtil!!.put(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - Do not rotate")!!.toString(), this, TRACKTO_TURNTO)
@@ -321,10 +273,7 @@ logUtil!!.put(StringMaker().
 
 open fun notOnPath(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, geographicMapCellHistory: GeographicMapCellHistory, currentGeographicMapCellPosition: GeographicMapCellPosition, pathList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
     //var geographicMapCellHistory = geographicMapCellHistory
     //var currentGeographicMapCellPosition = currentGeographicMapCellPosition

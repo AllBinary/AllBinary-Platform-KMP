@@ -45,10 +45,7 @@ open public class HighScoresHelperBase
     var highScoresArrayP: Array<HighScores?> = LastFetchHighScoresFactory.getInstance()!!.highScoresArray
 override fun setHighScoresArray(highScoresArrayP: Array<HighScores?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var highScoresArrayP = highScoresArrayP
 
     
@@ -79,10 +76,7 @@ this.highScoresArrayP= highScoresArrayP
 
 open fun getNextHighScores()
         //nullable = true from not(false or (false and true)) = true
-: HighScores
-
-        Updates for KMP build        
-        {
+: HighScores{
 
 
 
@@ -93,10 +87,7 @@ open fun getNextHighScores()
 
 open fun isAnyHighScores()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -106,20 +97,14 @@ open fun isAnyHighScores()
 
 open fun setSelectedHighScores(selectedHighScores: HighScores)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var selectedHighScores = selectedHighScores
 }
 
 
 open fun getSelectedHighScores()
         //nullable = true from not(false or (false and true)) = true
-: HighScores
-
-        Updates for KMP build        
-        {
+: HighScores{
 
 
 
@@ -130,10 +115,7 @@ open fun getSelectedHighScores()
 
 open fun getHighScoresArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<HighScores?>
-
-        Updates for KMP build        
-        {
+: Array<HighScores?>{
 
 
 
@@ -144,10 +126,7 @@ open fun getHighScoresArray()
 
 open fun selectHighScores()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 

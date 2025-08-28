@@ -37,10 +37,7 @@ open public class CharArrayFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CharArrayFactory
-
-        Updates for KMP build        
-        {
+: CharArrayFactory{
 
 
 
@@ -63,10 +60,7 @@ open fun getInstance()
 
 open fun getZeroCharArray()
         //nullable = true from not(false or (false and true)) = true
-: CharArray
-
-        Updates for KMP build        
-        {
+: CharArray{
 
 
 

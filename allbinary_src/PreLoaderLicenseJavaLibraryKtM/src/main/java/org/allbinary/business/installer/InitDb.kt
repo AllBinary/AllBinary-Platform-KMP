@@ -49,17 +49,11 @@ open public class InitDb
     private val METHOD_CALL_MAIN_PATH: String = "useNormalMainPath"
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 public constructor        (dbConnectionInfo: DbConnectionInfo)
             : super()
-        
-
-        Updates for KMP build        
         {
 var dbConnectionInfo = dbConnectionInfo
 }
@@ -67,10 +61,7 @@ var dbConnectionInfo = dbConnectionInfo
 
 open fun setHelper(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var anyType = anyType
 this.anyType= anyType
 }
@@ -78,10 +69,7 @@ this.anyType= anyType
 
 open fun getHelper()
         //nullable = true from not(false or (false and true)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 
 
 
@@ -92,10 +80,7 @@ open fun getHelper()
 
 open fun getHostName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -115,10 +100,7 @@ open fun getHostName()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
@@ -131,10 +113,7 @@ open fun getHostName()
 
 open fun addUsers()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             
@@ -154,10 +133,7 @@ open fun addUsers()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
@@ -170,10 +146,7 @@ open fun addUsers()
 
 open fun addDatabases()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             
@@ -193,10 +166,7 @@ open fun addDatabases()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
@@ -209,10 +179,7 @@ open fun addDatabases()
 
 open fun addTables()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             
@@ -232,10 +199,7 @@ open fun addTables()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
@@ -248,10 +212,7 @@ open fun addTables()
 
 open fun useTemporaryMainPath()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             
@@ -271,10 +232,7 @@ open fun useTemporaryMainPath()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
@@ -287,10 +245,7 @@ open fun useTemporaryMainPath()
 
 open fun useNormalMainPath()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             
@@ -310,10 +265,7 @@ open fun useNormalMainPath()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 

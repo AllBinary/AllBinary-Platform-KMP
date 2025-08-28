@@ -43,10 +43,7 @@ open public class BasePathFinderGraphVisitor : PathFinderGraphVisitorBase {
     val minPathWeight: Int
 
     val maxPathWeight: Int
-public constructor        (geographicMapInterface: BasicGeographicMap, edgeMinimum: Int, minPathWeight: Int, maxPathWeight: Int)
-
-        Updates for KMP build        
-        {
+public constructor        (geographicMapInterface: BasicGeographicMap, edgeMinimum: Int, minPathWeight: Int, maxPathWeight: Int){
 var geographicMapInterface = geographicMapInterface
 var edgeMinimum = edgeMinimum
 var minPathWeight = minPathWeight
@@ -62,10 +59,7 @@ this.maxPathWeight= maxPathWeight
             
 open fun visit(graph: SimpleWeightedGraph, startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graph = graph
 var startPathFindingNodeList = startPathFindingNodeList
 var endPathFindingNodeList = endPathFindingNodeList
@@ -76,10 +70,7 @@ var endPathFindingNodeList = endPathFindingNodeList
             
 open fun fixPath(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, pathList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var startPathFindingNodeList = startPathFindingNodeList
 var endPathFindingNodeList = endPathFindingNodeList
 var pathList = pathList
@@ -89,9 +80,6 @@ var pathList = pathList
 
                         for (index in startPathFindingNodeList!!.size() -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     var startPathFindingNode: PathFindingNode = startPathFindingNodeList!!.get(index) as PathFindingNode
@@ -105,10 +93,7 @@ pathList!!.add(0, startPathFindingNode!!.geographicMapCellPosition)
 
 open fun isValid(graphPath: GraphPath)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var graphPath = graphPath
 
     
@@ -137,10 +122,7 @@ var graphPath = graphPath
 
 open fun getInvalidReason(graphPath: GraphPath)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var graphPath = graphPath
 
     var stringBuffer: StringMaker = StringMaker()

@@ -34,17 +34,11 @@ open fun getTimeBase()
         //nullable = true from not(false or (false and true)) = true
 : TimeBase
 
-        Updates for KMP build        
-        
-
                 @Throws(MediaException::class)
             
 open fun setTimeBase(timeBase: TimeBase)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

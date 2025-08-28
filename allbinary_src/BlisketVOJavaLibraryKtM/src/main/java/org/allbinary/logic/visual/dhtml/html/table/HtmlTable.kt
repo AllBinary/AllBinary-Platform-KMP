@@ -86,10 +86,7 @@ open public class HtmlTable : HtmlTag {
     private var after: String
 
     private var htmlRowsVector: Vector
-public constructor        (before: String, cellpadding: String, cellspacing: String, after: String)
-
-        Updates for KMP build        
-        {
+public constructor        (before: String, cellpadding: String, cellspacing: String, after: String){
 var before = before
 var cellpadding = cellpadding
 var cellspacing = cellspacing
@@ -108,10 +105,7 @@ addAttribute(STYLE, this.BORDERCOLLAPSE)
 
 open fun addRow(htmlRow: HtmlRow)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var htmlRow = htmlRow
 
     
@@ -122,10 +116,7 @@ this.htmlRowsVector!!.add(htmlRow)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
@@ -144,9 +135,6 @@ result += " "
 
                         for (i in 0 until attributeKeys!!.size)
 
-        
-
-        Updates for KMP build        
         {
 
     var key: String = attributeKeys[i]!! as String
@@ -180,9 +168,6 @@ result += END
 
                         for (i in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 result += htmlRowsVector!!.get(i)!!.toString()
 result += " "

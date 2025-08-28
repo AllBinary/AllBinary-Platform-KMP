@@ -32,9 +32,6 @@ open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameInitializationInterface
 
-        Updates for KMP build        
-        
-
 }
                 
             

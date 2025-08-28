@@ -37,10 +37,7 @@ open public class CollidableAlwaysPickupNeverCollideBehaviorFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CollidableAlwaysPickupNeverCollideBehavior
-
-        Updates for KMP build        
-        {
+: CollidableAlwaysPickupNeverCollideBehavior{
 
 
 

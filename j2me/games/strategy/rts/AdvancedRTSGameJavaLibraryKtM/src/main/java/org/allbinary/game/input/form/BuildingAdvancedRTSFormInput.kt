@@ -51,10 +51,7 @@ open public class BuildingAdvancedRTSFormInput : BuildingRTSFormInput {
     val atLeastOneHouseGameNotificationEvent: GameNotificationEvent
 public constructor        (groupInterface: Array<Group?>, isUnitProducer: Boolean)                        
 
-                            : super(groupInterface, isUnitProducer)
-
-        Updates for KMP build        
-        {
+                            : super(groupInterface, isUnitProducer){
     //var groupInterface = groupInterface
     //var isUnitProducer = isUnitProducer
 
@@ -72,10 +69,7 @@ this.atLeastOneHouseGameNotificationEvent= GameNotificationEvent(this, "Build At
             
 open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
 super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 
@@ -90,10 +84,7 @@ this.atLeastOneHouseGameNotificationEvent!!.setBasicColorP(geographicMapInterfac
 
 open fun isPositionBlocked()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(DropCellPositionHistory.getInstance()!!.isCellPositionWithDrop(this.getSelectedGeographicCellPosition()) || WaypointCellPositionHistory.getInstance()!!.isCellPositionWithDrop(this.getSelectedGeographicCellPosition()))
@@ -123,10 +114,7 @@ open fun isPositionBlocked()
             
 open fun isBuildAttemptValid(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerInterface: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var rtsPlayerLayerInterface = rtsPlayerLayerInterface
 var layerInterface = layerInterface
 
@@ -176,10 +164,7 @@ var layerInterface = layerInterface
             
 open fun add(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, layerInterface: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var rtsPlayerLayerInterface = rtsPlayerLayerInterface
 var layerManager = layerManager
 var layerInterface = layerInterface

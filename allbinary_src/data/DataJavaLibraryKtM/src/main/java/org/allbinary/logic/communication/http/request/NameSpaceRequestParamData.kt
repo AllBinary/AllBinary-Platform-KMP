@@ -48,9 +48,6 @@ open public class NameSpaceRequestParamData
         }
             public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

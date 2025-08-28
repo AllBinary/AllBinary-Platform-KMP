@@ -39,10 +39,7 @@ open public class CompositeShaderUpdater : ShaderUpdater {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CompositeShaderUpdater
-
-        Updates for KMP build        
-        {
+: CompositeShaderUpdater{
 
 
 
@@ -56,10 +53,7 @@ open fun getInstance()
     val commonSeps: CommonSeps = CommonSeps.getInstance()!!
 public constructor        (uniformBlockArray: Array<String?>, uniformArray: Array<String?>, attributeArray: Array<String?>)                        
 
-                            : this(uniformBlockArray, uniformArray, attributeArray, IntArray(attributeArray!!.size))
-
-        Updates for KMP build        
-        {
+                            : this(uniformBlockArray, uniformArray, attributeArray, IntArray(attributeArray!!.size)){
     //var uniformBlockArray = uniformBlockArray
     //var uniformArray = uniformArray
     //var attributeArray = attributeArray
@@ -69,10 +63,7 @@ public constructor        (uniformBlockArray: Array<String?>, uniformArray: Arra
                     
 }
 
-public constructor        (uniformBlockArray: Array<String?>, uniformArray: Array<String?>, attributeArray: Array<String?>, attributeHandleArray: IntArray)
-
-        Updates for KMP build        
-        {
+public constructor        (uniformBlockArray: Array<String?>, uniformArray: Array<String?>, attributeArray: Array<String?>, attributeHandleArray: IntArray){
     //var uniformBlockArray = uniformBlockArray
     //var uniformArray = uniformArray
     //var attributeArray = attributeArray
@@ -82,10 +73,7 @@ public constructor        (uniformBlockArray: Array<String?>, uniformArray: Arra
 
 open fun onSurfaceCreated(gl: GL10, eglConfig: EGLConfig, programHandle: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
     //var eglConfig = eglConfig
     //var programHandle = programHandle
@@ -94,10 +82,7 @@ open fun onSurfaceCreated(gl: GL10, eglConfig: EGLConfig, programHandle: Int)
 
 open fun onSurfaceDestroyed(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
 }
 

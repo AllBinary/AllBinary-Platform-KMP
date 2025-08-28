@@ -43,10 +43,7 @@ open public class BasicUserRole
 
 open fun getRole(role: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicUserRole
-
-        Updates for KMP build        
-        {
+: BasicUserRole{
 var role = role
 
     var roleVector: Vector<Any> = BasicUserRole.getAll()!!
@@ -60,9 +57,6 @@ var role = role
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var userRole: BasicUserRole = roleVector!!.get(index) as BasicUserRole
@@ -91,10 +85,7 @@ var role = role
 
 open fun getAll()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>
-
-        Updates for KMP build        
-        {
+: Vector<Any>{
 
 
 
@@ -116,10 +107,7 @@ open fun getAll()
     private val sessionInactivityTimeout: Long
  constructor        (aRole: String, a_int_RoleId: Int, aSessionTimeout: Long, aSessionInactivityTimeout: Long)                        
 
-                            : this(aRole, aRole, a_int_RoleId, aSessionTimeout, aSessionInactivityTimeout)
-
-        Updates for KMP build        
-        {
+                            : this(aRole, aRole, a_int_RoleId, aSessionTimeout, aSessionInactivityTimeout){
 var aRole = aRole
 var a_int_RoleId = a_int_RoleId
 var aSessionTimeout = aSessionTimeout
@@ -132,9 +120,6 @@ var aSessionInactivityTimeout = aSessionInactivityTimeout
 
  constructor        (aRole: String, aDisplayValue: String, a_int_RoleId: Int, aSessionTimeout: Long, aSessionInactivityTimeout: Long)
             : super()
-        
-
-        Updates for KMP build        
         {
 var aRole = aRole
 var aDisplayValue = aDisplayValue
@@ -152,10 +137,7 @@ roleVector!!.add(this)
 
 open fun getRoleId()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -166,10 +148,7 @@ open fun getRoleId()
 
 open fun getRole()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -180,10 +159,7 @@ open fun getRole()
 
 open fun getSessionTimeout()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -194,10 +170,7 @@ open fun getSessionTimeout()
 
 open fun getSessionInactivityTimeout()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -208,10 +181,7 @@ open fun getSessionInactivityTimeout()
 
 open fun equals(basicUserRole: BasicUserRole?)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var basicUserRole = basicUserRole
 
     
@@ -235,10 +205,7 @@ var basicUserRole = basicUserRole
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

@@ -40,10 +40,7 @@ open public class PathGenerator
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PathGenerator
-
-        Updates for KMP build        
-        {
+: PathGenerator{
 
 
 
@@ -55,9 +52,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -66,10 +60,7 @@ open fun getInstance()
             
 open fun init(geographicMapInterface: BasicGeographicMap, totalPaths: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var geographicMapInterface = geographicMapInterface
     //var totalPaths = totalPaths
 }
@@ -79,10 +70,7 @@ open fun init(geographicMapInterface: BasicGeographicMap, totalPaths: Int)
             
 open fun getInstanceNoCache(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, totalPaths: Int)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
     //var geographicMapInterface = geographicMapInterface
     //var pathFindingInfo = pathFindingInfo
     //var totalPaths = totalPaths
@@ -101,10 +89,7 @@ open fun getInstanceNoCache(geographicMapInterface: BasicGeographicMap, pathFind
             
 open fun getInstance(geographicMapInterface: BasicGeographicMap, geographicMapCellHistory: GeographicMapCellHistory, pathFindingInfo: PathFindingInfo, totalPaths: Int)
         //nullable =  from not(true or (false and false)) = 
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
     //var geographicMapInterface = geographicMapInterface
     //var geographicMapCellHistory = geographicMapCellHistory
     //var pathFindingInfo = pathFindingInfo
@@ -120,10 +105,7 @@ open fun getInstance(geographicMapInterface: BasicGeographicMap, geographicMapCe
             
 open fun create(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, totalPaths: Int)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
     //var geographicMapInterface = geographicMapInterface
     //var pathFindingInfo = pathFindingInfo
     //var totalPaths = totalPaths
@@ -151,10 +133,7 @@ open fun create(geographicMapInterface: BasicGeographicMap, pathFindingInfo: Pat
             
 open fun createN(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, totalPaths: Int, multipassState: MultipassState)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
     //var geographicMapInterface = geographicMapInterface
     //var pathFindingInfo = pathFindingInfo
     //var totalPaths = totalPaths
@@ -183,10 +162,7 @@ open fun createN(geographicMapInterface: BasicGeographicMap, pathFindingInfo: Pa
             
 open fun isValid(pathList: BasicArrayList, geographicMapCellHistory: GeographicMapCellHistory)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var pathList = pathList
     //var geographicMapCellHistory = geographicMapCellHistory
 

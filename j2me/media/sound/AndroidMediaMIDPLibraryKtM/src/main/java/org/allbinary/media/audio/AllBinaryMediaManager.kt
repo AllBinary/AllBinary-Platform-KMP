@@ -51,10 +51,7 @@ open public class AllBinaryMediaManager
 
 open fun isMuted()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -65,20 +62,14 @@ open fun isMuted()
 
 open fun setMuted(aMuted: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var aMuted = aMuted
 }
 
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -91,10 +82,7 @@ open fun update()
             
 open fun init(soundsFactoryInterface: SoundsFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var soundsFactoryInterface = soundsFactoryInterface
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
@@ -116,10 +104,7 @@ logUtil!!.put(commonString!!.END, THIS, commonString!!.INIT)
             
 open fun shutdown(soundsFactoryInterface: SoundsFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var soundsFactoryInterface = soundsFactoryInterface
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
@@ -153,9 +138,6 @@ logUtil!!.put(commonString!!.START, THIS, "shutdown")
 
                         for (i in 0 until soundInterfaceArray!!.size)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -216,10 +198,7 @@ logUtil!!.put(commonString!!.START, THIS, "shutdown")
             
 open fun createPlayer(resource: String)
         //nullable = true from not(false or (false and false)) = true
-: Player
-
-        Updates for KMP build        
-        {
+: Player{
 var resource = resource
 mostUsedTotal++
 
@@ -238,10 +217,7 @@ mostUsedTotal++
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AndroidMediaPlayerWrapper(resource)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put("Could not create AndroidMediaPlayerWrapper using NoPlayer at " +CommonLabels.getInstance()!!.TOTAL_LABEL +mostUsedTotal, THIS, "createPlayer", e)
 
 
@@ -269,10 +245,7 @@ logUtil!!.put("Could not create AndroidMediaPlayerWrapper using NoPlayer at " +C
             
 open fun createPlayer(stream: InputStream, type: String)
         //nullable = true from not(false or (false and false)) = true
-: Player
-
-        Updates for KMP build        
-        {
+: Player{
 var stream = stream
 var type = type
 
@@ -287,10 +260,7 @@ var type = type
 
 open fun playTone(frequency: Int, time: Int, volume: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var frequency = frequency
 var time = time
 var volume = volume
@@ -303,10 +273,7 @@ var volume = volume
 
 open fun isInitialized()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -318,9 +285,6 @@ open fun isInitialized()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

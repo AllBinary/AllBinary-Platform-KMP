@@ -39,9 +39,6 @@ open public class ImageComparisonResultFrameCacheable
     private var imageComparisonResult: ImageComparisonResult
 public constructor        (imageComparisonResult: ImageComparisonResult, frame: Long)
             : super()
-        
-
-        Updates for KMP build        
         {
 var imageComparisonResult = imageComparisonResult
 var frame = frame
@@ -52,10 +49,7 @@ this.frame= frame
 
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 
 
 
@@ -66,10 +60,7 @@ open fun getKey()
 
 open fun getFrame()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -80,10 +71,7 @@ open fun getFrame()
 
 open fun setFrame(frame: Long)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var frame = frame
 this.frame= frame
 }
@@ -91,10 +79,7 @@ this.frame= frame
 
 open fun getImageComparisonResult()
         //nullable = true from not(false or (false and true)) = true
-: ImageComparisonResult
-
-        Updates for KMP build        
-        {
+: ImageComparisonResult{
 
 
 
@@ -105,20 +90,14 @@ open fun getImageComparisonResult()
 
 open fun setImageComparisonResult(imageComparisonResult: ImageComparisonResult)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var imageComparisonResult = imageComparisonResult
 this.imageComparisonResult= imageComparisonResult
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

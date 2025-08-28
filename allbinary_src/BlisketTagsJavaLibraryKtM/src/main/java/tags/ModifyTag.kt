@@ -41,10 +41,7 @@ open public class ModifyTag : HelperTag {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        (tagHelperFactoryInterface: TagHelperFactoryInterface)                        
 
-                            : super(tagHelperFactoryInterface)
-
-        Updates for KMP build        
-        {
+                            : super(tagHelperFactoryInterface){
 var tagHelperFactoryInterface = tagHelperFactoryInterface
 
 
@@ -66,10 +63,7 @@ var tagHelperFactoryInterface = tagHelperFactoryInterface
             
 open fun insert()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -89,10 +83,7 @@ open fun insert()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to insert"
 
@@ -119,10 +110,7 @@ open fun insert()
             
 open fun delete()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -142,10 +130,7 @@ open fun delete()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to delete"
 
@@ -172,10 +157,7 @@ open fun delete()
             
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -195,10 +177,7 @@ open fun update()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to update"
 
@@ -225,10 +204,7 @@ open fun update()
             
 open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
         try {
             
@@ -338,10 +314,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "doStartTag()")
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.EVAL_BODY_INCLUDE
 } catch(e: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 
 
@@ -350,10 +323,7 @@ AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
                         return SKIP_BODY
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 
 

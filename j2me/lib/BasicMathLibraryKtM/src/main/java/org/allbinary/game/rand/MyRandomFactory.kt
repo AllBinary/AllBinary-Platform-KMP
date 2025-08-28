@@ -44,10 +44,7 @@ open public class MyRandomFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: MyRandomFactory
-
-        Updates for KMP build        
-        {
+: MyRandomFactory{
 
 
 
@@ -58,10 +55,7 @@ open fun getInstance()
 
 open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var args = args
 
     var randomFactory: MyRandomFactory = MyRandomFactory.getInstance()!!
@@ -82,9 +76,6 @@ open fun main(args: Array<String?>)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 intArray[index]= index
 intArray2[index]= index
@@ -100,9 +91,6 @@ randomFactory!!.shuffle(intArray, intArray2)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 stringBuilder!!.append(intArray[index]!!)!!.append(',')
 }
@@ -115,9 +103,6 @@ stringBuilder!!.delete(0, stringBuilder!!.length())
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 stringBuilder!!.append(intArray2[index]!!)!!.append(',')
 }
@@ -132,9 +117,6 @@ System.out.println(stringBuilder!!.toString())
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 found= false
 
@@ -143,9 +125,6 @@ found= false
 
                         for (index2 in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -175,9 +154,6 @@ found= false
     private var rand: Random
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 rand= Random(System.currentTimeMillis())
 }
@@ -185,10 +161,7 @@ rand= Random(System.currentTimeMillis())
 
 open fun setSeed(seed: Long)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var seed = seed
 rand= Random(seed)
 }
@@ -196,10 +169,7 @@ rand= Random(seed)
 
 open fun getNextInt(range: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var range = range
 
     var div: Int = (Integer.MAX_VALUE /range) +1
@@ -214,10 +184,7 @@ var range = range
 
 open fun getAbsoluteNextInt(range: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var range = range
 
 
@@ -229,10 +196,7 @@ var range = range
 
 open fun getAbsoluteNextIntAllowZero(range: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var range = range
 
     
@@ -261,10 +225,7 @@ var range = range
 
 open fun shuffle(intArray: IntArray)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var intArray = intArray
 this.shuffle(intArray, intArray!!.size *7)
 }
@@ -272,10 +233,7 @@ this.shuffle(intArray, intArray!!.size *7)
 
 open fun shuffle(intArray: IntArray, shuffleTotal: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var intArray = intArray
     //var shuffleTotal = shuffleTotal
 
@@ -297,9 +255,6 @@ open fun shuffle(intArray: IntArray, shuffleTotal: Int)
 
                         for (index in 0 until shuffleTotal)
 
-        
-
-        Updates for KMP build        
         {
 randomIndex= this.getAbsoluteNextIntAllowZero(size)
 randomIndex2= this.getAbsoluteNextIntAllowZero(size)
@@ -313,10 +268,7 @@ intArray[randomIndex2]= value
 
 open fun shuffle(intArray: IntArray, intArray2: IntArray)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var intArray = intArray
     //var intArray2 = intArray2
 this.shuffle(intArray, intArray2, intArray!!.size *7)
@@ -325,10 +277,7 @@ this.shuffle(intArray, intArray2, intArray!!.size *7)
 
 open fun shuffle(intArray: IntArray, intArray2: IntArray, shuffleTotal: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var intArray = intArray
     //var intArray2 = intArray2
     //var shuffleTotal = shuffleTotal
@@ -354,9 +303,6 @@ open fun shuffle(intArray: IntArray, intArray2: IntArray, shuffleTotal: Int)
 
                         for (index in 0 until shuffleTotal)
 
-        
-
-        Updates for KMP build        
         {
 randomIndex= this.getAbsoluteNextIntAllowZero(size)
 randomIndex2= this.getAbsoluteNextIntAllowZero(size)

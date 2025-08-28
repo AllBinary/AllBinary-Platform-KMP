@@ -61,10 +61,7 @@ open public class TransformInfoEntity : AbSqlBean
     private val transformInfoObjectConfigGeneratorFactoryInterface: TransformInfoObjectConfigGeneratorFactoryInterface
 public constructor        (transformInfoObjectConfigGeneratorFactoryInterface: TransformInfoObjectConfigGeneratorFactoryInterface, transformInfoObjectConfigAndManipulatorFactoryInterface: TransformInfoObjectConfigAndManipulatorFactoryBase, transformInfoFactoryInterface: TransformInfoFactoryInterface)                        
 
-                            : super(UserDbInitInfo())
-
-        Updates for KMP build        
-        {
+                            : super(UserDbInitInfo()){
 var transformInfoObjectConfigGeneratorFactoryInterface = transformInfoObjectConfigGeneratorFactoryInterface
 var transformInfoObjectConfigAndManipulatorFactoryInterface = transformInfoObjectConfigAndManipulatorFactoryInterface
 var transformInfoFactoryInterface = transformInfoFactoryInterface
@@ -81,10 +78,7 @@ this.transformInfoFactoryInterface= transformInfoFactoryInterface
 
 open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var values = values
 
         try {
@@ -99,10 +93,7 @@ var values = values
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -119,10 +110,7 @@ var values = values
 
 open fun delete(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 
         try {
@@ -137,10 +125,7 @@ var value = value
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -159,10 +144,7 @@ var value = value
             
 open fun get(name: String, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable = true from not(false or (false and false)) = true
-: TransformInfoInterface
-
-        Updates for KMP build        
-        {
+: TransformInfoInterface{
 var name = name
 var propertiesHashMap = propertiesHashMap
 var pageContext = pageContext
@@ -241,10 +223,7 @@ hashMap!!.put(transformInfoData!!.DATA, decode.toCharArray())
             
 open fun getObjectConfigs(storeName: Object)
         //nullable = true from not(false or (false and false)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 var storeName = storeName
 
     var objectConfigVector: Vector = Vector()
@@ -261,9 +240,6 @@ var storeName = storeName
 
                         for (i in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var objectConfigString: String = objectConfigColumnVector!!.get(i) as String
@@ -284,10 +260,7 @@ objectConfigVector!!.add(this.transformInfoObjectConfigAndManipulatorFactoryInte
             
 open fun getNames(storeName: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 var storeName = storeName
 
     var viewNameVector: Vector = Vector()
@@ -304,9 +277,6 @@ var storeName = storeName
 
                         for (i in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var viewNameString: String = columnVector!!.get(i) as String
@@ -324,10 +294,7 @@ viewNameVector!!.add(viewNameString)
 
 open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var transformInfoData: TransformInfoData = TransformInfoData.getInstance()!!
 
@@ -373,10 +340,7 @@ stringBuffer!!.append(this.sqlStrings!!.END)
 
 open fun createTable()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -387,10 +351,7 @@ open fun createTable()
 
 open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var updatedValues = updatedValues
 super.updateWhere(TransformInfoData.getInstance()!!.NAME, updatedValues!!.get(TransformInfoData.getInstance()!!.NAME) as String, updatedValues)
 }
@@ -398,10 +359,7 @@ super.updateWhere(TransformInfoData.getInstance()!!.NAME, updatedValues!!.get(Tr
 
 open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

@@ -38,10 +38,7 @@ open public class AllBinaryVibrationME
         
 open fun vibrate(duration: Int, type: Int, volume: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var duration = duration
 var type = type
 var volume = volume

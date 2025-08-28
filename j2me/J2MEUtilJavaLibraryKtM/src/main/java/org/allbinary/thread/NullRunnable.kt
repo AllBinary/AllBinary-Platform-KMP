@@ -40,10 +40,7 @@ open public class NullRunnable
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NullRunnable
-
-        Updates for KMP build        
-        {
+: NullRunnable{
 
 
 
@@ -55,18 +52,12 @@ open fun getInstance()
         }
             public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 override fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 

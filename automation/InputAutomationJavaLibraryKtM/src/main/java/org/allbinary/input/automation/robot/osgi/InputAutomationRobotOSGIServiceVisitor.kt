@@ -44,19 +44,13 @@ open public class InputAutomationRobotOSGIServiceVisitor
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
     //var anyType = anyType
 
 
@@ -68,10 +62,7 @@ open fun visit(anyType: Any)
 
 open fun visit(osgiServiceInterface: OSGIServiceInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var osgiServiceInterface = osgiServiceInterface
 
         try {
@@ -88,9 +79,6 @@ open fun visit(osgiServiceInterface: OSGIServiceInterface)
 
                         for (index in 0 until inputRobotInterfaceArray!!.size)
 
-        
-
-        Updates for KMP build        
         {
 logUtil!!.put("Adding: " +inputRobotInterfaceArray[index]!!.getName(), this, "visit")
 InputRobotFactory.getInstance()!!.add(inputRobotInterfaceArray[index]!!)
@@ -102,10 +90,7 @@ InputRobotFactory.getInstance()!!.add(inputRobotInterfaceArray[index]!!)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.TRUE
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "visit", e)
 
 

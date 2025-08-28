@@ -42,10 +42,7 @@ open public class AndroidSystemProperties
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AndroidSystemProperties
-
-        Updates for KMP build        
-        {
+: AndroidSystemProperties{
 
 
 
@@ -59,9 +56,6 @@ open fun getInstance()
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 public constructor        (context: Context)
             : super()
-        
-
-        Updates for KMP build        
         {
 var context = context
 }
@@ -69,10 +63,7 @@ var context = context
 
 open fun getDeviceId()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -83,10 +74,7 @@ open fun getDeviceId()
 
 open fun getDeviceSoftwareVersion()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -97,10 +85,7 @@ open fun getDeviceSoftwareVersion()
 
 open fun getLine1Number()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -111,10 +96,7 @@ open fun getLine1Number()
 
 open fun getNetworkCountryIso()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -125,10 +107,7 @@ open fun getNetworkCountryIso()
 
 open fun getNetworkOperator()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -139,10 +118,7 @@ open fun getNetworkOperator()
 
 open fun getNetworkOperatorName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -153,10 +129,7 @@ open fun getNetworkOperatorName()
 
 open fun getSimCountryIso()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -167,10 +140,7 @@ open fun getSimCountryIso()
 
 open fun getSimOperator()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -181,10 +151,7 @@ open fun getSimOperator()
 
 open fun getSimOperatorName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -195,10 +162,7 @@ open fun getSimOperatorName()
 
 open fun getSimSerialNumber()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -209,10 +173,7 @@ open fun getSimSerialNumber()
 
 open fun getSubscriberId()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -223,10 +184,7 @@ open fun getSubscriberId()
 
 open fun getVoiceMailAlphaTag()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -237,10 +195,7 @@ open fun getVoiceMailAlphaTag()
 
 open fun getVoiceMailNumber()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -251,10 +206,7 @@ open fun getVoiceMailNumber()
 
 open fun getNetworkType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -265,10 +217,7 @@ open fun getNetworkType()
 
 open fun getPhoneType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -279,10 +228,7 @@ open fun getPhoneType()
 
 open fun getBoard()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -293,10 +239,7 @@ open fun getBoard()
 
 open fun getBrand()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -307,10 +250,7 @@ open fun getBrand()
 
 open fun getDevice()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -321,10 +261,7 @@ open fun getDevice()
 
 open fun getFingerprint()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -335,10 +272,7 @@ open fun getFingerprint()
 
 open fun getHost()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -349,10 +283,7 @@ open fun getHost()
 
 open fun getId()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -363,10 +294,7 @@ open fun getId()
 
 open fun getModel()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -377,10 +305,7 @@ open fun getModel()
 
 open fun getProduct()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -391,10 +316,7 @@ open fun getProduct()
 
 open fun getTags()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -405,10 +327,7 @@ open fun getTags()
 
 open fun getTime()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -419,10 +338,7 @@ open fun getTime()
 
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -433,10 +349,7 @@ open fun getType()
 
 open fun getUser()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

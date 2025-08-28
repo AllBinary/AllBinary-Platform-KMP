@@ -41,10 +41,7 @@ open public class ScrollSelectionFormNoneFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ScrollSelectionForm
-
-        Updates for KMP build        
-        {
+: ScrollSelectionForm{
 
 
 

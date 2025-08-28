@@ -43,10 +43,7 @@ open public class DatabaseEncoder
             
 open fun encode(value: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var value = value
 
         try {
@@ -62,9 +59,6 @@ var value = value
 
                         for (index in 0 until array.size)
 
-        
-
-        Updates for KMP build        
         {
 stringBuffer!!.append(array[index]!!.
                             toString())
@@ -85,10 +79,7 @@ stringBuffer!!.append(array[index]!!.
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -105,10 +96,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, "DatabaseEncoder", "decode", e)
 
 open fun decode(value: String)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray
-
-        Updates for KMP build        
-        {
+: ByteArray{
 var value = value
 
         try {
@@ -133,9 +121,6 @@ var value = value
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 byteOfData= vector.objectArray[index]!! as String
 byteVector!!.add(byteOfData.toByte())
@@ -156,9 +141,6 @@ byteVector!!.add(byteOfData.toByte())
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 aByte= byteVector!!.objectArray[index]!! as Byte
 decode[decodeIndex]= aByte!!.toByte()
@@ -171,10 +153,7 @@ decodeIndex++
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return decode
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -192,9 +171,6 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, "DatabaseEncoder", "decode", e)
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

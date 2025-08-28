@@ -46,9 +46,6 @@ open public class ImageActionScriptOutputData
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

@@ -50,9 +50,6 @@ open public class GenericProfileAction
     private var genericProfileActionJPanel: GenericProfileActionJPanel
 public constructor        (genericProfileActionJPanel: GenericProfileActionJPanel, node: Node)
             : super()
-        
-
-        Updates for KMP build        
         {
 var genericProfileActionJPanel = genericProfileActionJPanel
 var node = node
@@ -83,9 +80,6 @@ this.setGenericProfileActionScript(GenericProfileActionScript(this.genericProfil
 
 public constructor        (name: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var name = name
 this.name= name
@@ -95,10 +89,7 @@ this.setGenericProfileActionScript(GenericProfileActionScript(this.genericProfil
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -109,10 +100,7 @@ open fun getName()
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var name = name
 this.name= name
 }
@@ -120,10 +108,7 @@ this.name= name
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -141,10 +126,7 @@ logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var node: Node = ModDomHelper.createNodeWithValueNodes(document, GenericProfileActionData.NAME, this.toHashMap())!!
@@ -160,10 +142,7 @@ node.appendChild(getGenericProfileActionScript()!!.toXmlNode(document))
 
 open fun getGenericProfileActionScript()
         //nullable = true from not(false or (false and true)) = true
-: GenericProfileActionScript
-
-        Updates for KMP build        
-        {
+: GenericProfileActionScript{
 
 
 
@@ -174,10 +153,7 @@ open fun getGenericProfileActionScript()
 
 open fun setGenericProfileActionScript(genericProfileActionScript: GenericProfileActionScript)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var genericProfileActionScript = genericProfileActionScript
 this.genericProfileActionScript= genericProfileActionScript
 }

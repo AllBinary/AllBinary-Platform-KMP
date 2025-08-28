@@ -36,10 +36,7 @@ open public class HelperTag : PropertiesTag {
     private val tagHelperFactoryInterface: TagHelperFactoryInterface
 
     private var anyType: Any
-public constructor        (tagHelperFactoryInterface: TagHelperFactoryInterface)
-
-        Updates for KMP build        
-        {
+public constructor        (tagHelperFactoryInterface: TagHelperFactoryInterface){
     //var tagHelperFactoryInterface = tagHelperFactoryInterface
 
     
@@ -58,10 +55,7 @@ this.tagHelperFactoryInterface= tagHelperFactoryInterface
             
 open fun setHelper()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(this.anyType == 
@@ -87,10 +81,7 @@ this.anyType= tagHelperFactoryInterface!!.getInstance(this.getPropertiesHashMap(
 
 open fun getHelper()
         //nullable = true from not(false or (false and true)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 
 
 
@@ -101,10 +92,7 @@ open fun getHelper()
 
 open fun doEndTag()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))

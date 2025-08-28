@@ -39,10 +39,7 @@ open public class PermissionItemsEntityFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PermissionItemsEntityFactory
-
-        Updates for KMP build        
-        {
+: PermissionItemsEntityFactory{
 
 
 
@@ -53,10 +50,7 @@ open fun getInstance()
 
 open fun getPermissionItemsEntityInstance()
         //nullable = true from not(false or (false and true)) = true
-: PermissionItemsEntity
-
-        Updates for KMP build        
-        {
+: PermissionItemsEntity{
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -68,10 +62,7 @@ open fun getPermissionItemsEntityInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return org.allbinary.data.tables.user.commerce.inventory.item.permissions.PermissionItemsEntity()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -99,9 +90,6 @@ open fun getPermissionItemsEntityInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

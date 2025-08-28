@@ -38,10 +38,7 @@ open public class DemoGameMidlet : GameMidlet {
         
 public constructor        (clientInformationFactory: ClientInformationFactory)                        
 
-                            : super(clientInformationFactory)
-
-        Updates for KMP build        
-        {
+                            : super(clientInformationFactory){
     //var clientInformationFactory = clientInformationFactory
 
 
@@ -54,10 +51,7 @@ public constructor        (clientInformationFactory: ClientInformationFactory)
             
 open fun isContinue()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     var hashtable: Hashtable<Any, Any> = this.getStartStateHashtable()!!
 
@@ -90,10 +84,7 @@ open fun isContinue()
 
 open fun getHighestLevel()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -106,10 +97,7 @@ open fun getHighestLevel()
             
 open fun createDemoGameCanvasRunnableInterface()
         //nullable = true from not(false or (false and true)) = true
-: GameCanvasRunnableInterface
-
-        Updates for KMP build        
-        {
+: GameCanvasRunnableInterface{
 
 
 
@@ -121,10 +109,7 @@ open fun createDemoGameCanvasRunnableInterface()
             
 open fun createGameCanvasRunnableInterface(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
-: GameCanvasRunnableInterface
-
-        Updates for KMP build        
-        {
+: GameCanvasRunnableInterface{
 var allBinaryGameLayerManager = allBinaryGameLayerManager
 
 
@@ -137,10 +122,7 @@ var allBinaryGameLayerManager = allBinaryGameLayerManager
             
 open fun createGameCanvasRunnableInterface()
         //nullable = true from not(false or (false and true)) = true
-: GameCanvasRunnableInterface
-
-        Updates for KMP build        
-        {
+: GameCanvasRunnableInterface{
 
 
 
@@ -151,19 +133,13 @@ open fun createGameCanvasRunnableInterface()
 
 open fun demoSetup()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun postDemoSetup()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
@@ -171,10 +147,7 @@ open fun postDemoSetup()
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun setDemo()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 logUtil!!.put(commonStrings!!.START, this, "setDemo")
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
@@ -188,10 +161,7 @@ PrimaryThreadPool.getInstance()!!.runTask(DemoRunnable(this))
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun createGame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var CREATE_GAME: String = "createGame"
 
@@ -211,10 +181,7 @@ logUtil!!.put(commonStrings!!.END, this, CREATE_GAME)
 
 open fun isReady()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 

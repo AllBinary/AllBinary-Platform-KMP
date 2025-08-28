@@ -65,10 +65,7 @@ open public class StoreFrontsRequestHelper : ModifyTable {
     private var modifyingStoreFrontInterface: StoreFrontInterface
 
     private val portion: Portion
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
-
-        Updates for KMP build        
-        {
+public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 this.pageContext= pageContext
@@ -83,10 +80,7 @@ this.getFormData()
             
 open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.storeName= this.weblisketSession!!.getStoreName()
 this.modifyingStoreFrontInterface= StoreFront(this.request) as StoreFrontInterface
 }
@@ -94,10 +88,7 @@ this.modifyingStoreFrontInterface= StoreFront(this.request) as StoreFrontInterfa
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -122,10 +113,7 @@ StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!.update
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to update storefronts table"
 
@@ -152,10 +140,7 @@ StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!.update
             
 open fun sendStoreCreatedEmails()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var storeManagerEmailSubject: String = "Store Manager Nofification For Store: " +this.modifyingStoreFrontInterface!!.getName()
 
@@ -207,10 +192,7 @@ adminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.STORECREATE
 
 open fun install()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -239,10 +221,7 @@ this.modifyingStoreFrontInterface!!.install(this.portion.getCurrent()!!.toInt(),
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to Install storefront"
 
@@ -268,10 +247,7 @@ this.modifyingStoreFrontInterface!!.install(this.portion.getCurrent()!!.toInt(),
 
 open fun insert()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -296,10 +272,7 @@ StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!.insert
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to add storefront"
 
@@ -324,10 +297,7 @@ StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!.insert
 
 open fun delete()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -349,10 +319,7 @@ StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!.delete
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to delete storefronts table"
 

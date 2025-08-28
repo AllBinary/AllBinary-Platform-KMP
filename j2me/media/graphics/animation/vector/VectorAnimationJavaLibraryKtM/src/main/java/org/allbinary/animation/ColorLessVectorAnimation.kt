@@ -32,10 +32,7 @@ open public class ColorLessVectorAnimation : VectorAnimation {
         
 public constructor        (currentPoints: Array<Array<IntArray?>?>, animationBehavior: AnimationBehavior)                        
 
-                            : super(currentPoints, BasicColorFactory.getInstance()!!.WHITE, animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(currentPoints, BasicColorFactory.getInstance()!!.WHITE, animationBehavior){
     //var currentPoints = currentPoints
     //var animationBehavior = animationBehavior
 
@@ -46,10 +43,7 @@ public constructor        (currentPoints: Array<Array<IntArray?>?>, animationBeh
 
 public constructor        (currentPoints: Array<IntArray?>, animationBehavior: AnimationBehavior)                        
 
-                            : super(currentPoints, BasicColorFactory.getInstance()!!.WHITE, animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(currentPoints, BasicColorFactory.getInstance()!!.WHITE, animationBehavior){
     //var currentPoints = currentPoints
     //var animationBehavior = animationBehavior
 
@@ -60,10 +54,7 @@ public constructor        (currentPoints: Array<IntArray?>, animationBehavior: A
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 var x = x
 var y = y

@@ -37,10 +37,7 @@ open public class SWTProcessorUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: SWTProcessorUtil
-
-        Updates for KMP build        
-        {
+: SWTProcessorUtil{
 
 
 

@@ -39,19 +39,13 @@ open public class BaseTouchInput
     private val basicArrayListUtil: BasicArrayListUtil = BasicArrayListUtil.getInstance()!!
  constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 
@@ -61,10 +55,7 @@ open fun getList()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

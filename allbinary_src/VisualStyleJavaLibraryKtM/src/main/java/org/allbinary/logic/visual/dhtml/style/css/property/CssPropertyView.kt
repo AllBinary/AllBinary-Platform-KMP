@@ -41,9 +41,6 @@ open public class CssPropertyView
     private var cssProperty: CssProperty
 public constructor        (name: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var name = name
 this.cssProperty= CssProperty(name)
@@ -51,9 +48,6 @@ this.cssProperty= CssProperty(name)
 
 public constructor        (node: Node)
             : super()
-        
-
-        Updates for KMP build        
         {
 var node = node
 this.cssProperty= CssProperty(node)
@@ -62,10 +56,7 @@ this.cssProperty= CssProperty(node)
 
 open fun getProperty()
         //nullable = true from not(false or (false and true)) = true
-: CssProperty
-
-        Updates for KMP build        
-        {
+: CssProperty{
 
 
 
@@ -78,10 +69,7 @@ open fun getProperty()
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
 

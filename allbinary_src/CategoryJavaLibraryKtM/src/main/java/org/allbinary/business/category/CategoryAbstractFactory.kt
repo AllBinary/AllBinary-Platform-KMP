@@ -44,19 +44,13 @@ open public class CategoryAbstractFactory
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getRootInstance()
         //nullable = true from not(false or (false and true)) = true
-: CategoryInterface
-
-        Updates for KMP build        
-        {
+: CategoryInterface{
 
 
 
@@ -66,10 +60,7 @@ open fun getRootInstance()
 
 open fun getRootInstance(categoryAbPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
-: CategoryInterface
-
-        Updates for KMP build        
-        {
+: CategoryInterface{
 var categoryAbPath = categoryAbPath
 
 
@@ -80,10 +71,7 @@ var categoryAbPath = categoryAbPath
 
 open fun getRootInstanceFromNode(node: Node)
         //nullable = true from not(false or (false and false)) = true
-: CategoryInterface
-
-        Updates for KMP build        
-        {
+: CategoryInterface{
 var node = node
 
 
@@ -94,10 +82,7 @@ var node = node
 
 open fun getInstance(categoryName: String)
         //nullable =  from not(true or (false and false)) = 
-: CategoryInterface
-
-        Updates for KMP build        
-        {
+: CategoryInterface{
 var categoryName = categoryName
 
         try {
@@ -119,10 +104,7 @@ var categoryName = categoryName
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Category(categoryPropertiesFactoryInterface) as CategoryInterface
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
@@ -144,10 +126,7 @@ var categoryName = categoryName
 
 open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, categoryName: String)
         //nullable =  from not(true or (false and false)) = 
-: CategoryInterface
-
-        Updates for KMP build        
-        {
+: CategoryInterface{
 var rootCategoryInterface = rootCategoryInterface
 var parentCategoryInterface = parentCategoryInterface
 var categoryName = categoryName
@@ -171,10 +150,7 @@ var categoryName = categoryName
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Category(rootCategoryInterface, parentCategoryInterface, categoryPropertiesFactoryInterface) as CategoryInterface
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
@@ -196,10 +172,7 @@ var categoryName = categoryName
 
 open fun getInstance(node: Node)
         //nullable =  from not(true or (false and false)) = 
-: CategoryInterface
-
-        Updates for KMP build        
-        {
+: CategoryInterface{
 var node = node
 
         try {
@@ -221,10 +194,7 @@ var node = node
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Category(categoryPropertiesFactoryInterface) as CategoryInterface
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
@@ -246,10 +216,7 @@ var node = node
 
 open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, node: Node)
         //nullable =  from not(true or (false and false)) = 
-: CategoryInterface
-
-        Updates for KMP build        
-        {
+: CategoryInterface{
 var rootCategoryInterface = rootCategoryInterface
 var parentCategoryInterface = parentCategoryInterface
 var node = node
@@ -273,10 +240,7 @@ var node = node
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Category(rootCategoryInterface, parentCategoryInterface, categoryPropertiesFactoryInterface) as CategoryInterface
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
@@ -298,10 +262,7 @@ var node = node
 
 open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, categoryPropertiesHashMap: HashMap<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
-: CategoryInterface
-
-        Updates for KMP build        
-        {
+: CategoryInterface{
 var rootCategoryInterface = rootCategoryInterface
 var parentCategoryInterface = parentCategoryInterface
 var categoryPropertiesHashMap = categoryPropertiesHashMap
@@ -325,10 +286,7 @@ var categoryPropertiesHashMap = categoryPropertiesHashMap
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Category(rootCategoryInterface, parentCategoryInterface, categoryPropertiesFactoryInterface) as CategoryInterface
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORYERROR))

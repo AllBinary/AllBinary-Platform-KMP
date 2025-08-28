@@ -47,10 +47,7 @@ open public class Replace
             
 open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var args = args
 
         try {
@@ -77,10 +74,7 @@ System.out.println("New String: " +testString)
 testString= replaceCat!!.all(testString)
 System.out.println("New String: " +testString)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 }
 
 }
@@ -101,9 +95,6 @@ System.out.println("New String: " +testString)
     private val hashMap: HashMap<Any, Any>
 public constructor        (key: String, value: String)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var key = key
     //var value = value
@@ -122,9 +113,6 @@ this.hashMap!!.put(arrayOf(key), arrayOf(value))
 
 public constructor        (keys: Array<String?>, values: Array<String?>)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var keys = keys
     //var values = values
@@ -143,9 +131,6 @@ this.hashMap!!.put(keys, values)
 
 public constructor        (hashMap: HashMap<Any, Any>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var hashMap = hashMap
 this.hashMap= hashMap
@@ -163,10 +148,7 @@ this.hashMap= hashMap
 
 open fun all(replace: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var replace = replace
 
 
@@ -178,10 +160,7 @@ var replace = replace
 
 open fun upTo(replace: String, total: Int)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var replace = replace
 var total = total
 
@@ -221,9 +200,6 @@ var total = total
 
                         for (index2 in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 keys= keyArray[index2]!! as Array<String?>
 values= hashMap!!.get(keys as Object) as Array<String?>
@@ -235,9 +211,6 @@ values= hashMap!!.get(keys as Object) as Array<String?>
 
 
         while(index < replace.length)
-        
-
-        Updates for KMP build        
         {
 
     var begin: Int = replace.indexOf(keys[0]!!, index)!!
@@ -339,10 +312,7 @@ totalNumberOfReplaces++
 
 open fun line(replace: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var replace = replace
 
     
@@ -381,9 +351,6 @@ var replace = replace
 
                         for (index2 in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 key= keyArray[index2]!! as String
 value= hashMap!!.get(key as Object) as String
@@ -392,9 +359,6 @@ value= hashMap!!.get(key as Object) as String
 
 
         while(index < replace.length)
-        
-
-        Updates for KMP build        
         {
 newStringBuffer!!.delete(0, newStringBuffer!!.length())
 

@@ -42,10 +42,7 @@ open public class GuiLog
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GuiLog
-
-        Updates for KMP build        
-        {
+: GuiLog{
 
 
 
@@ -59,9 +56,6 @@ open fun getInstance()
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -69,10 +63,7 @@ private constructor        ()
 
 open fun showDialog(msg: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var msg = msg
 
     var error: JDialog = JDialog()
@@ -121,10 +112,7 @@ error.show()
 
 open fun put(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var specialMessage = specialMessage
 var anyType = anyType
 var functionName = functionName
@@ -140,10 +128,7 @@ var functionName = functionName
 
 open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Exception)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var specialMessage = specialMessage
 var anyType = anyType
 var functionName = functionName
@@ -161,10 +146,7 @@ System.out.println(data)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return data
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 PreLogUtil.put(commonStrings!!.EXCEPTION, this, "put", e)
 
 
@@ -179,10 +161,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, "put", e)
 
 open fun put(specialMessage: String, className: String, functionName: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var specialMessage = specialMessage
 var className = className
 var functionName = functionName
@@ -198,10 +177,7 @@ var functionName = functionName
 
 open fun put(specialMessage: String, className: String, functionName: String, exception: Exception)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var specialMessage = specialMessage
 var className = className
 var functionName = functionName
@@ -219,10 +195,7 @@ System.out.println(data)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return data
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 PreLogUtil.put(commonStrings!!.EXCEPTION, this, "put", e)
 
 

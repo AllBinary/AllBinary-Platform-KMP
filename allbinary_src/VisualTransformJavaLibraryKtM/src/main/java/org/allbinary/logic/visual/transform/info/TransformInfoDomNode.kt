@@ -46,9 +46,6 @@ open public class TransformInfoDomNode
     private var mappedName: String
 public constructor        (node: Node)
             : super()
-        
-
-        Updates for KMP build        
         {
 var node = node
 
@@ -170,9 +167,6 @@ this.transformInfoInterface= TransformInfo(name) as TransformInfoInterface
 
 public constructor        (transformInfoInterface: TransformInfoInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var transformInfoInterface = transformInfoInterface
 this.transformInfoInterface= transformInfoInterface
@@ -181,9 +175,6 @@ this.mappedName= transformInfoInterface!!.getName()
 
 public constructor        (transformInfoInterface: TransformInfoInterface, mappedName: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var transformInfoInterface = transformInfoInterface
 var mappedName = mappedName
@@ -193,9 +184,6 @@ this.mappedName= mappedName
 
 public constructor        (name: String, mappedName: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var name = name
 var mappedName = mappedName
@@ -206,10 +194,7 @@ this.mappedName= mappedName
 
 open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformInfoInterface
-
-        Updates for KMP build        
-        {
+: TransformInfoInterface{
 
 
 
@@ -220,10 +205,7 @@ open fun getTransformInfoInterface()
 
 open fun getMappedName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -234,10 +216,7 @@ open fun getMappedName()
 
 open fun getReplaceKey()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

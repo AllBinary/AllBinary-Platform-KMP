@@ -38,10 +38,7 @@ open public class ImageJ2SEUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageJ2SEUtil
-
-        Updates for KMP build        
-        {
+: ImageJ2SEUtil{
 
 
 

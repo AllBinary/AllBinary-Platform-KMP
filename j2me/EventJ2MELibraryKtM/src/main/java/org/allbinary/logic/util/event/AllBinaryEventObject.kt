@@ -41,9 +41,6 @@ open public class AllBinaryEventObject
     private var source: Any
 public constructor        (anyType: Any)
             : super()
-        
-
-        Updates for KMP build        
         {
 var anyType = anyType
 this.source= anyType
@@ -52,10 +49,7 @@ this.source= anyType
 
 open fun getSource()
         //nullable = true from not(false or (false and true)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 
 
 
@@ -66,10 +60,7 @@ open fun getSource()
 
 open fun setSource(source: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var source = source
 this.source= source
 }

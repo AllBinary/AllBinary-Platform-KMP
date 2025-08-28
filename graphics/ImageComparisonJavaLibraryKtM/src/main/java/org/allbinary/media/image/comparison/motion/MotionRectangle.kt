@@ -41,9 +41,6 @@ open public class MotionRectangle
     private var pixelDeltaVector: Vector
 public constructor        (rectangle: Rectangle)
             : super()
-        
-
-        Updates for KMP build        
         {
 var rectangle = rectangle
 this.setRectangle(rectangle)
@@ -53,10 +50,7 @@ this.setPixelDeltaVector(Vector())
 
 open fun getRectangle()
         //nullable = true from not(false or (false and true)) = true
-: Rectangle
-
-        Updates for KMP build        
-        {
+: Rectangle{
 
 
 
@@ -67,10 +61,7 @@ open fun getRectangle()
 
 open fun setRectangle(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var rectangle = rectangle
 this.rectangle= rectangle
 }
@@ -78,10 +69,7 @@ this.rectangle= rectangle
 
 open fun getPixelDeltaVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
 
 
@@ -92,20 +80,14 @@ open fun getPixelDeltaVector()
 
 open fun setPixelDeltaVector(pixelDeltaVector: Vector)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var pixelDeltaVector = pixelDeltaVector
 this.pixelDeltaVector= pixelDeltaVector
 }
 
 override fun clone()
         //nullable = true from not(false or (false and true)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 
     var motionRectangle: MotionRectangle = MotionRectangle(this.getRectangle()!!.clone() as Rectangle)
 

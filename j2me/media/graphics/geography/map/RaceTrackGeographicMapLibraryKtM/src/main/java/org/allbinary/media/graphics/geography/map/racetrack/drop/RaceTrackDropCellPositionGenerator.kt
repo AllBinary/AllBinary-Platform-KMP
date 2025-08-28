@@ -53,20 +53,14 @@ open public class RaceTrackDropCellPositionGenerator : BaseDropCellPositionGener
     var raceTrackGeographicMap: BaseRaceTrackGeographicMap
 
     var raceTrackGeographicMapCellTypeFactory: RaceTrackGeographicMapCellTypeFactory
-protected constructor        ()
-
-        Updates for KMP build        
-        {
+protected constructor        (){
 timeDelayHelper= TimeDelayHelper(10000)
 }
 
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.list.clear()
 }
 
@@ -75,10 +69,7 @@ this.list.clear()
             
 open fun isDropAllowedAt(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var geographicMapCellPosition = geographicMapCellPosition
 
     var raceTrackGeographicMapCellType: RaceTrackGeographicMapCellType = raceTrackGeographicMap!!.getCellTypeAt(geographicMapCellPosition) as RaceTrackGeographicMapCellType
@@ -108,10 +99,7 @@ open fun isDropAllowedAt(geographicMapCellPosition: GeographicMapCellPosition)
             
 open fun update(allBinaryGameLayerManager: AllBinaryGameLayerManager, geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
     //var geographicMapInterface = geographicMapInterface
 this.init()
@@ -141,18 +129,12 @@ this.raceTrackGeographicMapCellTypeFactory= this.raceTrackGeographicMap!!.getGeo
 
                         for (index in lastIndex downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 geographicMapCellPosition= trackedList!!.get(index) as GeographicMapCellPosition
 total= 0
 ahead= index
 
         while(this.isDropAllowedAt(trackedList!!.get(ahead) as GeographicMapCellPosition))
-        
-
-        Updates for KMP build        
         {
 total++
 
@@ -192,9 +174,6 @@ ahead++
 
                         for (index in size -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 this.drop(allBinaryGameLayerManager, index)
 }
@@ -208,10 +187,7 @@ this.drop(allBinaryGameLayerManager, index)
             
 open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allBinaryLayerManager = allBinaryLayerManager
 
     
@@ -232,10 +208,7 @@ this.drop(allBinaryLayerManager, index)
             
 open fun drop(allBinaryLayerManager: AllBinaryLayerManager, index: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allBinaryLayerManager = allBinaryLayerManager
 var index = index
 

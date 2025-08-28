@@ -37,10 +37,7 @@ open public class TimeData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TimeData
-
-        Updates for KMP build        
-        {
+: TimeData{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

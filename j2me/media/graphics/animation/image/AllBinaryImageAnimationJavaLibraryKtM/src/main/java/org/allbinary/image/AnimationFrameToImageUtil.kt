@@ -40,10 +40,7 @@ open public class AnimationFrameToImageUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AnimationFrameToImageUtil
-
-        Updates for KMP build        
-        {
+: AnimationFrameToImageUtil{
 
 
 
@@ -63,10 +60,7 @@ open fun getInstance()
             
 open fun getInstanceTranslate(width: Int, height: Int, animationInterface: Animation)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
 var width = width
 var height = height
 var animationInterface = animationInterface
@@ -97,10 +91,7 @@ graphics.translate( -tranlateX,  -tranlateY)
             
 open fun getInstance(width: Int, height: Int, animationInterface: Animation)
         //nullable =  from not(true or (false and false)) = 
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
 var width = width
 var height = height
 var animationInterface = animationInterface

@@ -33,10 +33,7 @@ open public class InputAutomationRobotServiceConsumer : InputAutomationServiceCo
         
 public constructor        (bundleContext: BundleContext)                        
 
-                            : super(InputAutomationRobotServiceInterface::class.toString()!!, bundleContext, InputAutomationRobotOSGIServiceVisitor())
-
-        Updates for KMP build        
-        {
+                            : super(InputAutomationRobotServiceInterface::class.toString()!!, bundleContext, InputAutomationRobotOSGIServiceVisitor()){
 var bundleContext = bundleContext
 
 

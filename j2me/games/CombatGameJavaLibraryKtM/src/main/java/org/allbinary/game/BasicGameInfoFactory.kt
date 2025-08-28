@@ -23,10 +23,7 @@ open public class BasicGameInfoFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BasicGameInfoFactory
-
-        Updates for KMP build        
-        {
+: BasicGameInfoFactory{
 
 
 
@@ -44,19 +41,13 @@ open fun getInstance()
     var total: Int= 0
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun init(total: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var total = total
 currentReleaseIndex= 0
 currentDestroyIndex= 0
@@ -66,10 +57,7 @@ this.total= total
 
 open fun isPeaked()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(this.currentDestroyIndex >= this.total)
@@ -97,10 +85,7 @@ open fun isPeaked()
 
 open fun howManyLeft()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

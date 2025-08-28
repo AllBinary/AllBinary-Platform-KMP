@@ -40,9 +40,6 @@ open public class GeologicalGeographicMapCellPositionFactory
     private val resourcePerMapCellType: IntArray
 public constructor        (resourcePerMapCellType: IntArray)
             : super()
-        
-
-        Updates for KMP build        
         {
 var resourcePerMapCellType = resourcePerMapCellType
 this.resourcePerMapCellType= resourcePerMapCellType
@@ -53,10 +50,7 @@ this.resourcePerMapCellType= resourcePerMapCellType
             
 open fun getInstance(geographicMapInterface: BasicGeographicMap, i_column: Int, i_row: Int, columns: Int, rows: Int, width: Int, height: Int)
         //nullable =  from not(true or (false and false)) = 
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
     //var geographicMapInterface = geographicMapInterface
 var i_column = i_column
 var i_row = i_row

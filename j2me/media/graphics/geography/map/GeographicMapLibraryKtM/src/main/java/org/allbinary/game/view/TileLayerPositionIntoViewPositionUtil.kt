@@ -40,10 +40,7 @@ open public class TileLayerPositionIntoViewPositionUtil
             
 open fun init(gameCanvasInterface: AllBinaryGameCanvas, viewPosition: TileLayerPositionIntoViewPosition)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gameCanvasInterface = gameCanvasInterface
     //var viewPosition = viewPosition
 

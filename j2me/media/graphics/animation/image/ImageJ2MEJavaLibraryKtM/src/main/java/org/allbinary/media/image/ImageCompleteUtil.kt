@@ -38,10 +38,7 @@ open public class ImageCompleteUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageCompleteUtil
-
-        Updates for KMP build        
-        {
+: ImageCompleteUtil{
 
 
 
@@ -61,10 +58,7 @@ open fun getInstance()
             
 open fun waitFor(image: Image, name: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var image = image
 var name = name
 }

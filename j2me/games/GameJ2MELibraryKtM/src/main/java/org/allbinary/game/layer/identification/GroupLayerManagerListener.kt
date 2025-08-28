@@ -49,10 +49,7 @@ open public class GroupLayerManagerListener : LayerManagerEventListener {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GroupLayerManagerListener
-
-        Updates for KMP build        
-        {
+: GroupLayerManagerListener{
 
 
 
@@ -66,20 +63,14 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val list: BasicArrayList = BasicArrayList()
-private constructor        ()
-
-        Updates for KMP build        
-        {
+private constructor        (){
 LayerManagerEventHandler.getInstance()!!.addListener(this)
 }
 
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var groupList: BasicArrayList
 
@@ -92,9 +83,6 @@ open fun clear()
 
                         for (index in size -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 groupList= this.list.objectArray[index]!! as BasicArrayList
 groupList!!.clear()
@@ -105,10 +93,7 @@ groupList!!.clear()
 
 open fun getGroupSize(groupInterfaceCompositeInterface: GroupInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var groupInterfaceCompositeInterface = groupInterfaceCompositeInterface
 
     var groupInterfaceArray: Array<Group?> = groupInterfaceCompositeInterface!!.getGroupInterface()!!
@@ -123,10 +108,7 @@ open fun getGroupSize(groupInterfaceCompositeInterface: GroupInterfaceCompositeI
 
 open fun getGroupSize(groupInterface: Group)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var groupInterface = groupInterface
 
     var id: Int = groupInterface!!.getGroupId().toInt()
@@ -141,10 +123,7 @@ open fun getGroupSize(groupInterface: Group)
 
 open fun getList(groupInterface: Group)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
     //var groupInterface = groupInterface
 
     var id: Int = groupInterface!!.getGroupId().toInt()
@@ -159,10 +138,7 @@ open fun getList(groupInterface: Group)
 
 open fun getList(groupId: Int)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
     //var groupId = groupId
 
     var groupList: BasicArrayList = this.list.objectArray[groupId]!! as BasicArrayList
@@ -177,10 +153,7 @@ open fun getList(groupId: Int)
 
 open fun getGroupSize(groupId: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var groupId = groupId
 
     var groupList: BasicArrayList = this.list.objectArray[groupId]!! as BasicArrayList
@@ -198,10 +171,7 @@ open fun getGroupSize(groupId: Int)
 
 open fun areAllOtherGroupsEmpty(groupInterface: Group)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var groupInterface = groupInterface
 
     var id: Int = groupInterface!!.getGroupId().toInt()
@@ -215,9 +185,6 @@ open fun areAllOtherGroupsEmpty(groupInterface: Group)
 
                         for (index in size -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -257,10 +224,7 @@ open fun areAllOtherGroupsEmpty(groupInterface: Group)
 
 open fun isIdInList(id: Int, excludeGroupList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var id = id
     //var excludeGroupList = excludeGroupList
 
@@ -281,9 +245,6 @@ open fun isIdInList(id: Int, excludeGroupList: BasicArrayList)
 
                         for (index in size -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 groupInterfaceArray= excludeGroupList!!.objectArray[index]!! as Array<Group?>
 
@@ -296,9 +257,6 @@ groupInterfaceArray= excludeGroupList!!.objectArray[index]!! as Array<Group?>
 
                         for (index2 in 0 until size2)
 
-        
-
-        Updates for KMP build        
         {
 groupInterface= groupInterfaceArray[index2]!!
 groupId= groupInterface!!.getGroupId().toInt()
@@ -329,10 +287,7 @@ groupId= groupInterface!!.getGroupId().toInt()
 
 open fun areAllOtherGroupsLessThan(excludeGroupList: BasicArrayList, maxSize: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var excludeGroupList = excludeGroupList
     //var maxSize = maxSize
 
@@ -344,9 +299,6 @@ open fun areAllOtherGroupsLessThan(excludeGroupList: BasicArrayList, maxSize: In
 
                         for (index in size -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -384,16 +336,10 @@ open fun areAllOtherGroupsLessThan(excludeGroupList: BasicArrayList, maxSize: In
 
 open fun init(total: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var total = total
 
         while(this.list.size() <= total +1)
-        
-
-        Updates for KMP build        
         {
 this.list.add(BasicArrayList())
 }
@@ -402,10 +348,7 @@ this.list.add(BasicArrayList())
 
 override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
@@ -414,10 +357,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
                 @Throws(Exception::class)
             override fun onCreateLayerManagerEvent(layerManagerEvent: LayerManagerEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layerManagerEvent = layerManagerEvent
 
     var layerInterface: AllBinaryLayer = layerManagerEvent!!.getLayerInterface()!!
@@ -441,9 +381,6 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 id= groupInterfaceArray[index]!!.getGroupId().toInt()
 groupList= this.list.objectArray[id]!! as BasicArrayList
@@ -480,10 +417,7 @@ groupList= this.list.objectArray[id]!! as BasicArrayList
                 @Throws(Exception::class)
             override fun onDeleteLayerManagerEvent(layerManagerEvent: LayerManagerEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layerManagerEvent = layerManagerEvent
 
     var layerInterface: AllBinaryLayer = layerManagerEvent!!.getLayerInterface()!!
@@ -507,9 +441,6 @@ groupList= this.list.objectArray[id]!! as BasicArrayList
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 id= groupInterfaceArray[index]!!.getGroupId().toInt()
 groupList= this.list.objectArray[id]!! as BasicArrayList
@@ -521,10 +452,7 @@ groupList!!.remove(layerInterface)
 
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -546,9 +474,6 @@ open fun log()
 
                         for (index in size -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     var groupList: BasicArrayList = this.list.objectArray[index]!! as BasicArrayList

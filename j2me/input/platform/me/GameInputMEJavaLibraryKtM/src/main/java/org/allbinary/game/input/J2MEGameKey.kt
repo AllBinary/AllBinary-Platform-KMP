@@ -35,10 +35,7 @@ open public class J2MEGameKey : Input {
             
 open fun getString(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var keyCode = keyCode
 
     var input: Input = InputFactory.getInstance()!!.getInstance(keyCode)!!
@@ -73,10 +70,7 @@ var keyCode = keyCode
         }
             protected constructor        (key: Int, keyName: String)                        
 
-                            : super(key, keyName)
-
-        Updates for KMP build        
-        {
+                            : super(key, keyName){
 var key = key
 var keyName = keyName
 
@@ -102,10 +96,7 @@ inputFactory!!.add(id, this)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

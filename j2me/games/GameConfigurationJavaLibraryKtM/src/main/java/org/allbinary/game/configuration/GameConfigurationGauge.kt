@@ -31,10 +31,7 @@ open public class GameConfigurationGauge : Gauge {
         
 public constructor        (gameConfiguration: GameConfiguration)                        
 
-                            : super(gameConfiguration!!.getName(), gameConfiguration!!.isModifiable(), gameConfiguration!!.getMaxValue()!!.toInt() -gameConfiguration!!.getMinValue()!!.toInt(), gameConfiguration!!.getValue()!!.toInt() -gameConfiguration!!.getMinValue()!!.toInt())
-
-        Updates for KMP build        
-        {
+                            : super(gameConfiguration!!.getName(), gameConfiguration!!.isModifiable(), gameConfiguration!!.getMaxValue()!!.toInt() -gameConfiguration!!.getMinValue()!!.toInt(), gameConfiguration!!.getValue()!!.toInt() -gameConfiguration!!.getMinValue()!!.toInt()){
 var gameConfiguration = gameConfiguration
 
 

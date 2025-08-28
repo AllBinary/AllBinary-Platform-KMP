@@ -38,10 +38,7 @@ open public class ProductListingFactory
             
 open fun getInstance(searchRequest: SearchRequest)
         //nullable =  from not(true or (false and false)) = 
-: ProductListingInterface
-
-        Updates for KMP build        
-        {
+: ProductListingInterface{
 var searchRequest = searchRequest
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
@@ -54,10 +51,7 @@ var searchRequest = searchRequest
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return views.admin.inventory.listings.ProductListing(searchRequest) as ProductListingInterface
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.FACTORYERROR))
@@ -83,9 +77,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION, "ProductListingFactory", commonStrings!
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

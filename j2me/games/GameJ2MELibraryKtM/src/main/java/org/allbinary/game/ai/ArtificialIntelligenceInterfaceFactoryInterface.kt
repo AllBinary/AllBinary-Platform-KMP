@@ -38,9 +38,6 @@ open fun getInstance(hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBin
         //nullable =  from not(true or (false and false)) = 
 : ArtificialIntelligenceInterface
 
-        Updates for KMP build        
-        
-
 }
                 
             

@@ -33,10 +33,7 @@ open public class CapitalEvent : AllBinaryEventObject {
     private var value: Int= 0
 public constructor        (anyType: Any)                        
 
-                            : super(anyType)
-
-        Updates for KMP build        
-        {
+                            : super(anyType){
 var anyType = anyType
 
 
@@ -46,10 +43,7 @@ var anyType = anyType
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -65,10 +59,7 @@ stringBuffer!!.append(this.getValue())
 
 open fun getValue()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -79,10 +70,7 @@ open fun getValue()
 
 open fun setValue(value: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.value= value
 }

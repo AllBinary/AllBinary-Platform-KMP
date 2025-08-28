@@ -35,29 +35,17 @@ open fun getFile(store: String, keywords: String)
         //nullable = true from not(false or (false and false)) = true
 : String
 
-        Updates for KMP build        
-        
-
 open fun delete(value: String)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

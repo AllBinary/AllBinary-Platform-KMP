@@ -47,10 +47,7 @@ open public class InputImageType
 
 open fun getInstance(imageTypeString: String)
         //nullable =  from not(true or (false and false)) = 
-: InputImageType
-
-        Updates for KMP build        
-        {
+: InputImageType{
 var imageTypeString = imageTypeString
 
 
@@ -62,10 +59,7 @@ var imageTypeString = imageTypeString
 
 open fun getAllAsVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
 
 
@@ -81,9 +75,6 @@ open fun getAllAsVector()
     private val index: Int
 private constructor        (name: String, index: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var name = name
 var index = index
@@ -95,10 +86,7 @@ this.hashMap!!.put(this.getName(), this)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -109,10 +97,7 @@ override fun toString()
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -123,10 +108,7 @@ open fun getName()
 
 open fun getIndex()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

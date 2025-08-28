@@ -41,10 +41,7 @@ open public class NullSpecialAnimationFactory
 
 open fun getFactoryInstance()
         //nullable = true from not(false or (false and true)) = true
-: NullSpecialAnimationFactory
-
-        Updates for KMP build        
-        {
+: NullSpecialAnimationFactory{
 
 
 
@@ -56,9 +53,6 @@ open fun getFactoryInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -66,10 +60,7 @@ open fun getFactoryInstance()
                 @Throws(Exception::class)
             override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation
-
-        Updates for KMP build        
-        {
+: Animation{
     //var instanceId = instanceId
 
 
@@ -82,10 +73,7 @@ open fun getFactoryInstance()
                 @Throws(Exception::class)
             override fun getInstance(animationInterface: Animation)
         //nullable =  from not(true or (false and false)) = 
-: Animation
-
-        Updates for KMP build        
-        {
+: Animation{
     //var animationInterface = animationInterface
 
 
@@ -96,10 +84,7 @@ open fun getFactoryInstance()
 
 override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var scaleProperties = scaleProperties
 }
 

@@ -32,36 +32,21 @@ open fun start()
         //nullable = true from not(false or (false and true)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun stop()
         //nullable = true from not(false or (false and true)) = true
 
-
-        Updates for KMP build        
-        
 
 open fun getStartTime()
         //nullable = true from not(false or (false and true)) = true
 : Long
 
-        Updates for KMP build        
-        
-
 open fun getMaxTime()
         //nullable = true from not(false or (false and true)) = true
 : Long
 
-        Updates for KMP build        
-        
-
 open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
-
-        Updates for KMP build        
-        
 
 }
                 

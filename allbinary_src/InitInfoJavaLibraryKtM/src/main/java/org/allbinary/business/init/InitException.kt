@@ -28,18 +28,12 @@
 
 open public class InitException : java.lang.Exception {
         
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 public constructor        (msg: String)                        
 
-                            : super(msg)
-
-        Updates for KMP build        
-        {
+                            : super(msg){
 var msg = msg
 
 

@@ -38,10 +38,7 @@ open public class AllBinarySpriteRotationAnimation : HackRotationSpriteIndexedAn
         
 public constructor        (sprite: Sprite, image: Image, animationBehavior: AnimationBehavior)                        
 
-                            : super(sprite, image, AngleInfo.getInstance((AngleFactory.getInstance()!!.TOTAL_ANGLE /sprite.getRawFrameCount()).toShort()), animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(sprite, image, AngleInfo.getInstance((AngleFactory.getInstance()!!.TOTAL_ANGLE /sprite.getRawFrameCount()).toShort()), animationBehavior){
     //var sprite = sprite
     //var image = image
     //var animationBehavior = animationBehavior
@@ -54,30 +51,21 @@ this.angleInfo!!.adjustAngle(this.sprite.getFrame())
 
 override fun nextRotation()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.sprite.nextFrame()
 this.angleInfo!!.adjustAngle(this.sprite.getFrame())
 }
 
 override fun previousRotation()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.sprite.prevFrame()
 this.angleInfo!!.adjustAngle(this.sprite.getFrame())
 }
 
 override fun setFrame(direction: Direction)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var direction = direction
 
     var angle: Angle = directionUtil!!.getFrameAngle(direction)!!
@@ -87,20 +75,14 @@ this.adjustFrame(angle)
 
 override fun setFrame(angle: Angle)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var angle = angle
 this.adjustFrame(angle)
 }
 
 override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var index = index
 this.sprite.setFrame(index)
 this.angleInfo!!.adjustAngle(this.getFrame())
@@ -108,10 +90,7 @@ this.angleInfo!!.adjustAngle(this.getFrame())
 
 override fun adjustFrame(angle: Angle)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var angle = angle
 this.adjustFrame(angle.getValue())
 }
@@ -120,10 +99,7 @@ this.adjustFrame(angle.getValue())
     private val frameUtil: FrameUtil = FrameUtil.getInstance()!!
 override fun adjustFrame(angle: Short)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var angle = angle
 this.setFrame(frameUtil!!.getFrameForAngle(angle, this.angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement().toInt()))
 }

@@ -38,10 +38,7 @@ open public class GameKey : Input {
         }
              constructor        (key: Int, name: String)                        
 
-                            : super(key, name)
-
-        Updates for KMP build        
-        {
+                            : super(key, name){
     //var key = key
     //var name = name
 
@@ -52,10 +49,7 @@ open public class GameKey : Input {
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

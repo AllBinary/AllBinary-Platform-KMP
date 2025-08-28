@@ -40,9 +40,6 @@ open public class Driver
     private var aggression: Aggression
 public constructor        (turnSpeed: Integer, trackPathSelectionSkill: Integer, aggression: Aggression)
             : super()
-        
-
-        Updates for KMP build        
         {
 var turnSpeed = turnSpeed
 var trackPathSelectionSkill = trackPathSelectionSkill
@@ -55,10 +52,7 @@ this.setAggression(aggression)
 
 open fun getTurnSpeed()
         //nullable = true from not(false or (false and true)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 
 
 
@@ -69,10 +63,7 @@ open fun getTurnSpeed()
 
 open fun setTurnSpeed(turnSpeed: Integer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var turnSpeed = turnSpeed
 this.turnSpeed= turnSpeed
 }
@@ -80,10 +71,7 @@ this.turnSpeed= turnSpeed
 
 open fun getTrackPathSelectionSkill()
         //nullable = true from not(false or (false and true)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 
 
 
@@ -94,10 +82,7 @@ open fun getTrackPathSelectionSkill()
 
 open fun setTrackPathSelectionSkill(trackPathSelectionSkill: Integer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var trackPathSelectionSkill = trackPathSelectionSkill
 this.trackPathSelectionSkill= trackPathSelectionSkill
 }
@@ -105,10 +90,7 @@ this.trackPathSelectionSkill= trackPathSelectionSkill
 
 open fun getAggression()
         //nullable = true from not(false or (false and true)) = true
-: Aggression
-
-        Updates for KMP build        
-        {
+: Aggression{
 
 
 
@@ -119,10 +101,7 @@ open fun getAggression()
 
 open fun setAggression(aggression: Aggression)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var aggression = aggression
 this.aggression= aggression
 }

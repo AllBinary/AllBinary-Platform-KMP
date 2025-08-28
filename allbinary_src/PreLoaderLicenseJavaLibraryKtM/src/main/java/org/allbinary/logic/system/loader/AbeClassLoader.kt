@@ -61,10 +61,7 @@ open public class AbeClassLoader : ClassLoader {
     private var key: String
 public constructor        (parent: ClassLoader, key: String)                        
 
-                            : super(parent)
-
-        Updates for KMP build        
-        {
+                            : super(parent){
 var parent = parent
 var key = key
 
@@ -78,10 +75,7 @@ this.PATH= org.allbinary.globals.URLGLOBALS.getWebappPath() +"WEB-INF/classes/"
 
 open fun findLoadedClass1(name: String)
         //nullable = true from not(false or (false and false)) = true
-: KClass<*>
-
-        Updates for KMP build        
-        {
+: KClass<*>{
 var name = name
 
 
@@ -96,10 +90,7 @@ var name = name
 
 open fun loadClass(name: String)
         //nullable = true from not(false or (false and false)) = true
-: KClass<*>
-
-        Updates for KMP build        
-        {
+: KClass<*>{
 var name = name
 
 
@@ -114,10 +105,7 @@ var name = name
 
 open fun loadClass(name: String, resolve: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: KClass<*>
-
-        Updates for KMP build        
-        {
+: KClass<*>{
 var name = name
 var resolve = resolve
 
@@ -160,24 +148,15 @@ var resolve = resolve
                                     }
                                 
 } catch(e: ClassNotFoundException)
-            
-
-        Updates for KMP build        
-        {
+            {
 logBuffer!!.add(LogFactory.getInstance("Failed to Load Class: " +name +"\nwith: " +loadedWith, this, "loadClass", e))
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logBuffer!!.add(LogFactory.getInstance("Failed to Load Class: " +name +"\nwith: " +loadedWith, this, "loadClass", e))
 }
  catch(e: NoClassDefFoundError)
-            
-
-        Updates for KMP build        
-        {
+            {
 logBuffer!!.add(LogFactory.getInstance("NoClassDefFoundError Failed Loaded Class: " +name +"\nwith: " +loadedWith, this, "loadClass"))
 }
 
@@ -229,10 +208,7 @@ resolveClass(myClass::class.java)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return myClass
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
@@ -255,10 +231,7 @@ logUtil!!.put("Failure loading: " +name +"\nwith: " +loadedWith, this, "loadClas
 
 open fun loadClassBytesFromFile(name: String)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray
-
-        Updates for KMP build        
-        {
+: ByteArray{
 var name = name
 
     var in: FileInputStream = 
@@ -281,10 +254,7 @@ in= FileInputStream(cname)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return decrypted
 } catch(e: IOException)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
@@ -297,10 +267,7 @@ in= FileInputStream(cname)
 StreamUtil.getInstance()!!.close(in)
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var loadedWith: String = "loadClassBytes"
 
@@ -315,10 +282,7 @@ StreamUtil.getInstance()!!.close(in)
                                 
 }
  catch(e: NoClassDefFoundError)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var loadedWith: String = "loadClassBytes"
 
@@ -346,10 +310,7 @@ StreamUtil.getInstance()!!.close(in)
 
 open fun oldLoadClass(name: String, resolve: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: KClass<*>
-
-        Updates for KMP build        
-        {
+: KClass<*>{
 var name = name
 var resolve = resolve
 
@@ -389,10 +350,7 @@ var resolve = resolve
                                     }
                                 
 } catch(e: ClassNotFoundException)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADER))
@@ -404,10 +362,7 @@ var resolve = resolve
                                 
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADER))
@@ -419,10 +374,7 @@ var resolve = resolve
                                 
 }
  catch(e: NoClassDefFoundError)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADER))
@@ -491,10 +443,7 @@ resolveClass(myClass::class.java)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return myClass
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))

@@ -32,20 +32,14 @@ open public class GameCanvasNonBotPaintable : Paintable {
         
 
     private var gameCanvas: AllBinaryGameCanvas
-public constructor        (gameCanvas: AllBinaryGameCanvas)
-
-        Updates for KMP build        
-        {
+public constructor        (gameCanvas: AllBinaryGameCanvas){
 var gameCanvas = gameCanvas
 this.gameCanvas= gameCanvas
 }
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 this.gameCanvas!!.nonBotPaint(graphics)
 }

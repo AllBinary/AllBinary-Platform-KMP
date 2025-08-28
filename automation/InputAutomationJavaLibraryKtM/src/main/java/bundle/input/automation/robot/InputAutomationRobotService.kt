@@ -36,9 +36,6 @@ open public class InputAutomationRobotService
     private var inputRobotInterfaceArray: Array<InputRobotInterface?>
 public constructor        (inputRobotInterfaceArray: Array<InputRobotInterface?>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var inputRobotInterfaceArray = inputRobotInterfaceArray
 this.setInputRobotInterfaceArray(inputRobotInterfaceArray)
@@ -47,10 +44,7 @@ this.setInputRobotInterfaceArray(inputRobotInterfaceArray)
 
 open fun getInputRobotInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<InputRobotInterface?>
-
-        Updates for KMP build        
-        {
+: Array<InputRobotInterface?>{
 
 
 
@@ -61,10 +55,7 @@ open fun getInputRobotInterfaceArray()
 
 open fun setInputRobotInterfaceArray(inputRobotInterfaceArray: Array<InputRobotInterface?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var inputRobotInterfaceArray = inputRobotInterfaceArray
 this.inputRobotInterfaceArray= inputRobotInterfaceArray
 }

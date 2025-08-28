@@ -48,9 +48,6 @@ open public class CollidableBaseBehavior
     val ownerLayer: CollidableCompositeLayer
 public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boolean)
             : super()
-        
-
-        Updates for KMP build        
         {
 var ownerLayer = ownerLayer
 var collidable = collidable
@@ -61,18 +58,12 @@ this.collidable= collidable
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -83,20 +74,14 @@ override fun getName()
 
 open fun setCollidable(collidable: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var collidable = collidable
 this.collidable= collidable
 }
 
 override fun isCollidable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -108,10 +93,7 @@ override fun isCollidable()
                 @Throws(Exception::class)
             override fun collide(allbinaryCollidableLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allbinaryCollidableLayer = allbinaryCollidableLayer
 
 
@@ -124,10 +106,7 @@ var allbinaryCollidableLayer = allbinaryCollidableLayer
     private val layerCollisionUtil: LayerCollisionUtil = LayerCollisionUtil.getInstance()!!
 override fun isCollision(collisionLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var collisionLayer = collisionLayer
 
 
@@ -139,10 +118,7 @@ var collisionLayer = collisionLayer
 
 open fun isCollision(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
 
@@ -156,10 +132,7 @@ var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterfac
             
 open fun collide(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
 
@@ -170,19 +143,13 @@ var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterfac
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
 }
 
 override fun getCollisionTypeWith(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: CollisionType
-
-        Updates for KMP build        
-        {
+: CollisionType{
 var layerInterface = layerInterface
 
 

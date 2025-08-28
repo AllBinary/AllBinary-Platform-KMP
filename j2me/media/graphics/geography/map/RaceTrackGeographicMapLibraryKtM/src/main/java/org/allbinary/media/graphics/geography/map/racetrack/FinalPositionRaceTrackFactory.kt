@@ -40,10 +40,7 @@ open public class FinalPositionRaceTrackFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -55,10 +52,7 @@ open fun getInstance()
 
 open fun reset()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 index= FIRST_POSITION
 }
 
@@ -66,9 +60,6 @@ index= FIRST_POSITION
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

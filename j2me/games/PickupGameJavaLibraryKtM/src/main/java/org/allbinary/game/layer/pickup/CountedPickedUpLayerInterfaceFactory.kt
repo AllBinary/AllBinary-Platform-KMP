@@ -45,10 +45,7 @@ open public class CountedPickedUpLayerInterfaceFactory : PickedUpLayerInterfaceF
     private val id: Int
 public constructor        (pickeUpLayerType: PickedUpLayerType, iconLayer: IconLayer, animationInterface: Animation)                        
 
-                            : super(pickeUpLayerType, iconLayer, animationInterface)
-
-        Updates for KMP build        
-        {
+                            : super(pickeUpLayerType, iconLayer, animationInterface){
 var pickeUpLayerType = pickeUpLayerType
 var iconLayer = iconLayer
 var animationInterface = animationInterface
@@ -67,10 +64,7 @@ list.add(this)
                 @Throws(Exception::class)
             override fun getInstance(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
         //nullable =  from not(true or (false and false)) = 
-: AllBinaryLayer
-
-        Updates for KMP build        
-        {
+: AllBinaryLayer{
 var hashtable = hashtable
 var x = x
 var y = y
@@ -83,10 +77,7 @@ var z = z
 
 override fun getTotal()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -96,10 +87,7 @@ override fun getTotal()
 
 override fun getId()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

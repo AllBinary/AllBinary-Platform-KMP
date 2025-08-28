@@ -47,10 +47,7 @@ open public class ImageArrayAnimationFactory
     private val animationBehaviorFactory: AnimationBehaviorFactory
 public constructor        (imageArray: Array<Image?>, dx: Int, dy: Int)                        
 
-                            : this(imageArray, dx, dy, AnimationBehaviorFactory.getInstance())
-
-        Updates for KMP build        
-        {
+                            : this(imageArray, dx, dy, AnimationBehaviorFactory.getInstance()){
     //var imageArray = imageArray
     //var dx = dx
     //var dy = dy
@@ -62,10 +59,7 @@ public constructor        (imageArray: Array<Image?>, dx: Int, dy: Int)
 
 public constructor        (imageArray: Array<Image?>, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(imageArray, animationBehaviorFactory)
-
-        Updates for KMP build        
-        {
+                            : this(imageArray, animationBehaviorFactory){
     //var imageArray = imageArray
     //var dx = dx
     //var dy = dy
@@ -80,10 +74,7 @@ this.dy= dy
 
 public constructor        (imageArray: Array<Image?>)                        
 
-                            : this(imageArray, AnimationBehaviorFactory.getInstance())
-
-        Updates for KMP build        
-        {
+                            : this(imageArray, AnimationBehaviorFactory.getInstance()){
     //var imageArray = imageArray
 
 
@@ -93,9 +84,6 @@ public constructor        (imageArray: Array<Image?>)
 
 public constructor        (imageArray: Array<Image?>, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var imageArray = imageArray
     //var animationBehaviorFactory = animationBehaviorFactory
@@ -107,10 +95,7 @@ this.animationBehaviorFactory= animationBehaviorFactory
                 @Throws(Exception::class)
             override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation
-
-        Updates for KMP build        
-        {
+: Animation{
     //var instanceId = instanceId
 
     
@@ -138,10 +123,7 @@ this.animationBehaviorFactory= animationBehaviorFactory
 
 override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var scaleProperties = scaleProperties
 }
 

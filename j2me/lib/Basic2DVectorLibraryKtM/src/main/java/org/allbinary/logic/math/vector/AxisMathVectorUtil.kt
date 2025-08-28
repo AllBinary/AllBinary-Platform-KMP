@@ -38,10 +38,7 @@ open public class AxisMathVectorUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AxisMathVectorUtil
-
-        Updates for KMP build        
-        {
+: AxisMathVectorUtil{
 
 
 
@@ -61,10 +58,7 @@ open fun getInstance()
 
 open fun calculateX(magnitude: Long, angle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 var magnitude = magnitude
 var angle = angle
 
@@ -77,10 +71,7 @@ var angle = angle
 
 open fun calculateY(magnitude: Long, angle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 var magnitude = magnitude
 var angle = angle
 
@@ -93,10 +84,7 @@ var angle = angle
 
 open fun calculateZ(magnitude: Long, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 var magnitude = magnitude
 var otherAngle = otherAngle
 

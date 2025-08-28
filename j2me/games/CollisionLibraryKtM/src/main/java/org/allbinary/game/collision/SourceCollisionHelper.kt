@@ -32,10 +32,7 @@ open public class SourceCollisionHelper : CollisionHelper {
         
 public constructor        (layerInterface: AllBinaryLayer)                        
 
-                            : super(layerInterface)
-
-        Updates for KMP build        
-        {
+                            : super(layerInterface){
 var layerInterface = layerInterface
 
 
@@ -45,10 +42,7 @@ var layerInterface = layerInterface
 
 override fun isCollidable(layerInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var layerInterface = layerInterface
 
     

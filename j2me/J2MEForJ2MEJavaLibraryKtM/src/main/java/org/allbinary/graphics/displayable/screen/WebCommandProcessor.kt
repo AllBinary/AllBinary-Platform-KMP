@@ -43,10 +43,7 @@ open public class WebCommandProcessor
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: WebCommandProcessor
-
-        Updates for KMP build        
-        {
+: WebCommandProcessor{
 
 
 
@@ -70,10 +67,7 @@ open fun getInstance()
 
 open fun process(midletCommandListener: CommandListener, command: Command, canvas: Canvas)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var midletCommandListener = midletCommandListener
     //var command = command
     //var canvas = canvas
@@ -81,10 +75,7 @@ open fun process(midletCommandListener: CommandListener, command: Command, canva
         try {
             list.remove(0)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

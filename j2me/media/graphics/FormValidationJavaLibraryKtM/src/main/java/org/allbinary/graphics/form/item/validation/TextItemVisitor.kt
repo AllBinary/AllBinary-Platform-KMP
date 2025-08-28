@@ -30,18 +30,12 @@ import org.allbinary.logic.util.visitor.Visitor
 
 open public class TextItemVisitor : Visitor {
         
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 override fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
     //var anyType = anyType
 
     var value: String = anyType as String

@@ -50,9 +50,6 @@ open public class DefaultGameInitializationListener
     private val swtJOGLProcessor: SWTJOGLProcessor = SWTJOGLProcessor.getInstance()!!
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     var gameInitializedEventHandler: GameInitializedEventHandler = GameInitializedEventHandler.getInstance()!!
@@ -64,10 +61,7 @@ gameInitializedEventHandler!!.addListener(this as GameInitializedListenerInterfa
 
 open fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
@@ -77,10 +71,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
 open fun onGameInitialized(gameInitializedEvent: GameInitializedEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gameInitializedEvent = gameInitializedEvent
 
     var ON_GAME_INITIALIZED: String = "onGameInitialized"
@@ -93,9 +84,6 @@ open fun onGameInitialized(gameInitializedEvent: GameInitializedEvent)
             logUtil!!.put(commonStrings!!.START, this, ON_GAME_INITIALIZED)
 
         while(!swtJOGLProcessor!!.glHolder!!.isCreated)
-        
-
-        Updates for KMP build        
         {
 logUtil!!.put(commonStrings!!.UPDATE, this, ON_GAME_INITIALIZED)
 Thread.sleep(20)
@@ -117,10 +105,7 @@ FeatureResourceInitializationUtil.getInstance()!!.init(gameInitializedEvent!!.ge
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, ON_GAME_INITIALIZED, e)
 }
 

@@ -49,18 +49,12 @@ open public class AnimationFactoryInitializationVisitor
 
 open fun visit()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 

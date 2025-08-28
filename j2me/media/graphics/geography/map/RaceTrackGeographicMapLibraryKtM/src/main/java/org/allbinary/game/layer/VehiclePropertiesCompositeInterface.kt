@@ -32,15 +32,9 @@ open fun getVehicleProperties()
         //nullable = true from not(false or (false and true)) = true
 : VehicleProperties
 
-        Updates for KMP build        
-        
-
 open fun setVehicleProperties(vehicleProperties: VehicleProperties)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

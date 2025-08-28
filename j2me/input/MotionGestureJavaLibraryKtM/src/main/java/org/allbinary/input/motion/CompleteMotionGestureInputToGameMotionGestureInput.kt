@@ -53,10 +53,7 @@ open public class CompleteMotionGestureInputToGameMotionGestureInput
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CompleteMotionGestureInputToGameMotionGestureInput
-
-        Updates for KMP build        
-        {
+: CompleteMotionGestureInputToGameMotionGestureInput{
 
 
 
@@ -76,10 +73,7 @@ open fun getInstance()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -122,10 +116,7 @@ list= BasicArrayList()
 list.add(touchMotionGestureFactory!!.RELEASED)
 motionGestureConfiguration!!.addMotionGestureAction(list, ReleaseTouchInputToGameKeyEventAction.getInstance())
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }
 

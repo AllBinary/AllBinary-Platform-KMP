@@ -43,10 +43,7 @@ open public class VirtualKeyboardEventHandler : BasicEventHandler {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: VirtualKeyboardEventHandler
-
-        Updates for KMP build        
-        {
+: VirtualKeyboardEventHandler{
 
 
 
@@ -56,10 +53,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
-
-        Updates for KMP build        
-        {
+            private constructor        (){
 }
 
 
@@ -70,10 +64,7 @@ open fun getInstance()
                 @Throws(Exception::class)
             override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var eventObject = eventObject
     //var eventListenerInterface = eventListenerInterface
 
@@ -85,19 +76,13 @@ virtualKeyboardEventListenerInterface!!.onVirtualKeyboardEvent(eventObject as Vi
 
 open fun open()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             Thread.sleep(120)
 this.fireEvent(this.SHOW_EVENT)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "open", e)
 }
 
@@ -106,19 +91,13 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "open", e)
 
 open fun close()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             Thread.sleep(120)
 this.fireEvent(this.HIDE_EVENT)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CLOSE, e)
 }
 

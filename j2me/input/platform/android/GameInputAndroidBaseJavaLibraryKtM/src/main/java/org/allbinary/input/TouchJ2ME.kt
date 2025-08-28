@@ -32,19 +32,13 @@ open public class TouchJ2ME
         
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun pointerDragged(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var x = x
 var y = y
 }
@@ -52,10 +46,7 @@ var y = y
 
 open fun pointerPressed(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var x = x
 var y = y
 }
@@ -63,10 +54,7 @@ var y = y
 
 open fun pointerReleased(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var x = x
 var y = y
 }

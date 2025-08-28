@@ -52,10 +52,7 @@ open public class BasePathFindingInfoFactory
             
 open fun init(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, mapArray: Array<IntArray?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var geographicMapInterface = geographicMapInterface
     //var pathFindingInfo = pathFindingInfo
     //var mapArray = mapArray
@@ -71,9 +68,6 @@ open class RaceTrackGeographicMapCellPositionFactoryInitVisitor
     private var finishLineId: Int
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     var raceTrackGeographicMapCellTypeFactory: GeographicMapCellTypeFactory = geographicMapInterface!!.getGeographicMapCellTypeFactory()!!
@@ -87,10 +81,7 @@ this.finishLineId= raceTrackGeographicMapCellTypeFactory!!.getEndType()
             
 open fun visit(tiledLayer: AllBinaryTiledLayer, cellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var tiledLayer = tiledLayer
     //var cellPosition = cellPosition
 
@@ -158,10 +149,7 @@ open fun visit(tiledLayer: AllBinaryTiledLayer, cellPosition: GeographicMapCellP
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(StringMaker().
                             append("[")!!.append(row)!!.append("][")!!.append(column)!!.append("] in [")!!.append(mapArray!!.size)!!.append("][")!!.append(mapArray[0]!!.length)!!.append("]")!!.toString(), this, "visit", e)
 
@@ -184,10 +172,7 @@ geographicMapInterface!!.getGeographicMapCellPositionFactory()!!.visit(RaceTrack
             
 open fun addStartPathFindingNode(pathFindingInfo: PathFindingInfo, startGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var pathFindingInfo = pathFindingInfo
     //var startGeographicMapCellPosition = startGeographicMapCellPosition
 pathFindingInfo!!.addStartPathFindingNode(PathFindingNode(
@@ -199,10 +184,7 @@ pathFindingInfo!!.addStartPathFindingNode(PathFindingNode(
             
 open fun addEndPathFindingNode(pathFindingInfo: PathFindingInfo, endGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var pathFindingInfo = pathFindingInfo
     //var endGeographicMapCellPosition = endGeographicMapCellPosition
 pathFindingInfo!!.addEndPathFindingNode(PathFindingNode(

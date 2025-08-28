@@ -53,10 +53,7 @@ open public class UserRoleFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: UserRoleFactory
-
-        Updates for KMP build        
-        {
+: UserRoleFactory{
 
 
 

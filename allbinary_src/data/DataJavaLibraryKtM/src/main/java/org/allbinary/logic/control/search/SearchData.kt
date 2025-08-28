@@ -82,9 +82,6 @@ open public class SearchData
         }
             public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

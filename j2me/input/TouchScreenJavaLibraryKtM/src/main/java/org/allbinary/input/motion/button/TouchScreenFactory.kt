@@ -41,10 +41,7 @@ open public class TouchScreenFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TouchScreenFactory
-
-        Updates for KMP build        
-        {
+: TouchScreenFactory{
 
 
 
@@ -66,19 +63,13 @@ open fun getInstance()
     private var touchScreenType: TouchScreenType = TouchScreenTypesFactory.getInstance()!!.NOTOUCH
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
         try {
             this.setTouch(true)
 this.setMultiTouch(false)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -90,10 +81,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, SINGLETON, commonStrings!!.GET_INSTANCE
 
 open fun setMultiTouch(multiTouch: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var multiTouch = multiTouch
 this.multiTouch= multiTouch
 }
@@ -101,10 +89,7 @@ this.multiTouch= multiTouch
 
 open fun isMultiTouch()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -115,10 +100,7 @@ open fun isMultiTouch()
 
 open fun setTouch(touch: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var touch = touch
 this.touch= touch
 }
@@ -126,10 +108,7 @@ this.touch= touch
 
 open fun isTouch()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -140,10 +119,7 @@ open fun isTouch()
 
 open fun setMultiTouchDistinct(multiTouchDistinct: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var multiTouchDistinct = multiTouchDistinct
 this.multiTouchDistinct= multiTouchDistinct
 }
@@ -151,10 +127,7 @@ this.multiTouchDistinct= multiTouchDistinct
 
 open fun isMultiTouchDistinct()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -165,10 +138,7 @@ open fun isMultiTouchDistinct()
 
 open fun setTouchScreenType(touchScreenType: TouchScreenType)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var touchScreenType = touchScreenType
 this.touchScreenType= touchScreenType
 }
@@ -176,10 +146,7 @@ this.touchScreenType= touchScreenType
 
 open fun getTouchScreenType()
         //nullable = true from not(false or (false and true)) = true
-: TouchScreenType
-
-        Updates for KMP build        
-        {
+: TouchScreenType{
 
 
 
@@ -189,10 +156,7 @@ open fun getTouchScreenType()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

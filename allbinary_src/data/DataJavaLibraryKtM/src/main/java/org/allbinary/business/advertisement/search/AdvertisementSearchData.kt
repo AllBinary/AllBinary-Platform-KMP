@@ -37,10 +37,7 @@ open public class AdvertisementSearchData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AdvertisementSearchData
-
-        Updates for KMP build        
-        {
+: AdvertisementSearchData{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

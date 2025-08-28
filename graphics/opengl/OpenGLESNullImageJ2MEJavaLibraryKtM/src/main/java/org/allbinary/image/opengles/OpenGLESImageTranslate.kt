@@ -38,10 +38,7 @@ open public class OpenGLESImageTranslate
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLESImageTranslate
-
-        Updates for KMP build        
-        {
+: OpenGLESImageTranslate{
 
 
 
@@ -59,10 +56,7 @@ open fun getInstance()
         
 open fun translate(gl: GL10, openGLESImage: OpenGLESImage, x: Float, y: Float)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
     //var openGLESImage = openGLESImage
     //var x = x
@@ -72,10 +66,7 @@ open fun translate(gl: GL10, openGLESImage: OpenGLESImage, x: Float, y: Float)
 
 open fun translate2(gl: GL10, openGLESImage: OpenGLESImage)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gl = gl
     //var openGLESImage = openGLESImage
 }

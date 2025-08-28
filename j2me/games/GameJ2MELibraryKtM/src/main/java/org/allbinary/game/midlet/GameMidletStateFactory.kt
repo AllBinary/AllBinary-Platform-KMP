@@ -27,10 +27,7 @@ open public class GameMidletStateFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameMidletStateFactory
-
-        Updates for KMP build        
-        {
+: GameMidletStateFactory{
 
 
 
@@ -46,19 +43,13 @@ open fun getInstance()
     private var currentGameState: GameState = GameState.NO_GAME_STATE
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getCurrentGameState()
         //nullable = true from not(false or (false and true)) = true
-: GameState
-
-        Updates for KMP build        
-        {
+: GameState{
 
 
 
@@ -69,10 +60,7 @@ open fun getCurrentGameState()
 
 open fun setCurrentGameState(currentGameState: GameState)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var currentGameState = currentGameState
 logUtil!!.put(StringMaker().
                             append("Current GameState: ")!!.append(StringUtil.getInstance()!!.toString(currentGameState))!!.toString(), this, "setCurrentGameState")

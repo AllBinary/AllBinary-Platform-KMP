@@ -41,20 +41,14 @@ open public class DemoGameStartupRunnable : ABRunnable {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val demoCanvas: DemoCanvas
-public constructor        (demoCanvas: DemoCanvas)
-
-        Updates for KMP build        
-        {
+public constructor        (demoCanvas: DemoCanvas){
 var demoCanvas = demoCanvas
 this.demoCanvas= demoCanvas
 }
 
 override fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             this.setRunning(true)
@@ -63,10 +57,7 @@ this.demoCanvas!!.create()
 this.demoCanvas!!.start()
 this.setRunning(false)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 this.setRunning(false)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -78,10 +69,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 
 override fun getType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

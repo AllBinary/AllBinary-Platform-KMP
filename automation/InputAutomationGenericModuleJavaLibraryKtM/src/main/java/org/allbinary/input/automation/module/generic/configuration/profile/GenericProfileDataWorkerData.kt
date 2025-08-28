@@ -38,9 +38,6 @@ open public class GenericProfileDataWorkerData
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

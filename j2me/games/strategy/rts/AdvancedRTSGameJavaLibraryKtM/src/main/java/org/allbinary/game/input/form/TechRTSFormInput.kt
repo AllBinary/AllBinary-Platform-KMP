@@ -60,10 +60,7 @@ open public class TechRTSFormInput : RTSFormInput {
     val noMoneyGameNotificationEvent: GameNotificationEvent
 public constructor        (groupInterface: Array<Group?>)                        
 
-                            : super(groupInterface)
-
-        Updates for KMP build        
-        {
+                            : super(groupInterface){
     //var groupInterface = groupInterface
 
 
@@ -80,10 +77,7 @@ this.noMoneyGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.ge
             
 open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
 super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 
@@ -100,10 +94,7 @@ this.noMoneyGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.getF
             
 open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, itemIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var associatedRtsLayer = associatedRtsLayer
 var rtsPlayerLayerInterface = rtsPlayerLayerInterface
 var layerManager = layerManager

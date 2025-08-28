@@ -36,10 +36,7 @@ open public class CategoryComponent : CategoryView
         
 public constructor        (categoryInterface: CategoryInterface)                        
 
-                            : super(categoryInterface)
-
-        Updates for KMP build        
-        {
+                            : super(categoryInterface){
 var categoryInterface = categoryInterface
 
 
@@ -52,10 +49,7 @@ var categoryInterface = categoryInterface
 
 open fun getTypeId()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -66,10 +60,7 @@ open fun getTypeId()
 
 open fun getTransformDocumentInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformDocumentInterface
-
-        Updates for KMP build        
-        {
+: TransformDocumentInterface{
 
 
 
@@ -82,10 +73,7 @@ open fun getTransformDocumentInterface()
             
 open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformInfoInterface
-
-        Updates for KMP build        
-        {
+: TransformInfoInterface{
 
 
 
@@ -96,10 +84,7 @@ open fun getTransformInfoInterface()
 
 open fun setTransformDocumentInterface(viewDocumentInterface: TransformDocumentInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var viewDocumentInterface = viewDocumentInterface
 }
 
@@ -108,10 +93,7 @@ var viewDocumentInterface = viewDocumentInterface
             
 open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
     var document: Document = DomDocumentHelper.create()!!
 
@@ -129,10 +111,7 @@ document.appendChild(CategoryView(this.getCategoryInterface()).
             
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

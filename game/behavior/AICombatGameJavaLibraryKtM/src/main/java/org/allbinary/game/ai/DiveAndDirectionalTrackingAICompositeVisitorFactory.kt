@@ -39,10 +39,7 @@ open public class DiveAndDirectionalTrackingAICompositeVisitorFactory
         
 open fun getInstance(diveBombAI: DiveAndDirectionalTrackingAI)
         //nullable =  from not(true or (false and false)) = 
-: Visitor
-
-        Updates for KMP build        
-        {
+: Visitor{
 var diveBombAI = diveBombAI
 
 

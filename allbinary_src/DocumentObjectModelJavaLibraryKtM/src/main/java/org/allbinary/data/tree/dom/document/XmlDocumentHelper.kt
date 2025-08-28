@@ -52,10 +52,7 @@ open public class XmlDocumentHelper
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: XmlDocumentHelper
-
-        Updates for KMP build        
-        {
+: XmlDocumentHelper{
 
 
 
@@ -73,9 +70,6 @@ open fun getInstance()
     private var transformer: Transformer
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 this.init(4, true)
 }
@@ -83,10 +77,7 @@ this.init(4, true)
 
 open fun init(indent: Int, ignoreDeclaration: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var indent = indent
     //var ignoreDeclaration = ignoreDeclaration
 
@@ -110,10 +101,7 @@ transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, if(ignoreDeclarat
     )
 transformer.setOutputProperty(OutputKeys.INDENT, booleanFactory!!.YES)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -127,10 +115,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
             
 open fun format(xmlString: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
     //var xmlString = xmlString
 
     var src: InputSource = InputSource(StringReader(xmlString))

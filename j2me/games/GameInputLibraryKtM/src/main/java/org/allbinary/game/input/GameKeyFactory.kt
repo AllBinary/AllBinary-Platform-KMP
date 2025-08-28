@@ -39,10 +39,7 @@ open public class GameKeyFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameKeyFactory
-
-        Updates for KMP build        
-        {
+: GameKeyFactory{
 
 
 

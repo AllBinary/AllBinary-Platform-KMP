@@ -50,9 +50,6 @@ open public class RealTimeStoreFrontStatisticsView
     private val userRole: UserRole
 public constructor        (storeFrontStatisticsInterface: StoreFrontStatisticsInterface, userRole: UserRole)
             : super()
-        
-
-        Updates for KMP build        
         {
 var storeFrontStatisticsInterface = storeFrontStatisticsInterface
 var userRole = userRole
@@ -65,10 +62,7 @@ this.userRole= userRole
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var node: Node = document.createElement(StoreFrontStatisticsData.getInstance()!!.NAME)!!

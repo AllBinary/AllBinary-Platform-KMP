@@ -31,10 +31,7 @@ open public class PasswordValidator : TextFieldItemValidator {
         
 public constructor        (textFieldItem: TextFieldItem, min: Int, max: Int, allowOnEmpty: Boolean)                        
 
-                            : super(textFieldItem, min, max, allowOnEmpty)
-
-        Updates for KMP build        
-        {
+                            : super(textFieldItem, min, max, allowOnEmpty){
 var textFieldItem = textFieldItem
 var min = min
 var max = max

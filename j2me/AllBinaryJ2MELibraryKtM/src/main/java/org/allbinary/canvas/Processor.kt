@@ -37,10 +37,7 @@ open public class Processor
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: Processor
-
-        Updates for KMP build        
-        {
+: Processor{
 
 
 
@@ -60,10 +57,7 @@ open fun getInstance()
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
@@ -71,10 +65,7 @@ open fun process()
             
 open fun process(timeDelta: Long)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var timeDelta = timeDelta
 }
 

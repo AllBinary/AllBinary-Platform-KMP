@@ -38,10 +38,7 @@ open public class PrimaryWaypointHelper
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PrimaryWaypointHelper
-
-        Updates for KMP build        
-        {
+: PrimaryWaypointHelper{
 
 
 
@@ -55,19 +52,13 @@ open fun getInstance()
     private var waypointLayer: WaypointLayer
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getWaypointLayer()
         //nullable = true from not(false or (false and true)) = true
-: WaypointLayer
-
-        Updates for KMP build        
-        {
+: WaypointLayer{
 
 
 
@@ -78,10 +69,7 @@ open fun getWaypointLayer()
 
 open fun setWaypointLayer(waypointLayer: WaypointLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var waypointLayer = waypointLayer
 this.waypointLayer= waypointLayer
 }

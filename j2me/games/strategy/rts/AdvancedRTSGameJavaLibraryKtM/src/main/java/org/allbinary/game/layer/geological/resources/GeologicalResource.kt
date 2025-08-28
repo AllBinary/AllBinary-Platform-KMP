@@ -38,9 +38,6 @@ open public class GeologicalResource
     private var initTotal: Int
 public constructor        (initTotal: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var initTotal = initTotal
 this.initTotal= initTotal
@@ -50,20 +47,14 @@ this.init()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.setTotal(this.initTotal)
 }
 
 
 open fun add(value: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 
     
@@ -84,10 +75,7 @@ var value = value
 
 open fun remove(value: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 
     
@@ -108,10 +96,7 @@ var value = value
 
 open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -122,10 +107,7 @@ open fun getTotal()
 
 open fun setTotal(total: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var total = total
 this.total= total
 }

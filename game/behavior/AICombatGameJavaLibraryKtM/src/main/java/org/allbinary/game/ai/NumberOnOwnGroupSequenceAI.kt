@@ -40,10 +40,7 @@ open public class NumberOnOwnGroupSequenceAI : SequenceAI {
     private var numberOnSameTeam: Array<Integer?>
 public constructor        (numberOnSameTeam: Array<Integer?>, artificialIntelligenceInterface: Array<ArtificialIntelligenceInterface?>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
-                            : super(artificialIntelligenceInterface, ownerLayerInterface, gameInput)
-
-        Updates for KMP build        
-        {
+                            : super(artificialIntelligenceInterface, ownerLayerInterface, gameInput){
 var numberOnSameTeam = numberOnSameTeam
 var artificialIntelligenceInterface = artificialIntelligenceInterface
 var ownerLayerInterface = ownerLayerInterface
@@ -59,10 +56,7 @@ this.numberOnSameTeam= numberOnSameTeam
                 @Throws(Exception::class)
             override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allBinaryLayerManager = allBinaryLayerManager
 
     var layerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!

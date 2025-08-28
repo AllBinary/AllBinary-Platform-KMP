@@ -39,10 +39,7 @@ open public class LogUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LogUtil
-
-        Updates for KMP build        
-        {
+: LogUtil{
 
 
 
@@ -56,19 +53,13 @@ open fun getInstance()
     private val LOG_SUCCESS: String = "org.allbinary: "
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun put(log: Log)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var log = log
 
     
@@ -103,10 +94,7 @@ put(specialMessage, anyType, functionName, exception)
 
 open fun put(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var specialMessage = specialMessage
     //var anyType = anyType
     //var functionName = functionName
@@ -133,10 +121,7 @@ PlayN.log()!!.debug(LOG_SUCCESS +message)
 
 open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var specialMessage = specialMessage
     //var anyType = anyType
     //var functionName = functionName

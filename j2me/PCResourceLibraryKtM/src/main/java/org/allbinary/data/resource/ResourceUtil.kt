@@ -50,10 +50,7 @@ open public class ResourceUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ResourceUtil
-
-        Updates for KMP build        
-        {
+: ResourceUtil{
 
 
 
@@ -71,19 +68,13 @@ open fun getInstance()
     private var ext: String = StringUtil.getInstance()!!.EMPTY_STRING
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun setLoadingPaths(path: String, ext: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var path = path
 var ext = ext
 this.path= path
@@ -93,10 +84,7 @@ this.ext= ext
 
 open fun setClassLoader(classLoader: ClassLoader)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var classLoader = classLoader
 }
 
@@ -105,10 +93,7 @@ open fun setClassLoader(classLoader: ClassLoader)
             
 open fun getResourceAsStream(resource: String)
         //nullable = true from not(false or (false and false)) = true
-: InputStream
-
-        Updates for KMP build        
-        {
+: InputStream{
     //var resource = resource
 
     var inputStream: InputStream = this.getResourceAsStream(resource, 2)!!
@@ -151,10 +136,7 @@ open fun getResourceAsStream(resource: String)
             
 open fun getResourceAsStream(resource: String, startIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-: InputStream
-
-        Updates for KMP build        
-        {
+: InputStream{
     //var resource = resource
     //var startIndex = startIndex
 
@@ -196,10 +178,7 @@ StreamUtil.getInstance()!!.getByteArray(inputStream, ByteArrayOutputStream(), by
 
 open fun addResource(resource: String, value: Integer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var resource = resource
     //var value = value
 }

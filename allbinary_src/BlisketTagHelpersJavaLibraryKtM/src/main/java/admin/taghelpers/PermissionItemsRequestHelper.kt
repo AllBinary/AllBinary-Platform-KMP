@@ -66,10 +66,7 @@ open public class PermissionItemsRequestHelper : ModifyTable {
     private var timeEntered: String
 
     private var lastModified: String
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
-
-        Updates for KMP build        
-        {
+public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 this.request= pageContext!!.getRequest() as HttpServletRequest
@@ -79,10 +76,7 @@ this.getFormData()
 
 open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.id= request.getParameter(BasicItemData.ID)
 this.number= request.getParameter(BasicItemData.NUMBER)
 this.enabled= request.getParameter(EntryData.getInstance()!!.ENABLE)
@@ -100,10 +94,7 @@ this.lastModified= request.getParameter(EntryData.getInstance()!!.LASTMODIFIED)
 
 open fun getHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var values: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -136,10 +127,7 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 open fun insert()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -184,10 +172,7 @@ PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to insert " +id +" into items table"
 
@@ -212,10 +197,7 @@ PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!
 
 open fun delete()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!!.delete(id)
@@ -237,10 +219,7 @@ open fun delete()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to delete"
 
@@ -265,10 +244,7 @@ open fun delete()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -293,10 +269,7 @@ PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to update: " +id
 

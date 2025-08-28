@@ -38,9 +38,6 @@ open public class MineLayerFactory
     private var viewPositionFactoryInterface: ViewPositionFactoryInterface
 public constructor        (viewPositionFactoryInterface: ViewPositionFactoryInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var viewPositionFactoryInterface = viewPositionFactoryInterface
 this.viewPositionFactoryInterface= viewPositionFactoryInterface
@@ -50,10 +47,7 @@ this.viewPositionFactoryInterface= viewPositionFactoryInterface
                 @Throws(Exception::class)
             override fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AllBinaryLayer
-
-        Updates for KMP build        
-        {
+: AllBinaryLayer{
 
 
 

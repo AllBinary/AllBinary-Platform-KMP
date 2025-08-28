@@ -37,10 +37,7 @@ open public class GameFeatureFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameFeatureFactory
-
-        Updates for KMP build        
-        {
+: GameFeatureFactory{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

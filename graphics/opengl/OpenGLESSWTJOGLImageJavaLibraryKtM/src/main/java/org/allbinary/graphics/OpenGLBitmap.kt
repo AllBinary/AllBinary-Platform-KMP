@@ -21,10 +21,7 @@ open public class OpenGLBitmap : PlatformBitmapBase {
         
 
     val image: Image
-public constructor        (bitmap: Any)
-
-        Updates for KMP build        
-        {
+public constructor        (bitmap: Any){
     //var bitmap = bitmap
 this.image= bitmap as Image
 }
@@ -32,10 +29,7 @@ this.image= bitmap as Image
 
 open fun getImage()
         //nullable = true from not(false or (false and true)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
 
 
 
@@ -46,10 +40,7 @@ open fun getImage()
 
 open fun getDepth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
     
                         if(this.image.isMutable())
@@ -83,10 +74,7 @@ open fun getDepth()
 
 open fun getPixels(pixels: IntArray, offset: Int, stride: Int, x: Int, y: Int, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var pixels = pixels
 var offset = offset
 var stride = stride
@@ -119,10 +107,7 @@ immutableImage!!.getRGB(pixels, offset, stride, x, y, width, height)
 
 open fun setPixels(pixels: IntArray, offset: Int, stride: Int, x: Int, y: Int, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var pixels = pixels
 var offset = offset
 var stride = stride
@@ -136,10 +121,7 @@ this.image.setRGB2(pixels, offset, height, x, y, width, height)
 
 open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -150,10 +132,7 @@ open fun getWidth()
 
 open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -164,10 +143,7 @@ open fun getHeight()
 
 open fun recycle()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 DisposalUtil.getInstance()!!.dispose(image)
 }
 

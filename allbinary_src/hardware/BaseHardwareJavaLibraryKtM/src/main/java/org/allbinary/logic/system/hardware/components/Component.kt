@@ -34,9 +34,6 @@ open public class Component
     private var name: String
 public constructor        (componentName: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var componentName = componentName
 this.name= componentName
@@ -44,10 +41,7 @@ this.name= componentName
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

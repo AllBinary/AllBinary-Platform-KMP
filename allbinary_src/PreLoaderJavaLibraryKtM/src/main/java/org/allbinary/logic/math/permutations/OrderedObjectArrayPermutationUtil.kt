@@ -41,10 +41,7 @@ open public class OrderedObjectArrayPermutationUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OrderedObjectArrayPermutationUtil
-
-        Updates for KMP build        
-        {
+: OrderedObjectArrayPermutationUtil{
 
 
 
@@ -55,10 +52,7 @@ open fun getInstance()
 
 open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var args = args
 
     var TOTAL: Int = 7
@@ -72,9 +66,6 @@ var args = args
 
                         for (i in 0 until TOTAL)
 
-        
-
-        Updates for KMP build        
         {
 data[i]= ComparableObject()
 }
@@ -99,19 +90,13 @@ OrderedObjectArrayPermutationUtil.getInstance()!!.generate(data, permutationVisi
     private val FINISHED: String = "\nFINISHED"
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getNext(data: Array<Any?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var data = data
 
     var length: Int = data.size
@@ -122,9 +107,6 @@ var data = data
 
 
         while(data[i -1]!!.hashCode() >= data[i]!!.hashCode())
-        
-
-        Updates for KMP build        
         {
 i= i -1
 }
@@ -134,9 +116,6 @@ i= i -1
 
 
         while(data[j -1]!!.hashCode() <= data[i -1]!!.hashCode())
-        
-
-        Updates for KMP build        
         {
 j= j -1
 }
@@ -146,9 +125,6 @@ i++
 j= length
 
         while(i < j)
-        
-
-        Updates for KMP build        
         {
 this.swap(data, i -1, j -1)
 i++
@@ -160,10 +136,7 @@ j--
 
 open fun swap(data: Array<Any?>, a: Int, b: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var data = data
 var a = a
 var b = b
@@ -177,10 +150,7 @@ data[b]= temp
 
 open fun factorial(dataLength: Int)
         //nullable = true from not(false or (false and false)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 var dataLength = dataLength
 
     var temp: Long = 1
@@ -196,9 +166,6 @@ var dataLength = dataLength
 
                         for (i in 1 until dataLength)
 
-        
-
-        Updates for KMP build        
         {
 temp *= i
 }
@@ -216,10 +183,7 @@ temp *= i
 
 open fun generate(data: Array<Any?>, visitor: Visitor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var data = data
 var visitor = visitor
 
@@ -233,9 +197,6 @@ System.out.println(iterations)
 
                         for (count in 0 until iterations -1)
 
-        
-
-        Updates for KMP build        
         {
 this.getNext(data)
 visitor.visit(this)

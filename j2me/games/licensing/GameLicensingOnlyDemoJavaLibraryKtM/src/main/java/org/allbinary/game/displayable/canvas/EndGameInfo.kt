@@ -51,10 +51,7 @@ open public class EndGameInfo
 
 open fun update(gameInfo: GameInfo, myCanvas: MyCanvas)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gameInfo = gameInfo
     //var myCanvas = myCanvas
 
@@ -78,10 +75,7 @@ this.setGameOverStr(TEASER_DEMO_GAME_END)
 
 open fun getGameOverStr()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -92,10 +86,7 @@ open fun getGameOverStr()
 
 open fun setGameOverStr(gameOverStr: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gameOverStr = gameOverStr
 this.gameOverStr= gameOverStr
 }
@@ -103,10 +94,7 @@ this.gameOverStr= gameOverStr
 
 open fun getWinStr()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -117,10 +105,7 @@ open fun getWinStr()
 
 open fun setWinStr(winStr: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var winStr = winStr
 this.winStr= winStr
 }

@@ -37,10 +37,7 @@ open public class URLGLOBALS
 
 open fun init(urlGlobalsInterface: UrlGlobalsInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var urlGlobalsInterface = urlGlobalsInterface
 URLGLOBALS.urlGlobalsInterface= urlGlobalsInterface
 }
@@ -48,10 +45,7 @@ URLGLOBALS.urlGlobalsInterface= urlGlobalsInterface
 
 open fun isTestingMode()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -62,10 +56,7 @@ open fun isTestingMode()
 
 open fun getWebappPath()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -76,10 +67,7 @@ open fun getWebappPath()
 
 open fun getTestHtmlPath()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -92,10 +80,7 @@ open fun getTestHtmlPath()
             
 open fun getMainPath()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

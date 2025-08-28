@@ -48,10 +48,7 @@ open public class TouchButtonInput : Input
     private var gameKeyEvent: GameKeyEvent = GameKeyEvent.NONE
 public constructor        (id: Int, name: String)                        
 
-                            : super(id, name)
-
-        Updates for KMP build        
-        {
+                            : super(id, name){
 var id = id
 var name = name
 
@@ -67,10 +64,7 @@ inputFactory!!.add(this.getId(), this)
 
 open fun update(inputToGameKeyMapping: InputToGameKeyMapping)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var inputToGameKeyMapping = inputToGameKeyMapping
 
         try {
@@ -79,10 +73,7 @@ var inputToGameKeyMapping = inputToGameKeyMapping
 
 this.gameKeyEvent= this.gameKeyEventFactory!!.getInstance(this, gameKey)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -93,10 +84,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
 
 override fun getSourceId()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -107,10 +95,7 @@ override fun getSourceId()
 
 open fun getGameKeyEvent()
         //nullable = true from not(false or (false and true)) = true
-: GameKeyEvent
-
-        Updates for KMP build        
-        {
+: GameKeyEvent{
 
 
 

@@ -39,10 +39,7 @@ open public class HighScoresCanvasNoInputProcessorFactory
             }            
         override fun getInstance(highScoresCanvas: HighScoresCanvas)
         //nullable =  from not(true or (false and false)) = 
-: HighScoresCanvasInputProcessor
-
-        Updates for KMP build        
-        {
+: HighScoresCanvasInputProcessor{
 var highScoresCanvas = highScoresCanvas
 
 

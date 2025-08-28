@@ -32,73 +32,43 @@ open fun onPressedMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun onUpMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 open fun onDownMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun onLeftMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 open fun onRightMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun onDiagonalDownRightMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 open fun onDiagonalDownLeftMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun onDiagonalUpRightMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun onDiagonalUpLeftMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
                 @Throws(Exception::class)
             
 open fun released(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

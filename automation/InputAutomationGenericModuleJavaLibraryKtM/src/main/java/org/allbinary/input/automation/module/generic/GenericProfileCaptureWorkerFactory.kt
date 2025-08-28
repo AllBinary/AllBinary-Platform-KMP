@@ -43,10 +43,7 @@ open public class GenericProfileCaptureWorkerFactory
             
 open fun getInstance(genericProfile: GenericProfile)
         //nullable =  from not(true or (false and false)) = 
-: CaptureWorkerInterface
-
-        Updates for KMP build        
-        {
+: CaptureWorkerInterface{
 var genericProfile = genericProfile
 
     var vector: Vector = genericProfile!!.getGenericProfileDataWorkerTypeVector()!!
@@ -60,9 +57,6 @@ var genericProfile = genericProfile
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var genericProfileDataWorkerType: GenericProfileDataWorkerType = vector.get(index) as GenericProfileDataWorkerType
@@ -105,9 +99,6 @@ var genericProfile = genericProfile
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

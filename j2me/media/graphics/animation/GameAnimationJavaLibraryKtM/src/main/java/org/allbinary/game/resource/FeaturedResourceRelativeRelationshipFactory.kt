@@ -42,10 +42,7 @@ open public class FeaturedResourceRelativeRelationshipFactory : FeaturedResource
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FeaturedResourceRelativeRelationshipFactory
-
-        Updates for KMP build        
-        {
+: FeaturedResourceRelativeRelationshipFactory{
 
 
 
@@ -55,10 +52,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
-
-        Updates for KMP build        
-        {
+            private constructor        (){
 }
 
 
@@ -66,10 +60,7 @@ open fun getInstance()
             
 open fun getRelativeRelationshipList(resource: String, layer: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 var resource = resource
 var layer = layer
 
@@ -84,9 +75,6 @@ var layer = layer
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var featureInterface: ResourceRelativeRelationshipFactoryInterface = featureReleaseList!!.objectArray[index]!! as ResourceRelativeRelationshipFactoryInterface
@@ -131,10 +119,7 @@ var layer = layer
             
 open fun duplicate(list: BasicArrayList, layer: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 var list = list
 var layer = layer
 
@@ -149,9 +134,6 @@ var layer = layer
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var relativeRelationship: RelativeRelationship = list.objectArray[index]!! as RelativeRelationship

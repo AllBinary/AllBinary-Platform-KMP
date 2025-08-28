@@ -49,10 +49,7 @@ open public class AdvertisementCampaignInternalEntity : AbSqlBean
     val tableName: String = "adCampaignInternal"
 public constructor        ()                        
 
-                            : super(UserDbInitInfo())
-
-        Updates for KMP build        
-        {
+                            : super(UserDbInitInfo()){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -63,10 +60,7 @@ this.setTableName(tableName)
 
 open fun delete(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 
         try {
@@ -81,10 +75,7 @@ var value = value
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -101,10 +92,7 @@ var value = value
 
 open fun getCampaignsInStore(storeName: String)
         //nullable = true from not(false or (false and false)) = true
-: AdvertisementCampaignsInterface
-
-        Updates for KMP build        
-        {
+: AdvertisementCampaignsInterface{
 var storeName = storeName
 
     var keysAndValues: HashMap<Any, Any> = HashMap<Any, Any>()
@@ -125,9 +113,6 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var hashMap: HashMap<Any, Any> = hashMapVector!!.get(index as Object) as HashMap<Any, Any>
@@ -155,10 +140,7 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
 
 open fun get(storeName: String, name: String)
         //nullable = true from not(false or (false and false)) = true
-: AdvertisementCampaignInterface
-
-        Updates for KMP build        
-        {
+: AdvertisementCampaignInterface{
 var storeName = storeName
 var name = name
 
@@ -198,10 +180,7 @@ keysAndValues!!.put(AdvertisementCampaignData.getInstance()!!.NAME, name)
 
 open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var updatedValues = updatedValues
 super.updateWhere(EntryData.getInstance()!!.getInstance()!!.ID, updatedValues!!.get(EntryData.getInstance()!!.getInstance()!!.ID) as String, updatedValues)
 }
@@ -209,10 +188,7 @@ super.updateWhere(EntryData.getInstance()!!.getInstance()!!.ID, updatedValues!!.
 
 open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var entryData: EntryData = EntryData.getInstance()!!.getInstance()!!
 
@@ -236,10 +212,7 @@ stringBuffer!!.append(entryData!!.ID)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT
 
 open fun createTable()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var returnStr: String = super.createTable(this.createTableStatement())!!
 
@@ -253,10 +226,7 @@ open fun createTable()
 
 open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

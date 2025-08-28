@@ -37,10 +37,7 @@ open public class HtmlNameMathData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: HtmlNameMathData
-
-        Updates for KMP build        
-        {
+: HtmlNameMathData{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

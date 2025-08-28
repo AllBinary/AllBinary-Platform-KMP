@@ -40,10 +40,7 @@ open public class PlatformRecordIdUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PlatformRecordIdUtil
-
-        Updates for KMP build        
-        {
+: PlatformRecordIdUtil{
 
 
 
@@ -63,10 +60,7 @@ open fun getInstance()
 
 open fun getRecordId(abeClientInformation: AbeClientInformationInterface, baseRecordId: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
     //var abeClientInformation = abeClientInformation
     //var baseRecordId = baseRecordId
 

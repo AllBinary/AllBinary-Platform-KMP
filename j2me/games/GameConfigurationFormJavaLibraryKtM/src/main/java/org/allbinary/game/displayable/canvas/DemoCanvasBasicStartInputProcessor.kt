@@ -38,10 +38,7 @@ open public class DemoCanvasBasicStartInputProcessor : BasicMenuInputProcessor {
         
 public constructor        (gameKeyEventList: BasicArrayList, gameCanvas: RunnableCanvas)                        
 
-                            : super(gameKeyEventList,  -1, gameCanvas)
-
-        Updates for KMP build        
-        {
+                            : super(gameKeyEventList,  -1, gameCanvas){
 var gameKeyEventList = gameKeyEventList
 var gameCanvas = gameCanvas
 
@@ -54,10 +51,7 @@ var gameCanvas = gameCanvas
                 @Throws(Exception::class)
             override fun processInput()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
     var list: BasicArrayList = this.getGameKeyEventList()!!
 
@@ -73,9 +67,6 @@ var gameCanvas = gameCanvas
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 gameKeyEvent= list.objectArray[index]!! as GameKeyEvent
 logUtil!!.put(StringMaker().

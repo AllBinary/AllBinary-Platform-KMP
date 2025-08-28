@@ -34,36 +34,21 @@ open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-        Updates for KMP build        
-        
-
 open fun getComponent()
         //nullable = true from not(false or (false and true)) = true
 : Any
-
-        Updates for KMP build        
-        
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun setComponentName(name: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun search(advertisementSearchInterface: AdvertisementSearchInterface)
         //nullable = true from not(false or (false and false)) = true
 : AdvertisementsInterface
-
-        Updates for KMP build        
-        
 
 }
                 

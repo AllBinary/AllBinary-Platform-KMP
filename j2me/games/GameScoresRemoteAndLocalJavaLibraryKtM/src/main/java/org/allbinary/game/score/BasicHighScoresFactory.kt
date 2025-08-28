@@ -45,10 +45,7 @@ open public class BasicHighScoresFactory : HighScoresBase {
             
 open fun loaded(index2: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var index2 = index2
 
     
@@ -78,10 +75,7 @@ open fun loaded(index2: Int)
     private val abeClientInformation: AbeClientInformationInterface
 
     private val softwareInformation: SoftwareInformation
-public constructor        (abeClientInformation: AbeClientInformationInterface, softwareInformation: SoftwareInformation)
-
-        Updates for KMP build        
-        {
+public constructor        (abeClientInformation: AbeClientInformationInterface, softwareInformation: SoftwareInformation){
     //var abeClientInformation = abeClientInformation
     //var softwareInformation = softwareInformation
 this.abeClientInformation= abeClientInformation
@@ -103,10 +97,7 @@ this.softwareInformation= softwareInformation
 
 open fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gameInfo = gameInfo
     //var highScoresResultsListener = highScoresResultsListener
 logUtil!!.put("Getting Remote/Local HighScores", this, FETCH)
@@ -116,10 +107,7 @@ this.fetchHighScores(gameInfo, highScoresResultsListener, true)
 
 open fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener, preload: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var gameInfo = gameInfo
     //var highScoresResultsListener = highScoresResultsListener
     //var preload = preload
@@ -128,10 +116,7 @@ SecondaryThreadPool.getInstance()!!.runTask(object: Runnable()
                                 
 open fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             logUtil!!.put(commonStrings!!.START, this, FETCH)
@@ -168,10 +153,7 @@ logUtil!!.put(commonStrings!!.END, this, FETCH)
 LastFetchHighScoresFactory.getInstance()!!.highScoresArray= highScoresArray
 highScoresResultsListener!!.setHighScoresArray(highScoresArray)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, FETCH, e)
 }
 
@@ -184,10 +166,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, FETCH, e)
 
 open fun createHighScoresHelper()
         //nullable = true from not(false or (false and true)) = true
-: HighScoresHelperBase
-
-        Updates for KMP build        
-        {
+: HighScoresHelperBase{
 
 
 

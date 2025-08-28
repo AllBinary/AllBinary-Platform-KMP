@@ -32,10 +32,7 @@ open public class AbDataOutputStream : DataOutputStream {
         
 public constructor        (out: OutputStream)                        
 
-                            : super(out)
-
-        Updates for KMP build        
-        {
+                            : super(out){
 var out = out
 
 

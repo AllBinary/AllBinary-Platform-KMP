@@ -32,10 +32,7 @@ import org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicM
 
 open public class PathFindingNodeCostInfoFactory : PathFindingNodeCostInfoFactoryBase {
         
-public constructor        (max: Int)
-
-        Updates for KMP build        
-        {
+public constructor        (max: Int){
 var max = max
 }
 
@@ -43,10 +40,7 @@ var max = max
                 @Throws(Exception::class)
             override fun create(geographicMapInterface: BasicGeographicMap, goingToGeographicMapCellPosition: GeographicMapCellPosition, geographicMapCellPosition: GeographicMapCellPosition, costFromStart: Long, costToEnd: Long)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var geographicMapInterface = geographicMapInterface
     //var goingToGeographicMapCellPosition = goingToGeographicMapCellPosition
     //var geographicMapCellPosition = geographicMapCellPosition
@@ -58,10 +52,7 @@ var max = max
                 @Throws(Exception::class)
             override fun getTotalCost(geographicMapInterface: BasicGeographicMap, comingFromGeographicMapCellPosition: GeographicMapCellPosition, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
     //var geographicMapInterface = geographicMapInterface
     //var comingFromGeographicMapCellPosition = comingFromGeographicMapCellPosition
     //var geographicMapCellPosition = geographicMapCellPosition

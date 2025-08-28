@@ -39,10 +39,7 @@ open public class MyCommandsFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: MyCommandsFactory
-
-        Updates for KMP build        
-        {
+: MyCommandsFactory{
 
 
 
@@ -64,9 +61,6 @@ open fun getInstance()
     val RESUME_COMMAND: Command = Command("Resume", Command.SCREEN, 0)
 protected constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

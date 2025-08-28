@@ -41,10 +41,7 @@ open public class MediaPlayerUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: MediaPlayerUtil
-
-        Updates for KMP build        
-        {
+: MediaPlayerUtil{
 
 
 
@@ -66,10 +63,7 @@ open fun getInstance()
             
 open fun wait(mediaPlayer: MediaPlayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var mediaPlayer = mediaPlayer
 
     var MESSAGE: String = "Not Stopped Waiting"
@@ -82,9 +76,6 @@ var mediaPlayer = mediaPlayer
 
 
         while(mediaPlayer!!.isPlaying() && index < 50)
-        
-
-        Updates for KMP build        
         {
 logUtil!!.put(MESSAGE, this, METHOD_NAME)
 Thread.sleep(100)

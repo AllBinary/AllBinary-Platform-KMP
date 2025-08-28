@@ -52,10 +52,7 @@ open public class BufferedGameCanvasPaintHelper : ProcessPaintable {
     private val circularIndexUtil: CircularIndexUtil = CircularIndexUtil.getInstance(MAX_IMAGES)!!
 
     private val drawCircularIndexUtil: CircularIndexUtil = CircularIndexUtil.getInstance(MAX_IMAGES -1, MAX_IMAGES)!!
-public constructor        (gameCanvas: AllBinaryGameCanvas)
-
-        Updates for KMP build        
-        {
+public constructor        (gameCanvas: AllBinaryGameCanvas){
 var gameCanvas = gameCanvas
 
 
@@ -65,10 +62,7 @@ var gameCanvas = gameCanvas
 
 override fun process()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var myCanvas: MyCanvas = (this.gameCanvas as MyCanvas)
 
@@ -81,10 +75,7 @@ this.drawCircularIndexUtil!!.next()
     private var anchor: Int = Anchor.TOP_LEFT
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 this.previousImage= this.offScreenImage[this.drawCircularIndexUtil!!.getIndex()]!!
 graphics.drawImage(this.previousImage, 0, 0, anchor)

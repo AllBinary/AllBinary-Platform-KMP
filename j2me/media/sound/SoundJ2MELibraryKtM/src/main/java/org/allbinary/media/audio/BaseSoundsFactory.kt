@@ -40,20 +40,14 @@ open public class BaseSoundsFactory
     private var initialized: Boolean= false
 override fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
                 @Throws(Exception::class)
             override fun getSoundInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<Sound?>
-
-        Updates for KMP build        
-        {
+: Array<Sound?>{
 
 
 
@@ -63,20 +57,14 @@ override fun init()
 
 override fun setInitialized(initialized: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var initialized = initialized
 this.initialized= initialized
 }
 
 override fun isInitialized()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 

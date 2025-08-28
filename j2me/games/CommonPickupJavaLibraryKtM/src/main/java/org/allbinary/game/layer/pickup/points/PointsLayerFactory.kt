@@ -37,9 +37,6 @@ open public class PointsLayerFactory
     private val points: Int
 public constructor        (points: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var points = points
 this.points= points
@@ -49,10 +46,7 @@ this.points= points
                 @Throws(Exception::class)
             override fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AllBinaryLayer
-
-        Updates for KMP build        
-        {
+: AllBinaryLayer{
 
 
 

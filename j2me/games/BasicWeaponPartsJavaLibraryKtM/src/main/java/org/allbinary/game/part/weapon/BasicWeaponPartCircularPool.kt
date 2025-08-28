@@ -52,10 +52,7 @@ open public class BasicWeaponPartCircularPool
             
 open fun init(basicWeaponPartFactoryInterface: BasicWeaponPartFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var basicWeaponPartFactoryInterface = basicWeaponPartFactoryInterface
 basicWeaponPart= basicWeaponPartFactoryInterface!!.getInstance()
 }
@@ -66,10 +63,7 @@ basicWeaponPart= basicWeaponPartFactoryInterface!!.getInstance()
 
 open fun getInstance(sourceLayerInterface: AllBinaryLayer, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface, relativeRelationship: RelativeRelationship)
         //nullable =  from not(true or (false and false)) = 
-: BasicWeaponPart
-
-        Updates for KMP build        
-        {
+: BasicWeaponPart{
     //var sourceLayerInterface = sourceLayerInterface
     //var weaponProperties = weaponProperties
     //var scoreableInterface = scoreableInterface

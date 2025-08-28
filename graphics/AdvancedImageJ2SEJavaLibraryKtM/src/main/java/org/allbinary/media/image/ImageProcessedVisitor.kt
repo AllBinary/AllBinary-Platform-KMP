@@ -36,9 +36,6 @@ open fun visit(generatedBufferedImage: BufferedImage, nameEnding: String, index:
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 }
                 
             

@@ -39,10 +39,7 @@ open public class NullGameCanvas : AllBinaryGameCanvas {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NullGameCanvas
-
-        Updates for KMP build        
-        {
+: NullGameCanvas{
 
 
 
@@ -53,10 +50,7 @@ open fun getInstance()
 
 open fun getInstance(gameLayerManager: AllBinaryGameLayerManager)
         //nullable =  from not(true or (false and false)) = 
-: NullGameCanvas
-
-        Updates for KMP build        
-        {
+: NullGameCanvas{
     //var gameLayerManager = gameLayerManager
 
     var nullGameCanvas: NullGameCanvas = NullGameCanvas(gameLayerManager)
@@ -78,10 +72,7 @@ nullGameCanvas!!.setTitle(NO_GAME)
         }
             protected constructor        (gameLayerManager: AllBinaryGameLayerManager)                        
 
-                            : super(gameLayerManager)
-
-        Updates for KMP build        
-        {
+                            : super(gameLayerManager){
     //var gameLayerManager = gameLayerManager
 
 
@@ -90,20 +81,14 @@ nullGameCanvas!!.setTitle(NO_GAME)
 super.setWait(1200)
 }
 
-private constructor        ()
-
-        Updates for KMP build        
-        {
+private constructor        (){
 super.setWait(1200)
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun isGameOver()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -115,10 +100,7 @@ override fun isGameOver()
     private var running: Boolean = true
 override fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var running = running
 this.running= running
 }
@@ -126,10 +108,7 @@ this.running= running
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun isRunning()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -140,29 +119,20 @@ override fun isRunning()
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun pause()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.setPaused(true)
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun unPause()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.setPaused(false)
 }
 
 override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var cmdListener = cmdListener
 this.removeAllCommands()
 this.setCommandListener(cmdListener)
@@ -172,37 +142,25 @@ this.setCommandListener(cmdListener)
                 @Throws(Exception::class)
             override fun buildGame(isProgress: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var isProgress = isProgress
 }
 
 override fun draw(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
 }
 
 override fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             logUtil!!.put(commonStrings!!.START_RUNNABLE, this, commonStrings!!.RUN)
 logUtil!!.put(commonStrings!!.END_RUNNABLE, this, commonStrings!!.RUN)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
 
@@ -210,10 +168,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 
 override fun getType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

@@ -36,18 +36,12 @@ open public class TextItemUserIdentifierVisitor : Visitor {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 override fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 var anyType = anyType
 
     var value: String = anyType as String
@@ -94,10 +88,7 @@ var anyType = anyType
         try {
             TextNotificationUtil.getInstance()!!.fireError("Only Letters & Numbers Allowed")
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -129,10 +120,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.VISIT, e)
 
 open fun isLetter(charValue: Char)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var charValue = charValue
 
     var value: Int = charValue.toInt()

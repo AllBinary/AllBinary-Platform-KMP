@@ -36,19 +36,13 @@ open public class WaypointPathRunnable : WaypointPathRunnableBase {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 
 open fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             pathFindingLayer!!.getWaypointRunnableLogHelper()!!.start(pathFindingLayer)
@@ -76,10 +70,7 @@ waypointBehavior!!.setWaypointPathsList(this.targetLayer!!.getWaypointBehavior()
 pathFindingLayer!!.getWaypointRunnableLogHelper()!!.end(pathFindingLayer)
 Thread.sleep(15 +(this.priority *2))
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -92,10 +83,7 @@ this.setRunning(false)
 
 open fun isDone()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 

@@ -37,10 +37,7 @@ open public class LoadedShaderManager
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ShaderManager
-
-        Updates for KMP build        
-        {
+: ShaderManager{
 
 
 

@@ -48,9 +48,6 @@ open public class DirectoryDataModel
     private var transformDocumentInterface: TransformDocumentInterface
 public constructor        (file: AbFile)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var file = file
 this.fileBasicArrayList= Directory.getInstance()!!.search(file)
@@ -62,10 +59,7 @@ this.transformDocumentInterface= TransformDocumentFactory.getInstance() as Trans
 
 open fun getTypeId()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -78,10 +72,7 @@ open fun getTypeId()
             
 open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformInfoInterface
-
-        Updates for KMP build        
-        {
+: TransformInfoInterface{
 
 
 
@@ -92,10 +83,7 @@ open fun getTransformInfoInterface()
 
 open fun setTransformDocumentInterface(transformDocumentInterface: TransformDocumentInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var transformDocumentInterface = transformDocumentInterface
 this.transformDocumentInterface= transformDocumentInterface
 }
@@ -103,10 +91,7 @@ this.transformDocumentInterface= transformDocumentInterface
 
 open fun getTransformDocumentInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformDocumentInterface
-
-        Updates for KMP build        
-        {
+: TransformDocumentInterface{
 
 
 
@@ -119,10 +104,7 @@ open fun getTransformDocumentInterface()
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
     //var document = document
 
     var dirNode: Node = document.createElement("dir")!!
@@ -142,9 +124,6 @@ open fun toXmlNode(document: Document)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 nextFile= this.fileBasicArrayList!!.get(index) as AbFile
 fileNode= FileDomDataModel(nextFile).
@@ -164,10 +143,7 @@ dirNode!!.appendChild(fileNode)
             
 open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
 
 
@@ -180,10 +156,7 @@ open fun toXmlDoc()
             
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var node: Node = this.toXmlNode(this.getTransformDocumentInterface()!!.getDoc())!!
 

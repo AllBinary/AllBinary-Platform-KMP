@@ -37,10 +37,7 @@ open public class PoolInterfaceFactory
             
 open fun getInstance(cacheableInterfaceFactoryInterface: CacheableInterfaceFactoryInterface, poolType: PoolType, cachePolicy: CachePolicy)
         //nullable =  from not(true or (false and false)) = 
-: PoolInterface
-
-        Updates for KMP build        
-        {
+: PoolInterface{
 var cacheableInterfaceFactoryInterface = cacheableInterfaceFactoryInterface
 var poolType = poolType
 var cachePolicy = cachePolicy
@@ -54,9 +51,6 @@ var cachePolicy = cachePolicy
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

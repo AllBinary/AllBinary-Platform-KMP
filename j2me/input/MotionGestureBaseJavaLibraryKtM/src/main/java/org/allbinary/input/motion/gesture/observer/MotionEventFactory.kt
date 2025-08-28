@@ -49,9 +49,6 @@ open public class MotionEventFactory
     private val id: Int
 public constructor        (source: Any, id: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var source = source
 var id = id
@@ -62,10 +59,7 @@ index= TouchMotionGestureFactory.getInstance()!!.LAST_MOTION.getId()
 
 override fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AllBinaryEventObject
-
-        Updates for KMP build        
-        {
+: AllBinaryEventObject{
 
     var inputFactory: InputFactory = InputFactory.getInstance()!!
 

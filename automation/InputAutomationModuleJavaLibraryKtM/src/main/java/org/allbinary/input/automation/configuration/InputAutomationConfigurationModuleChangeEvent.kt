@@ -35,9 +35,6 @@ open public class InputAutomationConfigurationModuleChangeEvent
     private var inputAutomationModuleConfiguration: InputAutomationModuleConfiguration
 public constructor        (inputAutomationModuleConfiguration: InputAutomationModuleConfiguration)
             : super()
-        
-
-        Updates for KMP build        
         {
 var inputAutomationModuleConfiguration = inputAutomationModuleConfiguration
 this.setInputAutomationModuleConfiguration(inputAutomationModuleConfiguration)
@@ -46,10 +43,7 @@ this.setInputAutomationModuleConfiguration(inputAutomationModuleConfiguration)
 
 open fun getInputAutomationModuleConfiguration()
         //nullable = true from not(false or (false and true)) = true
-: InputAutomationModuleConfiguration
-
-        Updates for KMP build        
-        {
+: InputAutomationModuleConfiguration{
 
 
 
@@ -60,10 +54,7 @@ open fun getInputAutomationModuleConfiguration()
 
 open fun setInputAutomationModuleConfiguration(inputAutomationModuleConfiguration: InputAutomationModuleConfiguration)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var inputAutomationModuleConfiguration = inputAutomationModuleConfiguration
 this.inputAutomationModuleConfiguration= inputAutomationModuleConfiguration
 }

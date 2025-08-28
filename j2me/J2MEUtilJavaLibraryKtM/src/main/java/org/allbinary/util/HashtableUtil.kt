@@ -39,10 +39,7 @@ open public class HashtableUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: HashtableUtil
-
-        Updates for KMP build        
-        {
+: HashtableUtil{
 
 
 
@@ -60,10 +57,7 @@ open fun getInstance()
         
 open fun putAll(fromHashtable: Hashtable<Any, Any>, hashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var fromHashtable = fromHashtable
 var hashtable = hashtable
 
@@ -71,9 +65,6 @@ var hashtable = hashtable
 
 
         while(enumeration.hasMoreElements())
-        
-
-        Updates for KMP build        
         {
 
     var key: Any = enumeration.nextElement()!!!!
@@ -103,10 +94,7 @@ var hashtable = hashtable
 
 open fun getKeysAsArray(hashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-: Array<Any?>
-
-        Updates for KMP build        
-        {
+: Array<Any?>{
 var hashtable = hashtable
 
     var objectArray: Array<Any?> = arrayOfNulls(hashtable.size)
@@ -119,9 +107,6 @@ var hashtable = hashtable
 
 
         while(enumeration.hasMoreElements())
-        
-
-        Updates for KMP build        
         {
 objectArray[index++]= enumeration.nextElement()!!
 }
@@ -136,10 +121,7 @@ objectArray[index++]= enumeration.nextElement()!!
 
 open fun getKeysAsList(hashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 var hashtable = hashtable
 
     var list: BasicArrayList = BasicArrayList(hashtable.size)
@@ -149,9 +131,6 @@ var hashtable = hashtable
 
 
         while(enumeration.hasMoreElements())
-        
-
-        Updates for KMP build        
         {
 list.add(enumeration.nextElement()!!)
 }

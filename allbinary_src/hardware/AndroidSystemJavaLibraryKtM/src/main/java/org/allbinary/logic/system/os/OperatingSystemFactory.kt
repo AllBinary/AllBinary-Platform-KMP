@@ -40,10 +40,7 @@ open public class OperatingSystemFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OperatingSystemFactory
-
-        Updates for KMP build        
-        {
+: OperatingSystemFactory{
 
 
 
@@ -61,9 +58,6 @@ open fun getInstance()
     private var hasDetected: Boolean = false
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -71,10 +65,7 @@ private constructor        ()
 
 open fun getOperatingSystemInstance()
         //nullable = true from not(false or (false and true)) = true
-: GenericOperatingSystem
-
-        Updates for KMP build        
-        {
+: GenericOperatingSystem{
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -117,10 +108,7 @@ logUtil!!.put(StringMaker().
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 genericOperatingSystem= NoOperatingSystem.NO_OPERATING_SYSTEM
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
 }

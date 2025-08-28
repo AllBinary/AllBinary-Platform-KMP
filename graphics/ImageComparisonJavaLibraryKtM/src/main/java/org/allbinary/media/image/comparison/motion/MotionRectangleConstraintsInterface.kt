@@ -34,59 +34,35 @@ open fun getMaxMotionRectangles()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-        Updates for KMP build        
-        
-
 open fun getMinDimension()
         //nullable = true from not(false or (false and true)) = true
 : Dimension
-
-        Updates for KMP build        
-        
 
 open fun getMinArea()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-        Updates for KMP build        
-        
-
 open fun getMaxDimension()
         //nullable = true from not(false or (false and true)) = true
 : Dimension
-
-        Updates for KMP build        
-        
 
 open fun isTooSmall(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
-        Updates for KMP build        
-        
-
 open fun isAreaTooSmall(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
-        Updates for KMP build        
-        
-
 open fun isTooBig(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
-
-        Updates for KMP build        
-        
 
                 @Throws(Exception::class)
             
 open fun isValid(frame: Long, bufferedImage: BufferedImage, rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
-
-        Updates for KMP build        
-        
 
 }
                 

@@ -35,10 +35,7 @@ open public class GameConfigurationPersistanceSingleton : KeyValuePersistance {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameConfigurationPersistanceSingleton
-
-        Updates for KMP build        
-        {
+: GameConfigurationPersistanceSingleton{
 
 
 
@@ -50,10 +47,7 @@ open fun getInstance()
         }
             private constructor        ()                        
 
-                            : super(GamePersistanceStrings.getInstance()!!.SAVED_GAME_CONFIGURATION_RECORD_ID)
-
-        Updates for KMP build        
-        {
+                            : super(GamePersistanceStrings.getInstance()!!.SAVED_GAME_CONFIGURATION_RECORD_ID){
 
 
                             //For kotlin this is before the body of the constructor.

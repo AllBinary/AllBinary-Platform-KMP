@@ -52,9 +52,6 @@ open public class GameConfiguration
     private var modifiable: Boolean = BooleanFactory.getInstance()!!.TRUE
 public constructor        (name: String, defaultValue: Integer, minValue: Integer, maxValue: Integer)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var name = name
     //var defaultValue = defaultValue
@@ -73,10 +70,7 @@ GameConfigurationSingleton.getInstance()!!.getHashtable()!!.put(this.getName(), 
             
 open fun setValue(value: Integer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var value = value
 
     
@@ -97,10 +91,7 @@ GameFeatureEventHandler.getInstance()!!.fireEvent(GameFeatureEvent(this, StringM
 
 open fun getValue()
         //nullable = true from not(false or (false and true)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 
 
 
@@ -111,10 +102,7 @@ open fun getValue()
 
 open fun setMaxValue(maxValue: Integer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var maxValue = maxValue
 this.maxValue= maxValue
 }
@@ -122,10 +110,7 @@ this.maxValue= maxValue
 
 open fun getMaxValue()
         //nullable = true from not(false or (false and true)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 
 
 
@@ -136,10 +121,7 @@ open fun getMaxValue()
 
 open fun setMinValue(minValue: Integer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var minValue = minValue
 this.minValue= minValue
 }
@@ -147,10 +129,7 @@ this.minValue= minValue
 
 open fun getMinValue()
         //nullable = true from not(false or (false and true)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 
 
 
@@ -161,10 +140,7 @@ open fun getMinValue()
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var name = name
 this.name= name
 }
@@ -172,10 +148,7 @@ this.name= name
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -186,10 +159,7 @@ open fun getName()
 
 open fun setDefaultValue(defaultValue: Integer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var defaultValue = defaultValue
 this.defaultValue= defaultValue
 }
@@ -197,10 +167,7 @@ this.defaultValue= defaultValue
 
 open fun getDefaultValue()
         //nullable = true from not(false or (false and true)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 
 
 
@@ -213,19 +180,13 @@ open fun getDefaultValue()
             
 open fun setDefault()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.setValue(this.getDefaultValue())
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -251,10 +212,7 @@ stringBuffer!!.append(this.isModifiable())
 
 open fun setModifiable(modifiable: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var modifiable = modifiable
 this.modifiable= modifiable
 }
@@ -262,10 +220,7 @@ this.modifiable= modifiable
 
 open fun isModifiable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 

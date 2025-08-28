@@ -59,10 +59,7 @@ open public class OrderHelper : TagHelper {
     private var pageContext: PageContext
 
     private var request: HttpServletRequest
-public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
-
-        Updates for KMP build        
-        {
+public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext){
 var propertiesHashMap = propertiesHashMap
 var pageContext = pageContext
 this.propertiesHashMap= propertiesHashMap
@@ -86,10 +83,7 @@ this.weblisketSession= WeblisketSession(this.propertiesHashMap, this.pageContext
 
 open fun setPaymentGateway()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             
@@ -160,10 +154,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "setPaymentGateway()")
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return paymentGatewayBoolean
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
@@ -192,10 +183,7 @@ stringBuffer!!.append(orderInterface!!.getPaymentMethod())
                                     }
                                 
 } catch(ex: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 stringBuffer!!.append(" Exception Getting")
 }
 
@@ -215,10 +203,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "setPaymentGateway()", e)
 
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -243,10 +228,7 @@ order.setStoreName(this.storeFrontInterface!!.getName())
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -255,10 +237,7 @@ stringBuffer!!.append("Failed to Process Order: ")
         try {
             stringBuffer!!.append(this.weblisketSession!!.getOrder()!!.getId())
 } catch(ex: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 stringBuffer!!.append(" Exception Getting Id")
 }
 

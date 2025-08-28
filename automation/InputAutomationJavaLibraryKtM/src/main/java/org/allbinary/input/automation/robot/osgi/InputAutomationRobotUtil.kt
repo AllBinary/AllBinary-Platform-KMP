@@ -38,10 +38,7 @@ open public class InputAutomationRobotUtil
             
 open fun getChangeEvent(inputRobotInterface: InputRobotInterface)
         //nullable = true from not(false or (false and false)) = true
-: InputAutomationRobotChangeEvent
-
-        Updates for KMP build        
-        {
+: InputAutomationRobotChangeEvent{
 var inputRobotInterface = inputRobotInterface
 
     var inputAutomationRobotInterfaceWrapper: InputAutomationRobotInterfaceWrapper = InputAutomationRobotInterfaceWrapper(inputRobotInterface)
@@ -60,9 +57,6 @@ var inputRobotInterface = inputRobotInterface
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

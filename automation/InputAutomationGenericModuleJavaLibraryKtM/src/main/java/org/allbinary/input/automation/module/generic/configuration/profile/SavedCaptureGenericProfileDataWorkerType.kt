@@ -41,10 +41,7 @@ open public class SavedCaptureGenericProfileDataWorkerType : GenericProfileDataW
     private var lastFrame: Int= 0
 public constructor        (name: String, path: String, lastFrame: Int)                        
 
-                            : super(name)
-
-        Updates for KMP build        
-        {
+                            : super(name){
 var name = name
 var path = path
 var lastFrame = lastFrame
@@ -59,10 +56,7 @@ this.setLastFrame(lastFrame)
 
 open fun getPath()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -73,10 +67,7 @@ open fun getPath()
 
 open fun setPath(path: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var path = path
 this.path= path
 }
@@ -84,10 +75,7 @@ this.path= path
 
 open fun getLastFrame()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -98,10 +86,7 @@ open fun getLastFrame()
 
 open fun setLastFrame(lastFrame: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var lastFrame = lastFrame
 this.lastFrame= lastFrame
 }

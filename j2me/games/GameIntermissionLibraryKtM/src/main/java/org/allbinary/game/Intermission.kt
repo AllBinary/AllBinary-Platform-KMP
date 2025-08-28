@@ -40,28 +40,19 @@ open public class Intermission
     private var intermissionEnableListener: IntermissionEnableListenerInterface = NullIntermissionEnableListener.getInstance()!!
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 override fun setListener(enableListener: IntermissionEnableListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var enableListener = enableListener
 this.intermissionEnableListener= enableListener
 }
 
 override fun getTimeDelayHelper()
         //nullable = true from not(false or (false and true)) = true
-: TimeDelayHelper
-
-        Updates for KMP build        
-        {
+: TimeDelayHelper{
 
 
 
@@ -71,10 +62,7 @@ override fun getTimeDelayHelper()
 
 override fun setEnabled(enabled: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var enabled = enabled
 this.enabled= enabled
 
@@ -91,10 +79,7 @@ this.intermissionEnableListener!!.notifyIntermission(enabled)
 
 override fun isEnabled()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 

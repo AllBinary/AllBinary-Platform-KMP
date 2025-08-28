@@ -41,10 +41,7 @@ open public class VirtualKeyboardFactory
 
 open fun init(activity: Activity)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var activity = activity
 
     var SDK_VERSION: Int = AndroidInfoFactory.getInstance()!!.getVersion()!!
@@ -68,10 +65,7 @@ var activity = activity
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: VirtualKeyboard
-
-        Updates for KMP build        
-        {
+: VirtualKeyboard{
 
 
 

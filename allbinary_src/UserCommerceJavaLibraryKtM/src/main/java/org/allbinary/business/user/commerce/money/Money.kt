@@ -41,9 +41,6 @@ open public class Money
     private val DEFAULT_CURRENCY: String = "USD"
 public constructor        (money: Money)
             : super()
-        
-
-        Updates for KMP build        
         {
 var money = money
 this.units= money.getUnits() as Long
@@ -51,18 +48,12 @@ this.units= money.getUnits() as Long
 
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 this.units= 0 as Long
 }
 
 public constructor        (usDollarStr: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var usDollarStr = usDollarStr
 
@@ -80,9 +71,6 @@ var usDollarStr = usDollarStr
 
 public constructor        (units: Long)
             : super()
-        
-
-        Updates for KMP build        
         {
 var units = units
 this.units= units as Long
@@ -91,10 +79,7 @@ this.units= units as Long
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(this.units != 
@@ -124,10 +109,7 @@ open fun isValid()
 
 open fun add(moreMoney: Money)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var moreMoney = moreMoney
 this.add(moreMoney!!.toString())
 }
@@ -135,10 +117,7 @@ this.add(moreMoney!!.toString())
 
 open fun add(usDollarStr: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var usDollarStr = usDollarStr
 this.units= this.units.longValue() +convertUsdToUnits(usDollarStr) as Long
 }
@@ -146,10 +125,7 @@ this.units= this.units.longValue() +convertUsdToUnits(usDollarStr) as Long
 
 open fun subtract(usDollarStr: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var usDollarStr = usDollarStr
 this.units= this.units.longValue() -convertUsdToUnits(usDollarStr) as Long
 }
@@ -157,10 +133,7 @@ this.units= this.units.longValue() -convertUsdToUnits(usDollarStr) as Long
 
 open fun multiply(multiplier: Float)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var multiplier = multiplier
 this.units= Float(this.units.longValue() *multiplier.toFloat()).
                             longValue() as Long
@@ -169,10 +142,7 @@ this.units= Float(this.units.longValue() *multiplier.toFloat()).
 
 open fun multiply(multiplier: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var multiplier = multiplier
 this.units= this.units.longValue() *multiplier as Long
 }
@@ -180,10 +150,7 @@ this.units= this.units.longValue() *multiplier as Long
 
 open fun convertUnitsTo(currency: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var currency = currency
 
     var stringBuffer: StringMaker = StringMaker()
@@ -226,10 +193,7 @@ stringBuffer!!.append(cents as Long.
 
 open fun convertUsdToUnits(usDollarStr: String)
         //nullable = true from not(false or (false and false)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 var usDollarStr = usDollarStr
 
     var localUnit: Long = 0
@@ -277,10 +241,7 @@ localUnit += centsStr as Long.
 
 open fun getUnits()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -291,10 +252,7 @@ open fun getUnits()
 
 open fun getUnitsLong()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -304,10 +262,7 @@ open fun getUnitsLong()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

@@ -39,10 +39,7 @@ open public class FileStreamFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FileStreamFactory
-
-        Updates for KMP build        
-        {
+: FileStreamFactory{
 
 
 
@@ -54,9 +51,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -65,10 +59,7 @@ open fun getInstance()
             
 open fun getFileInputStreamInstance(path: String, fileName: String)
         //nullable = true from not(false or (false and false)) = true
-: AbFileInputStream
-
-        Updates for KMP build        
-        {
+: AbFileInputStream{
 var path = path
 var fileName = fileName
 
@@ -89,10 +80,7 @@ var fileName = fileName
             
 open fun getFileOutputStreamInstance(path: String, fileName: String)
         //nullable = true from not(false or (false and false)) = true
-: AbFileOutputStream
-
-        Updates for KMP build        
-        {
+: AbFileOutputStream{
 var path = path
 var fileName = fileName
 
@@ -123,10 +111,7 @@ file.createNewFile()
             
 open fun delete(path: String, fileName: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var path = path
 var fileName = fileName
 

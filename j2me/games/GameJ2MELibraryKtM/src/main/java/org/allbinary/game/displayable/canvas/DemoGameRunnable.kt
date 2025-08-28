@@ -36,10 +36,7 @@ open public class DemoGameRunnable : GameRunnable {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val demoCanvas: DemoCanvas
-public constructor        (demoCanvas: DemoCanvas)
-
-        Updates for KMP build        
-        {
+public constructor        (demoCanvas: DemoCanvas){
 var demoCanvas = demoCanvas
 this.demoCanvas= demoCanvas
 }
@@ -48,19 +45,13 @@ this.demoCanvas= demoCanvas
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
 override fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             demoCanvas!!.getLoopTimeHelperP()!!.setStartTime(gameTickTimeDelayHelper!!.setStartTime())
 demoCanvas!!.processGame()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -73,10 +64,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
                 @Throws(Exception::class)
             override fun processLoopSleep()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 demoCanvas!!.processLoopSleep()
 }
 

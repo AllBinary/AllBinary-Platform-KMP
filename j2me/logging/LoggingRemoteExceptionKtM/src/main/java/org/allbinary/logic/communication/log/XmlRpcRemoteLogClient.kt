@@ -42,10 +42,7 @@ open public class XmlRpcRemoteLogClient : XmlRpcAbeClient {
     private val noCrypt: NoCrypt = NoCrypt()
 public constructor        (clientInfo: AbeClientInformationInterface)                        
 
-                            : super(clientInfo, "SSLLogServ.logUtil")
-
-        Updates for KMP build        
-        {
+                            : super(clientInfo, "SSLLogServ.logUtil"){
     //var clientInfo = clientInfo
 
 
@@ -58,10 +55,7 @@ public constructor        (clientInfo: AbeClientInformationInterface)
             
 open fun get(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
     //var anyType = anyType
 
         try {
@@ -96,10 +90,7 @@ System.out.println("Result: \n" +result.toString())
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: IOException)
-            
-
-        Updates for KMP build        
-        {
+            {
 System.out.println("IOException Trying Other Servers")
 
     
@@ -124,10 +115,7 @@ System.out.println("IOException Trying Other Servers")
                             
 }
  catch(e: XmlRpcException)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
@@ -135,10 +123,7 @@ System.out.println("IOException Trying Other Servers")
                         return this.tryAnother(anyType)
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 

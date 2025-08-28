@@ -41,10 +41,7 @@ open public class AbKeys
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AbKeys
-
-        Updates for KMP build        
-        {
+: AbKeys{
 
 
 
@@ -58,9 +55,6 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -70,10 +64,7 @@ private constructor        ()
 
 open fun getKey(abeClientInformation: AbeClientInformationInterface, keyName: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
     //var abeClientInformation = abeClientInformation
     //var keyName = keyName
 
@@ -98,20 +89,14 @@ open fun getKey(abeClientInformation: AbeClientInformationInterface, keyName: St
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbeLicenseInterfaceFactory.getInstance()!!.getLicenseInstance(abeClientInformation)!!.getKey(keyName)
 } catch(e: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
                             throw e
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put("Licensing Failure", this, "getKey()", e)
 
 

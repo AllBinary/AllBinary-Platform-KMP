@@ -74,10 +74,7 @@ open public class InitDbCrypted : AbDatabaseManagement {
     private val SQL_FILE: String = "initWeblisket.sql"
 public constructor        (databaseConnectionInfoInterface: DatabaseConnectionInfoInterface)                        
 
-                            : super(databaseConnectionInfoInterface as DbConnectionInfo)
-
-        Updates for KMP build        
-        {
+                            : super(databaseConnectionInfoInterface as DbConnectionInfo){
 var databaseConnectionInfoInterface = databaseConnectionInfoInterface
 
 
@@ -88,10 +85,7 @@ var databaseConnectionInfoInterface = databaseConnectionInfoInterface
 
 open fun addUsers()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             logUtil!!.put(this.commonStrings!!.START, this, this.METHOD_ADD_USERS)
@@ -222,10 +216,7 @@ logUtil!!.put(this.commonStrings!!.END, this, this.METHOD_ADD_USERS)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.TRUE
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.METHOD_ADD_USERS, e)
 
 
@@ -239,10 +230,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.METHOD_ADD_USERS, e)
 
 open fun addDatabases()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             logUtil!!.put(this.commonStrings!!.START, this, this.METHOD_ADD_DATABASES)
@@ -350,10 +338,7 @@ idOutData!!.writeBytes(this.sqlCommandLog!!.toString())
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.TRUE
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.METHOD_ADD_DATABASES, e)
 
 
@@ -367,10 +352,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.METHOD_ADD_DATABASES, e
 
 open fun addTables()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             
@@ -401,10 +383,7 @@ logUtil!!.put(ADD_TABLES_RESULTS_LABEL +stringBuffer!!.toString(), this, this.ME
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.TRUE
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.METHOD_ADD_TABLES, e)
 
 

@@ -43,10 +43,7 @@ open public class InitInfo
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: InitInfo
-
-        Updates for KMP build        
-        {
+: InitInfo{
 
 
 
@@ -78,9 +75,6 @@ open fun getInstance()
     private var hasRead: Boolean = false
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -90,10 +84,7 @@ private constructor        ()
 
 open fun set()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             
@@ -142,10 +133,7 @@ initInfoEntity!!.update()
                             
 hasRead= false
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
@@ -163,10 +151,7 @@ hasRead= false
 
 open fun set(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var hashMap = hashMap
 
         try {
@@ -174,10 +159,7 @@ var hashMap = hashMap
 mainPath= AbPath(hashMap!!.get(MAINPATH as Object) as String)
 testHtmlPath= AbPath(hashMap!!.get(TESTHTMLPATH as Object) as String)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
@@ -195,10 +177,7 @@ testHtmlPath= AbPath(hashMap!!.get(TESTHTMLPATH as Object) as String)
 
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             testing= 
@@ -215,10 +194,7 @@ testHtmlPath=
 
 initInfoEntity!!.get()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
@@ -241,10 +217,7 @@ initInfoEntity!!.get()
 
 open fun setHasRead(value: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 hasRead= value
 }
@@ -253,10 +226,7 @@ hasRead= value
 
 open fun updateIfNeeded()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             
@@ -270,10 +240,7 @@ this.get()
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
@@ -295,10 +262,7 @@ this.get()
 
 open fun isTesting()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             this.updateIfNeeded()
@@ -308,10 +272,7 @@ open fun isTesting()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return BooleanUtil.getInstance()!!.getFromString(testing)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
@@ -333,10 +294,7 @@ open fun isTesting()
 
 open fun getTesting()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 this.updateIfNeeded()
 
 
@@ -348,10 +306,7 @@ this.updateIfNeeded()
 
 open fun getTestHtmlPath()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 this.updateIfNeeded()
 
     
@@ -382,10 +337,7 @@ this.updateIfNeeded()
 
 open fun getMainPath()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 this.updateIfNeeded()
 
     
@@ -416,10 +368,7 @@ this.updateIfNeeded()
 
 open fun setTesting(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 testing= value
 }
@@ -427,10 +376,7 @@ testing= value
 
 open fun setTestHtmlPath(value: AbPath)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.testHtmlPath= value
 }
@@ -438,10 +384,7 @@ this.testHtmlPath= value
 
 open fun setMainPath(value: AbPath)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.mainPath= value
 }
@@ -449,10 +392,7 @@ this.mainPath= value
 
 open fun isMainPathValid(abPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var abPath = abPath
 
 
@@ -464,10 +404,7 @@ var abPath = abPath
 
 open fun isTestHtmlPathValid(abPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var abPath = abPath
 
 
@@ -481,10 +418,7 @@ var abPath = abPath
             
 open fun isTestingValid(testing: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var testing = testing
 
 
@@ -496,10 +430,7 @@ var testing = testing
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 

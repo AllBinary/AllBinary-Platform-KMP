@@ -24,10 +24,7 @@ open public class AnalogLocationInputFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AnalogLocationInputFactory
-
-        Updates for KMP build        
-        {
+: AnalogLocationInputFactory{
 
 
 
@@ -41,19 +38,13 @@ open fun getInstance()
     private val list: BasicArrayList = BasicArrayList()
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun addPlayer(playerInputId: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var playerInputId = playerInputId
 
     var analogLocationInput: AnalogLocationInput = AnalogLocationInput.NULL_ANALOG_LOCATION_INPUT
@@ -82,10 +73,7 @@ list.add(analogLocationInput)
 
 open fun getInstance(playerInputId: Int)
         //nullable =  from not(true or (false and false)) = 
-: AnalogLocationInput
-
-        Updates for KMP build        
-        {
+: AnalogLocationInput{
 var playerInputId = playerInputId
 
 
@@ -97,10 +85,7 @@ var playerInputId = playerInputId
 
 open fun getList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 

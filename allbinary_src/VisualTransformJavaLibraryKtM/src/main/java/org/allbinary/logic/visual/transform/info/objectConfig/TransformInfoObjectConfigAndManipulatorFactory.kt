@@ -43,10 +43,7 @@ open public class TransformInfoObjectConfigAndManipulatorFactory : TransformInfo
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TransformInfoObjectConfigAndManipulatorFactory
-
-        Updates for KMP build        
-        {
+: TransformInfoObjectConfigAndManipulatorFactory{
 
 
 
@@ -58,10 +55,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
-
-        Updates for KMP build        
-        {
+private constructor        (){
 }
 
 
@@ -69,10 +63,7 @@ private constructor        ()
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, objectConfigFileAbPath: AbPath)
         //nullable =  from not(true or (false and false)) = 
-: TransformInfoObjectConfigInterface
-
-        Updates for KMP build        
-        {
+: TransformInfoObjectConfigInterface{
     //var abeClientInformation = abeClientInformation
     //var transformInfoInterface = transformInfoInterface
     //var objectConfigFileAbPath = objectConfigFileAbPath
@@ -88,10 +79,7 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, transf
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getInstance(abeClientInformation, transformInfoInterface, DomDocumentHelper.create(data))
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
@@ -114,10 +102,7 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, transf
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)
         //nullable =  from not(true or (false and false)) = 
-: TransformInfoObjectConfigInterface
-
-        Updates for KMP build        
-        {
+: TransformInfoObjectConfigInterface{
     //var abeClientInformation = abeClientInformation
 var transformInfoInterface = transformInfoInterface
 
@@ -150,10 +135,7 @@ var transformInfoInterface = transformInfoInterface
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed To Get Instance: "
 
@@ -190,10 +172,7 @@ var transformInfoInterface = transformInfoInterface
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, document: Document)
         //nullable =  from not(true or (false and false)) = 
-: TransformInfoObjectConfigInterface
-
-        Updates for KMP build        
-        {
+: TransformInfoObjectConfigInterface{
     //var abeClientInformation = abeClientInformation
     //var transformInfoInterface = transformInfoInterface
     //var document = document
@@ -227,10 +206,7 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, transf
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed To Get Instance: "
 

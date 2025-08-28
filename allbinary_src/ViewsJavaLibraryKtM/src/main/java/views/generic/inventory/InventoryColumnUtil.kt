@@ -43,10 +43,7 @@ open public class InventoryColumnUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: InventoryColumnUtil
-
-        Updates for KMP build        
-        {
+: InventoryColumnUtil{
 
 
 
@@ -66,10 +63,7 @@ open fun getInstance()
 
 open fun getColumnWhereLike(inventoryEntity: InventoryEntity, category: String, column: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 var inventoryEntity = inventoryEntity
 var category = category
 var column = column
@@ -89,9 +83,6 @@ logUtil!!.put("Start Category: " +category, this, "getKeywords")
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var hashMap: HashMap<Any, Any> = vectorOfHashMaps!!.get(index as Object) as HashMap<Any, Any>

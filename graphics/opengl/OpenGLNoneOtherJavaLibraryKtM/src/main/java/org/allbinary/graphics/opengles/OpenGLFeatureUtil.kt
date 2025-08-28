@@ -37,10 +37,7 @@ open public class OpenGLFeatureUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLFeatureUtil
-
-        Updates for KMP build        
-        {
+: OpenGLFeatureUtil{
 
 
 
@@ -52,19 +49,13 @@ open fun getInstance()
         }
             public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun isAnyThreed()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 

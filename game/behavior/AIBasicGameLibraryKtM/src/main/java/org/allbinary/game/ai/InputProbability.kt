@@ -51,9 +51,6 @@ open public class InputProbability
     private val timeDelayHelper: TimeDelayHelper
 public constructor        (likelyhoodIntegerArray: Array<Array<Integer?>?>, repeatLikelyhoodIntegerArray: Array<Integer?>, max: Int, timeDelayHelper: TimeDelayHelper)
             : super()
-        
-
-        Updates for KMP build        
         {
 var likelyhoodIntegerArray = likelyhoodIntegerArray
 var repeatLikelyhoodIntegerArray = repeatLikelyhoodIntegerArray
@@ -68,10 +65,7 @@ this.timeDelayHelper= timeDelayHelper
 
 open fun getLikelyhoodIntegerArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<Array<Integer?>?>
-
-        Updates for KMP build        
-        {
+: Array<Array<Integer?>?>{
 
 
 
@@ -82,10 +76,7 @@ open fun getLikelyhoodIntegerArray()
 
 open fun getRepeatLikelyhoodIntegerArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<Integer?>
-
-        Updates for KMP build        
-        {
+: Array<Integer?>{
 
 
 
@@ -96,10 +87,7 @@ open fun getRepeatLikelyhoodIntegerArray()
 
 open fun getMax()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -110,10 +98,7 @@ open fun getMax()
 
 open fun getTimeDelayHelper()
         //nullable = true from not(false or (false and true)) = true
-: TimeDelayHelper
-
-        Updates for KMP build        
-        {
+: TimeDelayHelper{
 
 
 
@@ -124,10 +109,7 @@ open fun getTimeDelayHelper()
 
 open fun toHashtable()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>
-
-        Updates for KMP build        
-        {
+: Hashtable<Any, Any>{
 
     var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 

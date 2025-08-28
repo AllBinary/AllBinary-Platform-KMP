@@ -36,10 +36,7 @@ open public class MotionJ2MEGameInputMapping : J2MEGameInputMapping {
             }            
         override fun getDefault()
         //nullable = true from not(false or (false and true)) = true
-: InputToGameKeyMapping
-
-        Updates for KMP build        
-        {
+: InputToGameKeyMapping{
 
 
 

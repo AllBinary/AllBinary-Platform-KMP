@@ -39,10 +39,7 @@ open public class NoHardwareComponent
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NoHardwareComponent
-
-        Updates for KMP build        
-        {
+: NoHardwareComponent{
 
 
 
@@ -59,10 +56,7 @@ open fun getInstance()
             }            
         override fun compareTo(componentInterface: HardwareComponentInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var componentInterface = componentInterface
 
     
@@ -86,10 +80,7 @@ var componentInterface = componentInterface
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

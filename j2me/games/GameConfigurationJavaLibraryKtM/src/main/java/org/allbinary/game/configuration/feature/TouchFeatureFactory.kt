@@ -37,10 +37,7 @@ open public class TouchFeatureFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TouchFeatureFactory
-
-        Updates for KMP build        
-        {
+: TouchFeatureFactory{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

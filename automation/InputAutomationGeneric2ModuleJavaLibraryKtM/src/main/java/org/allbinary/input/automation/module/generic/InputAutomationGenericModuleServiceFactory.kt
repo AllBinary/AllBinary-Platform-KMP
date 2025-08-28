@@ -38,10 +38,7 @@ open public class InputAutomationGenericModuleServiceFactory : InputAutomationMo
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: InputAutomationGenericModuleServiceFactory
-
-        Updates for KMP build        
-        {
+: InputAutomationGenericModuleServiceFactory{
 
 
 
@@ -53,10 +50,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 
         try {
             
@@ -65,10 +59,7 @@ public constructor        ()
 inputAutomationModuleInterfaceArray[0]= GenericModuleFactory()
 this.setInputAutomationModuleInterfaceArray(inputAutomationModuleInterfaceArray)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR, e)
 }
 

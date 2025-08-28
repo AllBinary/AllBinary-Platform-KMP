@@ -38,9 +38,6 @@ open public class CanvasDrawLineString
     private var y: Int
 public constructor        (x: Int, y: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var x = x
 var y = y
@@ -53,10 +50,7 @@ this.y= y
 
 open fun paint(graphics: Graphics, string: String, line: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 var string = string
 var line = line

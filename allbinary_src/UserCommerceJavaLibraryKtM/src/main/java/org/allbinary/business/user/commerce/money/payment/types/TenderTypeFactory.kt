@@ -37,10 +37,7 @@ open public class TenderTypeFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TenderTypeFactory
-
-        Updates for KMP build        
-        {
+: TenderTypeFactory{
 
 
 

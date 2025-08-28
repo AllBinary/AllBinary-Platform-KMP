@@ -39,10 +39,7 @@ open public class LogConfigTypeFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LogConfigTypeFactory
-
-        Updates for KMP build        
-        {
+: LogConfigTypeFactory{
 
 
 
@@ -66,9 +63,6 @@ open fun getInstance()
     val CUSTOM_TYPES: LogConfigType = LogConfigType("Custom Types", NO_DESCRIPTION)
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 LogConfigTypes.LOGGING.add(this.INIT_SERVER)
 }

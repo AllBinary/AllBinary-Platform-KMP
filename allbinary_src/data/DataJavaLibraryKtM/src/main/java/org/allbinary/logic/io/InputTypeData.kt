@@ -37,10 +37,7 @@ open public class InputTypeData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: InputTypeData
-
-        Updates for KMP build        
-        {
+: InputTypeData{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

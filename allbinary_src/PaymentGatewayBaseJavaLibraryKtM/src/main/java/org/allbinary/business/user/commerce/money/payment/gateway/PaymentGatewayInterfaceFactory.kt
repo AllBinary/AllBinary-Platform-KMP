@@ -42,9 +42,6 @@ open public class PaymentGatewayInterfaceFactory
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -53,10 +50,7 @@ public constructor        ()
             
 open fun getInstance(httpServletRequest: HttpServletRequest)
         //nullable =  from not(true or (false and false)) = 
-: PaymentGatewayInterface
-
-        Updates for KMP build        
-        {
+: PaymentGatewayInterface{
 var httpServletRequest = httpServletRequest
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -79,10 +73,7 @@ var httpServletRequest = httpServletRequest
                         return this.getInstance(RequestParams(httpServletRequest).
                             toHashMap())
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENTERROR))
@@ -105,10 +96,7 @@ var httpServletRequest = httpServletRequest
             
 open fun getInstance(paymentType: BasicPaymentType)
         //nullable =  from not(true or (false and false)) = 
-: PaymentGatewayInterface
-
-        Updates for KMP build        
-        {
+: PaymentGatewayInterface{
 var paymentType = paymentType
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
@@ -126,10 +114,7 @@ hashMap!!.put(PaymentGatewayData.NAME.toString(), paymentType!!.getName())
             
 open fun getInstance(hashMap: HashMap<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
-: PaymentGatewayInterface
-
-        Updates for KMP build        
-        {
+: PaymentGatewayInterface{
 var hashMap = hashMap
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -160,10 +145,7 @@ var hashMap = hashMap
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return paymentGatewayInterfaceFactoryInterface!!.getInstance(hashMap)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENTERROR))

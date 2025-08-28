@@ -39,10 +39,7 @@ open public class FontDebugFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FontDebugFactory
-
-        Updates for KMP build        
-        {
+: FontDebugFactory{
 
 
 
@@ -60,10 +57,7 @@ open fun getInstance()
         
 open fun setFont(font: Font, graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var font = font
     //var graphics = graphics
 graphics.setFont(font)

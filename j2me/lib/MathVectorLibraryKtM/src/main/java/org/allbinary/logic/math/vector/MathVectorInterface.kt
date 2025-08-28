@@ -33,22 +33,13 @@ open fun getDirection()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-        Updates for KMP build        
-        
-
 open fun getMagnitude()
         //nullable = true from not(false or (false and true)) = true
 : BasicDecimal
 
-        Updates for KMP build        
-        
-
 open fun getResult()
         //nullable = true from not(false or (false and true)) = true
 : BasicDecimal
-
-        Updates for KMP build        
-        
 
 }
                 

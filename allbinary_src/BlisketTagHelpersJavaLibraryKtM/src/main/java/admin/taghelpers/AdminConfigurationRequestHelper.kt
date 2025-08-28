@@ -38,10 +38,7 @@ open public class AdminConfigurationRequestHelper : ModifyTable {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var request: HttpServletRequest
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
-
-        Updates for KMP build        
-        {
+public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 
@@ -59,10 +56,7 @@ this.request= pageContext!!.getRequest() as HttpServletRequest
 
 open fun insert()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -96,10 +90,7 @@ adminConfigurationInterface!!.write()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to created AdminConfiguration"
 
@@ -124,10 +115,7 @@ adminConfigurationInterface!!.write()
 
 open fun delete()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -148,10 +136,7 @@ open fun delete()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to delete"
 
@@ -176,10 +161,7 @@ open fun delete()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -203,10 +185,7 @@ open fun update()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to update"
 

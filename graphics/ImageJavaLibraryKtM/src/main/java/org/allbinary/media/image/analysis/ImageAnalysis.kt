@@ -46,10 +46,7 @@ open public class ImageAnalysis
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageAnalysis
-
-        Updates for KMP build        
-        {
+: ImageAnalysis{
 
 
 
@@ -62,10 +59,7 @@ open fun getInstance()
             
 open fun process(bufferedImage: BufferedImage, colorRangeInterface: ColorRangeInterface)
         //nullable = true from not(false or (false and false)) = true
-: ImageAnalysisResults
-
-        Updates for KMP build        
-        {
+: ImageAnalysisResults{
 var bufferedImage = bufferedImage
 var colorRangeInterface = colorRangeInterface
 
@@ -86,9 +80,6 @@ var colorRangeInterface = colorRangeInterface
 
                         for (indexY in 0 until bufferedImage!!.getHeight()!!)
 
-        
-
-        Updates for KMP build        
         {
 
 
@@ -96,9 +87,6 @@ var colorRangeInterface = colorRangeInterface
 
                         for (indexX in 0 until bufferedImage!!.getWidth()!!)
 
-        
-
-        Updates for KMP build        
         {
 
     var keyInteger: Integer = Integer(Integer.valueOf(bufferedImage!!.getRGB(indexX, indexY)))!!
@@ -137,10 +125,7 @@ colorAverage!!.setAvgBlue(blueTotal.toFloat() /totalPixels)
 
 open fun processColorRangeResults(imageAnalysisResults: ImageAnalysisResults, colorRangeInterface: ColorRangeInterface, color: Color)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var imageAnalysisResults = imageAnalysisResults
 var colorRangeInterface = colorRangeInterface
 var color = color
@@ -163,10 +148,7 @@ imageAnalysisResults!!.getImageColorRangeResults()!!.addTotalPixelsChecked()
 
 open fun processImageColorResults(imageColorResults: ImageColorResults, colorRangeInterface: ColorRangeInterface, color: Color)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var imageColorResults = imageColorResults
 var colorRangeInterface = colorRangeInterface
 var color = color
@@ -232,9 +214,6 @@ var color = color
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -243,10 +222,7 @@ private constructor        ()
             
 open fun process(bufferedImageArray: Array<BufferedImage?>, colorRangeInterface: ColorRangeInterface)
         //nullable = true from not(false or (false and false)) = true
-: Array<ImageAnalysisResults?>
-
-        Updates for KMP build        
-        {
+: Array<ImageAnalysisResults?>{
 var bufferedImageArray = bufferedImageArray
 var colorRangeInterface = colorRangeInterface
 
@@ -262,9 +238,6 @@ logUtil!!.put(CommonLabels.getInstance()!!.START +colorRangeInterface!!.toString
 
                         for (index in 0 until bufferedImageArray!!.size)
 
-        
-
-        Updates for KMP build        
         {
 imageAnalysisResultsArray[index]= ImageAnalysis.process(bufferedImageArray[index]!!, colorRangeInterface)
 }

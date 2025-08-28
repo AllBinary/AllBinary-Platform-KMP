@@ -36,9 +36,6 @@ open public class BasicAccelerationProperties
     private var reverse: Int= 0
 public constructor        (forward: Int, reverse: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var forward = forward
 var reverse = reverse
@@ -49,10 +46,7 @@ this.setReverse(reverse)
 
 open fun setReverse(reverse: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var reverse = reverse
 this.reverse= reverse
 }
@@ -60,10 +54,7 @@ this.reverse= reverse
 
 open fun getReverse()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -74,10 +65,7 @@ open fun getReverse()
 
 open fun setForward(forward: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var forward = forward
 this.forward= forward
 }
@@ -85,10 +73,7 @@ this.forward= forward
 
 open fun getForward()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

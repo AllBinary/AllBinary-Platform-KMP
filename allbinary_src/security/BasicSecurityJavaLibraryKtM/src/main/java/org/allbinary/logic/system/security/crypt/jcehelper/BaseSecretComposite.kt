@@ -47,10 +47,7 @@ open public class BaseSecretComposite
             
 open fun encrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray
-
-        Updates for KMP build        
-        {
+: ByteArray{
     //var array = array
 
 
@@ -64,10 +61,7 @@ open fun encrypt(array: ByteArray)
             
 open fun decrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray
-
-        Updates for KMP build        
-        {
+: ByteArray{
 var array = array
 
 

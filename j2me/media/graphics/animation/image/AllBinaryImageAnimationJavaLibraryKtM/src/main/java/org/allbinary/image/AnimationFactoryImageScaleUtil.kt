@@ -42,10 +42,7 @@ open public class AnimationFactoryImageScaleUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AnimationFactoryImageScaleUtil
-
-        Updates for KMP build        
-        {
+: AnimationFactoryImageScaleUtil{
 
 
 
@@ -67,10 +64,7 @@ open fun getInstance()
             
 open fun createImage(image: Image, width: Int, height: Int, scaleWidth: Int, scaleHeight: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var image = image
     //var width = width
     //var height = height
@@ -124,10 +118,7 @@ open fun createImage(image: Image, width: Int, height: Int, scaleWidth: Int, sca
             
 open fun processAdjust(baseImageAnimationFactory: BaseImageAnimationFactory)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var baseImageAnimationFactory = baseImageAnimationFactory
 
     var scaleProperties: ScaleProperties = baseImageAnimationFactory!!.getScalePropertiesP()!!

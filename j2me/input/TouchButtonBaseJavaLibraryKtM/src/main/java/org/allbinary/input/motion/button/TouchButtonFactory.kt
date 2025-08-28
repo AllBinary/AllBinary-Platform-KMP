@@ -39,10 +39,7 @@ open public class TouchButtonFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TouchButtonFactory
-
-        Updates for KMP build        
-        {
+: TouchButtonFactory{
 
 
 
@@ -60,19 +57,13 @@ open fun getInstance()
     private var savedList: BasicArrayList = LIST
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun defaultList()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.list= LIST
 this.toggle(false, LIST)
 }
@@ -83,10 +74,7 @@ this.toggle(false, LIST)
 
 open fun toggle(save: Boolean, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var save = save
 var list = list
 
@@ -147,10 +135,7 @@ this.saved= false
             
 open fun setList(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var list = list
 
     
@@ -172,10 +157,7 @@ this.list= list
 
 open fun getList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 

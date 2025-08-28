@@ -40,10 +40,7 @@ open public class CircleFilledAnimation : Animation
     private var height: Int
 public constructor        (width: Int, height: Int, basicColor: BasicColor)                        
 
-                            : super()
-
-        Updates for KMP build        
-        {
+                            : super(){
     //var width = width
     //var height = height
     //var basicColor = basicColor
@@ -58,18 +55,12 @@ this.setBasicColorP(basicColor)
 
 override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var x = x
     //var y = y

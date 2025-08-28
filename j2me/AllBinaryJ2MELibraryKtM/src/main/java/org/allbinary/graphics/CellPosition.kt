@@ -36,10 +36,7 @@ open public class CellPosition : V {
             
 open fun toString(basicGeographicMapCellPosition: CellPosition)
         //nullable = true from not(false or (true and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var basicGeographicMapCellPosition = basicGeographicMapCellPosition
 
 
@@ -51,10 +48,7 @@ var basicGeographicMapCellPosition = basicGeographicMapCellPosition
 
 open fun toString(i_column: Int, i_row: Int)
         //nullable = true from not(false or (true and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var i_column = i_column
 var i_row = i_row
 
@@ -83,10 +77,7 @@ stringBuffer!!.append(commonSeps!!.PARENTHESIS_CLOSE)
     private val column: Int
 
     private val row: Int
-public constructor        (column: Int, row: Int, columns: Int, rows: Int)
-
-        Updates for KMP build        
-        {
+public constructor        (column: Int, row: Int, columns: Int, rows: Int){
 var column = column
 var row = row
 var columns = columns
@@ -99,10 +90,7 @@ this.id= (row *columns) +column
 
 open fun getColumn()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -113,10 +101,7 @@ open fun getColumn()
 
 open fun getRow()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -126,10 +111,7 @@ open fun getRow()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -139,10 +121,7 @@ override fun toString()
 
 override fun getId()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

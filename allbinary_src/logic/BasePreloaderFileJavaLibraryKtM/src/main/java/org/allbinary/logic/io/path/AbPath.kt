@@ -60,9 +60,6 @@ open public class AbPath
     private val abPathUtil: PathUtil = PathUtil.getInstance()!!
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 init()
 }
@@ -71,9 +68,6 @@ init()
     private val EMPTY_STRING: String = StringUtil.getInstance()!!.EMPTY_STRING
 public constructor        (aPath: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var aPath = aPath
 
@@ -99,9 +93,6 @@ this.path= abPathUtil!!.adjustEnd(abPathUtil!!.adjust(this.getPath(aPath)))
 
 public constructor        (aPath: String, name: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var aPath = aPath
 var name = name
@@ -138,10 +129,7 @@ this.path= abPathUtil!!.adjustEnd(abPathUtil!!.adjust(this.getPath(aPath)))
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.schema= EMPTY_STRING
 this.setPath(abPathData!!.SEPARATOR)
 this.nameP= EMPTY_STRING
@@ -150,10 +138,7 @@ this.nameP= EMPTY_STRING
 
 open fun getSchema(aPath: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var aPath = aPath
 
     var beginIndex: Int = aPath!!.indexOf(commonSeps!!.COLON)!!
@@ -183,10 +168,7 @@ this.hasSchema= false
 
 open fun hasSchema()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -199,10 +181,7 @@ open fun hasSchema()
             
 open fun getPath(aPath: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var aPath = aPath
 
     var filePathData: FilePathData = FilePathData.getInstance()!!
@@ -231,9 +210,6 @@ var aPath = aPath
                                     beginIndex++
 
         while(tempPath[beginIndex] == abPathData!!.SEPARATORCHAR || tempPath[beginIndex] == filePathData!!.SEPARATORCHAR)
-        
-
-        Updates for KMP build        
         {
 beginIndex++
 numberOfSeps++
@@ -268,10 +244,7 @@ tempPath= tempPath!!.substring(beginIndex, tempPath!!.length)
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var name = name
 this.nameP= name
 }
@@ -279,10 +252,7 @@ this.nameP= name
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -292,10 +262,7 @@ open fun getName()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -321,10 +288,7 @@ stringBuffer!!.append(this.nameP)
 
 open fun toFileSystemString()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     
                         if(this.hasSchema())
@@ -363,10 +327,7 @@ stringBuffer!!.append(this.nameP)
 
 open fun getPath()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -377,10 +338,7 @@ open fun getPath()
 
 open fun setPath(path: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var path = path
 this.path= path
 }

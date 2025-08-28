@@ -37,10 +37,7 @@ open public class GameEventHandlerUtil
             
 open fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 UpGameKeyEventHandler.getInstance()!!.removeAllListeners()
 DownGameKeyEventHandler.getInstance()!!.removeAllListeners()
 }

@@ -44,10 +44,7 @@ open public class GenericModuleFactory : AbstractInputAutomationFactory {
         }
             public constructor        ()                        
 
-                            : super(NAME, GenericModuleConfigurationJPanel())
-
-        Updates for KMP build        
-        {
+                            : super(NAME, GenericModuleConfigurationJPanel()){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -60,10 +57,7 @@ open public class GenericModuleFactory : AbstractInputAutomationFactory {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: RunnableInterface
-
-        Updates for KMP build        
-        {
+: RunnableInterface{
 
     var genericProfile: GenericProfile = 
                                     (getConfigurationJPanel as GenericModuleConfigurationJPanel).getSelectedGenericProfile()!!

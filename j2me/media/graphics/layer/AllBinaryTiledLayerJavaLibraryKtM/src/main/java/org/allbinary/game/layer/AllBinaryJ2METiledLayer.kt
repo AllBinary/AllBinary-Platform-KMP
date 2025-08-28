@@ -41,10 +41,7 @@ open public class AllBinaryJ2METiledLayer : AllBinaryTiledLayer {
     val debugColor: Int
 public constructor        (dataId: Integer, tiledLayer: TiledLayer, mapTwoDArray: Array<IntArray?>, debugColor: Int)                        
 
-                            : super(dataId, tiledLayer!!.getWidth(), tiledLayer!!.getHeight(), tiledLayer!!.getCellWidth(), tiledLayer!!.getCellHeight())
-
-        Updates for KMP build        
-        {
+                            : super(dataId, tiledLayer!!.getWidth(), tiledLayer!!.getHeight(), tiledLayer!!.getCellWidth(), tiledLayer!!.getCellHeight()){
     //var dataId = dataId
     //var tiledLayer = tiledLayer
     //var mapTwoDArray = mapTwoDArray
@@ -61,10 +58,7 @@ this.setCells(mapTwoDArray)
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
 this.tiledLayer!!.paint(graphics)
 }
@@ -74,10 +68,7 @@ this.tiledLayer!!.paint(graphics)
 
 open fun paintDebug(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
 
     var font: Font = graphics.getFont()!!
@@ -126,9 +117,6 @@ graphics.setColor(debugColor)
 
                         for (rowIndex in firstRow until totalRows)
 
-        
-
-        Updates for KMP build        
         {
 x= x0
 
@@ -137,9 +125,6 @@ x= x0
 
                         for (columnIndex in firstColumn until totalColumns)
 
-        
-
-        Updates for KMP build        
         {
 tile= this.tiledLayer!!.getCell(columnIndex, rowIndex)
 
@@ -176,10 +161,7 @@ graphics.setFont(font)
 
 open fun move(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var dx = dx
     //var dy = dy
 this.tiledLayer!!.move(dx, dy)
@@ -189,10 +171,7 @@ super.move( -dx,  -dy)
 
 open fun setPosition(x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var x = x
     //var y = y
     //var z = z
@@ -203,10 +182,7 @@ super.setPosition( -x,  -y, z)
 
 open fun getTiledLayer()
         //nullable = true from not(false or (false and true)) = true
-: TiledLayer
-
-        Updates for KMP build        
-        {
+: TiledLayer{
 
 
 
@@ -217,10 +193,7 @@ open fun getTiledLayer()
 
 open fun getCellWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -231,10 +204,7 @@ open fun getCellWidth()
 
 open fun getCellHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -245,10 +215,7 @@ open fun getCellHeight()
 
 open fun getCell(col: Int, row: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var col = col
     //var row = row
 
@@ -261,10 +228,7 @@ open fun getCell(col: Int, row: Int)
 
 open fun getColumns()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -275,10 +239,7 @@ open fun getColumns()
 
 open fun getRows()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -289,10 +250,7 @@ open fun getRows()
 
 open fun setCell(col: Int, row: Int, index: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var col = col
     //var row = row
     //var index = index
@@ -302,10 +260,7 @@ this.tiledLayer!!.setCell(col, row, index)
 
 open fun getAnimatedTile(animationTileIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var animationTileIndex = animationTileIndex
 
 

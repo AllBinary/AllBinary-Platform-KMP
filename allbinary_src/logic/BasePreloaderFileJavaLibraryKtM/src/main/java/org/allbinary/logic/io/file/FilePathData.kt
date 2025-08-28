@@ -38,10 +38,7 @@ open public class FilePathData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FilePathData
-
-        Updates for KMP build        
-        {
+: FilePathData{
 
 
 
@@ -57,9 +54,6 @@ open fun getInstance()
     var SEPARATOR: String = File.separator
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     

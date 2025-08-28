@@ -38,10 +38,7 @@ open public class SmallBasicColorCacheFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: SmallBasicColorCacheFactory
-
-        Updates for KMP build        
-        {
+: SmallBasicColorCacheFactory{
 
 
 
@@ -61,19 +58,13 @@ open fun getInstance()
     private var colorIndex: Int = 0
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun add(basicDefaultColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var basicDefaultColor = basicDefaultColor
 BASIC_COLOR_ARRAY[colorIndex]= basicDefaultColor
 INDEX_TO_COLOR[colorIndex]= basicDefaultColor!!.toInt()
@@ -83,10 +74,7 @@ colorIndex++
 
 open fun getInstance(colorAsInt: Int)
         //nullable =  from not(true or (false and false)) = 
-: BasicColor
-
-        Updates for KMP build        
-        {
+: BasicColor{
     //var colorAsInt = colorAsInt
 
     var basicColor: BasicColor
@@ -97,9 +85,6 @@ open fun getInstance(colorAsInt: Int)
 
                         for (index in 0 until SIZE)
 
-        
-
-        Updates for KMP build        
         {
 
     

@@ -34,9 +34,6 @@ open fun getInstance(rtsLayer: RTSLayer)
         //nullable =  from not(true or (false and false)) = 
 : ScrollSelectionForm
 
-        Updates for KMP build        
-        
-
 }
                 
             

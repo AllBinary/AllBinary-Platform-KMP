@@ -50,10 +50,7 @@ open public class PrimitiveLongUtil
     private val primitiveLongSingleton: PrimitiveLongSingleton = PrimitiveLongSingleton.getInstance()!!
 public constructor        (powerOfTen: Int)                        
 
-                            : this(powerOfTen, false)
-
-        Updates for KMP build        
-        {
+                            : this(powerOfTen, false){
 var powerOfTen = powerOfTen
 
 
@@ -72,9 +69,6 @@ var powerOfTen = powerOfTen
 
 public constructor        (powerOfTen: Int, throwException: Boolean)
             : super()
-        
-
-        Updates for KMP build        
         {
 var powerOfTen = powerOfTen
 var throwException = throwException
@@ -87,10 +81,7 @@ this.charArray= CharArray(this.maxDigits)
 
 open fun getCharArray(value: Int)
         //nullable = true from not(false or (false and false)) = true
-: CharArray
-
-        Updates for KMP build        
-        {
+: CharArray{
 var value = value
 
     
@@ -131,9 +122,6 @@ var value = value
 
 
         while(div >= 1)
-        
-
-        Updates for KMP build        
         {
 
     var digit: Int = (value -lastValue) /div
@@ -174,10 +162,7 @@ this.setCurrentTotalDigits(index)
 
 open fun setCurrentTotalDigits(currentTotalDigits: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var currentTotalDigits = currentTotalDigits
 this.currentTotalDigits= currentTotalDigits
 }
@@ -185,10 +170,7 @@ this.currentTotalDigits= currentTotalDigits
 
 open fun getCurrentTotalDigits()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -199,10 +181,7 @@ open fun getCurrentTotalDigits()
 
 open fun getMaxDigits()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

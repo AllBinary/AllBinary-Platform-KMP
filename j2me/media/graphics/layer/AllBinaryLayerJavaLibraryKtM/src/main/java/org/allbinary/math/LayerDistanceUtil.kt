@@ -40,10 +40,7 @@ open public class LayerDistanceUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LayerDistanceUtil
-
-        Updates for KMP build        
-        {
+: LayerDistanceUtil{
 
 
 
@@ -63,10 +60,7 @@ open fun getInstance()
 
 open fun getDistance(layerInterface: AllBinaryLayer, layerInterface2: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var layerInterface = layerInterface
     //var layerInterface2 = layerInterface2
 
@@ -85,10 +79,7 @@ open fun getDistance(layerInterface: AllBinaryLayer, layerInterface2: AllBinaryL
 
 open fun getDistance3D(layerInterface: AllBinaryLayer, layerInterface2: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var layerInterface = layerInterface
     //var layerInterface2 = layerInterface2
 
@@ -110,10 +101,7 @@ open fun getDistance3D(layerInterface: AllBinaryLayer, layerInterface2: AllBinar
 
 open fun getDistance(layerInterface: AllBinaryLayer, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var layerInterface = layerInterface
     //var point = point
 

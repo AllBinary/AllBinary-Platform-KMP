@@ -44,10 +44,7 @@ open public class TextAnimation : IndexedAnimation {
     private var anchor: Int = Anchor.TOP_LEFT
 public constructor        (animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(animationBehavior){
     //var animationBehavior = animationBehavior
 
 
@@ -57,10 +54,7 @@ public constructor        (animationBehavior: AnimationBehavior)
 
 public constructor        (text: String, animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(animationBehavior){
     //var text = text
     //var animationBehavior = animationBehavior
 
@@ -74,18 +68,12 @@ this.setText(text)
                 @Throws(Exception::class)
             override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 var x = x
 var y = y
@@ -103,9 +91,6 @@ this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP(), this.ge
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 graphics.drawString(textArray[index]!!, x, y +(index *height), anchor)
 }
@@ -115,10 +100,7 @@ graphics.drawString(textArray[index]!!, x, y +(index *height), anchor)
 
 open fun setText(text: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var text = text
 
     var list: BasicArrayList = BasicArrayList()
@@ -141,9 +123,6 @@ var text = text
 
 
         while(index >= 0)
-        
-
-        Updates for KMP build        
         {
 startIndex= index
 index= text.indexOf('\n', startIndex)
@@ -192,9 +171,6 @@ index++
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 textArray[index]= list.get(index) as String
 }
@@ -213,10 +189,7 @@ this.textArray= list.toArray() as Array<String?>
 
 open fun getText()
         //nullable = true from not(false or (false and true)) = true
-: Array<String?>
-
-        Updates for KMP build        
-        {
+: Array<String?>{
 
 
 
@@ -227,10 +200,7 @@ open fun getText()
 
 open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
     var myFont: MyFont = MyFont.getInstance()!!
 

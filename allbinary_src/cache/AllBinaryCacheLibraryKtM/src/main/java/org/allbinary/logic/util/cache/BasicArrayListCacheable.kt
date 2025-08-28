@@ -39,10 +39,7 @@ open public class BasicArrayListCacheable : BasicArrayList
         
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 
 
 

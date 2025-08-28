@@ -35,10 +35,7 @@ open public class MultiPlayerGameLayer : CollidableDestroyableDamageableLayer
         
 public constructor        (remoteInfo: RemoteInfo, groupInterface: Array<Group?>, layerInfo: Rectangle, viewPosition: ViewPosition)                        
 
-                            : super(groupInterface, layerInfo, viewPosition)
-
-        Updates for KMP build        
-        {
+                            : super(groupInterface, layerInfo, viewPosition){
     //var remoteInfo = remoteInfo
     //var groupInterface = groupInterface
     //var layerInfo = layerInfo
@@ -51,10 +48,7 @@ public constructor        (remoteInfo: RemoteInfo, groupInterface: Array<Group?>
 
 public constructor        (remoteInfo: RemoteInfo, groupInterface: Array<Group?>, name: String, layerInfo: Rectangle, viewPosition: ViewPosition)                        
 
-                            : super(groupInterface, name, layerInfo, viewPosition)
-
-        Updates for KMP build        
-        {
+                            : super(groupInterface, name, layerInfo, viewPosition){
     //var remoteInfo = remoteInfo
     //var groupInterface = groupInterface
     //var name = name
@@ -68,10 +62,7 @@ public constructor        (remoteInfo: RemoteInfo, groupInterface: Array<Group?>
 
 override fun getMultiplayerBehavior()
         //nullable = true from not(false or (false and true)) = true
-: MultiplayerBehavior
-
-        Updates for KMP build        
-        {
+: MultiplayerBehavior{
 
 
 
@@ -82,30 +73,21 @@ override fun getMultiplayerBehavior()
 
 open fun setPingInfo(show: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var show = show
 }
 
 
 open fun setFiring(firing: Short)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var firing = firing
 }
 
 
 open fun getFiring()
         //nullable = true from not(false or (false and true)) = true
-: Short
-
-        Updates for KMP build        
-        {
+: Short{
 
 
 

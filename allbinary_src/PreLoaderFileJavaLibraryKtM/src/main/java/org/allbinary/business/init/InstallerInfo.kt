@@ -60,10 +60,7 @@ open public class InstallerInfo
 
 open fun setHasRead(value: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 InstallerInfo.hasRead= value
 }
@@ -74,9 +71,6 @@ InstallerInfo.hasRead= value
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -86,10 +80,7 @@ public constructor        ()
 
 open fun write()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var FILEABPATH: AbPath = AbPath(URLGLOBALS.getMainPath() +PACKAGE, INITFILENAME)
 
@@ -114,10 +105,7 @@ dataOutputStream!!.writeUTF(DatabaseEncoder.encode(cryptedUserName))
 dataOutputStream!!.writeUTF(DatabaseEncoder.encode(cryptedPassword))
 hasRead= false
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
@@ -141,10 +129,7 @@ hasRead= false
 
 open fun read()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var FILEABPATH: AbPath = AbPath(URLGLOBALS.getMainPath() +PACKAGE, INITFILENAME)
 
@@ -191,10 +176,7 @@ this.setPassword(WeakCrypt(2).
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
@@ -211,10 +193,7 @@ this.setPassword(WeakCrypt(2).
 
 open fun setUserName(userName: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var userName = userName
 InstallerInfo.userName= userName
 }
@@ -222,10 +201,7 @@ InstallerInfo.userName= userName
 
 open fun setPassword(password: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var password = password
 InstallerInfo.password= password
 }
@@ -236,10 +212,7 @@ InstallerInfo.password= password
 
 open fun updateIfNeeded()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(!hasRead)
@@ -278,10 +251,7 @@ this.read()
             
 open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 this.updateIfNeeded()
 
 
@@ -295,10 +265,7 @@ this.updateIfNeeded()
             
 open fun getPassword()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 this.updateIfNeeded()
 
 
@@ -312,10 +279,7 @@ this.updateIfNeeded()
             
 open fun isValid(userName: String, password: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var userName = userName
 var password = password
 this.updateIfNeeded()

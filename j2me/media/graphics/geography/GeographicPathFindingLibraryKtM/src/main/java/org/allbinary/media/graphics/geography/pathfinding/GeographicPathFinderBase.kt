@@ -44,10 +44,7 @@ open public class GeographicPathFinderBase
             
 open fun search(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, totalPaths: Int)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 var startPathFindingNodeList = startPathFindingNodeList
 var endPathFindingNodeList = endPathFindingNodeList
 var totalPaths = totalPaths
@@ -62,10 +59,7 @@ var totalPaths = totalPaths
             
 open fun searchN(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, totalPaths: Int, multipassState: MultipassState)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 var startPathFindingNodeList = startPathFindingNodeList
 var endPathFindingNodeList = endPathFindingNodeList
 var totalPaths = totalPaths

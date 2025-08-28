@@ -42,10 +42,7 @@ open public class BasicMenuInputProcessor : PlayerGameInput
     private var canvas: Canvas = NullCanvas.NULL_CANVAS
 protected constructor        (gameKeyEventList: BasicArrayList, playerInputId: Int, gameCanvas: Canvas)                        
 
-                            : super(gameKeyEventList, playerInputId)
-
-        Updates for KMP build        
-        {
+                            : super(gameKeyEventList, playerInputId){
 var gameKeyEventList = gameKeyEventList
 var playerInputId = playerInputId
 var gameCanvas = gameCanvas
@@ -58,10 +55,7 @@ this.canvas= gameCanvas
 
 override fun onMotionGestureEvent(motionGestureEvent: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var motionGestureEvent = motionGestureEvent
 motionGestureEventList!!.add(motionGestureEvent)
 }
@@ -69,10 +63,7 @@ motionGestureEventList!!.add(motionGestureEvent)
 
 open fun setCanvas(canvas: MyCanvas)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var canvas = canvas
 this.canvas= canvas
 }
@@ -80,10 +71,7 @@ this.canvas= canvas
 
 open fun getCanvas()
         //nullable = true from not(false or (false and true)) = true
-: MyCanvas
-
-        Updates for KMP build        
-        {
+: MyCanvas{
 
 
 
@@ -96,10 +84,7 @@ open fun getCanvas()
             
 open fun processInput()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

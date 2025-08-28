@@ -16,10 +16,7 @@ open public class XmlRpcException : Exception {
         
 public constructor        (code: Int, message: String)                        
 
-                            : super(message)
-
-        Updates for KMP build        
-        {
+                            : super(message){
 var code = code
 var message = message
 

@@ -37,10 +37,7 @@ open public class HealthResources
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: HealthResources
-
-        Updates for KMP build        
-        {
+: HealthResources{
 
 
 
@@ -54,9 +51,6 @@ open fun getInstance()
     var RESOURCE: String = "health_drop_20_by_20.png"
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

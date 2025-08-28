@@ -45,10 +45,7 @@ open public class IconLayer : AllBinaryLayer {
     private var animationInterface: Animation
 public constructor        (animationInterface: Animation, width: Int, height: Int)                        
 
-                            : super(Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, width, height), ViewPosition())
-
-        Updates for KMP build        
-        {
+                            : super(Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, width, height), ViewPosition()){
 var animationInterface = animationInterface
 var width = width
 var height = height
@@ -61,20 +58,14 @@ this.animationInterface= animationInterface
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 this.animationInterface!!.paint(graphics, x, y)
 }
 
 override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 this.animationInterface!!.paintThreed(graphics, x, y, z)
 }
@@ -82,10 +73,7 @@ this.animationInterface!!.paintThreed(graphics, x, y, z)
 
 open fun getAnimationInterface()
         //nullable = true from not(false or (false and true)) = true
-: Animation
-
-        Updates for KMP build        
-        {
+: Animation{
 
 
 

@@ -35,9 +35,6 @@ open public class HtmlTags
     private var htmlTagVector: Vector
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 htmlTagVector= Vector()
 }
@@ -45,10 +42,7 @@ htmlTagVector= Vector()
 
 open fun get(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: HtmlTag
-
-        Updates for KMP build        
-        {
+: HtmlTag{
 var index = index
 
 
@@ -60,10 +54,7 @@ var index = index
 
 open fun add(htmlTag: HtmlTag)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var htmlTag = htmlTag
 htmlTagVector!!.add(htmlTag)
 }
@@ -71,10 +62,7 @@ htmlTagVector!!.add(htmlTag)
 
 open fun size()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

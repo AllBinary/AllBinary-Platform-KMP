@@ -42,20 +42,14 @@ open public class TerrainEventHandler : BasicEventHandler {
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 TerrainEventHandler.hashtable= Hashtable<Any, Any>()
 }
 
 
 open fun getInstance(anyType: Any)
         //nullable =  from not(true or (false and false)) = 
-: TerrainEventHandler
-
-        Updates for KMP build        
-        {
+: TerrainEventHandler{
 var anyType = anyType
 
     var eventHandler: TerrainEventHandler = TerrainEventHandler.hashtable.get(anyType as Object) as TerrainEventHandler
@@ -83,19 +77,13 @@ TerrainEventHandler.hashtable.put(anyType, eventHandler)
         }
             
     private val list: BasicArrayList = BasicArrayList()
-private constructor        ()
-
-        Updates for KMP build        
-        {
+private constructor        (){
 }
 
 
 open fun addListener(terrainEventListener: TerrainEventListener)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var terrainEventListener = terrainEventListener
 
     
@@ -110,20 +98,14 @@ var terrainEventListener = terrainEventListener
 
 override fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.list.clear()
 super.removeAllListeners()
 }
 
 override fun removeListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventListenerInterface = eventListenerInterface
 this.list.remove(eventListenerInterface)
 super.removeListener(eventListenerInterface)
@@ -133,10 +115,7 @@ super.removeListener(eventListenerInterface)
                 @Throws(Exception::class)
             override fun fireEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventObject = eventObject
 
 
@@ -144,9 +123,6 @@ var eventObject = eventObject
 
                         for (index in this.list.size()!!  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
         try {
@@ -155,10 +131,7 @@ var eventObject = eventObject
 
 terrainEventListener!!.onTerrainEvent(eventObject as TerrainEvent)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
 }
 
@@ -171,10 +144,7 @@ super.fireEvent(eventObject)
                 @Throws(Exception::class)
             override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventObject = eventObject
 var eventListenerInterface = eventListenerInterface
 

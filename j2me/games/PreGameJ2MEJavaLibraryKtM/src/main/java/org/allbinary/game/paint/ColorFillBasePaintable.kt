@@ -38,20 +38,14 @@ open public class ColorFillBasePaintable : Paintable
     var basicColor: BasicColor = BasicColorFactory.getInstance()!!.WHITE
 
     var colorP: Int= 0
-public constructor        (basicColor: BasicColor)
-
-        Updates for KMP build        
-        {
+public constructor        (basicColor: BasicColor){
 var basicColor = basicColor
 this.setBasicColorP(basicColor)
 }
 
 override fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var basicColor = basicColor
 this.basicColor= basicColor
 this.setColor(this.getBasicColorP()!!.toInt())
@@ -59,10 +53,7 @@ this.setColor(this.getBasicColorP()!!.toInt())
 
 override fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor
-
-        Updates for KMP build        
-        {
+: BasicColor{
 
 
 
@@ -73,10 +64,7 @@ override fun getBasicColorP()
 
 open fun getColor()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -87,20 +75,14 @@ open fun getColor()
 
 open fun setColor(color: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var color = color
 this.colorP= color
 }
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 }
 

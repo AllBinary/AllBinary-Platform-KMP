@@ -38,10 +38,7 @@ open public class TransformInfoObjectConfigData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TransformInfoObjectConfigData
-
-        Updates for KMP build        
-        {
+: TransformInfoObjectConfigData{
 
 
 
@@ -53,9 +50,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

@@ -23,10 +23,7 @@ open public class OpenGLStrings
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLStrings
-
-        Updates for KMP build        
-        {
+: OpenGLStrings{
 
 
 

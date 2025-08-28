@@ -48,10 +48,7 @@ open public class MouseActionScriptInputJPanel : javax.swing.JPanel {
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var mouseActionScriptInputInterface: MouseActionScriptInputInterface
-public constructor        (mouseActionScriptInputInterface: MouseActionScriptInputInterface)
-
-        Updates for KMP build        
-        {
+public constructor        (mouseActionScriptInputInterface: MouseActionScriptInputInterface){
     //var mouseActionScriptInputInterface = mouseActionScriptInputInterface
 logUtil!!.put(CommonLabels.getInstance()!!.START +mouseActionScriptInputInterface, this, commonStrings!!.CONSTRUCTOR)
 initComponents()
@@ -69,10 +66,7 @@ this.set()
 
 open fun set()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var inputTypeComboBoxModel: ComboBoxModel = this.inputAutomationTypeJComboBox!!.getModel()!!
 
@@ -116,10 +110,7 @@ this.mouseActionScriptInputInterface!!.log()
             
 open fun updateInputType()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var comboBoxModel: ComboBoxModel = this.inputAutomationTypeJComboBox!!.getModel()!!
 
@@ -142,10 +133,7 @@ open fun updateInputType()
             
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.updateInputType()
 this.mouseActionScriptInputInterface!!.setTime(getText.valueOf())
 logUtil!!.put("Button State: " +this.mouseActionScriptInputInterface!!.getButtonClicks(), this, "update")
@@ -243,10 +231,7 @@ this.mouseActionScriptInputInterface!!.log()
 
 open fun getMouseActionJDialog()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JDialog
-
-        Updates for KMP build        
-        {
+: javax.swing.JDialog{
 
 
 
@@ -257,10 +242,7 @@ open fun getMouseActionJDialog()
 
 open fun setMouseActionJDialog(mouseActionJDialog: javax.swing.JDialog)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var mouseActionJDialog = mouseActionJDialog
 this.mouseActionJDialog= mouseActionJDialog
 }
@@ -268,10 +250,7 @@ this.mouseActionJDialog= mouseActionJDialog
 
 open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 mouseActionJDialog= javax.swing.JDialog()
 titleJLabel= javax.swing.JLabel()
 okJButton= javax.swing.JButton()
@@ -297,10 +276,7 @@ okJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 okJButtonActionPerformed(evt)
 }
@@ -320,10 +296,7 @@ button2JCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 button2JCheckBoxActionPerformed(evt)
 }
@@ -350,10 +323,7 @@ mouseActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 mouseActionJButtonActionPerformed(evt)
 }
@@ -372,30 +342,21 @@ layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Align
 
 open fun button2JCheckBoxActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 }
 
 
 open fun okJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 
         try {
             this.update()
 this.getMouseActionJDialog()!!.setVisible(false)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "okButtonActionPerformed", e)
 }
 
@@ -404,10 +365,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "okButtonActionPerformed", e)
 
 open fun mouseActionJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var evt = evt
 this.getMouseActionJDialog()!!.setVisible(true)
 }

@@ -48,10 +48,7 @@ open public class GameInput
     val isRemoveDuplicateKeyPresses: Boolean
 public constructor        (gameKeyEventList: BasicArrayList)                        
 
-                            : this(gameKeyEventList, BasicArrayList())
-
-        Updates for KMP build        
-        {
+                            : this(gameKeyEventList, BasicArrayList()){
     //var gameKeyEventList = gameKeyEventList
 
 
@@ -61,9 +58,6 @@ public constructor        (gameKeyEventList: BasicArrayList)
 
 public constructor        (gameKeyEventList: BasicArrayList, removalGameKeyEventList: BasicArrayList)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var gameKeyEventList = gameKeyEventList
     //var removalGameKeyEventList = removalGameKeyEventList
@@ -76,10 +70,7 @@ this.isRemoveDuplicateKeyPresses= Features.getInstance()!!.isFeature(InputFeatur
 
 open fun add(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gameKeyEvent = gameKeyEvent
 
     
@@ -116,10 +107,7 @@ var gameKeyEvent = gameKeyEvent
 
 open fun addForRemoval(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gameKeyEvent = gameKeyEvent
 this.removalGameKeyEventList!!.add(gameKeyEvent)
 }
@@ -128,10 +116,7 @@ this.removalGameKeyEventList!!.add(gameKeyEvent)
 
 open fun isForRemoval(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var gameKeyEvent = gameKeyEvent
 
 
@@ -144,10 +129,7 @@ var gameKeyEvent = gameKeyEvent
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.gameKeyEventList!!.clear()
 }
 
@@ -155,10 +137,7 @@ this.gameKeyEventList!!.clear()
 
 open fun removeNonAIInputGameKeyEvents()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var list: BasicArrayList = this.gameKeyEventList
 
@@ -171,9 +150,6 @@ open fun removeNonAIInputGameKeyEvents()
 
                         for (index in list.size()!!  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 gameKeyEvent= list.objectArray[index]!! as GameKeyEvent
 
@@ -193,10 +169,7 @@ gameKeyEvent= list.objectArray[index]!! as GameKeyEvent
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var removeList: BasicArrayList = this.removalGameKeyEventList
 
@@ -212,9 +185,6 @@ open fun update()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var anyType: Any = removeList!!.objectArray[index]!!
@@ -225,9 +195,6 @@ open fun update()
 
                         for (index2 in list.size()!!  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -248,10 +215,7 @@ removeList!!.clear()
 
 open fun getRemovalGameKeyEventList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 
@@ -262,10 +226,7 @@ open fun getRemovalGameKeyEventList()
 
 open fun getGameKeyEventList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 

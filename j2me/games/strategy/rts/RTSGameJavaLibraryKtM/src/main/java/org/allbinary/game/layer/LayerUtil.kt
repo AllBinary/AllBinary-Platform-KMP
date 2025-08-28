@@ -42,10 +42,7 @@ open public class LayerUtil
 
 open fun toString(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (true and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var hashtable = hashtable
 var x = x
 var y = y

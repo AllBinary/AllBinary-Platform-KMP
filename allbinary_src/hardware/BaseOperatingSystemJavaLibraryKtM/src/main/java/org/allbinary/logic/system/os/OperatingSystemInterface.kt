@@ -33,63 +33,36 @@ open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-        Updates for KMP build        
-        
-
 open fun getVersion()
         //nullable = true from not(false or (false and true)) = true
 : String
-
-        Updates for KMP build        
-        
 
 open fun getArch()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-        Updates for KMP build        
-        
-
 open fun getCharacterSet()
         //nullable = true from not(false or (false and true)) = true
 : CharacterSet
-
-        Updates for KMP build        
-        
 
 open fun isOverScan()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-        Updates for KMP build        
-        
-
 open fun getOverScanXPercent()
         //nullable = true from not(false or (false and true)) = true
 : Int
-
-        Updates for KMP build        
-        
 
 open fun getOverScanYPercent()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-        Updates for KMP build        
-        
-
 open fun isScalable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
-
-        Updates for KMP build        
-        
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String
-
-        Updates for KMP build        
-        
 
 }
                 

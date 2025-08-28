@@ -52,10 +52,7 @@ open public class GenericProfileDataWorkerType
 
 open fun getInstance(node: Node)
         //nullable =  from not(true or (false and false)) = 
-: GenericProfileDataWorkerType
-
-        Updates for KMP build        
-        {
+: GenericProfileDataWorkerType{
 var node = node
 
     var name: String = DomNodeHelper.getTextNodeValue(node)!!
@@ -73,9 +70,6 @@ var node = node
     private var name: String
 public constructor        (name: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var name = name
 this.setName(name)
@@ -85,10 +79,7 @@ hashMap!!.put(this.getName(), this)
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -99,10 +90,7 @@ open fun getName()
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var name = name
 this.name= name
 }
@@ -112,10 +100,7 @@ this.name= name
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var node: Node = ModDomHelper.createTextNode(document, GenericProfileDataWorkerData.NAME, name)!!
@@ -129,10 +114,7 @@ var document = document
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

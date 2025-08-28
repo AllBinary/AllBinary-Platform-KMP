@@ -41,19 +41,13 @@ open public class MultiSelectPaintable : SelectionHudPaintable {
     private val rootNameList: BasicArrayList = BasicArrayList()
 
     private var rootNamesString: String = StringUtil.getInstance()!!.EMPTY_STRING
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 
 open fun update(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var list = list
 this.clear()
 
@@ -71,9 +65,6 @@ this.totalCharArray= this.getPrimitiveLongUtil()!!.getCharArray(size)
 
                         for (index in list.size() -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 rtsLayer= list.get(index) as RTSLayer
 
@@ -99,9 +90,6 @@ rtsLayer= list.get(index) as RTSLayer
 
                         for (index in this.rootNameList!!.size() -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     var rootName: String = this.rootNameList!!.get(index) as String
@@ -124,10 +112,7 @@ this.rootNamesString= stringBuffer!!.toString()
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.rootNameList!!.clear()
 }
 
@@ -140,10 +125,7 @@ this.rootNameList!!.clear()
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 graphics.setColor(backgroundColor)
 graphics.drawRect(this.getX(), y, this.getWidth(), this.getHeight())

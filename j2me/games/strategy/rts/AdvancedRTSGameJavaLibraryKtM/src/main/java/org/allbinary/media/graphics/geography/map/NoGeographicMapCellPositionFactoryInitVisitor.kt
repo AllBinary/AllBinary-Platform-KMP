@@ -42,10 +42,7 @@ open public class NoGeographicMapCellPositionFactoryInitVisitor
             
 open fun visit(tiledLayer: AllBinaryTiledLayer, cellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var tiledLayer = tiledLayer
 var cellPosition = cellPosition
 }

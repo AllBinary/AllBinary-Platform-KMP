@@ -37,10 +37,7 @@ open public class BasicGroupFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BasicGroupFactory
-
-        Updates for KMP build        
-        {
+: BasicGroupFactory{
 
 
 

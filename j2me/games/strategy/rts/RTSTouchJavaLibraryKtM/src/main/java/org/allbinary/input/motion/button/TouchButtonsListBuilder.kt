@@ -39,10 +39,7 @@ open public class TouchButtonsListBuilder : BaseTouchInput {
 
 open fun add(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var list = list
 
     var size: Int = baseTouchInputList!!.size()!!
@@ -53,9 +50,6 @@ var list = list
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 list.addAll(
                                     (get as BaseTouchInput).getList())
@@ -66,10 +60,7 @@ list.addAll(
 
 open fun add(baseTouchInput: BaseTouchInput)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var baseTouchInput = baseTouchInput
 this.baseTouchInputList!!.add(baseTouchInput)
 }

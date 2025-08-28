@@ -49,10 +49,7 @@ open public class GameKeyEvent : AllBinaryEventObject {
     private var originalKey: Int= 0
 public constructor        (anyType: Any, sourceId: Int, originalKey: Int, gameActionKey: Int, key: Int, repeated: Boolean)                        
 
-                            : super(anyType)
-
-        Updates for KMP build        
-        {
+                            : super(anyType){
 var anyType = anyType
 var sourceId = sourceId
 var originalKey = originalKey
@@ -72,10 +69,7 @@ this.setRepeatEvents(repeated)
 
 public constructor        (anyType: Any, sourceId: Int, key: Int)                        
 
-                            : super(anyType)
-
-        Updates for KMP build        
-        {
+                            : super(anyType){
 var anyType = anyType
 var sourceId = sourceId
 var key = key
@@ -91,10 +85,7 @@ this.setRepeatEvents(false)
 
 open fun init(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var anyType = anyType
 this.setSource(anyType)
 }
@@ -102,10 +93,7 @@ this.setSource(anyType)
 
 open fun setRepeatEvents(repeated: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var repeated = repeated
 this.repeated= repeated
 }
@@ -113,10 +101,7 @@ this.repeated= repeated
 
 open fun hasRepeatEvents()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -127,10 +112,7 @@ open fun hasRepeatEvents()
 
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -140,10 +122,7 @@ open fun getKey()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -159,10 +138,7 @@ stringBuffer!!.append(this.getKey())
 
 open fun getOriginalKey()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -173,10 +149,7 @@ open fun getOriginalKey()
 
 open fun setOriginalKey(originalKey: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var originalKey = originalKey
 this.originalKey= originalKey
 }
@@ -184,10 +157,7 @@ this.originalKey= originalKey
 
 open fun getGameActionKey()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -198,10 +168,7 @@ open fun getGameActionKey()
 
 open fun setGameActionKey(gameActionKey: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gameActionKey = gameActionKey
 this.gameActionKey= gameActionKey
 }
@@ -209,10 +176,7 @@ this.gameActionKey= gameActionKey
 
 open fun getSourceId()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

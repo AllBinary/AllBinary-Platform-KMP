@@ -45,10 +45,7 @@ open public class PaymentProcessorInterfaceFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PaymentProcessorInterfaceFactory
-
-        Updates for KMP build        
-        {
+: PaymentProcessorInterfaceFactory{
 
 
 
@@ -62,9 +59,6 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -74,10 +68,7 @@ private constructor        ()
 
 open fun getInstance(transformInfoInterface: TransformInfoInterface)
         //nullable =  from not(true or (false and false)) = 
-: PaymentProcessorInterface
-
-        Updates for KMP build        
-        {
+: PaymentProcessorInterface{
 var transformInfoInterface = transformInfoInterface
 
         try {
@@ -111,10 +102,7 @@ var transformInfoInterface = transformInfoInterface
 
                             throw Exception("Error Getting PaymentProcessorInterface")
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENTERROR))

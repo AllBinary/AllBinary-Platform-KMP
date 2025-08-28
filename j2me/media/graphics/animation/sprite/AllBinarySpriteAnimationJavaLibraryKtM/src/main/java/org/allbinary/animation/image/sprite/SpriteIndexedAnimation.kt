@@ -49,10 +49,7 @@ open public class SpriteIndexedAnimation : IndexedAnimation
     private val basicColorArray: Array<BasicColor?>
 public constructor        (sprite: Sprite, image: Image, animationBehavior: AnimationBehavior)                        
 
-                            : this(sprite, image, BasicColorUtil.getInstance()!!.ZERO_ARRAY, animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : this(sprite, image, BasicColorUtil.getInstance()!!.ZERO_ARRAY, animationBehavior){
     //var sprite = sprite
     //var image = image
     //var animationBehavior = animationBehavior
@@ -64,10 +61,7 @@ public constructor        (sprite: Sprite, image: Image, animationBehavior: Anim
 
 public constructor        (sprite: Sprite, image: Image, basicColorArray: Array<BasicColor?>, animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(animationBehavior){
     //var sprite = sprite
     //var image = image
     //var basicColorArray = basicColorArray
@@ -98,10 +92,7 @@ this.basicColorArray= basicColorArray
                 @Throws(Exception::class)
             override fun getAnimationSize()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -111,10 +102,7 @@ this.basicColorArray= basicColorArray
 
 override fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var basicColor = basicColor
 
 
@@ -122,9 +110,6 @@ override fun setBasicColorP(basicColor: BasicColor)
 
                         for (index in 0 until this.basicColorArray!!.size)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -144,10 +129,7 @@ break;
 
 override fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor
-
-        Updates for KMP build        
-        {
+: BasicColor{
 
     
                         if(this.basicColorArray!!.size < this.getFrame())
@@ -175,10 +157,7 @@ override fun getBasicColorP()
 
 open fun paint(graphics: Graphics, frame: Int, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var frame = frame
     //var x = x
@@ -190,10 +169,7 @@ sprite.paint(graphics)
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var x = x
     //var y = y
@@ -204,38 +180,26 @@ sprite.paint(graphics)
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
 sprite.paint(graphics)
 }
 
 override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.sprite.nextFrame()
 }
 
 override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.sprite.prevFrame()
 }
 
 override fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -245,20 +209,14 @@ override fun getSize()
 
 override fun setFrame(frame: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var frame = frame
 this.sprite.setFrame(frame)
 }
 
 override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -268,10 +226,7 @@ override fun getFrame()
 
 override fun isLastFrame()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(this.sprite.getFrame() == this.getSize() -1)
@@ -299,10 +254,7 @@ override fun isLastFrame()
 
 open fun getLastFrame()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -312,19 +264,13 @@ open fun getLastFrame()
 
 override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var sequence = sequence
 }
 
 override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
-: IntArray
-
-        Updates for KMP build        
-        {
+: IntArray{
 
 
 
@@ -335,20 +281,14 @@ override fun getSequence()
 
 open fun close()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
                 @Throws(Throwable::class)
             override fun finalize()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 

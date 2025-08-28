@@ -46,10 +46,7 @@ open public class AnimationFactorySpriteScaleUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AnimationFactorySpriteScaleUtil
-
-        Updates for KMP build        
-        {
+: AnimationFactorySpriteScaleUtil{
 
 
 
@@ -79,10 +76,7 @@ open fun getInstance()
             
 open fun createImage(image: Image, width: Int, height: Int, scaleWidth: Int, scaleHeight: Int)
         //nullable = true from not(false or (false and false)) = true
-: Sprite
-
-        Updates for KMP build        
-        {
+: Sprite{
     //var image = image
     //var width = width
     //var height = height

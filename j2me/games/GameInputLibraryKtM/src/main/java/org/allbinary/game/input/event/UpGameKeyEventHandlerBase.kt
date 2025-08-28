@@ -46,19 +46,13 @@ open public class UpGameKeyEventHandlerBase : BasicEventHandler {
         }
             
     private val list: BasicArrayList = BasicArrayList()
- constructor        ()
-
-        Updates for KMP build        
-        {
+ constructor        (){
 }
 
 
 open fun addListener(playerGameInput: PlayerGameInput)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var playerGameInput = playerGameInput
 
     
@@ -73,20 +67,14 @@ var playerGameInput = playerGameInput
 
 override fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.list.clear()
 super.removeAllListeners()
 }
 
 override fun removeListenerSingleThreaded(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var eventListenerInterface = eventListenerInterface
 this.list.remove(eventListenerInterface)
 super.removeListenerSingleThreaded(eventListenerInterface)
@@ -95,10 +83,7 @@ super.removeListenerSingleThreaded(eventListenerInterface)
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun removeListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var eventListenerInterface = eventListenerInterface
 this.list.remove(eventListenerInterface)
 super.removeListener(eventListenerInterface)
@@ -108,10 +93,7 @@ super.removeListener(eventListenerInterface)
                 @Throws(Exception::class)
             override fun fireEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var eventObject = eventObject
 
 
@@ -119,9 +101,6 @@ super.removeListener(eventListenerInterface)
 
                         for (index in this.list.size()!!  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
         try {
@@ -130,10 +109,7 @@ super.removeListener(eventListenerInterface)
 
 playerGameInput!!.onUpGameKeyEvent(eventObject as GameKeyEvent)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
 }
 
@@ -146,10 +122,7 @@ super.fireEvent(eventObject)
                 @Throws(Exception::class)
             override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var eventObject = eventObject
     //var eventListenerInterface = eventListenerInterface
 
@@ -160,10 +133,7 @@ upGameKeyEventListenerInterface!!.onUpGameKeyEvent(eventObject as GameKeyEvent)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -179,9 +149,6 @@ stringBuffer!!.append(size)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
         try {
@@ -191,10 +158,7 @@ stringBuffer!!.append(size)
 stringBuffer!!.append(LISTENER_LABEL)
 stringBuffer!!.append(eventListenerInterface!!.toString())
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.TOSTRING, e)
 }
 

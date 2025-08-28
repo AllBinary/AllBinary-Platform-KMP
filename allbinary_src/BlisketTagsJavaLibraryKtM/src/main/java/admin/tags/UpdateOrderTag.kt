@@ -29,10 +29,7 @@ import admin.taghelpers.UpdateOrderHelperFactory
 
 open public class UpdateOrderTag : TableTag {
         
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 this.setTagHelperFactory(UpdateOrderHelperFactory())
 this.setTagRequestHelperFactory(UpdateOrderHelperFactory())
 }

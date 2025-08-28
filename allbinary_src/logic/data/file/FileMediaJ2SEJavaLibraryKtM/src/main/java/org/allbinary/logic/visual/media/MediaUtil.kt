@@ -33,10 +33,7 @@ open public class MediaUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: MediaUtil
-
-        Updates for KMP build        
-        {
+: MediaUtil{
 
 
 
@@ -47,10 +44,7 @@ open fun getInstance()
 
 open fun getImageBufferPropertyHashMap(bufferedImage: BufferedImage)
         //nullable = true from not(false or (false and false)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
     //var bufferedImage = bufferedImage
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
@@ -71,9 +65,6 @@ open fun getImageBufferPropertyHashMap(bufferedImage: BufferedImage)
 
                         for (index in 0 until propertyStringArray!!.size)
 
-        
-
-        Updates for KMP build        
         {
 
     var propertyObject: Any = bufferedImage!!.getProperty(propertyStringArray[index]!!)!!
@@ -97,9 +88,6 @@ hashMap!!.put(propertyStringArray[index]!!, propertyObject!!.toString())
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -108,10 +96,7 @@ private constructor        ()
             
 open fun saveImageFile(originalImageFile: AbFile, newImageFileName: String, category: String, mediaData: MediaData, newWidth: Int, newHeight: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var originalImageFile = originalImageFile
 var newImageFileName = newImageFileName
 var category = category

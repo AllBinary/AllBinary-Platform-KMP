@@ -39,10 +39,7 @@ open public class ProfileActionScriptConditionFactory
             
 open fun getInstance(node: Node)
         //nullable =  from not(true or (false and false)) = 
-: ProfileActionScriptConditionInterface
-
-        Updates for KMP build        
-        {
+: ProfileActionScriptConditionInterface{
 var node = node
 
     var profileActionScriptConditionInterface: ProfileActionScriptConditionInterface = 
@@ -93,9 +90,6 @@ var node = node
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

@@ -40,10 +40,7 @@ open public class ScreenRepaintProcessorFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ScreenRepaintProcessorFactory
-
-        Updates for KMP build        
-        {
+: ScreenRepaintProcessorFactory{
 
 
 
@@ -55,19 +52,13 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getInstance(displayable: Displayable)
         //nullable =  from not(true or (false and false)) = 
-: Processor
-
-        Updates for KMP build        
-        {
+: Processor{
 var displayable = displayable
 
     

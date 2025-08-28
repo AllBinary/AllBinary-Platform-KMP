@@ -37,10 +37,7 @@ open public class GameSpeed
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameSpeed
-
-        Updates for KMP build        
-        {
+: GameSpeed{
 
 
 
@@ -58,10 +55,7 @@ open fun getInstance()
         
 open fun getSpeed()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
     var speedGameConfiguration: GameConfiguration = GameConfigurationCentral.getInstance()!!.SPEED
 
@@ -75,10 +69,7 @@ open fun getSpeed()
 
 open fun getDelay()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
     var speedGameConfiguration: GameConfiguration = GameConfigurationCentral.getInstance()!!.SPEED
 

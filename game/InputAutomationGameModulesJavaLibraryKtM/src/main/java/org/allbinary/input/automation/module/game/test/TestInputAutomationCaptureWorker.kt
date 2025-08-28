@@ -55,10 +55,7 @@ open public class TestInputAutomationCaptureWorker : AbstractInputAutomationWork
     private val IMAGE_NOT_AVAILABLE: String = "Image Not Available"
 public constructor        (inputAutomationActionInterface: InputAutomationActionInterface, genericProfileActions: GenericProfileActions, imageComparatorConstraintsInterface: ImageComparatorConstraintsInterface, motionRectangleConstraintsInterface: MotionRectangleConstraintsInterface)                        
 
-                            : super(inputAutomationActionInterface)
-
-        Updates for KMP build        
-        {
+                            : super(inputAutomationActionInterface){
 var inputAutomationActionInterface = inputAutomationActionInterface
 var genericProfileActions = genericProfileActions
 var imageComparatorConstraintsInterface = imageComparatorConstraintsInterface
@@ -76,10 +73,7 @@ this.setGenericProfileActions(genericProfileActions)
             
 open fun processDataWorkerResults()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var cacheInterface: J2SECacheInterface = CapturedBufferedImagesCacheSingleton.getInstance() as J2SECacheInterface
 
@@ -111,9 +105,6 @@ open fun processDataWorkerResults()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var actionNameString: String = actionNameArray[index]!! as String
@@ -145,10 +136,7 @@ cacheInterface!!.get(anyType)
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.PROCESS)
 this.startDataWorkers()
 this.processDataWorkerResults()
@@ -157,10 +145,7 @@ this.processDataWorkerResults()
 
 open fun getGenericProfileActions()
         //nullable = true from not(false or (false and true)) = true
-: GenericProfileActions
-
-        Updates for KMP build        
-        {
+: GenericProfileActions{
 
 
 
@@ -171,10 +156,7 @@ open fun getGenericProfileActions()
 
 open fun setGenericProfileActions(genericProfileActions: GenericProfileActions)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var genericProfileActions = genericProfileActions
 this.genericProfileActions= genericProfileActions
 }

@@ -58,10 +58,7 @@ open public class GameInputMappingInstructionsCanvas : GameCommandCanvas {
     private var colorFillPaintable: ColorFillBasePaintable
 public constructor        (commandListener: CommandListener, allBinaryGameLayerManager: AllBinaryGameLayerManager)                        
 
-                            : super(commandListener, NAME, allBinaryGameLayerManager!!.getBackgroundBasicColor(), allBinaryGameLayerManager!!.getForegroundBasicColor())
-
-        Updates for KMP build        
-        {
+                            : super(commandListener, NAME, allBinaryGameLayerManager!!.getBackgroundBasicColor(), allBinaryGameLayerManager!!.getForegroundBasicColor()){
 var commandListener = commandListener
 var allBinaryGameLayerManager = allBinaryGameLayerManager
 
@@ -74,10 +71,7 @@ this.colorFillPaintable= ColorFillPaintableFactory.getInstance()!!.getInstance(a
 
 override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var cmdListener = cmdListener
 this.removeAllCommands()
 this.addCommand(GameInputMappingInstructionsCanvas.CLOSE)
@@ -90,10 +84,7 @@ this.setCommandListener(cmdListener)
     private val drawStringUtil: DrawStringUtil = DrawStringUtil.getInstance()!!
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 
     var myFont: MyFont = MyFont.getInstance()!!

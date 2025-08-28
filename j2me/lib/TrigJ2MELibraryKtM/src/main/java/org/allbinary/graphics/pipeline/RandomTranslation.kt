@@ -39,10 +39,7 @@ open public class RandomTranslation
             
 open fun getInstance(vector: BasicArrayList, howMuch: Int)
         //nullable =  from not(true or (false and false)) = 
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 var vector = vector
 var howMuch = howMuch
 

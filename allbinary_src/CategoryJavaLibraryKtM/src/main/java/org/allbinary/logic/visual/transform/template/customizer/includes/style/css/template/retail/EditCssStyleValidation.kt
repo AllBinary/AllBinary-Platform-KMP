@@ -38,18 +38,12 @@ open public class EditCssStyleValidation : CssStyleValidation
                 , ValidationInterface
                 , DomNodeInterface {
         
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 public constructor        (document: Document)                        
 
-                            : super(document)
-
-        Updates for KMP build        
-        {
+                            : super(document){
 var document = document
 
 
@@ -59,10 +53,7 @@ var document = document
 
 public constructor        (hashMap: HashMap<Any, Any>)                        
 
-                            : super(hashMap)
-
-        Updates for KMP build        
-        {
+                            : super(hashMap){
 var hashMap = hashMap
 
 
@@ -73,10 +64,7 @@ var hashMap = hashMap
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -87,10 +75,7 @@ open fun isValid()
 
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -101,10 +86,7 @@ open fun validationInfo()
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
 
 
@@ -115,10 +97,7 @@ open fun toValidationInfoDoc()
 
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
 
@@ -132,10 +111,7 @@ var document = document
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var node: Node = document.createElement(StylesData.getInstance()!!.NAME)!!
@@ -155,9 +131,6 @@ styleNode!!.appendChild(ColorsView().
 
                         for (i in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var styleDomNodeInterface: DomNodeInterface = cssStyleElementVector!!.get(i) as DomNodeInterface

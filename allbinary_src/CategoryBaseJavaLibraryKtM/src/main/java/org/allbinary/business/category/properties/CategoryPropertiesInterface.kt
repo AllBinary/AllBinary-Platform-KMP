@@ -36,15 +36,9 @@ open fun setValue(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun getValue()
         //nullable = true from not(false or (false and true)) = true
 : String
-
-        Updates for KMP build        
-        
 
                 @Throws(Exception::class)
             
@@ -52,17 +46,11 @@ open fun getWebAppPath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun getPath(categoryHierarchyInterface: CategoryHierarchyInterface)
         //nullable = true from not(false or (false and false)) = true
 : AbPath
-
-        Updates for KMP build        
-        
 
                 @Throws(Exception::class)
             
@@ -70,26 +58,17 @@ open fun getFileName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun isRoot()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun isRealRoot()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
-
-        Updates for KMP build        
-        
 
 }
                 

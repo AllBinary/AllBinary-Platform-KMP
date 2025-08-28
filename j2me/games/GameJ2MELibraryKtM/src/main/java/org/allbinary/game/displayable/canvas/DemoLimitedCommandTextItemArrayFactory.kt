@@ -39,10 +39,7 @@ open public class DemoLimitedCommandTextItemArrayFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DemoLimitedCommandTextItemArrayFactory
-
-        Updates for KMP build        
-        {
+: DemoLimitedCommandTextItemArrayFactory{
 
 
 
@@ -62,10 +59,7 @@ open fun getInstance()
 
 open fun getCommandTextItemArrayFactory()
         //nullable = true from not(false or (false and true)) = true
-: CommandTextItemArrayFactory
-
-        Updates for KMP build        
-        {
+: CommandTextItemArrayFactory{
 
 
 

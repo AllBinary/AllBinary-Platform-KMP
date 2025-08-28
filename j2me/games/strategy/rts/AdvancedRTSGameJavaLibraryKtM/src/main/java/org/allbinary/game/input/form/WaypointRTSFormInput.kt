@@ -82,10 +82,7 @@ open public class WaypointRTSFormInput : RTSFormInput {
     val noMoneyGameNotificationEvent: GameNotificationEvent
 public constructor        (groupInterface: Array<Group?>, isPrimaryWaypointCreator: Boolean)                        
 
-                            : super(groupInterface)
-
-        Updates for KMP build        
-        {
+                            : super(groupInterface){
     //var groupInterface = groupInterface
     //var isPrimaryWaypointCreator = isPrimaryWaypointCreator
 
@@ -112,10 +109,7 @@ this.noMoneyGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.ge
             
 open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
 super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 
@@ -137,10 +131,7 @@ this.noMoneyGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.getF
             
 open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedRtsLayer = associatedRtsLayer
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
     //var layerManager = layerManager
@@ -218,10 +209,7 @@ this.process(rtsPlayerLayerInterface, layerManager, geographicMapCellPosition)
             
 open fun process(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
     //var layerManager = layerManager
     //var geographicMapCellPosition = geographicMapCellPosition
@@ -264,10 +252,7 @@ this.attemptBuild(rtsPlayerLayerInterface, layerManager, this.newUnconstructedRT
             
 open fun processSticky(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var associatedRtsLayer = associatedRtsLayer
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
     //var layerManager = layerManager
@@ -286,10 +271,7 @@ this.getHashtable()!!.put(Layer.ID, associatedRtsLayer)
             
 open fun attemptBuild(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, layerInterface: RTSLayer, itemIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
     //var layerManager = layerManager
     //var layerInterface = layerInterface
@@ -358,9 +340,6 @@ logUtil!!.put("Layer: " +layerInterface, this, "attemptBuild")
 
                         for (index in list.size()!!  - 1  downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 geographicMapCellType= geographicMapInterface!!.getCellTypeAt(list.get(index) as GeographicMapCellPosition)
 
@@ -480,10 +459,7 @@ waypointLayer.
             
 open fun addWayPoint(layerInterface: WaypointLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layerInterface = layerInterface
 
     var list: BasicArrayList = stickyAssociatedRtsLayer = stickyAssociatedRtsLayerstickyAssociatedRtsLayer as AdvancedRTSGameLayer

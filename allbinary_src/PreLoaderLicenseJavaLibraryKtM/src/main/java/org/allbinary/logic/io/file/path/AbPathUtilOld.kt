@@ -43,10 +43,7 @@ open public class AbPathUtilOld
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AbPathUtilOld
-
-        Updates for KMP build        
-        {
+: AbPathUtilOld{
 
 
 
@@ -66,9 +63,6 @@ open fun getInstance()
     private val filePathData: FilePathData = FilePathData.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -77,10 +71,7 @@ private constructor        ()
             
 open fun getExtension(abFilePath: AbFilePath)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var abFilePath = abFilePath
 
 
@@ -94,10 +85,7 @@ var abFilePath = abFilePath
             
 open fun getExtension(abPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var abPath = abPath
 
 
@@ -111,10 +99,7 @@ var abPath = abPath
             
 open fun getExtension(filePath: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var filePath = filePath
 
     
@@ -155,10 +140,7 @@ var filePath = filePath
             
 open fun getWithoutExtension(abFilePath: AbFilePath)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var abFilePath = abFilePath
 
 
@@ -172,10 +154,7 @@ var abFilePath = abFilePath
             
 open fun getWithoutExtension(abPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var abPath = abPath
 
 
@@ -189,10 +168,7 @@ var abPath = abPath
             
 open fun getWithoutExtension(filePath: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var filePath = filePath
 
     
@@ -231,10 +207,7 @@ var filePath = filePath
 
 open fun isValid(path: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var path = path
 
     
@@ -267,10 +240,7 @@ var path = path
 
 open fun isValidStart(path: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var path = path
 
     
@@ -299,10 +269,7 @@ var path = path
 
 open fun isValidEnd(path: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var path = path
 
     
@@ -344,10 +311,7 @@ var path = path
 
 open fun adjustStart(path: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var path = path
 
     
@@ -368,10 +332,7 @@ var path = path
 
 open fun adjustEnd(path: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var path = path
 
     
@@ -392,10 +353,7 @@ var path = path
 
 open fun adjust(path: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var path = path
 
     
@@ -430,10 +388,7 @@ var path = path
 
 open fun getNameFromPath(categoryPath: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var categoryPath = categoryPath
 
     var endIndex: Int = categoryPath!!.lastIndexOf(abPathData!!.SEPARATOR)!!
@@ -491,10 +446,7 @@ var categoryPath = categoryPath
 
 open fun removeNameFromPath(categoryPath: String)
         //nullable = true from not(false or (false and false)) = true
-: AbPath
-
-        Updates for KMP build        
-        {
+: AbPath{
 var categoryPath = categoryPath
 
     var endIndex: Int = categoryPath!!.lastIndexOf(abPathData!!.SEPARATOR)!!

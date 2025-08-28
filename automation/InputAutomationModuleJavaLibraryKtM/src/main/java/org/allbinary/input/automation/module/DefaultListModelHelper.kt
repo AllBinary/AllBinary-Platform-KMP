@@ -38,9 +38,6 @@ open public class DefaultListModelHelper
     private var vector: Vector
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 this.vector= Vector()
 this.defaultListModel= DefaultListModel()
@@ -49,10 +46,7 @@ this.defaultListModel= DefaultListModel()
 
 open fun initDefaultModelList()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.defaultListModel= DefaultListModel()
 
     var size: Int = this.vector.size!!
@@ -63,9 +57,6 @@ this.defaultListModel= DefaultListModel()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var moduleName: String = this.vector.get(index) as String
@@ -78,10 +69,7 @@ this.defaultListModel!!.addElement(moduleName)
 
 open fun getListModel()
         //nullable = true from not(false or (false and true)) = true
-: ListModel
-
-        Updates for KMP build        
-        {
+: ListModel{
 
 
 
@@ -92,10 +80,7 @@ open fun getListModel()
 
 open fun add(string: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var string = string
 this.vector.add(string)
 }
@@ -103,10 +88,7 @@ this.vector.add(string)
 
 open fun remove(string: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var string = string
 this.vector.remove(string)
 }

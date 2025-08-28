@@ -26,10 +26,7 @@ open public class OpenGLUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLUtil
-
-        Updates for KMP build        
-        {
+: OpenGLUtil{
 
 
 
@@ -47,10 +44,7 @@ open fun getInstance()
         
 open fun add(image: Image)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var image = image
 
 
@@ -62,19 +56,13 @@ open fun add(image: Image)
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun add(runnable: Runnable)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var runnable = runnable
 }
 

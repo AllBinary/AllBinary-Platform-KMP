@@ -38,10 +38,7 @@ open public class MagicGameObject : MeteredGameObject
     private val MP_LABEL: String = "MP:"
 public constructor        (bufferedImage: Array<BufferedImage?>, minX: Object, maxX: Object, y: Object)                        
 
-                            : super(bufferedImage, minX, maxX, y)
-
-        Updates for KMP build        
-        {
+                            : super(bufferedImage, minX, maxX, y){
 var bufferedImage = bufferedImage
 var minX = minX
 var maxX = maxX
@@ -54,10 +51,7 @@ var y = y
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

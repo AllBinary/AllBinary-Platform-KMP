@@ -25,10 +25,7 @@ open public class NullDisplayable : Canvas {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NullDisplayable
-
-        Updates for KMP build        
-        {
+: NullDisplayable{
 
 
 
@@ -38,20 +35,14 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
-
-        Updates for KMP build        
-        {
+            private constructor        (){
 }
 
 
     private val baseGameStatistics: BaseGameStatistics = GameStatisticsFactory.getInstance()!!
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 baseGameStatistics!!.nextRefresh()
 }

@@ -42,10 +42,7 @@ open public class OSGIServiceUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OSGIServiceUtil
-
-        Updates for KMP build        
-        {
+: OSGIServiceUtil{
 
 
 
@@ -59,9 +56,6 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -70,10 +64,7 @@ private constructor        ()
             
 open fun getServicesObjectVector(bundleContext: Object, serviceReferences: Array<ServiceReference?>)
         //nullable = true from not(false or (false and false)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
     //var bundleContext = bundleContext
     //var serviceReferences = serviceReferences
 
@@ -97,9 +88,6 @@ logUtil!!.put("Service References: " +size, this, "getServicesObjectVector")
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var serviceReference: ServiceReference = serviceReferences[index]!!

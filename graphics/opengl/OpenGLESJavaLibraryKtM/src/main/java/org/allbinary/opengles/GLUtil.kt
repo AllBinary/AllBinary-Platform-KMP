@@ -44,10 +44,7 @@ open public class GLUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GLUtil
-
-        Updates for KMP build        
-        {
+: GLUtil{
 
 
 
@@ -67,10 +64,7 @@ open fun getInstance()
 
 open fun makeFloatBuffer3(p_a: Float, p_b: Float, p_c: Float)
         //nullable = true from not(false or (false and false)) = true
-: FloatBuffer
-
-        Updates for KMP build        
-        {
+: FloatBuffer{
 var p_a = p_a
 var p_b = p_b
 var p_c = p_c
@@ -95,10 +89,7 @@ this.position(buffer, 0)
 
 open fun makeFloatBuffer4(p_a: Float, p_b: Float, p_c: Float, p_d: Float)
         //nullable = true from not(false or (false and false)) = true
-: FloatBuffer
-
-        Updates for KMP build        
-        {
+: FloatBuffer{
 var p_a = p_a
 var p_b = p_b
 var p_c = p_c
@@ -125,10 +116,7 @@ this.position(buffer, 0)
 
 open fun makeFloatBuffer(byteBuffer: ByteBuffer)
         //nullable = true from not(false or (false and false)) = true
-: FloatBuffer
-
-        Updates for KMP build        
-        {
+: FloatBuffer{
     //var byteBuffer = byteBuffer
 
     var b: ByteBuffer = ByteBuffer.allocateDirect(byteBuffer!!.limit() *BYTES_PER_FLOAT)!!
@@ -145,9 +133,6 @@ b.order(ByteOrder.nativeOrder())
 
 
         while(byteBuffer!!.hasRemaining())
-        
-
-        Updates for KMP build        
         {
 unsigned= byteBuffer!!.get() and 0xFF
 v= (unsigned.toFloat()) /255f
@@ -165,10 +150,7 @@ this.position(buffer, 0)
 
 open fun position(buffer: Buffer, newPosition: Int)
         //nullable = true from not(false or (false and false)) = true
-: Buffer
-
-        Updates for KMP build        
-        {
+: Buffer{
     //var buffer = buffer
     //var newPosition = newPosition
 
@@ -181,10 +163,7 @@ open fun position(buffer: Buffer, newPosition: Int)
 
 open fun rotateUVs(uvs: FloatArray, angleDegrees: Float, pivotU: Float, pivotV: Float)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var uvs = uvs
     //var angleDegrees = angleDegrees
     //var pivotU = pivotU
@@ -204,9 +183,6 @@ open fun rotateUVs(uvs: FloatArray, angleDegrees: Float, pivotU: Float, pivotV: 
 
                         for (i in 0 until uvs.size)
 
-        
-
-        Updates for KMP build        
         {
 
     var u: Float = uvs[i]!!

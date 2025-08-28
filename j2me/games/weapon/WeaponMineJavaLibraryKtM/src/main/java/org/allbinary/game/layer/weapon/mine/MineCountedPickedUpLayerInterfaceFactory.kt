@@ -50,20 +50,14 @@ open public class MineCountedPickedUpLayerInterfaceFactory : CountedPickedUpLaye
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 pickedUpLayerInterfaceFactoryInterface= MineCountedPickedUpLayerInterfaceFactory()
 }
 
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PickedUpLayerInterfaceFactoryInterface
-
-        Updates for KMP build        
-        {
+: PickedUpLayerInterfaceFactoryInterface{
 
 
 
@@ -77,10 +71,7 @@ open fun getInstance()
     private val weaponLayerCircularStaticPool: WeaponLayerCircularPool = MineLayerCircularStaticPool.getInstance()!!
 private constructor        ()                        
 
-                            : super(PickedUpLayerTypeFactory.getInstance()!!.MINE, IconLayerFactory.getInstance(FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(MineWeaponResources.getInstance()!!.DROP_ICON_RESOURCE)!!.getInstance(0), 10, 10), FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(MineWeaponResources.getInstance()!!.DROP_RESOURCE)!!.getInstance(0))
-
-        Updates for KMP build        
-        {
+                            : super(PickedUpLayerTypeFactory.getInstance()!!.MINE, IconLayerFactory.getInstance(FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(MineWeaponResources.getInstance()!!.DROP_ICON_RESOURCE)!!.getInstance(0), 10, 10), FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(MineWeaponResources.getInstance()!!.DROP_RESOURCE)!!.getInstance(0)){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -89,10 +80,7 @@ private constructor        ()
 
 override fun getTotal()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -108,10 +96,7 @@ override fun getTotal()
                 @Throws(Exception::class)
             override fun getInstance(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
         //nullable =  from not(true or (false and false)) = 
-: AllBinaryLayer
-
-        Updates for KMP build        
-        {
+: AllBinaryLayer{
     //var hashtable = hashtable
     //var x = x
     //var y = y

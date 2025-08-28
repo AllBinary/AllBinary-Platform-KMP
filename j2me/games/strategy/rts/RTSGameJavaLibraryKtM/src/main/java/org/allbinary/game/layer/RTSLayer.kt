@@ -89,10 +89,7 @@ open public class RTSLayer : MultiPlayerGameLayer
 
 open fun getMinStaticType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -103,10 +100,7 @@ open fun getMinStaticType()
 
 open fun getMaxStaticType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -117,10 +111,7 @@ open fun getMaxStaticType()
 
 open fun isRTSLayer(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var layerInterface = layerInterface
 
     
@@ -216,10 +207,7 @@ open fun isRTSLayer(layerInterface: AllBinaryLayer)
     private var selected: Boolean = false
 protected constructor        (remoteInfo: RemoteInfo, groupInterface: Array<Group?>, rootName: String, name: String, healthInterface: Health, rtsFormInput: RTSFormInput, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
 
-                            : this(remoteInfo, groupInterface, rootName, name, healthInterface, rtsFormInput, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y, TileLayerPositionIntoViewPosition())
-
-        Updates for KMP build        
-        {
+                            : this(remoteInfo, groupInterface, rootName, name, healthInterface, rtsFormInput, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y, TileLayerPositionIntoViewPosition()){
     //var remoteInfo = remoteInfo
     //var groupInterface = groupInterface
     //var rootName = rootName
@@ -243,10 +231,7 @@ protected constructor        (remoteInfo: RemoteInfo, groupInterface: Array<Grou
 
 protected constructor        (remoteInfo: RemoteInfo, groupInterface: Array<Group?>, rootName: String, name: String, healthInterface: Health, rtsFormInput: RTSFormInput, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int, viewPosition: ViewPosition)                        
 
-                            : super(remoteInfo, groupInterface, name, rectangle, viewPosition)
-
-        Updates for KMP build        
-        {
+                            : super(remoteInfo, groupInterface, name, rectangle, viewPosition){
     //var remoteInfo = remoteInfo
     //var groupInterface = groupInterface
     //var rootName = rootName
@@ -289,10 +274,7 @@ this.geographicMapCellPositionArea= GeographicMapCellPositionArea(this)
 protected constructor        (remoteInfo: RemoteInfo)                        
 
                             : super(remoteInfo, 
-                            null, RectangleFactory.SINGLETON, TileLayerPositionIntoViewPosition())
-
-        Updates for KMP build        
-        {
+                            null, RectangleFactory.SINGLETON, TileLayerPositionIntoViewPosition()){
     //var remoteInfo = remoteInfo
 
 
@@ -330,10 +312,7 @@ this.geographicMapCellPositionArea=
             
 open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
 super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 
@@ -357,10 +336,7 @@ this.updateWaypointBehavior(geographicMapInterface)
             
 open fun updateWaypointBehavior(geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var geographicMapInterface = geographicMapInterface
 this.geographicMapCellPositionArea!!.update(geographicMapInterface)
 }
@@ -370,10 +346,7 @@ this.geographicMapCellPositionArea!!.update(geographicMapInterface)
             
 open fun construct(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
 ViewPositionEventHandler.getInstance()!!.addListener(this as AllBinaryLayer)
 this.animationInterface= this.buildAnimationInterface
@@ -383,10 +356,7 @@ this.hackVerticleBuild= 0
 
 open fun select()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.rangeAnimation= this.initRangeAnimation
 this.sensorRangeAnimation= this.initSensorRangeAnimation
 this.setSelected(true)
@@ -395,10 +365,7 @@ this.setSelected(true)
 
 open fun deselect()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.rangeAnimation= NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
 this.sensorRangeAnimation= NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
 this.setSelected(false)
@@ -407,10 +374,7 @@ this.setSelected(false)
 
 open fun setSelected(selected: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var selected = selected
 this.selected= selected
 }
@@ -418,10 +382,7 @@ this.selected= selected
 
 open fun isSelected()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -432,10 +393,7 @@ open fun isSelected()
 
 open fun getPercentComplete()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -446,10 +404,7 @@ open fun getPercentComplete()
 
 open fun getScrollSelectionForm()
         //nullable = true from not(false or (false and true)) = true
-: ScrollSelectionForm
-
-        Updates for KMP build        
-        {
+: ScrollSelectionForm{
 
 
 
@@ -460,10 +415,7 @@ open fun getScrollSelectionForm()
 
 open fun initInputProcessors()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 GameInputProcessorUtil.init(this.inputProcessorArray)
 }
 
@@ -472,10 +424,7 @@ GameInputProcessorUtil.init(this.inputProcessorArray)
             
 open fun processBuiltTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryLayerManager = allBinaryLayerManager
 this.animationInterface= this.indexedButShouldBeRotationAnimationInterface
 }
@@ -483,10 +432,7 @@ this.animationInterface= this.indexedButShouldBeRotationAnimationInterface
 
 open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var allBinaryLayerManager = allBinaryLayerManager
 
         try {
@@ -505,10 +451,7 @@ open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "processTick", e)
 }
 
@@ -519,29 +462,20 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "processTick", e)
             
 open fun processInput(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layerManager = layerManager
 }
 
 
 open fun reload()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun onMovement(trackingEvent: TrackingEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var trackingEvent = trackingEvent
 }
 
@@ -550,20 +484,14 @@ open fun onMovement(trackingEvent: TrackingEvent)
             
 open fun onMovementFound(trackingEvent: TrackingEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var trackingEvent = trackingEvent
 }
 
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
 super.paintFirst(graphics)
 
@@ -583,10 +511,7 @@ this.getAnimationInterface()!!.paint(graphics, viewX, viewY)
             
 open fun damage(damage: Int, damageType: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var damage = damage
     //var damageType = damageType
 }
@@ -594,10 +519,7 @@ open fun damage(damage: Int, damageType: Int)
 
 open fun getSourceId()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -610,30 +532,21 @@ open fun getSourceId()
 
 open fun downgrade()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 rtsLayerUtil!!.downgrade(this)
 }
 
 
 open fun upgrade()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 rtsLayerUtil!!.upgrade(this)
 }
 
 
 open fun isCompleted()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(this.hackVerticleBuild < BUILD_VALUE)
@@ -663,10 +576,7 @@ open fun isCompleted()
             
 open fun build()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(this.buildFrameTimeHelper!!.isTime())
@@ -685,10 +595,7 @@ this.getHudPaintable()!!.updateInfo()
 
 open fun isSelfUpgradeable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -699,10 +606,7 @@ open fun isSelfUpgradeable()
 
 open fun getCost()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -713,10 +617,7 @@ open fun getCost()
 
 open fun getDowngradeCost()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -727,10 +628,7 @@ open fun getDowngradeCost()
 
 open fun getUpgradeCost()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -741,10 +639,7 @@ open fun getUpgradeCost()
 
 open fun isUpgradeable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(this.getLevel() < this.getMaxLevel())
@@ -772,10 +667,7 @@ open fun isUpgradeable()
 
 open fun isDowngradeable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(this.getLevel() > 1)
@@ -803,10 +695,7 @@ open fun isDowngradeable()
 
 open fun getLevel()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -817,10 +706,7 @@ open fun getLevel()
 
 open fun setLevel(level: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var level = level
 this.level= level
 }
@@ -828,10 +714,7 @@ this.level= level
 
 open fun getVerticleBuildAnimationInterface()
         //nullable = true from not(false or (false and true)) = true
-: Animation
-
-        Updates for KMP build        
-        {
+: Animation{
 
 
 
@@ -842,10 +725,7 @@ open fun getVerticleBuildAnimationInterface()
 
 open fun getAnimationInterface()
         //nullable = true from not(false or (false and true)) = true
-: Animation
-
-        Updates for KMP build        
-        {
+: Animation{
 
 
 
@@ -856,10 +736,7 @@ open fun getAnimationInterface()
 
 open fun setAnimationInterface(animationInterface: Animation)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var animationInterface = animationInterface
 this.animationInterface= animationInterface
 }
@@ -871,10 +748,7 @@ this.animationInterface= animationInterface
             
 open fun setTarget(targetGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var targetGameLayer = targetGameLayer
 
     var anotherTargetDistance: Int = layerDistanceUtil!!.getDistance(this as AllBinaryLayer, targetGameLayer as AllBinaryLayer)!!
@@ -888,10 +762,7 @@ waypointBehaviorBase!!.setTarget(targetGameLayer as PathFindingLayerInterface, a
 
 open fun createHudPaintable()
         //nullable = true from not(false or (false and true)) = true
-: SelectionHudPaintable
-
-        Updates for KMP build        
-        {
+: SelectionHudPaintable{
 
 
 
@@ -902,10 +773,7 @@ open fun createHudPaintable()
 
 open fun getHudPaintable()
         //nullable = true from not(false or (false and true)) = true
-: SelectionHudPaintable
-
-        Updates for KMP build        
-        {
+: SelectionHudPaintable{
 
 
 
@@ -916,10 +784,7 @@ open fun getHudPaintable()
 
 open fun getMaxLevel()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -930,10 +795,7 @@ open fun getMaxLevel()
 
 open fun setMaxLevel(maxLevel: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var maxLevel = maxLevel
 this.maxLevel= maxLevel
 }
@@ -941,10 +803,7 @@ this.maxLevel= maxLevel
 
 open fun getHealthInterface()
         //nullable = true from not(false or (false and true)) = true
-: Health
-
-        Updates for KMP build        
-        {
+: Health{
 
 
 
@@ -955,10 +814,7 @@ open fun getHealthInterface()
 
 open fun setHealthInterface(healthInterface: Health)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var healthInterface = healthInterface
 this.healthInterface= healthInterface
 }
@@ -966,10 +822,7 @@ this.healthInterface= healthInterface
 
 open fun getRTSFormInput()
         //nullable = true from not(false or (false and true)) = true
-: RTSFormInput
-
-        Updates for KMP build        
-        {
+: RTSFormInput{
 
 
 
@@ -982,10 +835,7 @@ open fun getRTSFormInput()
             
 open fun isDestroyed()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -998,10 +848,7 @@ open fun isDestroyed()
             
 open fun setDestroyed(destroyed: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var destroyed = destroyed
 this.destroyed= destroyed
 
@@ -1019,10 +866,7 @@ ViewPositionEventHandler.getInstance()!!.removeListener(this)
 
 open fun getEndGeographicMapCellPositionList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 
@@ -1033,10 +877,7 @@ open fun getEndGeographicMapCellPositionList()
 
 open fun getGeographicMapCellPositionArea()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPositionArea
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPositionArea{
 
 
 
@@ -1047,10 +888,7 @@ open fun getGeographicMapCellPositionArea()
 
 open fun shouldHandleStartSameAsEnd()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -1063,20 +901,14 @@ open fun shouldHandleStartSameAsEnd()
             
 open fun handleCost(ownerLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var ownerLayer = ownerLayer
 }
 
 
 open fun getWaypointBehavior()
         //nullable = true from not(false or (false and true)) = true
-: WaypointBehaviorBase
-
-        Updates for KMP build        
-        {
+: WaypointBehaviorBase{
 
 
 
@@ -1087,10 +919,7 @@ open fun getWaypointBehavior()
 
 open fun getParentLayer()
         //nullable = true from not(false or (false and true)) = true
-: PathFindingLayerInterface
-
-        Updates for KMP build        
-        {
+: PathFindingLayerInterface{
 
 
 
@@ -1101,10 +930,7 @@ open fun getParentLayer()
 
 open fun getRTSLayer2LogHelper()
         //nullable = true from not(false or (false and true)) = true
-: RTSLayer2LogHelper
-
-        Updates for KMP build        
-        {
+: RTSLayer2LogHelper{
 
 
 
@@ -1115,10 +941,7 @@ open fun getRTSLayer2LogHelper()
 
 open fun getWaypointLogHelper()
         //nullable = true from not(false or (false and true)) = true
-: WaypointLogHelper
-
-        Updates for KMP build        
-        {
+: WaypointLogHelper{
 
 
 
@@ -1129,10 +952,7 @@ open fun getWaypointLogHelper()
 
 open fun getWaypoint2LogHelper()
         //nullable = true from not(false or (false and true)) = true
-: Waypoint2LogHelper
-
-        Updates for KMP build        
-        {
+: Waypoint2LogHelper{
 
 
 
@@ -1143,10 +963,7 @@ open fun getWaypoint2LogHelper()
 
 open fun getWaypointRunnableLogHelper()
         //nullable = true from not(false or (false and true)) = true
-: WaypointRunnableLogHelper
-
-        Updates for KMP build        
-        {
+: WaypointRunnableLogHelper{
 
 
 
@@ -1157,10 +974,7 @@ open fun getWaypointRunnableLogHelper()
 
 open fun shouldAddWaypointFromBuilding()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -1171,10 +985,7 @@ open fun shouldAddWaypointFromBuilding()
 
 open fun getCaptionAnimationHelper()
         //nullable = true from not(false or (false and true)) = true
-: CaptionAnimationHelperBase
-
-        Updates for KMP build        
-        {
+: CaptionAnimationHelperBase{
 
 
 
@@ -1185,10 +996,7 @@ open fun getCaptionAnimationHelper()
 
 open fun isShowMoreCaptionStates()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -1201,10 +1009,7 @@ open fun isShowMoreCaptionStates()
             
 open fun init(geographicMapCellHistory: GeographicMapCellHistory, geographicMapCellPositionBasicArrayList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var geographicMapCellHistory = geographicMapCellHistory
     //var geographicMapCellPositionBasicArrayList = geographicMapCellPositionBasicArrayList
 }
@@ -1214,10 +1019,7 @@ open fun init(geographicMapCellHistory: GeographicMapCellHistory, geographicMapC
             
 open fun getCurrentGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
 
 
 
@@ -1230,10 +1032,7 @@ open fun getCurrentGeographicMapCellPosition()
             
 open fun getTopLeftGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
 
 
 
@@ -1244,10 +1043,7 @@ open fun getTopLeftGeographicMapCellPosition()
 
 open fun getMoveOutOfBuildAreaPath(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
     //var geographicMapCellPosition = geographicMapCellPosition
 
 
@@ -1261,20 +1057,14 @@ open fun getMoveOutOfBuildAreaPath(geographicMapCellPosition: GeographicMapCellP
             
 open fun setClosestGeographicMapCellHistory(pathsList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var pathsList = pathsList
 }
 
 
 open fun teleportTo(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var geographicMapCellPosition = geographicMapCellPosition
 }
 
@@ -1283,10 +1073,7 @@ open fun teleportTo(geographicMapCellPosition: GeographicMapCellPosition)
             
 open fun setLoad(resource: Short)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var resource = resource
 }
 
@@ -1295,10 +1082,7 @@ var resource = resource
             
 open fun getSurroundingGeographicMapCellPositionList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 
@@ -1311,10 +1095,7 @@ open fun getSurroundingGeographicMapCellPositionList()
             
 open fun trackTo(reason: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var reason = reason
 }
 
@@ -1323,10 +1104,7 @@ open fun trackTo(reason: String)
             
 open fun trackTo(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var dx = dx
     //var dy = dy
 }
@@ -1334,10 +1112,7 @@ open fun trackTo(dx: Int, dy: Int)
 
 open fun isWaypointListEmptyOrOnlyTargets()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -1348,10 +1123,7 @@ open fun isWaypointListEmptyOrOnlyTargets()
 
 open fun getTrackingEvent()
         //nullable = true from not(false or (false and true)) = true
-: TrackingEvent
-
-        Updates for KMP build        
-        {
+: TrackingEvent{
 
 
 
@@ -1364,10 +1136,7 @@ open fun getTrackingEvent()
             
 open fun buildingChase(allbinaryLayer: AllBinaryLayer, cellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var allbinaryLayer = allbinaryLayer
     //var cellPosition = cellPosition
 
@@ -1380,19 +1149,13 @@ open fun buildingChase(allbinaryLayer: AllBinaryLayer, cellPosition: GeographicM
 
 open fun allStop()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun implmentsTickableInterface()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -1403,10 +1166,7 @@ open fun implmentsTickableInterface()
 
 open fun implmentsGameInputInterface()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -1417,10 +1177,7 @@ open fun implmentsGameInputInterface()
 
 open fun getRootName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -1431,10 +1188,7 @@ open fun getRootName()
 
 open fun getRotationAnimationInterface()
         //nullable = true from not(false or (false and true)) = true
-: RotationAnimation
-
-        Updates for KMP build        
-        {
+: RotationAnimation{
 
 
 
@@ -1445,10 +1199,7 @@ open fun getRotationAnimationInterface()
 
 open fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var index = index
 this.getRotationAnimationInterface()!!.setFrame(index)
 }
@@ -1456,10 +1207,7 @@ this.getRotationAnimationInterface()!!.setFrame(index)
 
 open fun setRotationAnimationInterface(rotationAnimationInterface: RotationAnimation)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var rotationAnimationInterface = rotationAnimationInterface
 this.indexedButShouldBeRotationAnimationInterface= rotationAnimationInterface
 }

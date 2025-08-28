@@ -52,9 +52,6 @@ open public class ViewHelper
     private var componentInterface: TransformInterface
 public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
             : super()
-        
-
-        Updates for KMP build        
         {
 var hashMap = hashMap
 var pageContext = pageContext
@@ -66,10 +63,7 @@ this.componentInterface= TransformFactory.getInstance()!!.getInstance(this.abeCl
 
 open fun getTypeId()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -82,10 +76,7 @@ open fun getTypeId()
             
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -94,10 +85,7 @@ open fun view()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return componentInterface!!.view()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to View: "
 
@@ -133,10 +121,7 @@ open fun view()
             
 open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
         try {
             
@@ -144,10 +129,7 @@ open fun toXmlDoc()
 
                             throw Exception("Hmm: " +componentInterface!!.getTransformDocumentInterface()!!.getDoc())
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var error: String = "Failed to View: "
 
@@ -181,10 +163,7 @@ open fun toXmlDoc()
 
 open fun getViewObject()
         //nullable = true from not(false or (false and true)) = true
-: TransformInterface
-
-        Updates for KMP build        
-        {
+: TransformInterface{
 
 
 
@@ -197,10 +176,7 @@ open fun getViewObject()
             
 open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformInfoInterface
-
-        Updates for KMP build        
-        {
+: TransformInfoInterface{
 
 
 
@@ -211,10 +187,7 @@ open fun getTransformInfoInterface()
 
 open fun getTransformDocumentInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformDocumentInterface
-
-        Updates for KMP build        
-        {
+: TransformDocumentInterface{
 
 
 
@@ -225,10 +198,7 @@ open fun getTransformDocumentInterface()
 
 open fun setTransformDocumentInterface(viewDocumentInterface: TransformDocumentInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var viewDocumentInterface = viewDocumentInterface
 
 

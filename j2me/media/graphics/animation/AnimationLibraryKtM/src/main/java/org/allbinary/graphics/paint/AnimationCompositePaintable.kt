@@ -32,30 +32,21 @@ open public class AnimationCompositePaintable : InitUpdatePaintable {
         
 
     private val animationInterface: Animation
-public constructor        (animationInterface: Animation)
-
-        Updates for KMP build        
-        {
+public constructor        (animationInterface: Animation){
 var animationInterface = animationInterface
 this.animationInterface= animationInterface
 }
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 this.animationInterface!!.paint(graphics, 0, 0)
 }
 
 override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 this.animationInterface!!.paintThreed(graphics, 0, 0, 0)
 }

@@ -38,10 +38,7 @@ open public class HtmlTableData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: HtmlTableData
-
-        Updates for KMP build        
-        {
+: HtmlTableData{
 
 
 

@@ -61,9 +61,6 @@ open public class LogConfig
     private var fileName: String
 public constructor        (aName: String, aDescription: String, aPath: String, aFileName: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var aName = aName
 var aDescription = aDescription
@@ -78,9 +75,6 @@ this.fileName= aFileName
 
 public constructor        (node: Node)
             : super()
-        
-
-        Updates for KMP build        
         {
 var node = node
 
@@ -110,10 +104,7 @@ this.fileName= DomNodeHelper.getTextNodeValue(fileValueNode)
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -124,10 +115,7 @@ open fun getName()
 
 open fun isEnabled()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -138,30 +126,21 @@ open fun isEnabled()
 
 open fun enable()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.isEnabled= true
 }
 
 
 open fun disable()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.isEnabled= false
 }
 
 
 open fun getDescription()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -172,10 +151,7 @@ open fun getDescription()
 
 open fun getFileName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -186,10 +162,7 @@ open fun getFileName()
 
 open fun setName(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.name= value
 }
@@ -197,10 +170,7 @@ this.name= value
 
 open fun setDescription(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.description= value
 }
@@ -208,10 +178,7 @@ this.description= value
 
 open fun setPath(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.path= value
 }
@@ -219,10 +186,7 @@ this.path= value
 
 open fun setFileName(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.fileName= value
 }
@@ -232,10 +196,7 @@ this.fileName= value
             
 open fun getDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -260,10 +221,7 @@ stringBuffer!!.append(this.getFileName())
             
 open fun getTypeVector()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
     var logKeyVector: BasicArrayList = BasicArrayList()
 
@@ -288,9 +246,6 @@ open fun getTypeVector()
 
                         for (i in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var node: Node = logConfigTypeNodeVector!!.elementAt(i) as Node

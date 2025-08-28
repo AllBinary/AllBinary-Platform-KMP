@@ -37,19 +37,13 @@ open public class DirectoryFileVisitor
         
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun accept(arg0: java.io.File)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var arg0 = arg0
 
 
@@ -63,10 +57,7 @@ visit.
 
 open fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 var anyType = anyType
 
     var file: File = anyType as File
@@ -81,9 +72,6 @@ var anyType = anyType
         while((aFile= aFile!!.getParentFile()) != 
                                     null
                                 )
-        
-
-        Updates for KMP build        
         {
 index++
 }

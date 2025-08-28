@@ -62,9 +62,6 @@ open public class UnitItemArrayFactory
     private val resources: Array<BasicGameResources?>
 protected constructor        (resources: Array<BasicGameResources?>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var resources = resources
 this.resources= resources
@@ -75,10 +72,7 @@ this.resources= resources
             
 open fun createFlagItem(flagResources: FlagGameResources, layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-: CustomItem
-
-        Updates for KMP build        
-        {
+: CustomItem{
 var flagResources = flagResources
 var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
 
@@ -108,10 +102,7 @@ var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
             
 open fun createFlagItem(flagResources: FlagGameResources, name: String, layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-: CustomItem
-
-        Updates for KMP build        
-        {
+: CustomItem{
 var flagResources = flagResources
 var name = name
 var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
@@ -136,10 +127,7 @@ var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
             
 open fun getItems()
         //nullable = true from not(false or (false and true)) = true
-: Array<CustomItem?>
-
-        Updates for KMP build        
-        {
+: Array<CustomItem?>{
 
 
 
@@ -150,10 +138,7 @@ open fun getItems()
 
 open fun getResources()
         //nullable = true from not(false or (false and true)) = true
-: Array<BasicGameResources?>
-
-        Updates for KMP build        
-        {
+: Array<BasicGameResources?>{
 
 
 
@@ -164,10 +149,7 @@ open fun getResources()
 
 open fun indexOf(basicGameResources: BasicGameResources)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var basicGameResources = basicGameResources
 
 
@@ -175,9 +157,6 @@ var basicGameResources = basicGameResources
 
                         for (index in this.getResources()!!.length -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     

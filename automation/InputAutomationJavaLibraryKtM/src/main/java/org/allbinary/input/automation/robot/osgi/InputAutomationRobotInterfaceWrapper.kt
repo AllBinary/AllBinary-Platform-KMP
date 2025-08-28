@@ -35,9 +35,6 @@ open public class InputAutomationRobotInterfaceWrapper
     private var inputRobotInterface: InputRobotInterface
 public constructor        (inputRobotInterface: InputRobotInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var inputRobotInterface = inputRobotInterface
 this.setInputRobotInterface(inputRobotInterface)
@@ -46,10 +43,7 @@ this.setInputRobotInterface(inputRobotInterface)
 
 open fun getInputRobotInterface()
         //nullable = true from not(false or (false and true)) = true
-: InputRobotInterface
-
-        Updates for KMP build        
-        {
+: InputRobotInterface{
 
 
 
@@ -60,10 +54,7 @@ open fun getInputRobotInterface()
 
 open fun setInputRobotInterface(inputRobotInterface: InputRobotInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var inputRobotInterface = inputRobotInterface
 this.inputRobotInterface= inputRobotInterface
 }

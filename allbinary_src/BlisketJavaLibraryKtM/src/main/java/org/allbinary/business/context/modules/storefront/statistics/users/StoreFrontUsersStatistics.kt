@@ -45,9 +45,6 @@ open public class StoreFrontUsersStatistics
     private var totalUsersByRoleHashMap: HashMap<Any, Any>
 public constructor        (storeFrontInterface: StoreFrontInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var storeFrontInterface = storeFrontInterface
 this.totalUsersByRoleHashMap= HashMap<Any, Any>()
@@ -67,9 +64,6 @@ this.totalNumberOfUsers= userVector!!.size as Long
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var userInterface: UserInterface = userVector!!.get(index) as UserInterface
@@ -88,10 +82,7 @@ totalUsersByRoleHashMap!!.put(nextUserRole, currentNumberOfUsersForRole)
 
 open fun getNewTotal(userRole: UserRole)
         //nullable = true from not(false or (false and false)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 var userRole = userRole
 
     var numberOfUsersForRoleLong: Long = totalUsersByRoleHashMap!!.get(userRole as Object) as Long
@@ -117,10 +108,7 @@ var userRole = userRole
 
 open fun getNumberOfUsers()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -131,10 +119,7 @@ open fun getNumberOfUsers()
 
 open fun getNumberOfUsersByRole(role: String)
         //nullable = true from not(false or (false and false)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 var role = role
 
     var totalForRole: Long = this.totalUsersByRoleHashMap!!.get(role as Object) as Long
@@ -149,10 +134,7 @@ var role = role
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -176,9 +158,6 @@ hashMap!!.put(StoreFrontUsersStatisticsData.getInstance()!!.NUMBEROFUSERS, this.
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 nextUserRole= userRoleArray[index]!! as UserRole
 
@@ -197,10 +176,7 @@ hashMap!!.put(nextUserRole!!.toString(), totalForRole!!.toString())
 
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
 
 
@@ -211,10 +187,7 @@ open fun toVector()
 
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 
 
 

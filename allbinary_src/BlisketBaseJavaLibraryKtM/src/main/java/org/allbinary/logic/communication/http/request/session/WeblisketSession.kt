@@ -54,10 +54,7 @@ open public class WeblisketSession
     private var session: HttpSession
 public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
-                            : this(hashMap, pageContext!!.getRequest() as HttpServletRequest)
-
-        Updates for KMP build        
-        {
+                            : this(hashMap, pageContext!!.getRequest() as HttpServletRequest){
 var hashMap = hashMap
 var pageContext = pageContext
 
@@ -68,9 +65,6 @@ var pageContext = pageContext
 
 public constructor        (hashMap: HashMap<Any, Any>, httpServletRequest: HttpServletRequest)
             : super()
-        
-
-        Updates for KMP build        
         {
 var hashMap = hashMap
 var httpServletRequest = httpServletRequest
@@ -97,10 +91,7 @@ this.session= request.getSession(true)
 
 open fun getId()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -111,10 +102,7 @@ open fun getId()
 
 open fun setPassword(password: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var password = password
 session.setAttribute(UserData.PASSWORD, password)
 }
@@ -122,10 +110,7 @@ session.setAttribute(UserData.PASSWORD, password)
 
 open fun setUserName(userName: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var userName = userName
 session.setAttribute(UserData.USERNAME, userName)
 }
@@ -133,10 +118,7 @@ session.setAttribute(UserData.USERNAME, userName)
 
 open fun setPaymentMethod(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 session.setAttribute(PaymentGatewayData.NAME.toString(), value)
 }
@@ -144,20 +126,14 @@ session.setAttribute(PaymentGatewayData.NAME.toString(), value)
 
 open fun setAuthenticated()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 session.setAttribute(WeblisketSessionData.AUTHENTICATED, BooleanFactory.getInstance()!!.TRUE_STRING)
 }
 
 
 open fun setRole(aRole: UserRole)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var aRole = aRole
 session.setAttribute(UserRoleData.NAME.toString(), aRole)
 }
@@ -165,10 +141,7 @@ session.setAttribute(UserRoleData.NAME.toString(), aRole)
 
 open fun setAttempts(value: Integer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 session.setAttribute(WeblisketSessionData.ATTEMPTS, value)
 }
@@ -176,10 +149,7 @@ session.setAttribute(WeblisketSessionData.ATTEMPTS, value)
 
 open fun setTimeout(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.session.setAttribute(WeblisketSessionData.TIMEOUT, value)
 }
@@ -187,10 +157,7 @@ this.session.setAttribute(WeblisketSessionData.TIMEOUT, value)
 
 open fun setStoreName(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.session.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
 }
@@ -198,10 +165,7 @@ this.session.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
 
 open fun getWebAppPath()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -212,10 +176,7 @@ open fun getWebAppPath()
 
 open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -226,10 +187,7 @@ open fun getUserName()
 
 open fun getPassword()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -240,10 +198,7 @@ open fun getPassword()
 
 open fun getPaymentMethod()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -254,10 +209,7 @@ open fun getPaymentMethod()
 
 open fun getAuthentication()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -268,10 +220,7 @@ open fun getAuthentication()
 
 open fun getAttempts()
         //nullable = true from not(false or (false and true)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 
 
 
@@ -282,10 +231,7 @@ open fun getAttempts()
 
 open fun getTimeout()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -296,10 +242,7 @@ open fun getTimeout()
 
 open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -312,10 +255,7 @@ open fun getStoreName()
             
 open fun getRole()
         //nullable = true from not(false or (false and true)) = true
-: UserRole
-
-        Updates for KMP build        
-        {
+: UserRole{
 
     var userRole: UserRole = session.getAttribute(UserRoleData.NAME.toString()) as UserRole
 
@@ -350,10 +290,7 @@ open fun getRole()
             
 open fun getOrder()
         //nullable = true from not(false or (false and true)) = true
-: OrderInterface
-
-        Updates for KMP build        
-        {
+: OrderInterface{
 
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(this.getStoreName())!!
 
@@ -401,10 +338,7 @@ session.setAttribute(basketName, orderInterface)
 
 open fun setAuthenticated(value: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 session.setAttribute(WeblisketSessionData.AUTHENTICATED, BooleanFactory.getInstance()!!.FALSE_STRING)
 }
@@ -412,10 +346,7 @@ session.setAttribute(WeblisketSessionData.AUTHENTICATED, BooleanFactory.getInsta
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.session.removeAttribute(WeblisketSessionData.AUTHENTICATED)
 this.session.removeAttribute(WeblisketSessionData.TIMEOUT)
 this.session.removeAttribute(UserRoleData.NAME.toString())
@@ -425,10 +356,7 @@ this.session.removeAttribute(UserData.USERNAME)
 
 open fun getCreationTime()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -439,10 +367,7 @@ open fun getCreationTime()
 
 open fun getLastAccessedTime()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -453,10 +378,7 @@ open fun getLastAccessedTime()
 
 open fun removeBasket()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(this.getStoreName())!!
 

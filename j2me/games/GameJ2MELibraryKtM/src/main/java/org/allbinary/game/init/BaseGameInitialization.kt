@@ -70,9 +70,6 @@ open public class BaseGameInitialization
     val GAME_CHANGABLE_RESOURCES: Int = 3
 public constructor        (resourceInitializationArray: Array<ResourceInitialization?>, portion: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var resourceInitializationArray = resourceInitializationArray
     //var portion = portion
@@ -85,10 +82,7 @@ this.portion= portion
             
 open fun initKey(portion: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var portion = portion
 }
 
@@ -97,10 +91,7 @@ var portion = portion
             
 open fun initKeyMapping(abeClientInformation: AbeClientInformationInterface, portion: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
 var portion = portion
 
@@ -120,10 +111,7 @@ ChangedGameFeatureListener.getInstance()!!.remove(InputFeatureFactory.getInstanc
                 @Throws(Exception::class)
             override fun init(abeClientInformation: AbeClientInformationInterface, commandListener: CommandListener, level: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var abeClientInformation = abeClientInformation
     //var commandListener = commandListener
     //var level = level
@@ -176,10 +164,7 @@ this.resourceInitializationArray[EARLY_RESOURCES]!!.init()
             
 open fun resourceInitialization(level: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var level = level
 
     var resourceLoadingLevelFactory: ResourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance()!!
@@ -227,10 +212,7 @@ this.allLoaded= true
 
 open fun resourceAnimationChange()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     var changedGameFeatureListener: ChangedGameFeatureListener = ChangedGameFeatureListener.getInstance()!!
 
@@ -273,10 +255,7 @@ open fun resourceAnimationChange()
 
 open fun clearResources()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.allLoaded= false
 GameFeatureImageCacheFactory.releaseAll()
 
@@ -289,10 +268,7 @@ FeaturedResourceRelativeRelationshipFactory.getInstance()!!.clear()
 
 open fun setGameInitialized(gameInitialized: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gameInitialized = gameInitialized
 this.gameInitialized= gameInitialized
 }
@@ -300,10 +276,7 @@ this.gameInitialized= gameInitialized
 
 open fun isGameInitialized()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -314,10 +287,7 @@ open fun isGameInitialized()
 
 open fun getPortion()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -328,10 +298,7 @@ open fun getPortion()
 
 open fun setInitialized(initialized: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var initialized = initialized
 this.initialized= initialized
 }
@@ -339,10 +306,7 @@ this.initialized= initialized
 
 open fun isInitialized()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 

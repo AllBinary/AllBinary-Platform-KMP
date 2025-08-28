@@ -32,50 +32,29 @@ open fun getImageTypes()
         //nullable = true from not(false or (false and true)) = true
 : ImageTypes
 
-        Updates for KMP build        
-        
-
 open fun setImageTypes(imageTypes: ImageTypes)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 open fun isSaved()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-        Updates for KMP build        
-        
-
 open fun setSaved(saved: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 open fun isDisplay()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-        Updates for KMP build        
-        
-
 open fun setDisplay(display: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun log()
         //nullable = true from not(false or (false and true)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

@@ -41,10 +41,7 @@ open public class DisplayPointScalar
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DisplayPointScalar
-
-        Updates for KMP build        
-        {
+: DisplayPointScalar{
 
 
 
@@ -56,19 +53,13 @@ open fun getInstance()
         }
             public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun processX(value: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var value = value
 
 
@@ -80,10 +71,7 @@ open fun processX(value: Int)
 
 open fun processY(value: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var value = value
 
 
@@ -95,10 +83,7 @@ open fun processY(value: Int)
 
 open fun process(point: GPoint)
         //nullable = true from not(false or (false and false)) = true
-: GPoint
-
-        Updates for KMP build        
-        {
+: GPoint{
     //var point = point
 
 

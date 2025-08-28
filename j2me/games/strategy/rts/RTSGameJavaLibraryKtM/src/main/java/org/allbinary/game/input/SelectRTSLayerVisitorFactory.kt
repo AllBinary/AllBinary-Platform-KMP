@@ -39,10 +39,7 @@ open public class SelectRTSLayerVisitorFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: SelectRTSLayerVisitorFactory
-
-        Updates for KMP build        
-        {
+: SelectRTSLayerVisitorFactory{
 
 
 
@@ -54,19 +51,13 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getInstance(selectedRTSLayersPlayerGameInput: SelectedRTSLayersPlayerGameInput)
         //nullable =  from not(true or (false and false)) = 
-: Visitor
-
-        Updates for KMP build        
-        {
+: Visitor{
 var selectedRTSLayersPlayerGameInput = selectedRTSLayersPlayerGameInput
 
 

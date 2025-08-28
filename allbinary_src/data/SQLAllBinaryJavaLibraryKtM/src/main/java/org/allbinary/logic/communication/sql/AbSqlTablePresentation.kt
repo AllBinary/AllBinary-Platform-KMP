@@ -31,10 +31,7 @@ open public class AbSqlTablePresentation : AbSqlBasic {
         
 public constructor        (databaseConnectionInfoInterface: DbConnectionInfo)                        
 
-                            : super(databaseConnectionInfoInterface)
-
-        Updates for KMP build        
-        {
+                            : super(databaseConnectionInfoInterface){
 var databaseConnectionInfoInterface = databaseConnectionInfoInterface
 
 

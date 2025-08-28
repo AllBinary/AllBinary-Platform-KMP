@@ -33,9 +33,6 @@ open fun getPoints(frame: Int)
         //nullable = true from not(false or (false and false)) = true
 : Array<IntArray?>
 
-        Updates for KMP build        
-        
-
 }
                 
             

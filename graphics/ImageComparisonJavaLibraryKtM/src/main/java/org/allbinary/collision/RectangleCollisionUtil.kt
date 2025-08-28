@@ -37,10 +37,7 @@ open public class RectangleCollisionUtil
             
 open fun isCollision(rectangle: Rectangle, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var rectangle = rectangle
 var point = point
 
@@ -70,10 +67,7 @@ var point = point
 
 open fun isCollision(rectangle1: Rectangle, rectangle2: Rectangle)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var rectangle1 = rectangle1
 var rectangle2 = rectangle2
 
@@ -86,10 +80,7 @@ var rectangle2 = rectangle2
 
 open fun isCollision(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, rect2X1: Int, rect2Y1: Int, rect2X2: Int, rect2Y2: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var rectX1 = rectX1
 var rectY1 = rectY1
 var rectX2 = rectX2
@@ -126,9 +117,6 @@ var rect2Y2 = rect2Y2
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

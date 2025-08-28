@@ -35,10 +35,7 @@ open public class TerrainEvent : AllBinaryEventObject {
     private var basicTerrainInfo: BasicTerrainInfo = BasicTerrainInfo.NULL_BASIC_TERRAIN_INFO
 public constructor        ()                        
 
-                            : super(NullUtil.getInstance()!!.NULL_OBJECT)
-
-        Updates for KMP build        
-        {
+                            : super(NullUtil.getInstance()!!.NULL_OBJECT){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -47,10 +44,7 @@ public constructor        ()
 
 public constructor        (basicTerrainInfo: BasicTerrainInfo)                        
 
-                            : super(basicTerrainInfo)
-
-        Updates for KMP build        
-        {
+                            : super(basicTerrainInfo){
     //var basicTerrainInfo = basicTerrainInfo
 
 
@@ -61,10 +55,7 @@ this.setBasicTerrainInfo(basicTerrainInfo)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -81,10 +72,7 @@ stringBuffer!!.append(this.basicTerrainInfo!!.toString())
 
 open fun getBasicTerrainInfo()
         //nullable = true from not(false or (false and true)) = true
-: BasicTerrainInfo
-
-        Updates for KMP build        
-        {
+: BasicTerrainInfo{
 
 
 
@@ -95,10 +83,7 @@ open fun getBasicTerrainInfo()
 
 open fun setBasicTerrainInfo(basicTerrainInfo: BasicTerrainInfo)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var basicTerrainInfo = basicTerrainInfo
 this.basicTerrainInfo= basicTerrainInfo
 }
@@ -106,10 +91,7 @@ this.basicTerrainInfo= basicTerrainInfo
 
 open fun setBasicTerrainInfoForCircularStaticPool(basicTerrainInfo: BasicTerrainInfo)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var basicTerrainInfo = basicTerrainInfo
 this.basicTerrainInfo= basicTerrainInfo
 }

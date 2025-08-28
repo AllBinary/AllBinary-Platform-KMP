@@ -23,10 +23,7 @@ open public class PoolTypeFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PoolTypeFactory
-
-        Updates for KMP build        
-        {
+: PoolTypeFactory{
 
 
 

@@ -42,10 +42,7 @@ open public class GameOptionsFormFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameOptionsFormFactory
-
-        Updates for KMP build        
-        {
+: GameOptionsFormFactory{
 
 
 
@@ -59,19 +56,13 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun init(commandListener: CommandListener, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-: CommandForm
-
-        Updates for KMP build        
-        {
+: CommandForm{
 var commandListener = commandListener
 var title = title
 var backgrounBasicColor = backgrounBasicColor
@@ -84,10 +75,7 @@ var foregroundBasicColor = foregroundBasicColor
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return GameOptionsForm(commandListener, title, backgrounBasicColor, foregroundBasicColor)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

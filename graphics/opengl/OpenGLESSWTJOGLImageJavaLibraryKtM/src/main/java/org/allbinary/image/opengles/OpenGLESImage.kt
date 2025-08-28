@@ -69,10 +69,7 @@ open public class OpenGLESImage : Image
     val openGLESImageProperties: OpenGLESImageProperties = OpenGLESImageProperties()
 public constructor        (image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory)                        
 
-                            : super(image.getName(), PostLoadImageProcessor.NULL_POST_LOAD_IMAGE_PROCESSOR)
-
-        Updates for KMP build        
-        {
+                            : super(image.getName(), PostLoadImageProcessor.NULL_POST_LOAD_IMAGE_PROCESSOR){
     //var image = image
     //var bitmapFactory = bitmapFactory
     //var textureFactory = textureFactory
@@ -89,10 +86,7 @@ this.platformImage= OpenGLESPostLoadPlatformImage.getInstance()
 
 open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -103,10 +97,7 @@ open fun getHeight()
 
 open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -119,10 +110,7 @@ open fun getWidth()
             
 open fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gl = gl
 
 
@@ -133,10 +121,7 @@ var gl = gl
 
 open fun initTexture(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var gl = gl
 
     
@@ -182,10 +167,7 @@ gl.glTexParameterf(GL10.GL_TEXTURE_2D, GL10.GL_TEXTURE_WRAP_T, GL10.GL_CLAMP_TO_
 
 open fun drawRegion(gl: GL10, viewHeight: Int, x_src: Float, y_src: Float, width: Float, height: Float, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gl = gl
 var viewHeight = viewHeight
 var x_src = x_src
@@ -200,10 +182,7 @@ var z = z
 
 open fun draw(gl: GL10, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gl = gl
 var x = x
 var y = y
@@ -213,10 +192,7 @@ var z = z
 
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -226,10 +202,7 @@ open fun getType()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var graphicsStrings: GraphicsStrings = GraphicsStrings.getInstance()!!
 

@@ -54,10 +54,7 @@ open public class AllBinaryMediaManager
 
 open fun isMuted()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -68,20 +65,14 @@ open fun isMuted()
 
 open fun setMuted(aMuted: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var aMuted = aMuted
 }
 
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -94,10 +85,7 @@ open fun update()
             
 open fun init(soundsFactoryInterface: SoundsFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var soundsFactoryInterface = soundsFactoryInterface
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
@@ -116,10 +104,7 @@ Sounds(soundsFactoryInterface).
             
 open fun shutdown(soundsFactoryInterface: SoundsFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var soundsFactoryInterface = soundsFactoryInterface
 Sounds(soundsFactoryInterface).
                             stopAll()
@@ -135,10 +120,7 @@ System.gc()
             
 open fun createPlayer(resource: String)
         //nullable = true from not(false or (false and false)) = true
-: Player
-
-        Updates for KMP build        
-        {
+: Player{
     //var resource = resource
 
     
@@ -172,10 +154,7 @@ open fun createPlayer(resource: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return PCClipWavPlayer(bufferedInputStream)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -209,10 +188,7 @@ logUtil!!.put(commonString!!.EXCEPTION, THIS, CREATE_PLAYER, e)
             
 open fun createPlayer(stream: InputStream, type: String)
         //nullable = true from not(false or (false and false)) = true
-: Player
-
-        Updates for KMP build        
-        {
+: Player{
     //var stream = stream
     //var type = type
 
@@ -227,10 +203,7 @@ open fun createPlayer(stream: InputStream, type: String)
 
 open fun playTone(frequency: Int, time: Int, volume: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var frequency = frequency
     //var time = time
     //var volume = volume
@@ -243,10 +216,7 @@ open fun playTone(frequency: Int, time: Int, volume: Int)
 
 open fun isInitialized()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -258,9 +228,6 @@ open fun isInitialized()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

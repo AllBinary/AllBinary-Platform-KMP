@@ -42,9 +42,6 @@ open public class MotionRectangles
     val MAX_PIXEL_DISTANCE_THRESHOLD: Int = 2
 public constructor        (name: String, imageComparisonResult: ImageComparisonResult)
             : super()
-        
-
-        Updates for KMP build        
         {
 var name = name
 var imageComparisonResult = imageComparisonResult
@@ -56,10 +53,7 @@ this.setVector(Vector())
 
 open fun getVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
 
 
@@ -70,10 +64,7 @@ open fun getVector()
 
 open fun setVector(rectangleVector: Vector)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var rectangleVector = rectangleVector
 this.rectangleVector= rectangleVector
 }
@@ -81,10 +72,7 @@ this.rectangleVector= rectangleVector
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -95,10 +83,7 @@ open fun getName()
 
 open fun getImageComparisonResult()
         //nullable = true from not(false or (false and true)) = true
-: ImageComparisonResult
-
-        Updates for KMP build        
-        {
+: ImageComparisonResult{
 
 
 
@@ -109,10 +94,7 @@ open fun getImageComparisonResult()
 
 open fun setImageComparisonResult(imageComparisonResult: ImageComparisonResult)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var imageComparisonResult = imageComparisonResult
 this.imageComparisonResult= imageComparisonResult
 }

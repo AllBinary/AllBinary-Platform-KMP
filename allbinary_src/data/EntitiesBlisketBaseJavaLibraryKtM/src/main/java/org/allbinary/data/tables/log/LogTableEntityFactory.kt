@@ -39,10 +39,7 @@ open public class LogTableEntityFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LogTableEntityFactory
-
-        Updates for KMP build        
-        {
+: LogTableEntityFactory{
 
 
 
@@ -56,19 +53,13 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getLogTableEntityInstance()
         //nullable = true from not(false or (false and true)) = true
-: LogTableEntity
-
-        Updates for KMP build        
-        {
+: LogTableEntity{
 
         try {
             
@@ -77,10 +68,7 @@ open fun getLogTableEntityInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return org.allbinary.data.tables.log.LogTableEntity()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))

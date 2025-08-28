@@ -56,20 +56,14 @@ open public class BaseChangedGameFeatureListener
     private var changed: Boolean = true
 override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventObject = eventObject
 ForcedLogUtil.log(CommonStrings.getInstance()!!.NOT_IMPLEMENTED, this)
 }
 
 override fun onGameFeatureChange(gameFeatureEvent: GameFeatureEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gameFeatureEvent = gameFeatureEvent
 logUtil!!.put(StringMaker().
                             append(gameFeatureUtil!!.GAME_FEATURE_CHANGED)!!.append(gameFeatureEvent!!.getWhatChanged())!!.toString(), this, gameFeatureUtil!!.ON_GAME_FEATURE_CHANGE)
@@ -80,10 +74,7 @@ setChanged(true)
 
 open fun add(gameFeature: Feature)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gameFeature = gameFeature
 list.add(gameFeature)
 }
@@ -91,10 +82,7 @@ list.add(gameFeature)
 
 open fun remove(gameFeature: Feature)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gameFeature = gameFeature
 list.remove(gameFeature)
 }
@@ -102,10 +90,7 @@ list.remove(gameFeature)
 
 open fun setChanged(initialized: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var initialized = initialized
 this.changed= initialized
 
@@ -122,10 +107,7 @@ this.changed= initialized
 
 open fun isChanged(gameFeature: Feature)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var gameFeature = gameFeature
 
     var isChanged: Boolean = list.contains(gameFeature)!!
@@ -150,10 +132,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "isChanged")
 
 open fun isChanged()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 

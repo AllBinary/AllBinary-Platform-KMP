@@ -37,10 +37,7 @@ open public class GDLazyResources
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GDLazyResources
-
-        Updates for KMP build        
-        {
+: GDLazyResources{
 
 
 

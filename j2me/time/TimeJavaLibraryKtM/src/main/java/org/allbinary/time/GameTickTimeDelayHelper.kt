@@ -40,9 +40,6 @@ open public class GameTickTimeDelayHelper
     var lastStartTime: Long
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 this.startTime= System.currentTimeMillis()
 this.lastStartTime= startTime
@@ -50,9 +47,6 @@ this.lastStartTime= startTime
 
 public constructor        (startTime: Long)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var startTime = startTime
 this.startTime= startTime
@@ -62,10 +56,7 @@ this.lastStartTime= 0
 
 open fun setStartTime()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 this.startTime= System.currentTimeMillis()
 
 
@@ -77,10 +68,7 @@ this.startTime= System.currentTimeMillis()
 
 open fun loop()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(this.lastStartTime == Long.MIN_VALUE)
@@ -100,10 +88,7 @@ open fun loop()
 
 open fun getTimeFromStart()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 

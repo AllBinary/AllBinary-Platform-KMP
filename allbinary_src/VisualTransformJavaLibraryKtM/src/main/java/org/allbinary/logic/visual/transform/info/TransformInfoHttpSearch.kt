@@ -37,10 +37,7 @@ open public class TransformInfoHttpSearch : TransformInfoHttp {
         
 public constructor        (searchRequest: SearchRequest)                        
 
-                            : super(searchRequest!!.getPropertiesHashMap(), searchRequest!!.getPageContext())
-
-        Updates for KMP build        
-        {
+                            : super(searchRequest!!.getPropertiesHashMap(), searchRequest!!.getPageContext()){
 var searchRequest = searchRequest
 
 
@@ -73,10 +70,7 @@ this.setTemplateFile(dataFileName)
             
 open fun getPath()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -96,10 +90,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
             
 open fun getTemplateFilePath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath
-
-        Updates for KMP build        
-        {
+: AbPath{
 
 
 
@@ -112,10 +103,7 @@ open fun getTemplateFilePath()
             
 open fun getObjectConfigFilePath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath
-
-        Updates for KMP build        
-        {
+: AbPath{
 
 
 
@@ -128,10 +116,7 @@ open fun getObjectConfigFilePath()
             
 open fun getDataFilePath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath
-
-        Updates for KMP build        
-        {
+: AbPath{
 
 
 

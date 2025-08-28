@@ -25,10 +25,7 @@ open public class ContextConfigurationPathUtil
             
 open fun getAbFile(contextName: String)
         //nullable = true from not(false or (false and false)) = true
-: AbFile
-
-        Updates for KMP build        
-        {
+: AbFile{
 var contextName = contextName
 
 
@@ -42,10 +39,7 @@ var contextName = contextName
             
 open fun getAbPath(contextName: String)
         //nullable = true from not(false or (false and false)) = true
-: AbPath
-
-        Updates for KMP build        
-        {
+: AbPath{
 var contextName = contextName
 
 
@@ -59,10 +53,7 @@ var contextName = contextName
             
 open fun getPath()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -73,10 +64,7 @@ open fun getPath()
 
 open fun getFileName(contextName: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var contextName = contextName
 
 

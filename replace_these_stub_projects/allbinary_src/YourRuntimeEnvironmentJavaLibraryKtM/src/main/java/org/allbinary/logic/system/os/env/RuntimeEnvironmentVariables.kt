@@ -34,19 +34,13 @@ open public class RuntimeEnvironmentVariables
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getTest1()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -57,10 +51,7 @@ open fun getTest1()
 
 open fun getVariable(var: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var var = var
 
     var environmentVariables: Properties = this.get()!!
@@ -75,10 +66,7 @@ var var = var
 
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: Properties
-
-        Updates for KMP build        
-        {
+: Properties{
 
         try {
             
@@ -153,9 +141,6 @@ open fun get()
         while((keyValuePair= bufferedReader!!.readLine()) != 
                                     null
                                 )
-        
-
-        Updates for KMP build        
         {
 
     var index: Int = keyValuePair!!.indexOf('=')!!
@@ -175,10 +160,7 @@ environmentVariables!!.put(key, value)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return environmentVariables
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.OSERROR))
@@ -200,10 +182,7 @@ environmentVariables!!.put(key, value)
 
 open fun getTempDir()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -212,10 +191,7 @@ open fun getTempDir()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return System.getProperty("java.io.tmpdir")
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.OSERROR))
@@ -237,10 +213,7 @@ open fun getTempDir()
 
 open fun getLibraryPath()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -249,10 +222,7 @@ open fun getLibraryPath()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return System.getProperty("java.library.path")
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.OSERROR))
@@ -274,10 +244,7 @@ open fun getLibraryPath()
 
 open fun getClassPath()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -286,10 +253,7 @@ open fun getClassPath()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return System.getProperty("java.class.path")
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.OSERROR))
@@ -311,10 +275,7 @@ open fun getClassPath()
 
 open fun updateLibraryPath(libPath: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var libPath = libPath
 
         try {
@@ -323,10 +284,7 @@ var libPath = libPath
 
 System.setProperty("java.library.path", libPath +":" +existingPath)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.OSERROR))
@@ -343,10 +301,7 @@ System.setProperty("java.library.path", libPath +":" +existingPath)
 
 open fun getUserHome()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -355,10 +310,7 @@ open fun getUserHome()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return System.getProperty("user.home")
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.OSERROR))
@@ -380,10 +332,7 @@ open fun getUserHome()
 
 open fun getUserDir()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -392,10 +341,7 @@ open fun getUserDir()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return System.getProperty("user.dir")
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.OSERROR))
@@ -417,17 +363,11 @@ open fun getUserDir()
 
 open fun set()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.OSERROR))
@@ -444,10 +384,7 @@ open fun set()
 
 open fun setVariable(var: String, val: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var var = var
 var val = val
 
@@ -509,10 +446,7 @@ var val = val
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.OSERROR))

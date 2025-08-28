@@ -45,10 +45,7 @@ open public class CustomItemsEntity : AbSqlBean
     val tableName: String = "customitems"
 public constructor        ()                        
 
-                            : super(InventoryDbInitInfo())
-
-        Updates for KMP build        
-        {
+                            : super(InventoryDbInitInfo()){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -59,10 +56,7 @@ this.setTableName(tableName)
 
 open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var values = values
 
         try {
@@ -77,10 +71,7 @@ var values = values
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -97,10 +88,7 @@ var values = values
 
 open fun delete(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 
         try {
@@ -115,10 +103,7 @@ var value = value
                                     }
                                 
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -135,10 +120,7 @@ var value = value
 
 open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -153,10 +135,7 @@ stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.appe
 
 open fun createTable()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -167,10 +146,7 @@ open fun createTable()
 
 open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var updatedValues = updatedValues
 super.updateWhere(BasicItemData.ID, updatedValues!!.get(BasicItemData.ID) as String, updatedValues)
 }
@@ -178,10 +154,7 @@ super.updateWhere(BasicItemData.ID, updatedValues!!.get(BasicItemData.ID) as Str
 
 open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

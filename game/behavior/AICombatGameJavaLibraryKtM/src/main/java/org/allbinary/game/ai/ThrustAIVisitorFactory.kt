@@ -37,10 +37,7 @@ open public class ThrustAIVisitorFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ThrustAIVisitor
-
-        Updates for KMP build        
-        {
+: ThrustAIVisitor{
 
 
 

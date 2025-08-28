@@ -38,9 +38,6 @@ open public class CustomizerTransformInfoData
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

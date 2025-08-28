@@ -76,10 +76,7 @@ open public class OrderHistory : Order
     private var total: Money
 public constructor        (basketInterface: BasketInterface)                        
 
-                            : super(basketInterface)
-
-        Updates for KMP build        
-        {
+                            : super(basketInterface){
 var basketInterface = basketInterface
 
 
@@ -89,10 +86,7 @@ var basketInterface = basketInterface
 
 public constructor        (basketInterface: BasketInterface, orderHistory: OrderHistory)                        
 
-                            : super(orderHistory!!.getStoreName(), basketInterface, orderHistory!!.getId(), orderHistory!!.getShippingMethod(), orderHistory!!.getSpecial(), orderHistory!!.getPaymentMethod())
-
-        Updates for KMP build        
-        {
+                            : super(orderHistory!!.getStoreName(), basketInterface, orderHistory!!.getId(), orderHistory!!.getShippingMethod(), orderHistory!!.getSpecial(), orderHistory!!.getPaymentMethod()){
 var basketInterface = basketInterface
 var orderHistory = orderHistory
 
@@ -120,10 +114,7 @@ super.setStoreCancelComments(orderHistory!!.getStoreCancelComments() as String)
 
 public constructor        (basketInterface: BasketInterface, orderHistoryHashMap: HashMap<Any, Any>)                        
 
-                            : super(orderHistoryHashMap!!.get(StoreFrontData.getInstance()!!.NAME) as String, basketInterface, orderHistoryHashMap!!.get(OrderData.ID) as String, orderHistoryHashMap!!.get(ShippingMethodData.NAME) as String, orderHistoryHashMap!!.get(EntryData.getInstance()!!.SPECIAL) as String, orderHistoryHashMap!!.get(PaymentData.METHOD) as String)
-
-        Updates for KMP build        
-        {
+                            : super(orderHistoryHashMap!!.get(StoreFrontData.getInstance()!!.NAME) as String, basketInterface, orderHistoryHashMap!!.get(OrderData.ID) as String, orderHistoryHashMap!!.get(ShippingMethodData.NAME) as String, orderHistoryHashMap!!.get(EntryData.getInstance()!!.SPECIAL) as String, orderHistoryHashMap!!.get(PaymentData.METHOD) as String){
 var basketInterface = basketInterface
 var orderHistoryHashMap = orderHistoryHashMap
 
@@ -152,10 +143,7 @@ super.setStoreCancelComments(orderHistoryHashMap!!.get(OrderData.STORECANCELCOMM
 
 open fun setUserName(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.userName= value
 }
@@ -163,10 +151,7 @@ this.userName= value
 
 open fun setDefaultShippingAddress(shippingAddress: StreetAddress)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var shippingAddress = shippingAddress
 this.shippingAddress= shippingAddress
 }
@@ -174,10 +159,7 @@ this.shippingAddress= shippingAddress
 
 open fun setBillingAddress(billingAddress: StreetAddress)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var billingAddress = billingAddress
 this.billingAddress= billingAddress
 }
@@ -185,10 +167,7 @@ this.billingAddress= billingAddress
 
 open fun setPaymentInfo(payment: Payment)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var payment = payment
 this.payment= payment
 }
@@ -196,10 +175,7 @@ this.payment= payment
 
 open fun setShipDate(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.shipDate= value
 }
@@ -207,10 +183,7 @@ this.shipDate= value
 
 open fun setOrderDate(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.orderDate= value
 }
@@ -218,10 +191,7 @@ this.orderDate= value
 
 open fun setTransDate(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.transDate= value
 }
@@ -229,10 +199,7 @@ this.transDate= value
 
 open fun setCancelDate(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.cancelDate= value
 }
@@ -240,10 +207,7 @@ this.cancelDate= value
 
 open fun setStatus(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.status= value
 }
@@ -251,10 +215,7 @@ this.status= value
 
 open fun setSubTotal(value: Money)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.subTotal= value
 }
@@ -262,10 +223,7 @@ this.subTotal= value
 
 open fun setShippingCost(value: Money)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.shippingCost= value
 }
@@ -273,10 +231,7 @@ this.shippingCost= value
 
 open fun setTaxes(value: Money)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.taxes= value
 }
@@ -284,10 +239,7 @@ this.taxes= value
 
 open fun setTotal(value: Money)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.total= value
 }
@@ -295,10 +247,7 @@ this.total= value
 
 open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -309,10 +258,7 @@ open fun getUserName()
 
 open fun getShippingAddress()
         //nullable = true from not(false or (false and true)) = true
-: StreetAddress
-
-        Updates for KMP build        
-        {
+: StreetAddress{
 
 
 
@@ -323,10 +269,7 @@ open fun getShippingAddress()
 
 open fun getBillingAddress()
         //nullable = true from not(false or (false and true)) = true
-: StreetAddress
-
-        Updates for KMP build        
-        {
+: StreetAddress{
 
 
 
@@ -337,10 +280,7 @@ open fun getBillingAddress()
 
 open fun getPaymentInfo()
         //nullable = true from not(false or (false and true)) = true
-: Payment
-
-        Updates for KMP build        
-        {
+: Payment{
 
 
 
@@ -351,10 +291,7 @@ open fun getPaymentInfo()
 
 open fun getShipDate()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -365,10 +302,7 @@ open fun getShipDate()
 
 open fun getOrderDate()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -379,10 +313,7 @@ open fun getOrderDate()
 
 open fun getTransDate()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -393,10 +324,7 @@ open fun getTransDate()
 
 open fun getCancelDate()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -407,10 +335,7 @@ open fun getCancelDate()
 
 open fun getStatus()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -421,10 +346,7 @@ open fun getStatus()
 
 open fun getSubTotal()
         //nullable = true from not(false or (false and true)) = true
-: Money
-
-        Updates for KMP build        
-        {
+: Money{
 
 
 
@@ -435,10 +357,7 @@ open fun getSubTotal()
 
 open fun getShippingCost()
         //nullable = true from not(false or (false and true)) = true
-: Money
-
-        Updates for KMP build        
-        {
+: Money{
 
 
 
@@ -449,10 +368,7 @@ open fun getShippingCost()
 
 open fun getTaxes()
         //nullable = true from not(false or (false and true)) = true
-: Money
-
-        Updates for KMP build        
-        {
+: Money{
 
 
 
@@ -463,10 +379,7 @@ open fun getTaxes()
 
 open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
-: Money
-
-        Updates for KMP build        
-        {
+: Money{
 
 
 
@@ -477,10 +390,7 @@ open fun getTotal()
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -518,10 +428,7 @@ hashMap!!.put(OrderHistoryData.TAX, this.taxes.toString())
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var hashMap: HashMap<Any, Any> = this.toHashMap()!!
@@ -557,9 +464,6 @@ node.appendChild(this.payment.toXmlNode(document))
 
                         for (i in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var name: String = keyArray[i]!! as String

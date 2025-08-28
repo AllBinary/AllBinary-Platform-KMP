@@ -71,10 +71,7 @@ open public class FileLog
 
 open fun createLogFile()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             logFile= File(logPath, fileName)
@@ -106,10 +103,7 @@ fileOut= BufferedWriter(FileWriter(raFile!!.getFD()))
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return canWrite
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 System.out.println("Error Creating Log: " +e)
 
 
@@ -124,19 +118,13 @@ System.out.println("Error Creating Log: " +e)
 
 open fun createLogFileBackup()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
         try {
             logFileBak= File(logPath, StringBuilder().
                             append(backupFileName)!!.append(CommonSeps.getInstance()!!.PERIOD)!!.append(backupIndex)!!.toString())
 
         while(logFileBak!!.isFile())
-        
-
-        Updates for KMP build        
         {
 backupIndex++
 logFileBak= File(logPath, StringBuilder().
@@ -156,9 +144,6 @@ logFileBak= File(logPath, StringBuilder().
         while((line= tmpIn!!.readLine()) != 
                                     null
                                 )
-        
-
-        Updates for KMP build        
         {
 tmpOut!!.write(line, 0, line.length)
 tmpOut!!.newLine()
@@ -174,10 +159,7 @@ logFile!!.delete()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 System.out.println("Error Creating Backup: " +e)
 
 
@@ -192,10 +174,7 @@ System.out.println("Error Creating Backup: " +e)
 
 open fun put(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var specialMessage = specialMessage
 var anyType = anyType
 var functionName = functionName
@@ -211,10 +190,7 @@ var functionName = functionName
 
 open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Throwable)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var specialMessage = specialMessage
 var anyType = anyType
 var functionName = functionName
@@ -301,10 +277,7 @@ fileOut!!.flush()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return .toCharArray()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
@@ -318,10 +291,7 @@ fileOut!!.flush()
 
 open fun put(specialMessage: String, className: String, functionName: String)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
     //var specialMessage = specialMessage
     //var className = className
     //var functionName = functionName
@@ -337,10 +307,7 @@ open fun put(specialMessage: String, className: String, functionName: String)
 
 open fun put(specialMessage: String, className: String, functionName: String, exception: Exception)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var specialMessage = specialMessage
     //var className = className
 var functionName = functionName
@@ -417,10 +384,7 @@ fileOut!!.flush()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return .toCharArray()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
 
 
@@ -433,10 +397,7 @@ fileOut!!.flush()
 
 open fun getFilePath()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -448,9 +409,6 @@ open fun getFilePath()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

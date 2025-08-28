@@ -49,9 +49,6 @@ open public class ExitRunnable
     private val isProgress: Boolean
 public constructor        (midlet: AllBinaryMidlet, processor: Processor, isProgress: Boolean)
             : super()
-        
-
-        Updates for KMP build        
         {
 var midlet = midlet
 var processor = processor
@@ -63,10 +60,7 @@ this.processor= processor
 
 override fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             logUtil!!.put(commonStrings!!.START_RUNNABLE, this, commonStrings!!.RUN)
@@ -76,19 +70,13 @@ this.midlet.notifyDestroyed()
 logUtil!!.put(commonStrings!!.END_RUNNABLE, this, commonStrings!!.RUN)
 processor.process()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 
         try {
             processor.process()
 } catch(e2: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
 

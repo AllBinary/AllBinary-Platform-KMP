@@ -61,9 +61,6 @@ open public class AbstractInputAutomationWorker
     private var captureThread: Thread
 public constructor        (inputAutomationActionInterface: InputAutomationActionInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var inputAutomationActionInterface = inputAutomationActionInterface
 }
@@ -73,10 +70,7 @@ var inputAutomationActionInterface = inputAutomationActionInterface
             
 open fun setThread(thread: Thread)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var thread = thread
 }
 
@@ -84,10 +78,7 @@ var thread = thread
 
 open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -99,10 +90,7 @@ open fun isRunning()
 
 open fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var running = running
 this.running= running
 }
@@ -111,10 +99,7 @@ this.running= running
 
 open fun isAnyDataWorkerRunning()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(captureThread != 
@@ -143,10 +128,7 @@ open fun isAnyDataWorkerRunning()
 
 open fun startDataWorkers()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(!isAnyDataWorkerRunning())
@@ -166,15 +148,9 @@ captureThread!!.start()
 
 open fun waitForDataWorkers()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         while(isAnyDataWorkerRunning())
-        
-
-        Updates for KMP build        
         {
 logUtil!!.put("Waiting", this, this.commonStrings!!.RUN)
 Thread.sleep(250)
@@ -187,10 +163,7 @@ Thread.sleep(250)
             
 open fun stopDataWorkers()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.getCaptureWorker()!!.setRunning(false)
 }
 
@@ -199,10 +172,7 @@ this.getCaptureWorker()!!.setRunning(false)
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
 
 
@@ -212,10 +182,7 @@ open fun process()
 
 open fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.RUN)
@@ -225,9 +192,6 @@ this.setRunning(true)
 
 
         while(this.isRunning())
-        
-
-        Updates for KMP build        
         {
 timeHelper!!.setStartTime()
 this.process()
@@ -239,10 +203,7 @@ this.stopDataWorkers()
 this.waitForDataWorkers()
 logUtil!!.put(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
 }
 
@@ -251,10 +212,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
 
 open fun getInputAutomationActionInterface()
         //nullable = true from not(false or (false and true)) = true
-: InputAutomationActionInterface
-
-        Updates for KMP build        
-        {
+: InputAutomationActionInterface{
 
 
 
@@ -265,10 +223,7 @@ open fun getInputAutomationActionInterface()
 
 open fun setInputAutomationActionInterface(inputAutomationActionInterface: InputAutomationActionInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var inputAutomationActionInterface = inputAutomationActionInterface
 this.inputAutomationActionInterface= inputAutomationActionInterface
 }
@@ -276,10 +231,7 @@ this.inputAutomationActionInterface= inputAutomationActionInterface
 
 open fun getCaptureWorker()
         //nullable = true from not(false or (false and true)) = true
-: CaptureWorkerInterface
-
-        Updates for KMP build        
-        {
+: CaptureWorkerInterface{
 
 
 
@@ -290,10 +242,7 @@ open fun getCaptureWorker()
 
 open fun setCaptureWorker(captureWorkerInterface: CaptureWorkerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var captureWorkerInterface = captureWorkerInterface
 this.captureWorkerInterface= captureWorkerInterface
 }
@@ -301,10 +250,7 @@ this.captureWorkerInterface= captureWorkerInterface
 
 open fun getImageComparisonWorker()
         //nullable = true from not(false or (false and true)) = true
-: ImageComparisonWorker
-
-        Updates for KMP build        
-        {
+: ImageComparisonWorker{
 
 
 
@@ -315,10 +261,7 @@ open fun getImageComparisonWorker()
 
 open fun setImageComparisonWorker(imageComparisonWorker: ImageComparisonWorker)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var imageComparisonWorker = imageComparisonWorker
 this.imageComparisonWorker= imageComparisonWorker
 }
@@ -326,10 +269,7 @@ this.imageComparisonWorker= imageComparisonWorker
 
 open fun getMotionRectanglesWorker()
         //nullable = true from not(false or (false and true)) = true
-: MotionRectanglesWorker
-
-        Updates for KMP build        
-        {
+: MotionRectanglesWorker{
 
 
 
@@ -340,10 +280,7 @@ open fun getMotionRectanglesWorker()
 
 open fun setMotionRectanglesWorker(motionRectanglesWorker: MotionRectanglesWorker)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var motionRectanglesWorker = motionRectanglesWorker
 this.motionRectanglesWorker= motionRectanglesWorker
 }

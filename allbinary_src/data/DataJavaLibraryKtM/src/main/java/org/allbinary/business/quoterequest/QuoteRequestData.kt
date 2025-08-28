@@ -37,10 +37,7 @@ open public class QuoteRequestData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: QuoteRequestData
-
-        Updates for KMP build        
-        {
+: QuoteRequestData{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

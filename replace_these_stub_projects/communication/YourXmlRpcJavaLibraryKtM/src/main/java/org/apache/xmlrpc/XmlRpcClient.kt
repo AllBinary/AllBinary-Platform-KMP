@@ -27,9 +27,6 @@ open public class XmlRpcClient
     private val url: URL
 public constructor        (url: URL)
             : super()
-        
-
-        Updates for KMP build        
         {
 var url = url
 this.url= url
@@ -37,10 +34,7 @@ this.url= url
 
 public constructor        (url: String)                        
 
-                            : this(URL(url))
-
-        Updates for KMP build        
-        {
+                            : this(URL(url)){
 var url = url
 
 
@@ -50,10 +44,7 @@ var url = url
 
 public constructor        (hostname: String, port: Int)                        
 
-                            : this(URL("http://" +hostname +':' +port +"/RPC2"))
-
-        Updates for KMP build        
-        {
+                            : this(URL("http://" +hostname +':' +port +"/RPC2")){
 var hostname = hostname
 var port = port
 
@@ -65,10 +56,7 @@ var port = port
 
 open fun getURL()
         //nullable = true from not(false or (false and true)) = true
-: URL
-
-        Updates for KMP build        
-        {
+: URL{
 
 
 
@@ -79,10 +67,7 @@ open fun getURL()
 
 open fun setBasicAuthentication(user: String, password: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var user = user
 var password = password
 }
@@ -91,10 +76,7 @@ var password = password
                 @Throws(XmlRpcException::class, IOException::class)
             override fun execute(method: String, params: Vector<Any>)
         //nullable = true from not(false or (false and false)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 var method = method
 var params = params
 
@@ -109,10 +91,7 @@ var params = params
             
 open fun execute(method: String, params: Vector<Any>, cryptInterface: CryptInterface)
         //nullable = true from not(false or (false and false)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 var method = method
 var params = params
 var cryptInterface = cryptInterface

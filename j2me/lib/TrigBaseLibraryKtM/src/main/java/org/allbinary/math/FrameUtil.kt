@@ -37,10 +37,7 @@ open public class FrameUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FrameUtil
-
-        Updates for KMP build        
-        {
+: FrameUtil{
 
 
 
@@ -52,19 +49,13 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getFrameForAngle(angle: Short, angleIncrement: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var angle = angle
     //var angleIncrement = angleIncrement
 
@@ -77,10 +68,7 @@ open fun getFrameForAngle(angle: Short, angleIncrement: Int)
 
 open fun getFrameAngle(frame: Int, angleIncrement: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var frame = frame
     //var angleIncrement = angleIncrement
 
@@ -96,10 +84,7 @@ open fun getFrameAngle(frame: Int, angleIncrement: Int)
 
 open fun adjustAngleToFrameAngle(currentAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var currentAngle = currentAngle
 
     var angleFactory: AngleFactory = AngleFactory.getInstance()!!
@@ -112,9 +97,6 @@ var currentAngle = currentAngle
                                     currentAngle= (currentAngle -angleFactory!!.TOTAL_ANGLE)
 
         while(currentAngle > 359)
-        
-
-        Updates for KMP build        
         {
 currentAngle= (currentAngle -angleFactory!!.TOTAL_ANGLE)
 }
@@ -130,9 +112,6 @@ currentAngle= (currentAngle -angleFactory!!.TOTAL_ANGLE)
                                     currentAngle= (currentAngle +angleFactory!!.TOTAL_ANGLE)
 
         while(currentAngle < 0)
-        
-
-        Updates for KMP build        
         {
 currentAngle= (currentAngle +angleFactory!!.TOTAL_ANGLE)
 }

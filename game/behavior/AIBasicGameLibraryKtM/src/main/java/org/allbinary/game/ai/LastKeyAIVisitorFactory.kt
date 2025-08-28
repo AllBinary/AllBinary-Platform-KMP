@@ -37,10 +37,7 @@ open public class LastKeyAIVisitorFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LastKeyAIVisitor
-
-        Updates for KMP build        
-        {
+: LastKeyAIVisitor{
 
 
 

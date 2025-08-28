@@ -39,10 +39,7 @@ open public class PlatformImage
         
 open fun getImage(graphicsSurface2: Any)
         //nullable = true from not(false or (false and false)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
     //var graphicsSurface2 = graphicsSurface2
 
 
@@ -54,10 +51,7 @@ open fun getImage(graphicsSurface2: Any)
 
 open fun getWidth(graphicsSurface2: Any, width: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var graphicsSurface2 = graphicsSurface2
     //var width = width
 
@@ -70,10 +64,7 @@ open fun getWidth(graphicsSurface2: Any, width: Int)
 
 open fun getHeight(graphicsSurface2: Any, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var graphicsSurface2 = graphicsSurface2
     //var height = height
 
@@ -86,10 +77,7 @@ open fun getHeight(graphicsSurface2: Any, height: Int)
 
 open fun getWidth(image: Image, width: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var image = image
     //var width = width
 
@@ -102,10 +90,7 @@ open fun getWidth(image: Image, width: Int)
 
 open fun getHeight(image: Image, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var image = image
     //var height = height
 
@@ -118,10 +103,7 @@ open fun getHeight(image: Image, height: Int)
 
 open fun getGraphics(graphicsSurface: Any, width: Int, height: Int, image: Image)
         //nullable = true from not(false or (false and false)) = true
-: javax.microedition.lcdui.Graphics
-
-        Updates for KMP build        
-        {
+: javax.microedition.lcdui.Graphics{
     //var graphicsSurface = graphicsSurface
     //var width = width
     //var height = height
@@ -135,10 +117,7 @@ open fun getGraphics(graphicsSurface: Any, width: Int, height: Int, image: Image
 
 open fun drawImage(image: Image, x: Int, y: Int, anchor: Int, g2: javax.microedition.lcdui.Graphics, g: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var image = image
     //var x = x
     //var y = y
@@ -150,10 +129,7 @@ var anchor = anchor
 
 open fun drawRegion(image: Image, x_src: Int, y_src: Int, width: Int, height: Int, transform: Int, x_dst: Int, y_dst: Int, anchor: Int, g: javax.microedition.lcdui.Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var image = image
     //var x_src = x_src
     //var y_src = y_src
@@ -169,10 +145,7 @@ open fun drawRegion(image: Image, x_src: Int, y_src: Int, width: Int, height: In
 
 open fun getRGB(argb: IntArray, offset: Int, scanlength: Int, x: Int, y: Int, width: Int, height: Int, image: Image)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var argb = argb
     //var offset = offset
     //var scanlength = scanlength
@@ -186,10 +159,7 @@ open fun getRGB(argb: IntArray, offset: Int, scanlength: Int, x: Int, y: Int, wi
 
 open fun setRGB(argb: IntArray, offset: Int, scanlength: Int, x: Int, y: Int, width: Int, height: Int, image: Image)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var argb = argb
     //var offset = offset
     //var scanlength = scanlength
@@ -203,10 +173,7 @@ open fun setRGB(argb: IntArray, offset: Int, scanlength: Int, x: Int, y: Int, wi
 
 open fun getData(image: Image)
         //nullable = true from not(false or (false and false)) = true
-: IntArray
-
-        Updates for KMP build        
-        {
+: IntArray{
     //var image = image
 
 

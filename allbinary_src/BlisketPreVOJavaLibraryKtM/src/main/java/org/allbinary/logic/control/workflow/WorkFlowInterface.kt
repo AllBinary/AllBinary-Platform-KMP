@@ -36,17 +36,11 @@ open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
 : Integer
-
-        Updates for KMP build        
-        
 
 }
                 

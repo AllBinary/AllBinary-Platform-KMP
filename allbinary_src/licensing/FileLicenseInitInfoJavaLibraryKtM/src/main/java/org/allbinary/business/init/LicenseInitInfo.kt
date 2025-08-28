@@ -40,19 +40,13 @@ open public class LicenseInitInfo
     private var serverVector: BasicArrayList = BasicArrayList()
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getLicenseId()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -63,10 +57,7 @@ open fun getLicenseId()
 
 open fun getServer(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 var index = index
 
 
@@ -78,10 +69,7 @@ var index = index
 
 open fun getNumberOfServers()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -92,10 +80,7 @@ open fun getNumberOfServers()
 
 open fun setLicenseId(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.id= value
 }
@@ -103,20 +88,14 @@ this.id= value
 
 open fun clearServers()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.serverVector= BasicArrayList()
 }
 
 
 open fun setServer(value: String, index: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 var index = index
 this.serverVector!!.add(index, value)
@@ -125,10 +104,7 @@ this.serverVector!!.add(index, value)
 
 open fun addServer(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.serverVector!!.add(value)
 }
@@ -136,10 +112,7 @@ this.serverVector!!.add(value)
 
 open fun getServerList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 
@@ -150,10 +123,7 @@ open fun getServerList()
 
 open fun setServerList(servers: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var servers = servers
 
     

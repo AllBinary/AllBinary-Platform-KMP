@@ -45,9 +45,6 @@ open public class EmailServerConfiguration
     private var smtpServer: String
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     
@@ -66,9 +63,6 @@ this.setSmtpServer(StringUtil.getInstance()!!.EMPTY_STRING)
 
 public constructor        (hashMap: HashMap<Any, Any>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var hashMap = hashMap
 
@@ -91,9 +85,6 @@ this.log()
 
 public constructor        (account: String, password: String, server: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var account = account
 var password = password
@@ -119,10 +110,7 @@ this.log()
 
 open fun setSmtpServer(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.smtpServer= value
 }
@@ -130,10 +118,7 @@ this.smtpServer= value
 
 open fun getSmtpServer()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -144,10 +129,7 @@ open fun getSmtpServer()
 
 open fun getAccountName()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -158,10 +140,7 @@ open fun getAccountName()
 
 open fun setAccountName(accountName: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var accountName = accountName
 this.accountName= accountName
 }
@@ -169,10 +148,7 @@ this.accountName= accountName
 
 open fun getPassword()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -183,10 +159,7 @@ open fun getPassword()
 
 open fun setPassword(password: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var password = password
 this.password= password
 }
@@ -194,10 +167,7 @@ this.password= password
 
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
@@ -211,10 +181,7 @@ open fun log()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

@@ -37,10 +37,7 @@ open public class GameInfoData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameInfoData
-
-        Updates for KMP build        
-        {
+: GameInfoData{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

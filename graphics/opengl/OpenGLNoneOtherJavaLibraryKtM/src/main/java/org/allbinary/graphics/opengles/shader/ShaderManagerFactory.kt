@@ -37,10 +37,7 @@ open public class ShaderManagerFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ShaderManagerFactory
-
-        Updates for KMP build        
-        {
+: ShaderManagerFactory{
 
 
 
@@ -58,10 +55,7 @@ open fun getInstance()
         
 open fun create()
         //nullable = true from not(false or (false and true)) = true
-: ShaderManager
-
-        Updates for KMP build        
-        {
+: ShaderManager{
 
 
 

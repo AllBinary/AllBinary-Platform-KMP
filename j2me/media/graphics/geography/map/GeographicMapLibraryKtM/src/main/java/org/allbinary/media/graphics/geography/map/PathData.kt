@@ -37,10 +37,7 @@ open public class PathData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PathData
-
-        Updates for KMP build        
-        {
+: PathData{
 
 
 

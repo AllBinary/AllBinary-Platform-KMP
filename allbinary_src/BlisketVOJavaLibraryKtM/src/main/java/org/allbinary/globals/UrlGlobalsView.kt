@@ -38,9 +38,6 @@ open public class UrlGlobalsView
         
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -49,10 +46,7 @@ public constructor        ()
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()

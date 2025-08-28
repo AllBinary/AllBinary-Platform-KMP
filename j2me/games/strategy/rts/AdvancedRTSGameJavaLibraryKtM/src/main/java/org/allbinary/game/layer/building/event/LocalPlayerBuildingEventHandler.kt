@@ -38,10 +38,7 @@ open public class LocalPlayerBuildingEventHandler : BasicEventHandler {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LocalPlayerBuildingEventHandler
-
-        Updates for KMP build        
-        {
+: LocalPlayerBuildingEventHandler{
 
 
 
@@ -51,10 +48,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
-
-        Updates for KMP build        
-        {
+            private constructor        (){
 }
 
 
@@ -62,10 +56,7 @@ open fun getInstance()
             
 open fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventObject = eventObject
 var eventListenerInterface = eventListenerInterface
 eventListenerInterface = eventListenerInterfaceeventListenerInterface as BuildingEventListenerInterface

@@ -49,9 +49,6 @@ open public class DemoRunnable
     private val startDemoGameMidletEvent: DemoGameMidletEvent
 public constructor        (demoGameMidlet: DemoGameMidlet)
             : super()
-        
-
-        Updates for KMP build        
         {
 var demoGameMidlet = demoGameMidlet
 this.demoGameMidlet= demoGameMidlet
@@ -60,10 +57,7 @@ this.startDemoGameMidletEvent= DemoGameMidletEvent(this.demoGameMidlet, DemoGame
 
 override fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             logUtil!!.put(StringMaker().
@@ -76,10 +70,7 @@ this.demoGameMidlet!!.startGameCanvasRunnableInterface()
 this.demoGameMidlet!!.postDemoSetup()
 logUtil!!.put(commonStrings!!.END_RUNNABLE, this, commonStrings!!.RUN)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
 

@@ -35,10 +35,7 @@ open public class SimpleShaderInitializer : ShaderInitializer {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: SimpleShaderInitializer
-
-        Updates for KMP build        
-        {
+: SimpleShaderInitializer{
 
 
 

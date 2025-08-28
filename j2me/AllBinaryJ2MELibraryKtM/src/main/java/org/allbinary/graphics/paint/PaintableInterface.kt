@@ -33,15 +33,9 @@ open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

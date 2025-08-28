@@ -45,10 +45,7 @@ open public class LicenseClientAndServerTest
             
 open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var args = args
 
         try {
@@ -57,10 +54,7 @@ var args = args
 
 licensingTest!!.test()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -77,9 +71,6 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, "main()", "main()", e)
     private var vector: BasicArrayList = BasicArrayList()
 public constructor        (options: Array<String?>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var options = options
 LicenseInitInfoUtil.getInstance()!!.setFilePath(PrintLicenseInitInfo.PATH +PATH_GLOBALS.getInstance()!!.INIT_PATH)
@@ -89,9 +80,6 @@ LicenseInitInfoUtil.getInstance()!!.setFilePath(PrintLicenseInitInfo.PATH +PATH_
 
                         for (index in 1 until options.size)
 
-        
-
-        Updates for KMP build        
         {
 vector.add(options[index]!!)
 }
@@ -112,9 +100,6 @@ vector.add(options[index]!!)
 
 
         while(true)
-        
-
-        Updates for KMP build        
         {
 
     var line: String = lineNumberReader!!.readLine()!!
@@ -148,10 +133,7 @@ vector.add(options[index]!!)
 
 open fun test()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -181,9 +163,6 @@ open fun test()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 stringBuffer!!.append(TESTING)
 
@@ -222,10 +201,7 @@ stringBuffer!!.append(END)
 logUtil!!.put(RESULT +stringBuffer!!.toString(), this, "test")
 stringBuffer!!.delete(0, stringBuffer!!.length())
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 list.add(serverName)
 logUtil!!.put("Test Error: " +stringBuffer!!.toString(), this, "test", e)
 }
@@ -234,10 +210,7 @@ logUtil!!.put("Test Error: " +stringBuffer!!.toString(), this, "test", e)
 
 logUtil!!.put("Total Servers Failed: " +list.size() +" Failed Servers: " +list.toString(), this, "test")
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put("Test Error: " +stringBuffer!!.toString(), this, "test", e)
 }
 

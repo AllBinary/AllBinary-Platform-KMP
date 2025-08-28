@@ -45,9 +45,6 @@ open public class RootStoreCategoryPropertiesFactory
     private var categoryPropertiesInterface: CategoryPropertiesInterface
 public constructor        (transformInfoInterface: TransformInfoInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var transformInfoInterface = transformInfoInterface
 this.categoryPropertiesInterface= RootStoreCategoryProperties(transformInfoInterface) as CategoryPropertiesInterface
@@ -55,9 +52,6 @@ this.categoryPropertiesInterface= RootStoreCategoryProperties(transformInfoInter
 
 public constructor        (transformInfoInterface: TransformInfoInterface, abPath: AbPath)
             : super()
-        
-
-        Updates for KMP build        
         {
 var transformInfoInterface = transformInfoInterface
 var abPath = abPath
@@ -66,9 +60,6 @@ this.categoryPropertiesInterface= RootStoreCategoryProperties(transformInfoInter
 
 public constructor        (transformInfoInterface: TransformInfoInterface, node: Node)
             : super()
-        
-
-        Updates for KMP build        
         {
 var transformInfoInterface = transformInfoInterface
 var node = node
@@ -77,9 +68,6 @@ this.categoryPropertiesInterface= RootStoreCategoryProperties(transformInfoInter
 
 public constructor        (transformInfoInterface: TransformInfoInterface, categoryPropertiesHashMap: HashMap<Any, Any>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var transformInfoInterface = transformInfoInterface
 var categoryPropertiesHashMap = categoryPropertiesHashMap
@@ -89,10 +77,7 @@ this.categoryPropertiesInterface= RootStoreCategoryProperties(transformInfoInter
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CategoryPropertiesInterface
-
-        Updates for KMP build        
-        {
+: CategoryPropertiesInterface{
 
         try {
             
@@ -101,10 +86,7 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.categoryPropertiesInterface as CategoryPropertiesInterface
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

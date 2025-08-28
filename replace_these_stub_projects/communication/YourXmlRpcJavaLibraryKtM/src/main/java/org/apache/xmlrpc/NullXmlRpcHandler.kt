@@ -48,10 +48,7 @@ open public class NullXmlRpcHandler
                 @Throws(Exception::class)
             override fun execute(method: String, params: Vector<Any>)
         //nullable = true from not(false or (false and false)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 var method = method
 var params = params
 

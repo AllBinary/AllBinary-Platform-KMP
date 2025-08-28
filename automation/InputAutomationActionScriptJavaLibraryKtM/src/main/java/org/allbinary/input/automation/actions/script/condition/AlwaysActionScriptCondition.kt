@@ -51,10 +51,7 @@ open public class AlwaysActionScriptCondition : BasicProfileActionScriptConditio
     private var isOn: Boolean= false
 public constructor        (node: Node)                        
 
-                            : super(AlwaysActionScriptCondition.NAME, node)
-
-        Updates for KMP build        
-        {
+                            : super(AlwaysActionScriptCondition.NAME, node){
 var node = node
 
 
@@ -79,9 +76,6 @@ var node = node
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
-        
-
-        Updates for KMP build        
         {
 
     var childNode: Node = nodeList!!.item(index)!!
@@ -125,10 +119,7 @@ this.init()
 
 public constructor        ()                        
 
-                            : super(AlwaysActionScriptCondition.NAME)
-
-        Updates for KMP build        
-        {
+                            : super(AlwaysActionScriptCondition.NAME){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -139,20 +130,14 @@ this.init()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.alwaysActionScriptConditionJPanel= AlwaysActionScriptConditionJPanel(this)
 }
 
 
 open fun isIsOn()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -163,10 +148,7 @@ open fun isIsOn()
 
 open fun setIsOn(isOn: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var isOn = isOn
 this.isOn= isOn
 }
@@ -174,20 +156,14 @@ this.isOn= isOn
 
 open fun showDialog()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.alwaysActionScriptConditionJPanel!!.getAlwaysActionJDialog()!!.setVisible(true)
 }
 
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -205,10 +181,7 @@ logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var node: Node = super.toXmlNode(document)!!
@@ -226,10 +199,7 @@ node.appendChild(ModDomHelper.createNodeWithValueNodes(document, AlwaysActionScr
             
 open fun shouldProcess(frame: Long)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var frame = frame
 
     
@@ -254,10 +224,7 @@ var frame = frame
 
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 logUtil!!.put("Is On: " +this.isIsOn(), this, "log")
 }
 

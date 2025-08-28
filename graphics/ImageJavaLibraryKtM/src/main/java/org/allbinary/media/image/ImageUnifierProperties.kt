@@ -40,19 +40,13 @@ open public class ImageUnifierProperties
     private var imageUnifierCell: ImageUnifierCell
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -63,10 +57,7 @@ open fun getWidth()
 
 open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -77,10 +68,7 @@ open fun getHeight()
 
 open fun getRows()
         //nullable = true from not(false or (false and true)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 
 
 
@@ -91,10 +79,7 @@ open fun getRows()
 
 open fun setRows(rows: Integer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var rows = rows
 this.rows= rows
 }
@@ -102,10 +87,7 @@ this.rows= rows
 
 open fun getColumns()
         //nullable = true from not(false or (false and true)) = true
-: Integer
-
-        Updates for KMP build        
-        {
+: Integer{
 
 
 
@@ -116,10 +98,7 @@ open fun getColumns()
 
 open fun setColumns(columns: Integer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var columns = columns
 this.columns= columns
 }
@@ -127,10 +106,7 @@ this.columns= columns
 
 open fun getImageUnifierCell()
         //nullable = true from not(false or (false and true)) = true
-: ImageUnifierCell
-
-        Updates for KMP build        
-        {
+: ImageUnifierCell{
 
 
 
@@ -141,10 +117,7 @@ open fun getImageUnifierCell()
 
 open fun setImageUnifierCell(imageUnifierCell: ImageUnifierCell)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var imageUnifierCell = imageUnifierCell
 this.imageUnifierCell= imageUnifierCell
 }

@@ -35,22 +35,13 @@ open fun write()
         //nullable = true from not(false or (false and true)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun getContextConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
 : ContextConfigurationInterface
 
-        Updates for KMP build        
-        
-
 open fun setContextConfigurationInterface(contextConfigurationInterface: ContextConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

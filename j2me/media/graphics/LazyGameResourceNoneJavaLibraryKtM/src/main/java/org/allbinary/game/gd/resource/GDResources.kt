@@ -37,10 +37,7 @@ open public class GDResources
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GDResources
-
-        Updates for KMP build        
-        {
+: GDResources{
 
 
 

@@ -38,10 +38,7 @@ open public class MovedMotionGesturesHandler : BasicEventHandler {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: MovedMotionGesturesHandler
-
-        Updates for KMP build        
-        {
+: MovedMotionGesturesHandler{
 
 
 
@@ -51,20 +48,14 @@ open fun getInstance()
 
 
         }
-            protected constructor        ()
-
-        Updates for KMP build        
-        {
+            protected constructor        (){
 }
 
 
                 @Throws(Exception::class)
             override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventObject = eventObject
 var eventListenerInterface = eventListenerInterface
 

@@ -50,10 +50,7 @@ open public class CollidableCompositeLayer : AllBinaryGameLayer
     private var collidableInferface: CollidableBaseBehavior
 public constructor        (layerInfo: Rectangle, viewPosition: ViewPosition, collidableInferface: CollidableBaseBehavior)                        
 
-                            : super(layerInfo, viewPosition)
-
-        Updates for KMP build        
-        {
+                            : super(layerInfo, viewPosition){
     //var layerInfo = layerInfo
     //var viewPosition = viewPosition
     //var collidableInferface = collidableInferface
@@ -67,10 +64,7 @@ this.setCollidableInferface(collidableInferface)
 
 public constructor        (name: String, layerInfo: Rectangle, viewPosition: ViewPosition, collidableInferface: CollidableBaseBehavior)                        
 
-                            : super(name, layerInfo, viewPosition)
-
-        Updates for KMP build        
-        {
+                            : super(name, layerInfo, viewPosition){
     //var name = name
     //var layerInfo = layerInfo
     //var viewPosition = viewPosition
@@ -85,10 +79,7 @@ this.setCollidableInferface(collidableInferface)
 
 public constructor        (layerInfo: Rectangle, viewPosition: ViewPosition)                        
 
-                            : super(layerInfo, viewPosition)
-
-        Updates for KMP build        
-        {
+                            : super(layerInfo, viewPosition){
     //var layerInfo = layerInfo
     //var viewPosition = viewPosition
 
@@ -100,10 +91,7 @@ collidableInferface= CollidableNeverCollideBehaviorFactory.getInstance()
 
 public constructor        (name: String, layerInfo: Rectangle, viewPosition: ViewPosition)                        
 
-                            : super(name, layerInfo, viewPosition)
-
-        Updates for KMP build        
-        {
+                            : super(name, layerInfo, viewPosition){
     //var name = name
     //var layerInfo = layerInfo
     //var viewPosition = viewPosition
@@ -116,10 +104,7 @@ collidableInferface= CollidableNeverCollideBehaviorFactory.getInstance()
 
 public constructor        (layerInfo: Rectangle)                        
 
-                            : super(layerInfo)
-
-        Updates for KMP build        
-        {
+                            : super(layerInfo){
     //var layerInfo = layerInfo
 
 
@@ -131,10 +116,7 @@ collidableInferface= CollidableNeverCollideBehaviorFactory.getInstance()
 
 open fun getArtificialIntelligenceInterface()
         //nullable = true from not(false or (false and true)) = true
-: ArtificialIntelligenceInterface
-
-        Updates for KMP build        
-        {
+: ArtificialIntelligenceInterface{
 ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, this)
 
 
@@ -145,10 +127,7 @@ ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, this)
 
 override fun getCollidableInferface()
         //nullable = true from not(false or (false and true)) = true
-: CollidableBaseBehavior
-
-        Updates for KMP build        
-        {
+: CollidableBaseBehavior{
 
 
 
@@ -159,20 +138,14 @@ override fun getCollidableInferface()
 
 open fun setCollidableInferface(collidableInferface: CollidableBaseBehavior)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var collidableInferface = collidableInferface
 this.collidableInferface= collidableInferface
 }
 
 override fun implmentsCollidableInterface()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -182,10 +155,7 @@ override fun implmentsCollidableInterface()
 
 override fun toString(stringBuffer: StringMaker)
         //nullable = true from not(false or (true and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var stringBuffer = stringBuffer
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
@@ -197,10 +167,7 @@ stringBuffer!!.append(this.getCollidableInferface()!!.toString())
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

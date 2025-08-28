@@ -50,10 +50,7 @@ open public class RegistrationConfiguration
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: RegistrationConfiguration
-
-        Updates for KMP build        
-        {
+: RegistrationConfiguration{
 
 
 
@@ -73,9 +70,6 @@ open fun getInstance()
     private val FILE: String = "Registration.dat"
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
         try {
@@ -94,10 +88,7 @@ private constructor        ()
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -111,10 +102,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
             
 open fun read()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var fileInputStreamFactory: FileStreamFactory = FileStreamFactory.getInstance()!!
 
@@ -134,10 +122,7 @@ PreLogUtil.put(StringMaker().
             
 open fun write()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var dataOutputStream: AbDataOutputStream = 
                 null
@@ -166,10 +151,7 @@ dataOutputStream!!.flush()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -181,10 +163,7 @@ override fun toString()
 
 open fun setRegistrationCode(registrationCode: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var registrationCode = registrationCode
 this.registrationCode= registrationCode
 }
@@ -192,10 +171,7 @@ this.registrationCode= registrationCode
 
 open fun getRegistrationCode()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

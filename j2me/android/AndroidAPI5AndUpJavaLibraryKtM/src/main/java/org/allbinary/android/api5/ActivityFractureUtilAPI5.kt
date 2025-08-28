@@ -41,10 +41,7 @@ open public class ActivityFractureUtilAPI5 : ActivityFractureUtil {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ActivityFractureUtilAPI5
-
-        Updates for KMP build        
-        {
+: ActivityFractureUtilAPI5{
 
 
 
@@ -67,10 +64,7 @@ open fun getInstance()
     private val FEATURE_TOUCHSCREEN_MULTITOUCH_DISTINCT: String = "android.hardware.touchscreen.multitouch.distinct"
 override fun process(activity: Activity)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var activity = activity
 
     var touchScreenFactory: TouchScreenFactory = TouchScreenFactory.getInstance()!!
@@ -91,10 +85,7 @@ PreLogUtil.put(touchScreenFactory!!.toString(), this, commonStrings!!.PROCESS)
 
 open fun isTouch(activity: Activity)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var activity = activity
 
 
@@ -106,10 +97,7 @@ var activity = activity
 
 open fun isMultiTouch(activity: Activity)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var activity = activity
 
 
@@ -121,10 +109,7 @@ var activity = activity
 
 open fun isMultiTouchDistinct(activity: Activity)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var activity = activity
 
 
@@ -136,10 +121,7 @@ var activity = activity
 
 open fun isFeature(activity: Activity, property: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var activity = activity
 var property = property
 

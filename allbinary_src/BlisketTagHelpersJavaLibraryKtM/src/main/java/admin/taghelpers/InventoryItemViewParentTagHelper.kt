@@ -44,10 +44,7 @@ open public class InventoryItemViewParentTagHelper
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: InventoryItemViewParentTagHelper
-
-        Updates for KMP build        
-        {
+: InventoryItemViewParentTagHelper{
 
 
 
@@ -67,10 +64,7 @@ open fun getInstance()
             
 open fun getInventoryItemView(inventoryTag: HelperTag)
         //nullable = true from not(false or (false and false)) = true
-: InventoryItemView
-
-        Updates for KMP build        
-        {
+: InventoryItemView{
 var inventoryTag = inventoryTag
 
     
@@ -127,10 +121,7 @@ stringBuffer!!.append(inventoryTag!!.getHelper()!!.::class.toString()!!)
             
 open fun getDownloadableInventoryItemView(inventoryTag: HelperTag)
         //nullable = true from not(false or (false and false)) = true
-: DownloadableInventoryItemView
-
-        Updates for KMP build        
-        {
+: DownloadableInventoryItemView{
 var inventoryTag = inventoryTag
 
     
@@ -187,10 +178,7 @@ stringBuffer!!.append(inventoryTag!!.getHelper()!!.::class.toString()!!)
             
 open fun getRequestMapInterface(inventoryTag: HelperTag)
         //nullable = true from not(false or (false and false)) = true
-: RequestMapInterface
-
-        Updates for KMP build        
-        {
+: RequestMapInterface{
 var inventoryTag = inventoryTag
 
     
@@ -247,10 +235,7 @@ stringBuffer!!.append(inventoryTag!!.getHelper()!!.::class.toString()!!)
             
 open fun checkForValidationViewHelper(helperObject: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var helperObject = helperObject
 
     

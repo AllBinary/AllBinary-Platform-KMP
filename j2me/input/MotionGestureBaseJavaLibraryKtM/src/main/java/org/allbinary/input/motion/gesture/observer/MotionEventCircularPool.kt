@@ -39,10 +39,7 @@ open public class MotionEventCircularPool
             
 open fun getInstance(id: Int)
         //nullable =  from not(true or (false and false)) = 
-: MotionEventCircularPool
-
-        Updates for KMP build        
-        {
+: MotionEventCircularPool{
 var id = id
 
 
@@ -59,17 +56,11 @@ var id = id
     private var eventPool: AllBinaryEventCircularPool = AllBinaryEventCircularPool((InputFactory.getInstance()!!.MAX -1) -MIN)
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 private constructor        (id: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var id = id
 eventPool!!.init(MotionEventFactory(eventPool, id))
@@ -81,10 +72,7 @@ eventPool!!.init(MotionEventFactory(eventPool, id))
 
 open fun getInstance(motionGestureInput: MotionGestureInput)
         //nullable =  from not(true or (false and false)) = 
-: MotionGestureEvent
-
-        Updates for KMP build        
-        {
+: MotionGestureEvent{
 var motionGestureInput = motionGestureInput
 
 

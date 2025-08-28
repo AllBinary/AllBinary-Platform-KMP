@@ -33,10 +33,7 @@ open public class TransformInfoHttpStoreNoManipulation : TransformInfoHttpStore 
         
 public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
-                            : super(propertiesHashMap, pageContext)
-
-        Updates for KMP build        
-        {
+                            : super(propertiesHashMap, pageContext){
 var propertiesHashMap = propertiesHashMap
 var pageContext = pageContext
 
@@ -50,10 +47,7 @@ var pageContext = pageContext
             
 open fun setObjectConfigFile(value: Object)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.setObjectConfigFileName(value)
 this.setObjectConfigInterface(TransformInfoObjectConfigNoManipulationFactory.getInstance()!!.getInstance(this, this.getObjectConfigFilePath()))
@@ -64,10 +58,7 @@ this.setObjectConfigInterface(TransformInfoObjectConfigNoManipulationFactory.get
             
 open fun setObjectConfig(value: Object)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 
 

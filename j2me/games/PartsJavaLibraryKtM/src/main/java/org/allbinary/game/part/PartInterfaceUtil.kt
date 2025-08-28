@@ -37,10 +37,7 @@ open public class PartInterfaceUtil
 
 open fun getZeroArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<PartInterface?>
-
-        Updates for KMP build        
-        {
+: Array<PartInterface?>{
 
 
 

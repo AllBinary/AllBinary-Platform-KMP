@@ -37,10 +37,7 @@ open public class NoMovementFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NoMovementFactory
-
-        Updates for KMP build        
-        {
+: NoMovementFactory{
 
 
 
@@ -60,10 +57,7 @@ open fun getInstance()
 
 open fun getMovmentInstance()
         //nullable = true from not(false or (false and true)) = true
-: Movement
-
-        Updates for KMP build        
-        {
+: Movement{
 
 
 

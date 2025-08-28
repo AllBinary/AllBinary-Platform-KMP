@@ -32,9 +32,6 @@ open fun getGameNotificationHud()
         //nullable = true from not(false or (false and true)) = true
 : GameNotificationHud
 
-        Updates for KMP build        
-        
-
 }
                 
             

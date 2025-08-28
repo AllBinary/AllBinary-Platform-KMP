@@ -37,10 +37,7 @@ open public class ProcessPaintableSingletonFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ProcessPaintable
-
-        Updates for KMP build        
-        {
+: ProcessPaintable{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

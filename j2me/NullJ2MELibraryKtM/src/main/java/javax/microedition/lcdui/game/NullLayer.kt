@@ -37,10 +37,7 @@ open public class NullLayer : Layer {
         }
              constructor        (x: Int, y: Int, width: Int, height: Int, visible: Boolean)                        
 
-                            : super(x, y, width, height, visible)
-
-        Updates for KMP build        
-        {
+                            : super(x, y, width, height, visible){
 var x = x
 var y = y
 var width = width
@@ -54,10 +51,7 @@ var visible = visible
 
 override fun paint(g: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var g = g
 }
 

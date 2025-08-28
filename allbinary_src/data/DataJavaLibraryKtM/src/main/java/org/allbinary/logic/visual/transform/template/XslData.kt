@@ -37,10 +37,7 @@ open public class XslData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: XslData
-
-        Updates for KMP build        
-        {
+: XslData{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

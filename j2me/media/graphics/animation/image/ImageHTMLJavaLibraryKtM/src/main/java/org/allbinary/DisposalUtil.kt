@@ -38,10 +38,7 @@ open public class DisposalUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DisposalUtil
-
-        Updates for KMP build        
-        {
+: DisposalUtil{
 
 
 
@@ -59,10 +56,7 @@ open fun getInstance()
         
 open fun dispose(resource: Resource)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var resource = resource
 
     

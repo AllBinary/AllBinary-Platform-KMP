@@ -38,29 +38,17 @@ open fun getChildNodes()
         //nullable = true from not(false or (false and true)) = true
 : Vector
 
-        Updates for KMP build        
-        
-
 open fun addChildProperty(categoryPropertiesInterface: CategoryPropertiesInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
-
-        Updates for KMP build        
-        
 
 open fun addChild(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
-        Updates for KMP build        
-        
-
 open fun removeChild(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
-
-        Updates for KMP build        
-        
 
                 @Throws(Exception::class)
             
@@ -68,36 +56,21 @@ open fun isLeaf()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-        Updates for KMP build        
-        
-
 open fun getProperties()
         //nullable = true from not(false or (false and true)) = true
 : CategoryPropertiesInterface
-
-        Updates for KMP build        
-        
 
 open fun setProperties(categoryPropertiesInterface: CategoryPropertiesInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun getHierarchy()
         //nullable = true from not(false or (false and true)) = true
 : CategoryHierarchyInterface
 
-        Updates for KMP build        
-        
-
 open fun setHierarchy(categoryHierarchyInterface: CategoryHierarchyInterface)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
                 @Throws(Exception::class)
             
@@ -105,17 +78,11 @@ open fun getPath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun getFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath
-
-        Updates for KMP build        
-        
 
                 @Throws(Exception::class)
             
@@ -123,26 +90,17 @@ open fun getWebAppPath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun getRootFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath
 
-        Updates for KMP build        
-        
-
                 @Throws(Exception::class)
             
 open fun log()
         //nullable = true from not(false or (false and true)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

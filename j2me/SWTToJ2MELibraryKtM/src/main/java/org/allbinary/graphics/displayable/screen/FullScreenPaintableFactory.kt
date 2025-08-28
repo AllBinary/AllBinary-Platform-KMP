@@ -39,10 +39,7 @@ open public class FullScreenPaintableFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FullScreenPaintableFactory
-
-        Updates for KMP build        
-        {
+: FullScreenPaintableFactory{
 
 
 

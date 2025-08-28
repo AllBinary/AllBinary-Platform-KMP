@@ -37,10 +37,7 @@ open public class ActivityFractureUtilAPI1 : ActivityFractureUtil {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ActivityFractureUtilAPI1
-
-        Updates for KMP build        
-        {
+: ActivityFractureUtilAPI1{
 
 
 
@@ -59,10 +56,7 @@ open fun getInstance()
                 @Throws(Exception::class)
             override fun process(activity: Activity)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var activity = activity
 }
 

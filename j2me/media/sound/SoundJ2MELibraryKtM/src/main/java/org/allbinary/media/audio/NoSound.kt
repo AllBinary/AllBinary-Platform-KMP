@@ -34,10 +34,7 @@ open public class NoSound : Sound {
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NoSound
-
-        Updates for KMP build        
-        {
+: NoSound{
 
 
 
@@ -51,10 +48,7 @@ open fun getInstance()
         }
             private constructor        ()                        
 
-                            : super(StringUtil.getInstance()!!.EMPTY_STRING)
-
-        Updates for KMP build        
-        {
+                            : super(StringUtil.getInstance()!!.EMPTY_STRING){
 
 
                             //For kotlin this is before the body of the constructor.

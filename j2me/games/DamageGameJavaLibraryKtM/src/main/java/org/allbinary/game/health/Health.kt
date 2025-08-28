@@ -54,9 +54,6 @@ open public class Health
     private var healthListenerInterface: HealthListenerInterface = NullHealthListener.NULL_HEALTH_LISTENER
 public constructor        (maxHealth: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
 var maxHealth = maxHealth
 this.setMaxHealth(maxHealth)
@@ -65,10 +62,7 @@ this.setHealth(maxHealth)
 
 override fun heal(ahealth: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var ahealth = ahealth
 
     var newHealth: Int = this.getHealth() +ahealth
@@ -91,20 +85,14 @@ var ahealth = ahealth
 
 override fun heal()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.setHealth(this.getMaxHealth())
 }
 
 
 open fun isDamaged()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(this.getHealth() != this.getMaxHealth())
@@ -131,10 +119,7 @@ open fun isDamaged()
 
 override fun damage(ahealth: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var ahealth = ahealth
 
     
@@ -165,10 +150,7 @@ this.setHealth(health)
 
 override fun isAlive()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(this.getHealth() <= 0)
@@ -195,10 +177,7 @@ override fun isAlive()
 
 override fun getMaxHealth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -208,10 +187,7 @@ override fun getMaxHealth()
 
 override fun setMaxHealth(maxHealth: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var maxHealth = maxHealth
 this.maxHealth= maxHealth
 }
@@ -219,10 +195,7 @@ this.maxHealth= maxHealth
 
 open fun setHealth(health: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var health = health
 
     
@@ -262,10 +235,7 @@ var health = health
 
 override fun getHealth()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -275,20 +245,14 @@ override fun getHealth()
 
 override fun addListener(healthGraphic: HealthListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var healthGraphic = healthGraphic
 this.healthListenerInterface= healthGraphic
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

@@ -44,10 +44,7 @@ open public class SpriteSplitterUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: SpriteSplitterUtil
-
-        Updates for KMP build        
-        {
+: SpriteSplitterUtil{
 
 
 
@@ -85,10 +82,7 @@ open fun getInstance()
             
 open fun process(imageProcessorInput: ImageProcessorInput, totalFrames: Int, totalAnimations: Int, widthReduction: Int, heightReduction: Int, increaseWidth: Int, increaseHeight: Int, spriteType: String, visitor: ImageProcessedVisitor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var imageProcessorInput = imageProcessorInput
     //var totalFrames = totalFrames
     //var totalAnimations = totalAnimations
@@ -113,9 +107,6 @@ open fun process(imageProcessorInput: ImageProcessorInput, totalFrames: Int, tot
 
                         for (index in 0 until bufferedImageArray!!.size)
 
-        
-
-        Updates for KMP build        
         {
 bufferedImage= bufferedImageArray[index]!!
 logUtil!!.put(spriteType, this, commonStrings!!.RUN)
@@ -160,9 +151,6 @@ logUtil!!.put("Processing Individual Cells cellHeight: " +cellHeight +" cellWidt
 
                         for (index2 in 0 until rows)
 
-        
-
-        Updates for KMP build        
         {
 y= cellHeight *index2
 
@@ -171,9 +159,6 @@ y= cellHeight *index2
 
                         for (index3 in 0 until columns)
 
-        
-
-        Updates for KMP build        
         {
 x= cellWidth *index3
 generatedBufferedImageArray[index2]!![index3]= bufferedImage!!.getSubimage(x +widthReduction, y +heightReduction, cellWidth -(widthReduction *2), cellHeight -(heightReduction *2))
@@ -209,9 +194,6 @@ imageUnifierProperties!!.setImageUnifierCell(imageUnifierCell)
 
                         for (index2 in 0 until rows)
 
-        
-
-        Updates for KMP build        
         {
 y= cellHeight *index2
 
@@ -223,9 +205,6 @@ y= cellHeight *index2
 
                         for (index3 in 0 until columns)
 
-        
-
-        Updates for KMP build        
         {
 tempBufferedImageArray[index3]= generatedBufferedImageArray[index2]!![index3]!!
 nameEnding= StringMaker().
@@ -289,9 +268,6 @@ logUtil!!.put("Processing Individual Cells for each Direction", this, commonStri
 
                         for (index2 in 0 until rows)
 
-        
-
-        Updates for KMP build        
         {
 y= cellHeight *index2
 
@@ -300,9 +276,6 @@ y= cellHeight *index2
 
                         for (index3 in 0 until columns)
 
-        
-
-        Updates for KMP build        
         {
 x= cellWidth *index3
 generatedBufferedImageArray[index2]!![index3]= bufferedImage!!.getSubimage(x +widthReduction, y +heightReduction, cellWidth -(widthReduction *2), cellHeight -(heightReduction *2))
@@ -338,9 +311,6 @@ logUtil!!.put("Processing Rows from Cells for each Direction", this, commonStrin
 
                         for (index2 in 0 until rows)
 
-        
-
-        Updates for KMP build        
         {
 y= cellHeight *index2
 
@@ -352,9 +322,6 @@ y= cellHeight *index2
 
                         for (index3 in 0 until columns)
 
-        
-
-        Updates for KMP build        
         {
 tempBufferedImageArray[index3]= generatedBufferedImageArray[index2]!![index3]!!
 nameEnding= StringMaker().

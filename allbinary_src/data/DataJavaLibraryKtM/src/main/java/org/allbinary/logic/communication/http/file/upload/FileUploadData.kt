@@ -37,10 +37,7 @@ open public class FileUploadData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FileUploadData
-
-        Updates for KMP build        
-        {
+: FileUploadData{
 
 
 

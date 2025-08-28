@@ -110,10 +110,7 @@ open public inner class NotHTMLProcessor : Processor {
         
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 concurrentImageLoadingProcessor!!.runTask()
 }
 
@@ -137,10 +134,7 @@ open public inner class NotHTMLEndProcessor : Processor {
         
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
@@ -167,10 +161,7 @@ open public inner class HTMLEndProcessor : Processor {
         
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var size: Int = gdResources!!.currentLayoutRequiredTotal
 
@@ -226,10 +217,7 @@ open public inner class FirstProcessor : Processor {
         
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var features: Features = Features.getInstance()!!
 
@@ -251,10 +239,7 @@ endProcessor= NotHTMLEndProcessor()
         try {
             runTask()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.END_METHOD_NAME)
 }
 
@@ -270,19 +255,13 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.END_METHOD_NAME)
     private var processor: Processor = FirstProcessor()
 
     private var endProcessor: Processor = Processor.getInstance()!!
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 }
 
 
 open fun addListener(renderer: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var renderer = renderer
 }
 
@@ -291,10 +270,7 @@ var renderer = renderer
             
 open fun waitForLoadNow()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(firstTime)
@@ -308,9 +284,6 @@ open fun waitForLoadNow()
 
 
         while(loadNowList!!.isEmpty() && (!abCanvas!!.isInitialized() || (abCanvas!!.isInitialized() && this.hasAnyLazyAnimationFactories)))
-        
-
-        Updates for KMP build        
         {
 Thread.sleep(120)
 }
@@ -328,10 +301,7 @@ firstTime= false
             
 open fun loadImageForAnimation()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var lazyImageRotationAnimation: LazyImageRotationAnimation = 
                 null
@@ -343,9 +313,6 @@ open fun loadImageForAnimation()
         synchronized(lock) 
 
         //mutex.withLock
-        
-
-        Updates for KMP build        
         {
 
     
@@ -445,9 +412,6 @@ lazyImageRotationAnimation= loadNowList!!.get(0) as LazyImageRotationAnimation
         synchronized(lock) 
 
         //mutex.withLock
-        
-
-        Updates for KMP build        
         {
 loadNowList!!.remove(lazyImageRotationAnimation)
 }
@@ -466,9 +430,6 @@ loadNowList!!.remove(lazyImageRotationAnimation)
         synchronized(lock) 
 
         //mutex.withLock
-        
-
-        Updates for KMP build        
         {
 
     var size: Int = list.size()!!
@@ -522,15 +483,9 @@ loadNowList!!.remove(lazyImageRotationAnimation)
             
 open fun loadImages()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         while(!loadList!!.isEmpty() || !loadNowList!!.isEmpty())
-        
-
-        Updates for KMP build        
         {
 loadImageForAnimations()
 loadImage()
@@ -543,15 +498,9 @@ loadImage()
             
 open fun loadImageForAnimations()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         while(!loadNowList!!.isEmpty())
-        
-
-        Updates for KMP build        
         {
 loadImageForAnimation()
 }
@@ -563,21 +512,12 @@ loadImageForAnimation()
             
 open fun loadRemainingAnimations()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         while(!this.loadAfterList!!.isEmpty() || !this.loadNowList!!.isEmpty())
-        
-
-        Updates for KMP build        
         {
 
         while(!loadNowList!!.isEmpty())
-        
-
-        Updates for KMP build        
         {
 loadImageForAnimation()
 }
@@ -593,9 +533,6 @@ loadImageForAnimation()
         synchronized(lock) 
 
         //mutex.withLock
-        
-
-        Updates for KMP build        
         {
 
     
@@ -623,10 +560,7 @@ loadImageForAnimation()
             
 open fun loadImageForAnimation(lazyImageRotationAnimation: LazyImageRotationAnimation)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var lazyImageRotationAnimation = lazyImageRotationAnimation
 
     var image: Image = lazyImageRotationAnimation!!.animationInterfaceFactoryInterface!!.getImage()!!
@@ -657,10 +591,7 @@ open fun loadImageForAnimation(lazyImageRotationAnimation: LazyImageRotationAnim
             
 open fun loadImage()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     var image: Image = 
                 null
@@ -672,9 +603,6 @@ open fun loadImage()
         synchronized(lock) 
 
         //mutex.withLock
-        
-
-        Updates for KMP build        
         {
 
     
@@ -700,10 +628,7 @@ this.loadImage(image)
             
 open fun loadImage(image: Image)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var image = image
 
     
@@ -787,10 +712,7 @@ open fun loadImage(image: Image)
             
 open fun init(image: Image, image2: Image)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var image = image
     //var image2 = image2
 image.init(image2.getImage())
@@ -801,10 +723,7 @@ image.init(image2.getImage())
             
 open fun creatImage(key: String)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var key = key
 
     var inputStream: InputStream = resourceUtil!!.getResourceAsStream(key)!!
@@ -825,10 +744,7 @@ image.setName(key)
             
 open fun get(caller: String, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var caller = caller
     //var width = width
     //var height = height
@@ -891,10 +807,7 @@ listOfList[foundIndex]!!.add(image)
             
 open fun get(key: Any)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var key = key
 
     var image: Image = this.getImage(key)!!
@@ -913,10 +826,7 @@ open fun get(key: Any)
         try {
             image= this.createImage(key, inputStream)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put("Exception: Trying Again After GC", this, commonStrings!!.GET, e)
 logUtil!!.put(StringMaker().
                             append("InputStream: ")!!.append(StringUtil.getInstance()!!.toString(inputStream))!!.toString(), this, commonStrings!!.GET)
@@ -941,10 +851,7 @@ this.hashtable.put(key, image)
 
 open fun getIndex(key: Any)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
     //var key = key
 
     var gdResources: GDResources = GDResources.getInstance()!!
@@ -962,9 +869,6 @@ open fun getIndex(key: Any)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -994,10 +898,7 @@ logUtil!!.put(StringMaker().
             
 open fun createImage(key: Any, inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var key = key
     //var inputStream = inputStream
 
@@ -1016,9 +917,6 @@ open fun createImage(key: Any, inputStream: InputStream)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -1054,9 +952,6 @@ this.runTask()
         synchronized(lock) 
 
         //mutex.withLock
-        
-
-        Updates for KMP build        
         {
 loadList!!.add(image)
 }
@@ -1073,10 +968,7 @@ loadList!!.add(image)
             
 open fun createImageLater(key: String, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
     //var key = key
     //var width = width
     //var height = height
@@ -1090,10 +982,7 @@ open fun createImageLater(key: String, width: Int, height: Int)
 
 open fun getAssociated(lazyImageRotationAnimation: LazyImageRotationAnimation)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
     //var lazyImageRotationAnimation = lazyImageRotationAnimation
 
     var list: BasicArrayList = BasicArrayList()
@@ -1104,9 +993,6 @@ open fun getAssociated(lazyImageRotationAnimation: LazyImageRotationAnimation)
         synchronized(lock) 
 
         //mutex.withLock
-        
-
-        Updates for KMP build        
         {
 
     var lazyImageRotationAnimation2: LazyImageRotationAnimation = 
@@ -1122,9 +1008,6 @@ open fun getAssociated(lazyImageRotationAnimation: LazyImageRotationAnimation)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 lazyImageRotationAnimation2= this.loadAfterList!!.get(index) as LazyImageRotationAnimation
 
@@ -1147,9 +1030,6 @@ lazyImageRotationAnimation2= this.loadAfterList!!.get(index) as LazyImageRotatio
 
                         for (index in 0 until size2)
 
-        
-
-        Updates for KMP build        
         {
 this.loadAfterList!!.remove(list.get(index))
 }
@@ -1166,10 +1046,7 @@ this.loadAfterList!!.remove(list.get(index))
 
 open fun add(lazyImageRotationAnimation: LazyImageRotationAnimation)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var lazyImageRotationAnimation = lazyImageRotationAnimation
 
         
@@ -1177,9 +1054,6 @@ open fun add(lazyImageRotationAnimation: LazyImageRotationAnimation)
         synchronized(lock) 
 
         //mutex.withLock
-        
-
-        Updates for KMP build        
         {
 this.loadAfterList!!.add(lazyImageRotationAnimation)
 }
@@ -1191,10 +1065,7 @@ this.loadAfterList!!.add(lazyImageRotationAnimation)
             
 open fun insertFirst(lazyImageRotationAnimation: LazyImageRotationAnimation)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var lazyImageRotationAnimation = lazyImageRotationAnimation
 
     
@@ -1211,9 +1082,6 @@ open fun insertFirst(lazyImageRotationAnimation: LazyImageRotationAnimation)
         synchronized(lock) 
 
         //mutex.withLock
-        
-
-        Updates for KMP build        
         {
 this.loadNowList!!.add(lazyImageRotationAnimation)
 this.loadAfterList!!.remove(lazyImageRotationAnimation)
@@ -1230,20 +1098,14 @@ this.runTask()
             
 open fun runTask()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.processor.process()
 }
 
 
 open fun initProgress()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(firstTime)
@@ -1258,10 +1120,7 @@ open fun initProgress()
 
 open fun isLazy()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 

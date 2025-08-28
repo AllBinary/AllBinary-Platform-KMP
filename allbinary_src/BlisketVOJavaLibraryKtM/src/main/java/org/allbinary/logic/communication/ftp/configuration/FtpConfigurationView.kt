@@ -42,9 +42,6 @@ open public class FtpConfigurationView
     private var ftpConfigurationInterface: FtpConfigurationInterface
 public constructor        (node: Node)
             : super()
-        
-
-        Updates for KMP build        
         {
 var node = node
 this.setFtpConfigurationInterface(FtpConfiguration() as FtpConfigurationInterface)
@@ -71,9 +68,6 @@ this.getFtpConfigurationInterface()!!.setPath(path)
 
 public constructor        (ftpConfigurationInterface: FtpConfigurationInterface)
             : super()
-        
-
-        Updates for KMP build        
         {
 var ftpConfigurationInterface = ftpConfigurationInterface
 this.setFtpConfigurationInterface(ftpConfigurationInterface)
@@ -84,10 +78,7 @@ this.setFtpConfigurationInterface(ftpConfigurationInterface)
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node
-
-        Updates for KMP build        
-        {
+: Node{
 var document = document
 
     var ftpConfigurationMapping: FtpConfigurationMapping = FtpConfigurationMapping(this.getFtpConfigurationInterface())
@@ -108,10 +99,7 @@ var document = document
 
 open fun getFtpConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
-: FtpConfigurationInterface
-
-        Updates for KMP build        
-        {
+: FtpConfigurationInterface{
 
 
 
@@ -122,10 +110,7 @@ open fun getFtpConfigurationInterface()
 
 open fun setFtpConfigurationInterface(ftpConfigurationInterface: FtpConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var ftpConfigurationInterface = ftpConfigurationInterface
 this.ftpConfigurationInterface= ftpConfigurationInterface
 }

@@ -37,10 +37,7 @@ open public class PositionStrings
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PositionStrings
-
-        Updates for KMP build        
-        {
+: PositionStrings{
 
 
 

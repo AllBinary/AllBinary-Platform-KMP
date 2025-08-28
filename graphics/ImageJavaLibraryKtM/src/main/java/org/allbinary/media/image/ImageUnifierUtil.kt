@@ -41,10 +41,7 @@ open public class ImageUnifierUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageUnifierUtil
-
-        Updates for KMP build        
-        {
+: ImageUnifierUtil{
 
 
 
@@ -60,19 +57,13 @@ open fun getInstance()
     private val imageUtil: ImageUtil = ImageUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getDefaultConfiguration()
         //nullable = true from not(false or (false and true)) = true
-: GraphicsConfiguration
-
-        Updates for KMP build        
-        {
+: GraphicsConfiguration{
 
     var ge: GraphicsEnvironment = GraphicsEnvironment.getLocalGraphicsEnvironment()!!
 
@@ -89,10 +80,7 @@ open fun getDefaultConfiguration()
 
 open fun getImage(bufferedImageArray: Array<BufferedImage?>, imageUnifierProperties: ImageUnifierProperties)
         //nullable = true from not(false or (false and false)) = true
-: BufferedImage
-
-        Updates for KMP build        
-        {
+: BufferedImage{
 var bufferedImageArray = bufferedImageArray
 var imageUnifierProperties = imageUnifierProperties
 
@@ -117,9 +105,6 @@ logUtil!!.put("Setting Image - " +commonLabels!!.WIDTH_LABEL +newBufferedImage!!
 
                         for (index in 0 until bufferedImageArray!!.size)
 
-        
-
-        Updates for KMP build        
         {
 
     var x: Int = imageUnifierProperties!!.getImageUnifierCell()!!.getWidth()!!.toInt() *columnIndex++

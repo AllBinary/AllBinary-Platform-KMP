@@ -37,10 +37,7 @@ open public class ChoiceGroupImageFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ChoiceGroupImageFactory
-
-        Updates for KMP build        
-        {
+: ChoiceGroupImageFactory{
 
 
 
@@ -84,10 +81,7 @@ open fun getInstance()
 
 open fun getImageArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<Image?>
-
-        Updates for KMP build        
-        {
+: Array<Image?>{
 
 
 
@@ -98,10 +92,7 @@ open fun getImageArray()
 
 open fun init(imageArray: Array<Image?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var imageArray = imageArray
 this.imgMultiOff= imageArray[0]!!
 this.imageArray[0]= this.imgMultiOff

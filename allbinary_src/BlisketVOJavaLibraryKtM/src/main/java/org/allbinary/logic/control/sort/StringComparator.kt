@@ -34,19 +34,13 @@ open public class StringComparator
         
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun compare(anyType: Any, object2: Any)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var anyType = anyType
 var object2 = object2
 

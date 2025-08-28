@@ -37,10 +37,7 @@ open public class HighScoresCanvasInputProcessor : PlayerGameInput {
     private val highScoresCanvas: HighScoresCanvas
 public constructor        (highScoresCanvas: HighScoresCanvas)                        
 
-                            : super(BasicArrayList(),  -1)
-
-        Updates for KMP build        
-        {
+                            : super(BasicArrayList(),  -1){
 var highScoresCanvas = highScoresCanvas
 
 
@@ -52,28 +49,19 @@ this.highScoresCanvas= highScoresCanvas
 
 open fun open()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun close()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun onPressGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gameKeyEvent = gameKeyEvent
 super.onPressGameKeyEvent(gameKeyEvent)
 this.update()
@@ -82,10 +70,7 @@ this.update()
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun onDownGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gameKeyEvent = gameKeyEvent
 super.onDownGameKeyEvent(gameKeyEvent)
 this.update()
@@ -94,10 +79,7 @@ this.update()
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun onUpGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gameKeyEvent = gameKeyEvent
 super.onUpGameKeyEvent(gameKeyEvent)
 this.update()
@@ -106,20 +88,14 @@ this.update()
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 }
 
 
 open fun getHighScoresCanvas()
         //nullable = true from not(false or (false and true)) = true
-: HighScoresCanvas
-
-        Updates for KMP build        
-        {
+: HighScoresCanvas{
 
 
 

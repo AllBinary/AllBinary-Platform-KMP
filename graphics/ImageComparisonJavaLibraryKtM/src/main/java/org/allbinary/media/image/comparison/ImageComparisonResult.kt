@@ -69,9 +69,6 @@ open public class ImageComparisonResult
     private var matchingPercent: Float =  -1
 public constructor        (name: String, bufferedImage: BufferedImage, bufferedImage2: BufferedImage, frameOne: Long, frameTwo: Long, tolerance: Int)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var name = name
     //var bufferedImage = bufferedImage
@@ -159,10 +156,7 @@ logUtil!!.put("2: " +imageUtil!!.toString(bufferedImage2), this, this.commonStri
 
 open fun getMatchingPercent()
         //nullable = true from not(false or (false and true)) = true
-: Float
-
-        Updates for KMP build        
-        {
+: Float{
 
     
                         if(this.matchingPercent ==  -1)
@@ -182,10 +176,7 @@ open fun getMatchingPercent()
 
 open fun add(pixel: PixelDelta)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var pixel = pixel
 this.nonMatchingPixelVector!!.add(pixel)
 }
@@ -193,10 +184,7 @@ this.nonMatchingPixelVector!!.add(pixel)
 
 open fun getNonMatchingPixelVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
 
 
@@ -206,10 +194,7 @@ open fun getNonMatchingPixelVector()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -221,10 +206,7 @@ override fun toString()
 
 open fun getBufferedImages()
         //nullable = true from not(false or (false and true)) = true
-: Array<BufferedImage?>
-
-        Updates for KMP build        
-        {
+: Array<BufferedImage?>{
 
 
 
@@ -235,10 +217,7 @@ open fun getBufferedImages()
 
 open fun getTolerance()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -249,10 +228,7 @@ open fun getTolerance()
 
 open fun setTolerance(tolerance: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var tolerance = tolerance
 this.tolerance= tolerance
 }
@@ -260,10 +236,7 @@ this.tolerance= tolerance
 
 open fun getFrameOne()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -274,10 +247,7 @@ open fun getFrameOne()
 
 open fun getFrameTwo()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 

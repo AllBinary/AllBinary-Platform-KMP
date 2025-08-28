@@ -37,10 +37,7 @@ open public class AllAnimationsEverywhereTileMapPlacementVisitor : TileMapPlacem
         
 open fun visit(lastMap: TiledMap, mapData: Array<IntArray?>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var lastMap = lastMap
     //var mapData = mapData
 
@@ -56,9 +53,6 @@ open fun visit(lastMap: TiledMap, mapData: Array<IntArray?>)
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
 
@@ -66,9 +60,6 @@ open fun visit(lastMap: TiledMap, mapData: Array<IntArray?>)
 
                         for (index2 in 0 until size2)
 
-        
-
-        Updates for KMP build        
         {
 mapData[index]!![index2]= 1
 mapData[index]!![index2 +1]= 17

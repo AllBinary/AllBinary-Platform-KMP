@@ -46,9 +46,6 @@ open public class ShippingMethodData
         }
             public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

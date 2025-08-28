@@ -27,10 +27,7 @@ open public class PreciseConstantVelocityMovement : BasicConstantVelocityMovemen
     private var accumulatedZ: Int= 0
 public constructor        (basicDecimal: BasicDecimal, velocityProperties: BasicVelocityProperties)                        
 
-                            : super(basicDecimal, velocityProperties)
-
-        Updates for KMP build        
-        {
+                            : super(basicDecimal, velocityProperties){
     //var basicDecimal = basicDecimal
     //var velocityProperties = velocityProperties
 
@@ -41,10 +38,7 @@ public constructor        (basicDecimal: BasicDecimal, velocityProperties: Basic
 
 override fun init(speedBasicDecimal: BasicDecimal, angle: Int, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var speedBasicDecimal = speedBasicDecimal
     //var angle = angle
     //var otherAngle = otherAngle
@@ -56,10 +50,7 @@ override fun init(speedBasicDecimal: BasicDecimal, angle: Int, otherAngle: Int)
                 @Throws(Exception::class)
             override fun process(layer: AllBinaryGameLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var layer = layer
 
     var mathUtil: MathUtil = MathUtil.getInstance()!!

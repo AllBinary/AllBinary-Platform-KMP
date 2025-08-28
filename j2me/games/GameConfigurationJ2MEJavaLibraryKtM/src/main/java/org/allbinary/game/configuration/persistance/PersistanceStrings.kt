@@ -37,10 +37,7 @@ open public class PersistanceStrings
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PersistanceStrings
-
-        Updates for KMP build        
-        {
+: PersistanceStrings{
 
 
 

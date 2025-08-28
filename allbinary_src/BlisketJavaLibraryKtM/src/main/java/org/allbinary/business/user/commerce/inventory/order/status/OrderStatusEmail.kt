@@ -61,9 +61,6 @@ open public class OrderStatusEmail
     private var user: UserInterface
 public constructor        (abeClientInformation: AbeClientInformationInterface, orderHistory: OrderHistory)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var abeClientInformation = abeClientInformation
     //var orderHistory = orderHistory
@@ -81,10 +78,7 @@ this.user= UserEntityFactory.getInstance()!!.getUser(orderHistory!!.getUserName(
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.notifyStoreAdmin()
 this.notifyUser()
 }
@@ -94,10 +88,7 @@ this.notifyUser()
             
 open fun notifyStoreAdmin()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             
@@ -139,10 +130,7 @@ open fun notifyStoreAdmin()
 storeAdminUserEmailEventHandler!!.receiveEmailInfo(userEmailEventNameData, storeAdminEmailInfo)
 adminUserEmailEventHandler!!.receiveEmailInfo(userEmailEventNameData, adminEmailInfo)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
@@ -161,10 +149,7 @@ adminUserEmailEventHandler!!.receiveEmailInfo(userEmailEventNameData, adminEmail
             
 open fun notifyUser()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             
@@ -196,10 +181,7 @@ open fun notifyUser()
 
 userEmailEventHandler!!.receiveEmailInfo(userEmailEventNameData, emailInfo)
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))

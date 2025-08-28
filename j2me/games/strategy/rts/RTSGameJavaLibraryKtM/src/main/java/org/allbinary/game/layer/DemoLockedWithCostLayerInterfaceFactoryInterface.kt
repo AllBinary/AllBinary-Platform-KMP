@@ -32,9 +32,6 @@ open fun isDemoLocked()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-        Updates for KMP build        
-        
-
 }
                 
             

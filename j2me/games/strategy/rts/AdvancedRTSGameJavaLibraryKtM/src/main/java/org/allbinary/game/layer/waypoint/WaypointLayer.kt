@@ -48,10 +48,7 @@ open public class WaypointLayer : AdvancedRTSGameLayer {
             
 open fun getStaticType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -65,10 +62,7 @@ open fun getStaticType()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 protected constructor        (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
 
-                            : super(remoteInfo, parentLayer, groupInterface, rootName, name, Health(1000), NullRTSFormInputFactory.getInstance(), animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y)
-
-        Updates for KMP build        
-        {
+                            : super(remoteInfo, parentLayer, groupInterface, rootName, name, Health(1000), NullRTSFormInputFactory.getInstance(), animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y){
     //var remoteInfo = remoteInfo
     //var parentLayer = parentLayer
     //var groupInterface = groupInterface
@@ -91,10 +85,7 @@ this.setAnimationInterface(this.indexedButShouldBeRotationAnimationInterface)
 
 open fun construct(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var rtsPlayerLayerInterface = rtsPlayerLayerInterface
 this.percentComplete= 100
 this.initVisibility(rtsPlayerLayerInterface)
@@ -103,10 +94,7 @@ this.initVisibility(rtsPlayerLayerInterface)
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 
     
@@ -122,19 +110,13 @@ var graphics = graphics
 
 open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allBinaryLayerManager = allBinaryLayerManager
 
         try {
             this.indexedButShouldBeRotationAnimationInterface!!.nextFrame()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "processTick", e)
 }
 
@@ -143,10 +125,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "processTick", e)
 
 open fun damage(damage: Int, damageType: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var damage = damage
 var damageType = damageType
 }
@@ -156,10 +135,7 @@ var damageType = damageType
             
 open fun getDamage(damageType: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var damageType = damageType
 
 
@@ -173,10 +149,7 @@ var damageType = damageType
             
 open fun setDestroyed(destroyed: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var destroyed = destroyed
 super.setDestroyed(destroyed)
 
@@ -193,10 +166,7 @@ super.setDestroyed(destroyed)
 
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -207,10 +177,7 @@ open fun getType()
 
 open fun isSelfUpgradeable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 

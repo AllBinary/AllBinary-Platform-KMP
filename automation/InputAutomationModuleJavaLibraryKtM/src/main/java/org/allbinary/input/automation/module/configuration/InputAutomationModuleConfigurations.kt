@@ -48,9 +48,6 @@ open public class InputAutomationModuleConfigurations
     private var hashMap: HashMap<Any, Any>
 public constructor        (abeClientInformation: AbeClientInformationInterface, file: File)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var abeClientInformation = abeClientInformation
     //var file = file
@@ -91,9 +88,6 @@ logUtil!!.put("Number Of Module(s) Specified: " +nameNodeList!!.getLength(), thi
 
                         for (index in 0 until nameNodeList!!.getLength()!!)
 
-        
-
-        Updates for KMP build        
         {
 
     var node: Node = nameNodeList!!.item(index)!!
@@ -108,9 +102,6 @@ this.add(InputAutomationModuleConfiguration(abeClientInformation, node))
 
 public constructor        (abeClientInformation: AbeClientInformationInterface, document: Document)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var abeClientInformation = abeClientInformation
     //var document = document
@@ -125,9 +116,6 @@ logUtil!!.put("Number Of Module(s) Specified: " +nameNodeList!!.getLength(), thi
 
                         for (index in 0 until nameNodeList!!.getLength()!!)
 
-        
-
-        Updates for KMP build        
         {
 
     var node: Node = nameNodeList!!.item(index)!!
@@ -139,9 +127,6 @@ this.add(InputAutomationModuleConfiguration(abeClientInformation, node))
 
 public constructor        (inputAutomationModuleConfigurationList: List<InputAutomationModuleConfiguration>)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var inputAutomationModuleConfigurationList = inputAutomationModuleConfigurationList
 this.setHashMap(HashMap<Any, Any>())
@@ -157,9 +142,6 @@ this.setHashMap(HashMap<Any, Any>())
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 inputAutomationModuleConfiguration= inputAutomationModuleConfigurationList!!.get(index)
 this.add(inputAutomationModuleConfiguration)
@@ -169,9 +151,6 @@ this.add(inputAutomationModuleConfiguration)
 
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 this.setHashMap(HashMap<Any, Any>())
 }
@@ -179,10 +158,7 @@ this.setHashMap(HashMap<Any, Any>())
 
 open fun add(inputAutomationModuleConfiguration: InputAutomationModuleConfiguration)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var inputAutomationModuleConfiguration = inputAutomationModuleConfiguration
 this.getHashMap()!!.put(inputAutomationModuleConfiguration!!.getClassName(), inputAutomationModuleConfiguration)
 }
@@ -190,10 +166,7 @@ this.getHashMap()!!.put(inputAutomationModuleConfiguration!!.getClassName(), inp
 
 open fun remove(inputAutomationModuleConfiguration: InputAutomationModuleConfiguration)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var inputAutomationModuleConfiguration = inputAutomationModuleConfiguration
 this.getHashMap()!!.remove(inputAutomationModuleConfiguration!!.getClassName())
 }
@@ -201,10 +174,7 @@ this.getHashMap()!!.remove(inputAutomationModuleConfiguration!!.getClassName())
 
 open fun getHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
 
 
@@ -215,10 +185,7 @@ open fun getHashMap()
 
 open fun setHashMap(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var hashMap = hashMap
 this.hashMap= hashMap
 }

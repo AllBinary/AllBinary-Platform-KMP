@@ -30,10 +30,7 @@ open public class StaticViewPosition : ViewPosition {
         
 public constructor        (x: Int, y: Int, z: Int)                        
 
-                            : super(x, y, z)
-
-        Updates for KMP build        
-        {
+                            : super(x, y, z){
 var x = x
 var y = y
 var z = z
@@ -45,10 +42,7 @@ var z = z
 
 override fun getX()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -58,10 +52,7 @@ override fun getX()
 
 override fun getY()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -71,10 +62,7 @@ override fun getY()
 
 override fun getZ()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

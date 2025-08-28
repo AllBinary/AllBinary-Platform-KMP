@@ -45,9 +45,6 @@ open public class Life
     private var maxlives: Short
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 this.lives= 0
 this.startLives= 0
@@ -56,9 +53,6 @@ this.maxlives= 0
 
 public constructor        (lives: Short, maxlives: Short)
             : super()
-        
-
-        Updates for KMP build        
         {
 var lives = lives
 var maxlives = maxlives
@@ -81,10 +75,7 @@ this.startLives= lives
 
 override fun get()
         //nullable = true from not(false or (false and true)) = true
-: Short
-
-        Updates for KMP build        
-        {
+: Short{
 
 
 
@@ -94,29 +85,20 @@ override fun get()
 
 override fun set(lives: Short)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var lives = lives
 this.lives= lives
 }
 
 override fun reset()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.lives= this.startLives
 }
 
 override fun add(lives: Short)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var lives = lives
 
     
@@ -144,10 +126,7 @@ var lives = lives
 
 override fun isAlive()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(this.lives <= 0)
@@ -174,10 +153,7 @@ override fun isAlive()
 
 override fun getMaxlives()
         //nullable = true from not(false or (false and true)) = true
-: Short
-
-        Updates for KMP build        
-        {
+: Short{
 
 
 
@@ -188,10 +164,7 @@ override fun getMaxlives()
 
 open fun reachedLimit()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(this.lives > this.maxlives || this.lives < 0)
@@ -218,10 +191,7 @@ open fun reachedLimit()
 
 override fun deaths(lives: Short)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var lives = lives
 
     
@@ -250,10 +220,7 @@ var lives = lives
 
 open fun getStartLives()
         //nullable = true from not(false or (false and true)) = true
-: Short
-
-        Updates for KMP build        
-        {
+: Short{
 
 
 
@@ -264,10 +231,7 @@ open fun getStartLives()
 
 open fun setStartLives(startLives: Short)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var startLives = startLives
 this.startLives= startLives
 }

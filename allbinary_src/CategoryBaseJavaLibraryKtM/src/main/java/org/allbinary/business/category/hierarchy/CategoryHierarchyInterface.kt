@@ -33,50 +33,29 @@ open fun getLevel()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-        Updates for KMP build        
-        
-
 open fun getLevelString()
         //nullable = true from not(false or (false and true)) = true
 : String
-
-        Updates for KMP build        
-        
 
 open fun getRoot()
         //nullable = true from not(false or (false and true)) = true
 : CategoryInterface
 
-        Updates for KMP build        
-        
-
 open fun getParent()
         //nullable = true from not(false or (false and true)) = true
 : CategoryInterface
-
-        Updates for KMP build        
-        
 
 open fun setLevel(level: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun setRoot(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun setParent(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

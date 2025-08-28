@@ -34,10 +34,7 @@ open public class ValidationView : ShippingMethodsView
         
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(transformInfoInterface)
-
-        Updates for KMP build        
-        {
+                            : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
 
 
@@ -48,10 +45,7 @@ var transformInfoInterface = transformInfoInterface
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -62,10 +56,7 @@ open fun isValid()
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: org.w3c.dom.Document
-
-        Updates for KMP build        
-        {
+: org.w3c.dom.Document{
 
 
 
@@ -76,10 +67,7 @@ open fun toValidationInfoDoc()
 
 open fun toValidationInfoNode(document: org.w3c.dom.Document)
         //nullable = true from not(false or (false and false)) = true
-: org.w3c.dom.Node
-
-        Updates for KMP build        
-        {
+: org.w3c.dom.Node{
 var document = document
 
 
@@ -91,10 +79,7 @@ var document = document
 
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

@@ -40,10 +40,7 @@ open public class CollidableVehicleBehavior : CollidableDestroyableDamageableBeh
     var totalImpactVelocity: Long = 0
 public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
 
-                            : super(ownerLayer, collidable)
-
-        Updates for KMP build        
-        {
+                            : super(ownerLayer, collidable){
 var ownerLayer = ownerLayer
 var collidable = collidable
 
@@ -57,10 +54,7 @@ var collidable = collidable
             
 open fun collide(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
     var collisionTypeFactory: CollisionTypeFactory = CollisionTypeFactory.getInstance()!!
@@ -98,10 +92,7 @@ ownerLayer.
 
 open fun collide(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 ForcedLogUtil.log("Don't Use Interface Version It Is Slower", this)
 }
@@ -113,10 +104,7 @@ ForcedLogUtil.log("Don't Use Interface Version It Is Slower", this)
 
 open fun collide(vehiclePropertiesCompositeInterface: VehiclePropertiesCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var vehiclePropertiesCompositeInterface = vehiclePropertiesCompositeInterface
 
     var ownerVehicleLayerInterface: VehiclePropertiesCompositeInterface = (this.ownerLayer as VehiclePropertiesCompositeInterface)
@@ -171,10 +159,7 @@ totalImpactVelocity= impactVelocityX +impactVelocityY
 
 open fun collideFriction(vehiclePropertiesCompositeInterface: VehiclePropertiesCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var vehiclePropertiesCompositeInterface = vehiclePropertiesCompositeInterface
 
     var vehicleFrictionProperties: VehicleFrictionProperties = vehiclePropertiesCompositeInterface!!.getVehicleProperties()!!.getVehicleFrictionProperties()!!

@@ -59,9 +59,6 @@ open public inner class ReleaseHelper
     val touchButtonRecognizer: TouchButtonRecognizer
 public constructor        (touchButtonRecognizer: TouchButtonRecognizer)
             : super()
-        
-
-        Updates for KMP build        
         {
 var touchButtonRecognizer = touchButtonRecognizer
 this.touchButtonRecognizer= touchButtonRecognizer
@@ -72,10 +69,7 @@ this.touchButtonRecognizer= touchButtonRecognizer
             
 open fun release(touchButtonInput: TouchButtonInput, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var touchButtonInput = touchButtonInput
 var deviceId = deviceId
 
@@ -84,9 +78,6 @@ var deviceId = deviceId
 
                         for (index in currentlyPressedTouchButtonSingleton!!.size() -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     var nextTouchButtonInput: TouchButtonInput = currentlyPressedTouchButtonSingleton!!.get(index)!!
@@ -109,10 +100,7 @@ open public inner class MultitouchReleaseHelper : ReleaseHelper {
         
 public constructor        (touchButtonRecognizer: TouchButtonRecognizer)                        
 
-                            : super(touchButtonRecognizer)
-
-        Updates for KMP build        
-        {
+                            : super(touchButtonRecognizer){
 var touchButtonRecognizer = touchButtonRecognizer
 
 
@@ -124,10 +112,7 @@ var touchButtonRecognizer = touchButtonRecognizer
                 @Throws(Exception::class)
             override fun release(touchButtonInput: TouchButtonInput, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var touchButtonInput = touchButtonInput
 var deviceId = deviceId
 
@@ -139,9 +124,6 @@ var deviceId = deviceId
 
                         for (index in currentlyPressedTouchButtonSingleton!!.size() -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     var nextTouchButtonInput: TouchButtonInput = currentlyPressedTouchButtonSingleton!!.get(index)!!
@@ -171,9 +153,6 @@ this.touchButtonRecognizer!!.currentlyPressedTouchButtonSingleton!!.remove(index
     private val releaseHelper: ReleaseHelper
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     
@@ -196,10 +175,7 @@ public constructor        ()
             
 open fun processRelease(touchButtonInput: TouchButtonInput, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var touchButtonInput = touchButtonInput
 var deviceId = deviceId
 this.releaseHelper!!.release(touchButtonInput, deviceId)
@@ -217,10 +193,7 @@ this.currentlyPressedTouchButtonSingleton!!.remove(touchButtonInput)
 
 open fun releaseTouchButtonInput(x: Int, y: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var x = x
 var y = y
 var deviceId = deviceId
@@ -261,9 +234,6 @@ this.processRelease(touchButtonInput, deviceId)
 
                         for (index in list.size() -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 touchButton= list.objectArray[index]!! as TouchButton
 rectangle= touchButton!!.getRectangle()
@@ -301,10 +271,7 @@ this.processRelease(touchButtonInput, deviceId)
 
 open fun pressTouchButtonInput(x: Int, y: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var x = x
 var y = y
 var deviceId = deviceId
@@ -329,9 +296,6 @@ var deviceId = deviceId
 
                         for (index in list.size() -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 touchButton= list.objectArray[index]!! as TouchButton
 rectangle= touchButton!!.getRectangle()

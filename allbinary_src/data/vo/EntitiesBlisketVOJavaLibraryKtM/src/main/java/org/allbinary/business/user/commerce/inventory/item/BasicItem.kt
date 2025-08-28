@@ -111,9 +111,6 @@ open public class BasicItem
     var lastModified: String
 public constructor        (itemHashMap: HashMap<Any, Any>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var itemHashMap = itemHashMap
 
@@ -158,9 +155,6 @@ this.specials= itemHashMap!!.get(BasicItemData.SPECIALS) as String
 
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     
@@ -209,10 +203,7 @@ this.specials= EMPTY
 
 open fun setId(itemId: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var itemId = itemId
 this.itemId= itemId
 }
@@ -220,10 +211,7 @@ this.itemId= itemId
 
 open fun setNumber(number: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var number = number
 this.number= number
 }
@@ -231,10 +219,7 @@ this.number= number
 
 open fun setInBaskets(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.inBaskets= value
 }
@@ -242,10 +227,7 @@ this.inBaskets= value
 
 open fun setWeight(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.weight= value
 }
@@ -253,10 +235,7 @@ this.weight= value
 
 open fun setNewOrUsed(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.newOrUsed= value
 }
@@ -264,10 +243,7 @@ this.newOrUsed= value
 
 open fun setSummary(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.summary= value
 }
@@ -275,10 +251,7 @@ this.summary= value
 
 open fun setDistributor(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.distributor= value
 }
@@ -286,10 +259,7 @@ this.distributor= value
 
 open fun setIdUsedByDistributor(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.idUsedByDistributor= value
 }
@@ -297,10 +267,7 @@ this.idUsedByDistributor= value
 
 open fun setProducedBy(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.producedBy= value
 }
@@ -308,10 +275,7 @@ this.producedBy= value
 
 open fun setProductionDate(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.productionDate= value
 }
@@ -319,10 +283,7 @@ this.productionDate= value
 
 open fun setStartProductionDate(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.startProductionDate= value
 }
@@ -330,10 +291,7 @@ this.startProductionDate= value
 
 open fun setDescription(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.description= value
 }
@@ -341,10 +299,7 @@ this.description= value
 
 open fun setKeywords(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.keywords= value
 }
@@ -352,10 +307,7 @@ this.keywords= value
 
 open fun setCategory(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.category= value
 }
@@ -363,10 +315,7 @@ this.category= value
 
 open fun setType(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.type= value
 }
@@ -374,10 +323,7 @@ this.type= value
 
 open fun setSmallImage(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.smallImage= value
 }
@@ -385,10 +331,7 @@ this.smallImage= value
 
 open fun setMediumImage(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.mediumImage= value
 }
@@ -396,10 +339,7 @@ this.mediumImage= value
 
 open fun setLargeImage(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.largeImage= value
 }
@@ -407,10 +347,7 @@ this.largeImage= value
 
 open fun setTimeEntered(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.timeEntered= value
 }
@@ -418,10 +355,7 @@ this.timeEntered= value
 
 open fun setLastModified(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.lastModified= value
 }
@@ -429,10 +363,7 @@ this.lastModified= value
 
 open fun setPrice(value: Money)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.price= value
 }
@@ -440,10 +371,7 @@ this.price= value
 
 open fun setComment(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.comment= value
 }
@@ -451,10 +379,7 @@ this.comment= value
 
 open fun setCustoms(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.customs= value
 }
@@ -462,10 +387,7 @@ this.customs= value
 
 open fun setDownloads(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.downloads= value
 
@@ -493,10 +415,7 @@ this.downloads= value
 
 open fun setGroups(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.groups= value
 }
@@ -504,10 +423,7 @@ this.groups= value
 
 open fun setOptions(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.options= value
 }
@@ -515,10 +431,7 @@ this.options= value
 
 open fun setPermissions(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.permissions= value
 }
@@ -526,10 +439,7 @@ this.permissions= value
 
 open fun setSpecials(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.specials= value
 }
@@ -537,10 +447,7 @@ this.specials= value
 
 open fun setEnabled(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.enabled= value
 }
@@ -548,10 +455,7 @@ this.enabled= value
 
 open fun getId()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -562,10 +466,7 @@ open fun getId()
 
 open fun getNumber()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -576,10 +477,7 @@ open fun getNumber()
 
 open fun getInBaskets()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -590,10 +488,7 @@ open fun getInBaskets()
 
 open fun getWeight()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -604,10 +499,7 @@ open fun getWeight()
 
 open fun getNewOrUsed()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -618,10 +510,7 @@ open fun getNewOrUsed()
 
 open fun getSummary()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -632,10 +521,7 @@ open fun getSummary()
 
 open fun getDistributor()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -646,10 +532,7 @@ open fun getDistributor()
 
 open fun getIdUsedByDistributor()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -660,10 +543,7 @@ open fun getIdUsedByDistributor()
 
 open fun getProducedBy()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -674,10 +554,7 @@ open fun getProducedBy()
 
 open fun getProductionDate()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -688,10 +565,7 @@ open fun getProductionDate()
 
 open fun getStartProductionDate()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -702,10 +576,7 @@ open fun getStartProductionDate()
 
 open fun getDescription()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -716,10 +587,7 @@ open fun getDescription()
 
 open fun getKeywords()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -730,10 +598,7 @@ open fun getKeywords()
 
 open fun getCategory()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -744,10 +609,7 @@ open fun getCategory()
 
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -758,10 +620,7 @@ open fun getType()
 
 open fun getSmallImage()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -772,10 +631,7 @@ open fun getSmallImage()
 
 open fun getMediumImage()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -786,10 +642,7 @@ open fun getMediumImage()
 
 open fun getLargeImage()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -800,10 +653,7 @@ open fun getLargeImage()
 
 open fun getTimeEntered()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -814,10 +664,7 @@ open fun getTimeEntered()
 
 open fun getLastModified()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -828,10 +675,7 @@ open fun getLastModified()
 
 open fun getPrice()
         //nullable = true from not(false or (false and true)) = true
-: Money
-
-        Updates for KMP build        
-        {
+: Money{
 
 
 
@@ -842,10 +686,7 @@ open fun getPrice()
 
 open fun getComment()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -856,10 +697,7 @@ open fun getComment()
 
 open fun getCustoms()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -870,10 +708,7 @@ open fun getCustoms()
 
 open fun getDownloads()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -884,10 +719,7 @@ open fun getDownloads()
 
 open fun getGroups()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -898,10 +730,7 @@ open fun getGroups()
 
 open fun getOptions()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -912,10 +741,7 @@ open fun getOptions()
 
 open fun getPermissions()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -926,10 +752,7 @@ open fun getPermissions()
 
 open fun getSpecials()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -940,10 +763,7 @@ open fun getSpecials()
 
 open fun setDownloadable(downloadable: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var downloadable = downloadable
 this.downloadable= downloadable
 }
@@ -951,10 +771,7 @@ this.downloadable= downloadable
 
 open fun isDownloadable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -965,10 +782,7 @@ open fun isDownloadable()
 
 open fun getEnabled()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -979,10 +793,7 @@ open fun getEnabled()
 
 open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
-: Money
-
-        Updates for KMP build        
-        {
+: Money{
 
     var itemTotal: Money = Money(this.price)
 
@@ -998,10 +809,7 @@ itemTotal!!.multiply(Integer(this.number).
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>
-
-        Updates for KMP build        
-        {
+: HashMap<Any, Any>{
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
@@ -1059,10 +867,7 @@ hashMap!!.put(BasicItemData.SPECIALS, this.specials)
 
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
@@ -1123,10 +928,7 @@ values.add(this.specials)
             
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 
 
 

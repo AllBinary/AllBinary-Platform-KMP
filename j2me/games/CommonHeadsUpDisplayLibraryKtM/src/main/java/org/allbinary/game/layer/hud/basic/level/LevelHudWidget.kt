@@ -52,10 +52,7 @@ open public class LevelHudWidget : BasicHud
     private val primitiveLongUtil: PrimitiveLongUtil
 public constructor        (maxlevel: Int, location: Int, direction: Int)                        
 
-                            : this(maxlevel, location, direction, MyFont.getInstance()!!.getSize() *4)
-
-        Updates for KMP build        
-        {
+                            : this(maxlevel, location, direction, MyFont.getInstance()!!.getSize() *4){
 var maxlevel = maxlevel
 var location = location
 var direction = direction
@@ -67,10 +64,7 @@ var direction = direction
 
 public constructor        (maxlevel: Int, location: Int, direction: Int, maxWidth: Int)                        
 
-                            : super(location, direction, 14, maxWidth, 2, BasicColorFactory.getInstance()!!.GREY)
-
-        Updates for KMP build        
-        {
+                            : super(location, direction, 14, maxWidth, 2, BasicColorFactory.getInstance()!!.GREY){
 var maxlevel = maxlevel
 var location = location
 var direction = direction
@@ -96,10 +90,7 @@ this.update()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 levelNumberCharArray= this.primitiveLongUtil!!.getCharArray(this.level)
 levelNumberTotalDigits= this.primitiveLongUtil!!.getCurrentTotalDigits()
 }
@@ -107,10 +98,7 @@ levelNumberTotalDigits= this.primitiveLongUtil!!.getCurrentTotalDigits()
 
 open fun setLevel(level: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var level = level
 this.level= level
 this.update()
@@ -119,10 +107,7 @@ this.update()
 
 open fun nextLevel()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.level++
 this.update()
 }
@@ -130,10 +115,7 @@ this.update()
 
 open fun previousLevel()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.level--
 
     
@@ -150,10 +132,7 @@ this.update()
 
 open fun isComplete()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(this.level <= maxlevel)
@@ -180,20 +159,14 @@ open fun isComplete()
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 super.paint(graphics, levelString, 0, levelString!!.size, levelNumberCharArray, 0, levelNumberTotalDigits, this.offset)
 }
 
 override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var graphics = graphics
 }
 

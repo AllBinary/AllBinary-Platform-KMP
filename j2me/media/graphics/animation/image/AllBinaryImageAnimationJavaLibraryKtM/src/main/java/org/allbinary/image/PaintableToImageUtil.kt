@@ -42,10 +42,7 @@ open public class PaintableToImageUtil
             
 open fun getImage(paintableInterface: PaintableInterface, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image
-
-        Updates for KMP build        
-        {
+: Image{
 var paintableInterface = paintableInterface
 var width = width
 var height = height

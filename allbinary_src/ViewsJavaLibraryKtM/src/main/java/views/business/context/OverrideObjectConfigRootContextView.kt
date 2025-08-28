@@ -47,10 +47,7 @@ open public class OverrideObjectConfigRootContextView : HttpStoreComponentView {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        (transformInfoInterface: Object)                        
 
-                            : super(transformInfoInterface)
-
-        Updates for KMP build        
-        {
+                            : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
 
 
@@ -72,10 +69,7 @@ var transformInfoInterface = transformInfoInterface
             
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
         try {
             
@@ -167,10 +161,7 @@ componentInterface!!.getTransformInfoInterface()!!.setObjectConfigInterface(tran
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return componentInterface!!.view()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))

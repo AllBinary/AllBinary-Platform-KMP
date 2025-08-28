@@ -37,10 +37,7 @@ open public class SensorFeatureFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: SensorFeatureFactory
-
-        Updates for KMP build        
-        {
+: SensorFeatureFactory{
 
 
 
@@ -52,9 +49,6 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

@@ -29,10 +29,7 @@ import admin.taghelpers.LogHelperFactory
 
 open public class LogTag : TableTag {
         
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 this.setTagHelperFactory(LogHelperFactory())
 this.setTagRequestHelperFactory(LogHelperFactory())
 }

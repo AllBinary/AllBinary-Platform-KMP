@@ -36,10 +36,7 @@ open public class AdjustCustomTextAnimation : CustomTextAnimation {
     private var dy: Int
 public constructor        (text: String, fontSize: Int, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
-                            : super(text, fontSize, animationBehavior)
-
-        Updates for KMP build        
-        {
+                            : super(text, fontSize, animationBehavior){
     //var text = text
     //var fontSize = fontSize
     //var dx = dx
@@ -55,10 +52,7 @@ this.dy= dy
 
 override fun getDx()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -68,20 +62,14 @@ override fun getDx()
 
 override fun setDx(dx: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var dx = dx
 this.dx= dx
 }
 
 override fun getDy()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -91,20 +79,14 @@ override fun getDy()
 
 override fun setDy(dy: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var dy = dy
 this.dy= dy
 }
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var graphics = graphics
     //var x = x
     //var y = y

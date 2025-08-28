@@ -37,10 +37,7 @@ open public class ThirdPartyMessageFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ThirdPartyMessageFactory
-
-        Updates for KMP build        
-        {
+: ThirdPartyMessageFactory{
 
 
 

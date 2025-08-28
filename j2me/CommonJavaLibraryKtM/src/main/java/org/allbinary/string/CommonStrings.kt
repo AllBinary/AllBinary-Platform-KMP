@@ -37,10 +37,7 @@ open public class CommonStrings
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CommonStrings
-
-        Updates for KMP build        
-        {
+: CommonStrings{
 
 
 

@@ -40,29 +40,20 @@ open public class StaticTileLayerIntoPositionViewPosition : ViewPosition {
 
 open fun setTiledLayer(tiledLayer: AllBinaryTiledLayer)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var tiledLayer = tiledLayer
 StaticTileLayerIntoPositionViewPosition.tiledLayer= tiledLayer
 }
 
 
         }
-            public constructor        ()
-
-        Updates for KMP build        
-        {
+            public constructor        (){
 }
 
 
 open fun getX()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -73,10 +64,7 @@ open fun getX()
 
 open fun getY()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -87,10 +75,7 @@ open fun getY()
 
 open fun getZ()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

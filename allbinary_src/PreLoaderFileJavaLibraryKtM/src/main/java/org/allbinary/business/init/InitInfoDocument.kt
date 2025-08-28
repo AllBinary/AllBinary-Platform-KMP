@@ -35,9 +35,6 @@ open public class InitInfoDocument
     private var initInfoDocument: Document
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 

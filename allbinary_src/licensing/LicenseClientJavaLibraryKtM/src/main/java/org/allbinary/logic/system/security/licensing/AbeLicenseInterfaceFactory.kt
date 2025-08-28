@@ -42,10 +42,7 @@ open public class AbeLicenseInterfaceFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AbeLicenseInterfaceFactory
-
-        Updates for KMP build        
-        {
+: AbeLicenseInterfaceFactory{
 
 
 
@@ -71,9 +68,6 @@ open fun getInstance()
             
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -82,10 +76,7 @@ private constructor        ()
             
 open fun getLicenseInstance(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-: AbeLicenseInterface
-
-        Updates for KMP build        
-        {
+: AbeLicenseInterface{
     //var abeClientInformation = abeClientInformation
 
     
@@ -116,10 +107,7 @@ open fun getLicenseInstance(abeClientInformation: AbeClientInformationInterface)
             
 open fun get(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-: AbeLicenseInterface
-
-        Updates for KMP build        
-        {
+: AbeLicenseInterface{
     //var abeClientInformation = abeClientInformation
 
         try {
@@ -146,10 +134,7 @@ abeLicenseInterface= licenseClient!!.get(abeClientInformation)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return abeLicenseInterface
 } catch(e: IOException)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put("Licensing IO Error", this, commonStrings!!.GET, e)
 
 
@@ -157,10 +142,7 @@ logUtil!!.put("Licensing IO Error", this, commonStrings!!.GET, e)
                             throw LicensingException("License Server Connection Error")
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put("Licensing Failure", this, commonStrings!!.GET, e)
 
 
@@ -173,10 +155,7 @@ logUtil!!.put("Licensing Failure", this, commonStrings!!.GET, e)
 
 open fun isTimeToGetKey()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     var calendar: Calendar = Calendar.getInstance()!!
 
@@ -211,10 +190,7 @@ time= currentTime
 
 open fun setCheck(check: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var check = check
 this.check= check
 }
@@ -222,10 +198,7 @@ this.check= check
 
 open fun isCheck()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 

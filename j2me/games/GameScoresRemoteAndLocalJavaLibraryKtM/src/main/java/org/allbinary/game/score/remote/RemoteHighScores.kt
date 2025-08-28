@@ -47,10 +47,7 @@ open public class RemoteHighScores : HighScores {
 
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, softwareInformation: SoftwareInformation, gameInfo: GameInfo, heading: String, columnTwoHeading: String, isAscending: Boolean)
         //nullable =  from not(true or (false and false)) = 
-: HighScores
-
-        Updates for KMP build        
-        {
+: HighScores{
     //var abeClientInformation = abeClientInformation
     //var softwareInformation = softwareInformation
     //var gameInfo = gameInfo
@@ -68,10 +65,7 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, softwa
 
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, softwareInformation: SoftwareInformation, gameInfo: GameInfo, heading: String, columnTwoHeading: String, isAscending: Boolean, preload: Boolean)
         //nullable =  from not(true or (false and false)) = 
-: HighScores
-
-        Updates for KMP build        
-        {
+: HighScores{
     //var abeClientInformation = abeClientInformation
     //var softwareInformation = softwareInformation
     //var gameInfo = gameInfo
@@ -105,10 +99,7 @@ hashTable!!.put(gameInfo, highScores)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return highScores
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -136,10 +127,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, RemoteErrorHighScoresSingletonFactory.g
     val ASCENDING: String = "ASCENDING"
 private constructor        (abeClientInformation: AbeClientInformationInterface, softwareInformation: SoftwareInformation, gameInfo: GameInfo, heading: String, columnTwoHeading: String, ascending: Boolean, preload: Boolean)                        
 
-                            : super(gameInfo!!.toString(), heading, columnTwoHeading)
-
-        Updates for KMP build        
-        {
+                            : super(gameInfo!!.toString(), heading, columnTwoHeading){
     //var abeClientInformation = abeClientInformation
     //var softwareInformation = softwareInformation
     //var gameInfo = gameInfo
@@ -168,10 +156,7 @@ this.setAscending(ascending)
 
 open fun addHighScore(newHighScore: HighScore)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var newHighScore = newHighScore
 RemoteHighScoresSubmissionProcessorFactory.getInstance()!!.process(this, this.abeClientInformation, newHighScore)
 }
@@ -179,10 +164,7 @@ RemoteHighScoresSubmissionProcessorFactory.getInstance()!!.process(this, this.ab
 
 open fun update(hashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var hashtable = hashtable
 this.getList()!!.clear()
 
@@ -204,9 +186,6 @@ this.getList()!!.clear()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var highScoreVector: Vector = vector.elementAt(index) as Vector
@@ -242,9 +221,6 @@ this.getList()!!.add(highScore)
 
 
         while(enumeration.hasMoreElements())
-        
-
-        Updates for KMP build        
         {
 nextElement= enumeration.nextElement()!!
 logUtil!!.put("NextElement: " +nextElement, this, commonStrings!!.PROCESS)
@@ -258,10 +234,7 @@ logUtil!!.put("NextElement: " +nextElement, this, commonStrings!!.PROCESS)
 
 open fun setAscending(ascending: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var ascending = ascending
 this.ascending= ascending
 }
@@ -269,10 +242,7 @@ this.ascending= ascending
 
 open fun getAscending()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -283,10 +253,7 @@ open fun getAscending()
 
 open fun getSoftwareInformation()
         //nullable = true from not(false or (false and true)) = true
-: SoftwareInformation
-
-        Updates for KMP build        
-        {
+: SoftwareInformation{
 
 
 

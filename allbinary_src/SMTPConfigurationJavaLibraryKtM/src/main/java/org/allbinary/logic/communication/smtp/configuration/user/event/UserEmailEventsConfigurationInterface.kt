@@ -37,24 +37,15 @@ open fun getEventConfigurationHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>
 
-        Updates for KMP build        
-        
-
 open fun addUserEmailEventConfiguration(userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
                 @Throws(Exception::class)
             
 open fun getEventListener(abeClientInformation: AbeClientInformationInterface, userEmailEventNameData: UserEmailEventNameData, userInterface: UserInterface)
         //nullable = true from not(false or (false and false)) = true
 : UserEmailEventListenerInterface
-
-        Updates for KMP build        
-        
 
 }
                 

@@ -33,10 +33,7 @@ open public class ImageComparisonSearchResultsEvent : AllBinaryEventObject {
     private var imageComparisonSearch: ImageComparisonSearch
 public constructor        (anyType: Any, imageComparisonSearch: ImageComparisonSearch)                        
 
-                            : super(anyType)
-
-        Updates for KMP build        
-        {
+                            : super(anyType){
 var anyType = anyType
 var imageComparisonSearch = imageComparisonSearch
 
@@ -49,10 +46,7 @@ this.setImageComparisonSearch(imageComparisonSearch)
 
 open fun getImageComparisonSearch()
         //nullable = true from not(false or (false and true)) = true
-: ImageComparisonSearch
-
-        Updates for KMP build        
-        {
+: ImageComparisonSearch{
 
 
 
@@ -63,10 +57,7 @@ open fun getImageComparisonSearch()
 
 open fun setImageComparisonSearch(imageComparisonSearch: ImageComparisonSearch)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var imageComparisonSearch = imageComparisonSearch
 this.imageComparisonSearch= imageComparisonSearch
 }

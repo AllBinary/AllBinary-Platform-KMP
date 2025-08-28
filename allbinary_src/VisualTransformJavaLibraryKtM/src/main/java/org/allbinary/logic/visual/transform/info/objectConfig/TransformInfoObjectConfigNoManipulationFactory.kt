@@ -43,10 +43,7 @@ open public class TransformInfoObjectConfigNoManipulationFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TransformInfoObjectConfigNoManipulationFactory
-
-        Updates for KMP build        
-        {
+: TransformInfoObjectConfigNoManipulationFactory{
 
 
 
@@ -60,9 +57,6 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
@@ -71,10 +65,7 @@ private constructor        ()
             
 open fun getInstance(transformInfoInterface: TransformInfoInterface, objectConfigFileAbPath: AbPath)
         //nullable =  from not(true or (false and false)) = 
-: TransformInfoObjectConfigInterface
-
-        Updates for KMP build        
-        {
+: TransformInfoObjectConfigInterface{
 var transformInfoInterface = transformInfoInterface
 var objectConfigFileAbPath = objectConfigFileAbPath
 
@@ -92,10 +83,7 @@ var objectConfigFileAbPath = objectConfigFileAbPath
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TransformInfoObjectConfig(transformInfoInterface, DomDocumentHelper.create(data))
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

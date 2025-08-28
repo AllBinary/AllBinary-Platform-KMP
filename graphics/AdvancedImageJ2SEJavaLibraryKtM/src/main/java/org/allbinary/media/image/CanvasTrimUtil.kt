@@ -41,10 +41,7 @@ open public class CanvasTrimUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CanvasTrimUtil
-
-        Updates for KMP build        
-        {
+: CanvasTrimUtil{
 
 
 
@@ -68,10 +65,7 @@ open fun getInstance()
             
 open fun process(imageProcessorInput: ImageProcessorInput, cutCanvasFromLeftReduction: Int, cutCanvasFromTopReduction: Int, cutCanvasFromRightReduction: Int, cutCanvasFromBottomReduction: Int, visitor: ImageProcessedVisitor)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var imageProcessorInput = imageProcessorInput
     //var cutCanvasFromLeftReduction = cutCanvasFromLeftReduction
     //var cutCanvasFromTopReduction = cutCanvasFromTopReduction
@@ -97,9 +91,6 @@ open fun process(imageProcessorInput: ImageProcessorInput, cutCanvasFromLeftRedu
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 bufferedImage= bufferedImageArray[index]!!
 subBufferedImageArray[index]= bufferedImage!!.getSubimage(cutCanvasFromLeftReduction, cutCanvasFromTopReduction, bufferedImage!!.getWidth() -cutCanvasFromLeftReduction -cutCanvasFromRightReduction, bufferedImage!!.getHeight() -cutCanvasFromTopReduction -cutCanvasFromBottomReduction)

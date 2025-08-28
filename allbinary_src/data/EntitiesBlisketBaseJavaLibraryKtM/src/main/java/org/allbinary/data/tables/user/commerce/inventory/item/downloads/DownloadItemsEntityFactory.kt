@@ -39,10 +39,7 @@ open public class DownloadItemsEntityFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DownloadItemsEntityFactory
-
-        Updates for KMP build        
-        {
+: DownloadItemsEntityFactory{
 
 
 
@@ -56,19 +53,13 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getDownloadItemsEntityInstance()
         //nullable = true from not(false or (false and true)) = true
-: DownloadItemsEntity
-
-        Updates for KMP build        
-        {
+: DownloadItemsEntity{
 
         try {
             
@@ -77,10 +68,7 @@ open fun getDownloadItemsEntityInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return org.allbinary.data.tables.user.commerce.inventory.item.downloads.DownloadItemsEntity()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

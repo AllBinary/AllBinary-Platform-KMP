@@ -44,9 +44,6 @@ open public class UserEmailConfiguration
     private var userEmailEventsConfigurationInterface: UserEmailEventsConfigurationInterface
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
     
@@ -62,9 +59,6 @@ this.setUserEmailEventsConfigurationInterface(UserEmailEventsConfiguration())
 
 public constructor        (hashMap: HashMap<Any, Any>)
             : super()
-        
-
-        Updates for KMP build        
         {
 var hashMap = hashMap
 
@@ -82,10 +76,7 @@ this.setUserEmailEventsConfigurationInterface(UserEmailEventsConfiguration(hashM
 
 open fun getUserEmailEventsConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
-: UserEmailEventsConfigurationInterface
-
-        Updates for KMP build        
-        {
+: UserEmailEventsConfigurationInterface{
 
 
 
@@ -96,10 +87,7 @@ open fun getUserEmailEventsConfigurationInterface()
 
 open fun setUserEmailEventsConfigurationInterface(userEmailEventsConfigurationInterface: UserEmailEventsConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var userEmailEventsConfigurationInterface = userEmailEventsConfigurationInterface
 this.userEmailEventsConfigurationInterface= userEmailEventsConfigurationInterface
 }

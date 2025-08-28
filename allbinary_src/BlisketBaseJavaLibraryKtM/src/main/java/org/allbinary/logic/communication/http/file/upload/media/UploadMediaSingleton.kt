@@ -46,10 +46,7 @@ open public class UploadMediaSingleton
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: UploadMediaSingleton
-
-        Updates for KMP build        
-        {
+: UploadMediaSingleton{
 
     
                         if(UploadMediaSingleton.uploadMedia == 
@@ -80,9 +77,6 @@ open fun getInstance()
     private var writerFileTypesHashMap: HashMap<Any, Any>
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 this.readerFileTypesHashMap= HashMap<Any, Any>()
 this.writerFileTypesHashMap= HashMap<Any, Any>()
@@ -105,9 +99,6 @@ this.writerFileTypesHashMap= HashMap<Any, Any>()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var mediaDataName: String = mediaDataNameArray[index]!! as String
@@ -133,9 +124,6 @@ this.readerFileTypesHashMap!!.put(mediaData!!.getName(), mediaData!!.getType())
 
                         for (index in 0 until readerFileTypes!!.size)
 
-        
-
-        Updates for KMP build        
         {
 this.readerFileTypesHashMap!!.put(readerFileTypes[index]!!, RESIZABLE_MEDIA)
 }
@@ -149,9 +137,6 @@ this.readerFileTypesHashMap!!.put(readerFileTypes[index]!!, RESIZABLE_MEDIA)
 
                         for (index in 0 until writerFileTypes!!.size)
 
-        
-
-        Updates for KMP build        
         {
 this.writerFileTypesHashMap!!.put(writerFileTypes[index]!!, RESIZABLE_MEDIA)
 }
@@ -177,10 +162,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
 
 open fun isReaderSupported(mediaFileType: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var mediaFileType = mediaFileType
 
 
@@ -192,10 +174,7 @@ var mediaFileType = mediaFileType
 
 open fun isWriterSupported(mediaFileType: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var mediaFileType = mediaFileType
 
 
@@ -207,10 +186,7 @@ var mediaFileType = mediaFileType
 
 open fun isSupported(mediaFileType: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var mediaFileType = mediaFileType
 
 
@@ -222,10 +198,7 @@ var mediaFileType = mediaFileType
 
 open fun isMedia(mediaFileType: String, aMediaType: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var mediaFileType = mediaFileType
 var aMediaType = aMediaType
 
@@ -238,10 +211,7 @@ var aMediaType = aMediaType
 
 open fun isReaderMedia(mediaFileType: String, aMediaType: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var mediaFileType = mediaFileType
 var aMediaType = aMediaType
 
@@ -254,10 +224,7 @@ var aMediaType = aMediaType
 
 open fun isWriterMedia(mediaFileType: String, aMediaType: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var mediaFileType = mediaFileType
 var aMediaType = aMediaType
 
@@ -270,10 +237,7 @@ var aMediaType = aMediaType
 
 open fun isMedia(mediaFileType: String, aMediaType: String, hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var mediaFileType = mediaFileType
 var aMediaType = aMediaType
 var hashMap = hashMap

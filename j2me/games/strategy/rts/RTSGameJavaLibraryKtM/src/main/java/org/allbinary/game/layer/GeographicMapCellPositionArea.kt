@@ -59,9 +59,6 @@ open public class GeographicMapCellPositionArea
     private var surroundingGeographicMapCellPositionList: BasicArrayList = LIST
 public constructor        (layerInterface: AllBinaryLayer)
             : super()
-        
-
-        Updates for KMP build        
         {
     //var layerInterface = layerInterface
 this.layerInterface= layerInterface
@@ -72,10 +69,7 @@ this.layerInterface= layerInterface
             
 open fun update(geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var geographicMapInterface = geographicMapInterface
 this.occupyingGeographicMapCellPositionList= layerCoveringCellPositionsUtil!!.getAll(geographicMapInterface, layerInterface, layerInterface!!.getXP(), layerInterface!!.getYP(), reusableOccupyingGeographicMapCellPositionList)
 this.surroundingGeographicMapCellPositionList= cellPositionsUtil!!.getAllSurrounding(geographicMapInterface, occupyingGeographicMapCellPositionList, reusableSurroundingGeographicMapCellPositionList)
@@ -85,10 +79,7 @@ this.surroundingCircularIndexUtil!!.setSize(this.surroundingGeographicMapCellPos
 
 open fun getOccupyingGeographicMapCellPositionList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 
@@ -99,10 +90,7 @@ open fun getOccupyingGeographicMapCellPositionList()
 
 open fun getSurroundingGeographicMapCellPositionList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList
-
-        Updates for KMP build        
-        {
+: BasicArrayList{
 
 
 
@@ -113,10 +101,7 @@ open fun getSurroundingGeographicMapCellPositionList()
 
 open fun getNextSurroundingGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition
-
-        Updates for KMP build        
-        {
+: GeographicMapCellPosition{
 
     var geographicMapCellPosition: GeographicMapCellPosition = this.surroundingGeographicMapCellPositionList!!.get(this.surroundingCircularIndexUtil!!.getIndex()) as GeographicMapCellPosition
 

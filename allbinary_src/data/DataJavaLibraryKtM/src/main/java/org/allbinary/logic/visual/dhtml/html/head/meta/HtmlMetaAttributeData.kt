@@ -36,9 +36,6 @@ open public class HtmlMetaAttributeData
     private var name: String
 public constructor        (id: Int, value: String)
             : super()
-        
-
-        Updates for KMP build        
         {
 var id = id
 var value = value
@@ -49,10 +46,7 @@ this.id= id
 
 open fun equals(htmlMetaAttributeData: HtmlMetaAttributeData?)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var htmlMetaAttributeData = htmlMetaAttributeData
 
     
@@ -80,10 +74,7 @@ var htmlMetaAttributeData = htmlMetaAttributeData
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 

@@ -40,10 +40,7 @@ open public class LocalPlayerInputIdFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LocalPlayerInputIdFactory
-
-        Updates for KMP build        
-        {
+: LocalPlayerInputIdFactory{
 
 
 
@@ -69,9 +66,6 @@ open fun getInstance()
     private var totalDevicesMapped: Int = 0
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 
 
@@ -79,9 +73,6 @@ private constructor        ()
 
                         for (index in deviceIdToplayerId!!.size -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 deviceIdToplayerId[index]=  -1
 }
@@ -91,10 +82,7 @@ deviceIdToplayerId[index]=  -1
 
 open fun getDeviceId(playerInputId: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var playerInputId = playerInputId
 
 
@@ -106,10 +94,7 @@ var playerInputId = playerInputId
 
 open fun getPlayerForDevice(deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 var deviceId = deviceId
 
     var index: Int= 0
@@ -145,9 +130,6 @@ var deviceId = deviceId
 
                         for (index in totalDevicesMapped -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -198,10 +180,7 @@ logUtil!!.put(StringMaker().
 
 open fun getTotalDevicesInPlay()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
     var total: Int = 0
 
@@ -211,9 +190,6 @@ open fun getTotalDevicesInPlay()
 
                         for (index in totalDevicesMapped -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     
@@ -236,10 +212,7 @@ open fun getTotalDevicesInPlay()
 
 open fun isPlayerInPlay(playerInputId: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 var playerInputId = playerInputId
 
 
@@ -251,10 +224,7 @@ var playerInputId = playerInputId
 
 open fun setPlayerInPlay(playerInputId: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var playerInputId = playerInputId
 logUtil!!.put(StringMaker().
                             append("Setting PlayerInPlay with playerInputId: ")!!.append(playerInputId)!!.toString(), this, "setPlayerInPlay")
@@ -264,10 +234,7 @@ playersInPlay[playerInputId]= true
 
 open fun setPlayerOutOfPlay(playerInputId: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var playerInputId = playerInputId
 logUtil!!.put(StringMaker().
                             append("Setting PlayerOutOfPlay with playerInputId: ")!!.append(playerInputId)!!.toString(), this, "setPlayerOutOfPlay")
@@ -277,10 +244,7 @@ playersInPlay[playerInputId]= false
 
 open fun getPlayersInPlay()
         //nullable = true from not(false or (false and true)) = true
-: BooleanArray
-
-        Updates for KMP build        
-        {
+: BooleanArray{
 
 
 

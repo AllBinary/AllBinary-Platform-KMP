@@ -42,10 +42,7 @@ open public class KeySpecFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: KeySpecFactory
-
-        Updates for KMP build        
-        {
+: KeySpecFactory{
 
 
 
@@ -63,19 +60,13 @@ open fun getInstance()
     val BLOWFISH: String = "Blowfish"
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun getInstance(algorithm: String, keyData: ByteArray)
         //nullable =  from not(true or (false and false)) = 
-: KeySpec
-
-        Updates for KMP build        
-        {
+: KeySpec{
 var algorithm = algorithm
 var keyData = keyData
 
@@ -115,10 +106,7 @@ var keyData = keyData
                         }
                             
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

@@ -50,9 +50,6 @@ open public class TestInputAutomationWorker
     private var moveMouseToFirstMotionRectanglesResultsWorker: TestInputForMotionRectanglesResultsWorker
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 this.captureWorker= ScreenCaptureImagesWorker()
 this.changedPixelsImageComparisonResultsWorker= SaveImageComparisonWorker()

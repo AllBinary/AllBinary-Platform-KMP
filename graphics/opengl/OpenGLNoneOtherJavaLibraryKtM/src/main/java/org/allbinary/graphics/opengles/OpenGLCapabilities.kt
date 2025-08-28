@@ -38,10 +38,7 @@ open public class OpenGLCapabilities
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLCapabilities
-
-        Updates for KMP build        
-        {
+: OpenGLCapabilities{
 
 
 
@@ -75,29 +72,20 @@ open fun getInstance()
     var maxTextureSize: Int = 64
 private constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 }
 
 
 open fun initCapabilities(gl: Any)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var gl = gl
 }
 
 
 open fun isGlExtensionDrawTexture()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -108,10 +96,7 @@ open fun isGlExtensionDrawTexture()
 
 open fun getGlVersion()
         //nullable = true from not(false or (false and true)) = true
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -122,10 +107,7 @@ open fun getGlVersion()
 
 open fun isVertexBufferObjectSupport()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -136,10 +118,7 @@ open fun isVertexBufferObjectSupport()
 
 open fun isTextureSizeValid(widthAndHeight: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
     //var widthAndHeight = widthAndHeight
 
 

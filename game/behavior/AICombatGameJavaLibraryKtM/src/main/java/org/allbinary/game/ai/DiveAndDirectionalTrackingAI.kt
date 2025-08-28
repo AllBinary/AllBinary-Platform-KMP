@@ -96,10 +96,7 @@ open public class DiveAndDirectionalTrackingAI : BasicAI
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
 public constructor        (ownerLayerInterface: AllBinaryLayer, artificialIntelligenceInterface: ArtificialIntelligenceInterface, gameInput: GameInput, visitor: Visitor)                        
 
-                            : super(ownerLayerInterface, gameInput)
-
-        Updates for KMP build        
-        {
+                            : super(ownerLayerInterface, gameInput){
 var ownerLayerInterface = ownerLayerInterface
 var artificialIntelligenceInterface = artificialIntelligenceInterface
 var gameInput = gameInput
@@ -126,10 +123,7 @@ this.init()
                 @Throws(Exception::class)
             override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allBinaryLayerManager = allBinaryLayerManager
 
     
@@ -162,10 +156,7 @@ this.list.clear()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.dive= false
 this.directionOfTarget= DirectionFactory.getInstance()!!.NOT_BORDERED_WITH
 TrackingEventHandler.getInstance()!!.addListener(this)
@@ -176,10 +167,7 @@ TrackingEventHandler.getInstance()!!.addListener(this)
             
 open fun target(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var allBinaryLayerManager = allBinaryLayerManager
 
     
@@ -327,10 +315,7 @@ this.lastTrackingLayerInterface= lastTrackingEvent!!.getLayerInterface()
             
 open fun verticalTargeting(x: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var x = x
 
     var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
@@ -369,10 +354,7 @@ var x = x
             
 open fun horizontalTargeting(y: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var y = y
 
     var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
@@ -409,10 +391,7 @@ var y = y
 
 open fun setDive()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.dive= true
 this.velocityInterface!!.zero()
 TrackingEventHandler.getInstance()!!.removeListener(this)
@@ -423,10 +402,7 @@ TrackingEventHandler.getInstance()!!.removeListener(this)
             
 open fun moveRight()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.setLastDirection(this.directionFactory!!.RIGHT)
 this.directionalInterface!!.setFrame(this.lastDirection)
 this.aiVistor!!.visit(this)
@@ -437,10 +413,7 @@ this.aiVistor!!.visit(this)
             
 open fun moveLeft()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.setLastDirection(this.directionFactory!!.LEFT)
 this.directionalInterface!!.setFrame(this.lastDirection)
 this.aiVistor!!.visit(this)
@@ -451,10 +424,7 @@ this.aiVistor!!.visit(this)
             
 open fun moveDown()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.setLastDirection(this.directionFactory!!.DOWN)
 this.directionalInterface!!.setFrame(this.lastDirection)
 this.aiVistor!!.visit(this)
@@ -465,10 +435,7 @@ this.aiVistor!!.visit(this)
             
 open fun moveUp()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.setLastDirection(this.directionFactory!!.UP)
 this.directionalInterface!!.setFrame(this.lastDirection)
 this.aiVistor!!.visit(this)
@@ -479,10 +446,7 @@ this.aiVistor!!.visit(this)
             
 open fun dive()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.directionalInterface!!.setFrame(this.directionOfTarget)
 this.aiVistor!!.visit(this)
 }
@@ -492,10 +456,7 @@ this.aiVistor!!.visit(this)
             
 open fun attack()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 super.processAI(Canvas.KEY_NUM1)
 }
 
@@ -504,10 +465,7 @@ super.processAI(Canvas.KEY_NUM1)
             
 open fun drop()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
     
                         if(this.timeDelayHelper!!.isTime(this.gameTickTimeDelayHelper!!.startTime))
@@ -523,10 +481,7 @@ this.aiVistor!!.visit(this)
 
 open fun isBeyondTarget()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(this.directionOfTarget == directionFactory!!.DOWN)
@@ -660,30 +615,21 @@ open fun isBeyondTarget()
 
 override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
 override fun onMovement(trackingEvent: TrackingEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var trackingEvent = trackingEvent
 this.list.add(trackingEvent)
 }
 
 override fun onDestroyed(destroyedEvent: DestroyedEvent)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var destroyedEvent = destroyedEvent
 
     
@@ -700,10 +646,7 @@ DestroyedEventHandler.getInstance()!!.removeListener(this)
 
 open fun setLastDirection(lastDirection: Direction)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var lastDirection = lastDirection
 this.lastDirection= lastDirection
 
@@ -722,10 +665,7 @@ this.lastDirection= lastDirection
 
 override fun setLastKey(lastKey: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var lastKey = lastKey
 super.setLastKey(lastKey)
 
@@ -769,10 +709,7 @@ super.setLastKey(lastKey)
 
 open fun getLastDirection()
         //nullable = true from not(false or (false and true)) = true
-: Direction
-
-        Updates for KMP build        
-        {
+: Direction{
 
 
 
@@ -782,10 +719,7 @@ open fun getLastDirection()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
     var stringBuffer: StringMaker = StringMaker()
 

@@ -45,10 +45,7 @@ open public class StoreWorkFlowTag : HelperTag {
     private var viewFile: String
 public constructor        ()                        
 
-                            : super(StoreTagWorkFlowHelperFactory())
-
-        Updates for KMP build        
-        {
+                            : super(StoreTagWorkFlowHelperFactory()){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -67,10 +64,7 @@ public constructor        ()
 
 open fun setName(value: String)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.viewName= value
 this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.NAME, this.viewName)
@@ -81,10 +75,7 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.NAME, this.v
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
         try {
             
@@ -113,10 +104,7 @@ open fun process()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result.toInt()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
@@ -139,10 +127,7 @@ open fun process()
             
 open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
         try {
             
@@ -161,10 +146,7 @@ this.setHelper()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.process()
 } catch(e: LicensingException)
-            
-
-        Updates for KMP build        
-        {
+            {
 AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 
 
@@ -173,10 +155,7 @@ AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
                         return SKIP_BODY
 }
  catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 
 

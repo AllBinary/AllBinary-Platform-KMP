@@ -43,10 +43,7 @@ open public class NoTemplateTransformInfoObjectConfig : TransformInfoObjectConfi
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        (transformInfoInterface: Object)                        
 
-                            : super(transformInfoInterface)
-
-        Updates for KMP build        
-        {
+                            : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
 
 
@@ -56,10 +53,7 @@ var transformInfoInterface = transformInfoInterface
 
 public constructor        (transformInfoInterface: Object, document: Object)                        
 
-                            : super(transformInfoInterface, document)
-
-        Updates for KMP build        
-        {
+                            : super(transformInfoInterface, document){
 var transformInfoInterface = transformInfoInterface
 var document = document
 
@@ -71,10 +65,7 @@ this.setDocument(this.generate(this.toXmlDoc()))
 
 public constructor        (transformInfoInterface: Object, name: Object, type: Object)                        
 
-                            : super(transformInfoInterface, name, type)
-
-        Updates for KMP build        
-        {
+                            : super(transformInfoInterface, name, type){
 var transformInfoInterface = transformInfoInterface
 var name = name
 var type = type
@@ -90,10 +81,7 @@ this.setDocument(this.generate(this.toXmlDoc()))
             
 open fun generate(objectConfigDocument: Document)
         //nullable = true from not(false or (false and false)) = true
-: Document
-
-        Updates for KMP build        
-        {
+: Document{
 var objectConfigDocument = objectConfigDocument
 
     var docString: String = DomDocumentHelper.toString(objectConfigDocument)!!

@@ -37,10 +37,7 @@ open public class LockedResources
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LockedResources
-
-        Updates for KMP build        
-        {
+: LockedResources{
 
 
 

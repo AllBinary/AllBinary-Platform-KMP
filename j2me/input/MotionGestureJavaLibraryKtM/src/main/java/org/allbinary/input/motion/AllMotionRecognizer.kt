@@ -51,10 +51,7 @@ open public class AllMotionRecognizer : MotionRecognizer {
     private val touchButtonRecognizer: TouchButtonRecognizer
 
     private val id: Int
-public constructor        ()
-
-        Updates for KMP build        
-        {
+public constructor        (){
 this.id= index++
 this.motionGestureRecognizer= MotionGestureRecognizer(id)
 this.touchButtonRecognizer= TouchButtonRecognizer()
@@ -64,10 +61,7 @@ this.touchButtonRecognizer= TouchButtonRecognizer()
                 @Throws(Exception::class)
             override fun processStartMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var x = x
     //var y = y
     //var deviceId = deviceId
@@ -101,10 +95,7 @@ this.motionGestureRecognizer!!.processPressedMotionEvent(point, deviceId, modifi
                 @Throws(Exception::class)
             override fun processEndMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var x = x
     //var y = y
     //var deviceId = deviceId
@@ -146,10 +137,7 @@ this.motionGestureRecognizer!!.processReleasedMotionEvent(point, deviceId, modif
                 @Throws(Exception::class)
             override fun processDraggedMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var x = x
     //var y = y
     //var deviceId = deviceId
@@ -188,10 +176,7 @@ this.motionGestureRecognizer!!.processDraggedMotionEvent(point, deviceId, modifi
             
 open fun processMovedMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
     //var x = x
     //var y = y
     //var deviceId = deviceId
@@ -217,10 +202,7 @@ this.motionGestureRecognizer!!.processMovedMotionEvent(point, deviceId, modifier
 
 open fun getMotionGestureRecognizer()
         //nullable = true from not(false or (false and true)) = true
-: MotionGestureRecognizer
-
-        Updates for KMP build        
-        {
+: MotionGestureRecognizer{
 
 
 

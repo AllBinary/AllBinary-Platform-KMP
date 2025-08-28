@@ -40,9 +40,6 @@ open public class BasicDecimal
     private var units: Long
 public constructor        (bigDecimal: BasicDecimal)
             : super()
-        
-
-        Updates for KMP build        
         {
 var bigDecimal = bigDecimal
 this.units= bigDecimal!!.getUnscaled()
@@ -51,9 +48,6 @@ this.updateScaled()
 
 public constructor        ()
             : super()
-        
-
-        Updates for KMP build        
         {
 this.units= 0
 this.updateScaled()
@@ -61,9 +55,6 @@ this.updateScaled()
 
 public constructor        (units: Long)
             : super()
-        
-
-        Updates for KMP build        
         {
 var units = units
 this.units= units
@@ -73,10 +64,7 @@ this.updateScaled()
 
 open fun set(value: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.units= value.toLong()
 this.updateScaled()
@@ -85,10 +73,7 @@ this.updateScaled()
 
 open fun set(value: Long)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.units= value
 this.updateScaled()
@@ -97,10 +82,7 @@ this.updateScaled()
 
 open fun set(bigDecimal: BasicDecimal)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var bigDecimal = bigDecimal
 this.units= bigDecimal!!.getUnscaled()
 this.updateScaled()
@@ -109,10 +91,7 @@ this.updateScaled()
 
 open fun add(value: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.units= this.units +value
 this.updateScaled()
@@ -121,10 +100,7 @@ this.updateScaled()
 
 open fun add(value: Long)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.units= this.units +value
 this.updateScaled()
@@ -133,10 +109,7 @@ this.updateScaled()
 
 open fun add(bigDecimal: BasicDecimal)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var bigDecimal = bigDecimal
 this.units= this.units +bigDecimal!!.getUnscaled()
 this.updateScaled()
@@ -145,10 +118,7 @@ this.updateScaled()
 
 open fun subtract(value: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.units= this.units -value
 this.updateScaled()
@@ -157,10 +127,7 @@ this.updateScaled()
 
 open fun subtract(value: Long)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.units= this.units -value
 this.updateScaled()
@@ -169,10 +136,7 @@ this.updateScaled()
 
 open fun subtract(bigDecimal: BasicDecimal)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var bigDecimal = bigDecimal
 this.units= this.units -bigDecimal!!.getUnscaled()
 this.updateScaled()
@@ -181,10 +145,7 @@ this.updateScaled()
 
 open fun multiply(value: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.units= this.units *value
 this.updateScaled()
@@ -193,10 +154,7 @@ this.updateScaled()
 
 open fun multiply(value: Long)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.units= this.units *value
 this.updateScaled()
@@ -205,10 +163,7 @@ this.updateScaled()
 
 open fun multiply(bigDecimal: BasicDecimal)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var bigDecimal = bigDecimal
 this.units= this.units *bigDecimal!!.getUnscaled()
 this.updateScaled()
@@ -217,10 +172,7 @@ this.updateScaled()
 
 open fun divide(value: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.units= this.units /value
 this.updateScaled()
@@ -229,10 +181,7 @@ this.updateScaled()
 
 open fun divide(value: Long)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var value = value
 this.units= this.units /value
 this.updateScaled()
@@ -241,10 +190,7 @@ this.updateScaled()
 
 open fun divide(bigDecimal: BasicDecimal)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var bigDecimal = bigDecimal
 this.units= this.units /bigDecimal!!.getUnscaled()
 this.updateScaled()
@@ -253,10 +199,7 @@ this.updateScaled()
 
 open fun getUnscaled()
         //nullable = true from not(false or (false and true)) = true
-: Long
-
-        Updates for KMP build        
-        {
+: Long{
 
 
 
@@ -269,20 +212,14 @@ open fun getUnscaled()
 
 open fun updateScaled()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.scaled= (this.units /factorValue).toInt()
 }
 
 
 open fun getScaled()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -292,10 +229,7 @@ open fun getScaled()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String
-
-        Updates for KMP build        
-        {
+: String{
 
 
 
@@ -310,10 +244,7 @@ override fun toString()
 
 open fun getScaledFactor()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -324,10 +255,7 @@ open fun getScaledFactor()
 
 open fun getScaledFactorValue()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

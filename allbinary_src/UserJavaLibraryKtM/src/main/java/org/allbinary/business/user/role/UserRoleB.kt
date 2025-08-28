@@ -41,10 +41,7 @@ open public class UserRoleB : UserRole {
 
 open fun getRole(role: String)
         //nullable = true from not(false or (false and false)) = true
-: UserRole
-
-        Updates for KMP build        
-        {
+: UserRole{
 var role = role
 UserRoleFactory.getInstance()
 
@@ -64,9 +61,6 @@ UserRoleFactory.getInstance()
 
                         for (index in 0 until size)
 
-        
-
-        Updates for KMP build        
         {
 
     var userRole: UserRole = roleVector!!.get(index) as UserRole
@@ -98,10 +92,7 @@ UserRoleFactory.getInstance()
 
 open fun getAll()
         //nullable = true from not(false or (false and true)) = true
-: Vector
-
-        Updates for KMP build        
-        {
+: Vector{
 UserRoleFactory.getInstance()
 
 
@@ -114,10 +105,7 @@ UserRoleFactory.getInstance()
         }
             protected constructor        (aBasicUserRole: BasicUserRole, aUserFactoryInterface: UserFactoryInterface)                        
 
-                            : super(aBasicUserRole, aUserFactoryInterface)
-
-        Updates for KMP build        
-        {
+                            : super(aBasicUserRole, aUserFactoryInterface){
 var aBasicUserRole = aBasicUserRole
 var aUserFactoryInterface = aUserFactoryInterface
 

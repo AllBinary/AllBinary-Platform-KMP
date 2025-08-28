@@ -34,29 +34,17 @@ open fun setInputRobotInterface(inputRobotInterface: InputRobotInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
-        Updates for KMP build        
-        
-
 open fun getInputRobotInterface()
         //nullable = true from not(false or (false and true)) = true
 : InputRobotInterface
-
-        Updates for KMP build        
-        
 
 open fun getTime()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-        Updates for KMP build        
-        
-
 open fun setTime(time: Int)
         //nullable = true from not(false or (false and false)) = true
 
-
-        Updates for KMP build        
-        
 
 }
                 

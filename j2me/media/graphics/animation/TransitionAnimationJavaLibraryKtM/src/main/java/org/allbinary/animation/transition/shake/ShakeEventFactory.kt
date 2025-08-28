@@ -37,10 +37,7 @@ open public class ShakeEventFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ShakeEventFactory
-
-        Updates for KMP build        
-        {
+: ShakeEventFactory{
 
 
 
@@ -66,10 +63,7 @@ open fun getInstance()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 

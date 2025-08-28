@@ -38,10 +38,7 @@ open public class OnDemandResourcesFactory
         
 open fun size()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -52,10 +49,7 @@ open fun size()
 
 open fun remove(layerId: Int)
         //nullable = true from not(false or (false and false)) = true
-: OnDemandResources
-
-        Updates for KMP build        
-        {
+: OnDemandResources{
 var layerId = layerId
 
 

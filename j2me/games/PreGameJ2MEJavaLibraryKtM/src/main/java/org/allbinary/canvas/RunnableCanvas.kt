@@ -66,10 +66,7 @@ open public class RunnableCanvas : MyCanvas
     val threadObjectUtil: ThreadObjectUtil = ThreadObjectUtil.getInstance()!!
 public constructor        (commandListener: CommandListener, childNameList: BasicArrayList, hasParam: Boolean)                        
 
-                            : super(CommonStrings.getInstance()!!.UNKNOWN, childNameList)
-
-        Updates for KMP build        
-        {
+                            : super(CommonStrings.getInstance()!!.UNKNOWN, childNameList){
     //var commandListener = commandListener
     //var childNameList = childNameList
     //var hasParam = hasParam
@@ -104,10 +101,7 @@ this.runnableCanvasRefreshHelper= RunnableCanvasRefreshHelper(this)
 
 public constructor        (commandListener: CommandListener, childNameList: BasicArrayList)                        
 
-                            : this(commandListener, childNameList, true)
-
-        Updates for KMP build        
-        {
+                            : this(commandListener, childNameList, true){
     //var commandListener = commandListener
     //var childNameList = childNameList
 
@@ -118,10 +112,7 @@ public constructor        (commandListener: CommandListener, childNameList: Basi
 
 public constructor        ()                        
 
-                            : this(NullCommandListener.NULL_COMMAND_LISTENER, CanvasStrings.getInstance()!!.EMPTY_CHILD_NAME_LIST, false)
-
-        Updates for KMP build        
-        {
+                            : this(NullCommandListener.NULL_COMMAND_LISTENER, CanvasStrings.getInstance()!!.EMPTY_CHILD_NAME_LIST, false){
 
 
                             //For kotlin this is before the body of the constructor.
@@ -131,10 +122,7 @@ public constructor        ()
 
 open fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var cmdListener = cmdListener
 logUtil!!.put(commonStrings!!.NOT_IMPLEMENTED, this, "initCommands")
 }
@@ -142,10 +130,7 @@ logUtil!!.put(commonStrings!!.NOT_IMPLEMENTED, this, "initCommands")
 
 open fun isMainCanvas()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(this.getCustomCommandListener() != 
@@ -174,20 +159,14 @@ open fun isMainCanvas()
 
 override fun setThread(thread: Thread)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var thread = thread
 this.thread= thread
 }
 
 override fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var running = running
 this.running= running
 
@@ -202,9 +181,6 @@ this.running= running
         synchronized(this) 
 
         //mutex.withLock
-        
-
-        Updates for KMP build        
         {
 threadObjectUtil!!.notifyObject(this)
 }
@@ -227,10 +203,7 @@ logUtil!!.put(StringMaker().
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun isRunning()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
     
                         if(this.thread == this.currentThread)
@@ -286,10 +259,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, IS_RUNNING)
 
 open fun getLoopTimeHelperP()
         //nullable = true from not(false or (false and true)) = true
-: TimeDelayHelper
-
-        Updates for KMP build        
-        {
+: TimeDelayHelper{
 
 
 
@@ -302,10 +272,7 @@ open fun getLoopTimeHelperP()
 
 open fun setWait(wait: Int)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var wait = wait
 loopTimeHelper!!.delay= wait
 this.pauseWait= wait.toLong() *3
@@ -316,10 +283,7 @@ logUtil!!.put(StringMaker().
 
 open fun getWait()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 
@@ -330,37 +294,25 @@ open fun getWait()
 
 open fun setCurrentThread()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.currentThread= Thread.currentThread()
 }
 
 
 open fun setCurrentThreadFake()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.currentThread= thread
 }
 
 override fun showNotify()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 
         try {
             this.stopWaiting()
 } catch(e: Exception)
-            
-
-        Updates for KMP build        
-        {
+            {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "showNotify", e)
 }
 
@@ -373,10 +325,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "showNotify", e)
             
 open fun stopWaiting()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.notified= true
 
         
@@ -384,9 +333,6 @@ this.notified= true
         synchronized(this) 
 
         //mutex.withLock
-        
-
-        Updates for KMP build        
         {
 this.threadObjectUtil!!.notifyObject(this)
 }
@@ -400,10 +346,7 @@ this.repaint()
 
 open fun waitOnNotify(wait: Long)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var wait = wait
 
     
@@ -436,20 +379,14 @@ var wait = wait
             
 open fun processSleep()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 Thread.sleep(pauseWait)
 }
 
 
 open fun isPausable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -462,10 +399,7 @@ open fun isPausable()
             
 open fun processGameSleep(sleep: Long)
         //nullable = true from not(false or (false and false)) = true
-
-
-        Updates for KMP build        
-        {
+{
 var sleep = sleep
 Thread.sleep(sleep)
 }
@@ -481,10 +415,7 @@ Thread.sleep(sleep)
             
 open fun processLoopSleep()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.runnableCanvasRefreshHelper!!.process()
 
     
@@ -497,9 +428,6 @@ this.runnableCanvasRefreshHelper!!.process()
 logUtil!!.put(stringMaker!!.append(START_PAUSE)!!.append(System.currentTimeMillis())!!.append(PAUSE_SLEEP)!!.append(this.pauseWait)!!.toString(), this, PROCESS_LOOP_SLEEP)
 
         while(this.isPaused() && this.isRunning() && !this.isSingleThread())
-        
-
-        Updates for KMP build        
         {
 this.processSleep()
 
@@ -547,10 +475,7 @@ logUtil!!.put(stringMaker!!.append(END_PAUSE)!!.append(System.currentTimeMillis(
 
 open fun isSingleThread()
         //nullable = true from not(false or (false and true)) = true
-: Boolean
-
-        Updates for KMP build        
-        {
+: Boolean{
 
 
 
@@ -560,10 +485,7 @@ open fun isSingleThread()
 
 override fun run()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 this.setCurrentThread()
 }
 
@@ -572,19 +494,13 @@ this.setCurrentThread()
             
 open fun end2()
         //nullable = true from not(false or (false and true)) = true
-
-
-        Updates for KMP build        
-        {
+{
 }
 
 
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
-: Int
-
-        Updates for KMP build        
-        {
+: Int{
 
 
 

@@ -37,10 +37,7 @@ open public class SelectAdvancedRTSLayerVisitor : Visitor {
         
 
     private val selectedRTSLayersPlayerGameInput: SelectedRTSLayersPlayerGameInput
-public constructor        (selectedRTSLayersPlayerGameInput: SelectedRTSLayersPlayerGameInput)
-
-        Updates for KMP build        
-        {
+public constructor        (selectedRTSLayersPlayerGameInput: SelectedRTSLayersPlayerGameInput){
 var selectedRTSLayersPlayerGameInput = selectedRTSLayersPlayerGameInput
 this.selectedRTSLayersPlayerGameInput= selectedRTSLayersPlayerGameInput
 }
@@ -48,10 +45,7 @@ this.selectedRTSLayersPlayerGameInput= selectedRTSLayersPlayerGameInput
 
 open fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Any
-
-        Updates for KMP build        
-        {
+: Any{
 var anyType = anyType
 
     var selectedLayer: AdvancedRTSGameLayer = anyType as AdvancedRTSGameLayer
@@ -72,9 +66,6 @@ var anyType = anyType
 
                         for (index in list.size() -1 downTo 0)
 
-        
-
-        Updates for KMP build        
         {
 
     var currentRTSLayer: RTSLayer = list.get(index) as RTSLayer
