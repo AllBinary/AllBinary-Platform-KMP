@@ -32,67 +32,65 @@
 
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>AllBinaryOnJ2MEBasePlatformJavaLibraryKt</artifactId>
+            <artifactId>AllBinaryOnKMPBasePlatformJavaLibraryKt</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>        
 
+
+<!--        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>OpenGLAndroidJavaLibraryKt</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>-->
+<!--        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>ImageCacheAndroidJavaLibraryKt</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>-->
         <dependency>
-            <groupId>org.allbinary.animation.transition</groupId>
-            <artifactId>NoTransitionAnimationJavaLibraryKt</artifactId>
+            <groupId>org.allbinary</groupId>
+            <artifactId>ImageCacheOpenGLESJavaLibraryKt</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
-        
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>NotDeviceSpecificMIDP2JavaLibraryKt</artifactId>
-            <!--
-            <artifactId>NotDeviceSpecificNoMediaMIDP1LibraryKt</artifactId>
-            -->
+            <artifactId>NoSWTJavaLibraryKt</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
                 
-        <dependency>
+<!--        <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>NoGyroSensorJavaLibraryKt</artifactId>
-            <!-- AllBinary Platform Version Start -->
+            <artifactId>AndroidTransitionAnimationJavaLibraryKt</artifactId>
             <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-        </dependency>        
+        </dependency>-->
+
+<!--        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>AndroidMediaMIDPLibraryKt</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>-->
 
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>NullCustomUIJavaLibraryKt</artifactId>
+            <artifactId>MicroEmulatorCustomUIJavaLibraryKt</artifactId>
             <!--
             <artifactId>MicroEmulatorCustomUIJavaLibraryKt</artifactId>
             <artifactId>NullCustomUIJavaLibraryKt</artifactId>
             -->
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
-        </dependency>
-
-        <dependency>
-            <groupId>org.allbinary</groupId>
-            <artifactId>NoGameLicensingJavaLibraryKt</artifactId>
-            <!--
-                <artifactId>NoGameLicensingJavaLibraryKt</artifactId>
-                <artifactId>LicensedGameDemoJavaLibraryKt</artifactId>
-            -->
-            <!-- AllBinary Platform Version Start -->
+                <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
 
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>HardCodedLicenseInitInfoJavaLibraryKt</artifactId>
+            <artifactId>FileLicenseInitInfoJavaLibraryKt</artifactId>
             <!--
             <artifactId>HardCodedLicenseInitInfoJavaLibraryKt</artifactId>
             <artifactId>FileLicenseInitInfoJavaLibraryKt</artifactId>
@@ -111,50 +109,150 @@
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
+
         </dependency>
 
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>GameInputMEKeyOnlyJavaLibraryKt</artifactId>
+            <artifactId>NoGameLicensingJavaLibraryKt</artifactId>
             <!--
+                <artifactId>NoGameLicensingJavaLibraryKt</artifactId>
+                <artifactId>LicensedGameDemoJavaLibraryKt</artifactId>
             -->
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
-        </dependency>        
+
+        </dependency>
 
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>TouchJ2MENoneJavaLibraryKt</artifactId>
-            <!--
-            <artifactId>TouchJ2MEJavaLibraryKt</artifactId>
-            <artifactId>TouchJ2MENoneJavaLibraryKt</artifactId>
+            <artifactId>ClientInfoLicensingJavaLibraryKt</artifactId>
+                <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
+
+<!--        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>MusicAndroidJavaLibraryKt</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>-->
+
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>CombatGameJavaLibraryKt</artifactId>
+            <!--        
+            GameJ2MELibrary
             -->
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
         </dependency>
 
+<!--        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>FileAndroidJavaLibraryKt</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>-->
+
+<!--        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>J2MEGameMidletAsActivityJavaLibraryKt</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>-->
+
+<!--        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>MotionInputAndroidResourcesJavaLibraryKt</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>-->
+
+        <!--
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>TouchScreenJ2MENoneJavaLibraryKt</artifactId>
+            <artifactId>GameInputAndroidBaseJavaLibraryKt</artifactId>
+        -->
             <!-- 
             <artifactId>TouchScreenJ2MEJavaLibraryKt</artifactId>
             <artifactId>TouchScreenJ2MENoneJavaLibraryKt</artifactId>
-            <artifactId>GameInputAndroidBaseJavaLibraryKt</artifactId>
+            GameInputAndroidBaseJavaLibrary
             -->
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
+
+<!--
+2 duplicates
+    FileAndroidJavaLibrary
+    FileLicenseInitInfoJavaLibrary
+
+4 already in prior dependencies
+            <groupId>org.allbinary</groupId>
+            <artifactId>BasePreloaderFileJavaLibraryKt</artifactId>
+            <groupId>org.allbinary</groupId>
+            <artifactId>BasePreloaderJavaLibraryKt</artifactId>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>LogJ2MEJavaLibraryKt</artifactId>
+        </dependency>
+        <dependency>
+    <groupId>org.allbinary</groupId>
+    <artifactId>J2SEExceptionLibraryKt</artifactId>
+        </dependency>
+-->
+<!-- Android specific non optional libraries 
+
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>J2MEMidletAsViewJavaLibraryKt</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>J2MEMidletAsActivityJavaLibraryKt</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>J2MEGameMidletAsActivityJavaLibraryKt</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>BasicPlayerMIDP2JavaLibraryKt</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
+            <artifactId>OpenGLESAndroidJavaLibraryKt</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>AndroidToJ2MELibraryKt</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>AndroidToAllBinaryJavaLibraryKt</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>MotionInputAndroidResourcesJavaLibraryKt</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>MotionInputAndroidJavaLibraryKt</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>GameInputAndroidMotionJavaLibraryKt</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>GameInputAndroidBaseJavaLibraryKt</artifactId>
+        </dependency>
+
+android\AndroidAPI3AndUpJavaLibrary
+android\AndroidAPI5AndUpJavaLibrary
+input\android\MotionInputAPI5AndUpAndroidJavaLibrary
+android\AndroidThroughAPI2JavaLibrary
+android\AndroidThroughAPI4JavaLibrary
+input\android\MotionInputThroughAPI4AndroidJavaLibrary
+
+        -->
 
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
@@ -224,7 +322,7 @@
             </plugin>
 
             <plugin>
-                <artifactId>maven-assembly-pluginKt</artifactId>
+                <artifactId>maven-assembly-plugin</artifactId>
                 <executions>
                     <execution>
                         <phase>package</phase>
