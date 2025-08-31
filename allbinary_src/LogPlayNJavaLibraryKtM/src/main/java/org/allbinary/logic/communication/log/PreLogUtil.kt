@@ -31,14 +31,13 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import playn.core.PlayN
 
-open public class PreLogUtil
+/*actual*/ open public class PreLogUtil
             : Object
          {
         
-
-        companion object {
+/*actual*/ companion object {
             
-open fun put(specialMessage: String, anyType: Any, functionName: String)
+    /*actual*/ open fun put(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var specialMessage = specialMessage
@@ -69,7 +68,7 @@ PlayN.log()!!.debug(LOG_SUCCESS +message)
 
     private val LOG_SUCCESS: String = "org.allbinary: "
 
-open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)
+    /*actual*/ open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var specialMessage = specialMessage
@@ -99,7 +98,7 @@ PlayN.log()!!.error(LOG_SUCCESS +message, exception as Throwable)
 }
 
 
-open fun put(specialMessage: String, className: String, functionName: String)
+    /*actual*/ open fun put(specialMessage: String, className: String, functionName: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var specialMessage = specialMessage
@@ -112,7 +111,7 @@ PlayN.log()!!.debug(LOG_SUCCESS +message)
 }
 
 
-open fun put(specialMessage: String, className: String, functionName: String, exception: Any)
+    /*actual*/ open fun put(specialMessage: String, className: String, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var specialMessage = specialMessage
@@ -126,7 +125,7 @@ PlayN.log()!!.error(LOG_SUCCESS +message, exception as Throwable)
 }
 
 
-open fun getClassName(anyType: Any)
+    /*actual*/ open fun getClassName(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : String
                 //native - START
@@ -140,7 +139,7 @@ open fun getClassName(anyType: Any)
                 
 
         }
-            public constructor        ()
+            public constructor ()
             : super()
         {
 }

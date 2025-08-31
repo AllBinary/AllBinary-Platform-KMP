@@ -33,16 +33,15 @@ import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.java.exception.ExceptionUtil
 import org.allbinary.string.CommonLabels
 
-open public class LogFormatUtil
+/*actual*/ open public class LogFormatUtil
             : Object
          {
         
-
-        companion object {
+/*actual*/ companion object {
             
     private val instance: LogFormatUtil = LogFormatUtil()
 
-open fun getInstance()
+    /*actual*/ open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : LogFormatUtil{
 
@@ -74,13 +73,13 @@ open fun getInstance()
     private val FUNCTION_CALL: String = CommonLabels.getInstance()!!.COLON_SEP
 
     private val SPECIAL_MESSAGE: String = "> "
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun get(className: String, functionName: String, specialMessage: String, exception: Any)
+    /*actual*/ open fun get(className: String, functionName: String, specialMessage: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var className = className
@@ -102,7 +101,7 @@ stringBuffer!!.append(this.commonSeps!!.NEW_LINE)
 }
 
 
-open fun get(className: String, functionName: String, specialMessage: String)
+    /*actual*/ open fun get(className: String, functionName: String, specialMessage: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var className = className
@@ -122,7 +121,7 @@ stringBuffer!!.append(this.commonSeps!!.NEW_LINE)
 }
 
 
-open fun get(className: String, functionName: String)
+    open fun get(className: String, functionName: String)
         //nullable = true from not(false or (false and false)) = true
 : StringMaker{
     //var className = className
@@ -161,7 +160,7 @@ stringBuffer!!.append(functionName)
 
     private val nullUtil: NullUtil = NullUtil.getInstance()!!
 
-open fun get(exception: Any)
+    /*actual*/ open fun get(exception: Any)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var exception = exception

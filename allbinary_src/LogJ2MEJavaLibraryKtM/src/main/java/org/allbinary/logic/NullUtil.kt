@@ -28,16 +28,15 @@
 import java.util.Hashtable
 import java.util.Vector
 
-open public class NullUtil
+/*actual*/ open public class NullUtil
             : Object
          {
         
-
-        companion object {
+/*actual*/ companion object {
             
     private val instance: NullUtil = NullUtil()
 
-open fun getInstance()
+    /*actual*/ open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : NullUtil{
 
@@ -55,30 +54,30 @@ open fun getInstance()
             {
             }            
         
-    val NULL_OBJECT: Any = Any()
+    /*actual*/ val NULL_OBJECT: Any = Any()
 
-    val NULL_CLASS: KClass<*> = NULL_OBJECT::class!!
+    /*actual*/ val NULL_CLASS: KClass<*> = NULL_OBJECT::class!!
 
-    val NULL_OBJECT_ARRAY: Array<Any?> = arrayOfNulls(0)
+    /*actual*/ val NULL_OBJECT_ARRAY: Array<Any?> = arrayOfNulls(0)
 
-    val NULL_CHAR_ARRAY: CharArray = 
+    /*actual*/ val NULL_CHAR_ARRAY: CharArray = 
                                                         
                                                         CharArray(0)
                                                     
 
-    val NULL_BYTE_ARRAY: ByteArray = ByteArray(0)
+    /*actual*/ val NULL_BYTE_ARRAY: ByteArray = ByteArray(0)
 
-    val NULL_INT_ARRAY: IntArray = IntArray(0)
+    /*actual*/ val NULL_INT_ARRAY: IntArray = IntArray(0)
 
-    val NULL_INT_ARRAY_ARRAY: Array<IntArray?> = Array(0) { IntArray(0) }
+    /*actual*/ val NULL_INT_ARRAY_ARRAY: Array<IntArray?> = Array(0) { IntArray(0) }
 
-    val NULL_INT_ARRAY_ARRAY_ARRAY: Array<Array<IntArray?>?> = Array(0) { Array(0) { IntArray(0) } }
+    /*actual*/ val NULL_INT_ARRAY_ARRAY_ARRAY: Array<Array<IntArray?>?> = Array(0) { Array(0) { IntArray(0) } }
 
-    val NULL_FLOAT_ARRAY: FloatArray = FloatArray(0)
+    /*actual*/ val NULL_FLOAT_ARRAY: FloatArray = FloatArray(0)
 
-    val EMPTY_VECTOR: Vector<Any> = Vector<Any>()
+    /*actual*/ val EMPTY_VECTOR: Vector<Any> = Vector<Any>()
 
-    val NULL_TABLE: Hashtable<Any, Any> = Hashtable<Any, Any>()
+    /*actual*/ val NULL_TABLE: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
 }
                 

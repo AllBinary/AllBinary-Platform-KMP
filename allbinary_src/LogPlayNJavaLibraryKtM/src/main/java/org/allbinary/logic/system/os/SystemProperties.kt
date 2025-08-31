@@ -26,16 +26,15 @@
         import kotlin.reflect.KClass
         
 
-open public class SystemProperties
+/*actual*/ open public class SystemProperties
             : Object
          {
         
-
-        companion object {
+/*actual*/ companion object {
             
     private val instance: SystemProperties = SystemProperties()
 
-open fun getInstance()
+    /*actual*/ open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : SystemProperties{
 
@@ -47,13 +46,13 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
 
 
-open fun getName()
+    /*actual*/ open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -64,7 +63,7 @@ open fun getName()
 }
 
 
-open fun getArch()
+    /*actual*/ open fun getArch()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -75,7 +74,7 @@ open fun getArch()
 }
 
 
-open fun getVersion()
+    /*actual*/ open fun getVersion()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

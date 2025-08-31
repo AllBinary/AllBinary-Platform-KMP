@@ -29,14 +29,14 @@
         
 import org.allbinary.logic.string.StringMaker
 
-open public class Memory
+/*actual*/ open public class Memory
             : Object
          {
         
 
         companion object {
             
-open fun getInfo()
+    open fun getInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

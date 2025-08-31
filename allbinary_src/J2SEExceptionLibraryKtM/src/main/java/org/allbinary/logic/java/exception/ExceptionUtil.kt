@@ -28,7 +28,7 @@
 import java.io.ByteArrayOutputStream
 import java.io.PrintStream
 
-open public class ExceptionUtil
+/*actual*/ open public class ExceptionUtil
             : Object
          {
         
@@ -37,7 +37,7 @@ open public class ExceptionUtil
             
     private val instance: ExceptionUtil = ExceptionUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ExceptionUtil{
 
@@ -57,7 +57,7 @@ open fun getInstance()
 
     private val NONE: String = "No Stack Trace"
 
-open fun getStackTrace(e: Throwable)
+    open fun getStackTrace(e: Throwable)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var e = e

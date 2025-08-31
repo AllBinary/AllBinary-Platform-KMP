@@ -39,7 +39,7 @@ open public class ProfilingRefreshHelper : AndroidGameStatistics {
             
     private val instance: ProfilingRefreshHelper = ProfilingRefreshHelper()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AndroidGameStatistics{
 
@@ -62,7 +62,8 @@ open fun getInstance()
 private constructor        (){
 }
 
-override fun init(view: View)
+
+    override fun init(view: View)
         //nullable = true from not(false or (false and false)) = true
 {
 var view = view
@@ -72,7 +73,8 @@ bestFrameProcessingTime= Integer.MAX_VALUE
 worstFrameProcessingTime= 0
 }
 
-override fun nextFrame()
+
+    override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 frameProcessingTimeElapsed= System.currentTimeMillis() -frameProcessingTimeElapsed
@@ -100,7 +102,8 @@ frameProcessingTimeElapsed= System.currentTimeMillis() -frameProcessingTimeElaps
 super.nextFrame()
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

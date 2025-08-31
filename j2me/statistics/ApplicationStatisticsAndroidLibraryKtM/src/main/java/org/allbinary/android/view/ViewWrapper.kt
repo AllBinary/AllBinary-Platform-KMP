@@ -36,13 +36,15 @@ public constructor        (view: View){
 this.view= view
 }
 
-override fun invalidate()
+
+    override fun invalidate()
         //nullable = true from not(false or (false and true)) = true
 {
 this.view.invalidate()
 }
 
-override fun postInvalidate()
+
+    override fun postInvalidate()
         //nullable = true from not(false or (false and true)) = true
 {
 this.view.postInvalidate()

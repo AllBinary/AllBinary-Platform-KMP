@@ -42,13 +42,13 @@ open public class BaseViewWrapper
             {
             }            
         
-open fun invalidate()
+    open fun invalidate()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun postInvalidate()
+    open fun postInvalidate()
         //nullable = true from not(false or (false and true)) = true
 {
 }

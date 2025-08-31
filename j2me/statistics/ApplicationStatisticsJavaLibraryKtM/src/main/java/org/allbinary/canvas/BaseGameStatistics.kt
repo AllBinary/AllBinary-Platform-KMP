@@ -56,7 +56,7 @@ public constructor        ()
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 this.timeDelayHelper!!.setStartTime()
@@ -65,27 +65,27 @@ this.totalFrames= 0
 }
 
 
-open fun add(string: String)
+    open fun add(string: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var string = string
 }
 
 
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun nextFrame()
+    open fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 this.totalFrames++
 }
 
 
-open fun nextRefresh()
+    open fun nextRefresh()
         //nullable = true from not(false or (false and true)) = true
 {
 this.totalRefreshes++
@@ -94,7 +94,7 @@ this.totalRefreshes++
 
     private val DEFAULT_SCALE_FACTOR: Int = ScaleFactorFactory.getInstance()!!.DEFAULT_SCALE_FACTOR
 
-open fun getRefreshRate()
+    open fun getRefreshRate()
         //nullable = true from not(false or (false and true)) = true
 : Short{
 
@@ -128,7 +128,7 @@ open fun getRefreshRate()
 }
 
 
-open fun getTimeDelayHelper()
+    open fun getTimeDelayHelper()
         //nullable = true from not(false or (false and true)) = true
 : TimeDelayHelper{
 
@@ -161,7 +161,7 @@ open fun getTimeDelayHelper()
 
     private val primitiveLongSingleton: PrimitiveLongSingleton = PrimitiveLongSingleton.getInstance()!!
 
-open fun toCharArray()
+    open fun toCharArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<CharArray?>{
 
@@ -254,7 +254,7 @@ CHAR_ARRAY[3]!![1]= PLUS_CHAR
 }
 
 
-open fun toStringArray()
+    open fun toStringArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<String?>{
 
@@ -294,7 +294,7 @@ STRING_ARRAY[9]= string
 }
 
 
-open fun toString(totalTime: Long)
+    open fun toString(totalTime: Long)
         //nullable = true from not(false or (true and false)) = true
 : String{
 var totalTime = totalTime
@@ -327,7 +327,8 @@ stringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
                         return stringBuffer!!.toString()
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

@@ -27,14 +27,14 @@
         
 import org.allbinary.logic.string.StringMaker
 
-open public class GameStatisticsFactory : AndroidGameStatistics {
+/*actual*/ open public class GameStatisticsFactory : AndroidGameStatistics {
         
 
         companion object {
             
     private val SINGLETON: AndroidGameStatistics = GameStatisticsFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AndroidGameStatistics{
 
@@ -53,7 +53,8 @@ open fun getInstance()
             }            
         
     private var stringBuffer: StringMaker = StringMaker()
-override fun add(string: String)
+
+    override fun add(string: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var string = string
@@ -70,7 +71,8 @@ this.stringBuffer!!.append("Old Stats Cleared")
 this.stringBuffer!!.append(string)
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

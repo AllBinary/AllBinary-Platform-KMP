@@ -56,7 +56,7 @@ this.STRING_ARRAY[index]= stringUtil!!.EMPTY_STRING
 }
 
 
-open fun init(view: View)
+    open fun init(view: View)
         //nullable = true from not(false or (false and false)) = true
 {
 var view = view
@@ -65,14 +65,15 @@ this.view= ViewWrapper(view)
 this.totalOnDraws= 0
 }
 
-override fun process()
+
+    override fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 view.postInvalidate()
 }
 
 
-open fun nextOnDraw()
+    open fun nextOnDraw()
         //nullable = true from not(false or (false and true)) = true
 {
 this.totalOnDraws++
@@ -82,7 +83,8 @@ this.totalOnDraws++
     private val TOTAL_ONDRAWS: String = " Total onDraws: "
 
     private val ONDRAWS_RATE: String = " onDraws(/10) Sec: "
-override fun toStringArray()
+
+    override fun toStringArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<String?>{
 
@@ -113,7 +115,8 @@ STRING_ARRAY[13]= (this.totalOnDraws /totalTime).toString()
                         return STRING_ARRAY
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

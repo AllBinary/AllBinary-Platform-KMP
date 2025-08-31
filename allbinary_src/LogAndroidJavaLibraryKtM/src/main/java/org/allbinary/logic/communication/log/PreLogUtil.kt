@@ -27,14 +27,13 @@
         
 import org.allbinary.logic.NullUtil
 
-open public class PreLogUtil
+/*actual*/ open public class PreLogUtil
             : Object
          {
         
-
-        companion object {
+/*actual*/ companion object {
             
-open fun put(specialMessage: String, anyType: Any, functionName: String)
+    /*actual*/ open fun put(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var specialMessage = specialMessage
@@ -46,7 +45,7 @@ put(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
 
     private val LABEL: String = "org.allbinary"
 
-open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)
+    /*actual*/ open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var specialMessage = specialMessage
@@ -77,7 +76,7 @@ android.util.Log.i(LABEL, message)
 }
 
 
-open fun put(specialMessage: String, className: String, functionName: String)
+    /*actual*/ open fun put(specialMessage: String, className: String, functionName: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var specialMessage = specialMessage
@@ -87,7 +86,7 @@ put(specialMessage, className, functionName, NullUtil.getInstance()!!.NULL_OBJEC
 }
 
 
-open fun put(specialMessage: String, className: String, functionName: String, exception: Any)
+    /*actual*/ open fun put(specialMessage: String, className: String, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var specialMessage = specialMessage
@@ -102,7 +101,7 @@ android.util.Log.i(className, message)
 
 
         }
-            public constructor        ()
+            public constructor ()
             : super()
         {
 }

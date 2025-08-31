@@ -29,16 +29,15 @@ import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
 
-open public class TimeStampUtil
+/*actual*/ open public class TimeStampUtil
             : Object
          {
         
-
-        companion object {
+/*actual*/ companion object {
             
     private val instance: TimeStampUtil = TimeStampUtil()
 
-open fun getInstance()
+    /*actual*/ open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TimeStampUtil{
 
@@ -52,13 +51,13 @@ open fun getInstance()
         }
             
     private val simpleDataFormat: SimpleDateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS")
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getAsString()
+    /*actual*/ open fun getAsString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
