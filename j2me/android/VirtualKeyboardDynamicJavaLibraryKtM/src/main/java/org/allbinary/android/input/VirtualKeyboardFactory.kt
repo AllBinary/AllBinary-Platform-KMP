@@ -34,12 +34,11 @@ open public class VirtualKeyboardFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var virtualKeyboard: VirtualKeyboard = VirtualKeyboard.NULL_VIRTUAL_KEYBOARD
 
-open fun init(activity: Activity)
+    open fun init(activity: Activity)
         //nullable = true from not(false or (false and false)) = true
 {
 var activity = activity
@@ -63,7 +62,7 @@ var activity = activity
 }
 
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : VirtualKeyboard{
 

@@ -39,7 +39,7 @@ open public class SimpleGeographicMapCellPositionFactory
         
                 @Throws(Exception::class)
             
-open fun getInstance(geographicMapInterface: BasicGeographicMap, i_column: Int, i_row: Int, columns: Int, rows: Int, width: Int, height: Int)
+    open fun getInstance(geographicMapInterface: BasicGeographicMap, i_column: Int, i_row: Int, columns: Int, rows: Int, width: Int, height: Int)
         //nullable =  from not(true or (false and false)) = 
 : GeographicMapCellPosition{
     //var geographicMapInterface = geographicMapInterface

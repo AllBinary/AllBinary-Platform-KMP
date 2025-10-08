@@ -32,12 +32,11 @@ open public class AffiliateSalesEntityFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val CLASSNAME: String = "org.allbinary.data.tables.AffiliatesSalesEntity"
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AffiliateSalesEntityInterface{
 
@@ -75,7 +74,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, "AffiliateEntityFactory", commonStrings
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

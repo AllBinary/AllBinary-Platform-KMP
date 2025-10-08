@@ -25,14 +25,15 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface TransformInfoHttpStoreInterface : TransformInfoHttpInterface {
         
 
-open fun setStoreName(value: String)
+    open fun setStoreName(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getStoreName()
+    open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
 : String
 

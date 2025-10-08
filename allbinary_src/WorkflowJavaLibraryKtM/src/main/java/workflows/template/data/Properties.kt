@@ -40,7 +40,7 @@ open public class Properties
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var propertiesHashMap: HashMap<Any, Any>
-public constructor        ()
+public constructor ()
             : super()
         {
 
@@ -56,7 +56,7 @@ this.propertiesHashMap= HashMap<Any, Any>()
 }
 
 
-open fun getPropertiesHashMap()
+    open fun getPropertiesHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -67,7 +67,7 @@ open fun getPropertiesHashMap()
 }
 
 
-open fun doEndTag()
+    open fun doEndTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

@@ -53,7 +53,7 @@ open public class MultipartRequestParamForwardHelper
     private val command: String
 
     private val paramVector: Vector
-public constructor        (parentHelperTag: HelperTag, page: String, command: String, paramVector: Vector, pageContext: PageContext)
+public constructor (parentHelperTag: HelperTag, page: String, command: String, paramVector: Vector, pageContext: PageContext)
             : super()
         {
 var parentHelperTag = parentHelperTag
@@ -71,7 +71,7 @@ this.requestMapInterface= InventoryItemViewParentTagHelper.getInstance()!!.getRe
 
                 @Throws(Exception::class)
             
-open fun forward()
+    open fun forward()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -112,7 +112,7 @@ this.pageContext!!.forward(stringBuffer!!.toString())
 }
 
 
-open fun getParams()
+    open fun getParams()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -173,7 +173,7 @@ stringBuffer!!.append(value)
 }
 
 
-open fun shouldForward()
+    open fun shouldForward()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

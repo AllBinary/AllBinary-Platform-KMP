@@ -32,7 +32,7 @@ open public class LicenseType
         
 
     private var name: String
-protected constructor        (name: String)
+protected constructor (name: String)
             : super()
         {
 var name = name
@@ -40,7 +40,7 @@ this.setName(name)
 }
 
 
-open fun setName(name: String)
+    open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name
@@ -48,7 +48,7 @@ this.name= name
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

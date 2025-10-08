@@ -33,12 +33,11 @@ open public class ModifierBaseProcessor
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ModifierBaseProcessor = ModifierBaseProcessor()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ModifierBaseProcessor{
 
@@ -56,7 +55,7 @@ open fun getInstance()
             {
             }            
         
-open fun update(imageModifierUtil: ImageModifierUtil, originalImage: Image, imageToShow: Image, index: Int, basicColor: BasicColor)
+    open fun update(imageModifierUtil: ImageModifierUtil, originalImage: Image, imageToShow: Image, index: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageModifierUtil = imageModifierUtil
@@ -67,7 +66,7 @@ open fun update(imageModifierUtil: ImageModifierUtil, originalImage: Image, imag
 }
 
 
-open fun update(imageModifierUtil: ImageModifierUtil, originalImage: Image, imageToShow: Image, index: Int, alpha: Int)
+    open fun update(imageModifierUtil: ImageModifierUtil, originalImage: Image, imageToShow: Image, index: Int, alpha: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageModifierUtil = imageModifierUtil

@@ -41,7 +41,7 @@ open public class BasePathFinderGraphVisitor : PathFinderGraphVisitorBase {
     val minPathWeight: Int
 
     val maxPathWeight: Int
-public constructor        (geographicMapInterface: BasicGeographicMap, edgeMinimum: Int, minPathWeight: Int, maxPathWeight: Int){
+public constructor (geographicMapInterface: BasicGeographicMap, edgeMinimum: Int, minPathWeight: Int, maxPathWeight: Int){
     //var geographicMapInterface = geographicMapInterface
     //var edgeMinimum = edgeMinimum
     //var minPathWeight = minPathWeight
@@ -55,7 +55,7 @@ this.maxPathWeight= maxPathWeight
 
                 @Throws(Exception::class)
             
-open fun visit(graph: Any, startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList)
+    open fun visit(graph: Any, startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graph = graph
@@ -66,7 +66,7 @@ open fun visit(graph: Any, startPathFindingNodeList: BasicArrayList, endPathFind
 
                 @Throws(Exception::class)
             
-open fun fixPath(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, pathList: BasicArrayList)
+    open fun fixPath(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, pathList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var startPathFindingNodeList = startPathFindingNodeList
@@ -90,7 +90,7 @@ pathList!!.add(0, startPathFindingNode!!.geographicMapCellPosition)
 }
 
 
-open fun isValid(graphPath: Any)
+    open fun isValid(graphPath: Any)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var graphPath = graphPath
@@ -102,7 +102,7 @@ open fun isValid(graphPath: Any)
 }
 
 
-open fun getInvalidReason(graphPath: Any)
+    open fun getInvalidReason(graphPath: Any)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var graphPath = graphPath

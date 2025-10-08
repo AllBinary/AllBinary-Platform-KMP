@@ -64,7 +64,7 @@ open public class HtmlSelect : HtmlTag {
     private var multiple: String = "multiple"
 
     private var isMultipleSelect: Boolean = false
-public constructor        (before: String, size: String, name: String, after: String){
+public constructor (before: String, size: String, name: String, after: String){
 var before = before
 var size = size
 var name = name
@@ -77,7 +77,7 @@ this.options= Vector()
 }
 
 
-open fun addOption(key: String)
+    open fun addOption(key: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var key = key
@@ -85,7 +85,7 @@ this.options.add(key)
 }
 
 
-open fun addOptions(fileName: String)
+    open fun addOptions(fileName: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var fileName = fileName
@@ -111,7 +111,7 @@ this.addOption("Error")
 }
 
 
-open fun setSelected(selected: String)
+    open fun setSelected(selected: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var selected = selected
@@ -119,7 +119,7 @@ this.selected= selected
 }
 
 
-open fun isMultiple()
+    open fun isMultiple()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -130,7 +130,7 @@ open fun isMultiple()
 }
 
 
-open fun setMultiple(value: Boolean)
+    open fun setMultiple(value: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -138,7 +138,7 @@ this.isMultipleSelect= value
 }
 
 
-open fun getOptions()
+    open fun getOptions()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -187,7 +187,8 @@ result += ENDOPTION
                         return result
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

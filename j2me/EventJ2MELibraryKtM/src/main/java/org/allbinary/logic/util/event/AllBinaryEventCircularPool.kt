@@ -30,14 +30,14 @@ import org.allbinary.util.CircularIndexUtil
 
 open public class AllBinaryEventCircularPool : BaseCircularPool {
         
-public constructor        (max: Int){
+public constructor (max: Int){
 var max = max
 this.OBJECT_ARRAY= arrayOfNulls(max)
 this.circularIndexUtil= CircularIndexUtil.getInstance(max)
 }
 
 
-open fun init(allBinaryEventObjectFactoryInterface: AllBinaryEventObjectFactoryInterface)
+    open fun init(allBinaryEventObjectFactoryInterface: AllBinaryEventObjectFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryEventObjectFactoryInterface = allBinaryEventObjectFactoryInterface

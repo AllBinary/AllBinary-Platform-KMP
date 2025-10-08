@@ -32,12 +32,11 @@ open public class TransactionResultEntityFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: TransactionResultEntityFactory = TransactionResultEntityFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TransactionResultEntityFactory{
 
@@ -51,13 +50,13 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getTransactionResultEntityInstance()
+    open fun getTransactionResultEntityInstance()
         //nullable = true from not(false or (false and true)) = true
 : TransactionResultEntity{
 

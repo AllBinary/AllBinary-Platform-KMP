@@ -26,7 +26,7 @@ open public class TouchButtonResource
     val RESOURCE: String
 
     val HINT: String
-protected constructor        (resource: String, hint: String)
+protected constructor (resource: String, hint: String)
             : super()
         {
 var resource = resource

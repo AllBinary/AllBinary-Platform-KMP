@@ -25,18 +25,19 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface ProductListingInterface {
         
 
                 @Throws(Exception::class)
             
-open fun generateAll()
+    open fun generateAll()
         //nullable = true from not(false or (false and true)) = true
 : String
 
                 @Throws(Exception::class)
             
-open fun generateAll(storeName: String)
+    open fun generateAll(storeName: String)
         //nullable = true from not(false or (false and false)) = true
 : String
 

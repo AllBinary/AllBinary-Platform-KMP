@@ -25,14 +25,15 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface VectorInterface {
         
 
-open fun getPoints(frame: Int)
+    open fun getPoints(frame: Int)
         //nullable = true from not(false or (false and false)) = true
 : Array<IntArray?>
 
-open fun setPoints(currentPoints: Array<Array<IntArray?>?>)
+    open fun setPoints(currentPoints: Array<Array<IntArray?>?>)
         //nullable = true from not(false or (false and false)) = true
 
 

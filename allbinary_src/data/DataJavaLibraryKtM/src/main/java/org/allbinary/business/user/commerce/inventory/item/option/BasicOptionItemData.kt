@@ -30,8 +30,7 @@ open public class BasicOptionItemData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val OPTION_ONE_TITLE: String = "BASICOPTIONITEM_OPTION_ONE_TITLE"
 

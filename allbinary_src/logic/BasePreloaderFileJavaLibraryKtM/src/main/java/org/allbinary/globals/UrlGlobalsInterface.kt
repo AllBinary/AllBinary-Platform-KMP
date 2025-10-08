@@ -39,7 +39,7 @@ open public class UrlGlobalsInterface
         
                 @Throws(Exception::class)
             
-open fun getMainPath()
+    open fun getMainPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -50,7 +50,7 @@ open fun getMainPath()
 }
 
 
-open fun getTestHtmlPath()
+    open fun getTestHtmlPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -61,7 +61,7 @@ open fun getTestHtmlPath()
 }
 
 
-open fun getWebappPath()
+    open fun getWebappPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -72,7 +72,7 @@ open fun getWebappPath()
 }
 
 
-open fun isTestingMode()
+    open fun isTestingMode()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

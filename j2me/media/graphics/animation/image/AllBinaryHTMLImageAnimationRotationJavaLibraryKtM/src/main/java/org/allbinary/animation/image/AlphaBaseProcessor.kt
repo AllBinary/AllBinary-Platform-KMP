@@ -32,12 +32,11 @@ open public class AlphaBaseProcessor
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AlphaBaseProcessor = AlphaBaseProcessor()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AlphaBaseProcessor{
 
@@ -55,7 +54,7 @@ open fun getInstance()
             {
             }            
         
-open fun setAlpha(imageModifierUtil: ImageModifierUtil, originalImage: Image, imageToShow: Image, alpha: Int)
+    open fun setAlpha(imageModifierUtil: ImageModifierUtil, originalImage: Image, imageToShow: Image, alpha: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageModifierUtil = imageModifierUtil

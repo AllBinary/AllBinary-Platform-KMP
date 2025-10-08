@@ -49,7 +49,7 @@ open public class SimpleGeographicMap
     private var foregroundBasicColor: BasicColor
 
     private var backgroundBasicColor: BasicColor
-public constructor        (id: Integer, name: String, cellTypeIdToGeographicMapCellType: IntArray, tiledLayer: AllBinaryTiledLayer, foregroundBasicColor: BasicColor, backgroundBasicColor: BasicColor)
+public constructor (id: Integer, name: String, cellTypeIdToGeographicMapCellType: IntArray, tiledLayer: AllBinaryTiledLayer, foregroundBasicColor: BasicColor, backgroundBasicColor: BasicColor)
             : super()
         {
     //var id = id
@@ -67,7 +67,7 @@ this.setForegroundBasicColor(foregroundBasicColor)
 }
 
 
-open fun getId()
+    open fun getId()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -78,7 +78,7 @@ open fun getId()
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -89,13 +89,13 @@ open fun getName()
 }
 
 
-open fun reset()
+    open fun reset()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun getAllBinaryTiledLayer()
+    open fun getAllBinaryTiledLayer()
         //nullable = true from not(false or (false and true)) = true
 : AllBinaryTiledLayer{
 
@@ -110,7 +110,7 @@ open fun getAllBinaryTiledLayer()
 
                 @Throws(Exception::class)
             
-open fun getCellTypeAt(cellPosition: GeographicMapCellPosition)
+    open fun getCellTypeAt(cellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellType{
     //var cellPosition = cellPosition
@@ -140,7 +140,7 @@ open fun getCellTypeAt(cellPosition: GeographicMapCellPosition)
 }
 
 
-open fun getCellTypeFromMapCellTypeInt(cellTypeId: Int)
+    open fun getCellTypeFromMapCellTypeInt(cellTypeId: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var cellTypeId = cellTypeId
@@ -152,7 +152,7 @@ open fun getCellTypeFromMapCellTypeInt(cellTypeId: Int)
 }
 
 
-open fun getForegroundBasicColor()
+    open fun getForegroundBasicColor()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
 
@@ -163,7 +163,7 @@ open fun getForegroundBasicColor()
 }
 
 
-open fun setForegroundBasicColor(foregroundBasicColor: BasicColor)
+    open fun setForegroundBasicColor(foregroundBasicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var foregroundBasicColor = foregroundBasicColor
@@ -171,7 +171,7 @@ this.foregroundBasicColor= foregroundBasicColor
 }
 
 
-open fun getBackgroundBasicColor()
+    open fun getBackgroundBasicColor()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
 
@@ -182,7 +182,7 @@ open fun getBackgroundBasicColor()
 }
 
 
-open fun setBackgroundBasicColor(backgroundBasicColor: BasicColor)
+    open fun setBackgroundBasicColor(backgroundBasicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var backgroundBasicColor = backgroundBasicColor

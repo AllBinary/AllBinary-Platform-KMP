@@ -27,22 +27,23 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface ProgressActivityInterface {
         
 
-open fun runOnUiThread(action: Runnable)
+    open fun runOnUiThread(action: Runnable)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun onDismissTitleProgressBar()
+    open fun onDismissTitleProgressBar()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun onShowTitleProgressBar(value: Int, indeterminate: Boolean)
+    open fun onShowTitleProgressBar(value: Int, indeterminate: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun onTitleProgressBarSetProgress(value: Int)
+    open fun onTitleProgressBarSetProgress(value: Int)
         //nullable = true from not(false or (false and false)) = true
 
 

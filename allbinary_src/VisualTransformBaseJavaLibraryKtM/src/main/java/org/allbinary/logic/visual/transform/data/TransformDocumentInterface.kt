@@ -27,14 +27,15 @@
         
 import org.w3c.dom.Document
 import org.w3c.dom.Node
+
 interface TransformDocumentInterface {
         
 
-open fun getBaseNode()
+    open fun getBaseNode()
         //nullable = true from not(false or (false and true)) = true
 : Node
 
-open fun getDoc()
+    open fun getDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document
 

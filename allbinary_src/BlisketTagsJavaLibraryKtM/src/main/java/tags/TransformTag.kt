@@ -38,7 +38,7 @@ open public class TransformTag : TransformInfoTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        ()                        
+public constructor ()                        
 
                             : super(ViewHelperFactory()){
 
@@ -56,7 +56,7 @@ public constructor        ()
                                 
 }
 
-public constructor        (tagHelperFactoryInterface: TagHelperFactoryInterface)                        
+public constructor (tagHelperFactoryInterface: TagHelperFactoryInterface)                        
 
                             : super(tagHelperFactoryInterface){
 var tagHelperFactoryInterface = tagHelperFactoryInterface
@@ -78,7 +78,7 @@ var tagHelperFactoryInterface = tagHelperFactoryInterface
 
                 @Throws(Exception::class)
             
-open fun view()
+    open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -115,7 +115,7 @@ open fun view()
 
                 @Throws(JspTagException::class)
             
-open fun doStartTag()
+    open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

@@ -28,8 +28,7 @@
 
 open public class NoShakeAnimationListener : ShakeAnimationListener {
         
-
-        companion object {
+companion object {
             
     val NO_SHAKE_ANIMATION_LISTENER: ShakeAnimationListener = NoShakeAnimationListener()
 

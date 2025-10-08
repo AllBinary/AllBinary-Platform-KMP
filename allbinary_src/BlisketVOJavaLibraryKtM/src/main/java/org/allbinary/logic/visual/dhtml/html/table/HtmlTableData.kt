@@ -31,12 +31,11 @@ open public class HtmlTableData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: HtmlTableData = HtmlTableData()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : HtmlTableData{
 

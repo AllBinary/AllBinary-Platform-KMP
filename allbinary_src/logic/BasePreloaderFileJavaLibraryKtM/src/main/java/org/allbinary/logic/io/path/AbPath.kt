@@ -36,8 +36,7 @@ open public class AbPath
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val NETWORK_SEP: String = ":/"
 
@@ -58,7 +57,7 @@ open public class AbPath
     private var numberOfSeps: Int = 0
 
     private val abPathUtil: PathUtil = PathUtil.getInstance()!!
-public constructor        ()
+public constructor ()
             : super()
         {
 init()
@@ -66,7 +65,7 @@ init()
 
 
     private val EMPTY_STRING: String = StringUtil.getInstance()!!.EMPTY_STRING
-public constructor        (aPath: String)
+public constructor (aPath: String)
             : super()
         {
 var aPath = aPath
@@ -91,7 +90,7 @@ this.path= abPathUtil!!.adjustEnd(abPathUtil!!.adjust(this.getPath(aPath)))
                             
 }
 
-public constructor        (aPath: String, name: String)
+public constructor (aPath: String, name: String)
             : super()
         {
 var aPath = aPath
@@ -127,7 +126,7 @@ this.path= abPathUtil!!.adjustEnd(abPathUtil!!.adjust(this.getPath(aPath)))
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 this.schema= EMPTY_STRING
@@ -136,7 +135,7 @@ this.nameP= EMPTY_STRING
 }
 
 
-open fun getSchema(aPath: String)
+    open fun getSchema(aPath: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var aPath = aPath
@@ -166,7 +165,7 @@ this.hasSchema= false
 }
 
 
-open fun hasSchema()
+    open fun hasSchema()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -179,7 +178,7 @@ open fun hasSchema()
 
                 @Throws(Exception::class)
             
-open fun getPath(aPath: String)
+    open fun getPath(aPath: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var aPath = aPath
@@ -242,7 +241,7 @@ tempPath= tempPath!!.substring(beginIndex, tempPath!!.length)
 }
 
 
-open fun setName(name: String)
+    open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var name = name
@@ -250,7 +249,7 @@ this.nameP= name
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -260,7 +259,8 @@ open fun getName()
                         return this.nameP
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -286,7 +286,7 @@ stringBuffer!!.append(this.nameP)
 }
 
 
-open fun toFileSystemString()
+    open fun toFileSystemString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -325,7 +325,7 @@ stringBuffer!!.append(this.nameP)
 }
 
 
-open fun getPath()
+    open fun getPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -336,7 +336,7 @@ open fun getPath()
 }
 
 
-open fun setPath(path: String)
+    open fun setPath(path: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var path = path

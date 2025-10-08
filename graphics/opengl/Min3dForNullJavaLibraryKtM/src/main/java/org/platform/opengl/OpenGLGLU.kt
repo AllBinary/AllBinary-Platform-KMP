@@ -17,12 +17,11 @@ open public class OpenGLGLU
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OpenGLGLU = OpenGLGLU()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OpenGLGLU{
 
@@ -40,7 +39,7 @@ open fun getInstance()
             {
             }            
         
-open fun gluLookAt(gl: GL10, eyeX: Float, eyeY: Float, eyeZ: Float, centerX: Float, centerY: Float, centerZ: Float, upX: Float, upY: Float, upZ: Float)
+    open fun gluLookAt(gl: GL10, eyeX: Float, eyeY: Float, eyeZ: Float, centerX: Float, centerY: Float, centerZ: Float, upX: Float, upY: Float, upZ: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl
@@ -60,7 +59,7 @@ open fun gluLookAt(gl: GL10, eyeX: Float, eyeY: Float, eyeZ: Float, centerX: Flo
 }
 
 
-open fun gluProject(gl: GL10, objX: Float, objY: Float, objZ: Float, model: FloatArray, modelOffset: Int, project: FloatArray, projectOffset: Int, view: IntArray, viewOffset: Int, win: FloatArray, winOffset: Int)
+    open fun gluProject(gl: GL10, objX: Float, objY: Float, objZ: Float, model: FloatArray, modelOffset: Int, project: FloatArray, projectOffset: Int, view: IntArray, viewOffset: Int, win: FloatArray, winOffset: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var gl = gl
@@ -82,7 +81,7 @@ var winOffset = winOffset
 }
 
 
-open fun gluUnProject(gl: GL10, winX: Float, winY: Float, winZ: Float, model: FloatArray, modelOffset: Int, project: FloatArray, projectOffset: Int, view: IntArray, viewOffset: Int, obj: FloatArray, objOffset: Int)
+    open fun gluUnProject(gl: GL10, winX: Float, winY: Float, winZ: Float, model: FloatArray, modelOffset: Int, project: FloatArray, projectOffset: Int, view: IntArray, viewOffset: Int, obj: FloatArray, objOffset: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var gl = gl

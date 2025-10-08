@@ -46,7 +46,7 @@ open public class GameInput
     private val removalGameKeyEventList: BasicArrayList
 
     val isRemoveDuplicateKeyPresses: Boolean
-public constructor        (gameKeyEventList: BasicArrayList)                        
+public constructor (gameKeyEventList: BasicArrayList)                        
 
                             : this(gameKeyEventList, BasicArrayList()){
     //var gameKeyEventList = gameKeyEventList
@@ -56,7 +56,7 @@ public constructor        (gameKeyEventList: BasicArrayList)
                     
 }
 
-public constructor        (gameKeyEventList: BasicArrayList, removalGameKeyEventList: BasicArrayList)
+public constructor (gameKeyEventList: BasicArrayList, removalGameKeyEventList: BasicArrayList)
             : super()
         {
     //var gameKeyEventList = gameKeyEventList
@@ -68,7 +68,7 @@ this.isRemoveDuplicateKeyPresses= Features.getInstance()!!.isFeature(InputFeatur
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun add(gameKeyEvent: GameKeyEvent)
+    open fun add(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameKeyEvent = gameKeyEvent
@@ -105,7 +105,7 @@ var gameKeyEvent = gameKeyEvent
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun addForRemoval(gameKeyEvent: GameKeyEvent)
+    open fun addForRemoval(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameKeyEvent = gameKeyEvent
@@ -114,7 +114,7 @@ this.removalGameKeyEventList!!.add(gameKeyEvent)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun isForRemoval(gameKeyEvent: GameKeyEvent)
+    open fun isForRemoval(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var gameKeyEvent = gameKeyEvent
@@ -127,7 +127,7 @@ var gameKeyEvent = gameKeyEvent
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun clear()
+    open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 this.gameKeyEventList!!.clear()
@@ -135,7 +135,7 @@ this.gameKeyEventList!!.clear()
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun removeNonAIInputGameKeyEvents()
+    open fun removeNonAIInputGameKeyEvents()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -167,7 +167,7 @@ gameKeyEvent= list.objectArray[index]!! as GameKeyEvent
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -213,7 +213,7 @@ removeList!!.clear()
 }
 
 
-open fun getRemovalGameKeyEventList()
+    open fun getRemovalGameKeyEventList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -224,7 +224,7 @@ open fun getRemovalGameKeyEventList()
 }
 
 
-open fun getGameKeyEventList()
+    open fun getGameKeyEventList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 

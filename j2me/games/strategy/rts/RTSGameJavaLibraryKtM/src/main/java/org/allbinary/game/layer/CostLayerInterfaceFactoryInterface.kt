@@ -26,12 +26,13 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.layer.LayerInterfaceFactoryInterface
+
 interface CostLayerInterfaceFactoryInterface : LayerInterfaceFactoryInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getCost()
+    open fun getCost()
         //nullable = true from not(false or (false and true)) = true
 : Int
 

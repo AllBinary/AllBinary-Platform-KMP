@@ -41,8 +41,7 @@ open public class InputAutomationConfigurationFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var inputAutomationConfiguration: InputAutomationConfiguration = 
                 null
@@ -50,7 +49,7 @@ open public class InputAutomationConfigurationFactory
 
                 @Throws(Exception::class)
             
-open fun init(abeClientInformation: AbeClientInformationInterface)
+    open fun init(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -116,7 +115,7 @@ inputAutomationConfiguration= InputAutomationConfiguration()
 }
 
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : InputAutomationConfiguration{
 
@@ -130,7 +129,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }

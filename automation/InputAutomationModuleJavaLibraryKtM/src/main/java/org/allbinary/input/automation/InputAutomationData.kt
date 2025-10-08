@@ -30,15 +30,14 @@ open public class InputAutomationData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var NAME: String = "INPUT_AUTOMATION"
 
     var INSTALLATION: String = "INPUT_AUTOMATION_INSTALLATION"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

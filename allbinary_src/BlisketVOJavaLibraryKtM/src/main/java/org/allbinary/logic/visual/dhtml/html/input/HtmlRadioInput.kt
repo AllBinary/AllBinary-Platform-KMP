@@ -31,7 +31,7 @@ open public class HtmlRadioInput : HtmlValueInput {
         
 
     private val CHECKED: String = "checked"
-public constructor        (before: String, name: String, value: String, after: String)                        
+public constructor (before: String, name: String, value: String, after: String)                        
 
                             : super(before, HtmlInputData.getInstance()!!.RADIO, name, value, after){
 var before = before
@@ -45,7 +45,7 @@ var after = after
 }
 
 
-open fun setSelected()
+    open fun setSelected()
         //nullable = true from not(false or (false and true)) = true
 {
 super.addAttribute(CHECKED, BooleanFactory.getInstance()!!.TRUE_STRING)

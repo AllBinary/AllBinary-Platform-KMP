@@ -58,13 +58,13 @@ open public class DbConnectionInfo
     private val USER_NAME_KEY: String = "?user="
 
     private val PASSWORD_KEY: String = "&password="
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun updateUrl()
+    open fun updateUrl()
         //nullable = true from not(false or (false and true)) = true
 {
 this.updateHost()
@@ -81,7 +81,7 @@ this.url= stringBuffer!!.toString()
 }
 
 
-open fun getUrl()
+    open fun getUrl()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -92,7 +92,7 @@ open fun getUrl()
 }
 
 
-open fun getJdbcDriver()
+    open fun getJdbcDriver()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -103,7 +103,7 @@ open fun getJdbcDriver()
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -114,7 +114,7 @@ open fun getName()
 }
 
 
-open fun getUserName()
+    open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -125,7 +125,7 @@ open fun getUserName()
 }
 
 
-open fun getPassword()
+    open fun getPassword()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -136,7 +136,7 @@ open fun getPassword()
 }
 
 
-open fun updateHost()
+    open fun updateHost()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -162,7 +162,7 @@ this.host= stringBuffer!!.toString()
 }
 
 
-open fun getHost()
+    open fun getHost()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -173,7 +173,7 @@ open fun getHost()
 }
 
 
-open fun getSchema()
+    open fun getSchema()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -184,7 +184,7 @@ open fun getSchema()
 }
 
 
-open fun getServer()
+    open fun getServer()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -195,7 +195,7 @@ open fun getServer()
 }
 
 
-open fun getPort()
+    open fun getPort()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -206,7 +206,7 @@ open fun getPort()
 }
 
 
-open fun setJdbcDriver(value: String)
+    open fun setJdbcDriver(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -214,7 +214,7 @@ this.jdbcDriver= value
 }
 
 
-open fun setName(value: String)
+    open fun setName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -223,7 +223,7 @@ this.updateUrl()
 }
 
 
-open fun setUserName(value: String)
+    open fun setUserName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -232,7 +232,7 @@ this.updateUrl()
 }
 
 
-open fun setPassword(value: String)
+    open fun setPassword(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -241,7 +241,7 @@ this.updateUrl()
 }
 
 
-open fun setSchema(value: String)
+    open fun setSchema(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -250,7 +250,7 @@ this.updateUrl()
 }
 
 
-open fun setServer(value: String)
+    open fun setServer(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -259,7 +259,7 @@ this.updateUrl()
 }
 
 
-open fun setPort(value: String)
+    open fun setPort(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -268,7 +268,7 @@ this.updateUrl()
 }
 
 
-open fun getUserNameKey()
+    open fun getUserNameKey()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -279,7 +279,7 @@ open fun getUserNameKey()
 }
 
 
-open fun getPasswordKey()
+    open fun getPasswordKey()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

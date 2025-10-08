@@ -30,12 +30,11 @@ open public class GDResources
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GDResources = GDResources()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GDResources{
 

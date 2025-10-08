@@ -42,7 +42,7 @@ open public class CaptionAnimation : Animation {
     private val dx: Int
 
     private val dy: Int
-public constructor        (animationInterface: Animation, overlayAnimationInterface: Animation, captionDx: Int, captionDy: Int, dx: Int, dy: Int){
+public constructor (animationInterface: Animation, overlayAnimationInterface: Animation, captionDx: Int, captionDy: Int, dx: Int, dy: Int){
     //var animationInterface = animationInterface
     //var overlayAnimationInterface = overlayAnimationInterface
     //var captionDx = captionDx
@@ -59,12 +59,14 @@ this.dy= dy
 
 
                 @Throws(Exception::class)
-            override fun nextFrame()
+            
+    override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -74,7 +76,8 @@ this.animationInterface!!.paint(graphics, x +this.captionDx, y +this.captionDy)
 this.overlayAnimationInterface!!.paint(graphics, x +this.captionDx +dx, y +this.captionDy +dy)
 }
 
-override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
+
+    override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics

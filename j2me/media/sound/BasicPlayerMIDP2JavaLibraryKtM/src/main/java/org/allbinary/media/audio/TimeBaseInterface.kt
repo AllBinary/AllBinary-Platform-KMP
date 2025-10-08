@@ -27,16 +27,17 @@
         
 import javax.microedition.media.MediaException
 import javax.microedition.media.TimeBase
+
 interface TimeBaseInterface {
         
 
-open fun getTimeBase()
+    open fun getTimeBase()
         //nullable = true from not(false or (false and true)) = true
 : TimeBase
 
                 @Throws(MediaException::class)
             
-open fun setTimeBase(timeBase: TimeBase)
+    open fun setTimeBase(timeBase: TimeBase)
         //nullable = true from not(false or (false and false)) = true
 
 

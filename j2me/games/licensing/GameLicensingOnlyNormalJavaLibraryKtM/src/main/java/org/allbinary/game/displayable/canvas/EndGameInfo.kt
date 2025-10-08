@@ -41,13 +41,13 @@ open public class EndGameInfo
     private var gameOverStr: String = StringUtil.getInstance()!!.EMPTY_STRING
 
     private var winStr: String = this.gameOverStr
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun update(gameInfo: GameInfo, myCanvas: MyCanvas)
+    open fun update(gameInfo: GameInfo, myCanvas: MyCanvas)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameInfo = gameInfo
@@ -57,7 +57,7 @@ this.setWinStr(this.NORMAL_GAME_OVER_WIN)
 }
 
 
-open fun getGameOverStr()
+    open fun getGameOverStr()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -68,7 +68,7 @@ open fun getGameOverStr()
 }
 
 
-open fun setGameOverStr(gameOverStr: String)
+    open fun setGameOverStr(gameOverStr: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameOverStr = gameOverStr
@@ -76,7 +76,7 @@ this.gameOverStr= gameOverStr
 }
 
 
-open fun getWinStr()
+    open fun getWinStr()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -87,7 +87,7 @@ open fun getWinStr()
 }
 
 
-open fun setWinStr(winStr: String)
+    open fun setWinStr(winStr: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var winStr = winStr

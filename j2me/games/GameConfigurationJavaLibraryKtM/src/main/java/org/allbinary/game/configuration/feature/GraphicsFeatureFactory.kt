@@ -31,12 +31,11 @@ open public class GraphicsFeatureFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GraphicsFeatureFactory = GraphicsFeatureFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GraphicsFeatureFactory{
 
@@ -48,7 +47,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

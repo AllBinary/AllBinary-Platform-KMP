@@ -45,12 +45,11 @@ open public class BlisketBackupFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: BlisketBackupFactory = BlisketBackupFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BlisketBackupFactory{
 
@@ -76,7 +75,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun getFileBasicArrayList(pathString: String)
+    open fun getFileBasicArrayList(pathString: String)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var pathString = pathString
@@ -94,7 +93,7 @@ var pathString = pathString
 }
 
 
-open fun backup()
+    open fun backup()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -123,7 +122,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backup()", e)
 }
 
 
-open fun backupViews()
+    open fun backupViews()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -187,7 +186,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backupViews()", e)
 }
 
 
-open fun backupResources()
+    open fun backupResources()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -254,7 +253,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backupResources()", e)
 }
 
 
-open fun backupJsps()
+    open fun backupJsps()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -309,7 +308,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backupJsps()", e)
 }
 
 
-open fun backup(fileBasicArrayList: BasicArrayList, zipFile: String)
+    open fun backup(fileBasicArrayList: BasicArrayList, zipFile: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var fileBasicArrayList = fileBasicArrayList

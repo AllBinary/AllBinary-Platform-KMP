@@ -37,7 +37,7 @@ open public class ImageComparisonResultFrameCacheable
     private var frame: Long
 
     private var imageComparisonResult: ImageComparisonResult
-public constructor        (imageComparisonResult: ImageComparisonResult, frame: Long)
+public constructor (imageComparisonResult: ImageComparisonResult, frame: Long)
             : super()
         {
 var imageComparisonResult = imageComparisonResult
@@ -47,7 +47,7 @@ this.frame= frame
 }
 
 
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -58,7 +58,7 @@ open fun getKey()
 }
 
 
-open fun getFrame()
+    open fun getFrame()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -69,7 +69,7 @@ open fun getFrame()
 }
 
 
-open fun setFrame(frame: Long)
+    open fun setFrame(frame: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var frame = frame
@@ -77,7 +77,7 @@ this.frame= frame
 }
 
 
-open fun getImageComparisonResult()
+    open fun getImageComparisonResult()
         //nullable = true from not(false or (false and true)) = true
 : ImageComparisonResult{
 
@@ -88,14 +88,15 @@ open fun getImageComparisonResult()
 }
 
 
-open fun setImageComparisonResult(imageComparisonResult: ImageComparisonResult)
+    open fun setImageComparisonResult(imageComparisonResult: ImageComparisonResult)
         //nullable = true from not(false or (false and false)) = true
 {
 var imageComparisonResult = imageComparisonResult
 this.imageComparisonResult= imageComparisonResult
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

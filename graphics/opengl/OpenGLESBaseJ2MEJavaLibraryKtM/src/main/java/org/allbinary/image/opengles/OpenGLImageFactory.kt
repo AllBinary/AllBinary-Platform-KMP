@@ -33,8 +33,7 @@ open public class OpenGLImageFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NULL_OPENGL_IMAGE_FACTORY: OpenGLImageFactory = OpenGLImageFactory()
 
@@ -45,7 +44,7 @@ open public class OpenGLImageFactory
             {
             }            
         
-open fun getInstance(image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory)
+    open fun getInstance(image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory)
         //nullable =  from not(true or (false and false)) = 
 : Image{
     //var image = image

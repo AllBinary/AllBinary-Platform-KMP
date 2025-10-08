@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 
@@ -33,10 +32,9 @@ open public class IdGeneratorEntityFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : IdGeneratorEntityInterface{
 
@@ -66,7 +64,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, "ServerLicenseRequestEntityFactory", co
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

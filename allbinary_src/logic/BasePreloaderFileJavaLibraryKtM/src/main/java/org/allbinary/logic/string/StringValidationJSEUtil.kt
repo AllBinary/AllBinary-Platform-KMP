@@ -30,10 +30,9 @@ open public class StringValidationJSEUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun isBlank(string: String)
+    open fun isBlank(string: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var string = string
@@ -74,7 +73,7 @@ var string = string
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

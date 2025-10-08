@@ -26,20 +26,21 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
+
 interface PathFindingNodeCostInfoFactoryInterface : PathFindingNodeCostInfoFactoryBaseInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getInstance(comingFromGeographicMapCellPosition: GeographicMapCellPosition, geographicMapCellPosition: GeographicMapCellPosition, costFromStart: Long, costToEnd: Long)
+    open fun getInstance(comingFromGeographicMapCellPosition: GeographicMapCellPosition, geographicMapCellPosition: GeographicMapCellPosition, costFromStart: Long, costToEnd: Long)
         //nullable =  from not(true or (false and false)) = 
 : PathFindingNodeCostInfo
 
-open fun getInstance(comingFromGeographicMapCellPosition: GeographicMapCellPosition, geographicMapCellPosition: GeographicMapCellPosition)
+    open fun getInstance(comingFromGeographicMapCellPosition: GeographicMapCellPosition, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable =  from not(true or (false and false)) = 
 : PathFindingNodeCostInfo
 
-open fun getTotalCost(comingFromGeographicMapCellPosition: GeographicMapCellPosition, geographicMapCellPosition: GeographicMapCellPosition)
+    open fun getTotalCost(comingFromGeographicMapCellPosition: GeographicMapCellPosition, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : Long
 

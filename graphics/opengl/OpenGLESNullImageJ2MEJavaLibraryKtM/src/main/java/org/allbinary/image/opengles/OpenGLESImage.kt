@@ -40,8 +40,7 @@ open public class OpenGLESImage
         
                 , OpenGLSurfaceChangedInterface {
         
-
-        companion object {
+companion object {
             
     val NULL_OPENGL_IMAGE: OpenGLESImage = OpenGLESImage(NullCanvas.NULL_IMAGE, PlatformBitmapBaseFactory.NULL_PLATFORM_BITMAP_BASE_FACTORY, PlatformTextureBaseFactory.NULL_PLATFORM_TEXTURE_BASE_FACTORY)
 
@@ -58,7 +57,7 @@ open public class OpenGLESImage
     val openGLBitmap: PlatformBitmapBase
 
     val openGLESImageProperties: OpenGLESImageProperties = OpenGLESImageProperties()
-public constructor        (image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory)
+public constructor (image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory)
             : super()
         {
     //var image = image
@@ -70,7 +69,8 @@ this.textureFactory= textureFactory
 
 
                 @Throws(Exception::class)
-            override fun set(gl: GL)
+            
+    override fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
 {
 var gl = gl
@@ -81,7 +81,7 @@ var gl = gl
 }
 
 
-open fun initTexture(gl: GL10)
+    open fun initTexture(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var gl = gl
@@ -93,7 +93,7 @@ var gl = gl
 }
 
 
-open fun drawRegion(gl: GL10, viewHeight: Int, x_src: Float, y_src: Float, width: Float, height: Float, x: Int, y: Int, z: Int)
+    open fun drawRegion(gl: GL10, viewHeight: Int, x_src: Float, y_src: Float, width: Float, height: Float, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var gl = gl
@@ -108,7 +108,7 @@ var z = z
 }
 
 
-open fun draw(gl: GL10, x: Int, y: Int, z: Int)
+    open fun draw(gl: GL10, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var gl = gl
@@ -118,7 +118,7 @@ var z = z
 }
 
 
-open fun getType()
+    open fun getType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

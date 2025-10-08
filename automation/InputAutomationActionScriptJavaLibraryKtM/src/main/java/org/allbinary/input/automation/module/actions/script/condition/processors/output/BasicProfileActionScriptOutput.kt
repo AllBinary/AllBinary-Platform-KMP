@@ -32,7 +32,7 @@ import org.w3c.dom.Node
 open public class BasicProfileActionScriptOutput : BasicProfileActionScriptProcessor
                 , ProfileActionScriptOutputInterface {
         
-public constructor        (label: String, node: Node)                        
+public constructor (label: String, node: Node)                        
 
                             : super(label, node){
 var label = label
@@ -43,7 +43,7 @@ var node = node
                     
 }
 
-public constructor        (label: String)                        
+public constructor (label: String)                        
 
                             : super(label){
 var label = label
@@ -56,7 +56,7 @@ var label = label
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

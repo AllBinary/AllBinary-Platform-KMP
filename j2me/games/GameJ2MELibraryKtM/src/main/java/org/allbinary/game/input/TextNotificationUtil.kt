@@ -40,12 +40,11 @@ open public class TextNotificationUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: TextNotificationUtil = TextNotificationUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TextNotificationUtil{
 
@@ -65,7 +64,7 @@ open fun getInstance()
         
                 @Throws(Exception::class)
             
-open fun fireError(message: String)
+    open fun fireError(message: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var message = message
@@ -76,7 +75,7 @@ this.fire(message)
 
                 @Throws(Exception::class)
             
-open fun fireNew(message: String)
+    open fun fireNew(message: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var message = message
@@ -87,7 +86,7 @@ this.fire(message)
 
                 @Throws(Exception::class)
             
-open fun fireSuccess(message: String)
+    open fun fireSuccess(message: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var message = message
@@ -104,7 +103,7 @@ this.fire(message)
 
                 @Throws(Exception::class)
             
-open fun fire(message: String)
+    open fun fire(message: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var message = message

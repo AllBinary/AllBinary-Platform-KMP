@@ -28,7 +28,7 @@
 
 open public class CompositeSound : Sound {
         
-protected constructor        (resource: String)                        
+protected constructor (resource: String)                        
 
                             : super(resource){
 var resource = resource
@@ -40,7 +40,8 @@ var resource = resource
 
 
                 @Throws(Exception::class)
-            override fun init()
+            
+    override fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setPlayerP(PlayerComposite(AllBinaryMediaManager.createPlayer(this.getResource())))

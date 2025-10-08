@@ -28,28 +28,29 @@
 import org.allbinary.game.layer.CollidableCompositeLayer
 import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.layer.NamedInterface
+
 interface CollidableInterface : NamedInterface {
         
 
                 @Throws(Exception::class)
             
-open fun isCollidable()
+    open fun isCollidable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
                 @Throws(Exception::class)
             
-open fun isCollision(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
+    open fun isCollision(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
                 @Throws(Exception::class)
             
-open fun collide(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
+    open fun collide(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getCollisionTypeWith(layerInterface: AllBinaryLayer)
+    open fun getCollisionTypeWith(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 : CollisionType
 

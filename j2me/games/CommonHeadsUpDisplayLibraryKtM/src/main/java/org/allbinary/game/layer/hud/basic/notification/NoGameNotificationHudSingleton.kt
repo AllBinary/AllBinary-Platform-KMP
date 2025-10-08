@@ -34,12 +34,11 @@ open public class NoGameNotificationHudSingleton
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: NoGameNotificationHudSingleton = NoGameNotificationHudSingleton()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : NoGameNotificationHudSingleton{
 
@@ -55,7 +54,7 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var gameNotificationHud: GameNotificationHud = GameNotificationHud.NULL_GAME_NOTIFICATION
-private constructor        ()
+private constructor ()
             : super()
         {
 
@@ -75,7 +74,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
 
-open fun getGameNotificationHud()
+    open fun getGameNotificationHud()
         //nullable = true from not(false or (false and true)) = true
 : GameNotificationHud{
 

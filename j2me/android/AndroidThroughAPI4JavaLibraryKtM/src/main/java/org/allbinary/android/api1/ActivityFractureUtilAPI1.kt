@@ -27,15 +27,15 @@
         
 import org.allbinary.android.ActivityFractureUtil
 import android.app.Activity
+import android.view.WindowManager
 
 open public class ActivityFractureUtilAPI1 : ActivityFractureUtil {
         
-
-        companion object {
+companion object {
             
     private val instance: ActivityFractureUtilAPI1 = ActivityFractureUtilAPI1()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ActivityFractureUtilAPI1{
 
@@ -54,10 +54,19 @@ open fun getInstance()
             }            
         
                 @Throws(Exception::class)
-            override fun process(activity: Activity)
+            
+    override fun process(activity: Activity)
         //nullable = true from not(false or (false and false)) = true
 {
-var activity = activity
+    //var activity = activity
+}
+
+
+    override fun setFullScreen(activity: Activity)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var activity = activity
+activity.getWindow()!!.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
 }
 
 

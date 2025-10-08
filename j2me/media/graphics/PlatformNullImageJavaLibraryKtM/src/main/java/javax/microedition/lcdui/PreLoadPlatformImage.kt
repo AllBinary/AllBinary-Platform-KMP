@@ -28,12 +28,11 @@
 
 open public class PreLoadPlatformImage : PlatformImage {
         
-
-        companion object {
+companion object {
             
     private val instance: PreLoadPlatformImage = PreLoadPlatformImage()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PreLoadPlatformImage{
 

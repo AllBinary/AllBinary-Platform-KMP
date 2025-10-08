@@ -35,12 +35,11 @@ open public class CssPropertiesValidationFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun getInstance(nodeList: NodeList)
+    open fun getInstance(nodeList: NodeList)
         //nullable =  from not(true or (false and false)) = 
 : Vector{
 var nodeList = nodeList
@@ -79,7 +78,7 @@ propertiesVector!!.add(cssPropertyValidationInterface)
 }
 
 
-open fun getInstance(hashMap: HashMap<Any, Any>)
+    open fun getInstance(hashMap: HashMap<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
 : Vector{
 var hashMap = hashMap
@@ -95,7 +94,7 @@ var hashMap = hashMap
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

@@ -33,12 +33,11 @@ open public class NoLicense
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun init(classLoader: ClassLoader, pathString: String)
+    open fun init(classLoader: ClassLoader, pathString: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var classLoader = classLoader
@@ -48,7 +47,7 @@ Globals.init(classLoader, pathString)
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

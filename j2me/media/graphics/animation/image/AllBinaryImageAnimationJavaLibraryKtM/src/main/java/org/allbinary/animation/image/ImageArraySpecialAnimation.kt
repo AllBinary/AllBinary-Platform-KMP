@@ -38,7 +38,7 @@ open public class ImageArraySpecialAnimation : ImageArrayAnimation
         
 
     private val timeDelayHelper: TimeDelayHelper = TimeDelayHelper(270)
-public constructor        (imageArray: Array<Image?>, animationBehavior: AnimationBehavior)                        
+public constructor (imageArray: Array<Image?>, animationBehavior: AnimationBehavior)                        
 
                             : super(imageArray, animationBehavior){
     //var imageArray = imageArray
@@ -53,7 +53,7 @@ this.reset()
 
     private var loopCount: Int = 0
 
-open fun getLoopCount()
+    open fun getLoopCount()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -63,20 +63,23 @@ open fun getLoopCount()
                         return loopCount
 }
 
-override fun setLastFrame()
+
+    override fun setLastFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 this.circularIndexUtil!!.setIndex(this.circularIndexUtil!!.getSize() -1)
 }
 
-override fun reset()
+
+    override fun reset()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setFrame(this.getSize() -1)
 loopCount= 0
 }
 
-override fun nextFrame()
+
+    override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -109,7 +112,8 @@ override fun nextFrame()
 
 
     private val loopCountTotal: Int = 1
-override fun isComplete()
+
+    override fun isComplete()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -136,7 +140,8 @@ override fun isComplete()
                             
 }
 
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics

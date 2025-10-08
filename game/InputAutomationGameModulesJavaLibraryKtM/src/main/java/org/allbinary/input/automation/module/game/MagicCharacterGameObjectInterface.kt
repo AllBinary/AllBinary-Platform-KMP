@@ -25,14 +25,15 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface MagicCharacterGameObjectInterface {
         
 
-open fun getHitPointGameObjectInterface()
+    open fun getHitPointGameObjectInterface()
         //nullable = true from not(false or (false and true)) = true
 : HitPointGameObjectInterface
 
-open fun getMagicGameObjectInterface()
+    open fun getMagicGameObjectInterface()
         //nullable = true from not(false or (false and true)) = true
 : MagicGameObjectInterface
 

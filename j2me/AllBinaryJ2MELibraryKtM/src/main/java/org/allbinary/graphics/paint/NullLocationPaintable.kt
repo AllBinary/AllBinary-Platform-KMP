@@ -28,12 +28,11 @@
 
 open public class NullLocationPaintable : LocationPaintable {
         
-
-        companion object {
+companion object {
             
     private val instance: NullLocationPaintable = NullLocationPaintable()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : NullLocationPaintable{
 

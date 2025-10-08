@@ -27,12 +27,13 @@
         
 import java.util.HashMap
 import javax.servlet.jsp.PageContext
+
 interface TransformInfoFactoryInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getInstance(databaseHashMap: HashMap<Any, Any>, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
+    open fun getInstance(databaseHashMap: HashMap<Any, Any>, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
 : TransformInfoInterface
 

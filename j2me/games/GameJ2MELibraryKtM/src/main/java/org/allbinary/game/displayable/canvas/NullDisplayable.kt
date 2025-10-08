@@ -18,12 +18,11 @@ import org.allbinary.canvas.GameStatisticsFactory
 
 open public class NullDisplayable : Canvas {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: NullDisplayable = NullDisplayable()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : NullDisplayable{
 
@@ -35,12 +34,13 @@ open fun getInstance()
 
 
         }
-            private constructor        (){
+            private constructor (){
 }
 
 
     private val baseGameStatistics: BaseGameStatistics = GameStatisticsFactory.getInstance()!!
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

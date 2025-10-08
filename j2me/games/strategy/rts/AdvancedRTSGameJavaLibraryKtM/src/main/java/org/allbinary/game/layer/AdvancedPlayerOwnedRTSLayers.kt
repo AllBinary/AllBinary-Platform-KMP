@@ -53,7 +53,7 @@ open public class AdvancedPlayerOwnedRTSLayers : PlayerOwnedRTSLayers {
 
     private val factoryList: BasicArrayList = BasicArrayList()
 
-open fun addUnit(rtsLayer: RTSLayer)
+    open fun addUnit(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var rtsLayer = rtsLayer
@@ -62,7 +62,7 @@ this.rtsLayerList!!.add(rtsLayer)
 }
 
 
-open fun addWaypoint(rtsLayer: RTSLayer)
+    open fun addWaypoint(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var rtsLayer = rtsLayer
@@ -71,7 +71,7 @@ this.rtsLayerList!!.add(rtsLayer)
 }
 
 
-open fun addBase(rtsLayer: RTSLayer)
+    open fun addBase(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var rtsLayer = rtsLayer
@@ -81,7 +81,7 @@ this.rtsLayerList!!.add(rtsLayer)
 }
 
 
-open fun addGarrison(rtsLayer: RTSLayer)
+    open fun addGarrison(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var rtsLayer = rtsLayer
@@ -91,7 +91,7 @@ this.rtsLayerList!!.add(rtsLayer)
 }
 
 
-open fun addHouse(rtsLayer: RTSLayer)
+    open fun addHouse(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var rtsLayer = rtsLayer
@@ -101,7 +101,7 @@ this.rtsLayerList!!.add(rtsLayer)
 }
 
 
-open fun addLab(rtsLayer: RTSLayer)
+    open fun addLab(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var rtsLayer = rtsLayer
@@ -111,7 +111,7 @@ this.rtsLayerList!!.add(rtsLayer)
 }
 
 
-open fun addFactory(rtsLayer: RTSLayer)
+    open fun addFactory(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var rtsLayer = rtsLayer
@@ -121,7 +121,7 @@ this.rtsLayerList!!.add(rtsLayer)
 }
 
 
-open fun removeUnit(gameLayer: AllBinaryGameLayer)
+    open fun removeUnit(gameLayer: AllBinaryGameLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameLayer = gameLayer
@@ -130,7 +130,7 @@ this.rtsLayerList!!.remove(gameLayer)
 }
 
 
-open fun removeWaypoint(gameLayer: AllBinaryGameLayer)
+    open fun removeWaypoint(gameLayer: AllBinaryGameLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameLayer = gameLayer
@@ -139,7 +139,7 @@ this.rtsLayerList!!.remove(gameLayer)
 }
 
 
-open fun getUnitsList()
+    open fun getUnitsList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -150,7 +150,7 @@ open fun getUnitsList()
 }
 
 
-open fun getWaypointsList()
+    open fun getWaypointsList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -161,7 +161,7 @@ open fun getWaypointsList()
 }
 
 
-open fun getBaseList()
+    open fun getBaseList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -172,7 +172,7 @@ open fun getBaseList()
 }
 
 
-open fun getGarrisonList()
+    open fun getGarrisonList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -183,7 +183,7 @@ open fun getGarrisonList()
 }
 
 
-open fun getHouseList()
+    open fun getHouseList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -194,7 +194,7 @@ open fun getHouseList()
 }
 
 
-open fun getLabList()
+    open fun getLabList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -205,7 +205,7 @@ open fun getLabList()
 }
 
 
-open fun getFactoryList()
+    open fun getFactoryList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -216,7 +216,7 @@ open fun getFactoryList()
 }
 
 
-open fun getTotalBuildings()
+    open fun getTotalBuildings()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -227,7 +227,7 @@ open fun getTotalBuildings()
 }
 
 
-open fun removeBuilding(layerInterface: AllBinaryGameLayer)
+    open fun removeBuilding(layerInterface: AllBinaryGameLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var layerInterface = layerInterface
@@ -279,7 +279,8 @@ this.buildingList!!.add(layerInterface)
                                 
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -308,7 +309,7 @@ stringBuffer!!.append(this.getUnitsList()!!.size())
 }
 
 
-open fun getBuildingList()
+    open fun getBuildingList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 

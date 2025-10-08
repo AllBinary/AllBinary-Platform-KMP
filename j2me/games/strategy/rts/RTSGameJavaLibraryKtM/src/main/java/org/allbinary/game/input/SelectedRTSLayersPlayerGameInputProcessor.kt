@@ -30,7 +30,7 @@ open public class SelectedRTSLayersPlayerGameInputProcessor : GameInputProcessor
         
 
     val selectedRTSLayersPlayerGameInput: SelectedRTSLayersPlayerGameInput
-public constructor        (selectedRTSLayersPlayerGameInput: SelectedRTSLayersPlayerGameInput){
+public constructor (selectedRTSLayersPlayerGameInput: SelectedRTSLayersPlayerGameInput){
 var selectedRTSLayersPlayerGameInput = selectedRTSLayersPlayerGameInput
 this.selectedRTSLayersPlayerGameInput= selectedRTSLayersPlayerGameInput
 }

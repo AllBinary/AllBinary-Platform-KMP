@@ -40,7 +40,7 @@ open public class XmlRpcRemoteLogClient : XmlRpcAbeClient {
         
 
     private val noCrypt: NoCrypt = NoCrypt()
-public constructor        (clientInfo: AbeClientInformationInterface)                        
+public constructor (clientInfo: AbeClientInformationInterface)                        
 
                             : super(clientInfo, "SSLLogServ.logUtil"){
     //var clientInfo = clientInfo
@@ -53,7 +53,7 @@ public constructor        (clientInfo: AbeClientInformationInterface)
 
                 @Throws(Exception::class)
             
-open fun get(anyType: Any)
+    open fun get(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{
     //var anyType = anyType

@@ -31,14 +31,13 @@ import org.allbinary.view.ViewPosition
 
 open public class StaticTileLayerIntoPositionViewPosition : ViewPosition {
         
-
-        companion object {
+companion object {
             
     private var tiledLayer: AllBinaryTiledLayer
 
     var layer: AllBinaryLayer
 
-open fun setTiledLayer(tiledLayer: AllBinaryTiledLayer)
+    open fun setTiledLayer(tiledLayer: AllBinaryTiledLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var tiledLayer = tiledLayer
@@ -47,11 +46,11 @@ StaticTileLayerIntoPositionViewPosition.tiledLayer= tiledLayer
 
 
         }
-            public constructor        (){
+            public constructor (){
 }
 
 
-open fun getX()
+    open fun getX()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -62,7 +61,7 @@ open fun getX()
 }
 
 
-open fun getY()
+    open fun getY()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -73,7 +72,7 @@ open fun getY()
 }
 
 
-open fun getZ()
+    open fun getZ()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

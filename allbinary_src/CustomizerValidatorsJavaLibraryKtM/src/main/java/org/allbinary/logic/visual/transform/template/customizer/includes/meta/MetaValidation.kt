@@ -51,7 +51,7 @@ open public class MetaValidation : Validation
     private var httpEquiv: String
 
     private var content: String
-public constructor        (htmlMetaAttributeData: HtmlMetaAttributeData, label: String, attributeValue: String, contentValue: String){
+public constructor (htmlMetaAttributeData: HtmlMetaAttributeData, label: String, attributeValue: String, contentValue: String){
 var htmlMetaAttributeData = htmlMetaAttributeData
 var label = label
 var attributeValue = attributeValue
@@ -78,7 +78,7 @@ this.label= label
 this.content= contentValue
 }
 
-public constructor        (document: Document){
+public constructor (document: Document){
 var document = document
 
 
@@ -87,7 +87,7 @@ var document = document
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -121,7 +121,7 @@ open fun isValid()
 }
 
 
-open fun validationInfo()
+    open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -155,7 +155,7 @@ open fun validationInfo()
 }
 
 
-open fun toValidationInfoDoc()
+    open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -166,7 +166,7 @@ open fun toValidationInfoDoc()
 }
 
 
-open fun toValidationInfoNode(document: Document)
+    open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -178,7 +178,7 @@ var document = document
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -201,7 +201,7 @@ hashMap!!.put(htmlMetaAttributeDataFactory!!.CONTENT.toString(), this.content)
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

@@ -25,10 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface DemoPaintableInterface {
         
 
-open fun showGamePaintable()
+    open fun showGamePaintable()
         //nullable = true from not(false or (false and true)) = true
 
 

@@ -36,15 +36,14 @@ open public class StoreTagWorkFlowHelperFactory
         
                 , TagHelperFactoryInterface {
         
-
-        companion object {
+companion object {
             
     private val CLASSNAME: String = "taghelpers.StoreTagWorkFlowHelper"
 
     private val FACTORYNAME: String = "taghelpers.StoreTagWorkFlowHelperFactory"
 
         }
-            public constructor        ()
+            public constructor ()
             : super()
         {
 }
@@ -52,7 +51,7 @@ open public class StoreTagWorkFlowHelperFactory
 
                 @Throws(Exception::class, LicensingException::class)
             
-open fun getInstance(propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
+    open fun getInstance(propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
 : Any{
 var propertiesHashMap = propertiesHashMap

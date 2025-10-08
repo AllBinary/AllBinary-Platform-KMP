@@ -33,12 +33,11 @@ open public class TransformInfoHttpStoreFactory
         
                 , TransformInfoFactoryInterface {
         
-
-        companion object {
+companion object {
             
     private val instance: TransformInfoHttpStoreFactory = TransformInfoHttpStoreFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TransformInfoHttpStoreFactory{
 
@@ -50,7 +49,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
@@ -58,7 +57,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun getInstance(databaseHashMap: HashMap<Any, Any>, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
+    open fun getInstance(databaseHashMap: HashMap<Any, Any>, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
 : TransformInfoInterface{
 var databaseHashMap = databaseHashMap

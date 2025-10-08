@@ -33,12 +33,13 @@ open public class SingleAnalogControllerVisitor : AnalogControllerVisitor {
         
 
     private val playerInputId: Int
-public constructor        (playerInputId: Int){
+public constructor (playerInputId: Int){
     //var playerInputId = playerInputId
 this.playerInputId= playerInputId
 }
 
-override fun process(allbinaryLayerManager: AllBinaryLayerManager, analogLocationInputProcessor: AnalogLocationInputProcessor)
+
+    override fun process(allbinaryLayerManager: AllBinaryLayerManager, analogLocationInputProcessor: AnalogLocationInputProcessor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allbinaryLayerManager = allbinaryLayerManager

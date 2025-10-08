@@ -40,8 +40,7 @@ open public class InputRobot
         
                 , InputRobotInterface {
         
-
-        companion object {
+companion object {
             
     val NAME: String = "Java Robot"
 
@@ -50,7 +49,7 @@ open public class InputRobot
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var robot: Robot
-public constructor        (graphicsDevice: GraphicsDevice)
+public constructor (graphicsDevice: GraphicsDevice)
             : super()
         {
     //var graphicsDevice = graphicsDevice
@@ -58,7 +57,7 @@ this.robot= Robot(graphicsDevice)
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -69,7 +68,7 @@ open fun getName()
 }
 
 
-open fun getHelpSet()
+    open fun getHelpSet()
         //nullable = true from not(false or (false and true)) = true
 : HelpSet{
 
@@ -80,7 +79,7 @@ open fun getHelpSet()
 }
 
 
-open fun getMousePoint()
+    open fun getMousePoint()
         //nullable = true from not(false or (false and true)) = true
 : Point{
 
@@ -96,7 +95,7 @@ open fun getMousePoint()
 
                 @Throws(Exception::class)
             
-open fun mouseMoveToTarget(rectangle: Rectangle, x: Integer, y: Integer)
+    open fun mouseMoveToTarget(rectangle: Rectangle, x: Integer, y: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var rectangle = rectangle
@@ -114,7 +113,7 @@ logUtil!!.put(message, this, "moveMouseToTarget")
 }
 
 
-open fun mouseMove(point: Point)
+    open fun mouseMove(point: Point)
         //nullable = true from not(false or (false and false)) = true
 {
 var point = point
@@ -122,7 +121,7 @@ this.mouseMove(point.x, point.y)
 }
 
 
-open fun mouseMove(x: Int, y: Int)
+    open fun mouseMove(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var x = x
@@ -138,7 +137,7 @@ logUtil!!.put(message, this, "moveMouse")
 
                 @Throws(Exception::class)
             
-open fun mouseMoveToTarget(rectangle: Rectangle)
+    open fun mouseMoveToTarget(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
 {
 var rectangle = rectangle
@@ -146,7 +145,7 @@ this.mouseMoveToTarget(rectangle, 0, 0)
 }
 
 
-open fun createScreenCapture(screenRect: Rectangle)
+    open fun createScreenCapture(screenRect: Rectangle)
         //nullable = true from not(false or (false and false)) = true
 : BufferedImage{
 var screenRect = screenRect
@@ -158,7 +157,7 @@ var screenRect = screenRect
 }
 
 
-open fun delay(ms: Integer)
+    open fun delay(ms: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var ms = ms
@@ -166,7 +165,7 @@ this.robot.delay(ms)
 }
 
 
-open fun getAutoDelay()
+    open fun getAutoDelay()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -177,7 +176,7 @@ open fun getAutoDelay()
 }
 
 
-open fun getPixelColor(x: Integer, y: Integer)
+    open fun getPixelColor(x: Integer, y: Integer)
         //nullable = true from not(false or (false and false)) = true
 : Color{
 var x = x
@@ -190,7 +189,7 @@ var y = y
 }
 
 
-open fun isAutoWaitForIdle()
+    open fun isAutoWaitForIdle()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -201,7 +200,7 @@ open fun isAutoWaitForIdle()
 }
 
 
-open fun keyPress(keycode: Integer)
+    open fun keyPress(keycode: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var keycode = keycode
@@ -209,7 +208,7 @@ this.robot.keyPress(keycode)
 }
 
 
-open fun keyRelease(keycode: Integer)
+    open fun keyRelease(keycode: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var keycode = keycode
@@ -217,7 +216,7 @@ this.robot.keyRelease(keycode)
 }
 
 
-open fun mouseMove(x: Integer, y: Integer)
+    open fun mouseMove(x: Integer, y: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -226,7 +225,7 @@ this.robot.mouseMove(x, y)
 }
 
 
-open fun mousePress(buttons: Integer)
+    open fun mousePress(buttons: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var buttons = buttons
@@ -234,7 +233,7 @@ this.robot.mousePress(buttons)
 }
 
 
-open fun mouseRelease(buttons: Integer)
+    open fun mouseRelease(buttons: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var buttons = buttons
@@ -242,7 +241,7 @@ this.robot.mouseRelease(buttons)
 }
 
 
-open fun mouseWheel(wheelAmt: Integer)
+    open fun mouseWheel(wheelAmt: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var wheelAmt = wheelAmt
@@ -250,7 +249,7 @@ this.robot.mouseWheel(wheelAmt)
 }
 
 
-open fun setAutoDelay(ms: Integer)
+    open fun setAutoDelay(ms: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var ms = ms
@@ -258,14 +257,15 @@ this.robot.setAutoDelay(ms)
 }
 
 
-open fun setAutoWaitForIdle(isOn: Boolean)
+    open fun setAutoWaitForIdle(isOn: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var isOn = isOn
 this.robot.setAutoWaitForIdle(isOn)
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -276,20 +276,20 @@ override fun toString()
 }
 
 
-open fun waitForIdle()
+    open fun waitForIdle()
         //nullable = true from not(false or (false and true)) = true
 {
 this.robot.waitForIdle()
 }
 
 
-open fun on()
+    open fun on()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun off()
+    open fun off()
         //nullable = true from not(false or (false and true)) = true
 {
 }

@@ -36,14 +36,15 @@ open public class DemoGameRunnable : GameRunnable {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val demoCanvas: DemoCanvas
-public constructor        (demoCanvas: DemoCanvas){
+public constructor (demoCanvas: DemoCanvas){
 var demoCanvas = demoCanvas
 this.demoCanvas= demoCanvas
 }
 
 
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
-override fun run()
+
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -62,7 +63,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 
 
                 @Throws(Exception::class)
-            override fun processLoopSleep()
+            
+    override fun processLoopSleep()
         //nullable = true from not(false or (false and true)) = true
 {
 demoCanvas!!.processLoopSleep()

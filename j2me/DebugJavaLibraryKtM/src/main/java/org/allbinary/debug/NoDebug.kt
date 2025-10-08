@@ -31,12 +31,11 @@ open public class NoDebug
         
                 , DebugInterface {
         
-
-        companion object {
+companion object {
             
     private var SINGLETON: DebugInterface = NoDebug()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DebugInterface{
 
@@ -53,17 +52,20 @@ open fun getInstance()
             public constructor() : super()
             {
             }            
-        override fun start()
+        
+    override fun start()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun stop()
+
+    override fun stop()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun getMaxTime()
+
+    override fun getMaxTime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -73,7 +75,8 @@ override fun getMaxTime()
                         return 10000
 }
 
-override fun getStartTime()
+
+    override fun getStartTime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -83,7 +86,8 @@ override fun getStartTime()
                         return 0
 }
 
-override fun isRunning()
+
+    override fun isRunning()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

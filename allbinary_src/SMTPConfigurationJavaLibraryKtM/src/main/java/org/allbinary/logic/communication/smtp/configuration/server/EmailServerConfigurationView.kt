@@ -40,7 +40,7 @@ open public class EmailServerConfigurationView
         
 
     private var emailServerConfigurationInterface: EmailServerConfigurationInterface
-public constructor        (node: Node)
+public constructor (node: Node)
             : super()
         {
 var node = node
@@ -59,7 +59,7 @@ var node = node
 this.emailServerConfigurationInterface= EmailServerConfiguration(accountName, password, server) as EmailServerConfigurationInterface
 }
 
-public constructor        (emailServerConfigurationInterface: EmailServerConfigurationInterface)
+public constructor (emailServerConfigurationInterface: EmailServerConfigurationInterface)
             : super()
         {
 var emailServerConfigurationInterface = emailServerConfigurationInterface
@@ -67,7 +67,7 @@ this.emailServerConfigurationInterface= emailServerConfigurationInterface
 }
 
 
-open fun getEmailConfigurationInterface()
+    open fun getEmailConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
 : EmailServerConfigurationInterface{
 
@@ -80,7 +80,7 @@ open fun getEmailConfigurationInterface()
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

@@ -26,19 +26,17 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 
 open public class GeographicMapCellTypeFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GeographicMapCellTypeFactory = GeographicMapCellTypeFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GeographicMapCellTypeFactory{
 
@@ -60,7 +58,7 @@ open fun getInstance()
 
     private val geographicMapCellTypeArray: Array<GeographicMapCellType?> = arrayOfNulls(512)
 
-open fun getInstance(type: Int)
+    open fun getInstance(type: Int)
         //nullable =  from not(true or (false and false)) = 
 : GeographicMapCellType{
 var type = type
@@ -72,7 +70,7 @@ var type = type
 }
 
 
-open fun getGeographicMapCellTypeArray()
+    open fun getGeographicMapCellTypeArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<GeographicMapCellType?>{
 
@@ -83,7 +81,7 @@ open fun getGeographicMapCellTypeArray()
 }
 
 
-open fun getStartType()
+    open fun getStartType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -93,7 +91,7 @@ open fun getStartType()
 }
 
 
-open fun getEndType()
+    open fun getEndType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -103,7 +101,7 @@ open fun getEndType()
 }
 
 
-open fun getEmptyType()
+    open fun getEmptyType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -113,7 +111,7 @@ open fun getEmptyType()
 }
 
 
-open fun isPath(cellType: GeographicMapCellType)
+    open fun isPath(cellType: GeographicMapCellType)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var cellType = cellType

@@ -27,12 +27,13 @@
         
 import javax.microedition.lcdui.CommandListener
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
+
 interface GameInitializationInterface {
         
 
                 @Throws(Exception::class)
             
-open fun init(abeClientInformation: AbeClientInformationInterface, commandListener: CommandListener, level: Int)
+    open fun init(abeClientInformation: AbeClientInformationInterface, commandListener: CommandListener, level: Int)
         //nullable = true from not(false or (false and false)) = true
 
 

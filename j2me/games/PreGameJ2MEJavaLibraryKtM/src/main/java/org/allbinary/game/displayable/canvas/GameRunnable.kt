@@ -42,12 +42,13 @@ open public class GameRunnable
     val FAST: Int = 60
 
     var wait: Long = WAIT.toLong()
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
-override fun run()
+
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 DisplayInfoSingleton.getInstance()!!.process()
@@ -56,7 +57,7 @@ DisplayInfoSingleton.getInstance()!!.process()
 
                 @Throws(Exception::class)
             
-open fun processLoopSleep()
+    open fun processLoopSleep()
         //nullable = true from not(false or (false and true)) = true
 {
 Thread.sleep(wait)

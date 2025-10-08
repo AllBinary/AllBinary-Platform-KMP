@@ -46,7 +46,7 @@ open public class AbCrypt
     private var secretComposite: BaseSecretComposite = BaseSecretComposite.NULL_SECRET_COMPOSITE
 
     private var algorithm: String
-public constructor        (algorithm: String)
+public constructor (algorithm: String)
             : super()
         {
     //var algorithm = algorithm
@@ -54,7 +54,7 @@ this.algorithm= algorithm
 }
 
 
-open fun init(keyAsString: String)
+    open fun init(keyAsString: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyAsString = keyAsString
@@ -94,7 +94,8 @@ PreLogUtil.put("init Failed", this, commonStrings!!.INIT, e)
 
 }
 
-override fun encrypt(array: ByteArray)
+
+    override fun encrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
     //var array = array
@@ -117,7 +118,8 @@ PreLogUtil.put("Encrypt Failed", this, "encrypt", e)
 
 }
 
-override fun decrypt(array: ByteArray)
+
+    override fun decrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
     //var array = array

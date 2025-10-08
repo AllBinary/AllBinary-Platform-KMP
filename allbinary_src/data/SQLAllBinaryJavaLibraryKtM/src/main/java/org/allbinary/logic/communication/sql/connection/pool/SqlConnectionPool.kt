@@ -37,12 +37,11 @@ open public class SqlConnectionPool
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: SqlConnectionPool = SqlConnectionPool()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : SqlConnectionPool{
 
@@ -80,7 +79,7 @@ open fun getInstance()
     private val METHOD_GET: String = "get()"
 
     private val METHOD_ADD: String = "add()"
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -89,7 +88,7 @@ private constructor        ()
                 @Throws(SQLException::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun get(url: String)
+    open fun get(url: String)
         //nullable = true from not(false or (false and false)) = true
 : Connection{
 var url = url
@@ -258,7 +257,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET)
                 @Throws(SQLException::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun add(url: String, sqlConnection: Connection)
+    open fun add(url: String, sqlConnection: Connection)
         //nullable = true from not(false or (false and false)) = true
 {
 var url = url

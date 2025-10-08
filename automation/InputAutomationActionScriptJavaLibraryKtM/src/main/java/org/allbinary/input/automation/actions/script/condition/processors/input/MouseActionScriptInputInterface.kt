@@ -26,26 +26,27 @@
         import kotlin.reflect.KClass
         
 import java.awt
+
 interface MouseActionScriptInputInterface : ProfileActionScriptInputInterface {
         
 
-open fun setPoint(point: Point)
+    open fun setPoint(point: Point)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getPoint()
+    open fun getPoint()
         //nullable = true from not(false or (false and true)) = true
 : Point
 
-open fun getButtonClicks()
+    open fun getButtonClicks()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun setButtonClicks(buttons: Int)
+    open fun setButtonClicks(buttons: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 
 

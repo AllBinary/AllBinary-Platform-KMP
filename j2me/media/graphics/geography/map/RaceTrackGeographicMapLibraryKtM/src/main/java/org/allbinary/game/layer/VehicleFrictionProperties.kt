@@ -38,7 +38,7 @@ open public class VehicleFrictionProperties : FrictionProperties {
     private val AIR_FRICTION_NOMINATOR: Int
 
     private val CRASH_FRICTION_NOMINATOR: Int
-public constructor        (tireFriction: Int, brakeFriction: Int, airFriction: Int, crashFriction: Int){
+public constructor (tireFriction: Int, brakeFriction: Int, airFriction: Int, crashFriction: Int){
 var tireFriction = tireFriction
 var brakeFriction = brakeFriction
 var airFriction = airFriction
@@ -50,7 +50,7 @@ CRASH_FRICTION_NOMINATOR= FrictionData.getFrictionDenominator() -crashFriction
 }
 
 
-open fun getTireFrictionNominator()
+    open fun getTireFrictionNominator()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -61,7 +61,7 @@ open fun getTireFrictionNominator()
 }
 
 
-open fun getBrakeFrictionNominator()
+    open fun getBrakeFrictionNominator()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -72,7 +72,7 @@ open fun getBrakeFrictionNominator()
 }
 
 
-open fun getAirFrictionNominator()
+    open fun getAirFrictionNominator()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -83,7 +83,7 @@ open fun getAirFrictionNominator()
 }
 
 
-open fun getCrashFrictionNominator()
+    open fun getCrashFrictionNominator()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

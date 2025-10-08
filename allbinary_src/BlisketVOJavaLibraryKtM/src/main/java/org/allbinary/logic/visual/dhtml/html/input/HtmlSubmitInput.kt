@@ -28,7 +28,7 @@
 
 open public class HtmlSubmitInput : HtmlValueInput {
         
-public constructor        (before: String, name: String, value: String, after: String)                        
+public constructor (before: String, name: String, value: String, after: String)                        
 
                             : super(before, HtmlInputData.getInstance()!!.SUBMIT, name, value, after){
 var before = before

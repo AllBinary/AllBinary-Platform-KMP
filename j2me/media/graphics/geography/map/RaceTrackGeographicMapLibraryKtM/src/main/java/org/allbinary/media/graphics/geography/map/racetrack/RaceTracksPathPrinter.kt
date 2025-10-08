@@ -42,7 +42,7 @@ open public class RaceTracksPathPrinter
             {
             }            
         
-open fun printPath(list: BasicArrayList)
+    open fun printPath(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var list = list
@@ -66,7 +66,7 @@ PreLogUtil.put(StringMaker().
 }
 
 
-open fun printPaths(list: BasicArrayList)
+    open fun printPaths(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var list = list

@@ -25,10 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface DirectionalCompositeInterface {
         
 
-open fun getDirectionalInterface()
+    open fun getDirectionalInterface()
         //nullable = true from not(false or (false and true)) = true
 : DirectionalInterface
 

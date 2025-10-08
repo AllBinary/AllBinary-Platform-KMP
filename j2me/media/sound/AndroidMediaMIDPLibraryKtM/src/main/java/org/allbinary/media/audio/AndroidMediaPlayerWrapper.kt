@@ -37,8 +37,7 @@ import org.allbinary.logic.string.StringMaker
 
 open public class AndroidMediaPlayerWrapper : BasicPlayer {
         
-
-        companion object {
+companion object {
             
     val NULL_ANDROID_MEDIA_PLAYER_WRAPPER: AndroidMediaPlayerWrapper = AndroidMediaPlayerWrapper()
 
@@ -47,10 +46,10 @@ open public class AndroidMediaPlayerWrapper : BasicPlayer {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var mediaPlayer: MediaPlayer = NullAndroidCanvas.NULL_MEDIA_PLAYER
-private constructor        (){
+private constructor (){
 }
 
-public constructor        (resource: String){
+public constructor (resource: String){
 var resource = resource
 
         try {
@@ -88,7 +87,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION_LABEL +resource, this, commonStrings!!.C
 
 }
 
-override fun setLoopCount(count: Int)
+
+    override fun setLoopCount(count: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var count = count
@@ -119,21 +119,24 @@ super.setLoopCount(count)
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun addPlayerListener(playerListener: PlayerListener)
+
+    override fun addPlayerListener(playerListener: PlayerListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var playerListener = playerListener
 super.addPlayerListener(playerListener)
 }
 
-override fun removePlayerListener(playerListener: PlayerListener)
+
+    override fun removePlayerListener(playerListener: PlayerListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var playerListener = playerListener
 super.removePlayerListener(playerListener)
 }
 
-override fun getState()
+
+    override fun getState()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -160,7 +163,8 @@ override fun getState()
                             
 }
 
-override fun close()
+
+    override fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -177,7 +181,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CLOSE, e)
 
                 @Throws(MediaException::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun start()
+
+    override fun start()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -204,7 +209,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME
 
                 @Throws(MediaException::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun stop()
+
+    override fun stop()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -220,7 +226,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "stop", e)
 }
 
 
-open fun update(event: String)
+    open fun update(event: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var event = event
@@ -243,7 +249,8 @@ listener.playerUpdate(this, event, NullUtil.getInstance()!!.NULL_OBJECT)
 
 }
 
-override fun setVolume(leftVolume: Int, rightVolume: Int)
+
+    override fun setVolume(leftVolume: Int, rightVolume: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var leftVolume = leftVolume
@@ -251,7 +258,8 @@ override fun setVolume(leftVolume: Int, rightVolume: Int)
 this.mediaPlayer!!.setVolume((leftVolume.toFloat()) /100.0f, (rightVolume.toFloat()) /100.0f)
 }
 
-override fun getDuration()
+
+    override fun getDuration()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -262,7 +270,7 @@ override fun getDuration()
 }
 
 
-open fun setMediaPlayer(mediaPlayer: MediaPlayer)
+    open fun setMediaPlayer(mediaPlayer: MediaPlayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var mediaPlayer = mediaPlayer
@@ -270,7 +278,7 @@ this.mediaPlayer= mediaPlayer
 }
 
 
-open fun getMediaPlayer()
+    open fun getMediaPlayer()
         //nullable = true from not(false or (false and true)) = true
 : MediaPlayer{
 

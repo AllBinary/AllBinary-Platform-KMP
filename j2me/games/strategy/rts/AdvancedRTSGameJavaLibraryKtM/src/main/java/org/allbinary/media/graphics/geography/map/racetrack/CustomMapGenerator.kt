@@ -40,7 +40,7 @@ open public class CustomMapGenerator : CustomMapGeneratorBase {
     private val raceTrackGeographicMap: RaceTrackGeographicMap
 
     private val geographicMapCellTypeFactory: GeographicMapCellTypeFactory
-public constructor        (raceTrackGeographicMap: RaceTrackGeographicMap){
+public constructor (raceTrackGeographicMap: RaceTrackGeographicMap){
     //var raceTrackGeographicMap = raceTrackGeographicMap
 this.raceTrackGeographicMap= raceTrackGeographicMap
 this.geographicMapCellTypeFactory= this.raceTrackGeographicMap!!.getGeographicMapCellTypeFactory()
@@ -64,7 +64,8 @@ this.customMapArray= Array(mapArray!!.size) { IntArray(mapArray[0]!!.length) }
 
 
                 @Throws(Exception::class)
-            override fun copyMapIntoCustomMap()
+            
+    override fun copyMapIntoCustomMap()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -98,7 +99,8 @@ this.customMapArray[index]!![index2]= this.getCustomType(index2, index, mapArray
     private val dropCellPositionHistory: DropCellPositionHistory = DropCellPositionHistory.getInstance()!!
 
                 @Throws(Exception::class)
-            override fun getCustomType(column: Int, row: Int, currentType: Int)
+            
+    override fun getCustomType(column: Int, row: Int, currentType: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var column = column
@@ -144,7 +146,8 @@ this.customMapArray[index]!![index2]= this.getCustomType(index2, index, mapArray
                         return currentType
 }
 
-override fun getCustomMapArray()
+
+    override fun getCustomMapArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<IntArray?>{
 

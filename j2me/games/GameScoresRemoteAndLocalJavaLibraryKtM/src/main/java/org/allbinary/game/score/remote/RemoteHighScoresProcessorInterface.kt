@@ -27,12 +27,13 @@
         
 import org.allbinary.game.GameInfo
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
+
 interface RemoteHighScoresProcessorInterface {
         
 
                 @Throws(Exception::class)
             
-open fun process(remoteHighScores: RemoteHighScores, abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo)
+    open fun process(remoteHighScores: RemoteHighScores, abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo)
         //nullable = true from not(false or (false and false)) = true
 
 

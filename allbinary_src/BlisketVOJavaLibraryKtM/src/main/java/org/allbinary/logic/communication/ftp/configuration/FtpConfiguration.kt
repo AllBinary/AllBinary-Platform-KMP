@@ -40,12 +40,12 @@ open public class FtpConfiguration
     private var ftpUserName: String
 
     private var ftpPassword: String
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
-public constructor        (hashMap: HashMap<Any, Any>)
+public constructor (hashMap: HashMap<Any, Any>)
             : super()
         {
 var hashMap = hashMap
@@ -56,7 +56,7 @@ this.ftpPassword= hashMap!!.get(FtpConfigurationData.PASSWORD) as String
 }
 
 
-open fun getServer()
+    open fun getServer()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -67,7 +67,7 @@ open fun getServer()
 }
 
 
-open fun getPath()
+    open fun getPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -78,7 +78,7 @@ open fun getPath()
 }
 
 
-open fun getUserName()
+    open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -89,7 +89,7 @@ open fun getUserName()
 }
 
 
-open fun getPassword()
+    open fun getPassword()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -100,7 +100,7 @@ open fun getPassword()
 }
 
 
-open fun setServer(value: String)
+    open fun setServer(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -108,7 +108,7 @@ this.ftpServer= value
 }
 
 
-open fun setPath(value: String)
+    open fun setPath(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -116,7 +116,7 @@ this.ftpPath= value
 }
 
 
-open fun setUserName(value: String)
+    open fun setUserName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -124,7 +124,7 @@ this.ftpUserName= value
 }
 
 
-open fun setPassword(value: String)
+    open fun setPassword(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value

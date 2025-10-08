@@ -30,12 +30,11 @@ open public class ShakeEventFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ShakeEventFactory = ShakeEventFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ShakeEventFactory{
 
@@ -61,7 +60,7 @@ open fun getInstance()
 
     var LARGE: ShakeEvent = ShakeEvent()
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 }

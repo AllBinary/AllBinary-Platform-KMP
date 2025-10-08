@@ -27,16 +27,17 @@
         
 import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.layer.NamedInterface
+
 interface GameInputInterface : NamedInterface {
         
 
                 @Throws(Exception::class)
             
-open fun processInput(layerManager: AllBinaryLayerManager)
+    open fun processInput(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun initInputProcessors()
+    open fun initInputProcessors()
         //nullable = true from not(false or (false and true)) = true
 
 

@@ -30,12 +30,11 @@ open public class GDLazyResources
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GDLazyResources = GDLazyResources()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GDLazyResources{
 

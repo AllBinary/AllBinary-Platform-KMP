@@ -38,7 +38,7 @@ open public class CombatBaseBehavior
     private val destroyableBaseBehavior: DestroyableBaseBehavior
 
     private var readyForExplosion: Boolean= false
-public constructor        (damageableBaseBehavior: DamageableBaseBehavior, destroyableBaseBehavior: DestroyableBaseBehavior)
+public constructor (damageableBaseBehavior: DamageableBaseBehavior, destroyableBaseBehavior: DestroyableBaseBehavior)
             : super()
         {
 var damageableBaseBehavior = damageableBaseBehavior
@@ -48,7 +48,7 @@ this.destroyableBaseBehavior= destroyableBaseBehavior
 }
 
 
-open fun getDamageableBaseBehavior()
+    open fun getDamageableBaseBehavior()
         //nullable = true from not(false or (false and true)) = true
 : DamageableBaseBehavior{
 
@@ -59,7 +59,7 @@ open fun getDamageableBaseBehavior()
 }
 
 
-open fun getDestroyableBaseBehavior()
+    open fun getDestroyableBaseBehavior()
         //nullable = true from not(false or (false and true)) = true
 : DestroyableBaseBehavior{
 
@@ -70,7 +70,7 @@ open fun getDestroyableBaseBehavior()
 }
 
 
-open fun isReadyForExplosion()
+    open fun isReadyForExplosion()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -81,7 +81,7 @@ open fun isReadyForExplosion()
 }
 
 
-open fun setReadyForExplosion(readyForExplosion: Boolean)
+    open fun setReadyForExplosion(readyForExplosion: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var readyForExplosion = readyForExplosion

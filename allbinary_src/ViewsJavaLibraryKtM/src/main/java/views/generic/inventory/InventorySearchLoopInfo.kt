@@ -50,7 +50,8 @@ open public class InventorySearchLoopInfo
     private val NUM: String = " num: "
 
     private val LAST: String = " last: "
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

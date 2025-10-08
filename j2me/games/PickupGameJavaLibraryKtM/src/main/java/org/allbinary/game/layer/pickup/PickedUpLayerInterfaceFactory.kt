@@ -39,7 +39,7 @@ open public class PickedUpLayerInterfaceFactory
     private val iconLayer: IconLayer
 
     private val animationInterface: Animation
-protected constructor        (pickeUpLayerType: PickedUpLayerType, iconLayer: IconLayer, animationInterface: Animation)
+protected constructor (pickeUpLayerType: PickedUpLayerType, iconLayer: IconLayer, animationInterface: Animation)
             : super()
         {
 var pickeUpLayerType = pickeUpLayerType
@@ -50,7 +50,8 @@ this.animationInterface= animationInterface
 this.iconLayer= iconLayer
 }
 
-override fun getIconLayer()
+
+    override fun getIconLayer()
         //nullable = true from not(false or (false and true)) = true
 : AllBinaryLayer{
 
@@ -60,7 +61,8 @@ override fun getIconLayer()
                         return iconLayer
 }
 
-override fun getAnimationInterface()
+
+    override fun getAnimationInterface()
         //nullable = true from not(false or (false and true)) = true
 : Animation{
 
@@ -70,7 +72,8 @@ override fun getAnimationInterface()
                         return animationInterface
 }
 
-override fun getPickedUpLayerType()
+
+    override fun getPickedUpLayerType()
         //nullable = true from not(false or (false and true)) = true
 : PickedUpLayerType{
 

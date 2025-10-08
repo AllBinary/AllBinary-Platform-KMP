@@ -33,14 +33,13 @@ open public class InitDbHelperFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val CLASSNAME: String = "org.allbinary.business.installer.InitDbCrypted"
 
                 @Throws(LicensingException::class)
             
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, databaseConnectionInfoInterface: DatabaseConnectionInfoInterface)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, databaseConnectionInfoInterface: DatabaseConnectionInfoInterface)
         //nullable =  from not(true or (false and false)) = 
 : Any{
     //var abeClientInformation = abeClientInformation
@@ -68,7 +67,7 @@ params[0]= databaseConnectionInfoInterface as Object
 
                 @Throws(LicensingException::class)
             
-open fun getInstance(abeClientInformation: AbeClientInformationInterface)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface)
         //nullable =  from not(true or (false and false)) = 
 : Any{
     //var abeClientInformation = abeClientInformation
@@ -86,7 +85,7 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface)
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

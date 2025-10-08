@@ -30,12 +30,11 @@ open public class J2SEMath
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: J2SEMath = J2SEMath()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : J2SEMath{
 
@@ -53,7 +52,7 @@ open fun getInstance()
             {
             }            
         
-open fun round(value: Float)
+    open fun round(value: Float)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var value = value
@@ -65,7 +64,7 @@ var value = value
 }
 
 
-open fun abs(value: Float)
+    open fun abs(value: Float)
         //nullable = true from not(false or (false and false)) = true
 : Float{
 var value = value

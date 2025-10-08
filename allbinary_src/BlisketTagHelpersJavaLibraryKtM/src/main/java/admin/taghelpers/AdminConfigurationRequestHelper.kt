@@ -38,7 +38,7 @@ open public class AdminConfigurationRequestHelper : ModifyTable {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var request: HttpServletRequest
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 
@@ -54,7 +54,7 @@ this.request= pageContext!!.getRequest() as HttpServletRequest
 }
 
 
-open fun insert()
+    open fun insert()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -113,7 +113,7 @@ adminConfigurationInterface!!.write()
 }
 
 
-open fun delete()
+    open fun delete()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -159,7 +159,7 @@ open fun delete()
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

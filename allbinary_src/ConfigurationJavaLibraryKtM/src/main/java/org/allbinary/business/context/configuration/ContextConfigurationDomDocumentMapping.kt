@@ -37,7 +37,7 @@ open public class ContextConfigurationDomDocumentMapping
         
 
     private var contextConfigurationInterface: ContextConfigurationInterface
-public constructor        (contextConfigurationInterface: ContextConfigurationInterface)
+public constructor (contextConfigurationInterface: ContextConfigurationInterface)
             : super()
         {
 var contextConfigurationInterface = contextConfigurationInterface
@@ -47,7 +47,7 @@ this.contextConfigurationInterface= contextConfigurationInterface
 
                 @Throws(Exception::class)
             
-open fun toXmlDoc()
+    open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -68,7 +68,7 @@ document.appendChild(node)
 
                 @Throws(Exception::class)
             
-open fun toDomDocumentString()
+    open fun toDomDocumentString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

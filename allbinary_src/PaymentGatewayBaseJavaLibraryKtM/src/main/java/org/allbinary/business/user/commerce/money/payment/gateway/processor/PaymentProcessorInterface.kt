@@ -27,12 +27,13 @@
         
 import org.allbinary.business.user.commerce.money.payment.PaymentException
 import org.allbinary.data.tree.dom.DomNodeInterface
+
 interface PaymentProcessorInterface : DomNodeInterface {
         
 
                 @Throws(PaymentException::class, Exception::class)
             
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 
 

@@ -32,12 +32,11 @@ open public class ClassLoaderUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun getName(anyType: Any)
+    open fun getName(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var anyType = anyType
@@ -67,7 +66,7 @@ var anyType = anyType
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

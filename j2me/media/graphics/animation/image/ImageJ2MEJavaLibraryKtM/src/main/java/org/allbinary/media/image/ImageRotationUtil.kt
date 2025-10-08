@@ -32,12 +32,11 @@ open public class ImageRotationUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ImageRotationUtil = ImageRotationUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ImageRotationUtil{
 
@@ -49,7 +48,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
@@ -59,7 +58,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun createRotatedImage(originalImage: Image, rotationInDegrees: Int)
+    open fun createRotatedImage(originalImage: Image, rotationInDegrees: Int)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var originalImage = originalImage

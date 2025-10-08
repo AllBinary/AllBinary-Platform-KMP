@@ -25,14 +25,15 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface ScreenListenerInterface {
         
 
-open fun onFullScreen(isFullScreen: Boolean)
+    open fun onFullScreen(isFullScreen: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun onFullScreenDisplay()
+    open fun onFullScreenDisplay()
         //nullable = true from not(false or (false and true)) = true
 
 

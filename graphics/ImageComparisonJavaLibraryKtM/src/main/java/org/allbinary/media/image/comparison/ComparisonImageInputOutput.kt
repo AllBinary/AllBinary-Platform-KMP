@@ -42,15 +42,14 @@ open public class ComparisonImageInputOutput
         
                 , ImageIOInterface {
         
-
-        companion object {
+companion object {
             
     private val ROOT_NAME: String = "_Changed_"
 
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        ()
+public constructor ()
             : super()
         {
 }
@@ -58,7 +57,7 @@ public constructor        ()
 
                 @Throws(Exception::class)
             
-open fun save(frame: Long)
+    open fun save(frame: Long)
         //nullable = true from not(false or (false and false)) = true
 {
     //var frame = frame
@@ -106,7 +105,7 @@ this.save(imageComparisonResult, imageComparisonResultFrameCacheable!!.getFrame(
 
                 @Throws(Exception::class)
             
-open fun save(imageComparisonResult: ImageComparisonResult, frame: Long)
+    open fun save(imageComparisonResult: ImageComparisonResult, frame: Long)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageComparisonResult = imageComparisonResult

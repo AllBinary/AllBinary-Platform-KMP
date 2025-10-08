@@ -31,12 +31,11 @@ open public class GravityUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GravityUtil = GravityUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GravityUtil{
 
@@ -58,7 +57,7 @@ open fun getInstance()
 
     val MAX_GAME_VELOCITY: Int = 18000
 
-open fun process(velocityProperties: BasicVelocityProperties)
+    open fun process(velocityProperties: BasicVelocityProperties)
         //nullable = true from not(false or (false and false)) = true
 {
 var velocityProperties = velocityProperties
@@ -66,7 +65,7 @@ velocityProperties!!.getVelocityYBasicDecimalP()!!.add(this.GAME_GRAVITY_VELOCIT
 }
 
 
-open fun process(velocityProperties: BasicVelocityProperties, customGravity: Int)
+    open fun process(velocityProperties: BasicVelocityProperties, customGravity: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var velocityProperties = velocityProperties

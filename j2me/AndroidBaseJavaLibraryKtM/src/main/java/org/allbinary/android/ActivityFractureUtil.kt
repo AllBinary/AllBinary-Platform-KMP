@@ -39,10 +39,17 @@ open public class ActivityFractureUtil
         
                 @Throws(Exception::class)
             
-open fun process(activity: Activity)
+    open fun process(activity: Activity)
         //nullable = true from not(false or (false and false)) = true
 {
-var activity = activity
+    //var activity = activity
+}
+
+
+    open fun setFullScreen(activity: Activity)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var activity = activity
 }
 
 

@@ -51,7 +51,7 @@ open public class InputAutomationModuleBundleActivator
     private var inputAutomationModuleInterface: Array<InputAutomationModuleFactoryInterface?>
 
     private var serviceFactory: ServiceFactory
-public constructor        ()
+public constructor ()
             : super()
         {
 this.init()
@@ -60,7 +60,7 @@ this.init()
 
                 @Throws(Exception::class)
             
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -72,7 +72,7 @@ open fun init()
 
                 @Throws(Exception::class)
             
-open fun getInputAutomationConfigurationModuleChangeListener(context: BundleContext)
+    open fun getInputAutomationConfigurationModuleChangeListener(context: BundleContext)
         //nullable = true from not(false or (false and false)) = true
 : InputAutomationConfigurationModuleChangeListener{
 var context = context
@@ -117,7 +117,7 @@ var context = context
 }
 
 
-open fun addModules(context: BundleContext)
+    open fun addModules(context: BundleContext)
         //nullable = true from not(false or (false and false)) = true
 {
 var context = context
@@ -160,7 +160,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "addModules")
 
                 @Throws(Exception::class)
             
-open fun registerAsService(bundleContext: BundleContext)
+    open fun registerAsService(bundleContext: BundleContext)
         //nullable = true from not(false or (false and false)) = true
 {
 var bundleContext = bundleContext
@@ -168,7 +168,7 @@ OSGIActivatorUtil.registerAsService(bundleContext, getServiceFactory(), InputAut
 }
 
 
-open fun removeModules(context: BundleContext)
+    open fun removeModules(context: BundleContext)
         //nullable = true from not(false or (false and false)) = true
 {
 var context = context
@@ -211,7 +211,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "removeModules")
 
                 @Throws(Exception::class)
             
-open fun start(context: BundleContext)
+    open fun start(context: BundleContext)
         //nullable = true from not(false or (false and false)) = true
 {
 var context = context
@@ -223,7 +223,7 @@ this.registerAsService(context)
 
                 @Throws(Exception::class)
             
-open fun stop(context: BundleContext)
+    open fun stop(context: BundleContext)
         //nullable = true from not(false or (false and false)) = true
 {
 var context = context
@@ -232,7 +232,7 @@ this.removeModules(context)
 }
 
 
-open fun getInputAutomationModuleInterface()
+    open fun getInputAutomationModuleInterface()
         //nullable = true from not(false or (false and true)) = true
 : Array<InputAutomationModuleFactoryInterface?>{
 
@@ -243,7 +243,7 @@ open fun getInputAutomationModuleInterface()
 }
 
 
-open fun setInputAutomationModuleInterface(inputAutomationModuleInterface: Array<InputAutomationModuleFactoryInterface?>)
+    open fun setInputAutomationModuleInterface(inputAutomationModuleInterface: Array<InputAutomationModuleFactoryInterface?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var inputAutomationModuleInterface = inputAutomationModuleInterface
@@ -251,7 +251,7 @@ this.inputAutomationModuleInterface= inputAutomationModuleInterface
 }
 
 
-open fun getServiceFactory()
+    open fun getServiceFactory()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -262,7 +262,7 @@ open fun getServiceFactory()
 }
 
 
-open fun setServiceFactory(serviceObject: ServiceFactory)
+    open fun setServiceFactory(serviceObject: ServiceFactory)
         //nullable = true from not(false or (false and false)) = true
 {
 var serviceObject = serviceObject

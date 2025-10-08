@@ -49,8 +49,7 @@ import org.allbinary.time.TimeDelayHelper
 open public class SavedCaptureImagesWorker : BasicEventHandler
                 , CaptureWorkerInterface {
         
-
-        companion object {
+companion object {
             
     private var index: Long
 
@@ -65,7 +64,7 @@ open public class SavedCaptureImagesWorker : BasicEventHandler
     private var screenScavangerRobot: ScreenScavangerRobot
 
     private var savedCaptureGenericProfileDataWorkerType: SavedCaptureGenericProfileDataWorkerType
-public constructor        (savedCaptureGenericProfileDataWorkerType: SavedCaptureGenericProfileDataWorkerType){
+public constructor (savedCaptureGenericProfileDataWorkerType: SavedCaptureGenericProfileDataWorkerType){
 var savedCaptureGenericProfileDataWorkerType = savedCaptureGenericProfileDataWorkerType
 this.savedCaptureGenericProfileDataWorkerType= savedCaptureGenericProfileDataWorkerType
 this.screenScavangerRobot= ScreenScavangerRobot()
@@ -75,7 +74,7 @@ index= ProcessingFrameIndexFactory.next()
 
                 @Throws(Exception::class)
             
-open fun setThread(thread: Thread)
+    open fun setThread(thread: Thread)
         //nullable = true from not(false or (false and false)) = true
 {
 var thread = thread
@@ -83,7 +82,7 @@ var thread = thread
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun isRunning()
+    open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -95,7 +94,7 @@ open fun isRunning()
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun setRunning(running: Boolean)
+    open fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var running = running
@@ -103,7 +102,7 @@ this.running= running
 }
 
 
-open fun run()
+    open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 

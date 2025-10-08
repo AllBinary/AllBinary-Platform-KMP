@@ -38,7 +38,7 @@ open public class CollidableVehicleBehavior : CollidableDestroyableDamageableBeh
         
 
     var totalImpactVelocity: Long = 0
-public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
+public constructor (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
 
                             : super(ownerLayer, collidable){
 var ownerLayer = ownerLayer
@@ -52,7 +52,7 @@ var collidable = collidable
 
                 @Throws(Exception::class)
             
-open fun collide(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
+    open fun collide(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
@@ -90,7 +90,7 @@ ownerLayer.
 }
 
 
-open fun collide(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
+    open fun collide(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
@@ -102,7 +102,7 @@ ForcedLogUtil.log("Don't Use Interface Version It Is Slower", this)
 
     private var halfImpactVelocityY: Long= 0
 
-open fun collide(vehiclePropertiesCompositeInterface: VehiclePropertiesCompositeInterface)
+    open fun collide(vehiclePropertiesCompositeInterface: VehiclePropertiesCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var vehiclePropertiesCompositeInterface = vehiclePropertiesCompositeInterface
@@ -157,7 +157,7 @@ totalImpactVelocity= impactVelocityX +impactVelocityY
 }
 
 
-open fun collideFriction(vehiclePropertiesCompositeInterface: VehiclePropertiesCompositeInterface)
+    open fun collideFriction(vehiclePropertiesCompositeInterface: VehiclePropertiesCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var vehiclePropertiesCompositeInterface = vehiclePropertiesCompositeInterface

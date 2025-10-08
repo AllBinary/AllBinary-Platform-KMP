@@ -43,7 +43,7 @@ open public class Advertisements
 
     private val pageList: BasicArrayList = BasicArrayList()
 
-open fun addPage(advertisementProcessorInterface: AdvertisementProcessorInterface)
+    open fun addPage(advertisementProcessorInterface: AdvertisementProcessorInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var advertisementProcessorInterface = advertisementProcessorInterface
@@ -59,7 +59,7 @@ var advertisementProcessorInterface = advertisementProcessorInterface
 }
 
 
-open fun startRandomPage()
+    open fun startRandomPage()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -85,7 +85,7 @@ advertisementProcessorInterface!!.start()
 
     private val myRandomFactory: MyRandomFactory = MyRandomFactory.getInstance()!!
 
-open fun processRandomPage()
+    open fun processRandomPage()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -117,7 +117,7 @@ advertisementProcessorInterface!!.process()
 }
 
 
-open fun stopAllPage()
+    open fun stopAllPage()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -136,7 +136,7 @@ advertisementProcessorInterface!!.stop()
 }
 
 
-open fun addBanner(advertisementProcessorInterface: AdvertisementProcessorInterface)
+    open fun addBanner(advertisementProcessorInterface: AdvertisementProcessorInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var advertisementProcessorInterface = advertisementProcessorInterface
@@ -152,7 +152,7 @@ var advertisementProcessorInterface = advertisementProcessorInterface
 }
 
 
-open fun startAll()
+    open fun startAll()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -171,7 +171,7 @@ advertisementProcessorInterface!!.start()
 }
 
 
-open fun stopAllBanner()
+    open fun stopAllBanner()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -190,7 +190,7 @@ advertisementProcessorInterface!!.stop()
 }
 
 
-open fun getBanner(index: Int)
+    open fun getBanner(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : AdvertisementProcessorInterface{
 var index = index
@@ -205,7 +205,7 @@ var index = index
 }
 
 
-open fun stopAll()
+    open fun stopAll()
         //nullable = true from not(false or (false and true)) = true
 {
 this.stopAllBanner()

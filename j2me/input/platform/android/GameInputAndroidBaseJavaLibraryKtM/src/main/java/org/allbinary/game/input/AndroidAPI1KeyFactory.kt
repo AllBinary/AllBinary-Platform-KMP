@@ -14,12 +14,11 @@
 
 open public class AndroidAPI1KeyFactory : AndroidKeyFactory {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: AndroidAPI1KeyFactory = AndroidAPI1KeyFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AndroidAPI1KeyFactory{
 
@@ -31,7 +30,7 @@ open fun getInstance()
 
 
         }
-            protected constructor        (){
+            protected constructor (){
 }
 
 

@@ -37,12 +37,11 @@ open public class RaceTrackStartPointUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun get(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, index: Int)
+    open fun get(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, index: Int)
         //nullable = true from not(false or (false and false)) = true
 : GPoint{
     //var geographicMapInterface = geographicMapInterface

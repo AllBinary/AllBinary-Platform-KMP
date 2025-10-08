@@ -31,12 +31,11 @@ open public class NullIntermissionEnableListener
         
                 , IntermissionEnableListenerInterface {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: IntermissionEnableListenerInterface = NullIntermissionEnableListener()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : IntermissionEnableListenerInterface{
 
@@ -48,12 +47,13 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
 
-override fun notifyIntermission(enable: Boolean)
+
+    override fun notifyIntermission(enable: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var enable = enable

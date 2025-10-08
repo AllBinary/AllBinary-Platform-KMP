@@ -33,7 +33,7 @@ import org.allbinary.input.motion.gesture.TouchMotionGestureFactory
 
 open public class MotionJ2MEDefaultGameInputMapping : PersistentInputMapping {
         
-public constructor        ()                        
+public constructor ()                        
 
                             : super(GamePersistanceStrings.getInstance()!!.DEFAULT_INPUT_MAPPING_RECORD_ID){
 

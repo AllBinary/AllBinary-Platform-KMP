@@ -120,7 +120,7 @@ open public class UpdateOrderHelper : TagHelper {
     private var storeComment: String
 
     private var storeCancelComment: String
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 this.request= pageContext!!.getRequest() as HttpServletRequest
@@ -128,7 +128,7 @@ this.getFormData()
 }
 
 
-open fun getFormData()
+    open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
 this.entryId= request.getParameter(EntryData.getInstance()!!.ID)
@@ -171,7 +171,7 @@ this.storeCancelComment= request.getParameter(OrderData.STORECANCELCOMMENT)
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

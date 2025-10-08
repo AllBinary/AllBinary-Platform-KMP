@@ -36,7 +36,7 @@ open public class CanvasDrawLineString
     private var x: Int
 
     private var y: Int
-public constructor        (x: Int, y: Int)
+public constructor (x: Int, y: Int)
             : super()
         {
 var x = x
@@ -48,7 +48,7 @@ this.y= y
 
     private val drawStringUtil: DrawStringUtil = DrawStringUtil.getInstance()!!
 
-open fun paint(graphics: Graphics, string: String, line: Int)
+    open fun paint(graphics: Graphics, string: String, line: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

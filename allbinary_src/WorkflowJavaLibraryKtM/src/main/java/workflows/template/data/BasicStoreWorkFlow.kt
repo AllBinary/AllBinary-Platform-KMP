@@ -33,7 +33,7 @@ import org.allbinary.logic.control.workflow.StoreWorkFlowInterface
 open public class BasicStoreWorkFlow : BasicWorkFlow
                 , StoreWorkFlowInterface {
         
-public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
+public constructor (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
                             : super(propertiesHashMap, pageContext){
 var propertiesHashMap = propertiesHashMap
@@ -47,7 +47,7 @@ var pageContext = pageContext
 
                 @Throws(Exception::class)
             
-open fun getStoreName()
+    open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

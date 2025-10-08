@@ -38,19 +38,21 @@ open public class Intermission
     private val timeElapsedHelper: TimeDelayHelper = TimeDelayHelper(0)
 
     private var intermissionEnableListener: IntermissionEnableListenerInterface = NullIntermissionEnableListener.getInstance()!!
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
-override fun setListener(enableListener: IntermissionEnableListenerInterface)
+
+    override fun setListener(enableListener: IntermissionEnableListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var enableListener = enableListener
 this.intermissionEnableListener= enableListener
 }
 
-override fun getTimeDelayHelper()
+
+    override fun getTimeDelayHelper()
         //nullable = true from not(false or (false and true)) = true
 : TimeDelayHelper{
 
@@ -60,7 +62,8 @@ override fun getTimeDelayHelper()
                         return timeElapsedHelper
 }
 
-override fun setEnabled(enabled: Boolean)
+
+    override fun setEnabled(enabled: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var enabled = enabled
@@ -77,7 +80,8 @@ this.enabled= enabled
 this.intermissionEnableListener!!.notifyIntermission(enabled)
 }
 
-override fun isEnabled()
+
+    override fun isEnabled()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

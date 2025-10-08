@@ -30,10 +30,9 @@ open public class AppletUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun isAppletLoader(anyType: Any)
+    open fun isAppletLoader(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var anyType = anyType
@@ -46,7 +45,7 @@ var anyType = anyType
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

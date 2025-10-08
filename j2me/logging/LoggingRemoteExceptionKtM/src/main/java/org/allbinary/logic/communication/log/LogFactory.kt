@@ -26,14 +26,13 @@
         import kotlin.reflect.KClass
         
 
-open public class LogFactory
+/*actual*/ open public class LogFactory
             : Object
          {
         
-
-        companion object {
+/*actual*/ companion object {
             
-open fun getInstance(specialMessage: String, anyType: Any, functionName: String, exception: Any)
+    /*actual*/ open fun getInstance(specialMessage: String, anyType: Any, functionName: String, exception: Any)
         //nullable =  from not(true or (false and false)) = 
 : Log{
 var specialMessage = specialMessage
@@ -48,7 +47,7 @@ var exception = exception
 }
 
 
-open fun getInstance(specialMessage: String, anyType: Any, functionName: String)
+    /*actual*/ open fun getInstance(specialMessage: String, anyType: Any, functionName: String)
         //nullable =  from not(true or (false and false)) = 
 : Log{
 var specialMessage = specialMessage

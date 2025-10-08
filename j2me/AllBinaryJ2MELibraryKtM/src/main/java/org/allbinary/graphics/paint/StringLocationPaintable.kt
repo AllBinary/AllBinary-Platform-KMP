@@ -31,12 +31,13 @@ open public class StringLocationPaintable : LocationPaintable {
         
 
     private val value: String
-public constructor        (value: String){
+public constructor (value: String){
     //var value = value
 this.value= value
 }
 
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics

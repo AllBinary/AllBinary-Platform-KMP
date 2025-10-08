@@ -41,8 +41,7 @@ open public class NullClip
         
                 , Clip {
         
-
-        companion object {
+companion object {
             
     val NULL_CONTROL: NullJ2SEControl = NullJ2SEControl(BooleanControl.Type.MUTE)
 
@@ -54,7 +53,8 @@ open public class NullClip
             }            
         
                 @Throws(LineUnavailableException::class)
-            override fun open(format: AudioFormat, data: ByteArray, offset: Int, bufferSize: Int)
+            
+    override fun open(format: AudioFormat, data: ByteArray, offset: Int, bufferSize: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var format = format
@@ -65,13 +65,15 @@ var bufferSize = bufferSize
 
 
                 @Throws(LineUnavailableException::class, IOException::class)
-            override fun open(stream: AudioInputStream)
+            
+    override fun open(stream: AudioInputStream)
         //nullable = true from not(false or (false and false)) = true
 {
 var stream = stream
 }
 
-override fun getFrameLength()
+
+    override fun getFrameLength()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -81,7 +83,8 @@ override fun getFrameLength()
                         return 0
 }
 
-override fun getMicrosecondLength()
+
+    override fun getMicrosecondLength()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -91,52 +94,61 @@ override fun getMicrosecondLength()
                         return 0
 }
 
-override fun setFramePosition(frames: Int)
+
+    override fun setFramePosition(frames: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var frames = frames
 }
 
-override fun setMicrosecondPosition(microseconds: Long)
+
+    override fun setMicrosecondPosition(microseconds: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var microseconds = microseconds
 }
 
-override fun setLoopPoints(start: Int, end: Int)
+
+    override fun setLoopPoints(start: Int, end: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var start = start
 var end = end
 }
 
-override fun loop(count: Int)
+
+    override fun loop(count: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var count = count
 }
 
-override fun drain()
+
+    override fun drain()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun flush()
+
+    override fun flush()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun start()
+
+    override fun start()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun stop()
+
+    override fun stop()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun isRunning()
+
+    override fun isRunning()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -146,7 +158,8 @@ override fun isRunning()
                         return false
 }
 
-override fun isActive()
+
+    override fun isActive()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -156,7 +169,8 @@ override fun isActive()
                         return false
 }
 
-override fun getFormat()
+
+    override fun getFormat()
         //nullable = true from not(false or (false and true)) = true
 : AudioFormat{
 
@@ -166,7 +180,8 @@ override fun getFormat()
                         return NullAudioFormat.NULL_AUDIO_FORMAT
 }
 
-override fun getBufferSize()
+
+    override fun getBufferSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -176,7 +191,8 @@ override fun getBufferSize()
                         return 0
 }
 
-override fun available()
+
+    override fun available()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -186,7 +202,8 @@ override fun available()
                         return 0
 }
 
-override fun getFramePosition()
+
+    override fun getFramePosition()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -196,7 +213,8 @@ override fun getFramePosition()
                         return 0
 }
 
-override fun getLongFramePosition()
+
+    override fun getLongFramePosition()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -206,7 +224,8 @@ override fun getLongFramePosition()
                         return 0L
 }
 
-override fun getMicrosecondPosition()
+
+    override fun getMicrosecondPosition()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -216,7 +235,8 @@ override fun getMicrosecondPosition()
                         return 0L
 }
 
-override fun getLevel()
+
+    override fun getLevel()
         //nullable = true from not(false or (false and true)) = true
 : Float{
 
@@ -226,7 +246,8 @@ override fun getLevel()
                         return 0.0f
 }
 
-override fun getLineInfo()
+
+    override fun getLineInfo()
         //nullable = true from not(false or (false and true)) = true
 : Info{
 
@@ -238,17 +259,20 @@ override fun getLineInfo()
 
 
                 @Throws(LineUnavailableException::class)
-            override fun open()
+            
+    override fun open()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun close()
+
+    override fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun isOpen()
+
+    override fun isOpen()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -258,7 +282,8 @@ override fun isOpen()
                         return false
 }
 
-override fun getControls()
+
+    override fun getControls()
         //nullable = true from not(false or (false and true)) = true
 : Array<Control?>{
 
@@ -268,7 +293,8 @@ override fun getControls()
                         return arrayOfNulls(0)
 }
 
-override fun isControlSupported(control: Type)
+
+    override fun isControlSupported(control: Type)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var control = control
@@ -279,7 +305,8 @@ var control = control
                         return false
 }
 
-override fun getControl(control: Type)
+
+    override fun getControl(control: Type)
         //nullable = true from not(false or (false and false)) = true
 : Control{
 var control = control
@@ -290,13 +317,15 @@ var control = control
                         return NullClip.NULL_CONTROL
 }
 
-override fun addLineListener(listener: LineListener)
+
+    override fun addLineListener(listener: LineListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var listener = listener
 }
 
-override fun removeLineListener(listener: LineListener)
+
+    override fun removeLineListener(listener: LineListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var listener = listener

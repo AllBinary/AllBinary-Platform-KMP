@@ -34,8 +34,7 @@ open public class Health
         
                 , HealthInterface {
         
-
-        companion object {
+companion object {
             
     val NULL_HEALTH: Health = Health(0)
 
@@ -52,7 +51,7 @@ open public class Health
     private var maxHealth: Int= 0
 
     private var healthListenerInterface: HealthListenerInterface = NullHealthListener.NULL_HEALTH_LISTENER
-public constructor        (maxHealth: Int)
+public constructor (maxHealth: Int)
             : super()
         {
 var maxHealth = maxHealth
@@ -60,7 +59,8 @@ this.setMaxHealth(maxHealth)
 this.setHealth(maxHealth)
 }
 
-override fun heal(ahealth: Int)
+
+    override fun heal(ahealth: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var ahealth = ahealth
@@ -83,14 +83,15 @@ var ahealth = ahealth
                             
 }
 
-override fun heal()
+
+    override fun heal()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setHealth(this.getMaxHealth())
 }
 
 
-open fun isDamaged()
+    open fun isDamaged()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -117,7 +118,8 @@ open fun isDamaged()
                             
 }
 
-override fun damage(ahealth: Int)
+
+    override fun damage(ahealth: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var ahealth = ahealth
@@ -148,7 +150,8 @@ ForcedLogUtil.log(stringBuffer!!.toString(), this)
 this.setHealth(health)
 }
 
-override fun isAlive()
+
+    override fun isAlive()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -175,7 +178,8 @@ override fun isAlive()
                             
 }
 
-override fun getMaxHealth()
+
+    override fun getMaxHealth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -185,7 +189,8 @@ override fun getMaxHealth()
                         return maxHealth
 }
 
-override fun setMaxHealth(maxHealth: Int)
+
+    override fun setMaxHealth(maxHealth: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var maxHealth = maxHealth
@@ -193,7 +198,7 @@ this.maxHealth= maxHealth
 }
 
 
-open fun setHealth(health: Int)
+    open fun setHealth(health: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var health = health
@@ -233,7 +238,8 @@ var health = health
                                 
 }
 
-override fun getHealth()
+
+    override fun getHealth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -243,14 +249,16 @@ override fun getHealth()
                         return health
 }
 
-override fun addListener(healthGraphic: HealthListenerInterface)
+
+    override fun addListener(healthGraphic: HealthListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var healthGraphic = healthGraphic
 this.healthListenerInterface= healthGraphic
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

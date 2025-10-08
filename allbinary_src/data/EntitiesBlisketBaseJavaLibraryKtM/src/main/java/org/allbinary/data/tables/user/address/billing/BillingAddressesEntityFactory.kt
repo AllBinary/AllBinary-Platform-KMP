@@ -33,12 +33,11 @@ open public class BillingAddressesEntityFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: BillingAddressesEntityFactory = BillingAddressesEntityFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BillingAddressesEntityFactory{
 
@@ -52,13 +51,13 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getInstance(userName: String)
+    open fun getInstance(userName: String)
         //nullable =  from not(true or (false and false)) = 
 : StreetAddressesEntity{
 var userName = userName

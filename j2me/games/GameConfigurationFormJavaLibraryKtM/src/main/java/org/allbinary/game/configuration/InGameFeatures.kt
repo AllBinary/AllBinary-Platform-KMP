@@ -41,7 +41,8 @@ open public class InGameFeatures : Init {
             public constructor() : super()
             {
             }            
-        override fun init()
+        
+    override fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -120,7 +121,7 @@ inGameFeatureChoiceGroups!!.add(LABEL, exclusiveScreenButtonsVector)
 }
 
 
-open fun addToInGameMenu()
+    open fun addToInGameMenu()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -135,7 +136,7 @@ InGameFeatureChoiceGroups.getExclusiveInstance()!!.add(orientationData!!.ORIENTA
 }
 
 
-open fun isAny()
+    open fun isAny()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

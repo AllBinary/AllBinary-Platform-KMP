@@ -27,30 +27,31 @@
         
 import org.w3c.dom.Document
 import org.w3c.dom.Node
+
 interface ValidationInterface {
         
 
                 @Throws(Exception::class)
             
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
                 @Throws(Exception::class)
             
-open fun toValidationInfoNode(document: Document)
+    open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node
 
                 @Throws(Exception::class)
             
-open fun toValidationInfoDoc()
+    open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document
 
                 @Throws(Exception::class)
             
-open fun validationInfo()
+    open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String
 

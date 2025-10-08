@@ -30,12 +30,11 @@ open public class PathData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: PathData = PathData()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PathData{
 

@@ -38,20 +38,20 @@ open public class AllBinaryOrientationSensor : AllBinarySensor {
 
     var listener: CompleteMotionGestureInputEventListenerInterface = NoCompleteMotionGestureInputEventListener.getInstance()!!
 
-open fun setCompleteMotionGestureInputEventListener(completeMotionGestureInputEventListenerInterface: CompleteMotionGestureInputEventListenerInterface)
+    open fun setCompleteMotionGestureInputEventListener(completeMotionGestureInputEventListenerInterface: CompleteMotionGestureInputEventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var completeMotionGestureInputEventListenerInterface = completeMotionGestureInputEventListenerInterface
 this.listener= completeMotionGestureInputEventListenerInterface
 }
 
-protected constructor        (){
+protected constructor (){
 }
 
 
                 @Throws(Exception::class)
             
-open fun getOrientation()
+    open fun getOrientation()
         //nullable = true from not(false or (false and true)) = true
 : Orientation{
 

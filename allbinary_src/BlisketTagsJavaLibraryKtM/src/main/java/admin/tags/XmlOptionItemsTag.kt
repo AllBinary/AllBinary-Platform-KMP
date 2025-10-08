@@ -30,7 +30,7 @@ import admin.taghelpers.XmlOptionItemsRequestHelperFactory
 
 open public class XmlOptionItemsTag : TableTag {
         
-public constructor        (){
+public constructor (){
 this.setTagHelperFactory(XmlOptionItemsHelperFactory())
 this.setTagRequestHelperFactory(XmlOptionItemsRequestHelperFactory())
 }

@@ -44,11 +44,11 @@ open public class PageValidation : Validation
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var title: TitleValidation
-public constructor        (){
+public constructor (){
 this.title= TitleValidation()
 }
 
-public constructor        (document: Document){
+public constructor (document: Document){
 var document = document
 
     var node: Node = DomSearchHelper.getNode(TitleData.getInstance()!!.NAME, document.getElementsByTagName(PageData.getInstance()!!.NAME))!!
@@ -56,13 +56,13 @@ var document = document
 this.title= TitleValidation(node)
 }
 
-public constructor        (hashMap: HashMap<Any, Any>){
+public constructor (hashMap: HashMap<Any, Any>){
 var hashMap = hashMap
 this.getFormData(hashMap)
 }
 
 
-open fun getFormData(hashMap: HashMap<Any, Any>)
+    open fun getFormData(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var hashMap = hashMap
@@ -70,7 +70,7 @@ this.title= TitleValidation(hashMap)
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -131,7 +131,7 @@ open fun isValid()
 }
 
 
-open fun validationInfo()
+    open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -174,7 +174,7 @@ open fun validationInfo()
 }
 
 
-open fun toValidationInfoDoc()
+    open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -185,7 +185,7 @@ open fun toValidationInfoDoc()
 }
 
 
-open fun toValidationInfoNode(document: Document)
+    open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -199,7 +199,7 @@ var document = document
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

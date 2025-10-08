@@ -31,7 +31,7 @@ open public class ViewWrapper : BaseViewWrapper {
         
 
     private val view: View
-public constructor        (view: View){
+public constructor (view: View){
     //var view = view
 this.view= view
 }

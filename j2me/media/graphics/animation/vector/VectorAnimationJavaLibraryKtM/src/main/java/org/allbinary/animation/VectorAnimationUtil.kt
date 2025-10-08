@@ -32,12 +32,11 @@ open public class VectorAnimationUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: VectorAnimationUtil = VectorAnimationUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : VectorAnimationUtil{
 
@@ -49,13 +48,13 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
 
 
-open fun toAnimationArrayFromBasicArrayListOfPointBasicArrayList(vector: BasicArrayList, pointsPerFrame: Int)
+    open fun toAnimationArrayFromBasicArrayListOfPointBasicArrayList(vector: BasicArrayList, pointsPerFrame: Int)
         //nullable = true from not(false or (false and false)) = true
 : Array<Array<IntArray?>?>{
 var vector = vector
@@ -100,7 +99,7 @@ points[index]!![pointIndex]!![1]= frame[pointIndex]!![1]!!
 }
 
 
-open fun toAnimationArrayFromBasicArrayListOfPointBasicArrayList(vector: BasicArrayList)
+    open fun toAnimationArrayFromBasicArrayListOfPointBasicArrayList(vector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : Array<Array<IntArray?>?>{
 var vector = vector
@@ -145,7 +144,7 @@ points[index]!![pointIndex]!![1]= framePoints[pointIndex]!![1]!!
 }
 
 
-open fun toFrameArrayFromPointBasicArrayList(list: BasicArrayList)
+    open fun toFrameArrayFromPointBasicArrayList(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : Array<IntArray?>{
 var list = list

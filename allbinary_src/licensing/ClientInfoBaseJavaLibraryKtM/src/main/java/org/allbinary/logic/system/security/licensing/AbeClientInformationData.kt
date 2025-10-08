@@ -30,12 +30,11 @@ open public class AbeClientInformationData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AbeClientInformationData = AbeClientInformationData()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AbeClientInformationData{
 
@@ -47,7 +46,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

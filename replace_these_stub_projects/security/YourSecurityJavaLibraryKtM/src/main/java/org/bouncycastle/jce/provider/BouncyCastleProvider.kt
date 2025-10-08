@@ -15,15 +15,14 @@ import java.security.Provider
 
 open public class BouncyCastleProvider : Provider {
         
-
-        companion object {
+companion object {
             
     private var info: String = "BouncyCastle Security Provider v1.41"
 
     var PROVIDER_NAME: String = "BC"
 
         }
-            public constructor        ()                        
+            public constructor ()                        
 
                             : super(BouncyCastleProvider.PROVIDER_NAME, 1.41, BouncyCastleProvider.info){
 
@@ -33,7 +32,7 @@ open public class BouncyCastleProvider : Provider {
 }
 
 
-open fun setParameter(parameterName: String, parameter: Any)
+    open fun setParameter(parameterName: String, parameter: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var parameterName = parameterName

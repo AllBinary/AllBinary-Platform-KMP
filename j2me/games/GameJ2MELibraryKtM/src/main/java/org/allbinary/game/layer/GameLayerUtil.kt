@@ -33,10 +33,9 @@ open public class GameLayerUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun isOnScreen(layer: AllBinaryLayer)
+    open fun isOnScreen(layer: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var layer = layer
@@ -54,7 +53,7 @@ var layer = layer
 }
 
 
-open fun isInside(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, rect2X1: Int, rect2Y1: Int, rect2X2: Int, rect2Y2: Int)
+    open fun isInside(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, rect2X1: Int, rect2Y1: Int, rect2X2: Int, rect2Y2: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var rectX1 = rectX1
@@ -91,7 +90,7 @@ var rect2Y2 = rect2Y2
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

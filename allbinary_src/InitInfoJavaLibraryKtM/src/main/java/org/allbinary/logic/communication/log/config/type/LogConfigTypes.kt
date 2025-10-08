@@ -36,8 +36,7 @@ open public class LogConfigTypes
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val JSP_ERROR_NO_FUNCTION: String = "in JSP Not In Function"
 
@@ -48,7 +47,7 @@ LogConfigTypes.init()
 }
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -75,7 +74,7 @@ PreLogUtil.put("Unable to initialize LogConfigTypes", "LogConfigTypes", "init()"
 
                 @Throws(Exception::class)
             
-open fun getInstance(node: Node)
+    open fun getInstance(node: Node)
         //nullable =  from not(true or (false and false)) = 
 : LogConfigType{
     //var node = node
@@ -141,7 +140,7 @@ logConfigType= availableLogConfigTypes!!.get(index) as LogConfigType
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

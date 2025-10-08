@@ -30,8 +30,7 @@ open public class DisplayInBrowserContraintsData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NAME: String = "DISPLAYBROWSERCONSTRAINTS_NAME"
 
@@ -44,7 +43,7 @@ open public class DisplayInBrowserContraintsData
     val MOUNTABLELINK: String = "DISPLAYBROWSERCONSTRAINTS_MOUNTABLELINK"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

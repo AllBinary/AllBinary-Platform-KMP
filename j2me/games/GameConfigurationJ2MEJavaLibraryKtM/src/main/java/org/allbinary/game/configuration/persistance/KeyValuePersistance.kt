@@ -43,7 +43,7 @@ import org.allbinary.util.HashtableUtil
 
 open public class KeyValuePersistance : BasicPersitance {
         
-protected constructor        (recordId: String)                        
+protected constructor (recordId: String)                        
 
                             : super(recordId){
     //var recordId = recordId
@@ -56,7 +56,7 @@ protected constructor        (recordId: String)
 
                 @Throws(Exception::class)
             
-open fun loadAll(abeClientInformation: AbeClientInformationInterface)
+    open fun loadAll(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -66,7 +66,7 @@ this.loadAll(abeClientInformation, 1)
 
                 @Throws(Exception::class)
             
-open fun loadAll(abeClientInformation: AbeClientInformationInterface, size: Int)
+    open fun loadAll(abeClientInformation: AbeClientInformationInterface, size: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -172,7 +172,7 @@ recordStore!!.closeRecordStore()
 
                 @Throws(Exception::class)
             
-open fun save(abeClientInformation: AbeClientInformationInterface, hashtable: Hashtable<Any, Any>)
+    open fun save(abeClientInformation: AbeClientInformationInterface, hashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -252,7 +252,7 @@ recordStore!!.closeRecordStore()
 }
 
 
-open fun get(index: Int)
+    open fun get(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : Hashtable<Any, Any>{
 var index = index

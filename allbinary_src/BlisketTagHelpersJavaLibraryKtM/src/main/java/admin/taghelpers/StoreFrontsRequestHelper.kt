@@ -65,7 +65,7 @@ open public class StoreFrontsRequestHelper : ModifyTable {
     private var modifyingStoreFrontInterface: StoreFrontInterface
 
     private val portion: Portion
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 this.pageContext= pageContext
@@ -78,7 +78,7 @@ this.getFormData()
 
                 @Throws(Exception::class)
             
-open fun getFormData()
+    open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
 this.storeName= this.weblisketSession!!.getStoreName()
@@ -86,7 +86,7 @@ this.modifyingStoreFrontInterface= StoreFront(this.request) as StoreFrontInterfa
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -138,7 +138,7 @@ StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!.update
 
                 @Throws(Exception::class)
             
-open fun sendStoreCreatedEmails()
+    open fun sendStoreCreatedEmails()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -190,7 +190,7 @@ adminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.STORECREATE
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun install()
+    open fun install()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -245,7 +245,7 @@ this.modifyingStoreFrontInterface!!.install(this.portion.getCurrent()!!.toInt(),
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun insert()
+    open fun insert()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -295,7 +295,7 @@ StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!.insert
 }
 
 
-open fun delete()
+    open fun delete()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

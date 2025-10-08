@@ -30,8 +30,7 @@ open public class UrlGlobalsData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NAME: String = "URLGLOBALS_NAME"
 
@@ -44,7 +43,7 @@ open public class UrlGlobalsData
     val MAINPATH: String = "URLGLOBALS_MAINPATH"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

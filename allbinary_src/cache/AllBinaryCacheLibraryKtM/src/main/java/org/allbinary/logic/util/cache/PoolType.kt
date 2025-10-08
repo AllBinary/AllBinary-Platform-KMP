@@ -32,7 +32,7 @@ open public class PoolType
         
 
     private var cacheType: CacheType
-public constructor        (cacheType: CacheType)
+public constructor (cacheType: CacheType)
             : super()
         {
 var cacheType = cacheType
@@ -40,7 +40,7 @@ this.setCacheType(cacheType)
 }
 
 
-open fun getCacheType()
+    open fun getCacheType()
         //nullable = true from not(false or (false and true)) = true
 : CacheType{
 
@@ -51,14 +51,15 @@ open fun getCacheType()
 }
 
 
-open fun setCacheType(cacheType: CacheType)
+    open fun setCacheType(cacheType: CacheType)
         //nullable = true from not(false or (false and false)) = true
 {
 var cacheType = cacheType
 this.cacheType= cacheType
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

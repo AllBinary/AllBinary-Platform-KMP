@@ -42,7 +42,7 @@ open public class LayerPlacer
     val layerInterfaceVisitor: LayerInterfaceVisitor
 
     private val dimension: GPoint
-public constructor        (layerInterfaceVisitor: LayerInterfaceVisitor, dimension: GPoint)
+public constructor (layerInterfaceVisitor: LayerInterfaceVisitor, dimension: GPoint)
             : super()
         {
     //var layerInterfaceVisitor = layerInterfaceVisitor
@@ -54,7 +54,7 @@ this.dimension= dimension
 
                 @Throws(Exception::class)
             
-open fun process(list: BasicArrayList)
+    open fun process(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var list = list
@@ -80,7 +80,7 @@ this.process(layerPlacementInterface)
 
                 @Throws(Exception::class)
             
-open fun process(layerPlacementInterface: LayerPlacementInterface)
+    open fun process(layerPlacementInterface: LayerPlacementInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerPlacementInterface = layerPlacementInterface
@@ -131,7 +131,7 @@ layerInterfaceVisitor!!.visit(layerInterface)
 
                 @Throws(Exception::class)
             
-open fun getPoint(layerPlacementInterface: LayerPlacementInterface)
+    open fun getPoint(layerPlacementInterface: LayerPlacementInterface)
         //nullable = true from not(false or (false and false)) = true
 : GPoint{
     //var layerPlacementInterface = layerPlacementInterface

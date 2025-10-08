@@ -33,7 +33,7 @@ open public class TimedVectorAnimation : VectorAnimation {
         
 
     private var timeElapsedHelper: TimeDelayHelper = TimeDelayHelper(200)
-public constructor        (currentPoints: Array<Array<IntArray?>?>, basicColor: BasicColor, animationBehavior: AnimationBehavior)                        
+public constructor (currentPoints: Array<Array<IntArray?>?>, basicColor: BasicColor, animationBehavior: AnimationBehavior)                        
 
                             : super(currentPoints, basicColor, animationBehavior){
     //var currentPoints = currentPoints
@@ -45,7 +45,7 @@ public constructor        (currentPoints: Array<Array<IntArray?>?>, basicColor: 
                     
 }
 
-public constructor        (currentPoints: Array<IntArray?>, basicColor: BasicColor, animationBehavior: AnimationBehavior)                        
+public constructor (currentPoints: Array<IntArray?>, basicColor: BasicColor, animationBehavior: AnimationBehavior)                        
 
                             : super(currentPoints, basicColor, animationBehavior){
     //var currentPoints = currentPoints
@@ -57,7 +57,8 @@ public constructor        (currentPoints: Array<IntArray?>, basicColor: BasicCol
                     
 }
 
-override fun nextFrame()
+
+    override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 

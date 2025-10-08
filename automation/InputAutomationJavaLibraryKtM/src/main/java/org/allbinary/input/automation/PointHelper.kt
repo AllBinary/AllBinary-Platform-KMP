@@ -31,12 +31,11 @@ open public class PointHelper
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val two: Double = 2
 
-open fun getCenterPoint(rectangle: Rectangle)
+    open fun getCenterPoint(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
 : Point{
 var rectangle = rectangle
@@ -55,7 +54,7 @@ var rectangle = rectangle
 
 
         }
-            public constructor        ()
+            public constructor ()
             : super()
         {
 }

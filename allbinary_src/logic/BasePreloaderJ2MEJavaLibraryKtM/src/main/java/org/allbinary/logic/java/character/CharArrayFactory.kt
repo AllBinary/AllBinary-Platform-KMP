@@ -30,12 +30,11 @@ open public class CharArrayFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: CharArrayFactory = CharArrayFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CharArrayFactory{
 
@@ -58,7 +57,7 @@ open fun getInstance()
                                                         CharArray(0)
                                                     
 
-open fun getZeroCharArray()
+    open fun getZeroCharArray()
         //nullable = true from not(false or (false and true)) = true
 : CharArray{
 

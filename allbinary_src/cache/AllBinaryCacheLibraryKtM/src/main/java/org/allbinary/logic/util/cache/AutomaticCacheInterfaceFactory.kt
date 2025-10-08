@@ -30,12 +30,11 @@ open public class AutomaticCacheInterfaceFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun getInstance(cacheableInterfaceFactoryInterface: CacheableInterfaceFactoryInterface, cacheType: CacheType, cachePolicy: CachePolicy)
+    open fun getInstance(cacheableInterfaceFactoryInterface: CacheableInterfaceFactoryInterface, cacheType: CacheType, cachePolicy: CachePolicy)
         //nullable =  from not(true or (false and false)) = 
 : AutomaticCacheInterface{
 var cacheableInterfaceFactoryInterface = cacheableInterfaceFactoryInterface
@@ -49,7 +48,7 @@ var cachePolicy = cachePolicy
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

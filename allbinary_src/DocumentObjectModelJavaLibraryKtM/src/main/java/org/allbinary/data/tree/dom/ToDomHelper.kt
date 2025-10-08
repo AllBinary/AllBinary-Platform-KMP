@@ -30,10 +30,9 @@ open public class ToDomHelper
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun convertNull(value: String)
+    open fun convertNull(value: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var value = value
@@ -52,7 +51,7 @@ var value = value
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

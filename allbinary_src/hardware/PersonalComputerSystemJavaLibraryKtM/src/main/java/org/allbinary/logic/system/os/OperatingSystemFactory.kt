@@ -35,7 +35,7 @@ import org.allbinary.logic.communication.log.config.type.LogConfigTypes
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.system.os.linux.LinuxOperatingSystemFactory
-import org.allbinary.logic.system.os.solaris.Solaris
+import org.allbinary.logic.system.os.solaris.SolarisOperatingSystemFactory
 import org.allbinary.logic.system.os.windows.WindowsOperatingSystemFactory
 import org.allbinary.string.CommonStrings
 
@@ -43,12 +43,11 @@ open public class OperatingSystemFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OperatingSystemFactory = OperatingSystemFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OperatingSystemFactory{
 
@@ -68,14 +67,14 @@ open fun getInstance()
     private var genericOperatingSystem: GenericOperatingSystem = NoOperatingSystem.NO_OPERATING_SYSTEM
 
     private var hasDetected: Boolean = false
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getOperatingSystemInstance()
+    open fun getOperatingSystemInstance()
         //nullable = true from not(false or (false and true)) = true
 : GenericOperatingSystem{
 
@@ -116,7 +115,7 @@ this.hasDetected= true
 
                                     }
                                 
-this.genericOperatingSystem= LinuxOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance() as GenericOperatingSystem
+this.genericOperatingSystem= LinuxOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()
 
                                     }
                                 
@@ -134,7 +133,7 @@ this.genericOperatingSystem= LinuxOperatingSystemFactory.getInstance()!!.getOper
 
                                     }
                                 
-this.genericOperatingSystem= WindowsOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance() as GenericOperatingSystem
+this.genericOperatingSystem= WindowsOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()
 
                                     }
                                 
@@ -152,7 +151,7 @@ this.genericOperatingSystem= WindowsOperatingSystemFactory.getInstance()!!.getOp
 
                                     }
                                 
-this.genericOperatingSystem= Solaris() as GenericOperatingSystem
+this.genericOperatingSystem= SolarisOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()
 
                                     }
                                 

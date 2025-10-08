@@ -30,15 +30,14 @@ open public class TimeIntervalActionScriptConditionData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var NAME: String = "TIME_INTERVAL_ACTION_CONDITION_NAME"
 
     var TIME: String = "TIME_INTERVAL_ACTION_CONDITION_TIME"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

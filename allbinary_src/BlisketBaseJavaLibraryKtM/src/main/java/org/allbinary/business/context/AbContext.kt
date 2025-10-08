@@ -44,7 +44,7 @@ open public class AbContext
     private var propertiesHashMap: HashMap<Any, Any>
 
     private var pageContext: PageContext
-public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
+public constructor (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
             : super()
         {
 var propertiesHashMap = propertiesHashMap
@@ -63,7 +63,7 @@ this.pageContext= pageContext
 }
 
 
-open fun getWeblisketSession()
+    open fun getWeblisketSession()
         //nullable = true from not(false or (false and true)) = true
 : WeblisketSessionInterface{
 
@@ -74,7 +74,7 @@ open fun getWeblisketSession()
 }
 
 
-open fun getPageContext()
+    open fun getPageContext()
         //nullable = true from not(false or (false and true)) = true
 : PageContext{
 
@@ -85,7 +85,7 @@ open fun getPageContext()
 }
 
 
-open fun getPropertiesHashMap()
+    open fun getPropertiesHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 

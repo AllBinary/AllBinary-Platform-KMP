@@ -36,7 +36,7 @@ open public class InventoryTag : TableTag {
         
 
     private var storeName: String
-public constructor        ()                        
+public constructor ()                        
 
                             : super(){
 
@@ -48,7 +48,7 @@ this.setTagRequestHelperFactory(InventoryRequestHelperFactory())
 }
 
 
-open fun setStoreName(value: String)
+    open fun setStoreName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -58,7 +58,7 @@ this.storeName= value
 
                 @Throws(JspTagException::class)
             
-open fun doStartTag()
+    open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

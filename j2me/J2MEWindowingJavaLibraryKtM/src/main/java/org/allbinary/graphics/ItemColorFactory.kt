@@ -30,12 +30,11 @@ open public class ItemColorFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ItemColorFactory = ItemColorFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ItemColorFactory{
 

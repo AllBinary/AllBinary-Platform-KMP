@@ -36,8 +36,7 @@ open public class ColorCacheFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var cacheInterface: AutomaticCacheInterface = 
                 null
@@ -65,7 +64,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, ColorCacheFactory::class, STATIC_BLOCK,
 
 }
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AutomaticCacheInterface{
 
@@ -77,7 +76,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

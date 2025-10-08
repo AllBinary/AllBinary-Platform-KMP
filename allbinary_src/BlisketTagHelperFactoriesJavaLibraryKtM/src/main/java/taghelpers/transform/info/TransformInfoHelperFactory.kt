@@ -35,13 +35,13 @@ open public class TransformInfoHelperFactory : TagHelperFactory {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (){
+public constructor (){
 }
 
 
                 @Throws(LicensingException::class)
             
-open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
+    open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
 : Any{
 var hashMap = hashMap

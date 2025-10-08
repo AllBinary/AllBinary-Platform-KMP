@@ -33,12 +33,11 @@ open public class CellPositionFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var SINGLETON: CellPositionFactory = CellPositionFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CellPositionFactory{
 
@@ -61,13 +60,13 @@ open fun getInstance()
     private var columns: Int= 0
 
     private var rows: Int= 0
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun init(columns: Int, rows: Int)
+    open fun init(columns: Int, rows: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var columns = columns
@@ -109,7 +108,7 @@ this.createInstance(column, row)
 }
 
 
-open fun getInstance(i_column: Int, i_row: Int)
+    open fun getInstance(i_column: Int, i_row: Int)
         //nullable =  from not(true or (false and false)) = 
 : CellPosition{
 var i_column = i_column
@@ -138,7 +137,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-open fun createInstance(i_column: Int, i_row: Int)
+    open fun createInstance(i_column: Int, i_row: Int)
         //nullable = true from not(false or (false and false)) = true
 : CellPosition{
 var i_column = i_column
@@ -166,7 +165,7 @@ cellPositionArray[i_column]!![i_row]= cellPositionCanBeNull
 }
 
 
-open fun getColumns()
+    open fun getColumns()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -177,7 +176,7 @@ open fun getColumns()
 }
 
 
-open fun getRows()
+    open fun getRows()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

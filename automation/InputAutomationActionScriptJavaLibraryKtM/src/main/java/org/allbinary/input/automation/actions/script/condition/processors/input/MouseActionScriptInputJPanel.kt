@@ -48,7 +48,7 @@ open public class MouseActionScriptInputJPanel : javax.swing.JPanel {
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var mouseActionScriptInputInterface: MouseActionScriptInputInterface
-public constructor        (mouseActionScriptInputInterface: MouseActionScriptInputInterface){
+public constructor (mouseActionScriptInputInterface: MouseActionScriptInputInterface){
     //var mouseActionScriptInputInterface = mouseActionScriptInputInterface
 logUtil!!.put(CommonLabels.getInstance()!!.START +mouseActionScriptInputInterface, this, commonStrings!!.CONSTRUCTOR)
 initComponents()
@@ -64,7 +64,7 @@ this.set()
 }
 
 
-open fun set()
+    open fun set()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -108,7 +108,7 @@ this.mouseActionScriptInputInterface!!.log()
 
                 @Throws(Exception::class)
             
-open fun updateInputType()
+    open fun updateInputType()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -131,7 +131,7 @@ open fun updateInputType()
 
                 @Throws(Exception::class)
             
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 this.updateInputType()
@@ -229,7 +229,7 @@ this.mouseActionScriptInputInterface!!.log()
 }
 
 
-open fun getMouseActionJDialog()
+    open fun getMouseActionJDialog()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JDialog{
 
@@ -240,7 +240,7 @@ open fun getMouseActionJDialog()
 }
 
 
-open fun setMouseActionJDialog(mouseActionJDialog: javax.swing.JDialog)
+    open fun setMouseActionJDialog(mouseActionJDialog: javax.swing.JDialog)
         //nullable = true from not(false or (false and false)) = true
 {
 var mouseActionJDialog = mouseActionJDialog
@@ -248,7 +248,7 @@ this.mouseActionJDialog= mouseActionJDialog
 }
 
 
-open fun initComponents()
+    open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
 mouseActionJDialog= javax.swing.JDialog()
@@ -274,7 +274,7 @@ okJButton!!.setText("OK")
 okJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -294,7 +294,7 @@ button2JCheckBox!!.setMargin(java.awt.Insets(0, 0, 0, 0))
 button2JCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -321,7 +321,7 @@ mouseActionJButton!!.setText("Edit")
 mouseActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -340,14 +340,14 @@ layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Align
 }
 
 
-open fun button2JCheckBoxActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun button2JCheckBoxActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
 }
 
 
-open fun okJButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun okJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -363,7 +363,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "okButtonActionPerformed", e)
 }
 
 
-open fun mouseActionJButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun mouseActionJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt

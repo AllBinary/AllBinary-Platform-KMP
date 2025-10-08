@@ -38,12 +38,11 @@ open public class GameInitializationUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GameInitializationUtil = GameInitializationUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameInitializationUtil{
 
@@ -65,7 +64,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun initDemo(abeClientInformation: AbeClientInformationInterface, canvas: MyCanvas, gameInitializationInterfaceFactoryInterface: BasicBuildGameInitializerFactory)
+    open fun initDemo(abeClientInformation: AbeClientInformationInterface, canvas: MyCanvas, gameInitializationInterfaceFactoryInterface: BasicBuildGameInitializerFactory)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -124,7 +123,7 @@ GameInitializedEventHandler.getInstance()!!.fireEvent(EVENT)
 
                 @Throws(Exception::class)
             
-open fun initGame(abeClientInformation: AbeClientInformationInterface, canvas: MyCanvas, gameInitializationInterfaceFactoryInterface: BasicBuildGameInitializerFactory)
+    open fun initGame(abeClientInformation: AbeClientInformationInterface, canvas: MyCanvas, gameInitializationInterfaceFactoryInterface: BasicBuildGameInitializerFactory)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation

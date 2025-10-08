@@ -30,12 +30,11 @@ open public class LockedUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: LockedUtil = LockedUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : LockedUtil{
 
@@ -53,7 +52,7 @@ open fun getInstance()
             {
             }            
         
-open fun isLockedFeature()
+    open fun isLockedFeature()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -64,7 +63,7 @@ open fun isLockedFeature()
 }
 
 
-open fun isLockedFeature(lockableFeatrue: LockableFeature)
+    open fun isLockedFeature(lockableFeatrue: LockableFeature)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var lockableFeatrue = lockableFeatrue

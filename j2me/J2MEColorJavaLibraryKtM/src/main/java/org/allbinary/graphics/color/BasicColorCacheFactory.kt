@@ -33,12 +33,11 @@ open public class BasicColorCacheFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: BasicColorCacheFactory = BasicColorCacheFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BasicColorCacheFactory{
 
@@ -52,13 +51,13 @@ open fun getInstance()
         }
             
     private val hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun add(basicDefaultColor: BasicColor)
+    open fun add(basicDefaultColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var basicDefaultColor = basicDefaultColor
@@ -67,7 +66,7 @@ hashtable.put(Integer(basicDefaultColor!!.toInt()), basicDefaultColor)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getInstance(integer: Integer)
+    open fun getInstance(integer: Integer)
         //nullable =  from not(true or (false and false)) = 
 : BasicColor{
     //var integer = integer

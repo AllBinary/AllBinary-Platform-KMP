@@ -33,7 +33,7 @@ open public class ScrollMapEvent : AllBinaryEventObject {
     private var dx: Int= 0
 
     private var dy: Int= 0
-public constructor        (anyType: Any)                        
+public constructor (anyType: Any)                        
 
                             : super(anyType){
 var anyType = anyType
@@ -44,7 +44,7 @@ var anyType = anyType
 }
 
 
-open fun setDx(dx: Int)
+    open fun setDx(dx: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var dx = dx
@@ -52,7 +52,7 @@ this.dx= dx
 }
 
 
-open fun getDx()
+    open fun getDx()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -63,7 +63,7 @@ open fun getDx()
 }
 
 
-open fun setDy(dy: Int)
+    open fun setDy(dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var dy = dy
@@ -71,7 +71,7 @@ this.dy= dy
 }
 
 
-open fun getDy()
+    open fun getDy()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -82,7 +82,7 @@ open fun getDy()
 }
 
 
-open fun setDxDy(dx: Int, dy: Int)
+    open fun setDxDy(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var dx = dx

@@ -32,7 +32,7 @@ open public class SensorAction
         
 
     val name: String
-public constructor        (name: String)
+public constructor (name: String)
             : super()
         {
 var name = name

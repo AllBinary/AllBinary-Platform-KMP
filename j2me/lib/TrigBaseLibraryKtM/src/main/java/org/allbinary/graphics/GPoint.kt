@@ -33,12 +33,11 @@ open public class GPoint
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val POINT_LABEL: String = "Point: "
 
-open fun toStringStatic(x: Int, y: Int, z: Int)
+    open fun toStringStatic(x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var x = x
@@ -74,7 +73,7 @@ stringBuffer!!.append(z)
     private val y: Int
 
     private val z: Int
-public constructor        (point: GPoint)
+public constructor (point: GPoint)
             : super()
         {
 var point = point
@@ -83,7 +82,7 @@ this.y= point.getY()
 this.z= point.getZ()
 }
 
-public constructor        (x: Int, y: Int)
+public constructor (x: Int, y: Int)
             : super()
         {
 var x = x
@@ -93,7 +92,7 @@ this.y= y
 this.z= 3
 }
 
-public constructor        (x: Int, y: Int, z: Int)
+public constructor (x: Int, y: Int, z: Int)
             : super()
         {
 var x = x
@@ -105,7 +104,7 @@ this.z= z
 }
 
 
-open fun getX()
+    open fun getX()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -116,7 +115,7 @@ open fun getX()
 }
 
 
-open fun getY()
+    open fun getY()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -127,7 +126,7 @@ open fun getY()
 }
 
 
-open fun getZ()
+    open fun getZ()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -138,7 +137,7 @@ open fun getZ()
 }
 
 
-open fun getRawX()
+    open fun getRawX()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -149,7 +148,7 @@ open fun getRawX()
 }
 
 
-open fun getRawY()
+    open fun getRawY()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -160,7 +159,7 @@ open fun getRawY()
 }
 
 
-open fun getRawZ()
+    open fun getRawZ()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -170,7 +169,8 @@ open fun getRawZ()
                         return z
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

@@ -38,12 +38,11 @@ open public class LockedFeatureNotificationUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: LockedFeatureNotificationUtil = LockedFeatureNotificationUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : LockedFeatureNotificationUtil{
 
@@ -65,7 +64,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun fire()
+    open fun fire()
         //nullable = true from not(false or (false and true)) = true
 {
 PrimaryPlayerQueueFactory.getInstance()!!.add(ErrorSound.getInstance())
@@ -75,7 +74,7 @@ GameNotificationEventHandler.getInstance()!!.fireEvent(gameNotificationEvent)
 
                 @Throws(Exception::class)
             
-open fun fire(basicColor: BasicColor)
+    open fun fire(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
 var basicColor = basicColor

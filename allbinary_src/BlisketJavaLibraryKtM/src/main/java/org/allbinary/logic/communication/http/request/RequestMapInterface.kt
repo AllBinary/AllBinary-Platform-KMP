@@ -26,10 +26,11 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
+
 interface RequestMapInterface {
         
 
-open fun getRequestHashMap()
+    open fun getRequestHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>
 

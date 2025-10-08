@@ -53,12 +53,11 @@ open public class HighScoreNamePersistanceSingleton
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var SINGLETON: HighScoreNamePersistanceSingleton = HighScoreNamePersistanceSingleton()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : HighScoreNamePersistanceSingleton{
 
@@ -88,7 +87,7 @@ open fun getInstance()
 
     private var nameBasicArrayList: BasicArrayList = BasicArrayList()
 
-open fun clear()
+    open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 this.name= StringUtil.getInstance()!!.EMPTY_STRING
@@ -97,7 +96,7 @@ this.name= StringUtil.getInstance()!!.EMPTY_STRING
 
                 @Throws(Exception::class)
             
-open fun deleteAll(abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo)
+    open fun deleteAll(abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -122,7 +121,7 @@ this.clear()
 }
 
 
-open fun getRecordId(abeClientInformation: AbeClientInformationInterface)
+    open fun getRecordId(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var abeClientInformation = abeClientInformation
@@ -136,7 +135,7 @@ open fun getRecordId(abeClientInformation: AbeClientInformationInterface)
 
                 @Throws(Exception::class)
             
-open fun delete(abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, deleteId: Int)
+    open fun delete(abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, deleteId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -178,7 +177,7 @@ recordStore!!.closeRecordStore()
 }
 
 
-open fun getIds()
+    open fun getIds()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -189,7 +188,7 @@ open fun getIds()
 }
 
 
-open fun load(abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo)
+    open fun load(abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var abeClientInformation = abeClientInformation
@@ -284,7 +283,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.LOAD, e)
 }
 
 
-open fun save(abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, name: String)
+    open fun save(abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, name: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation

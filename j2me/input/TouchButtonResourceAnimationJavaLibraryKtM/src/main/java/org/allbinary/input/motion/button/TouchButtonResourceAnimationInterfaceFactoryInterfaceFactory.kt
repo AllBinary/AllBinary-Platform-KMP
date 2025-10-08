@@ -42,7 +42,7 @@ import org.allbinary.media.image.ImageCompleteUtil
 
 open public class TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory : BaseResourceAnimationInterfaceFactoryInterfaceFactory {
         
-public constructor        ()                        
+public constructor ()                        
 
                             : super("TouchButton Animations"){
 
@@ -51,7 +51,7 @@ public constructor        ()
                     
 }
 
-public constructor        (name: String)                        
+public constructor (name: String)                        
 
                             : super(name){
     //var name = name
@@ -63,7 +63,8 @@ public constructor        (name: String)
 
 
                 @Throws(Exception::class)
-            override fun init(level: Int)
+            
+    override fun init(level: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var level = level
@@ -72,7 +73,8 @@ this.init(ImageCacheFactory.getInstance(), level)
 
 
                 @Throws(Exception::class)
-            override fun init(imageCache: ImageCache, level: Int)
+            
+    override fun init(imageCache: ImageCache, level: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageCache = imageCache
@@ -229,7 +231,8 @@ this.add(touchButtonStartResource!!.HINT, OneRowSpriteIndexedAnimationFactory(to
 super.init(level)
 }
 
-override fun isLoadingLevel(level: Int)
+
+    override fun isLoadingLevel(level: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var level = level
@@ -260,7 +263,8 @@ override fun isLoadingLevel(level: Int)
                             
 }
 
-override fun isFeature()
+
+    override fun isFeature()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

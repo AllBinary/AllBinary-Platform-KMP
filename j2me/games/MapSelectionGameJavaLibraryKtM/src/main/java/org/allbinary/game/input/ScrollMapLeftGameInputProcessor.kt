@@ -30,7 +30,7 @@ import org.allbinary.layer.AllBinaryLayerManager
 
 open public class ScrollMapLeftGameInputProcessor : ScrollMapGameInputProcessor {
         
-public constructor        (scrollMapPlayerGameInput: ScrollMapPlayerGameInput)                        
+public constructor (scrollMapPlayerGameInput: ScrollMapPlayerGameInput)                        
 
                             : super(scrollMapPlayerGameInput){
 var scrollMapPlayerGameInput = scrollMapPlayerGameInput
@@ -43,7 +43,7 @@ var scrollMapPlayerGameInput = scrollMapPlayerGameInput
 
                 @Throws(Exception::class)
             
-open fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+    open fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var allbinaryLayerManager = allbinaryLayerManager

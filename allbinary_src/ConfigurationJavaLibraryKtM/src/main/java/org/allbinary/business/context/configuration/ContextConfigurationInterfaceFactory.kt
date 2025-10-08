@@ -36,12 +36,11 @@ open public class ContextConfigurationInterfaceFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ContextConfigurationInterfaceFactory = ContextConfigurationInterfaceFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ContextConfigurationInterfaceFactory{
 
@@ -53,7 +52,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
@@ -61,7 +60,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun getInstance(document: Document)
+    open fun getInstance(document: Document)
         //nullable =  from not(true or (false and false)) = 
 : ContextConfigurationInterface{
     //var document = document
@@ -82,7 +81,7 @@ open fun getInstance(document: Document)
 
                 @Throws(Exception::class)
             
-open fun getInstance(contextName: String)
+    open fun getInstance(contextName: String)
         //nullable =  from not(true or (false and false)) = 
 : ContextConfigurationInterface{
     //var contextName = contextName

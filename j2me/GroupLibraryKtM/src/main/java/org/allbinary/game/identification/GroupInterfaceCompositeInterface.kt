@@ -25,10 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface GroupInterfaceCompositeInterface {
         
 
-open fun getGroupInterface()
+    open fun getGroupInterface()
         //nullable = true from not(false or (false and true)) = true
 : Array<Group?>
 

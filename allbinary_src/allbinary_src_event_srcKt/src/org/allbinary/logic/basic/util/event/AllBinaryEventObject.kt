@@ -29,7 +29,7 @@ import java.util.EventObject
 
 open public class AllBinaryEventObject : EventObject {
         
-public constructor        (anyType: Any)                        
+public constructor (anyType: Any)                        
 
                             : super(anyType){
 var anyType = anyType

@@ -44,7 +44,7 @@ open public class CaptionAnimationHelper : CaptionAnimationHelperBase {
     private val captionAnimation: Animation
 
     private var animation: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
-public constructor        (captionAnimation: Animation, captionDx: Int, captionDy: Int, dx: Int, dy: Int){
+public constructor (captionAnimation: Animation, captionDx: Int, captionDy: Int, dx: Int, dy: Int){
     //var captionAnimation = captionAnimation
     //var captionDx = captionDx
     //var captionDy = captionDy
@@ -53,7 +53,8 @@ public constructor        (captionAnimation: Animation, captionDx: Int, captionD
 this.captionAnimation= CaptionAnimation(captionAnimation, this.textAnimation, captionDx, captionDy, dx, dy)
 }
 
-override fun isShowing()
+
+    override fun isShowing()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -80,7 +81,8 @@ override fun isShowing()
                             
 }
 
-override fun tick()
+
+    override fun tick()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -94,7 +96,8 @@ override fun tick()
                                 
 }
 
-override fun update(message: String, basicColor: BasicColor)
+
+    override fun update(message: String, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
 var message = message
@@ -105,7 +108,8 @@ this.animation= this.captionAnimation
 this.timeHelper!!.setStartTime()
 }
 
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

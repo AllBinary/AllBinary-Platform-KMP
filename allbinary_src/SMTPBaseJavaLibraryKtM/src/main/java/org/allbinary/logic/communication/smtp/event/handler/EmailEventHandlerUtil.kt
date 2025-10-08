@@ -41,12 +41,11 @@ open public class EmailEventHandlerUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: EmailEventHandlerUtil = EmailEventHandlerUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : EmailEventHandlerUtil{
 
@@ -59,7 +58,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun getUserEmailEventListenerVector(abeClientInformation: AbeClientInformationInterface, userEmailEventNameData: UserEmailEventNameData, userInterface: UserInterface)
+    open fun getUserEmailEventListenerVector(abeClientInformation: AbeClientInformationInterface, userEmailEventNameData: UserEmailEventNameData, userInterface: UserInterface)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
     //var abeClientInformation = abeClientInformation
@@ -92,7 +91,7 @@ vector.add(userEmailEventListenerInterface)
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -100,7 +99,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getEventHandler(abeClientInformation: AbeClientInformationInterface, userEmailEventNameData: UserEmailEventNameData, userVector: Vector)
+    open fun getEventHandler(abeClientInformation: AbeClientInformationInterface, userEmailEventNameData: UserEmailEventNameData, userVector: Vector)
         //nullable = true from not(false or (false and false)) = true
 : UserEmailEventHandler{
     //var abeClientInformation = abeClientInformation

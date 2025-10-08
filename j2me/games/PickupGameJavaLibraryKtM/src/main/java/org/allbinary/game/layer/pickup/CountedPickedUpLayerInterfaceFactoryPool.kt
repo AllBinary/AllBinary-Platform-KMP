@@ -31,12 +31,11 @@ open public class CountedPickedUpLayerInterfaceFactoryPool
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var SINGLETON: CountedPickedUpLayerInterfaceFactoryPool = CountedPickedUpLayerInterfaceFactoryPool()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CountedPickedUpLayerInterfaceFactoryPool{
 
@@ -47,7 +46,7 @@ open fun getInstance()
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 SINGLETON= CountedPickedUpLayerInterfaceFactoryPool()
@@ -57,14 +56,14 @@ SINGLETON= CountedPickedUpLayerInterfaceFactoryPool()
         }
             
     private var list: BasicArrayList
-private constructor        ()
+private constructor ()
             : super()
         {
 list= BasicArrayList()
 }
 
 
-open fun getList()
+    open fun getList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 

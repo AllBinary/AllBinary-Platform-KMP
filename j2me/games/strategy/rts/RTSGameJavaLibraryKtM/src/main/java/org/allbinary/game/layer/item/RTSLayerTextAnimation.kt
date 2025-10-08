@@ -38,7 +38,7 @@ open public class RTSLayerTextAnimation : Animation {
     private val image: Image
 
     private val text: String
-public constructor        (text: String, image: Image){
+public constructor (text: String, image: Image){
     //var text = text
     //var image = image
 this.text= text
@@ -46,7 +46,7 @@ this.image= image
 }
 
 
-open fun paint(graphics: Graphics, x: Int, y: Int)
+    open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

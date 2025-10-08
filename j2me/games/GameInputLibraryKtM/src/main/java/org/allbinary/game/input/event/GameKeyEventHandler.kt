@@ -33,12 +33,11 @@ open public class GameKeyEventHandler
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GameKeyEventHandler = GameKeyEventHandler()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameKeyEventHandler{
 
@@ -67,7 +66,7 @@ open fun getInstance()
     private val downGameKeyEventHandler: DownGameKeyEventHandler = DownGameKeyEventHandler.getInstance()!!
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun removeAllListeners()
+    open fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
 {
 this.pressGameKeyEventHandler!!.removeAllListeners()
@@ -76,7 +75,7 @@ this.downGameKeyEventHandler!!.removeAllListeners()
 }
 
 
-open fun addListener(eventListenerInterface: EventListenerInterface, playerInputId: Int)
+    open fun addListener(eventListenerInterface: EventListenerInterface, playerInputId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventListenerInterface = eventListenerInterface
@@ -88,7 +87,7 @@ this.downGameKeyEventHandler!!.getInstanceForPlayer(playerInputId)!!.addListener
 }
 
 
-open fun addListener(eventListenerInterface: EventListenerInterface)
+    open fun addListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventListenerInterface = eventListenerInterface
@@ -99,7 +98,7 @@ this.downGameKeyEventHandler!!.addListenerSingleThreaded(eventListenerInterface)
 }
 
 
-open fun removeListener(eventListenerInterface: EventListenerInterface)
+    open fun removeListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventListenerInterface = eventListenerInterface

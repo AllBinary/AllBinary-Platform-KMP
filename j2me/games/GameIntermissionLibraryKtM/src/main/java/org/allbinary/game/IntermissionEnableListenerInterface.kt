@@ -25,10 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface IntermissionEnableListenerInterface {
         
 
-open fun notifyIntermission(enable: Boolean)
+    open fun notifyIntermission(enable: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
 

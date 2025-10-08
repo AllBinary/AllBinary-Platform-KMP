@@ -41,7 +41,7 @@ open public class StaticTileLayerViewPositionFactory
         
                 @Throws(Exception::class)
             
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ViewPosition{
 

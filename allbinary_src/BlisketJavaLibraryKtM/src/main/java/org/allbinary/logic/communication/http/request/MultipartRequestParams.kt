@@ -41,7 +41,7 @@ open public class MultipartRequestParams : RequestParams {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var special: Boolean = false
-public constructor        (request: HttpServletRequest)                        
+public constructor (request: HttpServletRequest)                        
 
                             : super(){
 var request = request
@@ -52,7 +52,7 @@ var request = request
 this.processMultipartRequest(request)
 }
 
-public constructor        (pageContext: PageContext)                        
+public constructor (pageContext: PageContext)                        
 
                             : super(){
 var pageContext = pageContext
@@ -64,14 +64,14 @@ this.processMultipartRequest(pageContext!!.getRequest() as HttpServletRequest)
 }
 
 
-open fun setSpecial()
+    open fun setSpecial()
         //nullable = true from not(false or (false and true)) = true
 {
 this.special= true
 }
 
 
-open fun processMultipartRequest(request: HttpServletRequest)
+    open fun processMultipartRequest(request: HttpServletRequest)
         //nullable = true from not(false or (false and false)) = true
 {
 var request = request
@@ -181,7 +181,7 @@ super.setMap(request.getParameterMap())
 
                 @Throws(Exception::class)
             
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 

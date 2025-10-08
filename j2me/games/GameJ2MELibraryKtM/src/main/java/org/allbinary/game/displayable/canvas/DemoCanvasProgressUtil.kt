@@ -34,10 +34,9 @@ open public class DemoCanvasProgressUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun showProgress(demoCanvas: DemoCanvas)
+    open fun showProgress(demoCanvas: DemoCanvas)
         //nullable = true from not(false or (false and false)) = true
 {
 var demoCanvas = demoCanvas
@@ -45,7 +44,7 @@ DemoCanvasProgressUtil.showProgress(demoCanvas, false)
 }
 
 
-open fun showProgress(demoCanvas: DemoCanvas, background: Boolean)
+    open fun showProgress(demoCanvas: DemoCanvas, background: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var demoCanvas = demoCanvas

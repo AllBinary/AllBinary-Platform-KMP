@@ -31,7 +31,6 @@ import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.TextField
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringUtil
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.game.commands.GameCommandsFactory
 import org.allbinary.graphics.color.BasicColor
@@ -44,8 +43,7 @@ import org.allbinary.input.event.VirtualKeyboardEventHandler
 
 open public class LicenseRegistrationTextBox : CustomTextBox {
         
-
-        companion object {
+companion object {
             
     val DISPLAY_COMMAND: Command = Command("Register", Command.SCREEN, 3)
 
@@ -58,7 +56,7 @@ open public class LicenseRegistrationTextBox : CustomTextBox {
     private val pleaseWaitPaintable: Paintable = SimpleTextPaintable(commonStrings!!.PLEASE_WAIT, BasicColorFactory.getInstance()!!.WHITE)
 
     private var paintable: Paintable = NullPaintable.getInstance()!!
-public constructor        (cmdListener: CommandListener, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (cmdListener: CommandListener, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(cmdListener, "Enter Registration Code:", StringUtil.getInstance()!!.EMPTY_STRING, 60, TextField.ANY, backgrounBasicColor, foregroundBasicColor){
 var cmdListener = cmdListener
@@ -71,7 +69,7 @@ var foregroundBasicColor = foregroundBasicColor
 }
 
 
-open fun initCommands(cmdListener: CommandListener)
+    open fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var cmdListener = cmdListener
@@ -83,7 +81,7 @@ this.setCommandListener(cmdListener)
 }
 
 
-open fun open()
+    open fun open()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -103,7 +101,7 @@ this.repaint()
 }
 
 
-open fun close()
+    open fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -123,7 +121,7 @@ super.close()
 }
 
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -132,7 +130,7 @@ this.paintable.paint(graphics)
 }
 
 
-open fun submit()
+    open fun submit()
         //nullable = true from not(false or (false and true)) = true
 {
 

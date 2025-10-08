@@ -32,14 +32,13 @@ open public class MineLayerCircularStaticPool
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var WEAPON_LAYER_CIRCULAR_STATIC_POOL: WeaponLayerCircularPool = WeaponLayerCircularPool()
 
                 @Throws(Exception::class)
             
-open fun init(viewPositionFactoryInterface: ViewPositionFactoryInterface)
+    open fun init(viewPositionFactoryInterface: ViewPositionFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var viewPositionFactoryInterface = viewPositionFactoryInterface
@@ -48,7 +47,7 @@ WEAPON_LAYER_CIRCULAR_STATIC_POOL.init(MineLayerFactory(viewPositionFactoryInter
 }
 
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : WeaponLayerCircularPool{
 

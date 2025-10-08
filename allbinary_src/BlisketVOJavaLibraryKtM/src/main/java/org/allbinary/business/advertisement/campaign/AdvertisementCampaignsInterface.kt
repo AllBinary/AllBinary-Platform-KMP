@@ -26,22 +26,23 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.business.advertisement.AdvertisementInterface
+
 interface AdvertisementCampaignsInterface {
         
 
-open fun add(advertisementInterface: AdvertisementInterface)
+    open fun add(advertisementInterface: AdvertisementInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun get(index: Int)
+    open fun get(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : AdvertisementInterface
 
-open fun size()
+    open fun size()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun isEnabled()
+    open fun isEnabled()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 

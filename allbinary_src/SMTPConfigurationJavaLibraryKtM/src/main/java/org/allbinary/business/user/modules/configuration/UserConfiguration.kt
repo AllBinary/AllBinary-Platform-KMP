@@ -43,7 +43,7 @@ open public class UserConfiguration
     private var timeCreated: TimeCreated
 
     private var timeLastModified: TimeLastModified
-public constructor        ()
+public constructor ()
             : super()
         {
 this.userEmailConfigurationInterface= UserEmailConfiguration() as UserEmailConfigurationInterface
@@ -51,7 +51,7 @@ this.timeCreated= TimeCreated(0)
 this.timeLastModified= TimeLastModified(0)
 }
 
-public constructor        (hashMap: HashMap<Any, Any>)
+public constructor (hashMap: HashMap<Any, Any>)
             : super()
         {
 var hashMap = hashMap
@@ -61,7 +61,7 @@ this.timeLastModified= TimeLastModified(hashMap!!.get(EntryData.getInstance()!!.
 }
 
 
-open fun getUserEmailConfigurationInterface()
+    open fun getUserEmailConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
 : UserEmailConfigurationInterface{
 
@@ -72,7 +72,7 @@ open fun getUserEmailConfigurationInterface()
 }
 
 
-open fun setUserEmailConfigurationInterface(userEmailConfigurationInterface: UserEmailConfigurationInterface)
+    open fun setUserEmailConfigurationInterface(userEmailConfigurationInterface: UserEmailConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var userEmailConfigurationInterface = userEmailConfigurationInterface
@@ -80,7 +80,7 @@ this.userEmailConfigurationInterface= userEmailConfigurationInterface
 }
 
 
-open fun getTimeCreated()
+    open fun getTimeCreated()
         //nullable = true from not(false or (false and true)) = true
 : TimeCreated{
 
@@ -91,7 +91,7 @@ open fun getTimeCreated()
 }
 
 
-open fun getTimeLastModified()
+    open fun getTimeLastModified()
         //nullable = true from not(false or (false and true)) = true
 : TimeLastModified{
 
@@ -102,7 +102,7 @@ open fun getTimeLastModified()
 }
 
 
-open fun setTimeCreated(timeCreated: TimeCreated)
+    open fun setTimeCreated(timeCreated: TimeCreated)
         //nullable = true from not(false or (false and false)) = true
 {
 var timeCreated = timeCreated
@@ -110,7 +110,7 @@ this.timeCreated= timeCreated
 }
 
 
-open fun setTimeLastModified(timeLastModified: TimeLastModified)
+    open fun setTimeLastModified(timeLastModified: TimeLastModified)
         //nullable = true from not(false or (false and false)) = true
 {
 var timeLastModified = timeLastModified

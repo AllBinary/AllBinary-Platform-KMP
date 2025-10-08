@@ -30,12 +30,11 @@ open public class AndroidInfoFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AndroidInfoFactory = AndroidInfoFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AndroidInfoFactory{
 
@@ -55,7 +54,7 @@ open fun getInstance()
         
     private val version: Int = 8
 
-open fun getVersion()
+    open fun getVersion()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

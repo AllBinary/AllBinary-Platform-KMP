@@ -30,12 +30,11 @@ open public class GameStrings
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GameStrings = GameStrings()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameStrings{
 

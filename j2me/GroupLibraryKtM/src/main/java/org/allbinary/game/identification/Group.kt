@@ -36,8 +36,7 @@ open public class Group
         
                 , GroupInterface {
         
-
-        companion object {
+companion object {
             
     val ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(10)!!
 
@@ -52,7 +51,7 @@ open public class Group
     private val teamId: Short
 
     private var string: String = StringUtil.getInstance()!!.EMPTY_STRING
-public constructor        (teamName: String, teamId: Short)
+public constructor (teamName: String, teamId: Short)
             : super()
         {
 var teamName = teamName
@@ -61,7 +60,8 @@ this.setName(teamName)
 this.teamId= teamId
 }
 
-override fun getGroupName()
+
+    override fun getGroupName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -72,7 +72,7 @@ override fun getGroupName()
 }
 
 
-open fun setName(name: String)
+    open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var name = name
@@ -87,7 +87,8 @@ stringBuffer!!.append(this.teamId)
 this.string= stringBuffer!!.toString()
 }
 
-override fun getGroupId()
+
+    override fun getGroupId()
         //nullable = true from not(false or (false and true)) = true
 : Short{
 
@@ -97,7 +98,8 @@ override fun getGroupId()
                         return teamId
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

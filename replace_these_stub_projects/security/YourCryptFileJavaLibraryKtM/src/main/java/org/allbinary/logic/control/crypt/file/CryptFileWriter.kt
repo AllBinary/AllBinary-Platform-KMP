@@ -18,7 +18,7 @@ open public class CryptFileWriter
             : Object
          {
         
-public constructor        (decryptedExtension: String, encryptedExtension: String)
+public constructor (decryptedExtension: String, encryptedExtension: String)
             : super()
         {
 var decryptedExtension = decryptedExtension
@@ -28,7 +28,7 @@ var encryptedExtension = encryptedExtension
 
                 @Throws(Exception::class)
             
-open fun write(fileAbPath: AbPath, document: Document)
+    open fun write(fileAbPath: AbPath, document: Document)
         //nullable = true from not(false or (false and false)) = true
 {
 var fileAbPath = fileAbPath

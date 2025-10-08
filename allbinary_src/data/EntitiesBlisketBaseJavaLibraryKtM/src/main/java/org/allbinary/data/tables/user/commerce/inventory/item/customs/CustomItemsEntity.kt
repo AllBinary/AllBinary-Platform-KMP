@@ -43,7 +43,7 @@ open public class CustomItemsEntity : AbSqlBean
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val tableName: String = "customitems"
-public constructor        ()                        
+public constructor ()                        
 
                             : super(InventoryDbInitInfo()){
 
@@ -54,7 +54,7 @@ this.setTableName(tableName)
 }
 
 
-open fun insert(values: Vector)
+    open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 {
 var values = values
@@ -86,7 +86,7 @@ var values = values
 }
 
 
-open fun delete(value: String)
+    open fun delete(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -118,7 +118,7 @@ var value = value
 }
 
 
-open fun createTableStatement()
+    open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -133,7 +133,7 @@ stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.appe
 }
 
 
-open fun createTable()
+    open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -144,7 +144,7 @@ open fun createTable()
 }
 
 
-open fun update(updatedValues: HashMap<Any, Any>)
+    open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var updatedValues = updatedValues
@@ -152,7 +152,7 @@ super.updateWhere(BasicItemData.ID, updatedValues!!.get(BasicItemData.ID) as Str
 }
 
 
-open fun dropTable()
+    open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

@@ -40,7 +40,7 @@ open public class WebAppUrlGlobals : UrlGlobalsInterface {
 
     private var isWebappPathSet: Boolean = false
 
-open fun isTestingMode()
+    open fun isTestingMode()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -51,7 +51,7 @@ open fun isTestingMode()
 }
 
 
-open fun getWebappPath()
+    open fun getWebappPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -63,7 +63,7 @@ open fun getWebappPath()
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun setWebappPath(path: String)
+    open fun setWebappPath(path: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var path = path
@@ -72,7 +72,7 @@ isWebappPathSet= true
 }
 
 
-open fun getTestHtmlPath()
+    open fun getTestHtmlPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -85,7 +85,7 @@ open fun getTestHtmlPath()
 
                 @Throws(Exception::class)
             
-open fun getMainPath()
+    open fun getMainPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

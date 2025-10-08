@@ -42,7 +42,7 @@ open public class TransformInfoProperties
     private var objectConfigFileName: String
 
     private var templateFileName: String
-public constructor        (name: String, label: String, description: String, objectFileName: String, objectConfigFileName: String, templateFileName: String)
+public constructor (name: String, label: String, description: String, objectFileName: String, objectConfigFileName: String, templateFileName: String)
             : super()
         {
 var name = name
@@ -60,7 +60,7 @@ this.objectConfigFileName= objectConfigFileName
 }
 
 
-open fun setName(value: String)
+    open fun setName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -68,7 +68,7 @@ this.name= value
 }
 
 
-open fun setDescription(value: String)
+    open fun setDescription(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -76,7 +76,7 @@ this.description= value
 }
 
 
-open fun setViewFile(value: String)
+    open fun setViewFile(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -84,7 +84,7 @@ this.objectFileName= value
 }
 
 
-open fun setTemplateFile(value: String)
+    open fun setTemplateFile(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -92,7 +92,7 @@ this.templateFileName= value
 }
 
 
-open fun setObjectConfigFile(value: Object)
+    open fun setObjectConfigFile(value: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -100,7 +100,7 @@ this.objectConfigFileName= value
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -111,7 +111,7 @@ open fun getName()
 }
 
 
-open fun getLabel()
+    open fun getLabel()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -122,7 +122,7 @@ open fun getLabel()
 }
 
 
-open fun getDescription()
+    open fun getDescription()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -133,7 +133,7 @@ open fun getDescription()
 }
 
 
-open fun getViewFile()
+    open fun getViewFile()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -144,7 +144,7 @@ open fun getViewFile()
 }
 
 
-open fun getTemplateFile()
+    open fun getTemplateFile()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -155,7 +155,7 @@ open fun getTemplateFile()
 }
 
 
-open fun getObjectConfigFile()
+    open fun getObjectConfigFile()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

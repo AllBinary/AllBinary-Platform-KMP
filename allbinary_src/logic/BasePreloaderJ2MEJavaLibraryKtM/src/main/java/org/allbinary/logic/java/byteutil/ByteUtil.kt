@@ -34,12 +34,11 @@ open public class ByteUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ByteUtil = ByteUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ByteUtil{
 
@@ -51,13 +50,13 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
 
 
-open fun xor(array: ByteArray, mask: Byte)
+    open fun xor(array: ByteArray, mask: Byte)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
     //var array = array
@@ -91,7 +90,7 @@ index++
 }
 
 
-open fun not(array: ByteArray)
+    open fun not(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
     //var array = array
@@ -120,7 +119,7 @@ index++
 }
 
 
-open fun xorByte(array: ByteArray, index: Int)
+    open fun xorByte(array: ByteArray, index: Int)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
     //var array = array
@@ -168,7 +167,7 @@ open fun xorByte(array: ByteArray, index: Int)
 }
 
 
-open fun compare(newByteArray: ByteArray, oldByteArray: ByteArray)
+    open fun compare(newByteArray: ByteArray, oldByteArray: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var newByteArray = newByteArray
@@ -224,7 +223,7 @@ open fun compare(newByteArray: ByteArray, oldByteArray: ByteArray)
 }
 
 
-open fun compare(newByteArray: ByteArray, newSize: Int, oldByteArray: ByteArray, stats: IntArray)
+    open fun compare(newByteArray: ByteArray, newSize: Int, oldByteArray: ByteArray, stats: IntArray)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var newByteArray = newByteArray

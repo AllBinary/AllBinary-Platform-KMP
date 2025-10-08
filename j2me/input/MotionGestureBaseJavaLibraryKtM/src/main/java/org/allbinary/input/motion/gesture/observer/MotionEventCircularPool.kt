@@ -34,10 +34,9 @@ open public class MotionEventCircularPool
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getInstance(id: Int)
+    open fun getInstance(id: Int)
         //nullable =  from not(true or (false and false)) = 
 : MotionEventCircularPool{
 var id = id
@@ -54,12 +53,12 @@ var id = id
         }
             
     private var eventPool: AllBinaryEventCircularPool = AllBinaryEventCircularPool((InputFactory.getInstance()!!.MAX -1) -MIN)
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
-private constructor        (id: Int)
+private constructor (id: Int)
             : super()
         {
 var id = id
@@ -70,7 +69,7 @@ eventPool!!.init(MotionEventFactory(eventPool, id))
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getInstance(motionGestureInput: MotionGestureInput)
+    open fun getInstance(motionGestureInput: MotionGestureInput)
         //nullable =  from not(true or (false and false)) = 
 : MotionGestureEvent{
 var motionGestureInput = motionGestureInput

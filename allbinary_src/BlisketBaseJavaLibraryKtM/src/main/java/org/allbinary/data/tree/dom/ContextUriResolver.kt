@@ -48,7 +48,7 @@ open public class ContextUriResolver
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var basicURIResolver: BasicUriResolver
-public constructor        (basicURIResolver: BasicUriResolver)
+public constructor (basicURIResolver: BasicUriResolver)
             : super()
         {
 var basicURIResolver = basicURIResolver
@@ -58,7 +58,7 @@ this.basicURIResolver= basicURIResolver
 
                 @Throws(TransformerException::class)
             
-open fun resolve(href: String, base: String)
+    open fun resolve(href: String, base: String)
         //nullable = true from not(false or (false and false)) = true
 : Source{
 var href = href
@@ -120,7 +120,8 @@ logUtil!!.put(stringBuffer!!.toString(), this, "resolve")
 
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

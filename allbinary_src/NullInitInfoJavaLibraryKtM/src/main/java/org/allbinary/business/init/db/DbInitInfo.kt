@@ -29,7 +29,7 @@ import org.allbinary.logic.communication.log.PreLogUtil
 
 open public class DbInitInfo : DbConnectionInfo {
         
-public constructor        (initFileName: String, read: Boolean)                        
+public constructor (initFileName: String, read: Boolean)                        
 
                             : super(){
 var initFileName = initFileName
@@ -41,7 +41,7 @@ var read = read
 }
 
 
-open fun getUrl()
+    open fun getUrl()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -59,7 +59,7 @@ PreLogUtil.put("Url: " +url, this, "getUrl")
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun write()
+    open fun write()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -68,14 +68,14 @@ open fun write()
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun load()
+    open fun load()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun setHasRead(value: Boolean)
+    open fun setHasRead(value: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value

@@ -28,6 +28,7 @@
 import java.io.InputStream
 import javax.microedition.khronos.opengles.GL10
 import javax.microedition.lcdui.Image
+import javax.microedition.lcdui.NullCanvas
 import org.allbinary.graphics.opengles.renderer.AllBinaryRendererBase3
 import org.allbinary.util.BasicArrayList
 import org.allbinary.logic.communication.log.LogUtil
@@ -52,11 +53,11 @@ open public class OpenGLImageCache : ImageCache {
     private val list: BasicArrayList = BasicArrayList()
 
     private var renderer: AllBinaryRendererBase3 = AllBinaryRendererBase3()
-protected constructor        (){
+protected constructor (){
 }
 
 
-open fun addListener(renderer: Any)
+    open fun addListener(renderer: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var renderer = renderer
@@ -66,7 +67,7 @@ this.renderer= renderer as AllBinaryRendererBase3
 
                 @Throws(Exception::class)
             
-open fun update(gl: GL10)
+    open fun update(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl
@@ -90,9 +91,7 @@ this.gl= gl
 
 
     
-                        if(openGLESImage != 
-                                    null
-                                )
+                        if(openGLESImage != OpenGLESImage.NULL_OPENGL_IMAGE)
                         
                                     {
                                     openGLESImage!!.set(gl)
@@ -107,7 +106,8 @@ this.gl= gl
 
 
                 @Throws(Exception::class)
-            override fun createImage(caller: String, width: Int, height: Int)
+            
+    override fun createImage(caller: String, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var caller = caller
@@ -148,10 +148,13 @@ height= textureSize
         {
 
     
-                        if(image != 
-                                    null
-                                )
-                        list.add(image)
+                        if(image != NullCanvas.NULL_IMAGE)
+                        
+                                    {
+                                    list.add(image)
+
+                                    }
+                                
 }
 
 
@@ -163,7 +166,8 @@ height= textureSize
 
 
                 @Throws(Exception::class)
-            override fun createImage(key: Any, inputStream: InputStream)
+            
+    override fun createImage(key: Any, inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var key = key
@@ -183,10 +187,13 @@ height= textureSize
         {
 
     
-                        if(image != 
-                                    null
-                                )
-                        list.add(image)
+                        if(image != NullCanvas.NULL_IMAGE)
+                        
+                                    {
+                                    list.add(image)
+
+                                    }
+                                
 }
 
 
@@ -197,7 +204,7 @@ height= textureSize
 }
 
 
-open fun getGlP()
+    open fun getGlP()
         //nullable = true from not(false or (false and true)) = true
 : GL10{
 
@@ -208,7 +215,7 @@ open fun getGlP()
 }
 
 
-open fun init(image: Image)
+    open fun init(image: Image)
         //nullable = true from not(false or (false and false)) = true
 {
     //var image = image

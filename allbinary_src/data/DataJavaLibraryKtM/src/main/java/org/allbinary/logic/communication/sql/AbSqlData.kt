@@ -30,8 +30,7 @@ open public class AbSqlData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val ANYSINGLECHARACTERMATCH: String = "_"
 
@@ -46,7 +45,7 @@ open public class AbSqlData
     val MAXBLOB: Int = 32000
 
         }
-            public constructor        ()
+            public constructor ()
             : super()
         {
 }

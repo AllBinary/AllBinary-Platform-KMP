@@ -17,10 +17,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface ChallengerInterface {
         
 
-open fun setWinner(isWinner: Boolean)
+    open fun setWinner(isWinner: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
 

@@ -26,12 +26,13 @@
         import kotlin.reflect.KClass
         
 import java.io.IOException
+
 interface IdGeneratorInterface {
         
 
                 @Throws(IOException::class)
             
-open fun getNext()
+    open fun getNext()
         //nullable = true from not(false or (false and true)) = true
 : String
 

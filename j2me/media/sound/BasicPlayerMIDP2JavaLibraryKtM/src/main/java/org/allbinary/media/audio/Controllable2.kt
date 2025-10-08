@@ -25,10 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface Controllable2 {
         
 
-open fun setVolume(leftVolume: Int, rightVolume: Int)
+    open fun setVolume(leftVolume: Int, rightVolume: Int)
         //nullable = true from not(false or (false and false)) = true
 
 

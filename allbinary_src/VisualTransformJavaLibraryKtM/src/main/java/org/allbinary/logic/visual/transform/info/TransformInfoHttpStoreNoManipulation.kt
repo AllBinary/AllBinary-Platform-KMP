@@ -31,7 +31,7 @@ import org.allbinary.logic.visual.transform.info.objectConfig.TransformInfoObjec
 
 open public class TransformInfoHttpStoreNoManipulation : TransformInfoHttpStore {
         
-public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
+public constructor (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
                             : super(propertiesHashMap, pageContext){
 var propertiesHashMap = propertiesHashMap
@@ -45,7 +45,7 @@ var pageContext = pageContext
 
                 @Throws(Exception::class)
             
-open fun setObjectConfigFile(value: Object)
+    open fun setObjectConfigFile(value: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -56,14 +56,14 @@ this.setObjectConfigInterface(TransformInfoObjectConfigNoManipulationFactory.get
 
                 @Throws(Exception::class)
             
-open fun setObjectConfig(value: Object)
+    open fun setObjectConfig(value: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
 
 
 
-                            throw Exception("Should not set from actual config")
+                            throw Exception("Should not set from config")
 }
 
 

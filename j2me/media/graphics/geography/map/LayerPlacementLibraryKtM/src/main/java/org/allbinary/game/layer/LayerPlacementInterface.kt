@@ -26,24 +26,25 @@
         import kotlin.reflect.KClass
         
 import java.util.Hashtable
+
 interface LayerPlacementInterface {
         
 
-open fun getWidth()
+    open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getHeight()
+    open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getLayerType()
+    open fun getLayerType()
         //nullable = true from not(false or (false and true)) = true
 : LayerPlacementType
 
                 @Throws(Exception::class)
             
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : Hashtable<Any, Any>
 

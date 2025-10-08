@@ -26,12 +26,13 @@
         
 import org.allbinary.game.layer.RTSLayerEvent
 import org.allbinary.logic.util.event.EventListenerInterface
+
 interface BuildingEventListenerInterface : EventListenerInterface {
         
 
                 @Throws(Exception::class)
             
-open fun onBuildingEvent(event: RTSLayerEvent)
+    open fun onBuildingEvent(event: RTSLayerEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

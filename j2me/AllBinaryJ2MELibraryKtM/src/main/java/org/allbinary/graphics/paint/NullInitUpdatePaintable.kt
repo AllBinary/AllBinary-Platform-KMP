@@ -28,12 +28,11 @@
 
 open public class NullInitUpdatePaintable : InitUpdatePaintable {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: NullInitUpdatePaintable = NullInitUpdatePaintable()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : InitUpdatePaintable{
 
@@ -45,7 +44,7 @@ open fun getInstance()
 
 
         }
-            private constructor        (){
+            private constructor (){
 }
 
 

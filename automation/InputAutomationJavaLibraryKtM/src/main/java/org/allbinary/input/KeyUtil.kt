@@ -31,10 +31,9 @@ open public class KeyUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun isNormallyDisplayed(keyCode: Int)
+    open fun isNormallyDisplayed(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var keyCode = keyCode
@@ -61,7 +60,7 @@ else -> {
 
 
         }
-            public constructor        ()
+            public constructor ()
             : super()
         {
 }

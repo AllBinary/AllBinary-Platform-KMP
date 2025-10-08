@@ -34,12 +34,11 @@ open public class ScrollSelectionFormNoneFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ScrollSelectionForm = ScrollSelectionForm(StringUtil.getInstance()!!.EMPTY_STRING, arrayOfNulls(0), RectangleFactory.SINGLETON, FormTypeFactory.getInstance()!!.HORIZONTAL_FORM, 0, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ScrollSelectionForm{
 

@@ -38,7 +38,7 @@ open public class AdConfiguration
     val LEADBOLT: String
 
     val ADMOB: String
-public constructor        (advertIdArray: Array<Any?>)
+public constructor (advertIdArray: Array<Any?>)
             : super()
         {
 var advertIdArray = advertIdArray
@@ -48,7 +48,7 @@ this.LEADBOLT= advertIdArray[2]!! as String
 }
 
 
-open fun getValidAdSpots()
+    open fun getValidAdSpots()
         //nullable = true from not(false or (false and true)) = true
 : Array<Direction?>{
 
@@ -59,34 +59,34 @@ open fun getValidAdSpots()
 }
 
 
-open fun process(gameState: GameState)
+    open fun process(gameState: GameState)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameState = gameState
 }
 
 
-open fun process(state: Int)
+    open fun process(state: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var state = state
 }
 
 
-open fun setShowAds()
+    open fun setShowAds()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun setShowAds(showAds: Boolean)
+    open fun setShowAds(showAds: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var showAds = showAds
 }
 
 
-open fun isShowAds()
+    open fun isShowAds()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

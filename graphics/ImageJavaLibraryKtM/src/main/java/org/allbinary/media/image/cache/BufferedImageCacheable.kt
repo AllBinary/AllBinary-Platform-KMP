@@ -38,7 +38,7 @@ open public class BufferedImageCacheable
     private var key: BufferedImageInfo
 
     private var bufferedImage: BufferedImage
-public constructor        (key: BufferedImageInfo)
+public constructor (key: BufferedImageInfo)
             : super()
         {
 var key = key
@@ -47,7 +47,7 @@ this.setBufferedImage(BufferedImage(key.getWidth(), key.getHeight(), key.getType
 }
 
 
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -58,7 +58,7 @@ open fun getKey()
 }
 
 
-open fun getBufferedImage()
+    open fun getBufferedImage()
         //nullable = true from not(false or (false and true)) = true
 : BufferedImage{
 
@@ -69,14 +69,15 @@ open fun getBufferedImage()
 }
 
 
-open fun setBufferedImage(bufferedImage: BufferedImage)
+    open fun setBufferedImage(bufferedImage: BufferedImage)
         //nullable = true from not(false or (false and false)) = true
 {
 var bufferedImage = bufferedImage
 this.bufferedImage= bufferedImage
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

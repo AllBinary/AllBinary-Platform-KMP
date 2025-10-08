@@ -48,7 +48,7 @@ open public class TransactionResult
     private var keyValuePairs: HashMap<Any, Any>
 
     private var result: String
-public constructor        (result: String)
+public constructor (result: String)
             : super()
         {
 var result = result
@@ -78,7 +78,7 @@ logUtil!!.put(exceptionMessage, this, this.commonStrings!!.CONSTRUCTOR)
 
 }
 
-public constructor        (keyValuePairs: HashMap<Any, Any>)
+public constructor (keyValuePairs: HashMap<Any, Any>)
             : super()
         {
 var keyValuePairs = keyValuePairs
@@ -86,7 +86,8 @@ keyValuePairs= keyValuePairs
 this.result= "Needs to have the hashmap converted to string for other constructor"
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -97,7 +98,7 @@ override fun toString()
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -108,7 +109,7 @@ open fun toHashMap()
 }
 
 
-open fun getAllPossibleKeys()
+    open fun getAllPossibleKeys()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -147,7 +148,7 @@ verisignResponseKeys!!.add(paymentTransactionKeysFactory!!.EXCEPTION7.toString()
 }
 
 
-open fun getValues()
+    open fun getValues()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -196,7 +197,7 @@ valueVector!!.add(stringUtil!!.EMPTY_STRING)
 }
 
 
-open fun getPnRef()
+    open fun getPnRef()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -207,7 +208,7 @@ open fun getPnRef()
 }
 
 
-open fun getRespMsg()
+    open fun getRespMsg()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -218,7 +219,7 @@ open fun getRespMsg()
 }
 
 
-open fun getResult()
+    open fun getResult()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -229,7 +230,7 @@ open fun getResult()
 }
 
 
-open fun getScore()
+    open fun getScore()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -240,7 +241,7 @@ open fun getScore()
 }
 
 
-open fun getStatus()
+    open fun getStatus()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -251,7 +252,7 @@ open fun getStatus()
 }
 
 
-open fun getFraudCode()
+    open fun getFraudCode()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -262,7 +263,7 @@ open fun getFraudCode()
 }
 
 
-open fun getFraudMsg()
+    open fun getFraudMsg()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -273,7 +274,7 @@ open fun getFraudMsg()
 }
 
 
-open fun getOrigResult()
+    open fun getOrigResult()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -284,7 +285,7 @@ open fun getOrigResult()
 }
 
 
-open fun getAvsAddr()
+    open fun getAvsAddr()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -295,7 +296,7 @@ open fun getAvsAddr()
 }
 
 
-open fun getAvsZip()
+    open fun getAvsZip()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -306,7 +307,7 @@ open fun getAvsZip()
 }
 
 
-open fun getErrCode()
+    open fun getErrCode()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -317,7 +318,7 @@ open fun getErrCode()
 }
 
 
-open fun getException1()
+    open fun getException1()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -328,7 +329,7 @@ open fun getException1()
 }
 
 
-open fun getException2()
+    open fun getException2()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -339,7 +340,7 @@ open fun getException2()
 }
 
 
-open fun getException3()
+    open fun getException3()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -350,7 +351,7 @@ open fun getException3()
 }
 
 
-open fun getException4()
+    open fun getException4()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -361,7 +362,7 @@ open fun getException4()
 }
 
 
-open fun getException5()
+    open fun getException5()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -372,7 +373,7 @@ open fun getException5()
 }
 
 
-open fun getException6()
+    open fun getException6()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -383,7 +384,7 @@ open fun getException6()
 }
 
 
-open fun getException7()
+    open fun getException7()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -394,7 +395,7 @@ open fun getException7()
 }
 
 
-open fun getReason1()
+    open fun getReason1()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -405,7 +406,7 @@ open fun getReason1()
 }
 
 
-open fun getReason2()
+    open fun getReason2()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -416,7 +417,7 @@ open fun getReason2()
 }
 
 
-open fun getReason3()
+    open fun getReason3()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

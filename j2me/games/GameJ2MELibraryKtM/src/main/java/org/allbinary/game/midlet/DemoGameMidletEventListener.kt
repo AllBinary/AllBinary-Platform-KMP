@@ -26,18 +26,19 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.util.event.EventListenerInterface
+
 interface DemoGameMidletEventListener : EventListenerInterface {
         
 
-open fun onDemoStart()
+    open fun onDemoStart()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun onGameStart()
+    open fun onGameStart()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun onDemoGameMidletEvent(demoGameMidletEvent: DemoGameMidletEvent)
+    open fun onDemoGameMidletEvent(demoGameMidletEvent: DemoGameMidletEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

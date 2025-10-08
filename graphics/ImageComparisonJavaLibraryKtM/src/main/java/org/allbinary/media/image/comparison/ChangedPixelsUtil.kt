@@ -40,8 +40,7 @@ open public class ChangedPixelsUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val START_X: Int = 0
 
@@ -55,7 +54,7 @@ open public class ChangedPixelsUtil
 
                 @Throws(Exception::class)
             
-open fun generateBufferedImageChacheables(imageComparisonInfo: ImageComparisonResult)
+    open fun generateBufferedImageChacheables(imageComparisonInfo: ImageComparisonResult)
         //nullable = true from not(false or (false and false)) = true
 : Array<BufferedImageCacheable?>{
 var imageComparisonInfo = imageComparisonInfo
@@ -127,7 +126,7 @@ bufferedImageCacheables[1]!!.getBufferedImage()!!.setRGB(pixelDelta!!.getPoint()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

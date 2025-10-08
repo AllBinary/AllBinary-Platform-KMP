@@ -30,12 +30,11 @@ open public class NullServiceReferenceFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: NullServiceReferenceFactory = NullServiceReferenceFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : NullServiceReferenceFactory{
 

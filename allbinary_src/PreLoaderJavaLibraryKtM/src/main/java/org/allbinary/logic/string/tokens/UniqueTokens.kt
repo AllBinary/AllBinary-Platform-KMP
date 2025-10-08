@@ -41,7 +41,7 @@ open public class UniqueTokens
         
 
     private val specialCharacters: Vector = Vector()
-public constructor        ()
+public constructor ()
             : super()
         {
 specialCharacters!!.add("!")
@@ -73,7 +73,7 @@ specialCharacters!!.add("`")
 
                 @Throws(Exception::class)
             
-open fun getWhithoutDashesAndSkipNumberOnlyTokens(stringVector: Vector)
+    open fun getWhithoutDashesAndSkipNumberOnlyTokens(stringVector: Vector)
         //nullable = true from not(false or (false and false)) = true
 : HashSet{
 var stringVector = stringVector
@@ -173,7 +173,7 @@ index++
 }
 
 
-open fun numberOnly(subCleaningString: String)
+    open fun numberOnly(subCleaningString: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var subCleaningString = subCleaningString
@@ -197,7 +197,7 @@ open fun numberOnly(subCleaningString: String)
 }
 
 
-open fun isSpecialCharacter(subCleaningString: String)
+    open fun isSpecialCharacter(subCleaningString: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var subCleaningString = subCleaningString

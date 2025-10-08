@@ -38,7 +38,8 @@ open public class OpenGLESGL10ImageFactory : OpenGLImageFactory {
             public constructor() : super()
             {
             }            
-        override fun getInstance(image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory)
+        
+    override fun getInstance(image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory)
         //nullable =  from not(true or (false and false)) = 
 : Image{
     //var image = image

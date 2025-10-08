@@ -45,7 +45,7 @@ open public class CategoryLoader : CategoryModifierTree
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (categoryFactoryInterface: CategoryFactoryInterface)                        
+public constructor (categoryFactoryInterface: CategoryFactoryInterface)                        
 
                             : super(categoryFactoryInterface){
 var categoryFactoryInterface = categoryFactoryInterface
@@ -66,7 +66,7 @@ var categoryFactoryInterface = categoryFactoryInterface
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getDoc(categoryInterface: CategoryInterface)
+    open fun getDoc(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 : Document{
 var categoryInterface = categoryInterface
@@ -167,7 +167,7 @@ logUtil!!.put(this.commonStrings!!.FAILURE, this, "getDoc", e)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun get(categoryInterface: CategoryInterface)
+    open fun get(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 : CategoryInterface{
 var categoryInterface = categoryInterface
@@ -206,7 +206,7 @@ var categoryInterface = categoryInterface
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun get(document: Document)
+    open fun get(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : CategoryInterface{
 var document = document
@@ -245,7 +245,7 @@ var document = document
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getAll(categoryInterface: CategoryInterface)
+    open fun getAll(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 : CategoryInterface{
 var categoryInterface = categoryInterface
@@ -281,7 +281,7 @@ var categoryInterface = categoryInterface
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getAll(document: Document)
+    open fun getAll(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : CategoryInterface{
 var document = document
@@ -320,7 +320,7 @@ var document = document
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getAll(parentCategoryInterface: CategoryInterface, categoryNodeList: NodeList)
+    open fun getAll(parentCategoryInterface: CategoryInterface, categoryNodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
 : CategoryInterface{
 var parentCategoryInterface = parentCategoryInterface
@@ -390,7 +390,7 @@ parentCategoryInterface!!.addChild(categoryInterface)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun addProperties(loadedCategoryInterface: CategoryInterface, categoryNodeList: NodeList)
+    open fun addProperties(loadedCategoryInterface: CategoryInterface, categoryNodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
 : CategoryInterface{
 var loadedCategoryInterface = loadedCategoryInterface

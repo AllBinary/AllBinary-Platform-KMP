@@ -31,12 +31,11 @@ open public class OpenGLCapabilities
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OpenGLCapabilities = OpenGLCapabilities()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OpenGLCapabilities{
 
@@ -70,20 +69,20 @@ open fun getInstance()
     var glInstanceVersion: String = StringUtil.getInstance()!!.EMPTY_STRING
 
     var maxTextureSize: Int = 64
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun initCapabilities(gl: Any)
+    open fun initCapabilities(gl: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var gl = gl
 }
 
 
-open fun isGlExtensionDrawTexture()
+    open fun isGlExtensionDrawTexture()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -94,7 +93,7 @@ open fun isGlExtensionDrawTexture()
 }
 
 
-open fun getGlVersion()
+    open fun getGlVersion()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -105,7 +104,7 @@ open fun getGlVersion()
 }
 
 
-open fun isVertexBufferObjectSupport()
+    open fun isVertexBufferObjectSupport()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -116,7 +115,7 @@ open fun isVertexBufferObjectSupport()
 }
 
 
-open fun isTextureSizeValid(widthAndHeight: Int)
+    open fun isTextureSizeValid(widthAndHeight: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var widthAndHeight = widthAndHeight

@@ -41,7 +41,6 @@ import org.allbinary.game.layer.waypoint.WaypointLayer
 import org.allbinary.game.layer.waypoint.event.WaypointEventHandlerFactory
 import org.allbinary.graphics.form.item.CustomItem
 import org.allbinary.util.BasicArrayList
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.game.identification.Group
@@ -80,7 +79,7 @@ open public class WaypointRTSFormInput : RTSFormInput {
     val newWaypointGameNotificationEvent: GameNotificationEvent
 
     val noMoneyGameNotificationEvent: GameNotificationEvent
-public constructor        (groupInterface: Array<Group?>, isPrimaryWaypointCreator: Boolean)                        
+public constructor (groupInterface: Array<Group?>, isPrimaryWaypointCreator: Boolean)                        
 
                             : super(groupInterface){
     //var groupInterface = groupInterface
@@ -107,7 +106,7 @@ this.noMoneyGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.ge
 
                 @Throws(Exception::class)
             
-open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
+    open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -129,7 +128,7 @@ this.noMoneyGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.getF
 
                 @Throws(Exception::class)
             
-open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, point: GPoint)
+    open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedRtsLayer = associatedRtsLayer
@@ -207,7 +206,7 @@ this.process(rtsPlayerLayerInterface, layerManager, geographicMapCellPosition)
 
                 @Throws(Exception::class)
             
-open fun process(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, geographicMapCellPosition: GeographicMapCellPosition)
+    open fun process(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
@@ -250,7 +249,7 @@ this.attemptBuild(rtsPlayerLayerInterface, layerManager, this.newUnconstructedRT
 
                 @Throws(Exception::class)
             
-open fun processSticky(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
+    open fun processSticky(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedRtsLayer = associatedRtsLayer
@@ -269,7 +268,7 @@ this.getHashtable()!!.put(Layer.ID, associatedRtsLayer)
 
                 @Throws(Exception::class)
             
-open fun attemptBuild(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, layerInterface: RTSLayer, itemIndex: Int)
+    open fun attemptBuild(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, layerInterface: RTSLayer, itemIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
@@ -457,7 +456,7 @@ waypointLayer.
 
                 @Throws(Exception::class)
             
-open fun addWayPoint(layerInterface: WaypointLayer)
+    open fun addWayPoint(layerInterface: WaypointLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerInterface = layerInterface

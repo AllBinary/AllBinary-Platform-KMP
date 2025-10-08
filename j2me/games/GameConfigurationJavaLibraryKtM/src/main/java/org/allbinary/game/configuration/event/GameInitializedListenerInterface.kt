@@ -26,10 +26,11 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.util.event.EventListenerInterface
+
 interface GameInitializedListenerInterface : EventListenerInterface {
         
 
-open fun onGameInitialized(gameInitializedEvent: GameInitializedEvent)
+    open fun onGameInitialized(gameInitializedEvent: GameInitializedEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

@@ -30,12 +30,11 @@ open public class AbeHttpRequestInfoData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AbeHttpRequestInfoData = AbeHttpRequestInfoData()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AbeHttpRequestInfoData{
 
@@ -47,7 +46,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

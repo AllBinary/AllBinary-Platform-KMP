@@ -31,12 +31,11 @@ open public class TerrainEventCircularStaticPool
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: TerrainEventCircularStaticPool = TerrainEventCircularStaticPool()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TerrainEventCircularStaticPool{
 
@@ -56,7 +55,7 @@ open fun getInstance()
         
     private var EVENT_POOL: AllBinaryEventCircularPool = AllBinaryEventCircularPool(20)
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 EVENT_POOL.init(TerrainEventFactory())
@@ -66,7 +65,7 @@ EVENT_POOL.init(TerrainEventFactory())
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getInstance(basicTerrainInfo: BasicTerrainInfo)
+    open fun getInstance(basicTerrainInfo: BasicTerrainInfo)
         //nullable =  from not(true or (false and false)) = 
 : TerrainEvent{
 var basicTerrainInfo = basicTerrainInfo

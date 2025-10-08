@@ -40,7 +40,7 @@ open public class EmailInfo
     private var htmlAttachment: String
 
     private var contentBase: String
-public constructor        (basicEmailInfo: BasicEmailInfo)
+public constructor (basicEmailInfo: BasicEmailInfo)
             : super()
         {
 var basicEmailInfo = basicEmailInfo
@@ -61,7 +61,7 @@ this.init(basicEmailInfo,
                             null)
 }
 
-public constructor        (basicEmailInfo: BasicEmailInfo, htmlAttachment: String, contentBase: String)
+public constructor (basicEmailInfo: BasicEmailInfo, htmlAttachment: String, contentBase: String)
             : super()
         {
 var basicEmailInfo = basicEmailInfo
@@ -85,7 +85,7 @@ this.init(basicEmailInfo,
 }
 
 
-open fun init(basicEmailInfo: BasicEmailInfo, htmlAttachment: String, contentBase: String)
+    open fun init(basicEmailInfo: BasicEmailInfo, htmlAttachment: String, contentBase: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var basicEmailInfo = basicEmailInfo
@@ -97,7 +97,7 @@ this.contentBase= contentBase
 }
 
 
-open fun getBasicEmailInfo()
+    open fun getBasicEmailInfo()
         //nullable = true from not(false or (false and true)) = true
 : BasicEmailInfo{
 
@@ -108,7 +108,7 @@ open fun getBasicEmailInfo()
 }
 
 
-open fun getHtmlAttachment()
+    open fun getHtmlAttachment()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -119,7 +119,7 @@ open fun getHtmlAttachment()
 }
 
 
-open fun getContentBase()
+    open fun getContentBase()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -129,7 +129,8 @@ open fun getContentBase()
                         return this.contentBase
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

@@ -26,10 +26,11 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.layer.AllBinaryLayer
+
 interface TrackListenerInterface {
         
 
-open fun finished(layerInterface: AllBinaryLayer)
+    open fun finished(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 
 

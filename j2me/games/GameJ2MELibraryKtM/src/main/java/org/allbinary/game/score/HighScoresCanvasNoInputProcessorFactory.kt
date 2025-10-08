@@ -37,7 +37,8 @@ open public class HighScoresCanvasNoInputProcessorFactory
             public constructor() : super()
             {
             }            
-        override fun getInstance(highScoresCanvas: HighScoresCanvas)
+        
+    override fun getInstance(highScoresCanvas: HighScoresCanvas)
         //nullable =  from not(true or (false and false)) = 
 : HighScoresCanvasInputProcessor{
 var highScoresCanvas = highScoresCanvas

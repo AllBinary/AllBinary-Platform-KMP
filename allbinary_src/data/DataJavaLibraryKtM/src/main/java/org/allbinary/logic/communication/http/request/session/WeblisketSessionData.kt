@@ -30,8 +30,7 @@ open public class WeblisketSessionData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val INVALIDATESESSION: String = "SESSION_INVALIDATE_SESSION"
 
@@ -50,7 +49,7 @@ open public class WeblisketSessionData
     val AUTHENTICATED: String = "SESSION_AUTHENTICATED"
 
         }
-            public constructor        ()
+            public constructor ()
             : super()
         {
 }

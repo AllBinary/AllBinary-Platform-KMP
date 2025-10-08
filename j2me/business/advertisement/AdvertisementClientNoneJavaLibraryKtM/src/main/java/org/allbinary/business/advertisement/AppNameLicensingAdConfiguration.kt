@@ -15,7 +15,7 @@ import org.allbinary.logic.string.StringUtil
 
 open public class AppNameLicensingAdConfiguration : AdConfiguration {
         
-public constructor        ()                        
+public constructor ()                        
 
                             : super(arrayOf(StringUtil.getInstance()!!.EMPTY_STRING,StringUtil.getInstance()!!.EMPTY_STRING,StringUtil.getInstance()!!.EMPTY_STRING)){
 

@@ -53,7 +53,7 @@ open public class CapturedImageInputOutput
 
                 @Throws(Exception::class)
             
-open fun save(frame: Long)
+    open fun save(frame: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var frame = frame
@@ -69,7 +69,7 @@ save(capturedBufferedImageCacheable!!.getBufferedImage(), frame)
 }
 
 
-open fun save(bufferedImage: BufferedImage, frame: Long)
+    open fun save(bufferedImage: BufferedImage, frame: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var bufferedImage = bufferedImage

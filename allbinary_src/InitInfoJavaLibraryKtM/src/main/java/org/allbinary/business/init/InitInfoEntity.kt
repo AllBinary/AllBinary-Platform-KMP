@@ -56,7 +56,7 @@ open public class InitInfoEntity : InitSql {
     private val CREATED_SUCCESS: String = " Created Successfully"
 
     private val FAILED_TO_CREATE: String = "Failed to create "
-public constructor        ()                        
+public constructor ()                        
 
                             : super(UserDbInitInfo()){
 
@@ -85,7 +85,7 @@ this.setTable(this.tableName)
 }
 
 
-open fun get()
+    open fun get()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -152,7 +152,7 @@ keyAndValue!!.put(NOTHING, NOTHING)
 }
 
 
-open fun is()
+    open fun is()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -218,14 +218,14 @@ keyAndValue!!.put(NOTHING, NOTHING)
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 updateWhere(NOTHING, NOTHING, InitInfo.getInstance()!!.toHashMap())
 }
 
 
-open fun add()
+    open fun add()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -254,7 +254,7 @@ insert(values)
 }
 
 
-open fun createTable()
+    open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

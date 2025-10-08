@@ -24,14 +24,14 @@ open public class StringMaker
     private var charArray: CharArray
 
     private var currentLength: Int= 0
-public constructor        ()
+public constructor ()
             : super()
         {
 charArray= CharArray(20)
 }
 
 
-open fun append(string: String)
+    open fun append(string: String)
         //nullable = true from not(false or (false and false)) = true
 : StringMaker{
     //var string = string
@@ -52,7 +52,7 @@ currentLength += stringLength
 }
 
 
-open fun append(c: Char)
+    open fun append(c: Char)
         //nullable = true from not(false or (false and false)) = true
 : StringMaker{
     //var c = c
@@ -66,7 +66,7 @@ charArray[currentLength++]= c
 }
 
 
-open fun append(b: Byte)
+    open fun append(b: Byte)
         //nullable = true from not(false or (false and false)) = true
 : StringMaker{
     //var b = b
@@ -79,7 +79,7 @@ this.append(b.toString())
 }
 
 
-open fun append(b: Short)
+    open fun append(b: Short)
         //nullable = true from not(false or (false and false)) = true
 : StringMaker{
     //var b = b
@@ -92,7 +92,7 @@ this.append(b.toString())
 }
 
 
-open fun append(i: Int)
+    open fun append(i: Int)
         //nullable = true from not(false or (false and false)) = true
 : StringMaker{
     //var i = i
@@ -105,7 +105,7 @@ this.append(i.toString())
 }
 
 
-open fun append(l: Long)
+    open fun append(l: Long)
         //nullable = true from not(false or (false and false)) = true
 : StringMaker{
     //var l = l
@@ -118,7 +118,7 @@ this.append(l.toString())
 }
 
 
-open fun append(f: Float)
+    open fun append(f: Float)
         //nullable = true from not(false or (false and false)) = true
 : StringMaker{
 var f = f
@@ -131,7 +131,7 @@ this.append(f.toString())
 }
 
 
-open fun append(bool: Boolean)
+    open fun append(bool: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : StringMaker{
     //var bool = bool
@@ -184,7 +184,7 @@ charArray[currentLength++]=
 }
 
 
-open fun ensureCapacity(minSize: Int)
+    open fun ensureCapacity(minSize: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var minSize = minSize
@@ -221,7 +221,7 @@ charArray= copy
 }
 
 
-open fun min(value: Int, value2: Int)
+    open fun min(value: Int, value2: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var value = value
@@ -241,7 +241,7 @@ var value2 = value2
 }
 
 
-open fun delete(start: Int, end: Int)
+    open fun delete(start: Int, end: Int)
         //nullable = true from not(false or (false and false)) = true
 : StringMaker{
     //var start = start
@@ -255,7 +255,7 @@ this.currentLength -= (end -start)
 }
 
 
-open fun length()
+    open fun length()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -265,7 +265,8 @@ open fun length()
                         return this.currentLength
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

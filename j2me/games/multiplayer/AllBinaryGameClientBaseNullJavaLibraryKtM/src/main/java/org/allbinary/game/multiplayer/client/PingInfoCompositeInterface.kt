@@ -25,10 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface PingInfoCompositeInterface {
         
 
-open fun setPingInfo(show: Boolean)
+    open fun setPingInfo(show: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
 

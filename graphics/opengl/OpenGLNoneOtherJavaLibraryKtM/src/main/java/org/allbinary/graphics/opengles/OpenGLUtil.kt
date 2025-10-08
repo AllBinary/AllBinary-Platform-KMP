@@ -19,12 +19,11 @@ open public class OpenGLUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OpenGLUtil = OpenGLUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OpenGLUtil{
 
@@ -42,7 +41,7 @@ open fun getInstance()
             {
             }            
         
-open fun add(image: Image)
+    open fun add(image: Image)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var image = image
@@ -54,13 +53,13 @@ open fun add(image: Image)
 }
 
 
-open fun clear()
+    open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun add(runnable: Runnable)
+    open fun add(runnable: Runnable)
         //nullable = true from not(false or (false and false)) = true
 {
     //var runnable = runnable

@@ -26,10 +26,11 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.util.visitor.Visitor
+
 interface SelectRTSLayerVisitorFactoryInterface {
         
 
-open fun getInstance(selectedRTSLayersPlayerGameInput: SelectedRTSLayersPlayerGameInput)
+    open fun getInstance(selectedRTSLayersPlayerGameInput: SelectedRTSLayersPlayerGameInput)
         //nullable =  from not(true or (false and false)) = 
 : Visitor
 

@@ -33,8 +33,7 @@ open public class NullXmlRpcHandler
         
                 , XmlRpcHandler {
         
-
-        companion object {
+companion object {
             
     val NULL_XML_RPC_HANDLER: NullXmlRpcHandler = NullXmlRpcHandler()
 
@@ -46,7 +45,8 @@ open public class NullXmlRpcHandler
             }            
         
                 @Throws(Exception::class)
-            override fun execute(method: String, params: Vector<Any>)
+            
+    override fun execute(method: String, params: Vector<Any>)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var method = method

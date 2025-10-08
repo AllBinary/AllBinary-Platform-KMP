@@ -31,12 +31,11 @@ open public class FilePathData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: FilePathData = FilePathData()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : FilePathData{
 
@@ -52,7 +51,7 @@ open fun getInstance()
     val SEPARATORCHAR: Char = File.separatorChar
 
     var SEPARATOR: String = File.separator
-private constructor        ()
+private constructor ()
             : super()
         {
 

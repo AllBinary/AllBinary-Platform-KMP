@@ -42,7 +42,7 @@ open public class GameNotificationEvent : AllBinaryEventObject {
     private var basicColor: BasicColor = BasicColorFactory.getInstance()!!.BLACK
 
     private val removeable: Boolean
-public constructor        (anyType: Any, string: String, seconds: Integer, basicColor: BasicColor, permanent: Boolean)                        
+public constructor (anyType: Any, string: String, seconds: Integer, basicColor: BasicColor, permanent: Boolean)                        
 
                             : super(anyType){
 var anyType = anyType
@@ -61,7 +61,7 @@ this.removeable= permanent
 }
 
 
-open fun getString()
+    open fun getString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -72,7 +72,7 @@ open fun getString()
 }
 
 
-open fun getSeconds()
+    open fun getSeconds()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -83,7 +83,7 @@ open fun getSeconds()
 }
 
 
-open fun getBasicColorP()
+    open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
 
@@ -94,7 +94,7 @@ open fun getBasicColorP()
 }
 
 
-open fun getPermanent()
+    open fun getPermanent()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -105,7 +105,7 @@ open fun getPermanent()
 }
 
 
-open fun setString(string: String)
+    open fun setString(string: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var string = string
@@ -113,7 +113,7 @@ this.string= string
 }
 
 
-open fun setBasicColorP(basicColor: BasicColor)
+    open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
 var basicColor = basicColor

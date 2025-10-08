@@ -41,7 +41,7 @@ open public class RootContextView : HttpStoreComponentView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (transformInfoInterface: TransformInfoInterface)                        
+public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
@@ -63,7 +63,7 @@ var transformInfoInterface = transformInfoInterface
 
                 @Throws(Exception::class)
             
-open fun view()
+    open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -110,7 +110,7 @@ open fun view()
 
                 @Throws(Exception::class)
             
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

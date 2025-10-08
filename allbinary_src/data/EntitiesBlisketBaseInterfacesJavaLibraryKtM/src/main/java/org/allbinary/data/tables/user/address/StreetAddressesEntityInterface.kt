@@ -29,30 +29,31 @@
         
 import org.allbinary.business.user.address.StreetAddress
 import org.allbinary.data.tables.BasicDataTableInterface
+
 interface StreetAddressesEntityInterface : BasicDataTableInterface {
         
 
-open fun remove(index: Integer)
+    open fun remove(index: Integer)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun add(address: StreetAddress)
+    open fun add(address: StreetAddress)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun update(address: StreetAddress)
+    open fun update(address: StreetAddress)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getLastId()
+    open fun getLastId()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getDefault()
+    open fun getDefault()
         //nullable = true from not(false or (false and true)) = true
 : StreetAddress
 
-open fun setDefault(value: String)
+    open fun setDefault(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 

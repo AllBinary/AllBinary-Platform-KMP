@@ -14,7 +14,7 @@
 
 open public class NullIndexedAnimation : IndexedAnimation {
         
-public constructor        (animationBehavior: AnimationBehavior)                        
+public constructor (animationBehavior: AnimationBehavior)                        
 
                             : super(animationBehavior){
     //var animationBehavior = animationBehavior
@@ -26,7 +26,8 @@ public constructor        (animationBehavior: AnimationBehavior)
 
 
                 @Throws(Exception::class)
-            override fun getAnimationSize()
+            
+    override fun getAnimationSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

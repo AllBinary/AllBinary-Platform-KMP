@@ -41,7 +41,7 @@ open public class StraightMultiProjectileWeaponPart : BasicWeaponPart {
     private val weaponLayerCircularStaticPool: WeaponLayerCircularPool
 
     private val total: Int
-public constructor        (animationInterface: Animation, weaponLayerCircularStaticPool: WeaponLayerCircularPool)                        
+public constructor (animationInterface: Animation, weaponLayerCircularStaticPool: WeaponLayerCircularPool)                        
 
                             : super(animationInterface){
     //var animationInterface = animationInterface
@@ -54,7 +54,7 @@ this.total= 2
 this.weaponLayerCircularStaticPool= weaponLayerCircularStaticPool
 }
 
-public constructor        (animationInterface: Animation, sourceLayerInterface: AllBinaryLayer, weaponLayerCircularStaticPool: WeaponLayerCircularPool, total: Int, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface, relativeRelationship: RelativeRelationship)                        
+public constructor (animationInterface: Animation, sourceLayerInterface: AllBinaryLayer, weaponLayerCircularStaticPool: WeaponLayerCircularPool, total: Int, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface, relativeRelationship: RelativeRelationship)                        
 
                             : super(animationInterface, sourceLayerInterface, weaponProperties, scoreableInterface, relativeRelationship){
     //var animationInterface = animationInterface
@@ -76,7 +76,8 @@ this.weaponLayerCircularStaticPool= weaponLayerCircularStaticPool
     private val noDecimalTrigTable: NoDecimalTrigTable = NoDecimalTrigTable.getInstance()!!
 
                 @Throws(Exception::class)
-            override fun process(allbinaryLayerManager: AllBinaryLayerManager, angle: Short, otherAngle: Short, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface)
+            
+    override fun process(allbinaryLayerManager: AllBinaryLayerManager, angle: Short, otherAngle: Short, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allbinaryLayerManager = allbinaryLayerManager

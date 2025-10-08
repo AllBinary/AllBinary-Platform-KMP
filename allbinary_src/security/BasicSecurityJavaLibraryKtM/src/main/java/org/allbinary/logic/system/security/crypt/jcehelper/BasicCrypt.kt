@@ -40,7 +40,7 @@ open public class BasicCrypt
     private val byteUtil: ByteUtil = ByteUtil.getInstance()!!
 
     private val key: ByteArray
-public constructor        (keyAsString: String)
+public constructor (keyAsString: String)
             : super()
         {
 var keyAsString = keyAsString
@@ -61,7 +61,8 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, "AbCrypt(alg,key)", e)
 this.key= key
 }
 
-override fun encrypt(array: ByteArray)
+
+    override fun encrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
     //var array = array
@@ -84,7 +85,8 @@ PreLogUtil.put("Encrypt Failed", this, "encrypt", e)
 
 }
 
-override fun decrypt(array: ByteArray)
+
+    override fun decrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
     //var array = array
@@ -108,7 +110,7 @@ PreLogUtil.put("decrypt Failed", this, "decrypt", e)
 }
 
 
-open fun mutilate(array: ByteArray)
+    open fun mutilate(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
 var array = array

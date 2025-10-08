@@ -52,14 +52,14 @@ open public class ImageComparisonSearchWorker : BasicEventHandler
     private var running: Boolean= false
 
     private var imageSearchConstraintsInterface: ImageComparisonSearchConstraintsInterface
-public constructor        (imageSearchConstraintsInterface: ImageComparisonSearchConstraintsInterface){
+public constructor (imageSearchConstraintsInterface: ImageComparisonSearchConstraintsInterface){
 var imageSearchConstraintsInterface = imageSearchConstraintsInterface
 this.imageComparisonInfoVector= Vector()
 this.imageSearchConstraintsInterface= imageSearchConstraintsInterface
 }
 
 
-open fun onImageComparisonResultsEvent(imageComparisonResultsEvent: ImageComparisonResultsEvent)
+    open fun onImageComparisonResultsEvent(imageComparisonResultsEvent: ImageComparisonResultsEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var imageComparisonResultsEvent = imageComparisonResultsEvent
@@ -68,7 +68,7 @@ this.run()
 }
 
 
-open fun onEvent(allBinaryEventObject: AllBinaryEventObject)
+    open fun onEvent(allBinaryEventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryEventObject = allBinaryEventObject
@@ -77,7 +77,7 @@ this.onImageComparisonResultsEvent(allBinaryEventObject as ImageComparisonResult
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun isRunning()
+    open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -89,7 +89,7 @@ open fun isRunning()
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun setRunning(running: Boolean)
+    open fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var running = running
@@ -97,7 +97,7 @@ this.running= running
 }
 
 
-open fun run()
+    open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 

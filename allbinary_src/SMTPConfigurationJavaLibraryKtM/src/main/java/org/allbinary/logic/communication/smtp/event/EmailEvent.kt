@@ -37,7 +37,7 @@ open public class EmailEvent : EventObject {
     private var userEmailEventNameData: UserEmailEventNameData
 
     private var attempts: Int= 0
-public constructor        (emailEventHandler: Any, userEmailEventNameData: UserEmailEventNameData, emailInfo: EmailInfo, attempts: Int)                        
+public constructor (emailEventHandler: Any, userEmailEventNameData: UserEmailEventNameData, emailInfo: EmailInfo, attempts: Int)                        
 
                             : super(emailEventHandler){
 var emailEventHandler = emailEventHandler
@@ -53,7 +53,7 @@ this.emailInfo= emailInfo
 }
 
 
-open fun getEmailInfo()
+    open fun getEmailInfo()
         //nullable = true from not(false or (false and true)) = true
 : EmailInfo{
 
@@ -64,7 +64,7 @@ open fun getEmailInfo()
 }
 
 
-open fun getAttempts()
+    open fun getAttempts()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -75,14 +75,15 @@ open fun getAttempts()
 }
 
 
-open fun setAttempts(attempts: Int)
+    open fun setAttempts(attempts: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var attempts = attempts
 this.attempts= attempts
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

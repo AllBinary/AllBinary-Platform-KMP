@@ -37,7 +37,8 @@ open public class NoCrypt
             public constructor() : super()
             {
             }            
-        override fun encrypt(array: ByteArray)
+        
+    override fun encrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
     //var array = array
@@ -48,7 +49,8 @@ open public class NoCrypt
                         return array
 }
 
-override fun decrypt(array: ByteArray)
+
+    override fun decrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
     //var array = array

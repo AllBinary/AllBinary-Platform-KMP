@@ -36,12 +36,11 @@ open public class StreamUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: StreamUtil = StreamUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : StreamUtil{
 
@@ -55,7 +54,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -63,7 +62,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun get(inputStream: InputStream, outputStream: OutputStream, buffer: ByteArray)
+    open fun get(inputStream: InputStream, outputStream: OutputStream, buffer: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : OutputStream{
     //var inputStream = inputStream
@@ -104,7 +103,7 @@ outputStream!!.write(buffer, 0, len)
 
                 @Throws(Exception::class)
             
-open fun getByteArray(inputStream: InputStream, outputStream2: ByteArrayOutputStream, byteArray: ByteArray)
+    open fun getByteArray(inputStream: InputStream, outputStream2: ByteArrayOutputStream, byteArray: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
     //var inputStream = inputStream
@@ -137,7 +136,7 @@ open fun getByteArray(inputStream: InputStream, outputStream2: ByteArrayOutputSt
 }
 
 
-open fun close(closeable: Closeable)
+    open fun close(closeable: Closeable)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var closeable = closeable

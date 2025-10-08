@@ -35,7 +35,6 @@ import org.allbinary.logic.io.file.FileFactory
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 
@@ -43,12 +42,11 @@ open public class RegistrationConfiguration
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: RegistrationConfiguration = RegistrationConfiguration()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : RegistrationConfiguration{
 
@@ -68,7 +66,7 @@ open fun getInstance()
     val NAME: String = "registrationid"
 
     private val FILE: String = "Registration.dat"
-private constructor        ()
+private constructor ()
             : super()
         {
 
@@ -100,7 +98,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 
                 @Throws(Exception::class)
             
-open fun read()
+    open fun read()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -120,7 +118,7 @@ PreLogUtil.put(StringMaker().
 
                 @Throws(Exception::class)
             
-open fun write()
+    open fun write()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -149,7 +147,8 @@ dataOutputStream!!.flush()
         
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -161,7 +160,7 @@ override fun toString()
 }
 
 
-open fun setRegistrationCode(registrationCode: String)
+    open fun setRegistrationCode(registrationCode: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var registrationCode = registrationCode
@@ -169,7 +168,7 @@ this.registrationCode= registrationCode
 }
 
 
-open fun getRegistrationCode()
+    open fun getRegistrationCode()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

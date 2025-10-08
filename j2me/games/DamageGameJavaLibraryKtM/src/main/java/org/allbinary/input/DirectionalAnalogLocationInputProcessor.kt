@@ -58,7 +58,7 @@ open public class DirectionalAnalogLocationInputProcessor : AnalogLocationInputP
     private var leftTriggerGameKeyEvent: GameKeyEvent = GameKeyEvent.NONE
 
     private var rightTriggerGameKeyEvent: GameKeyEvent = GameKeyEvent.NONE
-public constructor        (inputProcessorArray: Array<GameInputProcessor?>){
+public constructor (inputProcessorArray: Array<GameInputProcessor?>){
 var inputProcessorArray = inputProcessorArray
 this.inputProcessorArray= inputProcessorArray
 
@@ -79,7 +79,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 
 }
 
-override fun process(allbinaryLayerManager: AllBinaryLayerManager, analogLocationInput: AnalogLocationInput)
+
+    override fun process(allbinaryLayerManager: AllBinaryLayerManager, analogLocationInput: AnalogLocationInput)
         //nullable = true from not(false or (false and false)) = true
 {
 var allbinaryLayerManager = allbinaryLayerManager
@@ -166,7 +167,8 @@ logUtil!!.put("Unable to process analog input", this, commonStrings!!.PROCESS, e
 
 }
 
-override fun getSourceId()
+
+    override fun getSourceId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

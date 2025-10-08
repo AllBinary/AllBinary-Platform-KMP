@@ -33,7 +33,7 @@ import org.allbinary.layer.LayerProcessor
 
 open public class OptimizedAllBinaryCollisionLayerProcessorForCollidableLayer : LayerProcessor {
         
-public constructor        ()                        
+public constructor ()                        
 
                             : super(OptimizedAllBinaryCollisionLayerManager()){
 
@@ -44,7 +44,8 @@ public constructor        ()
 
 
                 @Throws(Exception::class)
-            override fun process(allBinaryLayerManager: AllBinaryLayerManager, layerInterface: AllBinaryLayer, startIndex: Int)
+            
+    override fun process(allBinaryLayerManager: AllBinaryLayerManager, layerInterface: AllBinaryLayer, startIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager
@@ -99,7 +100,8 @@ collidableBase2!!.collide(collidableInterfaceCompositeInterface)
                                 
 }
 
-override fun isProcessorLayer(layerInterface: AllBinaryLayer)
+
+    override fun isProcessorLayer(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var layerInterface = layerInterface

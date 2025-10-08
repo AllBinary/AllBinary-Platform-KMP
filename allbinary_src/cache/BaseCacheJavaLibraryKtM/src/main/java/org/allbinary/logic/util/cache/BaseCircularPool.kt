@@ -45,7 +45,7 @@ open public class BaseCircularPool
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getNextInstance()
+    open fun getNextInstance()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -60,7 +60,7 @@ this.circularIndexUtil!!.next()
 }
 
 
-open fun init(allBinaryObjectFactoryInterface: AllBinaryObjectFactoryInterface)
+    open fun init(allBinaryObjectFactoryInterface: AllBinaryObjectFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryObjectFactoryInterface = allBinaryObjectFactoryInterface
@@ -83,7 +83,7 @@ OBJECT_ARRAY[index]= allBinaryObjectFactoryInterface!!.getInstance()
 
                 @Throws(Exception::class)
             
-open fun getInstance(index: Int)
+    open fun getInstance(index: Int)
         //nullable =  from not(true or (false and false)) = 
 : Any{
 var index = index

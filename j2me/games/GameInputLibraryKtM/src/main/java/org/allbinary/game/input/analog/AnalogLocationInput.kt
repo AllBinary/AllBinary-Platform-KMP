@@ -17,8 +17,7 @@ open public class AnalogLocationInput
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NULL_ANALOG_LOCATION_INPUT: AnalogLocationInput = AnalogLocationInput( -1)
 
@@ -33,7 +32,7 @@ open public class AnalogLocationInput
     private var rightTrigger: Int= 0
 
     private var leftTrigger: Int= 0
- constructor        (playerId: Int)
+ constructor (playerId: Int)
             : super()
         {
 var playerId = playerId
@@ -42,7 +41,7 @@ this.customGPoint= CustomGPoint(0, 0, 0)
 }
 
 
-open fun getPlayerId()
+    open fun getPlayerId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -53,7 +52,7 @@ open fun getPlayerId()
 }
 
 
-open fun getCustomGPoint()
+    open fun getCustomGPoint()
         //nullable = true from not(false or (false and true)) = true
 : CustomGPoint{
 
@@ -64,7 +63,7 @@ open fun getCustomGPoint()
 }
 
 
-open fun getRz()
+    open fun getRz()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -75,7 +74,7 @@ open fun getRz()
 }
 
 
-open fun setRz(rz: Int)
+    open fun setRz(rz: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var rz = rz
@@ -83,7 +82,7 @@ this.rz= rz
 }
 
 
-open fun getRightTrigger()
+    open fun getRightTrigger()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -94,7 +93,7 @@ open fun getRightTrigger()
 }
 
 
-open fun setRightTrigger(rightTrigger: Int)
+    open fun setRightTrigger(rightTrigger: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var rightTrigger = rightTrigger
@@ -102,7 +101,7 @@ this.rightTrigger= rightTrigger
 }
 
 
-open fun getLeftTrigger()
+    open fun getLeftTrigger()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -113,7 +112,7 @@ open fun getLeftTrigger()
 }
 
 
-open fun setLeftTrigger(leftTrigger: Int)
+    open fun setLeftTrigger(leftTrigger: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var leftTrigger = leftTrigger

@@ -27,40 +27,41 @@
         
 import java.awt
 import java.awt.image.BufferedImage
+
 interface MotionRectangleConstraintsInterface {
         
 
-open fun getMaxMotionRectangles()
+    open fun getMaxMotionRectangles()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getMinDimension()
+    open fun getMinDimension()
         //nullable = true from not(false or (false and true)) = true
 : Dimension
 
-open fun getMinArea()
+    open fun getMinArea()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getMaxDimension()
+    open fun getMaxDimension()
         //nullable = true from not(false or (false and true)) = true
 : Dimension
 
-open fun isTooSmall(rectangle: Rectangle)
+    open fun isTooSmall(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
-open fun isAreaTooSmall(rectangle: Rectangle)
+    open fun isAreaTooSmall(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
-open fun isTooBig(rectangle: Rectangle)
+    open fun isTooBig(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
                 @Throws(Exception::class)
             
-open fun isValid(frame: Long, bufferedImage: BufferedImage, rectangle: Rectangle)
+    open fun isValid(frame: Long, bufferedImage: BufferedImage, rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 

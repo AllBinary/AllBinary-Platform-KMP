@@ -56,7 +56,7 @@ open public class AbeHttpRequestInfo
     private var remotePort: String
 
     private var requestedFilePath: String
-public constructor        (hashMap: HashMap<Any, Any>)
+public constructor (hashMap: HashMap<Any, Any>)
             : super()
         {
 var hashMap = hashMap
@@ -71,7 +71,7 @@ this.remotePort= stringUtil!!.getInstance(hashMap!!.get(abeHttpRequestInfoData!!
 this.requestedFilePath= stringUtil!!.getInstance(hashMap!!.get(abeHttpRequestInfoData!!.REQUEST_FILE_PATH) as String)
 }
 
-public constructor        (httpServletRequest: HttpServletRequest)
+public constructor (httpServletRequest: HttpServletRequest)
             : super()
         {
 var httpServletRequest = httpServletRequest
@@ -105,7 +105,7 @@ this.remotePort= Integer.toString(httpServletRequest!!.getRemotePort())
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -125,7 +125,7 @@ hashMap!!.put(abeHttpRequestInfoData!!.REQUEST_FILE_PATH, this.requestedFilePath
 }
 
 
-open fun toVector()
+    open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -144,7 +144,8 @@ vector.add(this.requestedFilePath)
                         return vector
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

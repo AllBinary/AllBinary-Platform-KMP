@@ -33,12 +33,11 @@ open public class OrderProcessorUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OrderProcessorUtil = OrderProcessorUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OrderProcessorUtil{
 
@@ -60,7 +59,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun process(userName: String, order: Order)
+    open fun process(userName: String, order: Order)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var userName = userName

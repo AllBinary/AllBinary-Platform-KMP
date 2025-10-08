@@ -36,8 +36,7 @@ import org.allbinary.util.BasicArrayList
 
 open public class UpGameKeyEventHandlerBase : BasicEventHandler {
         
-
-        companion object {
+companion object {
             
     private val TOTAL_LISTENERS: String = " Total PlayerGameInput Listeners: "
 
@@ -46,11 +45,11 @@ open public class UpGameKeyEventHandlerBase : BasicEventHandler {
         }
             
     private val list: BasicArrayList = BasicArrayList()
- constructor        (){
+ constructor (){
 }
 
 
-open fun addListener(playerGameInput: PlayerGameInput)
+    open fun addListener(playerGameInput: PlayerGameInput)
         //nullable = true from not(false or (false and false)) = true
 {
 var playerGameInput = playerGameInput
@@ -65,14 +64,16 @@ var playerGameInput = playerGameInput
                                 
 }
 
-override fun removeAllListeners()
+
+    override fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
 {
 this.list.clear()
 super.removeAllListeners()
 }
 
-override fun removeListenerSingleThreaded(eventListenerInterface: EventListenerInterface)
+
+    override fun removeListenerSingleThreaded(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventListenerInterface = eventListenerInterface
@@ -81,7 +82,8 @@ super.removeListenerSingleThreaded(eventListenerInterface)
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun removeListener(eventListenerInterface: EventListenerInterface)
+
+    override fun removeListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventListenerInterface = eventListenerInterface
@@ -91,7 +93,8 @@ super.removeListener(eventListenerInterface)
 
 
                 @Throws(Exception::class)
-            override fun fireEvent(eventObject: AllBinaryEventObject)
+            
+    override fun fireEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject
@@ -120,7 +123,8 @@ super.fireEvent(eventObject)
 
 
                 @Throws(Exception::class)
-            override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
+            
+    override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject
@@ -131,7 +135,8 @@ super.fireEvent(eventObject)
 upGameKeyEventListenerInterface!!.onUpGameKeyEvent(eventObject as GameKeyEvent)
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

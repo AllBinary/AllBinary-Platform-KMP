@@ -49,15 +49,14 @@ open public class PaymentTypeUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: PaymentTypeUtil = PaymentTypeUtil()
 
                 init{
 }
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PaymentTypeUtil{
 
@@ -83,7 +82,7 @@ open fun getInstance()
             
 
     private var paymentTypeVector: Vector = Vector()
-private constructor        ()
+private constructor ()
             : super()
         {
 
@@ -109,7 +108,7 @@ PAYMENTGATEWAYFILEPATHSTRING= stringBuffer!!.toString()
 }
 
 
-open fun add(paymentType: PaymentType)
+    open fun add(paymentType: PaymentType)
         //nullable = true from not(false or (false and false)) = true
 {
 var paymentType = paymentType
@@ -119,7 +118,7 @@ this.paymentTypeVector!!.add(paymentType)
 
                 @Throws(Exception::class)
             
-open fun get(paymentTypeString: String)
+    open fun get(paymentTypeString: String)
         //nullable = true from not(false or (false and false)) = true
 : PaymentType{
 var paymentTypeString = paymentTypeString
@@ -160,7 +159,7 @@ var paymentTypeString = paymentTypeString
 
                 @Throws(Exception::class)
             
-open fun initDefault(storeName: String)
+    open fun initDefault(storeName: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var storeName = storeName
@@ -243,7 +242,7 @@ stringBuffer!!.append(PAYMENTGATEWAYFILEPATHSTRING)
 
                 @Throws(Exception::class)
             
-open fun getDefault(storeName: String)
+    open fun getDefault(storeName: String)
         //nullable = true from not(false or (false and false)) = true
 : PaymentType{
 var storeName = storeName
@@ -277,7 +276,7 @@ this.initDefault(storeName)
 }
 
 
-open fun isContain(paymentType: PaymentType)
+    open fun isContain(paymentType: PaymentType)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var paymentType = paymentType
@@ -289,7 +288,7 @@ var paymentType = paymentType
 }
 
 
-open fun difference(a_PaymentTypeVector: Vector)
+    open fun difference(a_PaymentTypeVector: Vector)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var a_PaymentTypeVector = a_PaymentTypeVector

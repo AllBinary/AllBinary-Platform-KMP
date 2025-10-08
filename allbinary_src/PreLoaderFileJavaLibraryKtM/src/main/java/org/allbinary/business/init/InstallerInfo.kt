@@ -42,8 +42,7 @@ open public class InstallerInfo
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: InstallerInfo = InstallerInfo()
 
@@ -58,7 +57,7 @@ open public class InstallerInfo
     private var hasRead: Boolean = false
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun setHasRead(value: Boolean)
+    open fun setHasRead(value: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -69,7 +68,7 @@ InstallerInfo.hasRead= value
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        ()
+public constructor ()
             : super()
         {
 }
@@ -78,7 +77,7 @@ public constructor        ()
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun write()
+    open fun write()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -127,7 +126,7 @@ hasRead= false
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun read()
+    open fun read()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -191,7 +190,7 @@ this.setPassword(WeakCrypt(2).
 }
 
 
-open fun setUserName(userName: String)
+    open fun setUserName(userName: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var userName = userName
@@ -199,7 +198,7 @@ InstallerInfo.userName= userName
 }
 
 
-open fun setPassword(password: String)
+    open fun setPassword(password: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var password = password
@@ -210,7 +209,7 @@ InstallerInfo.password= password
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun updateIfNeeded()
+    open fun updateIfNeeded()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -249,7 +248,7 @@ this.read()
 
                 @Throws(Exception::class)
             
-open fun getUserName()
+    open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 this.updateIfNeeded()
@@ -263,7 +262,7 @@ this.updateIfNeeded()
 
                 @Throws(Exception::class)
             
-open fun getPassword()
+    open fun getPassword()
         //nullable = true from not(false or (false and true)) = true
 : String{
 this.updateIfNeeded()
@@ -277,7 +276,7 @@ this.updateIfNeeded()
 
                 @Throws(Exception::class)
             
-open fun isValid(userName: String, password: String)
+    open fun isValid(userName: String, password: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var userName = userName

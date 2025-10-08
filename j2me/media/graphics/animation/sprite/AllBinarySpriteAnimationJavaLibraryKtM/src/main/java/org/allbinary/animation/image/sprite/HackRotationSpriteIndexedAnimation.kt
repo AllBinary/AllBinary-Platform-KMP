@@ -39,7 +39,7 @@ open public class HackRotationSpriteIndexedAnimation : RotationAnimation {
     val sprite: Sprite
 
     private val image: Image
-public constructor        (sprite: Sprite, image: Image, angleInfo: AngleInfo, animationBehavior: AnimationBehavior)                        
+public constructor (sprite: Sprite, image: Image, angleInfo: AngleInfo, animationBehavior: AnimationBehavior)                        
 
                             : super(angleInfo, animationBehavior){
     //var sprite = sprite
@@ -56,7 +56,8 @@ this.image= image
 
 
                 @Throws(Exception::class)
-            override fun getAnimationSize()
+            
+    override fun getAnimationSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -67,7 +68,7 @@ this.image= image
 }
 
 
-open fun paint(g: Graphics, frame: Int, x: Int, y: Int)
+    open fun paint(g: Graphics, frame: Int, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var g = g
@@ -78,7 +79,8 @@ this.setFrame(frame)
 this.paint(g, x, y)
 }
 
-override fun paint(g: Graphics, x: Int, y: Int)
+
+    override fun paint(g: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var g = g
@@ -89,26 +91,29 @@ this.paint(g)
 }
 
 
-open fun paint(g: Graphics)
+    open fun paint(g: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var g = g
 this.sprite.paint(g)
 }
 
-override fun nextRotation()
+
+    override fun nextRotation()
         //nullable = true from not(false or (false and true)) = true
 {
 this.sprite.nextFrame()
 }
 
-override fun previousRotation()
+
+    override fun previousRotation()
         //nullable = true from not(false or (false and true)) = true
 {
 this.sprite.prevFrame()
 }
 
-override fun getSize()
+
+    override fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -118,14 +123,16 @@ override fun getSize()
                         return this.sprite.getRawFrameCount()
 }
 
-override fun setFrame(frame: Int)
+
+    override fun setFrame(frame: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var frame = frame
 this.sprite.setFrame(frame)
 }
 
-override fun getFrame()
+
+    override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -135,13 +142,15 @@ override fun getFrame()
                         return this.sprite.getFrame()
 }
 
-override fun setSequence(sequence: IntArray)
+
+    override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
 {
     //var sequence = sequence
 }
 
-override fun getSequence()
+
+    override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
 : IntArray{
 

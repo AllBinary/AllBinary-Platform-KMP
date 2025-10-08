@@ -31,12 +31,11 @@ open public class ComponentFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ComponentFactory = ComponentFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ComponentFactory{
 

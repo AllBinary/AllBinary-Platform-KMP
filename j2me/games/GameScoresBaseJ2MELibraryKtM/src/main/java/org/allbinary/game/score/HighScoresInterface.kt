@@ -26,24 +26,25 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.util.BasicArrayList
+
 interface HighScoresInterface {
         
 
-open fun getList()
+    open fun getList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList
 
-open fun addHighScore(newHighScore: HighScore)
+    open fun addHighScore(newHighScore: HighScore)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getTotal()
+    open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
                 @Throws(Exception::class)
             
-open fun isBestScore(newHighScore: HighScore)
+    open fun isBestScore(newHighScore: HighScore)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 

@@ -31,8 +31,7 @@ open public class CapitalEventHandlerFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val capitalEventHandlerArray: Array<CapitalEventHandler?>
 
@@ -50,7 +49,7 @@ capitalEventHandlerArray[index]= CapitalEventHandler()
 
 }
 
-open fun getInstance(groupInterface: Group)
+    open fun getInstance(groupInterface: Group)
         //nullable =  from not(true or (false and false)) = 
 : CapitalEventHandler{
 var groupInterface = groupInterface
@@ -62,7 +61,7 @@ var groupInterface = groupInterface
 }
 
 
-open fun removeAll()
+    open fun removeAll()
         //nullable = true from not(false or (false and true)) = true
 {
 

@@ -52,7 +52,7 @@ open public class PaymentHelper : Table {
     private var value: String
 
     private val portion: Portion
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 this.request= pageContext!!.getRequest() as HttpServletRequest
@@ -62,14 +62,14 @@ this.getFormData()
 }
 
 
-open fun getFormData()
+    open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
 this.value= request.getParameter("VALUE")
 }
 
 
-open fun insert()
+    open fun insert()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -123,7 +123,7 @@ paymentEntity!!.setDefault(this.weblisketSession!!.getUserName(), Integer(paymen
 }
 
 
-open fun select()
+    open fun select()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -173,7 +173,7 @@ paymentEntity!!.setDefault(this.weblisketSession!!.getUserName(), Integer(this.v
 }
 
 
-open fun delete()
+    open fun delete()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -237,7 +237,7 @@ paymentEntity!!.remove(this.weblisketSession!!.getUserName(), Integer(this.value
 }
 
 
-open fun drop()
+    open fun drop()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -286,7 +286,7 @@ open fun drop()
 }
 
 
-open fun create()
+    open fun create()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -335,7 +335,7 @@ open fun create()
 }
 
 
-open fun restore()
+    open fun restore()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -384,7 +384,7 @@ open fun restore()
 }
 
 
-open fun backup()
+    open fun backup()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -435,7 +435,7 @@ open fun backup()
 
                 @Throws(LicensingException::class)
             
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

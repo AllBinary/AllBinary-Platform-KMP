@@ -36,7 +36,8 @@ open public class NullPriorityRunnable
             public constructor() : super()
             {
             }            
-        override fun getPriority()
+        
+    override fun getPriority()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -46,7 +47,8 @@ open public class NullPriorityRunnable
                         return 0
 }
 
-override fun isDone()
+
+    override fun isDone()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -56,12 +58,14 @@ override fun isDone()
                         return true
 }
 
-override fun reset()
+
+    override fun reset()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun run()
+
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 }

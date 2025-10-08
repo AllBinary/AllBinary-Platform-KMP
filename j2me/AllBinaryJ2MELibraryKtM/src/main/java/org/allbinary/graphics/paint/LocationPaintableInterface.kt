@@ -26,10 +26,11 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Graphics
+
 interface LocationPaintableInterface {
         
 
-open fun paint(graphics: Graphics, x: Int, y: Int)
+    open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 
 

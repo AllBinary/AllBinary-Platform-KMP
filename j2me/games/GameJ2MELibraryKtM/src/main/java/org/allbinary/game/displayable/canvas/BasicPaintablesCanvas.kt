@@ -38,7 +38,7 @@ open public class BasicPaintablesCanvas : GameCommandCanvas {
     private val paintableArray: Array<Paintable?>
 
     private val colorFillPaintable: ColorFillBasePaintable
-public constructor        (cmdListener: CommandListener, name: String, allBinaryGameLayerManager: AllBinaryGameLayerManager, paintableArray: Array<Paintable?>)                        
+public constructor (cmdListener: CommandListener, name: String, allBinaryGameLayerManager: AllBinaryGameLayerManager, paintableArray: Array<Paintable?>)                        
 
                             : super(cmdListener, name, allBinaryGameLayerManager!!.getBackgroundBasicColor(), allBinaryGameLayerManager!!.getForegroundBasicColor()){
     //var cmdListener = cmdListener
@@ -53,7 +53,8 @@ this.paintableArray= paintableArray
 this.colorFillPaintable= ColorFillPaintableFactory.getInstance()!!.getInstance(allBinaryGameLayerManager!!.getBackgroundBasicColor(), false)
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics

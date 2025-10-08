@@ -31,12 +31,11 @@ open public class DataOutputStreamFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: DataOutputStreamFactory = DataOutputStreamFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DataOutputStreamFactory{
 
@@ -56,7 +55,7 @@ open fun getInstance()
         
                 @Throws(Exception::class)
             
-open fun getInstance(file: AbFile)
+    open fun getInstance(file: AbFile)
         //nullable =  from not(true or (false and false)) = 
 : AbDataOutputStream{
 var file = file
@@ -76,7 +75,7 @@ var file = file
 
                 @Throws(Exception::class)
             
-open fun getInstance(filePath: String, fileName: String)
+    open fun getInstance(filePath: String, fileName: String)
         //nullable =  from not(true or (false and false)) = 
 : AbDataOutputStream{
 var filePath = filePath

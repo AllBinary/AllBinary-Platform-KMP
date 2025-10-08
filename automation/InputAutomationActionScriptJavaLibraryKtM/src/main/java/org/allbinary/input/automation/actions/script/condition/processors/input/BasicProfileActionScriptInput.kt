@@ -52,7 +52,7 @@ open public class BasicProfileActionScriptInput : BasicProfileActionScriptProces
     private var inputRobotInterface: InputRobotInterface
 
     private var time: Int= 0
-public constructor        (label: String, node: Node)                        
+public constructor (label: String, node: Node)                        
 
                             : super(label, node){
     //var label = label
@@ -93,7 +93,7 @@ this.setTime(Integer.valueOf(delayString)!!.toInt())
 this.setInputRobotInterface(InputRobotFactory.getInstance()!!.get(inputTypeString))
 }
 
-public constructor        (label: String)                        
+public constructor (label: String)                        
 
                             : super(label){
     //var label = label
@@ -119,7 +119,7 @@ this.setTime(0)
 }
 
 
-open fun getTime()
+    open fun getTime()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -130,7 +130,7 @@ open fun getTime()
 }
 
 
-open fun setTime(time: Int)
+    open fun setTime(time: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var time = time
@@ -138,7 +138,7 @@ this.time= time
 }
 
 
-open fun BasicProfileActionScriptInput_toHashMap()
+    open fun BasicProfileActionScriptInput_toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -157,7 +157,7 @@ logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -172,7 +172,7 @@ var document = document
 }
 
 
-open fun setInputRobotInterface(inputRobotInterface: InputRobotInterface)
+    open fun setInputRobotInterface(inputRobotInterface: InputRobotInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var inputRobotInterface = inputRobotInterface
@@ -180,7 +180,7 @@ this.inputRobotInterface= inputRobotInterface
 }
 
 
-open fun getInputRobotInterface()
+    open fun getInputRobotInterface()
         //nullable = true from not(false or (false and true)) = true
 : InputRobotInterface{
 
@@ -190,7 +190,8 @@ open fun getInputRobotInterface()
                         return inputRobotInterface
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

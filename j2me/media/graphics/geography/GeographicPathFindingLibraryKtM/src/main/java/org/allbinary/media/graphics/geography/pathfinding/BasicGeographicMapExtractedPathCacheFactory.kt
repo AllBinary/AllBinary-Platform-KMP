@@ -16,12 +16,11 @@ import org.allbinary.util.BasicArrayList
 
 open public class BasicGeographicMapExtractedPathCacheFactory : BaseBasicArrayListCache {
         
-
-        companion object {
+companion object {
             
     private val instance: BasicGeographicMapExtractedPathCacheFactory = BasicGeographicMapExtractedPathCacheFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BasicGeographicMapExtractedPathCacheFactory{
 
@@ -37,11 +36,11 @@ open fun getInstance()
     private var maxConcurrentPaths: Int= 0
 
     private var maxPaths: Int= 0
-private constructor        (){
+private constructor (){
 }
 
 
-open fun init(maxConcurrentPaths: Int, maxPaths: Int)
+    open fun init(maxConcurrentPaths: Int, maxPaths: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var maxConcurrentPaths = maxConcurrentPaths
@@ -69,7 +68,7 @@ this.maxPaths= maxPaths
 }
 
 
-open fun getPath()
+    open fun getPath()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -97,7 +96,7 @@ open fun getPath()
 }
 
 
-open fun release(list: BasicArrayList)
+    open fun release(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var list = list

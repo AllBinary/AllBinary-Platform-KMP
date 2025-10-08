@@ -30,7 +30,7 @@ open public class LicenseLoadingType
             : Object
          {
         
- constructor        (name: String)
+ constructor (name: String)
             : super()
         {
 var name = name

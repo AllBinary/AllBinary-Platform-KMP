@@ -45,7 +45,7 @@ open public class Log
     private val functionName: String
 
     private val exception: Any
-public constructor        ()
+public constructor ()
             : super()
         {
 
@@ -57,7 +57,7 @@ this.functionName= stringUtil!!.EMPTY_STRING
 this.exception= nullUtil!!.NULL_OBJECT
 }
 
-public constructor        (specialMessage: String, anyType: Any, functionName: String, exception: Any)
+public constructor (specialMessage: String, anyType: Any, functionName: String, exception: Any)
             : super()
         {
     //var specialMessage = specialMessage
@@ -70,7 +70,7 @@ this.functionName= functionName
 this.exception= exception
 }
 
-public constructor        (specialMessage: String, anyType: Any, functionName: String)
+public constructor (specialMessage: String, anyType: Any, functionName: String)
             : super()
         {
     //var specialMessage = specialMessage
@@ -83,7 +83,7 @@ this.exception= nullUtil!!.NULL_OBJECT
 }
 
 
-open fun getSpecialMessage()
+    open fun getSpecialMessage()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -94,7 +94,7 @@ open fun getSpecialMessage()
 }
 
 
-open fun getObject()
+    open fun getObject()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -105,7 +105,7 @@ open fun getObject()
 }
 
 
-open fun getFunctionName()
+    open fun getFunctionName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -116,7 +116,7 @@ open fun getFunctionName()
 }
 
 
-open fun getThrowable()
+    open fun getThrowable()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -126,7 +126,8 @@ open fun getThrowable()
                         return exception
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

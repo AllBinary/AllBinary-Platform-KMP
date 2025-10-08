@@ -40,7 +40,7 @@ open public class UserEmailEventConfigurationView
         
 
     private var userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface
-public constructor        (node: Node)
+public constructor (node: Node)
             : super()
         {
 var node = node
@@ -61,7 +61,7 @@ hashMap!!.put(UserEmailEventConfigurationData.LISTENER_CLASSPATH, eventListenerC
 this.setUserEmailEventConfigurationInterface(UserEmailEventConfiguration(hashMap) as UserEmailEventConfigurationInterface)
 }
 
-public constructor        (userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface)
+public constructor (userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface)
             : super()
         {
 var userEmailEventConfigurationInterface = userEmailEventConfigurationInterface
@@ -71,7 +71,7 @@ this.setUserEmailEventConfigurationInterface(userEmailEventConfigurationInterfac
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -92,7 +92,7 @@ var document = document
 }
 
 
-open fun getUserEmailEventConfigurationInterface()
+    open fun getUserEmailEventConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
 : UserEmailEventConfigurationInterface{
 
@@ -103,7 +103,7 @@ open fun getUserEmailEventConfigurationInterface()
 }
 
 
-open fun setUserEmailEventConfigurationInterface(userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface)
+    open fun setUserEmailEventConfigurationInterface(userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var userEmailEventConfigurationInterface = userEmailEventConfigurationInterface

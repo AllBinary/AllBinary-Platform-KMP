@@ -26,10 +26,11 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.game.score.displayable.HighScoresCanvas
+
 interface HighScoresCanvasInputProcessorFactoryInterface {
         
 
-open fun getInstance(highScoresCanvas: HighScoresCanvas)
+    open fun getInstance(highScoresCanvas: HighScoresCanvas)
         //nullable =  from not(true or (false and false)) = 
 : HighScoresCanvasInputProcessor
 

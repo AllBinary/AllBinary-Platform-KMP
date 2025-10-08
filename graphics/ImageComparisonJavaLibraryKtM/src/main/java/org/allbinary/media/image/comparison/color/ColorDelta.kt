@@ -37,10 +37,9 @@ open public class ColorDelta
         
                 , CacheableInterface {
         
-
-        companion object {
+companion object {
             
-open fun getKey(rgb1: Int, rgb2: Int)
+    open fun getKey(rgb1: Int, rgb2: Int)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var rgb1 = rgb1
@@ -61,7 +60,7 @@ var rgb2 = rgb2
     private var rgb2: Int= 0
 
     private var key: Any
-public constructor        (rgb1: Int, rgb2: Int)
+public constructor (rgb1: Int, rgb2: Int)
             : super()
         {
 var rgb1 = rgb1
@@ -72,7 +71,7 @@ this.key= ColorDelta.getKey(rgb1, rgb2)
 }
 
 
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -83,7 +82,7 @@ open fun getKey()
 }
 
 
-open fun getRgb1()
+    open fun getRgb1()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -94,7 +93,7 @@ open fun getRgb1()
 }
 
 
-open fun setRgb1(rgb1: Int)
+    open fun setRgb1(rgb1: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var rgb1 = rgb1
@@ -102,7 +101,7 @@ this.rgb1= rgb1
 }
 
 
-open fun getRgb2()
+    open fun getRgb2()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -113,14 +112,15 @@ open fun getRgb2()
 }
 
 
-open fun setRgb2(rgb2: Int)
+    open fun setRgb2(rgb2: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var rgb2 = rgb2
 this.rgb2= rgb2
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

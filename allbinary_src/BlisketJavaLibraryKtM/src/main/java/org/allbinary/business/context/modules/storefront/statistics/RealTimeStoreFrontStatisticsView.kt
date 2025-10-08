@@ -48,7 +48,7 @@ open public class RealTimeStoreFrontStatisticsView
     private val storeFrontStatisticsInterface: StoreFrontStatisticsInterface
 
     private val userRole: UserRole
-public constructor        (storeFrontStatisticsInterface: StoreFrontStatisticsInterface, userRole: UserRole)
+public constructor (storeFrontStatisticsInterface: StoreFrontStatisticsInterface, userRole: UserRole)
             : super()
         {
 var storeFrontStatisticsInterface = storeFrontStatisticsInterface
@@ -60,7 +60,7 @@ this.userRole= userRole
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

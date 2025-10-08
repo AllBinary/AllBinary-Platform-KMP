@@ -29,8 +29,7 @@ import org.allbinary.logic.math.BasicDecimal
 
 open public class DragVelocityBehavior : VelocityBehaviorBase {
         
-
-        companion object {
+companion object {
             
     val instance: DragVelocityBehavior = DragVelocityBehavior()
 
@@ -40,7 +39,8 @@ open public class DragVelocityBehavior : VelocityBehaviorBase {
             public constructor() : super()
             {
             }            
-        override fun reduce(velocityProperties: BasicVelocityProperties, nominator: Int, denominator: Int)
+        
+    override fun reduce(velocityProperties: BasicVelocityProperties, nominator: Int, denominator: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var velocityProperties = velocityProperties
@@ -74,7 +74,8 @@ basicDecimal!!.divide(denominator)
                                 
 }
 
-override fun reduceX(velocityProperties: BasicVelocityProperties, nominator: Int, denominator: Int)
+
+    override fun reduceX(velocityProperties: BasicVelocityProperties, nominator: Int, denominator: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var velocityProperties = velocityProperties
@@ -95,7 +96,8 @@ basicDecimal!!.divide(denominator)
                                 
 }
 
-override fun reduceY(velocityProperties: BasicVelocityProperties, nominator: Int, denominator: Int)
+
+    override fun reduceY(velocityProperties: BasicVelocityProperties, nominator: Int, denominator: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var velocityProperties = velocityProperties

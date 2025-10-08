@@ -12,26 +12,27 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Graphics
+
 interface CustomItemInterface {
         
 
-open fun getMinimumWidth()
+    open fun getMinimumWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getMinimumHeight()
+    open fun getMinimumHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getLabel()
+    open fun getLabel()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun paint(graphics: Graphics, x: Int, y: Int)
+    open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun paintUnselected(graphics: Graphics, x: Int, y: Int)
+    open fun paintUnselected(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 
 

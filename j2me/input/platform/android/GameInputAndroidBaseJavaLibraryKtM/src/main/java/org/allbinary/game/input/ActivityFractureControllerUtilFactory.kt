@@ -17,10 +17,9 @@ open public class ActivityFractureControllerUtilFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AndroidKeyFactory{
 

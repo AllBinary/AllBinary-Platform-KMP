@@ -32,12 +32,11 @@ open public class AdvertisementCampaignInternalEntityFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val CLASSNAME: String = "org.allbinary.data.tables.AdvertisementCampaignEntity"
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AdvertisementCampaignInternalEntityInterface{
 
@@ -75,7 +74,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, "AdvertisementCampaignEntityFactory", c
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

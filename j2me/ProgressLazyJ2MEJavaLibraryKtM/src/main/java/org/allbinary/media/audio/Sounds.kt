@@ -30,7 +30,6 @@
 import javax.microedition.media.Player
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringMaker
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvas
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory
@@ -49,7 +48,7 @@ open public class Sounds
     private val soundStrings: SoundStrings = SoundStrings.getInstance()!!
 
     private val soundsFactoryInterface: SoundsFactoryInterface
-public constructor        (soundsFactoryInterface: SoundsFactoryInterface)
+public constructor (soundsFactoryInterface: SoundsFactoryInterface)
             : super()
         {
 var soundsFactoryInterface = soundsFactoryInterface
@@ -59,7 +58,7 @@ this.soundsFactoryInterface= soundsFactoryInterface
 
                 @Throws(Exception::class)
             
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.INIT)
@@ -125,7 +124,7 @@ logUtil!!.put(commonStrings!!.END, this, commonStrings!!.INIT)
 
                 @Throws(Exception::class)
             
-open fun stopAll()
+    open fun stopAll()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(commonStrings!!.START, this, this.soundStrings!!.STOP_ALL)
@@ -175,7 +174,7 @@ progressCanvas!!.addPortion(100, this.soundStrings!!.STOPPING_SOUND, index)
 
                 @Throws(Exception::class)
             
-open fun closeAll()
+    open fun closeAll()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(commonStrings!!.START, this, this.soundStrings!!.CLOSE_ALL)

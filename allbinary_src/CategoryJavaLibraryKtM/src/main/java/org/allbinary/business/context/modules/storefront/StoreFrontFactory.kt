@@ -34,10 +34,9 @@ open public class StoreFrontFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getInstance(storeName: String)
+    open fun getInstance(storeName: String)
         //nullable =  from not(true or (false and false)) = 
 : StoreFront{
     //var storeName = storeName
@@ -79,7 +78,7 @@ open fun getInstance(storeName: String)
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

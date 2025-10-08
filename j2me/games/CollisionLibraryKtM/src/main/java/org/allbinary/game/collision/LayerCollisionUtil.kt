@@ -34,12 +34,11 @@ open public class LayerCollisionUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: LayerCollisionUtil = LayerCollisionUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : LayerCollisionUtil{
 
@@ -53,7 +52,7 @@ open fun getInstance()
         }
             
     private val collisionProcessor: CollisionProcessor
-private constructor        ()
+private constructor ()
             : super()
         {
 
@@ -79,7 +78,7 @@ private constructor        ()
 }
 
 
-open fun isCollision(myLayer: AllBinaryLayer, myLayer2: AllBinaryLayer)
+    open fun isCollision(myLayer: AllBinaryLayer, myLayer2: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var myLayer = myLayer

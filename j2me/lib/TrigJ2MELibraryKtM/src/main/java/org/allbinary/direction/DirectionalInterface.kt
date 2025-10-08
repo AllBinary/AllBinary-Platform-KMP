@@ -26,22 +26,23 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.math.Angle
+
 interface DirectionalInterface {
         
 
-open fun setFrame(direction: Direction)
+    open fun setFrame(direction: Direction)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setFrame(angle: Angle)
+    open fun setFrame(angle: Angle)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun adjustFrame(newAngle: Angle)
+    open fun adjustFrame(newAngle: Angle)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun adjustFrame(angle: Short)
+    open fun adjustFrame(angle: Short)
         //nullable = true from not(false or (false and false)) = true
 
 

@@ -46,7 +46,7 @@ open public class NameSpaceRequestParams : RequestParams {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        ()                        
+public constructor ()                        
 
                             : super(){
 
@@ -64,7 +64,7 @@ public constructor        ()
                                 
 }
 
-public constructor        (httpServletRequest: HttpServletRequest)                        
+public constructor (httpServletRequest: HttpServletRequest)                        
 
                             : super(httpServletRequest){
 var httpServletRequest = httpServletRequest
@@ -83,7 +83,7 @@ var httpServletRequest = httpServletRequest
                                 
 }
 
-public constructor        (pageContext: PageContext)                        
+public constructor (pageContext: PageContext)                        
 
                             : super(pageContext){
 var pageContext = pageContext
@@ -105,7 +105,7 @@ var pageContext = pageContext
 
                 @Throws(Exception::class)
             
-open fun createPackageNode(document: Document, packageName: String, packagePropertiesHashMap: HashMap<Any, Any>)
+    open fun createPackageNode(document: Document, packageName: String, packagePropertiesHashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -153,7 +153,7 @@ node.appendChild(propertyNode)
 
                 @Throws(Exception::class)
             
-open fun createPackageMultiNode(document: Document, nameSpaceRequestParam: NameSpaceRequestParam, packageName: String, packagePropertiesHashMap: HashMap<Any, Any>)
+    open fun createPackageMultiNode(document: Document, nameSpaceRequestParam: NameSpaceRequestParam, packageName: String, packagePropertiesHashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -210,7 +210,7 @@ nextNode!!.appendChild(indexNode)
 
                 @Throws(Exception::class)
             
-open fun getRootNode(rootElementPackage: String, packagePropertiesHashMap: HashMap<Any, Any>, document: Document)
+    open fun getRootNode(rootElementPackage: String, packagePropertiesHashMap: HashMap<Any, Any>, document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var rootElementPackage = rootElementPackage
@@ -279,7 +279,7 @@ document.appendChild(node)
 
                 @Throws(Exception::class)
             
-open fun addNewProperties(document: Document, node: Node, nextPackagePropertiesHashMap: HashMap<Any, Any>)
+    open fun addNewProperties(document: Document, node: Node, nextPackagePropertiesHashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -393,7 +393,7 @@ node.appendChild(newPropertyNode)
 
                 @Throws(Exception::class)
             
-open fun isElementValueTextNodeEqual(nextPackagePropertiesHashMap: HashMap<Any, Any>, node: Node)
+    open fun isElementValueTextNodeEqual(nextPackagePropertiesHashMap: HashMap<Any, Any>, node: Node)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var nextPackagePropertiesHashMap = nextPackagePropertiesHashMap
@@ -467,7 +467,7 @@ var node = node
 
                 @Throws(Exception::class)
             
-open fun isElementValueTextNodeUnique(nextPackagePropertiesHashMap: HashMap<Any, Any>, elementNodeVector: Vector)
+    open fun isElementValueTextNodeUnique(nextPackagePropertiesHashMap: HashMap<Any, Any>, elementNodeVector: Vector)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var nextPackagePropertiesHashMap = nextPackagePropertiesHashMap
@@ -519,7 +519,7 @@ var elementNodeVector = elementNodeVector
 
                 @Throws(Exception::class)
             
-open fun addChildren(document: Document, rootNode: Node, nameSpaceRequestParam: NameSpaceRequestParam)
+    open fun addChildren(document: Document, rootNode: Node, nameSpaceRequestParam: NameSpaceRequestParam)
         //nullable = true from not(false or (false and false)) = true
 : Document{
 var document = document
@@ -664,7 +664,7 @@ node= this.addNewProperties(document, nodeNameDuplicateNode, nextPackageProperti
 
                 @Throws(Exception::class)
             
-open fun addNameSpace(key: String, value: String, document: Document)
+    open fun addNameSpace(key: String, value: String, document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Document{
 var key = key
@@ -730,7 +730,7 @@ var document = document
 
                 @Throws(Exception::class)
             
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 

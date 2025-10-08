@@ -44,7 +44,7 @@ open public class AllBinaryRendererBase3
 
                 @Throws(Exception::class)
             
-open fun update(gl: GL10)
+    open fun update(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl
@@ -70,7 +70,7 @@ open fun update(gl: GL10)
 }
 
 
-open fun add(image: Image)
+    open fun add(image: Image)
         //nullable = true from not(false or (false and false)) = true
 {
     //var image = image

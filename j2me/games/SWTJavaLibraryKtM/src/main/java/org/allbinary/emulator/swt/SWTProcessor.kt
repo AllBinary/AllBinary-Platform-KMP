@@ -34,12 +34,11 @@ open public class SWTProcessor
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: SWTProcessor = SWTProcessor()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : SWTProcessor{
 
@@ -51,7 +50,7 @@ open fun getInstance()
 
 
         }
-            protected constructor        ()
+            protected constructor ()
             : super()
         {
 }
@@ -59,7 +58,7 @@ open fun getInstance()
 
     var runnable: Runnable = NullRunnable.getInstance()!!
 
-open fun process(display: Display)
+    open fun process(display: Display)
         //nullable = true from not(false or (false and false)) = true
 {
     //var display = display

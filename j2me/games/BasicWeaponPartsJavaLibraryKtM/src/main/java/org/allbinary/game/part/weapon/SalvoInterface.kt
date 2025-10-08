@@ -28,18 +28,19 @@
 import org.allbinary.game.combat.weapon.WeaponProperties
 import org.allbinary.game.score.ScoreableInterface
 import org.allbinary.layer.AllBinaryLayerManager
+
 interface SalvoInterface {
         
 
                 @Throws(Exception::class)
             
-open fun process(allbinaryLayerManager: AllBinaryLayerManager, angle: Short, otherAngle: Short)
+    open fun process(allbinaryLayerManager: AllBinaryLayerManager, angle: Short, otherAngle: Short)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun process(allbinaryLayerManager: AllBinaryLayerManager, angle: Short, otherAngle: Short, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface)
+    open fun process(allbinaryLayerManager: AllBinaryLayerManager, angle: Short, otherAngle: Short, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface)
         //nullable = true from not(false or (false and false)) = true
 
 

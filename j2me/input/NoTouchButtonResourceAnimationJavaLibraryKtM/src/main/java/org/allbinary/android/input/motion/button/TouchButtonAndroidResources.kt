@@ -34,7 +34,8 @@ open public class TouchButtonAndroidResources : Init {
             public constructor() : super()
             {
             }            
-        override fun init()
+        
+    override fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 }

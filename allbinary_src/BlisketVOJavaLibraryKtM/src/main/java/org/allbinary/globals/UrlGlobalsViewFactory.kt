@@ -33,10 +33,9 @@ open public class UrlGlobalsViewFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DomNodeInterface{
 
@@ -74,7 +73,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

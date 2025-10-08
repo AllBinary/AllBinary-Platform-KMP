@@ -35,12 +35,11 @@ open public class HardwareFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: HardwareFactory = HardwareFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : HardwareFactory{
 
@@ -54,7 +53,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -62,7 +61,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getInstance(os: GenericOperatingSystem)
+    open fun getInstance(os: GenericOperatingSystem)
         //nullable =  from not(true or (false and false)) = 
 : HardwareInterface{
 var os = os

@@ -32,12 +32,11 @@ open public class ShaderInitializer
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ShaderInitializer = ShaderInitializer()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ShaderInitializer{
 
@@ -57,7 +56,7 @@ open fun getInstance()
         
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-open fun init(gl: GL10, shader: Array<Shader?>, attributeArray: Array<String?>)
+    open fun init(gl: GL10, shader: Array<Shader?>, attributeArray: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var gl = gl

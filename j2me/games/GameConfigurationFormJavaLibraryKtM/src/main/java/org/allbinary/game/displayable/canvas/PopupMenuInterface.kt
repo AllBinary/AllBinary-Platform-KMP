@@ -25,22 +25,23 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface PopupMenuInterface {
         
 
                 @Throws(Exception::class)
             
-open fun popupMenu()
+    open fun popupMenu()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun closeMenu()
+    open fun closeMenu()
         //nullable = true from not(false or (false and true)) = true
 
 
                 @Throws(Exception::class)
             
-open fun toggleMenu()
+    open fun toggleMenu()
         //nullable = true from not(false or (false and true)) = true
 
 

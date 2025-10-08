@@ -29,7 +29,7 @@ import org.allbinary.logic.math.BasicDecimal
 
 open public class YAxisMathVector : MathVector {
         
-public constructor        (magnitudeBasicDecimal: BasicDecimal, direction: Int)                        
+public constructor (magnitudeBasicDecimal: BasicDecimal, direction: Int)                        
 
                             : super(magnitudeBasicDecimal, direction){
 var magnitudeBasicDecimal = magnitudeBasicDecimal
@@ -42,7 +42,7 @@ this.calculate()
 }
 
 
-open fun getResult()
+    open fun getResult()
         //nullable = true from not(false or (false and true)) = true
 : BasicDecimal{
 
@@ -53,7 +53,7 @@ open fun getResult()
 }
 
 
-open fun calculate()
+    open fun calculate()
         //nullable = true from not(false or (false and true)) = true
 {
 

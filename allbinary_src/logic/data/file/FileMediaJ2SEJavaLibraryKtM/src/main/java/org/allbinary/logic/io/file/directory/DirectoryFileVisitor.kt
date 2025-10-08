@@ -35,13 +35,13 @@ open public class DirectoryFileVisitor
                 , VisitorInterface
                 , FileFilter {
         
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun accept(arg0: java.io.File)
+    open fun accept(arg0: java.io.File)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var arg0 = arg0
@@ -55,7 +55,7 @@ visit.
 }
 
 
-open fun visit(anyType: Any)
+    open fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var anyType = anyType

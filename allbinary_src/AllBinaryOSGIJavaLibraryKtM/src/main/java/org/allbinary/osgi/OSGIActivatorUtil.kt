@@ -35,12 +35,11 @@ open public class OSGIActivatorUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun registerAsService(bundleContext: BundleContext, anyType: Any, serviceName: String)
+    open fun registerAsService(bundleContext: BundleContext, anyType: Any, serviceName: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var bundleContext = bundleContext
@@ -52,7 +51,7 @@ OSGIActivatorUtil.registerAsService(bundleContext, anyType, serviceName, Hashtab
 
                 @Throws(Exception::class)
             
-open fun registerAsService(bundleContext: BundleContext, anyType: Any, serviceName: String, properties: Hashtable<Any, Any>)
+    open fun registerAsService(bundleContext: BundleContext, anyType: Any, serviceName: String, properties: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var bundleContext = bundleContext
@@ -82,7 +81,7 @@ serviceReference= bundleContext!!.getServiceReference(serviceName)
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

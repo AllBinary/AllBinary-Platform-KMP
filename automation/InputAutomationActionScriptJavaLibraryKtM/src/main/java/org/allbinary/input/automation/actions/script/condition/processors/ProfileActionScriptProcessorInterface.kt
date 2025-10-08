@@ -29,6 +29,7 @@ import javax.swing.tree.MutableTreeNode
 import org.allbinary.data.tree.dom.DomNodeInterface
 import org.allbinary.input.automation.actions.script.ProfileActionScriptItemInterface
 import org.allbinary.input.automation.actions.script.condition.CustomTreeNodeInterface
+
 interface ProfileActionScriptProcessorInterface : CustomTreeNodeInterface, DomNodeInterface, MutableTreeNode, ProfileActionScriptItemInterface {
         
 

@@ -25,12 +25,13 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface ImageIOInterface {
         
 
                 @Throws(Exception::class)
             
-open fun save(frame: Long)
+    open fun save(frame: Long)
         //nullable = true from not(false or (false and false)) = true
 
 

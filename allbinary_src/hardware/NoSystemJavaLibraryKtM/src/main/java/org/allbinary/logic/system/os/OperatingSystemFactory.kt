@@ -35,12 +35,11 @@ open public class OperatingSystemFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OperatingSystemFactory = OperatingSystemFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OperatingSystemFactory{
 
@@ -56,14 +55,14 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var genericOperatingSystem: GenericOperatingSystem = NoOperatingSystem.NO_OPERATING_SYSTEM
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getOperatingSystemInstance()
+    open fun getOperatingSystemInstance()
         //nullable = true from not(false or (false and true)) = true
 : GenericOperatingSystem{
 

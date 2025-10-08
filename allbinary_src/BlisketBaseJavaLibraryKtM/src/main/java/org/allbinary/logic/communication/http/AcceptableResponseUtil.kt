@@ -31,12 +31,11 @@ open public class AcceptableResponseUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AcceptableResponseUtil = AcceptableResponseUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AcceptableResponseUtil{
 
@@ -62,7 +61,7 @@ AcceptableResponseFactory.getInstance()!!.HTML.hashCode()
 
     val tagNameVector: Vector = Vector()
 
-open fun get(index: Int)
+    open fun get(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var index = index
@@ -74,7 +73,7 @@ var index = index
 }
 
 
-open fun getTagName(index: Int)
+    open fun getTagName(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var index = index
@@ -86,7 +85,7 @@ var index = index
 }
 
 
-open fun size()
+    open fun size()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

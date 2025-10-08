@@ -27,18 +27,19 @@
         
 import org.allbinary.animation.Animation
 import org.allbinary.layer.AllBinaryLayer
+
 interface PickedUpLayerInterfaceFactoryInterface {
         
 
-open fun getPickedUpLayerType()
+    open fun getPickedUpLayerType()
         //nullable = true from not(false or (false and true)) = true
 : PickedUpLayerType
 
-open fun getIconLayer()
+    open fun getIconLayer()
         //nullable = true from not(false or (false and true)) = true
 : AllBinaryLayer
 
-open fun getAnimationInterface()
+    open fun getAnimationInterface()
         //nullable = true from not(false or (false and true)) = true
 : Animation
 

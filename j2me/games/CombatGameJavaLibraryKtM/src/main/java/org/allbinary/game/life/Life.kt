@@ -31,8 +31,7 @@ open public class Life
         
                 , LifeInterface {
         
-
-        companion object {
+companion object {
             
     val NO_LIFE: Life = Life()
 
@@ -43,7 +42,7 @@ open public class Life
     private var startLives: Short
 
     private var maxlives: Short
-public constructor        ()
+public constructor ()
             : super()
         {
 this.lives= 0
@@ -51,7 +50,7 @@ this.startLives= 0
 this.maxlives= 0
 }
 
-public constructor        (lives: Short, maxlives: Short)
+public constructor (lives: Short, maxlives: Short)
             : super()
         {
 var lives = lives
@@ -73,7 +72,8 @@ this.lives= lives
 this.startLives= lives
 }
 
-override fun get()
+
+    override fun get()
         //nullable = true from not(false or (false and true)) = true
 : Short{
 
@@ -83,20 +83,23 @@ override fun get()
                         return this.lives
 }
 
-override fun set(lives: Short)
+
+    override fun set(lives: Short)
         //nullable = true from not(false or (false and false)) = true
 {
 var lives = lives
 this.lives= lives
 }
 
-override fun reset()
+
+    override fun reset()
         //nullable = true from not(false or (false and true)) = true
 {
 this.lives= this.startLives
 }
 
-override fun add(lives: Short)
+
+    override fun add(lives: Short)
         //nullable = true from not(false or (false and false)) = true
 {
 var lives = lives
@@ -124,7 +127,8 @@ var lives = lives
                                 
 }
 
-override fun isAlive()
+
+    override fun isAlive()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -151,7 +155,8 @@ override fun isAlive()
                             
 }
 
-override fun getMaxlives()
+
+    override fun getMaxlives()
         //nullable = true from not(false or (false and true)) = true
 : Short{
 
@@ -162,7 +167,7 @@ override fun getMaxlives()
 }
 
 
-open fun reachedLimit()
+    open fun reachedLimit()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -189,7 +194,8 @@ open fun reachedLimit()
                             
 }
 
-override fun deaths(lives: Short)
+
+    override fun deaths(lives: Short)
         //nullable = true from not(false or (false and false)) = true
 {
 var lives = lives
@@ -218,7 +224,7 @@ var lives = lives
 }
 
 
-open fun getStartLives()
+    open fun getStartLives()
         //nullable = true from not(false or (false and true)) = true
 : Short{
 
@@ -229,7 +235,7 @@ open fun getStartLives()
 }
 
 
-open fun setStartLives(startLives: Short)
+    open fun setStartLives(startLives: Short)
         //nullable = true from not(false or (false and false)) = true
 {
 var startLives = startLives

@@ -55,12 +55,11 @@ open public class PaymentTransactionInterfaceRequestFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: PaymentTransactionInterfaceRequestFactory = PaymentTransactionInterfaceRequestFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PaymentTransactionInterfaceRequestFactory{
 
@@ -74,7 +73,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -84,7 +83,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getInstance(transformInfoInterface: TransformInfoInterface)
+    open fun getInstance(transformInfoInterface: TransformInfoInterface)
         //nullable =  from not(true or (false and false)) = 
 : PaymentTransactionInterface{
 var transformInfoInterface = transformInfoInterface
@@ -187,7 +186,7 @@ orderReview!!.setPaymentInfo(orderPaymentInfo)
 
                 @Throws(Exception::class)
             
-open fun generateFromTestData(transformInfoInterface: TransformInfoInterface)
+    open fun generateFromTestData(transformInfoInterface: TransformInfoInterface)
         //nullable = true from not(false or (false and false)) = true
 : PaymentTransactionInterface{
 var transformInfoInterface = transformInfoInterface

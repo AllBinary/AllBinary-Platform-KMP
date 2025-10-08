@@ -36,7 +36,7 @@ open public class AllBinaryVibrationME
             {
             }            
         
-open fun vibrate(duration: Int, type: Int, volume: Int)
+    open fun vibrate(duration: Int, type: Int, volume: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var duration = duration

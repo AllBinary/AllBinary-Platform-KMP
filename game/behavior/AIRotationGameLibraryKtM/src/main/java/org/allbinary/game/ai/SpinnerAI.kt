@@ -36,7 +36,7 @@ open public class SpinnerAI : BasicAI {
     private var isEven: Boolean= false
 
     private var direction: IntArray
-public constructor        (direction: IntArray, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
+public constructor (direction: IntArray, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
                             : super(ownerLayerInterface, gameInput){
 var direction = direction
@@ -51,7 +51,8 @@ this.direction= direction
 
 
                 @Throws(Exception::class)
-            override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+            
+    override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager

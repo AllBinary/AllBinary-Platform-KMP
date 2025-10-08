@@ -32,12 +32,11 @@ open public class TrackingEventCircularStaticPool
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var instance: TrackingEventCircularStaticPool = TrackingEventCircularStaticPool()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TrackingEventCircularStaticPool{
 
@@ -57,7 +56,7 @@ open fun getInstance()
         
     private var EVENT_POOL: AllBinaryEventCircularPool = AllBinaryEventCircularPool(20)
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 EVENT_POOL.init(TrackingEventFactory())
@@ -67,7 +66,7 @@ EVENT_POOL.init(TrackingEventFactory())
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getInstance(layerInterface: AllBinaryLayer)
+    open fun getInstance(layerInterface: AllBinaryLayer)
         //nullable =  from not(true or (false and false)) = 
 : TrackingEvent{
 var layerInterface = layerInterface

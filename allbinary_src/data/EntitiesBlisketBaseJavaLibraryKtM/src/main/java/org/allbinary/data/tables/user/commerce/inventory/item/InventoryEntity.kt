@@ -46,7 +46,7 @@ open public class InventoryEntity : AbSqlBean
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val tableName: String = "basicinventory"
-public constructor        ()                        
+public constructor ()                        
 
                             : super(InventoryDbInitInfo()){
 
@@ -57,7 +57,7 @@ this.setTableName(tableName)
 }
 
 
-open fun insert(values: Vector)
+    open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 {
 var values = values
@@ -89,7 +89,7 @@ var values = values
 }
 
 
-open fun delete(value: String)
+    open fun delete(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -123,7 +123,7 @@ var value = value
 
                 @Throws(Exception::class)
             
-open fun getItems(storeFrontInterface: StoreFrontInterface)
+    open fun getItems(storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var storeFrontInterface = storeFrontInterface
@@ -192,7 +192,7 @@ var storeFrontInterface = storeFrontInterface
 
                 @Throws(MoneyException::class)
             
-open fun getItem(id: String)
+    open fun getItem(id: String)
         //nullable = true from not(false or (false and false)) = true
 : ItemInterface{
 var id = id
@@ -230,7 +230,7 @@ keysAndValues!!.put(BasicItemData.ID, id)
 }
 
 
-open fun getWeight(id: String)
+    open fun getWeight(id: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var id = id
@@ -242,7 +242,7 @@ var id = id
 }
 
 
-open fun createTableStatement()
+    open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -320,7 +320,7 @@ stringBuffer!!.append(this.sqlStrings!!.END)
 }
 
 
-open fun createTable()
+    open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -331,7 +331,7 @@ open fun createTable()
 }
 
 
-open fun update(updatedValues: HashMap<Any, Any>)
+    open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var updatedValues = updatedValues
@@ -339,7 +339,7 @@ super.updateWhere(BasicItemData.ID, updatedValues!!.get(BasicItemData.ID) as Str
 }
 
 
-open fun dropTable()
+    open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

@@ -30,12 +30,11 @@ open public class ShaderManagerFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ShaderManagerFactory = ShaderManagerFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ShaderManagerFactory{
 
@@ -53,7 +52,7 @@ open fun getInstance()
             {
             }            
         
-open fun create()
+    open fun create()
         //nullable = true from not(false or (false and true)) = true
 : ShaderManager{
 

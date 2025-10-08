@@ -30,12 +30,11 @@ open public class TransactionTypeFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: TransactionTypeFactory = TransactionTypeFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TransactionTypeFactory{
 

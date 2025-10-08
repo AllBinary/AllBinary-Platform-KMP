@@ -48,12 +48,11 @@ open public class GenericProfileActions
                 , DomNodeInterface
                 , DomDocumentMappingInterface {
         
-
-        companion object {
+companion object {
             
     val DEFAULT_PROFILE_ACTIONS_PATH: String = GenericProfiles.DEFAULT_PROFILES_PATH +"actions/"
 
-open fun getFile(name: String)
+    open fun getFile(name: String)
         //nullable = true from not(false or (false and false)) = true
 : File{
 var name = name
@@ -79,7 +78,7 @@ var name = name
     private var actionsDefaultListModelHelper: DefaultListModelHelper
 
     private var hashMap: HashMap<Any, Any>
-public constructor        (genericProfileActionsJPanel: GenericProfileActionsJPanel, name: String)
+public constructor (genericProfileActionsJPanel: GenericProfileActionsJPanel, name: String)
             : super()
         {
 var genericProfileActionsJPanel = genericProfileActionsJPanel
@@ -89,7 +88,7 @@ this.init(genericProfileActionsJPanel)
 this.load()
 }
 
-public constructor        (genericProfileActionsJPanel: GenericProfileActionsJPanel, abPath: AbPath, name: String)
+public constructor (genericProfileActionsJPanel: GenericProfileActionsJPanel, abPath: AbPath, name: String)
             : super()
         {
 var genericProfileActionsJPanel = genericProfileActionsJPanel
@@ -100,7 +99,7 @@ this.init(genericProfileActionsJPanel)
 this.load()
 }
 
-public constructor        (genericProfileActionsJPanel: GenericProfileActionsJPanel, fileInputStream: FileInputStream, name: String)
+public constructor (genericProfileActionsJPanel: GenericProfileActionsJPanel, fileInputStream: FileInputStream, name: String)
             : super()
         {
 var genericProfileActionsJPanel = genericProfileActionsJPanel
@@ -114,7 +113,7 @@ this.fileInit(fileInputStream)
 
                 @Throws(Exception::class)
             
-open fun init(genericProfileActionsJPanel: GenericProfileActionsJPanel)
+    open fun init(genericProfileActionsJPanel: GenericProfileActionsJPanel)
         //nullable = true from not(false or (false and false)) = true
 {
 var genericProfileActionsJPanel = genericProfileActionsJPanel
@@ -126,7 +125,7 @@ this.setHashMap(HashMap<Any, Any>())
 
                 @Throws(Exception::class)
             
-open fun save()
+    open fun save()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -141,7 +140,7 @@ idOutData!!.writeBytes(DomDocumentHelper.toString(this.toXmlDoc()))
 
                 @Throws(Exception::class)
             
-open fun load()
+    open fun load()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -169,7 +168,7 @@ this.fileInit(idFile)
 
                 @Throws(Exception::class)
             
-open fun fileInit(fileInputStream: FileInputStream)
+    open fun fileInit(fileInputStream: FileInputStream)
         //nullable = true from not(false or (false and false)) = true
 {
 var fileInputStream = fileInputStream
@@ -233,7 +232,7 @@ this.getDefaultListModelHelper()!!.initDefaultModelList()
 
                 @Throws(Exception::class)
             
-open fun initActions(nodeList: NodeList)
+    open fun initActions(nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
 {
 var nodeList = nodeList
@@ -275,7 +274,7 @@ this.getDefaultListModelHelper()!!.add(genericConfigurationProfileAction!!.getNa
 }
 
 
-open fun getDefaultListModelHelper()
+    open fun getDefaultListModelHelper()
         //nullable = true from not(false or (false and true)) = true
 : DefaultListModelHelper{
 
@@ -286,7 +285,7 @@ open fun getDefaultListModelHelper()
 }
 
 
-open fun getAction(string: String)
+    open fun getAction(string: String)
         //nullable = true from not(false or (false and false)) = true
 : GenericProfileAction{
 var string = string
@@ -300,7 +299,7 @@ var string = string
 
                 @Throws(Exception::class)
             
-open fun add(name: String)
+    open fun add(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name
@@ -316,7 +315,7 @@ this.save()
 
                 @Throws(Exception::class)
             
-open fun remove(name: String)
+    open fun remove(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name
@@ -327,7 +326,7 @@ this.save()
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -344,7 +343,7 @@ logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -387,7 +386,7 @@ node.appendChild(nextGenericProfileAction!!.toXmlNode(document))
 
                 @Throws(Exception::class)
             
-open fun toXmlDoc()
+    open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -405,7 +404,7 @@ document.appendChild(node)
 }
 
 
-open fun getGenericProfileActionsJPanel()
+    open fun getGenericProfileActionsJPanel()
         //nullable = true from not(false or (false and true)) = true
 : GenericProfileActionsJPanel{
 
@@ -416,7 +415,7 @@ open fun getGenericProfileActionsJPanel()
 }
 
 
-open fun setGenericProfileActionsJPanel(genericProfileActionsJPanel: GenericProfileActionsJPanel)
+    open fun setGenericProfileActionsJPanel(genericProfileActionsJPanel: GenericProfileActionsJPanel)
         //nullable = true from not(false or (false and false)) = true
 {
 var genericProfileActionsJPanel = genericProfileActionsJPanel
@@ -424,7 +423,7 @@ this.genericProfileActionsJPanel= genericProfileActionsJPanel
 }
 
 
-open fun getHashMap()
+    open fun getHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -435,7 +434,7 @@ open fun getHashMap()
 }
 
 
-open fun setHashMap(hashMap: HashMap<Any, Any>)
+    open fun setHashMap(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var hashMap = hashMap
@@ -443,7 +442,7 @@ this.hashMap= hashMap
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -454,7 +453,7 @@ open fun getName()
 }
 
 
-open fun setName(name: String)
+    open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name

@@ -36,7 +36,7 @@ import org.allbinary.view.ViewPosition
 open public class LifeLayer : AllBinaryLayer
                 , LifeVisitorInterface {
         
-public constructor        ()                        
+public constructor ()                        
 
                             : super(Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 0, 0), ViewPosition()){
 
@@ -45,13 +45,15 @@ public constructor        ()
                     
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 }
 
-override fun visit(lifeInterface: Life)
+
+    override fun visit(lifeInterface: Life)
         //nullable = true from not(false or (false and false)) = true
 {
 var lifeInterface = lifeInterface

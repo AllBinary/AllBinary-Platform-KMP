@@ -25,12 +25,13 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface BasicLayerProcessorInterface {
         
 
                 @Throws(Exception::class)
             
-open fun process(allBinaryLayerManager: AllBinaryLayerManager)
+    open fun process(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 
 

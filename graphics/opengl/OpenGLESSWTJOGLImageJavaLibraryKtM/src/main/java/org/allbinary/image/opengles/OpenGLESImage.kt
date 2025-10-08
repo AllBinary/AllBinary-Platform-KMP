@@ -35,6 +35,7 @@ import org.allbinary.graphics.GraphicsStrings
 import org.allbinary.graphics.OpenGLBitmap
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.platform.graphics.PlatformBitmapBase
 import org.allbinary.platform.graphics.PlatformBitmapBaseFactory
 import org.allbinary.platform.opengles.PlatformTextureBaseFactory
 import org.allbinary.string.CommonStrings
@@ -43,8 +44,7 @@ import org.allbinary.util.BasicArrayList
 open public class OpenGLESImage : Image
                 , OpenGLSurfaceChangedInterface {
         
-
-        companion object {
+companion object {
             
     val NULL_OPENGL_IMAGE: OpenGLESImage = OpenGLESImage(NullCanvas.NULL_IMAGE, PlatformBitmapBaseFactory.NULL_PLATFORM_BITMAP_BASE_FACTORY, PlatformTextureBaseFactory.NULL_PLATFORM_TEXTURE_BASE_FACTORY)
 
@@ -60,14 +60,14 @@ open public class OpenGLESImage : Image
 
     val textureFactory: PlatformTextureBaseFactory
 
-    val openGLBitmap: OpenGLBitmap
+    val openGLBitmap: PlatformBitmapBase
 
     var imageProcessor: OpenGLESImageProcessor = OpenGLESImageProcessor.getInstance()!!
 
     var openGLESImageTranslate: OpenGLESImageTranslate = OpenGLESImageTranslate.getInstance()!!
 
     val openGLESImageProperties: OpenGLESImageProperties = OpenGLESImageProperties()
-public constructor        (image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory)                        
+public constructor (image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory)                        
 
                             : super(image.getName(), PostLoadImageProcessor.NULL_POST_LOAD_IMAGE_PROCESSOR){
     //var image = image
@@ -77,38 +77,44 @@ public constructor        (image: Image, bitmapFactory: PlatformBitmapBaseFactor
 
                             //For kotlin this is before the body of the constructor.
                     
-this.openGLBitmap= bitmapFactory!!.createBitmap(image) as OpenGLBitmap
+this.openGLBitmap= bitmapFactory!!.createBitmap(image)
 this.textureFactory= textureFactory
 OpenGLImageCacheFactory.getInstance()!!.init(this)
 this.platformImage= OpenGLESPostLoadPlatformImage.getInstance()
 }
 
 
-open fun getHeight()
+    open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
+
+    var openGLBitmap: OpenGLBitmap = (this.openGLBitmap as OpenGLBitmap)
+
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return (this.openGLBitmap!!.getHeight() *this.openGLESImageProperties!!.scaleY2).toInt()
+                        return (openGLBitmap!!.getHeight() *this.openGLESImageProperties!!.scaleY2).toInt()
 }
 
 
-open fun getWidth()
+    open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
+
+    var openGLBitmap: OpenGLBitmap = (this.openGLBitmap as OpenGLBitmap)
+
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return (this.openGLBitmap!!.getWidth() *this.openGLESImageProperties!!.scaleX2).toInt()
+                        return (openGLBitmap!!.getWidth() *this.openGLESImageProperties!!.scaleX2).toInt()
 }
 
 
                 @Throws(Exception::class)
             
-open fun set(gl: GL)
+    open fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
 {
 var gl = gl
@@ -119,7 +125,7 @@ var gl = gl
 }
 
 
-open fun initTexture(gl: GL10)
+    open fun initTexture(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var gl = gl
@@ -165,7 +171,7 @@ gl.glTexParameterf(GL10.GL_TEXTURE_2D, GL10.GL_TEXTURE_WRAP_T, GL10.GL_CLAMP_TO_
 }
 
 
-open fun drawRegion(gl: GL10, viewHeight: Int, x_src: Float, y_src: Float, width: Float, height: Float, x: Int, y: Int, z: Int)
+    open fun drawRegion(gl: GL10, viewHeight: Int, x_src: Float, y_src: Float, width: Float, height: Float, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var gl = gl
@@ -180,7 +186,7 @@ var z = z
 }
 
 
-open fun draw(gl: GL10, x: Int, y: Int, z: Int)
+    open fun draw(gl: GL10, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var gl = gl
@@ -190,7 +196,7 @@ var z = z
 }
 
 
-open fun getType()
+    open fun getType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -200,7 +206,8 @@ open fun getType()
                         return TYPE
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

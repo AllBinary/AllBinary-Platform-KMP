@@ -32,12 +32,11 @@ open public class BufferedImageInfoFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
-open fun getInstance(width: Int, height: Int, type: Int)
+    open fun getInstance(width: Int, height: Int, type: Int)
         //nullable =  from not(true or (false and false)) = 
 : BufferedImageInfo{
 var width = width
@@ -76,7 +75,7 @@ hashMap!!.put(key, bufferedImageInfo)
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

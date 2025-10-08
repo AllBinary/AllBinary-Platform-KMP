@@ -39,12 +39,11 @@ open public class TransformGeneratorUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: TransformGeneratorUtil = TransformGeneratorUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TransformGeneratorUtil{
 
@@ -58,7 +57,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -66,7 +65,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun generate(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, ownerTransformInfoInterface: TransformInfoInterface)
+    open fun generate(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, ownerTransformInfoInterface: TransformInfoInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -133,7 +132,7 @@ StoreFileGenerator(componentInterface!!.getTransformInfoInterface()).
 
                 @Throws(Exception::class)
             
-open fun generate(abeClientInformation: AbeClientInformationInterface, transformInfoDomNode: TransformInfoDomNode, ownerTransformInfoInterface: TransformInfoInterface)
+    open fun generate(abeClientInformation: AbeClientInformationInterface, transformInfoDomNode: TransformInfoDomNode, ownerTransformInfoInterface: TransformInfoInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation

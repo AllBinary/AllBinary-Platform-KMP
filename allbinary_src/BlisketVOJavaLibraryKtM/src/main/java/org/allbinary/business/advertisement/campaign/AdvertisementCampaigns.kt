@@ -37,7 +37,7 @@ open public class AdvertisementCampaigns
         
 
     private var advertisementsVector: Vector
-public constructor        (vector: Vector)
+public constructor (vector: Vector)
             : super()
         {
 var vector = vector
@@ -45,7 +45,7 @@ this.advertisementsVector= advertisementsVector
 }
 
 
-open fun add(advertisementInterface: AdvertisementInterface)
+    open fun add(advertisementInterface: AdvertisementInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var advertisementInterface = advertisementInterface
@@ -53,7 +53,7 @@ this.advertisementsVector!!.add(advertisementInterface)
 }
 
 
-open fun get(index: Int)
+    open fun get(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : AdvertisementInterface{
 var index = index
@@ -65,7 +65,7 @@ var index = index
 }
 
 
-open fun size()
+    open fun size()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -76,7 +76,7 @@ open fun size()
 }
 
 
-open fun isEnabled()
+    open fun isEnabled()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -87,7 +87,7 @@ open fun isEnabled()
 }
 
 
-open fun search(advertisementSearchInterface: AdvertisementSearchInterface)
+    open fun search(advertisementSearchInterface: AdvertisementSearchInterface)
         //nullable = true from not(false or (false and false)) = true
 : AdvertisementsInterface{
 var advertisementSearchInterface = advertisementSearchInterface

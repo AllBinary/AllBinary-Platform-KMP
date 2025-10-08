@@ -29,12 +29,11 @@ import org.allbinary.logic.string.StringMaker
 
 /*actual*/ open public class GameStatisticsFactory : AndroidGameStatistics {
         
-
-        companion object {
+/*actual*/ companion object {
             
     private val SINGLETON: AndroidGameStatistics = GameStatisticsFactory()
 
-    open fun getInstance()
+    /*actual*/ open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AndroidGameStatistics{
 
@@ -72,7 +71,7 @@ this.stringBuffer!!.append(string)
 }
 
 
-    override fun toString()
+    /*actual*/ override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

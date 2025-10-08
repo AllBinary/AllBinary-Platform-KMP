@@ -47,7 +47,7 @@ open public class TransformInfoHttp : TransformInfo
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val abContext: AbContext
-public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext, crud: Boolean)                        
+public constructor (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext, crud: Boolean)                        
 
                             : super(){
 var propertiesHashMap = propertiesHashMap
@@ -70,7 +70,7 @@ this.abContext= AbContext(propertiesHashMap, pageContext)
 this.override(propertiesHashMap)
 }
 
-public constructor        (request: HttpServletRequest, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
+public constructor (request: HttpServletRequest, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
                             : super(){
 var request = request
@@ -95,7 +95,7 @@ this.set(RequestParams(request as HttpServletRequest).
 this.override(propertiesHashMap)
 }
 
-public constructor        (databaseHashMap: HashMap<Any, Any>, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
+public constructor (databaseHashMap: HashMap<Any, Any>, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
                             : super(){
 var databaseHashMap = databaseHashMap
@@ -118,7 +118,7 @@ this.abContext= AbContext(propertiesHashMap, pageContext)
 this.set(databaseHashMap)
 }
 
-public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
+public constructor (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
                             : super(){
 var propertiesHashMap = propertiesHashMap
@@ -140,7 +140,7 @@ this.abContext= AbContext(propertiesHashMap, pageContext)
 this.set(propertiesHashMap)
 }
 
-public constructor        (parentViewOfThisTransformInfoInterface: TransformInfoHttp)                        
+public constructor (parentViewOfThisTransformInfoInterface: TransformInfoHttp)                        
 
                             : super(){
 var parentViewOfThisTransformInfoInterface = parentViewOfThisTransformInfoInterface
@@ -154,7 +154,7 @@ this.abContext= AbContext(parentViewOfThisTransformInfoInterface!!.getProperties
 
                 @Throws(Exception::class)
             
-open fun set(hashMap: HashMap<Any, Any>)
+    open fun set(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var hashMap = hashMap
@@ -220,7 +220,7 @@ this.setData(hashMap!!.get(transformInfoData!!.DATA) as String)
 }
 
 
-open fun getWeblisketSession()
+    open fun getWeblisketSession()
         //nullable = true from not(false or (false and true)) = true
 : WeblisketSessionInterface{
 
@@ -231,7 +231,7 @@ open fun getWeblisketSession()
 }
 
 
-open fun getPageContext()
+    open fun getPageContext()
         //nullable = true from not(false or (false and true)) = true
 : PageContext{
 
@@ -242,7 +242,7 @@ open fun getPageContext()
 }
 
 
-open fun getPropertiesHashMap()
+    open fun getPropertiesHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -255,7 +255,7 @@ open fun getPropertiesHashMap()
 
                 @Throws(Exception::class)
             
-open fun getTemplateFilePath()
+    open fun getTemplateFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 
@@ -268,7 +268,7 @@ open fun getTemplateFilePath()
 
                 @Throws(Exception::class)
             
-open fun getObjectConfigFilePath()
+    open fun getObjectConfigFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 
@@ -281,7 +281,7 @@ open fun getObjectConfigFilePath()
 
                 @Throws(Exception::class)
             
-open fun getDataFilePath()
+    open fun getDataFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 

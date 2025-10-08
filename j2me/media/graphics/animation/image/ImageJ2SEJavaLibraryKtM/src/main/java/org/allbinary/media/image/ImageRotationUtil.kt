@@ -35,12 +35,11 @@ open public class ImageRotationUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ImageRotationUtil = ImageRotationUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ImageRotationUtil{
 
@@ -54,13 +53,13 @@ open fun getInstance()
         }
             
     private val imageJ2SERotationUtil: ImageJ2SERotationUtil = ImageJ2SERotationUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun rotateImage(originalImage: Image, image: Image, totalAngle: Int)
+    open fun rotateImage(originalImage: Image, image: Image, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var originalImage = originalImage
@@ -116,7 +115,7 @@ imageJ2SERotationUtil!!.rotateImage(originalAwtImage, newBufferedImage, totalAng
 
                 @Throws(Exception::class)
             
-open fun createRotatedImage(originalImage: Image, rotationInDegrees: Int)
+    open fun createRotatedImage(originalImage: Image, rotationInDegrees: Int)
         //nullable = true from not(false or (false and false)) = true
 : Image{
 var originalImage = originalImage
@@ -161,7 +160,7 @@ originalAwtImage= originalJ2SEImage!!.getImage() as java.awt.Image
     var newBufferedImage: BufferedImage = j2seImage!!.getImage() as BufferedImage
 
 
-    var bufferedImage: BufferedImage = ImageJ2SERotationUtil.getInstance()!!.getRotatedImage(originalAwtImage, newBufferedImage, rotationInDegrees)!!
+    var bufferedImage: BufferedImage = imageJ2SERotationUtil!!.getRotatedImage(originalAwtImage, newBufferedImage, rotationInDegrees)!!
 
 
 

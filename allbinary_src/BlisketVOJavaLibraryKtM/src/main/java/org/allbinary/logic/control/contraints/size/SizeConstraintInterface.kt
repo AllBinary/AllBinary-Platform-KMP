@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.control.contraints.MinMaxIntConstraintInterface
+
 interface SizeConstraintInterface : MinMaxIntConstraintInterface {
         
 

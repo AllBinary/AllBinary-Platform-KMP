@@ -40,14 +40,14 @@ open public class DisplayInBrowserContraints
     private var quickFrameable: Boolean= false
 
     private var mountedLink: String
-public constructor        (node: Node)
+public constructor (node: Node)
             : super()
         {
 var node = node
 }
 
 
-open fun isMountable()
+    open fun isMountable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -58,7 +58,7 @@ open fun isMountable()
 }
 
 
-open fun setMountable(mountable: Boolean)
+    open fun setMountable(mountable: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var mountable = mountable
@@ -66,7 +66,7 @@ this.mountable= mountable
 }
 
 
-open fun isFrameable()
+    open fun isFrameable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -77,7 +77,7 @@ open fun isFrameable()
 }
 
 
-open fun setFrameable(frameable: Boolean)
+    open fun setFrameable(frameable: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var frameable = frameable
@@ -85,7 +85,7 @@ this.frameable= frameable
 }
 
 
-open fun isQuickFrameable()
+    open fun isQuickFrameable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -96,7 +96,7 @@ open fun isQuickFrameable()
 }
 
 
-open fun setQuickFrameable(quickFrameable: Boolean)
+    open fun setQuickFrameable(quickFrameable: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var quickFrameable = quickFrameable
@@ -104,7 +104,7 @@ this.quickFrameable= quickFrameable
 }
 
 
-open fun getMountedLink()
+    open fun getMountedLink()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -115,7 +115,7 @@ open fun getMountedLink()
 }
 
 
-open fun setMountedLink(mountedLink: String)
+    open fun setMountedLink(mountedLink: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var mountedLink = mountedLink

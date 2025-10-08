@@ -25,12 +25,13 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface CompositeTransformInfoInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getTransformInfoInterface()
+    open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformInfoInterface
 

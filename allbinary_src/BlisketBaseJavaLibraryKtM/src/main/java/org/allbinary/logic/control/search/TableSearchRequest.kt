@@ -45,7 +45,7 @@ open public class TableSearchRequest
     private var keywords: String
 
     private var searchParams: SearchParams
-public constructor        (keywords: String, searchParams: SearchParams, xslFile: String, contentType: String)
+public constructor (keywords: String, searchParams: SearchParams, xslFile: String, contentType: String)
             : super()
         {
 var keywords = keywords
@@ -60,7 +60,7 @@ this.contentType= contentType
 }
 
 
-open fun setKeywords(value: String)
+    open fun setKeywords(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -68,7 +68,7 @@ this.keywords= value
 }
 
 
-open fun setParams(searchParams: SearchParams)
+    open fun setParams(searchParams: SearchParams)
         //nullable = true from not(false or (false and false)) = true
 {
 var searchParams = searchParams
@@ -76,7 +76,7 @@ this.searchParams= searchParams
 }
 
 
-open fun setXslFile(value: String)
+    open fun setXslFile(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -84,7 +84,7 @@ this.xslFile= value
 }
 
 
-open fun setFileBaseName(value: String)
+    open fun setFileBaseName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -92,7 +92,7 @@ this.pageName= value
 }
 
 
-open fun setContentType(value: String)
+    open fun setContentType(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -100,7 +100,7 @@ this.contentType= value
 }
 
 
-open fun getKeywords()
+    open fun getKeywords()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -111,7 +111,7 @@ open fun getKeywords()
 }
 
 
-open fun getParams()
+    open fun getParams()
         //nullable = true from not(false or (false and true)) = true
 : SearchParams{
 
@@ -124,7 +124,7 @@ open fun getParams()
 
                 @Throws(Exception::class)
             
-open fun getXslFile()
+    open fun getXslFile()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -138,7 +138,7 @@ open fun getXslFile()
 }
 
 
-open fun getFileBaseName()
+    open fun getFileBaseName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -149,7 +149,7 @@ open fun getFileBaseName()
 }
 
 
-open fun getContentType()
+    open fun getContentType()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -162,7 +162,7 @@ open fun getContentType()
 
                 @Throws(Exception::class)
             
-open fun getFileBaseNameNode(document: Document)
+    open fun getFileBaseNameNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

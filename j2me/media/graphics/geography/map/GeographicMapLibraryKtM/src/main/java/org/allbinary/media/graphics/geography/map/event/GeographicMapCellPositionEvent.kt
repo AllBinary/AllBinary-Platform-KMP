@@ -34,7 +34,7 @@ open public class GeographicMapCellPositionEvent : AllBinaryEventObject {
         
 
     private var geographicMapCellPosition: GeographicMapCellPosition
-public constructor        (anyType: Any, geographicMapCellPosition: GeographicMapCellPosition)                        
+public constructor (anyType: Any, geographicMapCellPosition: GeographicMapCellPosition)                        
 
                             : super(anyType){
 var anyType = anyType
@@ -46,7 +46,7 @@ var geographicMapCellPosition = geographicMapCellPosition
 this.setGeographicMapCellPosition(geographicMapCellPosition)
 }
 
-public constructor        (anyType: Any, key: Int)                        
+public constructor (anyType: Any, key: Int)                        
 
                             : super(anyType){
 var anyType = anyType
@@ -58,7 +58,7 @@ var key = key
 }
 
 
-open fun init(anyType: Any)
+    open fun init(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var anyType = anyType
@@ -66,7 +66,7 @@ this.setSource(anyType)
 }
 
 
-open fun setGeographicMapCellPosition(geographicMapCellPosition: GeographicMapCellPosition)
+    open fun setGeographicMapCellPosition(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
 var geographicMapCellPosition = geographicMapCellPosition
@@ -74,7 +74,7 @@ this.geographicMapCellPosition= geographicMapCellPosition
 }
 
 
-open fun getGeographicMapCellPosition()
+    open fun getGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPosition{
 
@@ -84,7 +84,8 @@ open fun getGeographicMapCellPosition()
                         return geographicMapCellPosition
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

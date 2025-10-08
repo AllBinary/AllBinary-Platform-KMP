@@ -32,12 +32,11 @@ open public class FileStreamFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: FileStreamFactory = FileStreamFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : FileStreamFactory{
 
@@ -49,7 +48,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
@@ -57,7 +56,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun getFileInputStreamInstance(path: String, fileName: String)
+    open fun getFileInputStreamInstance(path: String, fileName: String)
         //nullable = true from not(false or (false and false)) = true
 : AbFileInputStream{
 var path = path
@@ -78,7 +77,7 @@ var fileName = fileName
 
                 @Throws(Exception::class)
             
-open fun getFileOutputStreamInstance(path: String, fileName: String)
+    open fun getFileOutputStreamInstance(path: String, fileName: String)
         //nullable = true from not(false or (false and false)) = true
 : AbFileOutputStream{
 var path = path
@@ -109,7 +108,7 @@ file.createNewFile()
 
                 @Throws(Exception::class)
             
-open fun delete(path: String, fileName: String)
+    open fun delete(path: String, fileName: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var path = path

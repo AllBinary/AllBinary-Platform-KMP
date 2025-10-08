@@ -31,12 +31,11 @@ open public class OpenGLESImageTranslate
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OpenGLESImageTranslate = OpenGLESImageTranslate()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OpenGLESImageTranslate{
 
@@ -54,7 +53,7 @@ open fun getInstance()
             {
             }            
         
-open fun translate(gl: GL10, openGLESImage: OpenGLESImage, x: Float, y: Float)
+    open fun translate(gl: GL10, openGLESImage: OpenGLESImage, x: Float, y: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl
@@ -65,7 +64,7 @@ openGLESImage!!.imageProcessor!!.translate(gl, x, y)
 }
 
 
-open fun translate2(gl: GL10, openGLESImage: OpenGLESImage)
+    open fun translate2(gl: GL10, openGLESImage: OpenGLESImage)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl

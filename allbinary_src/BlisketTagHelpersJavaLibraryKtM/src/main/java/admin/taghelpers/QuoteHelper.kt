@@ -67,7 +67,7 @@ open public class QuoteHelper : BasicTable {
     private val storeFrontInterface: StoreFrontInterface
 
     private val portion: Portion
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 
@@ -96,7 +96,7 @@ this.portion= Portion(hashMap)
 
                 @Throws(Exception::class)
             
-open fun emailUser(quoteRequest: QuoteRequest)
+    open fun emailUser(quoteRequest: QuoteRequest)
         //nullable = true from not(false or (false and false)) = true
 {
 var quoteRequest = quoteRequest
@@ -130,7 +130,7 @@ userEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.QUOTEREQUEST, em
 
                 @Throws(Exception::class)
             
-open fun emailAdmins(quoteRequest: QuoteRequest)
+    open fun emailAdmins(quoteRequest: QuoteRequest)
         //nullable = true from not(false or (false and false)) = true
 {
 var quoteRequest = quoteRequest
@@ -174,7 +174,7 @@ adminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.QUOTEREQUES
 
                 @Throws(Exception::class)
             
-open fun email()
+    open fun email()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -266,7 +266,7 @@ this.emailAdmins(quoteRequest)
 }
 
 
-open fun drop()
+    open fun drop()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -312,7 +312,7 @@ open fun drop()
 }
 
 
-open fun create()
+    open fun create()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -358,7 +358,7 @@ open fun create()
 }
 
 
-open fun restore()
+    open fun restore()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -407,7 +407,7 @@ open fun restore()
 }
 
 
-open fun backup()
+    open fun backup()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

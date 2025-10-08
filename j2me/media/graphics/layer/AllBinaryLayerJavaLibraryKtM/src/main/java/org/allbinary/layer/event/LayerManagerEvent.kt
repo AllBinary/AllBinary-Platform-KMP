@@ -36,7 +36,7 @@ open public class LayerManagerEvent : AllBinaryEventObject {
     private var layerInterface: AllBinaryLayer = AllBinaryLayer.NULL_ALLBINARY_LAYER
 
     private val crud: String
-public constructor        (layerManager: LayerManager, crud: String)                        
+public constructor (layerManager: LayerManager, crud: String)                        
 
                             : super(layerManager){
 var layerManager = layerManager
@@ -49,7 +49,7 @@ this.crud= crud
 }
 
 
-open fun getLayerInterface()
+    open fun getLayerInterface()
         //nullable = true from not(false or (false and true)) = true
 : AllBinaryLayer{
 
@@ -60,14 +60,15 @@ open fun getLayerInterface()
 }
 
 
-open fun setLayerInterface(layerInterface: AllBinaryLayer)
+    open fun setLayerInterface(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var layerInterface = layerInterface
 this.layerInterface= layerInterface
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

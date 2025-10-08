@@ -33,12 +33,11 @@ open public class AcceptableResponseGenerator
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AcceptableResponseGenerator = AcceptableResponseGenerator()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AcceptableResponseGenerator{
 
@@ -52,7 +51,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -60,7 +59,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun get(httpServletRequest: HttpServletRequest)
+    open fun get(httpServletRequest: HttpServletRequest)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var httpServletRequest = httpServletRequest

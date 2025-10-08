@@ -38,8 +38,7 @@ import org.allbinary.time.TimeDelayHelper
 
 open public class TimedFireAI : BasicAI {
         
-
-        companion object {
+companion object {
             
     val TIME: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(1)!!
 
@@ -48,7 +47,7 @@ open public class TimedFireAI : BasicAI {
     val maxFireDelayTimeHelper: TimeDelayHelper = TimeDelayHelper(0)
 
     private val delay: Int
-public constructor        (delay: Int, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
+public constructor (delay: Int, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
                             : super(ownerLayerInterface, gameInput){
 var delay = delay
@@ -63,7 +62,8 @@ this.delay= delay
 
 
                 @Throws(Exception::class)
-            override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+            
+    override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager

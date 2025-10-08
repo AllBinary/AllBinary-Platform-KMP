@@ -32,8 +32,7 @@ open public class RelativeRelationship
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NULL_RELATIVE_RELATIONSHIP: RelativeRelationship = RelativeRelationship(PointFactory.getInstance()!!.ZERO_ZERO, BasicArrayListUtil.getInstance()!!.getImmutableInstance())
 
@@ -46,7 +45,7 @@ open public class RelativeRelationship
     private var y: Int
 
     private var z: Int
-public constructor        (point: GPoint, typesAllowedList: BasicArrayList)
+public constructor (point: GPoint, typesAllowedList: BasicArrayList)
             : super()
         {
 var point = point
@@ -58,7 +57,7 @@ this.typesAllowedList= typesAllowedList
 }
 
 
-open fun getX()
+    open fun getX()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -69,7 +68,7 @@ open fun getX()
 }
 
 
-open fun getY()
+    open fun getY()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -80,7 +79,7 @@ open fun getY()
 }
 
 
-open fun getZ()
+    open fun getZ()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -91,7 +90,7 @@ open fun getZ()
 }
 
 
-open fun getTypesAllowedList()
+    open fun getTypesAllowedList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -102,7 +101,7 @@ open fun getTypesAllowedList()
 }
 
 
-open fun setTypesAllowedList(typesAllowedList: BasicArrayList)
+    open fun setTypesAllowedList(typesAllowedList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var typesAllowedList = typesAllowedList

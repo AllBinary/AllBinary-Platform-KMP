@@ -51,7 +51,7 @@ open public class NumberStringHud : BasicHud
     private var valueTotalDigits: Int= 0
 
     private val primitiveLongUtil: PrimitiveLongUtil
-public constructor        (prependString: String, max: Int, location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int, basicColor: BasicColor)                        
+public constructor (prependString: String, max: Int, location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int, basicColor: BasicColor)                        
 
                             : super(location, direction, maxHeight, maxWidth, bufferZone, basicColor){
 var prependString = prependString
@@ -90,7 +90,7 @@ this.value= 0
 }
 
 
-open fun get()
+    open fun get()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -101,7 +101,7 @@ open fun get()
 }
 
 
-open fun add(value: Int)
+    open fun add(value: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -109,7 +109,7 @@ this.set(this.value +value)
 }
 
 
-open fun set(value: Int)
+    open fun set(value: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -128,14 +128,15 @@ this.valueTotalDigits= this.primitiveLongUtil!!.getCurrentTotalDigits()
 }
 
 
-open fun reduce(value: Int)
+    open fun reduce(value: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
 this.set(this.value -value)
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -143,7 +144,7 @@ super.paint(graphics, PREPEND_STRING, 0, PREPEND_STRING.size, this.valueString, 
 }
 
 
-open fun paint(graphics: Graphics, x: Int, y: Int)
+    open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -167,7 +168,8 @@ graphics.drawChars(charArray, 0, len, x, y, 0)
 graphics.drawChars(charArray2, 0, len2, x -this.offset, y, 0)
 }
 
-override fun paintThreed(graphics: Graphics)
+
+    override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

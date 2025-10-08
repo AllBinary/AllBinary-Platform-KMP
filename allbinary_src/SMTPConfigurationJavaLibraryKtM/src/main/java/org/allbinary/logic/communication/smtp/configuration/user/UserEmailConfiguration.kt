@@ -42,7 +42,7 @@ open public class UserEmailConfiguration
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var userEmailEventsConfigurationInterface: UserEmailEventsConfigurationInterface
-public constructor        ()
+public constructor ()
             : super()
         {
 
@@ -57,7 +57,7 @@ public constructor        ()
 this.setUserEmailEventsConfigurationInterface(UserEmailEventsConfiguration())
 }
 
-public constructor        (hashMap: HashMap<Any, Any>)
+public constructor (hashMap: HashMap<Any, Any>)
             : super()
         {
 var hashMap = hashMap
@@ -74,7 +74,7 @@ this.setUserEmailEventsConfigurationInterface(UserEmailEventsConfiguration(hashM
 }
 
 
-open fun getUserEmailEventsConfigurationInterface()
+    open fun getUserEmailEventsConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
 : UserEmailEventsConfigurationInterface{
 
@@ -85,7 +85,7 @@ open fun getUserEmailEventsConfigurationInterface()
 }
 
 
-open fun setUserEmailEventsConfigurationInterface(userEmailEventsConfigurationInterface: UserEmailEventsConfigurationInterface)
+    open fun setUserEmailEventsConfigurationInterface(userEmailEventsConfigurationInterface: UserEmailEventsConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var userEmailEventsConfigurationInterface = userEmailEventsConfigurationInterface

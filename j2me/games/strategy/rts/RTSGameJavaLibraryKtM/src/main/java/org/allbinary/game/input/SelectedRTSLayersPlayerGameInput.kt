@@ -37,7 +37,6 @@ import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringMaker
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.game.configuration.feature.Features
@@ -80,7 +79,7 @@ open public class SelectedRTSLayersPlayerGameInput : PlayerGameInput {
     private val noMoneyGameNotificationEvent: GameNotificationEvent
 
     private val downgradeGameNotificationEvent: GameNotificationEvent
-public constructor        (towerInfoPaintable: RTSLayerInfoPaintable, rtsPlayerLayerInterface: RTSPlayerLayerInterface, list: BasicArrayList, playerInputId: Int, selectRTSLayerVisitorFactoryInterface: SelectRTSLayerVisitorFactoryInterface)                        
+public constructor (towerInfoPaintable: RTSLayerInfoPaintable, rtsPlayerLayerInterface: RTSPlayerLayerInterface, list: BasicArrayList, playerInputId: Int, selectRTSLayerVisitorFactoryInterface: SelectRTSLayerVisitorFactoryInterface)                        
 
                             : super(list, playerInputId){
 var towerInfoPaintable = towerInfoPaintable
@@ -110,7 +109,7 @@ this.downgradeGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.
 
                 @Throws(Exception::class)
             
-open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
+    open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -126,7 +125,7 @@ this.downgradeGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.ge
 }
 
 
-open fun isSelected(rtsLayer: RTSLayer)
+    open fun isSelected(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var rtsLayer = rtsLayer
@@ -157,7 +156,7 @@ var rtsLayer = rtsLayer
 
                 @Throws(Exception::class)
             
-open fun upgrade()
+    open fun upgrade()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -240,7 +239,7 @@ getPlayerGameInput.
 
                 @Throws(Exception::class)
             
-open fun downgrade()
+    open fun downgrade()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -299,7 +298,7 @@ getPlayerGameInput.
 }
 
 
-open fun initInputProcessors()
+    open fun initInputProcessors()
         //nullable = true from not(false or (false and true)) = true
 {
 this.inputProcessorArray[Canvas.KEY_NUM1]= SelectedRTSLayersPlayerUpgradeGameInputProcessor(this)
@@ -310,7 +309,7 @@ GameInputProcessorUtil.init(this.inputProcessorArray)
 
                 @Throws(Exception::class)
             
-open fun processInput(key: Int)
+    open fun processInput(key: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var key = key
@@ -331,7 +330,7 @@ var key = key
 
                 @Throws(Exception::class)
             
-open fun processInput(layerManager: AllBinaryLayerManager)
+    open fun processInput(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var layerManager = layerManager
@@ -379,7 +378,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.PROCESS_INPUT,
 }
 
 
-open fun getSelectedBasicArrayList()
+    open fun getSelectedBasicArrayList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -390,7 +389,7 @@ open fun getSelectedBasicArrayList()
 }
 
 
-open fun addSelectedRTSLayer(selectedLayer: RTSLayer)
+    open fun addSelectedRTSLayer(selectedLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var selectedLayer = selectedLayer
@@ -424,7 +423,7 @@ this.paintSelectedRTSLayersList= this.selectedRTSLayersList
 }
 
 
-open fun setSelectedRTSLayer(selectedLayer: RTSLayer)
+    open fun setSelectedRTSLayer(selectedLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var selectedLayer = selectedLayer
@@ -478,7 +477,7 @@ this.paintSelectedRTSLayersList= this.selectedRTSLayersList
 }
 
 
-open fun getLastSelectedRtsLayer()
+    open fun getLastSelectedRtsLayer()
         //nullable = true from not(false or (false and true)) = true
 : RTSLayer{
 
@@ -506,7 +505,7 @@ open fun getLastSelectedRtsLayer()
 }
 
 
-open fun selectAllPreselected()
+    open fun selectAllPreselected()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -531,7 +530,7 @@ rtsLayer!!.select()
 }
 
 
-open fun deselectAllPreselected()
+    open fun deselectAllPreselected()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -557,7 +556,7 @@ this.preSelectedRTSLayersList!!.clear()
 }
 
 
-open fun deselectAll()
+    open fun deselectAll()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -576,7 +575,7 @@ rtsLayer!!.deselect()
 }
 
 
-open fun isAnyRTSLayerSelected()
+    open fun isAnyRTSLayerSelected()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -600,7 +599,7 @@ open fun isAnyRTSLayerSelected()
 }
 
 
-open fun getPaintSelectedRTSLayersList()
+    open fun getPaintSelectedRTSLayersList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -611,7 +610,7 @@ open fun getPaintSelectedRTSLayersList()
 }
 
 
-open fun getPreSelectedRTSLayersList()
+    open fun getPreSelectedRTSLayersList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 

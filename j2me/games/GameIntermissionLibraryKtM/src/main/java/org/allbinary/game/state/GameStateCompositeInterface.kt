@@ -25,16 +25,17 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface GameStateCompositeInterface {
         
 
                 @Throws(Exception::class)
             
-open fun setGameState(gameState: GameState)
+    open fun setGameState(gameState: GameState)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getGameState()
+    open fun getGameState()
         //nullable = true from not(false or (false and true)) = true
 : GameState
 

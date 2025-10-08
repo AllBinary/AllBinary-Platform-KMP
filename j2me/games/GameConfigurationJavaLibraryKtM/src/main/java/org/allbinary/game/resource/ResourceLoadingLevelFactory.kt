@@ -32,12 +32,11 @@ open public class ResourceLoadingLevelFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ResourceLoadingLevelFactory = ResourceLoadingLevelFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ResourceLoadingLevelFactory{
 
@@ -69,7 +68,7 @@ open fun getInstance()
 
     private val RESOURCE_LOADING_LEVEL_ARRAY: Array<ResourceLoadingLevel?> = arrayOf(this.LOAD_ALL,this.MAX_LEVEL,this.LEVEL,this.LOAD_GAME,this.LOAD_TOUCH,this.LOAD_EARLY)
 
-open fun getLevelString(level: Int)
+    open fun getLevelString(level: Int)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var level = level

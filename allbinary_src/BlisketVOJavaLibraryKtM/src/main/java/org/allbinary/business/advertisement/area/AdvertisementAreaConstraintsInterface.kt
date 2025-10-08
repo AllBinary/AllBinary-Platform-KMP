@@ -27,14 +27,15 @@
         
 import org.allbinary.logic.control.contraints.display.browser.DisplayInBrowserContraintsInterface
 import org.allbinary.logic.control.contraints.size.TwoDimensionalConstraintInterface
+
 interface AdvertisementAreaConstraintsInterface {
         
 
-open fun getDisplayInBrowserContraints()
+    open fun getDisplayInBrowserContraints()
         //nullable = true from not(false or (false and true)) = true
 : DisplayInBrowserContraintsInterface
 
-open fun getTwoDimensionContraints()
+    open fun getTwoDimensionContraints()
         //nullable = true from not(false or (false and true)) = true
 : TwoDimensionalConstraintInterface
 

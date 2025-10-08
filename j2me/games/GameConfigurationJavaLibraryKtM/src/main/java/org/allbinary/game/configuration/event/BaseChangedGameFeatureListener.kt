@@ -54,14 +54,16 @@ open public class BaseChangedGameFeatureListener
     val list: BasicArrayList = BasicArrayList()
 
     private var changed: Boolean = true
-override fun onEvent(eventObject: AllBinaryEventObject)
+
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
 ForcedLogUtil.log(CommonStrings.getInstance()!!.NOT_IMPLEMENTED, this)
 }
 
-override fun onGameFeatureChange(gameFeatureEvent: GameFeatureEvent)
+
+    override fun onGameFeatureChange(gameFeatureEvent: GameFeatureEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameFeatureEvent = gameFeatureEvent
@@ -72,7 +74,7 @@ setChanged(true)
 }
 
 
-open fun add(gameFeature: Feature)
+    open fun add(gameFeature: Feature)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameFeature = gameFeature
@@ -80,7 +82,7 @@ list.add(gameFeature)
 }
 
 
-open fun remove(gameFeature: Feature)
+    open fun remove(gameFeature: Feature)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameFeature = gameFeature
@@ -88,7 +90,7 @@ list.remove(gameFeature)
 }
 
 
-open fun setChanged(initialized: Boolean)
+    open fun setChanged(initialized: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var initialized = initialized
@@ -105,7 +107,7 @@ this.changed= initialized
 }
 
 
-open fun isChanged(gameFeature: Feature)
+    open fun isChanged(gameFeature: Feature)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var gameFeature = gameFeature
@@ -130,7 +132,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "isChanged")
 }
 
 
-open fun isChanged()
+    open fun isChanged()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

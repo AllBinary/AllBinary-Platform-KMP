@@ -30,15 +30,14 @@ open public class TaxData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NAME: String = "TAX_NAME"
 
     val RATE: String = "TAX_RATE"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

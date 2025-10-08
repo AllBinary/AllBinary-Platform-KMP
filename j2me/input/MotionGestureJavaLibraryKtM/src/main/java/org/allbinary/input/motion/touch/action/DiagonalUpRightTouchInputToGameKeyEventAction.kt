@@ -31,12 +31,11 @@ import org.allbinary.input.motion.gesture.TouchMotionGestureFactory
 
 open public class DiagonalUpRightTouchInputToGameKeyEventAction : GameKeyCompleteMotionGestureInputEvent {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: GameKeyCompleteMotionGestureInputEvent = DiagonalUpRightTouchInputToGameKeyEventAction()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameKeyCompleteMotionGestureInputEvent{
 
@@ -48,7 +47,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()                        
+            private constructor ()                        
 
                             : super("Diagonal Up Right Action", TouchMotionGestureFactory.getInstance()!!.DIAGONAL_UP_RIGHT, PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()){
 

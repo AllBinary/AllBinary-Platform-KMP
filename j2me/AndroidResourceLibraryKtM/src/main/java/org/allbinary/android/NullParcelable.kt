@@ -32,8 +32,7 @@ open public class NullParcelable
         
                 , Parcelable {
         
-
-        companion object {
+companion object {
             
     val NULL_PARCELABLE: NullParcelable = NullParcelable()
 
@@ -43,7 +42,8 @@ open public class NullParcelable
             public constructor() : super()
             {
             }            
-        override fun describeContents()
+        
+    override fun describeContents()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -52,7 +52,8 @@ open public class NullParcelable
                             throw RuntimeException()
 }
 
-override fun writeToParcel(dest: android.os.Parcel, flags: Int)
+
+    override fun writeToParcel(dest: android.os.Parcel, flags: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var dest = dest

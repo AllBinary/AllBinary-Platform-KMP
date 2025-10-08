@@ -61,7 +61,7 @@ open public class TransformInfoTag : ModifyTag {
     private var data: String
 
     private var type: String
-public constructor        ()                        
+public constructor ()                        
 
                             : super(TransformInfoRequestHelperFactory()){
 
@@ -70,7 +70,7 @@ public constructor        ()
                     
 }
 
-public constructor        (tagHelperFactoryInterface: TagHelperFactoryInterface)                        
+public constructor (tagHelperFactoryInterface: TagHelperFactoryInterface)                        
 
                             : super(tagHelperFactoryInterface){
 var tagHelperFactoryInterface = tagHelperFactoryInterface
@@ -81,7 +81,7 @@ var tagHelperFactoryInterface = tagHelperFactoryInterface
 }
 
 
-open fun setName(value: String)
+    open fun setName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -90,7 +90,7 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.NAME, this.n
 }
 
 
-open fun setStoreName(value: String)
+    open fun setStoreName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -99,7 +99,7 @@ this.getPropertiesHashMap()!!.put(StoreFrontData.getInstance()!!.NAME, this.stor
 }
 
 
-open fun setObjectFile(value: Object)
+    open fun setObjectFile(value: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -108,7 +108,7 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.OBJECTFILENA
 }
 
 
-open fun setObject(value: Object)
+    open fun setObject(value: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -117,7 +117,7 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.OBJECT, this
 }
 
 
-open fun setTemplateFile(value: String)
+    open fun setTemplateFile(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -126,7 +126,7 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.TEMPLATEFILE
 }
 
 
-open fun setTemplate(value: String)
+    open fun setTemplate(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -135,7 +135,7 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.TEMPLATE, th
 }
 
 
-open fun setDataFile(value: String)
+    open fun setDataFile(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -144,7 +144,7 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.DATAFILENAME
 }
 
 
-open fun setData(value: String)
+    open fun setData(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -153,7 +153,7 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.DATA, this.d
 }
 
 
-open fun setObjectConfigFile(value: Object)
+    open fun setObjectConfigFile(value: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -162,7 +162,7 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.OBJECTCONFIG
 }
 
 
-open fun setObjectConfig(value: Object)
+    open fun setObjectConfig(value: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -171,7 +171,7 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.OBJECTCONFIG
 }
 
 
-open fun setType(value: String)
+    open fun setType(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -189,7 +189,7 @@ this.getPropertiesHashMap()!!.put(OutputTypeData.getInstance()!!.NAME, this.type
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -200,7 +200,7 @@ open fun getName()
 }
 
 
-open fun getObjectFile()
+    open fun getObjectFile()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -213,7 +213,7 @@ open fun getObjectFile()
 
                 @Throws(JspTagException::class)
             
-open fun doStartTag()
+    open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

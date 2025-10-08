@@ -48,7 +48,7 @@ open public class HtmlInput : HtmlTag {
     private var name: String
 
     private var after: String
-public constructor        (before: String, type: String, name: String, after: String){
+public constructor (before: String, type: String, name: String, after: String){
 var before = before
 var type = type
 var name = name
@@ -59,7 +59,8 @@ this.name= name
 this.after= after
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

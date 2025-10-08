@@ -36,14 +36,13 @@ import org.allbinary.logic.communication.log.LogUtil
 
 open public class SaveGameForm : CommandForm {
         
-
-        companion object {
+companion object {
             
     private var FORM: CommandForm = CommandForm.NULL_COMMAND_FORM
 
                 @Throws(Exception::class)
             
-open fun getInstance(commandListener: CommandListener, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)
+    open fun getInstance(commandListener: CommandListener, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)
         //nullable =  from not(true or (false and false)) = 
 : CommandForm{
 var commandListener = commandListener
@@ -59,7 +58,7 @@ FORM= SaveGameForm(commandListener, title, backgrounBasicColor, foregroundBasicC
 }
 
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CommandForm{
 
@@ -71,7 +70,7 @@ open fun getInstance()
 
 
         }
-            private constructor        (commandListener: CommandListener, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+            private constructor (commandListener: CommandListener, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(commandListener, title, backgrounBasicColor, foregroundBasicColor){
 var commandListener = commandListener
@@ -90,7 +89,8 @@ this.append(TextField("Name: ", timeString, 30, TextField.ANY))
 this.initCommands(commandListener)
 }
 
-override fun initCommands(cmdListener: CommandListener)
+
+    override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var cmdListener = cmdListener

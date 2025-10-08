@@ -32,12 +32,11 @@ open public class HashtableUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: HashtableUtil = HashtableUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : HashtableUtil{
 
@@ -55,7 +54,7 @@ open fun getInstance()
             {
             }            
         
-open fun putAll(fromHashtable: Hashtable<Any, Any>, hashtable: Hashtable<Any, Any>)
+    open fun putAll(fromHashtable: Hashtable<Any, Any>, hashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var fromHashtable = fromHashtable
@@ -92,7 +91,7 @@ var hashtable = hashtable
 }
 
 
-open fun getKeysAsArray(hashtable: Hashtable<Any, Any>)
+    open fun getKeysAsArray(hashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 : Array<Any?>{
 var hashtable = hashtable
@@ -119,7 +118,7 @@ objectArray[index++]= enumeration.nextElement()!!
 }
 
 
-open fun getKeysAsList(hashtable: Hashtable<Any, Any>)
+    open fun getKeysAsList(hashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var hashtable = hashtable

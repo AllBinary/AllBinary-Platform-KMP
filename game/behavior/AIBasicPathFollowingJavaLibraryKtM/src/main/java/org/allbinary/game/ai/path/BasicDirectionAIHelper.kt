@@ -43,7 +43,7 @@ open public class BasicDirectionAIHelper
     private var name: String
 
     private var angleInfo: AngleInfo
-public constructor        (name: String, angleInfo: AngleInfo)
+public constructor (name: String, angleInfo: AngleInfo)
             : super()
         {
 var name = name
@@ -53,7 +53,7 @@ this.setAngleInfo(angleInfo)
 }
 
 
-open fun turnAI(frame: Int)
+    open fun turnAI(frame: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var frame = frame
@@ -125,7 +125,7 @@ var frame = frame
 }
 
 
-open fun getAIKeyPressed(frame: Integer)
+    open fun getAIKeyPressed(frame: Integer)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var frame = frame
@@ -154,7 +154,7 @@ var frame = frame
 }
 
 
-open fun getAIKeyPressedFromDirection(geographicMapDirectionData: Direction)
+    open fun getAIKeyPressedFromDirection(geographicMapDirectionData: Direction)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var geographicMapDirectionData = geographicMapDirectionData
@@ -211,7 +211,7 @@ var geographicMapDirectionData = geographicMapDirectionData
 }
 
 
-open fun getAngleInfoP()
+    open fun getAngleInfoP()
         //nullable = true from not(false or (false and true)) = true
 : AngleInfo{
 
@@ -222,7 +222,7 @@ open fun getAngleInfoP()
 }
 
 
-open fun setAngleInfo(angleInfo: AngleInfo)
+    open fun setAngleInfo(angleInfo: AngleInfo)
         //nullable = true from not(false or (false and false)) = true
 {
 var angleInfo = angleInfo
@@ -230,7 +230,7 @@ this.angleInfo= angleInfo
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -241,7 +241,7 @@ open fun getName()
 }
 
 
-open fun setName(name: String)
+    open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name

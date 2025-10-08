@@ -31,12 +31,11 @@ open public class GameKeyUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GameKeyUtil = GameKeyUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameKeyUtil{
 
@@ -54,7 +53,7 @@ open fun getInstance()
             {
             }            
         
-open fun isDirectionKey(key: Int)
+    open fun isDirectionKey(key: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var key = key

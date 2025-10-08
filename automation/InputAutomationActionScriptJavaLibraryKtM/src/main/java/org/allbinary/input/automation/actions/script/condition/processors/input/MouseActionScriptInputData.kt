@@ -30,8 +30,7 @@ open public class MouseActionScriptInputData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var NAME: String = "MOUSE_ACTION_INPUT_NAME"
 
@@ -44,7 +43,7 @@ open public class MouseActionScriptInputData
     var MOVE_Y: String = "MOUSE_ACTION_INPUT_MOVE_Y"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

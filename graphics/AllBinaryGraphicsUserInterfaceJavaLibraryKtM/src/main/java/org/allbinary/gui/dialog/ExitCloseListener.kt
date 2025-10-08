@@ -33,13 +33,13 @@ open public class ExitCloseListener
         
                 , CloseJDialogListenerInterface {
         
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun onClose()
+    open fun onClose()
         //nullable = true from not(false or (false and true)) = true
 {
 System.exit( -1)

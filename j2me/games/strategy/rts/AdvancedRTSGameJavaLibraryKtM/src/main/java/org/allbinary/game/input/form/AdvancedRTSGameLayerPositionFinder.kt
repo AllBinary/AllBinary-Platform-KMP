@@ -36,12 +36,11 @@ open public class AdvancedRTSGameLayerPositionFinder
         
                 , LayerPositionFinderInterface {
         
-
-        companion object {
+companion object {
             
     private val instance: AdvancedRTSGameLayerPositionFinder = AdvancedRTSGameLayerPositionFinder()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AdvancedRTSGameLayerPositionFinder{
 
@@ -53,13 +52,13 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
 
 
-open fun getLayerInterface(geographicMapCellPosition: GeographicMapCellPosition)
+    open fun getLayerInterface(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : AllBinaryLayer{
 var geographicMapCellPosition = geographicMapCellPosition

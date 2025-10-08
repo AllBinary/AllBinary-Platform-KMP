@@ -25,22 +25,23 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface ScalableListener {
         
 
-open fun getRatio(ratio: Float)
+    open fun getRatio(ratio: Float)
         //nullable = true from not(false or (false and false)) = true
 : Float
 
-open fun getLeft(xOffset: Int)
+    open fun getLeft(xOffset: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int
 
-open fun getTop(yOffset: Int)
+    open fun getTop(yOffset: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int
 
-open fun scale(ratio: Float)
+    open fun scale(ratio: Float)
         //nullable = true from not(false or (false and false)) = true
 
 

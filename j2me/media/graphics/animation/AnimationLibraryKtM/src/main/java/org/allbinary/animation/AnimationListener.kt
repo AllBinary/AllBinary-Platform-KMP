@@ -26,10 +26,11 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.util.event.EventListenerInterface
+
 interface AnimationListener : EventListenerInterface {
         
 
-open fun onEnd()
+    open fun onEnd()
         //nullable = true from not(false or (false and true)) = true
 
 

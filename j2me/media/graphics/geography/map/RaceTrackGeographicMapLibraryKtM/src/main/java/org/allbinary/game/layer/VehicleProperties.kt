@@ -35,7 +35,7 @@ open public class VehicleProperties
     private val velocityProperties: VelocityProperties
 
     private var vehicleFrictionProperties: VehicleFrictionProperties
-public constructor        (velocityProperties: VelocityProperties, vehicleFrictionProperties: VehicleFrictionProperties)
+public constructor (velocityProperties: VelocityProperties, vehicleFrictionProperties: VehicleFrictionProperties)
             : super()
         {
 var velocityProperties = velocityProperties
@@ -45,7 +45,7 @@ this.setVehicleFrictionProperties(vehicleFrictionProperties)
 }
 
 
-open fun getVehicleFrictionProperties()
+    open fun getVehicleFrictionProperties()
         //nullable = true from not(false or (false and true)) = true
 : VehicleFrictionProperties{
 
@@ -56,7 +56,7 @@ open fun getVehicleFrictionProperties()
 }
 
 
-open fun setVehicleFrictionProperties(vehicleFrictionProperties: VehicleFrictionProperties)
+    open fun setVehicleFrictionProperties(vehicleFrictionProperties: VehicleFrictionProperties)
         //nullable = true from not(false or (false and false)) = true
 {
 var vehicleFrictionProperties = vehicleFrictionProperties
@@ -64,7 +64,7 @@ this.vehicleFrictionProperties= vehicleFrictionProperties
 }
 
 
-open fun getVelocityProperties()
+    open fun getVelocityProperties()
         //nullable = true from not(false or (false and true)) = true
 : VelocityProperties{
 

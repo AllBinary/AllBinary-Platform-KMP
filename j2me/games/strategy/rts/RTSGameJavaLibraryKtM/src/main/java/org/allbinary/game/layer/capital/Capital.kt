@@ -32,13 +32,13 @@ open public class Capital
         
 
     private var value: Int= 0
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun getTotalMoney()
+    open fun getTotalMoney()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -49,7 +49,7 @@ open fun getTotalMoney()
 }
 
 
-open fun removeMoney(points: Int)
+    open fun removeMoney(points: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var points = points
@@ -57,7 +57,7 @@ this.value -= points
 }
 
 
-open fun addMoney(points: Int)
+    open fun addMoney(points: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var points = points

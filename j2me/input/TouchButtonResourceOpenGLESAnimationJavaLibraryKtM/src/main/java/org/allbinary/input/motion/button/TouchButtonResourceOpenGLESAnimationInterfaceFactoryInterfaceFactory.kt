@@ -31,7 +31,7 @@ import org.allbinary.image.opengles.OpenGLImageCacheFactory
 
 open public class TouchButtonResourceOpenGLESAnimationInterfaceFactoryInterfaceFactory : TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory {
         
-public constructor        ()                        
+public constructor ()                        
 
                             : super("OpenGL TouchButton Animations"){
 
@@ -42,14 +42,16 @@ public constructor        ()
 
 
                 @Throws(Exception::class)
-            override fun init(level: Int)
+            
+    override fun init(level: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var level = level
 super.init(OpenGLImageCacheFactory.getInstance(), level)
 }
 
-override fun isFeature()
+
+    override fun isFeature()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

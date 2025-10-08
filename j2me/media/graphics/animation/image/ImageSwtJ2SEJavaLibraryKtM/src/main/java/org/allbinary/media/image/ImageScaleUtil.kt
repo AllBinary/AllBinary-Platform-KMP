@@ -29,7 +29,6 @@ import javax.microedition.lcdui.Image
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.configuration.feature.GameFeatureFactory
 import org.allbinary.image.ImageCache
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.eclipse.swt.SWT
@@ -42,12 +41,11 @@ open public class ImageScaleUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ImageScaleUtil = ImageScaleUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ImageScaleUtil{
 
@@ -71,7 +69,7 @@ open fun getInstance()
     private val features: Features = Features.getInstance()!!
 
     private val NO_COPY: String = "SWT should not copy images after initial loading as the alpha is not honored"
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -79,7 +77,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominatorX: Float, scaleDenominatorX: Float, scaleNominatorY: Float, scaleDenominatorY: Float, cached: Boolean)
+    open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominatorX: Float, scaleDenominatorX: Float, scaleNominatorY: Float, scaleDenominatorY: Float, cached: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var imageCache = imageCache
@@ -99,7 +97,7 @@ open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominato
 
                 @Throws(Exception::class)
             
-open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominatorX: Float, scaleDenominatorX: Float, scaleNominatorY: Float, scaleDenominatorY: Float, cached: Boolean, mutable: Boolean)
+    open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominatorX: Float, scaleDenominatorX: Float, scaleNominatorY: Float, scaleDenominatorY: Float, cached: Boolean, mutable: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var imageCache = imageCache
@@ -149,7 +147,7 @@ open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominato
 
                 @Throws(Exception::class)
             
-open fun scale(originalImage: Image, originalImageArray: Array<Image?>, ximageToShowArray: Array<Image?>, unused: Int, scaleX: Float, scaleY: Float, maxScaleX: Float, maxScaleY: Float)
+    open fun scale(originalImage: Image, originalImageArray: Array<Image?>, ximageToShowArray: Array<Image?>, unused: Int, scaleX: Float, scaleY: Float, maxScaleX: Float, maxScaleY: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var originalImage = originalImage
@@ -166,7 +164,7 @@ this.scale(originalImage, originalImageArray, ximageToShowArray, unused, scaleX,
 
                 @Throws(Exception::class)
             
-open fun scale(originalImage: Image, originalImageArray: Array<Image?>, ximageToShowArray: Array<Image?>, unused: Int, scaleX: Float, scaleY: Float, maxScaleX: Float, maxScaleY: Float, mutable: Boolean)
+    open fun scale(originalImage: Image, originalImageArray: Array<Image?>, ximageToShowArray: Array<Image?>, unused: Int, scaleX: Float, scaleY: Float, maxScaleX: Float, maxScaleY: Float, mutable: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var originalImage = originalImage

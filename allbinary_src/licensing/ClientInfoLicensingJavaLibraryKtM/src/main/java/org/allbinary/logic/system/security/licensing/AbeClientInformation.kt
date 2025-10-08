@@ -38,7 +38,7 @@ open public class AbeClientInformation : ClientInformation {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (name: String, version: String, specialName: String, shortName: String)                        
+public constructor (name: String, version: String, specialName: String, shortName: String)                        
 
                             : super(name, version, specialName, shortName){
     //var name = name
@@ -51,7 +51,8 @@ public constructor        (name: String, version: String, specialName: String, s
                     
 }
 
-override fun init()
+
+    override fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 

@@ -30,19 +30,17 @@ import javax.microedition.lcdui.game.Sprite
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringMaker
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 
 open public class SpriteFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: SpriteFactory = SpriteFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : SpriteFactory{
 
@@ -62,7 +60,7 @@ open fun getInstance()
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-open fun create(image: Image, frameWidth: Int, frameHeight: Int)
+    open fun create(image: Image, frameWidth: Int, frameHeight: Int)
         //nullable = true from not(false or (false and false)) = true
 : Sprite{
     //var image = image

@@ -30,7 +30,7 @@ import admin.taghelpers.AdminConfigurationRequestHelperFactory
 
 open public class AdminConfigurationTag : TableTag {
         
-public constructor        (){
+public constructor (){
 this.setTagHelperFactory(AdminConfigurationHelperFactory())
 this.setTagRequestHelperFactory(AdminConfigurationRequestHelperFactory())
 }

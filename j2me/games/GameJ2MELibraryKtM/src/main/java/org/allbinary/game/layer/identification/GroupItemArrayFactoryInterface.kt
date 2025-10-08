@@ -27,12 +27,13 @@
         
 import org.allbinary.game.identification.Group
 import org.allbinary.graphics.form.item.CustomItem
+
 interface GroupItemArrayFactoryInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getInstance(groupInterface: Group)
+    open fun getInstance(groupInterface: Group)
         //nullable =  from not(true or (false and false)) = 
 : Array<CustomItem?>
 

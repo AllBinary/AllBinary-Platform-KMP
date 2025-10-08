@@ -33,13 +33,13 @@ open public class FrictionProperties
             : Object
          {
         
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun friction(velocityProperties: VelocityProperties, nominator: Int)
+    open fun friction(velocityProperties: VelocityProperties, nominator: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var velocityProperties = velocityProperties

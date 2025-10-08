@@ -47,7 +47,7 @@ open public class CustomUriResolver
     private var path: String
 
     private var basicURIResolver: BasicUriResolver
-public constructor        (path: String, basicURIResolver: BasicUriResolver)
+public constructor (path: String, basicURIResolver: BasicUriResolver)
             : super()
         {
 var path = path
@@ -59,7 +59,7 @@ this.basicURIResolver= basicURIResolver
 
                 @Throws(TransformerException::class)
             
-open fun resolve(href: String, base: String)
+    open fun resolve(href: String, base: String)
         //nullable = true from not(false or (false and false)) = true
 : Source{
 var href = href
@@ -101,7 +101,8 @@ var base = base
 
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

@@ -72,7 +72,7 @@ open public class ImageCaptionIndexedAnimationFactory
     var scaleProperties: ScaleProperties = ScaleProperties.instance
 
     private val animationBehaviorFactory: AnimationBehaviorFactory
-public constructor        (captionImage: Image, spriteMovieImage: Image, soundInterface: Sound, frameWidth: Int, frameHeight: Int, captionDx: Int, captionDy: Int, dx: Int, dy: Int, time: Int)                        
+public constructor (captionImage: Image, spriteMovieImage: Image, soundInterface: Sound, frameWidth: Int, frameHeight: Int, captionDx: Int, captionDy: Int, dx: Int, dy: Int, time: Int)                        
 
                             : this(captionImage, spriteMovieImage, soundInterface, frameWidth, frameHeight, captionDx, captionDy, dx, dy, time, AnimationBehaviorFactory.getInstance()){
     //var captionImage = captionImage
@@ -91,7 +91,7 @@ public constructor        (captionImage: Image, spriteMovieImage: Image, soundIn
                     
 }
 
-public constructor        (captionImage: Image, spriteMovieImage: Image, soundInterface: Sound, frameWidth: Int, frameHeight: Int, captionDx: Int, captionDy: Int, dx: Int, dy: Int, time: Int, animationBehaviorFactory: AnimationBehaviorFactory)
+public constructor (captionImage: Image, spriteMovieImage: Image, soundInterface: Sound, frameWidth: Int, frameHeight: Int, captionDx: Int, captionDy: Int, dx: Int, dy: Int, time: Int, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
         {
     //var captionImage = captionImage
@@ -120,7 +120,8 @@ this.animationBehaviorFactory= animationBehaviorFactory
 
 
                 @Throws(Exception::class)
-            override fun getInstance(instanceId: Int)
+            
+    override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var instanceId = instanceId
@@ -160,7 +161,8 @@ this.animationBehaviorFactory= animationBehaviorFactory
                         return CaptionIndexedAnimation(animationInterface, movieIndexedAnimationInterface, player, this.captionDx, this.captionDy, dx, dy, time, this.animationBehaviorFactory!!.getOrCreateInstance())
 }
 
-override fun setInitialScale(scaleProperties: ScaleProperties)
+
+    override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
 {
     //var scaleProperties = scaleProperties

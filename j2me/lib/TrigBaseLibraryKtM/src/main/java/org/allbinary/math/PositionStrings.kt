@@ -30,12 +30,11 @@ open public class PositionStrings
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: PositionStrings = PositionStrings()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PositionStrings{
 

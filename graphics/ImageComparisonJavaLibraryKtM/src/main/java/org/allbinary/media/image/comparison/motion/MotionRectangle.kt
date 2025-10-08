@@ -39,7 +39,7 @@ open public class MotionRectangle
     private var rectangle: Rectangle
 
     private var pixelDeltaVector: Vector
-public constructor        (rectangle: Rectangle)
+public constructor (rectangle: Rectangle)
             : super()
         {
 var rectangle = rectangle
@@ -48,7 +48,7 @@ this.setPixelDeltaVector(Vector())
 }
 
 
-open fun getRectangle()
+    open fun getRectangle()
         //nullable = true from not(false or (false and true)) = true
 : Rectangle{
 
@@ -59,7 +59,7 @@ open fun getRectangle()
 }
 
 
-open fun setRectangle(rectangle: Rectangle)
+    open fun setRectangle(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
 {
 var rectangle = rectangle
@@ -67,7 +67,7 @@ this.rectangle= rectangle
 }
 
 
-open fun getPixelDeltaVector()
+    open fun getPixelDeltaVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -78,14 +78,15 @@ open fun getPixelDeltaVector()
 }
 
 
-open fun setPixelDeltaVector(pixelDeltaVector: Vector)
+    open fun setPixelDeltaVector(pixelDeltaVector: Vector)
         //nullable = true from not(false or (false and false)) = true
 {
 var pixelDeltaVector = pixelDeltaVector
 this.pixelDeltaVector= pixelDeltaVector
 }
 
-override fun clone()
+
+    override fun clone()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 

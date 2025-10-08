@@ -32,10 +32,9 @@ open public class GameEventHandlerUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun removeAllListeners()
+    open fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
 {
 UpGameKeyEventHandler.getInstance()!!.removeAllListeners()

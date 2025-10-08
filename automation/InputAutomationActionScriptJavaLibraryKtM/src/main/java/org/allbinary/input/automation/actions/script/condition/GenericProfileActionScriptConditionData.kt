@@ -30,13 +30,12 @@ open public class GenericProfileActionScriptConditionData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var NAME: String = "GENERIC_CONFIGURATION_PROFILE_ACTION_IF_NAME"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

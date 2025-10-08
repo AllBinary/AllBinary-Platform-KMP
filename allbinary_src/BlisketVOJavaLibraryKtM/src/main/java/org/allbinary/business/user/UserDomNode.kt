@@ -41,7 +41,7 @@ open public class UserDomNode
         
 
     private var dataMappingInterface: TableMappingInterface
-public constructor        (dataMappingInterface: TableMappingInterface)
+public constructor (dataMappingInterface: TableMappingInterface)
             : super()
         {
 var dataMappingInterface = dataMappingInterface
@@ -51,7 +51,7 @@ this.dataMappingInterface= dataMappingInterface
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -74,7 +74,7 @@ hashMap!!.put(UserData.PASSWORD, EMPTY_STRING)
 
                 @Throws(Exception::class)
             
-open fun toXmlDoc()
+    open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -87,7 +87,7 @@ open fun toXmlDoc()
 
                 @Throws(Exception::class)
             
-open fun view()
+    open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

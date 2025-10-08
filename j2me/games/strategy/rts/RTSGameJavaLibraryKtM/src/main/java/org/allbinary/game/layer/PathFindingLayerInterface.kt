@@ -30,44 +30,45 @@ import org.allbinary.game.identification.GroupInterfaceCompositeInterface
 import org.allbinary.game.input.GameKeyEventSourceInterface
 import org.allbinary.game.layer.waypoint.WaypointLayerInterface
 import org.allbinary.util.BasicArrayList
+
 interface PathFindingLayerInterface : WaypointLayerInterface, GameKeyEventSourceInterface, GroupInterfaceCompositeInterface, DestroyableInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getEndGeographicMapCellPositionList()
+    open fun getEndGeographicMapCellPositionList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList
 
-open fun shouldHandleStartSameAsEnd()
+    open fun shouldHandleStartSameAsEnd()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun getGeographicMapCellPositionArea()
+    open fun getGeographicMapCellPositionArea()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPositionArea
 
-open fun getHudPaintable()
+    open fun getHudPaintable()
         //nullable = true from not(false or (false and true)) = true
 : SelectionHudPaintable
 
                 @Throws(Exception::class)
             
-open fun handleCost(ownerLayer: PathFindingLayerInterface)
+    open fun handleCost(ownerLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getParentLayer()
+    open fun getParentLayer()
         //nullable = true from not(false or (false and true)) = true
 : PathFindingLayerInterface
 
-open fun getRTSLayer2LogHelper()
+    open fun getRTSLayer2LogHelper()
         //nullable = true from not(false or (false and true)) = true
 : RTSLayer2LogHelper
 
                 @Throws(Exception::class)
             
-open fun setTarget(targetGameLayer: PathFindingLayerInterface)
+    open fun setTarget(targetGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 
 

@@ -38,14 +38,16 @@ open public class HighScoresHelper2 : HighScoresHelperBase {
     private val circularIndexUtil: CircularIndexUtil = CircularIndexUtil.getInstance(0, 0)!!
 
     private var selectedHighScores: HighScores = NullHighScoresSingletonFactory.getInstance()!!
-override fun setSelectedHighScores(selectedHighScores: HighScores)
+
+    override fun setSelectedHighScores(selectedHighScores: HighScores)
         //nullable = true from not(false or (false and false)) = true
 {
     //var selectedHighScores = selectedHighScores
 this.selectedHighScores= selectedHighScores
 }
 
-override fun getSelectedHighScores()
+
+    override fun getSelectedHighScores()
         //nullable = true from not(false or (false and true)) = true
 : HighScores{
 
@@ -55,7 +57,8 @@ override fun getSelectedHighScores()
                         return selectedHighScores
 }
 
-override fun setHighScoresArray(highScoresArrayP: Array<HighScores?>)
+
+    override fun setHighScoresArray(highScoresArrayP: Array<HighScores?>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var highScoresArrayP = highScoresArrayP
@@ -64,7 +67,8 @@ this.circularIndexUtil!!.setSize(this.highScoresArrayP!!.size)
 this.selectHighScores()
 }
 
-override fun selectHighScores()
+
+    override fun selectHighScores()
         //nullable = true from not(false or (false and true)) = true
 {
 

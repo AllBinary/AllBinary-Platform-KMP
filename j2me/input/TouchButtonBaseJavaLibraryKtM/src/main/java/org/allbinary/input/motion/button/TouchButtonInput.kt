@@ -46,7 +46,7 @@ open public class TouchButtonInput : Input
     private val TOUCH_BUTTON_SOURCE_ID: Int = this.gameKeyEventFactory!!.TOUCH_BUTTON_SOURCE_ID
 
     private var gameKeyEvent: GameKeyEvent = GameKeyEvent.NONE
-public constructor        (id: Int, name: String)                        
+public constructor (id: Int, name: String)                        
 
                             : super(id, name){
 var id = id
@@ -62,7 +62,7 @@ inputFactory!!.add(this.getId(), this)
 }
 
 
-open fun update(inputToGameKeyMapping: InputToGameKeyMapping)
+    open fun update(inputToGameKeyMapping: InputToGameKeyMapping)
         //nullable = true from not(false or (false and false)) = true
 {
 var inputToGameKeyMapping = inputToGameKeyMapping
@@ -82,7 +82,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
 
 }
 
-override fun getSourceId()
+
+    override fun getSourceId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -93,7 +94,7 @@ override fun getSourceId()
 }
 
 
-open fun getGameKeyEvent()
+    open fun getGameKeyEvent()
         //nullable = true from not(false or (false and true)) = true
 : GameKeyEvent{
 

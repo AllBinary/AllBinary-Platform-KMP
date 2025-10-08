@@ -45,12 +45,11 @@ open public class InventorySearchProductUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: InventorySearchProductUtil = InventorySearchProductUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : InventorySearchProductUtil{
 
@@ -76,7 +75,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun getProduct(abeClientInformation: AbeClientInformationInterface, searchRequest: SearchRequest, product: String)
+    open fun getProduct(abeClientInformation: AbeClientInformationInterface, searchRequest: SearchRequest, product: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var abeClientInformation = abeClientInformation

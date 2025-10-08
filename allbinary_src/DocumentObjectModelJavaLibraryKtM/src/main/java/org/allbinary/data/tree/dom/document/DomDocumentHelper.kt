@@ -40,10 +40,9 @@ open public class DomDocumentHelper
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun create()
+    open fun create()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -76,7 +75,7 @@ open fun create()
 
                 @Throws(Exception::class)
             
-open fun create(inputStream: InputStream)
+    open fun create(inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
 : Document{
 var inputStream = inputStream
@@ -109,7 +108,7 @@ var inputStream = inputStream
 
                 @Throws(Exception::class)
             
-open fun create(xmlString: String)
+    open fun create(xmlString: String)
         //nullable = true from not(false or (false and false)) = true
 : Document{
 var xmlString = xmlString
@@ -142,7 +141,7 @@ var xmlString = xmlString
 
                 @Throws(Exception::class)
             
-open fun toString(document: Document)
+    open fun toString(document: Document)
         //nullable = true from not(false or (true and false)) = true
 : String{
 var document = document
@@ -181,7 +180,7 @@ copyTransformer!!.transform(domSource, streamResult)
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

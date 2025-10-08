@@ -43,7 +43,7 @@ open public class StoreFrontHelper : TagHelper {
     private val currentLocation: String
 
     private val currentHomeLocation: String
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 
@@ -77,7 +77,7 @@ this.currentHomeLocation= stringUtil!!.EMPTY_STRING
 }
 
 
-open fun getCurrentLocation()
+    open fun getCurrentLocation()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -88,7 +88,7 @@ open fun getCurrentLocation()
 }
 
 
-open fun getCurrentHomeLocation()
+    open fun getCurrentHomeLocation()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

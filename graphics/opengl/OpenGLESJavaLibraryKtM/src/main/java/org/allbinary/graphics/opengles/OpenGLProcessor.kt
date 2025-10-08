@@ -26,7 +26,7 @@ open public class OpenGLProcessor
         
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-open fun process(gl: GL10)
+    open fun process(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
 {
 var gl = gl

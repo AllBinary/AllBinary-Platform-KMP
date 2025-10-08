@@ -26,7 +26,6 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.game.rand.MyRandomFactory
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.mapeditor.core.TileLayer
@@ -44,7 +43,7 @@ open public class PropsTileMapPlacementVisitor : TileMapPlacementVisitor {
 
     private val randomFactory: MyRandomFactory = MyRandomFactory.getInstance()!!
 
-open fun visit(lastMap: TiledMap, mapData: Array<IntArray?>)
+    open fun visit(lastMap: TiledMap, mapData: Array<IntArray?>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var lastMap = lastMap
@@ -239,7 +238,7 @@ open fun visit(lastMap: TiledMap, mapData: Array<IntArray?>)
 }
 
 
-open fun visit2(mapArray: Array<IntArray?>, mapData: Array<IntArray?>, index: Int, index2: Int)
+    open fun visit2(mapArray: Array<IntArray?>, mapData: Array<IntArray?>, index: Int, index2: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var mapArray = mapArray

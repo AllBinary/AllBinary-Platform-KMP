@@ -46,14 +46,15 @@ open public class GameFeatureItemCommandListener
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var gameOptionsForm: GameOptionsForm
-public constructor        (gameOptionsForm: GameOptionsForm)
+public constructor (gameOptionsForm: GameOptionsForm)
             : super()
         {
 var gameOptionsForm = gameOptionsForm
 this.gameOptionsForm= gameOptionsForm
 }
 
-override fun commandAction(command: Command, item: Item)
+
+    override fun commandAction(command: Command, item: Item)
         //nullable = true from not(false or (false and false)) = true
 {
 var command = command

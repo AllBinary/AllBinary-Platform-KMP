@@ -27,10 +27,11 @@
         
 import org.allbinary.input.automation.robot.InputRobotInterface
 import org.allbinary.osgi.OSGIServiceInterface
+
 interface InputAutomationRobotServiceInterface : OSGIServiceInterface {
         
 
-open fun getInputRobotInterfaceArray()
+    open fun getInputRobotInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<InputRobotInterface?>
 

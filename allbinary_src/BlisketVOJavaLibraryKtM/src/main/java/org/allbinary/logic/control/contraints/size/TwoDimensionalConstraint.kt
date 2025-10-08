@@ -36,14 +36,14 @@ open public class TwoDimensionalConstraint
     private var widthSizeConstraintInterface: SizeConstraintInterface
 
     private var heightSizeConstraintInterface: SizeConstraintInterface
-public constructor        (node: Node)
+public constructor (node: Node)
             : super()
         {
 var node = node
 }
 
 
-open fun getHeight()
+    open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : SizeConstraintInterface{
 
@@ -54,7 +54,7 @@ open fun getHeight()
 }
 
 
-open fun getWidth()
+    open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : SizeConstraintInterface{
 
@@ -65,7 +65,7 @@ open fun getWidth()
 }
 
 
-open fun setHeight(heightSizeConstraintInterface: SizeConstraintInterface)
+    open fun setHeight(heightSizeConstraintInterface: SizeConstraintInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var heightSizeConstraintInterface = heightSizeConstraintInterface
@@ -73,7 +73,7 @@ this.heightSizeConstraintInterface= heightSizeConstraintInterface
 }
 
 
-open fun setWidth(widthSizeConstraintInterface: SizeConstraintInterface)
+    open fun setWidth(widthSizeConstraintInterface: SizeConstraintInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var widthSizeConstraintInterface = widthSizeConstraintInterface

@@ -32,12 +32,11 @@ open public class CommandUriAction
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: CommandUriAction = CommandUriAction()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CommandUriAction{
 
@@ -57,7 +56,7 @@ open fun getInstance()
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-open fun add(command: Command, url: String)
+    open fun add(command: Command, url: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var command = command
@@ -65,7 +64,7 @@ var url = url
 }
 
 
-open fun process(command: Command)
+    open fun process(command: Command)
         //nullable = true from not(false or (false and false)) = true
 {
 var command = command

@@ -36,7 +36,7 @@ open public class CachePolicy
     private var maxTime: Long= 0
 
     private var maxSize: Long= 0
-public constructor        (name: String, maxTime: Long, maxSize: Long)
+public constructor (name: String, maxTime: Long, maxSize: Long)
             : super()
         {
 var name = name
@@ -48,7 +48,7 @@ this.setMaxSize(maxSize)
 }
 
 
-open fun getMaxTime()
+    open fun getMaxTime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -59,7 +59,7 @@ open fun getMaxTime()
 }
 
 
-open fun setMaxTime(maxTime: Long)
+    open fun setMaxTime(maxTime: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var maxTime = maxTime
@@ -67,7 +67,7 @@ this.maxTime= maxTime
 }
 
 
-open fun getMaxSize()
+    open fun getMaxSize()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -78,7 +78,7 @@ open fun getMaxSize()
 }
 
 
-open fun setMaxSize(maxSize: Long)
+    open fun setMaxSize(maxSize: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var maxSize = maxSize
@@ -86,7 +86,7 @@ this.maxSize= maxSize
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

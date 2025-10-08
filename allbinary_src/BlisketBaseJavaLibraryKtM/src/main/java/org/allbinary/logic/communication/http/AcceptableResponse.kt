@@ -36,7 +36,7 @@ open public class AcceptableResponse
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-protected constructor        (candidate: String, tagName: String, index: Int)
+protected constructor (candidate: String, tagName: String, index: Int)
             : super()
         {
 var candidate = candidate

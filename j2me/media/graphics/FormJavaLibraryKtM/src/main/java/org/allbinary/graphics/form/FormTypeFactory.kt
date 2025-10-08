@@ -31,12 +31,11 @@ open public class FormTypeFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: FormTypeFactory = FormTypeFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : FormTypeFactory{
 
@@ -64,7 +63,7 @@ open fun getInstance()
 
     val VERTICAL_CENTER_FORM: FormType = FormType()
 
-open fun getFormType()
+    open fun getFormType()
         //nullable = true from not(false or (false and true)) = true
 : FormType{
 

@@ -28,12 +28,11 @@
 
 open public class SimpleShaderInitializer : ShaderInitializer {
         
-
-        companion object {
+companion object {
             
     private val instance: SimpleShaderInitializer = SimpleShaderInitializer()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : SimpleShaderInitializer{
 

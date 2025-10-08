@@ -27,10 +27,11 @@
         
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.util.event.EventListenerInterface
+
 interface GameMidletEventListener : EventListenerInterface {
         
 
-open fun onGameEnd(eventObject: AllBinaryEventObject)
+    open fun onGameEnd(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 
 

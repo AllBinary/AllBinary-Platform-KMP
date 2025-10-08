@@ -33,10 +33,9 @@ open public class ConstructorUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun viewAll(myClass: KClass<*>, lineBreak: String)
+    open fun viewAll(myClass: KClass<*>, lineBreak: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var myClass = myClass
@@ -67,7 +66,7 @@ stringBuffer!!.append(ConstructorUtil.view(constructor[index]!!, lineBreak))
 }
 
 
-open fun view(constructor: Constructor, lineBreak: String)
+    open fun view(constructor: Constructor, lineBreak: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var constructor = constructor
@@ -119,7 +118,7 @@ stringBuffer!!.append(lineBreak)
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

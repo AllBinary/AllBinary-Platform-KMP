@@ -46,7 +46,7 @@ open public class TerrainPatrolAI : PacePatrolAI {
     private val DOWN: Angle = AngleFactory.getInstance()!!.DOWN
 
     private val CLIFF: BasicTerrainInfo = BasicTerrainInfo(DOWN)
-public constructor        (hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
+public constructor (hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
                             : super(hashtable, ownerLayerInterface, gameInput){
     //var hashtable = hashtable
@@ -60,7 +60,8 @@ TerrainEventHandler.getInstance(ownerLayerInterface)!!.addListener(this.terrainE
 this.terrainEventListener!!.onTerrainEvent(TerrainEventCircularStaticPool.getInstance()!!.getInstance(this.CLIFF))
 }
 
-override fun update()
+
+    override fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 super.update()
@@ -68,7 +69,7 @@ this.changeDirectionIfCliffReached()
 }
 
 
-open fun changeDirectionIfCliffReached()
+    open fun changeDirectionIfCliffReached()
         //nullable = true from not(false or (false and true)) = true
 {
 

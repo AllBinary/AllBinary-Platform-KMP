@@ -27,14 +27,15 @@
         
 import java.util.Vector
 import org.allbinary.data.tables.BasicDataTableInterface
+
 interface LogTableEntityInterface : BasicDataTableInterface {
         
 
-open fun deleteWhere(key: String, value: String)
+    open fun deleteWhere(key: String, value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun insert(values: Vector)
+    open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 
 

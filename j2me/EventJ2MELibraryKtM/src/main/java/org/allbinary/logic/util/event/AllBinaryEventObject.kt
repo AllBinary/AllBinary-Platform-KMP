@@ -31,15 +31,14 @@ open public class AllBinaryEventObject
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NULL_EVENT: AllBinaryEventObject = AllBinaryEventObject(NullUtil.getInstance()!!.NULL_OBJECT)
 
         }
             
     private var source: Any
-public constructor        (anyType: Any)
+public constructor (anyType: Any)
             : super()
         {
 var anyType = anyType
@@ -47,7 +46,7 @@ this.source= anyType
 }
 
 
-open fun getSource()
+    open fun getSource()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -58,7 +57,7 @@ open fun getSource()
 }
 
 
-open fun setSource(source: Any)
+    open fun setSource(source: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var source = source

@@ -38,12 +38,13 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.data.resource.ResourceUtil
+import org.allbinary.game.gd.resource.GDResources
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.system.Memory
 
 open public class ImageCache : ImageCacheBase {
         
-
-        companion object {
+companion object {
             
     val NULL_IMAGE_CACHE: ImageCache = ImageCache()
 
@@ -52,13 +53,13 @@ open public class ImageCache : ImageCacheBase {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-public constructor        (){
+public constructor (){
 }
 
 
                 @Throws(Exception::class)
             
-open fun get(caller: String, width: Int, height: Int)
+    open fun get(caller: String, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var caller = caller
@@ -113,7 +114,7 @@ listOfList[foundIndex]!!.add(image)
 
                 @Throws(Exception::class)
             
-open fun get(key: Any)
+    open fun get(key: Any)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var key = key
@@ -164,9 +165,54 @@ this.hashtable.put(resourceId, image)
 }
 
 
+    open fun getIndex(key: Any)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+    //var key = key
+
+    var gdResources: GDResources = GDResources.getInstance()!!
+
+
+    var resourceStringArray: Array<String?> = gdResources!!.resourceStringArray
+
+
+    var size: Int = resourceStringArray!!.size
+                
+
+
+
+
+
+                        for (index in 0 until size)
+
+        {
+
+    
+                        if(resourceStringArray[index] == key)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return index
+
+                                    }
+                                
+}
+
+logUtil!!.put(StringMaker().
+                            append("unable to find key: ")!!.append(StringUtil.getInstance()!!.toString(key))!!.toString(), this, commonStrings!!.RUN)
+
+
+
+                            throw RuntimeException()
+}
+
+
                 @Throws(Exception::class)
             
-open fun createImage(key: Any, inputStream: InputStream)
+    open fun createImage(key: Any, inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var key = key
@@ -179,7 +225,7 @@ open fun createImage(key: Any, inputStream: InputStream)
 }
 
 
-open fun isLazy()
+    open fun isLazy()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

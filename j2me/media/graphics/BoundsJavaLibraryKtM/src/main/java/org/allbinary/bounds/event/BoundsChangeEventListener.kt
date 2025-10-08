@@ -26,10 +26,11 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.util.event.EventListenerInterface
+
 interface BoundsChangeEventListener : EventListenerInterface {
         
 
-open fun onBoundsChangeEvent(boundsChangeEvent: BoundsChangeEvent)
+    open fun onBoundsChangeEvent(boundsChangeEvent: BoundsChangeEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

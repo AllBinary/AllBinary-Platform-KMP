@@ -55,7 +55,7 @@ open public class BasicProfileActionScriptCondition : ProfileActionScriptItem
     private var profileActionProcessorInterfaceVector: Vector
 
     private var profileActionConditionInterfaceVector: Vector
-public constructor        (label: String, node: Node)                        
+public constructor (label: String, node: Node)                        
 
                             : super(label, node){
 var label = label
@@ -120,7 +120,7 @@ this.init()
 
                 @Throws(Exception::class)
             
-open fun addProcessorNodes(node: Node)
+    open fun addProcessorNodes(node: Node)
         //nullable = true from not(false or (false and false)) = true
 {
 var node = node
@@ -159,7 +159,7 @@ var node = node
 
 }
 
-public constructor        (label: String)                        
+public constructor (label: String)                        
 
                             : super(label){
 var label = label
@@ -171,7 +171,7 @@ this.init()
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setProfileActionProcessorInterfaceVector(Vector())
@@ -182,7 +182,7 @@ this.getJPopupMenu()!!.add(this.getOutputJPopupMenu())
 }
 
 
-open fun getConditionJPopupMenu()
+    open fun getConditionJPopupMenu()
         //nullable = true from not(false or (false and true)) = true
 : JMenu{
 
@@ -211,7 +211,7 @@ jMenu!!.add(jMenuItemTimeInterval)
 }
 
 
-open fun getInputJPopupMenu()
+    open fun getInputJPopupMenu()
         //nullable = true from not(false or (false and true)) = true
 : JMenu{
 
@@ -240,7 +240,7 @@ jMenu!!.add(jMenuItemJoystick)
 }
 
 
-open fun getOutputJPopupMenu()
+    open fun getOutputJPopupMenu()
         //nullable = true from not(false or (false and true)) = true
 : JMenu{
 
@@ -259,7 +259,7 @@ jMenu!!.add(jMenuItemImage)
 }
 
 
-open fun addProcessor(profileActionProcessorInterface: ProfileActionScriptProcessorInterface)
+    open fun addProcessor(profileActionProcessorInterface: ProfileActionScriptProcessorInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var profileActionProcessorInterface = profileActionProcessorInterface
@@ -269,7 +269,7 @@ this.add(profileActionProcessorInterface)
 }
 
 
-open fun removeProcessor(profileActionProcessorInterface: ProfileActionScriptProcessorInterface)
+    open fun removeProcessor(profileActionProcessorInterface: ProfileActionScriptProcessorInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var profileActionProcessorInterface = profileActionProcessorInterface
@@ -279,7 +279,7 @@ this.remove(profileActionProcessorInterface)
 }
 
 
-open fun removeCondition(profileActionScriptNodeInterface: ProfileActionScriptNodeInterface)
+    open fun removeCondition(profileActionScriptNodeInterface: ProfileActionScriptNodeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var profileActionScriptNodeInterface = profileActionScriptNodeInterface
@@ -289,7 +289,7 @@ this.remove(profileActionScriptNodeInterface)
 }
 
 
-open fun addCondition(profileActionScriptNodeInterface: ProfileActionScriptNodeInterface)
+    open fun addCondition(profileActionScriptNodeInterface: ProfileActionScriptNodeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var profileActionScriptNodeInterface = profileActionScriptNodeInterface
@@ -301,7 +301,7 @@ this.add(profileActionScriptNodeInterface)
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -354,7 +354,7 @@ node.appendChild(profileActionProcessorInterface!!.toXmlNode(document))
 }
 
 
-open fun getProfileActionConditionInterfaceVector()
+    open fun getProfileActionConditionInterfaceVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -365,7 +365,7 @@ open fun getProfileActionConditionInterfaceVector()
 }
 
 
-open fun setProfileActionConditionInterfaceVector(profileActionConditionInterfaceVector: Vector)
+    open fun setProfileActionConditionInterfaceVector(profileActionConditionInterfaceVector: Vector)
         //nullable = true from not(false or (false and false)) = true
 {
 var profileActionConditionInterfaceVector = profileActionConditionInterfaceVector
@@ -373,7 +373,7 @@ this.profileActionConditionInterfaceVector= profileActionConditionInterfaceVecto
 }
 
 
-open fun actionPerformed(actionEvent: ActionEvent)
+    open fun actionPerformed(actionEvent: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var actionEvent = actionEvent
@@ -469,7 +469,7 @@ logUtil!!.put("Error", this, "actionPerformed", e)
 }
 
 
-open fun getProfileActionProcessorInterfaceVector()
+    open fun getProfileActionProcessorInterfaceVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -480,7 +480,7 @@ open fun getProfileActionProcessorInterfaceVector()
 }
 
 
-open fun setProfileActionProcessorInterfaceVector(profileActionProcessorInterfaceVector: Vector)
+    open fun setProfileActionProcessorInterfaceVector(profileActionProcessorInterfaceVector: Vector)
         //nullable = true from not(false or (false and false)) = true
 {
 var profileActionProcessorInterfaceVector = profileActionProcessorInterfaceVector
@@ -488,7 +488,7 @@ this.profileActionProcessorInterfaceVector= profileActionProcessorInterfaceVecto
 }
 
 
-open fun updateTree()
+    open fun updateTree()
         //nullable = true from not(false or (false and true)) = true
 {
 JTreeInterfaceFactory.getInstance()!!.getJTreeInterface()!!.updateJTree()
@@ -501,7 +501,7 @@ JTreeInterfaceFactory.getInstance()!!.getJTreeInterface()!!.getActionScriptJTree
 
                 @Throws(Exception::class)
             
-open fun shouldProcess(frame: Long)
+    open fun shouldProcess(frame: Long)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var frame = frame
@@ -546,7 +546,7 @@ var frame = frame
 
                 @Throws(Exception::class)
             
-open fun process(frame: Long)
+    open fun process(frame: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var frame = frame

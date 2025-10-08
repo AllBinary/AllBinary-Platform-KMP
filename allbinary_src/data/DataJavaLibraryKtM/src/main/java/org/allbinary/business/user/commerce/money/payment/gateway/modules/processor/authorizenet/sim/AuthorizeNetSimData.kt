@@ -30,8 +30,7 @@ open public class AuthorizeNetSimData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val X_FP_HASH: String = "x_fp_hash"
 
@@ -66,7 +65,7 @@ open public class AuthorizeNetSimData
     val X_RELAY_URL: String = "x_relay_url"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

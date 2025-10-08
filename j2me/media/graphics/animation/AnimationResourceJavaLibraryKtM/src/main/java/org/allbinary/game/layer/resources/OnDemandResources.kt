@@ -33,15 +33,14 @@ open public class OnDemandResources
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NULL_ON_DEMAND_RESOURCES: OnDemandResources = OnDemandResources()
 
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-protected constructor        ()
+protected constructor ()
             : super()
         {
 }
@@ -49,7 +48,7 @@ protected constructor        ()
 
                 @Throws(Exception::class)
             
-open fun waitFor()
+    open fun waitFor()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -57,7 +56,7 @@ open fun waitFor()
 
                 @Throws(Exception::class)
             
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -65,7 +64,7 @@ open fun init()
 
                 @Throws(Exception::class)
             
-open fun init(imageCache: ImageCache, resourceAnimationInterfaceFactoryInterfaceFactory: BaseResourceAnimationInterfaceFactoryInterfaceFactory, portion: Int, loadingString: String, index: Int)
+    open fun init(imageCache: ImageCache, resourceAnimationInterfaceFactoryInterfaceFactory: BaseResourceAnimationInterfaceFactoryInterfaceFactory, portion: Int, loadingString: String, index: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var imageCache = imageCache

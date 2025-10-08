@@ -33,12 +33,11 @@ open public class PlatformInputMappingFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: PlatformInputMappingFactory = PlatformInputMappingFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PlatformInputMappingFactory{
 
@@ -60,7 +59,7 @@ open fun getInstance()
 
     private var SINGLETON: PersistentInputMapping = PersistentInputMapping.NULL_PERSISTENT_INPUT_MAPPING
 
-open fun getPersistentInputMappingInstance()
+    open fun getPersistentInputMappingInstance()
         //nullable = true from not(false or (false and true)) = true
 : PersistentInputMapping{
 

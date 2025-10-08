@@ -62,7 +62,7 @@ open public class Advertisement
     private var thumbnail: AdvertisementThumbnailInterface
 
     private val displayInBrowserContraintsInterface: DisplayInBrowserContraintsInterface
-public constructor        ()
+public constructor ()
             : super()
         {
 this.displayInBrowserContraintsInterface= 
@@ -71,7 +71,7 @@ this.displayInBrowserContraintsInterface=
 }
 
 
-open fun getArtist()
+    open fun getArtist()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -82,7 +82,7 @@ open fun getArtist()
 }
 
 
-open fun setArtist(artist: String)
+    open fun setArtist(artist: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var artist = artist
@@ -90,7 +90,7 @@ this.artist= artist
 }
 
 
-open fun getArtistLink()
+    open fun getArtistLink()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -101,7 +101,7 @@ open fun getArtistLink()
 }
 
 
-open fun setArtistLink(artistLink: String)
+    open fun setArtistLink(artistLink: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var artistLink = artistLink
@@ -109,7 +109,7 @@ this.artistLink= artistLink
 }
 
 
-open fun getTitle()
+    open fun getTitle()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -120,7 +120,7 @@ open fun getTitle()
 }
 
 
-open fun setTitle(title: String)
+    open fun setTitle(title: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var title = title
@@ -128,7 +128,7 @@ this.title= title
 }
 
 
-open fun getDateAdded()
+    open fun getDateAdded()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -139,7 +139,7 @@ open fun getDateAdded()
 }
 
 
-open fun setDateAdded(dateAdded: String)
+    open fun setDateAdded(dateAdded: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var dateAdded = dateAdded
@@ -147,7 +147,7 @@ this.dateAdded= dateAdded
 }
 
 
-open fun getDirectory()
+    open fun getDirectory()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -158,7 +158,7 @@ open fun getDirectory()
 }
 
 
-open fun setDirectory(directory: String)
+    open fun setDirectory(directory: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var directory = directory
@@ -166,7 +166,7 @@ this.directory= directory
 }
 
 
-open fun getFramedLink()
+    open fun getFramedLink()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -177,7 +177,7 @@ open fun getFramedLink()
 }
 
 
-open fun setFramedLink(framedLink: String)
+    open fun setFramedLink(framedLink: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var framedLink = framedLink
@@ -185,7 +185,7 @@ this.framedLink= framedLink
 }
 
 
-open fun getListPrice()
+    open fun getListPrice()
         //nullable = true from not(false or (false and true)) = true
 : Money{
 
@@ -196,7 +196,7 @@ open fun getListPrice()
 }
 
 
-open fun setListPrice(listPrice: Money)
+    open fun setListPrice(listPrice: Money)
         //nullable = true from not(false or (false and false)) = true
 {
 var listPrice = listPrice
@@ -204,7 +204,7 @@ this.listPrice= listPrice
 }
 
 
-open fun getOurPrice()
+    open fun getOurPrice()
         //nullable = true from not(false or (false and true)) = true
 : Money{
 
@@ -215,7 +215,7 @@ open fun getOurPrice()
 }
 
 
-open fun setOurPrice(ourPrice: Money)
+    open fun setOurPrice(ourPrice: Money)
         //nullable = true from not(false or (false and false)) = true
 {
 var ourPrice = ourPrice
@@ -223,7 +223,7 @@ this.ourPrice= ourPrice
 }
 
 
-open fun getRank()
+    open fun getRank()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -234,7 +234,7 @@ open fun getRank()
 }
 
 
-open fun setRank(rank: Int)
+    open fun setRank(rank: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var rank = rank
@@ -242,7 +242,7 @@ this.rank= rank
 }
 
 
-open fun getImage()
+    open fun getImage()
         //nullable = true from not(false or (false and true)) = true
 : AdvertisementImageInterface{
 
@@ -253,7 +253,7 @@ open fun getImage()
 }
 
 
-open fun setImage(image: AdvertisementImageInterface)
+    open fun setImage(image: AdvertisementImageInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var image = image
@@ -261,7 +261,7 @@ this.image= image
 }
 
 
-open fun getProduct()
+    open fun getProduct()
         //nullable = true from not(false or (false and true)) = true
 : AdvertisementProductInterface{
 
@@ -272,7 +272,7 @@ open fun getProduct()
 }
 
 
-open fun setProduct(product: AdvertisementProductInterface)
+    open fun setProduct(product: AdvertisementProductInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var product = product
@@ -280,7 +280,7 @@ this.product= product
 }
 
 
-open fun getThumbnail()
+    open fun getThumbnail()
         //nullable = true from not(false or (false and true)) = true
 : AdvertisementThumbnailInterface{
 
@@ -291,7 +291,7 @@ open fun getThumbnail()
 }
 
 
-open fun setThumbnail(thumbnail: AdvertisementThumbnailInterface)
+    open fun setThumbnail(thumbnail: AdvertisementThumbnailInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var thumbnail = thumbnail
@@ -299,7 +299,7 @@ this.thumbnail= thumbnail
 }
 
 
-open fun getDisplayInBrowserContraintsInterface()
+    open fun getDisplayInBrowserContraintsInterface()
         //nullable = true from not(false or (false and true)) = true
 : DisplayInBrowserContraintsInterface{
 

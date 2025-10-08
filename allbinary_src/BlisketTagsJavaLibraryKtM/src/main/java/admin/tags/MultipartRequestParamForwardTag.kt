@@ -49,7 +49,7 @@ open public class MultipartRequestParamForwardTag : CustomTagSupport {
 
     private var paramVector: Vector
 
-open fun setPage(page: String)
+    open fun setPage(page: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var page = page
@@ -57,7 +57,7 @@ this.page= page
 }
 
 
-open fun setCommand(command: String)
+    open fun setCommand(command: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var command = command
@@ -65,7 +65,7 @@ this.command= command
 }
 
 
-open fun setParamVector(paramVector: Vector)
+    open fun setParamVector(paramVector: Vector)
         //nullable = true from not(false or (false and false)) = true
 {
 var paramVector = paramVector
@@ -75,7 +75,7 @@ this.paramVector= paramVector
 
                 @Throws(JspTagException::class)
             
-open fun doStartTag()
+    open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

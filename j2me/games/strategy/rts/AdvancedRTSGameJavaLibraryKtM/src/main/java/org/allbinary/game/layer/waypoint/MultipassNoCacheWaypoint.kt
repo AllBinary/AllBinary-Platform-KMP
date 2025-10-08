@@ -34,7 +34,6 @@ import org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer
 import org.allbinary.game.layer.unit.UnitWaypointBehavior
 import org.allbinary.game.media.graphics.geography.map.racetrack.PathFindingInfoFactory
 import org.allbinary.logic.communication.log.ForcedLogUtil
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.util.event.AllBinaryEventObject
@@ -59,7 +58,7 @@ open public class MultipassNoCacheWaypoint : WaypointBase
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val ownerLayer: PathFindingLayerInterface
-public constructor        (ownerLayer: PathFindingLayerInterface, sound: Sound)                        
+public constructor (ownerLayer: PathFindingLayerInterface, sound: Sound)                        
 
                             : super(sound){
     //var ownerLayer = ownerLayer
@@ -74,7 +73,7 @@ this.ownerLayer= ownerLayer
 
                 @Throws(Exception::class)
             
-open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
+    open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -82,14 +81,15 @@ super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 }
 
 
-open fun releaseCachedPaths()
+    open fun releaseCachedPaths()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
                 @Throws(Exception::class)
-            override fun getPathFindingInfo(geographicMapCellPosition: GeographicMapCellPosition)
+            
+    override fun getPathFindingInfo(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : PathFindingInfo{
     //var geographicMapCellPosition = geographicMapCellPosition
@@ -176,7 +176,8 @@ customMapArray[endGeographicMapCellPosition!!.getRow()]!![endGeographicMapCellPo
 
 
                 @Throws(Exception::class)
-            override fun getPathsList(geographicMapCellPosition: GeographicMapCellPosition, pathFindingInfo: PathFindingInfo, multipassState: MultipassState)
+            
+    override fun getPathsList(geographicMapCellPosition: GeographicMapCellPosition, pathFindingInfo: PathFindingInfo, multipassState: MultipassState)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var geographicMapCellPosition = geographicMapCellPosition
@@ -259,7 +260,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "getPathsList", e)
 
                 @Throws(Exception::class)
             
-open fun getEndGeographicMapCellPosition(startGeographicMapCellPosition: GeographicMapCellPosition)
+    open fun getEndGeographicMapCellPosition(startGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellPosition{
     //var startGeographicMapCellPosition = startGeographicMapCellPosition
@@ -306,7 +307,7 @@ endGeographicMapCellPosition= endList!!.get(index) as GeographicMapCellPosition
 }
 
 
-open fun onEvent(eventObject: AllBinaryEventObject)
+    open fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject
@@ -316,14 +317,14 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
                 @Throws(Exception::class)
             
-open fun onBuildingEvent(event: RTSLayerEvent)
+    open fun onBuildingEvent(event: RTSLayerEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var event = event
 }
 
 
-open fun reset()
+    open fun reset()
         //nullable = true from not(false or (false and true)) = true
 {
 this.getConnectedWaypointList()!!.clear()
@@ -332,7 +333,7 @@ this.getConnectedWaypointList()!!.clear()
 
                 @Throws(Exception::class)
             
-open fun visit(unitLayer: PathFindingLayerInterface)
+    open fun visit(unitLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var unitLayer = unitLayer

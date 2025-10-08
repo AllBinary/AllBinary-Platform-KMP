@@ -32,10 +32,9 @@ open public class FilePathUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun adjust(path: String)
+    open fun adjust(path: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var path = path
@@ -71,7 +70,7 @@ path= path.replace(abPathData!!.SEPARATORCHAR, filePathData!!.SEPARATORCHAR)
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

@@ -54,7 +54,7 @@ open public class GenericInputAutomationWorker : AbstractInputAutomationWorker {
     private var frame: Long
 
     private var genericProfile: GenericProfile
-public constructor        (inputAutomationActionInterface: InputAutomationActionInterface, genericProfile: GenericProfile, motionRectangleConstraintsInterface: MotionRectangleConstraintsInterface, imageComparatorConstraintsInterface: ImageComparatorConstraintsInterface)                        
+public constructor (inputAutomationActionInterface: InputAutomationActionInterface, genericProfile: GenericProfile, motionRectangleConstraintsInterface: MotionRectangleConstraintsInterface, imageComparatorConstraintsInterface: ImageComparatorConstraintsInterface)                        
 
                             : super(inputAutomationActionInterface){
     //var inputAutomationActionInterface = inputAutomationActionInterface
@@ -113,7 +113,7 @@ logUtil!!.put("Adding Listener: " +genericProfileDataWorkerType, this, this.comm
 
                 @Throws(Exception::class)
             
-open fun processDataWorkerResults()
+    open fun processDataWorkerResults()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(this.commonStrings!!.START, this, this.PROCESS_DATA_WORKER_RESULTS)
@@ -191,7 +191,7 @@ lastFrame= getFrame()
 
                 @Throws(Exception::class)
             
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.PROCESS)
@@ -200,7 +200,7 @@ this.processDataWorkerResults()
 }
 
 
-open fun getGenericProfile()
+    open fun getGenericProfile()
         //nullable = true from not(false or (false and true)) = true
 : GenericProfile{
 
@@ -211,7 +211,7 @@ open fun getGenericProfile()
 }
 
 
-open fun setGenericProfile(genericProfile: GenericProfile)
+    open fun setGenericProfile(genericProfile: GenericProfile)
         //nullable = true from not(false or (false and false)) = true
 {
     //var genericProfile = genericProfile
@@ -219,7 +219,7 @@ this.genericProfile= genericProfile
 }
 
 
-open fun getFrame()
+    open fun getFrame()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -230,7 +230,7 @@ open fun getFrame()
 }
 
 
-open fun setFrame(frame: Long)
+    open fun setFrame(frame: Long)
         //nullable = true from not(false or (false and false)) = true
 {
     //var frame = frame

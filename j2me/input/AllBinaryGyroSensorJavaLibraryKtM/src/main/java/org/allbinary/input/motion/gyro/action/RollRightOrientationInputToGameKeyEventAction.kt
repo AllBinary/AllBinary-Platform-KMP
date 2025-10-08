@@ -31,12 +31,11 @@ import org.allbinary.input.gyro.OrientationMotionGestureFactory
 
 open public class RollRightOrientationInputToGameKeyEventAction : GameKeyCompleteMotionGestureInputEvent {
         
-
-        companion object {
+companion object {
             
     private val instance: GameKeyCompleteMotionGestureInputEvent = RollRightOrientationInputToGameKeyEventAction()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameKeyCompleteMotionGestureInputEvent{
 
@@ -48,7 +47,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()                        
+            private constructor ()                        
 
                             : super("Roll Right Action", OrientationMotionGestureFactory.getInstance()!!.ROLL_RIGHT, PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()){
 

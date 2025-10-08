@@ -38,14 +38,14 @@ open public class RotationAnimation : IndexedAnimation
                 , RotationAnimationInterface {
         
 
-    private val frameUtil: FrameUtil = FrameUtil.getInstance()!!
+    val frameUtil: FrameUtil = FrameUtil.getInstance()!!
 
     val directionUtil: DirectionUtil = DirectionUtil.getInstance()!!
 
     val angleInfo: AngleInfo
 
     var circularIndexUtil: CircularIndexUtil
-protected constructor        (angleInfo: AngleInfo, animationBehavior: AnimationBehavior)                        
+protected constructor (angleInfo: AngleInfo, animationBehavior: AnimationBehavior)                        
 
                             : super(animationBehavior){
     //var angleInfo = angleInfo
@@ -58,7 +58,7 @@ this.angleInfo= angleInfo
 this.circularIndexUtil= CircularIndexUtil.getInstance(360 /angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement())
 }
 
-protected constructor        (angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
+protected constructor (angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
 
                             : super(animationBehavior){
     //var angleInfo = angleInfo
@@ -72,7 +72,7 @@ this.angleInfo= angleInfo
 this.circularIndexUtil= CircularIndexUtil.getInstance(totalAngle /angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement())
 }
 
-protected constructor        (animationBehavior: AnimationBehavior)                        
+protected constructor (animationBehavior: AnimationBehavior)                        
 
                             : super(animationBehavior){
     //var animationBehavior = animationBehavior
@@ -84,31 +84,34 @@ this.angleInfo= AngleInfo.getInstance(AngleFactory.getInstance()!!.QUARTER_TOTAL
 this.circularIndexUtil= CircularIndexUtil.getInstance(4)
 }
 
-override fun nextRotation()
+
+    override fun nextRotation()
         //nullable = true from not(false or (false and true)) = true
 {
 this.angleInfo!!.adjustAngle(this.circularIndexUtil!!.next())
 }
 
-override fun previousRotation()
+
+    override fun previousRotation()
         //nullable = true from not(false or (false and true)) = true
 {
 this.angleInfo!!.adjustAngle(this.circularIndexUtil!!.previous())
 }
 
 
-open fun nextRotationZ()
+    open fun nextRotationZ()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun previousRotationZ()
+    open fun previousRotationZ()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun setFrame(index: Int)
+
+    override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var index = index
@@ -119,7 +122,8 @@ this.circularIndexUtil!!.setIndex(index)
 this.angleInfo!!.adjustAngle(newFrame)
 }
 
-override fun setFrame(direction: Direction)
+
+    override fun setFrame(direction: Direction)
         //nullable = true from not(false or (false and false)) = true
 {
     //var direction = direction
@@ -129,28 +133,32 @@ override fun setFrame(direction: Direction)
 this.adjustFrame(angle)
 }
 
-override fun setFrame(angle: Angle)
+
+    override fun setFrame(angle: Angle)
         //nullable = true from not(false or (false and false)) = true
 {
     //var angle = angle
 this.adjustFrame(angle)
 }
 
-override fun adjustFrame(angle: Angle)
+
+    override fun adjustFrame(angle: Angle)
         //nullable = true from not(false or (false and false)) = true
 {
     //var angle = angle
 this.adjustFrame(angle.getValue())
 }
 
-override fun adjustFrame(angle: Short)
+
+    override fun adjustFrame(angle: Short)
         //nullable = true from not(false or (false and false)) = true
 {
     //var angle = angle
 this.setFrame(this.frameUtil!!.getFrameForAngle(angle, this.angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement().toInt()))
 }
 
-override fun getFrame()
+
+    override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -160,7 +168,8 @@ override fun getFrame()
                         return this.circularIndexUtil!!.getIndex()
 }
 
-override fun getSize()
+
+    override fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -170,7 +179,8 @@ override fun getSize()
                         return this.circularIndexUtil!!.getSize()
 }
 
-override fun getAngleInfoP()
+
+    override fun getAngleInfoP()
         //nullable = true from not(false or (false and true)) = true
 : AngleInfo{
 
@@ -180,7 +190,8 @@ override fun getAngleInfoP()
                         return this.angleInfo
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

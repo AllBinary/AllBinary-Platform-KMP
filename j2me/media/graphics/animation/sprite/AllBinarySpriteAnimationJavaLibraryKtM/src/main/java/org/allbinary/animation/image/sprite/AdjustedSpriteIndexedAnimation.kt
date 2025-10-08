@@ -38,7 +38,7 @@ open public class AdjustedSpriteIndexedAnimation : SpriteIndexedAnimation {
     private var dx: Int
 
     private var dy: Int
-public constructor        (sprite: Sprite, image: Image, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
+public constructor (sprite: Sprite, image: Image, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
                             : this(sprite, image, BasicColorUtil.getInstance()!!.ZERO_ARRAY, dx, dy, animationBehavior){
     //var sprite = sprite
@@ -52,7 +52,7 @@ public constructor        (sprite: Sprite, image: Image, dx: Int, dy: Int, anima
                     
 }
 
-public constructor        (sprite: Sprite, image: Image, basicColorArray: Array<BasicColor?>, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
+public constructor (sprite: Sprite, image: Image, basicColorArray: Array<BasicColor?>, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
                             : super(sprite, image, basicColorArray, animationBehavior){
     //var sprite = sprite
@@ -69,7 +69,8 @@ this.dx= dx
 this.dy= dy
 }
 
-override fun paint(graphics: Graphics, frame: Int, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, frame: Int, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -81,7 +82,8 @@ this.sprite.setPosition(x +this.dx, y +this.dy)
 super.paint(graphics)
 }
 
-override fun paint(g: Graphics, x: Int, y: Int)
+
+    override fun paint(g: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var g = g
@@ -91,7 +93,8 @@ this.sprite.setPosition(x +this.dx, y +this.dy)
 super.paint(g)
 }
 
-override fun paint(g: Graphics)
+
+    override fun paint(g: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var g = g

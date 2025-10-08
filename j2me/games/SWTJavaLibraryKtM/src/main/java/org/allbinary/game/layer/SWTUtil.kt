@@ -30,8 +30,7 @@ open public class SWTUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var isSWT: Boolean = true
 

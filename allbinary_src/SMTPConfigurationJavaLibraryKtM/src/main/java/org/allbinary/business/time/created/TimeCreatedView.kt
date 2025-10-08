@@ -39,14 +39,14 @@ open public class TimeCreatedView
         
 
     private var timeCreated: TimeCreated
-public constructor        (timeCreated: TimeCreated)
+public constructor (timeCreated: TimeCreated)
             : super()
         {
 var timeCreated = timeCreated
 this.setTimeCreated(timeCreated)
 }
 
-public constructor        (node: Node)
+public constructor (node: Node)
             : super()
         {
 var node = node
@@ -56,7 +56,7 @@ this.setTimeCreated(TimeCreated(DomNodeHelper.getTextNodeValue(node)))
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -68,7 +68,7 @@ var document = document
 }
 
 
-open fun getTimeCreated()
+    open fun getTimeCreated()
         //nullable = true from not(false or (false and true)) = true
 : TimeCreated{
 
@@ -79,7 +79,7 @@ open fun getTimeCreated()
 }
 
 
-open fun setTimeCreated(timeCreated: TimeCreated)
+    open fun setTimeCreated(timeCreated: TimeCreated)
         //nullable = true from not(false or (false and false)) = true
 {
 var timeCreated = timeCreated

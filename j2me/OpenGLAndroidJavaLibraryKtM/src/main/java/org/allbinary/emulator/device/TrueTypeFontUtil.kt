@@ -45,12 +45,11 @@ import org.allbinary.string.CommonStrings
 
 open public class TrueTypeFontUtil : TrueTypeFontUtilBase {
         
-
-        companion object {
+companion object {
             
     private val instance: TrueTypeFontUtil = TrueTypeFontUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TrueTypeFontUtil{
 
@@ -70,7 +69,7 @@ open fun getInstance()
     private val realFontSize: Int = 18
 
     var fontImage: OpenGLESImage = OpenGLESImage.NULL_OPENGL_IMAGE
-private constructor        ()                        
+private constructor ()                        
 
                             : super(1){
 
@@ -80,7 +79,7 @@ private constructor        ()
 }
 
 
-open fun saveFontAtlasAsFile()
+    open fun saveFontAtlasAsFile()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -113,7 +112,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.EXCEPTION, e)
 }
 
 
-open fun getFontBitmap(gl: GL10, filename: String, cellSize: Int, basicColor: BasicColor)
+    open fun getFontBitmap(gl: GL10, filename: String, cellSize: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var gl = gl
@@ -122,9 +121,7 @@ open fun getFontBitmap(gl: GL10, filename: String, cellSize: Int, basicColor: Ba
     //var basicColor = basicColor
 
     
-                        if(this.fontImage == 
-                                    null
-                                )
+                        if(this.fontImage == OpenGLESImage.NULL_OPENGL_IMAGE)
                         
                                     {
                                     
@@ -292,7 +289,7 @@ this.fontImage= this.preResourceImageUtil!!.encapsulate(image) as OpenGLESImage
 }
 
 
-open fun getFontWidths(filename: String, fontSize: Int)
+    open fun getFontWidths(filename: String, fontSize: Int)
         //nullable = true from not(false or (false and false)) = true
 : IntArray{
     //var filename = filename

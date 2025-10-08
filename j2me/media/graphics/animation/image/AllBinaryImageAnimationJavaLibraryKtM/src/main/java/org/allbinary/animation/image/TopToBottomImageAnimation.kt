@@ -35,7 +35,7 @@ open public class TopToBottomImageAnimation : ImageSegmentAnimation {
         
 
     private var currentHeight: Int
-public constructor        (image: Image, sequenceArray: IntArray, animationBehavior: AnimationBehavior)                        
+public constructor (image: Image, sequenceArray: IntArray, animationBehavior: AnimationBehavior)                        
 
                             : super(image, sequenceArray, animationBehavior){
     //var image = image
@@ -57,7 +57,8 @@ this.currentHeight= 0
                                 
 }
 
-override fun nextFrame()
+
+    override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -77,7 +78,8 @@ override fun nextFrame()
 this.update()
 }
 
-override fun previousFrame()
+
+    override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -97,7 +99,8 @@ override fun previousFrame()
 this.update()
 }
 
-override fun setFrame(index: Int)
+
+    override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var index = index
@@ -106,7 +109,7 @@ this.update()
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 this.currentHeight= this.getDrawHeight() *this.getFrame() /this.getSize()
@@ -114,7 +117,8 @@ this.currentHeight= this.getDrawHeight() *this.getFrame() /this.getSize()
 
 
     private var anchor: Int = Anchor.TOP_LEFT
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics

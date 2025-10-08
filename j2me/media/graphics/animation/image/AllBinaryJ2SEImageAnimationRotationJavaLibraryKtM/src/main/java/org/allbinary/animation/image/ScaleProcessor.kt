@@ -32,12 +32,11 @@ import org.allbinary.string.CommonStrings
 
 open public class ScaleProcessor : ScaleBaseProcessor {
         
-
-        companion object {
+companion object {
             
     private val instance: ScaleProcessor = ScaleProcessor()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ScaleBaseProcessor{
 
@@ -60,7 +59,8 @@ open fun getInstance()
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private val imageScaleUtil: ImageScaleUtil = ImageScaleUtil.getInstance()!!
-override fun update(originalImage: Image, originalImageArray: Array<Image?>, ximageToShowArray: Array<Image?>, unused: Int, scaleX: Float, scaleY: Float, maxScaleX: Float, maxScaleY: Float)
+
+    override fun update(originalImage: Image, originalImageArray: Array<Image?>, ximageToShowArray: Array<Image?>, unused: Int, scaleX: Float, scaleY: Float, maxScaleX: Float, maxScaleY: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var originalImage = originalImage
@@ -76,7 +76,7 @@ override fun update(originalImage: Image, originalImageArray: Array<Image?>, xim
             imageScaleUtil!!.scale(originalImage, originalImageArray, ximageToShowArray, unused, scaleX, scaleY, maxScaleX, maxScaleY)
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.UPDATE)
+logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.UPDATE, e)
 }
 
 }

@@ -32,7 +32,7 @@ open public class CommandTextItem : TextItem {
         
 
     private val command: Command
-public constructor        (command: Command, layout: Int, altText: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (command: Command, layout: Int, altText: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(command.getLabel(), layout, altText, backgroundBasicColor, foregroundBasicColor){
 var command = command
@@ -47,7 +47,8 @@ var foregroundBasicColor = foregroundBasicColor
 this.command= command
 }
 
-override fun isFocusable()
+
+    override fun isFocusable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -58,7 +59,7 @@ override fun isFocusable()
 }
 
 
-open fun getCommand()
+    open fun getCommand()
         //nullable = true from not(false or (false and true)) = true
 : Command{
 

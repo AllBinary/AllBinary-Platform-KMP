@@ -37,7 +37,7 @@ open public class CssCustomizerView : HttpStoreComponentView {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     var styleValidationInterface: ValidationInterface
-public constructor        (transformInfoInterface: TransformInfoInterface)                        
+public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
@@ -50,7 +50,7 @@ var transformInfoInterface = transformInfoInterface
 
                 @Throws(Exception::class)
             
-open fun addDomNodeInterfaces()
+    open fun addDomNodeInterfaces()
         //nullable = true from not(false or (false and true)) = true
 {
 this.addDomNodeInterface(this.styleValidationInterface as DomNodeInterface)
@@ -59,7 +59,7 @@ this.addDomNodeInterface(this.styleValidationInterface as DomNodeInterface)
 
                 @Throws(Exception::class)
             
-open fun view()
+    open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

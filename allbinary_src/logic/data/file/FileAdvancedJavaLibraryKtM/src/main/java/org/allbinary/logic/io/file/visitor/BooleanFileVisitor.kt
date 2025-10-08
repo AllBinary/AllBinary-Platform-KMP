@@ -40,7 +40,7 @@ open public class BooleanFileVisitor
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var filterStringBasicArrayList: BasicArrayList
-public constructor        (filterStringBasicArrayList: BasicArrayList)
+public constructor (filterStringBasicArrayList: BasicArrayList)
             : super()
         {
 var filterStringBasicArrayList = filterStringBasicArrayList
@@ -49,7 +49,7 @@ PreLogUtil.put("Filter BasicArrayList: " +this.getFilterStringBasicArrayList()!!
 }
 
 
-open fun visit(anyType: Any)
+    open fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var anyType = anyType
@@ -61,7 +61,7 @@ var anyType = anyType
 }
 
 
-open fun visit(file: AbFile)
+    open fun visit(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var file = file
@@ -105,7 +105,7 @@ nextFileFilterString= list.get(index) as String
 }
 
 
-open fun getFilterStringBasicArrayList()
+    open fun getFilterStringBasicArrayList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -116,7 +116,7 @@ open fun getFilterStringBasicArrayList()
 }
 
 
-open fun setFilterStringBasicArrayList(filterStringBasicArrayList: BasicArrayList)
+    open fun setFilterStringBasicArrayList(filterStringBasicArrayList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var filterStringBasicArrayList = filterStringBasicArrayList
@@ -124,7 +124,7 @@ this.filterStringBasicArrayList= filterStringBasicArrayList
 }
 
 
-open fun visit(file: AbFile, fileNameString: String)
+    open fun visit(file: AbFile, fileNameString: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var file = file

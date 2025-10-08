@@ -30,7 +30,7 @@ open public class HtmlButton
             : Object
          {
         
-public constructor        ()
+public constructor ()
             : super()
         {
 }

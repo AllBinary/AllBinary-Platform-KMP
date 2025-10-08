@@ -14,7 +14,7 @@
 
 open public class XmlRpcException : Exception {
         
-public constructor        (code: Int, message: String)                        
+public constructor (code: Int, message: String)                        
 
                             : super(message){
 var code = code

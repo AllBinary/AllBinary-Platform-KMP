@@ -30,8 +30,7 @@ open public class OrderData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val ORDERS: String = "ORDERS"
 

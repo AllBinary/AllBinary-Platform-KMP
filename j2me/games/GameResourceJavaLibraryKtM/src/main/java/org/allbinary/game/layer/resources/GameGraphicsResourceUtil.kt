@@ -39,12 +39,11 @@ open public class GameGraphicsResourceUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GameGraphicsResourceUtil = GameGraphicsResourceUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameGraphicsResourceUtil{
 
@@ -64,7 +63,7 @@ open fun getInstance()
     val QUARTER: String = "_quarter"
 
     private var name: String = StringUtil.getInstance()!!.EMPTY_STRING
-public constructor        ()
+public constructor ()
             : super()
         {
 
@@ -83,7 +82,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 
                 @Throws(Exception::class)
             
-open fun getString()
+    open fun getString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -141,7 +140,7 @@ open fun getString()
 
                 @Throws(Exception::class)
             
-open fun getString(graphicsFeature: GraphicsFeature)
+    open fun getString(graphicsFeature: GraphicsFeature)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var graphicsFeature = graphicsFeature
@@ -231,7 +230,7 @@ stringBuffer!!.append(SPRITE)
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

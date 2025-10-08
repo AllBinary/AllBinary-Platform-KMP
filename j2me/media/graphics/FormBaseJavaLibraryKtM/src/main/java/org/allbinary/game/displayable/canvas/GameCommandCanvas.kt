@@ -79,8 +79,7 @@ open public class GameCommandCanvas : MyCanvas
                 , MenuListener
                 , DisplayChangeEventListener {
         
-
-        companion object {
+companion object {
             
     private val id: Int = 0
 
@@ -117,7 +116,7 @@ open public class GameCommandCanvas : MyCanvas
     private var menuForm: PaintableForm = PaintableForm.NULL_PAINTABLE_FORM
 
     private var isSingleKeyRepeatableProcessing: Boolean = Features.getInstance()!!.isFeature(InputFeatureFactory.getInstance()!!.SINGLE_KEY_REPEAT_PRESS)!!
-public constructor        (cmdListener: CommandListener, name: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (cmdListener: CommandListener, name: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(name, CanvasStrings.getInstance()!!.EMPTY_CHILD_NAME_LIST){
     //var cmdListener = cmdListener
@@ -156,14 +155,16 @@ repaintProcessor!!.process()
                                 
 }
 
-override fun onEvent(eventObject: AllBinaryEventObject)
+
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
-override fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
+
+    override fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var displayChangeEvent = displayChangeEvent
@@ -183,7 +184,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "onResize", e)
 }
 
 
-open fun initCommands(cmdListener: CommandListener)
+    open fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 {
     //var cmdListener = cmdListener
@@ -195,7 +196,7 @@ this.setCommandListener(cmdListener)
 
                 @Throws(Exception::class)
             
-open fun initMenu()
+    open fun initMenu()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -218,7 +219,7 @@ this.repaintBehavior!!.onChangeRepaint(this)
 
                 @Throws(Exception::class)
             
-open fun createForm()
+    open fun createForm()
         //nullable = true from not(false or (false and true)) = true
 : ScrollSelectionForm{
 
@@ -236,7 +237,7 @@ open fun createForm()
 }
 
 
-open fun createRectangle(size: Int)
+    open fun createRectangle(size: Int)
         //nullable = true from not(false or (false and false)) = true
 : Rectangle{
     //var size = size
@@ -259,7 +260,8 @@ open fun createRectangle(size: Int)
                         return rectangle
 }
 
-override fun open()
+
+    override fun open()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(commonStrings!!.START, this, "open")
@@ -268,7 +270,8 @@ GameKeyEventHandler.getInstance()!!.addListener(this.getMenuInputProcessor())
 DisplayChangeEventHandler.getInstance()!!.addListener(this)
 }
 
-override fun close()
+
+    override fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CLOSE)
@@ -280,13 +283,14 @@ DisplayChangeEventHandler.getInstance()!!.removeListener(this)
 
                 @Throws(Exception::class)
             
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 this.repaintProcessor!!.process()
 }
 
-override fun getSourceId()
+
+    override fun getSourceId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -296,28 +300,32 @@ override fun getSourceId()
                         return id
 }
 
-override fun keyPressed(keyCode: Int)
+
+    override fun keyPressed(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
 this.keyPressed(keyCode, 0)
 }
 
-override fun keyReleased(keyCode: Int)
+
+    override fun keyReleased(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
 this.keyReleased(keyCode, 0)
 }
 
-override fun keyRepeated(keyCode: Int)
+
+    override fun keyRepeated(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
 this.keyRepeated(keyCode, 0)
 }
 
-override fun keyPressed(keyCode: Int, deviceId: Int)
+
+    override fun keyPressed(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
@@ -327,7 +335,8 @@ logUtil!!.put(StringMaker().
 this.addGameKeyEvent(keyCode, 0, false)
 }
 
-override fun keyReleased(keyCode: Int, deviceId: Int)
+
+    override fun keyReleased(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
@@ -335,7 +344,8 @@ override fun keyReleased(keyCode: Int, deviceId: Int)
 this.removeGameKeyEvent(keyCode, deviceId, false)
 }
 
-override fun keyRepeated(keyCode: Int, deviceId: Int)
+
+    override fun keyRepeated(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
@@ -352,7 +362,7 @@ override fun keyRepeated(keyCode: Int, deviceId: Int)
 }
 
 
-open fun addGameKeyEvent(keyCode: Int, deviceId: Int, repeated: Boolean)
+    open fun addGameKeyEvent(keyCode: Int, deviceId: Int, repeated: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
@@ -390,7 +400,7 @@ logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
 }
 
 
-open fun removeGameKeyEvent(keyCode: Int, deviceId: Int, repeated: Boolean)
+    open fun removeGameKeyEvent(keyCode: Int, deviceId: Int, repeated: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
@@ -427,7 +437,8 @@ logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.REMOVE_KEY_EVENT,
 
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -436,7 +447,7 @@ this.repaintBehavior!!.repaint(this)
 }
 
 
-open fun setMenuInputProcessor(menuInputProcessor: BasicMenuInputProcessor)
+    open fun setMenuInputProcessor(menuInputProcessor: BasicMenuInputProcessor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var menuInputProcessor = menuInputProcessor
@@ -444,7 +455,7 @@ this.menuInputProcessor= menuInputProcessor
 }
 
 
-open fun getMenuInputProcessor()
+    open fun getMenuInputProcessor()
         //nullable = true from not(false or (false and true)) = true
 : BasicMenuInputProcessor{
 

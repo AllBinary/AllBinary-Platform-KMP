@@ -28,7 +28,6 @@
 import java.util.Enumeration
 import java.util.Hashtable
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.media.graphics.geography.map.GeographicMapCellType
 import org.allbinary.media.graphics.geography.map.GeographicMapCellTypeFactory
@@ -46,7 +45,7 @@ open public class BasicPlatormGeographicMapCellTypeFactory : GeographicMapCellTy
     val LADDER_CELL_TYPE: BasicPlatormGeographicMapCellType
 
     private val maxTileId: Int
-public constructor        (tileTypeToTileIdsMap: Hashtable<Any, Any>, maxTileId: Int){
+public constructor (tileTypeToTileIdsMap: Hashtable<Any, Any>, maxTileId: Int){
     //var tileTypeToTileIdsMap = tileTypeToTileIdsMap
     //var maxTileId = maxTileId
 
@@ -135,7 +134,7 @@ this.LADDER_CELL_TYPE= LADDER_CELL_TYPE
 }
 
 
-open fun getStartType()
+    open fun getStartType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -146,7 +145,7 @@ open fun getStartType()
 }
 
 
-open fun getEndType()
+    open fun getEndType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -157,7 +156,7 @@ open fun getEndType()
 }
 
 
-open fun getEmptyType()
+    open fun getEmptyType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -168,7 +167,7 @@ open fun getEmptyType()
 }
 
 
-open fun isPath(cellType: GeographicMapCellType)
+    open fun isPath(cellType: GeographicMapCellType)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var cellType = cellType

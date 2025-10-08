@@ -28,30 +28,31 @@
 import org.allbinary.business.time.created.TimeCreated
 import org.allbinary.business.time.modified.TimeLastModified
 import org.allbinary.logic.communication.smtp.configuration.user.UserEmailConfigurationInterface
+
 interface UserConfigurationInterface {
         
 
-open fun getUserEmailConfigurationInterface()
+    open fun getUserEmailConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
 : UserEmailConfigurationInterface
 
-open fun setUserEmailConfigurationInterface(userEmailConfigurationInterface: UserEmailConfigurationInterface)
+    open fun setUserEmailConfigurationInterface(userEmailConfigurationInterface: UserEmailConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getTimeCreated()
+    open fun getTimeCreated()
         //nullable = true from not(false or (false and true)) = true
 : TimeCreated
 
-open fun getTimeLastModified()
+    open fun getTimeLastModified()
         //nullable = true from not(false or (false and true)) = true
 : TimeLastModified
 
-open fun setTimeCreated(timeCreated: TimeCreated)
+    open fun setTimeCreated(timeCreated: TimeCreated)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setTimeLastModified(timeLastModified: TimeLastModified)
+    open fun setTimeLastModified(timeLastModified: TimeLastModified)
         //nullable = true from not(false or (false and false)) = true
 
 

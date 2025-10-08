@@ -39,12 +39,11 @@ import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 
 open public class RaceTrackRandomDropCellPositionGenerator : RaceTrackDropCellPositionGenerator {
         
-
-        companion object {
+companion object {
             
     private var SINGLETON: RaceTrackRandomDropCellPositionGenerator = RaceTrackRandomDropCellPositionGenerator()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : RaceTrackRandomDropCellPositionGenerator{
 
@@ -70,13 +69,13 @@ open fun getInstance()
     private var cellWidth: Int= 0
 
     private var cellHeight: Int= 0
-private constructor        (){
+private constructor (){
 }
 
 
                 @Throws(Exception::class)
             
-open fun update(allBinaryGameLayerManager: AllBinaryGameLayerManager, geographicMapInterface: BasicGeographicMap)
+    open fun update(allBinaryGameLayerManager: AllBinaryGameLayerManager, geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -92,7 +91,7 @@ this.cellHeight= tiledLayer!!.getCellHeight() /this.cellsPerRowOrColumn
 
                 @Throws(Exception::class)
             
-open fun drop(allBinaryLayerManager: AllBinaryLayerManager, index: Int)
+    open fun drop(allBinaryLayerManager: AllBinaryLayerManager, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager

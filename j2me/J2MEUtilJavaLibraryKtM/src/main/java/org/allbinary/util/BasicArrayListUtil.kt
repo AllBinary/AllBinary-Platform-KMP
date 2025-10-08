@@ -36,12 +36,11 @@ open public class BasicArrayListUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: BasicArrayListUtil = BasicArrayListUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BasicArrayListUtil{
 
@@ -52,7 +51,7 @@ open fun getInstance()
 }
 
 
-open fun main(args: Array<String?>)
+    open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var args = args
@@ -87,7 +86,7 @@ System.out.println(list)
 
     private val immutableInstance: BasicArrayList = ImmutableBasicArrayList(0)
 
-open fun getRandom(list: BasicArrayList)
+    open fun getRandom(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var list = list
@@ -102,7 +101,7 @@ var list = list
 }
 
 
-open fun getRandomIndex(list: BasicArrayList)
+    open fun getRandomIndex(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var list = list
@@ -114,7 +113,7 @@ var list = list
 }
 
 
-open fun reverse(list: BasicArrayList)
+    open fun reverse(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var list = list
@@ -146,7 +145,7 @@ list.add(secondSwapIndex +1, temp)
 }
 
 
-open fun log(list: BasicArrayList)
+    open fun log(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var list = list
@@ -180,7 +179,7 @@ stringBuffer!!.append(usedList!!.size())
 }
 
 
-open fun getImmutableInstance()
+    open fun getImmutableInstance()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 

@@ -33,8 +33,7 @@ open public class NullPlayerGameInputComposite
         
                 , PlayerGameInputCompositeInterface {
         
-
-        companion object {
+companion object {
             
     val NULL_PLAYER_GAME_INPUT_COMPOSITE: NullPlayerGameInputComposite = NullPlayerGameInputComposite()
 
@@ -44,7 +43,8 @@ open public class NullPlayerGameInputComposite
             public constructor() : super()
             {
             }            
-        override fun getName()
+        
+    override fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -56,18 +56,21 @@ open public class NullPlayerGameInputComposite
 
 
                 @Throws(Exception::class)
-            override fun processInput(layerManager: AllBinaryLayerManager)
+            
+    override fun processInput(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var layerManager = layerManager
 }
 
-override fun initInputProcessors()
+
+    override fun initInputProcessors()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun getPlayerGameInput()
+
+    override fun getPlayerGameInput()
         //nullable = true from not(false or (false and true)) = true
 : PlayerGameInput{
 

@@ -29,8 +29,7 @@ import org.allbinary.logic.string.StringUtil
 
 open public class AppUrlGlobals : UrlGlobalsInterface {
         
-
-        companion object {
+companion object {
             
     val NULL_APP_URL_GLOBALS: AppUrlGlobals = AppUrlGlobals()
 
@@ -42,7 +41,8 @@ open public class AppUrlGlobals : UrlGlobalsInterface {
             }            
         
     private var path: String = StringUtil.getInstance()!!.EMPTY_STRING
-override fun isTestingMode()
+
+    override fun isTestingMode()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -52,7 +52,8 @@ override fun isTestingMode()
                         return false
 }
 
-override fun getWebappPath()
+
+    override fun getWebappPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -64,7 +65,7 @@ override fun getWebappPath()
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun setWebappPath(path: String)
+    open fun setWebappPath(path: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var path = path
@@ -80,7 +81,8 @@ this.path= path
                                 
 }
 
-override fun getTestHtmlPath()
+
+    override fun getTestHtmlPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -92,7 +94,8 @@ override fun getTestHtmlPath()
 
 
                 @Throws(Exception::class)
-            override fun getMainPath()
+            
+    override fun getMainPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

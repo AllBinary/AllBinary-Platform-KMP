@@ -41,7 +41,7 @@ open public class TransformInfoHttpComposite
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var transformInfoInterface: TransformInfoHttpInterface
-public constructor        (transformInfoInterface: TransformInfoInterface)
+public constructor (transformInfoInterface: TransformInfoInterface)
             : super()
         {
 var transformInfoInterface = transformInfoInterface
@@ -60,7 +60,7 @@ this.transformInfoInterface= transformInfoInterface as TransformInfoHttpInterfac
 
                 @Throws(Exception::class)
             
-open fun getTransformInfoInterface()
+    open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformInfoInterface{
 
@@ -71,7 +71,7 @@ open fun getTransformInfoInterface()
 }
 
 
-open fun getWeblisketSession()
+    open fun getWeblisketSession()
         //nullable = true from not(false or (false and true)) = true
 : WeblisketSession{
 
@@ -82,7 +82,7 @@ open fun getWeblisketSession()
 }
 
 
-open fun getPageContext()
+    open fun getPageContext()
         //nullable = true from not(false or (false and true)) = true
 : PageContext{
 
@@ -93,7 +93,7 @@ open fun getPageContext()
 }
 
 
-open fun getPropertiesHashMap()
+    open fun getPropertiesHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 

@@ -35,7 +35,7 @@ import org.allbinary.logic.visual.transform.info.objectConfig.TransformInfoObjec
 
 open public class TransformInfoCustomUriTransformer : BasicTransformer {
         
-public constructor        (abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)                        
+public constructor (abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)                        
 
                             : super(abeClientInformation, transformInfoInterface){
     //var abeClientInformation = abeClientInformation

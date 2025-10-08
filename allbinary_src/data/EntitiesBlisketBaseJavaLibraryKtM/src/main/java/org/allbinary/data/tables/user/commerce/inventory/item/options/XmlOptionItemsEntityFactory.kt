@@ -32,12 +32,11 @@ open public class XmlOptionItemsEntityFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: XmlOptionItemsEntityFactory = XmlOptionItemsEntityFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : XmlOptionItemsEntityFactory{
 
@@ -51,13 +50,13 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getXmlOptionItemsEntityInstance()
+    open fun getXmlOptionItemsEntityInstance()
         //nullable = true from not(false or (false and true)) = true
 : XmlOptionItemsEntity{
 

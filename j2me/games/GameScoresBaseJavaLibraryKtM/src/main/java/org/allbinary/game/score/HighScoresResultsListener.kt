@@ -25,10 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface HighScoresResultsListener {
         
 
-open fun setHighScoresArray(highScoresArrayP: Array<HighScores?>)
+    open fun setHighScoresArray(highScoresArrayP: Array<HighScores?>)
         //nullable = true from not(false or (false and false)) = true
 
 

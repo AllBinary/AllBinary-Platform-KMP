@@ -25,37 +25,39 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface EmailServerConfigurationInterface {
         
 
-open fun setSmtpServer(value: String)
+    open fun setSmtpServer(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getSmtpServer()
+    open fun getSmtpServer()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getAccountName()
+    open fun getAccountName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun setAccountName(accountName: String)
+    open fun setAccountName(accountName: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getPassword()
+    open fun getPassword()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun setPassword(password: String)
+    open fun setPassword(password: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String
 

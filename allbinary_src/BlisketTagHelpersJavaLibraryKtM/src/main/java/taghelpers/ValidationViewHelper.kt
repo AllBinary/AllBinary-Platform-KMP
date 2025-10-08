@@ -39,7 +39,7 @@ open public class ValidationViewHelper : ViewHelper
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var viewInterface: ValidationComponentInterface
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)                        
+public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
                             : super(hashMap, pageContext){
 var hashMap = hashMap
@@ -61,7 +61,7 @@ viewInterface= this.getViewObject() as ValidationComponentInterface
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -101,7 +101,7 @@ open fun isValid()
 }
 
 
-open fun validationInfo()
+    open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -132,7 +132,7 @@ open fun validationInfo()
 }
 
 
-open fun toValidationInfoDoc()
+    open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -163,7 +163,7 @@ open fun toValidationInfoDoc()
 }
 
 
-open fun toValidationInfoNode(document: Document)
+    open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

@@ -32,12 +32,11 @@ open public class Visitor
         
                 , VisitorInterface {
         
-
-        companion object {
+companion object {
             
     private val instance: Visitor = Visitor()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : Visitor{
 
@@ -56,7 +55,8 @@ open fun getInstance()
             }            
         
     val nullUtil: NullUtil = NullUtil.getInstance()!!
-override fun visit(anyType: Any)
+
+    override fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var anyType = anyType

@@ -26,41 +26,47 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.java.character.CharacterSet
+
 interface OperatingSystemInterface {
         
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getVersion()
+    open fun getVersion()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getArch()
+    open fun getArch()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getCharacterSet()
+    open fun getCharacterSet()
         //nullable = true from not(false or (false and true)) = true
 : CharacterSet
 
-open fun isOverScan()
+    open fun isOverScan()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun getOverScanXPercent()
+    open fun getOverScanXPercent()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getOverScanYPercent()
+    open fun getOverScanYPercent()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun isScalable()
+    open fun isScalable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
-override fun toString()
+
+    open fun isAutoHide()
+        //nullable = true from not(false or (false and true)) = true
+: Boolean
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String
 

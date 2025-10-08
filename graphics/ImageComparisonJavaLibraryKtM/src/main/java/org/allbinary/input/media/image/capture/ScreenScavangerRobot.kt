@@ -41,7 +41,7 @@ open public class ScreenScavangerRobot
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-public constructor        ()
+public constructor ()
             : super()
         {
 }
@@ -49,7 +49,7 @@ public constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getScreenAsBufferedImages()
+    open fun getScreenAsBufferedImages()
         //nullable = true from not(false or (false and true)) = true
 : Array<BufferedImage?>{
 logUtil!!.put(this.commonStrings!!.START, this, "getScreenAsBufferedImages")

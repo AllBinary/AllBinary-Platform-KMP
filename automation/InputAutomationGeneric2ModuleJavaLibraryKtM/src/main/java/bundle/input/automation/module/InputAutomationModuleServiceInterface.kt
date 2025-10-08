@@ -27,10 +27,11 @@
         
 import org.allbinary.input.automation.module.InputAutomationModuleFactoryInterface
 import org.allbinary.osgi.OSGIServiceInterface
+
 interface InputAutomationModuleServiceInterface : OSGIServiceInterface {
         
 
-open fun getInputAutomationModuleInterfaceArray()
+    open fun getInputAutomationModuleInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<InputAutomationModuleFactoryInterface?>
 

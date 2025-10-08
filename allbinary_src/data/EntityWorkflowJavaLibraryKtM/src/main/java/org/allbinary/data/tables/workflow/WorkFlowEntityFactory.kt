@@ -32,12 +32,11 @@ open public class WorkFlowEntityFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: WorkFlowEntityFactory = WorkFlowEntityFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : WorkFlowEntityFactory{
 
@@ -51,13 +50,13 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun create2()
+    open fun create2()
         //nullable = true from not(false or (false and true)) = true
 : WorkFlowEntity{
 

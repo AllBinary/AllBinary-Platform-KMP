@@ -34,7 +34,7 @@ open public class ImageArrayRotationAnimation : ImageArrayBaseRotationAnimation 
         
 
     private var expectedTotalFrames: Int= 0
-protected constructor        (anyType: Any, animationBehavior: AnimationBehavior)                        
+protected constructor (anyType: Any, animationBehavior: AnimationBehavior)                        
 
                             : super(
                                     (anyType as ImageArrayRotationAnimationInfo).getImageArray(), 
@@ -51,7 +51,7 @@ protected constructor        (anyType: Any, animationBehavior: AnimationBehavior
 this.init(allBinaryImageRotationAnimationInfo!!.getImageArray(), allBinaryImageRotationAnimationInfo!!.getAngleInfoP(), allBinaryImageRotationAnimationInfo!!.getTotalAngle())
 }
 
-public constructor        (imageArray: Array<Image?>, angleInfo: AngleInfo, totalAngle: Int, animationBehavior: AnimationBehavior)                        
+public constructor (imageArray: Array<Image?>, angleInfo: AngleInfo, totalAngle: Int, animationBehavior: AnimationBehavior)                        
 
                             : super(imageArray, angleInfo, animationBehavior){
     //var imageArray = imageArray
@@ -65,7 +65,7 @@ public constructor        (imageArray: Array<Image?>, angleInfo: AngleInfo, tota
 this.init(imageArray, angleInfo, totalAngle)
 }
 
-public constructor        (imageArray: Array<Image?>, animationBehavior: AnimationBehavior)                        
+public constructor (imageArray: Array<Image?>, animationBehavior: AnimationBehavior)                        
 
                             : this(imageArray, AngleInfo.getInstance(10.toShort()), AngleFactory.getInstance()!!.TOTAL_ANGLE, animationBehavior){
     //var imageArray = imageArray
@@ -76,7 +76,7 @@ public constructor        (imageArray: Array<Image?>, animationBehavior: Animati
                     
 }
 
-public constructor        (imageArray: Array<Image?>, angleInfo: AngleInfo, animationBehavior: AnimationBehavior)                        
+public constructor (imageArray: Array<Image?>, angleInfo: AngleInfo, animationBehavior: AnimationBehavior)                        
 
                             : this(imageArray, angleInfo, AngleFactory.getInstance()!!.TOTAL_ANGLE, animationBehavior){
     //var imageArray = imageArray
@@ -91,7 +91,7 @@ public constructor        (imageArray: Array<Image?>, angleInfo: AngleInfo, anim
 
                 @Throws(Exception::class)
             
-open fun init(imageArray: Array<Image?>, angleInfo: AngleInfo, totalAngle: Int)
+    open fun init(imageArray: Array<Image?>, angleInfo: AngleInfo, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageArray = imageArray
@@ -114,7 +114,7 @@ this.angleInfo!!.adjustAngle(0)
 }
 
 
-open fun setImageArray(imageArray: Array<Image?>)
+    open fun setImageArray(imageArray: Array<Image?>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageArray = imageArray

@@ -33,7 +33,7 @@ open public class BasicOptionItemsTag : TableTag {
         
 
     private var propertiesHashMap: HashMap<Any, Any>
-public constructor        (){
+public constructor (){
 this.setTagHelperFactory(BasicOptionItemsHelperFactory())
 this.setTagRequestHelperFactory(BasicOptionItemsRequestHelperFactory())
 }

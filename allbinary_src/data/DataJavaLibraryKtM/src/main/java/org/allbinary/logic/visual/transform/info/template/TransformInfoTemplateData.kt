@@ -30,12 +30,11 @@ open public class TransformInfoTemplateData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: TransformInfoTemplateData = TransformInfoTemplateData()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TransformInfoTemplateData{
 
@@ -47,7 +46,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

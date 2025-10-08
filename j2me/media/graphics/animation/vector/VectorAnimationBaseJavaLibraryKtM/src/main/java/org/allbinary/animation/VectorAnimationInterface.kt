@@ -26,10 +26,11 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.graphics.color.ColorCompositeInterface
+
 interface VectorAnimationInterface : IndexedAnimationInterface, ColorCompositeInterface {
         
 
-open fun getPoints(frame: Int)
+    open fun getPoints(frame: Int)
         //nullable = true from not(false or (false and false)) = true
 : Array<IntArray?>
 

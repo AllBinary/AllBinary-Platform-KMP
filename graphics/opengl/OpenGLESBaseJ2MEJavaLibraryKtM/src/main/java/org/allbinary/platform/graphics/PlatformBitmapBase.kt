@@ -38,7 +38,7 @@ open public class PlatformBitmapBase
             {
             }            
         
-open fun getImage()
+    open fun getImage()
         //nullable = true from not(false or (false and true)) = true
 : Image{
 

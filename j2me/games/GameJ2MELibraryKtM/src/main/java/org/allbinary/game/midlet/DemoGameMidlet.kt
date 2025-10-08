@@ -36,7 +36,7 @@ import org.allbinary.thread.PrimaryThreadPool
 
 open public class DemoGameMidlet : GameMidlet {
         
-public constructor        (clientInformationFactory: ClientInformationFactory)                        
+public constructor (clientInformationFactory: ClientInformationFactory)                        
 
                             : super(clientInformationFactory){
     //var clientInformationFactory = clientInformationFactory
@@ -49,7 +49,7 @@ public constructor        (clientInformationFactory: ClientInformationFactory)
 
                 @Throws(Exception::class)
             
-open fun isContinue()
+    open fun isContinue()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -82,7 +82,7 @@ open fun isContinue()
 }
 
 
-open fun getHighestLevel()
+    open fun getHighestLevel()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -95,7 +95,7 @@ open fun getHighestLevel()
 
                 @Throws(Exception::class)
             
-open fun createDemoGameCanvasRunnableInterface()
+    open fun createDemoGameCanvasRunnableInterface()
         //nullable = true from not(false or (false and true)) = true
 : GameCanvasRunnableInterface{
 
@@ -107,7 +107,7 @@ open fun createDemoGameCanvasRunnableInterface()
 
                 @Throws(Exception::class)
             
-open fun createGameCanvasRunnableInterface(allBinaryGameLayerManager: AllBinaryGameLayerManager)
+    open fun createGameCanvasRunnableInterface(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
 : GameCanvasRunnableInterface{
 var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -120,7 +120,7 @@ var allBinaryGameLayerManager = allBinaryGameLayerManager
 
                 @Throws(Exception::class)
             
-open fun createGameCanvasRunnableInterface()
+    open fun createGameCanvasRunnableInterface()
         //nullable = true from not(false or (false and true)) = true
 : GameCanvasRunnableInterface{
 
@@ -131,13 +131,13 @@ open fun createGameCanvasRunnableInterface()
 }
 
 
-open fun demoSetup()
+    open fun demoSetup()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun postDemoSetup()
+    open fun postDemoSetup()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -145,7 +145,8 @@ open fun postDemoSetup()
 
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun setDemo()
+
+    override fun setDemo()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(commonStrings!!.START, this, "setDemo")
@@ -159,7 +160,8 @@ PrimaryThreadPool.getInstance()!!.runTask(DemoRunnable(this))
 
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun createGame()
+
+    override fun createGame()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -179,7 +181,7 @@ logUtil!!.put(commonStrings!!.END, this, CREATE_GAME)
 }
 
 
-open fun isReady()
+    open fun isReady()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

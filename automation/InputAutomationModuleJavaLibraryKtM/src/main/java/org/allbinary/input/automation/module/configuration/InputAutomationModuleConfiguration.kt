@@ -59,12 +59,12 @@ open public class InputAutomationModuleConfiguration
     private var name: String
 
     private var inputAutomationModuleInterface: InputAutomationModuleFactoryInterface
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
-public constructor        (abeClientInformation: AbeClientInformationInterface, node: Node)
+public constructor (abeClientInformation: AbeClientInformationInterface, node: Node)
             : super()
         {
     //var abeClientInformation = abeClientInformation
@@ -72,7 +72,7 @@ public constructor        (abeClientInformation: AbeClientInformationInterface, 
 this.init(abeClientInformation, node)
 }
 
-public constructor        (abeClientInformation: AbeClientInformationInterface, name: String, className: String)
+public constructor (abeClientInformation: AbeClientInformationInterface, name: String, className: String)
             : super()
         {
     //var abeClientInformation = abeClientInformation
@@ -83,7 +83,7 @@ this.setClassName(className)
 this.init(abeClientInformation)
 }
 
-public constructor        (inputAutomationModuleInterface: InputAutomationModuleFactoryInterface)
+public constructor (inputAutomationModuleInterface: InputAutomationModuleFactoryInterface)
             : super()
         {
 var inputAutomationModuleInterface = inputAutomationModuleInterface
@@ -94,7 +94,7 @@ this.setClassName(this.inputAutomationModuleInterface!!.::class.toString()!!)
 
                 @Throws(Exception::class)
             
-open fun init(abeClientInformation: AbeClientInformationInterface, node: Node)
+    open fun init(abeClientInformation: AbeClientInformationInterface, node: Node)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -140,7 +140,7 @@ this.init(abeClientInformation)
 }
 
 
-open fun init(abeClientInformation: AbeClientInformationInterface)
+    open fun init(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -163,7 +163,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e)
 
                 @Throws(Exception::class)
             
-open fun toDomNode(document: Document)
+    open fun toDomNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -182,7 +182,7 @@ node.appendChild(classNameNode)
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -193,7 +193,7 @@ open fun getName()
 }
 
 
-open fun setName(name: String)
+    open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name
@@ -202,7 +202,7 @@ this.name= name
 }
 
 
-open fun getClassName()
+    open fun getClassName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -213,7 +213,7 @@ open fun getClassName()
 }
 
 
-open fun setClassName(className: String)
+    open fun setClassName(className: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var className = className
@@ -222,7 +222,7 @@ this.className= className
 }
 
 
-open fun getInputAutomationModuleInterface()
+    open fun getInputAutomationModuleInterface()
         //nullable = true from not(false or (false and true)) = true
 : InputAutomationModuleFactoryInterface{
 
@@ -233,7 +233,7 @@ open fun getInputAutomationModuleInterface()
 }
 
 
-open fun setInputAutomationModuleInterface(inputAutomationModuleInterface: InputAutomationModuleFactoryInterface)
+    open fun setInputAutomationModuleInterface(inputAutomationModuleInterface: InputAutomationModuleFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var inputAutomationModuleInterface = inputAutomationModuleInterface

@@ -36,12 +36,11 @@ open public class ImageActionScriptOutputProcessor
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun process(imageActionScriptOutputInterface: ImageActionScriptOutputInterface, frame: Long)
+    open fun process(imageActionScriptOutputInterface: ImageActionScriptOutputInterface, frame: Long)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageActionScriptOutputInterface = imageActionScriptOutputInterface
@@ -84,7 +83,7 @@ imageIOInterface!!.save(frame)
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }

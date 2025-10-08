@@ -30,8 +30,7 @@ open public class MidletIcon
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var RESOURCE: String = "icon"
 

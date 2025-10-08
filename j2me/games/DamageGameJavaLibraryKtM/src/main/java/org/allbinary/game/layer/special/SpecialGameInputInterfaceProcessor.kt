@@ -31,7 +31,7 @@ open public class SpecialGameInputInterfaceProcessor : GameInputProcessor {
         
 
     val specialGameInputInterface: SpecialGameInputInterface
-public constructor        (collidableDestroyableDamageableLayer: SpecialGameInputInterface){
+public constructor (collidableDestroyableDamageableLayer: SpecialGameInputInterface){
 var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
 this.specialGameInputInterface= collidableDestroyableDamageableLayer
 }

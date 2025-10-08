@@ -32,7 +32,7 @@ open public class AudioContentTypeData
         
 
     private val name: String
- constructor        (name: String)
+ constructor (name: String)
             : super()
         {
 var name = name
@@ -40,7 +40,7 @@ this.name= name
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

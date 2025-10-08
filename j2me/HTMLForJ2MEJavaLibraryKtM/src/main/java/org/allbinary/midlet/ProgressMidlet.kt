@@ -28,7 +28,6 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.canvas.Processor
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
@@ -42,20 +41,20 @@ open public class ProgressMidlet : AllBinaryMidlet {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val abeClientInformation: AbeClientInformationInterface
-public constructor        (clientInformationFactory: ClientInformationFactory){
+public constructor (clientInformationFactory: ClientInformationFactory){
     //var clientInformationFactory = clientInformationFactory
 this.preInit()
 this.abeClientInformation= clientInformationFactory!!.getInstance()
 }
 
 
-open fun preInit()
+    open fun preInit()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun exit(isProgress: Boolean)
+    open fun exit(isProgress: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var isProgress = isProgress

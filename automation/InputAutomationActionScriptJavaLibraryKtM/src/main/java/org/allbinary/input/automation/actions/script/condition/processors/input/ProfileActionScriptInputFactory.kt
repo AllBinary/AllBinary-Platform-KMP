@@ -32,12 +32,11 @@ open public class ProfileActionScriptInputFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun getInstance(node: Node)
+    open fun getInstance(node: Node)
         //nullable =  from not(true or (false and false)) = 
 : ProfileActionScriptInputInterface{
 var node = node
@@ -85,7 +84,7 @@ var node = node
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

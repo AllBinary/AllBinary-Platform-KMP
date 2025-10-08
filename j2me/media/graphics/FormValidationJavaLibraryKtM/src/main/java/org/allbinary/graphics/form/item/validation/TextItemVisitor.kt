@@ -30,10 +30,11 @@ import org.allbinary.logic.util.visitor.Visitor
 
 open public class TextItemVisitor : Visitor {
         
-public constructor        (){
+public constructor (){
 }
 
-override fun visit(anyType: Any)
+
+    override fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{
     //var anyType = anyType

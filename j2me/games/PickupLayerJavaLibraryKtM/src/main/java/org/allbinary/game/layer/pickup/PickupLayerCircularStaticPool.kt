@@ -29,12 +29,11 @@ import org.allbinary.layer.AllBinaryLayerCircularPool
 
 open public class PickupLayerCircularStaticPool : AllBinaryLayerCircularPool {
         
-
-        companion object {
+companion object {
             
     private var SINGLETON: PickupLayerCircularStaticPool = PickupLayerCircularStaticPool()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PickupLayerCircularStaticPool{
 
@@ -46,13 +45,13 @@ open fun getInstance()
 
 
         }
-            private constructor        (){
+            private constructor (){
 }
 
 
                 @Throws(Exception::class)
             
-open fun getInstance(pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface, x: Int, y: Int, z: Int)
+    open fun getInstance(pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface, x: Int, y: Int, z: Int)
         //nullable =  from not(true or (false and false)) = 
 : PickedUpLayerInterface{
 var pickedUpLayerInterfaceFactoryInterface = pickedUpLayerInterfaceFactoryInterface

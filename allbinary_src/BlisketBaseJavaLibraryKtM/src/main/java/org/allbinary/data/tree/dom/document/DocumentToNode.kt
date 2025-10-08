@@ -32,8 +32,7 @@ open public class DocumentToNode
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val XMLROOT: String = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
 
@@ -49,7 +48,7 @@ open public class DocumentToNode
 
                 @Throws(Exception::class)
             
-open fun convertDocumentToNodeString(documentString: String)
+    open fun convertDocumentToNodeString(documentString: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var documentString = documentString
@@ -66,7 +65,7 @@ documentString= remove(documentString, XMLJSPROOTENDSTART, XMLEND)
 }
 
 
-open fun removeXmlDefinitionFromDocumentString(documentString: String)
+    open fun removeXmlDefinitionFromDocumentString(documentString: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var documentString = documentString
@@ -78,7 +77,7 @@ var documentString = documentString
 }
 
 
-open fun remove(documentString: String, start: String, end: String)
+    open fun remove(documentString: String, start: String, end: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var documentString = documentString
@@ -131,7 +130,7 @@ var end = end
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

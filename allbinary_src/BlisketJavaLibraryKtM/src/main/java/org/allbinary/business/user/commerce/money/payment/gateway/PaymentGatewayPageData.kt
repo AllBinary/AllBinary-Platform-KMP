@@ -32,8 +32,7 @@ open public class PaymentGatewayPageData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val EXTENSION: String = ".jsp"
 
@@ -64,7 +63,7 @@ open public class PaymentGatewayPageData
     val AUTHORIZE: String
 
     val FINISH: String
-public constructor        (location: String, paymentMethod: String)
+public constructor (location: String, paymentMethod: String)
             : super()
         {
 var location = location

@@ -36,7 +36,7 @@ open public class LogUserEmailEventListenerModule
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        ()
+public constructor ()
             : super()
         {
 }
@@ -44,7 +44,7 @@ public constructor        ()
 
                 @Throws(Exception::class)
             
-open fun onEmailSendRequest(userEmailInfoEvent: EmailEvent)
+    open fun onEmailSendRequest(userEmailInfoEvent: EmailEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var userEmailInfoEvent = userEmailInfoEvent

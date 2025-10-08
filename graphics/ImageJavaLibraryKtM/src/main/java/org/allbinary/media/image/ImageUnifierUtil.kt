@@ -34,12 +34,11 @@ open public class ImageUnifierUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ImageUnifierUtil = ImageUnifierUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ImageUnifierUtil{
 
@@ -55,13 +54,13 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val imageUtil: ImageUtil = ImageUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getDefaultConfiguration()
+    open fun getDefaultConfiguration()
         //nullable = true from not(false or (false and true)) = true
 : GraphicsConfiguration{
 
@@ -78,7 +77,7 @@ open fun getDefaultConfiguration()
 }
 
 
-open fun getImage(bufferedImageArray: Array<BufferedImage?>, imageUnifierProperties: ImageUnifierProperties)
+    open fun getImage(bufferedImageArray: Array<BufferedImage?>, imageUnifierProperties: ImageUnifierProperties)
         //nullable = true from not(false or (false and false)) = true
 : BufferedImage{
 var bufferedImageArray = bufferedImageArray

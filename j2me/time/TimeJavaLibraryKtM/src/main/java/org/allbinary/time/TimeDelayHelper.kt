@@ -41,7 +41,7 @@ open public class TimeDelayHelper
     private var elapsedTimeAtPause: Long = Long.MIN_VALUE
 
     var delay: Int
-public constructor        (delay: Int)
+public constructor (delay: Int)
             : super()
         {
     //var delay = delay
@@ -50,7 +50,7 @@ this.setStartTime()
 }
 
 
-open fun isTime()
+    open fun isTime()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -78,7 +78,7 @@ open fun isTime()
 }
 
 
-open fun isTimeSince(delay: Int)
+    open fun isTimeSince(delay: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var delay = delay
@@ -107,7 +107,7 @@ var delay = delay
 }
 
 
-open fun isTime(currentTime: Long)
+    open fun isTime(currentTime: Long)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var currentTime = currentTime
@@ -133,7 +133,7 @@ var currentTime = currentTime
 }
 
 
-open fun isTimeWithoutReset(currentTime: Long)
+    open fun isTimeWithoutReset(currentTime: Long)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var currentTime = currentTime
@@ -158,7 +158,7 @@ var currentTime = currentTime
 }
 
 
-open fun isTimeSince(delay: Int, currentTime: Long)
+    open fun isTimeSince(delay: Int, currentTime: Long)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var delay = delay
@@ -185,7 +185,7 @@ var currentTime = currentTime
 }
 
 
-open fun getElapsed()
+    open fun getElapsed()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -196,7 +196,7 @@ open fun getElapsed()
 }
 
 
-open fun getElapsed(currentTime: Long)
+    open fun getElapsed(currentTime: Long)
         //nullable = true from not(false or (false and false)) = true
 : Long{
 var currentTime = currentTime
@@ -208,7 +208,7 @@ var currentTime = currentTime
 }
 
 
-open fun isElapsed(currentTime: Long, time: Long)
+    open fun isElapsed(currentTime: Long, time: Long)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var currentTime = currentTime
@@ -238,7 +238,7 @@ var time = time
 }
 
 
-open fun isElapsed(time: Long)
+    open fun isElapsed(time: Long)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var time = time
@@ -267,7 +267,7 @@ var time = time
 }
 
 
-open fun setStartTime(startTime: Long)
+    open fun setStartTime(startTime: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var startTime = startTime
@@ -275,7 +275,7 @@ this.startTime= startTime
 }
 
 
-open fun getStartTime()
+    open fun getStartTime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -286,14 +286,14 @@ open fun getStartTime()
 }
 
 
-open fun setStartTime()
+    open fun setStartTime()
         //nullable = true from not(false or (false and true)) = true
 {
 this.startTime= System.currentTimeMillis()
 }
 
 
-open fun pause()
+    open fun pause()
         //nullable = true from not(false or (false and true)) = true
 {
 this.elapsedTimeAtPause= this.getElapsed()
@@ -301,7 +301,7 @@ this.startTime= Long.MAX_VALUE
 }
 
 
-open fun resume()
+    open fun resume()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -328,7 +328,7 @@ this.setStartTime()
 }
 
 
-open fun toString(currentTime: Long)
+    open fun toString(currentTime: Long)
         //nullable = true from not(false or (true and false)) = true
 : String{
 var currentTime = currentTime
@@ -366,7 +366,8 @@ var currentTime = currentTime
                             
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

@@ -40,7 +40,7 @@ open public class CompoundAnimationInterfaceFactory
     val basicAnimationInterfaceFactoryInterfaceArrayP: Array<AnimationInterfaceFactoryInterface?>
 
     val animationBehaviorFactory: AnimationBehaviorFactory
-public constructor        (basicAnimationInterfaceFactoryInterfaceArray: Array<AnimationInterfaceFactoryInterface?>, animationBehaviorFactory: AnimationBehaviorFactory)
+public constructor (basicAnimationInterfaceFactoryInterfaceArray: Array<AnimationInterfaceFactoryInterface?>, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
         {
     //var basicAnimationInterfaceFactoryInterfaceArray = basicAnimationInterfaceFactoryInterfaceArray
@@ -51,7 +51,8 @@ this.animationBehaviorFactory= animationBehaviorFactory
 
 
                 @Throws(Exception::class)
-            override fun getInstance(instanceId: Int)
+            
+    override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var instanceId = instanceId
@@ -80,7 +81,7 @@ animationInterfaceArray[index]= this.basicAnimationInterfaceFactoryInterfaceArra
 }
 
 
-open fun createArray(size: Int)
+    open fun createArray(size: Int)
         //nullable = true from not(false or (false and false)) = true
 : Array<Animation?>{
     //var size = size
@@ -92,7 +93,7 @@ open fun createArray(size: Int)
 }
 
 
-open fun getInstance(animationInterfaceArray: Array<Animation?>)
+    open fun getInstance(animationInterfaceArray: Array<Animation?>)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var animationInterfaceArray = animationInterfaceArray
@@ -104,7 +105,7 @@ open fun getInstance(animationInterfaceArray: Array<Animation?>)
 }
 
 
-open fun getBasicAnimationInterfaceFactoryInterfaceArray()
+    open fun getBasicAnimationInterfaceFactoryInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<AnimationInterfaceFactoryInterface?>{
 
@@ -114,7 +115,8 @@ open fun getBasicAnimationInterfaceFactoryInterfaceArray()
                         return basicAnimationInterfaceFactoryInterfaceArrayP
 }
 
-override fun setInitialScale(scaleProperties: ScaleProperties)
+
+    override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
 {
     //var scaleProperties = scaleProperties

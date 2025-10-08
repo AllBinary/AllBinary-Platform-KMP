@@ -32,14 +32,13 @@ open public class AllBinaryMediaManagerShutdown
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AllBinaryMediaManagerShutdown = AllBinaryMediaManagerShutdown()
 
                 @Throws(Exception::class)
             
-open fun shutdown(soundsFactoryInterface: SoundsFactoryInterface)
+    open fun shutdown(soundsFactoryInterface: SoundsFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var soundsFactoryInterface = soundsFactoryInterface

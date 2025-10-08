@@ -31,8 +31,7 @@ open public class NullEventListener
         
                 , EventListenerInterface {
         
-
-        companion object {
+companion object {
             
     val NULL_EVENT_LISTENER: NullEventListener = NullEventListener()
 
@@ -42,7 +41,8 @@ open public class NullEventListener
             public constructor() : super()
             {
             }            
-        override fun onEvent(eventObject: AllBinaryEventObject)
+        
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject

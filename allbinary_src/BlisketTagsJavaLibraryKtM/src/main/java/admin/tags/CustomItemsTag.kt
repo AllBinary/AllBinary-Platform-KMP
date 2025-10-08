@@ -30,7 +30,7 @@ import admin.taghelpers.CustomItemsRequestHelperFactory
 
 open public class CustomItemsTag : TableTag {
         
-public constructor        (){
+public constructor (){
 this.setTagHelperFactory(CustomItemsHelperFactory())
 this.setTagRequestHelperFactory(CustomItemsRequestHelperFactory())
 }

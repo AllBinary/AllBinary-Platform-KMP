@@ -40,8 +40,7 @@ open public class BasicPlayer
                 , TimeBaseInterface
                 , Controllable2 {
         
-
-        companion object {
+companion object {
             
     var CONTROL_TYPE: String = "ToneControl"
 
@@ -54,7 +53,7 @@ open public class BasicPlayer
     private var timeBase: TimeBase
 
     val listenersList: BasicArrayList = BasicArrayList()
-public constructor        ()
+public constructor ()
             : super()
         {
 this.setLoopCount(0)
@@ -62,7 +61,7 @@ this.setState(Player.UNREALIZED)
 }
 
 
-open fun getContentType()
+    open fun getContentType()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -73,7 +72,7 @@ open fun getContentType()
 }
 
 
-open fun getControl(controlType: String)
+    open fun getControl(controlType: String)
         //nullable = true from not(false or (false and false)) = true
 : Control{
 var controlType = controlType
@@ -85,7 +84,7 @@ var controlType = controlType
 }
 
 
-open fun getControls()
+    open fun getControls()
         //nullable = true from not(false or (false and true)) = true
 : Array<Control?>{
 
@@ -96,14 +95,14 @@ open fun getControls()
 }
 
 
-open fun close()
+    open fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun addPlayerListener(playerListener: PlayerListener)
+    open fun addPlayerListener(playerListener: PlayerListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var playerListener = playerListener
@@ -119,7 +118,7 @@ var playerListener = playerListener
 }
 
 
-open fun removePlayerListener(playerListener: PlayerListener)
+    open fun removePlayerListener(playerListener: PlayerListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var playerListener = playerListener
@@ -127,7 +126,7 @@ this.listenersList!!.remove(playerListener)
 }
 
 
-open fun getState()
+    open fun getState()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -139,7 +138,7 @@ open fun getState()
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun setState(state: Int)
+    open fun setState(state: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var state = state
@@ -147,7 +146,7 @@ this.state= state
 }
 
 
-open fun getDuration()
+    open fun getDuration()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -158,7 +157,7 @@ open fun getDuration()
 }
 
 
-open fun getMediaTime()
+    open fun getMediaTime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -169,7 +168,7 @@ open fun getMediaTime()
 }
 
 
-open fun getTimeBase()
+    open fun getTimeBase()
         //nullable = true from not(false or (false and true)) = true
 : TimeBase{
 
@@ -181,7 +180,7 @@ open fun getTimeBase()
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun setTimeBase(timeBase: TimeBase)
+    open fun setTimeBase(timeBase: TimeBase)
         //nullable = true from not(false or (false and false)) = true
 {
 var timeBase = timeBase
@@ -189,7 +188,7 @@ this.timeBase= timeBase
 }
 
 
-open fun deallocate()
+    open fun deallocate()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -197,7 +196,7 @@ open fun deallocate()
 
                 @Throws(MediaException::class)
             
-open fun prefetch()
+    open fun prefetch()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -205,14 +204,14 @@ open fun prefetch()
 
                 @Throws(MediaException::class)
             
-open fun realize()
+    open fun realize()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun setLoopCount(count: Int)
+    open fun setLoopCount(count: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var count = count
@@ -220,7 +219,7 @@ this.loopCount= count
 }
 
 
-open fun getLoopCount()
+    open fun getLoopCount()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -234,7 +233,7 @@ open fun getLoopCount()
                 @Throws(MediaException::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun setMediaTime(now: Long)
+    open fun setMediaTime(now: Long)
         //nullable = true from not(false or (false and false)) = true
 : Long{
 var now = now
@@ -249,7 +248,7 @@ var now = now
                 @Throws(MediaException::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun start()
+    open fun start()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setState(Player.STARTED)
@@ -259,14 +258,14 @@ this.setState(Player.STARTED)
                 @Throws(MediaException::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun stop()
+    open fun stop()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setState(Player.PREFETCHED)
 }
 
 
-open fun setVolume(leftVolume: Int, rightVolume: Int)
+    open fun setVolume(leftVolume: Int, rightVolume: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var leftVolume = leftVolume

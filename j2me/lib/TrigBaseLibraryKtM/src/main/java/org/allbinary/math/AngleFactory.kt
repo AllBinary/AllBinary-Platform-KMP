@@ -35,12 +35,11 @@ open public class AngleFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AngleFactory = AngleFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AngleFactory{
 
@@ -51,7 +50,7 @@ open fun getInstance()
 }
 
 
-open fun main(args: Array<String?>)
+    open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var args = args
@@ -96,7 +95,7 @@ LogUtil.getInstance()!!.put(stringMaker!!.toString(), "main", "main")
     val LEFT: NamedAngle
 
     val RIGHT: NamedAngle
-public constructor        ()
+public constructor ()
             : super()
         {
 
@@ -158,7 +157,7 @@ angleArray[index]= Angle(index.toShort())
 
     private val frameUtil: FrameUtil = FrameUtil.getInstance()!!
 
-open fun getInstance(index: Int)
+    open fun getInstance(index: Int)
         //nullable =  from not(true or (false and false)) = 
 : Angle{
     //var index = index
@@ -173,7 +172,7 @@ open fun getInstance(index: Int)
 }
 
 
-open fun getClosestDirection(angle: Int)
+    open fun getClosestDirection(angle: Int)
         //nullable = true from not(false or (false and false)) = true
 : Angle{
 var angle = angle
@@ -236,7 +235,7 @@ var angle = angle
 }
 
 
-open fun getGeneralDirection()
+    open fun getGeneralDirection()
         //nullable = true from not(false or (false and true)) = true
 : Angle{
 

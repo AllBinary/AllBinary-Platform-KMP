@@ -34,15 +34,14 @@ open public class PaymentProcessHelperFactory
         
                 , TagHelperFactoryInterface {
         
-
-        companion object {
+companion object {
             
     private val CLASSNAME: String = "admin.taghelpers.PaymentProcessHelper"
 
     private val FACTORYNAME: String = "PaymentProcessFactory"
 
         }
-            public constructor        ()
+            public constructor ()
             : super()
         {
 }
@@ -50,7 +49,7 @@ open public class PaymentProcessHelperFactory
 
                 @Throws(LicensingException::class)
             
-open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
+    open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
 : Any{
 var hashMap = hashMap

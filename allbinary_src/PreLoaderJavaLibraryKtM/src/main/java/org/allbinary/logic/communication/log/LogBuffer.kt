@@ -35,14 +35,14 @@ open public class LogBuffer
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     var logEntryVector: Vector
-public constructor        ()
+public constructor ()
             : super()
         {
 this.logEntryVector= Vector()
 }
 
 
-open fun add(log: Log)
+    open fun add(log: Log)
         //nullable = true from not(false or (false and false)) = true
 {
 var log = log
@@ -50,7 +50,7 @@ this.logEntryVector!!.add(log)
 }
 
 
-open fun logAll()
+    open fun logAll()
         //nullable = true from not(false or (false and true)) = true
 {
 

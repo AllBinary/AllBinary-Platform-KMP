@@ -58,7 +58,7 @@ open public class BasicWorkFlow
     private var workFlowName: String
 
     private var storeName: String
-public constructor        ()
+public constructor ()
             : super()
         {
 this.workFlowName= StringUtil.getInstance()!!.EMPTY_STRING
@@ -69,7 +69,7 @@ this.workFlowDoc= DomDocumentHelper.create()
 this.workFlowDoc!!.appendChild(workFlowNode)
 }
 
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
+public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext)
             : super()
         {
 var hashMap = hashMap
@@ -86,7 +86,7 @@ this.workFlowName= requestHashMap!!.get(WorkFlowData.getInstance()!!.NAME) as St
 this.workFlowDoc= DomDocumentHelper.create(requestHashMap!!.get(WorkFlowData.getInstance()!!.DATA) as String)
 }
 
-public constructor        (hashMap: HashMap<Any, Any>)
+public constructor (hashMap: HashMap<Any, Any>)
             : super()
         {
 var hashMap = hashMap
@@ -96,7 +96,7 @@ this.workFlowDoc= DomDocumentHelper.create(hashMap!!.get(WorkFlowData.getInstanc
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -107,7 +107,7 @@ open fun getName()
 }
 
 
-open fun getStoreName()
+    open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -118,7 +118,7 @@ open fun getStoreName()
 }
 
 
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -131,7 +131,7 @@ open fun getKey()
 
                 @Throws(Exception::class)
             
-open fun toVector()
+    open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -160,7 +160,7 @@ values.add(time)
 
                 @Throws(Exception::class)
             
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -186,7 +186,7 @@ hashMap!!.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 }
 
 
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -250,7 +250,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 }
 
 
-open fun toXmlDoc()
+    open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -281,7 +281,7 @@ open fun toXmlDoc()
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -326,7 +326,7 @@ open fun isValid()
 }
 
 
-open fun validationInfo()
+    open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -366,7 +366,7 @@ open fun validationInfo()
 }
 
 
-open fun toValidationInfoDoc()
+    open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -377,7 +377,7 @@ open fun toValidationInfoDoc()
 }
 
 
-open fun toValidationInfoNode(document: Document)
+    open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

@@ -31,12 +31,11 @@ open public class OpenGLESImageExclusionUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OpenGLESImageExclusionUtil = OpenGLESImageExclusionUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OpenGLESImageExclusionUtil{
 
@@ -54,7 +53,7 @@ open fun getInstance()
             {
             }            
         
-open fun isCustomScaling(image: Image)
+    open fun isCustomScaling(image: Image)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var image = image

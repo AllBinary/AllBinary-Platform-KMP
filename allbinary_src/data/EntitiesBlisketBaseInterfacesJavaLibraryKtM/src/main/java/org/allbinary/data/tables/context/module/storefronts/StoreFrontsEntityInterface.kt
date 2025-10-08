@@ -29,28 +29,29 @@ import java.util.HashMap
 import java.util.Vector
 import org.allbinary.business.context.modules.storefront.StoreFrontInterface
 import org.allbinary.data.tables.BasicDataTableInterface
+
 interface StoreFrontsEntityInterface : BasicDataTableInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getStoreFrontInterface(name: String)
+    open fun getStoreFrontInterface(name: String)
         //nullable = true from not(false or (false and false)) = true
 : StoreFrontInterface
 
-open fun getStoreFrontNames()
+    open fun getStoreFrontNames()
         //nullable = true from not(false or (false and true)) = true
 : Vector
 
-open fun delete(value: String)
+    open fun delete(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun insert(values: Vector)
+    open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun update(updatedValues: HashMap<Any, Any>)
+    open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 
 

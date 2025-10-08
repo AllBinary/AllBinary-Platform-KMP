@@ -38,11 +38,11 @@ open public class BasicWeightShippingModuleView : BasicWeightShippingModule
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (){
+public constructor (){
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -53,7 +53,7 @@ open fun isValid()
 }
 
 
-open fun toValidationInfoDoc()
+    open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : org.w3c.dom.Document{
 
@@ -64,7 +64,7 @@ open fun toValidationInfoDoc()
 }
 
 
-open fun toValidationInfoNode(document: org.w3c.dom.Document)
+    open fun toValidationInfoNode(document: org.w3c.dom.Document)
         //nullable = true from not(false or (false and false)) = true
 : org.w3c.dom.Node{
 var document = document
@@ -76,7 +76,7 @@ var document = document
 }
 
 
-open fun validationInfo()
+    open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -87,7 +87,7 @@ open fun validationInfo()
 }
 
 
-open fun toXmlNode(document: org.w3c.dom.Document)
+    open fun toXmlNode(document: org.w3c.dom.Document)
         //nullable = true from not(false or (false and false)) = true
 : org.w3c.dom.Node{
 var document = document
@@ -124,7 +124,7 @@ shippingMethodNode!!.appendChild(ModDomHelper.createNameValueNodes(document, Shi
 }
 
 
-open fun toXmlDoc()
+    open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : org.w3c.dom.Document{
 
@@ -158,7 +158,7 @@ open fun toXmlDoc()
 }
 
 
-open fun view()
+    open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

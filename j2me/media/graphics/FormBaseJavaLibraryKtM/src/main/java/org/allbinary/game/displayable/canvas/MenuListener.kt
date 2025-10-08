@@ -26,14 +26,15 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.game.input.GameKeyEventSourceInterface
+
 interface MenuListener : GameKeyEventSourceInterface {
         
 
-open fun open()
+    open fun open()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun close()
+    open fun close()
         //nullable = true from not(false or (false and true)) = true
 
 

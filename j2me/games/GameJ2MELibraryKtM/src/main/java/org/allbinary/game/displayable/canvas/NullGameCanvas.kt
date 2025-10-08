@@ -32,12 +32,11 @@ import org.allbinary.logic.communication.log.LogUtil
 
 open public class NullGameCanvas : AllBinaryGameCanvas {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: NullGameCanvas = NullGameCanvas()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : NullGameCanvas{
 
@@ -48,7 +47,7 @@ open fun getInstance()
 }
 
 
-open fun getInstance(gameLayerManager: AllBinaryGameLayerManager)
+    open fun getInstance(gameLayerManager: AllBinaryGameLayerManager)
         //nullable =  from not(true or (false and false)) = 
 : NullGameCanvas{
     //var gameLayerManager = gameLayerManager
@@ -70,7 +69,7 @@ nullGameCanvas!!.setTitle(NO_GAME)
     val TYPE: Int = 1
 
         }
-            protected constructor        (gameLayerManager: AllBinaryGameLayerManager)                        
+            protected constructor (gameLayerManager: AllBinaryGameLayerManager)                        
 
                             : super(gameLayerManager){
     //var gameLayerManager = gameLayerManager
@@ -81,12 +80,13 @@ nullGameCanvas!!.setTitle(NO_GAME)
 super.setWait(1200)
 }
 
-private constructor        (){
+private constructor (){
 super.setWait(1200)
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun isGameOver()
+
+    override fun isGameOver()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -98,7 +98,8 @@ override fun isGameOver()
 
 
     private var running: Boolean = true
-override fun setRunning(running: Boolean)
+
+    override fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var running = running
@@ -106,7 +107,8 @@ this.running= running
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun isRunning()
+
+    override fun isRunning()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -117,20 +119,23 @@ override fun isRunning()
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun pause()
+
+    override fun pause()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setPaused(true)
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun unPause()
+
+    override fun unPause()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setPaused(false)
 }
 
-override fun initCommands(cmdListener: CommandListener)
+
+    override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 {
     //var cmdListener = cmdListener
@@ -140,19 +145,22 @@ this.setCommandListener(cmdListener)
 
 
                 @Throws(Exception::class)
-            override fun buildGame(isProgress: Boolean)
+            
+    override fun buildGame(isProgress: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var isProgress = isProgress
 }
 
-override fun draw(graphics: Graphics)
+
+    override fun draw(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
 }
 
-override fun run()
+
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -166,7 +174,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 
 }
 
-override fun getType()
+
+    override fun getType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

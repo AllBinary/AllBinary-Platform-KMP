@@ -25,10 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface NamedInterface {
         
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String
 

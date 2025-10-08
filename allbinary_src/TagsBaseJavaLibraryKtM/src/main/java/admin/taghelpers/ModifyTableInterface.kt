@@ -25,24 +25,25 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface ModifyTableInterface {
         
 
                 @Throws(Exception::class)
             
-open fun insert()
+    open fun insert()
         //nullable = true from not(false or (false and true)) = true
 : String
 
                 @Throws(Exception::class)
             
-open fun delete()
+    open fun delete()
         //nullable = true from not(false or (false and true)) = true
 : String
 
                 @Throws(Exception::class)
             
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 : String
 

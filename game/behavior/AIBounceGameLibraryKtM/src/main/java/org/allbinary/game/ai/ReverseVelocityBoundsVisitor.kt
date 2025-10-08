@@ -42,7 +42,7 @@ open public class ReverseVelocityBoundsVisitor
     var velocityInterface: VelocityInterface
 
     private var layerInterface: LayerInterface
-public constructor        (layerInterface: LayerInterface)
+public constructor (layerInterface: LayerInterface)
             : super()
         {
 var layerInterface = layerInterface
@@ -53,7 +53,8 @@ this.layerInterface= layerInterface
 this.velocityInterface= velocityInterfaceCompositeInterface!!.getVelocityProperties() as VelocityInterface
 }
 
-override fun getX()
+
+    override fun getX()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -63,7 +64,8 @@ override fun getX()
                         return this.layerInterface!!.getXP()
 }
 
-override fun getY()
+
+    override fun getY()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -73,7 +75,8 @@ override fun getY()
                         return this.layerInterface!!.getYP()
 }
 
-override fun minX()
+
+    override fun minX()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -82,7 +85,8 @@ override fun minX()
                         this.velocityInterface!!.getVelocityXBasicDecimalP()!!.multiply( -1)
 }
 
-override fun maxX()
+
+    override fun maxX()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -91,7 +95,8 @@ override fun maxX()
                         this.velocityInterface!!.getVelocityXBasicDecimalP()!!.multiply( -1)
 }
 
-override fun minY()
+
+    override fun minY()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -100,7 +105,8 @@ override fun minY()
                         this.velocityInterface!!.getVelocityYBasicDecimalP()!!.multiply( -1)
 }
 
-override fun maxY()
+
+    override fun maxY()
         //nullable = true from not(false or (false and true)) = true
 {
 

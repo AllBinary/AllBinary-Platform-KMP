@@ -22,13 +22,13 @@ open public class Resource
             {
             }            
         
-open fun dispose()
+    open fun dispose()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun isDisposed()
+    open fun isDisposed()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

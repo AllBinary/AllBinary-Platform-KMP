@@ -35,12 +35,11 @@ open public class SystemHardwareFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: SystemHardwareFactory = SystemHardwareFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : SystemHardwareFactory{
 
@@ -53,7 +52,7 @@ open fun getInstance()
 
     private var hardwareInterface: HardwareInterface = NoHardware.getInstance()!!
 
-open fun static_toString()
+    open fun static_toString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -89,13 +88,13 @@ osBuffer!!.append("Hardware Info: \n")
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getInstance(operatingSystemInterface: GenericOperatingSystem)
+    open fun getInstance(operatingSystemInterface: GenericOperatingSystem)
         //nullable =  from not(true or (false and false)) = 
 : HardwareInterface{
 var operatingSystemInterface = operatingSystemInterface

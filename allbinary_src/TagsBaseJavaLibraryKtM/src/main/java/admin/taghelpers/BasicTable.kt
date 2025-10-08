@@ -42,7 +42,7 @@ open public class BasicTable
 
                 @Throws(Exception::class)
             
-open fun drop()
+    open fun drop()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -54,7 +54,7 @@ open fun drop()
 
                 @Throws(Exception::class)
             
-open fun create()
+    open fun create()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -66,7 +66,7 @@ open fun create()
 
                 @Throws(Exception::class)
             
-open fun restore()
+    open fun restore()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -78,7 +78,7 @@ open fun restore()
 
                 @Throws(Exception::class)
             
-open fun backup()
+    open fun backup()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

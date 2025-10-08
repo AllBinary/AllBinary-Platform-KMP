@@ -25,14 +25,15 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface SequentialAnimationInterface : AnimationInterface, SequenceInterface {
         
 
-open fun getSize()
+    open fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun previousFrame()
+    open fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
 
 

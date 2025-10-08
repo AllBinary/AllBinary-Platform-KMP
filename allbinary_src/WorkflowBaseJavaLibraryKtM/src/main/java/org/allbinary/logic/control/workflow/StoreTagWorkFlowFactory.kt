@@ -39,12 +39,11 @@ open public class StoreTagWorkFlowFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: StoreTagWorkFlowFactory = StoreTagWorkFlowFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : StoreTagWorkFlowFactory{
 
@@ -58,7 +57,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -66,7 +65,7 @@ private constructor        ()
 
                 @Throws(Exception::class, LicensingException::class)
             
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
 : StoreWorkFlowInterface{
     //var abeClientInformation = abeClientInformation

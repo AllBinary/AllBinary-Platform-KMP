@@ -30,12 +30,11 @@ open public class ChoiceGroupImageFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ChoiceGroupImageFactory = ChoiceGroupImageFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ChoiceGroupImageFactory{
 
@@ -79,7 +78,7 @@ open fun getInstance()
 
     private val imageArray: Array<Image?> = arrayOf(this.imgMultiOff,this.imgMultiOn,this.imgRadioOff,this.imgRadioOn)
 
-open fun getImageArray()
+    open fun getImageArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<Image?>{
 
@@ -90,7 +89,7 @@ open fun getImageArray()
 }
 
 
-open fun init(imageArray: Array<Image?>)
+    open fun init(imageArray: Array<Image?>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageArray = imageArray

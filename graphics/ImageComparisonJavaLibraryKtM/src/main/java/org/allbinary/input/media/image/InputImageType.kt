@@ -32,8 +32,7 @@ open public class InputImageType
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -45,7 +44,7 @@ open public class InputImageType
 
     var MOTION: InputImageType = InputImageType("Motion", 2)
 
-open fun getInstance(imageTypeString: String)
+    open fun getInstance(imageTypeString: String)
         //nullable =  from not(true or (false and false)) = 
 : InputImageType{
 var imageTypeString = imageTypeString
@@ -57,7 +56,7 @@ var imageTypeString = imageTypeString
 }
 
 
-open fun getAllAsVector()
+    open fun getAllAsVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -73,7 +72,7 @@ open fun getAllAsVector()
     private val name: String
 
     private val index: Int
-private constructor        (name: String, index: Int)
+private constructor (name: String, index: Int)
             : super()
         {
 var name = name
@@ -84,7 +83,8 @@ TYPE_VECTOR.add(this)
 this.hashMap!!.put(this.getName(), this)
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -95,7 +95,7 @@ override fun toString()
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -106,7 +106,7 @@ open fun getName()
 }
 
 
-open fun getIndex()
+    open fun getIndex()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

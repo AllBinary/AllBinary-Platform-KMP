@@ -56,7 +56,7 @@ open public class AllBinaryHTMLImageRotationAnimation : ImageBaseRotationAnimati
     private var bufferedImageIndex: Int= 0
 
     private var alphaProcessor: AlphaBaseProcessor = AlphaBaseProcessor.getInstance()!!
-protected constructor        (originalImage: Image, image: Image, angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
+protected constructor (originalImage: Image, image: Image, angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
 
                             : super(image, angleInfo, totalAngle, animationBehavior){
     //var originalImage = originalImage
@@ -77,7 +77,7 @@ this.canvasSurfaceArray[1]= this.getCanvasSurface(this.twoImages[1]!!)
 }
 
 
-open fun getCanvasSurface(image: Image)
+    open fun getCanvasSurface(image: Image)
         //nullable = true from not(false or (false and false)) = true
 : CanvasSurface{
     //var image = image
@@ -99,7 +99,7 @@ canvasSurface!!.translate(originalImage!!.getWidth() /2, originalImage!!.getHeig
 }
 
 
-open fun setBasicColorP(basicColor: BasicColor)
+    open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var basicColor = basicColor
@@ -130,7 +130,7 @@ super.setBasicColorP(basicColor)
 }
 
 
-open fun setAlpha(alpha: Int)
+    open fun setAlpha(alpha: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var alpha = alpha
@@ -160,7 +160,7 @@ this.updateImage()
 }
 
 
-open fun nextRotation()
+    open fun nextRotation()
         //nullable = true from not(false or (false and true)) = true
 {
 super.nextRotation()
@@ -168,7 +168,7 @@ this.updateImage()
 }
 
 
-open fun previousRotation()
+    open fun previousRotation()
         //nullable = true from not(false or (false and true)) = true
 {
 super.previousRotation()
@@ -176,7 +176,7 @@ this.updateImage()
 }
 
 
-open fun updateImage()
+    open fun updateImage()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -191,7 +191,7 @@ this.swap()
 }
 
 
-open fun setFrame(index: Int)
+    open fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var index = index
@@ -200,7 +200,7 @@ this.updateImage()
 }
 
 
-open fun swap()
+    open fun swap()
         //nullable = true from not(false or (false and true)) = true
 {
 this.imageToShow= this.twoImages[this.bufferedImageIndex]!!
@@ -221,7 +221,7 @@ this.imageToShow= this.twoImages[this.bufferedImageIndex]!!
 }
 
 
-open fun paint(graphics: Graphics, x: Int, y: Int)
+    open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

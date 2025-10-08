@@ -29,7 +29,7 @@ import admin.taghelpers.UpdateOrderHelperFactory
 
 open public class UpdateOrderTag : TableTag {
         
-public constructor        (){
+public constructor (){
 this.setTagHelperFactory(UpdateOrderHelperFactory())
 this.setTagRequestHelperFactory(UpdateOrderHelperFactory())
 }

@@ -25,21 +25,21 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import javax.microedition.lcdui.Graphics
+import java.awt.image.BufferedImage
 import javax.microedition.lcdui.Image
 import org.allbinary.graphics.Anchor
 import org.allbinary.logic.communication.log.LogUtil
+import org.microemu.device.j2se.J2SEImmutableImage
 
 open public class ImageCopyUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ImageCopyUtil = ImageCopyUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ImageCopyUtil{
 
@@ -54,8 +54,10 @@ open fun getInstance()
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
+    private val imageUtil: ImageUtil = ImageUtil.getInstance()!!
+
     private val imageCreationUtil: ImageCreationUtil = ImageCreationUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -65,7 +67,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun createImageForRotation(originalImage: Image)
+    open fun createImageForRotation(originalImage: Image)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var originalImage = originalImage
@@ -79,7 +81,7 @@ open fun createImageForRotation(originalImage: Image)
 
                 @Throws(Exception::class)
             
-open fun createImage(originalImage: Image)
+    open fun createImage(originalImage: Image)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var originalImage = originalImage
@@ -113,7 +115,7 @@ open fun createImage(originalImage: Image)
 
                 @Throws(Exception::class)
             
-open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
+    open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var originalImage = originalImage
@@ -152,39 +154,19 @@ open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
                                     }
                                 
 
-    var image: Image = imageCreationUtil!!.getInstance(newWidth, newHeight)!!
+    var originalBufferedImage: BufferedImage = imageUtil!!.getBufferedImage(originalImage)!!
 
 
-    
-                        if(image.isMutable())
-                        
-                                    {
-                                    
-    var halfWidthDelta: Int = (newWidth -originalImage!!.getWidth()) /2
+    var bufferedImage: BufferedImage = imageUtil!!.createBufferedImageWithLargerCanvas(originalBufferedImage, newWidth, newHeight)!!
 
 
-    var halfHeightDelta: Int = (newHeight -originalImage!!.getHeight()) /2
+    var image: J2SEImmutableImage = J2SEImmutableImage(bufferedImage)
 
-
-    var graphics: Graphics = image.getGraphics()!!
-
-graphics.drawImage(originalImage, halfWidthDelta, halfHeightDelta, anchor)
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return image
-
-                                    }
-                                
-                        else {
-                            
-
-
-                            throw Exception("Not Mutable")
-
-                        }
-                            
 }
 
 

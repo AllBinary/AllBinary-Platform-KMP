@@ -37,14 +37,13 @@ open public class GraphicsAnalysisUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val MAX: Int = 122
 
                 @Throws(Exception::class)
             
-open fun getNominator(bufferedImage: BufferedImage, min_x: Integer, max_x: Integer, y: Integer)
+    open fun getNominator(bufferedImage: BufferedImage, min_x: Integer, max_x: Integer, y: Integer)
         //nullable = true from not(false or (false and false)) = true
 : Double{
 var bufferedImage = bufferedImage
@@ -98,7 +97,7 @@ var y = y
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

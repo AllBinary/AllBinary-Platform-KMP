@@ -30,10 +30,9 @@ open public class PrimitiveFloatUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getArrayInstance()
+    open fun getArrayInstance()
         //nullable = true from not(false or (false and true)) = true
 : FloatArray{
 
@@ -45,7 +44,7 @@ open fun getArrayInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

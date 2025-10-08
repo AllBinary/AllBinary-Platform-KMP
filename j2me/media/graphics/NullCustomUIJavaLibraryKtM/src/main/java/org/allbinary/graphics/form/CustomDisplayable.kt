@@ -22,7 +22,7 @@ open public class CustomDisplayable
             {
             }            
         
-open fun setTitle(title: String)
+    open fun setTitle(title: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var title = title

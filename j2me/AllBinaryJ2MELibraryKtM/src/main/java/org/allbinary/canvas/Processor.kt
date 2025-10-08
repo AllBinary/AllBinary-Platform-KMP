@@ -30,12 +30,11 @@ open public class Processor
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: Processor = Processor()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : Processor{
 
@@ -55,7 +54,7 @@ open fun getInstance()
         
                 @Throws(Exception::class)
             
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -63,7 +62,7 @@ open fun process()
 
                 @Throws(Exception::class)
             
-open fun process(timeDelta: Long)
+    open fun process(timeDelta: Long)
         //nullable = true from not(false or (false and false)) = true
 {
     //var timeDelta = timeDelta

@@ -33,12 +33,11 @@ open public class AbeNoLicense
         
                 , AbeLicenseInterface {
         
-
-        companion object {
+companion object {
             
     private var abeNoLicense: AbeNoLicense = AbeNoLicense()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AbeNoLicense{
 
@@ -52,13 +51,13 @@ open fun getInstance()
         }
             
     var serverVector: BasicArrayList = BasicArrayList()
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun hasKey()
+    open fun hasKey()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -69,7 +68,7 @@ open fun hasKey()
 }
 
 
-open fun getKey(keyName: String)
+    open fun getKey(keyName: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var keyName = keyName
@@ -81,7 +80,7 @@ var keyName = keyName
 }
 
 
-open fun getLicenseId()
+    open fun getLicenseId()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -92,7 +91,7 @@ open fun getLicenseId()
 }
 
 
-open fun getSpecial()
+    open fun getSpecial()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -103,7 +102,7 @@ open fun getSpecial()
 }
 
 
-open fun getServers()
+    open fun getServers()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -114,7 +113,7 @@ open fun getServers()
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -125,7 +124,7 @@ open fun isValid()
 }
 
 
-open fun getLicenseType()
+    open fun getLicenseType()
         //nullable = true from not(false or (false and true)) = true
 : LicenseType{
 

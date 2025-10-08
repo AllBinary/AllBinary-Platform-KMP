@@ -29,7 +29,6 @@
         
 import javax.microedition.lcdui.Graphics
 import org.allbinary.logic.string.StringMaker
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.graphics.paint.PaintableInterface
 import org.allbinary.layer.Layer
@@ -56,7 +55,7 @@ open public class AllBinaryTiledLayer : Layer
     private val halfCellHeight: Int
 
     private val dataId: Integer
-public constructor        (dataId: Integer, width: Int, height: Int, cellWidth: Int, cellHeight: Int)                        
+public constructor (dataId: Integer, width: Int, height: Int, cellWidth: Int, cellHeight: Int)                        
 
                             : super(0, 0){
     //var dataId = dataId
@@ -81,7 +80,7 @@ this.halfCellHeight= (cellHeight shr 1)
 }
 
 
-open fun setCells(mapTwoDArray: Array<IntArray?>)
+    open fun setCells(mapTwoDArray: Array<IntArray?>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var mapTwoDArray = mapTwoDArray
@@ -125,7 +124,7 @@ this.setCell(col, row, mapTwoDArray[row]!![col]!!)
 }
 
 
-open fun updateCells(mapTwoDArray: Array<IntArray?>, fromTileId: Int, toTileId: Int)
+    open fun updateCells(mapTwoDArray: Array<IntArray?>, fromTileId: Int, toTileId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var mapTwoDArray = mapTwoDArray
@@ -168,7 +167,7 @@ this.setCell(col, row, mapTwoDArray[row]!![col]!!)
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -179,21 +178,21 @@ open fun getName()
 }
 
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
 }
 
 
-open fun paintThreed(graphics: Graphics)
+    open fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
 }
 
 
-open fun getX2()
+    open fun getX2()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -204,7 +203,7 @@ open fun getX2()
 }
 
 
-open fun getY2()
+    open fun getY2()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -215,7 +214,7 @@ open fun getY2()
 }
 
 
-open fun getZ2()
+    open fun getZ2()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -226,7 +225,7 @@ open fun getZ2()
 }
 
 
-open fun getCellWidth()
+    open fun getCellWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -237,7 +236,7 @@ open fun getCellWidth()
 }
 
 
-open fun getCellHeight()
+    open fun getCellHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -248,7 +247,7 @@ open fun getCellHeight()
 }
 
 
-open fun getCell(col: Int, row: Int)
+    open fun getCell(col: Int, row: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var col = col
@@ -261,7 +260,7 @@ open fun getCell(col: Int, row: Int)
 }
 
 
-open fun getColumns()
+    open fun getColumns()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -272,7 +271,7 @@ open fun getColumns()
 }
 
 
-open fun getRows()
+    open fun getRows()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -283,7 +282,7 @@ open fun getRows()
 }
 
 
-open fun setCell(col: Int, row: Int, tileIndex: Int)
+    open fun setCell(col: Int, row: Int, tileIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var col = col
@@ -292,7 +291,7 @@ open fun setCell(col: Int, row: Int, tileIndex: Int)
 }
 
 
-open fun getHalfWidth()
+    open fun getHalfWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -303,7 +302,7 @@ open fun getHalfWidth()
 }
 
 
-open fun getHalfHeight()
+    open fun getHalfHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -314,7 +313,7 @@ open fun getHalfHeight()
 }
 
 
-open fun getDataId()
+    open fun getDataId()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -325,7 +324,7 @@ open fun getDataId()
 }
 
 
-open fun getHalfCellWidth()
+    open fun getHalfCellWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -336,7 +335,7 @@ open fun getHalfCellWidth()
 }
 
 
-open fun getHalfCellHeight()
+    open fun getHalfCellHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -347,7 +346,7 @@ open fun getHalfCellHeight()
 }
 
 
-open fun isOnTileLayer(column: Int, row: Int)
+    open fun isOnTileLayer(column: Int, row: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var column = column
@@ -377,7 +376,7 @@ open fun isOnTileLayer(column: Int, row: Int)
 }
 
 
-open fun getAnimatedTile(animationTileIndex: Int)
+    open fun getAnimatedTile(animationTileIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var animationTileIndex = animationTileIndex

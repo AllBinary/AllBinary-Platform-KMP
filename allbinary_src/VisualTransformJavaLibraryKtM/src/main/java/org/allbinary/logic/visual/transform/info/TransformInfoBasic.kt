@@ -39,7 +39,7 @@ open public class TransformInfoBasic : AbContext
         
 
     private var storeFrontInterface: StoreFrontInterface
-public constructor        (storeFrontInterface: StoreFrontInterface, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
+public constructor (storeFrontInterface: StoreFrontInterface, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
                             : super(propertiesHashMap, pageContext){
 var storeFrontInterface = storeFrontInterface
@@ -53,7 +53,7 @@ this.storeFrontInterface= storeFrontInterface
 }
 
 
-open fun getStoreName()
+    open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -64,7 +64,7 @@ open fun getStoreName()
 }
 
 
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -75,14 +75,14 @@ open fun log()
 }
 
 
-open fun override(hashMap: HashMap<Any, Any>)
+    open fun override(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var hashMap = hashMap
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -93,7 +93,7 @@ open fun getName()
 }
 
 
-open fun getObjectFile()
+    open fun getObjectFile()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -104,7 +104,7 @@ open fun getObjectFile()
 }
 
 
-open fun getObject()
+    open fun getObject()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -115,7 +115,7 @@ open fun getObject()
 }
 
 
-open fun getObjectConfigInterface()
+    open fun getObjectConfigInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformInfoObjectConfigInterface{
 
@@ -126,14 +126,14 @@ open fun getObjectConfigInterface()
 }
 
 
-open fun setObjectConfigInterface(transformInfoObjectConfigInterface: Object)
+    open fun setObjectConfigInterface(transformInfoObjectConfigInterface: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 var transformInfoObjectConfigInterface = transformInfoObjectConfigInterface
 }
 
 
-open fun getTemplateFilePath()
+    open fun getTemplateFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 
@@ -144,7 +144,7 @@ open fun getTemplateFilePath()
 }
 
 
-open fun getTemplateFile()
+    open fun getTemplateFile()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -155,7 +155,7 @@ open fun getTemplateFile()
 }
 
 
-open fun getTemplate()
+    open fun getTemplate()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -166,7 +166,7 @@ open fun getTemplate()
 }
 
 
-open fun getDataFilePath()
+    open fun getDataFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 
@@ -177,7 +177,7 @@ open fun getDataFilePath()
 }
 
 
-open fun getDataFile()
+    open fun getDataFile()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -190,7 +190,7 @@ open fun getDataFile()
 
                 @Throws(Exception::class)
             
-open fun getDataDocument()
+    open fun getDataDocument()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -200,76 +200,76 @@ open fun getDataDocument()
 }
 
 
-open fun setName(value: String)
+    open fun setName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
 }
 
 
-open fun setStoreName(value: String)
+    open fun setStoreName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
 }
 
 
-open fun setObjectFile(value: Object)
+    open fun setObjectFile(value: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
 }
 
 
-open fun setObject(anyType: Object)
+    open fun setObject(anyType: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 var anyType = anyType
 }
 
 
-open fun setObjectConfigFile(value: Object)
+    open fun setObjectConfigFile(value: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
 }
 
 
-open fun setTemplateFile(value: String)
+    open fun setTemplateFile(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
 }
 
 
-open fun setTemplate(value: String)
+    open fun setTemplate(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
 }
 
 
-open fun setDataFile(value: String)
+    open fun setDataFile(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
 }
 
 
-open fun setData(value: String)
+    open fun setData(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
 }
 
 
-open fun setChild()
+    open fun setChild()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun isChild()
+    open fun isChild()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -280,7 +280,7 @@ open fun isChild()
 }
 
 
-open fun getImportUriPath()
+    open fun getImportUriPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -291,7 +291,7 @@ open fun getImportUriPath()
 }
 
 
-open fun setImportUriPath(importUriPath: String)
+    open fun setImportUriPath(importUriPath: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var importUriPath = importUriPath
@@ -300,7 +300,7 @@ var importUriPath = importUriPath
 
                 @Throws(Exception::class)
             
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -313,7 +313,7 @@ open fun getKey()
 
                 @Throws(Exception::class)
             
-open fun toVector()
+    open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -326,7 +326,7 @@ open fun toVector()
 
                 @Throws(Exception::class)
             
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 

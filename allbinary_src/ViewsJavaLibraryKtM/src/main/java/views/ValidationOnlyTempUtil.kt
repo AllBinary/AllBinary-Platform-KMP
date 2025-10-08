@@ -34,12 +34,11 @@ open public class ValidationOnlyTempUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ValidationOnlyTempUtil = ValidationOnlyTempUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ValidationOnlyTempUtil{
 
@@ -53,7 +52,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -61,7 +60,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun view(validationComponentInterface: ValidationComponentInterface)
+    open fun view(validationComponentInterface: ValidationComponentInterface)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var validationComponentInterface = validationComponentInterface

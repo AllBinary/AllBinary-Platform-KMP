@@ -37,12 +37,11 @@ open public class ValidatorBase
         
                 , ValidatorBaseInterface {
         
-
-        companion object {
+companion object {
             
     private val instance: ValidatorBase = ValidatorBase()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ValidatorBase{
 
@@ -54,12 +53,13 @@ open fun getInstance()
 
 
         }
-            public constructor        ()
+            public constructor ()
             : super()
         {
 }
 
-override fun isValid()
+
+    override fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -69,7 +69,8 @@ override fun isValid()
                         return BooleanFactory.getInstance()!!.TRUE
 }
 
-override fun validationInfo()
+
+    override fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -79,7 +80,8 @@ override fun validationInfo()
                         return StringUtil.getInstance()!!.EMPTY_STRING
 }
 
-override fun toHashtable()
+
+    override fun toHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
 
@@ -89,7 +91,8 @@ override fun toHashtable()
                         return NullUtil.getInstance()!!.NULL_TABLE
 }
 
-override fun toList()
+
+    override fun toList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 

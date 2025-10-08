@@ -34,14 +34,15 @@ open public class MainGameDemoStatePaintable : Paintable {
     private val ownershipPaintableInterface: Paintable
 
     private val menuPaintableInterface: Paintable
-public constructor        (ownershipPaintableInterface: Paintable, menuPaintableInterface: Paintable){
+public constructor (ownershipPaintableInterface: Paintable, menuPaintableInterface: Paintable){
 var ownershipPaintableInterface = ownershipPaintableInterface
 var menuPaintableInterface = menuPaintableInterface
 this.ownershipPaintableInterface= ownershipPaintableInterface
 this.menuPaintableInterface= menuPaintableInterface
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -50,7 +51,7 @@ this.ownershipPaintableInterface!!.paint(graphics)
 }
 
 
-open fun getOwnershipPaintableInterface()
+    open fun getOwnershipPaintableInterface()
         //nullable = true from not(false or (false and true)) = true
 : Paintable{
 
@@ -61,7 +62,7 @@ open fun getOwnershipPaintableInterface()
 }
 
 
-open fun getMenuPaintableInterface()
+    open fun getMenuPaintableInterface()
         //nullable = true from not(false or (false and true)) = true
 : Paintable{
 

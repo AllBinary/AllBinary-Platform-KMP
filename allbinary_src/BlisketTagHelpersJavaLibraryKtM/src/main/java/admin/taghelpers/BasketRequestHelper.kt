@@ -59,7 +59,7 @@ open public class BasketRequestHelper : TagHelper {
     private var num: String
 
     private val MAX: Int = 200
-public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext){
 var propertiesHashMap = propertiesHashMap
 var pageContext = pageContext
 this.propertiesHashMap= propertiesHashMap
@@ -89,7 +89,7 @@ this.getFormData()
 }
 
 
-open fun getFormData()
+    open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
 this.id= request.getParameter(BasicItemData.ID)
@@ -97,7 +97,7 @@ this.num= request.getParameter(BasketData.ITEMTOTALINBASKET)
 }
 
 
-open fun addItemToBasket()
+    open fun addItemToBasket()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -168,7 +168,7 @@ basket.addItem(id, num)
 }
 
 
-open fun removeItemFromBasket()
+    open fun removeItemFromBasket()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -222,7 +222,7 @@ basket.removeItem(id)
 }
 
 
-open fun adjustBasket()
+    open fun adjustBasket()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

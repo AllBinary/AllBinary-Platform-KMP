@@ -47,7 +47,7 @@ open public class GeographicMapCellPathHistoryInfo
 
     private var nextChosenOnPathGeographicMapCellPosition: GeographicMapCellPosition
 
-open fun getPreviousGeographicMapCellPosition()
+    open fun getPreviousGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPosition{
 
@@ -58,7 +58,7 @@ open fun getPreviousGeographicMapCellPosition()
 }
 
 
-open fun setPreviousGeographicMapCellPosition(previousGeographicMapCellPosition: GeographicMapCellPosition)
+    open fun setPreviousGeographicMapCellPosition(previousGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
 var previousGeographicMapCellPosition = previousGeographicMapCellPosition
@@ -66,7 +66,7 @@ this.previousGeographicMapCellPosition= previousGeographicMapCellPosition
 }
 
 
-open fun getPreviousOnPathGeographicMapCellPosition()
+    open fun getPreviousOnPathGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPosition{
 
@@ -77,7 +77,7 @@ open fun getPreviousOnPathGeographicMapCellPosition()
 }
 
 
-open fun setPreviousOnPathGeographicMapCellPosition(previousOnPathGeographicMapCellPosition: GeographicMapCellPosition)
+    open fun setPreviousOnPathGeographicMapCellPosition(previousOnPathGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
 var previousOnPathGeographicMapCellPosition = previousOnPathGeographicMapCellPosition
@@ -85,7 +85,7 @@ this.previousOnPathGeographicMapCellPosition= previousOnPathGeographicMapCellPos
 }
 
 
-open fun getNextUnvisitedOnPathGeographicMapCellPosition()
+    open fun getNextUnvisitedOnPathGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPosition{
 
@@ -96,7 +96,7 @@ open fun getNextUnvisitedOnPathGeographicMapCellPosition()
 }
 
 
-open fun setNextUnvisitedOnPathGeographicMapCellPosition(nextUnvisitedOnPathGeographicMapCellPosition: GeographicMapCellPosition)
+    open fun setNextUnvisitedOnPathGeographicMapCellPosition(nextUnvisitedOnPathGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
 var nextUnvisitedOnPathGeographicMapCellPosition = nextUnvisitedOnPathGeographicMapCellPosition
@@ -104,7 +104,7 @@ this.nextUnvisitedOnPathGeographicMapCellPosition= nextUnvisitedOnPathGeographic
 }
 
 
-open fun getNextOnPathGeographicMapCellPosition()
+    open fun getNextOnPathGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPosition{
 
@@ -115,7 +115,7 @@ open fun getNextOnPathGeographicMapCellPosition()
 }
 
 
-open fun setNextOnPathGeographicMapCellPosition(nextOnPathGeographicMapCellPosition: GeographicMapCellPosition)
+    open fun setNextOnPathGeographicMapCellPosition(nextOnPathGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
 var nextOnPathGeographicMapCellPosition = nextOnPathGeographicMapCellPosition
@@ -123,7 +123,7 @@ this.nextOnPathGeographicMapCellPosition= nextOnPathGeographicMapCellPosition
 }
 
 
-open fun getNextChosenOnPathGeographicMapCellPosition()
+    open fun getNextChosenOnPathGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPosition{
 
@@ -134,7 +134,7 @@ open fun getNextChosenOnPathGeographicMapCellPosition()
 }
 
 
-open fun setNextChosenOnPathGeographicMapCellPosition(nextChosenOnPathGeographicMapCellPosition: GeographicMapCellPosition)
+    open fun setNextChosenOnPathGeographicMapCellPosition(nextChosenOnPathGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
 var nextChosenOnPathGeographicMapCellPosition = nextChosenOnPathGeographicMapCellPosition

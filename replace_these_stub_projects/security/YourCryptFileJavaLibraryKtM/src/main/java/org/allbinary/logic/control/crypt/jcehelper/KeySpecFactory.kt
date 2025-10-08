@@ -31,14 +31,13 @@ open public class KeySpecFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val DES: String = "DES"
 
     val DESEDE: String = "DESede"
 
-open fun getInstance(algorithm: String, keyData: ByteArray)
+    open fun getInstance(algorithm: String, keyData: ByteArray)
         //nullable =  from not(true or (false and false)) = 
 : KeySpec{
 var algorithm = algorithm
@@ -52,7 +51,7 @@ var keyData = keyData
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

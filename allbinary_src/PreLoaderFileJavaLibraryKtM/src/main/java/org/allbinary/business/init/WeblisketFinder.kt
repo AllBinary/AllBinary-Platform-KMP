@@ -40,12 +40,11 @@ open public class WeblisketFinder
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: WeblisketFinder = WeblisketFinder()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : WeblisketFinder{
 
@@ -60,7 +59,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun main(args: Array<String?>)
+    open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var args = args
@@ -81,13 +80,13 @@ System.out.println(vector.size())
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private val subDirectory: SubDirectory = SubDirectory.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun findAll(path: String)
+    open fun findAll(path: String)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var path = path
@@ -121,7 +120,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "findAll", e)
 }
 
 
-open fun getInstallationPath(file: AbFile)
+    open fun getInstallationPath(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var file = file

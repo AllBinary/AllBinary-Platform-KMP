@@ -20,7 +20,7 @@ open public class IntPermutationVisitor : Visitor {
         
 
     val data: IntArray
-public constructor        (data: IntArray){
+public constructor (data: IntArray){
 var data = data
 this.data= data
 }
@@ -28,7 +28,7 @@ this.data= data
 
     private var stringBuilder: StringBuilder = StringBuilder()
 
-open fun visit(anyType: Any)
+    open fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var anyType = anyType
@@ -42,7 +42,7 @@ this.print(data, stringBuilder)
 }
 
 
-open fun print(data: IntArray)
+    open fun print(data: IntArray)
         //nullable = true from not(false or (false and false)) = true
 {
 var data = data
@@ -53,7 +53,7 @@ this.print(data, stringBuilder)
 }
 
 
-open fun print(data: IntArray, stringBuilder: StringBuilder)
+    open fun print(data: IntArray, stringBuilder: StringBuilder)
         //nullable = true from not(false or (false and false)) = true
 {
 var data = data

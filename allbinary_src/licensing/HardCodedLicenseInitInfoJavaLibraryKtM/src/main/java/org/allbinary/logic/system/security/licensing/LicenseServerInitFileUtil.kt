@@ -36,13 +36,13 @@ open public class LicenseServerInitFileUtil
             {
             }            
         
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun write()
+    open fun write()
         //nullable = true from not(false or (false and true)) = true
 {
 }

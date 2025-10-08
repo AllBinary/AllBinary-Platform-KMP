@@ -29,44 +29,45 @@ import org.allbinary.business.category.hierarchy.CategoryHierarchyInterface
 import org.allbinary.data.tables.TableMappingInterface
 import org.allbinary.logic.control.validate.ValidationInterface
 import org.allbinary.logic.io.path.AbPath
+
 interface CategoryPropertiesInterface : TableMappingInterface, ValidationInterface {
         
 
-open fun setValue(value: String)
+    open fun setValue(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getValue()
+    open fun getValue()
         //nullable = true from not(false or (false and true)) = true
 : String
 
                 @Throws(Exception::class)
             
-open fun getWebAppPath()
+    open fun getWebAppPath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath
 
                 @Throws(Exception::class)
             
-open fun getPath(categoryHierarchyInterface: CategoryHierarchyInterface)
+    open fun getPath(categoryHierarchyInterface: CategoryHierarchyInterface)
         //nullable = true from not(false or (false and false)) = true
 : AbPath
 
                 @Throws(Exception::class)
             
-open fun getFileName()
+    open fun getFileName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
                 @Throws(Exception::class)
             
-open fun isRoot()
+    open fun isRoot()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
                 @Throws(Exception::class)
             
-open fun isRealRoot()
+    open fun isRealRoot()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 

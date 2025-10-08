@@ -32,14 +32,15 @@ open public class GameType
         
 
     private var name: String
- constructor        (name: String)
+ constructor (name: String)
             : super()
         {
 var name = name
 this.name= name
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

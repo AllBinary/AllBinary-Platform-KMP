@@ -31,12 +31,11 @@ open public class OpenGLESImageDraw
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OpenGLESImageDraw = OpenGLESImageDraw()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OpenGLESImageDraw{
 
@@ -54,7 +53,7 @@ open fun getInstance()
             {
             }            
         
-open fun drawRegion(gl: GL10, viewHeight: Int, x_src: Float, y_src: Float, width: Float, height: Float, x: Int, y: Int, z: Int)
+    open fun drawRegion(gl: GL10, viewHeight: Int, x_src: Float, y_src: Float, width: Float, height: Float, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl
@@ -69,7 +68,7 @@ open fun drawRegion(gl: GL10, viewHeight: Int, x_src: Float, y_src: Float, width
 }
 
 
-open fun draw(gl: GL10, x: Int, y: Int, z: Int)
+    open fun draw(gl: GL10, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl

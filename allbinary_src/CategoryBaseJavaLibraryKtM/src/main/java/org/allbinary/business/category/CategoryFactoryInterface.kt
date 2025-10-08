@@ -28,30 +28,31 @@
 import java.util.HashMap
 import org.allbinary.logic.io.path.AbPath
 import org.w3c.dom.Node
+
 interface CategoryFactoryInterface {
         
 
-open fun getRootInstance()
+    open fun getRootInstance()
         //nullable = true from not(false or (false and true)) = true
 : CategoryInterface
 
-open fun getRootInstance(categoryPath: AbPath)
+    open fun getRootInstance(categoryPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
 : CategoryInterface
 
-open fun getRootInstanceFromNode(node: Node)
+    open fun getRootInstanceFromNode(node: Node)
         //nullable = true from not(false or (false and false)) = true
 : CategoryInterface
 
-open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, name: String)
+    open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, name: String)
         //nullable =  from not(true or (false and false)) = 
 : CategoryInterface
 
-open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, node: Node)
+    open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, node: Node)
         //nullable =  from not(true or (false and false)) = 
 : CategoryInterface
 
-open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, categoryPropertiesHashMap: HashMap<Any, Any>)
+    open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, categoryPropertiesHashMap: HashMap<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
 : CategoryInterface
 

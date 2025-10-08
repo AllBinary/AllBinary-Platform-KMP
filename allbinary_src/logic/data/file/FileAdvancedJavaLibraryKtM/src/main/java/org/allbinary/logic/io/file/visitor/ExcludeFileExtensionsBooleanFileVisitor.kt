@@ -30,7 +30,7 @@ import org.allbinary.util.BasicArrayList
 
 open public class ExcludeFileExtensionsBooleanFileVisitor : BooleanFileVisitor {
         
-public constructor        (filterStringBasicArrayList: BasicArrayList)                        
+public constructor (filterStringBasicArrayList: BasicArrayList)                        
 
                             : super(filterStringBasicArrayList){
 var filterStringBasicArrayList = filterStringBasicArrayList
@@ -41,7 +41,7 @@ var filterStringBasicArrayList = filterStringBasicArrayList
 }
 
 
-open fun visit(file: AbFile)
+    open fun visit(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var file = file
@@ -66,7 +66,7 @@ var file = file
 }
 
 
-open fun visit(file: AbFile, fileNameString: String)
+    open fun visit(file: AbFile, fileNameString: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var file = file

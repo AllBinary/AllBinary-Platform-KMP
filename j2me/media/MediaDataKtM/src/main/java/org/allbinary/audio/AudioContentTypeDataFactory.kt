@@ -30,12 +30,11 @@ open public class AudioContentTypeDataFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AudioContentTypeDataFactory = AudioContentTypeDataFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AudioContentTypeDataFactory{
 
@@ -59,7 +58,7 @@ open fun getInstance()
     val MIME_AUDIO_MIDI: AudioContentTypeData = AudioContentTypeData("audio/midi")
 
     val MIME_AUDIO_SP_MIDI: AudioContentTypeData = AudioContentTypeData("audio/sp-midi")
-private constructor        ()
+private constructor ()
             : super()
         {
 }

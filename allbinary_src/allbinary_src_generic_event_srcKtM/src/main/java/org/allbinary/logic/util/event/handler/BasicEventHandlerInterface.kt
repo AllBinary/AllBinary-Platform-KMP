@@ -27,24 +27,25 @@
         
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.util.event.EventListenerInterface
+
 interface BasicEventHandlerInterface {
         
 
-open fun addListener(eventListenerInterface: EventListenerInterface)
+    open fun addListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun fireEvent(eventObject: AllBinaryEventObject)
+    open fun fireEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun removeAllListeners()
+    open fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun removeListener(eventListenerInterface: EventListenerInterface)
+    open fun removeListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 
 

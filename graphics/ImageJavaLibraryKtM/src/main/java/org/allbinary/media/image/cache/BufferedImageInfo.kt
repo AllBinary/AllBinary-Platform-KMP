@@ -38,7 +38,7 @@ open public class BufferedImageInfo
     private var height: Int
 
     private var type: Int
-public constructor        (width: Int, height: Int, type: Int)
+public constructor (width: Int, height: Int, type: Int)
             : super()
         {
 var width = width
@@ -50,7 +50,7 @@ this.type= type
 }
 
 
-open fun getWidth()
+    open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -61,7 +61,7 @@ open fun getWidth()
 }
 
 
-open fun setWidth(width: Int)
+    open fun setWidth(width: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var width = width
@@ -69,7 +69,7 @@ this.width= width
 }
 
 
-open fun getHeight()
+    open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -80,7 +80,7 @@ open fun getHeight()
 }
 
 
-open fun setHeight(height: Int)
+    open fun setHeight(height: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var height = height
@@ -88,7 +88,7 @@ this.height= height
 }
 
 
-open fun getType()
+    open fun getType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -99,14 +99,15 @@ open fun getType()
 }
 
 
-open fun setType(type: Int)
+    open fun setType(type: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var type = type
 this.type= type
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

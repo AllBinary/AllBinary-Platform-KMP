@@ -28,24 +28,25 @@
 import org.allbinary.data.tree.dom.document.mapping.DomDocumentMappingInterface
 import org.allbinary.logic.visual.transform.data.TransformDocumentInterface
 import org.allbinary.logic.visual.transform.info.CompositeTransformInfoInterface
+
 interface TransformInterface : DomDocumentMappingInterface, CompositeTransformInfoInterface {
         
 
-open fun getTypeId()
+    open fun getTypeId()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun setTransformDocumentInterface(viewDocumentInterface: TransformDocumentInterface)
+    open fun setTransformDocumentInterface(viewDocumentInterface: TransformDocumentInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getTransformDocumentInterface()
+    open fun getTransformDocumentInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformDocumentInterface
 
                 @Throws(Exception::class)
             
-open fun view()
+    open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String
 

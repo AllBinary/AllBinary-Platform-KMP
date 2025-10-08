@@ -25,12 +25,13 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface ViewPositionFactoryInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ViewPosition
 

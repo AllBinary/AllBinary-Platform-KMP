@@ -36,12 +36,11 @@ open public class GenericProfileCaptureWorkerFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun getInstance(genericProfile: GenericProfile)
+    open fun getInstance(genericProfile: GenericProfile)
         //nullable =  from not(true or (false and false)) = 
 : CaptureWorkerInterface{
 var genericProfile = genericProfile
@@ -97,7 +96,7 @@ var genericProfile = genericProfile
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

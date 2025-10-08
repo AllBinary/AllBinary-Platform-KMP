@@ -26,12 +26,13 @@
         
 import org.allbinary.game.layer.RTSLayerEvent
 import org.allbinary.logic.util.event.EventListenerInterface
+
 interface WaypointEventListenerInterface : EventListenerInterface {
         
 
                 @Throws(Exception::class)
             
-open fun onWaypointEvent(event: RTSLayerEvent)
+    open fun onWaypointEvent(event: RTSLayerEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

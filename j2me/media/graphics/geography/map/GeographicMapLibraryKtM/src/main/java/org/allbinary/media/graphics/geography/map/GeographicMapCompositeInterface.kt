@@ -25,18 +25,19 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface GeographicMapCompositeInterface {
         
 
-open fun geographicMapCellTypeArray()
+    open fun geographicMapCellTypeArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<GeographicMapCellType?>
 
-open fun getGeographicMapInterface()
+    open fun getGeographicMapInterface()
         //nullable = true from not(false or (false and true)) = true
 : Array<BasicGeographicMap?>
 
-open fun setGeographicMapInterface(geographicMapInterface: Array<BasicGeographicMap?>)
+    open fun setGeographicMapInterface(geographicMapInterface: Array<BasicGeographicMap?>)
         //nullable = true from not(false or (false and false)) = true
 
 

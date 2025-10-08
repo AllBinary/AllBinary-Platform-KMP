@@ -29,7 +29,7 @@ import org.allbinary.layer.AllBinaryLayer
 
 open public class CollidableAlwaysPickupNeverCollideBehavior : CollidableNeverCollideBehavior {
         
- constructor        ()                        
+ constructor ()                        
 
                             : super(true){
 
@@ -38,7 +38,8 @@ open public class CollidableAlwaysPickupNeverCollideBehavior : CollidableNeverCo
                     
 }
 
-override fun getCollisionTypeWith(layerInterface: AllBinaryLayer)
+
+    override fun getCollisionTypeWith(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 : CollisionType{
 var layerInterface = layerInterface

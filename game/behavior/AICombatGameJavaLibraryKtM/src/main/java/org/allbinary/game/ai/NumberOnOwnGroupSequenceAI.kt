@@ -38,7 +38,7 @@ open public class NumberOnOwnGroupSequenceAI : SequenceAI {
         
 
     private var numberOnSameTeam: Array<Integer?>
-public constructor        (numberOnSameTeam: Array<Integer?>, artificialIntelligenceInterface: Array<ArtificialIntelligenceInterface?>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
+public constructor (numberOnSameTeam: Array<Integer?>, artificialIntelligenceInterface: Array<ArtificialIntelligenceInterface?>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
                             : super(artificialIntelligenceInterface, ownerLayerInterface, gameInput){
 var numberOnSameTeam = numberOnSameTeam
@@ -54,7 +54,8 @@ this.numberOnSameTeam= numberOnSameTeam
 
 
                 @Throws(Exception::class)
-            override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+            
+    override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager

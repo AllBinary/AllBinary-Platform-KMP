@@ -36,12 +36,11 @@ open public class InitInfo
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: InitInfo = InitInfo()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : InitInfo{
 
@@ -73,7 +72,7 @@ open fun getInstance()
             
 
     private var hasRead: Boolean = false
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -82,7 +81,7 @@ private constructor        ()
                 @Throws(InitException::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun set()
+    open fun set()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -149,7 +148,7 @@ hasRead= false
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun set(hashMap: HashMap<Any, Any>)
+    open fun set(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var hashMap = hashMap
@@ -175,7 +174,7 @@ testHtmlPath= AbPath(hashMap!!.get(TESTHTMLPATH as Object) as String)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun get()
+    open fun get()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -215,7 +214,7 @@ initInfoEntity!!.get()
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun setHasRead(value: Boolean)
+    open fun setHasRead(value: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -224,7 +223,7 @@ hasRead= value
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun updateIfNeeded()
+    open fun updateIfNeeded()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -260,7 +259,7 @@ this.get()
 }
 
 
-open fun isTesting()
+    open fun isTesting()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -292,7 +291,7 @@ open fun isTesting()
 }
 
 
-open fun getTesting()
+    open fun getTesting()
         //nullable = true from not(false or (false and true)) = true
 : String{
 this.updateIfNeeded()
@@ -304,7 +303,7 @@ this.updateIfNeeded()
 }
 
 
-open fun getTestHtmlPath()
+    open fun getTestHtmlPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 this.updateIfNeeded()
@@ -335,7 +334,7 @@ this.updateIfNeeded()
 }
 
 
-open fun getMainPath()
+    open fun getMainPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 this.updateIfNeeded()
@@ -366,7 +365,7 @@ this.updateIfNeeded()
 }
 
 
-open fun setTesting(value: String)
+    open fun setTesting(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -374,7 +373,7 @@ testing= value
 }
 
 
-open fun setTestHtmlPath(value: AbPath)
+    open fun setTestHtmlPath(value: AbPath)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -382,7 +381,7 @@ this.testHtmlPath= value
 }
 
 
-open fun setMainPath(value: AbPath)
+    open fun setMainPath(value: AbPath)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -390,7 +389,7 @@ this.mainPath= value
 }
 
 
-open fun isMainPathValid(abPath: AbPath)
+    open fun isMainPathValid(abPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var abPath = abPath
@@ -402,7 +401,7 @@ var abPath = abPath
 }
 
 
-open fun isTestHtmlPathValid(abPath: AbPath)
+    open fun isTestHtmlPathValid(abPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var abPath = abPath
@@ -416,7 +415,7 @@ var abPath = abPath
 
                 @Throws(Exception::class)
             
-open fun isTestingValid(testing: String)
+    open fun isTestingValid(testing: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var testing = testing
@@ -428,7 +427,7 @@ var testing = testing
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 

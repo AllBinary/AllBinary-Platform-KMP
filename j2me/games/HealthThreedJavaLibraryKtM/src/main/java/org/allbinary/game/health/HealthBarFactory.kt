@@ -41,7 +41,7 @@ open public class HealthBarFactory
         
                 @Throws(Exception::class)
             
-open fun getInstance(layerInterface: AllBinaryLayer, healthInterface: Health, location: Int, direction: Int)
+    open fun getInstance(layerInterface: AllBinaryLayer, healthInterface: Health, location: Int, direction: Int)
         //nullable =  from not(true or (false and false)) = 
 : HealthBar{
 var layerInterface = layerInterface

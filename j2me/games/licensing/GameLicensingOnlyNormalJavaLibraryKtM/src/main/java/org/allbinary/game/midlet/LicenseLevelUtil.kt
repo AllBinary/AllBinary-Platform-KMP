@@ -30,12 +30,11 @@ open public class LicenseLevelUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: LicenseLevelUtil = LicenseLevelUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : LicenseLevelUtil{
 
@@ -53,7 +52,7 @@ open fun getInstance()
             {
             }            
         
-open fun getMaxLevel(maxLevel: Int, demoLevel: Int)
+    open fun getMaxLevel(maxLevel: Int, demoLevel: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var maxLevel = maxLevel

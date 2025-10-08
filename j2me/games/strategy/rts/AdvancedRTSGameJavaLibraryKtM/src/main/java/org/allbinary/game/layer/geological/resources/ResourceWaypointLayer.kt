@@ -37,7 +37,7 @@ import org.allbinary.game.multiplayer.layer.RemoteInfo
 
 open public class ResourceWaypointLayer : WaypointLayer {
         
-public constructor        (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
+public constructor (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
 
                             : super(remoteInfo, parentLayer, groupInterface, rootName, name, animationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y){
     //var remoteInfo = remoteInfo
@@ -57,7 +57,7 @@ public constructor        (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameL
 }
 
 
-open fun createHudPaintable()
+    open fun createHudPaintable()
         //nullable = true from not(false or (false and true)) = true
 : SelectionHudPaintable{
 
@@ -73,7 +73,7 @@ rtsLayerHudPaintable!!.setRtsLayer(this)
 }
 
 
-open fun getHudPaintable()
+    open fun getHudPaintable()
         //nullable = true from not(false or (false and true)) = true
 : SelectionHudPaintable{
 

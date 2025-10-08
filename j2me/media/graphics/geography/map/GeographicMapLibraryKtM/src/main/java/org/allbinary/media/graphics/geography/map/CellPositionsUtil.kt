@@ -33,12 +33,11 @@ open public class CellPositionsUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: CellPositionsUtil = CellPositionsUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CellPositionsUtil{
 
@@ -58,7 +57,7 @@ open fun getInstance()
         
                 @Throws(Exception::class)
             
-open fun getAll(geographicMapInterface: BasicGeographicMap, topRightGeographicMapCellPosition: GeographicMapCellPosition, columns: Int, rows: Int, reusableList: BasicArrayList)
+    open fun getAll(geographicMapInterface: BasicGeographicMap, topRightGeographicMapCellPosition: GeographicMapCellPosition, columns: Int, rows: Int, reusableList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var geographicMapInterface = geographicMapInterface
@@ -123,7 +122,7 @@ reusableList!!.add(geographicMapCellPosition)
 
                 @Throws(Exception::class)
             
-open fun getAllSurrounding(geographicMapInterface: BasicGeographicMap, occupyList: BasicArrayList, reusableList: BasicArrayList)
+    open fun getAllSurrounding(geographicMapInterface: BasicGeographicMap, occupyList: BasicArrayList, reusableList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var geographicMapInterface = geographicMapInterface
@@ -185,7 +184,7 @@ reusableList!!.clear()
 
                 @Throws(Exception::class)
             
-open fun getAllSurrounding(geographicMapInterface: BasicGeographicMap, layerGeographicMapCellPosition: GeographicMapCellPosition, reusableSurroundingList: BasicArrayList)
+    open fun getAllSurrounding(geographicMapInterface: BasicGeographicMap, layerGeographicMapCellPosition: GeographicMapCellPosition, reusableSurroundingList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var geographicMapInterface = geographicMapInterface

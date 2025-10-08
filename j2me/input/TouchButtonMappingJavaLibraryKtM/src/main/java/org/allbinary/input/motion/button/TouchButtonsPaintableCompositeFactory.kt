@@ -33,10 +33,9 @@ open public class TouchButtonsPaintableCompositeFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getInstance(inputMappingInterface: InputMappingInterface, basicColor: BasicColor)
+    open fun getInstance(inputMappingInterface: InputMappingInterface, basicColor: BasicColor)
         //nullable =  from not(true or (false and false)) = 
 : ProcessPaintable{
 var inputMappingInterface = inputMappingInterface

@@ -37,12 +37,11 @@ open public class BufferedIOUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun copy(backupFile: AbFile, backupFileBak: AbFile)
+    open fun copy(backupFile: AbFile, backupFileBak: AbFile)
         //nullable = true from not(false or (false and false)) = true
 {
 var backupFile = backupFile

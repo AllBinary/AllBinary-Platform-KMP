@@ -40,12 +40,11 @@ open public class ImageScaleUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ImageScaleUtil = ImageScaleUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ImageScaleUtil{
 
@@ -59,7 +58,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -79,7 +78,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominatorX: Float, scaleDenominatorX: Float, scaleNominatorY: Float, scaleDenominatorY: Float, cached: Boolean)
+    open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominatorX: Float, scaleDenominatorX: Float, scaleNominatorY: Float, scaleDenominatorY: Float, cached: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var imageCache = imageCache
@@ -99,7 +98,7 @@ open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominato
 
                 @Throws(Exception::class)
             
-open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominatorX: Float, scaleDenominatorX: Float, scaleNominatorY: Float, scaleDenominatorY: Float, cached: Boolean, mutable: Boolean)
+    open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominatorX: Float, scaleDenominatorX: Float, scaleNominatorY: Float, scaleDenominatorY: Float, cached: Boolean, mutable: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var imageCache = imageCache
@@ -126,7 +125,7 @@ open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominato
 
                 @Throws(Exception::class)
             
-open fun createImage(imageCache: ImageCache, originalImage: Image, scaleX: Float, scaleY: Float, cached: Boolean)
+    open fun createImage(imageCache: ImageCache, originalImage: Image, scaleX: Float, scaleY: Float, cached: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var imageCache = imageCache
@@ -212,7 +211,7 @@ this.scaleYBasicArrayList!!.add(scaleY)
 
                 @Throws(Exception::class)
             
-open fun getScaledImage(imageCache: ImageCache, originalImage: Image, scaleX: Float, scaleY: Float, width: Int, height: Int, cached: Boolean)
+    open fun getScaledImage(imageCache: ImageCache, originalImage: Image, scaleX: Float, scaleY: Float, width: Int, height: Int, cached: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var imageCache = imageCache
@@ -268,7 +267,7 @@ image.getGraphics()!!.drawImage(originalImage, 0, 0, anchor)
 }
 
 
-open fun scale(image: Image, matrix: Matrix, scaleX: Float, scaleY: Float)
+    open fun scale(image: Image, matrix: Matrix, scaleX: Float, scaleY: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var image = image

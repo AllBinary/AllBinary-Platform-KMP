@@ -30,34 +30,35 @@
 import java.util.Vector
 import org.allbinary.business.user.commerce.money.payment.PaymentInterface
 import org.allbinary.data.tables.BasicDataTableInterface
+
 interface PaymentEntityInterface : BasicDataTableInterface {
         
 
-open fun getLastId(userName: String)
+    open fun getLastId(userName: String)
         //nullable = true from not(false or (false and false)) = true
 : String
 
-open fun setDefault(userName: String, index: Integer)
+    open fun setDefault(userName: String, index: Integer)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getDefault(userName: String)
+    open fun getDefault(userName: String)
         //nullable = true from not(false or (false and false)) = true
 : PaymentInterface
 
-open fun get(userName: String)
+    open fun get(userName: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector
 
-open fun add(userName: String, paymentInterface: PaymentInterface)
+    open fun add(userName: String, paymentInterface: PaymentInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun remove(userName: String, index: Integer)
+    open fun remove(userName: String, index: Integer)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun insert(values: Vector)
+    open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 
 

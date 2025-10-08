@@ -41,7 +41,7 @@ open public class ColorCompositeSpriteIndexedAnimationFactory : BaseImageAnimati
     private val animationFactorySpriteScaleUtil: AnimationFactorySpriteScaleUtil = AnimationFactorySpriteScaleUtil.getInstance()!!
 
     private val basicColorArray: Array<BasicColor?>
-public constructor        (image: Image, basicColorArray: Array<BasicColor?>, width: Int, height: Int)                        
+public constructor (image: Image, basicColorArray: Array<BasicColor?>, width: Int, height: Int)                        
 
                             : this(image, basicColorArray, width, height, AnimationBehaviorFactory.getInstance()){
     //var image = image
@@ -54,7 +54,7 @@ public constructor        (image: Image, basicColorArray: Array<BasicColor?>, wi
                     
 }
 
-public constructor        (image: Image, basicColorArray: Array<BasicColor?>, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
+public constructor (image: Image, basicColorArray: Array<BasicColor?>, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
                             : super(image, width, height, animationBehaviorFactory){
     //var image = image
@@ -71,7 +71,8 @@ this.basicColorArray= basicColorArray
 
 
                 @Throws(Exception::class)
-            override fun getInstance(instanceId: Int)
+            
+    override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var instanceId = instanceId
@@ -87,7 +88,8 @@ this.basicColorArray= basicColorArray
 
 
                 @Throws(Exception::class)
-            override fun getInstance(animationInterface: Animation)
+            
+    override fun getInstance(animationInterface: Animation)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var animationInterface = animationInterface

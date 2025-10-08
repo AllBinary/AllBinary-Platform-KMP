@@ -34,10 +34,9 @@ open public class DomNodeHelper
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getFirstChildElement(parentNode: Node)
+    open fun getFirstChildElement(parentNode: Node)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var parentNode = parentNode
@@ -86,7 +85,7 @@ node= nodeList!!.item(index)
 }
 
 
-open fun getTextNodeValue(node: Node)
+    open fun getTextNodeValue(node: Node)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var node = node
@@ -122,7 +121,7 @@ var node = node
 
                 @Throws(Exception::class)
             
-open fun getTextNodeValue(nodeName: String, nodeList: NodeList)
+    open fun getTextNodeValue(nodeName: String, nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var nodeName = nodeName
@@ -138,7 +137,7 @@ var nodeList = nodeList
 }
 
 
-open fun getTextNodesValue(node: Node)
+    open fun getTextNodesValue(node: Node)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var node = node
@@ -188,7 +187,7 @@ var node = node
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

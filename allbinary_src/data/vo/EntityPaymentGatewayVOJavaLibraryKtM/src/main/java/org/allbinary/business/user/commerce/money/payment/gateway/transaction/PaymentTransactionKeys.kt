@@ -32,14 +32,15 @@ open public class PaymentTransactionKeys
         
 
     private var key: String
-protected constructor        (value: String)
+protected constructor (value: String)
             : super()
         {
 var value = value
 this.key= value
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

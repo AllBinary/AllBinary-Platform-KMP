@@ -36,7 +36,7 @@ import org.allbinary.util.BasicArrayList
 
 open public class DemoCanvasBasicStartInputProcessor : BasicMenuInputProcessor {
         
-public constructor        (gameKeyEventList: BasicArrayList, gameCanvas: RunnableCanvas)                        
+public constructor (gameKeyEventList: BasicArrayList, gameCanvas: RunnableCanvas)                        
 
                             : super(gameKeyEventList,  -1, gameCanvas){
 var gameKeyEventList = gameKeyEventList
@@ -49,7 +49,8 @@ var gameCanvas = gameCanvas
 
 
                 @Throws(Exception::class)
-            override fun processInput()
+            
+    override fun processInput()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

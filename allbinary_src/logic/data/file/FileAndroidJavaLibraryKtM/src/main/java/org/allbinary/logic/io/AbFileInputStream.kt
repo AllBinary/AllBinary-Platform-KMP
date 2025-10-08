@@ -35,19 +35,21 @@ open public class AbFileInputStream : InputStream {
         
 
     private var fileInputStream: FileInputStream
-public constructor        (fileInputStream: FileInputStream){
+public constructor (fileInputStream: FileInputStream){
 var fileInputStream = fileInputStream
 this.fileInputStream= fileInputStream
 }
 
-override fun mark(readlimit: Int)
+
+    override fun mark(readlimit: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var readlimit = readlimit
 this.fileInputStream!!.mark(readlimit)
 }
 
-override fun markSupported()
+
+    override fun markSupported()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -60,7 +62,8 @@ override fun markSupported()
 
                 @Throws(IOException::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun reset()
+
+    override fun reset()
         //nullable = true from not(false or (false and true)) = true
 {
 this.fileInputStream!!.reset()
@@ -68,7 +71,8 @@ this.fileInputStream!!.reset()
 
 
                 @Throws(IOException::class)
-            override fun available()
+            
+    override fun available()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -78,14 +82,15 @@ this.fileInputStream!!.reset()
                         return this.fileInputStream!!.available()
 }
 
-override fun close()
+
+    override fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 this.fileInputStream!!.close()
 }
 
 
-open fun getChannel()
+    open fun getChannel()
         //nullable = true from not(false or (false and true)) = true
 : FileChannel{
 
@@ -97,7 +102,8 @@ open fun getChannel()
 
 
                 @Throws(IOException::class)
-            override fun read()
+            
+    override fun read()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -109,7 +115,8 @@ open fun getChannel()
 
 
                 @Throws(IOException::class)
-            override fun read(b: ByteArray)
+            
+    override fun read(b: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var b = b
@@ -122,7 +129,8 @@ var b = b
 
 
                 @Throws(IOException::class)
-            override fun read(buffer: ByteArray, offset: Int, count: Int)
+            
+    override fun read(buffer: ByteArray, offset: Int, count: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var buffer = buffer
@@ -137,7 +145,8 @@ var count = count
 
 
                 @Throws(IOException::class)
-            override fun skip(n: Long)
+            
+    override fun skip(n: Long)
         //nullable = true from not(false or (false and false)) = true
 : Long{
 var n = n

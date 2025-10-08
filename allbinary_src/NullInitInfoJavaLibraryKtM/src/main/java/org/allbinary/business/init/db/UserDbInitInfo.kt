@@ -28,7 +28,7 @@
 
 open public class UserDbInitInfo : DbInitInfo {
         
-public constructor        ()                        
+public constructor ()                        
 
                             : super(
                             null, false){
@@ -38,7 +38,7 @@ public constructor        ()
                     
 }
 
-public constructor        (read: Boolean)                        
+public constructor (read: Boolean)                        
 
                             : super(
                             null, false){

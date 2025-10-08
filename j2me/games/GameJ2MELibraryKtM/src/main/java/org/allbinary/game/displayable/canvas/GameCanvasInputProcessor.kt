@@ -59,7 +59,7 @@ open public class GameCanvasInputProcessor : InputProcessor {
     private val smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
 
     private val inputToGameKeyMapping: InputToGameKeyMapping = PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()!!
-public constructor        (allBinaryGameCanvas: AllBinaryGameCanvas){
+public constructor (allBinaryGameCanvas: AllBinaryGameCanvas){
     //var allBinaryGameCanvas = allBinaryGameCanvas
 this.allBinaryGameCanvas= allBinaryGameCanvas
 this.inputToGameKeyMapping!!.init(this.allBinaryGameCanvas)
@@ -69,7 +69,8 @@ this.inputToGameKeyMapping!!.init(this.allBinaryGameCanvas)
     private val NONE: GameKey = GameKeyFactory.getInstance()!!.NONE
 
     private val gameKeyEventFactory: GameKeyEventFactory = GameKeyEventFactory.getInstance()!!
-override fun keyPressed(keyCode: Int, deviceId: Int)
+
+    override fun keyPressed(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
@@ -110,7 +111,8 @@ logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
 
 }
 
-override fun keyReleased(canvas: Canvas, keyCode: Int, deviceId: Int)
+
+    override fun keyReleased(canvas: Canvas, keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var canvas = canvas
@@ -120,7 +122,7 @@ this.removeGameKeyEvent(canvas, keyCode, deviceId, false)
 }
 
 
-open fun removeGameKeyEvent(canvas: Canvas, keyCode: Int, deviceId: Int, repeated: Boolean)
+    open fun removeGameKeyEvent(canvas: Canvas, keyCode: Int, deviceId: Int, repeated: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var canvas = canvas

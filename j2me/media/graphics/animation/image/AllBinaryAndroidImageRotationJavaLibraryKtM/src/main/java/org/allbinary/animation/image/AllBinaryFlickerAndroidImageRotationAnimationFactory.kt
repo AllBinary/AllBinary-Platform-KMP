@@ -46,7 +46,7 @@ open public class AllBinaryFlickerAndroidImageRotationAnimationFactory
     private val angleIncrement: Short
 
     val animationBehaviorFactory: AnimationBehaviorFactory
-public constructor        (image: Image, width: Int, height: Int)                        
+public constructor (image: Image, width: Int, height: Int)                        
 
                             : this(image, width, height, (AngleFactory.getInstance()!!.TOTAL_ANGLE /GameConfigurationCentral.getInstance()!!.getGameControlFidelity()).toShort(), AnimationBehaviorFactory.getInstance()){
     //var image = image
@@ -58,7 +58,7 @@ public constructor        (image: Image, width: Int, height: Int)
                     
 }
 
-public constructor        (image: Image, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
+public constructor (image: Image, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
                             : this(image, width, height, (AngleFactory.getInstance()!!.TOTAL_ANGLE /GameConfigurationCentral.getInstance()!!.getGameControlFidelity()).toShort(), animationBehaviorFactory){
     //var image = image
@@ -71,7 +71,7 @@ public constructor        (image: Image, width: Int, height: Int, animationBehav
                     
 }
 
-public constructor        (image: Image, width: Int, height: Int, angleIncrement: Short)                        
+public constructor (image: Image, width: Int, height: Int, angleIncrement: Short)                        
 
                             : this(image, width, height, angleIncrement, AnimationBehaviorFactory.getInstance()){
     //var image = image
@@ -84,7 +84,7 @@ public constructor        (image: Image, width: Int, height: Int, angleIncrement
                     
 }
 
-public constructor        (image: Image, width: Int, height: Int, angleIncrement: Short, animationBehaviorFactory: AnimationBehaviorFactory)
+public constructor (image: Image, width: Int, height: Int, angleIncrement: Short, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
         {
     //var image = image
@@ -99,7 +99,8 @@ this.animationBehaviorFactory= animationBehaviorFactory
 
 
                 @Throws(Exception::class)
-            override fun getInstance(instanceId: Int)
+            
+    override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var instanceId = instanceId
@@ -114,7 +115,7 @@ this.animationBehaviorFactory= animationBehaviorFactory
 }
 
 
-open fun getAngleIncrement()
+    open fun getAngleIncrement()
         //nullable = true from not(false or (false and true)) = true
 : Short{
 
@@ -125,7 +126,7 @@ open fun getAngleIncrement()
 }
 
 
-open fun setImage(image: Image)
+    open fun setImage(image: Image)
         //nullable = true from not(false or (false and false)) = true
 {
 var image = image
@@ -133,7 +134,7 @@ this.image= image
 }
 
 
-open fun getImage()
+    open fun getImage()
         //nullable = true from not(false or (false and true)) = true
 : Image{
 
@@ -144,7 +145,7 @@ open fun getImage()
 }
 
 
-open fun setInitialScale(scaleProperties: ScaleProperties)
+    open fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
 {
     //var scaleProperties = scaleProperties

@@ -27,22 +27,23 @@
         
 import java.util.Vector
 import org.allbinary.business.user.commerce.shipping.modules.ShippingInterface
+
 interface ShippingMethodsInterface {
         
 
-open fun get()
+    open fun get()
         //nullable = true from not(false or (false and true)) = true
 : Vector
 
                 @Throws(Exception::class)
             
-open fun getShippingInterface(name: String)
+    open fun getShippingInterface(name: String)
         //nullable = true from not(false or (false and false)) = true
 : ShippingInterface
 
                 @Throws(Exception::class)
             
-open fun getDefault()
+    open fun getDefault()
         //nullable = true from not(false or (false and true)) = true
 : ShippingInterface
 

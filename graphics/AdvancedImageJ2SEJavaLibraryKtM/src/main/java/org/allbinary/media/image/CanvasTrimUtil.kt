@@ -34,12 +34,11 @@ open public class CanvasTrimUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: CanvasTrimUtil = CanvasTrimUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CanvasTrimUtil{
 
@@ -63,7 +62,7 @@ open fun getInstance()
 
                 @Throws(IOException::class)
             
-open fun process(imageProcessorInput: ImageProcessorInput, cutCanvasFromLeftReduction: Int, cutCanvasFromTopReduction: Int, cutCanvasFromRightReduction: Int, cutCanvasFromBottomReduction: Int, visitor: ImageProcessedVisitor)
+    open fun process(imageProcessorInput: ImageProcessorInput, cutCanvasFromLeftReduction: Int, cutCanvasFromTopReduction: Int, cutCanvasFromRightReduction: Int, cutCanvasFromBottomReduction: Int, visitor: ImageProcessedVisitor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageProcessorInput = imageProcessorInput

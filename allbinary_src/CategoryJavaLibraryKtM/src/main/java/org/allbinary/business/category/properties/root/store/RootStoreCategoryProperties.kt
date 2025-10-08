@@ -67,7 +67,7 @@ open public class RootStoreCategoryProperties
     var webAppAbPath: AbPath
 
     var transformInfoInterface: TransformInfoInterface
-public constructor        (transformInfoInterface: TransformInfoInterface)
+public constructor (transformInfoInterface: TransformInfoInterface)
             : super()
         {
     //var transformInfoInterface = transformInfoInterface
@@ -79,7 +79,7 @@ this.initPath()
 this.log()
 }
 
-public constructor        (transformInfoInterface: TransformInfoInterface, categoryAbPath: AbPath)
+public constructor (transformInfoInterface: TransformInfoInterface, categoryAbPath: AbPath)
             : super()
         {
     //var transformInfoInterface = transformInfoInterface
@@ -101,7 +101,7 @@ this.initPath()
 this.log()
 }
 
-public constructor        (transformInfoInterface: TransformInfoInterface, node: Node)
+public constructor (transformInfoInterface: TransformInfoInterface, node: Node)
             : super()
         {
     //var transformInfoInterface = transformInfoInterface
@@ -126,7 +126,7 @@ this.initPath()
 this.log()
 }
 
-public constructor        (transformInfoInterface: TransformInfoInterface, categoryPropertiesHashMap: HashMap<Any, Any>)
+public constructor (transformInfoInterface: TransformInfoInterface, categoryPropertiesHashMap: HashMap<Any, Any>)
             : super()
         {
     //var transformInfoInterface = transformInfoInterface
@@ -154,7 +154,7 @@ this.log()
 
                 @Throws(Exception::class)
             
-open fun initPath()
+    open fun initPath()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -174,7 +174,7 @@ this.setRootFilePath(AbPath(URLGLOBALS.getMainPath() +postPath))
 }
 
 
-open fun isRealRoot()
+    open fun isRealRoot()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -185,7 +185,7 @@ open fun isRealRoot()
 }
 
 
-open fun isRoot()
+    open fun isRoot()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -196,7 +196,7 @@ open fun isRoot()
 }
 
 
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -207,7 +207,7 @@ open fun getKey()
 }
 
 
-open fun setPath(path: AbPath)
+    open fun setPath(path: AbPath)
         //nullable = true from not(false or (false and false)) = true
 {
 var path = path
@@ -215,7 +215,7 @@ this.abPath= path
 }
 
 
-open fun setRootFilePath(value: AbPath)
+    open fun setRootFilePath(value: AbPath)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -223,7 +223,7 @@ this.fileAbPath= value
 }
 
 
-open fun getRootFilePath()
+    open fun getRootFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 
@@ -234,7 +234,7 @@ open fun getRootFilePath()
 }
 
 
-open fun getValue()
+    open fun getValue()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -247,7 +247,7 @@ open fun getValue()
 
                 @Throws(Exception::class)
             
-open fun getWebAppPath()
+    open fun getWebAppPath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 
@@ -258,7 +258,7 @@ open fun getWebAppPath()
 }
 
 
-open fun getPath(categoryHierarchyInterface: CategoryHierarchyInterface)
+    open fun getPath(categoryHierarchyInterface: CategoryHierarchyInterface)
         //nullable = true from not(false or (false and false)) = true
 : AbPath{
     //var categoryHierarchyInterface = categoryHierarchyInterface
@@ -270,7 +270,7 @@ open fun getPath(categoryHierarchyInterface: CategoryHierarchyInterface)
 }
 
 
-open fun getFileName()
+    open fun getFileName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -281,7 +281,7 @@ open fun getFileName()
 }
 
 
-open fun setValue(value: String)
+    open fun setValue(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -289,7 +289,7 @@ this.category= value
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -300,7 +300,7 @@ open fun isValid()
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -315,7 +315,7 @@ categoryHashMap!!.put(CategoryData.getInstance()!!.NAME, this.getValue())
 }
 
 
-open fun toVector()
+    open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -332,7 +332,7 @@ categoryVector!!.add(this.getValue())
 
                 @Throws(Exception::class)
             
-open fun toValidationInfoDoc()
+    open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -345,7 +345,7 @@ open fun toValidationInfoDoc()
 
                 @Throws(Exception::class)
             
-open fun toValidationInfoNode(document: Document)
+    open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -359,7 +359,7 @@ var document = document
 
                 @Throws(Exception::class)
             
-open fun validationInfo()
+    open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -370,7 +370,7 @@ open fun validationInfo()
 }
 
 
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 {
 

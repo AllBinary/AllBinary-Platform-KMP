@@ -31,12 +31,11 @@ open public class CancelTouchButtonInputFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: CancelTouchButtonInputFactory = CancelTouchButtonInputFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CancelTouchButtonInputFactory{
 
@@ -50,7 +49,7 @@ open fun getInstance()
         }
             
     private val cancelInputArray: Array<TouchButtonInput?> = arrayOfNulls(InputFactory.getInstance()!!.MAX)
-private constructor        ()
+private constructor ()
             : super()
         {
 
@@ -73,7 +72,7 @@ cancelInputArray[basicTouchInputFactory!!.RIGHT.getSourceId()]= basicTouchInputF
 }
 
 
-open fun getCancel(touchButtonInput: TouchButtonInput)
+    open fun getCancel(touchButtonInput: TouchButtonInput)
         //nullable = true from not(false or (false and false)) = true
 : TouchButtonInput{
 var touchButtonInput = touchButtonInput

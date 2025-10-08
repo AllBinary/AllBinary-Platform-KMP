@@ -46,7 +46,7 @@ open public class ImageComparatorConstraints
     private var maxNonMatchingPixelDeltas: Int= 0
 
     private var doImageComparisonEveryNthFrame: Int
-public constructor        (doImageComparisonEveryNthFrame: Int)
+public constructor (doImageComparisonEveryNthFrame: Int)
             : super()
         {
 var doImageComparisonEveryNthFrame = doImageComparisonEveryNthFrame
@@ -55,7 +55,7 @@ this.setAvoidVector(Vector())
 }
 
 
-open fun getAvoidVector()
+    open fun getAvoidVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -66,7 +66,7 @@ open fun getAvoidVector()
 }
 
 
-open fun isColorAllowed(frame: Int, point: GPoint, color: Color)
+    open fun isColorAllowed(frame: Int, point: GPoint, color: Color)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var frame = frame
@@ -79,7 +79,7 @@ var color = color
 }
 
 
-open fun isCollisionWithAvoidRectangles(rectangle: Rectangle)
+    open fun isCollisionWithAvoidRectangles(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var rectangle = rectangle
@@ -121,7 +121,7 @@ var rectangle = rectangle
 }
 
 
-open fun isCollisionWithAvoidRectangles(point: GPoint)
+    open fun isCollisionWithAvoidRectangles(point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var point = point
@@ -166,7 +166,7 @@ break;
 }
 
 
-open fun setAvoidVector(avoidVector: Vector)
+    open fun setAvoidVector(avoidVector: Vector)
         //nullable = true from not(false or (false and false)) = true
 {
 var avoidVector = avoidVector
@@ -174,7 +174,7 @@ this.avoidVector= avoidVector
 }
 
 
-open fun getMaxNonMatchingPixelDeltas()
+    open fun getMaxNonMatchingPixelDeltas()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -185,7 +185,7 @@ open fun getMaxNonMatchingPixelDeltas()
 }
 
 
-open fun setMaxNonMatchingPixelDeltas(maxNonMatchingPixelDeltas: Int)
+    open fun setMaxNonMatchingPixelDeltas(maxNonMatchingPixelDeltas: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var maxNonMatchingPixelDeltas = maxNonMatchingPixelDeltas
@@ -193,7 +193,7 @@ this.maxNonMatchingPixelDeltas= maxNonMatchingPixelDeltas
 }
 
 
-open fun isFrameAllowed(frame: Int)
+    open fun isFrameAllowed(frame: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var frame = frame
@@ -228,7 +228,7 @@ logUtil!!.put(" Frame: " +frame +" remainder: " +remainder +" this.doImageCompar
 
                 @Throws(Exception::class)
             
-open fun isImageValid(bufferedImage: BufferedImage)
+    open fun isImageValid(bufferedImage: BufferedImage)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var bufferedImage = bufferedImage
@@ -239,7 +239,7 @@ var bufferedImage = bufferedImage
 }
 
 
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 {
 

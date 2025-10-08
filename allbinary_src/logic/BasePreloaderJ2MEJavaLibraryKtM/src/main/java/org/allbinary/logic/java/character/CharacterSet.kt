@@ -30,12 +30,13 @@ open public class CharacterSet
             : Object
          {
         
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

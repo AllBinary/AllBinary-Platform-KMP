@@ -36,7 +36,7 @@ open public class UrlGlobalsView
         
                 , DomNodeInterface {
         
-public constructor        ()
+public constructor ()
             : super()
         {
 }
@@ -44,7 +44,7 @@ public constructor        ()
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

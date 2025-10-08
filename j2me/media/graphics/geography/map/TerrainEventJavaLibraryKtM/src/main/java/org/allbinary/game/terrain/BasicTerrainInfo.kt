@@ -32,15 +32,14 @@ open public class BasicTerrainInfo
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NULL_BASIC_TERRAIN_INFO: BasicTerrainInfo = BasicTerrainInfo(AngleFactory.getInstance()!!.NOT_ANGLE)
 
         }
             
     private var angle: Angle
-public constructor        (angle: Angle)
+public constructor (angle: Angle)
             : super()
         {
 var angle = angle
@@ -48,7 +47,7 @@ this.angle= angle
 }
 
 
-open fun getAngle()
+    open fun getAngle()
         //nullable = true from not(false or (false and true)) = true
 : Angle{
 
@@ -59,7 +58,7 @@ open fun getAngle()
 }
 
 
-open fun setAngle(angle: Angle)
+    open fun setAngle(angle: Angle)
         //nullable = true from not(false or (false and false)) = true
 {
 var angle = angle

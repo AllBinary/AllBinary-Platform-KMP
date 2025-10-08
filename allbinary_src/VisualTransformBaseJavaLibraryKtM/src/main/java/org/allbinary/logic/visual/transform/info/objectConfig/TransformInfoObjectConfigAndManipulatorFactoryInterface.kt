@@ -29,24 +29,25 @@ import org.allbinary.logic.io.path.AbPath
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.logic.visual.transform.info.TransformInfoInterface
 import org.w3c.dom.Document
+
 interface TransformInfoObjectConfigAndManipulatorFactoryInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, objectConfigFileAbPath: AbPath)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, objectConfigFileAbPath: AbPath)
         //nullable =  from not(true or (false and false)) = 
 : TransformInfoObjectConfigInterface
 
                 @Throws(Exception::class)
             
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)
         //nullable =  from not(true or (false and false)) = 
 : TransformInfoObjectConfigInterface
 
                 @Throws(Exception::class)
             
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, document: Document)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, document: Document)
         //nullable =  from not(true or (false and false)) = 
 : TransformInfoObjectConfigInterface
 

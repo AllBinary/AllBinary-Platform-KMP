@@ -39,7 +39,7 @@ open public class AbstractInputRobot
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var helpSet: HelpSet
-public constructor        (helpSet: HelpSet)
+public constructor (helpSet: HelpSet)
             : super()
         {
 var helpSet = helpSet
@@ -47,7 +47,7 @@ this.setHelpSet(helpSet)
 }
 
 
-open fun getHelpSet()
+    open fun getHelpSet()
         //nullable = true from not(false or (false and true)) = true
 : HelpSet{
 
@@ -58,7 +58,7 @@ open fun getHelpSet()
 }
 
 
-open fun mouseMove(point: Point)
+    open fun mouseMove(point: Point)
         //nullable = true from not(false or (false and false)) = true
 {
 var point = point
@@ -69,7 +69,7 @@ logUtil!!.put("Moved Mouse To: x: " +point.x +" y: " +point.y, this, "moveMouse"
 
                 @Throws(Exception::class)
             
-open fun mouseMoveToTarget(rectangle: Rectangle, x: Integer, y: Integer)
+    open fun mouseMoveToTarget(rectangle: Rectangle, x: Integer, y: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var rectangle = rectangle
@@ -85,7 +85,7 @@ logUtil!!.put("Moved Mouse To: x: " +point.x +" y: " +point.y +" in the middle o
 
                 @Throws(Exception::class)
             
-open fun mouseMoveToTarget(rectangle: Rectangle)
+    open fun mouseMoveToTarget(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
 {
 var rectangle = rectangle
@@ -93,7 +93,7 @@ this.mouseMoveToTarget(rectangle, 0, 0)
 }
 
 
-open fun mouseMove(x: Integer, y: Integer)
+    open fun mouseMove(x: Integer, y: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -105,7 +105,7 @@ var y = y
 }
 
 
-open fun setHelpSet(helpSet: HelpSet)
+    open fun setHelpSet(helpSet: HelpSet)
         //nullable = true from not(false or (false and false)) = true
 {
 var helpSet = helpSet

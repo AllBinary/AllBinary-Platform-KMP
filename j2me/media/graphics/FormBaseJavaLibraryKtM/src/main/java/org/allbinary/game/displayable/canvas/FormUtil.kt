@@ -36,12 +36,11 @@ open public class FormUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: FormUtil = FormUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : FormUtil{
 
@@ -61,7 +60,7 @@ open fun getInstance()
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-open fun createFormRectangle()
+    open fun createFormRectangle()
         //nullable = true from not(false or (false and true)) = true
 : Rectangle{
 
@@ -78,7 +77,7 @@ open fun createFormRectangle()
 }
 
 
-open fun createPopupMenuRectangle()
+    open fun createPopupMenuRectangle()
         //nullable = true from not(false or (false and true)) = true
 : Rectangle{
 

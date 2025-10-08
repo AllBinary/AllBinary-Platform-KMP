@@ -48,7 +48,7 @@ open public class RealTimeStoreFrontStatistics
     private var storeFrontInventoryStatisticsInterface: StoreFrontInventoryStatisticsInterface
 
     private var storeFrontOrderHistoryStatisticsInterface: StoreFrontOrdersHistoryStatisticsInterface
-public constructor        (storeFrontInterface: StoreFrontInterface)
+public constructor (storeFrontInterface: StoreFrontInterface)
             : super()
         {
 var storeFrontInterface = storeFrontInterface
@@ -59,7 +59,7 @@ this.storeFrontOrderHistoryStatisticsInterface= StoreFrontOrdersHistoryStatistic
 }
 
 
-open fun getAdvertisements()
+    open fun getAdvertisements()
         //nullable = true from not(false or (false and true)) = true
 : StoreFrontAdvertisementsStatisticsInterface{
 
@@ -70,7 +70,7 @@ open fun getAdvertisements()
 }
 
 
-open fun getUsers()
+    open fun getUsers()
         //nullable = true from not(false or (false and true)) = true
 : StoreFrontUsersStatisticsInterface{
 
@@ -81,7 +81,7 @@ open fun getUsers()
 }
 
 
-open fun getInventory()
+    open fun getInventory()
         //nullable = true from not(false or (false and true)) = true
 : StoreFrontInventoryStatisticsInterface{
 
@@ -92,7 +92,7 @@ open fun getInventory()
 }
 
 
-open fun getOrders()
+    open fun getOrders()
         //nullable = true from not(false or (false and true)) = true
 : StoreFrontOrdersHistoryStatisticsInterface{
 

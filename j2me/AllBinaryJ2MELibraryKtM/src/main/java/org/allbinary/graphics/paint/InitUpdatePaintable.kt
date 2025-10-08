@@ -29,17 +29,19 @@
 open public class InitUpdatePaintable : Paintable
                 , InitUpdatePaintableInterface {
         
-protected constructor        (){
+protected constructor (){
 }
 
 
                 @Throws(Exception::class)
-            override fun init()
+            
+    override fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun update()
+
+    override fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 }

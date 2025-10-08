@@ -38,14 +38,14 @@ open public class GameTickTimeDelayHelper
     var startTime: Long
 
     var lastStartTime: Long
-public constructor        ()
+public constructor ()
             : super()
         {
 this.startTime= System.currentTimeMillis()
 this.lastStartTime= startTime
 }
 
-public constructor        (startTime: Long)
+public constructor (startTime: Long)
             : super()
         {
     //var startTime = startTime
@@ -54,7 +54,7 @@ this.lastStartTime= 0
 }
 
 
-open fun setStartTime()
+    open fun setStartTime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 this.startTime= System.currentTimeMillis()
@@ -66,7 +66,7 @@ this.startTime= System.currentTimeMillis()
 }
 
 
-open fun loop()
+    open fun loop()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -86,7 +86,7 @@ open fun loop()
 }
 
 
-open fun getTimeFromStart()
+    open fun getTimeFromStart()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 

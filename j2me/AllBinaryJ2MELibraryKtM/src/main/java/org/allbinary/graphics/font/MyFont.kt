@@ -32,12 +32,11 @@ open public class MyFont
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: MyFont = MyFont()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : MyFont{
 
@@ -55,13 +54,13 @@ open fun getInstance()
     var DEFAULT_CHAR_HEIGHT: Int = defaultFont!!.getHeight()!!
 
     private var DEFAULT_CHAR_WIDTH: Int = defaultFont!!.charWidth('C')!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 this.DEFAULT_CHAR_HEIGHT= defaultFont!!.getHeight()
@@ -69,7 +68,7 @@ this.DEFAULT_CHAR_WIDTH= defaultFont!!.charWidth('C')
 }
 
 
-open fun charWidth()
+    open fun charWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -80,7 +79,7 @@ open fun charWidth()
 }
 
 
-open fun stringWidth(size: Int)
+    open fun stringWidth(size: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var size = size
@@ -92,7 +91,7 @@ open fun stringWidth(size: Int)
 }
 
 
-open fun stringWidth(string: String)
+    open fun stringWidth(string: String)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var string = string
@@ -104,7 +103,7 @@ open fun stringWidth(string: String)
 }
 
 
-open fun stringWidth2(string: String)
+    open fun stringWidth2(string: String)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var string = string
@@ -116,7 +115,7 @@ open fun stringWidth2(string: String)
 }
 
 
-open fun getSize()
+    open fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -127,7 +126,7 @@ open fun getSize()
 }
 
 
-open fun charWidth(aChar: Char)
+    open fun charWidth(aChar: Char)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var aChar = aChar
@@ -139,7 +138,7 @@ open fun charWidth(aChar: Char)
 }
 
 
-open fun charsWidth(charArray: CharArray, offset: Int, length: Int)
+    open fun charsWidth(charArray: CharArray, offset: Int, length: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var charArray = charArray
@@ -152,7 +151,8 @@ open fun charsWidth(charArray: CharArray, offset: Int, length: Int)
                         return defaultFont!!.charsWidth(charArray, offset, length)
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

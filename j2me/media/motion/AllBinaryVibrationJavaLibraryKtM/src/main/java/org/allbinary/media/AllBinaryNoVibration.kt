@@ -33,7 +33,8 @@ open public class AllBinaryNoVibration : AllBinaryVibrationME {
             public constructor() : super()
             {
             }            
-        override fun vibrate(duration: Int, type: Int, volume: Int)
+        
+    override fun vibrate(duration: Int, type: Int, volume: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var duration = duration

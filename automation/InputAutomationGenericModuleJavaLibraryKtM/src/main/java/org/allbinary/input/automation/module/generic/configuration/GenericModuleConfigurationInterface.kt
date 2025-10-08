@@ -26,14 +26,15 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.input.automation.module.generic.configuration.profile.GenericProfile
+
 interface GenericModuleConfigurationInterface {
         
 
-open fun getSelectedGenericProfile()
+    open fun getSelectedGenericProfile()
         //nullable = true from not(false or (false and true)) = true
 : GenericProfile
 
-open fun setSelectedGenericProfile(selectedGenericProfile: GenericProfile)
+    open fun setSelectedGenericProfile(selectedGenericProfile: GenericProfile)
         //nullable = true from not(false or (false and false)) = true
 
 

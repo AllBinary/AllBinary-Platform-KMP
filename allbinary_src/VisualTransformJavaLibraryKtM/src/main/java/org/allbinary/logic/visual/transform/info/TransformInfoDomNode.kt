@@ -44,7 +44,7 @@ open public class TransformInfoDomNode
     private var transformInfoInterface: TransformInfoInterface
 
     private var mappedName: String
-public constructor        (node: Node)
+public constructor (node: Node)
             : super()
         {
 var node = node
@@ -165,7 +165,7 @@ this.transformInfoInterface= TransformInfo(name) as TransformInfoInterface
                             
 }
 
-public constructor        (transformInfoInterface: TransformInfoInterface)
+public constructor (transformInfoInterface: TransformInfoInterface)
             : super()
         {
 var transformInfoInterface = transformInfoInterface
@@ -173,7 +173,7 @@ this.transformInfoInterface= transformInfoInterface
 this.mappedName= transformInfoInterface!!.getName()
 }
 
-public constructor        (transformInfoInterface: TransformInfoInterface, mappedName: String)
+public constructor (transformInfoInterface: TransformInfoInterface, mappedName: String)
             : super()
         {
 var transformInfoInterface = transformInfoInterface
@@ -182,7 +182,7 @@ this.transformInfoInterface= transformInfoInterface
 this.mappedName= mappedName
 }
 
-public constructor        (name: String, mappedName: String)
+public constructor (name: String, mappedName: String)
             : super()
         {
 var name = name
@@ -192,7 +192,7 @@ this.mappedName= mappedName
 }
 
 
-open fun getTransformInfoInterface()
+    open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformInfoInterface{
 
@@ -203,7 +203,7 @@ open fun getTransformInfoInterface()
 }
 
 
-open fun getMappedName()
+    open fun getMappedName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -214,7 +214,7 @@ open fun getMappedName()
 }
 
 
-open fun getReplaceKey()
+    open fun getReplaceKey()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

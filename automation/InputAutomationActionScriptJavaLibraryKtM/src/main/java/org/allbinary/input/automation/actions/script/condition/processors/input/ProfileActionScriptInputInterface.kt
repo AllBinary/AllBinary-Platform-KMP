@@ -27,22 +27,23 @@
         
 import org.allbinary.input.automation.actions.script.condition.processors.ProfileActionScriptProcessorInterface
 import org.allbinary.input.automation.robot.InputRobotInterface
+
 interface ProfileActionScriptInputInterface : ProfileActionScriptProcessorInterface {
         
 
-open fun setInputRobotInterface(inputRobotInterface: InputRobotInterface)
+    open fun setInputRobotInterface(inputRobotInterface: InputRobotInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getInputRobotInterface()
+    open fun getInputRobotInterface()
         //nullable = true from not(false or (false and true)) = true
 : InputRobotInterface
 
-open fun getTime()
+    open fun getTime()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun setTime(time: Int)
+    open fun setTime(time: Int)
         //nullable = true from not(false or (false and false)) = true
 
 

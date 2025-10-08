@@ -28,19 +28,17 @@
 import org.allbinary.layer.Layer
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringMaker
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 
 open public class BasicGeographicMapUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: BasicGeographicMapUtil = BasicGeographicMapUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BasicGeographicMapUtil{
 
@@ -62,7 +60,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun getBorderingRow(direction: Int, oldGeographicMapCellPosition: GeographicMapCellPosition)
+    open fun getBorderingRow(direction: Int, oldGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var direction = direction
@@ -111,7 +109,7 @@ else -> {
 
                 @Throws(Exception::class)
             
-open fun getBorderingColumn(direction: Int, oldGeographicMapCellPosition: GeographicMapCellPosition)
+    open fun getBorderingColumn(direction: Int, oldGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var direction = direction
@@ -160,7 +158,7 @@ else -> {
 
                 @Throws(Exception::class)
             
-open fun isSameCellPosition(fromGeographicMapCellPosition: GeographicMapCellPosition, toGeographicMapCellPosition: GeographicMapCellPosition)
+    open fun isSameCellPosition(fromGeographicMapCellPosition: GeographicMapCellPosition, toGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var fromGeographicMapCellPosition = fromGeographicMapCellPosition
@@ -202,7 +200,7 @@ open fun isSameCellPosition(fromGeographicMapCellPosition: GeographicMapCellPosi
 }
 
 
-open fun createAllBinaryTiledLayerArray(geographicMapInterfaceArray: Array<BasicGeographicMap?>)
+    open fun createAllBinaryTiledLayerArray(geographicMapInterfaceArray: Array<BasicGeographicMap?>)
         //nullable = true from not(false or (false and false)) = true
 : Array<Layer?>{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
@@ -217,7 +215,7 @@ open fun createAllBinaryTiledLayerArray(geographicMapInterfaceArray: Array<Basic
 }
 
 
-open fun createAllBinaryTiledLayerArray(geographicMapInterfaceArray: Array<BasicGeographicMap?>, tiledLayerArray: Array<Layer?>, startIndex: Int)
+    open fun createAllBinaryTiledLayerArray(geographicMapInterfaceArray: Array<BasicGeographicMap?>, tiledLayerArray: Array<Layer?>, startIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 : Array<Layer?>{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
@@ -252,7 +250,7 @@ tiledLayerArray[count++]= geographicMapInterface!!.getAllBinaryTiledLayer()
 }
 
 
-open fun move(geographicMapInterfaceArray: Array<BasicGeographicMap?>, dx: Int, dy: Int)
+    open fun move(geographicMapInterfaceArray: Array<BasicGeographicMap?>, dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
@@ -279,7 +277,7 @@ geographicMapInterface!!.getAllBinaryTiledLayer()!!.move(dx, dy)
 }
 
 
-open fun setPosition(geographicMapInterfaceArray: Array<BasicGeographicMap?>, x: Int, y: Int)
+    open fun setPosition(geographicMapInterfaceArray: Array<BasicGeographicMap?>, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapInterfaceArray = geographicMapInterfaceArray

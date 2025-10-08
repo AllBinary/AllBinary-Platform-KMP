@@ -33,14 +33,14 @@ open public class HtmlTag
         
 
     var otherAttributes: HashMap<Any, Any>
-public constructor        ()
+public constructor ()
             : super()
         {
 this.otherAttributes= HashMap<Any, Any>()
 }
 
 
-open fun addAttribute(key: String, value: String)
+    open fun addAttribute(key: String, value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var key = key

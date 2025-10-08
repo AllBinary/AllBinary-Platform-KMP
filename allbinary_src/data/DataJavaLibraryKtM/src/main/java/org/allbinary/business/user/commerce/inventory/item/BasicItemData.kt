@@ -30,8 +30,7 @@ open public class BasicItemData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val ITEM: String = "BASICITEM"
 

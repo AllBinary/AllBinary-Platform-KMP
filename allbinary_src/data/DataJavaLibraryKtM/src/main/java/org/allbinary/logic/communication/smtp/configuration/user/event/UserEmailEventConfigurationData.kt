@@ -30,15 +30,14 @@ open public class UserEmailEventConfigurationData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NAME: String = "EMAIL_EVENT_CONFIGURATION_NAME"
 
     val LISTENER_CLASSPATH: String = "EMAIL_EVENT_CONFIGURATION_LISTENER_CLASSPATH"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

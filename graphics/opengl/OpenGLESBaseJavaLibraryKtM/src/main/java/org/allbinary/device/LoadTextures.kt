@@ -39,7 +39,7 @@ open public class LoadTextures
         
                 @Throws(Exception::class)
             
-open fun load(gl: GL10)
+    open fun load(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl

@@ -26,12 +26,13 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.visual.transform.info.TransformInfoInterface
+
 interface TransformInfoObjectConfigGeneratorFactoryInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getInstance(transformInfoInterface: TransformInfoInterface)
+    open fun getInstance(transformInfoInterface: TransformInfoInterface)
         //nullable =  from not(true or (false and false)) = 
 : TransformInfoObjectConfigGenerator
 

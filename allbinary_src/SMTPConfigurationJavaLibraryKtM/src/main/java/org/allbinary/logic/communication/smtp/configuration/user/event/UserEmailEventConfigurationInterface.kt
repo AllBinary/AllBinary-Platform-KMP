@@ -25,26 +25,27 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface UserEmailEventConfigurationInterface {
         
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun setName(name: String)
+    open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getEventListenerClassPath()
+    open fun getEventListenerClassPath()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun setEventListenerClassPath(eventListenerClassPath: String)
+    open fun setEventListenerClassPath(eventListenerClassPath: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 : String
 

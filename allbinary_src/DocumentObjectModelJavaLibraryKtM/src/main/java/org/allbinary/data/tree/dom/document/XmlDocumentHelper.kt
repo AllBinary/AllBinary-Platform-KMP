@@ -45,12 +45,11 @@ open public class XmlDocumentHelper
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: XmlDocumentHelper = XmlDocumentHelper()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : XmlDocumentHelper{
 
@@ -68,14 +67,14 @@ open fun getInstance()
     private val INDENT_NUMBER: String = "indent-number"
 
     private var transformer: Transformer
-private constructor        ()
+private constructor ()
             : super()
         {
 this.init(4, true)
 }
 
 
-open fun init(indent: Int, ignoreDeclaration: Boolean)
+    open fun init(indent: Int, ignoreDeclaration: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var indent = indent
@@ -113,7 +112,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 
                 @Throws(Exception::class)
             
-open fun format(xmlString: String)
+    open fun format(xmlString: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var xmlString = xmlString

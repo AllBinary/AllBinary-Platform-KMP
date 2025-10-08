@@ -32,12 +32,11 @@ import org.allbinary.string.CommonSeps
 
 open public class CurrentlyPressedTouchButtonSingletonDebug : CurrentlyPressedTouchButtonSingleton {
         
-
-        companion object {
+companion object {
             
     private val instance: CurrentlyPressedTouchButtonSingletonDebug = CurrentlyPressedTouchButtonSingletonDebug()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CurrentlyPressedTouchButtonSingleton{
 
@@ -73,7 +72,7 @@ open fun getInstance()
 
     private val RELEASED_AND_NOT_FIRED: String = "rel & not fired"
 
-open fun append(append: String, touchButtonInput: TouchButtonInput)
+    open fun append(append: String, touchButtonInput: TouchButtonInput)
         //nullable = true from not(false or (false and false)) = true
 {
 var append = append
@@ -90,7 +89,7 @@ this.string= StringMaker().
 }
 
 
-open fun append(append: String)
+    open fun append(append: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var append = append
@@ -101,7 +100,7 @@ this.string= StringMaker().
 }
 
 
-open fun clearLog(x: Int, y: Int)
+    open fun clearLog(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -113,14 +112,14 @@ this.string= StringMaker().
 }
 
 
-open fun releaseAndNotFired()
+    open fun releaseAndNotFired()
         //nullable = true from not(false or (false and true)) = true
 {
 this.append(RELEASED_AND_NOT_FIRED)
 }
 
 
-open fun releaseAndFired(touchButtonInput: TouchButtonInput)
+    open fun releaseAndFired(touchButtonInput: TouchButtonInput)
         //nullable = true from not(false or (false and false)) = true
 {
 var touchButtonInput = touchButtonInput
@@ -128,7 +127,7 @@ this.append(RELEASED_AND_FIRED, touchButtonInput)
 }
 
 
-open fun releaseAndFired2(touchButtonInput: TouchButtonInput)
+    open fun releaseAndFired2(touchButtonInput: TouchButtonInput)
         //nullable = true from not(false or (false and false)) = true
 {
 var touchButtonInput = touchButtonInput
@@ -136,7 +135,7 @@ this.append(RELEASED_AND_FIRED_2, touchButtonInput)
 }
 
 
-open fun releaseAndFiredAssociated(touchButtonInput: TouchButtonInput)
+    open fun releaseAndFiredAssociated(touchButtonInput: TouchButtonInput)
         //nullable = true from not(false or (false and false)) = true
 {
 var touchButtonInput = touchButtonInput
@@ -144,7 +143,7 @@ this.append(ASSOCIATED_RELEASED_AND_FIRED, touchButtonInput)
 }
 
 
-open fun pressedAndFired(touchButtonInput: TouchButtonInput)
+    open fun pressedAndFired(touchButtonInput: TouchButtonInput)
         //nullable = true from not(false or (false and false)) = true
 {
 var touchButtonInput = touchButtonInput
@@ -152,14 +151,15 @@ this.append(PRESSED_AND_FIRED, touchButtonInput)
 }
 
 
-open fun pressedAndNotFired(touchButtonInput: TouchButtonInput)
+    open fun pressedAndNotFired(touchButtonInput: TouchButtonInput)
         //nullable = true from not(false or (false and false)) = true
 {
 var touchButtonInput = touchButtonInput
 this.append(PRESSED_AND_NOT_FIRED, touchButtonInput)
 }
 
-override fun remove(index: Int)
+
+    override fun remove(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : TouchButtonInput{
 var index = index
@@ -176,7 +176,8 @@ this.string= StringMaker().
                         return touchButtonInput
 }
 
-override fun remove(touchButtonInput: TouchButtonInput)
+
+    override fun remove(touchButtonInput: TouchButtonInput)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var touchButtonInput = touchButtonInput
@@ -193,7 +194,8 @@ this.string= StringMaker().
                         return isRemoved
 }
 
-override fun add(touchButtonInput: TouchButtonInput)
+
+    override fun add(touchButtonInput: TouchButtonInput)
         //nullable = true from not(false or (false and false)) = true
 {
 var touchButtonInput = touchButtonInput
@@ -203,7 +205,8 @@ this.string= StringMaker().
                             append(listString)!!.append(this.append)!!.toString()
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

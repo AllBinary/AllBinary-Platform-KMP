@@ -45,13 +45,13 @@ open public class StatesView
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

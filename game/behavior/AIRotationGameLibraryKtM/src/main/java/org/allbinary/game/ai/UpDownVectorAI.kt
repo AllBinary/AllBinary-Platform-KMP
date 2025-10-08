@@ -38,7 +38,7 @@ open public class UpDownVectorAI : BasicAI {
     private var velocityInterface: BasicVelocityProperties
 
     private var index: Int = 0
-public constructor        (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
+public constructor (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
                             : super(ownerLayerInterface, gameInput){
 var ownerLayerInterface = ownerLayerInterface
@@ -56,7 +56,8 @@ this.velocityInterface!!.getVelocityYBasicDecimalP()!!.set(0)
 
 
                 @Throws(Exception::class)
-            override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+            
+    override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager

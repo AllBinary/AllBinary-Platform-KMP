@@ -33,7 +33,7 @@ import org.allbinary.logic.visual.transform.info.TransformInfoInterface
 
 open public class ContextTransformer : BasicTransformer {
         
-public constructor        (abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)                        
+public constructor (abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)                        
 
                             : super(abeClientInformation, transformInfoInterface){
     //var abeClientInformation = abeClientInformation

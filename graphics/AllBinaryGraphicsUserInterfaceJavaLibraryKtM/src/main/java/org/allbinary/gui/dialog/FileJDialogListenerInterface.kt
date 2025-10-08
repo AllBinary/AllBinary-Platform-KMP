@@ -26,10 +26,11 @@
         import kotlin.reflect.KClass
         
 import java.io.File
+
 interface FileJDialogListenerInterface {
         
 
-open fun onFiles(files: Array<File?>)
+    open fun onFiles(files: Array<File?>)
         //nullable = true from not(false or (false and false)) = true
 
 

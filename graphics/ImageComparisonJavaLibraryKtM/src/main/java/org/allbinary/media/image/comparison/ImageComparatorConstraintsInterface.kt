@@ -28,32 +28,33 @@
 import java.awt
 import java.awt.image.BufferedImage
 import org.allbinary.graphics.GPoint
+
 interface ImageComparatorConstraintsInterface {
         
 
-open fun getMaxNonMatchingPixelDeltas()
+    open fun getMaxNonMatchingPixelDeltas()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun isCollisionWithAvoidRectangles(rectangle: Rectangle)
+    open fun isCollisionWithAvoidRectangles(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
-open fun isCollisionWithAvoidRectangles(point: GPoint)
+    open fun isCollisionWithAvoidRectangles(point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
-open fun isColorAllowed(frame: Int, point: GPoint, color: Color)
+    open fun isColorAllowed(frame: Int, point: GPoint, color: Color)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
                 @Throws(Exception::class)
             
-open fun isImageValid(bufferedImage: BufferedImage)
+    open fun isImageValid(bufferedImage: BufferedImage)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
-open fun isFrameAllowed(frame: Int)
+    open fun isFrameAllowed(frame: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 

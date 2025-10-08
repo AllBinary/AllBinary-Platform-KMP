@@ -29,7 +29,7 @@
 open public class CustomTransformInfo : TransformInfo
                 , TransformInfoInterface {
         
-public constructor        (outputTypeName: String, inputOutputTypeName: String, inputOutputTypeFile: String, name: String, objectFileName: String, objectConfigFileName: String, templateFileName: String, dataFileName: String){
+public constructor (outputTypeName: String, inputOutputTypeName: String, inputOutputTypeFile: String, name: String, objectFileName: String, objectConfigFileName: String, templateFileName: String, dataFileName: String){
 var outputTypeName = outputTypeName
 var inputOutputTypeName = inputOutputTypeName
 var inputOutputTypeFile = inputOutputTypeFile

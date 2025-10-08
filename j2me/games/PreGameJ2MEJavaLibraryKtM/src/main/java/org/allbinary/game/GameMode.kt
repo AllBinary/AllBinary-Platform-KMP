@@ -31,8 +31,7 @@ open public class GameMode
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var NONE: GameMode = GameMode(StringUtil.getInstance()!!.NULL_STRING)
 
@@ -43,7 +42,7 @@ open public class GameMode
         }
             
     private var name: String = StringUtil.getInstance()!!.EMPTY_STRING
-private constructor        (name: String)
+private constructor (name: String)
             : super()
         {
 var name = name
@@ -51,7 +50,7 @@ this.setName(name)
 }
 
 
-open fun setName(name: String)
+    open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name
@@ -59,7 +58,7 @@ this.name= name
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -69,7 +68,8 @@ open fun getName()
                         return name
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

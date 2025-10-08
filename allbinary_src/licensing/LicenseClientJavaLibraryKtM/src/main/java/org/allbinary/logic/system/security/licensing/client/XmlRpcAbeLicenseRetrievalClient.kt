@@ -44,7 +44,7 @@ open public class XmlRpcAbeLicenseRetrievalClient : XmlRpcAbeClient {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (clientInfo: AbeClientInformationInterface)                        
+public constructor (clientInfo: AbeClientInformationInterface)                        
 
                             : super(clientInfo, "LicServ.getLicense"){
 var clientInfo = clientInfo
@@ -57,7 +57,7 @@ var clientInfo = clientInfo
 
                 @Throws(Exception::class)
             
-open fun get(anyType: Any, cryptInterface: CryptInterface)
+    open fun get(anyType: Any, cryptInterface: CryptInterface)
         //nullable = true from not(false or (false and false)) = true
 : Any{
     //var anyType = anyType

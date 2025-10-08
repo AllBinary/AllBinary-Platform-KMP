@@ -28,7 +28,7 @@
 
 open public class BasicArrayListResetablePool : AbstractArrayListPool {
         
-public constructor        (cacheableInterfaceFactoryInterface: CacheableInterfaceFactoryInterface)                        
+public constructor (cacheableInterfaceFactoryInterface: CacheableInterfaceFactoryInterface)                        
 
                             : super(cacheableInterfaceFactoryInterface){
 var cacheableInterfaceFactoryInterface = cacheableInterfaceFactoryInterface
@@ -39,7 +39,7 @@ var cacheableInterfaceFactoryInterface = cacheableInterfaceFactoryInterface
 }
 
 
-open fun clear()
+    open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -47,7 +47,7 @@ open fun clear()
 
                 @Throws(Exception::class)
             
-open fun remove(key: Any)
+    open fun remove(key: Any)
         //nullable = true from not(false or (false and false)) = true
 : CacheableInterface{
 var key = key

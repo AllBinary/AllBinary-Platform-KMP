@@ -54,7 +54,7 @@ open public class BaseImageAnimationFactory
     val animationFactoryInitializationVisitor: AnimationFactoryInitializationVisitor
 
     var scaleProperties: ScaleProperties = ScaleProperties.instance
-public constructor        (image: Image, width: Int, height: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
+public constructor (image: Image, width: Int, height: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
                             : this(image, PrimitiveIntUtil.getArrayInstance(), width, height, animationBehaviorFactory){
     //var image = image
@@ -71,7 +71,7 @@ this.animationFactoryInitializationVisitor!!.dx= dx
 this.animationFactoryInitializationVisitor!!.dy= dy
 }
 
-public constructor        (image: Image, sequenceArray: IntArray, width: Int, height: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
+public constructor (image: Image, sequenceArray: IntArray, width: Int, height: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
                             : this(image, sequenceArray, width, height, animationBehaviorFactory){
     //var image = image
@@ -89,7 +89,7 @@ this.animationFactoryInitializationVisitor!!.dx= dx
 this.animationFactoryInitializationVisitor!!.dy= dy
 }
 
-public constructor        (image: Image, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
+public constructor (image: Image, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
                             : this(image, PrimitiveIntUtil.getArrayInstance(), width, height, animationBehaviorFactory){
     //var image = image
@@ -102,7 +102,7 @@ public constructor        (image: Image, width: Int, height: Int, animationBehav
                     
 }
 
-public constructor        (image: Image, sequenceArray: IntArray, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)
+public constructor (image: Image, sequenceArray: IntArray, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
         {
     //var image = image
@@ -120,7 +120,8 @@ this.sequenceArray= sequenceArray
 
 
                 @Throws(Exception::class)
-            override fun getInstance(instanceId: Int)
+            
+    override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var instanceId = instanceId
@@ -132,7 +133,7 @@ this.sequenceArray= sequenceArray
 }
 
 
-open fun getImage()
+    open fun getImage()
         //nullable = true from not(false or (false and true)) = true
 : Image{
 
@@ -143,7 +144,7 @@ open fun getImage()
 }
 
 
-open fun getSequenceArray()
+    open fun getSequenceArray()
         //nullable = true from not(false or (false and true)) = true
 : IntArray{
 
@@ -153,7 +154,8 @@ open fun getSequenceArray()
                         return sequenceArray
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -177,7 +179,8 @@ stringBuffer!!.append(this.animationFactoryInitializationVisitor!!.toString())
                         return stringBuffer!!.toString()
 }
 
-override fun setInitialScale(scaleProperties: ScaleProperties)
+
+    override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
 {
     //var scaleProperties = scaleProperties
@@ -199,7 +202,7 @@ this.scaleProperties!!.scaleHeight= (this.animationFactoryInitializationVisitor!
 }
 
 
-open fun getAnimationFactoryInitializationVisitorP()
+    open fun getAnimationFactoryInitializationVisitorP()
         //nullable = true from not(false or (false and true)) = true
 : AnimationFactoryInitializationVisitor{
 
@@ -210,7 +213,7 @@ open fun getAnimationFactoryInitializationVisitorP()
 }
 
 
-open fun getScalePropertiesP()
+    open fun getScalePropertiesP()
         //nullable = true from not(false or (false and true)) = true
 : ScaleProperties{
 

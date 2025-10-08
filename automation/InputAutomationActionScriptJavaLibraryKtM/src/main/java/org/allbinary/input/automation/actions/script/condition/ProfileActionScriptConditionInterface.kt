@@ -28,20 +28,21 @@
 import org.allbinary.input.automation.actions.script.ProfileActionScriptItemInterface
 import org.allbinary.input.automation.actions.script.ProfileActionScriptNodeInterface
 import org.allbinary.input.automation.actions.script.condition.processors.ProfileActionScriptProcessorInterface
+
 interface ProfileActionScriptConditionInterface : ProfileActionScriptNodeInterface, CustomTreeNodeInterface, ProfileActionScriptItemInterface {
         
 
-open fun addProcessor(profileActionProcessorInterface: ProfileActionScriptProcessorInterface)
+    open fun addProcessor(profileActionProcessorInterface: ProfileActionScriptProcessorInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun removeProcessor(profileActionProcessorInterface: ProfileActionScriptProcessorInterface)
+    open fun removeProcessor(profileActionProcessorInterface: ProfileActionScriptProcessorInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun shouldProcess(frame: Long)
+    open fun shouldProcess(frame: Long)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 

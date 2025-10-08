@@ -36,12 +36,11 @@ open public class AndroidImageUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AndroidImageUtil = AndroidImageUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AndroidImageUtil{
 
@@ -59,7 +58,7 @@ open fun getInstance()
             {
             }            
         
-open fun paint(bitmap: Bitmap, originalBitmap: Bitmap, paint: Paint)
+    open fun paint(bitmap: Bitmap, originalBitmap: Bitmap, paint: Paint)
         //nullable = true from not(false or (false and false)) = true
 {
     //var bitmap = bitmap
@@ -74,7 +73,7 @@ canvas.drawBitmap(originalBitmap, 0.0f, 0.0f, paint)
 }
 
 
-open fun paint(image: Image, originalImage: Image, paint: Paint)
+    open fun paint(image: Image, originalImage: Image, paint: Paint)
         //nullable = true from not(false or (false and false)) = true
 {
     //var image = image
@@ -88,7 +87,7 @@ canvas.drawBitmap(originalImage!!.getBitmap(), 0.0f, 0.0f, paint)
 }
 
 
-open fun rotate(image: Image, originalImage: Image, matrix: Matrix, paint: Paint)
+    open fun rotate(image: Image, originalImage: Image, matrix: Matrix, paint: Paint)
         //nullable = true from not(false or (false and false)) = true
 {
     //var image = image
@@ -101,21 +100,6 @@ image.getBitmap()!!.eraseColor(Color.TRANSPARENT)
 
 canvas.concat(matrix)
 canvas.drawBitmap(originalImage!!.getBitmap(), 0.0f, 0.0f, paint)
-}
-
-
-open fun rotate(image: Image, originalImage: Image, matrix: Matrix)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var image = image
-    //var originalImage = originalImage
-    //var matrix = matrix
-image.getBitmap()!!.eraseColor(Color.TRANSPARENT)
-
-    var canvas: Canvas = image.getCanvas()!!
-
-canvas.concat(matrix)
-image.getGraphics()!!.drawImage(originalImage, 0, 0, 0)
 }
 
 

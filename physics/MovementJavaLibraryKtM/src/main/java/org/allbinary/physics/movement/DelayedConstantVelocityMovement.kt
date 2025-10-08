@@ -35,7 +35,7 @@ open public class DelayedConstantVelocityMovement : BasicConstantVelocityMovemen
         
 
     private val timeDelayHelper: TimeDelayHelper = TimeDelayHelper(60)
-public constructor        (basicDecimal: BasicDecimal, velocityProperties: BasicVelocityProperties)                        
+public constructor (basicDecimal: BasicDecimal, velocityProperties: BasicVelocityProperties)                        
 
                             : super(basicDecimal, velocityProperties){
 var basicDecimal = basicDecimal
@@ -46,7 +46,8 @@ var velocityProperties = velocityProperties
                     
 }
 
-override fun init(speedBasicDecimal: BasicDecimal, angle: Int, otherAngle: Int)
+
+    override fun init(speedBasicDecimal: BasicDecimal, angle: Int, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var speedBasicDecimal = speedBasicDecimal
@@ -56,7 +57,8 @@ var otherAngle = otherAngle
 
 
                 @Throws(Exception::class)
-            override fun process(layer: AllBinaryGameLayer)
+            
+    override fun process(layer: AllBinaryGameLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var layer = layer

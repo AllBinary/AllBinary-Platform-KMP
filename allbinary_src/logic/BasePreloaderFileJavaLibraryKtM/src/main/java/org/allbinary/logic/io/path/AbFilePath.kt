@@ -28,7 +28,7 @@
 
 open public class AbFilePath : AbPath {
         
-public constructor        (aPath: String)                        
+public constructor (aPath: String)                        
 
                             : super(){
 var aPath = aPath

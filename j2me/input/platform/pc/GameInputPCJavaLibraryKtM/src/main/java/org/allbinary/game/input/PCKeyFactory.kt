@@ -33,12 +33,11 @@ open public class PCKeyFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: PCKeyFactory = PCKeyFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PCKeyFactory{
 
@@ -216,7 +215,7 @@ open fun getInstance()
 
     val BACK_SPACE: PCGameKey = PCGameKey(KeyEvent.VK_BACK_SPACE, "Backspace")
 
-open fun isSubmission(input: Input)
+    open fun isSubmission(input: Input)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var input = input
@@ -241,7 +240,7 @@ var input = input
 }
 
 
-open fun isDelete(input: Input)
+    open fun isDelete(input: Input)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var input = input
@@ -266,7 +265,7 @@ var input = input
 }
 
 
-open fun isBackSpace(input: Input)
+    open fun isBackSpace(input: Input)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var input = input
@@ -291,7 +290,7 @@ var input = input
 }
 
 
-open fun isUp(input: Input)
+    open fun isUp(input: Input)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var input = input
@@ -316,7 +315,7 @@ var input = input
 }
 
 
-open fun isDown(input: Input)
+    open fun isDown(input: Input)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var input = input
@@ -341,7 +340,7 @@ var input = input
 }
 
 
-open fun isLeft(input: Input)
+    open fun isLeft(input: Input)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var input = input
@@ -366,7 +365,7 @@ var input = input
 }
 
 
-open fun isRight(input: Input)
+    open fun isRight(input: Input)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var input = input
@@ -391,7 +390,7 @@ var input = input
 }
 
 
-open fun isEnter(input: Input)
+    open fun isEnter(input: Input)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var input = input

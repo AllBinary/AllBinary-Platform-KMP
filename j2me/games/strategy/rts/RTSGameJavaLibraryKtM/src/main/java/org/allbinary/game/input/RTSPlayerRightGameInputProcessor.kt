@@ -30,7 +30,7 @@ import org.allbinary.layer.AllBinaryLayerManager
 
 open public class RTSPlayerRightGameInputProcessor : RTSPlayerGameInputProcessor {
         
-public constructor        (rtsPlayerGameInput: RTSPlayerGameInput)                        
+public constructor (rtsPlayerGameInput: RTSPlayerGameInput)                        
 
                             : super(rtsPlayerGameInput){
 var rtsPlayerGameInput = rtsPlayerGameInput
@@ -43,7 +43,7 @@ var rtsPlayerGameInput = rtsPlayerGameInput
 
                 @Throws(Exception::class)
             
-open fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+    open fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var allbinaryLayerManager = allbinaryLayerManager

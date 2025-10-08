@@ -26,12 +26,13 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.util.event.EventListenerInterface
+
 interface TrackingEventListenerInterface : EventListenerInterface {
         
 
                 @Throws(Exception::class)
             
-open fun onMovement(trackingEvent: TrackingEvent)
+    open fun onMovement(trackingEvent: TrackingEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

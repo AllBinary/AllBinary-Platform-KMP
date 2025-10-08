@@ -27,26 +27,27 @@
         
 import javax.microedition.lcdui.Command
 import javax.microedition.lcdui.CommandListener
+
 interface DisplayableInterface {
         
 
-open fun addCommand(cmd: Command)
+    open fun addCommand(cmd: Command)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getHeight()
+    open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getWidth()
+    open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun removeCommand(cmd: Command)
+    open fun removeCommand(cmd: Command)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setCommandListener(l: CommandListener)
+    open fun setCommandListener(l: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 
 

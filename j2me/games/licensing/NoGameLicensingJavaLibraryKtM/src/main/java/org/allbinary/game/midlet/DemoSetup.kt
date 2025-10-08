@@ -36,7 +36,7 @@ open public class DemoSetup
             {
             }            
         
-open fun init(gameMidlet: GameMidlet)
+    open fun init(gameMidlet: GameMidlet)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameMidlet = gameMidlet

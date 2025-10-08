@@ -30,13 +30,12 @@ open public class TransformTemplateCustomizerData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var NAME: String = "TEMPLATE_CUSTOMIZER_NAME"
 
         }
-            public constructor        ()
+            public constructor ()
             : super()
         {
 }

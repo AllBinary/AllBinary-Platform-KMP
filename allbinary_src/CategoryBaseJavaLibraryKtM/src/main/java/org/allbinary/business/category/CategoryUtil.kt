@@ -39,11 +39,10 @@ open public class CategoryUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getPathLevel(categoryPath: AbPath)
+    open fun getPathLevel(categoryPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var categoryPath = categoryPath
@@ -59,7 +58,7 @@ var categoryPath = categoryPath
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getNameFromNode(node: Node)
+    open fun getNameFromNode(node: Node)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var node = node
@@ -115,7 +114,7 @@ var node = node
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

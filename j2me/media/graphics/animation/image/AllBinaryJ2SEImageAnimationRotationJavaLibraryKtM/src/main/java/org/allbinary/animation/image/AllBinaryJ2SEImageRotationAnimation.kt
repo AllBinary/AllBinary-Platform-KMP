@@ -52,9 +52,13 @@ open public class AllBinaryJ2SEImageRotationAnimation : ImageBaseRotationAnimati
 
     private var bufferedImageIndex: Int= 0
 
-    private var scaleX: Float= 0.0f
+    private var lastScaleX: Float = 1.0f
 
-    private var scaleY: Float= 0.0f
+    private var lastScaleY: Float = 1.0f
+
+    private var scaleX: Float = 1.0f
+
+    private var scaleY: Float = 1.0f
 
     private var maxScaleX: Float= 0.0f
 
@@ -67,7 +71,7 @@ open public class AllBinaryJ2SEImageRotationAnimation : ImageBaseRotationAnimati
     private var changeColorProcessor: ModifierBaseProcessor = ModifierBaseProcessor.getInstance()!!
 
     private var scaleProcessor: ScaleBaseProcessor = ScaleProcessor.getInstance()!!
-protected constructor        (originalImage: Image, image: Image, angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
+protected constructor (originalImage: Image, image: Image, angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
 
                             : super(image, angleInfo, totalAngle, animationBehavior){
     //var originalImage = originalImage
@@ -86,7 +90,8 @@ this.twoImages[0]= image
 this.twoImages[1]= ImageCopyUtil.getInstance()!!.createImageForRotation(image)
 }
 
-override fun setBasicColorP(basicColor: BasicColor)
+
+    override fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var basicColor = basicColor
@@ -117,7 +122,8 @@ this.updateImage()
                                 
 }
 
-override fun changeBasicColor(basicColor: BasicColor)
+
+    override fun changeBasicColor(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var basicColor = basicColor
@@ -126,9 +132,9 @@ override fun changeBasicColor(basicColor: BasicColor)
 
 
     
-                        if(this.getBasicColorP() == 
+                        if(this.getChangeBasicColor() == 
                                     null
-                                 || this.getBasicColorP()!!.toInt() != basicColor!!.toInt())
+                                 || this.getChangeBasicColor()!!.toInt() != basicColor!!.toInt())
                         
                                     {
                                     changed= true
@@ -148,7 +154,8 @@ this.updateImage()
                                 
 }
 
-override fun setAlpha(alpha: Int)
+
+    override fun setAlpha(alpha: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var alpha = alpha
@@ -177,18 +184,30 @@ this.updateImage()
                                 
 }
 
-override fun setScale(scaleX: Float, scaleY: Float)
+
+    override fun setScale(scaleX: Float, scaleY: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var scaleX = scaleX
     //var scaleY = scaleY
 this.scaleX= scaleX
 this.scaleY= scaleY
-this.scaleProcessor!!.update(this.realOriginalImage, this.originalImageArray, this.twoImages, this.bufferedImageIndex, this.scaleX, this.scaleY, this.maxScaleX, this.maxScaleY)
+
+    
+                        if(this.scaleX != this.lastScaleX || this.scaleY != this.lastScaleY)
+                        
+                                    {
+                                    this.scaleProcessor!!.update(this.realOriginalImage, this.originalImageArray, this.twoImages, this.bufferedImageIndex, this.scaleX, this.scaleY, this.maxScaleX, this.maxScaleY)
 this.updateImage()
+
+                                    }
+                                
+this.lastScaleX= this.scaleX
+this.lastScaleY= this.scaleY
 }
 
-override fun setMaxScale(maxScaleX: Float, maxScaleY: Float)
+
+    override fun setMaxScale(maxScaleX: Float, maxScaleY: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var maxScaleX = maxScaleX
@@ -200,7 +219,7 @@ this.updateImage()
 }
 
 
-open fun nextRotation()
+    open fun nextRotation()
         //nullable = true from not(false or (false and true)) = true
 {
 super.nextRotation()
@@ -208,7 +227,7 @@ this.updateImage()
 }
 
 
-open fun previousRotation()
+    open fun previousRotation()
         //nullable = true from not(false or (false and true)) = true
 {
 super.previousRotation()
@@ -216,7 +235,7 @@ this.updateImage()
 }
 
 
-open fun updateImage()
+    open fun updateImage()
         //nullable = true from not(false or (false and true)) = true
 {
 this.imageRotationUtil!!.rotateImage(this.originalImageArray[0]!!, this.twoImages[this.bufferedImageIndex]!!, this.angleInfo!!.getAngle() +90)
@@ -230,7 +249,7 @@ this.swap()
 }
 
 
-open fun setFrame(index: Int)
+    open fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var index = index
@@ -239,7 +258,7 @@ this.updateImage()
 }
 
 
-open fun swap()
+    open fun swap()
         //nullable = true from not(false or (false and true)) = true
 {
 this.imageToShow= this.twoImages[this.bufferedImageIndex]!!
@@ -260,7 +279,7 @@ this.imageToShow= this.twoImages[this.bufferedImageIndex]!!
 }
 
 
-open fun paint(graphics: Graphics, x: Int, y: Int)
+    open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -270,7 +289,7 @@ graphics.drawImage(this.imageToShow, x, y, anchor)
 }
 
 
-open fun close()
+    open fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 super.close()
@@ -312,7 +331,7 @@ disposalUtil!!.dispose(this.imageToShow)
 
                 @Throws(Throwable::class)
             
-open fun finalize()
+    open fun finalize()
         //nullable = true from not(false or (false and true)) = true
 {
 super.finalize()

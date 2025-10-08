@@ -36,7 +36,7 @@ open public class DefaultListModelHelper
     private var defaultListModel: DefaultListModel
 
     private var vector: Vector
-public constructor        ()
+public constructor ()
             : super()
         {
 this.vector= Vector()
@@ -44,7 +44,7 @@ this.defaultListModel= DefaultListModel()
 }
 
 
-open fun initDefaultModelList()
+    open fun initDefaultModelList()
         //nullable = true from not(false or (false and true)) = true
 {
 this.defaultListModel= DefaultListModel()
@@ -67,7 +67,7 @@ this.defaultListModel!!.addElement(moduleName)
 }
 
 
-open fun getListModel()
+    open fun getListModel()
         //nullable = true from not(false or (false and true)) = true
 : ListModel{
 
@@ -78,7 +78,7 @@ open fun getListModel()
 }
 
 
-open fun add(string: String)
+    open fun add(string: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var string = string
@@ -86,7 +86,7 @@ this.vector.add(string)
 }
 
 
-open fun remove(string: String)
+    open fun remove(string: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var string = string

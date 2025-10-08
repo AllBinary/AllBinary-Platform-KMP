@@ -32,7 +32,7 @@ import org.allbinary.graphics.font.MyFont
 
 open public class ScoreHudWidget : NumberStringHud {
         
-public constructor        (maxscore: Int, location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int, basicColor: BasicColor)                        
+public constructor (maxscore: Int, location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int, basicColor: BasicColor)                        
 
                             : super("Pts ", maxscore, location, direction, maxHeight, maxWidth, bufferZone, basicColor){
 var maxscore = maxscore
@@ -48,7 +48,7 @@ var basicColor = basicColor
                     
 }
 
-public constructor        (maxscore: Int, location: Int, direction: Int, maxWidth: Int)                        
+public constructor (maxscore: Int, location: Int, direction: Int, maxWidth: Int)                        
 
                             : this(maxscore, location, direction, 14, maxWidth, 2, BasicColorFactory.getInstance()!!.GREY){
 var maxscore = maxscore
@@ -61,7 +61,7 @@ var maxWidth = maxWidth
                     
 }
 
-public constructor        (maxscore: Int, location: Int, direction: Int)                        
+public constructor (maxscore: Int, location: Int, direction: Int)                        
 
                             : this(maxscore, location, direction, 14, MyFont.getInstance()!!.getSize() *5, 2, BasicColorFactory.getInstance()!!.GREY){
 var maxscore = maxscore

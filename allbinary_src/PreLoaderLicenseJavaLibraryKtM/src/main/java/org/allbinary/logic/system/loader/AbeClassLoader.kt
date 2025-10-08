@@ -43,8 +43,7 @@ import org.allbinary.logic.system.security.AbCryptUtil
 
 open public class AbeClassLoader : ClassLoader {
         
-
-        companion object {
+companion object {
             
     private var classes: Map = HashMap<Any, Any>()
 
@@ -59,7 +58,7 @@ open public class AbeClassLoader : ClassLoader {
     private val ENCRYPTED_EXTENSION: String = AbPathData.getInstance()!!.EXTENSION_SEP +"abc"
 
     private var key: String
-public constructor        (parent: ClassLoader, key: String)                        
+public constructor (parent: ClassLoader, key: String)                        
 
                             : super(parent){
 var parent = parent
@@ -73,7 +72,7 @@ this.PATH= org.allbinary.globals.URLGLOBALS.getWebappPath() +"WEB-INF/classes/"
 }
 
 
-open fun findLoadedClass1(name: String)
+    open fun findLoadedClass1(name: String)
         //nullable = true from not(false or (false and false)) = true
 : KClass<*>{
 var name = name
@@ -88,7 +87,7 @@ var name = name
                 @Throws(ClassNotFoundException::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun loadClass(name: String)
+    open fun loadClass(name: String)
         //nullable = true from not(false or (false and false)) = true
 : KClass<*>{
 var name = name
@@ -103,7 +102,7 @@ var name = name
                 @Throws(ClassNotFoundException::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun loadClass(name: String, resolve: Boolean)
+    open fun loadClass(name: String, resolve: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : KClass<*>{
 var name = name
@@ -229,7 +228,7 @@ logUtil!!.put("Failure loading: " +name +"\nwith: " +loadedWith, this, "loadClas
 }
 
 
-open fun loadClassBytesFromFile(name: String)
+    open fun loadClassBytesFromFile(name: String)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
 var name = name
@@ -308,7 +307,7 @@ StreamUtil.getInstance()!!.close(in)
                 @Throws(ClassNotFoundException::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun oldLoadClass(name: String, resolve: Boolean)
+    open fun oldLoadClass(name: String, resolve: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : KClass<*>{
 var name = name

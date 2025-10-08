@@ -41,13 +41,12 @@ import org.allbinary.logic.util.event.EventStrings
 open public class GameNotificationHud : BasicHud
                 , GameNotificationListenerInterface {
         
-
-        companion object {
+companion object {
             
     val NULL_GAME_NOTIFICATION: GameNotificationHud = GameNotificationHud(BasicHudFactory.getInstance()!!.TOPCENTER, BasicHudFactory.getInstance()!!.HORIZONTAL, 0, 0, 0, BasicColorFactory.getInstance()!!.RED)
 
         }
-            public constructor        (location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int, basicColor: BasicColor)                        
+            public constructor (location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int, basicColor: BasicColor)                        
 
                             : super(location, direction, maxHeight, maxWidth, bufferZone, basicColor){
 var location = location
@@ -62,7 +61,8 @@ var basicColor = basicColor
                     
 }
 
-override fun onEvent(eventObject: AllBinaryEventObject)
+
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
@@ -75,7 +75,8 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
     private var lastGameNotificationEvent: GameNotificationEvent = GameNotification.NULL_GAME_NOTIFICATION_EVENT
 
                 @Throws(Exception::class)
-            override fun onGameNotificationEvent(gameNotificationEvent: GameNotificationEvent)
+            
+    override fun onGameNotificationEvent(gameNotificationEvent: GameNotificationEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameNotificationEvent = gameNotificationEvent
@@ -93,7 +94,7 @@ this.add(gameNotificationEvent!!.getString(), gameNotificationEvent!!.getSeconds
 }
 
 
-open fun add(string: String, seconds: Integer, basicColor: BasicColor, permanent: Boolean)
+    open fun add(string: String, seconds: Integer, basicColor: BasicColor, permanent: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var string = string
@@ -105,20 +106,20 @@ var permanent = permanent
 
                 @Throws(Exception::class)
             
-open fun processTick()
+    open fun processTick()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 }
 
 
-open fun clear()
+    open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 }

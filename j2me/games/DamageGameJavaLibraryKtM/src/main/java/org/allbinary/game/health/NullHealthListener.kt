@@ -31,8 +31,7 @@ open public class NullHealthListener
         
                 , HealthListenerInterface {
         
-
-        companion object {
+companion object {
             
     val NULL_HEALTH_LISTENER: NullHealthListener = NullHealthListener()
 
@@ -42,7 +41,8 @@ open public class NullHealthListener
             public constructor() : super()
             {
             }            
-        override fun onHealthChange()
+        
+    override fun onHealthChange()
         //nullable = true from not(false or (false and true)) = true
 {
 }

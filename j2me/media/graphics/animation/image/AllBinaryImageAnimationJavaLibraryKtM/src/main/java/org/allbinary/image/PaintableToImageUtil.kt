@@ -33,14 +33,13 @@ open public class PaintableToImageUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: PaintableToImageUtil = PaintableToImageUtil()
 
                 @Throws(Exception::class)
             
-open fun getImage(paintableInterface: PaintableInterface, width: Int, height: Int)
+    open fun getImage(paintableInterface: PaintableInterface, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 : Image{
 var paintableInterface = paintableInterface

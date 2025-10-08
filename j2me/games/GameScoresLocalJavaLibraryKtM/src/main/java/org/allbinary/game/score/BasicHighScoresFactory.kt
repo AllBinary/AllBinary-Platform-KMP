@@ -18,10 +18,9 @@ import org.allbinary.logic.system.security.licensing.AbeClientInformationInterfa
 
 open public class BasicHighScoresFactory : HighScoresBase {
         
-
-        companion object {
+companion object {
             
-open fun loaded(index2: Int)
+    open fun loaded(index2: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var index2 = index2
@@ -51,7 +50,7 @@ open fun loaded(index2: Int)
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val abeClientInformation: AbeClientInformationInterface
-public constructor        (abeClientInformation: AbeClientInformationInterface, softwareInformation: SoftwareInformation){
+public constructor (abeClientInformation: AbeClientInformationInterface, softwareInformation: SoftwareInformation){
     //var abeClientInformation = abeClientInformation
     //var softwareInformation = softwareInformation
 this.abeClientInformation= abeClientInformation
@@ -67,7 +66,8 @@ this.abeClientInformation= abeClientInformation
     private val PERSONAL_HIGH_SCORES: String = "Personal Top Scores"
 
     private val FETCH: String = "fetchHighScores"
-override fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener)
+
+    override fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameInfo = gameInfo
@@ -76,7 +76,8 @@ logUtil!!.put("Getting Local HighScores", this, FETCH)
 this.fetchHighScores(gameInfo, highScoresResultsListener, true)
 }
 
-override fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener, preload: Boolean)
+
+    override fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener, preload: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameInfo = gameInfo
@@ -93,7 +94,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, FETCH, e)
 
 }
 
-override fun createHighScoresHelper()
+
+    override fun createHighScoresHelper()
         //nullable = true from not(false or (false and true)) = true
 : HighScoresHelperBase{
 

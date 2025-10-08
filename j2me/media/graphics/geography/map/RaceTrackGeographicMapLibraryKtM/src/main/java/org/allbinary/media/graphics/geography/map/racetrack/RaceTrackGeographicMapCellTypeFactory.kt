@@ -30,12 +30,11 @@ import org.allbinary.media.graphics.geography.map.GeographicMapCellTypeFactory
 
 open public class RaceTrackGeographicMapCellTypeFactory : GeographicMapCellTypeFactory {
         
-
-        companion object {
+companion object {
             
     private val instance: RaceTrackGeographicMapCellTypeFactory = RaceTrackGeographicMapCellTypeFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : RaceTrackGeographicMapCellTypeFactory{
 
@@ -69,7 +68,7 @@ open fun getInstance()
     val DEFAULT_FINISH_LINE_ROAD_CELL_TYPE: RaceTrackGeographicMapCellType
 
     var FINISH_LINE_ROAD_CELL_TYPE: RaceTrackGeographicMapCellType
-public constructor        (){
+public constructor (){
 
     var raceTrackGeographicMapCellTypes: RaceTrackGeographicMapCellTypes = RaceTrackGeographicMapCellTypes.getInstance()!!
 
@@ -84,7 +83,7 @@ DEFAULT_FINISH_LINE_ROAD_CELL_TYPE= raceTrackGeographicMapCellTypes!!.DEFAULT_FI
 }
 
 
-open fun getStartType()
+    open fun getStartType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -95,7 +94,7 @@ open fun getStartType()
 }
 
 
-open fun getEndType()
+    open fun getEndType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -106,7 +105,7 @@ open fun getEndType()
 }
 
 
-open fun getEmptyType()
+    open fun getEmptyType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -117,7 +116,7 @@ open fun getEmptyType()
 }
 
 
-open fun isPath(cellType: GeographicMapCellType)
+    open fun isPath(cellType: GeographicMapCellType)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var cellType = cellType

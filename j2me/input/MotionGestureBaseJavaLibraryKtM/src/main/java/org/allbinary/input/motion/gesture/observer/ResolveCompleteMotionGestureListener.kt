@@ -42,7 +42,7 @@ open public class ResolveCompleteMotionGestureListener
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        ()
+public constructor ()
             : super()
         {
 
@@ -54,7 +54,8 @@ CompleteMotionGestureInputEventHandler.getInstance()!!.addListener(GameKeyFromMo
 
 
                 @Throws(Exception::class)
-            override fun onMotionGestureCompleted(list: BasicArrayList)
+            
+    override fun onMotionGestureCompleted(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var list = list

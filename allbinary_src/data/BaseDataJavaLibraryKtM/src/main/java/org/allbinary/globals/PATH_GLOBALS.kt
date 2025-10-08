@@ -33,12 +33,11 @@ open public class PATH_GLOBALS
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: PATH_GLOBALS = PATH_GLOBALS()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PATH_GLOBALS{
 
@@ -50,7 +49,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 

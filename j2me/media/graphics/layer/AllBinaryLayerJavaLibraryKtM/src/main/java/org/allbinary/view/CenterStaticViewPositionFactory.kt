@@ -31,13 +31,13 @@ open public class CenterStaticViewPositionFactory
             : Object
          {
         
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun getInstance(z: Int)
+    open fun getInstance(z: Int)
         //nullable =  from not(true or (false and false)) = 
 : ViewPosition{
 var z = z

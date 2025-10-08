@@ -32,12 +32,11 @@ import java.io.PrintStream
             : Object
          {
         
-
-        companion object {
+/*actual*/ companion object {
             
     private val instance: ExceptionUtil = ExceptionUtil()
 
-    open fun getInstance()
+    /*actual*/ open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ExceptionUtil{
 
@@ -48,8 +47,10 @@ import java.io.PrintStream
 }
 
 
+    /*actual*/ val PRETEND_EXCEPTION: Exception = Exception("Not Really An Exception")
+
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
@@ -57,7 +58,7 @@ import java.io.PrintStream
 
     private val NONE: String = "No Stack Trace"
 
-    open fun getStackTrace(e: Throwable)
+    /*actual*/ open fun getStackTrace(e: Throwable)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var e = e

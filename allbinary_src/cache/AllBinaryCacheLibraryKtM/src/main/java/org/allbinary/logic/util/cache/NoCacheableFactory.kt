@@ -31,7 +31,7 @@ open public class NoCacheableFactory
         
                 , CacheableInterfaceFactoryInterface {
         
-public constructor        ()
+public constructor ()
             : super()
         {
 }
@@ -39,7 +39,7 @@ public constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getInstance(key: Any)
+    open fun getInstance(key: Any)
         //nullable =  from not(true or (false and false)) = 
 : CacheableInterface{
 var key = key

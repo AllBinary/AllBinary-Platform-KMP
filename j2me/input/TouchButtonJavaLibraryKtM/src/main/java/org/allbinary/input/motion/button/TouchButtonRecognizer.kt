@@ -57,7 +57,7 @@ open public inner class ReleaseHelper
         
 
     val touchButtonRecognizer: TouchButtonRecognizer
-public constructor        (touchButtonRecognizer: TouchButtonRecognizer)
+public constructor (touchButtonRecognizer: TouchButtonRecognizer)
             : super()
         {
 var touchButtonRecognizer = touchButtonRecognizer
@@ -67,7 +67,7 @@ this.touchButtonRecognizer= touchButtonRecognizer
 
                 @Throws(Exception::class)
             
-open fun release(touchButtonInput: TouchButtonInput, deviceId: Int)
+    open fun release(touchButtonInput: TouchButtonInput, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var touchButtonInput = touchButtonInput
@@ -98,7 +98,7 @@ this.touchButtonRecognizer!!.currentlyPressedTouchButtonSingleton!!.remove(index
             
 open public inner class MultitouchReleaseHelper : ReleaseHelper {
         
-public constructor        (touchButtonRecognizer: TouchButtonRecognizer)                        
+public constructor (touchButtonRecognizer: TouchButtonRecognizer)                        
 
                             : super(touchButtonRecognizer){
 var touchButtonRecognizer = touchButtonRecognizer
@@ -110,7 +110,8 @@ var touchButtonRecognizer = touchButtonRecognizer
 
 
                 @Throws(Exception::class)
-            override fun release(touchButtonInput: TouchButtonInput, deviceId: Int)
+            
+    override fun release(touchButtonInput: TouchButtonInput, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var touchButtonInput = touchButtonInput
@@ -151,7 +152,7 @@ this.touchButtonRecognizer!!.currentlyPressedTouchButtonSingleton!!.remove(index
                 
             
     private val releaseHelper: ReleaseHelper
-public constructor        ()
+public constructor ()
             : super()
         {
 
@@ -173,7 +174,7 @@ public constructor        ()
 
                 @Throws(Exception::class)
             
-open fun processRelease(touchButtonInput: TouchButtonInput, deviceId: Int)
+    open fun processRelease(touchButtonInput: TouchButtonInput, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var touchButtonInput = touchButtonInput
@@ -191,7 +192,7 @@ this.currentlyPressedTouchButtonSingleton!!.remove(touchButtonInput)
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun releaseTouchButtonInput(x: Int, y: Int, deviceId: Int)
+    open fun releaseTouchButtonInput(x: Int, y: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var x = x
@@ -269,7 +270,7 @@ this.processRelease(touchButtonInput, deviceId)
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun pressTouchButtonInput(x: Int, y: Int, deviceId: Int)
+    open fun pressTouchButtonInput(x: Int, y: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var x = x

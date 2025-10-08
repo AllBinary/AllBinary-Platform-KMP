@@ -32,12 +32,11 @@ import org.allbinary.game.configuration.feature.GraphicsFeatureFactory
 
 open public class Unit1DecalGameResources : BasicGameResources {
         
-
-        companion object {
+companion object {
             
     private val instance: Unit1DecalGameResources = Unit1DecalGameResources()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BasicGameResources{
 
@@ -49,7 +48,7 @@ open fun getInstance()
 
 
         }
-            private constructor        (){
+            private constructor (){
 
     var ROOT: String = "/unit_decal"
 
@@ -77,7 +76,7 @@ super.init(ROOT, SIZE)
 
                 @Throws(Exception::class)
             
-open fun init(ROOT: String, sizeString: String)
+    open fun init(ROOT: String, sizeString: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var ROOT = ROOT
@@ -88,7 +87,7 @@ super.init(ROOT, sizeString)
 
                 @Throws(Exception::class)
             
-open fun getString()
+    open fun getString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

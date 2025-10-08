@@ -40,12 +40,11 @@ open public class DomDocumentFileHelper
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun create(xmlFile: AbFile)
+    open fun create(xmlFile: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : Document{
 var xmlFile = xmlFile
@@ -69,7 +68,7 @@ var xmlFile = xmlFile
 
                 @Throws(Exception::class)
             
-open fun save(file: AbFile, document: Document)
+    open fun save(file: AbFile, document: Document)
         //nullable = true from not(false or (false and false)) = true
 {
 var file = file
@@ -123,7 +122,7 @@ dataOutputStream!!.flush()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

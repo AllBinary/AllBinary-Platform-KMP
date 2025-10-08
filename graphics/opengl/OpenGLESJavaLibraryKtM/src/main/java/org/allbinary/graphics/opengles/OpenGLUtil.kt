@@ -37,12 +37,11 @@ open public class OpenGLUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OpenGLUtil = OpenGLUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OpenGLUtil{
 
@@ -82,7 +81,7 @@ open fun getInstance()
 
     private var created: Boolean = false
 
-open fun onSurfaceCreated(gl: GL10)
+    open fun onSurfaceCreated(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl
@@ -106,7 +105,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, this.renderStrings!!.ON_SURFACE_C
 }
 
 
-open fun onSurfaceCreated(gl: GL10, loadTextures: LoadTextures)
+    open fun onSurfaceCreated(gl: GL10, loadTextures: LoadTextures)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl
@@ -127,7 +126,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, this.renderStrings!!.ON_SURFACE_C
 
                 @Throws(Exception::class)
             
-open fun onSurfaceChanged(gl: GL10, graphics: OpenGLESGraphics)
+    open fun onSurfaceChanged(gl: GL10, graphics: OpenGLESGraphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl
@@ -155,7 +154,7 @@ this.set(gl)
 }
 
 
-open fun add(image: Image)
+    open fun add(image: Image)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var image = image
@@ -193,7 +192,7 @@ list.add(encapsulateImage)
 }
 
 
-open fun clear()
+    open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -209,7 +208,7 @@ list.clear()
 }
 
 
-open fun add(runnable: Runnable)
+    open fun add(runnable: Runnable)
         //nullable = true from not(false or (false and false)) = true
 {
     //var runnable = runnable
@@ -235,7 +234,7 @@ displayInfoSingleton!!.add(this.canvasStrings!!.SCALED_IMAGES)
 }
 
 
-open fun processRunnables()
+    open fun processRunnables()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -270,7 +269,7 @@ this.runnableList!!.clear()
 
                 @Throws(Exception::class)
             
-open fun set(gl: GL10)
+    open fun set(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
 {
 var gl = gl

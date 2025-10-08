@@ -30,12 +30,11 @@ open public class LicenseStupidTimerFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: StupidTimer = StupidTimer()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : StupidTimer{
 

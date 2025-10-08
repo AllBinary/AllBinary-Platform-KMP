@@ -31,7 +31,6 @@ import javax.microedition.khronos.egl.EGLConfig
 import javax.microedition.khronos.opengles.GL10
 import org.allbinary.emulator.InitEmulatorFactory
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 
@@ -51,7 +50,7 @@ open public class EmulatorCustomRenderer
 
     val renderStrings: RendererStrings = RendererStrings.getInstance()!!
 
-open fun onSurfaceCreated(gl: GL10, eglConfig: EGLConfig)
+    open fun onSurfaceCreated(gl: GL10, eglConfig: EGLConfig)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl

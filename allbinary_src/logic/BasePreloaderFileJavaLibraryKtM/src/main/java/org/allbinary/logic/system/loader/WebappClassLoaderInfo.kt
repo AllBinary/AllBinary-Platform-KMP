@@ -33,13 +33,12 @@ open public class WebappClassLoaderInfo
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var classLoader: Any = NullUtil.getInstance()!!.NULL_OBJECT
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun setLoader(classLoader: ClassLoader)
+    open fun setLoader(classLoader: ClassLoader)
         //nullable = true from not(false or (false and false)) = true
 {
 var classLoader = classLoader
@@ -48,7 +47,7 @@ WebappClassLoaderInfo.classLoader= classLoader
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getLoader()
+    open fun getLoader()
         //nullable = true from not(false or (false and true)) = true
 : ClassLoader{
 
@@ -60,7 +59,7 @@ open fun getLoader()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

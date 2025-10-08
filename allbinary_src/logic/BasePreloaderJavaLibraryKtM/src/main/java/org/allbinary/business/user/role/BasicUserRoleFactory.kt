@@ -30,12 +30,11 @@ open public class BasicUserRoleFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: BasicUserRoleFactory = BasicUserRoleFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BasicUserRoleFactory{
 

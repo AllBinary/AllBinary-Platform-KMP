@@ -35,12 +35,11 @@ open public class AbSqlTableUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AbSqlTableUtil = AbSqlTableUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AbSqlTableUtil{
 
@@ -69,7 +68,7 @@ open fun getInstance()
     val sqlStrings: SqlStrings = SqlStrings.getInstance()!!
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun backupTable(abSqlTable: AbSqlTable)
+    open fun backupTable(abSqlTable: AbSqlTable)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var abSqlTable = abSqlTable
@@ -85,7 +84,7 @@ var abSqlTable = abSqlTable
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun restoreTable(abSqlTable: AbSqlTable, portion: Portion)
+    open fun restoreTable(abSqlTable: AbSqlTable, portion: Portion)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var abSqlTable = abSqlTable

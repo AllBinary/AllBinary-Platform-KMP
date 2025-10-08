@@ -63,7 +63,7 @@ open public class TouchButton : Paintable {
     var animationX: Int= 0
 
     var animationY: Int= 0
-public constructor        (touchButtonInput: TouchButtonInput, animationInterface: AnimationInterface, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int){
+public constructor (touchButtonInput: TouchButtonInput, animationInterface: AnimationInterface, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int){
 var touchButtonInput = touchButtonInput
 var animationInterface = animationInterface
 var rawRectangle = rawRectangle
@@ -81,7 +81,8 @@ logUtil!!.put(StringMaker().
                             append("Created: ")!!.append(this.toString())!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -89,7 +90,7 @@ this.animationInterface!!.paint(graphics, animationX, animationY)
 }
 
 
-open fun updateRectangle()
+    open fun updateRectangle()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -114,7 +115,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "updateRectangle", e)
 }
 
 
-open fun getCellPositionP()
+    open fun getCellPositionP()
         //nullable = true from not(false or (false and true)) = true
 : CellPosition{
 
@@ -125,7 +126,7 @@ open fun getCellPositionP()
 }
 
 
-open fun getRectangleP()
+    open fun getRectangleP()
         //nullable = true from not(false or (false and true)) = true
 : Rectangle{
 
@@ -136,7 +137,7 @@ open fun getRectangleP()
 }
 
 
-open fun getTouchButtonInput()
+    open fun getTouchButtonInput()
         //nullable = true from not(false or (false and true)) = true
 : TouchButtonInput{
 
@@ -146,7 +147,8 @@ open fun getTouchButtonInput()
                         return touchButtonInput
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

@@ -28,10 +28,10 @@
 
 open public class InitException : java.lang.Exception {
         
-public constructor        (){
+public constructor (){
 }
 
-public constructor        (msg: String)                        
+public constructor (msg: String)                        
 
                             : super(msg){
 var msg = msg

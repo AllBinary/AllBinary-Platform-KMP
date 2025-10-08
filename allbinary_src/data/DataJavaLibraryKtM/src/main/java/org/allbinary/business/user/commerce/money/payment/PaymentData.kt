@@ -30,8 +30,7 @@ open public class PaymentData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val MIN: Int = 4
 

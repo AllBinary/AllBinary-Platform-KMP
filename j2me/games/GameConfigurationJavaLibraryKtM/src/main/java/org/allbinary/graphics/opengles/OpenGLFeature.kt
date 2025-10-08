@@ -29,7 +29,7 @@ import org.allbinary.game.configuration.feature.Feature
 
 open public class OpenGLFeature : Feature {
         
- constructor        (name: String)                        
+ constructor (name: String)                        
 
                             : super(name){
 var name = name

@@ -27,22 +27,23 @@
         
 import android.app.Activity
 import org.allbinary.android.activity.SimpleProgressActivityInterface
-import org.allbinary.thread.NullRunnable
+import org.allbinary.thread.ARunnable
 
-open public class ProgressRunnable : NullRunnable {
+open public class ProgressRunnable : ARunnable {
         
 
     val midletActivity: SimpleProgressActivityInterface
 
     val progressCanvas: ProgressCanvas
-public constructor        (midletActivity: Activity, progressCanvas: ProgressCanvas){
+public constructor (midletActivity: Activity, progressCanvas: ProgressCanvas){
     //var midletActivity = midletActivity
     //var progressCanvas = progressCanvas
 this.midletActivity= midletActivity as SimpleProgressActivityInterface
 this.progressCanvas= progressCanvas
 }
 
-override fun run()
+
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 }

@@ -42,7 +42,8 @@ open public class AllBinaryVisualDebugVibration : AllBinaryVibrationME {
             }            
         
     private val timeDelayHelper: TimeDelayHelper = TimeDelayHelper(Integer.MAX_VALUE)
-override fun vibrate(duration: Int, type: Int, volume: Int)
+
+    override fun vibrate(duration: Int, type: Int, volume: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var duration = duration
@@ -56,7 +57,7 @@ this.timeDelayHelper!!.delay= duration
 
     private var anchor: Int = Anchor.TOP_LEFT
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

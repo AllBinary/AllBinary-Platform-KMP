@@ -46,14 +46,14 @@ open public class BasicPaymentType
     private var paymentGatewayInterfaceFactoryInterface: PaymentGatewayInterfaceFactoryInterface
 
     private var paymentGatewayDomNodeFactoryInterface: PaymentGatewayDomNodeFactoryInterface
-protected constructor        (paymentMethod: String)
+protected constructor (paymentMethod: String)
             : super()
         {
 var paymentMethod = paymentMethod
 this.init(paymentMethod)
 }
 
-protected constructor        (paymentMethod: String, paymentGatewayInterfaceFactoryInterface: PaymentGatewayInterfaceFactoryInterface, paymentGatewayDomNodeFactoryInterface: PaymentGatewayDomNodeFactoryInterface)
+protected constructor (paymentMethod: String, paymentGatewayInterfaceFactoryInterface: PaymentGatewayInterfaceFactoryInterface, paymentGatewayDomNodeFactoryInterface: PaymentGatewayDomNodeFactoryInterface)
             : super()
         {
 var paymentMethod = paymentMethod
@@ -65,7 +65,7 @@ this.paymentGatewayDomNodeFactoryInterface= paymentGatewayDomNodeFactoryInterfac
 }
 
 
-open fun init(paymentMethod: String)
+    open fun init(paymentMethod: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var paymentMethod = paymentMethod
@@ -87,7 +87,7 @@ BasicPaymentTypeUtil.getInstance()!!.add(this)
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -98,7 +98,7 @@ open fun getName()
 }
 
 
-open fun getValue()
+    open fun getValue()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -111,7 +111,7 @@ open fun getValue()
 
                 @Throws(Exception::class)
             
-open fun getPaymentGatewayInterfaceFactoryInterface()
+    open fun getPaymentGatewayInterfaceFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
 : PaymentGatewayInterfaceFactoryInterface{
 
@@ -138,7 +138,7 @@ open fun getPaymentGatewayInterfaceFactoryInterface()
 
                 @Throws(Exception::class)
             
-open fun getPaymentGatewayDomNodeFactoryInterface()
+    open fun getPaymentGatewayDomNodeFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
 : PaymentGatewayDomNodeFactoryInterface{
 
@@ -163,7 +163,7 @@ open fun getPaymentGatewayDomNodeFactoryInterface()
 }
 
 
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -174,7 +174,7 @@ open fun getKey()
 }
 
 
-open fun toVector()
+    open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -190,7 +190,7 @@ vector.add(this.value)
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -205,7 +205,8 @@ hashMap!!.put(PaymentGatewayData.VALUE.toString(), this.value)
                         return hashMap
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

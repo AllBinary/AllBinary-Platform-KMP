@@ -37,13 +37,13 @@ open public class PaymentProcessTag : StoreValidationTransformTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (){
+public constructor (){
 }
 
 
                 @Throws(LicensingException::class, Exception::class)
             
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -106,7 +106,7 @@ open fun process()
 
                 @Throws(JspTagException::class)
             
-open fun doStartTag()
+    open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

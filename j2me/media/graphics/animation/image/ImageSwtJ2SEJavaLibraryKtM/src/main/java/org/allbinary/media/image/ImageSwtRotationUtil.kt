@@ -28,7 +28,6 @@
 import javax.microedition.lcdui.Image
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.configuration.feature.GameFeatureFactory
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.eclipse.swt.SWT
@@ -42,12 +41,11 @@ open public class ImageSwtRotationUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ImageSwtRotationUtil = ImageSwtRotationUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ImageSwtRotationUtil{
 
@@ -71,13 +69,13 @@ open fun getInstance()
     private val features: Features = Features.getInstance()!!
 
     private val NO_COPY: String = "SWT should not copy images after initial loading as the alpha is not honored"
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getRotatedImage(bufferedImage: org.eclipse.swt.graphics.Image, totalAngle: Int)
+    open fun getRotatedImage(bufferedImage: org.eclipse.swt.graphics.Image, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 : org.eclipse.swt.graphics.Image{
     //var bufferedImage = bufferedImage
@@ -104,7 +102,7 @@ open fun getRotatedImage(bufferedImage: org.eclipse.swt.graphics.Image, totalAng
 }
 
 
-open fun getRotatedImage2(bufferedImage: org.eclipse.swt.graphics.Image, newBufferedImage: org.eclipse.swt.graphics.Image, gc: GC, angle: Float)
+    open fun getRotatedImage2(bufferedImage: org.eclipse.swt.graphics.Image, newBufferedImage: org.eclipse.swt.graphics.Image, gc: GC, angle: Float)
         //nullable = true from not(false or (false and false)) = true
 : org.eclipse.swt.graphics.Image{
     //var bufferedImage = bufferedImage
@@ -133,7 +131,7 @@ open fun getRotatedImage2(bufferedImage: org.eclipse.swt.graphics.Image, newBuff
 }
 
 
-open fun rotateImage(originalSwtImage: org.eclipse.swt.graphics.Image, newSwtImage: org.eclipse.swt.graphics.Image, gc: GC, totalAngle: Int)
+    open fun rotateImage(originalSwtImage: org.eclipse.swt.graphics.Image, newSwtImage: org.eclipse.swt.graphics.Image, gc: GC, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 : org.eclipse.swt.graphics.Image{
     //var originalSwtImage = originalSwtImage
@@ -148,7 +146,7 @@ open fun rotateImage(originalSwtImage: org.eclipse.swt.graphics.Image, newSwtIma
 }
 
 
-open fun getRotatedImage(bufferedImage: org.eclipse.swt.graphics.Image, newSwtImage: org.eclipse.swt.graphics.Image, gc: GC, totalAngle: Int)
+    open fun getRotatedImage(bufferedImage: org.eclipse.swt.graphics.Image, newSwtImage: org.eclipse.swt.graphics.Image, gc: GC, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 : org.eclipse.swt.graphics.Image{
     //var bufferedImage = bufferedImage
@@ -163,7 +161,7 @@ open fun getRotatedImage(bufferedImage: org.eclipse.swt.graphics.Image, newSwtIm
 }
 
 
-open fun getRotatedImages(bufferedImage: org.eclipse.swt.graphics.Image, numberOfFrames: Int, totalAngle: Int)
+    open fun getRotatedImages(bufferedImage: org.eclipse.swt.graphics.Image, numberOfFrames: Int, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 : Array<org.eclipse.swt.graphics.Image?>{
     //var bufferedImage = bufferedImage
@@ -198,7 +196,7 @@ bufferedImageArray[index]= this.getRotatedImage(bufferedImage, angle)
 }
 
 
-open fun createSpriteImage(bufferedImageArray: Array<org.eclipse.swt.graphics.Image?>)
+    open fun createSpriteImage(bufferedImageArray: Array<org.eclipse.swt.graphics.Image?>)
         //nullable = true from not(false or (false and false)) = true
 : org.eclipse.swt.graphics.Image{
     //var bufferedImageArray = bufferedImageArray

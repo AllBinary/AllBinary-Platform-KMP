@@ -48,7 +48,7 @@ open public class BasketHelper : TagHelper {
     private var pageContext: PageContext
 
     private val MAX: Int = 200
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 this.propertiesHashMap= hashMap
@@ -71,7 +71,7 @@ this.weblisketSession= WeblisketSession(hashMap, pageContext)
 }
 
 
-open fun isBasketEmpty()
+    open fun isBasketEmpty()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

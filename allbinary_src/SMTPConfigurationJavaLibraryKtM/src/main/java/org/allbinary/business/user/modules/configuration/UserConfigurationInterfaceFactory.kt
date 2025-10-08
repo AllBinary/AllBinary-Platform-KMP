@@ -40,14 +40,13 @@ open public class UserConfigurationInterfaceFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val configurationName: String = "DefaultUserConfiguration"
 
                 @Throws(Exception::class)
             
-open fun getInstance(document: Document)
+    open fun getInstance(document: Document)
         //nullable =  from not(true or (false and false)) = 
 : UserConfigurationInterface{
 var document = document
@@ -65,7 +64,7 @@ var document = document
 
                 @Throws(Exception::class)
             
-open fun getInstance(userRole: UserRole)
+    open fun getInstance(userRole: UserRole)
         //nullable =  from not(true or (false and false)) = 
 : UserConfigurationInterface{
 var userRole = userRole
@@ -89,7 +88,7 @@ var userRole = userRole
 
                 @Throws(Exception::class)
             
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : UserConfigurationInterface{
 
@@ -101,7 +100,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

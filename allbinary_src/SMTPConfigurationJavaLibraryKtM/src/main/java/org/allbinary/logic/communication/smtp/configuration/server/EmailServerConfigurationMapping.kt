@@ -36,7 +36,7 @@ open public class EmailServerConfigurationMapping
         
 
     private var emailServerConfigurationInterface: EmailServerConfigurationInterface
-public constructor        (emailServerConfigurationInterface: EmailServerConfigurationInterface)
+public constructor (emailServerConfigurationInterface: EmailServerConfigurationInterface)
             : super()
         {
 var emailServerConfigurationInterface = emailServerConfigurationInterface
@@ -44,7 +44,7 @@ this.emailServerConfigurationInterface= emailServerConfigurationInterface
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -63,7 +63,7 @@ hashMap!!.put(EmailServerConfigurationData.PASSWORD, this.emailServerConfigurati
 
                 @Throws(Exception::class)
             
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -76,7 +76,7 @@ open fun getKey()
 
                 @Throws(Exception::class)
             
-open fun toVector()
+    open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 

@@ -35,7 +35,7 @@ import org.allbinary.logic.string.StringUtil
 
 open public class TransformInfoHttpSearch : TransformInfoHttp {
         
-public constructor        (searchRequest: SearchRequest)                        
+public constructor (searchRequest: SearchRequest)                        
 
                             : super(searchRequest!!.getPropertiesHashMap(), searchRequest!!.getPageContext()){
 var searchRequest = searchRequest
@@ -68,7 +68,7 @@ this.setTemplateFile(dataFileName)
 
                 @Throws(Exception::class)
             
-open fun getPath()
+    open fun getPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -88,7 +88,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 
                 @Throws(Exception::class)
             
-open fun getTemplateFilePath()
+    open fun getTemplateFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 
@@ -101,7 +101,7 @@ open fun getTemplateFilePath()
 
                 @Throws(Exception::class)
             
-open fun getObjectConfigFilePath()
+    open fun getObjectConfigFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 
@@ -114,7 +114,7 @@ open fun getObjectConfigFilePath()
 
                 @Throws(Exception::class)
             
-open fun getDataFilePath()
+    open fun getDataFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 

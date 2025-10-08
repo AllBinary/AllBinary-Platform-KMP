@@ -35,10 +35,9 @@ import org.allbinary.graphics.paint.Paintable
 
 open public class AboutPaintable : Paintable {
         
-
-        companion object {
+companion object {
             
-open fun getInstance(info: Array<String?>, developers: Array<String?>)
+    open fun getInstance(info: Array<String?>, developers: Array<String?>)
         //nullable =  from not(true or (false and false)) = 
 : AboutPaintable{
 var info = info
@@ -62,7 +61,7 @@ var developers = developers
     private val paintableArray: Array<Paintable?> = arrayOf(
                                 //Otherwise - values - ThisExpr
 )
-private constructor        (info: Array<String?>, developers: Array<String?>){
+private constructor (info: Array<String?>, developers: Array<String?>){
 var info = info
 var developers = developers
 this.info= info
@@ -70,7 +69,7 @@ this.developers= developers
 }
 
 
-open fun getPaintableArrayInstance()
+    open fun getPaintableArrayInstance()
         //nullable = true from not(false or (false and true)) = true
 : Array<Paintable?>{
 
@@ -83,7 +82,7 @@ open fun getPaintableArrayInstance()
 
     private var anchor: Int = Anchor.TOP_LEFT
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

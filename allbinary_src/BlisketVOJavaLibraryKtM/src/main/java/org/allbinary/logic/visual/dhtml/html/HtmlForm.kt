@@ -56,7 +56,7 @@ open public class HtmlForm
     private var action: String
 
     var inputs: Vector
-public constructor        (action: String)
+public constructor (action: String)
             : super()
         {
 var action = action
@@ -65,21 +65,21 @@ inputs= Vector()
 }
 
 
-open fun setPost()
+    open fun setPost()
         //nullable = true from not(false or (false and true)) = true
 {
 method= POST
 }
 
 
-open fun setGet()
+    open fun setGet()
         //nullable = true from not(false or (false and true)) = true
 {
 method= GET
 }
 
 
-open fun addInput(htmlInput: HtmlInput)
+    open fun addInput(htmlInput: HtmlInput)
         //nullable = true from not(false or (false and false)) = true
 {
 var htmlInput = htmlInput
@@ -87,14 +87,15 @@ inputs.add(htmlInput)
 }
 
 
-open fun addTable(htmlTable: HtmlTable)
+    open fun addTable(htmlTable: HtmlTable)
         //nullable = true from not(false or (false and false)) = true
 {
 var htmlTable = htmlTable
 inputs.add(htmlTable)
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

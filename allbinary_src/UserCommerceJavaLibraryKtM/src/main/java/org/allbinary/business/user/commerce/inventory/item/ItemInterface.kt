@@ -27,242 +27,243 @@
         
 import org.allbinary.business.user.commerce.money.Money
 import org.allbinary.data.tables.TableMappingInterface
+
 interface ItemInterface : TableMappingInterface {
         
 
-open fun setId(itemId: String)
+    open fun setId(itemId: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setNumber(number: String)
+    open fun setNumber(number: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setInBaskets(value: String)
+    open fun setInBaskets(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setWeight(value: String)
+    open fun setWeight(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setEnabled(value: String)
+    open fun setEnabled(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setNewOrUsed(value: String)
+    open fun setNewOrUsed(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setSummary(value: String)
+    open fun setSummary(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setDistributor(value: String)
+    open fun setDistributor(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setIdUsedByDistributor(value: String)
+    open fun setIdUsedByDistributor(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setProducedBy(value: String)
+    open fun setProducedBy(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setProductionDate(value: String)
+    open fun setProductionDate(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setStartProductionDate(value: String)
+    open fun setStartProductionDate(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setDescription(value: String)
+    open fun setDescription(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setKeywords(value: String)
+    open fun setKeywords(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setCategory(value: String)
+    open fun setCategory(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setType(value: String)
+    open fun setType(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setSmallImage(value: String)
+    open fun setSmallImage(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setMediumImage(value: String)
+    open fun setMediumImage(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setLargeImage(value: String)
+    open fun setLargeImage(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setTimeEntered(value: String)
+    open fun setTimeEntered(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setLastModified(value: String)
+    open fun setLastModified(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setPrice(value: Money)
+    open fun setPrice(value: Money)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setComment(value: String)
+    open fun setComment(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setCustoms(value: String)
+    open fun setCustoms(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setDownloads(value: String)
+    open fun setDownloads(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setGroups(value: String)
+    open fun setGroups(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setOptions(value: String)
+    open fun setOptions(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setPermissions(value: String)
+    open fun setPermissions(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setSpecials(value: String)
+    open fun setSpecials(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getId()
+    open fun getId()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getNumber()
+    open fun getNumber()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getInBaskets()
+    open fun getInBaskets()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getWeight()
+    open fun getWeight()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getEnabled()
+    open fun getEnabled()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getNewOrUsed()
+    open fun getNewOrUsed()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getSummary()
+    open fun getSummary()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getDistributor()
+    open fun getDistributor()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getIdUsedByDistributor()
+    open fun getIdUsedByDistributor()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getProducedBy()
+    open fun getProducedBy()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getProductionDate()
+    open fun getProductionDate()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getStartProductionDate()
+    open fun getStartProductionDate()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getDescription()
+    open fun getDescription()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getKeywords()
+    open fun getKeywords()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getCategory()
+    open fun getCategory()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getType()
+    open fun getType()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getSmallImage()
+    open fun getSmallImage()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getMediumImage()
+    open fun getMediumImage()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getLargeImage()
+    open fun getLargeImage()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getTimeEntered()
+    open fun getTimeEntered()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getLastModified()
+    open fun getLastModified()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getPrice()
+    open fun getPrice()
         //nullable = true from not(false or (false and true)) = true
 : Money
 
-open fun getComment()
+    open fun getComment()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getCustoms()
+    open fun getCustoms()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getDownloads()
+    open fun getDownloads()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getGroups()
+    open fun getGroups()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getOptions()
+    open fun getOptions()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getPermissions()
+    open fun getPermissions()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getSpecials()
+    open fun getSpecials()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getTotal()
+    open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
 : Money
 

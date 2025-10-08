@@ -27,18 +27,19 @@
         
 import org.allbinary.direction.DirectionalInterface
 import org.allbinary.math.AngleInfo
+
 interface RotationAnimationInterface : IndexedAnimationInterface, DirectionalInterface {
         
 
-open fun getAngleInfoP()
+    open fun getAngleInfoP()
         //nullable = true from not(false or (false and true)) = true
 : AngleInfo
 
-open fun nextRotation()
+    open fun nextRotation()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun previousRotation()
+    open fun previousRotation()
         //nullable = true from not(false or (false and true)) = true
 
 

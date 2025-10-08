@@ -29,8 +29,7 @@ import javax.microedition.rms.RecordStore
 
 open public class NullRecordStore : RecordStore {
         
-
-        companion object {
+companion object {
             
     var NULL_RECORD_STORE: NullRecordStore = NullRecordStore()
 

@@ -30,8 +30,7 @@ open public class ImageActionScriptOutputData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var NAME: String = "IMAGE_ACTION_OUTPUT_NAME"
 
@@ -44,7 +43,7 @@ open public class ImageActionScriptOutputData
     var TYPES: String = "TYPES_IMAGE_ACTION_OUTPUT_NAME"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

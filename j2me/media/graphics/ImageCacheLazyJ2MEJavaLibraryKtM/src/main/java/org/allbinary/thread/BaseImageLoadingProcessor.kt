@@ -30,12 +30,11 @@ open public class BaseImageLoadingProcessor
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: BaseImageLoadingProcessor = BaseImageLoadingProcessor()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BaseImageLoadingProcessor{
 
@@ -53,7 +52,7 @@ open fun getInstance()
             {
             }            
         
-open fun runTask()
+    open fun runTask()
         //nullable = true from not(false or (false and true)) = true
 {
 }

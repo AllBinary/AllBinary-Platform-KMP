@@ -31,12 +31,11 @@ open public class KeyValueFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: KeyValueFactory = KeyValueFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : KeyValueFactory{
 
@@ -56,7 +55,7 @@ open fun getInstance()
         
     val MAP: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
-open fun get(key: String)
+    open fun get(key: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var key = key

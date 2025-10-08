@@ -34,7 +34,7 @@ import org.allbinary.logic.communication.log.LogUtil
 
 open public class FullTouchButton : TouchButton {
         
-public constructor        (touchButtonInput: TouchButtonInput, touchButtonResource: TouchButtonResource, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int)                        
+public constructor (touchButtonInput: TouchButtonInput, touchButtonResource: TouchButtonResource, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int)                        
 
                             : super(touchButtonInput, touchButtonResource, rawRectangle, cellPosition, xBorder, yBorder){
 var touchButtonInput = touchButtonInput
@@ -49,7 +49,7 @@ var yBorder = yBorder
                     
 }
 
-public constructor        (touchButtonInput: TouchButtonInput, animationInterface: Animation, hintAnimationInterface: Animation, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int)                        
+public constructor (touchButtonInput: TouchButtonInput, animationInterface: Animation, hintAnimationInterface: Animation, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int)                        
 
                             : super(touchButtonInput, animationInterface, hintAnimationInterface, rawRectangle, cellPosition, xBorder, yBorder){
 var touchButtonInput = touchButtonInput
@@ -65,7 +65,8 @@ var yBorder = yBorder
                     
 }
 
-override fun updateRectangle()
+
+    override fun updateRectangle()
         //nullable = true from not(false or (false and true)) = true
 {
 

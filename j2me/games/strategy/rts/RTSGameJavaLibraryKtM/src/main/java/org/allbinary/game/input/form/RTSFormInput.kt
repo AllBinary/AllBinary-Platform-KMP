@@ -30,7 +30,6 @@ import org.allbinary.game.layer.RTSLayer
 import org.allbinary.game.layer.RTSPlayerLayerInterface
 import org.allbinary.game.layer.item.LayerInterfaceFactoryImageItem
 import org.allbinary.graphics.form.item.CustomItem
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.direction.DirectionFactory
 import org.allbinary.game.identification.Group
@@ -63,7 +62,7 @@ open public class RTSFormInput
     private var selectedStickyItemIndex: Int= 0
 
     private var selectedStickyItem: CustomItem
-public constructor        (groupInterfaceArray: Array<Group?>)
+public constructor (groupInterfaceArray: Array<Group?>)
             : super()
         {
     //var groupInterfaceArray = groupInterfaceArray
@@ -85,7 +84,7 @@ this.hashtable.put(DirectionFactory.getInstance()!!.NAME, DirectionFactory.getIn
 
                 @Throws(Exception::class)
             
-open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
+    open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -94,7 +93,7 @@ open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLa
 
                 @Throws(Exception::class)
             
-open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, point: GPoint)
+    open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedRtsLayer = associatedRtsLayer
@@ -144,7 +143,7 @@ this.process(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, item, in
 
                 @Throws(Exception::class)
             
-open fun process(layerManager: AllBinaryLayerManager)
+    open fun process(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerManager = layerManager
@@ -154,7 +153,7 @@ this.setAllBinaryGameLayerManager(layerManager as AllBinaryGameLayerManager)
 
                 @Throws(Exception::class)
             
-open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
+    open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedRtsLayer = associatedRtsLayer
@@ -167,7 +166,7 @@ open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlaye
 
                 @Throws(Exception::class)
             
-open fun processSticky(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, point: GPoint)
+    open fun processSticky(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var associatedRtsLayer = associatedRtsLayer
@@ -222,7 +221,7 @@ this.processSticky(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, it
 
                 @Throws(Exception::class)
             
-open fun processSticky(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
+    open fun processSticky(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var associatedRtsLayer = associatedRtsLayer
@@ -235,7 +234,7 @@ var index = index
 
                 @Throws(Exception::class)
             
-open fun getItemAt(rtsPlayerLayerInterface: RTSPlayerLayerInterface, point: GPoint)
+    open fun getItemAt(rtsPlayerLayerInterface: RTSPlayerLayerInterface, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 : CustomItem{
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
@@ -255,7 +254,7 @@ logUtil!!.put(StringMaker().
 
                 @Throws(Exception::class)
             
-open fun getIndexAt(rtsPlayerLayerInterface: RTSPlayerLayerInterface, point: GPoint)
+    open fun getIndexAt(rtsPlayerLayerInterface: RTSPlayerLayerInterface, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
@@ -275,7 +274,7 @@ logUtil!!.put(StringMaker().
 
                 @Throws(Exception::class)
             
-open fun getInstance(layerManager: AllBinaryLayerManager, aItem: CustomItem, geographicMapCellPosition: GeographicMapCellPosition)
+    open fun getInstance(layerManager: AllBinaryLayerManager, aItem: CustomItem, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable =  from not(true or (false and false)) = 
 : RTSLayer{
     //var layerManager = layerManager
@@ -314,7 +313,7 @@ open fun getInstance(layerManager: AllBinaryLayerManager, aItem: CustomItem, geo
 }
 
 
-open fun getSelectedGeographicCellPosition()
+    open fun getSelectedGeographicCellPosition()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPosition{
 
@@ -325,7 +324,7 @@ open fun getSelectedGeographicCellPosition()
 }
 
 
-open fun setSelectedGeographicCellPosition(selectedGeographicCellPosition: GeographicMapCellPosition)
+    open fun setSelectedGeographicCellPosition(selectedGeographicCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
 var selectedGeographicCellPosition = selectedGeographicCellPosition
@@ -335,7 +334,7 @@ this.selectedGeographicCellPosition= selectedGeographicCellPosition
 }
 
 
-open fun isStickyItemSelected()
+    open fun isStickyItemSelected()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -346,7 +345,7 @@ open fun isStickyItemSelected()
 }
 
 
-open fun setStickyItemSelected(stickyItemSelected: Boolean)
+    open fun setStickyItemSelected(stickyItemSelected: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var stickyItemSelected = stickyItemSelected
@@ -354,7 +353,7 @@ this.stickyItemSelected= stickyItemSelected
 }
 
 
-open fun getSelectedStickyItem()
+    open fun getSelectedStickyItem()
         //nullable = true from not(false or (false and true)) = true
 : CustomItem{
 
@@ -365,7 +364,7 @@ open fun getSelectedStickyItem()
 }
 
 
-open fun setSelectedStickyItem(selectedStickyItem: CustomItem)
+    open fun setSelectedStickyItem(selectedStickyItem: CustomItem)
         //nullable = true from not(false or (false and false)) = true
 {
 var selectedStickyItem = selectedStickyItem
@@ -373,7 +372,7 @@ this.selectedStickyItem= selectedStickyItem
 }
 
 
-open fun getSelectedStickyItemIndex()
+    open fun getSelectedStickyItemIndex()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -384,7 +383,7 @@ open fun getSelectedStickyItemIndex()
 }
 
 
-open fun setSelectedStickyItemIndex(selectedStickyItemIndex: Int)
+    open fun setSelectedStickyItemIndex(selectedStickyItemIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var selectedStickyItemIndex = selectedStickyItemIndex
@@ -392,7 +391,7 @@ this.selectedStickyItemIndex= selectedStickyItemIndex
 }
 
 
-open fun getHashtable()
+    open fun getHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
 

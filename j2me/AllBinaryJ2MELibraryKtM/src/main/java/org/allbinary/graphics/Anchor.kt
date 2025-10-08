@@ -31,8 +31,7 @@ open public class Anchor
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var TOP_LEFT: Int = Graphics.TOP and Graphics.LEFT
 

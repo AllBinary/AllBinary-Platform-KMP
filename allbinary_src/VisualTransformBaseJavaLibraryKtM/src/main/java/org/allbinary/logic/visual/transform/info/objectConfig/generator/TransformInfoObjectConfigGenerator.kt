@@ -42,7 +42,7 @@ open public class TransformInfoObjectConfigGenerator
 
                 @Throws(Exception::class)
             
-open fun process(input: String)
+    open fun process(input: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var input = input

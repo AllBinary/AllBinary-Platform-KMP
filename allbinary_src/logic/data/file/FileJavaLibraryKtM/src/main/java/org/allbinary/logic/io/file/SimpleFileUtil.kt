@@ -42,12 +42,11 @@ open public class SimpleFileUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: SimpleFileUtil = SimpleFileUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : SimpleFileUtil{
 
@@ -58,7 +57,7 @@ open fun getInstance()
 }
 
 
-open fun nullWriter()
+    open fun nullWriter()
         //nullable = true from not(false or (false and true)) = true
 : Writer{
 
@@ -71,7 +70,8 @@ open fun nullWriter()
     private var closed: Boolean= false
 
                 @Throws(IOException::class)
-            override fun append(c: Char)
+            
+    override fun append(c: Char)
         //nullable = true from not(false or (false and false)) = true
 : Writer{
 var c = c
@@ -83,7 +83,8 @@ var c = c
 }
 
                 @Throws(IOException::class)
-            override fun append(csq: CharSequence)
+            
+    override fun append(csq: CharSequence)
         //nullable = true from not(false or (false and false)) = true
 : Writer{
 var csq = csq
@@ -95,7 +96,8 @@ var csq = csq
 }
 
                 @Throws(IOException::class)
-            override fun append(csq: CharSequence, start: Int, end: Int)
+            
+    override fun append(csq: CharSequence, start: Int, end: Int)
         //nullable = true from not(false or (false and false)) = true
 : Writer{
 var csq = csq
@@ -109,14 +111,16 @@ var end = end
 }
 
                 @Throws(IOException::class)
-            override fun write(c: Int)
+            
+    override fun write(c: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var c = c
 }
 
                 @Throws(IOException::class)
-            override fun write(cbuf: CharArray, off: Int, len: Int)
+            
+    override fun write(cbuf: CharArray, off: Int, len: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var cbuf = cbuf
@@ -125,14 +129,16 @@ var len = len
 }
 
                 @Throws(IOException::class)
-            override fun write(str: String)
+            
+    override fun write(str: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var str = str
 }
 
                 @Throws(IOException::class)
-            override fun write(str: String, off: Int, len: Int)
+            
+    override fun write(str: String, off: Int, len: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var str = str
@@ -141,11 +147,13 @@ var len = len
 }
 
                 @Throws(IOException::class)
-            override fun flush()
+            
+    override fun flush()
         //nullable = true from not(false or (false and true)) = true
 {
 }
-override fun close()
+
+    override fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -155,7 +163,7 @@ override fun close()
 }
 
 
-open fun nullReader()
+    open fun nullReader()
         //nullable = true from not(false or (false and true)) = true
 : Reader{
 
@@ -166,7 +174,8 @@ open fun nullReader()
                                 {
                                 
                 @Throws(IOException::class)
-            override fun read()
+            
+    override fun read()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -177,7 +186,8 @@ open fun nullReader()
 }
 
                 @Throws(IOException::class)
-            override fun read(cbuf: CharArray, off: Int, len: Int)
+            
+    override fun read(cbuf: CharArray, off: Int, len: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var cbuf = cbuf
@@ -191,7 +201,8 @@ var len = len
 }
 
                 @Throws(IOException::class)
-            override fun read(target: CharBuffer)
+            
+    override fun read(target: CharBuffer)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var target = target
@@ -203,7 +214,8 @@ var target = target
 }
 
                 @Throws(IOException::class)
-            override fun ready()
+            
+    override fun ready()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -214,7 +226,8 @@ var target = target
 }
 
                 @Throws(IOException::class)
-            override fun skip(n: Long)
+            
+    override fun skip(n: Long)
         //nullable = true from not(false or (false and false)) = true
 : Long{
 var n = n
@@ -224,7 +237,8 @@ var n = n
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 0L
 }
-override fun close()
+
+    override fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -253,7 +267,7 @@ override fun close()
 
     private val streamUtil: StreamUtil = StreamUtil.getInstance()!!
 
-open fun loadFileAsList(inputStream: InputStream, max: Int, byteArray1: ByteArray)
+    open fun loadFileAsList(inputStream: InputStream, max: Int, byteArray1: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var inputStream = inputStream
@@ -267,7 +281,7 @@ open fun loadFileAsList(inputStream: InputStream, max: Int, byteArray1: ByteArra
 }
 
 
-open fun loadFileAsList(inputStream: InputStream, max: Int, byteArray1: ByteArray, includeReturnLine: Int)
+    open fun loadFileAsList(inputStream: InputStream, max: Int, byteArray1: ByteArray, includeReturnLine: Int)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var inputStream = inputStream
@@ -383,7 +397,7 @@ index++
 }
 
 
-open fun createStringFromArrayOfStrings(stringArray: Array<String?>)
+    open fun createStringFromArrayOfStrings(stringArray: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var stringArray = stringArray

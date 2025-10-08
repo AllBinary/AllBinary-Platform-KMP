@@ -20,12 +20,11 @@ open public class GameMidletStateFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val INSTANCE: GameMidletStateFactory = GameMidletStateFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameMidletStateFactory{
 
@@ -41,13 +40,13 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var currentGameState: GameState = GameState.NO_GAME_STATE
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getCurrentGameState()
+    open fun getCurrentGameState()
         //nullable = true from not(false or (false and true)) = true
 : GameState{
 
@@ -58,7 +57,7 @@ open fun getCurrentGameState()
 }
 
 
-open fun setCurrentGameState(currentGameState: GameState)
+    open fun setCurrentGameState(currentGameState: GameState)
         //nullable = true from not(false or (false and false)) = true
 {
 var currentGameState = currentGameState

@@ -30,13 +30,13 @@ open public class Subscription
             : Object
          {
         
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun isSubscribed()
+    open fun isSubscribed()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

@@ -52,8 +52,7 @@ import org.w3c.dom.Node
 
 open public class CategoryRequestHelper : ModifyTable {
         
-
-        companion object {
+companion object {
             
     private val categoryRequest: String = StringMaker().
                             append("<")!!.append(CategoryData.getInstance()!!.REQUEST)!!.append(">")!!.toString()!!
@@ -75,7 +74,7 @@ open public class CategoryRequestHelper : ModifyTable {
     private var childCategoryInterface: CategoryInterface
 
     private var transformInfoInterface: TransformInfoInterface
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 
@@ -100,7 +99,7 @@ this.getXmlData()
 }
 
 
-open fun getXmlData()
+    open fun getXmlData()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -248,7 +247,7 @@ logUtil!!.put("Loaded Child Category", this, "getXmlData()")
 
                 @Throws(Exception::class)
             
-open fun setCategoryLoader(requestNode: Node)
+    open fun setCategoryLoader(requestNode: Node)
         //nullable = true from not(false or (false and false)) = true
 {
 var requestNode = requestNode
@@ -311,7 +310,7 @@ this.categoryLoaderInterface= CategoryLoaderFactory.getInstance(storeCategoryFac
 }
 
 
-open fun insert()
+    open fun insert()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -367,7 +366,7 @@ this.categoryLoaderInterface!!.insert(this.categoryInterface, this.childCategory
 }
 
 
-open fun delete()
+    open fun delete()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -446,7 +445,7 @@ this.categoryLoaderInterface!!.delete(this.categoryInterface, this.childCategory
 }
 
 
-open fun viewCategory()
+    open fun viewCategory()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -496,7 +495,7 @@ open fun viewCategory()
 }
 
 
-open fun viewCategories()
+    open fun viewCategories()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -542,7 +541,7 @@ open fun viewCategories()
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

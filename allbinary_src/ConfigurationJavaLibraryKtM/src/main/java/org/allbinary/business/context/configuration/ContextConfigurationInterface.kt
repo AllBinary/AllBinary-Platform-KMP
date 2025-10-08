@@ -26,14 +26,15 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.communication.smtp.configuration.server.EmailServerConfigurationInterface
+
 interface ContextConfigurationInterface {
         
 
-open fun getEmailServerConfigurationInterface()
+    open fun getEmailServerConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
 : EmailServerConfigurationInterface
 
-open fun setEmailServerConfigurationInterface(emailServerConfigurationInterface: EmailServerConfigurationInterface)
+    open fun setEmailServerConfigurationInterface(emailServerConfigurationInterface: EmailServerConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
 
 

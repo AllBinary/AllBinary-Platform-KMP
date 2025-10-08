@@ -39,7 +39,7 @@ open public class EditHeaderValidationView : TopBarView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (transformInfoInterface: TransformInfoInterface)                        
+public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
@@ -50,7 +50,7 @@ var transformInfoInterface = transformInfoInterface
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -85,7 +85,7 @@ open fun isValid()
 }
 
 
-open fun validationInfo()
+    open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -120,7 +120,7 @@ stringBuffer!!.append(this.heading.validationInfo())
 }
 
 
-open fun toValidationInfoDoc()
+    open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -131,7 +131,7 @@ open fun toValidationInfoDoc()
 }
 
 
-open fun toValidationInfoNode(document: Document)
+    open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

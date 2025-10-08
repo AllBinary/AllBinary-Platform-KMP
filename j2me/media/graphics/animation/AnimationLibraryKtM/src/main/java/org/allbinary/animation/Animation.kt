@@ -45,18 +45,18 @@ open public class Animation
 
     var colorP: Int= 0
 
-    var changeBasicColorP: BasicColor = BasicColorFactory.getInstance()!!.WHITE
+    var changeBasicColorP: BasicColor = BasicColorFactory.getInstance()!!.NULL_COLOR
 
     var changeColorP: Int= 0
 
     var alphaP: Int= 0
-protected constructor        ()
+protected constructor ()
             : super()
         {
 }
 
 
-open fun setAlpha(alpha: Int)
+    open fun setAlpha(alpha: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var alpha = alpha
@@ -65,12 +65,14 @@ this.alphaP= alpha
 
 
                 @Throws(Exception::class)
-            override fun nextFrame()
+            
+    override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -79,7 +81,8 @@ override fun paint(graphics: Graphics, x: Int, y: Int)
 this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP(), this.getColor())
 }
 
-override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
+
+    override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -89,7 +92,7 @@ override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
 }
 
 
-open fun isThreed()
+    open fun isThreed()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -100,7 +103,7 @@ open fun isThreed()
 }
 
 
-open fun getBasicColorP()
+    open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
 
@@ -111,7 +114,7 @@ open fun getBasicColorP()
 }
 
 
-open fun setBasicColorP(basicColor: BasicColor)
+    open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var basicColor = basicColor
@@ -120,7 +123,7 @@ this.colorP= this.basicColor!!.toInt()
 }
 
 
-open fun getChangeBasicColor()
+    open fun getChangeBasicColor()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
 
@@ -131,7 +134,7 @@ open fun getChangeBasicColor()
 }
 
 
-open fun changeBasicColor(basicColor: BasicColor)
+    open fun changeBasicColor(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var basicColor = basicColor
@@ -140,7 +143,7 @@ this.changeColorP= this.changeBasicColorP!!.toInt()
 }
 
 
-open fun getChangeColor()
+    open fun getChangeColor()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -151,7 +154,7 @@ open fun getChangeColor()
 }
 
 
-open fun getColor()
+    open fun getColor()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -162,7 +165,7 @@ open fun getColor()
 }
 
 
-open fun setScale(scaleX: Float, scaleY: Float)
+    open fun setScale(scaleX: Float, scaleY: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var scaleX = scaleX
@@ -170,7 +173,7 @@ open fun setScale(scaleX: Float, scaleY: Float)
 }
 
 
-open fun setMaxScale(maxScaleX: Float, maxScaleY: Float)
+    open fun setMaxScale(maxScaleX: Float, maxScaleY: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var maxScaleX = maxScaleX
@@ -179,21 +182,22 @@ open fun setMaxScale(maxScaleX: Float, maxScaleY: Float)
 
 
                 @Throws(Exception::class)
-            override fun set(gl: GL)
+            
+    override fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
 {
 var gl = gl
 }
 
 
-open fun setDx(dx: Int)
+    open fun setDx(dx: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var dx = dx
 }
 
 
-open fun getDx()
+    open fun getDx()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -204,14 +208,14 @@ open fun getDx()
 }
 
 
-open fun setDy(dy: Int)
+    open fun setDy(dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var dy = dy
 }
 
 
-open fun getDy()
+    open fun getDy()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

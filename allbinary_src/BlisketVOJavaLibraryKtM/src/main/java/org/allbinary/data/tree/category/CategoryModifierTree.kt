@@ -41,7 +41,7 @@ open public class CategoryModifierTree : CategoryPrivateTree
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private val directory: Directory = Directory.getInstance()!!
-public constructor        (categoryFactoryInterface: CategoryFactoryInterface)                        
+public constructor (categoryFactoryInterface: CategoryFactoryInterface)                        
 
                             : super(categoryFactoryInterface){
 var categoryFactoryInterface = categoryFactoryInterface
@@ -62,7 +62,7 @@ var categoryFactoryInterface = categoryFactoryInterface
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun insert(parentCategoryInterface: CategoryInterface, newChildCategoryInterface: CategoryInterface)
+    open fun insert(parentCategoryInterface: CategoryInterface, newChildCategoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var parentCategoryInterface = parentCategoryInterface
@@ -123,7 +123,7 @@ this.save(newChildCategoryInterface)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun delete(parentCategoryInterface: CategoryInterface, existingChildCategoryInterface: CategoryInterface)
+    open fun delete(parentCategoryInterface: CategoryInterface, existingChildCategoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var parentCategoryInterface = parentCategoryInterface

@@ -31,12 +31,11 @@ open public class IconLayerFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun getInstance(animationInterface: Animation, width: Int, height: Int)
+    open fun getInstance(animationInterface: Animation, width: Int, height: Int)
         //nullable =  from not(true or (false and false)) = 
 : IconLayer{
 var animationInterface = animationInterface

@@ -35,7 +35,7 @@ open public class BasicColorArrayIndexer
     private var basicColorArray: Array<BasicColor?>
 
     private var circularIndexUtil: CircularIndexUtil
-public constructor        (basicColorArray: Array<BasicColor?>)
+public constructor (basicColorArray: Array<BasicColor?>)
             : super()
         {
 var basicColorArray = basicColorArray
@@ -44,14 +44,14 @@ this.circularIndexUtil= CircularIndexUtil.getInstance(this.basicColorArray!!.siz
 }
 
 
-open fun next()
+    open fun next()
         //nullable = true from not(false or (false and true)) = true
 {
 this.circularIndexUtil!!.next()
 }
 
 
-open fun get()
+    open fun get()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
 
@@ -62,7 +62,7 @@ open fun get()
 }
 
 
-open fun getBasicColorArray()
+    open fun getBasicColorArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<BasicColor?>{
 

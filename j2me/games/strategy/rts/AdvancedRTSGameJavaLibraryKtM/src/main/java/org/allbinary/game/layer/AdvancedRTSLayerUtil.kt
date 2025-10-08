@@ -33,12 +33,11 @@ open public class AdvancedRTSLayerUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AdvancedRTSLayerUtil = AdvancedRTSLayerUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AdvancedRTSLayerUtil{
 
@@ -56,7 +55,7 @@ open fun getInstance()
             {
             }            
         
-open fun createFakeRTSLayerHashtable(baseRaceTrackGeographicMap: BaseRaceTrackGeographicMap)
+    open fun createFakeRTSLayerHashtable(baseRaceTrackGeographicMap: BaseRaceTrackGeographicMap)
         //nullable = true from not(false or (false and false)) = true
 : Hashtable<Any, Any>{
     //var baseRaceTrackGeographicMap = baseRaceTrackGeographicMap

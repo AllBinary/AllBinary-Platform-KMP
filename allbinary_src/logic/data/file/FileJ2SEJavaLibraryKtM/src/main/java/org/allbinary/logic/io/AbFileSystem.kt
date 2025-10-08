@@ -30,12 +30,11 @@ open public class AbFileSystem
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AbFileSystem = AbFileSystem()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AbFileSystem{
 
@@ -55,7 +54,7 @@ open fun getInstance()
         
     private val type: String = "java.io"
 
-open fun getType()
+    open fun getType()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -66,7 +65,7 @@ open fun getType()
 }
 
 
-open fun isType(type: String)
+    open fun isType(type: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var type = type

@@ -67,7 +67,7 @@ open public class ImageComparisonResult
     private var tolerance: Int= 0
 
     private var matchingPercent: Float =  -1
-public constructor        (name: String, bufferedImage: BufferedImage, bufferedImage2: BufferedImage, frameOne: Long, frameTwo: Long, tolerance: Int)
+public constructor (name: String, bufferedImage: BufferedImage, bufferedImage2: BufferedImage, frameOne: Long, frameTwo: Long, tolerance: Int)
             : super()
         {
     //var name = name
@@ -154,7 +154,7 @@ logUtil!!.put("2: " +imageUtil!!.toString(bufferedImage2), this, this.commonStri
 }
 
 
-open fun getMatchingPercent()
+    open fun getMatchingPercent()
         //nullable = true from not(false or (false and true)) = true
 : Float{
 
@@ -174,7 +174,7 @@ open fun getMatchingPercent()
 }
 
 
-open fun add(pixel: PixelDelta)
+    open fun add(pixel: PixelDelta)
         //nullable = true from not(false or (false and false)) = true
 {
 var pixel = pixel
@@ -182,7 +182,7 @@ this.nonMatchingPixelVector!!.add(pixel)
 }
 
 
-open fun getNonMatchingPixelVector()
+    open fun getNonMatchingPixelVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -192,7 +192,8 @@ open fun getNonMatchingPixelVector()
                         return this.nonMatchingPixelVector
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -204,7 +205,7 @@ override fun toString()
 }
 
 
-open fun getBufferedImages()
+    open fun getBufferedImages()
         //nullable = true from not(false or (false and true)) = true
 : Array<BufferedImage?>{
 
@@ -215,7 +216,7 @@ open fun getBufferedImages()
 }
 
 
-open fun getTolerance()
+    open fun getTolerance()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -226,7 +227,7 @@ open fun getTolerance()
 }
 
 
-open fun setTolerance(tolerance: Int)
+    open fun setTolerance(tolerance: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var tolerance = tolerance
@@ -234,7 +235,7 @@ this.tolerance= tolerance
 }
 
 
-open fun getFrameOne()
+    open fun getFrameOne()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -245,7 +246,7 @@ open fun getFrameOne()
 }
 
 
-open fun getFrameTwo()
+    open fun getFrameTwo()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 

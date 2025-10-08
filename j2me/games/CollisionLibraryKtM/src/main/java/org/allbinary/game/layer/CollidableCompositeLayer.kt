@@ -40,15 +40,14 @@ import org.allbinary.view.ViewPosition
 open public class CollidableCompositeLayer : AllBinaryGameLayer
                 , CollidableInterfaceCompositeInterface {
         
-
-        companion object {
+companion object {
             
     val NULL_COLLIDABLE_COMPOSITE_LAYER: CollidableCompositeLayer = CollidableCompositeLayer(RectangleFactory.SINGLETON, ViewPosition.NULL_VIEW_POSITION, CollidableNeverCollideBehaviorFactory.getInstance())
 
         }
             
     private var collidableInferface: CollidableBaseBehavior
-public constructor        (layerInfo: Rectangle, viewPosition: ViewPosition, collidableInferface: CollidableBaseBehavior)                        
+public constructor (layerInfo: Rectangle, viewPosition: ViewPosition, collidableInferface: CollidableBaseBehavior)                        
 
                             : super(layerInfo, viewPosition){
     //var layerInfo = layerInfo
@@ -62,7 +61,7 @@ this.collidableInferface= CollidableNeverCollideBehaviorFactory.getInstance()
 this.setCollidableInferface(collidableInferface)
 }
 
-public constructor        (name: String, layerInfo: Rectangle, viewPosition: ViewPosition, collidableInferface: CollidableBaseBehavior)                        
+public constructor (name: String, layerInfo: Rectangle, viewPosition: ViewPosition, collidableInferface: CollidableBaseBehavior)                        
 
                             : super(name, layerInfo, viewPosition){
     //var name = name
@@ -77,7 +76,7 @@ this.collidableInferface= CollidableNeverCollideBehaviorFactory.getInstance()
 this.setCollidableInferface(collidableInferface)
 }
 
-public constructor        (layerInfo: Rectangle, viewPosition: ViewPosition)                        
+public constructor (layerInfo: Rectangle, viewPosition: ViewPosition)                        
 
                             : super(layerInfo, viewPosition){
     //var layerInfo = layerInfo
@@ -89,7 +88,7 @@ public constructor        (layerInfo: Rectangle, viewPosition: ViewPosition)
 collidableInferface= CollidableNeverCollideBehaviorFactory.getInstance()
 }
 
-public constructor        (name: String, layerInfo: Rectangle, viewPosition: ViewPosition)                        
+public constructor (name: String, layerInfo: Rectangle, viewPosition: ViewPosition)                        
 
                             : super(name, layerInfo, viewPosition){
     //var name = name
@@ -102,7 +101,7 @@ public constructor        (name: String, layerInfo: Rectangle, viewPosition: Vie
 collidableInferface= CollidableNeverCollideBehaviorFactory.getInstance()
 }
 
-public constructor        (layerInfo: Rectangle)                        
+public constructor (layerInfo: Rectangle)                        
 
                             : super(layerInfo){
     //var layerInfo = layerInfo
@@ -114,7 +113,7 @@ collidableInferface= CollidableNeverCollideBehaviorFactory.getInstance()
 }
 
 
-open fun getArtificialIntelligenceInterface()
+    open fun getArtificialIntelligenceInterface()
         //nullable = true from not(false or (false and true)) = true
 : ArtificialIntelligenceInterface{
 ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, this)
@@ -125,7 +124,8 @@ ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, this)
                         return ArtificialIntelligence.getInstance()
 }
 
-override fun getCollidableInferface()
+
+    override fun getCollidableInferface()
         //nullable = true from not(false or (false and true)) = true
 : CollidableBaseBehavior{
 
@@ -136,14 +136,15 @@ override fun getCollidableInferface()
 }
 
 
-open fun setCollidableInferface(collidableInferface: CollidableBaseBehavior)
+    open fun setCollidableInferface(collidableInferface: CollidableBaseBehavior)
         //nullable = true from not(false or (false and false)) = true
 {
     //var collidableInferface = collidableInferface
 this.collidableInferface= collidableInferface
 }
 
-override fun implmentsCollidableInterface()
+
+    override fun implmentsCollidableInterface()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -153,7 +154,8 @@ override fun implmentsCollidableInterface()
                         return true
 }
 
-override fun toString(stringBuffer: StringMaker)
+
+    override fun toString(stringBuffer: StringMaker)
         //nullable = true from not(false or (true and false)) = true
 {
     //var stringBuffer = stringBuffer
@@ -165,7 +167,8 @@ stringBuffer!!.append(commonSeps!!.NEW_LINE)
 stringBuffer!!.append(this.getCollidableInferface()!!.toString())
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

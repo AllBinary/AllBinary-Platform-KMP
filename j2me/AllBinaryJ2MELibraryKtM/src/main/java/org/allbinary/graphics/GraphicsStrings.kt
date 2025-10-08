@@ -30,12 +30,11 @@ open public class GraphicsStrings
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GraphicsStrings = GraphicsStrings()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GraphicsStrings{
 

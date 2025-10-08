@@ -26,10 +26,11 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.util.event.BasicEventListenerInterface
+
 interface CapturedImageWorkerResultsListener : BasicEventListenerInterface {
         
 
-open fun onCaptureEvent(capturedimageworkerresultsevent: CapturedImageWorkerResultsEvent)
+    open fun onCaptureEvent(capturedimageworkerresultsevent: CapturedImageWorkerResultsEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

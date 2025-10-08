@@ -28,7 +28,6 @@
 import javax.microedition.lcdui.Graphics
 import org.allbinary.util.BasicArrayList
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.animation.Animation
@@ -60,7 +59,7 @@ open public class GeographicMapCellHistory
     private var totalVisited: Int= 0
 
     private var halfWidth: Int = 0
-public constructor        ()
+public constructor ()
             : super()
         {
 this.list= BasicArrayList()
@@ -69,7 +68,7 @@ this.init()
 }
 
 
-open fun getTotalVisited()
+    open fun getTotalVisited()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -80,7 +79,7 @@ open fun getTotalVisited()
 }
 
 
-open fun getTotalNotVisited()
+    open fun getTotalNotVisited()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -91,7 +90,7 @@ open fun getTotalNotVisited()
 }
 
 
-open fun getSize()
+    open fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -102,7 +101,7 @@ open fun getSize()
 }
 
 
-open fun track(list: BasicArrayList)
+    open fun track(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var list = list
@@ -128,7 +127,7 @@ this.track(geographicMapCellPosition)
 }
 
 
-open fun track(geographicMapCellPosition: GeographicMapCellPosition)
+    open fun track(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapCellPosition = geographicMapCellPosition
@@ -145,7 +144,7 @@ this.visitedList!!.add(booleanFactory!!.FALSE)
 }
 
 
-open fun getTracked()
+    open fun getTracked()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -156,7 +155,7 @@ open fun getTracked()
 }
 
 
-open fun getVisited()
+    open fun getVisited()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -167,7 +166,7 @@ open fun getVisited()
 }
 
 
-open fun getAfterIfNotLast(geographicMapCellPosition: GeographicMapCellPosition)
+    open fun getAfterIfNotLast(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellPosition{
 var geographicMapCellPosition = geographicMapCellPosition
@@ -198,7 +197,7 @@ var geographicMapCellPosition = geographicMapCellPosition
 }
 
 
-open fun getFirstUnvisited()
+    open fun getFirstUnvisited()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPosition{
 
@@ -244,7 +243,7 @@ value= this.visitedList!!.get(index) as Boolean
 }
 
 
-open fun getFirstUnvisitedIndex()
+    open fun getFirstUnvisitedIndex()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -287,7 +286,7 @@ value= this.visitedList!!.get(index) as Boolean
 }
 
 
-open fun getInPathButNotTracked(pathList: BasicArrayList)
+    open fun getInPathButNotTracked(pathList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var pathList = pathList
@@ -330,7 +329,7 @@ geographicMapCellPosition= pathList!!.get(index) as GeographicMapCellPosition
 }
 
 
-open fun isVisited(geographicMapCellPosition: GeographicMapCellPosition)
+    open fun isVisited(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var geographicMapCellPosition = geographicMapCellPosition
@@ -373,7 +372,7 @@ open fun isVisited(geographicMapCellPosition: GeographicMapCellPosition)
 }
 
 
-open fun visit(geographicMapCellPosition: GeographicMapCellPosition)
+    open fun visit(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var geographicMapCellPosition = geographicMapCellPosition
@@ -424,7 +423,7 @@ this.totalVisited++
 
                 @Throws(Exception::class)
             
-open fun isAllVisited()
+    open fun isAllVisited()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -454,7 +453,7 @@ open fun isAllVisited()
 
                 @Throws(Exception::class)
             
-open fun isAllVisited2()
+    open fun isAllVisited2()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -484,7 +483,7 @@ open fun isAllVisited2()
 
                 @Throws(Exception::class)
             
-open fun isVisited(basicDecimal: BasicDecimal)
+    open fun isVisited(basicDecimal: BasicDecimal)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var basicDecimal = basicDecimal
@@ -524,7 +523,7 @@ open fun isVisited(basicDecimal: BasicDecimal)
 
                 @Throws(Exception::class)
             
-open fun reset()
+    open fun reset()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -550,7 +549,7 @@ this.totalVisited= 0
 }
 
 
-open fun paintNotVisited(graphics: Graphics, tiledLayer: AllBinaryTiledLayer, point: GPoint)
+    open fun paintNotVisited(graphics: Graphics, tiledLayer: AllBinaryTiledLayer, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -583,7 +582,7 @@ this.animation.paint(graphics, x +halfWidth, y +(height))
 
     private val RED: Int = BasicColorFactory.getInstance()!!.RED.toInt()!!
 
-open fun paintNotVisited(graphics: Graphics, geographicMapInterface: BasicGeographicMap)
+    open fun paintNotVisited(graphics: Graphics, geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -634,7 +633,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "paintNotVisited", e)
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 this.list.clear()

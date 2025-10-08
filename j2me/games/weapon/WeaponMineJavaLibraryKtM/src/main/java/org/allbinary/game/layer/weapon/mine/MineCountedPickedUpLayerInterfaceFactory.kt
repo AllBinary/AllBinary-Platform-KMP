@@ -41,21 +41,20 @@ import org.allbinary.logic.math.SmallIntegerSingletonFactory
 
 open public class MineCountedPickedUpLayerInterfaceFactory : CountedPickedUpLayerInterfaceFactory {
         
-
-        companion object {
+companion object {
             
     private var pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface = CountedPickedUpLayerInterfaceFactory.NULL_COUNTED_PICKUP_LAYER_FACTORY
 
                 @Throws(Exception::class)
             
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 pickedUpLayerInterfaceFactoryInterface= MineCountedPickedUpLayerInterfaceFactory()
 }
 
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PickedUpLayerInterfaceFactoryInterface{
 
@@ -69,7 +68,7 @@ open fun getInstance()
         }
             
     private val weaponLayerCircularStaticPool: WeaponLayerCircularPool = MineLayerCircularStaticPool.getInstance()!!
-private constructor        ()                        
+private constructor ()                        
 
                             : super(PickedUpLayerTypeFactory.getInstance()!!.MINE, IconLayerFactory.getInstance(FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(MineWeaponResources.getInstance()!!.DROP_ICON_RESOURCE)!!.getInstance(0), 10, 10), FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(MineWeaponResources.getInstance()!!.DROP_RESOURCE)!!.getInstance(0)){
 
@@ -78,7 +77,8 @@ private constructor        ()
                     
 }
 
-override fun getTotal()
+
+    override fun getTotal()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -94,7 +94,8 @@ override fun getTotal()
     private val smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
 
                 @Throws(Exception::class)
-            override fun getInstance(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
+            
+    override fun getInstance(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
         //nullable =  from not(true or (false and false)) = 
 : AllBinaryLayer{
     //var hashtable = hashtable

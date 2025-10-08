@@ -48,12 +48,11 @@ open public class OpenGLConfiguration
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OpenGLConfiguration = OpenGLConfiguration()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OpenGLConfiguration{
 
@@ -81,7 +80,7 @@ open fun getInstance()
     private var color: OpenGLFeature = OpenGLFeatureFactory.getInstance()!!.IMAGE_COLOR_DEPTH_4444
 
     private var versionSelector: OpenGLFeature = OpenGLFeatureFactory.getInstance()!!.OPENGL_AUTO_SELECT
-private constructor        ()
+private constructor ()
             : super()
         {
 
@@ -110,7 +109,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 
                 @Throws(Exception::class)
             
-open fun read()
+    open fun read()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -294,7 +293,7 @@ PreLogUtil.put("Read Configuration: " +this.toString(), this, "read")
 
                 @Throws(Exception::class)
             
-open fun write()
+    open fun write()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -350,7 +349,7 @@ dataOutputStream!!.flush()
 
                 @Throws(Exception::class)
             
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -414,7 +413,7 @@ PreLogUtil.put(this.toString(), this, this.commonStrings!!.INIT)
 
                 @Throws(Exception::class)
             
-open fun update(gameFeature: Feature, colorLocked: Boolean)
+    open fun update(gameFeature: Feature, colorLocked: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameFeature = gameFeature
@@ -611,7 +610,7 @@ modified= true
 }
 
 
-open fun setOpenGL(opengl: Boolean)
+    open fun setOpenGL(opengl: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var opengl = opengl
@@ -619,7 +618,7 @@ this.opengl= opengl
 }
 
 
-open fun isOpenGL()
+    open fun isOpenGL()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -630,7 +629,7 @@ open fun isOpenGL()
 }
 
 
-open fun setImageColor(imageColor: OpenGLFeature)
+    open fun setImageColor(imageColor: OpenGLFeature)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageColor = imageColor
@@ -638,7 +637,7 @@ this.imageColor= imageColor
 }
 
 
-open fun getImageColor()
+    open fun getImageColor()
         //nullable = true from not(false or (false and true)) = true
 : OpenGLFeature{
 
@@ -649,7 +648,7 @@ open fun getImageColor()
 }
 
 
-open fun setColor(color: OpenGLFeature)
+    open fun setColor(color: OpenGLFeature)
         //nullable = true from not(false or (false and false)) = true
 {
     //var color = color
@@ -657,7 +656,7 @@ this.color= color
 }
 
 
-open fun getColor()
+    open fun getColor()
         //nullable = true from not(false or (false and true)) = true
 : OpenGLFeature{
 
@@ -668,7 +667,7 @@ open fun getColor()
 }
 
 
-open fun setVersionSelector(versionSelector: OpenGLFeature)
+    open fun setVersionSelector(versionSelector: OpenGLFeature)
         //nullable = true from not(false or (false and false)) = true
 {
     //var versionSelector = versionSelector
@@ -676,7 +675,7 @@ this.versionSelector= versionSelector
 }
 
 
-open fun getVersionSelector()
+    open fun getVersionSelector()
         //nullable = true from not(false or (false and true)) = true
 : OpenGLFeature{
 
@@ -687,7 +686,7 @@ open fun getVersionSelector()
 }
 
 
-open fun setType(type: OpenGLFeature)
+    open fun setType(type: OpenGLFeature)
         //nullable = true from not(false or (false and false)) = true
 {
     //var type = type
@@ -695,7 +694,7 @@ this.type= type
 }
 
 
-open fun getType()
+    open fun getType()
         //nullable = true from not(false or (false and true)) = true
 : OpenGLFeature{
 
@@ -705,7 +704,8 @@ open fun getType()
                         return type
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

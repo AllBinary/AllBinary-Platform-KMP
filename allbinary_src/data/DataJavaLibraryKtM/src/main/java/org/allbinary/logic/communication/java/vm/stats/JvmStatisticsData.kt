@@ -30,8 +30,7 @@ open public class JvmStatisticsData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val JVM_STATISTICS: String = "JVM_STATISTICS_"
 
@@ -58,7 +57,7 @@ open public class JvmStatisticsData
     val NUMBER_OF_THREADS: String = JVM_STATISTICS +"NUMBER_OF_THREADS"
 
         }
-            private constructor        ()                        
+            private constructor ()                        
 
                             : super(){
 

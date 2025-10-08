@@ -52,7 +52,7 @@ open public class WeblisketSession
         
 
     private var session: HttpSession
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)                        
+public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
                             : this(hashMap, pageContext!!.getRequest() as HttpServletRequest){
 var hashMap = hashMap
@@ -63,7 +63,7 @@ var pageContext = pageContext
                     
 }
 
-public constructor        (hashMap: HashMap<Any, Any>, httpServletRequest: HttpServletRequest)
+public constructor (hashMap: HashMap<Any, Any>, httpServletRequest: HttpServletRequest)
             : super()
         {
 var hashMap = hashMap
@@ -89,7 +89,7 @@ this.session= request.getSession(true)
 }
 
 
-open fun getId()
+    open fun getId()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -100,7 +100,7 @@ open fun getId()
 }
 
 
-open fun setPassword(password: String)
+    open fun setPassword(password: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var password = password
@@ -108,7 +108,7 @@ session.setAttribute(UserData.PASSWORD, password)
 }
 
 
-open fun setUserName(userName: String)
+    open fun setUserName(userName: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var userName = userName
@@ -116,7 +116,7 @@ session.setAttribute(UserData.USERNAME, userName)
 }
 
 
-open fun setPaymentMethod(value: String)
+    open fun setPaymentMethod(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -124,14 +124,14 @@ session.setAttribute(PaymentGatewayData.NAME.toString(), value)
 }
 
 
-open fun setAuthenticated()
+    open fun setAuthenticated()
         //nullable = true from not(false or (false and true)) = true
 {
 session.setAttribute(WeblisketSessionData.AUTHENTICATED, BooleanFactory.getInstance()!!.TRUE_STRING)
 }
 
 
-open fun setRole(aRole: UserRole)
+    open fun setRole(aRole: UserRole)
         //nullable = true from not(false or (false and false)) = true
 {
 var aRole = aRole
@@ -139,7 +139,7 @@ session.setAttribute(UserRoleData.NAME.toString(), aRole)
 }
 
 
-open fun setAttempts(value: Integer)
+    open fun setAttempts(value: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -147,7 +147,7 @@ session.setAttribute(WeblisketSessionData.ATTEMPTS, value)
 }
 
 
-open fun setTimeout(value: String)
+    open fun setTimeout(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -155,7 +155,7 @@ this.session.setAttribute(WeblisketSessionData.TIMEOUT, value)
 }
 
 
-open fun setStoreName(value: String)
+    open fun setStoreName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -163,7 +163,7 @@ this.session.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
 }
 
 
-open fun getWebAppPath()
+    open fun getWebAppPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -174,7 +174,7 @@ open fun getWebAppPath()
 }
 
 
-open fun getUserName()
+    open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -185,7 +185,7 @@ open fun getUserName()
 }
 
 
-open fun getPassword()
+    open fun getPassword()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -196,7 +196,7 @@ open fun getPassword()
 }
 
 
-open fun getPaymentMethod()
+    open fun getPaymentMethod()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -207,7 +207,7 @@ open fun getPaymentMethod()
 }
 
 
-open fun getAuthentication()
+    open fun getAuthentication()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -218,7 +218,7 @@ open fun getAuthentication()
 }
 
 
-open fun getAttempts()
+    open fun getAttempts()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -229,7 +229,7 @@ open fun getAttempts()
 }
 
 
-open fun getTimeout()
+    open fun getTimeout()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -240,7 +240,7 @@ open fun getTimeout()
 }
 
 
-open fun getStoreName()
+    open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -253,7 +253,7 @@ open fun getStoreName()
 
                 @Throws(Exception::class)
             
-open fun getRole()
+    open fun getRole()
         //nullable = true from not(false or (false and true)) = true
 : UserRole{
 
@@ -288,7 +288,7 @@ open fun getRole()
 
                 @Throws(Exception::class)
             
-open fun getOrder()
+    open fun getOrder()
         //nullable = true from not(false or (false and true)) = true
 : OrderInterface{
 
@@ -336,7 +336,7 @@ session.setAttribute(basketName, orderInterface)
 }
 
 
-open fun setAuthenticated(value: Boolean)
+    open fun setAuthenticated(value: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -344,7 +344,7 @@ session.setAttribute(WeblisketSessionData.AUTHENTICATED, BooleanFactory.getInsta
 }
 
 
-open fun clear()
+    open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 this.session.removeAttribute(WeblisketSessionData.AUTHENTICATED)
@@ -354,7 +354,7 @@ this.session.removeAttribute(UserData.USERNAME)
 }
 
 
-open fun getCreationTime()
+    open fun getCreationTime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -365,7 +365,7 @@ open fun getCreationTime()
 }
 
 
-open fun getLastAccessedTime()
+    open fun getLastAccessedTime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -376,7 +376,7 @@ open fun getLastAccessedTime()
 }
 
 
-open fun removeBasket()
+    open fun removeBasket()
         //nullable = true from not(false or (false and true)) = true
 {
 

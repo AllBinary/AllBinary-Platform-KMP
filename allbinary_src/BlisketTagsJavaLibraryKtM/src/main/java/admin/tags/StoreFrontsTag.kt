@@ -39,7 +39,7 @@ open public class StoreFrontsTag : TableTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (){
+public constructor (){
 this.setTagHelperFactory(StoreFrontsHelperFactory())
 this.setTagRequestHelperFactory(StoreFrontsRequestHelperFactory())
 }
@@ -47,7 +47,7 @@ this.setTagRequestHelperFactory(StoreFrontsRequestHelperFactory())
 
                 @Throws(LicensingException::class)
             
-open fun generateSelect()
+    open fun generateSelect()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -101,7 +101,7 @@ open fun generateSelect()
 
                 @Throws(LicensingException::class)
             
-open fun install()
+    open fun install()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -155,7 +155,7 @@ open fun install()
 
                 @Throws(LicensingException::class)
             
-open fun sendStoreCreatedEmails()
+    open fun sendStoreCreatedEmails()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -209,7 +209,7 @@ open fun sendStoreCreatedEmails()
 
                 @Throws(JspTagException::class)
             
-open fun doStartTag()
+    open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

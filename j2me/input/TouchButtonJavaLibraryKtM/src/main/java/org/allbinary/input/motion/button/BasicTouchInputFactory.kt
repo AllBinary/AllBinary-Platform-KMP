@@ -36,12 +36,11 @@ open public class BasicTouchInputFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: BasicTouchInputFactory = BasicTouchInputFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BasicTouchInputFactory{
 
@@ -85,7 +84,7 @@ open fun getInstance()
     private var initialized: Boolean = false
 
     private val list: BasicArrayList = BasicArrayList()
-private constructor        ()
+private constructor ()
             : super()
         {
 
@@ -108,7 +107,7 @@ NONE= TouchButtonInput(MAX -40, "No Button")
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun init(inputToGameKeyMapping: InputToGameKeyMapping)
+    open fun init(inputToGameKeyMapping: InputToGameKeyMapping)
         //nullable = true from not(false or (false and false)) = true
 {
 var inputToGameKeyMapping = inputToGameKeyMapping
@@ -139,7 +138,7 @@ CancelTouchButtonInputFactory.getInstance()
 }
 
 
-open fun updateAll(inputToGameKeyMapping: InputToGameKeyMapping)
+    open fun updateAll(inputToGameKeyMapping: InputToGameKeyMapping)
         //nullable = true from not(false or (false and false)) = true
 {
 var inputToGameKeyMapping = inputToGameKeyMapping
@@ -147,7 +146,7 @@ this.updateAll(this.list, inputToGameKeyMapping)
 }
 
 
-open fun updateAll(list: BasicArrayList, inputToGameKeyMapping: InputToGameKeyMapping)
+    open fun updateAll(list: BasicArrayList, inputToGameKeyMapping: InputToGameKeyMapping)
         //nullable = true from not(false or (false and false)) = true
 {
 var list = list
@@ -171,7 +170,7 @@ touchButtonInput!!.update(inputToGameKeyMapping)
 }
 
 
-open fun getList()
+    open fun getList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 

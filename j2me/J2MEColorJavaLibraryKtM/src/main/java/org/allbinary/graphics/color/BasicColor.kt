@@ -54,7 +54,7 @@ open public class BasicColor
     val alpha: Short
 
     private val basicColorUtil: BasicColorUtil = BasicColorUtil.getInstance()!!
-public constructor        (value: Int)                        
+public constructor (value: Int)                        
 
                             : this(value, StringUtil.getInstance()!!.EMPTY_STRING){
     //var value = value
@@ -64,7 +64,7 @@ public constructor        (value: Int)
                     
 }
 
-public constructor        (alphaValue: Int, value: Int)                        
+public constructor (alphaValue: Int, value: Int)                        
 
                             : this(alphaValue, value, StringUtil.getInstance()!!.EMPTY_STRING){
     //var alphaValue = alphaValue
@@ -75,7 +75,7 @@ public constructor        (alphaValue: Int, value: Int)
                     
 }
 
- constructor        (value: Int, name: String)                        
+ constructor (value: Int, name: String)                        
 
                             : this(BasicColorUtil.getInstance()!!.ALPHA, value, name){
     //var value = value
@@ -86,7 +86,7 @@ public constructor        (alphaValue: Int, value: Int)
                     
 }
 
- constructor        (alphaValue: Int, value: Int, name: String)
+ constructor (alphaValue: Int, value: Int, name: String)
             : super()
         {
     //var alphaValue = alphaValue
@@ -146,7 +146,7 @@ this.blueComponent= (blueInt.toFloat()) /255
 this.value= tempValue
 }
 
-public constructor        (alphaValue: Int, r: Int, g: Int, b: Int, name: String)
+public constructor (alphaValue: Int, r: Int, g: Int, b: Int, name: String)
             : super()
         {
     //var alphaValue = alphaValue
@@ -179,7 +179,7 @@ this.value= ((alphaValue shl 24) and ALPHA_MASK) +((redInt shl 16) and 0x00FF000
 }
 
 
-open fun intValue()
+    open fun intValue()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -190,7 +190,7 @@ open fun intValue()
 }
 
 
-open fun toInt()
+    open fun toInt()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -200,7 +200,8 @@ open fun toInt()
                         return value
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -225,7 +226,7 @@ stringBuffer!!.append(this.value)
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -236,7 +237,7 @@ open fun getName()
 }
 
 
-open fun getRedComponent()
+    open fun getRedComponent()
         //nullable = true from not(false or (false and true)) = true
 : Float{
 
@@ -247,7 +248,7 @@ open fun getRedComponent()
 }
 
 
-open fun getGreenComponent()
+    open fun getGreenComponent()
         //nullable = true from not(false or (false and true)) = true
 : Float{
 
@@ -258,7 +259,7 @@ open fun getGreenComponent()
 }
 
 
-open fun getBlueComponent()
+    open fun getBlueComponent()
         //nullable = true from not(false or (false and true)) = true
 : Float{
 
@@ -269,7 +270,7 @@ open fun getBlueComponent()
 }
 
 
-open fun getAlphaComponent()
+    open fun getAlphaComponent()
         //nullable = true from not(false or (false and true)) = true
 : Float{
 

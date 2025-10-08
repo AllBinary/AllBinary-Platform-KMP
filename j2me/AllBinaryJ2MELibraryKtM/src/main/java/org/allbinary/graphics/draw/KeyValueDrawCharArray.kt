@@ -45,7 +45,7 @@ open public class KeyValueDrawCharArray
     private var value: CharArray = CharArrayFactory.getInstance()!!.getZeroCharArray()!!
 
     private var len: Int= 0
-public constructor        (label: String, x: Int)
+public constructor (label: String, x: Int)
             : super()
         {
 var label = label
@@ -57,7 +57,7 @@ this.valueX= this.labelWidth +x
 }
 
 
-open fun paint(graphics: Graphics, y: Int)
+    open fun paint(graphics: Graphics, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -67,7 +67,7 @@ graphics.drawChars(this.value, 0, this.len, this.valueX, y, 0)
 }
 
 
-open fun update(value: CharArray, len: Int)
+    open fun update(value: CharArray, len: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value

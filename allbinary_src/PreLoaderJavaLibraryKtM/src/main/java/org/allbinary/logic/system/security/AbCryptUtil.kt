@@ -35,12 +35,11 @@ open public class AbCryptUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AbCryptUtil = AbCryptUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AbCryptUtil{
 
@@ -54,7 +53,7 @@ open fun getInstance()
         }
             
     private val streamUtil: StreamUtil = StreamUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -62,7 +61,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun decrypt(inputStream: InputStream, key: String)
+    open fun decrypt(inputStream: InputStream, key: String)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
     //var inputStream = inputStream

@@ -30,12 +30,11 @@ open public class InputFeatureFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: InputFeatureFactory = InputFeatureFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : InputFeatureFactory{
 
@@ -47,7 +46,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
@@ -63,7 +62,7 @@ open fun getInstance()
 
     val SINGLE_KEY_PRESS: InputFeature = InputFeature("Single Key Press")
 
-open fun isSingleKeyProcessing()
+    open fun isSingleKeyProcessing()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

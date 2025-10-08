@@ -31,12 +31,11 @@ open public class RaceTrackGeographicMapCellTypes
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: RaceTrackGeographicMapCellTypes = RaceTrackGeographicMapCellTypes()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : RaceTrackGeographicMapCellTypes{
 
@@ -64,7 +63,7 @@ open fun getInstance()
     val START_LINE_ROAD_CELL_TYPE: RaceTrackGeographicMapCellType
 
     val DEFAULT_FINISH_LINE_ROAD_CELL_TYPE: RaceTrackGeographicMapCellType
-public constructor        ()
+public constructor ()
             : super()
         {
 BOTTOM_LEFT_TURN_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType("Bottom Left Turn", 1, 1)

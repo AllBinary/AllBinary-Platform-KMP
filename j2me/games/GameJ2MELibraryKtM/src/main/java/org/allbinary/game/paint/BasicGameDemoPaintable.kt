@@ -40,7 +40,7 @@ open public class BasicGameDemoPaintable : StatePaintable {
     private val helpPaintableInterface: Paintable
 
     private var currentStatePaintable: Paintable = NullPaintable.getInstance()!!
-public constructor        (mainDemoStatePaintable: Paintable, ownershipPaintable: Paintable, helpPaintableInterface: Paintable){
+public constructor (mainDemoStatePaintable: Paintable, ownershipPaintable: Paintable, helpPaintableInterface: Paintable){
 var mainDemoStatePaintable = mainDemoStatePaintable
 var ownershipPaintable = ownershipPaintable
 var helpPaintableInterface = helpPaintableInterface
@@ -50,7 +50,8 @@ this.ownershipPaintable= ownershipPaintable
 this.helpPaintableInterface= helpPaintableInterface
 }
 
-override fun setState(state: Int)
+
+    override fun setState(state: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var state = state
@@ -79,7 +80,8 @@ var state = state
                             
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -87,7 +89,7 @@ this.getCurrentStatePaintable()!!.paint(graphics)
 }
 
 
-open fun getHelpPaintableInterface()
+    open fun getHelpPaintableInterface()
         //nullable = true from not(false or (false and true)) = true
 : Paintable{
 
@@ -98,7 +100,7 @@ open fun getHelpPaintableInterface()
 }
 
 
-open fun setCurrentStatePaintable(currentStatePaintable: Paintable)
+    open fun setCurrentStatePaintable(currentStatePaintable: Paintable)
         //nullable = true from not(false or (false and false)) = true
 {
 var currentStatePaintable = currentStatePaintable
@@ -106,7 +108,7 @@ this.currentStatePaintable= currentStatePaintable
 }
 
 
-open fun getCurrentStatePaintable()
+    open fun getCurrentStatePaintable()
         //nullable = true from not(false or (false and true)) = true
 : Paintable{
 
@@ -117,7 +119,7 @@ open fun getCurrentStatePaintable()
 }
 
 
-open fun getMainDemoStatePaintable()
+    open fun getMainDemoStatePaintable()
         //nullable = true from not(false or (false and true)) = true
 : Paintable{
 

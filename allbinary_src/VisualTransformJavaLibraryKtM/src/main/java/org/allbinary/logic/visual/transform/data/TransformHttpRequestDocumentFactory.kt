@@ -32,12 +32,11 @@ open public class TransformHttpRequestDocumentFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun getInstance(pageContext: PageContext, weblisketSession: WeblisketSession)
+    open fun getInstance(pageContext: PageContext, weblisketSession: WeblisketSession)
         //nullable =  from not(true or (false and false)) = 
 : TransformDocumentInterface{
 var pageContext = pageContext
@@ -51,7 +50,7 @@ var weblisketSession = weblisketSession
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

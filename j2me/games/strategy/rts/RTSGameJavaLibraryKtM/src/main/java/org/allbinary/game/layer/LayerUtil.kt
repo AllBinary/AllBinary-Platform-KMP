@@ -35,12 +35,11 @@ open public class LayerUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val HASHTABLE: String = "Hashtable: "
 
-open fun toString(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
+    open fun toString(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (true and false)) = true
 : String{
 var hashtable = hashtable

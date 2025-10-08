@@ -33,7 +33,7 @@ import org.allbinary.util.BasicArrayList
 
 open public class PopupCommandFormInputProcessor : CommandFormInputProcessor {
         
-public constructor        (gameKeyEventList: BasicArrayList, playerInputId: Int, gameCanvas: MyCanvas, form: ScrollSelectionForm, popupMenuInputProcessor: PopupMenuInputProcessor)                        
+public constructor (gameKeyEventList: BasicArrayList, playerInputId: Int, gameCanvas: MyCanvas, form: ScrollSelectionForm, popupMenuInputProcessor: PopupMenuInputProcessor)                        
 
                             : super(gameKeyEventList, playerInputId, gameCanvas, form){
 var gameKeyEventList = gameKeyEventList
@@ -49,7 +49,8 @@ var popupMenuInputProcessor = popupMenuInputProcessor
 
 
                 @Throws(Exception::class)
-            override fun processInput(key: Int)
+            
+    override fun processInput(key: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var key = key
@@ -62,7 +63,8 @@ var key = key
 
 
                 @Throws(Exception::class)
-            override fun processMotionInput(motionGestureEvent: MotionGestureEvent)
+            
+    override fun processMotionInput(motionGestureEvent: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var motionGestureEvent = motionGestureEvent

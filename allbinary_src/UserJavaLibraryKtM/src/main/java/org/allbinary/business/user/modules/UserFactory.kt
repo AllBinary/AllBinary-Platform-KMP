@@ -34,7 +34,7 @@ open public class UserFactory
         
                 , UserFactoryInterface {
         
-public constructor        ()
+public constructor ()
             : super()
         {
 }
@@ -42,7 +42,7 @@ public constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getInstance(hashMap: HashMap<Any, Any>)
+    open fun getInstance(hashMap: HashMap<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
 : UserInterface{
 var hashMap = hashMap

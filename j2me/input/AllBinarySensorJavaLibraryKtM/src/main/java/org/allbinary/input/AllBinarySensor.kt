@@ -34,14 +34,13 @@ open public class AllBinarySensor
         
                 , AllBinarySensorListener {
         
-
-        companion object {
+companion object {
             
     val NULL_ALLBINARY_SENSOR: AllBinarySensor = AllBinarySensor()
 
     private var max: Int = 100
 
-open fun setMax(max: Int)
+    open fun setMax(max: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var max = max
@@ -49,7 +48,7 @@ AllBinarySensor.max= max
 }
 
 
-open fun getMax()
+    open fun getMax()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -65,13 +64,13 @@ open fun getMax()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-protected constructor        ()
+protected constructor ()
             : super()
         {
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -79,13 +78,13 @@ open fun init()
 
                 @Throws(Exception::class)
             
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun getId()
+    open fun getId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -96,13 +95,14 @@ open fun getId()
 }
 
 
-open fun shutdown()
+    open fun shutdown()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(commonStrings!!.START, this, "shutdown")
 }
 
-override fun onSensorChange()
+
+    override fun onSensorChange()
         //nullable = true from not(false or (false and true)) = true
 {
 ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, this)

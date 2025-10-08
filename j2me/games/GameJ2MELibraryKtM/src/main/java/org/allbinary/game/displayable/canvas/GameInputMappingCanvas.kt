@@ -53,8 +53,7 @@ import org.allbinary.util.BasicArrayList
 open public class GameInputMappingCanvas : GameCommandCanvas
                 , InputMappingInterface {
         
-
-        companion object {
+companion object {
             
     val NAME: String = "GameInputMappingCanvas"
 
@@ -81,7 +80,7 @@ open public class GameInputMappingCanvas : GameCommandCanvas
     private var selectedGameKey: GameKey = NONE
 
     private var selectedInput: Input = NONE
-public constructor        (abeClientInformation: AbeClientInformationInterface, commandListener: CommandListener, allBinaryGameLayerManager: AllBinaryGameLayerManager, helpPaintable: HelpPaintable)                        
+public constructor (abeClientInformation: AbeClientInformationInterface, commandListener: CommandListener, allBinaryGameLayerManager: AllBinaryGameLayerManager, helpPaintable: HelpPaintable)                        
 
                             : super(commandListener, NAME, allBinaryGameLayerManager!!.getBackgroundBasicColor(), allBinaryGameLayerManager!!.getForegroundBasicColor()){
     //var abeClientInformation = abeClientInformation
@@ -114,7 +113,8 @@ this.paintable= ProcessPaintable()
 this.colorFillPaintable= ColorFillPaintableFactory.getInstance()!!.getInstance(allBinaryGameLayerManager!!.getBackgroundBasicColor(), false)
 }
 
-override fun close()
+
+    override fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 super.close()
@@ -124,7 +124,8 @@ this.selectedInput= NONE
 this.update()
 }
 
-override fun initCommands(cmdListener: CommandListener)
+
+    override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var cmdListener = cmdListener
@@ -135,28 +136,32 @@ this.addCommand(GameInputMappingInstructionsCanvas.DISPLAY)
 this.setCommandListener(cmdListener)
 }
 
-override fun keyPressed(keyCode: Int)
+
+    override fun keyPressed(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
 this.keyPressed(keyCode, 0)
 }
 
-override fun keyReleased(keyCode: Int)
+
+    override fun keyReleased(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
 this.keyReleased(keyCode, 0)
 }
 
-override fun keyRepeated(keyCode: Int)
+
+    override fun keyRepeated(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
 this.keyRepeated(keyCode, 0)
 }
 
-override fun keyPressed(keyCode: Int, deviceId: Int)
+
+    override fun keyPressed(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
@@ -168,7 +173,7 @@ super.keyPressed(keyCode, 0)
 
     private val inputFactory: InputFactory = InputFactory.getInstance()!!
 
-open fun addGameKeyEvent(keyCode: Int, repeated: Boolean)
+    open fun addGameKeyEvent(keyCode: Int, repeated: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
@@ -193,7 +198,8 @@ logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
 
 
                 @Throws(Exception::class)
-            override fun process(gameKey: GameKey, input: Input)
+            
+    override fun process(gameKey: GameKey, input: Input)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameKey = gameKey
@@ -223,7 +229,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.PROCESS)
 }
 
 
-open fun setSelectedAction(gameKey: GameKey)
+    open fun setSelectedAction(gameKey: GameKey)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameKey = gameKey
@@ -238,7 +244,7 @@ this.repaintBehavior!!.onChangeRepaint(this)
 
                 @Throws(Exception::class)
             
-open fun gameActionCrud(gameKey: GameKey, input: Input)
+    open fun gameActionCrud(gameKey: GameKey, input: Input)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameKey = gameKey
@@ -302,7 +308,7 @@ this.repaintBehavior!!.onChangeRepaint(this)
 
                 @Throws(Exception::class)
             
-open fun addNewMapping(gameKey: GameKey, input: Input)
+    open fun addNewMapping(gameKey: GameKey, input: Input)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameKey = gameKey
@@ -344,7 +350,7 @@ this.setSelectedAction(gameKey)
 
                 @Throws(Exception::class)
             
-open fun deleteCurrentMapping()
+    open fun deleteCurrentMapping()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -383,7 +389,7 @@ this.update()
 
                 @Throws(Exception::class)
             
-open fun setDefault()
+    open fun setDefault()
         //nullable = true from not(false or (false and true)) = true
 {
 inputMapping!!.setDefault(abeClientInformation)
@@ -393,7 +399,8 @@ this.repaintBehavior!!.onChangeRepaint(this)
 
 
                 @Throws(Exception::class)
-            override fun update()
+            
+    override fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 inputMapping!!.update(abeClientInformation)
@@ -401,7 +408,8 @@ this.helpPaintable!!.update(this.selectedGameKey, this.selectedInput)
 this.repaintBehavior!!.onChangeRepaint(this)
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

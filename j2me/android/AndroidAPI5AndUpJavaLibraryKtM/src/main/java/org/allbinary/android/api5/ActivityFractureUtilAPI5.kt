@@ -26,20 +26,19 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.input.motion.button.TouchScreenTypeFactory
-import org.allbinary.android.ActivityFractureUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.communication.log.PreLogUtil
 import android.app.Activity
+import org.allbinary.android.api1.ActivityFractureUtilAPI1
 import org.allbinary.input.motion.button.TouchScreenFactory
 
-open public class ActivityFractureUtilAPI5 : ActivityFractureUtil {
+open public class ActivityFractureUtilAPI5 : ActivityFractureUtilAPI1 {
         
-
-        companion object {
+companion object {
             
     private val instance: ActivityFractureUtilAPI5 = ActivityFractureUtilAPI5()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ActivityFractureUtilAPI5{
 
@@ -62,10 +61,11 @@ open fun getInstance()
     private val FEATURE_TOUCHSCREEN: String = "android.hardware.touchscreen"
 
     private val FEATURE_TOUCHSCREEN_MULTITOUCH_DISTINCT: String = "android.hardware.touchscreen.multitouch.distinct"
-override fun process(activity: Activity)
+
+    override fun process(activity: Activity)
         //nullable = true from not(false or (false and false)) = true
 {
-var activity = activity
+    //var activity = activity
 
     var touchScreenFactory: TouchScreenFactory = TouchScreenFactory.getInstance()!!
 
@@ -83,10 +83,10 @@ PreLogUtil.put(touchScreenFactory!!.toString(), this, commonStrings!!.PROCESS)
 }
 
 
-open fun isTouch(activity: Activity)
+    open fun isTouch(activity: Activity)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
-var activity = activity
+    //var activity = activity
 
 
 
@@ -95,10 +95,10 @@ var activity = activity
 }
 
 
-open fun isMultiTouch(activity: Activity)
+    open fun isMultiTouch(activity: Activity)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
-var activity = activity
+    //var activity = activity
 
 
 
@@ -107,10 +107,10 @@ var activity = activity
 }
 
 
-open fun isMultiTouchDistinct(activity: Activity)
+    open fun isMultiTouchDistinct(activity: Activity)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
-var activity = activity
+    //var activity = activity
 
 
 
@@ -119,11 +119,11 @@ var activity = activity
 }
 
 
-open fun isFeature(activity: Activity, property: String)
+    open fun isFeature(activity: Activity, property: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
-var activity = activity
-var property = property
+    //var activity = activity
+    //var property = property
 
 
 

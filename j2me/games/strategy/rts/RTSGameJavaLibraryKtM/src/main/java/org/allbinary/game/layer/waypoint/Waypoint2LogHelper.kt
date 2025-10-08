@@ -34,12 +34,11 @@ open public class Waypoint2LogHelper
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: Waypoint2LogHelper = Waypoint2LogHelper()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : Waypoint2LogHelper{
 
@@ -57,7 +56,7 @@ open fun getInstance()
             {
             }            
         
-open fun initRange(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, closeRange: Int, sensorRange: Int)
+    open fun initRange(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, closeRange: Int, sensorRange: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -66,7 +65,7 @@ open fun initRange(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, cl
 }
 
 
-open fun processPossibleTarget(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior2: WaypointBehaviorBase, layerInterface: PathFindingLayerInterface, anotherTargetDistance: Int, isShorterThanCurrentTargetDistance: Boolean, isCurrentTargetDestroyed: Boolean)
+    open fun processPossibleTarget(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior2: WaypointBehaviorBase, layerInterface: PathFindingLayerInterface, anotherTargetDistance: Int, isShorterThanCurrentTargetDistance: Boolean, isCurrentTargetDestroyed: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -78,7 +77,7 @@ open fun processPossibleTarget(associatedAdvancedRTSGameLayer: PathFindingLayerI
 }
 
 
-open fun processPossibleTarget(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior2: WaypointBehaviorBase, layerInterface: PathFindingLayerInterface, anotherTargetDistance: Int)
+    open fun processPossibleTarget(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior2: WaypointBehaviorBase, layerInterface: PathFindingLayerInterface, anotherTargetDistance: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -88,7 +87,7 @@ open fun processPossibleTarget(associatedAdvancedRTSGameLayer: PathFindingLayerI
 }
 
 
-open fun processPossibleTargetCloser(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior2: WaypointBehaviorBase, layerInterface: PathFindingLayerInterface, anotherTargetDistance: Int)
+    open fun processPossibleTargetCloser(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior2: WaypointBehaviorBase, layerInterface: PathFindingLayerInterface, anotherTargetDistance: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -98,7 +97,7 @@ open fun processPossibleTargetCloser(associatedAdvancedRTSGameLayer: PathFinding
 }
 
 
-open fun setTarget(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior2: WaypointBehaviorBase, layerInterface: PathFindingLayerInterface, anotherTargetDistance: Int)
+    open fun setTarget(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior2: WaypointBehaviorBase, layerInterface: PathFindingLayerInterface, anotherTargetDistance: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -108,14 +107,14 @@ open fun setTarget(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, un
 }
 
 
-open fun setTargetPath(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
+    open fun setTargetPath(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 }
 
 
-open fun setTargetPath(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior2: WaypointBehaviorBase)
+    open fun setTargetPath(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior2: WaypointBehaviorBase)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -123,7 +122,7 @@ open fun setTargetPath(associatedAdvancedRTSGameLayer: PathFindingLayerInterface
 }
 
 
-open fun processWaypoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior2: WaypointBehaviorBase, targetLayer: PathFindingLayerInterface, size: Int)
+    open fun processWaypoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior2: WaypointBehaviorBase, targetLayer: PathFindingLayerInterface, size: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -133,7 +132,7 @@ open fun processWaypoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterfa
 }
 
 
-open fun processWaypointTracked(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior2: WaypointBehaviorBase)
+    open fun processWaypointTracked(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior2: WaypointBehaviorBase)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -141,7 +140,7 @@ open fun processWaypointTracked(associatedAdvancedRTSGameLayer: PathFindingLayer
 }
 
 
-open fun processWaypointTracked(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, geographicMapCellPosition: GeographicMapCellPosition)
+    open fun processWaypointTracked(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -149,7 +148,7 @@ open fun processWaypointTracked(associatedAdvancedRTSGameLayer: PathFindingLayer
 }
 
 
-open fun processWaypointTrackedWithoutProgress(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, reason: String)
+    open fun processWaypointTrackedWithoutProgress(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, reason: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -157,30 +156,21 @@ open fun processWaypointTrackedWithoutProgress(associatedAdvancedRTSGameLayer: P
 }
 
 
-open fun wander(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
+    open fun wander(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 }
 
 
-open fun targetDestroyed(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
+    open fun targetDestroyed(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 }
 
 
-open fun processTargeting(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, dx: Int, dy: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-    //var dx = dx
-    //var dy = dy
-}
-
-
-open fun processTargetingNonWayPoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, dx: Int, dy: Int)
+    open fun processTargeting(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -189,7 +179,16 @@ open fun processTargetingNonWayPoint(associatedAdvancedRTSGameLayer: PathFinding
 }
 
 
-open fun removeWaypoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior2: WaypointBehaviorBase, waypointLayer: PathFindingLayerInterface, reason: String)
+    open fun processTargetingNonWayPoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, dx: Int, dy: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+    //var dx = dx
+    //var dy = dy
+}
+
+
+    open fun removeWaypoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior2: WaypointBehaviorBase, waypointLayer: PathFindingLayerInterface, reason: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -199,7 +198,7 @@ open fun removeWaypoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterfac
 }
 
 
-open fun removeWaypoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior2: WaypointBehaviorBase, list: BasicArrayList)
+    open fun removeWaypoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior2: WaypointBehaviorBase, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -208,21 +207,21 @@ open fun removeWaypoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterfac
 }
 
 
-open fun removeWaypointClear(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
+    open fun removeWaypointClear(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 }
 
 
-open fun clearTarget(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
+    open fun clearTarget(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 }
 
 
-open fun addWaypointFromUser(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, advancedRTSGameLayer: PathFindingLayerInterface)
+    open fun addWaypointFromUser(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, advancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -230,7 +229,7 @@ open fun addWaypointFromUser(associatedAdvancedRTSGameLayer: PathFindingLayerInt
 }
 
 
-open fun targetMovedSoRetarget(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
+    open fun targetMovedSoRetarget(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer

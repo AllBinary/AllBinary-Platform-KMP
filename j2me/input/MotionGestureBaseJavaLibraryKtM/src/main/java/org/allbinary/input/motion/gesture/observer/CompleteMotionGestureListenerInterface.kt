@@ -26,12 +26,13 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.util.BasicArrayList
+
 interface CompleteMotionGestureListenerInterface {
         
 
                 @Throws(Exception::class)
             
-open fun onMotionGestureCompleted(list: BasicArrayList)
+    open fun onMotionGestureCompleted(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 
 

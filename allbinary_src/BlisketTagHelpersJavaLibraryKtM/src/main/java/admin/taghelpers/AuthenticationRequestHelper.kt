@@ -55,14 +55,14 @@ open public class AuthenticationRequestHelper : TagHelper {
     private var weblisketSession: WeblisketSession
 
     private var request: HttpServletRequest
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 this.weblisketSession= WeblisketSession(hashMap, pageContext)
 this.request= pageContext!!.getRequest() as HttpServletRequest
 }
 
-public constructor        (hashMap: HashMap<Any, Any>, httpServletRequest: HttpServletRequest){
+public constructor (hashMap: HashMap<Any, Any>, httpServletRequest: HttpServletRequest){
 var hashMap = hashMap
 var httpServletRequest = httpServletRequest
 this.weblisketSession= WeblisketSession(hashMap, httpServletRequest)
@@ -72,7 +72,7 @@ this.request= httpServletRequest
 
                 @Throws(Exception::class)
             
-open fun generateNewPassword()
+    open fun generateNewPassword()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -122,7 +122,7 @@ open fun generateNewPassword()
 }
 
 
-open fun newPassword()
+    open fun newPassword()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -225,7 +225,7 @@ NewPasswordEmail(this.abeClientInformation, userInterface, newPassword).
 }
 
 
-open fun changePassword()
+    open fun changePassword()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -374,7 +374,7 @@ NewPasswordEmail(this.abeClientInformation, userInterface, newPassword).
 }
 
 
-open fun isRoleValid(userName: String, password: String, roles: Vector)
+    open fun isRoleValid(userName: String, password: String, roles: Vector)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var userName = userName

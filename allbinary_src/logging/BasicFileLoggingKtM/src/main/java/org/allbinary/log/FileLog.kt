@@ -41,8 +41,7 @@ open public class FileLog
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val stringUtil: StringUtil = StringUtil.getInstance()!!
 
@@ -69,7 +68,7 @@ open public class FileLog
     private var backupIndex: Int= 0
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun createLogFile()
+    open fun createLogFile()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -116,7 +115,7 @@ System.out.println("Error Creating Log: " +e)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun createLogFileBackup()
+    open fun createLogFileBackup()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -172,7 +171,7 @@ System.out.println("Error Creating Backup: " +e)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun put(specialMessage: String, anyType: Any, functionName: String)
+    open fun put(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var specialMessage = specialMessage
@@ -188,7 +187,7 @@ var functionName = functionName
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Throwable)
+    open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Throwable)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var specialMessage = specialMessage
@@ -289,7 +288,7 @@ fileOut!!.flush()
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun put(specialMessage: String, className: String, functionName: String)
+    open fun put(specialMessage: String, className: String, functionName: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var specialMessage = specialMessage
@@ -305,7 +304,7 @@ open fun put(specialMessage: String, className: String, functionName: String)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun put(specialMessage: String, className: String, functionName: String, exception: Exception)
+    open fun put(specialMessage: String, className: String, functionName: String, exception: Exception)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var specialMessage = specialMessage
@@ -395,7 +394,7 @@ fileOut!!.flush()
 }
 
 
-open fun getFilePath()
+    open fun getFilePath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -407,7 +406,7 @@ open fun getFilePath()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

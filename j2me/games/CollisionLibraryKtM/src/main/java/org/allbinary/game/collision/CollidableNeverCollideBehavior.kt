@@ -30,7 +30,7 @@ import org.allbinary.graphics.RectangleFactory
 
 open public class CollidableNeverCollideBehavior : CollidableBaseBehavior {
         
- constructor        (isCollidable: Boolean)                        
+ constructor (isCollidable: Boolean)                        
 
                             : super(CollidableCompositeLayer(RectangleFactory.SINGLETON), isCollidable){
 var isCollidable = isCollidable
@@ -40,7 +40,8 @@ var isCollidable = isCollidable
                     
 }
 
-override fun isCollision(allbinaryCollidableLayer: CollidableCompositeLayer)
+
+    override fun isCollision(allbinaryCollidableLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var allbinaryCollidableLayer = allbinaryCollidableLayer
@@ -53,19 +54,22 @@ var allbinaryCollidableLayer = allbinaryCollidableLayer
 
 
                 @Throws(Exception::class)
-            override fun collide(allbinaryCollidableLayer: CollidableCompositeLayer)
+            
+    override fun collide(allbinaryCollidableLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var allbinaryCollidableLayer = allbinaryCollidableLayer
 }
 
-override fun collide(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
+
+    override fun collide(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 }
 
-override fun isCollision(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
+
+    override fun isCollision(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface

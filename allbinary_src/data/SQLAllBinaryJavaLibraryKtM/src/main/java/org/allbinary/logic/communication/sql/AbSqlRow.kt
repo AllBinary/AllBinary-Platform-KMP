@@ -69,7 +69,7 @@ open public class AbSqlRow : AbSqlColumn {
     private val COLUMN_NAME_LABEL: String = "columnName: "
 
     private val INSERT_END: String = "')"
-public constructor        (databaseConnectionInfoInterface: DbConnectionInfo)                        
+public constructor (databaseConnectionInfoInterface: DbConnectionInfo)                        
 
                             : super(databaseConnectionInfoInterface){
     //var databaseConnectionInfoInterface = databaseConnectionInfoInterface
@@ -81,7 +81,7 @@ public constructor        (databaseConnectionInfoInterface: DbConnectionInfo)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getValue(value: String)
+    open fun getValue(value: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var value = value
@@ -111,7 +111,7 @@ open fun getValue(value: String)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun updateWhere(key: String, value: String, updatedKeyValuePairs: HashMap<Any, Any>)
+    open fun updateWhere(key: String, value: String, updatedKeyValuePairs: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var key = key
@@ -215,7 +215,7 @@ this.executeSQLStatement(sqlStatement)
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun updateWhere(whereKeyValuePairs: HashMap<Any, Any>, updatedKeyValuePairs: HashMap<Any, Any>)
+    open fun updateWhere(whereKeyValuePairs: HashMap<Any, Any>, updatedKeyValuePairs: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var whereKeyValuePairs = whereKeyValuePairs
@@ -369,7 +369,7 @@ this.executeSQLStatement(sqlStatement)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun deleteWhere(key: String, value: String)
+    open fun deleteWhere(key: String, value: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var key = key
@@ -417,7 +417,7 @@ this.executeSQLStatement(sqlStatement)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun deleteWhere(keysAndValues: HashMap<Any, Any>)
+    open fun deleteWhere(keysAndValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keysAndValues = keysAndValues
@@ -497,7 +497,7 @@ this.executeSQLStatement(sqlStatement)
 }
 
 
-open fun insert(values: Vector)
+    open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 {
     //var values = values
@@ -561,7 +561,7 @@ this.executeSQLStatement(sqlStatement)
 }
 
 
-open fun getRow(keysAndValues: HashMap<Any, Any>)
+    open fun getRow(keysAndValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 : HashMap<Any, Any>{
     //var keysAndValues = keysAndValues
@@ -708,7 +708,7 @@ result.put(columnName, field)
 }
 
 
-open fun getRows(keysAndValues: HashMap<Any, Any>)
+    open fun getRows(keysAndValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
     //var keysAndValues = keysAndValues
@@ -720,7 +720,7 @@ open fun getRows(keysAndValues: HashMap<Any, Any>)
 }
 
 
-open fun getRows(keysAndValues: HashMap<Any, Any>, more: String)
+    open fun getRows(keysAndValues: HashMap<Any, Any>, more: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
     //var keysAndValues = keysAndValues
@@ -859,7 +859,7 @@ rows.add(result)
 }
 
 
-open fun getAllRows()
+    open fun getAllRows()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -953,7 +953,7 @@ rows.add(result)
 }
 
 
-open fun getRowsWhereBetween(whereKeyValuePairs: HashMap<Any, Any>, betweenColumn: String, smallest: String, largest: String)
+    open fun getRowsWhereBetween(whereKeyValuePairs: HashMap<Any, Any>, betweenColumn: String, smallest: String, largest: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
     //var whereKeyValuePairs = whereKeyValuePairs
@@ -1101,7 +1101,7 @@ rows.add(result)
 }
 
 
-open fun getRowsWhereBetween(betweenColumn: String, smallest: String, largest: String)
+    open fun getRowsWhereBetween(betweenColumn: String, smallest: String, largest: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
     //var betweenColumn = betweenColumn

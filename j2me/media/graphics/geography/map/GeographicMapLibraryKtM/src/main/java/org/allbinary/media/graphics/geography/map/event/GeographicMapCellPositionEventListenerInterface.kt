@@ -26,18 +26,19 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.util.event.EventListenerInterface
+
 interface GeographicMapCellPositionEventListenerInterface : EventListenerInterface {
         
 
                 @Throws(Exception::class)
             
-open fun onGeographicMapCellPositionEvent(geographicMapCellPositionEvent: GeographicMapCellPositionEvent)
+    open fun onGeographicMapCellPositionEvent(geographicMapCellPositionEvent: GeographicMapCellPositionEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun onRemoveGeographicMapCellPositionEvent(geographicMapCellPositionEvent: GeographicMapCellPositionEvent)
+    open fun onRemoveGeographicMapCellPositionEvent(geographicMapCellPositionEvent: GeographicMapCellPositionEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

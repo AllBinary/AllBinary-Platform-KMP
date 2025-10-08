@@ -31,12 +31,11 @@ open public class WeaponLayerArrayLayerCircularStaticPool
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: WeaponLayerArrayLayerCircularStaticPool = WeaponLayerArrayLayerCircularStaticPool()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : WeaponLayerArrayLayerCircularStaticPool{
 
@@ -61,7 +60,7 @@ open fun getInstance()
     private var ALL_WEAPONLAYER_ARRAY: Array<Array<Array<Any?>?>?> = arrayOfNulls(4)
                                                         
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -97,7 +96,7 @@ ALL_WEAPONLAYER_ARRAY[3]= THREE_WEAPONLAYER_ARRAY
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getInstance(size: Int)
+    open fun getInstance(size: Int)
         //nullable =  from not(true or (false and false)) = 
 : Array<WeaponLayer?>{
 var size = size

@@ -32,12 +32,11 @@ open public class OrientationMotionGestureFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OrientationMotionGestureFactory = OrientationMotionGestureFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OrientationMotionGestureFactory{
 
@@ -61,7 +60,7 @@ open fun getInstance()
     val ROLL_LEFT: MotionGestureInput
 
     val ROLL_RIGHT: MotionGestureInput
-private constructor        ()
+private constructor ()
             : super()
         {
 

@@ -34,7 +34,7 @@ open public class Unknown
         
 
     private var data: String
-public constructor        (data: String)
+public constructor (data: String)
             : super()
         {
 var data = data
@@ -42,7 +42,7 @@ this.data= data
 }
 
 
-open fun compareTo(componentInterface: HardwareComponentInterface)
+    open fun compareTo(componentInterface: HardwareComponentInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var componentInterface = componentInterface
@@ -53,7 +53,8 @@ var componentInterface = componentInterface
                         return true
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

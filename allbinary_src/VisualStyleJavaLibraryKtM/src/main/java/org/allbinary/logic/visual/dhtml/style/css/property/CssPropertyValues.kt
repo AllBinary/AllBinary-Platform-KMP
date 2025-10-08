@@ -49,13 +49,13 @@ open public class CssPropertyValues
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var propertyValueVector: Vector
-public constructor        ()
+public constructor ()
             : super()
         {
 this.propertyValueVector= Vector()
 }
 
-public constructor        (node: Node)
+public constructor (node: Node)
             : super()
         {
 var node = node
@@ -134,7 +134,7 @@ this.propertyValueVector!!.add(propertyValue)
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -181,7 +181,7 @@ index++
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

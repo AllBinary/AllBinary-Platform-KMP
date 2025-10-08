@@ -49,7 +49,7 @@ open public class PopupMenuInputProcessor : BasicMenuInputProcessor {
     private val clickTimeHelper: TimeDelayHelper = TimeDelayHelper(CLICK_DELAY)
 
     private var rectangle: Rectangle
-public constructor        (gameKeyEventList: BasicArrayList, playerInputId: Int, gameCanvas: MyCanvas, rectangle: Rectangle)                        
+public constructor (gameKeyEventList: BasicArrayList, playerInputId: Int, gameCanvas: MyCanvas, rectangle: Rectangle)                        
 
                             : super(gameKeyEventList, playerInputId, gameCanvas){
     //var gameKeyEventList = gameKeyEventList
@@ -64,7 +64,7 @@ this.rectangle= rectangle
 }
 
 
-open fun init(rectangle: Rectangle)
+    open fun init(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
 {
     //var rectangle = rectangle
@@ -74,7 +74,7 @@ this.rectangle= rectangle
 
                 @Throws(Exception::class)
             
-open fun processInput(key: Int)
+    open fun processInput(key: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var key = key
@@ -104,7 +104,8 @@ gameCanvas!!.toggleMenu()
 
 
                 @Throws(Exception::class)
-            override fun processInput()
+            
+    override fun processInput()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -194,7 +195,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, GameInputStrings.getInstance()!!.
 
                 @Throws(Exception::class)
             
-open fun processMotionInputs()
+    open fun processMotionInputs()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -223,7 +224,7 @@ motionGestureEventList!!.clear()
 
                 @Throws(Exception::class)
             
-open fun processMotionInput(motionGestureEvent: MotionGestureEvent)
+    open fun processMotionInput(motionGestureEvent: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var motionGestureEvent = motionGestureEvent

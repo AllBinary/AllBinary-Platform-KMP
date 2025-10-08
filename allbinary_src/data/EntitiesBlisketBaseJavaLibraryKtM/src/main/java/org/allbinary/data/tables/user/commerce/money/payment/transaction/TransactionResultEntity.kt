@@ -46,7 +46,7 @@ open public class TransactionResultEntity : AbSqlBean
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val tableName: String = "vresults"
-public constructor        ()                        
+public constructor ()                        
 
                             : super(UserDbInitInfo()){
 
@@ -57,7 +57,7 @@ this.setTableName(tableName)
 }
 
 
-open fun remove(userName: String, orderNumber: String)
+    open fun remove(userName: String, orderNumber: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var userName = userName
@@ -95,7 +95,7 @@ super.deleteWhere(whereHashMap)
 }
 
 
-open fun add(userName: String, orderNumber: String, transactionResultInterface: TransactionResultInterface)
+    open fun add(userName: String, orderNumber: String, transactionResultInterface: TransactionResultInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var userName = userName
@@ -144,7 +144,7 @@ super.insert(values)
 }
 
 
-open fun getTransactionResultInterface(orderNumber: String)
+    open fun getTransactionResultInterface(orderNumber: String)
         //nullable = true from not(false or (false and false)) = true
 : TransactionResultInterface{
 var orderNumber = orderNumber
@@ -215,7 +215,7 @@ resultHashMap= super.getRow(updateKeyAndValue)
 }
 
 
-open fun createTableStatement()
+    open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -242,7 +242,7 @@ stringBuffer!!.append(this.sqlTypeStrings!!.FOUR_INT_NOT_NULL)!!.append(paymentT
 }
 
 
-open fun createTable()
+    open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -253,7 +253,7 @@ open fun createTable()
 }
 
 
-open fun dropTable()
+    open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

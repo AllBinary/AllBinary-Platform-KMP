@@ -27,12 +27,11 @@
 
 open public class WorkSound : CompositeSound {
         
-
-        companion object {
+companion object {
             
     private var soundInterface: Sound = WorkSound()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : Sound{
 
@@ -44,7 +43,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()                        
+            private constructor ()                        
 
                             : super("resource:/wav/work.wav"){
 

@@ -37,7 +37,7 @@ open public class SimpleTextPaintable : Paintable {
     private var text: String
 
     private var basicColor: BasicColor
-public constructor        (text: String, basicColor: BasicColor){
+public constructor (text: String, basicColor: BasicColor){
     //var text = text
     //var basicColor = basicColor
 this.text= text
@@ -48,7 +48,8 @@ this.basicColor= basicColor
     private var anchor: Int = Anchor.TOP_LEFT
 
     private val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -65,7 +66,8 @@ graphics.setColor(this.getBasicColorP()!!.toInt())
 graphics.drawString(this.text, (width shr 1) -topScoresWidth, myFont!!.DEFAULT_CHAR_HEIGHT *3, anchor)
 }
 
-override fun setBasicColorP(basicColor: BasicColor)
+
+    override fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var basicColor = basicColor
@@ -73,7 +75,7 @@ this.basicColor= basicColor
 }
 
 
-open fun getBasicColorP()
+    open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
 
@@ -84,7 +86,7 @@ open fun getBasicColorP()
 }
 
 
-open fun setText(text: String)
+    open fun setText(text: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var text = text
@@ -92,7 +94,7 @@ this.text= text
 }
 
 
-open fun getText()
+    open fun getText()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

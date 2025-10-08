@@ -28,78 +28,79 @@
 import org.allbinary.game.input.event.GameKeyEvent
 import org.allbinary.graphics.paint.PaintableInterface
 import org.allbinary.layer.AllBinaryLayerManager
+
 interface SpecialGameInputInterface : PaintableInterface {
         
 
                 @Throws(Exception::class)
             
-open fun up()
+    open fun up()
         //nullable = true from not(false or (false and true)) = true
 
 
                 @Throws(Exception::class)
             
-open fun down()
+    open fun down()
         //nullable = true from not(false or (false and true)) = true
 
 
                 @Throws(Exception::class)
             
-open fun right()
+    open fun right()
         //nullable = true from not(false or (false and true)) = true
 
 
                 @Throws(Exception::class)
             
-open fun left()
+    open fun left()
         //nullable = true from not(false or (false and true)) = true
 
 
                 @Throws(Exception::class)
             
-open fun strafeLeft()
+    open fun strafeLeft()
         //nullable = true from not(false or (false and true)) = true
 
 
                 @Throws(Exception::class)
             
-open fun strafeRight()
+    open fun strafeRight()
         //nullable = true from not(false or (false and true)) = true
 
 
                 @Throws(Exception::class)
             
-open fun fire(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+    open fun fire(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun special1(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+    open fun special1(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun special2(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+    open fun special2(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun special3(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+    open fun special3(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun special4(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+    open fun special4(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun special5(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+    open fun special5(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

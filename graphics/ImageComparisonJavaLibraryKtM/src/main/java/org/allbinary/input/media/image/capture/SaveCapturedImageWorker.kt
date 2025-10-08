@@ -45,12 +45,12 @@ open public class SaveCapturedImageWorker : BasicEventHandler
     private var running: Boolean= false
 
     private var capturedImageWorkerResultsEventVector: Vector = Vector()
-public constructor        (){
+public constructor (){
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun isRunning()
+    open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -62,7 +62,7 @@ open fun isRunning()
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun setRunning(running: Boolean)
+    open fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var running = running
@@ -70,7 +70,7 @@ this.running= running
 }
 
 
-open fun onCaptureEvent(capturedImageEvent: CapturedImageWorkerResultsEvent)
+    open fun onCaptureEvent(capturedImageEvent: CapturedImageWorkerResultsEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var capturedImageEvent = capturedImageEvent
@@ -79,7 +79,7 @@ run()
 }
 
 
-open fun onEvent(allBinaryEventObject: AllBinaryEventObject)
+    open fun onEvent(allBinaryEventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryEventObject = allBinaryEventObject
@@ -87,7 +87,7 @@ onCaptureEvent(allBinaryEventObject as CapturedImageWorkerResultsEvent)
 }
 
 
-open fun run()
+    open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 

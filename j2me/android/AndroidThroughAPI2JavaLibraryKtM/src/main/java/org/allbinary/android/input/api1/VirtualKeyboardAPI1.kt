@@ -32,16 +32,15 @@ import android.app.Activity
 open public class VirtualKeyboardAPI1 : VirtualKeyboard
                 , VirtualKeyboardEventListenerInterface {
         
-
-        companion object {
+companion object {
             
     var MIN_API: Int = 1
 
     var MAX_API: Int = 2
 
         }
-            public constructor        (activity: Activity){
-var activity = activity
+            public constructor (activity: Activity){
+    //var activity = activity
 }
 
 

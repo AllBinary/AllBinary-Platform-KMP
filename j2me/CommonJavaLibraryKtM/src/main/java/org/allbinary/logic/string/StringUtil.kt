@@ -30,12 +30,11 @@ open public class StringUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: StringUtil = StringUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : StringUtil{
 
@@ -55,13 +54,13 @@ open fun getInstance()
     var ONE_EMPTY_STRING_ARRAY: Array<String?> = arrayOf(this.EMPTY_STRING)
 
     private val stringArray: Array<String?> = arrayOfNulls(0)
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getInstance(string: String)
+    open fun getInstance(string: String)
         //nullable =  from not(true or (false and false)) = 
 : String{
 var string = string
@@ -92,7 +91,7 @@ var string = string
 }
 
 
-open fun getArrayInstance()
+    open fun getArrayInstance()
         //nullable = true from not(false or (false and true)) = true
 : Array<String?>{
 
@@ -103,7 +102,7 @@ open fun getArrayInstance()
 }
 
 
-open fun count(string: String, aChar: Char)
+    open fun count(string: String, aChar: Char)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var string = string
@@ -140,7 +139,7 @@ open fun count(string: String, aChar: Char)
 }
 
 
-open fun toString(anyType: Any)
+    open fun toString(anyType: Any)
         //nullable = true from not(false or (true and false)) = true
 : String{
     //var anyType = anyType

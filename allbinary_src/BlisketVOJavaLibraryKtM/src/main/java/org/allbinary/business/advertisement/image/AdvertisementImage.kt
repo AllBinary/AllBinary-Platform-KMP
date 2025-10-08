@@ -38,13 +38,13 @@ open public class AdvertisementImage
     private var imageUrl: String
 
     private var constraint: TwoDimensionalConstraintInterface
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun getFileName()
+    open fun getFileName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -55,7 +55,7 @@ open fun getFileName()
 }
 
 
-open fun getUrl()
+    open fun getUrl()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -66,7 +66,7 @@ open fun getUrl()
 }
 
 
-open fun getTwoDimensionalConstraint()
+    open fun getTwoDimensionalConstraint()
         //nullable = true from not(false or (false and true)) = true
 : TwoDimensionalConstraintInterface{
 

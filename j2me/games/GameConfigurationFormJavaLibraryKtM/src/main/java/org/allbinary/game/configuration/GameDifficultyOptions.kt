@@ -42,7 +42,7 @@ open public class GameDifficultyOptions : CommandForm {
         
 
     private val list: BasicArrayList
-public constructor        (commandListener: CommandListener, title: String, list: BasicArrayList, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (commandListener: CommandListener, title: String, list: BasicArrayList, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(commandListener, title, backgrounBasicColor, foregroundBasicColor){
 var commandListener = commandListener
@@ -64,13 +64,15 @@ this.initCommands(commandListener)
 this.setSelectedId(gameDifficultyFactory!!.getLevel())
 }
 
-override fun open()
+
+    override fun open()
         //nullable = true from not(false or (false and true)) = true
 {
 super.open()
 }
 
-override fun close()
+
+    override fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 super.close()
@@ -80,7 +82,7 @@ this.save()
 
                 @Throws(Exception::class)
             
-open fun save()
+    open fun save()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -89,7 +91,8 @@ open fun save()
 gameDifficultyFactory!!.setLevel(this.getSelectedId())
 }
 
-override fun initCommands(cmdListener: CommandListener)
+
+    override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var cmdListener = cmdListener
@@ -103,7 +106,8 @@ this.setCommandListener(cmdListener)
 
 
                 @Throws(Exception::class)
-            override fun update()
+            
+    override fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 this.deleteAll()
@@ -112,7 +116,7 @@ super.update()
 }
 
 
-open fun add(list: BasicArrayList, name: String, option: Int)
+    open fun add(list: BasicArrayList, name: String, option: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var list = list
@@ -134,7 +138,7 @@ this.append(choiceGroup)
 }
 
 
-open fun getChoiceGroup(list: BasicArrayList, name: String, option: Int)
+    open fun getChoiceGroup(list: BasicArrayList, name: String, option: Int)
         //nullable = true from not(false or (false and false)) = true
 : ChoiceGroup{
 var list = list
@@ -175,7 +179,7 @@ choiceGroup!!.append(anyType!!.toString(), NullCanvas.NULL_IMAGE)
 }
 
 
-open fun setSelectedId(id: Int)
+    open fun setSelectedId(id: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var id = id
@@ -186,7 +190,7 @@ choiceGroup!!.setSelectedIndex(id, true)
 }
 
 
-open fun getSelectedId()
+    open fun getSelectedId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -200,7 +204,7 @@ open fun getSelectedId()
 }
 
 
-open fun getSelectedText()
+    open fun getSelectedText()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

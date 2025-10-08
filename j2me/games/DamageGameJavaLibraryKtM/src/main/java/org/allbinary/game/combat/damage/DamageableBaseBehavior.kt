@@ -31,12 +31,11 @@ open public class DamageableBaseBehavior
         
                 , DamageableInterface {
         
-
-        companion object {
+companion object {
             
     private val instance: DamageableBaseBehavior = DamageableBaseBehavior()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DamageableBaseBehavior{
 
@@ -53,7 +52,8 @@ open fun getInstance()
             public constructor() : super()
             {
             }            
-        override fun getName()
+        
+    override fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -65,7 +65,8 @@ open fun getInstance()
 
 
                 @Throws(Exception::class)
-            override fun damage(damage: Int, damageType: Int)
+            
+    override fun damage(damage: Int, damageType: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var damage = damage
@@ -74,7 +75,8 @@ var damageType = damageType
 
 
                 @Throws(Exception::class)
-            override fun getDamage(damageType: Int)
+            
+    override fun getDamage(damageType: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var damageType = damageType

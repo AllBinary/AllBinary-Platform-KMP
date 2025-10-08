@@ -30,12 +30,11 @@ import org.allbinary.media.image.ImageModifierUtil
 
 open public class AlphaProcessor : ModifierBaseProcessor {
         
-
-        companion object {
+companion object {
             
     private val instance: AlphaProcessor = AlphaProcessor()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AlphaProcessor{
 
@@ -52,7 +51,8 @@ open fun getInstance()
             public constructor() : super()
             {
             }            
-        override fun update(imageModifierUtil: ImageModifierUtil, originalImage: Image, imageToShow: Image, index: Int, alpha: Int)
+        
+    override fun update(imageModifierUtil: ImageModifierUtil, originalImage: Image, imageToShow: Image, index: Int, alpha: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageModifierUtil = imageModifierUtil

@@ -28,7 +28,6 @@
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvas
 import org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory
 import org.allbinary.image.ImageCache
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 
@@ -44,7 +43,7 @@ open public class ConcurrentImageLoadingProcessor : BaseImageLoadingProcessor {
     private val runnable: ABRunnable = object: ABRunnable()
                                 {
                                 
-open fun run()
+    open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -76,13 +75,13 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 
                                 }
                             
-public constructor        (imageCache: ImageCache){
+public constructor (imageCache: ImageCache){
     //var imageCache = imageCache
 this.imageCache= imageCache
 }
 
 
-open fun runTask()
+    open fun runTask()
         //nullable = true from not(false or (false and true)) = true
 {
 

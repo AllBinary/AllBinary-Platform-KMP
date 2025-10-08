@@ -36,19 +36,19 @@ open public class AdvertisementProcessorInterface
             {
             }            
         
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun start()
+    open fun start()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun stop()
+    open fun stop()
         //nullable = true from not(false or (false and true)) = true
 {
 }

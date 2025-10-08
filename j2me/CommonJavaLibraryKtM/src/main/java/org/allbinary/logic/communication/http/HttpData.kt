@@ -31,12 +31,11 @@ open public class HttpData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: HttpData = HttpData()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : HttpData{
 
@@ -48,7 +47,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

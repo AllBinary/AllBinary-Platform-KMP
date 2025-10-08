@@ -27,14 +27,15 @@
         
 import org.allbinary.business.user.commerce.money.Money
 import org.allbinary.data.tables.TableMappingInterface
+
 interface StoreFrontInventoryStatisticsInterface : TableMappingInterface {
         
 
-open fun getNumber()
+    open fun getNumber()
         //nullable = true from not(false or (false and true)) = true
 : Long
 
-open fun getTotal()
+    open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
 : Money
 

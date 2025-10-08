@@ -26,12 +26,13 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.util.BasicArrayList
+
 interface GameInputProcessorInterface {
         
 
                 @Throws(Exception::class)
             
-open fun onInput(list: BasicArrayList)
+    open fun onInput(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 
 

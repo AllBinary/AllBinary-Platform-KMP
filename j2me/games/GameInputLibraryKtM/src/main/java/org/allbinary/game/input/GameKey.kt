@@ -30,13 +30,12 @@ import org.allbinary.logic.string.StringUtil
 
 open public class GameKey : Input {
         
-
-        companion object {
+companion object {
             
     val NULL_GAME_KEY: GameKey = GameKey( -1, StringUtil.getInstance()!!.NULL_STRING)
 
         }
-             constructor        (key: Int, name: String)                        
+             constructor (key: Int, name: String)                        
 
                             : super(key, name){
     //var key = key
@@ -47,7 +46,8 @@ open public class GameKey : Input {
                     
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

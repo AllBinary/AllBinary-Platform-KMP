@@ -41,7 +41,7 @@ open public class UserEmailEventHandler
     private var emailInfo: EmailInfo
 
     private var userEmailEventNameData: UserEmailEventNameData
-public constructor        ()
+public constructor ()
             : super()
         {
 this.emailVector= Vector()
@@ -51,7 +51,7 @@ this.emailVector= Vector()
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun receiveEmailInfo(userEmailEventNameData: UserEmailEventNameData, emailInfo: EmailInfo)
+    open fun receiveEmailInfo(userEmailEventNameData: UserEmailEventNameData, emailInfo: EmailInfo)
         //nullable = true from not(false or (false and false)) = true
 {
 var userEmailEventNameData = userEmailEventNameData
@@ -63,7 +63,7 @@ this.fireEmailEvent()
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun addListener(vector: Vector)
+    open fun addListener(vector: Vector)
         //nullable = true from not(false or (false and false)) = true
 {
 var vector = vector
@@ -87,7 +87,7 @@ this.addListener(userEmailEventListenerInterface)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun addListener(emailEventListenerInterface: UserEmailEventListenerInterface)
+    open fun addListener(emailEventListenerInterface: UserEmailEventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var emailEventListenerInterface = emailEventListenerInterface
@@ -96,7 +96,7 @@ this.emailVector!!.add(emailEventListenerInterface)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun removeListener(emailEventListenerInterface: UserEmailEventListenerInterface)
+    open fun removeListener(emailEventListenerInterface: UserEmailEventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var emailEventListenerInterface = emailEventListenerInterface
@@ -107,7 +107,7 @@ this.emailVector!!.remove(emailEventListenerInterface)
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun fireEmailEvent()
+    open fun fireEmailEvent()
         //nullable = true from not(false or (false and true)) = true
 {
 

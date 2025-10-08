@@ -42,7 +42,7 @@ open public class IndependentVectorExplosionRotationAnimationFactory
     private var basicColor: BasicColor
 
     private var vectorAnimationFactoryInterface: VectorAnimationFactoryInterface
-public constructor        (vectorInfo: VectorInfo, basicColor: BasicColor, vectorAnimationFactoryInterface: VectorAnimationFactoryInterface)
+public constructor (vectorInfo: VectorInfo, basicColor: BasicColor, vectorAnimationFactoryInterface: VectorAnimationFactoryInterface)
             : super()
         {
 var vectorInfo = vectorInfo
@@ -57,7 +57,7 @@ this.init()
 
                 @Throws(Exception::class)
             
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 framePoints= VectorRotationGenerator.getInstance()!!.getInstance(this.vectorInfo)
@@ -67,7 +67,8 @@ framePoints= VectorRotationGenerator.getInstance()!!.getInstance(this.vectorInfo
     private val vectorExplosionGenerator: VectorExplosionGenerator = VectorExplosionGenerator.getInstance()!!
 
                 @Throws(Exception::class)
-            override fun getInstance(animationInterface: Animation)
+            
+    override fun getInstance(animationInterface: Animation)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
 var animationInterface = animationInterface

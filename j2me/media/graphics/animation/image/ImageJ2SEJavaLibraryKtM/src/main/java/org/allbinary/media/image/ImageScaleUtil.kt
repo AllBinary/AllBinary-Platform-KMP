@@ -25,24 +25,21 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.awt
+import java.awt.Graphics2D
 import java.awt.geom.AffineTransform
 import java.awt.image.BufferedImage
 import javax.microedition.lcdui.Image
 import org.allbinary.image.ImageCache
-import org.microemu.device.j2se.J2SEImmutableImage
-import org.microemu.device.j2se.J2SEMutableImage
 
 open public class ImageScaleUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ImageScaleUtil = ImageScaleUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ImageScaleUtil{
 
@@ -55,10 +52,12 @@ open fun getInstance()
 
         }
             
+    private val imageUtil: ImageUtil = ImageUtil.getInstance()!!
+
     private val imageJ2SEUtil: ImageJ2SEUtil = ImageJ2SEUtil.getInstance()!!
 
     private val imageCreationUtil: ImageCreationUtil = ImageCreationUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -66,7 +65,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominatorX: Float, scaleDenominatorX: Float, scaleNominatorY: Float, scaleDenominatorY: Float, cached: Boolean)
+    open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominatorX: Float, scaleDenominatorX: Float, scaleNominatorY: Float, scaleDenominatorY: Float, cached: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var imageCache = imageCache
@@ -86,7 +85,7 @@ open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominato
 
                 @Throws(Exception::class)
             
-open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominatorX: Float, scaleDenominatorX: Float, scaleNominatorY: Float, scaleDenominatorY: Float, cached: Boolean, mutable: Boolean)
+    open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominatorX: Float, scaleDenominatorX: Float, scaleNominatorY: Float, scaleDenominatorY: Float, cached: Boolean, mutable: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var imageCache = imageCache
@@ -126,7 +125,7 @@ open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominato
 
                         }
                             
-this.scale(originalImage, image, scaleX, scaleY)
+this.scale(originalImage, image, scaleX, scaleY, true)
 
 
 
@@ -137,7 +136,7 @@ this.scale(originalImage, image, scaleX, scaleY)
 
                 @Throws(Exception::class)
             
-open fun scale(originalImage: Image, originalImageArray: Array<Image?>, ximageToShowArray: Array<Image?>, unused: Int, scaleX: Float, scaleY: Float, maxScaleX: Float, maxScaleY: Float)
+    open fun scale(originalImage: Image, originalImageArray: Array<Image?>, ximageToShowArray: Array<Image?>, unused: Int, scaleX: Float, scaleY: Float, maxScaleX: Float, maxScaleY: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var originalImage = originalImage
@@ -157,72 +156,42 @@ open fun scale(originalImage: Image, originalImageArray: Array<Image?>, ximageTo
 
                                     }
                                 
-this.scale(originalImage, originalImageArray[0]!!, scaleX, scaleY)
+this.scale(originalImage, originalImageArray[0]!!, scaleX, scaleY, false)
 }
 
 
-open fun scale(originalImage: Image, newMaxSizeImage: Image, scaleX: Float, scaleY: Float)
+    open fun scale(originalImage: Image, newMaxSizeImage: Image, scaleX: Float, scaleY: Float, clear: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var originalImage = originalImage
     //var newMaxSizeImage = newMaxSizeImage
     //var scaleX = scaleX
     //var scaleY = scaleY
+    //var clear = clear
 
-    var bufferedImage: BufferedImage
-
-
-    
-                        if(originalImage!!.isMutable())
-                        
-                                    {
-                                    
-    var j2seImage: J2SEMutableImage = originalImage as J2SEMutableImage
-
-bufferedImage= j2seImage!!.getImage() as BufferedImage
-
-                                    }
-                                
-                        else {
-                            
-    var j2seImage: J2SEImmutableImage = originalImage as J2SEImmutableImage
-
-bufferedImage= j2seImage!!.getImage() as BufferedImage
-
-                        }
-                            
-
-    var newBufferedImage: BufferedImage
+    var bufferedImage: BufferedImage = this.imageUtil!!.getBufferedImage(originalImage)!!
 
 
-    
-                        if(newMaxSizeImage!!.isMutable())
-                        
-                                    {
-                                    
-    var j2seImage: J2SEMutableImage = newMaxSizeImage as J2SEMutableImage
+    var newBufferedImage: BufferedImage = this.imageUtil!!.getBufferedImage(newMaxSizeImage)!!
 
-newBufferedImage= j2seImage!!.getImage() as BufferedImage
-
-                                    }
-                                
-                        else {
-                            
-    var j2seImage: J2SEImmutableImage = newMaxSizeImage as J2SEImmutableImage
-
-newBufferedImage= j2seImage!!.getImage() as BufferedImage
-
-                        }
-                            
 
     var at: AffineTransform = AffineTransform.getScaleInstance(scaleX, scaleY)!!
 
 
     var g: Graphics2D = newBufferedImage!!.createGraphics()!!
 
-g.setBackground(imageJ2SEUtil!!.TRANSPARENT_COLOR)
+
+    
+                        if(clear)
+                        
+                                    {
+                                    g.setBackground(imageJ2SEUtil!!.TRANSPARENT_COLOR)
 g.clearRect(0, 0, newBufferedImage!!.getWidth(), newBufferedImage!!.getHeight())
+
+                                    }
+                                
 g.drawRenderedImage(bufferedImage, at)
+g.dispose()
 }
 
 

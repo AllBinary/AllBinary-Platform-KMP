@@ -30,12 +30,11 @@ import org.allbinary.input.motion.button.TouchButtonResource
 
 open public class TouchButtonDowngradeResource : TouchButtonResource {
         
-
-        companion object {
+companion object {
             
     private val instance: TouchButtonResource = TouchButtonDowngradeResource()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TouchButtonResource{
 
@@ -47,7 +46,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()                        
+            private constructor ()                        
 
                             : super("/touch_button_downgrade_64_by_64.png", "/touch_button_downgrade_hint_64_by_64.png"){
 

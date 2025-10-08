@@ -30,12 +30,11 @@ open public class NoButtonsTouchInputFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: BaseTouchInput = BaseTouchInput()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BaseTouchInput{
 

@@ -37,12 +37,11 @@ open public class SpriteSplitterUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: SpriteSplitterUtil = SpriteSplitterUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : SpriteSplitterUtil{
 
@@ -80,7 +79,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun process(imageProcessorInput: ImageProcessorInput, totalFrames: Int, totalAnimations: Int, widthReduction: Int, heightReduction: Int, increaseWidth: Int, increaseHeight: Int, spriteType: String, visitor: ImageProcessedVisitor)
+    open fun process(imageProcessorInput: ImageProcessorInput, totalFrames: Int, totalAnimations: Int, widthReduction: Int, heightReduction: Int, increaseWidth: Int, increaseHeight: Int, spriteType: String, visitor: ImageProcessedVisitor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageProcessorInput = imageProcessorInput

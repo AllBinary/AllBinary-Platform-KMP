@@ -39,12 +39,11 @@ open public class AbFileUploadFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AbFileUploadFactory = AbFileUploadFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AbFileUploadFactory{
 
@@ -58,7 +57,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -66,7 +65,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getFileItemStreamList(httpServletRequest: HttpServletRequest)
+    open fun getFileItemStreamList(httpServletRequest: HttpServletRequest)
         //nullable = true from not(false or (false and false)) = true
 : List{
 var httpServletRequest = httpServletRequest
@@ -124,7 +123,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "get()", e)
 
                 @Throws(Exception::class)
             
-open fun getFileItemList(httpServletRequest: HttpServletRequest)
+    open fun getFileItemList(httpServletRequest: HttpServletRequest)
         //nullable = true from not(false or (false and false)) = true
 : List{
 var httpServletRequest = httpServletRequest

@@ -41,7 +41,7 @@ open public class TestInputAutomationActionWorker : AbstractInputAutomationWorke
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var sleep: Int
-public constructor        (sleep: Int, inputAutomationActionInterface: InputAutomationActionInterface, imageComparatorConstraintsInterface: ImageComparatorConstraintsInterface, motionRectangleConstraintsInterface: MotionRectangleConstraintsInterface)                        
+public constructor (sleep: Int, inputAutomationActionInterface: InputAutomationActionInterface, imageComparatorConstraintsInterface: ImageComparatorConstraintsInterface, motionRectangleConstraintsInterface: MotionRectangleConstraintsInterface)                        
 
                             : super(inputAutomationActionInterface){
 var sleep = sleep
@@ -59,7 +59,7 @@ this.sleep= sleep
 
                 @Throws(Exception::class)
             
-open fun processBetweenWorkers()
+    open fun processBetweenWorkers()
         //nullable = true from not(false or (false and true)) = true
 {
 Thread.sleep(2000)
@@ -68,7 +68,7 @@ Thread.sleep(2000)
 
                 @Throws(Exception::class)
             
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(this.commonStrings!!.START, this, commonStrings!!.PROCESS)

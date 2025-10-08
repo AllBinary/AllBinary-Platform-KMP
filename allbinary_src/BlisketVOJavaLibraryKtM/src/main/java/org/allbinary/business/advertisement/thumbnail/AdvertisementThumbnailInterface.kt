@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.business.advertisement.image.AdvertisementImageInterface
+
 interface AdvertisementThumbnailInterface : AdvertisementImageInterface {
         
 

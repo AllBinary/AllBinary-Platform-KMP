@@ -35,12 +35,11 @@ open public class InventoryViewFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(LicensingException::class)
             
-open fun getInstance(searchRequest: SearchRequest)
+    open fun getInstance(searchRequest: SearchRequest)
         //nullable =  from not(true or (false and false)) = 
 : InventoryViewSearchInterface{
 var searchRequest = searchRequest
@@ -79,7 +78,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, "InventoryViewFactory", "getInstance(Se
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

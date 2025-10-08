@@ -38,7 +38,7 @@ open public class MultiGeographicMapBehavior
         
                 @Throws(Exception::class)
             
-open fun getCellTypeAt(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, geographicMapCellPosition: GeographicMapCellPosition)
+    open fun getCellTypeAt(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : Array<GeographicMapCellType?>{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray

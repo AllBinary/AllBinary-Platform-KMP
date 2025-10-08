@@ -35,12 +35,11 @@ open public class KeySpecFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: KeySpecFactory = KeySpecFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : KeySpecFactory{
 
@@ -58,13 +57,13 @@ open fun getInstance()
     val DESEDE: String = "DESede"
 
     val BLOWFISH: String = "Blowfish"
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getInstance(algorithm: String, keyData: ByteArray)
+    open fun getInstance(algorithm: String, keyData: ByteArray)
         //nullable =  from not(true or (false and false)) = 
 : KeySpec{
 var algorithm = algorithm

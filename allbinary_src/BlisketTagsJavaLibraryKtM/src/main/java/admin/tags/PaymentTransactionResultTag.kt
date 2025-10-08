@@ -29,7 +29,7 @@ import admin.taghelpers.PaymentTransactionResultHelperFactory
 
 open public class PaymentTransactionResultTag : TableTag {
         
-public constructor        (){
+public constructor (){
 this.setTagHelperFactory(PaymentTransactionResultHelperFactory())
 this.setTagRequestHelperFactory(PaymentTransactionResultHelperFactory())
 }

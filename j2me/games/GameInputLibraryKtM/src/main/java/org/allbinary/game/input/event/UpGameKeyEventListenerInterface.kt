@@ -26,12 +26,13 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.util.event.EventListenerInterface
+
 interface UpGameKeyEventListenerInterface : EventListenerInterface {
         
 
                 @Throws(Exception::class)
             
-open fun onUpGameKeyEvent(gameKeyEvent: GameKeyEvent)
+    open fun onUpGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

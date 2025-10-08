@@ -27,20 +27,21 @@
         
 import org.allbinary.game.layer.AllBinaryGameLayer
 import org.allbinary.logic.math.BasicDecimal
+
 interface MovementInterface {
         
 
-open fun init(speedBasicDecimal: BasicDecimal, angle: Int, otherAngle: Int)
+    open fun init(speedBasicDecimal: BasicDecimal, angle: Int, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun process(layer: AllBinaryGameLayer)
+    open fun process(layer: AllBinaryGameLayer)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun stop()
+    open fun stop()
         //nullable = true from not(false or (false and true)) = true
 
 

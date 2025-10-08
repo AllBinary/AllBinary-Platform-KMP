@@ -47,7 +47,7 @@ open public class ColorsView
     private val MAX: Int = 255
 
     val delta: Int = 20
-public constructor        ()
+public constructor ()
             : super()
         {
 }
@@ -55,7 +55,7 @@ public constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getColorNode(document: Document, redIndex: Int, greenIndex: Int, blueIndex: Int)
+    open fun getColorNode(document: Document, redIndex: Int, greenIndex: Int, blueIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -108,7 +108,7 @@ hexColorStringBuffer!!.append(blueIndex, HEXRADIX.toString())
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

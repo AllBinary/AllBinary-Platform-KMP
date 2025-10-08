@@ -31,12 +31,11 @@ import org.allbinary.logic.communication.log.LogUtil
 
 open public class PathFindingThreadPool : ThreadPool {
         
-
-        companion object {
+companion object {
             
     private val instance: ThreadPool = PathFindingThreadPool("PathFinding", 1, 1)
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ThreadPool{
 
@@ -48,7 +47,7 @@ open fun getInstance()
 
 
         }
-            public constructor        (poolName: String, numThreads: Int, priority: Int)                        
+            public constructor (poolName: String, numThreads: Int, priority: Int)                        
 
                             : super(poolName, numThreads){
     //var poolName = poolName
@@ -60,27 +59,31 @@ open fun getInstance()
                     
 }
 
-override fun runTaskWithPriority(task: PriorityRunnable)
+
+    override fun runTaskWithPriority(task: PriorityRunnable)
         //nullable = true from not(false or (false and false)) = true
 {
     //var task = task
 super.runTaskWithPriority(task)
 }
 
-override fun runTask(task: Runnable)
+
+    override fun runTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
 {
 var task = task
 super.runTask(task)
 }
 
-override fun startTask(task: Runnable)
+
+    override fun startTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
 {
 var task = task
 }
 
-override fun completedTask(task: Runnable)
+
+    override fun completedTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
 {
 var task = task

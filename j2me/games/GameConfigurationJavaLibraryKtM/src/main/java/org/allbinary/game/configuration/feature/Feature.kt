@@ -32,12 +32,11 @@ open public class Feature
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
-open fun getInstance(name: String)
+    open fun getInstance(name: String)
         //nullable =  from not(true or (false and false)) = 
 : Feature{
 var name = name
@@ -49,7 +48,7 @@ var name = name
 }
 
 
-open fun add(name: String, gameFeature: Feature)
+    open fun add(name: String, gameFeature: Feature)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name
@@ -61,7 +60,7 @@ hashtable.put(name, gameFeature)
         }
             
     private val name: String
-public constructor        (name: String)
+public constructor (name: String)
             : super()
         {
 var name = name
@@ -70,7 +69,8 @@ add(name, this)
 ChangedGameFeatureListener.getInstance()!!.add(this)
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -81,7 +81,7 @@ override fun toString()
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

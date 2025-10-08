@@ -32,12 +32,11 @@ import org.allbinary.string.CommonSeps
 
 open public class CompositeShaderUpdater : ShaderUpdater {
         
-
-        companion object {
+companion object {
             
     private val instance: CompositeShaderUpdater = CompositeShaderUpdater(StringUtil.getInstance()!!.getArrayInstance(), StringUtil.getInstance()!!.getArrayInstance(), StringUtil.getInstance()!!.getArrayInstance())
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CompositeShaderUpdater{
 
@@ -65,7 +64,7 @@ open fun getInstance()
     val attributeHandleArray: IntArray
 
     val attributeArray: Array<String?>
-public constructor        (uniformBlockArray: Array<String?>, uniformArray: Array<String?>, attributeArray: Array<String?>)                        
+public constructor (uniformBlockArray: Array<String?>, uniformArray: Array<String?>, attributeArray: Array<String?>)                        
 
                             : this(uniformBlockArray, uniformArray, attributeArray, IntArray(attributeArray!!.size)){
     //var uniformBlockArray = uniformBlockArray
@@ -77,7 +76,7 @@ public constructor        (uniformBlockArray: Array<String?>, uniformArray: Arra
                     
 }
 
-public constructor        (uniformBlockArray: Array<String?>, uniformArray: Array<String?>, attributeArray: Array<String?>, attributeHandleArray: IntArray){
+public constructor (uniformBlockArray: Array<String?>, uniformArray: Array<String?>, attributeArray: Array<String?>, attributeHandleArray: IntArray){
     //var uniformBlockArray = uniformBlockArray
     //var uniformArray = uniformArray
     //var attributeArray = attributeArray
@@ -91,7 +90,7 @@ this.attributeHandleArray= attributeHandleArray
 }
 
 
-open fun onSurfaceCreated(gl: GL10, eglConfig: EGLConfig, programHandle: Int)
+    open fun onSurfaceCreated(gl: GL10, eglConfig: EGLConfig, programHandle: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl
@@ -100,7 +99,7 @@ open fun onSurfaceCreated(gl: GL10, eglConfig: EGLConfig, programHandle: Int)
 }
 
 
-open fun onSurfaceDestroyed(gl: GL10)
+    open fun onSurfaceDestroyed(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl

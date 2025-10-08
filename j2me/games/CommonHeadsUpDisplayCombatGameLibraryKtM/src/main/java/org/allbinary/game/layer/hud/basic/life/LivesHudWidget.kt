@@ -41,7 +41,7 @@ open public class LivesHudWidget : BasicHud
     private var xArray: IntArray
 
     private val animationInterface: Animation
-public constructor        (animationInterface: Animation, lifeInterface: Life, location: Int, direction: Int)                        
+public constructor (animationInterface: Animation, lifeInterface: Life, location: Int, direction: Int)                        
 
                             : super(location, direction, 16, lifeInterface!!.getMaxlives() *16, 2){
 var animationInterface = animationInterface
@@ -58,7 +58,8 @@ this.update()
 this.animationInterface= animationInterface
 }
 
-override fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
+
+    override fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var displayChangeEvent = displayChangeEvent
@@ -67,7 +68,7 @@ this.update()
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -95,7 +96,8 @@ this.xArray[index]= this.getX() +(index *16)
                                 
 }
 
-override fun setX(x: Int)
+
+    override fun setX(x: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -103,7 +105,8 @@ super.setX(x)
 this.update()
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -119,14 +122,15 @@ this.animationInterface!!.paint(graphics, xArray[index]!!, this.getY())
 
 }
 
-override fun paintThreed(graphics: Graphics)
+
+    override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 }
 
 
-open fun getLifeInterface()
+    open fun getLifeInterface()
         //nullable = true from not(false or (false and true)) = true
 : Life{
 

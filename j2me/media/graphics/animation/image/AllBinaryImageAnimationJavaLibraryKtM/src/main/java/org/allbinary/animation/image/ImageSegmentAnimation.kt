@@ -45,7 +45,7 @@ open public class ImageSegmentAnimation : ImageAnimation {
     private var circularIndexUtil: CircularIndexUtil
 
     private var sequenceArray: IntArray
-protected constructor        (image: Image, animationBehavior: AnimationBehavior)                        
+protected constructor (image: Image, animationBehavior: AnimationBehavior)                        
 
                             : this(image, PrimitiveIntUtil.getArrayInstance(), animationBehavior){
     //var image = image
@@ -56,7 +56,7 @@ protected constructor        (image: Image, animationBehavior: AnimationBehavior
                     
 }
 
-protected constructor        (image: Image, sequenceArray: IntArray, animationBehavior: AnimationBehavior)                        
+protected constructor (image: Image, sequenceArray: IntArray, animationBehavior: AnimationBehavior)                        
 
                             : super(image, animationBehavior){
     //var image = image
@@ -74,26 +74,30 @@ this.circularIndexUtil= CircularIndexUtil.getInstance(this.drawHeight)
 this.sequenceArray= sequenceArray
 }
 
-override fun nextFrame()
+
+    override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 this.circularIndexUtil!!.next()
 }
 
-override fun previousFrame()
+
+    override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 this.circularIndexUtil!!.previous()
 }
 
-override fun setFrame(index: Int)
+
+    override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var index = index
 this.circularIndexUtil!!.setIndex(index)
 }
 
-override fun getFrame()
+
+    override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -103,7 +107,8 @@ override fun getFrame()
                         return this.circularIndexUtil!!.getIndex()
 }
 
-override fun getSize()
+
+    override fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -113,14 +118,16 @@ override fun getSize()
                         return this.circularIndexUtil!!.getSize()
 }
 
-override fun setSequence(sequenceArray: IntArray)
+
+    override fun setSequence(sequenceArray: IntArray)
         //nullable = true from not(false or (false and false)) = true
 {
 var sequenceArray = sequenceArray
 this.sequenceArray= sequenceArray
 }
 
-override fun getSequence()
+
+    override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
 : IntArray{
 
@@ -130,7 +137,8 @@ override fun getSequence()
                         return this.sequenceArray
 }
 
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -139,7 +147,7 @@ var y = y
 }
 
 
-open fun getStartX()
+    open fun getStartX()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -150,7 +158,7 @@ open fun getStartX()
 }
 
 
-open fun setStartX(startX: Int)
+    open fun setStartX(startX: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var startX = startX
@@ -158,7 +166,7 @@ this.startX= startX
 }
 
 
-open fun getStartY()
+    open fun getStartY()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -169,7 +177,7 @@ open fun getStartY()
 }
 
 
-open fun setStartY(startY: Int)
+    open fun setStartY(startY: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var startY = startY
@@ -177,7 +185,7 @@ this.startY= startY
 }
 
 
-open fun getDrawWidth()
+    open fun getDrawWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -188,7 +196,7 @@ open fun getDrawWidth()
 }
 
 
-open fun setDrawWidth(drawWidth: Int)
+    open fun setDrawWidth(drawWidth: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var drawWidth = drawWidth
@@ -196,7 +204,7 @@ this.drawWidth= drawWidth
 }
 
 
-open fun getDrawHeight()
+    open fun getDrawHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -207,7 +215,7 @@ open fun getDrawHeight()
 }
 
 
-open fun setDrawHeight(drawHeight: Int)
+    open fun setDrawHeight(drawHeight: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var drawHeight = drawHeight

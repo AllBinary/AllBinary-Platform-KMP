@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.math.PositionStrings
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonSeps
 
@@ -47,12 +48,17 @@ open public class AnimationFactoryInitializationVisitor
 
     var dy: Int= 0
 
-open fun visit()
+    var originalDx: Int= 0
+
+    var originalDy: Int= 0
+
+    open fun visit()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -64,6 +70,8 @@ override fun toString()
 
     var stringBuffer: StringMaker = StringMaker()
 
+stringBuffer!!.append(PositionStrings.getInstance()!!.DX_LABEL)!!.append(this.dx.toFloat())
+stringBuffer!!.append(PositionStrings.getInstance()!!.DY_LABEL)!!.append(this.dy.toFloat())
 stringBuffer!!.append(commonLabels!!.WIDTH_LABEL)
 stringBuffer!!.append(width)
 stringBuffer!!.append(commonSeps!!.SPACE)

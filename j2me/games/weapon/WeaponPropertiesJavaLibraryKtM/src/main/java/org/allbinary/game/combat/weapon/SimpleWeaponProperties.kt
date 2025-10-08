@@ -42,7 +42,7 @@ open public class SimpleWeaponProperties
 
     private var range: Int= 0
 
-open fun set(simpleWeaponProperties: SimpleWeaponProperties)
+    open fun set(simpleWeaponProperties: SimpleWeaponProperties)
         //nullable = true from not(false or (false and false)) = true
 {
 var simpleWeaponProperties = simpleWeaponProperties
@@ -52,7 +52,7 @@ this.setRange(simpleWeaponProperties!!.getRange())
 }
 
 
-open fun setDamage(damage: Int)
+    open fun setDamage(damage: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var damage = damage
@@ -60,7 +60,7 @@ this.damage= damage
 }
 
 
-open fun getDamage()
+    open fun getDamage()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -71,7 +71,7 @@ open fun getDamage()
 }
 
 
-open fun setDissipation(dissipation: Short)
+    open fun setDissipation(dissipation: Short)
         //nullable = true from not(false or (false and false)) = true
 {
 var dissipation = dissipation
@@ -79,7 +79,7 @@ this.dissipation= dissipation
 }
 
 
-open fun getDissipation()
+    open fun getDissipation()
         //nullable = true from not(false or (false and true)) = true
 : Short{
 
@@ -90,7 +90,7 @@ open fun getDissipation()
 }
 
 
-open fun getRange()
+    open fun getRange()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -101,7 +101,7 @@ open fun getRange()
 }
 
 
-open fun setRange(range: Int)
+    open fun setRange(range: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var range = range

@@ -33,12 +33,11 @@ open public class ColorFillPaintableFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ColorFillPaintableFactory = ColorFillPaintableFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ColorFillPaintableFactory{
 
@@ -56,7 +55,7 @@ open fun getInstance()
             {
             }            
         
-open fun getInstance(basicColor: BasicColor, forThreedCanvas: Boolean)
+    open fun getInstance(basicColor: BasicColor, forThreedCanvas: Boolean)
         //nullable =  from not(true or (false and false)) = 
 : ColorFillBasePaintable{
     //var basicColor = basicColor

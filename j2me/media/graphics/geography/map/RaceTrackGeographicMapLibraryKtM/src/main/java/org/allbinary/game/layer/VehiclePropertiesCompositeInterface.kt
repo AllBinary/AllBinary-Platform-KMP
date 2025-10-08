@@ -25,14 +25,15 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface VehiclePropertiesCompositeInterface {
         
 
-open fun getVehicleProperties()
+    open fun getVehicleProperties()
         //nullable = true from not(false or (false and true)) = true
 : VehicleProperties
 
-open fun setVehicleProperties(vehicleProperties: VehicleProperties)
+    open fun setVehicleProperties(vehicleProperties: VehicleProperties)
         //nullable = true from not(false or (false and false)) = true
 
 

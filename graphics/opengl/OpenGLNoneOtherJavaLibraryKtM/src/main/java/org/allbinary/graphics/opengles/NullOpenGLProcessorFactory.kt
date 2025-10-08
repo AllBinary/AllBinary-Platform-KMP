@@ -16,12 +16,11 @@ open public class NullOpenGLProcessorFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OpenGLProcessor = OpenGLProcessor()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OpenGLProcessor{
 

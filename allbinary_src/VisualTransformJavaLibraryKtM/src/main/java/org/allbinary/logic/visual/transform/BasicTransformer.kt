@@ -52,7 +52,7 @@ open public class BasicTransformer : AbTransformer {
     private val streamUtil: StreamUtil = StreamUtil.getInstance()!!
 
     private val abeClientInformation: AbeClientInformationInterface
-public constructor        (abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)                        
+public constructor (abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
     //var abeClientInformation = abeClientInformation
@@ -68,7 +68,7 @@ this.setTemplateAsInputStream()
 
                 @Throws(Exception::class)
             
-open fun setEncryptedTemplateFileAsInputStream(file: AbFile)
+    open fun setEncryptedTemplateFileAsInputStream(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
 {
     //var file = file
@@ -141,7 +141,7 @@ this.streamUtil!!.close(inputStream)
 
                 @Throws(Exception::class)
             
-open fun setEncryptedTemplateAsInputStream()
+    open fun setEncryptedTemplateAsInputStream()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -204,7 +204,7 @@ this.streamUtil!!.close(inputStream)
 
                 @Throws(Exception::class)
             
-open fun setTemplateAsInputStream()
+    open fun setTemplateAsInputStream()
         //nullable = true from not(false or (false and true)) = true
 {
 

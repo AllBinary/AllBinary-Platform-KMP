@@ -30,13 +30,12 @@ open public class GameStateFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var index: Int = 0
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getInstance(name: String)
+    open fun getInstance(name: String)
         //nullable =  from not(true or (false and false)) = 
 : GameState{
 var name = name
@@ -49,7 +48,7 @@ var name = name
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

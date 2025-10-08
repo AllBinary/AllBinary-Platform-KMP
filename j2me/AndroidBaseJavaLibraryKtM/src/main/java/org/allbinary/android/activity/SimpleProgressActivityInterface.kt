@@ -27,28 +27,29 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface SimpleProgressActivityInterface {
         
 
-open fun runOnUiThread(action: Runnable)
+    open fun runOnUiThread(action: Runnable)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun onSetProgress(value: Int, text: String)
+    open fun onSetProgress(value: Int, text: String)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun onDismissProgress(animationSequence: IntArray)
+    open fun onDismissProgress(animationSequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun onShowProgress(indeterminate: Boolean, animationSequence: IntArray)
+    open fun onShowProgress(indeterminate: Boolean, animationSequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
 
 

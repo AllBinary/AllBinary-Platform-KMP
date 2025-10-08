@@ -53,8 +53,7 @@ import org.allbinary.time.TimeDelayHelper
 open public class UnitWaypointBehavior : WaypointBehaviorBase
                 , WaypointEventListenerInterface {
         
-
-        companion object {
+companion object {
             
     private val PATHING: String = "Pathing"
 
@@ -93,7 +92,7 @@ open public class UnitWaypointBehavior : WaypointBehaviorBase
     private var trackingWaypoint: Boolean= false
 
     val associatedAdvancedRTSGameLayer: UnitLayer
-protected constructor        (associatedAdvancedRTSGameLayer: UnitLayer, fakeWaypoint: CollidableDestroyableDamageableLayer){
+protected constructor (associatedAdvancedRTSGameLayer: UnitLayer, fakeWaypoint: CollidableDestroyableDamageableLayer){
 var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 var fakeWaypoint = fakeWaypoint
 this.associatedAdvancedRTSGameLayer= associatedAdvancedRTSGameLayer
@@ -106,7 +105,7 @@ this.FAKE_WAYPOINT_LAYER= fakeWaypoint
 }
 
 
-open fun initRange(weaponRange: Int)
+    open fun initRange(weaponRange: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var weaponRange = weaponRange
@@ -114,7 +113,7 @@ this.longWeaponRange= weaponRange /2
 }
 
 
-open fun onEvent(eventObject: AllBinaryEventObject)
+    open fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject
@@ -124,7 +123,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
                 @Throws(Exception::class)
             
-open fun onWaypointEvent(event: RTSLayerEvent)
+    open fun onWaypointEvent(event: RTSLayerEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var event = event
@@ -155,7 +154,7 @@ this.associatedAdvancedRTSGameLayer!!.waypointLogHelper!!.onWaypointEvent(this.a
 
                 @Throws(Exception::class)
             
-open fun addWaypointFromUser(advancedRTSGameLayer: AdvancedRTSGameLayer)
+    open fun addWaypointFromUser(advancedRTSGameLayer: AdvancedRTSGameLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var advancedRTSGameLayer = advancedRTSGameLayer
@@ -164,7 +163,7 @@ open fun addWaypointFromUser(advancedRTSGameLayer: AdvancedRTSGameLayer)
 
                 @Throws(Exception::class)
             
-open fun addWaypointFromBuilding(advancedRTSGameLayer: AdvancedRTSGameLayer)
+    open fun addWaypointFromBuilding(advancedRTSGameLayer: AdvancedRTSGameLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var advancedRTSGameLayer = advancedRTSGameLayer
@@ -202,7 +201,7 @@ this.associatedAdvancedRTSGameLayer!!.waypointLogHelper!!.addWaypointFromBuildin
 }
 
 
-open fun isWaypointListEmptyOrOnlyTargets()
+    open fun isWaypointListEmptyOrOnlyTargets()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -215,7 +214,7 @@ open fun isWaypointListEmptyOrOnlyTargets()
 
                 @Throws(Exception::class)
             
-open fun insertWaypoint(index: Int, rtsLayer: CollidableDestroyableDamageableLayer)
+    open fun insertWaypoint(index: Int, rtsLayer: CollidableDestroyableDamageableLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var index = index
@@ -256,7 +255,7 @@ this.associatedAdvancedRTSGameLayer!!.waypointLogHelper!!.insertWaypoint(this.as
 }
 
 
-open fun move()
+    open fun move()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -279,7 +278,7 @@ this.setMoving(false)
 
                 @Throws(Exception::class)
             
-open fun setRandomGeographicMapCellHistory(pathsList: BasicArrayList)
+    open fun setRandomGeographicMapCellHistory(pathsList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pathsList = pathsList
@@ -304,7 +303,7 @@ this.setGeographicMapCellHistoryPath(geographicMapCellPositionBasicArrayList)
 
                 @Throws(Exception::class)
             
-open fun setGeographicMapCellHistoryPath(geographicMapCellPositionBasicArrayList: BasicArrayList)
+    open fun setGeographicMapCellHistoryPath(geographicMapCellPositionBasicArrayList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapCellPositionBasicArrayList = geographicMapCellPositionBasicArrayList
@@ -327,7 +326,7 @@ this.getCompleteTimeDelayHelper()!!.setStartTime()
 }
 
 
-open fun canInsertWaypoint(index: Int, rtsLayer: CollidableDestroyableDamageableLayer)
+    open fun canInsertWaypoint(index: Int, rtsLayer: CollidableDestroyableDamageableLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var index = index
@@ -367,7 +366,7 @@ open fun canInsertWaypoint(index: Int, rtsLayer: CollidableDestroyableDamageable
 
                 @Throws(Exception::class)
             
-open fun addBuildingChase(allbinaryLayer: AllBinaryLayer, cellPosition: GeographicMapCellPosition)
+    open fun addBuildingChase(allbinaryLayer: AllBinaryLayer, cellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allbinaryLayer = allbinaryLayer
@@ -377,7 +376,7 @@ open fun addBuildingChase(allbinaryLayer: AllBinaryLayer, cellPosition: Geograph
 
                 @Throws(Exception::class)
             
-open fun moveAwayFromBuilding(buildingLayer: BuildingLayer)
+    open fun moveAwayFromBuilding(buildingLayer: BuildingLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var buildingLayer = buildingLayer
@@ -414,7 +413,7 @@ this.associatedAdvancedRTSGameLayer!!.setClosestGeographicMapCellHistory(pathsLi
 
     private val repeatedToLong: TimeDelayHelper = TimeDelayHelper(22000)
 
-open fun needToMove()
+    open fun needToMove()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 this.associatedAdvancedRTSGameLayer!!.waypointLogHelper!!.needToMove(this.associatedAdvancedRTSGameLayer, this)
@@ -454,7 +453,7 @@ ForcedLogUtil.log(message, this.associatedAdvancedRTSGameLayer)
 }
 
 
-open fun getMovementLogicAsString()
+    open fun getMovementLogicAsString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -488,7 +487,7 @@ stringBuffer!!.append(this.longWeaponRange +this.currentTargetLayerInterface!!.g
 }
 
 
-open fun isMovingFromStopped()
+    open fun isMovingFromStopped()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -499,7 +498,7 @@ open fun isMovingFromStopped()
 }
 
 
-open fun setMovingFromStopped(movingFromStopped: Boolean)
+    open fun setMovingFromStopped(movingFromStopped: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var movingFromStopped = movingFromStopped
@@ -507,7 +506,7 @@ this.movingFromStopped= movingFromStopped
 }
 
 
-open fun setWaypointPathsList(waypointPathsList: BasicArrayList)
+    open fun setWaypointPathsList(waypointPathsList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var waypointPathsList = waypointPathsList
@@ -515,7 +514,7 @@ this.waypointPathsList= waypointPathsList
 }
 
 
-open fun getWaypointPathsList()
+    open fun getWaypointPathsList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -526,7 +525,7 @@ open fun getWaypointPathsList()
 }
 
 
-open fun isMoving()
+    open fun isMoving()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -537,7 +536,7 @@ open fun isMoving()
 }
 
 
-open fun setMoving(moving: Boolean)
+    open fun setMoving(moving: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var moving = moving
@@ -545,7 +544,7 @@ this.moving= moving
 }
 
 
-open fun isTrackingWaypoint()
+    open fun isTrackingWaypoint()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -556,7 +555,7 @@ open fun isTrackingWaypoint()
 }
 
 
-open fun getPossibleTargetList()
+    open fun getPossibleTargetList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -567,7 +566,7 @@ open fun getPossibleTargetList()
 }
 
 
-open fun setLastPathGeographicMapCellPosition(lastPathGeographicMapCellPosition: GeographicMapCellPosition)
+    open fun setLastPathGeographicMapCellPosition(lastPathGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
 var lastPathGeographicMapCellPosition = lastPathGeographicMapCellPosition
@@ -575,7 +574,7 @@ this.lastPathGeographicMapCellPosition= lastPathGeographicMapCellPosition
 }
 
 
-open fun getLastPathGeographicMapCellPosition()
+    open fun getLastPathGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPosition{
 
@@ -586,7 +585,7 @@ open fun getLastPathGeographicMapCellPosition()
 }
 
 
-open fun setCurrentPathGeographicMapCellPosition(currentPathGeographicMapCellPosition: GeographicMapCellPosition)
+    open fun setCurrentPathGeographicMapCellPosition(currentPathGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
 var currentPathGeographicMapCellPosition = currentPathGeographicMapCellPosition
@@ -594,7 +593,7 @@ this.currentPathGeographicMapCellPosition= currentPathGeographicMapCellPosition
 }
 
 
-open fun getCurrentPathGeographicMapCellPosition()
+    open fun getCurrentPathGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPosition{
 
@@ -605,7 +604,7 @@ open fun getCurrentPathGeographicMapCellPosition()
 }
 
 
-open fun setSensorAction(sensorAction: SensorAction)
+    open fun setSensorAction(sensorAction: SensorAction)
         //nullable = true from not(false or (false and false)) = true
 {
 var sensorAction = sensorAction
@@ -613,7 +612,7 @@ this.sensorAction= sensorAction
 }
 
 
-open fun getSensorAction()
+    open fun getSensorAction()
         //nullable = true from not(false or (false and true)) = true
 : SensorAction{
 
@@ -624,7 +623,7 @@ open fun getSensorAction()
 }
 
 
-open fun getTargetList()
+    open fun getTargetList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -635,7 +634,7 @@ open fun getTargetList()
 }
 
 
-open fun setCurrentTargetLayerInterface(currentTargetLayerInterface: CollidableDestroyableDamageableLayer)
+    open fun setCurrentTargetLayerInterface(currentTargetLayerInterface: CollidableDestroyableDamageableLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var currentTargetLayerInterface = currentTargetLayerInterface
@@ -643,7 +642,7 @@ this.currentTargetLayerInterface= currentTargetLayerInterface
 }
 
 
-open fun getCurrentTargetLayerInterface()
+    open fun getCurrentTargetLayerInterface()
         //nullable = true from not(false or (false and true)) = true
 : CollidableDestroyableDamageableLayer{
 
@@ -654,7 +653,7 @@ open fun getCurrentTargetLayerInterface()
 }
 
 
-open fun setCurrentTargetDistance(currentTargetDistance: Int)
+    open fun setCurrentTargetDistance(currentTargetDistance: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var currentTargetDistance = currentTargetDistance
@@ -662,7 +661,7 @@ this.currentTargetDistance= currentTargetDistance
 }
 
 
-open fun getCurrentTargetDistance()
+    open fun getCurrentTargetDistance()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -673,7 +672,7 @@ open fun getCurrentTargetDistance()
 }
 
 
-open fun getCompleteTimeDelayHelper()
+    open fun getCompleteTimeDelayHelper()
         //nullable = true from not(false or (false and true)) = true
 : TimeDelayHelper{
 
@@ -684,7 +683,7 @@ open fun getCompleteTimeDelayHelper()
 }
 
 
-open fun setCurrentGeographicMapCellHistory(currentGeographicMapCellHistory: GeographicMapCellHistory)
+    open fun setCurrentGeographicMapCellHistory(currentGeographicMapCellHistory: GeographicMapCellHistory)
         //nullable = true from not(false or (false and false)) = true
 {
 var currentGeographicMapCellHistory = currentGeographicMapCellHistory
@@ -692,7 +691,7 @@ this.currentGeographicMapCellHistory= currentGeographicMapCellHistory
 }
 
 
-open fun getCurrentGeographicMapCellHistory()
+    open fun getCurrentGeographicMapCellHistory()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellHistory{
 
@@ -703,7 +702,7 @@ open fun getCurrentGeographicMapCellHistory()
 }
 
 
-open fun setTrackingWaypoint(trackingWaypoint: Boolean)
+    open fun setTrackingWaypoint(trackingWaypoint: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var trackingWaypoint = trackingWaypoint

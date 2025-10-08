@@ -33,8 +33,7 @@ open public class NullEmulatorView
         
                 , EmulatorViewInterface {
         
-
-        companion object {
+companion object {
             
     val NULL_EMULATOR_VIEW: NullEmulatorView = NullEmulatorView()
 
@@ -44,19 +43,22 @@ open public class NullEmulatorView
             public constructor() : super()
             {
             }            
-        override fun setMidlet(midlet: MIDlet)
+        
+    override fun setMidlet(midlet: MIDlet)
         //nullable = true from not(false or (false and false)) = true
 {
     //var midlet = midlet
 }
 
-override fun onEmulatorInitComplete(midletActivity: Any)
+
+    override fun onEmulatorInitComplete(midletActivity: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var midletActivity = midletActivity
 }
 
-override fun onSetDisplayable(displayable: Displayable)
+
+    override fun onSetDisplayable(displayable: Displayable)
         //nullable = true from not(false or (false and false)) = true
 {
 var displayable = displayable

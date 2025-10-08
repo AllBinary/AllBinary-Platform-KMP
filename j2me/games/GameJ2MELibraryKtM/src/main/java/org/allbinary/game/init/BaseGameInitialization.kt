@@ -48,8 +48,7 @@ open public class BaseGameInitialization
         
                 , GameInitializationInterface {
         
-
-        companion object {
+companion object {
             
     val NULL_BASE_GAME_INITIALIZATION: BaseGameInitialization = BaseGameInitialization(arrayOfNulls(0), 0)
 
@@ -68,7 +67,7 @@ open public class BaseGameInitialization
     val EARLY_CHANGABLE_RESOURCES: Int = 2
 
     val GAME_CHANGABLE_RESOURCES: Int = 3
-public constructor        (resourceInitializationArray: Array<ResourceInitialization?>, portion: Int)
+public constructor (resourceInitializationArray: Array<ResourceInitialization?>, portion: Int)
             : super()
         {
     //var resourceInitializationArray = resourceInitializationArray
@@ -80,7 +79,7 @@ this.portion= portion
 
                 @Throws(Exception::class)
             
-open fun initKey(portion: Int)
+    open fun initKey(portion: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var portion = portion
@@ -89,7 +88,7 @@ var portion = portion
 
                 @Throws(Exception::class)
             
-open fun initKeyMapping(abeClientInformation: AbeClientInformationInterface, portion: Int)
+    open fun initKeyMapping(abeClientInformation: AbeClientInformationInterface, portion: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -109,7 +108,8 @@ ChangedGameFeatureListener.getInstance()!!.remove(InputFeatureFactory.getInstanc
 
 
                 @Throws(Exception::class)
-            override fun init(abeClientInformation: AbeClientInformationInterface, commandListener: CommandListener, level: Int)
+            
+    override fun init(abeClientInformation: AbeClientInformationInterface, commandListener: CommandListener, level: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -162,7 +162,7 @@ this.resourceInitializationArray[EARLY_RESOURCES]!!.init()
 
                 @Throws(Exception::class)
             
-open fun resourceInitialization(level: Int)
+    open fun resourceInitialization(level: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var level = level
@@ -210,7 +210,7 @@ this.allLoaded= true
 }
 
 
-open fun resourceAnimationChange()
+    open fun resourceAnimationChange()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -253,7 +253,7 @@ open fun resourceAnimationChange()
 }
 
 
-open fun clearResources()
+    open fun clearResources()
         //nullable = true from not(false or (false and true)) = true
 {
 this.allLoaded= false
@@ -266,7 +266,7 @@ FeaturedResourceRelativeRelationshipFactory.getInstance()!!.clear()
 }
 
 
-open fun setGameInitialized(gameInitialized: Boolean)
+    open fun setGameInitialized(gameInitialized: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameInitialized = gameInitialized
@@ -274,7 +274,7 @@ this.gameInitialized= gameInitialized
 }
 
 
-open fun isGameInitialized()
+    open fun isGameInitialized()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -285,7 +285,7 @@ open fun isGameInitialized()
 }
 
 
-open fun getPortion()
+    open fun getPortion()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -296,7 +296,7 @@ open fun getPortion()
 }
 
 
-open fun setInitialized(initialized: Boolean)
+    open fun setInitialized(initialized: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var initialized = initialized
@@ -304,7 +304,7 @@ this.initialized= initialized
 }
 
 
-open fun isInitialized()
+    open fun isInitialized()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

@@ -34,12 +34,11 @@ import org.allbinary.input.motion.button.TouchButtonInput
 
 open public class UpgradableRTSLayerHudPaintable : SelectionHudPaintable {
         
-
-        companion object {
+companion object {
             
     private val instance: UpgradableRTSLayerHudPaintable = UpgradableRTSLayerHudPaintable()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : UpgradableRTSLayerHudPaintable{
 
@@ -63,11 +62,11 @@ open fun getInstance()
     private var percentCompleteX2: Int= 0
 
     private var rtsLayerCompositePaintable: RTSLayerCompositePaintable
-private constructor        (){
+private constructor (){
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 super.update()
@@ -100,7 +99,7 @@ this.percentCompleteX2= this.imageX +CommonButtons.getInstance()!!.STANDARD_BUTT
 }
 
 
-open fun updateSelectionInfo()
+    open fun updateSelectionInfo()
         //nullable = true from not(false or (false and true)) = true
 {
 this.rtsLayerCompositePaintable!!.update(this.getRtsLayer())
@@ -117,7 +116,7 @@ this.setName(this.getRtsLayer()!!.getName())
 
     private var currentTotalDigits: Int= 0
 
-open fun updateInfo()
+    open fun updateInfo()
         //nullable = true from not(false or (false and true)) = true
 {
 this.percentComplete= this.getRtsLayer()!!.getPercentComplete()
@@ -149,7 +148,7 @@ this.currentTotalDigits= this.getPrimitiveLongUtil()!!.getCurrentTotalDigits()
 }
 
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -161,7 +160,7 @@ this.getAnimationInterface()!!.paint(graphics, this.imageX, y)
 }
 
 
-open fun setRtsLayer(rtsLayer: RTSLayer)
+    open fun setRtsLayer(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var rtsLayer = rtsLayer
@@ -169,7 +168,7 @@ this.rtsLayer= rtsLayer
 }
 
 
-open fun getRtsLayer()
+    open fun getRtsLayer()
         //nullable = true from not(false or (false and true)) = true
 : RTSLayer{
 

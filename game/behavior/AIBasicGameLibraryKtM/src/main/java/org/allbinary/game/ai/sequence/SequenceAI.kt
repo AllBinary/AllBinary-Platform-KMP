@@ -36,15 +36,14 @@ import org.allbinary.logic.string.StringUtil
 
 open public class SequenceAI : ArrayAI {
         
-
-        companion object {
+companion object {
             
     private val SEQUENCE_AI: String = "Sequence AI"
 
         }
             
     private var index: Int= 0
-public constructor        (artificialIntelligenceInterfaceArray: Array<ArtificialIntelligenceInterface?>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
+public constructor (artificialIntelligenceInterfaceArray: Array<ArtificialIntelligenceInterface?>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
                             : super(artificialIntelligenceInterfaceArray, ownerLayerInterface, gameInput){
 var artificialIntelligenceInterfaceArray = artificialIntelligenceInterfaceArray
@@ -58,7 +57,8 @@ var gameInput = gameInput
 
 
                 @Throws(Exception::class)
-            override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+            
+    override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager
@@ -66,7 +66,7 @@ this.getArtificialIntelligenceInterface()[index]!!.processAI(allBinaryLayerManag
 }
 
 
-open fun next()
+    open fun next()
         //nullable = true from not(false or (false and true)) = true
 {
 this.index++
@@ -88,7 +88,7 @@ artificialIntelligenceTransitionInterface!!.transition()
 }
 
 
-open fun getIndex()
+    open fun getIndex()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -99,7 +99,7 @@ open fun getIndex()
 }
 
 
-open fun setIndex(index: Int)
+    open fun setIndex(index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var index = index
@@ -107,7 +107,7 @@ this.index= index
 }
 
 
-open fun getSelectedArtificialIntelligenceInterface()
+    open fun getSelectedArtificialIntelligenceInterface()
         //nullable = true from not(false or (false and true)) = true
 : ArtificialIntelligenceInterface{
 
@@ -117,7 +117,8 @@ open fun getSelectedArtificialIntelligenceInterface()
                         return this.getArtificialIntelligenceInterface()[this.index]!!
 }
 
-override fun getName()
+
+    override fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -127,7 +128,8 @@ override fun getName()
                         return SEQUENCE_AI
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

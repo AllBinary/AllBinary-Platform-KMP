@@ -33,12 +33,13 @@ open public class DestroyableSimpleBehavior : DestroyableBaseBehavior {
     val ownerLayer: CollidableCompositeLayer
 
     private var destroyed: Boolean = false
-public constructor        (ownerLayer: CollidableCompositeLayer){
+public constructor (ownerLayer: CollidableCompositeLayer){
 var ownerLayer = ownerLayer
 this.ownerLayer= ownerLayer
 }
 
-override fun isDestroyed()
+
+    override fun isDestroyed()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -48,7 +49,8 @@ override fun isDestroyed()
                         return this.destroyed
 }
 
-override fun setDestroyed(destroyed: Boolean)
+
+    override fun setDestroyed(destroyed: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var destroyed = destroyed

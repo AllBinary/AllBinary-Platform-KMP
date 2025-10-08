@@ -30,12 +30,11 @@ import org.allbinary.logic.communication.log.LogUtil
 
 open public class NoHighScoresFactory : HighScoresBase {
         
-
-        companion object {
+companion object {
             
     private val instance: NoHighScoresFactory = NoHighScoresFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : NoHighScoresFactory{
 
@@ -51,10 +50,11 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val NO_HIGH_SCORES: Array<HighScores?> = arrayOfNulls(0)
-private constructor        (){
+private constructor (){
 }
 
-override fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener)
+
+    override fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameInfo = gameInfo
@@ -63,7 +63,8 @@ logUtil!!.put("Getting No HighScores", this, "fetchHighScores")
 highScoresResultsListener!!.setHighScoresArray(NO_HIGH_SCORES)
 }
 
-override fun createHighScoresHelper()
+
+    override fun createHighScoresHelper()
         //nullable = true from not(false or (false and true)) = true
 : HighScoresHelperBase{
 

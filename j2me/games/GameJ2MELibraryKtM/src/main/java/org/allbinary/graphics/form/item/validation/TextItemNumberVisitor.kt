@@ -36,10 +36,11 @@ open public class TextItemNumberVisitor : Visitor {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (){
+public constructor (){
 }
 
-override fun visit(anyType: Any)
+
+    override fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var anyType = anyType

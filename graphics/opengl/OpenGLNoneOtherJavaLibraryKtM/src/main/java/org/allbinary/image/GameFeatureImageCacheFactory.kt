@@ -30,10 +30,9 @@ open public class GameFeatureImageCacheFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ImageCache{
 
@@ -44,14 +43,14 @@ open fun getInstance()
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 ImageCacheFactory.init()
 }
 
 
-open fun releaseAll()
+    open fun releaseAll()
         //nullable = true from not(false or (false and true)) = true
 {
 ImageCacheFactory.getInstance()!!.releaseAll()

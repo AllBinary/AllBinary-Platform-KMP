@@ -31,7 +31,7 @@ import org.allbinary.thread.RunnableInterface
 
 open public class SpecialDemoGameMidlet : DemoGameMidlet {
         
-public constructor        (clientInformationFactory: ClientInformationFactory, licenseLoadingType: LicenseLoadingType)                        
+public constructor (clientInformationFactory: ClientInformationFactory, licenseLoadingType: LicenseLoadingType)                        
 
                             : super(clientInformationFactory){
     //var clientInformationFactory = clientInformationFactory
@@ -42,7 +42,7 @@ public constructor        (clientInformationFactory: ClientInformationFactory, l
                     
 }
 
-public constructor        (clientInformationFactory: ClientInformationFactory, licenseLoadingType: LicenseLoadingType, demoSetup: DemoSetup, licenseCheckRunnable: RunnableInterface)                        
+public constructor (clientInformationFactory: ClientInformationFactory, licenseLoadingType: LicenseLoadingType, demoSetup: DemoSetup, licenseCheckRunnable: RunnableInterface)                        
 
                             : super(clientInformationFactory){
     //var clientInformationFactory = clientInformationFactory
@@ -56,12 +56,13 @@ public constructor        (clientInformationFactory: ClientInformationFactory, l
 }
 
 
-open fun initView()
+    open fun initView()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun preInit()
+
+    override fun preInit()
         //nullable = true from not(false or (false and true)) = true
 {
 LicenseServerInitFileUtil().

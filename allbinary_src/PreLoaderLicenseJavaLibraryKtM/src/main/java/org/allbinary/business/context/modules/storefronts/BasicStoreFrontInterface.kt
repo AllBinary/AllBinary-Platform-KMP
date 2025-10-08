@@ -26,136 +26,137 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.util.BasicArrayList
+
 interface BasicStoreFrontInterface {
         
 
-open fun getTestHtmlPath()
+    open fun getTestHtmlPath()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getCurrentHostName()
+    open fun getCurrentHostName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getCurrentHostNamePath()
+    open fun getCurrentHostNamePath()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getCurrentHomeHostName()
+    open fun getCurrentHomeHostName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getCurrentHomeHostNamePath()
+    open fun getCurrentHomeHostNamePath()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getUserName()
+    open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getBasketName()
+    open fun getBasketName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getHomeHostName()
+    open fun getHomeHostName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getHomeHostNamePath()
+    open fun getHomeHostNamePath()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getHostName()
+    open fun getHostName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getHostNamePath()
+    open fun getHostNamePath()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getTestHomeHostName()
+    open fun getTestHomeHostName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getTestHomeHostNamePath()
+    open fun getTestHomeHostNamePath()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getTestHostName()
+    open fun getTestHostName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getTestHostNamePath()
+    open fun getTestHostNamePath()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getStaticPath()
+    open fun getStaticPath()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getCategoryPath()
+    open fun getCategoryPath()
         //nullable = true from not(false or (false and true)) = true
 : String
 
                 @Throws(Exception::class)
             
-open fun getSubStores()
+    open fun getSubStores()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList
 
-open fun getTagLocation()
+    open fun getTagLocation()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getPackageLocation()
+    open fun getPackageLocation()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getInventoryControl()
+    open fun getInventoryControl()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getFtp()
+    open fun getFtp()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getFtpPath()
+    open fun getFtpPath()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getFtpUserName()
+    open fun getFtpUserName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getFtpPassword()
+    open fun getFtpPassword()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getTestFtp()
+    open fun getTestFtp()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getTestFtpPath()
+    open fun getTestFtpPath()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getTestFtpUserName()
+    open fun getTestFtpUserName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getTestFtpPassword()
+    open fun getTestFtpPassword()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getTimeCreated()
+    open fun getTimeCreated()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getLastModified()
+    open fun getLastModified()
         //nullable = true from not(false or (false and true)) = true
 : String
 

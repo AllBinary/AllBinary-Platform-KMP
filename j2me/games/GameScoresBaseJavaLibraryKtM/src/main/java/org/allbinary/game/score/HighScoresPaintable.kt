@@ -46,10 +46,11 @@ open public class HighScoresPaintable : Paintable
     private var basicColor: BasicColor = BasicColorFactory.getInstance()!!.WHITE
 
     private var highScores: HighScores = NullHighScoresSingletonFactory.getInstance()!!
-public constructor        (){
+public constructor (){
 }
 
-override fun onEvent(eventObject: AllBinaryEventObject)
+
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
@@ -61,7 +62,8 @@ this.basicColor= colorChangeEvent!!.getBasicColorP()
 
 
     private var anchor: Int = Anchor.TOP_LEFT
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -141,7 +143,8 @@ vectorIndex++
 
 }
 
-override fun setBasicColorP(basicColor: BasicColor)
+
+    override fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
 var basicColor = basicColor
@@ -149,7 +152,7 @@ this.basicColor= basicColor
 }
 
 
-open fun getBasicColorP()
+    open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
 
@@ -160,7 +163,7 @@ open fun getBasicColorP()
 }
 
 
-open fun setHighScores(highScores: HighScores)
+    open fun setHighScores(highScores: HighScores)
         //nullable = true from not(false or (false and false)) = true
 {
 var highScores = highScores

@@ -35,12 +35,11 @@ open public class PaymentTransactionInterfaceFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: PaymentTransactionInterfaceFactory = PaymentTransactionInterfaceFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PaymentTransactionInterfaceFactory{
 
@@ -54,7 +53,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -62,7 +61,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getInstance(orderReview: OrderHistory)
+    open fun getInstance(orderReview: OrderHistory)
         //nullable =  from not(true or (false and false)) = 
 : PaymentTransactionInterface{
 var orderReview = orderReview

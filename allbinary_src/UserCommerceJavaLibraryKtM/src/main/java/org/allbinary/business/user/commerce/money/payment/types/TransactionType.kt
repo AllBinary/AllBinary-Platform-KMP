@@ -32,7 +32,7 @@ open public class TransactionType
         
 
     private var name: String
-public constructor        (name: String)
+public constructor (name: String)
             : super()
         {
 var name = name
@@ -40,7 +40,7 @@ this.name= name
 }
 
 
-open fun isEqual(transactionType: TransactionType)
+    open fun isEqual(transactionType: TransactionType)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var transactionType = transactionType
@@ -58,7 +58,8 @@ var transactionType = transactionType
                         
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

@@ -60,7 +60,7 @@ open public class AllBinaryGameLayer : AllBinaryLayer
                                 
     private val BLACK: BasicColor = BasicColorFactory.getInstance()!!.BLACK
 
-open override fun paint(graphics: Graphics)
+    open override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -76,7 +76,7 @@ basicSetColorUtil!!.setBasicColorP(graphics, BLACK)
     
 
     private val gameKeyEventList: BasicArrayList = BasicArrayList()
-public constructor        (layerInfo: Rectangle)                        
+public constructor (layerInfo: Rectangle)                        
 
                             : this(layerInfo, ViewPosition()){
     //var layerInfo = layerInfo
@@ -86,7 +86,7 @@ public constructor        (layerInfo: Rectangle)
                     
 }
 
-public constructor        (layerInfo: Rectangle, viewPosition: ViewPosition)                        
+public constructor (layerInfo: Rectangle, viewPosition: ViewPosition)                        
 
                             : super(layerInfo, viewPosition){
     //var layerInfo = layerInfo
@@ -97,7 +97,7 @@ public constructor        (layerInfo: Rectangle, viewPosition: ViewPosition)
                     
 }
 
-public constructor        (name: String, layerInfo: Rectangle, viewPosition: ViewPosition)                        
+public constructor (name: String, layerInfo: Rectangle, viewPosition: ViewPosition)                        
 
                             : super(name, layerInfo, viewPosition){
     //var name = name
@@ -110,13 +110,13 @@ public constructor        (name: String, layerInfo: Rectangle, viewPosition: Vie
 }
 
 
-open fun move()
+    open fun move()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun getGameKeyEventList()
+    open fun getGameKeyEventList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -129,7 +129,7 @@ open fun getGameKeyEventList()
 
                 @Throws(Exception::class)
             
-open fun processInput(allBinaryLayerManager: AllBinaryLayerManager)
+    open fun processInput(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryLayerManager = allBinaryLayerManager
@@ -142,7 +142,7 @@ open fun processInput(allBinaryLayerManager: AllBinaryLayerManager)
 
                 @Throws(Exception::class)
             
-open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
+    open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryLayerManager = allBinaryLayerManager
@@ -152,7 +152,8 @@ open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
                             throw Exception(commonStrings!!.NOT_IMPLEMENTED)
 }
 
-override fun onEvent(eventObject: AllBinaryEventObject)
+
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject
@@ -162,7 +163,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
                 @Throws(Exception::class)
             
-open fun onViewPositionChangeEvent()
+    open fun onViewPositionChangeEvent()
         //nullable = true from not(false or (false and true)) = true
 {
 this.onChangeEvent(this.viewPositionEvent)
@@ -170,7 +171,8 @@ this.onChangeEvent(this.viewPositionEvent)
 
 
                 @Throws(Exception::class)
-            override fun onChangeEvent(layerManagerEvent: ViewPositionEvent)
+            
+    override fun onChangeEvent(layerManagerEvent: ViewPositionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerManagerEvent = layerManagerEvent
@@ -191,7 +193,7 @@ this.onChangeEvent(this.viewPositionEvent)
 }
 
 
-open fun paintFirst(graphics: Graphics)
+    open fun paintFirst(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -199,7 +201,7 @@ this.paintable.paint(graphics)
 }
 
 
-open fun paintDebug(graphics: Graphics)
+    open fun paintDebug(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -217,7 +219,7 @@ graphics.drawRect(viewX, viewY, this.getWidth(), this.getHeight())
 }
 
 
-open fun setWidth(width: Int)
+    open fun setWidth(width: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var width = width
@@ -226,7 +228,7 @@ this.setHalfWidth(width shr 1)
 }
 
 
-open fun setHeight(height: Int)
+    open fun setHeight(height: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var height = height

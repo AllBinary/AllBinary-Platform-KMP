@@ -25,14 +25,15 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface BasicDataTableInterface {
         
 
-open fun createTable()
+    open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun dropTable()
+    open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String
 

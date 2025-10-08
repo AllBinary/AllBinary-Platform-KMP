@@ -33,12 +33,11 @@ open public class ShaderManager
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ShaderManager = ShaderManager( -1,  -1)
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ShaderManager{
 
@@ -60,7 +59,7 @@ open fun getInstance()
     val GL_VERTEX_SHADER: Int
 
     val GL_FRAGMENT_SHADER: Int
-public constructor        (GL_VERTEX_SHADER: Int, GL_FRAGMENT_SHADER: Int)
+public constructor (GL_VERTEX_SHADER: Int, GL_FRAGMENT_SHADER: Int)
             : super()
         {
     //var GL_VERTEX_SHADER = GL_VERTEX_SHADER
@@ -70,7 +69,7 @@ this.GL_FRAGMENT_SHADER= GL_FRAGMENT_SHADER
 }
 
 
-open fun load(gl: GL10, resource: String, shaderAsStringArray: Array<String?>, shaderType: Int)
+    open fun load(gl: GL10, resource: String, shaderAsStringArray: Array<String?>, shaderType: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var gl = gl
@@ -85,7 +84,7 @@ open fun load(gl: GL10, resource: String, shaderAsStringArray: Array<String?>, s
 }
 
 
-open fun loadShader(gl: GL10, resource: String, stringList: BasicArrayList, shaderType: Int)
+    open fun loadShader(gl: GL10, resource: String, stringList: BasicArrayList, shaderType: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var gl = gl

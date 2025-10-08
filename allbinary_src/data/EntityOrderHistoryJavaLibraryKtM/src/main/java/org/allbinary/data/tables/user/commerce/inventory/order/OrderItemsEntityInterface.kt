@@ -29,26 +29,27 @@ import java.util.Vector
 import org.allbinary.business.user.commerce.inventory.basket.BasketReview
 import org.allbinary.business.user.commerce.inventory.order.OrderInterface
 import org.allbinary.data.tables.BasicDataTableInterface
+
 interface OrderItemsEntityInterface : BasicDataTableInterface {
         
 
-open fun setStatus(orderId: String, groupId: String, status: String)
+    open fun setStatus(orderId: String, groupId: String, status: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun isEverythingShipped(orderId: String)
+    open fun isEverythingShipped(orderId: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
-open fun getBasketReview(orderId: String)
+    open fun getBasketReview(orderId: String)
         //nullable = true from not(false or (false and false)) = true
 : BasketReview
 
-open fun insert(userName: String, order: OrderInterface)
+    open fun insert(userName: String, order: OrderInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun insert(values: Vector)
+    open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 
 

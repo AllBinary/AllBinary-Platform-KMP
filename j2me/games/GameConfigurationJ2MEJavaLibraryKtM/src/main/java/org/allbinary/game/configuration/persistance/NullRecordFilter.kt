@@ -32,8 +32,7 @@ open public class NullRecordFilter
         
                 , RecordFilter {
         
-
-        companion object {
+companion object {
             
     var NULL_RECORD_FILTER: NullRecordFilter = NullRecordFilter()
 
@@ -43,7 +42,8 @@ open public class NullRecordFilter
             public constructor() : super()
             {
             }            
-        override fun matches(candidate: ByteArray)
+        
+    override fun matches(candidate: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var candidate = candidate

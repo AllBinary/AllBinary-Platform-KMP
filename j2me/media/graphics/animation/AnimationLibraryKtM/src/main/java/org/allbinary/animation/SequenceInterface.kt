@@ -25,14 +25,15 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface SequenceInterface {
         
 
-open fun setSequence(sequence: IntArray)
+    open fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getSequence()
+    open fun getSequence()
         //nullable = true from not(false or (false and true)) = true
 : IntArray
 

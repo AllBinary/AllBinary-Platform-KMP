@@ -29,12 +29,11 @@ import org.allbinary.game.layer.resources.BasicGameResources
 
 open public class MineWeaponResources : BasicGameResources {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: MineWeaponResources = MineWeaponResources()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : MineWeaponResources{
 
@@ -52,7 +51,7 @@ open fun getInstance()
     val DROP_RESOURCE: String = "/mine_drop_20_by_20.png"
 
     val DROP_ICON_RESOURCE: String = "/mine_drop_icon_20_by_20.png"
-protected constructor        (){
+protected constructor (){
 
     var ROOT: String = "/mine"
 

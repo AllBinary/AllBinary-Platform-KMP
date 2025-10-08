@@ -30,12 +30,11 @@ open public class GameTickTimeDelayHelperFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GameTickTimeDelayHelper = GameTickTimeDelayHelper( -1)
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameTickTimeDelayHelper{
 
@@ -47,7 +46,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

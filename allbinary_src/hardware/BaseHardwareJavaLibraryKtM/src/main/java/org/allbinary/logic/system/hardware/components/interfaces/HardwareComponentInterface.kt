@@ -25,13 +25,15 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface HardwareComponentInterface {
         
 
-open fun compareTo(componentInterface: HardwareComponentInterface)
+    open fun compareTo(componentInterface: HardwareComponentInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String
 

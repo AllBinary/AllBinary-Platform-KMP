@@ -31,58 +31,59 @@ import org.allbinary.business.context.modules.storefront.StoreFrontInterface
 import org.allbinary.business.user.UserInterface
 import org.allbinary.business.user.role.UserRole
 import org.allbinary.data.tables.BasicDataTableInterface
+
 interface UserEntityInterface : BasicDataTableInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getAdministrators()
+    open fun getAdministrators()
         //nullable = true from not(false or (false and true)) = true
 : Vector
 
                 @Throws(Exception::class)
             
-open fun getStoreManagers(storeFrontInterface: StoreFrontInterface)
+    open fun getStoreManagers(storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
 : Vector
 
                 @Throws(Exception::class)
             
-open fun getCustomers()
+    open fun getCustomers()
         //nullable = true from not(false or (false and true)) = true
 : Vector
 
                 @Throws(Exception::class)
             
-open fun getUsersWithRole(userRole: UserRole)
+    open fun getUsersWithRole(userRole: UserRole)
         //nullable = true from not(false or (false and false)) = true
 : Vector
 
                 @Throws(Exception::class)
             
-open fun getUsers(storeFrontInterface: StoreFrontInterface)
+    open fun getUsers(storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
 : Vector
 
                 @Throws(Exception::class)
             
-open fun getUser(userName: String)
+    open fun getUser(userName: String)
         //nullable = true from not(false or (false and false)) = true
 : UserInterface
 
-open fun login(userName: String, password: String)
+    open fun login(userName: String, password: String)
         //nullable = true from not(false or (false and false)) = true
 : String
 
-open fun deleteWhere(key: String, value: String)
+    open fun deleteWhere(key: String, value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun insert(values: Vector)
+    open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun update(userName: String, updatedValues: HashMap<Any, Any>)
+    open fun update(userName: String, updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 
 

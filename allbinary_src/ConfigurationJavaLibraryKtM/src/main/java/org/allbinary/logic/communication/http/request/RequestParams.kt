@@ -47,13 +47,13 @@ open public class RequestParams
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var map: Map
-public constructor        ()
+public constructor ()
             : super()
         {
 logUtil!!.put("New RequestParams Size: 0", this, this.commonStrings!!.CONSTRUCTOR)
 }
 
-public constructor        (request: HttpServletRequest)
+public constructor (request: HttpServletRequest)
             : super()
         {
 var request = request
@@ -61,7 +61,7 @@ map= request.getParameterMap()
 logUtil!!.put("RequestParams Size: " +this.getMap()!!.keySet()!!.size(), this, this.commonStrings!!.CONSTRUCTOR)
 }
 
-public constructor        (pageContext: PageContext)
+public constructor (pageContext: PageContext)
             : super()
         {
 var pageContext = pageContext
@@ -70,7 +70,7 @@ logUtil!!.put("Request Params Size: " +this.getMap()!!.keySet()!!.size(), this, 
 }
 
 
-open fun setMap(map: Map)
+    open fun setMap(map: Map)
         //nullable = true from not(false or (false and false)) = true
 {
 var map = map
@@ -78,7 +78,7 @@ this.map= map
 }
 
 
-open fun getMap()
+    open fun getMap()
         //nullable = true from not(false or (false and true)) = true
 : Map{
 
@@ -93,7 +93,7 @@ open fun getMap()
 
     private val VALUE: String = " Value: "
 
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -157,7 +157,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "toXmlNode(document)", e)
 
                 @Throws(Exception::class)
             
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 

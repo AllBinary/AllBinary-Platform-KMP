@@ -33,12 +33,11 @@ open public class DropCellPositionHistory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: DropCellPositionHistory = DropCellPositionHistory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DropCellPositionHistory{
 
@@ -60,7 +59,7 @@ open fun getInstance()
 
     private var layerList: BasicArrayList = BasicArrayList()
 
-open fun add(cellPosition: CellPosition, layerInterface: AllBinaryLayer)
+    open fun add(cellPosition: CellPosition, layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var cellPosition = cellPosition
@@ -70,7 +69,7 @@ this.layerList!!.add(layerInterface)
 }
 
 
-open fun add(list: BasicArrayList, layerInterface: AllBinaryLayer)
+    open fun add(list: BasicArrayList, layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var list = list
@@ -88,7 +87,7 @@ this.add(list.get(index) as CellPosition, layerInterface)
 }
 
 
-open fun remove(cellPosition: CellPosition)
+    open fun remove(cellPosition: CellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
 var cellPosition = cellPosition
@@ -108,7 +107,7 @@ this.layerList!!.remove(index)
 }
 
 
-open fun remove(layerInterface: AllBinaryLayer)
+    open fun remove(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var layerInterface = layerInterface
@@ -134,7 +133,7 @@ this.layerList!!.remove(index)
 }
 
 
-open fun clear()
+    open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 this.positionList!!.clear()
@@ -142,7 +141,7 @@ this.layerList!!.clear()
 }
 
 
-open fun isCellPositionWithDrop(cellPosition: CellPosition)
+    open fun isCellPositionWithDrop(cellPosition: CellPosition)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var cellPosition = cellPosition
@@ -154,7 +153,7 @@ var cellPosition = cellPosition
 }
 
 
-open fun anyCellPositionWithDrop(list: BasicArrayList)
+    open fun anyCellPositionWithDrop(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var list = list
@@ -188,7 +187,7 @@ var list = list
 }
 
 
-open fun getCellPositionWithDrop(list: BasicArrayList)
+    open fun getCellPositionWithDrop(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : CellPosition{
 var list = list
@@ -225,7 +224,7 @@ var list = list
 }
 
 
-open fun getLayerInterface(cellPosition: CellPosition)
+    open fun getLayerInterface(cellPosition: CellPosition)
         //nullable = true from not(false or (false and false)) = true
 : AllBinaryLayer{
 var cellPosition = cellPosition

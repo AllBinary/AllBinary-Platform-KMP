@@ -39,7 +39,7 @@ open public class AndroidOperatingSystem : GenericOperatingSystem {
     private val DEVICE_SOFTWARE_VERSION: String = "DeviceSoftwareVersion"
 
     private val LINE_1_NUMBER: String = "Line1Number"
-public constructor        (){
+public constructor (){
 
     var SDK_VERSION: Int = AndroidInfoFactory.getInstance()!!.getVersion()!!
 
@@ -122,7 +122,8 @@ stringBuffer!!.append(commonStrings!!.SPACE)
 
 
     private val OUYA: String = "ouya"
-override fun isOverScan()
+
+    override fun isOverScan()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -148,7 +149,8 @@ override fun isOverScan()
                         return false
 }
 
-override fun getOverScanXPercent()
+
+    override fun getOverScanXPercent()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -158,7 +160,8 @@ override fun getOverScanXPercent()
                         return 90
 }
 
-override fun getOverScanYPercent()
+
+    override fun getOverScanYPercent()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -168,7 +171,8 @@ override fun getOverScanYPercent()
                         return 90
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

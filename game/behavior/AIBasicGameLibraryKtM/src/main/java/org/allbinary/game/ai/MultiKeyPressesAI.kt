@@ -42,7 +42,7 @@ open public class MultiKeyPressesAI : KeyPressesAI {
     private val toggleTimeHelper: TimeDelayHelper = TimeDelayHelper(600)
 
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
-public constructor        (hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
+public constructor (hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
                             : super(hashtable, ownerLayerInterface, gameInput){
 var hashtable = hashtable
@@ -57,7 +57,8 @@ this.update()
 
 
                 @Throws(Exception::class)
-            override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+            
+    override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager
@@ -68,7 +69,7 @@ var allBinaryLayerManager = allBinaryLayerManager
 
                 @Throws(Exception::class)
             
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -139,7 +140,8 @@ open fun update()
 
 
                 @Throws(Exception::class)
-            override fun toggle()
+            
+    override fun toggle()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -156,7 +158,8 @@ this.update()
 
 
                 @Throws(Exception::class)
-            override fun disable()
+            
+    override fun disable()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -173,7 +176,8 @@ this.update()
 
 
                 @Throws(Exception::class)
-            override fun enable()
+            
+    override fun enable()
         //nullable = true from not(false or (false and true)) = true
 {
 

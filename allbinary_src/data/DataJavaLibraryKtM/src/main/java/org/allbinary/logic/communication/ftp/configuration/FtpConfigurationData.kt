@@ -30,8 +30,7 @@ open public class FtpConfigurationData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NAME: String = "FTP_NAME"
 
@@ -44,7 +43,7 @@ open public class FtpConfigurationData
     val PASSWORD: String = "FTP_PASSWORD"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

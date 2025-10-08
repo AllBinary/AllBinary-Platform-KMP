@@ -49,7 +49,7 @@ open public class BuildingAdvancedRTSFormInput : BuildingRTSFormInput {
         
 
     val atLeastOneHouseGameNotificationEvent: GameNotificationEvent
-public constructor        (groupInterface: Array<Group?>, isUnitProducer: Boolean)                        
+public constructor (groupInterface: Array<Group?>, isUnitProducer: Boolean)                        
 
                             : super(groupInterface, isUnitProducer){
     //var groupInterface = groupInterface
@@ -67,7 +67,7 @@ this.atLeastOneHouseGameNotificationEvent= GameNotificationEvent(this, "Build At
 
                 @Throws(Exception::class)
             
-open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
+    open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -82,7 +82,7 @@ this.atLeastOneHouseGameNotificationEvent!!.setBasicColorP(geographicMapInterfac
 }
 
 
-open fun isPositionBlocked()
+    open fun isPositionBlocked()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -112,7 +112,7 @@ open fun isPositionBlocked()
 
                 @Throws(Exception::class)
             
-open fun isBuildAttemptValid(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerInterface: RTSLayer)
+    open fun isBuildAttemptValid(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerInterface: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var rtsPlayerLayerInterface = rtsPlayerLayerInterface
@@ -162,7 +162,7 @@ var layerInterface = layerInterface
 
                 @Throws(Exception::class)
             
-open fun add(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, layerInterface: RTSLayer)
+    open fun add(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, layerInterface: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var rtsPlayerLayerInterface = rtsPlayerLayerInterface

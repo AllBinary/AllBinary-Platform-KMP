@@ -25,12 +25,13 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface InitInterface {
         
 
                 @Throws(Exception::class)
             
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 
 

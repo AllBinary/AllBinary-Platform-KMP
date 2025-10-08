@@ -30,8 +30,7 @@ open public class SearchData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val TOTAL_NUMBER_PAGES: String = "SEARCHDATA_TOTALNUMBEROFPAGES"
 
@@ -80,7 +79,7 @@ open public class SearchData
     val MAKEPUBLIC: String = "Make Public"
 
         }
-            public constructor        ()
+            public constructor ()
             : super()
         {
 }

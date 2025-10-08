@@ -21,26 +21,24 @@
 
         import java.lang.Object        
         
-        import java.lang.Runnable
-        
         
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.thread.ARunnable
 
 open public class BasicTextJDialog : javax.swing.JDialog {
         
-
-        companion object {
+companion object {
             
-open fun main(args: Array<String?>)
+    open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var args = args
-java.awt.EventQueue.invokeLater(object: Runnable()
+java.awt.EventQueue.invokeLater(object: ARunnable()
                                 {
                                 
-open fun run()
+    open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 BasicTextJDialog(javax.swing.JFrame(), true, "Test").
@@ -55,7 +53,7 @@ BasicTextJDialog(javax.swing.JFrame(), true, "Test").
         }
             
     private var closeListenerInterface: CloseJDialogListenerInterface
-public constructor        (parent: java.awt.Frame, modal: Boolean, text: String)                        
+public constructor (parent: java.awt.Frame, modal: Boolean, text: String)                        
 
                             : super(parent, modal){
 var parent = parent
@@ -70,7 +68,7 @@ this.setText(text)
 }
 
 
-open fun setText(text: String)
+    open fun setText(text: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var text = text
@@ -78,21 +76,21 @@ this.textJLabel!!.setText(text)
 }
 
 
-open fun addCloseListener(closeListenerInterface: CloseJDialogListenerInterface)
+    open fun addCloseListener(closeListenerInterface: CloseJDialogListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var closeListenerInterface = closeListenerInterface
 this.closeListenerInterface= closeListenerInterface
 }
 
-public constructor        (text: String){
+public constructor (text: String){
 var text = text
 initComponents()
 this.textJLabel!!.setText(text)
 }
 
 
-open fun initComponents()
+    open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
 jButton1= javax.swing.JButton()
@@ -102,7 +100,7 @@ jButton1!!.setText("OK")
 jButton1!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -122,7 +120,7 @@ pack()
 }
 
 
-open fun jButton1ActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun jButton1ActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt

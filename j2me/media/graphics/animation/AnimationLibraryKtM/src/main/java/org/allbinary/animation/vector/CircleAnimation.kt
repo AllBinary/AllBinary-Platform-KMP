@@ -40,7 +40,7 @@ open public class CircleAnimation : Animation
     var width: Int
 
     var height: Int
-public constructor        (widthAndHeight: Int, basicColor: BasicColor){
+public constructor (widthAndHeight: Int, basicColor: BasicColor){
 var widthAndHeight = widthAndHeight
 var basicColor = basicColor
 this.width= widthAndHeight
@@ -48,7 +48,7 @@ this.height= widthAndHeight
 this.setBasicColorP(basicColor)
 }
 
-public constructor        (width: Int, height: Int, basicColor: BasicColor){
+public constructor (width: Int, height: Int, basicColor: BasicColor){
 var width = width
 var height = height
 var basicColor = basicColor
@@ -57,12 +57,14 @@ this.height= height
 this.setBasicColorP(basicColor)
 }
 
-override fun nextFrame()
+
+    override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

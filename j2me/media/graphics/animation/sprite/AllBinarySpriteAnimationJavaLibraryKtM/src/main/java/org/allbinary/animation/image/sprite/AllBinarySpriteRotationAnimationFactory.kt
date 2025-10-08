@@ -39,7 +39,7 @@ open public class AllBinarySpriteRotationAnimationFactory : BaseImageAnimationFa
         
 
     private val animationFactorySpriteScaleUtil: AnimationFactorySpriteScaleUtil = AnimationFactorySpriteScaleUtil.getInstance()!!
-public constructor        (image: Image, dx: Int, dy: Int, unused: Any)                        
+public constructor (image: Image, dx: Int, dy: Int, unused: Any)                        
 
                             : this(image, dx, dy){
     //var image = image
@@ -54,7 +54,7 @@ this.animationFactoryInitializationVisitor!!.dx +=  -this.animationFactoryInitia
 this.animationFactoryInitializationVisitor!!.dy +=  -this.animationFactoryInitializationVisitor!!.height /5
 }
 
-public constructor        (image: Image, dx: Int, dy: Int, unused: Int)                        
+public constructor (image: Image, dx: Int, dy: Int, unused: Int)                        
 
                             : this(image, NullUtil.getInstance()!!.NULL_OBJECT, AnimationBehaviorFactory.getInstance()){
     //var image = image
@@ -69,7 +69,7 @@ this.animationFactoryInitializationVisitor!!.dx= dx
 this.animationFactoryInitializationVisitor!!.dy= dy
 }
 
-public constructor        (image: Image, unused: Any, unused2: Any)                        
+public constructor (image: Image, unused: Any, unused2: Any)                        
 
                             : this(image, 0, 0, unused){
     //var image = image
@@ -81,7 +81,7 @@ public constructor        (image: Image, unused: Any, unused2: Any)
                     
 }
 
-public constructor        (image: Image, dx: Int, dy: Int)                        
+public constructor (image: Image, dx: Int, dy: Int)                        
 
                             : this(image, dx, dy, AnimationBehaviorFactory.getInstance()){
     //var image = image
@@ -93,7 +93,7 @@ public constructor        (image: Image, dx: Int, dy: Int)
                     
 }
 
-public constructor        (image: Image, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
+public constructor (image: Image, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
                             : this(image, animationBehaviorFactory){
     //var image = image
@@ -108,7 +108,7 @@ this.animationFactoryInitializationVisitor!!.dx= dx
 this.animationFactoryInitializationVisitor!!.dy= dy
 }
 
-public constructor        (image: Image)                        
+public constructor (image: Image)                        
 
                             : this(image, AnimationBehaviorFactory.getInstance()){
     //var image = image
@@ -118,7 +118,7 @@ public constructor        (image: Image)
                     
 }
 
-public constructor        (image: Image, animationBehaviorFactory: AnimationBehaviorFactory)                        
+public constructor (image: Image, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
                             : super(image, (image.getHeight() shr 2), (image.getHeight() shr 2), animationBehaviorFactory){
     //var image = image
@@ -129,7 +129,7 @@ public constructor        (image: Image, animationBehaviorFactory: AnimationBeha
                     
 }
 
-public constructor        (image: Image, unused: Any)                        
+public constructor (image: Image, unused: Any)                        
 
                             : super(image, (image.getHeight() shr 2), (image.getHeight() shr 2), AnimationBehaviorFactory.getInstance()){
     //var image = image
@@ -140,7 +140,7 @@ public constructor        (image: Image, unused: Any)
                     
 }
 
-public constructor        (image: Image, unused: Any, animationBehaviorFactory: AnimationBehaviorFactory)                        
+public constructor (image: Image, unused: Any, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
                             : super(image, image.getHeight(), image.getHeight(), animationBehaviorFactory){
     //var image = image
@@ -154,7 +154,8 @@ public constructor        (image: Image, unused: Any, animationBehaviorFactory: 
 
 
                 @Throws(Exception::class)
-            override fun getInstance(instanceId: Int)
+            
+    override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var instanceId = instanceId
@@ -187,7 +188,8 @@ public constructor        (image: Image, unused: Any, animationBehaviorFactory: 
 
 
                 @Throws(Exception::class)
-            override fun getInstance(animationInterface: Animation)
+            
+    override fun getInstance(animationInterface: Animation)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var animationInterface = animationInterface

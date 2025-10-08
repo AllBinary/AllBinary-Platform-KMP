@@ -25,10 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface HealthInterfaceCompositeInterface {
         
 
-open fun getHealthInterface()
+    open fun getHealthInterface()
         //nullable = true from not(false or (false and true)) = true
 : Health
 

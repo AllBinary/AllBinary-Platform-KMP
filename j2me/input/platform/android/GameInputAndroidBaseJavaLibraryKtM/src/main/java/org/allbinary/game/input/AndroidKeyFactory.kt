@@ -16,7 +16,6 @@ import org.allbinary.android.ActivityFractureUtil
 import org.allbinary.string.CommonPhoneStrings
 import org.allbinary.logic.io.path.AbPathData
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 
 open public class AndroidKeyFactory : ActivityFractureUtil {
@@ -261,7 +260,7 @@ open public class AndroidKeyFactory : ActivityFractureUtil {
 
     val SEARCH: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_SEARCH, "SEARCH")
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -271,7 +270,7 @@ logUtil!!.put("Start/End", this, commonStrings!!.INIT)
 }
 
 
-open fun isSubmission(input: Input)
+    open fun isSubmission(input: Input)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var input = input
@@ -309,7 +308,7 @@ var input = input
 }
 
 
-open fun isDelete(input: Input)
+    open fun isDelete(input: Input)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var input = input
@@ -321,7 +320,7 @@ var input = input
 }
 
 
-open fun isBackSpace(input: Input)
+    open fun isBackSpace(input: Input)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var input = input
@@ -346,7 +345,7 @@ var input = input
 }
 
 
-open fun isLeft(input: Input)
+    open fun isLeft(input: Input)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var input = input
@@ -371,7 +370,7 @@ var input = input
 }
 
 
-open fun isRight(input: Input)
+    open fun isRight(input: Input)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var input = input
@@ -396,7 +395,7 @@ var input = input
 }
 
 
-open fun isUp(input: Input)
+    open fun isUp(input: Input)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var input = input
@@ -421,7 +420,7 @@ var input = input
 }
 
 
-open fun isDown(input: Input)
+    open fun isDown(input: Input)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var input = input
@@ -446,7 +445,7 @@ var input = input
 }
 
 
-open fun isEnter(input: Input)
+    open fun isEnter(input: Input)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var input = input

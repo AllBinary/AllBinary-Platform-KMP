@@ -40,12 +40,11 @@ open public class AllBinaryMediaManager
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val THIS: String = "AllBinaryMediaManagerHTML5"
 
-open fun isMuted()
+    open fun isMuted()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -56,14 +55,14 @@ open fun isMuted()
 }
 
 
-open fun setMuted(aMuted: Boolean)
+    open fun setMuted(aMuted: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var aMuted = aMuted
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -76,7 +75,7 @@ open fun update()
 
                 @Throws(Exception::class)
             
-open fun init(soundsFactoryInterface: SoundsFactoryInterface)
+    open fun init(soundsFactoryInterface: SoundsFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var soundsFactoryInterface = soundsFactoryInterface
@@ -95,7 +94,7 @@ Sounds(soundsFactoryInterface).
 
                 @Throws(Exception::class)
             
-open fun shutdown(soundsFactoryInterface: SoundsFactoryInterface)
+    open fun shutdown(soundsFactoryInterface: SoundsFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var soundsFactoryInterface = soundsFactoryInterface
@@ -109,7 +108,7 @@ System.gc()
 
                 @Throws(Exception::class)
             
-open fun createPlayer(resource: String)
+    open fun createPlayer(resource: String)
         //nullable = true from not(false or (false and false)) = true
 : Player{
 var resource = resource
@@ -158,7 +157,7 @@ var resource = resource
                 @Throws(MediaException::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun playTone(frequency: Int, time: Int, volume: Int)
+    open fun playTone(frequency: Int, time: Int, volume: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var frequency = frequency
@@ -177,7 +176,7 @@ var volume = volume
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

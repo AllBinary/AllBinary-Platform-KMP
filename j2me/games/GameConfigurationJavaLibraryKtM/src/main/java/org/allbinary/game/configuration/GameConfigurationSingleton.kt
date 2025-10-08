@@ -32,12 +32,11 @@ open public class GameConfigurationSingleton
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var SINGLETON: GameConfigurationSingleton = GameConfigurationSingleton()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameConfigurationSingleton{
 
@@ -53,7 +52,7 @@ open fun getInstance()
     private var list: BasicArrayList
 
     private var hashtable: Hashtable<Any, Any>
-private constructor        ()
+private constructor ()
             : super()
         {
 list= BasicArrayList()
@@ -61,7 +60,7 @@ hashtable= Hashtable<Any, Any>()
 }
 
 
-open fun getInstance(name: String)
+    open fun getInstance(name: String)
         //nullable =  from not(true or (false and false)) = 
 : GameConfiguration{
 var name = name
@@ -73,7 +72,7 @@ var name = name
 }
 
 
-open fun getOptionsBasicArrayList()
+    open fun getOptionsBasicArrayList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -84,7 +83,7 @@ open fun getOptionsBasicArrayList()
 }
 
 
-open fun add(gameConfiguration: GameConfiguration)
+    open fun add(gameConfiguration: GameConfiguration)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameConfiguration = gameConfiguration
@@ -92,7 +91,7 @@ list.add(gameConfiguration)
 }
 
 
-open fun getHashtable()
+    open fun getHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
 

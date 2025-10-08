@@ -43,13 +43,12 @@ import org.allbinary.logic.system.security.licensing.AbeClientInformationInterfa
 
 open public class CombatGameCanvas : AllBinaryGameCanvas {
         
-
-        companion object {
+companion object {
             
     var basicLayerProcessor: Array<BasicLayerProcessor?> = arrayOfNulls(0)
 
         }
-            public constructor        (cmdListener: CommandListener, gameLayerManager: AllBinaryGameLayerManager, highScoresFactoryInterface: HighScoresFactoryInterface, gameInitializationInterfaceFactoryInterface: BasicBuildGameInitializerFactory, buffered: Boolean)                        
+            public constructor (cmdListener: CommandListener, gameLayerManager: AllBinaryGameLayerManager, highScoresFactoryInterface: HighScoresFactoryInterface, gameInitializationInterfaceFactoryInterface: BasicBuildGameInitializerFactory, buffered: Boolean)                        
 
                             : super(cmdListener, gameLayerManager, highScoresFactoryInterface, gameInitializationInterfaceFactoryInterface, buffered){
     //var cmdListener = cmdListener
@@ -64,7 +63,7 @@ open public class CombatGameCanvas : AllBinaryGameCanvas {
 }
 
 
-open fun CombatGameCanvas_init()
+    open fun CombatGameCanvas_init()
         //nullable = true from not(false or (false and true)) = true
 {
 DestroyEventCircularStaticPool.getInstance()!!.init(this)
@@ -73,7 +72,8 @@ ProgressCanvasFactory.getInstance()!!.addPortion(50, "Destroy Events")
 
 
                 @Throws(Exception::class)
-            override fun init(abeClientInformation: AbeClientInformationInterface)
+            
+    override fun init(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -82,7 +82,7 @@ super.init(abeClientInformation)
 }
 
 
-open fun initConfigurable(portion: Int)
+    open fun initConfigurable(portion: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var portion = portion
@@ -115,7 +115,8 @@ basicLayerProcessor[0]= DestroyedLayerProcessor.getInstance()
 
 
                 @Throws(Exception::class)
-            override fun processPlayingGame()
+            
+    override fun processPlayingGame()
         //nullable = true from not(false or (false and true)) = true
 {
 super.processPlayingGame()
@@ -133,7 +134,8 @@ basicLayerProcessor[index]!!.process(this.gameLayerManager)
 
 
                 @Throws(Exception::class)
-            override fun cleanupGame()
+            
+    override fun cleanupGame()
         //nullable = true from not(false or (false and true)) = true
 {
 super.cleanupGame()
@@ -156,7 +158,7 @@ this.cleanupManager()
 
                 @Throws(Exception::class)
             
-open fun cleanupManager()
+    open fun cleanupManager()
         //nullable = true from not(false or (false and true)) = true
 {
 this.gameLayerManager!!.cleanup()

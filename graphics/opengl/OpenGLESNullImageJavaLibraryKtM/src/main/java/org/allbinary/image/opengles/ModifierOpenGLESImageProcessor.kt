@@ -28,12 +28,11 @@
 
 open public class ModifierOpenGLESImageProcessor : OpenGLESImageProcessor {
         
-
-        companion object {
+companion object {
             
     private val instance: ModifierOpenGLESImageProcessor = ModifierOpenGLESImageProcessor()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ModifierOpenGLESImageProcessor{
 

@@ -27,17 +27,18 @@ open public class OpenGLESGraphics : Graphics
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     var gl: GL10 = NullGL10.NULL_GL10
-public constructor        (){
+public constructor (){
 }
 
 
-open fun update(gl: GL)
+    open fun update(gl: GL)
         //nullable = true from not(false or (false and false)) = true
 {
 var gl = gl
 }
 
-override fun set(gl: GL)
+
+    override fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
 {
 var gl = gl
@@ -46,7 +47,7 @@ var gl = gl
 
                 @Throws(Exception::class)
             
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -54,25 +55,25 @@ open fun init()
 
                 @Throws(Exception::class)
             
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun setOrthoginalMode()
+    open fun setOrthoginalMode()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun setCameraMode()
+    open fun setCameraMode()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun getGl10()
+    open fun getGl10()
         //nullable = true from not(false or (false and true)) = true
 : GL10{
 
@@ -82,7 +83,8 @@ open fun getGl10()
                         return gl
 }
 
-override fun setFont(font: Font, fontDebug: FontDebugBase)
+
+    override fun setFont(font: Font, fontDebug: FontDebugBase)
         //nullable = true from not(false or (false and false)) = true
 {
     //var font = font

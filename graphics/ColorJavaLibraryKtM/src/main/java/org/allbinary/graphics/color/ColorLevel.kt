@@ -30,8 +30,7 @@ open public class ColorLevel
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val COLOR_MASK: Int = 0x00FFFFFF
 
@@ -44,7 +43,7 @@ open public class ColorLevel
     val HIGH: Int = 0xEE
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

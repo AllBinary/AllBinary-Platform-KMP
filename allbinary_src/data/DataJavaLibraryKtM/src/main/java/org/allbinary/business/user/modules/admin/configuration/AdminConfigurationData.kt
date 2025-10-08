@@ -30,8 +30,7 @@ open public class AdminConfigurationData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val CONTEXTNAME: String = "Admin"
 

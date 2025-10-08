@@ -31,48 +31,49 @@ import org.allbinary.business.context.modules.storefront.StoreFrontInterface
 import org.allbinary.business.user.commerce.inventory.order.Order
 import org.allbinary.business.user.commerce.inventory.order.OrderHistory
 import org.allbinary.data.tables.BasicDataTableInterface
+
 interface OrderHistoryEntityInterface : BasicDataTableInterface {
         
 
-open fun insert(userName: String, order: Order)
+    open fun insert(userName: String, order: Order)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setStatus(orderId: String, status: String)
+    open fun setStatus(orderId: String, status: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setPaymentMethod(orderId: String, status: String)
+    open fun setPaymentMethod(orderId: String, status: String)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun getStoreOrders(storeFrontInterface: StoreFrontInterface)
+    open fun getStoreOrders(storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
 : Vector
 
                 @Throws(Exception::class)
             
-open fun getOrders(userName: String)
+    open fun getOrders(userName: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector
 
                 @Throws(Exception::class)
             
-open fun getOrders(status: String, fromDate: String, toDate: String)
+    open fun getOrders(status: String, fromDate: String, toDate: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector
 
                 @Throws(Exception::class)
             
-open fun getOrder(id: String)
+    open fun getOrder(id: String)
         //nullable = true from not(false or (false and false)) = true
 : OrderHistory
 
                 @Throws(Exception::class)
             
-open fun update(whereHashMap: HashMap<Any, Any>, orderHashMap: HashMap<Any, Any>)
+    open fun update(whereHashMap: HashMap<Any, Any>, orderHashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 
 

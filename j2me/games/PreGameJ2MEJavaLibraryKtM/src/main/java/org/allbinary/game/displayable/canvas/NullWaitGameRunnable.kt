@@ -28,12 +28,11 @@
 
 open public class NullWaitGameRunnable : GameRunnable {
         
-
-        companion object {
+companion object {
             
     private val instance: GameRunnable = NullWaitGameRunnable()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameRunnable{
 

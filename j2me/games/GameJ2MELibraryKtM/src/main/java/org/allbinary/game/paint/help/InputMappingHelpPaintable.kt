@@ -48,8 +48,7 @@ import org.allbinary.util.BasicArrayList
 
 open public class InputMappingHelpPaintable : HelpPaintable {
         
-
-        companion object {
+companion object {
             
     private val AND: String = " and "
 
@@ -79,7 +78,7 @@ open public class InputMappingHelpPaintable : HelpPaintable {
     private val NONE: GameKey = GameKeyFactory.getInstance()!!.NONE
 
     private val basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
-protected constructor        (gameInputMappingArray: Array<GameInputMapping?>, backgroundBasicColor: BasicColor, basicColor: BasicColor)                        
+protected constructor (gameInputMappingArray: Array<GameInputMapping?>, backgroundBasicColor: BasicColor, basicColor: BasicColor)                        
 
                             : super("Input Mapping", backgroundBasicColor, basicColor){
     //var gameInputMappingArray = gameInputMappingArray
@@ -108,7 +107,7 @@ this.update(NONE, NONE)
 }
 
 
-open fun update(selectedGameKey: GameKey, selectedInput: Input)
+    open fun update(selectedGameKey: GameKey, selectedInput: Input)
         //nullable = true from not(false or (false and false)) = true
 {
     //var selectedGameKey = selectedGameKey
@@ -211,7 +210,7 @@ super.setInputInfoP(keyInfo)
 }
 
 
-open fun get(keyList: BasicArrayList)
+    open fun get(keyList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var keyList = keyList
@@ -277,7 +276,8 @@ stringBuffer!!.append(key.getName())
                         return stringBuffer!!.toString()
 }
 
-override fun getHeight()
+
+    override fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -298,7 +298,8 @@ override fun getHeight()
 
 
     private var anchor: Int = Anchor.TOP_LEFT
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics

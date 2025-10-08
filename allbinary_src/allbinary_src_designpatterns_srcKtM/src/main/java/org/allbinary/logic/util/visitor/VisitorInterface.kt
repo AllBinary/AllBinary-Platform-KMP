@@ -25,10 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface VisitorInterface {
         
 
-open fun visit(anyType: Any)
+    open fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any
 

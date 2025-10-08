@@ -34,8 +34,7 @@ open public class AngleIncrementInfo
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val INCREMENT: String = "Inc: "
 
@@ -50,7 +49,7 @@ open public class AngleIncrementInfo
     val LEFT_FRAME: Integer
 
     val RIGHT_FRAME: Integer
-public constructor        (angleIncrement: Short)
+public constructor (angleIncrement: Short)
             : super()
         {
 var angleIncrement = angleIncrement
@@ -70,7 +69,7 @@ this.RIGHT_FRAME= smallIntegerSingletonFactory!!.getInstance(angleFactory!!.RIGH
 
     private val frameUtil: FrameUtil = FrameUtil.getInstance()!!
 
-open fun getFrameAngle(frame: Int)
+    open fun getFrameAngle(frame: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var frame = frame
@@ -82,7 +81,7 @@ var frame = frame
 }
 
 
-open fun getAngleIncrement()
+    open fun getAngleIncrement()
         //nullable = true from not(false or (false and true)) = true
 : Short{
 
@@ -92,7 +91,8 @@ open fun getAngleIncrement()
                         return angleIncrement
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -104,7 +104,7 @@ override fun toString()
 }
 
 
-open fun getClosestGeneralDirection(angle: Short)
+    open fun getClosestGeneralDirection(angle: Short)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var angle = angle

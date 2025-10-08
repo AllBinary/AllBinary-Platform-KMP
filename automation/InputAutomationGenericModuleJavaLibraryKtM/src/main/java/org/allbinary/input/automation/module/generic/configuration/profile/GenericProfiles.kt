@@ -48,8 +48,7 @@ open public class GenericProfiles
                 , DomNodeInterface
                 , DomDocumentMappingInterface {
         
-
-        companion object {
+companion object {
             
     val DEFAULT_PROFILES_PATH: String = "./modules/configs/profiles/"
 
@@ -66,7 +65,7 @@ open public class GenericProfiles
     private var profilesDefaultListModelHelper: DefaultListModelHelper
 
     private val fileName: String
-public constructor        (fileName: String)
+public constructor (fileName: String)
             : super()
         {
 var fileName = fileName
@@ -135,7 +134,7 @@ this.getDefaultListModelHelper()!!.initDefaultModelList()
 
                 @Throws(Exception::class)
             
-open fun initProfiles(node: Node)
+    open fun initProfiles(node: Node)
         //nullable = true from not(false or (false and false)) = true
 {
 var node = node
@@ -170,7 +169,7 @@ this.getDefaultListModelHelper()!!.add(genericProfile!!.getName())
 }
 
 
-open fun getDefaultListModelHelper()
+    open fun getDefaultListModelHelper()
         //nullable = true from not(false or (false and true)) = true
 : DefaultListModelHelper{
 
@@ -183,7 +182,7 @@ open fun getDefaultListModelHelper()
 
                 @Throws(Exception::class)
             
-open fun get(name: String)
+    open fun get(name: String)
         //nullable = true from not(false or (false and false)) = true
 : GenericProfile{
 var name = name
@@ -214,7 +213,7 @@ logUtil!!.put("No Generic Profile Named: " +name +" availability was: " +this.ha
 
                 @Throws(Exception::class)
             
-open fun add(name: String)
+    open fun add(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name
@@ -227,7 +226,7 @@ this.save()
 
                 @Throws(Exception::class)
             
-open fun remove(name: String)
+    open fun remove(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name
@@ -240,7 +239,7 @@ this.save()
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -280,7 +279,7 @@ node.appendChild(genericProfile!!.toXmlNode(document))
 
                 @Throws(Exception::class)
             
-open fun toXmlDoc()
+    open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -300,7 +299,7 @@ document.appendChild(node)
 
                 @Throws(Exception::class)
             
-open fun save()
+    open fun save()
         //nullable = true from not(false or (false and true)) = true
 {
 

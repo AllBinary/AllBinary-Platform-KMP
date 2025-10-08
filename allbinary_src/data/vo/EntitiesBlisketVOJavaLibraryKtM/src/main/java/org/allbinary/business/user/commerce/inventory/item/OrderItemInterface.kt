@@ -26,54 +26,55 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.business.user.address.StreetAddress
+
 interface OrderItemInterface : ItemInterface {
         
 
-open fun setGroup(value: String)
+    open fun setGroup(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setTax(value: String)
+    open fun setTax(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setShippingType(value: String)
+    open fun setShippingType(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setShippingCost(value: String)
+    open fun setShippingCost(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setShippingAddress(value: StreetAddress)
+    open fun setShippingAddress(value: StreetAddress)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setSpecial(value: String)
+    open fun setSpecial(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getGroup()
+    open fun getGroup()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getTax()
+    open fun getTax()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getShippingType()
+    open fun getShippingType()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getShippingCost()
+    open fun getShippingCost()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getShippingAddress()
+    open fun getShippingAddress()
         //nullable = true from not(false or (false and true)) = true
 : StreetAddress
 
-open fun getSpecial()
+    open fun getSpecial()
         //nullable = true from not(false or (false and true)) = true
 : String
 

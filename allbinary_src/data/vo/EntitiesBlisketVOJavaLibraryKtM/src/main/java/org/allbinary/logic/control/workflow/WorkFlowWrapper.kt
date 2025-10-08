@@ -42,7 +42,7 @@ open public class WorkFlowWrapper
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var anyType: Any
-public constructor        (anyType: Any)
+public constructor (anyType: Any)
             : super()
         {
 var anyType = anyType
@@ -50,7 +50,7 @@ this.anyType= anyType
 }
 
 
-open fun getWorkFlowObject()
+    open fun getWorkFlowObject()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -63,7 +63,7 @@ open fun getWorkFlowObject()
 
                 @Throws(Exception::class)
             
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -109,7 +109,7 @@ open fun getName()
 
                 @Throws(Exception::class)
             
-open fun getStoreName()
+    open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -155,7 +155,7 @@ open fun getStoreName()
 
                 @Throws(Exception::class)
             
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 

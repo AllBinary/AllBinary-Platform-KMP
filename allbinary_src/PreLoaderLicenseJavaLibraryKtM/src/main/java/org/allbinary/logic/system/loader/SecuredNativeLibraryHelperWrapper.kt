@@ -33,7 +33,7 @@ open public class SecuredNativeLibraryHelperWrapper : NativeLibraryHelperWrapper
         
 
     private var securedNativeLibraryInterface: SecuredNativeLibraryInterface
-public constructor        (securedNativeLibraryInterface: SecuredNativeLibraryInterface)                        
+public constructor (securedNativeLibraryInterface: SecuredNativeLibraryInterface)                        
 
                             : super(securedNativeLibraryInterface!!.getLibraryName()){
     //var securedNativeLibraryInterface = securedNativeLibraryInterface
@@ -47,7 +47,7 @@ this.securedNativeLibraryInterface= securedNativeLibraryInterface
 
                 @Throws(LicensingException::class)
             
-open fun unlock(abeClientInformation: AbeClientInformationInterface)
+    open fun unlock(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var abeClientInformation = abeClientInformation

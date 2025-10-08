@@ -30,7 +30,6 @@ import java.util.Vector
 import org.allbinary.data.tables.generator.IdGeneratorEntity
 import org.allbinary.data.tables.generator.IdGeneratorEntityFactory
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 
 open public class UniqueIdGenerator
@@ -38,8 +37,7 @@ open public class UniqueIdGenerator
         
                 , IdGeneratorInterface {
         
-
-        companion object {
+companion object {
             
     val EXT: String = ".unq"
 
@@ -50,14 +48,14 @@ open public class UniqueIdGenerator
     private val idGeneratorEntity: IdGeneratorEntity
 
     private var name: String
-public constructor        ()
+public constructor ()
             : super()
         {
 idGeneratorEntity= IdGeneratorEntityFactory.getInstance() as IdGeneratorEntity
 }
 
 
-open fun initialize(value: Int)
+    open fun initialize(value: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -91,7 +89,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "initialize", e)
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun setFile(filePathName: String, name: String)
+    open fun setFile(filePathName: String, name: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var filePathName = filePathName
@@ -103,7 +101,7 @@ this.name= name
                 @Throws(IOException::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getNext()
+    open fun getNext()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

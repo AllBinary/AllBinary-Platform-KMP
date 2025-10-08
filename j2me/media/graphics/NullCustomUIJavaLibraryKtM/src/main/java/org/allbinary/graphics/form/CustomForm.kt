@@ -24,13 +24,13 @@ open public class CustomForm : CustomScreen {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-public constructor        (title: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor){
+public constructor (title: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor){
 var title = title
 var backgroundBasicColor = backgroundBasicColor
 var foregroundBasicColor = foregroundBasicColor
 }
 
-public constructor        (title: String, items: Array<CustomItem?>, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor){
+public constructor (title: String, items: Array<CustomItem?>, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor){
 var title = title
 var items = items
 var backgroundBasicColor = backgroundBasicColor
@@ -38,7 +38,7 @@ var foregroundBasicColor = foregroundBasicColor
 }
 
 
-open fun size()
+    open fun size()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -49,14 +49,14 @@ open fun size()
 }
 
 
-open fun setSelectedIndex(index: Int)
+    open fun setSelectedIndex(index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var index = index
 }
 
 
-open fun getSelectedIndex()
+    open fun getSelectedIndex()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -67,20 +67,20 @@ open fun getSelectedIndex()
 }
 
 
-open fun deleteAll()
+    open fun deleteAll()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun delete(itemNum: Int)
+    open fun delete(itemNum: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var itemNum = itemNum
 }
 
 
-open fun append(item: CustomItem)
+    open fun append(item: CustomItem)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var item = item
@@ -92,7 +92,7 @@ var item = item
 }
 
 
-open fun insert(itemNum: Int, item: CustomItem)
+    open fun insert(itemNum: Int, item: CustomItem)
         //nullable = true from not(false or (false and false)) = true
 {
 var itemNum = itemNum
@@ -100,7 +100,7 @@ var item = item
 }
 
 
-open fun set(itemNum: Int, item: CustomItem)
+    open fun set(itemNum: Int, item: CustomItem)
         //nullable = true from not(false or (false and false)) = true
 {
 var itemNum = itemNum
@@ -108,7 +108,7 @@ var item = item
 }
 
 
-open fun get(itemNum: Int)
+    open fun get(itemNum: Int)
         //nullable = true from not(false or (false and false)) = true
 : CustomItem{
 var itemNum = itemNum
@@ -120,7 +120,7 @@ var itemNum = itemNum
 }
 
 
-open fun getWidth()
+    open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -130,14 +130,14 @@ open fun getWidth()
 }
 
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 }
 
 
-open fun getTitle()
+    open fun getTitle()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

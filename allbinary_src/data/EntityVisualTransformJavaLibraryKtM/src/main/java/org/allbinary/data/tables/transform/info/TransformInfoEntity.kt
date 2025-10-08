@@ -59,7 +59,7 @@ open public class TransformInfoEntity : AbSqlBean
     private val transformInfoObjectConfigAndManipulatorFactoryInterface: TransformInfoObjectConfigAndManipulatorFactoryBase
 
     private val transformInfoObjectConfigGeneratorFactoryInterface: TransformInfoObjectConfigGeneratorFactoryInterface
-public constructor        (transformInfoObjectConfigGeneratorFactoryInterface: TransformInfoObjectConfigGeneratorFactoryInterface, transformInfoObjectConfigAndManipulatorFactoryInterface: TransformInfoObjectConfigAndManipulatorFactoryBase, transformInfoFactoryInterface: TransformInfoFactoryInterface)                        
+public constructor (transformInfoObjectConfigGeneratorFactoryInterface: TransformInfoObjectConfigGeneratorFactoryInterface, transformInfoObjectConfigAndManipulatorFactoryInterface: TransformInfoObjectConfigAndManipulatorFactoryBase, transformInfoFactoryInterface: TransformInfoFactoryInterface)                        
 
                             : super(UserDbInitInfo()){
 var transformInfoObjectConfigGeneratorFactoryInterface = transformInfoObjectConfigGeneratorFactoryInterface
@@ -76,7 +76,7 @@ this.transformInfoFactoryInterface= transformInfoFactoryInterface
 }
 
 
-open fun insert(values: Vector)
+    open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 {
 var values = values
@@ -108,7 +108,7 @@ var values = values
 }
 
 
-open fun delete(value: String)
+    open fun delete(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -142,7 +142,7 @@ var value = value
 
                 @Throws(Exception::class)
             
-open fun get(name: String, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
+    open fun get(name: String, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable = true from not(false or (false and false)) = true
 : TransformInfoInterface{
 var name = name
@@ -221,7 +221,7 @@ hashMap!!.put(transformInfoData!!.DATA, decode.toCharArray())
 
                 @Throws(Exception::class)
             
-open fun getObjectConfigs(storeName: Object)
+    open fun getObjectConfigs(storeName: Object)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var storeName = storeName
@@ -258,7 +258,7 @@ objectConfigVector!!.add(this.transformInfoObjectConfigAndManipulatorFactoryInte
 
                 @Throws(Exception::class)
             
-open fun getNames(storeName: String)
+    open fun getNames(storeName: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var storeName = storeName
@@ -292,7 +292,7 @@ viewNameVector!!.add(viewNameString)
 }
 
 
-open fun createTableStatement()
+    open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -338,7 +338,7 @@ stringBuffer!!.append(this.sqlStrings!!.END)
 }
 
 
-open fun createTable()
+    open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -349,7 +349,7 @@ open fun createTable()
 }
 
 
-open fun update(updatedValues: HashMap<Any, Any>)
+    open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var updatedValues = updatedValues
@@ -357,7 +357,7 @@ super.updateWhere(TransformInfoData.getInstance()!!.NAME, updatedValues!!.get(Tr
 }
 
 
-open fun dropTable()
+    open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

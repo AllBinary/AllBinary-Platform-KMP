@@ -29,7 +29,7 @@ import org.allbinary.business.time.Time
 
 open public class TimeLastModified : Time {
         
-public constructor        (time: String)                        
+public constructor (time: String)                        
 
                             : super(time){
 var time = time
@@ -39,7 +39,7 @@ var time = time
                     
 }
 
-public constructor        (time: Long)                        
+public constructor (time: Long)                        
 
                             : super(time){
 var time = time

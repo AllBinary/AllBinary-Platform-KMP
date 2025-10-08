@@ -30,12 +30,11 @@ open public class FileData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: FileData = FileData()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : FileData{
 
@@ -47,7 +46,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

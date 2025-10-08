@@ -40,12 +40,13 @@ open public class ConstantVelocityNotifyViewChangeMovement : Movement {
     private var speedBasicDecimal: BasicDecimal
 
     private val axisMathVectorUtil: AxisMathVectorUtil = AxisMathVectorUtil.getInstance()!!
-public constructor        (){
+public constructor (){
 this.speedBasicDecimal= BasicDecimal.ZERO_BIGDECIMAL
 this.basicVelocityProperties= BasicVelocityProperties()
 }
 
-override fun init(speedBasicDecimal: BasicDecimal, angle: Int, otherAngle: Int)
+
+    override fun init(speedBasicDecimal: BasicDecimal, angle: Int, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var speedBasicDecimal = speedBasicDecimal
@@ -59,7 +60,7 @@ basicVelocityProperties!!.setVelocity(speedBasicDecimal, angleFactory!!.getInsta
 }
 
 
-open fun moveOutsideRadius(layer: AllBinaryLayer, radius: Long, angle: Int, otherAngle: Int)
+    open fun moveOutsideRadius(layer: AllBinaryLayer, radius: Long, angle: Int, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var layer = layer
@@ -83,7 +84,8 @@ layer.move(xVector, yVector, zVector)
 
 
                 @Throws(Exception::class)
-            override fun process(layer: AllBinaryGameLayer)
+            
+    override fun process(layer: AllBinaryGameLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var layer = layer
@@ -108,7 +110,8 @@ layer.move(x, y, z)
                                 
 }
 
-override fun stop()
+
+    override fun stop()
         //nullable = true from not(false or (false and true)) = true
 {
 this.basicVelocityProperties!!.zero()

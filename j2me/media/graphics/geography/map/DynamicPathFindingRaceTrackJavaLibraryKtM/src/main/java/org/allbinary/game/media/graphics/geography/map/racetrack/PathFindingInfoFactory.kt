@@ -48,12 +48,11 @@ import org.allbinary.media.graphics.geography.pathfinding.PathFindingNodeCostInf
 
 open public class PathFindingInfoFactory : BasePathFindingInfoFactory {
         
-
-        companion object {
+companion object {
             
     private var instance: PathFindingInfoFactory
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PathFindingInfoFactory{
 
@@ -64,7 +63,7 @@ open fun getInstance()
 }
 
 
-open fun init(max: Int)
+    open fun init(max: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var max = max
@@ -83,7 +82,7 @@ instance= PathFindingInfoFactory(SimplePathFinderGraphVisitorFactory(1, 1, Integ
     private val basicGeographicMapPathFinder: BasicGeographicMapPathFinder
 
     private val pathFinderGraphVisitorFactoryInterface: PathFinderGraphVisitorFactoryBase
-private constructor        (pathFinderGraphVisitorFactoryInterface: PathFinderGraphVisitorFactoryBase, max: Int){
+private constructor (pathFinderGraphVisitorFactoryInterface: PathFinderGraphVisitorFactoryBase, max: Int){
     //var pathFinderGraphVisitorFactoryInterface = pathFinderGraphVisitorFactoryInterface
     //var max = max
 
@@ -99,7 +98,7 @@ this.pathFinderGraphVisitorFactoryInterface= pathFinderGraphVisitorFactoryInterf
 
                 @Throws(Exception::class)
             
-open fun getInstance(geographicMapInterface: BasicGeographicMap, mapArray: Array<IntArray?>)
+    open fun getInstance(geographicMapInterface: BasicGeographicMap, mapArray: Array<IntArray?>)
         //nullable =  from not(true or (false and false)) = 
 : PathFindingInfo{
     //var geographicMapInterface = geographicMapInterface
@@ -121,7 +120,7 @@ pathFindingInfo!!.setPathFinder(basicGeographicMapPathFinder)
 
                 @Throws(Exception::class)
             
-open fun init(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, mapArray: Array<IntArray?>)
+    open fun init(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, mapArray: Array<IntArray?>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapInterface = geographicMapInterface
@@ -134,7 +133,7 @@ this.buildPathFindingNodes(geographicMapInterface, pathFindingInfo, mapArray)
 
                 @Throws(Exception::class)
             
-open fun buildPathFindingNodes(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, mapArray: Array<IntArray?>, cellPosition: GeographicMapCellPosition)
+    open fun buildPathFindingNodes(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, mapArray: Array<IntArray?>, cellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapInterface = geographicMapInterface
@@ -205,7 +204,7 @@ pathFindingNodeCostInfoFactoryInterface!!.create(geographicMapInterface, goingTo
 
                 @Throws(Exception::class)
             
-open fun buildPathFindingNodes(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, mapArray: Array<IntArray?>)
+    open fun buildPathFindingNodes(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, mapArray: Array<IntArray?>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapInterface = geographicMapInterface

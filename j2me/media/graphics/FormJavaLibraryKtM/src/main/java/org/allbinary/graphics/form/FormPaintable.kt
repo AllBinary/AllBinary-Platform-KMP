@@ -32,12 +32,13 @@ open public class FormPaintable : Paintable {
         
 
     private val form: PaintableForm
-public constructor        (form: PaintableForm){
+public constructor (form: PaintableForm){
 var form = form
 this.form= form
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -45,7 +46,7 @@ this.form.paint(graphics)
 }
 
 
-open fun getForm()
+    open fun getForm()
         //nullable = true from not(false or (false and true)) = true
 : PaintableForm{
 

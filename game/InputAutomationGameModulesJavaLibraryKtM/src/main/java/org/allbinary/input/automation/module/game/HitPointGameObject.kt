@@ -44,7 +44,7 @@ open public class HitPointGameObject : MeteredGameObject
     private val IS_DAMAGED_LABEL: String = "isDamaged: "
 
     private val IS_CLOSE_DEATH_LABEL: String = "isCloseDeath: "
-public constructor        (bufferedImage: Array<BufferedImage?>, minX: Object, maxX: Object, y: Object)                        
+public constructor (bufferedImage: Array<BufferedImage?>, minX: Object, maxX: Object, y: Object)                        
 
                             : super(bufferedImage, minX, maxX, y){
 var bufferedImage = bufferedImage
@@ -86,7 +86,7 @@ var y = y
 }
 
 
-open fun isMoreThan(aFloat: Float)
+    open fun isMoreThan(aFloat: Float)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var aFloat = aFloat
@@ -115,7 +115,7 @@ var aFloat = aFloat
 }
 
 
-open fun isCloseDeath()
+    open fun isCloseDeath()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -126,7 +126,7 @@ open fun isCloseDeath()
 }
 
 
-open fun setCloseDeath(closeDeath: Boolean)
+    open fun setCloseDeath(closeDeath: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var closeDeath = closeDeath
@@ -134,7 +134,7 @@ this.closeDeath= closeDeath
 }
 
 
-open fun isDamaged()
+    open fun isDamaged()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -145,14 +145,15 @@ open fun isDamaged()
 }
 
 
-open fun setDamaged(damaged: Boolean)
+    open fun setDamaged(damaged: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var damaged = damaged
 this.damaged= damaged
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

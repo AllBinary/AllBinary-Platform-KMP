@@ -35,7 +35,7 @@ open public class GameInitializedEvent : AllBinaryEventObject {
     private var resourceLoadingLevel: ResourceLoadingLevel = ResourceLoadingLevelFactory.getInstance()!!.LEVEL
 
     private var level: Int= 0
-public constructor        (anyType: Any)                        
+public constructor (anyType: Any)                        
 
                             : super(anyType){
 var anyType = anyType
@@ -46,7 +46,7 @@ var anyType = anyType
 }
 
 
-open fun setLevel(level: Int)
+    open fun setLevel(level: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var level = level
@@ -55,7 +55,7 @@ this.resourceLoadingLevel= ResourceLoadingLevelFactory.getInstance()!!.LEVEL
 }
 
 
-open fun getLevel()
+    open fun getLevel()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -66,7 +66,7 @@ open fun getLevel()
 }
 
 
-open fun setResourceLoadingLevel(resourceLoadingLevel: ResourceLoadingLevel)
+    open fun setResourceLoadingLevel(resourceLoadingLevel: ResourceLoadingLevel)
         //nullable = true from not(false or (false and false)) = true
 {
 var resourceLoadingLevel = resourceLoadingLevel
@@ -75,7 +75,7 @@ level= this.resourceLoadingLevel!!.getLevel()
 }
 
 
-open fun getResourceLoadingLevel()
+    open fun getResourceLoadingLevel()
         //nullable = true from not(false or (false and true)) = true
 : ResourceLoadingLevel{
 

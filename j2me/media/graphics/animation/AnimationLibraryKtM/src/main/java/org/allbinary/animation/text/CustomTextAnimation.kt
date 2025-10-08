@@ -43,7 +43,7 @@ open public class CustomTextAnimation : TextAnimation {
     private var lastText: String = StringUtil.getInstance()!!.EMPTY_STRING
 
     var hasChanged: Boolean = true
-public constructor        (text: String, fontSize: Int, animationBehavior: AnimationBehavior)                        
+public constructor (text: String, fontSize: Int, animationBehavior: AnimationBehavior)                        
 
                             : super(text, animationBehavior){
     //var text = text
@@ -57,7 +57,8 @@ this.fontSize= fontSize
 this.font= Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, fontSize)
 }
 
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -71,7 +72,8 @@ super.paint(graphics, x, y)
 fontDebugFactory!!.setFont(existingFont, graphics)
 }
 
-override fun setScale(scaleX: Float, scaleY: Float)
+
+    override fun setScale(scaleX: Float, scaleY: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var scaleX = scaleX
@@ -92,7 +94,8 @@ this.hasChanged= true
 this.font= Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, (fontSize *scaleX).toInt())
 }
 
-override fun setText(text: String)
+
+    override fun setText(text: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var text = text
@@ -111,7 +114,8 @@ super.setText(text)
 
 
     private var textWidth: Int= 0
-override fun getWidth()
+
+    override fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -131,7 +135,8 @@ this.hasChanged= false
                         return this.textWidth
 }
 
-override fun getHeight()
+
+    override fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

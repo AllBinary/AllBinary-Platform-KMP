@@ -30,12 +30,11 @@ open public class PointsResources
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: PointsResources = PointsResources()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PointsResources{
 
@@ -55,7 +54,7 @@ open fun getInstance()
     var RESOURCE_3: String = "points_3_drop_20_by_20.png"
 
     var RESOURCE_4: String = "points_4_drop_20_by_20.png"
-private constructor        ()
+private constructor ()
             : super()
         {
 }

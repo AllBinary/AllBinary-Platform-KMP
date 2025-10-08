@@ -30,7 +30,7 @@ open public class ValidatorFactory
             : Object
          {
         
-private constructor        ()
+private constructor ()
             : super()
         {
 }

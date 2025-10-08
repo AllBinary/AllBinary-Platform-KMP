@@ -34,7 +34,7 @@ import org.allbinary.image.IndexedAnimationToImageArrayUtil
 
 open public class ImageArraySingletonAnimationInterfaceFactory : SingletonAnimationInterfaceFactory {
         
-public constructor        (animationInterface: Animation)                        
+public constructor (animationInterface: Animation)                        
 
                             : super(animationInterface){
     //var animationInterface = animationInterface
@@ -44,7 +44,7 @@ public constructor        (animationInterface: Animation)
                     
 }
 
-public constructor        (animationInterface: IndexedAnimation, width: Int, height: Int)                        
+public constructor (animationInterface: IndexedAnimation, width: Int, height: Int)                        
 
                             : this(ImageArrayAnimation(IndexedAnimationToImageArrayUtil.getInstance(width, height, animationInterface), AnimationBehavior.getInstance())){
     //var animationInterface = animationInterface
@@ -56,7 +56,7 @@ public constructor        (animationInterface: IndexedAnimation, width: Int, hei
                     
 }
 
-public constructor        (imageArray: Array<Image?>)                        
+public constructor (imageArray: Array<Image?>)                        
 
                             : this(ImageArrayAnimation(imageArray, AnimationBehavior.getInstance())){
 var imageArray = imageArray

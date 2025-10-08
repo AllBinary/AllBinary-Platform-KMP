@@ -18,12 +18,11 @@ open public class ContextConfigurationPathUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun getAbFile(contextName: String)
+    open fun getAbFile(contextName: String)
         //nullable = true from not(false or (false and false)) = true
 : AbFile{
 var contextName = contextName
@@ -37,7 +36,7 @@ var contextName = contextName
 
                 @Throws(Exception::class)
             
-open fun getAbPath(contextName: String)
+    open fun getAbPath(contextName: String)
         //nullable = true from not(false or (false and false)) = true
 : AbPath{
 var contextName = contextName
@@ -51,7 +50,7 @@ var contextName = contextName
 
                 @Throws(Exception::class)
             
-open fun getPath()
+    open fun getPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -62,7 +61,7 @@ open fun getPath()
 }
 
 
-open fun getFileName(contextName: String)
+    open fun getFileName(contextName: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var contextName = contextName

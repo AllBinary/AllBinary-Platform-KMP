@@ -25,14 +25,15 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface GameSkillPropertyInterface {
         
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getValue()
+    open fun getValue()
         //nullable = true from not(false or (false and true)) = true
 : String
 

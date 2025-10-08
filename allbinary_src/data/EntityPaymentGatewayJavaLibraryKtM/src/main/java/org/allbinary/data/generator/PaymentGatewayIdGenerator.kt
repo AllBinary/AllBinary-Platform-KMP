@@ -33,7 +33,7 @@ open public class PaymentGatewayIdGenerator : UniqueIdGenerator {
         
 
     private val IDFILE: String = "paymentgatewayId"
-public constructor        (){
+public constructor (){
 
     var stringBuffer: StringMaker = StringMaker()
 

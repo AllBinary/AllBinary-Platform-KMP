@@ -30,12 +30,11 @@ open public class AcceptableResponseFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AcceptableResponseFactory = AcceptableResponseFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AcceptableResponseFactory{
 

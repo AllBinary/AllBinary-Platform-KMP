@@ -31,7 +31,7 @@ open public class DemoGameMidletEvent : AllBinaryEventObject {
         
 
     private var demoGameMidletState: DemoGameMidletState
-public constructor        (anyType: Any, demoGameMidletState: DemoGameMidletState)                        
+public constructor (anyType: Any, demoGameMidletState: DemoGameMidletState)                        
 
                             : super(anyType){
 var anyType = anyType
@@ -44,7 +44,7 @@ this.demoGameMidletState= demoGameMidletState
 }
 
 
-open fun init(anyType: Any)
+    open fun init(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var anyType = anyType
@@ -52,7 +52,7 @@ this.setSource(anyType)
 }
 
 
-open fun setDemoGameMidletState(demoGameMidletState: DemoGameMidletState)
+    open fun setDemoGameMidletState(demoGameMidletState: DemoGameMidletState)
         //nullable = true from not(false or (false and false)) = true
 {
 var demoGameMidletState = demoGameMidletState
@@ -60,7 +60,7 @@ this.demoGameMidletState= demoGameMidletState
 }
 
 
-open fun getDemoGameMidletState()
+    open fun getDemoGameMidletState()
         //nullable = true from not(false or (false and true)) = true
 : DemoGameMidletState{
 

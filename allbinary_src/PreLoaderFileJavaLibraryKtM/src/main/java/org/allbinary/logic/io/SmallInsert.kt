@@ -45,7 +45,7 @@ open public class SmallInsert
     private var fileName: String
 
     private var string: String
-public constructor        (fileName: String)
+public constructor (fileName: String)
             : super()
         {
 var fileName = fileName
@@ -54,7 +54,7 @@ string= FileUtil.getInstance()!!.readAsString(fileName)
 }
 
 
-open fun atBeginning(text: String)
+    open fun atBeginning(text: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var text = text
@@ -93,7 +93,7 @@ idOutData!!.writeBytes(text +this.string)
 }
 
 
-open fun after(text: String, after: String)
+    open fun after(text: String, after: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var text = text
@@ -159,7 +159,7 @@ idFile!!.close()
 }
 
 
-open fun atEnd(text: String)
+    open fun atEnd(text: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var text = text

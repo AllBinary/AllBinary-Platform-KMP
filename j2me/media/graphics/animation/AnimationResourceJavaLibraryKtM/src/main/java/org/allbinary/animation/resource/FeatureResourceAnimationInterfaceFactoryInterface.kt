@@ -28,10 +28,11 @@
 import java.util.Hashtable
 import org.allbinary.game.configuration.feature.GameFeatureControlledInterface
 import org.allbinary.game.resource.RectangleResourceFactoryInterface
+
 interface FeatureResourceAnimationInterfaceFactoryInterface : ResourceAnimationInterfaceFactoryInterface, RectangleResourceFactoryInterface, GameFeatureControlledInterface {
         
 
-open fun getHashtable()
+    open fun getHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>
 

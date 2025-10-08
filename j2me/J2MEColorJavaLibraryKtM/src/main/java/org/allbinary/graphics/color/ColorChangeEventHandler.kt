@@ -29,13 +29,12 @@ import org.allbinary.logic.util.event.handler.BasicEventHandler
 
 open public class ColorChangeEventHandler : BasicEventHandler {
         
-
-        companion object {
+companion object {
             
     private val eventHandler: ColorChangeEventHandler = ColorChangeEventHandler()
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ColorChangeEventHandler{
 
@@ -47,7 +46,7 @@ open fun getInstance()
 
 
         }
-            private constructor        (){
+            private constructor (){
 }
 
 

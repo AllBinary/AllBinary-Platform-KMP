@@ -26,16 +26,17 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.media.ScaleProperties
+
 interface AnimationInterfaceFactoryInterface : BasicAnimationInterfaceFactoryInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getInstance(instanceId: Int)
+    open fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation
 
-open fun setInitialScale(scaleProperties: ScaleProperties)
+    open fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
 
 

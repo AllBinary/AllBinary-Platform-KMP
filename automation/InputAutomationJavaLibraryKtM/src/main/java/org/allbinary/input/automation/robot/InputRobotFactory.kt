@@ -43,14 +43,13 @@ open public class InputRobotFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val inputRobotFactory: InputRobotFactory = InputRobotFactory()
 
                 @Throws(Exception::class)
             
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : InputRobotFactory{
 
@@ -63,7 +62,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun loadLibraries(collection: Collection)
+    open fun loadLibraries(collection: Collection)
         //nullable = true from not(false or (false and false)) = true
 {
 var collection = collection
@@ -85,7 +84,7 @@ loadLibrary(iterator.next() as InputRobotInterface)
 
                 @Throws(Exception::class)
             
-open fun loadLibrary(inputRobotInterface: InputRobotInterface)
+    open fun loadLibrary(inputRobotInterface: InputRobotInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var inputRobotInterface = inputRobotInterface
@@ -117,7 +116,7 @@ securedNativeLibraryInterface!!.load()
     private val hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
     private var helpSetListenerInterface: HelpSetListener
-private constructor        ()
+private constructor ()
             : super()
         {
 
@@ -152,7 +151,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRU
 }
 
 
-open fun addListener(helpSetListenerInterface: HelpSetListener)
+    open fun addListener(helpSetListenerInterface: HelpSetListener)
         //nullable = true from not(false or (false and false)) = true
 {
     //var helpSetListenerInterface = helpSetListenerInterface
@@ -162,7 +161,7 @@ this.helpSetListenerInterface= helpSetListenerInterface
 
                 @Throws(Exception::class)
             
-open fun add(inputRobotInterface: InputRobotInterface)
+    open fun add(inputRobotInterface: InputRobotInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var inputRobotInterface = inputRobotInterface
@@ -218,7 +217,7 @@ this.helpSetListenerInterface!!.helpSetAdded(helpSetEvent)
 
                 @Throws(Exception::class)
             
-open fun loadLibraries()
+    open fun loadLibraries()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -250,7 +249,7 @@ loadLibrary(inputRobotInterface)
 
                 @Throws(Exception::class)
             
-open fun unloadLibraries()
+    open fun unloadLibraries()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put("Unloading Libraries", this, "unloadLibraries")
@@ -295,7 +294,7 @@ securedNativeLibraryInterface!!.unload()
 
                 @Throws(Exception::class)
             
-open fun get()
+    open fun get()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
 
@@ -306,7 +305,7 @@ open fun get()
 }
 
 
-open fun get(name: String)
+    open fun get(name: String)
         //nullable = true from not(false or (false and false)) = true
 : InputRobotInterface{
     //var name = name

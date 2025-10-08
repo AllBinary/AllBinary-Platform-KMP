@@ -40,8 +40,7 @@ import org.allbinary.util.BasicArrayList
 
 open public class AllBinaryGameLayerManager : AllBinaryLayerManager {
         
-
-        companion object {
+companion object {
             
     val NULL_ALLBINARY_LAYER_MANAGER: AllBinaryGameLayerManager = AllBinaryGameLayerManager(BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE, GameInfo.NONE)
 
@@ -56,7 +55,7 @@ open public class AllBinaryGameLayerManager : AllBinaryLayerManager {
     private var gameInfo: GameInfo
 
     private var playerGameInputCompositeInterface: PlayerGameInputCompositeInterface = NullPlayerGameInputComposite.NULL_PLAYER_GAME_INPUT_COMPOSITE
-public constructor        (backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor, gameInfo: GameInfo){
+public constructor (backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor, gameInfo: GameInfo){
     //var backgroundBasicColor = backgroundBasicColor
     //var foregroundBasicColor = foregroundBasicColor
     //var gameInfo = gameInfo
@@ -71,7 +70,7 @@ this.gameInfo= gameInfo
 }
 
 
-open fun getLayerManager()
+    open fun getLayerManager()
         //nullable = true from not(false or (false and true)) = true
 : AllBinaryLayerManager{
 
@@ -82,13 +81,13 @@ open fun getLayerManager()
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun getBackgroundBasicColor()
+    open fun getBackgroundBasicColor()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
 
@@ -99,7 +98,7 @@ open fun getBackgroundBasicColor()
 }
 
 
-open fun setBackgroundBasicColor(backgroundBasicColor: BasicColor)
+    open fun setBackgroundBasicColor(backgroundBasicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var backgroundBasicColor = backgroundBasicColor
@@ -108,7 +107,7 @@ ItemColorFactory.getInstance()!!.INVERT_PAINT= this.backgroundBasicColor!!.toInt
 }
 
 
-open fun getForegroundBasicColor()
+    open fun getForegroundBasicColor()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
 
@@ -119,7 +118,7 @@ open fun getForegroundBasicColor()
 }
 
 
-open fun setForegroundBasicColor(foregroundBasicColor: BasicColor)
+    open fun setForegroundBasicColor(foregroundBasicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var foregroundBasicColor = foregroundBasicColor
@@ -128,7 +127,7 @@ ItemColorFactory.getInstance()!!.PAINT= this.foregroundBasicColor!!.toInt()
 }
 
 
-open fun getGameInfo()
+    open fun getGameInfo()
         //nullable = true from not(false or (false and true)) = true
 : GameInfo{
 
@@ -139,7 +138,7 @@ open fun getGameInfo()
 }
 
 
-open fun setGameInfo(gameInfo: GameInfo)
+    open fun setGameInfo(gameInfo: GameInfo)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameInfo = gameInfo
@@ -147,7 +146,7 @@ this.gameInfo= gameInfo
 }
 
 
-open fun setLayerProcessorList(list: BasicArrayList)
+    open fun setLayerProcessorList(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var list = list
@@ -172,7 +171,7 @@ this.setLayerProcessorArray(layerProcessorInterfaceArray)
 }
 
 
-open fun setPlayerGameInputCompositeInterface(playerGameInputCompositeInterface: PlayerGameInputCompositeInterface)
+    open fun setPlayerGameInputCompositeInterface(playerGameInputCompositeInterface: PlayerGameInputCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var playerGameInputCompositeInterface = playerGameInputCompositeInterface
@@ -180,7 +179,7 @@ this.playerGameInputCompositeInterface= playerGameInputCompositeInterface
 }
 
 
-open fun getPlayerGameInputCompositeInterface()
+    open fun getPlayerGameInputCompositeInterface()
         //nullable = true from not(false or (false and true)) = true
 : PlayerGameInputCompositeInterface{
 

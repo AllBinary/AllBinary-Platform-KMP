@@ -37,12 +37,11 @@ open public class TransformInfoObjectFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: TransformInfoObjectFactory = TransformInfoObjectFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TransformInfoObjectFactory{
 
@@ -56,7 +55,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -64,7 +63,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)
         //nullable =  from not(true or (false and false)) = 
 : TransformInterface{
     //var abeClientInformation = abeClientInformation

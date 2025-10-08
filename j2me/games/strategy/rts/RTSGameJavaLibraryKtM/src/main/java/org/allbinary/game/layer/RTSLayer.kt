@@ -31,7 +31,6 @@ import javax.microedition.lcdui.Graphics
 import org.allbinary.game.input.form.RTSFormInput
 import org.allbinary.game.multiplayer.layer.MultiPlayerGameLayer
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.animation.Animation
 import org.allbinary.animation.AnimationInterfaceFactoryInterface
@@ -78,8 +77,7 @@ open public class RTSLayer : MultiPlayerGameLayer
                 , RTSInterface
                 , PathFindingLayerInterface {
         
-
-        companion object {
+companion object {
             
     private val id: Int = 0
 
@@ -87,7 +85,7 @@ open public class RTSLayer : MultiPlayerGameLayer
 
     val SECONDARY_INDEX: Int = 1
 
-open fun getMinStaticType()
+    open fun getMinStaticType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -98,7 +96,7 @@ open fun getMinStaticType()
 }
 
 
-open fun getMaxStaticType()
+    open fun getMaxStaticType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -109,7 +107,7 @@ open fun getMaxStaticType()
 }
 
 
-open fun isRTSLayer(layerInterface: AllBinaryLayer)
+    open fun isRTSLayer(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var layerInterface = layerInterface
@@ -205,7 +203,7 @@ open fun isRTSLayer(layerInterface: AllBinaryLayer)
     private var destroyed: Boolean = false
 
     private var selected: Boolean = false
-protected constructor        (remoteInfo: RemoteInfo, groupInterface: Array<Group?>, rootName: String, name: String, healthInterface: Health, rtsFormInput: RTSFormInput, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
+protected constructor (remoteInfo: RemoteInfo, groupInterface: Array<Group?>, rootName: String, name: String, healthInterface: Health, rtsFormInput: RTSFormInput, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
 
                             : this(remoteInfo, groupInterface, rootName, name, healthInterface, rtsFormInput, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y, TileLayerPositionIntoViewPosition()){
     //var remoteInfo = remoteInfo
@@ -229,7 +227,7 @@ protected constructor        (remoteInfo: RemoteInfo, groupInterface: Array<Grou
                     
 }
 
-protected constructor        (remoteInfo: RemoteInfo, groupInterface: Array<Group?>, rootName: String, name: String, healthInterface: Health, rtsFormInput: RTSFormInput, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int, viewPosition: ViewPosition)                        
+protected constructor (remoteInfo: RemoteInfo, groupInterface: Array<Group?>, rootName: String, name: String, healthInterface: Health, rtsFormInput: RTSFormInput, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int, viewPosition: ViewPosition)                        
 
                             : super(remoteInfo, groupInterface, name, rectangle, viewPosition){
     //var remoteInfo = remoteInfo
@@ -271,7 +269,7 @@ this.setPartInterfaceArray(PartInterfaceUtil.getZeroArray())
 this.geographicMapCellPositionArea= GeographicMapCellPositionArea(this)
 }
 
-protected constructor        (remoteInfo: RemoteInfo)                        
+protected constructor (remoteInfo: RemoteInfo)                        
 
                             : super(remoteInfo, 
                             null, RectangleFactory.SINGLETON, TileLayerPositionIntoViewPosition()){
@@ -310,7 +308,7 @@ this.geographicMapCellPositionArea=
 
                 @Throws(Exception::class)
             
-open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
+    open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -334,7 +332,7 @@ this.updateWaypointBehavior(geographicMapInterface)
 
                 @Throws(Exception::class)
             
-open fun updateWaypointBehavior(geographicMapInterface: BasicGeographicMap)
+    open fun updateWaypointBehavior(geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapInterface = geographicMapInterface
@@ -344,7 +342,7 @@ this.geographicMapCellPositionArea!!.update(geographicMapInterface)
 
                 @Throws(Exception::class)
             
-open fun construct(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
+    open fun construct(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
@@ -354,7 +352,7 @@ this.hackVerticleBuild= 0
 }
 
 
-open fun select()
+    open fun select()
         //nullable = true from not(false or (false and true)) = true
 {
 this.rangeAnimation= this.initRangeAnimation
@@ -363,7 +361,7 @@ this.setSelected(true)
 }
 
 
-open fun deselect()
+    open fun deselect()
         //nullable = true from not(false or (false and true)) = true
 {
 this.rangeAnimation= NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
@@ -372,7 +370,7 @@ this.setSelected(false)
 }
 
 
-open fun setSelected(selected: Boolean)
+    open fun setSelected(selected: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var selected = selected
@@ -380,7 +378,7 @@ this.selected= selected
 }
 
 
-open fun isSelected()
+    open fun isSelected()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -391,7 +389,7 @@ open fun isSelected()
 }
 
 
-open fun getPercentComplete()
+    open fun getPercentComplete()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -402,7 +400,7 @@ open fun getPercentComplete()
 }
 
 
-open fun getScrollSelectionForm()
+    open fun getScrollSelectionForm()
         //nullable = true from not(false or (false and true)) = true
 : ScrollSelectionForm{
 
@@ -413,7 +411,7 @@ open fun getScrollSelectionForm()
 }
 
 
-open fun initInputProcessors()
+    open fun initInputProcessors()
         //nullable = true from not(false or (false and true)) = true
 {
 GameInputProcessorUtil.init(this.inputProcessorArray)
@@ -422,7 +420,7 @@ GameInputProcessorUtil.init(this.inputProcessorArray)
 
                 @Throws(Exception::class)
             
-open fun processBuiltTick(allBinaryLayerManager: AllBinaryLayerManager)
+    open fun processBuiltTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryLayerManager = allBinaryLayerManager
@@ -430,7 +428,7 @@ this.animationInterface= this.indexedButShouldBeRotationAnimationInterface
 }
 
 
-open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
+    open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryLayerManager = allBinaryLayerManager
@@ -460,20 +458,20 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "processTick", e)
 
                 @Throws(Exception::class)
             
-open fun processInput(layerManager: AllBinaryLayerManager)
+    open fun processInput(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerManager = layerManager
 }
 
 
-open fun reload()
+    open fun reload()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun onMovement(trackingEvent: TrackingEvent)
+    open fun onMovement(trackingEvent: TrackingEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var trackingEvent = trackingEvent
@@ -482,14 +480,14 @@ open fun onMovement(trackingEvent: TrackingEvent)
 
                 @Throws(Exception::class)
             
-open fun onMovementFound(trackingEvent: TrackingEvent)
+    open fun onMovementFound(trackingEvent: TrackingEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var trackingEvent = trackingEvent
 }
 
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -509,7 +507,7 @@ this.getAnimationInterface()!!.paint(graphics, viewX, viewY)
 
                 @Throws(Exception::class)
             
-open fun damage(damage: Int, damageType: Int)
+    open fun damage(damage: Int, damageType: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var damage = damage
@@ -517,7 +515,7 @@ open fun damage(damage: Int, damageType: Int)
 }
 
 
-open fun getSourceId()
+    open fun getSourceId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -530,21 +528,21 @@ open fun getSourceId()
 
     private val rtsLayerUtil: RTSLayerUtil = RTSLayerUtil.getInstance()!!
 
-open fun downgrade()
+    open fun downgrade()
         //nullable = true from not(false or (false and true)) = true
 {
 rtsLayerUtil!!.downgrade(this)
 }
 
 
-open fun upgrade()
+    open fun upgrade()
         //nullable = true from not(false or (false and true)) = true
 {
 rtsLayerUtil!!.upgrade(this)
 }
 
 
-open fun isCompleted()
+    open fun isCompleted()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -574,7 +572,7 @@ open fun isCompleted()
 
                 @Throws(Exception::class)
             
-open fun build()
+    open fun build()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -593,7 +591,7 @@ this.getHudPaintable()!!.updateInfo()
 }
 
 
-open fun isSelfUpgradeable()
+    open fun isSelfUpgradeable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -604,7 +602,7 @@ open fun isSelfUpgradeable()
 }
 
 
-open fun getCost()
+    open fun getCost()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -615,7 +613,7 @@ open fun getCost()
 }
 
 
-open fun getDowngradeCost()
+    open fun getDowngradeCost()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -626,7 +624,7 @@ open fun getDowngradeCost()
 }
 
 
-open fun getUpgradeCost()
+    open fun getUpgradeCost()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -637,7 +635,7 @@ open fun getUpgradeCost()
 }
 
 
-open fun isUpgradeable()
+    open fun isUpgradeable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -665,7 +663,7 @@ open fun isUpgradeable()
 }
 
 
-open fun isDowngradeable()
+    open fun isDowngradeable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -693,7 +691,7 @@ open fun isDowngradeable()
 }
 
 
-open fun getLevel()
+    open fun getLevel()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -704,7 +702,7 @@ open fun getLevel()
 }
 
 
-open fun setLevel(level: Int)
+    open fun setLevel(level: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var level = level
@@ -712,7 +710,7 @@ this.level= level
 }
 
 
-open fun getVerticleBuildAnimationInterface()
+    open fun getVerticleBuildAnimationInterface()
         //nullable = true from not(false or (false and true)) = true
 : Animation{
 
@@ -723,7 +721,7 @@ open fun getVerticleBuildAnimationInterface()
 }
 
 
-open fun getAnimationInterface()
+    open fun getAnimationInterface()
         //nullable = true from not(false or (false and true)) = true
 : Animation{
 
@@ -734,7 +732,7 @@ open fun getAnimationInterface()
 }
 
 
-open fun setAnimationInterface(animationInterface: Animation)
+    open fun setAnimationInterface(animationInterface: Animation)
         //nullable = true from not(false or (false and false)) = true
 {
     //var animationInterface = animationInterface
@@ -746,7 +744,7 @@ this.animationInterface= animationInterface
 
                 @Throws(Exception::class)
             
-open fun setTarget(targetGameLayer: PathFindingLayerInterface)
+    open fun setTarget(targetGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var targetGameLayer = targetGameLayer
@@ -760,7 +758,7 @@ waypointBehaviorBase!!.setTarget(targetGameLayer as PathFindingLayerInterface, a
 }
 
 
-open fun createHudPaintable()
+    open fun createHudPaintable()
         //nullable = true from not(false or (false and true)) = true
 : SelectionHudPaintable{
 
@@ -771,7 +769,7 @@ open fun createHudPaintable()
 }
 
 
-open fun getHudPaintable()
+    open fun getHudPaintable()
         //nullable = true from not(false or (false and true)) = true
 : SelectionHudPaintable{
 
@@ -782,7 +780,7 @@ open fun getHudPaintable()
 }
 
 
-open fun getMaxLevel()
+    open fun getMaxLevel()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -793,7 +791,7 @@ open fun getMaxLevel()
 }
 
 
-open fun setMaxLevel(maxLevel: Int)
+    open fun setMaxLevel(maxLevel: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var maxLevel = maxLevel
@@ -801,7 +799,7 @@ this.maxLevel= maxLevel
 }
 
 
-open fun getHealthInterface()
+    open fun getHealthInterface()
         //nullable = true from not(false or (false and true)) = true
 : Health{
 
@@ -812,7 +810,7 @@ open fun getHealthInterface()
 }
 
 
-open fun setHealthInterface(healthInterface: Health)
+    open fun setHealthInterface(healthInterface: Health)
         //nullable = true from not(false or (false and false)) = true
 {
     //var healthInterface = healthInterface
@@ -820,7 +818,7 @@ this.healthInterface= healthInterface
 }
 
 
-open fun getRTSFormInput()
+    open fun getRTSFormInput()
         //nullable = true from not(false or (false and true)) = true
 : RTSFormInput{
 
@@ -833,7 +831,7 @@ open fun getRTSFormInput()
 
                 @Throws(Exception::class)
             
-open fun isDestroyed()
+    open fun isDestroyed()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -846,7 +844,7 @@ open fun isDestroyed()
 
                 @Throws(Exception::class)
             
-open fun setDestroyed(destroyed: Boolean)
+    open fun setDestroyed(destroyed: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var destroyed = destroyed
@@ -864,7 +862,7 @@ ViewPositionEventHandler.getInstance()!!.removeListener(this)
 }
 
 
-open fun getEndGeographicMapCellPositionList()
+    open fun getEndGeographicMapCellPositionList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -875,7 +873,7 @@ open fun getEndGeographicMapCellPositionList()
 }
 
 
-open fun getGeographicMapCellPositionArea()
+    open fun getGeographicMapCellPositionArea()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPositionArea{
 
@@ -886,7 +884,7 @@ open fun getGeographicMapCellPositionArea()
 }
 
 
-open fun shouldHandleStartSameAsEnd()
+    open fun shouldHandleStartSameAsEnd()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -899,14 +897,14 @@ open fun shouldHandleStartSameAsEnd()
 
                 @Throws(Exception::class)
             
-open fun handleCost(ownerLayer: PathFindingLayerInterface)
+    open fun handleCost(ownerLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var ownerLayer = ownerLayer
 }
 
 
-open fun getWaypointBehavior()
+    open fun getWaypointBehavior()
         //nullable = true from not(false or (false and true)) = true
 : WaypointBehaviorBase{
 
@@ -917,7 +915,7 @@ open fun getWaypointBehavior()
 }
 
 
-open fun getParentLayer()
+    open fun getParentLayer()
         //nullable = true from not(false or (false and true)) = true
 : PathFindingLayerInterface{
 
@@ -928,7 +926,7 @@ open fun getParentLayer()
 }
 
 
-open fun getRTSLayer2LogHelper()
+    open fun getRTSLayer2LogHelper()
         //nullable = true from not(false or (false and true)) = true
 : RTSLayer2LogHelper{
 
@@ -939,7 +937,7 @@ open fun getRTSLayer2LogHelper()
 }
 
 
-open fun getWaypointLogHelper()
+    open fun getWaypointLogHelper()
         //nullable = true from not(false or (false and true)) = true
 : WaypointLogHelper{
 
@@ -950,7 +948,7 @@ open fun getWaypointLogHelper()
 }
 
 
-open fun getWaypoint2LogHelper()
+    open fun getWaypoint2LogHelper()
         //nullable = true from not(false or (false and true)) = true
 : Waypoint2LogHelper{
 
@@ -961,7 +959,7 @@ open fun getWaypoint2LogHelper()
 }
 
 
-open fun getWaypointRunnableLogHelper()
+    open fun getWaypointRunnableLogHelper()
         //nullable = true from not(false or (false and true)) = true
 : WaypointRunnableLogHelper{
 
@@ -972,7 +970,7 @@ open fun getWaypointRunnableLogHelper()
 }
 
 
-open fun shouldAddWaypointFromBuilding()
+    open fun shouldAddWaypointFromBuilding()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -983,7 +981,7 @@ open fun shouldAddWaypointFromBuilding()
 }
 
 
-open fun getCaptionAnimationHelper()
+    open fun getCaptionAnimationHelper()
         //nullable = true from not(false or (false and true)) = true
 : CaptionAnimationHelperBase{
 
@@ -994,7 +992,7 @@ open fun getCaptionAnimationHelper()
 }
 
 
-open fun isShowMoreCaptionStates()
+    open fun isShowMoreCaptionStates()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -1007,7 +1005,7 @@ open fun isShowMoreCaptionStates()
 
                 @Throws(Exception::class)
             
-open fun init(geographicMapCellHistory: GeographicMapCellHistory, geographicMapCellPositionBasicArrayList: BasicArrayList)
+    open fun init(geographicMapCellHistory: GeographicMapCellHistory, geographicMapCellPositionBasicArrayList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapCellHistory = geographicMapCellHistory
@@ -1017,7 +1015,7 @@ open fun init(geographicMapCellHistory: GeographicMapCellHistory, geographicMapC
 
                 @Throws(Exception::class)
             
-open fun getCurrentGeographicMapCellPosition()
+    open fun getCurrentGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPosition{
 
@@ -1030,7 +1028,7 @@ open fun getCurrentGeographicMapCellPosition()
 
                 @Throws(Exception::class)
             
-open fun getTopLeftGeographicMapCellPosition()
+    open fun getTopLeftGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPosition{
 
@@ -1041,7 +1039,7 @@ open fun getTopLeftGeographicMapCellPosition()
 }
 
 
-open fun getMoveOutOfBuildAreaPath(geographicMapCellPosition: GeographicMapCellPosition)
+    open fun getMoveOutOfBuildAreaPath(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var geographicMapCellPosition = geographicMapCellPosition
@@ -1055,14 +1053,14 @@ open fun getMoveOutOfBuildAreaPath(geographicMapCellPosition: GeographicMapCellP
 
                 @Throws(Exception::class)
             
-open fun setClosestGeographicMapCellHistory(pathsList: BasicArrayList)
+    open fun setClosestGeographicMapCellHistory(pathsList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pathsList = pathsList
 }
 
 
-open fun teleportTo(geographicMapCellPosition: GeographicMapCellPosition)
+    open fun teleportTo(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapCellPosition = geographicMapCellPosition
@@ -1071,7 +1069,7 @@ open fun teleportTo(geographicMapCellPosition: GeographicMapCellPosition)
 
                 @Throws(Exception::class)
             
-open fun setLoad(resource: Short)
+    open fun setLoad(resource: Short)
         //nullable = true from not(false or (false and false)) = true
 {
 var resource = resource
@@ -1080,7 +1078,7 @@ var resource = resource
 
                 @Throws(Exception::class)
             
-open fun getSurroundingGeographicMapCellPositionList()
+    open fun getSurroundingGeographicMapCellPositionList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -1093,7 +1091,7 @@ open fun getSurroundingGeographicMapCellPositionList()
 
                 @Throws(Exception::class)
             
-open fun trackTo(reason: String)
+    open fun trackTo(reason: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var reason = reason
@@ -1102,7 +1100,7 @@ open fun trackTo(reason: String)
 
                 @Throws(Exception::class)
             
-open fun trackTo(dx: Int, dy: Int)
+    open fun trackTo(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var dx = dx
@@ -1110,7 +1108,7 @@ open fun trackTo(dx: Int, dy: Int)
 }
 
 
-open fun isWaypointListEmptyOrOnlyTargets()
+    open fun isWaypointListEmptyOrOnlyTargets()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -1121,7 +1119,7 @@ open fun isWaypointListEmptyOrOnlyTargets()
 }
 
 
-open fun getTrackingEvent()
+    open fun getTrackingEvent()
         //nullable = true from not(false or (false and true)) = true
 : TrackingEvent{
 
@@ -1134,7 +1132,7 @@ open fun getTrackingEvent()
 
                 @Throws(Exception::class)
             
-open fun buildingChase(allbinaryLayer: AllBinaryLayer, cellPosition: GeographicMapCellPosition)
+    open fun buildingChase(allbinaryLayer: AllBinaryLayer, cellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var allbinaryLayer = allbinaryLayer
@@ -1147,13 +1145,13 @@ open fun buildingChase(allbinaryLayer: AllBinaryLayer, cellPosition: GeographicM
 }
 
 
-open fun allStop()
+    open fun allStop()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun implmentsTickableInterface()
+    open fun implmentsTickableInterface()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -1164,7 +1162,7 @@ open fun implmentsTickableInterface()
 }
 
 
-open fun implmentsGameInputInterface()
+    open fun implmentsGameInputInterface()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -1175,7 +1173,7 @@ open fun implmentsGameInputInterface()
 }
 
 
-open fun getRootName()
+    open fun getRootName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1186,7 +1184,7 @@ open fun getRootName()
 }
 
 
-open fun getRotationAnimationInterface()
+    open fun getRotationAnimationInterface()
         //nullable = true from not(false or (false and true)) = true
 : RotationAnimation{
 
@@ -1197,7 +1195,7 @@ open fun getRotationAnimationInterface()
 }
 
 
-open fun setFrame(index: Int)
+    open fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var index = index
@@ -1205,7 +1203,7 @@ this.getRotationAnimationInterface()!!.setFrame(index)
 }
 
 
-open fun setRotationAnimationInterface(rotationAnimationInterface: RotationAnimation)
+    open fun setRotationAnimationInterface(rotationAnimationInterface: RotationAnimation)
         //nullable = true from not(false or (false and false)) = true
 {
     //var rotationAnimationInterface = rotationAnimationInterface

@@ -30,12 +30,11 @@ open public class ProcessPaintableSingletonFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: ProcessPaintable = ProcessPaintable()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ProcessPaintable{
 
@@ -47,7 +46,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

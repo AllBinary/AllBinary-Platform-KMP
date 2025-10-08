@@ -36,7 +36,7 @@ open public class CustomMapGeneratorFactory : CustomMapGeneratorBaseFactory {
         
                 @Throws(Exception::class)
             
-open fun getInstance(raceTrackGeographicMap: RaceTrackGeographicMap)
+    open fun getInstance(raceTrackGeographicMap: RaceTrackGeographicMap)
         //nullable =  from not(true or (false and false)) = 
 : CustomMapGeneratorBase{
     //var raceTrackGeographicMap = raceTrackGeographicMap

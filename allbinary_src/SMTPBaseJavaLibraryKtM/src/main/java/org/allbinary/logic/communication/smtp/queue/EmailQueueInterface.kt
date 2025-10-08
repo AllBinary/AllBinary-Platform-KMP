@@ -26,18 +26,19 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.communication.smtp.EmailInterface
+
 interface EmailQueueInterface {
         
 
                 @Throws(Exception::class)
             
-open fun offer(emailInterface: EmailInterface)
+    open fun offer(emailInterface: EmailInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
                 @Throws(Exception::class)
             
-open fun remove()
+    open fun remove()
         //nullable = true from not(false or (false and true)) = true
 : EmailInterface
 

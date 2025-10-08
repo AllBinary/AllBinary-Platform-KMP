@@ -25,14 +25,15 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface CryptInterface {
         
 
-open fun encrypt(array: ByteArray)
+    open fun encrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray
 
-open fun decrypt(array: ByteArray)
+    open fun decrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray
 

@@ -49,7 +49,7 @@ open public class CreateGameRunnable
     private val hashtable: Hashtable<Any, Any>
 
     private val startGameMidletEvent: DemoGameMidletEvent
-public constructor        (demoGameMidlet: DemoGameMidlet, hashtable: Hashtable<Any, Any>)
+public constructor (demoGameMidlet: DemoGameMidlet, hashtable: Hashtable<Any, Any>)
             : super()
         {
 var demoGameMidlet = demoGameMidlet
@@ -59,7 +59,8 @@ this.hashtable= hashtable
 this.startGameMidletEvent= DemoGameMidletEvent(this, DemoGameMidletStateFactory.getInstance()!!.START_GAME)
 }
 
-override fun run()
+
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 

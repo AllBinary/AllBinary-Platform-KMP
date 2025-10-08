@@ -26,14 +26,15 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Command
+
 interface MyCommandInterface {
         
 
-open fun addCommand(command: Command)
+    open fun addCommand(command: Command)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun removeAllCommands()
+    open fun removeAllCommands()
         //nullable = true from not(false or (false and true)) = true
 
 

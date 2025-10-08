@@ -39,7 +39,6 @@ import org.allbinary.game.layer.SelectionHudPaintable
 import org.allbinary.game.layer.waypoint.Waypoint
 import org.allbinary.util.BasicArrayList
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.animation.AnimationInterfaceFactoryInterface
 import org.allbinary.animation.ProceduralAnimationInterfaceFactoryInterface
@@ -76,10 +75,9 @@ open public class BuildingLayer : AdvancedRTSGameLayer
                 , RotationAnimationInterfaceCompositeInterface
                 , TrackingEventListenerInterface {
         
-
-        companion object {
+companion object {
             
-open fun getStaticType()
+    open fun getStaticType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -111,7 +109,7 @@ open fun getStaticType()
     private val healthBar: Paintable
 
     private val pathsHashtable: Hashtable<Any, Any>
-public constructor        (remoteInfo: RemoteInfo, groupInterface: Array<Group?>, rootName: String, name: String, healthInterface: Health, rtsFormInput: RTSFormInput, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
+public constructor (remoteInfo: RemoteInfo, groupInterface: Array<Group?>, rootName: String, name: String, healthInterface: Health, rtsFormInput: RTSFormInput, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
 
                             : super(remoteInfo, 
                             null, groupInterface, rootName, name, healthInterface, rtsFormInput, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y){
@@ -175,7 +173,7 @@ this.generateMoveOutOfBuildAreaPaths()
 this.trackingEvent= TrackingEvent(this)
 }
 
-public constructor        ()                        
+public constructor ()                        
 
                             : super(){
 
@@ -204,7 +202,7 @@ this.pathsHashtable=
 
     var local: Boolean= false
 
-open fun initVisibility(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
+    open fun initVisibility(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
@@ -232,7 +230,7 @@ super.initVisibility(rtsPlayerLayerInterface)
 
                 @Throws(Exception::class)
             
-open fun construct(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
+    open fun construct(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
@@ -241,7 +239,7 @@ TrackingEventHandler.getInstance()!!.addListener(this)
 }
 
 
-open fun onMovement(trackingEvent: TrackingEvent)
+    open fun onMovement(trackingEvent: TrackingEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var trackingEvent = trackingEvent
@@ -271,7 +269,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "onMovement", e)
 
                 @Throws(Exception::class)
             
-open fun processBuiltTick(allBinaryLayerManager: AllBinaryLayerManager)
+    open fun processBuiltTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager
@@ -347,7 +345,7 @@ this.indexedButShouldBeRotationAnimationInterface!!.nextFrame()
 }
 
 
-open fun calculateEfficiency()
+    open fun calculateEfficiency()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -358,7 +356,7 @@ open fun calculateEfficiency()
 }
 
 
-open fun getCost()
+    open fun getCost()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -372,7 +370,7 @@ open fun getCost()
 }
 
 
-open fun getDowngradeCost()
+    open fun getDowngradeCost()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -387,7 +385,7 @@ logUtil!!.put("Cost: " +downgradeCost, this, "getDowngradeCost")
 }
 
 
-open fun getUpgradeCost()
+    open fun getUpgradeCost()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -401,7 +399,7 @@ open fun getUpgradeCost()
 }
 
 
-open fun downgrade()
+    open fun downgrade()
         //nullable = true from not(false or (false and true)) = true
 {
 super.downgrade()
@@ -411,7 +409,7 @@ this.getHealthInterface()!!.setMaxHealth(this.getHealthInterface()!!.getMaxHealt
 }
 
 
-open fun upgrade()
+    open fun upgrade()
         //nullable = true from not(false or (false and true)) = true
 {
 super.upgrade()
@@ -421,7 +419,7 @@ this.getHealthInterface()!!.setMaxHealth(this.getHealthInterface()!!.getMaxHealt
 }
 
 
-open fun getBuildingLevelCost()
+    open fun getBuildingLevelCost()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -432,7 +430,7 @@ open fun getBuildingLevelCost()
 }
 
 
-open fun setBuildingLevelCost(buildingLevelCost: Int)
+    open fun setBuildingLevelCost(buildingLevelCost: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var buildingLevelCost = buildingLevelCost
@@ -440,7 +438,7 @@ this.buildingLevelCost= buildingLevelCost
 }
 
 
-open fun getProductivity()
+    open fun getProductivity()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -451,7 +449,7 @@ open fun getProductivity()
 }
 
 
-open fun setProductivity(productivity: Int)
+    open fun setProductivity(productivity: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var productivity = productivity
@@ -459,7 +457,7 @@ this.productivity= productivity
 }
 
 
-open fun getEfficiency()
+    open fun getEfficiency()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -470,7 +468,7 @@ open fun getEfficiency()
 }
 
 
-open fun setEfficiency(efficiency: Int)
+    open fun setEfficiency(efficiency: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var efficiency = efficiency
@@ -480,7 +478,7 @@ this.efficiency= efficiency
 
                 @Throws(Exception::class)
             
-open fun generateMoveOutOfBuildAreaPaths()
+    open fun generateMoveOutOfBuildAreaPaths()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -543,7 +541,7 @@ this.pathsHashtable!!.put(occupyGeographicMapCellPosition, pathsList)
 }
 
 
-open fun getMoveOutOfBuildAreaPath(geographicMapCellPosition: GeographicMapCellPosition)
+    open fun getMoveOutOfBuildAreaPath(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var geographicMapCellPosition = geographicMapCellPosition
@@ -558,7 +556,7 @@ open fun getMoveOutOfBuildAreaPath(geographicMapCellPosition: GeographicMapCellP
 }
 
 
-open fun getEndGeographicMapCellPositionList()
+    open fun getEndGeographicMapCellPositionList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -569,7 +567,7 @@ open fun getEndGeographicMapCellPositionList()
 }
 
 
-open fun shouldHandleStartSameAsEnd()
+    open fun shouldHandleStartSameAsEnd()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -580,7 +578,7 @@ open fun shouldHandleStartSameAsEnd()
 }
 
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -600,7 +598,7 @@ this.healthBar!!.paint(graphics)
 
                 @Throws(Exception::class)
             
-open fun damage(damage: Int, damageType: Int)
+    open fun damage(damage: Int, damageType: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var damage = damage
@@ -616,7 +614,7 @@ this.damageFloaters!!.add(damage)
 
                 @Throws(Exception::class)
             
-open fun getDamage(damageType: Int)
+    open fun getDamage(damageType: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var damageType = damageType
@@ -628,7 +626,7 @@ var damageType = damageType
 }
 
 
-open fun addVisibility()
+    open fun addVisibility()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -645,7 +643,7 @@ VisibleCellPositionsSingleton.getInstance()!!.addStationaryCellPositions(surroun
 }
 
 
-open fun removeVisibility()
+    open fun removeVisibility()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -661,7 +659,7 @@ VisibleCellPositionsSingleton.getInstance()!!.removeStationaryCellPositions(surr
 
                 @Throws(Exception::class)
             
-open fun setDestroyed(destroyed: Boolean)
+    open fun setDestroyed(destroyed: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var destroyed = destroyed
@@ -738,7 +736,7 @@ vibration.vibrate(duration *4, 0, 0)
 }
 
 
-open fun createHudPaintable()
+    open fun createHudPaintable()
         //nullable = true from not(false or (false and true)) = true
 : SelectionHudPaintable{
 
@@ -754,7 +752,7 @@ buildingInfoHudPaintable!!.setRtsLayer(this)
 }
 
 
-open fun getHudPaintable()
+    open fun getHudPaintable()
         //nullable = true from not(false or (false and true)) = true
 : SelectionHudPaintable{
 
@@ -768,7 +766,7 @@ open fun getHudPaintable()
 }
 
 
-open fun getType()
+    open fun getType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

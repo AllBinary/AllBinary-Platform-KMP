@@ -32,13 +32,12 @@ import org.allbinary.media.image.comparison.pixel.PixelDelta
 
 open public class AllMotionRectangles : MotionRectangles {
         
-
-        companion object {
+companion object {
             
     private val NAME: String = "allMotionRectangles_"
 
         }
-            public constructor        (imageComparisonResult: ImageComparisonResult)                        
+            public constructor (imageComparisonResult: ImageComparisonResult)                        
 
                             : super(NAME, imageComparisonResult){
 var imageComparisonResult = imageComparisonResult
@@ -52,7 +51,7 @@ createMotionRectangles(imageComparisonResult)
 
                 @Throws(Exception::class)
             
-open fun createMotionRectangles(imageComparisonInfo: ImageComparisonResult)
+    open fun createMotionRectangles(imageComparisonInfo: ImageComparisonResult)
         //nullable = true from not(false or (false and false)) = true
 {
 var imageComparisonInfo = imageComparisonInfo
@@ -80,7 +79,7 @@ addPixelDeltaToAMotionRectangle(pixelDelta)
 
                 @Throws(Exception::class)
             
-open fun addPixelDeltaToExistingMotionRectangle(pixelDelta: PixelDelta)
+    open fun addPixelDeltaToExistingMotionRectangle(pixelDelta: PixelDelta)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var pixelDelta = pixelDelta
@@ -150,7 +149,7 @@ motionRectangle!!.getRectangle()!!.setSize(newWidth, newHeight)
 
                 @Throws(Exception::class)
             
-open fun addPixelDeltaToAMotionRectangle(pixelDelta: PixelDelta)
+    open fun addPixelDeltaToAMotionRectangle(pixelDelta: PixelDelta)
         //nullable = true from not(false or (false and false)) = true
 {
 var pixelDelta = pixelDelta
@@ -175,7 +174,7 @@ this.getVector()!!.add(motionRectangle)
 
                 @Throws(Exception::class)
             
-open fun shouldPixelDeltaPartOfMotionRectangle(motionRectangle: MotionRectangle, pixelDelta: PixelDelta)
+    open fun shouldPixelDeltaPartOfMotionRectangle(motionRectangle: MotionRectangle, pixelDelta: PixelDelta)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var motionRectangle = motionRectangle
@@ -227,7 +226,7 @@ var pixelDelta = pixelDelta
 
                 @Throws(Exception::class)
             
-open fun isPixelDeltaLikelyPartOfMotionRectangle(motionRectangle: MotionRectangle, pixelDelta: PixelDelta)
+    open fun isPixelDeltaLikelyPartOfMotionRectangle(motionRectangle: MotionRectangle, pixelDelta: PixelDelta)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var motionRectangle = motionRectangle

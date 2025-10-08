@@ -48,7 +48,7 @@ open public class AbBasicCrypt
     private var algorithm: String
 
     private var key: ByteArray
-public constructor        (algorithm: String, key: String)
+public constructor (algorithm: String, key: String)
             : super()
         {
 var algorithm = algorithm
@@ -69,7 +69,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, "AbCrypt(alg,key)", e)
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -97,7 +97,7 @@ PreLogUtil.put("init Failed", this, commonStrings!!.INIT, e)
 }
 
 
-open fun encrypt(array: ByteArray)
+    open fun encrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
 var array = array
@@ -152,7 +152,7 @@ PreLogUtil.put("Encrypt Failed", this, "encrypt", e)
 }
 
 
-open fun decrypt(array: ByteArray)
+    open fun decrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
 var array = array

@@ -26,20 +26,21 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.media.Player
+
 interface SoundInterface {
         
 
-open fun getResource()
+    open fun getResource()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getPlayerP()
+    open fun getPlayerP()
         //nullable = true from not(false or (false and true)) = true
 : Player
 
                 @Throws(Exception::class)
             
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 
 

@@ -36,12 +36,11 @@ open public class MouseInputAutomationProcessor
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun process(mouseActionScriptInputInterface: MouseActionScriptInputInterface)
+    open fun process(mouseActionScriptInputInterface: MouseActionScriptInputInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var mouseActionScriptInputInterface = mouseActionScriptInputInterface
@@ -82,7 +81,7 @@ Thread.sleep(mouseActionScriptInputInterface!!.getTime())
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

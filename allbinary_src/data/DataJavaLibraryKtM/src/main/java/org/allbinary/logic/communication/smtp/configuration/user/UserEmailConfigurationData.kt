@@ -30,13 +30,12 @@ open public class UserEmailConfigurationData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NAME: String = "USER_EMAIL_CONFIGURATION_NAME"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

@@ -35,7 +35,6 @@ import org.allbinary.game.rts.technology.event.TechEventHandler
 import org.allbinary.graphics.form.item.CustomItem
 import org.allbinary.media.audio.BuildingSound
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.game.identification.Group
@@ -58,7 +57,7 @@ open public class TechRTSFormInput : RTSFormInput {
     private val EVENT: AllBinaryEventObject = AllBinaryEventObject(this)
 
     val noMoneyGameNotificationEvent: GameNotificationEvent
-public constructor        (groupInterface: Array<Group?>)                        
+public constructor (groupInterface: Array<Group?>)                        
 
                             : super(groupInterface){
     //var groupInterface = groupInterface
@@ -75,7 +74,7 @@ this.noMoneyGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.ge
 
                 @Throws(Exception::class)
             
-open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
+    open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -92,7 +91,7 @@ this.noMoneyGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.getF
 
                 @Throws(Exception::class)
             
-open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, itemIndex: Int)
+    open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, itemIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var associatedRtsLayer = associatedRtsLayer

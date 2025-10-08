@@ -26,78 +26,79 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.business.user.commerce.inventory.basket.BasketInterface
+
 interface OrderInterface {
         
 
-open fun setShippingMethod(shippingType: String)
+    open fun setShippingMethod(shippingType: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setPaymentMethod(value: String)
+    open fun setPaymentMethod(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setSpecial(special: String)
+    open fun setSpecial(special: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setStoreName(value: String)
+    open fun setStoreName(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setUserComments(value: String)
+    open fun setUserComments(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setUserCancelComments(value: String)
+    open fun setUserCancelComments(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setStoreComments(value: String)
+    open fun setStoreComments(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setStoreCancelComments(value: String)
+    open fun setStoreCancelComments(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getBasket()
+    open fun getBasket()
         //nullable = true from not(false or (false and true)) = true
 : BasketInterface
 
-open fun getShippingMethod()
+    open fun getShippingMethod()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getPaymentMethod()
+    open fun getPaymentMethod()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getSpecial()
+    open fun getSpecial()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getId()
+    open fun getId()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getStoreName()
+    open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getUserComments()
+    open fun getUserComments()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getUserCancelComments()
+    open fun getUserCancelComments()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getStoreComments()
+    open fun getStoreComments()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getStoreCancelComments()
+    open fun getStoreCancelComments()
         //nullable = true from not(false or (false and true)) = true
 : String
 

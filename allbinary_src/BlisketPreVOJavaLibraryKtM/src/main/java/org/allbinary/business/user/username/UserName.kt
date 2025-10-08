@@ -37,12 +37,11 @@ open public class UserName
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: UserName = UserName()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : UserName{
 
@@ -53,7 +52,7 @@ open fun getInstance()
 }
 
 
-open fun getValidationInfo(aUserName: String)
+    open fun getValidationInfo(aUserName: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var aUserName = aUserName
@@ -83,12 +82,12 @@ var aUserName = aUserName
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var userName: String
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
-public constructor        (hashMap: HashMap<Any, Any>)
+public constructor (hashMap: HashMap<Any, Any>)
             : super()
         {
 var hashMap = hashMap
@@ -96,7 +95,7 @@ this.userName= hashMap!!.get(UserData.USERNAME) as String
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -127,7 +126,7 @@ open fun isValid()
 }
 
 
-open fun get()
+    open fun get()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -138,7 +137,7 @@ open fun get()
 }
 
 
-open fun isValid(aUserName: String)
+    open fun isValid(aUserName: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var aUserName = aUserName

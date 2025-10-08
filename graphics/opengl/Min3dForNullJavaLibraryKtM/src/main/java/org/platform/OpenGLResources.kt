@@ -17,12 +17,11 @@ open public class OpenGLResources
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OpenGLResources = OpenGLResources()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OpenGLResources{
 
@@ -40,13 +39,13 @@ open fun getInstance()
             {
             }            
         
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun isExcluded(name: String)
+    open fun isExcluded(name: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var name = name
@@ -57,7 +56,7 @@ open fun isExcluded(name: String)
 }
 
 
-open fun getIdentifier(name: String, defType: String, defPackage: String)
+    open fun getIdentifier(name: String, defType: String, defPackage: String)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var name = name
@@ -72,7 +71,7 @@ open fun getIdentifier(name: String, defType: String, defPackage: String)
 
                 @Throws(Exception::class)
             
-open fun openRawResource(id: Int)
+    open fun openRawResource(id: Int)
         //nullable = true from not(false or (false and false)) = true
 : InputStream{
     //var id = id
@@ -85,7 +84,7 @@ open fun openRawResource(id: Int)
 
                 @Throws(Exception::class)
             
-open fun openRawResourceFromName(resourceName: String)
+    open fun openRawResourceFromName(resourceName: String)
         //nullable = true from not(false or (false and false)) = true
 : InputStream{
     //var resourceName = resourceName
@@ -98,7 +97,7 @@ open fun openRawResourceFromName(resourceName: String)
 
                 @Throws(Exception::class)
             
-open fun getResourceAsStream(resourceName: String)
+    open fun getResourceAsStream(resourceName: String)
         //nullable = true from not(false or (false and false)) = true
 : InputStream{
     //var resourceName = resourceName
@@ -109,7 +108,7 @@ open fun getResourceAsStream(resourceName: String)
 }
 
 
-open fun getPackageName()
+    open fun getPackageName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

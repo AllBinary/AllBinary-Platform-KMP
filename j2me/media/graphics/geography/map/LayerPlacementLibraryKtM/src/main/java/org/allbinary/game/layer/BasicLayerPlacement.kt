@@ -36,7 +36,7 @@ open public class BasicLayerPlacement
     private var width: Int
 
     private var height: Int
-public constructor        (layerType: LayerPlacementType, width: Int, height: Int)
+public constructor (layerType: LayerPlacementType, width: Int, height: Int)
             : super()
         {
 var layerType = layerType
@@ -48,7 +48,7 @@ this.height= height
 }
 
 
-open fun getWidth()
+    open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -59,7 +59,7 @@ open fun getWidth()
 }
 
 
-open fun getHeight()
+    open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -70,7 +70,7 @@ open fun getHeight()
 }
 
 
-open fun getLayerType()
+    open fun getLayerType()
         //nullable = true from not(false or (false and true)) = true
 : LayerPlacementType{
 
@@ -81,7 +81,7 @@ open fun getLayerType()
 }
 
 
-open fun setLayerType(layerType: LayerPlacementType)
+    open fun setLayerType(layerType: LayerPlacementType)
         //nullable = true from not(false or (false and false)) = true
 {
 var layerType = layerType

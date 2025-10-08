@@ -32,12 +32,11 @@ import org.allbinary.util.BasicArrayListUtil
 
 open public class NoMenuInputProcessor : BasicMenuInputProcessor {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: NoMenuInputProcessor = NoMenuInputProcessor()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : NoMenuInputProcessor{
 
@@ -49,7 +48,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()                        
+            private constructor ()                        
 
                             : super(BasicArrayListUtil.getInstance()!!.getImmutableInstance(),  -1, NullCanvas.NULL_CANVAS){
 
@@ -59,20 +58,23 @@ open fun getInstance()
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun onDownGameKeyEvent(gameKeyEvent: GameKeyEvent)
+
+    override fun onDownGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameKeyEvent = gameKeyEvent
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun onUpGameKeyEvent(gameKeyEvent: GameKeyEvent)
+
+    override fun onUpGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameKeyEvent = gameKeyEvent
 }
 
-override fun onMotionGestureEvent(motionGestureEvent: MotionGestureEvent)
+
+    override fun onMotionGestureEvent(motionGestureEvent: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var motionGestureEvent = motionGestureEvent

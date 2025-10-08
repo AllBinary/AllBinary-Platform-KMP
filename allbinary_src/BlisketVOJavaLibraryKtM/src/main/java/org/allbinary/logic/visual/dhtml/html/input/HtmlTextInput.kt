@@ -30,7 +30,7 @@
 
 open public class HtmlTextInput : HtmlLengthInput {
         
-public constructor        (before: String, name: String, value: String, after: String)                        
+public constructor (before: String, name: String, value: String, after: String)                        
 
                             : super(before, HtmlInputData.getInstance()!!.TEXT, name, value, after){
 var before = before

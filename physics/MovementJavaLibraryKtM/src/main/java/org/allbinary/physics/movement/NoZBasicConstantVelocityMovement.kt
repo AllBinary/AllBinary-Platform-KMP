@@ -42,19 +42,20 @@ open public class NoZBasicConstantVelocityMovement : Movement
     private var speedBasicDecimal: BasicDecimal = BasicDecimal.ZERO_BIGDECIMAL
 
     private val axisMathVectorUtil: AxisMathVectorUtil = AxisMathVectorUtil.getInstance()!!
-public constructor        (basicDecimal: BasicDecimal, velocityProperties: BasicVelocityProperties){
+public constructor (basicDecimal: BasicDecimal, velocityProperties: BasicVelocityProperties){
 var basicDecimal = basicDecimal
 var velocityProperties = velocityProperties
 this.setSpeedBasicDecimal(basicDecimal)
 this.velocityProperties= velocityProperties
 }
 
-public constructor        (){
+public constructor (){
 this.setSpeedBasicDecimal(BasicDecimal.ZERO_BIGDECIMAL)
 this.velocityProperties= BasicVelocityProperties()
 }
 
-override fun init(speedBasicDecimal: BasicDecimal, angle: Int, otherAngle: Int)
+
+    override fun init(speedBasicDecimal: BasicDecimal, angle: Int, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var speedBasicDecimal = speedBasicDecimal
@@ -68,7 +69,7 @@ this.velocityProperties!!.setVelocity(speedBasicDecimal, angleFactory!!.getInsta
 }
 
 
-open fun moveOutsideRadius(layer: AllBinaryLayer, radius: Long, angle: Int, otherAngle: Int)
+    open fun moveOutsideRadius(layer: AllBinaryLayer, radius: Long, angle: Int, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var layer = layer
@@ -89,14 +90,16 @@ layer.move(xVector, yVector, 0)
 
 
                 @Throws(Exception::class)
-            override fun process(layer: AllBinaryGameLayer)
+            
+    override fun process(layer: AllBinaryGameLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var layer = layer
 layer.move(this.velocityProperties!!.getVelocityXBasicDecimalP()!!.getScaled(), this.velocityProperties!!.getVelocityYBasicDecimalP()!!.getScaled(), 0)
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -106,13 +109,15 @@ override fun toString()
                         return this.velocityProperties!!.toString()
 }
 
-override fun stop()
+
+    override fun stop()
         //nullable = true from not(false or (false and true)) = true
 {
 this.velocityProperties!!.zero()
 }
 
-override fun getVelocityProperties()
+
+    override fun getVelocityProperties()
         //nullable = true from not(false or (false and true)) = true
 : BasicVelocityProperties{
 
@@ -123,7 +128,7 @@ override fun getVelocityProperties()
 }
 
 
-open fun setVelocityProperties(velocityProperties: BasicVelocityProperties)
+    open fun setVelocityProperties(velocityProperties: BasicVelocityProperties)
         //nullable = true from not(false or (false and false)) = true
 {
 var velocityProperties = velocityProperties
@@ -131,7 +136,7 @@ this.velocityProperties= velocityProperties
 }
 
 
-open fun setSpeedBasicDecimal(speedBasicDecimal: BasicDecimal)
+    open fun setSpeedBasicDecimal(speedBasicDecimal: BasicDecimal)
         //nullable = true from not(false or (false and false)) = true
 {
 var speedBasicDecimal = speedBasicDecimal
@@ -139,7 +144,7 @@ this.speedBasicDecimal= speedBasicDecimal
 }
 
 
-open fun getSpeedBasicDecimal()
+    open fun getSpeedBasicDecimal()
         //nullable = true from not(false or (false and true)) = true
 : BasicDecimal{
 

@@ -58,7 +58,7 @@ open public class HighScoreTextBox : CustomTextBox {
     private var paintable: Paintable = NullPaintable.getInstance()!!
 
     var submitted: Boolean = false
-public constructor        (highScoresFactoryInterface: HighScoresFactoryInterface, highScoresHelper: HighScoresHelperBase, abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, cmdListener: CommandListener, name: String, highScore: HighScore, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (highScoresFactoryInterface: HighScoresFactoryInterface, highScoresHelper: HighScoresHelperBase, abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, cmdListener: CommandListener, name: String, highScore: HighScore, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(cmdListener, "New High Score Enter Name:", name, 12, TextField.ANY, backgrounBasicColor, foregroundBasicColor){
     //var highScoresFactoryInterface = highScoresFactoryInterface
@@ -107,7 +107,8 @@ highScoreUtil= HighScoreUtil(highScoresFactoryInterface, highScoresHelper, abeCl
                                 
 }
 
-override fun initCommands(cmdListener: CommandListener)
+
+    override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var cmdListener = cmdListener
@@ -117,7 +118,8 @@ this.addCommand(HighScoreUtil.SUBMIT_TEXTBOX_COMMAND)
 this.setCommandListener(cmdListener)
 }
 
-override fun open()
+
+    override fun open()
         //nullable = true from not(false or (false and true)) = true
 {
 this.virtualKeyboardEventHandler!!.open()
@@ -125,7 +127,8 @@ this.paintable= NullPaintable.getInstance()
 super.open()
 }
 
-override fun close()
+
+    override fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 this.virtualKeyboardEventHandler!!.close()
@@ -153,7 +156,8 @@ this.repaintBehavior!!.onChangeRepaint(this)
 
 
                 @Throws(Exception::class)
-            override fun update()
+            
+    override fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -163,7 +167,8 @@ this.highScoreUtil!!.update(name)
 super.update()
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -172,13 +177,14 @@ this.paintable.paint(graphics)
 }
 
 
-open fun saveHighScore()
+    open fun saveHighScore()
         //nullable = true from not(false or (false and true)) = true
 {
 this.highScoreUtil!!.saveHighScore()
 }
 
-override fun submit()
+
+    override fun submit()
         //nullable = true from not(false or (false and true)) = true
 {
 this.highScoreUtil!!.submit(this)

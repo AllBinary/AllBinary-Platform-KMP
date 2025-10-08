@@ -43,13 +43,13 @@ open public class RootCategoryPropertiesAbstract
     private val category: String = CategoryData.getInstance()!!.ROOTCATEGORY
 
     private val fileName: String = category +AbPathData.getInstance()!!.EXTENSION_SEP +CategoryData.getInstance()!!.UNCRYPTED_EXTENSION
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -60,7 +60,7 @@ open fun getKey()
 }
 
 
-open fun getValue()
+    open fun getValue()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -73,7 +73,7 @@ open fun getValue()
 
                 @Throws(Exception::class)
             
-open fun setValue(value: String)
+    open fun setValue(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -86,7 +86,7 @@ var value = value
 
                 @Throws(Exception::class)
             
-open fun setRootFilePath(value: AbPath)
+    open fun setRootFilePath(value: AbPath)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -99,7 +99,7 @@ var value = value
 
                 @Throws(Exception::class)
             
-open fun setRootFilePath(value: String)
+    open fun setRootFilePath(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -112,7 +112,7 @@ var value = value
 
                 @Throws(Exception::class)
             
-open fun getRootFilePath()
+    open fun getRootFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 
@@ -124,7 +124,7 @@ open fun getRootFilePath()
 
                 @Throws(Exception::class)
             
-open fun isRealRoot()
+    open fun isRealRoot()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -136,7 +136,7 @@ open fun isRealRoot()
 
                 @Throws(Exception::class)
             
-open fun isRoot()
+    open fun isRoot()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -148,7 +148,7 @@ open fun isRoot()
 
                 @Throws(Exception::class)
             
-open fun getWebAppPath(categoryHierarchyInterface: CategoryHierarchyInterface)
+    open fun getWebAppPath(categoryHierarchyInterface: CategoryHierarchyInterface)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var categoryHierarchyInterface = categoryHierarchyInterface
@@ -159,7 +159,7 @@ var categoryHierarchyInterface = categoryHierarchyInterface
 }
 
 
-open fun getPath(categoryHierarchyInterface: CategoryHierarchyInterface)
+    open fun getPath(categoryHierarchyInterface: CategoryHierarchyInterface)
         //nullable = true from not(false or (false and false)) = true
 : AbPath{
 var categoryHierarchyInterface = categoryHierarchyInterface
@@ -171,7 +171,7 @@ var categoryHierarchyInterface = categoryHierarchyInterface
 }
 
 
-open fun getFileName()
+    open fun getFileName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -182,7 +182,7 @@ open fun getFileName()
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -193,7 +193,7 @@ open fun isValid()
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -208,7 +208,7 @@ categoryHashMap!!.put(CategoryData.getInstance()!!.NAME, this.category)
 }
 
 
-open fun toVector()
+    open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -225,7 +225,7 @@ categoryVector!!.add(category)
 
                 @Throws(Exception::class)
             
-open fun toValidationInfoDoc()
+    open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -238,7 +238,7 @@ open fun toValidationInfoDoc()
 
                 @Throws(Exception::class)
             
-open fun toValidationInfoNode(document: Document)
+    open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -252,7 +252,7 @@ var document = document
 
                 @Throws(Exception::class)
             
-open fun validationInfo()
+    open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

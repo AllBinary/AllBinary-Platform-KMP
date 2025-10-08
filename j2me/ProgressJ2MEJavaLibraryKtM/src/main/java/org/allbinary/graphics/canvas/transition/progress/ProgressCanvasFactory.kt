@@ -34,12 +34,11 @@ open public class ProgressCanvasFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var PROGRESS_FORM_SCREEN: ProgressCanvas = ProgressCanvas(StringUtil.getInstance()!!.EMPTY_STRING, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ProgressCanvas{
 
@@ -50,7 +49,7 @@ open fun getInstance()
 }
 
 
-open fun getLazyInstance()
+    open fun getLazyInstance()
         //nullable = true from not(false or (false and true)) = true
 : PaintableInterface{
 

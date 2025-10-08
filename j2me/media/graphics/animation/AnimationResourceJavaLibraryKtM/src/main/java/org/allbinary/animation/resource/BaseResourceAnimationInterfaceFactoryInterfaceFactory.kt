@@ -56,7 +56,7 @@ open public class BaseResourceAnimationInterfaceFactoryInterfaceFactory
     private val name: String
 
     private var initialized: Boolean= false
-public constructor        (name: String)
+public constructor (name: String)
             : super()
         {
     //var name = name
@@ -66,7 +66,7 @@ this.rectangleArrayOfArraysHashtable= Hashtable<Any, Any>()
 this.name= name
 }
 
-public constructor        (name: String, hashtable: Hashtable<Any, Any>, rectangleHashtable: Hashtable<Any, Any>, rectangleArrayHashtable: Hashtable<Any, Any>)
+public constructor (name: String, hashtable: Hashtable<Any, Any>, rectangleHashtable: Hashtable<Any, Any>, rectangleArrayHashtable: Hashtable<Any, Any>)
             : super()
         {
     //var name = name
@@ -80,7 +80,7 @@ this.name= name
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -92,7 +92,8 @@ open fun getName()
 
 
                 @Throws(Exception::class)
-            override fun init(level: Int)
+            
+    override fun init(level: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var level = level
@@ -107,7 +108,7 @@ this.setInitialized(true)
 
                 @Throws(Exception::class)
             
-open fun init(imageCache: ImageCache, level: Int)
+    open fun init(imageCache: ImageCache, level: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageCache = imageCache
@@ -117,7 +118,7 @@ open fun init(imageCache: ImageCache, level: Int)
 
                 @Throws(Exception::class)
             
-open fun add(resource: String, animationInterfaceFactoryInterface: BasicAnimationInterfaceFactoryInterface)
+    open fun add(resource: String, animationInterfaceFactoryInterface: BasicAnimationInterfaceFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var resource = resource
@@ -140,7 +141,8 @@ hashtable.put(resource, animationInterfaceFactoryInterface)
 
 
                 @Throws(Exception::class)
-            override fun getBasicAnimationInterfaceFactoryInstance(resource: String)
+            
+    override fun getBasicAnimationInterfaceFactoryInstance(resource: String)
         //nullable = true from not(false or (false and false)) = true
 : BasicAnimationInterfaceFactoryInterface{
     //var resource = resource
@@ -171,7 +173,8 @@ hashtable.put(resource, animationInterfaceFactoryInterface)
 
 
                 @Throws(Exception::class)
-            override fun getRectangle(resource: String)
+            
+    override fun getRectangle(resource: String)
         //nullable = true from not(false or (false and false)) = true
 : Rectangle{
     //var resource = resource
@@ -203,7 +206,7 @@ hashtable.put(resource, animationInterfaceFactoryInterface)
 
                 @Throws(Exception::class)
             
-open fun addRectangle(resource: String, rectangle: Rectangle)
+    open fun addRectangle(resource: String, rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
 {
     //var resource = resource
@@ -213,7 +216,8 @@ rectangleHashtable!!.put(resource, rectangle)
 
 
                 @Throws(Exception::class)
-            override fun getRectangleArrayOfArrays(resource: String)
+            
+    override fun getRectangleArrayOfArrays(resource: String)
         //nullable = true from not(false or (false and false)) = true
 : Array<Array<Rectangle?>?>{
     //var resource = resource
@@ -227,7 +231,7 @@ rectangleHashtable!!.put(resource, rectangle)
 
                 @Throws(Exception::class)
             
-open fun addRectangleArrayOfArrays(resource: String, rectangleArrayOfArrays: Array<Array<Rectangle?>?>)
+    open fun addRectangleArrayOfArrays(resource: String, rectangleArrayOfArrays: Array<Array<Rectangle?>?>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var resource = resource
@@ -235,7 +239,8 @@ open fun addRectangleArrayOfArrays(resource: String, rectangleArrayOfArrays: Arr
 rectangleArrayOfArraysHashtable!!.put(resource, rectangleArrayOfArrays)
 }
 
-override fun isFeature()
+
+    override fun isFeature()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -245,7 +250,8 @@ override fun isFeature()
                         return false
 }
 
-override fun isLoadingLevel(level: Int)
+
+    override fun isLoadingLevel(level: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var level = level
@@ -276,7 +282,8 @@ override fun isLoadingLevel(level: Int)
                             
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -287,7 +294,8 @@ override fun toString()
                             append(this::class.toString()!!)!!.append(CommonSeps.getInstance()!!.SEMICOLON)!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(this.name)!!.toString()
 }
 
-override fun getHashtable()
+
+    override fun getHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
 
@@ -298,7 +306,7 @@ override fun getHashtable()
 }
 
 
-open fun getRectangleHashtable()
+    open fun getRectangleHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
 
@@ -309,7 +317,7 @@ open fun getRectangleHashtable()
 }
 
 
-open fun getRectangleArrayOfArraysHashtable()
+    open fun getRectangleArrayOfArraysHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
 
@@ -320,7 +328,7 @@ open fun getRectangleArrayOfArraysHashtable()
 }
 
 
-open fun setInitialized(initialized: Boolean)
+    open fun setInitialized(initialized: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var initialized = initialized
@@ -328,7 +336,7 @@ this.initialized= initialized
 }
 
 
-open fun isInitialized()
+    open fun isInitialized()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

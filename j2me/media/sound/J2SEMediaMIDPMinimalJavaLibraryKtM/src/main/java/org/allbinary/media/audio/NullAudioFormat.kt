@@ -31,8 +31,7 @@ open public class NullAudioFormat
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NULL_AUDIO_FORMAT: AudioFormat = AudioFormat(AudioFormat.Encoding.PCM_UNSIGNED, 0.0f, 0, 0, 0, 0.0f, false)
 

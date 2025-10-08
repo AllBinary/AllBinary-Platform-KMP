@@ -35,12 +35,11 @@ import org.allbinary.logic.string.StringUtil
 
 open public class SecondaryThreadPool : ThreadPool {
         
-
-        companion object {
+companion object {
             
     private val instance: ThreadPool = SecondaryThreadPool("Secondary", 1)
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ThreadPool{
 
@@ -52,7 +51,7 @@ open fun getInstance()
 
 
         }
-            public constructor        (poolName: String, numThreads: Int)                        
+            public constructor (poolName: String, numThreads: Int)                        
 
                             : super(poolName, numThreads){
     //var poolName = poolName
@@ -63,7 +62,8 @@ open fun getInstance()
                     
 }
 
-override fun runTask(task: Runnable)
+
+    override fun runTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
 {
 var task = task
@@ -72,7 +72,8 @@ logUtil!!.put(StringMaker().
 super.runTask(task)
 }
 
-override fun startTask(task: Runnable)
+
+    override fun startTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
 {
 var task = task
@@ -80,7 +81,8 @@ logUtil!!.put(StringMaker().
                             append(this.threadPoolStrings!!.START_TASK)!!.append(StringUtil.getInstance()!!.toString(task))!!.append(System.currentTimeMillis())!!.toString(), this, this.commonStrings!!.RUN)
 }
 
-override fun completedTask(task: Runnable)
+
+    override fun completedTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
 {
 var task = task

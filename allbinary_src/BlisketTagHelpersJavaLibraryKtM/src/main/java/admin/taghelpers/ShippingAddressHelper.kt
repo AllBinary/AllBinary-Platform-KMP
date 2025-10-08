@@ -58,7 +58,7 @@ open public class ShippingAddressHelper : BasicTable {
     private var streetAddress: StreetAddress
 
     private val portion: Portion
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 this.request= pageContext!!.getRequest() as HttpServletRequest
@@ -68,7 +68,7 @@ this.getAddressForm()
 }
 
 
-open fun getAddressForm()
+    open fun getAddressForm()
         //nullable = true from not(false or (false and true)) = true
 {
 this.userName= request.getParameter(UserData.USERNAME)
@@ -87,7 +87,7 @@ this.streetAddress= StreetAddress(request)
 }
 
 
-open fun drop()
+    open fun drop()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -134,7 +134,7 @@ open fun drop()
 }
 
 
-open fun create()
+    open fun create()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -181,7 +181,7 @@ open fun create()
 }
 
 
-open fun restore()
+    open fun restore()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -230,7 +230,7 @@ open fun restore()
 }
 
 
-open fun backup()
+    open fun backup()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -279,7 +279,7 @@ open fun backup()
 }
 
 
-open fun insert()
+    open fun insert()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -326,7 +326,7 @@ ShippingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -373,7 +373,7 @@ ShippingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession
 }
 
 
-open fun setToBillingAddress()
+    open fun setToBillingAddress()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -430,7 +430,7 @@ open fun setToBillingAddress()
 }
 
 
-open fun delete()
+    open fun delete()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -477,7 +477,7 @@ ShippingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession
 }
 
 
-open fun set()
+    open fun set()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

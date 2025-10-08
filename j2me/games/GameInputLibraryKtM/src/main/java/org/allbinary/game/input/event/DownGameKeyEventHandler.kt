@@ -30,14 +30,13 @@ import org.allbinary.logic.util.event.EventListenerInterface
 
 open public class DownGameKeyEventHandler : DownGameKeyEventHandlerBase {
         
-
-        companion object {
+companion object {
             
     private val instance: DownGameKeyEventHandler = DownGameKeyEventHandler()
 
     private val instanceArray: Array<DownGameKeyEventHandlerBase?> = arrayOf(DownGameKeyEventHandlerBase(),DownGameKeyEventHandlerBase(),DownGameKeyEventHandlerBase(),DownGameKeyEventHandlerBase(),DownGameKeyEventHandlerBase(),DownGameKeyEventHandlerBase())
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DownGameKeyEventHandler{
 
@@ -52,7 +51,7 @@ open fun getInstance()
             
     private val playerInputIdFactory: LocalPlayerInputIdFactory = LocalPlayerInputIdFactory.getInstance()!!
 
-open fun getInstance(deviceId: Int)
+    open fun getInstance(deviceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : DownGameKeyEventHandlerBase{
 var deviceId = deviceId
@@ -67,7 +66,7 @@ var deviceId = deviceId
 }
 
 
-open fun getInstanceForPlayer(playerInputId: Int)
+    open fun getInstanceForPlayer(playerInputId: Int)
         //nullable = true from not(false or (false and false)) = true
 : DownGameKeyEventHandlerBase{
 var playerInputId = playerInputId
@@ -78,10 +77,11 @@ var playerInputId = playerInputId
                         return instanceArray[playerInputId]!!
 }
 
-private constructor        (){
+private constructor (){
 }
 
-override fun removeAllListeners()
+
+    override fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
 {
 super.removeAllListeners()
@@ -97,7 +97,8 @@ instanceArray[index]!!.removeAllListeners()
 
 }
 
-override fun removeListenerSingleThreaded(eventListenerInterface: EventListenerInterface)
+
+    override fun removeListenerSingleThreaded(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventListenerInterface = eventListenerInterface
@@ -115,7 +116,8 @@ instanceArray[index]!!.removeListenerSingleThreaded(eventListenerInterface)
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun removeListener(eventListenerInterface: EventListenerInterface)
+
+    override fun removeListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventListenerInterface = eventListenerInterface

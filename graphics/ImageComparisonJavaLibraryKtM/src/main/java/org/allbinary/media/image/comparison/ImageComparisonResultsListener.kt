@@ -26,10 +26,11 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.util.event.BasicEventListenerInterface
+
 interface ImageComparisonResultsListener : BasicEventListenerInterface {
         
 
-open fun onImageComparisonResultsEvent(imageComparisonResultsEvent: ImageComparisonResultsEvent)
+    open fun onImageComparisonResultsEvent(imageComparisonResultsEvent: ImageComparisonResultsEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

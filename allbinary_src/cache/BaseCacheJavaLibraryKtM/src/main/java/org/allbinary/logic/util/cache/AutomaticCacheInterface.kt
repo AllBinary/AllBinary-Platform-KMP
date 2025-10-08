@@ -25,12 +25,13 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface AutomaticCacheInterface : CacheInterface {
         
 
                 @Throws(Exception::class)
             
-open fun get(key: Any)
+    open fun get(key: Any)
         //nullable = true from not(false or (false and false)) = true
 : CacheableInterface
 

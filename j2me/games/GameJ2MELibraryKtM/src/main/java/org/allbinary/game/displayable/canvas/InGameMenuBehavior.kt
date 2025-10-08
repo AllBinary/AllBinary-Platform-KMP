@@ -29,12 +29,11 @@ import org.allbinary.graphics.displayable.event.DisplayChangeEvent
 
 open public class InGameMenuBehavior : BaseMenuBehavior {
         
-
-        companion object {
+companion object {
             
     private val instance: InGameMenuBehavior = InGameMenuBehavior()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : InGameMenuBehavior{
 
@@ -53,7 +52,8 @@ open fun getInstance()
             }            
         
                 @Throws(Exception::class)
-            override fun onDisplayChangeEvent(allBinaryGameCanvas: AllBinaryGameCanvas, displayChangeEvent: DisplayChangeEvent)
+            
+    override fun onDisplayChangeEvent(allBinaryGameCanvas: AllBinaryGameCanvas, displayChangeEvent: DisplayChangeEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameCanvas = allBinaryGameCanvas
@@ -61,7 +61,8 @@ open fun getInstance()
 allBinaryGameCanvas!!.updateMenu(displayChangeEvent)
 }
 
-override fun initSpecialPaint(allBinaryGameCanvas: AllBinaryGameCanvas)
+
+    override fun initSpecialPaint(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameCanvas = allBinaryGameCanvas
@@ -70,7 +71,8 @@ allBinaryGameCanvas!!.setNonBotPaintableP(GameCanvasNonBotPaintable(allBinaryGam
 
 
                 @Throws(Exception::class)
-            override fun initMenu(allBinaryGameCanvas: AllBinaryGameCanvas)
+            
+    override fun initMenu(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameCanvas = allBinaryGameCanvas
@@ -79,7 +81,8 @@ allBinaryGameCanvas!!.initMenu2()
 
 
                 @Throws(Exception::class)
-            override fun updateMenu(allBinaryGameCanvas: AllBinaryGameCanvas)
+            
+    override fun updateMenu(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameCanvas = allBinaryGameCanvas
@@ -88,14 +91,16 @@ allBinaryGameCanvas!!.initMenu2()
 
 
                 @Throws(Exception::class)
-            override fun popupMenu(allBinaryGameCanvas: AllBinaryGameCanvas)
+            
+    override fun popupMenu(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameCanvas = allBinaryGameCanvas
 allBinaryGameCanvas!!.popupMenu2()
 }
 
-override fun closeMenu(allBinaryGameCanvas: AllBinaryGameCanvas)
+
+    override fun closeMenu(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameCanvas = allBinaryGameCanvas

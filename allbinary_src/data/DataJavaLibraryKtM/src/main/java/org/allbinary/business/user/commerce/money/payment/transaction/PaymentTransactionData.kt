@@ -30,13 +30,12 @@ open public class PaymentTransactionData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var NAME: String = "PAYMENTTRANSACTION_NAME"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

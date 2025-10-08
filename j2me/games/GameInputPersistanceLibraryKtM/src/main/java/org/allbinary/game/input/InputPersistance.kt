@@ -52,7 +52,7 @@ open public class InputPersistance : BasicPersitance {
         
 
     private val hashtableUtil: HashtableUtil = HashtableUtil.getInstance()!!
-public constructor        (name: String)                        
+public constructor (name: String)                        
 
                             : super(name){
     //var name = name
@@ -65,7 +65,7 @@ public constructor        (name: String)
 
                 @Throws(Exception::class)
             
-open fun loadAll(abeClientInformation: AbeClientInformationInterface)
+    open fun loadAll(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -236,7 +236,7 @@ recordStore!!.closeRecordStore()
 
                 @Throws(Exception::class)
             
-open fun save(abeClientInformation: AbeClientInformationInterface, hashtable: Hashtable<Any, Any>)
+    open fun save(abeClientInformation: AbeClientInformationInterface, hashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation

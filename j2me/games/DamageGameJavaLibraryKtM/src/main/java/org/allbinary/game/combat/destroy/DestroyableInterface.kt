@@ -26,12 +26,13 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.layer.NamedInterface
+
 interface DestroyableInterface : NamedInterface {
         
 
                 @Throws(Exception::class)
             
-open fun isDestroyed()
+    open fun isDestroyed()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 

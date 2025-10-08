@@ -40,12 +40,11 @@ open public class Features
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: Features = Features()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : Features{
 
@@ -65,7 +64,7 @@ open fun getInstance()
     private val list: BasicArrayList
 
     private val defaultList: BasicArrayList
-private constructor        ()
+private constructor ()
             : super()
         {
 list= BasicArrayList()
@@ -76,7 +75,7 @@ this.init()
 
                 @Throws(Exception::class)
             
-open fun addDefault(gameFeature: Feature)
+    open fun addDefault(gameFeature: Feature)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameFeature = gameFeature
@@ -95,7 +94,7 @@ this.add(gameFeature)
 
                 @Throws(Exception::class)
             
-open fun add(gameFeature: Feature)
+    open fun add(gameFeature: Feature)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameFeature = gameFeature
@@ -116,7 +115,7 @@ GameFeatureEventHandler.getInstance()!!.fireEvent(GameFeatureEvent(gameFeature, 
 
                 @Throws(Exception::class)
             
-open fun removeDefault(gameFeature: Feature)
+    open fun removeDefault(gameFeature: Feature)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameFeature = gameFeature
@@ -129,7 +128,7 @@ defaultList!!.remove(gameFeature)
 
                 @Throws(Exception::class)
             
-open fun remove(gameFeature: Feature)
+    open fun remove(gameFeature: Feature)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameFeature = gameFeature
@@ -147,7 +146,7 @@ GameFeatureEventHandler.getInstance()!!.fireEvent(GameFeatureEvent(gameFeature, 
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -202,7 +201,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }
 
 
-open fun isDefault(gameFeature: Feature)
+    open fun isDefault(gameFeature: Feature)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var gameFeature = gameFeature
@@ -214,7 +213,7 @@ var gameFeature = gameFeature
 }
 
 
-open fun isFeature(gameFeature: Feature)
+    open fun isFeature(gameFeature: Feature)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var gameFeature = gameFeature
@@ -228,7 +227,7 @@ var gameFeature = gameFeature
 
                 @Throws(Exception::class)
             
-open fun toggle(gameFeature: Feature)
+    open fun toggle(gameFeature: Feature)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameFeature = gameFeature

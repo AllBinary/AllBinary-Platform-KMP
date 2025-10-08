@@ -38,7 +38,7 @@ open public class NullServiceReference
             {
             }            
         
-open fun getProperty(key: String)
+    open fun getProperty(key: String)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var key = key
@@ -50,7 +50,7 @@ var key = key
 }
 
 
-open fun getPropertyKeys()
+    open fun getPropertyKeys()
         //nullable = true from not(false or (false and true)) = true
 : Array<String?>{
 
@@ -61,7 +61,7 @@ open fun getPropertyKeys()
 }
 
 
-open fun compareTo(o: Any)
+    open fun compareTo(o: Any)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var o = o

@@ -33,12 +33,11 @@ open public class AnimationFrameToImageUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AnimationFrameToImageUtil = AnimationFrameToImageUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AnimationFrameToImageUtil{
 
@@ -58,7 +57,7 @@ open fun getInstance()
         
                 @Throws(Exception::class)
             
-open fun getInstanceTranslate(width: Int, height: Int, animationInterface: Animation)
+    open fun getInstanceTranslate(width: Int, height: Int, animationInterface: Animation)
         //nullable = true from not(false or (false and false)) = true
 : Image{
 var width = width
@@ -89,7 +88,7 @@ graphics.translate( -tranlateX,  -tranlateY)
 
                 @Throws(Exception::class)
             
-open fun getInstance(width: Int, height: Int, animationInterface: Animation)
+    open fun getInstance(width: Int, height: Int, animationInterface: Animation)
         //nullable =  from not(true or (false and false)) = 
 : Image{
 var width = width

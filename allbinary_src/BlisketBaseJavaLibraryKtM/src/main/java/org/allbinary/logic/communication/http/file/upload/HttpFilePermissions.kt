@@ -44,7 +44,7 @@ open public class HttpFilePermissions
     private val file: AbFile
 
     private val userRoles: Vector = Vector()
-public constructor        (fullPath: AbPath)
+public constructor (fullPath: AbPath)
             : super()
         {
 var fullPath = fullPath
@@ -79,7 +79,7 @@ file= AbFile(AbPath(fullPath!!.toFileSystemString(), FileUploadData.getInstance(
 }
 
 
-open fun isFile()
+    open fun isFile()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -90,7 +90,7 @@ open fun isFile()
 }
 
 
-open fun getUserRoles()
+    open fun getUserRoles()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 

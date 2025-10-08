@@ -45,7 +45,7 @@ open public class HighScores
     private val columnOneHeading: String = "Name"
 
     private val columnTwoHeading: String
-public constructor        (name: String, heading: String, columnTwoHeading: String)
+public constructor (name: String, heading: String, columnTwoHeading: String)
             : super()
         {
 var name = name
@@ -57,14 +57,15 @@ this.columnTwoHeading= columnTwoHeading
 }
 
 
-open fun setList(orderedHighScoresList: BasicArrayList)
+    open fun setList(orderedHighScoresList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var orderedHighScoresList = orderedHighScoresList
 this.orderedHighScoresList= orderedHighScoresList
 }
 
-override fun getList()
+
+    override fun getList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -75,7 +76,7 @@ override fun getList()
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -85,7 +86,8 @@ open fun getName()
                         return name
 }
 
-override fun getTotal()
+
+    override fun getTotal()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -95,7 +97,8 @@ override fun getTotal()
                         return this.getList()!!.size()
 }
 
-override fun addHighScore(newHighScore: HighScore)
+
+    override fun addHighScore(newHighScore: HighScore)
         //nullable = true from not(false or (false and false)) = true
 {
 var newHighScore = newHighScore
@@ -103,7 +106,7 @@ this.orderedHighScoresList!!.add(newHighScore)
 }
 
 
-open fun getHeading()
+    open fun getHeading()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -114,7 +117,7 @@ open fun getHeading()
 }
 
 
-open fun getColumnOneHeading()
+    open fun getColumnOneHeading()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -125,7 +128,7 @@ open fun getColumnOneHeading()
 }
 
 
-open fun getColumnTwoHeading()
+    open fun getColumnTwoHeading()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -137,7 +140,8 @@ open fun getColumnTwoHeading()
 
 
                 @Throws(Exception::class)
-            override fun isBestScore(newHighScore: HighScore)
+            
+    override fun isBestScore(newHighScore: HighScore)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var newHighScore = newHighScore
@@ -148,7 +152,8 @@ var newHighScore = newHighScore
                         return false
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

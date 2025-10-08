@@ -35,12 +35,11 @@ open public class CreateUserFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun getInstance(hashMap: HashMap<Any, Any>)
+    open fun getInstance(hashMap: HashMap<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
 : UserInterface{
 var hashMap = hashMap
@@ -93,7 +92,7 @@ var hashMap = hashMap
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

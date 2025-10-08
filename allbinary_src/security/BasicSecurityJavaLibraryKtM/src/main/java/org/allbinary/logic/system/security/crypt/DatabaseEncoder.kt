@@ -38,10 +38,9 @@ open public class DatabaseEncoder
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun encode(value: ByteArray)
+    open fun encode(value: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var value = value
@@ -94,7 +93,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, "DatabaseEncoder", "decode", e)
 }
 
 
-open fun decode(value: String)
+    open fun decode(value: String)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
 var value = value
@@ -169,7 +168,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, "DatabaseEncoder", "decode", e)
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

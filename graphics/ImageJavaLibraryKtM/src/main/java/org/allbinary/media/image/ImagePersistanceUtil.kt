@@ -37,12 +37,11 @@ open public class ImagePersistanceUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ImagePersistanceUtil = ImagePersistanceUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ImagePersistanceUtil{
 
@@ -66,7 +65,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun saveWithBatik(file: AbFile, bufferedImage: BufferedImage)
+    open fun saveWithBatik(file: AbFile, bufferedImage: BufferedImage)
         //nullable = true from not(false or (false and false)) = true
 {
 var file = file
@@ -91,7 +90,7 @@ logUtil!!.put("Wrote Image: " +file.getAbsolutePath(), this, commonStrings!!.SAV
 }
 
 
-open fun saveWithImageIO(filePath: String, bufferedImage: BufferedImage)
+    open fun saveWithImageIO(filePath: String, bufferedImage: BufferedImage)
         //nullable = true from not(false or (false and false)) = true
 {
 var filePath = filePath
@@ -100,7 +99,7 @@ saveWithImageIO(File(filePath), bufferedImage)
 }
 
 
-open fun saveWithImageIO(file: File, bufferedImage: BufferedImage)
+    open fun saveWithImageIO(file: File, bufferedImage: BufferedImage)
         //nullable = true from not(false or (false and false)) = true
 {
 var file = file

@@ -36,7 +36,7 @@ open public class ImageProcessorInput
     private var bufferedImageArray: Array<BufferedImage?>
 
     private var files: Array<File?>
-public constructor        (files: Array<File?>, bufferedImageArray: Array<BufferedImage?>)                        
+public constructor (files: Array<File?>, bufferedImageArray: Array<BufferedImage?>)                        
 
                             : super(){
 var files = files
@@ -50,7 +50,7 @@ this.files= files
 }
 
 
-open fun getBufferedImageArray()
+    open fun getBufferedImageArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<BufferedImage?>{
 
@@ -61,7 +61,7 @@ open fun getBufferedImageArray()
 }
 
 
-open fun getFiles()
+    open fun getFiles()
         //nullable = true from not(false or (false and true)) = true
 : Array<File?>{
 

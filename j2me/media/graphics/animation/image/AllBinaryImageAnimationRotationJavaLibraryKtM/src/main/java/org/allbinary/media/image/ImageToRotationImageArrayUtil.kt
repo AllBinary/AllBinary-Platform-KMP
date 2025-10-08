@@ -31,12 +31,11 @@ open public class ImageToRotationImageArrayUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ImageToRotationImageArrayUtil = ImageToRotationImageArrayUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ImageToRotationImageArrayUtil{
 
@@ -48,7 +47,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
@@ -56,7 +55,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun generate(image: Image, angleIncrement: Int, totalAngle: Int)
+    open fun generate(image: Image, angleIncrement: Int, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 : Array<Image?>{
 var image = image

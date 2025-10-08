@@ -38,7 +38,7 @@ open public class ImmediateCommandFormInputProcessor : CommandFormInputProcessor
     private val timeHelper: TimeDelayHelper = TimeDelayHelper(25)
 
     var gameCommandCanvas: GameCommandCanvas
-public constructor        (gameKeyEventList: BasicArrayList, playerInputId: Int, gameCommandCanvas: GameCommandCanvas, form: ScrollSelectionForm)                        
+public constructor (gameKeyEventList: BasicArrayList, playerInputId: Int, gameCommandCanvas: GameCommandCanvas, form: ScrollSelectionForm)                        
 
                             : super(gameKeyEventList, playerInputId, gameCommandCanvas, form){
 var gameKeyEventList = gameKeyEventList
@@ -53,7 +53,8 @@ this.gameCommandCanvas= gameCommandCanvas
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun onPressGameKeyEvent(gameKeyEvent: GameKeyEvent)
+
+    override fun onPressGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameKeyEvent = gameKeyEvent
@@ -78,7 +79,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.ON_PRESS_GAME_
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun onDownGameKeyEvent(gameKeyEvent: GameKeyEvent)
+
+    override fun onDownGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameKeyEvent = gameKeyEvent
@@ -103,7 +105,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.ON_DOWN_GAME_K
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun onUpGameKeyEvent(gameKeyEvent: GameKeyEvent)
+
+    override fun onUpGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameKeyEvent = gameKeyEvent
@@ -127,7 +130,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.ON_UP_GAME_KEY
 
 }
 
-override fun onMotionGestureEvent(motionGestureEvent: MotionGestureEvent)
+
+    override fun onMotionGestureEvent(motionGestureEvent: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var motionGestureEvent = motionGestureEvent

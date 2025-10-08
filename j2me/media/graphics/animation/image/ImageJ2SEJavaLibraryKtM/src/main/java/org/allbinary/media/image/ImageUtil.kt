@@ -25,25 +25,33 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.awt
+import java.awt.Color
+import java.awt.Graphics2D
+import java.awt.GraphicsConfiguration
+import java.awt.GraphicsDevice
+import java.awt.GraphicsEnvironment
+import java.awt.Transparency
 import java.awt.geom.AffineTransform
 import java.awt.image.BufferedImage
+import javax.microedition.lcdui.Image
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.math.PositionStrings
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
+import org.microemu.device.j2se.J2SEImmutableImage
+import org.microemu.device.j2se.J2SEMutableImage
 
 open public class ImageUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ImageUtil = ImageUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ImageUtil{
 
@@ -56,8 +64,6 @@ open fun getInstance()
 
         }
             
-    val logUtil: LogUtil = LogUtil.getInstance()!!
-
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private val commonSeps: CommonSeps = CommonSeps.getInstance()!!
@@ -65,21 +71,13 @@ open fun getInstance()
     private var IIOIMAGE_POOL_NAME: String = "IIOIMAGE_POOL_NAME"
 
     private val CREATE_BUFFERED_IMAGE: String = "createBufferedImage"
-private constructor        ()
+private constructor ()
             : super()
         {
-
-        try {
-            logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
-} catch(e: Exception)
-            {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
-}
-
 }
 
 
-open fun getDefaultConfiguration()
+    open fun getDefaultConfiguration()
         //nullable = true from not(false or (false and true)) = true
 : GraphicsConfiguration{
 
@@ -96,7 +94,7 @@ open fun getDefaultConfiguration()
 }
 
 
-open fun create(width: Int, height: Int)
+    open fun create(width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 : BufferedImage{
     //var width = width
@@ -114,7 +112,7 @@ open fun create(width: Int, height: Int)
 
                 @Throws(Exception::class)
             
-open fun createBufferedImage(bufferedImageArray: Array<BufferedImage?>, percent: Int, scale: Boolean)
+    open fun createBufferedImage(bufferedImageArray: Array<BufferedImage?>, percent: Int, scale: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Array<BufferedImage?>{
     //var bufferedImageArray = bufferedImageArray
@@ -157,7 +155,7 @@ scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImage, newWidt
 
                 @Throws(Exception::class)
             
-open fun createBufferedImage(bufferedImageArray: Array<BufferedImage?>, percent: Float, scale: Boolean)
+    open fun createBufferedImage(bufferedImageArray: Array<BufferedImage?>, percent: Float, scale: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Array<BufferedImage?>{
     //var bufferedImageArray = bufferedImageArray
@@ -200,7 +198,7 @@ scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImage, newWidt
 
                 @Throws(Exception::class)
             
-open fun createBufferedImage(bufferedImageArray: Array<BufferedImage?>, width: Int, height: Int, scale: Boolean)
+    open fun createBufferedImage(bufferedImageArray: Array<BufferedImage?>, width: Int, height: Int, scale: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Array<BufferedImage?>{
     //var bufferedImageArray = bufferedImageArray
@@ -234,7 +232,7 @@ scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImageArray[ind
 
                 @Throws(Exception::class)
             
-open fun createBufferedImage(bufferedImage: BufferedImage, newWidth: Int, newHeight: Int)
+    open fun createBufferedImage(bufferedImage: BufferedImage, newWidth: Int, newHeight: Int)
         //nullable = true from not(false or (false and false)) = true
 : BufferedImage{
     //var bufferedImage = bufferedImage
@@ -250,7 +248,7 @@ var newHeight = newHeight
 
                 @Throws(Exception::class)
             
-open fun createBufferedImage(bufferedImage: BufferedImage, newWidth: Int, newHeight: Int, scale: Boolean)
+    open fun createBufferedImage(bufferedImage: BufferedImage, newWidth: Int, newHeight: Int, scale: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : BufferedImage{
     //var bufferedImage = bufferedImage
@@ -267,7 +265,7 @@ var newHeight = newHeight
 
                 @Throws(Exception::class)
             
-open fun createBufferedImage(bufferedImage: BufferedImage, newWidth: Int, newHeight: Int, scale: Boolean, allowTranslate: Boolean)
+    open fun createBufferedImage(bufferedImage: BufferedImage, newWidth: Int, newHeight: Int, scale: Boolean, allowTranslate: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : BufferedImage{
     //var bufferedImage = bufferedImage
@@ -312,8 +310,6 @@ ratioY= heightRatio
 
     var affineTransform: AffineTransform = AffineTransform.getScaleInstance(ratioX, ratioY)!!
 
-logUtil!!.put(StringMaker().
-                            append(width.toFloat())!!.append(this.commonSeps!!.FORWARD_SLASH)!!.append(height.toFloat())!!.append(this.commonSeps!!.COLON)!!.append(newWidth)!!.append(this.commonSeps!!.FORWARD_SLASH)!!.append(newHeight)!!.append(this.commonSeps!!.COLON)!!.append(widthRatio.toFloat())!!.append(this.commonSeps!!.FORWARD_SLASH)!!.append(heightRatio.toFloat())!!.toString(), this, CREATE_BUFFERED_IMAGE)
 
     
                         if(!scale && allowTranslate)
@@ -325,8 +321,6 @@ logUtil!!.put(StringMaker().
 
     var dy: Double = (newHeight -height) /2
 
-logUtil!!.put(StringMaker().
-                            append("Translate dx: ")!!.append(dx.toFloat())!!.append(" dy: ")!!.append(dy.toFloat())!!.toString(), this, CREATE_BUFFERED_IMAGE)
 affineTransform!!.translate(dx, dy)
 
                                     }
@@ -346,7 +340,140 @@ graphics.drawRenderedImage(bufferedImage, affineTransform)
 }
 
 
-open fun toString(bufferedImage: BufferedImage)
+                @Throws(Exception::class)
+            
+    open fun createBufferedImageWithLargerCanvas(bufferedImage: BufferedImage, newWidth: Int, newHeight: Int)
+        //nullable = true from not(false or (false and false)) = true
+: BufferedImage{
+    //var bufferedImage = bufferedImage
+    //var newWidth = newWidth
+var newHeight = newHeight
+
+    var width: Double = bufferedImage!!.getWidth()!!
+
+
+    var height: Double = bufferedImage!!.getHeight()!!
+
+
+    var d_newWidth: Double = newWidth
+
+
+    var d_newHeight: Double = newHeight
+
+
+    var widthRatio: Double = d_newWidth /width
+
+
+    var heightRatio: Double = d_newHeight /height
+
+
+    var dx2: Int = (newWidth -width).toInt()
+
+
+    var dy2: Int = (newHeight -height).toInt()
+
+
+    var dx: Int = dx2.toInt() /2
+
+
+    var dy: Int = dy2.toInt() /2
+
+
+    var dx4: Int = dx2.toInt() /4
+
+
+    var dy4: Int = dy2.toInt() /4
+
+
+    var newBufferedImage: BufferedImage = BufferedImage(newWidth, newHeight, BufferedImage.TYPE_INT_ARGB_PRE)
+
+
+    var graphics: Graphics2D = newBufferedImage!!.createGraphics()!!
+
+graphics.drawImage(bufferedImage, dx4, dy4, 
+                            null)
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return newBufferedImage
+}
+
+
+    open fun convertToBufferedImage(toolkitImage: java.awt.Image)
+        //nullable = true from not(false or (false and false)) = true
+: BufferedImage{
+var toolkitImage = toolkitImage
+
+    
+                        if(toolkitImage == 
+                                    null
+                                )
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+
+                                    }
+                                
+
+    var bufferedImage: BufferedImage = BufferedImage(toolkitImage!!.getWidth(
+                            null), toolkitImage!!.getHeight(
+                            null), BufferedImage.TYPE_INT_ARGB)
+
+
+    var g2d: Graphics2D = bufferedImage!!.createGraphics()!!
+
+g2d.drawImage(toolkitImage, 0, 0, 
+                            null)
+g2d.dispose()
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return bufferedImage
+}
+
+
+    open fun getBufferedImage(image: Image)
+        //nullable = true from not(false or (false and false)) = true
+: BufferedImage{
+    //var image = image
+
+    var bufferedImage: BufferedImage
+
+
+    
+                        if(image.isMutable())
+                        
+                                    {
+                                    
+    var j2seImage: J2SEMutableImage = image as J2SEMutableImage
+
+bufferedImage= j2seImage!!.getImage() as BufferedImage
+
+                                    }
+                                
+                        else {
+                            
+    var j2seImage: J2SEImmutableImage = image as J2SEImmutableImage
+
+bufferedImage= j2seImage!!.getImage() as BufferedImage
+
+                        }
+                            
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return bufferedImage
+}
+
+
+    open fun toString(bufferedImage: BufferedImage)
         //nullable = true from not(false or (true and false)) = true
 : String{
 var bufferedImage = bufferedImage

@@ -29,20 +29,21 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface RunnableInterface : Runnable {
         
 
-open fun isRunning()
+    open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun setRunning(isRunning: Boolean)
+    open fun setRunning(isRunning: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun setThread(thread: Thread)
+    open fun setThread(thread: Thread)
         //nullable = true from not(false or (false and false)) = true
 
 

@@ -30,8 +30,7 @@ open public class AuthorizeNetData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val X_LOGIN: String = "x_login"
 
@@ -140,7 +139,7 @@ open public class AuthorizeNetData
     val X_DUTY: String = "x_duty"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

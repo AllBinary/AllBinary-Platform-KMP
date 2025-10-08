@@ -30,8 +30,7 @@ open public class OrderHistoryData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var MAXIDLEN: Int = 19
 

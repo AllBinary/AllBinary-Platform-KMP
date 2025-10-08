@@ -34,7 +34,7 @@ import org.w3c.dom.Node
 open public class TransformInfoDomNodeView : TransformInfoDomNode
                 , DomNodeInterface {
         
-public constructor        (transformInfoInterface: TransformInfoInterface, mapping: String)                        
+public constructor (transformInfoInterface: TransformInfoInterface, mapping: String)                        
 
                             : super(transformInfoInterface, mapping){
 var transformInfoInterface = transformInfoInterface
@@ -45,7 +45,7 @@ var mapping = mapping
                     
 }
 
-public constructor        (transformInfoInterface: TransformInfoInterface)                        
+public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
@@ -55,7 +55,7 @@ var transformInfoInterface = transformInfoInterface
                     
 }
 
-public constructor        (name: String, mappedName: String)                        
+public constructor (name: String, mappedName: String)                        
 
                             : super(name, mappedName){
 var name = name
@@ -66,7 +66,7 @@ var mappedName = mappedName
                     
 }
 
-public constructor        (name: String)                        
+public constructor (name: String)                        
 
                             : super(name, 
                             null){
@@ -80,7 +80,7 @@ var name = name
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

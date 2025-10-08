@@ -51,7 +51,7 @@ open public class PaymentEntity : AbSqlBean
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val tableName: String = "payment"
-public constructor        ()                        
+public constructor ()                        
 
                             : super(UserDbInitInfo()){
 
@@ -62,7 +62,7 @@ this.setTableName(tableName)
 }
 
 
-open fun getLastId(userName: String)
+    open fun getLastId(userName: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var userName = userName
@@ -74,7 +74,7 @@ var userName = userName
 }
 
 
-open fun setDefault(userName: String, index: Integer)
+    open fun setDefault(userName: String, index: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var userName = userName
@@ -132,7 +132,7 @@ super.updateWhere(whereKeyAndValue, updateKeyAndValue)
 }
 
 
-open fun get(userName: String)
+    open fun get(userName: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var userName = userName
@@ -203,7 +203,7 @@ keyAndValue!!.put(UserData.USERNAME, userName)
 }
 
 
-open fun getDefault(userName: String)
+    open fun getDefault(userName: String)
         //nullable = true from not(false or (false and false)) = true
 : PaymentInterface{
 var userName = userName
@@ -275,7 +275,7 @@ paymentHashMap= super.getRow(updateKeyAndValue)
 }
 
 
-open fun remove(userName: String, index: Integer)
+    open fun remove(userName: String, index: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var userName = userName
@@ -313,7 +313,7 @@ super.deleteWhere(whereHashMap)
 }
 
 
-open fun add(userName: String, paymentInterface: PaymentInterface)
+    open fun add(userName: String, paymentInterface: PaymentInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var userName = userName
@@ -373,7 +373,7 @@ super.insert(vector)
 }
 
 
-open fun createTableStatement()
+    open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -391,7 +391,7 @@ stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.appe
 }
 
 
-open fun createTable()
+    open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -402,7 +402,7 @@ open fun createTable()
 }
 
 
-open fun drop()
+    open fun drop()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

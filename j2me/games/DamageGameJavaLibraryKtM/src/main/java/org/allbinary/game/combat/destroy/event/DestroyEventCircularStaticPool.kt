@@ -33,12 +33,11 @@ open public class DestroyEventCircularStaticPool
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: DestroyEventCircularStaticPool = DestroyEventCircularStaticPool()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DestroyEventCircularStaticPool{
 
@@ -52,13 +51,13 @@ open fun getInstance()
         }
             
     private var EVENT_POOL: AllBinaryEventCircularPool = AllBinaryEventCircularPool(20)
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun init(combatGameCanvas: AllBinaryGameCanvas)
+    open fun init(combatGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
 {
 var combatGameCanvas = combatGameCanvas
@@ -68,7 +67,7 @@ EVENT_POOL.init(DestroyEventFactory(combatGameCanvas))
 
                 @Throws(Exception::class)
             
-open fun getInstance(layerInterface: AllBinaryLayer)
+    open fun getInstance(layerInterface: AllBinaryLayer)
         //nullable =  from not(true or (false and false)) = 
 : DestroyedEvent{
 var layerInterface = layerInterface

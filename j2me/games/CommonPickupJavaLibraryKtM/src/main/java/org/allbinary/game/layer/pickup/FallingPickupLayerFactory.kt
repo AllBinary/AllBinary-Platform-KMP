@@ -40,7 +40,8 @@ open public class FallingPickupLayerFactory
             }            
         
                 @Throws(Exception::class)
-            override fun getInstance()
+            
+    override fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AllBinaryLayer{
 

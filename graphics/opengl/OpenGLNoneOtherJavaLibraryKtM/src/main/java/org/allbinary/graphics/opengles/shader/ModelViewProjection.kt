@@ -31,12 +31,11 @@ open public class ModelViewProjection
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ModelViewProjection = ModelViewProjection()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ModelViewProjection{
 
@@ -54,7 +53,7 @@ open fun getInstance()
             {
             }            
         
-open fun get()
+    open fun get()
         //nullable = true from not(false or (false and true)) = true
 : FloatArray{
 

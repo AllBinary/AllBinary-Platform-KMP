@@ -34,7 +34,7 @@ open public class BasicAccelerationProperties
     private var forward: Int= 0
 
     private var reverse: Int= 0
-public constructor        (forward: Int, reverse: Int)
+public constructor (forward: Int, reverse: Int)
             : super()
         {
 var forward = forward
@@ -44,7 +44,7 @@ this.setReverse(reverse)
 }
 
 
-open fun setReverse(reverse: Int)
+    open fun setReverse(reverse: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var reverse = reverse
@@ -52,7 +52,7 @@ this.reverse= reverse
 }
 
 
-open fun getReverse()
+    open fun getReverse()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -63,7 +63,7 @@ open fun getReverse()
 }
 
 
-open fun setForward(forward: Int)
+    open fun setForward(forward: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var forward = forward
@@ -71,7 +71,7 @@ this.forward= forward
 }
 
 
-open fun getForward()
+    open fun getForward()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

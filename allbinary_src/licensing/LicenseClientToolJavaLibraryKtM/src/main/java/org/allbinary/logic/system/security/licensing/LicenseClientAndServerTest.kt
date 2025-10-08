@@ -40,10 +40,9 @@ open public class LicenseClientAndServerTest
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun main(args: Array<String?>)
+    open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var args = args
@@ -69,7 +68,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, "main()", "main()", e)
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var vector: BasicArrayList = BasicArrayList()
-public constructor        (options: Array<String?>)
+public constructor (options: Array<String?>)
             : super()
         {
 var options = options
@@ -131,7 +130,7 @@ vector.add(options[index]!!)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun test()
+    open fun test()
         //nullable = true from not(false or (false and true)) = true
 {
 

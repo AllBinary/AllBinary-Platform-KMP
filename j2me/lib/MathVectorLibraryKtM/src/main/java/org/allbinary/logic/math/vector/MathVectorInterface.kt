@@ -26,18 +26,19 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.math.BasicDecimal
+
 interface MathVectorInterface {
         
 
-open fun getDirection()
+    open fun getDirection()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getMagnitude()
+    open fun getMagnitude()
         //nullable = true from not(false or (false and true)) = true
 : BasicDecimal
 
-open fun getResult()
+    open fun getResult()
         //nullable = true from not(false or (false and true)) = true
 : BasicDecimal
 

@@ -30,12 +30,11 @@ open public class PointsUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: PointsUtil = PointsUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PointsUtil{
 
@@ -53,7 +52,7 @@ open fun getInstance()
             {
             }            
         
-open fun adjust(points: Array<Array<IntArray?>?>, x: Int, y: Int)
+    open fun adjust(points: Array<Array<IntArray?>?>, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : Array<Array<IntArray?>?>{
     //var points = points
@@ -113,7 +112,7 @@ newPoints[index]!![index2]!![1]= 1000
 }
 
 
-open fun adjust(points: Array<IntArray?>, both: Int)
+    open fun adjust(points: Array<IntArray?>, both: Int)
         //nullable = true from not(false or (false and false)) = true
 : Array<IntArray?>{
 var points = points
@@ -126,7 +125,7 @@ var both = both
 }
 
 
-open fun adjust(points: Array<IntArray?>, x: Int, y: Int)
+    open fun adjust(points: Array<IntArray?>, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : Array<IntArray?>{
 var points = points

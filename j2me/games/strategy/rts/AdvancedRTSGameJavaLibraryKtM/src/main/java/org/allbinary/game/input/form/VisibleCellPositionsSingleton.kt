@@ -45,12 +45,11 @@ open public class VisibleCellPositionsSingleton
                 , BuildingEventListenerInterface
                 , ScrollMapEventListenerInterface {
         
-
-        companion object {
+companion object {
             
     private val instance: VisibleCellPositionsSingleton = VisibleCellPositionsSingleton()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : VisibleCellPositionsSingleton{
 
@@ -76,7 +75,7 @@ open fun getInstance()
     private var paintSimpleTiledLayer: SimpleTiledLayer = ALL_VISIBLE_TILEDLAYER
 
     private var currentIndex: Int= 0
-private constructor        ()
+private constructor ()
             : super()
         {
 LocalPlayerBuildingEventHandler.getInstance()!!.addListener(this)
@@ -84,7 +83,7 @@ ScrollMapEventHandler.getInstance()!!.addListener(this)
 }
 
 
-open fun init(simpleTiledLayer: SimpleTiledLayer)
+    open fun init(simpleTiledLayer: SimpleTiledLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var simpleTiledLayer = simpleTiledLayer
@@ -103,7 +102,7 @@ this.setSimpleTiledLayer(simpleTiledLayer)
 }
 
 
-open fun onEvent(eventObject: AllBinaryEventObject)
+    open fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
@@ -113,7 +112,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
                 @Throws(Exception::class)
             
-open fun onBuildingEvent(event: RTSLayerEvent)
+    open fun onBuildingEvent(event: RTSLayerEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var event = event
@@ -123,7 +122,7 @@ this.paintSimpleTiledLayer= this.simpleTiledLayer
 
                 @Throws(Exception::class)
             
-open fun onMoveEvent(scrollMapEvent: ScrollMapEvent)
+    open fun onMoveEvent(scrollMapEvent: ScrollMapEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var scrollMapEvent = scrollMapEvent
@@ -131,7 +130,7 @@ this.move(scrollMapEvent!!.getDx(), scrollMapEvent!!.getDy())
 }
 
 
-open fun addStationaryCellPositions(list: BasicArrayList)
+    open fun addStationaryCellPositions(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var list = list
@@ -151,7 +150,7 @@ this.stationaryVisibleCellPositions[cellPosition!!.getRow()]!![cellPosition!!.ge
 }
 
 
-open fun removeStationaryCellPositions(list: BasicArrayList)
+    open fun removeStationaryCellPositions(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var list = list
@@ -171,7 +170,7 @@ this.stationaryVisibleCellPositions[cellPosition!!.getRow()]!![cellPosition!!.ge
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -219,7 +218,7 @@ this.currentIndex++
 }
 
 
-open fun shouldProcess()
+    open fun shouldProcess()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -247,7 +246,7 @@ open fun shouldProcess()
 }
 
 
-open fun addCellPositions(list: BasicArrayList)
+    open fun addCellPositions(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var list = list
@@ -267,7 +266,7 @@ this.visibleCellPositions[cellPosition!!.getRow()]!![cellPosition!!.getColumn()]
 }
 
 
-open fun isVisible(cellPosition: CellPosition)
+    open fun isVisible(cellPosition: CellPosition)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var cellPosition = cellPosition
@@ -296,7 +295,7 @@ var cellPosition = cellPosition
 }
 
 
-open fun move(dx: Int, dy: Int)
+    open fun move(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var dx = dx
@@ -305,7 +304,7 @@ this.getSimpleTiledLayer()!!.move(dx, dy)
 }
 
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -313,7 +312,7 @@ this.paintSimpleTiledLayer!!.paint(graphics, this.currentlyVisibleCellPositions)
 }
 
 
-open fun setSimpleTiledLayer(simpleTiledLayer: SimpleTiledLayer)
+    open fun setSimpleTiledLayer(simpleTiledLayer: SimpleTiledLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var simpleTiledLayer = simpleTiledLayer
@@ -321,7 +320,7 @@ this.simpleTiledLayer= simpleTiledLayer
 }
 
 
-open fun getSimpleTiledLayer()
+    open fun getSimpleTiledLayer()
         //nullable = true from not(false or (false and true)) = true
 : SimpleTiledLayer{
 

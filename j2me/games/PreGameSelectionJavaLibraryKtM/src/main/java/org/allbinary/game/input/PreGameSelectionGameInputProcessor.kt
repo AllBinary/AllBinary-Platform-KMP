@@ -42,7 +42,6 @@ import org.allbinary.game.input.event.GameKeyEventHandler
 import org.allbinary.game.input.event.GameKeyEventUtil
 import org.allbinary.game.state.GameState
 import org.allbinary.layer.AllBinaryLayerManager
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.media.audio.SecondaryPlayerQueueFactory
@@ -74,7 +73,7 @@ open public class PreGameSelectionGameInputProcessor : Processor
     private val abRunnable: ABRunnable = object: ABRunnable()
                                 {
                                 
-open fun run()
+    open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -97,7 +96,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 
                                 }
                             
-public constructor        (gameCanvas: AllBinaryGameCanvas, preGameSelectorPaintable: PreGameSelectorPaintable, nextGameState: GameState, lockedIndex: Int){
+public constructor (gameCanvas: AllBinaryGameCanvas, preGameSelectorPaintable: PreGameSelectorPaintable, nextGameState: GameState, lockedIndex: Int){
 var gameCanvas = gameCanvas
 var preGameSelectorPaintable = preGameSelectorPaintable
 var nextGameState = nextGameState
@@ -112,7 +111,7 @@ this.lockedIndex= lockedIndex
 
                 @Throws(Exception::class)
             
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 this.getPlayerGameInput()!!.update()
@@ -121,7 +120,7 @@ this.getPlayerGameInput()!!.update()
 
                 @Throws(Exception::class)
             
-open fun onInput(list: BasicArrayList)
+    open fun onInput(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var list = list
@@ -208,7 +207,7 @@ list.clear()
 }
 
 
-open fun getPreGameSelectorPaintable()
+    open fun getPreGameSelectorPaintable()
         //nullable = true from not(false or (false and true)) = true
 : PreGameSelectorPaintable{
 
@@ -221,20 +220,20 @@ open fun getPreGameSelectorPaintable()
 
                 @Throws(Exception::class)
             
-open fun processInput(layerManager: AllBinaryLayerManager)
+    open fun processInput(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var layerManager = layerManager
 }
 
 
-open fun initInputProcessors()
+    open fun initInputProcessors()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -245,7 +244,7 @@ open fun getName()
 }
 
 
-open fun getPlayerGameInput()
+    open fun getPlayerGameInput()
         //nullable = true from not(false or (false and true)) = true
 : PlayerGameInput{
 

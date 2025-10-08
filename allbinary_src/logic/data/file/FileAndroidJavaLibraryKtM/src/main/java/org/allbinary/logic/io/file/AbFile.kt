@@ -38,15 +38,14 @@ open public class AbFile
         
                 , AbFileInterface {
         
-
-        companion object {
+companion object {
             
     val NULL_FILE: AbFile = AbFile(StringUtil.getInstance()!!.EMPTY_STRING, false)
 
         }
             
     private val file: File
- constructor        (filePath: String, unknown: Boolean)
+ constructor (filePath: String, unknown: Boolean)
             : super()
         {
 var filePath = filePath
@@ -54,14 +53,14 @@ var unknown = unknown
 this.file= File(filePath)
 }
 
-protected constructor        (file: File)
+protected constructor (file: File)
             : super()
         {
 var file = file
 this.file= file
 }
 
-public constructor        (file: AbFile, childPathName: String)
+public constructor (file: AbFile, childPathName: String)
             : super()
         {
 var file = file
@@ -69,7 +68,7 @@ var childPathName = childPathName
 this.file= File(file.getFile(), childPathName)
 }
 
-public constructor        (filePath: String)
+public constructor (filePath: String)
             : super()
         {
 var filePath = filePath
@@ -77,7 +76,7 @@ this.file= File(AbPath(filePath).
                             toFileSystemString())
 }
 
-public constructor        (filePath: String, fileName: String)
+public constructor (filePath: String, fileName: String)
             : super()
         {
 var filePath = filePath
@@ -86,7 +85,7 @@ this.file= File(AbPath(filePath).
                             toFileSystemString(), fileName)
 }
 
-public constructor        (abPath: AbPath)
+public constructor (abPath: AbPath)
             : super()
         {
 var abPath = abPath
@@ -94,7 +93,7 @@ this.file= File(abPath!!.toFileSystemString())
 }
 
 
-open fun getFile()
+    open fun getFile()
         //nullable = true from not(false or (false and true)) = true
 : File{
 
@@ -105,7 +104,7 @@ open fun getFile()
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -115,7 +114,8 @@ open fun getName()
                         return this.file.getName()
 }
 
-override fun getParent()
+
+    override fun getParent()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -126,7 +126,7 @@ override fun getParent()
 }
 
 
-open fun getParentFile()
+    open fun getParentFile()
         //nullable = true from not(false or (false and true)) = true
 : File{
 
@@ -136,7 +136,8 @@ open fun getParentFile()
                         return this.file.getParentFile()
 }
 
-override fun getPath()
+
+    override fun getPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -146,7 +147,8 @@ override fun getPath()
                         return this.file.getPath()
 }
 
-override fun isAbsolute()
+
+    override fun isAbsolute()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -156,7 +158,8 @@ override fun isAbsolute()
                         return this.file.isAbsolute()
 }
 
-override fun getAbsolutePath()
+
+    override fun getAbsolutePath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -167,7 +170,7 @@ override fun getAbsolutePath()
 }
 
 
-open fun getAbsoluteFile()
+    open fun getAbsoluteFile()
         //nullable = true from not(false or (false and true)) = true
 : File{
 
@@ -179,7 +182,8 @@ open fun getAbsoluteFile()
 
 
                 @Throws(IOException::class)
-            override fun getCanonicalPath()
+            
+    override fun getCanonicalPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -192,7 +196,7 @@ open fun getAbsoluteFile()
 
                 @Throws(IOException::class)
             
-open fun getCanonicalFile()
+    open fun getCanonicalFile()
         //nullable = true from not(false or (false and true)) = true
 : File{
 
@@ -202,7 +206,8 @@ open fun getCanonicalFile()
                         return this.file.getCanonicalFile()
 }
 
-override fun toURI()
+
+    override fun toURI()
         //nullable = true from not(false or (false and true)) = true
 : URI{
 
@@ -212,7 +217,8 @@ override fun toURI()
                         return this.file.toURI()
 }
 
-override fun canRead()
+
+    override fun canRead()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -222,7 +228,8 @@ override fun canRead()
                         return this.file.canRead()
 }
 
-override fun canWrite()
+
+    override fun canWrite()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -232,7 +239,8 @@ override fun canWrite()
                         return this.file.canWrite()
 }
 
-override fun exists()
+
+    override fun exists()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -242,7 +250,8 @@ override fun exists()
                         return this.file.exists()
 }
 
-override fun isDirectory()
+
+    override fun isDirectory()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -252,7 +261,8 @@ override fun isDirectory()
                         return this.file.isDirectory()
 }
 
-override fun isFile()
+
+    override fun isFile()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -262,7 +272,8 @@ override fun isFile()
                         return this.file.isFile()
 }
 
-override fun isHidden()
+
+    override fun isHidden()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -272,7 +283,8 @@ override fun isHidden()
                         return this.file.isHidden()
 }
 
-override fun lastModified()
+
+    override fun lastModified()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -282,7 +294,8 @@ override fun lastModified()
                         return this.file.lastModified()
 }
 
-override fun length()
+
+    override fun length()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -294,7 +307,8 @@ override fun length()
 
 
                 @Throws(IOException::class)
-            override fun createNewFile()
+            
+    override fun createNewFile()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -306,7 +320,8 @@ override fun length()
 
 
                 @Throws(IOException::class)
-            override fun delete()
+            
+    override fun delete()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -316,13 +331,15 @@ override fun length()
                         return this.file.delete()
 }
 
-override fun deleteOnExit()
+
+    override fun deleteOnExit()
         //nullable = true from not(false or (false and true)) = true
 {
 this.file.deleteOnExit()
 }
 
-override fun list()
+
+    override fun list()
         //nullable = true from not(false or (false and true)) = true
 : Array<String?>{
 
@@ -332,7 +349,8 @@ override fun list()
                         return this.file.list()
 }
 
-override fun list(filter: FilenameFilter)
+
+    override fun list(filter: FilenameFilter)
         //nullable = true from not(false or (false and false)) = true
 : Array<String?>{
 var filter = filter
@@ -344,7 +362,7 @@ var filter = filter
 }
 
 
-open fun listFiles()
+    open fun listFiles()
         //nullable = true from not(false or (false and true)) = true
 : Array<Any?>{
 
@@ -355,7 +373,7 @@ open fun listFiles()
 }
 
 
-open fun listFiles(filter: FilenameFilter)
+    open fun listFiles(filter: FilenameFilter)
         //nullable = true from not(false or (false and false)) = true
 : Array<Any?>{
 var filter = filter
@@ -367,7 +385,7 @@ var filter = filter
 }
 
 
-open fun listFiles(filter: FileFilter)
+    open fun listFiles(filter: FileFilter)
         //nullable = true from not(false or (false and false)) = true
 : Array<Any?>{
 var filter = filter
@@ -378,7 +396,8 @@ var filter = filter
                         return this.file.listFiles(filter) as Array<Any?>
 }
 
-override fun mkdir()
+
+    override fun mkdir()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -388,7 +407,8 @@ override fun mkdir()
                         return this.file.mkdir()
 }
 
-override fun mkdirs()
+
+    override fun mkdirs()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -399,7 +419,7 @@ override fun mkdirs()
 }
 
 
-open fun renameTo(dest: AbFile)
+    open fun renameTo(dest: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var dest = dest
@@ -410,7 +430,8 @@ var dest = dest
                         return this.file.renameTo(dest.getFile())
 }
 
-override fun setLastModified(time: Long)
+
+    override fun setLastModified(time: Long)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var time = time
@@ -421,7 +442,8 @@ var time = time
                         return this.file.setLastModified(time)
 }
 
-override fun setReadOnly()
+
+    override fun setReadOnly()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -432,7 +454,7 @@ override fun setReadOnly()
 }
 
 
-open fun compareTo(pathname: File)
+    open fun compareTo(pathname: File)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var pathname = pathname
@@ -443,7 +465,8 @@ var pathname = pathname
                         return this.file.compareTo(pathname)
 }
 
-override fun equals(obj: Any?)
+
+    override fun equals(obj: Any?)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var obj = obj
@@ -454,7 +477,8 @@ var obj = obj
                         return this.file.equals(obj)
 }
 
-override fun hashCode()
+
+    override fun hashCode()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -464,7 +488,8 @@ override fun hashCode()
                         return this.file.hashCode()
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

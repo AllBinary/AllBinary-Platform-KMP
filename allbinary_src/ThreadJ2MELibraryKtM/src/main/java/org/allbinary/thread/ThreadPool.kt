@@ -42,8 +42,7 @@ open public class ThreadPool
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val ROOT_NAME: String = "-PooledThread-"
 
@@ -53,7 +52,11 @@ open public class ThreadPool
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
+    val NULL_RUNNABLE: NullRunnable = NullRunnable.getInstance()!!
+
     val threadPoolStrings: ThreadPoolStrings = ThreadPoolStrings.getInstance()!!
+
+    val threadObjectUtil: ThreadObjectUtil = ThreadObjectUtil.getInstance()!!
 
     private val poolName: String
 
@@ -66,7 +69,7 @@ open public class ThreadPool
     private var threadID: Int= 0
 
     private var numThreads: Int
-public constructor        (poolName: String, numThreads: Int)                        
+public constructor (poolName: String, numThreads: Int)                        
 
                             : this(poolName, numThreads, Thread.NORM_PRIORITY){
     //var poolName = poolName
@@ -77,7 +80,7 @@ public constructor        (poolName: String, numThreads: Int)
                     
 }
 
-public constructor        (poolName: String, numThreads: Int, priority: Int)
+public constructor (poolName: String, numThreads: Int, priority: Int)
             : super()
         {
     //var poolName = poolName
@@ -89,7 +92,7 @@ this.numThreads= numThreads
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -122,7 +125,7 @@ pooledThread!!.start()
 
                 @Throws(Exception::class)
             
-open fun runAPriorityTask()
+    open fun runAPriorityTask()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -132,7 +135,7 @@ open fun runAPriorityTask()
 }
 
 
-open fun runTaskWithPriority(task: PriorityRunnable)
+    open fun runTaskWithPriority(task: PriorityRunnable)
         //nullable = true from not(false or (false and false)) = true
 {
     //var task = task
@@ -166,7 +169,7 @@ open fun runTaskWithPriority(task: PriorityRunnable)
     var runnable: PriorityRunnable
 
 
-    var lowerPriorityRunnable: PriorityRunnable = ThreadObjectUtil.getInstance()!!.NULL_PRIORITY_RUNNABLE
+    var lowerPriorityRunnable: PriorityRunnable = threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
 
 
 
@@ -192,9 +195,7 @@ break;
 
 
     
-                        if(lowerPriorityRunnable == 
-                                    null
-                                 || lowerPriorityRunnable == NullRunnable.getInstance())
+                        if(lowerPriorityRunnable == threadObjectUtil!!.NULL_PRIORITY_RUNNABLE || lowerPriorityRunnable == NULL_RUNNABLE)
                         
                                     {
                                     this.taskQueue!!.add(task)
@@ -218,7 +219,7 @@ notify()
 }
 
 
-open fun runTask(task: Runnable)
+    open fun runTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
 {
     //var task = task
@@ -257,7 +258,7 @@ notify()
 
                 @Throws(InterruptedException::class)
             
-open fun getTask()
+    open fun getTask()
         //nullable = true from not(false or (false and true)) = true
 : Runnable{
 
@@ -279,7 +280,7 @@ open fun getTask()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return NullRunnable.getInstance()
+                        return NULL_RUNNABLE
 
                                     }
                                 
@@ -299,7 +300,7 @@ this.wait()
 }
 
 
-open fun clear()
+    open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -323,7 +324,7 @@ open fun clear()
 }
 
 
-open fun close()
+    open fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -348,7 +349,7 @@ this.taskQueue!!.clear()
 }
 
 
-open fun join()
+    open fun join()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -366,7 +367,7 @@ notifyAll()
 }
 
 
-open fun isBusy()
+    open fun isBusy()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -416,13 +417,13 @@ open fun isBusy()
 }
 
 
-open fun threadStarted()
+    open fun threadStarted()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun threadStopped()
+    open fun threadStopped()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -438,14 +439,14 @@ taskQueue!!.clear()
 }
 
 
-open fun startTask(task: Runnable)
+    open fun startTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
 {
     //var task = task
 }
 
 
-open fun completedTask(task: Runnable)
+    open fun completedTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
 {
     //var task = task
@@ -456,13 +457,12 @@ open fun completedTask(task: Runnable)
 
 open public inner class PooledThread : Thread {
         
-/*Static stuff is not allowed for Kotlin inner classes
-        companion object {
+/*Static stuff is not allowed for Kotlin inner classescompanion object {
             *//*
         }
             */
 
-public constructor        ()                        
+public constructor ()                        
 
                             : super(StringMaker().
                             append(poolName)!!.append(ROOT_NAME)!!.append(threadID++)!!.toString()){
@@ -475,13 +475,11 @@ logUtil!!.put(commonStrings!!.CONSTRUCTOR, this, commonStrings!!.CONSTRUCTOR)
 
 
     private val INTERRUPT_EXCEPTION: String = "Exit InterruptedException"
-override fun run()
+
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 threadStarted()
-
-    var threadObjectUtil: ThreadObjectUtil = ThreadObjectUtil.getInstance()!!
-
 
         while(true)
         {

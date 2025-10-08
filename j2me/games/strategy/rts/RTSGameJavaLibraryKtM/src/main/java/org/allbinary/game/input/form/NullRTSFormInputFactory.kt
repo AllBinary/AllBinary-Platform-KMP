@@ -31,12 +31,11 @@ open public class NullRTSFormInputFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: RTSFormInput = RTSFormInput(BasicGroupFactory.getInstance()!!.NONE_ARRAY)
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : RTSFormInput{
 

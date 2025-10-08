@@ -25,14 +25,15 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface IntermissionCompositeInterface {
         
 
-open fun getStartIntermissionInterface()
+    open fun getStartIntermissionInterface()
         //nullable = true from not(false or (false and true)) = true
 : IntermissionInterface
 
-open fun getEndLevelIntermissionInterface()
+    open fun getEndLevelIntermissionInterface()
         //nullable = true from not(false or (false and true)) = true
 : IntermissionInterface
 

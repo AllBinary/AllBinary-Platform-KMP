@@ -35,12 +35,11 @@ open public class AndroidSystemProperties
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: AndroidSystemProperties = AndroidSystemProperties(ResourceUtil.getInstance()!!.getContext())
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AndroidSystemProperties{
 
@@ -54,14 +53,14 @@ open fun getInstance()
         }
             
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-public constructor        (context: Context)
+public constructor (context: Context)
             : super()
         {
 var context = context
 }
 
 
-open fun getDeviceId()
+    open fun getDeviceId()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -72,7 +71,7 @@ open fun getDeviceId()
 }
 
 
-open fun getDeviceSoftwareVersion()
+    open fun getDeviceSoftwareVersion()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -83,7 +82,7 @@ open fun getDeviceSoftwareVersion()
 }
 
 
-open fun getLine1Number()
+    open fun getLine1Number()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -94,7 +93,7 @@ open fun getLine1Number()
 }
 
 
-open fun getNetworkCountryIso()
+    open fun getNetworkCountryIso()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -105,7 +104,7 @@ open fun getNetworkCountryIso()
 }
 
 
-open fun getNetworkOperator()
+    open fun getNetworkOperator()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -116,7 +115,7 @@ open fun getNetworkOperator()
 }
 
 
-open fun getNetworkOperatorName()
+    open fun getNetworkOperatorName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -127,7 +126,7 @@ open fun getNetworkOperatorName()
 }
 
 
-open fun getSimCountryIso()
+    open fun getSimCountryIso()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -138,7 +137,7 @@ open fun getSimCountryIso()
 }
 
 
-open fun getSimOperator()
+    open fun getSimOperator()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -149,7 +148,7 @@ open fun getSimOperator()
 }
 
 
-open fun getSimOperatorName()
+    open fun getSimOperatorName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -160,7 +159,7 @@ open fun getSimOperatorName()
 }
 
 
-open fun getSimSerialNumber()
+    open fun getSimSerialNumber()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -171,7 +170,7 @@ open fun getSimSerialNumber()
 }
 
 
-open fun getSubscriberId()
+    open fun getSubscriberId()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -182,7 +181,7 @@ open fun getSubscriberId()
 }
 
 
-open fun getVoiceMailAlphaTag()
+    open fun getVoiceMailAlphaTag()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -193,7 +192,7 @@ open fun getVoiceMailAlphaTag()
 }
 
 
-open fun getVoiceMailNumber()
+    open fun getVoiceMailNumber()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -204,7 +203,7 @@ open fun getVoiceMailNumber()
 }
 
 
-open fun getNetworkType()
+    open fun getNetworkType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -215,7 +214,7 @@ open fun getNetworkType()
 }
 
 
-open fun getPhoneType()
+    open fun getPhoneType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -226,7 +225,7 @@ open fun getPhoneType()
 }
 
 
-open fun getBoard()
+    open fun getBoard()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -237,7 +236,7 @@ open fun getBoard()
 }
 
 
-open fun getBrand()
+    open fun getBrand()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -248,7 +247,7 @@ open fun getBrand()
 }
 
 
-open fun getDevice()
+    open fun getDevice()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -259,7 +258,7 @@ open fun getDevice()
 }
 
 
-open fun getFingerprint()
+    open fun getFingerprint()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -270,7 +269,7 @@ open fun getFingerprint()
 }
 
 
-open fun getHost()
+    open fun getHost()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -281,7 +280,7 @@ open fun getHost()
 }
 
 
-open fun getId()
+    open fun getId()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -292,7 +291,7 @@ open fun getId()
 }
 
 
-open fun getModel()
+    open fun getModel()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -303,7 +302,7 @@ open fun getModel()
 }
 
 
-open fun getProduct()
+    open fun getProduct()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -314,7 +313,7 @@ open fun getProduct()
 }
 
 
-open fun getTags()
+    open fun getTags()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -325,7 +324,7 @@ open fun getTags()
 }
 
 
-open fun getTime()
+    open fun getTime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -336,7 +335,7 @@ open fun getTime()
 }
 
 
-open fun getType()
+    open fun getType()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -347,7 +346,7 @@ open fun getType()
 }
 
 
-open fun getUser()
+    open fun getUser()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

@@ -43,7 +43,7 @@ open public class EmailServerConfiguration
     private var password: String
 
     private var smtpServer: String
-public constructor        ()
+public constructor ()
             : super()
         {
 
@@ -61,7 +61,7 @@ logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 this.setSmtpServer(StringUtil.getInstance()!!.EMPTY_STRING)
 }
 
-public constructor        (hashMap: HashMap<Any, Any>)
+public constructor (hashMap: HashMap<Any, Any>)
             : super()
         {
 var hashMap = hashMap
@@ -83,7 +83,7 @@ this.setSmtpServer(hashMap!!.get(EmailServerConfigurationData.SERVER) as String)
 this.log()
 }
 
-public constructor        (account: String, password: String, server: String)
+public constructor (account: String, password: String, server: String)
             : super()
         {
 var account = account
@@ -108,7 +108,7 @@ this.log()
 }
 
 
-open fun setSmtpServer(value: String)
+    open fun setSmtpServer(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -116,7 +116,7 @@ this.smtpServer= value
 }
 
 
-open fun getSmtpServer()
+    open fun getSmtpServer()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -127,7 +127,7 @@ open fun getSmtpServer()
 }
 
 
-open fun getAccountName()
+    open fun getAccountName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -138,7 +138,7 @@ open fun getAccountName()
 }
 
 
-open fun setAccountName(accountName: String)
+    open fun setAccountName(accountName: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var accountName = accountName
@@ -146,7 +146,7 @@ this.accountName= accountName
 }
 
 
-open fun getPassword()
+    open fun getPassword()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -157,7 +157,7 @@ open fun getPassword()
 }
 
 
-open fun setPassword(password: String)
+    open fun setPassword(password: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var password = password
@@ -165,7 +165,7 @@ this.password= password
 }
 
 
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -179,7 +179,8 @@ open fun log()
                                 
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

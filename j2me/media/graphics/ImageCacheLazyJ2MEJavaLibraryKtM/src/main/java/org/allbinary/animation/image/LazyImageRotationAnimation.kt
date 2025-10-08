@@ -35,7 +35,6 @@ import org.allbinary.animation.RotationAnimation
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.image.ImageCache
 import org.allbinary.image.ImageCacheFactory
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
@@ -44,8 +43,7 @@ import org.allbinary.media.ScaleProperties
 
 open public class LazyImageRotationAnimation : RotationAnimation {
         
-
-        companion object {
+companion object {
             
     private val SET_REAL_ANIMATION: String = "setRealAnimation"
 
@@ -66,7 +64,7 @@ open public class LazyImageRotationAnimation : RotationAnimation {
     private var animation: IndexedAnimation
 
     var scaleProperties: ScaleProperties = ScaleProperties.instance
-public constructor        (layoutIndex: Int, instanceId: Int, scaleProperties: ScaleProperties, animationInterfaceFactoryInterface: BaseImageAnimationFactory, animationBehavior: AnimationBehavior)                        
+public constructor (layoutIndex: Int, instanceId: Int, scaleProperties: ScaleProperties, animationInterfaceFactoryInterface: BaseImageAnimationFactory, animationBehavior: AnimationBehavior)                        
 
                             : super(animationBehavior){
     //var layoutIndex = layoutIndex
@@ -89,7 +87,7 @@ this.scaleProperties= scaleProperties
 NULL_INDEX_ANIMATION= object: NullIndexedAnimation(animationBehavior)
                                 {
                                 
-open override fun paint(graphics: Graphics, x: Int, y: Int)
+    open override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -104,14 +102,14 @@ animation= object: IndexedAnimation(animationBehavior)
                                 
     private var index: Int= 0
 
-open override fun setFrame(index: Int)
+    open override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var index = index
 this.index= index
 }
 
-open override fun getFrame()
+    open override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -121,7 +119,7 @@ open override fun getFrame()
                         return this.index
 }
 
-open override fun paint(graphics: Graphics, x: Int, y: Int)
+    open override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -138,7 +136,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
 
 }
 
-open override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
+    open override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -161,7 +159,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
 }
 
 
-open fun setRealAnimation()
+    open fun setRealAnimation()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -179,7 +177,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, SET_REAL_ANIMATION, e)
 
 }
 
-override fun setScale(scaleX: Float, scaleY: Float)
+
+    override fun setScale(scaleX: Float, scaleY: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var scaleX = scaleX
@@ -187,7 +186,8 @@ override fun setScale(scaleX: Float, scaleY: Float)
 this.animation.setScale(scaleX, scaleY)
 }
 
-override fun getAnimationBehavior()
+
+    override fun getAnimationBehavior()
         //nullable = true from not(false or (false and true)) = true
 : AnimationBehavior{
 
@@ -199,35 +199,40 @@ override fun getAnimationBehavior()
 
 
                 @Throws(Exception::class)
-            override fun set(gl: GL)
+            
+    override fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl
 this.animation.set(gl)
 }
 
-override fun setAlpha(alpha: Int)
+
+    override fun setAlpha(alpha: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var alpha = alpha
 this.animation.setAlpha(alpha)
 }
 
-override fun setDx(dx: Int)
+
+    override fun setDx(dx: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var dx = dx
 this.animation.setDx(dx)
 }
 
-override fun setDy(dy: Int)
+
+    override fun setDy(dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var dy = dy
 this.animation.setDy(dy)
 }
 
-override fun setMaxScale(maxScaleX: Float, maxScaleY: Float)
+
+    override fun setMaxScale(maxScaleX: Float, maxScaleY: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var maxScaleX = maxScaleX
@@ -235,14 +240,16 @@ override fun setMaxScale(maxScaleX: Float, maxScaleY: Float)
 this.animation.setMaxScale(maxScaleX, maxScaleY)
 }
 
-override fun changeBasicColor(basicColor: BasicColor)
+
+    override fun changeBasicColor(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var basicColor = basicColor
 this.animation.changeBasicColor(basicColor)
 }
 
-override fun getBasicColorP()
+
+    override fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
 
@@ -252,7 +259,8 @@ override fun getBasicColorP()
                         return this.animation.getBasicColorP()
 }
 
-override fun getChangeBasicColor()
+
+    override fun getChangeBasicColor()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
 
@@ -262,7 +270,8 @@ override fun getChangeBasicColor()
                         return this.animation.getChangeBasicColor()
 }
 
-override fun getChangeColor()
+
+    override fun getChangeColor()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -272,7 +281,8 @@ override fun getChangeColor()
                         return this.animation.getChangeColor()
 }
 
-override fun getColor()
+
+    override fun getColor()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -282,7 +292,8 @@ override fun getColor()
                         return this.animation.getColor()
 }
 
-override fun getDx()
+
+    override fun getDx()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -292,7 +303,8 @@ override fun getDx()
                         return this.animation.getDx()
 }
 
-override fun getDy()
+
+    override fun getDy()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -302,7 +314,8 @@ override fun getDy()
                         return this.animation.getDy()
 }
 
-override fun isThreed()
+
+    override fun isThreed()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -314,26 +327,30 @@ override fun isThreed()
 
 
                 @Throws(Exception::class)
-            override fun nextFrame()
+            
+    override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 this.animation.nextFrame()
 }
 
-override fun reset()
+
+    override fun reset()
         //nullable = true from not(false or (false and true)) = true
 {
 this.animation.reset()
 }
 
-override fun setFrame(index: Int)
+
+    override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var index = index
 this.animation.setFrame(index)
 }
 
-override fun getFrame()
+
+    override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -345,7 +362,8 @@ override fun getFrame()
 
 
                 @Throws(Exception::class)
-            override fun getAnimationSize()
+            
+    override fun getAnimationSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -355,7 +373,8 @@ override fun getFrame()
                         return this.animation.getAnimationSize()
 }
 
-override fun getSize()
+
+    override fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -365,13 +384,15 @@ override fun getSize()
                         return this.animation.getSize()
 }
 
-override fun previousFrame()
+
+    override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 this.animation.previousFrame()
 }
 
-override fun isLastFrame()
+
+    override fun isLastFrame()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -381,14 +402,16 @@ override fun isLastFrame()
                         return this.animation.isLastFrame()
 }
 
-override fun setSequence(sequence: IntArray)
+
+    override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
 {
     //var sequence = sequence
 this.animation.setSequence(sequence)
 }
 
-override fun getSequence()
+
+    override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
 : IntArray{
 
@@ -398,7 +421,8 @@ override fun getSequence()
                         return this.animation.getSequence()
 }
 
-override fun getWidth()
+
+    override fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -409,7 +433,7 @@ override fun getWidth()
 }
 
 
-open fun paint(graphics: Graphics, x: Int, y: Int)
+    open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -426,7 +450,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS, e)
 }
 
 
-open fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
+    open fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -443,7 +467,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS, e)
 
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

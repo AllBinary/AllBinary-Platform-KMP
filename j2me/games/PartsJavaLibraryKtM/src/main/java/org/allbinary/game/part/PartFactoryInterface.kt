@@ -27,12 +27,13 @@
         
 import org.allbinary.graphics.RelativeRelationship
 import org.allbinary.layer.AllBinaryLayer
+
 interface PartFactoryInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getInstance(sourceLayerInterface: AllBinaryLayer, relativeRelationship: RelativeRelationship)
+    open fun getInstance(sourceLayerInterface: AllBinaryLayer, relativeRelationship: RelativeRelationship)
         //nullable =  from not(true or (false and false)) = 
 : PartInterface
 

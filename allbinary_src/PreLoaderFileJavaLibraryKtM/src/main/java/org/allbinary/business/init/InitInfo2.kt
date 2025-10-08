@@ -32,12 +32,11 @@ open public class InitInfo2
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: InitInfo2 = InitInfo2()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : InitInfo2{
 
@@ -57,7 +56,7 @@ open fun getInstance()
         
     private val directory: Directory = Directory.getInstance()!!
 
-open fun isTestHtmlPathValid(value: AbPath)
+    open fun isTestHtmlPathValid(value: AbPath)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var value = value
@@ -69,7 +68,7 @@ var value = value
 }
 
 
-open fun isMainPathValid(value: AbPath)
+    open fun isMainPathValid(value: AbPath)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var value = value

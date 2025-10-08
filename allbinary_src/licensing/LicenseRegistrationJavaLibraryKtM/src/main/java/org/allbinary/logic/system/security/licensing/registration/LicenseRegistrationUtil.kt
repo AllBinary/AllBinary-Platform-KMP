@@ -36,11 +36,10 @@ open public class LicenseRegistrationUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun process(abeClientInformation: AbeClientInformationInterface, registrationId: String)
+    open fun process(abeClientInformation: AbeClientInformationInterface, registrationId: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -69,7 +68,7 @@ PreLogUtil.put("License Registration Exception", "LicenseRegistrationUtil", "Lic
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

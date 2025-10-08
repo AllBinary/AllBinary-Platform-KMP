@@ -34,7 +34,7 @@ open public class AnalogControllerHelper
         
 
     private val reduceTimeFactor: Int
-public constructor        (reduceTimeFactor: Int)
+public constructor (reduceTimeFactor: Int)
             : super()
         {
 var reduceTimeFactor = reduceTimeFactor
@@ -54,7 +54,7 @@ this.reduceTimeFactor= reduceTimeFactor
 
                 @Throws(Exception::class)
             
-open fun right(collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer, xAnalogValue: Int)
+    open fun right(collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer, xAnalogValue: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
@@ -74,7 +74,7 @@ this.rightTimeElapsedHelper!!.delay= ((SCALE_VALUE -xAnalogValue) shr this.reduc
 
                 @Throws(Exception::class)
             
-open fun left(collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer, xAnalogValue: Int)
+    open fun left(collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer, xAnalogValue: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
@@ -94,7 +94,7 @@ this.leftTimeElapsedHelper!!.delay= ((SCALE_VALUE +xAnalogValue) shr this.reduce
 
                 @Throws(Exception::class)
             
-open fun up(collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer, xAnalogValue: Int)
+    open fun up(collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer, xAnalogValue: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
@@ -114,7 +114,7 @@ this.upTimeElapsedHelper!!.delay= ((SCALE_VALUE -xAnalogValue) shr this.reduceTi
 
                 @Throws(Exception::class)
             
-open fun down(collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer, xAnalogValue: Int)
+    open fun down(collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer, xAnalogValue: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer

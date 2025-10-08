@@ -30,8 +30,7 @@ open public class KeyboardActionScriptInputData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var NAME: String = "KEY_ACTION_INPUT_NAME"
 
@@ -44,7 +43,7 @@ open public class KeyboardActionScriptInputData
     var RELEASE: String = "KEY_ACTION_INPUT_RELEASE"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

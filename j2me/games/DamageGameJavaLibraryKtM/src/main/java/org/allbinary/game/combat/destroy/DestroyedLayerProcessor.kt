@@ -35,19 +35,18 @@ import org.allbinary.util.BasicArrayList
 
 open public class DestroyedLayerProcessor : BasicLayerProcessor {
         
-
-        companion object {
+companion object {
             
     private var DESTROYED_LAYER_PROCESSOR: BasicLayerProcessor = BasicLayerProcessor.NULL_LAYER_PROCESSOR
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 DESTROYED_LAYER_PROCESSOR= DestroyedLayerProcessor()
 }
 
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BasicLayerProcessor{
 
@@ -59,12 +58,13 @@ open fun getInstance()
 
 
         }
-            private constructor        (){
+            private constructor (){
 }
 
 
                 @Throws(Exception::class)
-            override fun process(allBinaryLayerManager: AllBinaryLayerManager)
+            
+    override fun process(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager

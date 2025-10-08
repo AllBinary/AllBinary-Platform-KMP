@@ -45,11 +45,11 @@ open public class StoreFrontTag : CustomTagSupport {
     private var storeName: String
 
     private var propertiesHashMap: HashMap<Any, Any>
-public constructor        (){
+public constructor (){
 }
 
 
-open fun setCommand(command: String)
+    open fun setCommand(command: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var command = command
@@ -57,7 +57,7 @@ this.command= command
 }
 
 
-open fun setStoreName(value: String)
+    open fun setStoreName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -67,7 +67,7 @@ this.storeName= value
 
                 @Throws(LicensingException::class)
             
-open fun getCurrentLocation()
+    open fun getCurrentLocation()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -122,7 +122,7 @@ open fun getCurrentLocation()
 
                 @Throws(LicensingException::class)
             
-open fun getCurrentHomeLocation()
+    open fun getCurrentHomeLocation()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -177,7 +177,7 @@ open fun getCurrentHomeLocation()
 
                 @Throws(JspTagException::class)
             
-open fun doStartTag()
+    open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

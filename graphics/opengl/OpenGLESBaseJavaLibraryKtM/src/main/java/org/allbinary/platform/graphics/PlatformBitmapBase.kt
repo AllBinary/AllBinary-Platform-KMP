@@ -27,12 +27,19 @@
         
 import javax.microedition.lcdui.Image
 import javax.microedition.lcdui.NullCanvas
+import org.allbinary.graphics.color.BasicColor
+import org.allbinary.graphics.color.BasicColorFactory
 
 open public class PlatformBitmapBase
             : Object
          {
         
+companion object {
+            
+    val NULL_PLATFORM_BITMAP_BASE: PlatformBitmapBase = PlatformBitmapBase()
 
+        }
+            
             //Auto Generated
             public constructor() : super()
             {
@@ -40,7 +47,9 @@ open public class PlatformBitmapBase
         
     var alpha: Int = 255
 
-open fun getImage()
+    var basicColor: BasicColor = BasicColorFactory.getInstance()!!.NULL_COLOR
+
+    open fun getImage()
         //nullable = true from not(false or (false and true)) = true
 : Image{
 

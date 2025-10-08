@@ -26,12 +26,13 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.util.event.EventListenerInterface
+
 interface PressGameKeyEventListenerInterface : EventListenerInterface {
         
 
                 @Throws(Exception::class)
             
-open fun onPressGameKeyEvent(gameKeyEvent: GameKeyEvent)
+    open fun onPressGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

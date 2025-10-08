@@ -62,7 +62,7 @@ open public class MyCanvas : Canvas
     private val commandStack: Stack<Any>
 
     private var isPaused: Boolean= false
-public constructor        ()                        
+public constructor ()                        
 
                             : this(CommonStrings.getInstance()!!.UNKNOWN, BasicArrayList()){
 
@@ -71,7 +71,7 @@ public constructor        ()
                     
 }
 
-public constructor        (name: String, childNameList: BasicArrayList){
+public constructor (name: String, childNameList: BasicArrayList){
     //var name = name
     //var childNameList = childNameList
 logUtil!!.put(commonStrings!!.CONSTRUCTOR, this, commonStrings!!.CONSTRUCTOR)
@@ -81,7 +81,8 @@ this.childNameList= childNameList
 this.commandStack= Stack()
 }
 
-override fun setFullScreenMode(mode: Boolean)
+
+    override fun setFullScreenMode(mode: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var mode = mode
@@ -89,7 +90,8 @@ super.setFullScreenMode(mode)
 displayInfoSingleton!!.update(this, canvasStrings!!.SET_FULL_SCREEN_MODE)
 }
 
-override fun sizeChanged(w: Int, h: Int)
+
+    override fun sizeChanged(w: Int, h: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var w = w
@@ -98,7 +100,7 @@ displayInfoSingleton!!.update(this, canvasStrings!!.SIZE_CHANGED)
 }
 
 
-open fun getCommandStack()
+    open fun getCommandStack()
         //nullable = true from not(false or (false and true)) = true
 : Stack<Any>{
 
@@ -110,7 +112,7 @@ open fun getCommandStack()
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun isCommand(command: Command)
+    open fun isCommand(command: Command)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var command = command
@@ -122,7 +124,8 @@ var command = command
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun addCommand(command: Command)
+
+    override fun addCommand(command: Command)
         //nullable = true from not(false or (false and false)) = true
 {
 var command = command
@@ -139,7 +142,8 @@ super.addCommand(command)
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun removeCommand(command: Command)
+
+    override fun removeCommand(command: Command)
         //nullable = true from not(false or (false and false)) = true
 {
 var command = command
@@ -148,7 +152,8 @@ super.removeCommand(command)
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun removeAllCommands()
+
+    override fun removeAllCommands()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -168,7 +173,8 @@ super.removeCommand(commandStack!!.pop() as Command)
 
 
     private var listener: CommandListener = NullCommandListener.NULL_COMMAND_LISTENER
-override fun setCommandListener(l: CommandListener)
+
+    override fun setCommandListener(l: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var l = l
@@ -177,7 +183,7 @@ listener= l
 }
 
 
-open fun getCustomCommandListener()
+    open fun getCustomCommandListener()
         //nullable = true from not(false or (false and true)) = true
 : CommandListener{
 
@@ -189,7 +195,7 @@ open fun getCustomCommandListener()
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun isPaused()
+    open fun isPaused()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -200,7 +206,7 @@ open fun isPaused()
 }
 
 
-open fun removePauseCommand()
+    open fun removePauseCommand()
         //nullable = true from not(false or (false and true)) = true
 {
 this.removeCommand(MyCommandsFactory.getInstance()!!.PAUSE_COMMAND)
@@ -208,7 +214,7 @@ this.removeCommand(MyCommandsFactory.getInstance()!!.PAUSE_COMMAND)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun pause()
+    open fun pause()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(commonStrings!!.START, this, canvasStrings!!.PAUSE)
@@ -219,7 +225,7 @@ this.setPaused(true)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun unPause()
+    open fun unPause()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(commonStrings!!.START, this, canvasStrings!!.UN_PAUSE)
@@ -231,27 +237,28 @@ this.setPaused(false)
 
                 @Throws(Exception::class)
             
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 displayInfoSingleton!!.process()
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 }
 
 
-open fun draw(graphics: Graphics)
+    open fun draw(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 }
 
 
-open fun hasChild(displayable: MyCanvas)
+    open fun hasChild(displayable: MyCanvas)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var displayable = displayable
@@ -263,14 +270,14 @@ var displayable = displayable
 }
 
 
-open fun destroy()
+    open fun destroy()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put("Destroyed MyCanvas", this, "destroy")
 }
 
 
-open fun setPaused(isPaused: Boolean)
+    open fun setPaused(isPaused: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var isPaused = isPaused
@@ -278,7 +285,7 @@ this.isPaused= isPaused
 }
 
 
-open fun keyPressed(keyCode: Int, deviceId: Int)
+    open fun keyPressed(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
@@ -286,7 +293,7 @@ var deviceId = deviceId
 }
 
 
-open fun keyRepeated(keyCode: Int, deviceId: Int)
+    open fun keyRepeated(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
@@ -294,7 +301,7 @@ var deviceId = deviceId
 }
 
 
-open fun keyReleased(keyCode: Int, deviceId: Int)
+    open fun keyReleased(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
@@ -303,7 +310,8 @@ var deviceId = deviceId
 
 
     private val touchME: TouchJ2ME = TouchJ2ME()
-override fun pointerDragged(x: Int, y: Int)
+
+    override fun pointerDragged(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -311,7 +319,8 @@ var y = y
 touchME!!.pointerDragged(x, y)
 }
 
-override fun pointerPressed(x: Int, y: Int)
+
+    override fun pointerPressed(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -319,7 +328,8 @@ var y = y
 touchME!!.pointerPressed(x, y)
 }
 
-override fun pointerReleased(x: Int, y: Int)
+
+    override fun pointerReleased(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -328,7 +338,7 @@ touchME!!.pointerReleased(x, y)
 }
 
 
-open fun nextSong(nextSongSound: Sound, leftVolume: Int, rightVolume: Int)
+    open fun nextSong(nextSongSound: Sound, leftVolume: Int, rightVolume: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var nextSongSound = nextSongSound

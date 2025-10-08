@@ -25,10 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface VelocityInterfaceCompositeInterface {
         
 
-open fun getVelocityProperties()
+    open fun getVelocityProperties()
         //nullable = true from not(false or (false and true)) = true
 : BasicVelocityProperties
 

@@ -43,7 +43,7 @@ open public class StoreWorkFlowTag : HelperTag {
     private var viewName: String
 
     private var viewFile: String
-public constructor        ()                        
+public constructor ()                        
 
                             : super(StoreTagWorkFlowHelperFactory()){
 
@@ -62,7 +62,7 @@ public constructor        ()
 }
 
 
-open fun setName(value: String)
+    open fun setName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -73,7 +73,7 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.NAME, this.v
 
                 @Throws(Exception::class)
             
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -125,7 +125,7 @@ open fun process()
 
                 @Throws(JspTagException::class)
             
-open fun doStartTag()
+    open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

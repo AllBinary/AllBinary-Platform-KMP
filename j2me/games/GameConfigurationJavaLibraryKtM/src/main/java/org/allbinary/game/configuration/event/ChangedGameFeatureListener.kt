@@ -29,12 +29,11 @@ import org.allbinary.game.configuration.GameConfiguration
 
 open public class ChangedGameFeatureListener : BaseChangedGameFeatureListener {
         
-
-        companion object {
+companion object {
             
     private val gameFeatureListener: ChangedGameFeatureListener = ChangedGameFeatureListener()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ChangedGameFeatureListener{
 
@@ -52,7 +51,7 @@ open fun getInstance()
             {
             }            
         
-open fun isChanged(gameConfiguration: GameConfiguration)
+    open fun isChanged(gameConfiguration: GameConfiguration)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var gameConfiguration = gameConfiguration

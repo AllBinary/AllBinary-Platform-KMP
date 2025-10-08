@@ -21,12 +21,11 @@
 
         import java.lang.Object        
         
-        import java.lang.Runnable
-        
         
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.thread.ARunnable
 import org.allbinary.game.BasicHighScoresGameInfoFactory
 import org.allbinary.game.GameInfo
 import org.allbinary.game.GameType
@@ -40,10 +39,9 @@ import org.allbinary.thread.SecondaryThreadPool
 
 open public class BasicHighScoresFactory : HighScoresBase {
         
-
-        companion object {
+companion object {
             
-open fun loaded(index2: Int)
+    open fun loaded(index2: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var index2 = index2
@@ -75,7 +73,7 @@ open fun loaded(index2: Int)
     private val abeClientInformation: AbeClientInformationInterface
 
     private val softwareInformation: SoftwareInformation
-public constructor        (abeClientInformation: AbeClientInformationInterface, softwareInformation: SoftwareInformation){
+public constructor (abeClientInformation: AbeClientInformationInterface, softwareInformation: SoftwareInformation){
     //var abeClientInformation = abeClientInformation
     //var softwareInformation = softwareInformation
 this.abeClientInformation= abeClientInformation
@@ -95,7 +93,7 @@ this.softwareInformation= softwareInformation
 
     private val FETCH: String = "fetchHighScores"
 
-open fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener)
+    open fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameInfo = gameInfo
@@ -105,16 +103,16 @@ this.fetchHighScores(gameInfo, highScoresResultsListener, true)
 }
 
 
-open fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener, preload: Boolean)
+    open fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener, preload: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameInfo = gameInfo
     //var highScoresResultsListener = highScoresResultsListener
     //var preload = preload
-SecondaryThreadPool.getInstance()!!.runTask(object: Runnable()
+SecondaryThreadPool.getInstance()!!.runTask(object: ARunnable()
                                 {
                                 
-open fun run()
+    open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -164,7 +162,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, FETCH, e)
 }
 
 
-open fun createHighScoresHelper()
+    open fun createHighScoresHelper()
         //nullable = true from not(false or (false and true)) = true
 : HighScoresHelperBase{
 

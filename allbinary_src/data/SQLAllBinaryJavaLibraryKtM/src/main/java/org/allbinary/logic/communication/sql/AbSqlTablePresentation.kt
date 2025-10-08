@@ -29,7 +29,7 @@ import org.allbinary.business.init.db.DbConnectionInfo
 
 open public class AbSqlTablePresentation : AbSqlBasic {
         
-public constructor        (databaseConnectionInfoInterface: DbConnectionInfo)                        
+public constructor (databaseConnectionInfoInterface: DbConnectionInfo)                        
 
                             : super(databaseConnectionInfoInterface){
 var databaseConnectionInfoInterface = databaseConnectionInfoInterface

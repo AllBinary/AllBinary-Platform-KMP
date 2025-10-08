@@ -34,10 +34,9 @@ open public class SpecialCharacterUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getHashMap()
+    open fun getHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 

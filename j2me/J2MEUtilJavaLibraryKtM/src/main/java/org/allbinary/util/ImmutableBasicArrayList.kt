@@ -31,7 +31,7 @@ open public class ImmutableBasicArrayList : BasicArrayList {
         
 
     private val IMMUTABLE: String = "Immutable"
-public constructor        (size: Int)                        
+public constructor (size: Int)                        
 
                             : super(size){
 var size = size
@@ -41,7 +41,8 @@ var size = size
                     
 }
 
-override fun add(e: Any)
+
+    override fun add(e: Any)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var e = e
@@ -53,7 +54,8 @@ ForcedLogUtil.log(IMMUTABLE, this)
                         return true
 }
 
-override fun add(index: Int, element: Any)
+
+    override fun add(index: Int, element: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var index = index

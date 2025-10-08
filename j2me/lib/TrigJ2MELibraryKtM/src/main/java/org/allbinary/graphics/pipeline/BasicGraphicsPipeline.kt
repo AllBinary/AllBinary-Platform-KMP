@@ -37,7 +37,7 @@ open public class BasicGraphicsPipeline
         
 
     var pointBasicArrayList: BasicArrayList
-public constructor        (points: BasicArrayList)
+public constructor (points: BasicArrayList)
             : super()
         {
 var points = points
@@ -45,7 +45,7 @@ pointBasicArrayList= points
 }
 
 
-open fun setInitMatrix(points: BasicArrayList)
+    open fun setInitMatrix(points: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var points = points
@@ -53,7 +53,7 @@ pointBasicArrayList= points
 }
 
 
-open fun createMatrix()
+    open fun createMatrix()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -61,7 +61,7 @@ open fun createMatrix()
 
                 @Throws(Exception::class)
             
-open fun translate(x: Int, y: Int)
+    open fun translate(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -108,7 +108,7 @@ this.pointBasicArrayList= newBasicArrayList
 
                 @Throws(Exception::class)
             
-open fun rotate(angle: Angle)
+    open fun rotate(angle: Angle)
         //nullable = true from not(false or (false and false)) = true
 {
 var angle = angle
@@ -120,7 +120,7 @@ this.rotate(angle.getValue().toInt())
 
                 @Throws(Exception::class)
             
-open fun rotate(angle: Int)
+    open fun rotate(angle: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var angle = angle
@@ -190,7 +190,7 @@ this.pointBasicArrayList= newBasicArrayList
 
                 @Throws(Exception::class)
             
-open fun mirror(width: Int)
+    open fun mirror(width: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var width = width
@@ -259,7 +259,7 @@ this.pointBasicArrayList= newBasicArrayList
 }
 
 
-open fun getMatrix()
+    open fun getMatrix()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 

@@ -38,13 +38,12 @@ open public class UploadMediaSingleton
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var uploadMedia: UploadMediaSingleton
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : UploadMediaSingleton{
 
@@ -75,7 +74,7 @@ open fun getInstance()
     private var readerFileTypesHashMap: HashMap<Any, Any>
 
     private var writerFileTypesHashMap: HashMap<Any, Any>
-private constructor        ()
+private constructor ()
             : super()
         {
 this.readerFileTypesHashMap= HashMap<Any, Any>()
@@ -160,7 +159,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
 }
 
 
-open fun isReaderSupported(mediaFileType: String)
+    open fun isReaderSupported(mediaFileType: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var mediaFileType = mediaFileType
@@ -172,7 +171,7 @@ var mediaFileType = mediaFileType
 }
 
 
-open fun isWriterSupported(mediaFileType: String)
+    open fun isWriterSupported(mediaFileType: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var mediaFileType = mediaFileType
@@ -184,7 +183,7 @@ var mediaFileType = mediaFileType
 }
 
 
-open fun isSupported(mediaFileType: String)
+    open fun isSupported(mediaFileType: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var mediaFileType = mediaFileType
@@ -196,7 +195,7 @@ var mediaFileType = mediaFileType
 }
 
 
-open fun isMedia(mediaFileType: String, aMediaType: String)
+    open fun isMedia(mediaFileType: String, aMediaType: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var mediaFileType = mediaFileType
@@ -209,7 +208,7 @@ var aMediaType = aMediaType
 }
 
 
-open fun isReaderMedia(mediaFileType: String, aMediaType: String)
+    open fun isReaderMedia(mediaFileType: String, aMediaType: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var mediaFileType = mediaFileType
@@ -222,7 +221,7 @@ var aMediaType = aMediaType
 }
 
 
-open fun isWriterMedia(mediaFileType: String, aMediaType: String)
+    open fun isWriterMedia(mediaFileType: String, aMediaType: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var mediaFileType = mediaFileType
@@ -235,7 +234,7 @@ var aMediaType = aMediaType
 }
 
 
-open fun isMedia(mediaFileType: String, aMediaType: String, hashMap: HashMap<Any, Any>)
+    open fun isMedia(mediaFileType: String, aMediaType: String, hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var mediaFileType = mediaFileType

@@ -33,12 +33,11 @@ open public class PlatformRecordIdUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: PlatformRecordIdUtil = PlatformRecordIdUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PlatformRecordIdUtil{
 
@@ -58,7 +57,7 @@ open fun getInstance()
         
     private val PLATFORM_SHORT_NAME: String = "JME"
 
-open fun getRecordId(abeClientInformation: AbeClientInformationInterface, baseRecordId: String)
+    open fun getRecordId(abeClientInformation: AbeClientInformationInterface, baseRecordId: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var abeClientInformation = abeClientInformation

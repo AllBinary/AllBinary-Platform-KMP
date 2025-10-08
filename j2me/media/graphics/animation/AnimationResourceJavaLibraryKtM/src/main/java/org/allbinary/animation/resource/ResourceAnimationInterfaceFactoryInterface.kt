@@ -26,12 +26,13 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.animation.BasicAnimationInterfaceFactoryInterface
+
 interface ResourceAnimationInterfaceFactoryInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getBasicAnimationInterfaceFactoryInstance(resource: String)
+    open fun getBasicAnimationInterfaceFactoryInstance(resource: String)
         //nullable = true from not(false or (false and false)) = true
 : BasicAnimationInterfaceFactoryInterface
 

@@ -25,12 +25,13 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface LayerInterfaceVisitor {
         
 
                 @Throws(Exception::class)
             
-open fun visit(layerInterface: AllBinaryLayer)
+    open fun visit(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 
 

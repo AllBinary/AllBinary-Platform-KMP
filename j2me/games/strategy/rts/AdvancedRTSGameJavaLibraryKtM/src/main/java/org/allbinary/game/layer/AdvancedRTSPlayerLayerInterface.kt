@@ -27,22 +27,23 @@
         
 import org.allbinary.game.GameType
 import org.allbinary.graphics.color.BasicColor
+
 interface AdvancedRTSPlayerLayerInterface : RTSPlayerLayerInterface {
         
 
-open fun getAdvancedPlayerOwnedRTSLayers()
+    open fun getAdvancedPlayerOwnedRTSLayers()
         //nullable = true from not(false or (false and true)) = true
 : AdvancedPlayerOwnedRTSLayers
 
-open fun isLocalPlayer()
+    open fun isLocalPlayer()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun getGameType()
+    open fun getGameType()
         //nullable = true from not(false or (false and true)) = true
 : GameType
 
-open fun getDecalBasicColor()
+    open fun getDecalBasicColor()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor
 

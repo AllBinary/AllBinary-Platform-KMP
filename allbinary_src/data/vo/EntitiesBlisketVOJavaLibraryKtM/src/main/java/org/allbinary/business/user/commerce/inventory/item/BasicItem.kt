@@ -109,7 +109,7 @@ open public class BasicItem
     var timeEntered: String
 
     var lastModified: String
-public constructor        (itemHashMap: HashMap<Any, Any>)
+public constructor (itemHashMap: HashMap<Any, Any>)
             : super()
         {
 var itemHashMap = itemHashMap
@@ -153,7 +153,7 @@ this.permissions= itemHashMap!!.get(BasicItemData.PERMISSIONS) as String
 this.specials= itemHashMap!!.get(BasicItemData.SPECIALS) as String
 }
 
-public constructor        ()
+public constructor ()
             : super()
         {
 
@@ -201,7 +201,7 @@ this.specials= EMPTY
 }
 
 
-open fun setId(itemId: String)
+    open fun setId(itemId: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var itemId = itemId
@@ -209,7 +209,7 @@ this.itemId= itemId
 }
 
 
-open fun setNumber(number: String)
+    open fun setNumber(number: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var number = number
@@ -217,7 +217,7 @@ this.number= number
 }
 
 
-open fun setInBaskets(value: String)
+    open fun setInBaskets(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -225,7 +225,7 @@ this.inBaskets= value
 }
 
 
-open fun setWeight(value: String)
+    open fun setWeight(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -233,7 +233,7 @@ this.weight= value
 }
 
 
-open fun setNewOrUsed(value: String)
+    open fun setNewOrUsed(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -241,7 +241,7 @@ this.newOrUsed= value
 }
 
 
-open fun setSummary(value: String)
+    open fun setSummary(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -249,7 +249,7 @@ this.summary= value
 }
 
 
-open fun setDistributor(value: String)
+    open fun setDistributor(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -257,7 +257,7 @@ this.distributor= value
 }
 
 
-open fun setIdUsedByDistributor(value: String)
+    open fun setIdUsedByDistributor(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -265,7 +265,7 @@ this.idUsedByDistributor= value
 }
 
 
-open fun setProducedBy(value: String)
+    open fun setProducedBy(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -273,7 +273,7 @@ this.producedBy= value
 }
 
 
-open fun setProductionDate(value: String)
+    open fun setProductionDate(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -281,7 +281,7 @@ this.productionDate= value
 }
 
 
-open fun setStartProductionDate(value: String)
+    open fun setStartProductionDate(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -289,7 +289,7 @@ this.startProductionDate= value
 }
 
 
-open fun setDescription(value: String)
+    open fun setDescription(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -297,7 +297,7 @@ this.description= value
 }
 
 
-open fun setKeywords(value: String)
+    open fun setKeywords(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -305,7 +305,7 @@ this.keywords= value
 }
 
 
-open fun setCategory(value: String)
+    open fun setCategory(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -313,7 +313,7 @@ this.category= value
 }
 
 
-open fun setType(value: String)
+    open fun setType(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -321,7 +321,7 @@ this.type= value
 }
 
 
-open fun setSmallImage(value: String)
+    open fun setSmallImage(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -329,7 +329,7 @@ this.smallImage= value
 }
 
 
-open fun setMediumImage(value: String)
+    open fun setMediumImage(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -337,7 +337,7 @@ this.mediumImage= value
 }
 
 
-open fun setLargeImage(value: String)
+    open fun setLargeImage(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -345,7 +345,7 @@ this.largeImage= value
 }
 
 
-open fun setTimeEntered(value: String)
+    open fun setTimeEntered(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -353,7 +353,7 @@ this.timeEntered= value
 }
 
 
-open fun setLastModified(value: String)
+    open fun setLastModified(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -361,7 +361,7 @@ this.lastModified= value
 }
 
 
-open fun setPrice(value: Money)
+    open fun setPrice(value: Money)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -369,7 +369,7 @@ this.price= value
 }
 
 
-open fun setComment(value: String)
+    open fun setComment(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -377,7 +377,7 @@ this.comment= value
 }
 
 
-open fun setCustoms(value: String)
+    open fun setCustoms(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -385,7 +385,7 @@ this.customs= value
 }
 
 
-open fun setDownloads(value: String)
+    open fun setDownloads(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -413,7 +413,7 @@ this.downloads= value
 }
 
 
-open fun setGroups(value: String)
+    open fun setGroups(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -421,7 +421,7 @@ this.groups= value
 }
 
 
-open fun setOptions(value: String)
+    open fun setOptions(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -429,7 +429,7 @@ this.options= value
 }
 
 
-open fun setPermissions(value: String)
+    open fun setPermissions(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -437,7 +437,7 @@ this.permissions= value
 }
 
 
-open fun setSpecials(value: String)
+    open fun setSpecials(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -445,7 +445,7 @@ this.specials= value
 }
 
 
-open fun setEnabled(value: String)
+    open fun setEnabled(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -453,7 +453,7 @@ this.enabled= value
 }
 
 
-open fun getId()
+    open fun getId()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -464,7 +464,7 @@ open fun getId()
 }
 
 
-open fun getNumber()
+    open fun getNumber()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -475,7 +475,7 @@ open fun getNumber()
 }
 
 
-open fun getInBaskets()
+    open fun getInBaskets()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -486,7 +486,7 @@ open fun getInBaskets()
 }
 
 
-open fun getWeight()
+    open fun getWeight()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -497,7 +497,7 @@ open fun getWeight()
 }
 
 
-open fun getNewOrUsed()
+    open fun getNewOrUsed()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -508,7 +508,7 @@ open fun getNewOrUsed()
 }
 
 
-open fun getSummary()
+    open fun getSummary()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -519,7 +519,7 @@ open fun getSummary()
 }
 
 
-open fun getDistributor()
+    open fun getDistributor()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -530,7 +530,7 @@ open fun getDistributor()
 }
 
 
-open fun getIdUsedByDistributor()
+    open fun getIdUsedByDistributor()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -541,7 +541,7 @@ open fun getIdUsedByDistributor()
 }
 
 
-open fun getProducedBy()
+    open fun getProducedBy()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -552,7 +552,7 @@ open fun getProducedBy()
 }
 
 
-open fun getProductionDate()
+    open fun getProductionDate()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -563,7 +563,7 @@ open fun getProductionDate()
 }
 
 
-open fun getStartProductionDate()
+    open fun getStartProductionDate()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -574,7 +574,7 @@ open fun getStartProductionDate()
 }
 
 
-open fun getDescription()
+    open fun getDescription()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -585,7 +585,7 @@ open fun getDescription()
 }
 
 
-open fun getKeywords()
+    open fun getKeywords()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -596,7 +596,7 @@ open fun getKeywords()
 }
 
 
-open fun getCategory()
+    open fun getCategory()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -607,7 +607,7 @@ open fun getCategory()
 }
 
 
-open fun getType()
+    open fun getType()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -618,7 +618,7 @@ open fun getType()
 }
 
 
-open fun getSmallImage()
+    open fun getSmallImage()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -629,7 +629,7 @@ open fun getSmallImage()
 }
 
 
-open fun getMediumImage()
+    open fun getMediumImage()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -640,7 +640,7 @@ open fun getMediumImage()
 }
 
 
-open fun getLargeImage()
+    open fun getLargeImage()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -651,7 +651,7 @@ open fun getLargeImage()
 }
 
 
-open fun getTimeEntered()
+    open fun getTimeEntered()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -662,7 +662,7 @@ open fun getTimeEntered()
 }
 
 
-open fun getLastModified()
+    open fun getLastModified()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -673,7 +673,7 @@ open fun getLastModified()
 }
 
 
-open fun getPrice()
+    open fun getPrice()
         //nullable = true from not(false or (false and true)) = true
 : Money{
 
@@ -684,7 +684,7 @@ open fun getPrice()
 }
 
 
-open fun getComment()
+    open fun getComment()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -695,7 +695,7 @@ open fun getComment()
 }
 
 
-open fun getCustoms()
+    open fun getCustoms()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -706,7 +706,7 @@ open fun getCustoms()
 }
 
 
-open fun getDownloads()
+    open fun getDownloads()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -717,7 +717,7 @@ open fun getDownloads()
 }
 
 
-open fun getGroups()
+    open fun getGroups()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -728,7 +728,7 @@ open fun getGroups()
 }
 
 
-open fun getOptions()
+    open fun getOptions()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -739,7 +739,7 @@ open fun getOptions()
 }
 
 
-open fun getPermissions()
+    open fun getPermissions()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -750,7 +750,7 @@ open fun getPermissions()
 }
 
 
-open fun getSpecials()
+    open fun getSpecials()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -761,7 +761,7 @@ open fun getSpecials()
 }
 
 
-open fun setDownloadable(downloadable: Boolean)
+    open fun setDownloadable(downloadable: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var downloadable = downloadable
@@ -769,7 +769,7 @@ this.downloadable= downloadable
 }
 
 
-open fun isDownloadable()
+    open fun isDownloadable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -780,7 +780,7 @@ open fun isDownloadable()
 }
 
 
-open fun getEnabled()
+    open fun getEnabled()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -791,7 +791,7 @@ open fun getEnabled()
 }
 
 
-open fun getTotal()
+    open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
 : Money{
 
@@ -807,7 +807,7 @@ itemTotal!!.multiply(Integer(this.number).
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -865,7 +865,7 @@ hashMap!!.put(BasicItemData.SPECIALS, this.specials)
 }
 
 
-open fun toVector()
+    open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -926,7 +926,7 @@ values.add(this.specials)
 
                 @Throws(Exception::class)
             
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 

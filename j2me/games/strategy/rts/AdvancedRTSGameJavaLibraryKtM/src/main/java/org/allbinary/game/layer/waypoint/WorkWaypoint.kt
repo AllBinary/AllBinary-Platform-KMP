@@ -39,13 +39,12 @@ import org.allbinary.logic.math.SmallIntegerSingletonFactory
 
 open public class WorkWaypoint : Waypoint {
         
-
-        companion object {
+companion object {
             
     val ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(25)!!
 
         }
-            public constructor        (ownerLayer: PathFindingLayerInterface)                        
+            public constructor (ownerLayer: PathFindingLayerInterface)                        
 
                             : super(ownerLayer, WorkSound.getInstance()){
     //var ownerLayer = ownerLayer
@@ -58,7 +57,7 @@ open public class WorkWaypoint : Waypoint {
 
                 @Throws(Exception::class)
             
-open fun visit(unitLayer: UnitLayer)
+    open fun visit(unitLayer: UnitLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var unitLayer = unitLayer
@@ -172,7 +171,7 @@ break;
 }
 
 
-open fun getType()
+    open fun getType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

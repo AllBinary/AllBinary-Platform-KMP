@@ -40,8 +40,7 @@ import org.w3c.dom.NodeList
 open public class TimeIntervalActionScriptCondition : BasicProfileActionScriptCondition
                 , TimeIntervalActionScriptConditionInterface {
         
-
-        companion object {
+companion object {
             
     private val NAME: String = "Time Interval"
 
@@ -52,7 +51,7 @@ open public class TimeIntervalActionScriptCondition : BasicProfileActionScriptCo
     private var timeIntervalActionScriptConditionJPanel: TimeIntervalActionScriptConditionJPanel
 
     private var timeHelper: TimeDelayHelper
-public constructor        (node: Node)                        
+public constructor (node: Node)                        
 
                             : super(TimeIntervalActionScriptCondition.NAME, node){
 var node = node
@@ -119,7 +118,7 @@ this.setTimeDelayHelper(TimeDelayHelper(Integer(Integer.valueOf(interval))))
 this.init()
 }
 
-public constructor        ()                        
+public constructor ()                        
 
                             : super(TimeIntervalActionScriptCondition.NAME){
 
@@ -131,21 +130,21 @@ this.init()
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 this.timeIntervalActionScriptConditionJPanel= TimeIntervalActionScriptConditionJPanel(this)
 }
 
 
-open fun showDialog()
+    open fun showDialog()
         //nullable = true from not(false or (false and true)) = true
 {
 this.timeIntervalActionScriptConditionJPanel!!.getTimeIntervalActionJDialog()!!.setVisible(true)
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -163,7 +162,7 @@ logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -179,14 +178,14 @@ node.appendChild(ModDomHelper.createNodeWithValueNodes(document, TimeIntervalAct
 }
 
 
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put("Time Interval: " +this.timeHelper!!.delay, this, "log")
 }
 
 
-open fun getTimeDelayHelper()
+    open fun getTimeDelayHelper()
         //nullable = true from not(false or (false and true)) = true
 : TimeDelayHelper{
 
@@ -197,7 +196,7 @@ open fun getTimeDelayHelper()
 }
 
 
-open fun setTimeDelayHelper(timeHelper: TimeDelayHelper)
+    open fun setTimeDelayHelper(timeHelper: TimeDelayHelper)
         //nullable = true from not(false or (false and false)) = true
 {
     //var timeHelper = timeHelper
@@ -207,7 +206,7 @@ this.timeHelper= timeHelper
 
                 @Throws(Exception::class)
             
-open fun shouldProcess(frame: Long)
+    open fun shouldProcess(frame: Long)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var frame = frame

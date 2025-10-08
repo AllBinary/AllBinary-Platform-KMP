@@ -35,12 +35,11 @@ open public class FileUtil2
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: FileUtil2 = FileUtil2()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : FileUtil2{
 
@@ -58,13 +57,13 @@ open fun getInstance()
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private val streamUtil: StreamUtil = StreamUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun loadFileAsList(file: AbFile, max: Int, byteArray1: ByteArray)
+    open fun loadFileAsList(file: AbFile, max: Int, byteArray1: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var file = file

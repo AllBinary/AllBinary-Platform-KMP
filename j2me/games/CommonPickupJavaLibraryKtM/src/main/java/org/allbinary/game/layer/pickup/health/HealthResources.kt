@@ -30,12 +30,11 @@ open public class HealthResources
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: HealthResources = HealthResources()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : HealthResources{
 
@@ -49,7 +48,7 @@ open fun getInstance()
         }
             
     var RESOURCE: String = "health_drop_20_by_20.png"
-private constructor        ()
+private constructor ()
             : super()
         {
 }

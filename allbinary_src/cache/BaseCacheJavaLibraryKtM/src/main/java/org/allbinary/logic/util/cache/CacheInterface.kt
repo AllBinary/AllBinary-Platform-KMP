@@ -25,24 +25,25 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface CacheInterface {
         
 
                 @Throws(Exception::class)
             
-open fun add(cacheableInterface: CacheableInterface)
+    open fun add(cacheableInterface: CacheableInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun add(cacheableInterfaces: Array<CacheableInterface?>)
+    open fun add(cacheableInterfaces: Array<CacheableInterface?>)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun clear()
+    open fun clear()
         //nullable = true from not(false or (false and true)) = true
 
 

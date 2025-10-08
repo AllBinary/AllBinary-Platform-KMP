@@ -48,8 +48,7 @@ import org.w3c.dom.NodeList
 open public class ColorAtActionScriptCondition : BasicProfileActionScriptCondition
                 , ColorAtActionScriptConditionInterface {
         
-
-        companion object {
+companion object {
             
     private val NAME: String = "If Color At"
 
@@ -62,7 +61,7 @@ open public class ColorAtActionScriptCondition : BasicProfileActionScriptConditi
     private var point: Point
 
     private var colorRangeInterface: ColorRangeInterface = ColorRange() as ColorRangeInterface
-public constructor        (node: Node)                        
+public constructor (node: Node)                        
 
                             : super(ColorAtActionScriptCondition.NAME, node){
 var node = node
@@ -206,7 +205,7 @@ this.getColorRangeInterface()!!.setMaxBlue(string.valueOf())
 this.init()
 }
 
-public constructor        ()                        
+public constructor ()                        
 
                             : super(ColorAtActionScriptCondition.NAME){
 
@@ -218,14 +217,14 @@ this.init()
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 this.colorAtActionScriptConditionJPanel= ColorAtActionScriptConditionJPanel(this)
 }
 
 
-open fun getPoint()
+    open fun getPoint()
         //nullable = true from not(false or (false and true)) = true
 : Point{
 
@@ -236,7 +235,7 @@ open fun getPoint()
 }
 
 
-open fun setPoint(point: Point)
+    open fun setPoint(point: Point)
         //nullable = true from not(false or (false and false)) = true
 {
 var point = point
@@ -244,14 +243,14 @@ this.point= point
 }
 
 
-open fun showDialog()
+    open fun showDialog()
         //nullable = true from not(false or (false and true)) = true
 {
 this.colorAtActionScriptConditionJPanel!!.getColorAtActionJDialog()!!.setVisible(true)
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -276,7 +275,7 @@ logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -294,7 +293,7 @@ node.appendChild(ModDomHelper.createNodeWithValueNodes(document, ColorAtActionSc
 
                 @Throws(Exception::class)
             
-open fun shouldProcess(frame: Long)
+    open fun shouldProcess(frame: Long)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var frame = frame
@@ -340,7 +339,7 @@ var frame = frame
 }
 
 
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -350,7 +349,7 @@ logUtil!!.put(message, this, "log")
 }
 
 
-open fun getColorRangeInterface()
+    open fun getColorRangeInterface()
         //nullable = true from not(false or (false and true)) = true
 : ColorRangeInterface{
 
@@ -361,7 +360,7 @@ open fun getColorRangeInterface()
 }
 
 
-open fun setColorRangeInterface(colorRangeInterface: ColorRangeInterface)
+    open fun setColorRangeInterface(colorRangeInterface: ColorRangeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var colorRangeInterface = colorRangeInterface

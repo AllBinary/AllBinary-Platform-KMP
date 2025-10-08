@@ -53,7 +53,7 @@ open public class TestInputAutomationCaptureWorker : AbstractInputAutomationWork
     private val IMAGE_AVAILABLE_SO_PROCESSING: String = "Image Available so processing"
 
     private val IMAGE_NOT_AVAILABLE: String = "Image Not Available"
-public constructor        (inputAutomationActionInterface: InputAutomationActionInterface, genericProfileActions: GenericProfileActions, imageComparatorConstraintsInterface: ImageComparatorConstraintsInterface, motionRectangleConstraintsInterface: MotionRectangleConstraintsInterface)                        
+public constructor (inputAutomationActionInterface: InputAutomationActionInterface, genericProfileActions: GenericProfileActions, imageComparatorConstraintsInterface: ImageComparatorConstraintsInterface, motionRectangleConstraintsInterface: MotionRectangleConstraintsInterface)                        
 
                             : super(inputAutomationActionInterface){
 var inputAutomationActionInterface = inputAutomationActionInterface
@@ -71,7 +71,7 @@ this.setGenericProfileActions(genericProfileActions)
 
                 @Throws(Exception::class)
             
-open fun processDataWorkerResults()
+    open fun processDataWorkerResults()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -134,7 +134,7 @@ cacheInterface!!.get(anyType)
 
                 @Throws(Exception::class)
             
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.PROCESS)
@@ -143,7 +143,7 @@ this.processDataWorkerResults()
 }
 
 
-open fun getGenericProfileActions()
+    open fun getGenericProfileActions()
         //nullable = true from not(false or (false and true)) = true
 : GenericProfileActions{
 
@@ -154,7 +154,7 @@ open fun getGenericProfileActions()
 }
 
 
-open fun setGenericProfileActions(genericProfileActions: GenericProfileActions)
+    open fun setGenericProfileActions(genericProfileActions: GenericProfileActions)
         //nullable = true from not(false or (false and false)) = true
 {
 var genericProfileActions = genericProfileActions

@@ -36,7 +36,7 @@ open public class RelativeLayerRelationship : RelativeRelationship {
         
 
     private var layer: AllBinaryLayer = AllBinaryLayer.NULL_ALLBINARY_LAYER
-public constructor        (layer: AllBinaryLayer, x: Int, y: Int)                        
+public constructor (layer: AllBinaryLayer, x: Int, y: Int)                        
 
                             : this(layer, PointFactory.getInstance()!!.getInstance(x, y), BasicArrayListUtil.getInstance()!!.getImmutableInstance()){
 var layer = layer
@@ -48,7 +48,7 @@ var y = y
                     
 }
 
-public constructor        (layer: AllBinaryLayer, point: GPoint, typesAllowedList: BasicArrayList)                        
+public constructor (layer: AllBinaryLayer, point: GPoint, typesAllowedList: BasicArrayList)                        
 
                             : super(point, typesAllowedList){
 var layer = layer
@@ -61,7 +61,8 @@ var typesAllowedList = typesAllowedList
 this.layer= layer
 }
 
-override fun getX()
+
+    override fun getX()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -71,7 +72,8 @@ override fun getX()
                         return this.layer.getXP() +super.getX()
 }
 
-override fun getY()
+
+    override fun getY()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -81,7 +83,8 @@ override fun getY()
                         return this.layer.getYP() +super.getY()
 }
 
-override fun getZ()
+
+    override fun getZ()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

@@ -34,7 +34,7 @@ open public class InputAutomationRobotService
         
 
     private var inputRobotInterfaceArray: Array<InputRobotInterface?>
-public constructor        (inputRobotInterfaceArray: Array<InputRobotInterface?>)
+public constructor (inputRobotInterfaceArray: Array<InputRobotInterface?>)
             : super()
         {
 var inputRobotInterfaceArray = inputRobotInterfaceArray
@@ -42,7 +42,7 @@ this.setInputRobotInterfaceArray(inputRobotInterfaceArray)
 }
 
 
-open fun getInputRobotInterfaceArray()
+    open fun getInputRobotInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<InputRobotInterface?>{
 
@@ -53,7 +53,7 @@ open fun getInputRobotInterfaceArray()
 }
 
 
-open fun setInputRobotInterfaceArray(inputRobotInterfaceArray: Array<InputRobotInterface?>)
+    open fun setInputRobotInterfaceArray(inputRobotInterfaceArray: Array<InputRobotInterface?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var inputRobotInterfaceArray = inputRobotInterfaceArray

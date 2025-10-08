@@ -53,7 +53,7 @@ import org.allbinary.util.HashtableUtil
 
 open public class GameOptionsForm : CommandForm {
         
-public constructor        (commandListener: CommandListener, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (commandListener: CommandListener, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(commandListener, title, backgrounBasicColor, foregroundBasicColor){
 var commandListener = commandListener
@@ -77,7 +77,7 @@ this.addTextFieldsIfSimulated()
 }
 
 
-open fun close(abeClientInformation: AbeClientInformationInterface)
+    open fun close(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -86,7 +86,7 @@ this.save(abeClientInformation)
 }
 
 
-open fun addTextFieldsIfSimulated()
+    open fun addTextFieldsIfSimulated()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -122,7 +122,7 @@ open fun addTextFieldsIfSimulated()
 }
 
 
-open fun addTextFields()
+    open fun addTextFields()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -153,7 +153,7 @@ this.append(textField)
 }
 
 
-open fun addConfiguration()
+    open fun addConfiguration()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -193,7 +193,8 @@ this.append(gauge)
 
 }
 
-override fun initCommands(cmdListener: CommandListener)
+
+    override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var cmdListener = cmdListener
@@ -209,7 +210,7 @@ this.setCommandListener(cmdListener)
 
                 @Throws(Exception::class)
             
-open fun save(abeClientInformation: AbeClientInformationInterface)
+    open fun save(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation

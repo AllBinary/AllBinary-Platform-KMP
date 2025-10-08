@@ -33,10 +33,9 @@ open public class ProductListingFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getInstance(searchRequest: SearchRequest)
+    open fun getInstance(searchRequest: SearchRequest)
         //nullable =  from not(true or (false and false)) = 
 : ProductListingInterface{
 var searchRequest = searchRequest
@@ -75,7 +74,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, "ProductListingFactory", commonStrings!
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

@@ -60,12 +60,12 @@ open public class StreetAddress
     private var country: String
 
     private var isDefault: Boolean = false
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
-public constructor        (node: Node)
+public constructor (node: Node)
             : super()
         {
 var node = node
@@ -96,7 +96,7 @@ this.country= DomNodeHelper.getTextNodeValue(countryNode)
 this.log()
 }
 
-public constructor        (streetAddress: StreetAddress)
+public constructor (streetAddress: StreetAddress)
             : super()
         {
 var streetAddress = streetAddress
@@ -111,7 +111,7 @@ this.isDefault= streetAddress!!.isDefault()
 this.log()
 }
 
-public constructor        (request: HttpServletRequest)
+public constructor (request: HttpServletRequest)
             : super()
         {
 var request = request
@@ -125,7 +125,7 @@ this.setCountry(request.getParameter(StreetAddressData.COUNTRY))
 this.log()
 }
 
-public constructor        (name: String, street: String, city: String, state: String, code: String, country: String)
+public constructor (name: String, street: String, city: String, state: String, code: String, country: String)
             : super()
         {
 var name = name
@@ -143,7 +143,7 @@ this.country= country
 this.log()
 }
 
-public constructor        (address: HashMap<Any, Any>)
+public constructor (address: HashMap<Any, Any>)
             : super()
         {
 var address = address
@@ -177,7 +177,7 @@ this.log()
 }
 
 
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -192,7 +192,7 @@ open fun log()
 }
 
 
-open fun setId(id: String)
+    open fun setId(id: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var id = id
@@ -200,7 +200,7 @@ this.id= id
 }
 
 
-open fun setName(name: String)
+    open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name
@@ -208,7 +208,7 @@ this.name= name
 }
 
 
-open fun setStreet(value: String)
+    open fun setStreet(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -216,7 +216,7 @@ this.street= value
 }
 
 
-open fun setCity(value: String)
+    open fun setCity(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -224,7 +224,7 @@ this.city= value
 }
 
 
-open fun setState(value: String)
+    open fun setState(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -232,7 +232,7 @@ this.state= value
 }
 
 
-open fun setCode(value: String)
+    open fun setCode(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -240,7 +240,7 @@ this.code= value
 }
 
 
-open fun setCountry(value: String)
+    open fun setCountry(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -248,7 +248,7 @@ this.country= value
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -259,7 +259,7 @@ open fun getName()
 }
 
 
-open fun getStreet()
+    open fun getStreet()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -270,7 +270,7 @@ open fun getStreet()
 }
 
 
-open fun getCity()
+    open fun getCity()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -281,7 +281,7 @@ open fun getCity()
 }
 
 
-open fun getState()
+    open fun getState()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -292,7 +292,7 @@ open fun getState()
 }
 
 
-open fun getCode()
+    open fun getCode()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -303,7 +303,7 @@ open fun getCode()
 }
 
 
-open fun getCountry()
+    open fun getCountry()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -314,7 +314,7 @@ open fun getCountry()
 }
 
 
-open fun getId()
+    open fun getId()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -325,7 +325,7 @@ open fun getId()
 }
 
 
-open fun isDefault()
+    open fun isDefault()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -336,7 +336,7 @@ open fun isDefault()
 }
 
 
-open fun isEmpty()
+    open fun isEmpty()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -375,7 +375,7 @@ open fun isEmpty()
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -414,7 +414,7 @@ open fun isValid()
 }
 
 
-open fun validationInfo()
+    open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -492,7 +492,7 @@ stringBuffer!!.append("<br></br>")
 }
 
 
-open fun toValidationInfoDoc()
+    open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -503,7 +503,7 @@ open fun toValidationInfoDoc()
 }
 
 
-open fun toValidationInfoNode(document: Document)
+    open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -542,7 +542,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "toValidationInfoNode", e)
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -565,7 +565,7 @@ hashMap!!.put(StreetAddressData.COUNTRY, this.country)
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

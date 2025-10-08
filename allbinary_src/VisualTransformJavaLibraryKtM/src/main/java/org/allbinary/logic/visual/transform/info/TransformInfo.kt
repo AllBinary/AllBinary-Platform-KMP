@@ -87,19 +87,19 @@ open public class TransformInfo
     private var dataFileName: String
 
     private var data: String = StringUtil.getInstance()!!.EMPTY_STRING
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
-public constructor        (name: String)
+public constructor (name: String)
             : super()
         {
 var name = name
 this.setName(name)
 }
 
-public constructor        (name: String, objectFileName: String, objectConfigFileName: String, templateFileName: String, dataFileName: String)
+public constructor (name: String, objectFileName: String, objectConfigFileName: String, templateFileName: String, dataFileName: String)
             : super()
         {
 var name = name
@@ -117,7 +117,7 @@ this.setDataFile(dataFileName)
 
                 @Throws(Exception::class)
             
-open fun override(hashMap: HashMap<Any, Any>)
+    open fun override(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var hashMap = hashMap
@@ -413,7 +413,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "TransformInfoInterface(HashMap)"
 }
 
 
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -443,7 +443,7 @@ stringBuffer!!.append("TransformInfoInterface(HashMap)")
 }
 
 
-open fun setName(value: String)
+    open fun setName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -451,7 +451,7 @@ this.name= value
 }
 
 
-open fun setStoreName(value: String)
+    open fun setStoreName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -459,7 +459,7 @@ this.storeName= value
 }
 
 
-open fun getStoreName()
+    open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -470,7 +470,7 @@ open fun getStoreName()
 }
 
 
-open fun setObject(anyType: Object)
+    open fun setObject(anyType: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 var anyType = anyType
@@ -478,7 +478,7 @@ this.anyType= anyType
 }
 
 
-open fun setObjectFile(value: Object)
+    open fun setObjectFile(value: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -486,7 +486,7 @@ this.objectFileName= value
 }
 
 
-open fun setTemplate(value: String)
+    open fun setTemplate(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -494,7 +494,7 @@ this.template= value
 }
 
 
-open fun setTemplateFile(value: String)
+    open fun setTemplateFile(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -504,7 +504,7 @@ this.templateFileName= value
 
                 @Throws(Exception::class)
             
-open fun setObjectConfigFileName(value: Object)
+    open fun setObjectConfigFileName(value: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -514,7 +514,7 @@ this.objectConfigFileName= value
 
                 @Throws(Exception::class)
             
-open fun setObjectConfigFile(value: Object)
+    open fun setObjectConfigFile(value: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -525,7 +525,7 @@ this.setObjectConfigInterface(TransformInfoObjectConfigAndManipulatorFactory.get
 
                 @Throws(Exception::class)
             
-open fun setObjectConfig(value: Object)
+    open fun setObjectConfig(value: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -536,7 +536,7 @@ this.setObjectConfigInterface(TransformInfoObjectConfigAndManipulatorFactory.get
 }
 
 
-open fun setDataFile(value: String)
+    open fun setDataFile(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -544,7 +544,7 @@ this.dataFileName= value
 }
 
 
-open fun setData(value: String)
+    open fun setData(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -552,7 +552,7 @@ this.data= value
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -563,7 +563,7 @@ open fun getName()
 }
 
 
-open fun getObject()
+    open fun getObject()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -574,7 +574,7 @@ open fun getObject()
 }
 
 
-open fun getObjectFile()
+    open fun getObjectFile()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -585,7 +585,7 @@ open fun getObjectFile()
 }
 
 
-open fun getTemplate()
+    open fun getTemplate()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -596,7 +596,7 @@ open fun getTemplate()
 }
 
 
-open fun getTemplateFile()
+    open fun getTemplateFile()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -609,7 +609,7 @@ open fun getTemplateFile()
 
                 @Throws(Exception::class)
             
-open fun getTemplateFilePath()
+    open fun getTemplateFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 
@@ -622,7 +622,7 @@ open fun getTemplateFilePath()
 
                 @Throws(Exception::class)
             
-open fun getObjectConfigFilePath()
+    open fun getObjectConfigFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 
@@ -635,7 +635,7 @@ open fun getObjectConfigFilePath()
 
                 @Throws(Exception::class)
             
-open fun getDataFilePath()
+    open fun getDataFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 
@@ -646,7 +646,7 @@ open fun getDataFilePath()
 }
 
 
-open fun getObjectConfigFile()
+    open fun getObjectConfigFile()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -657,7 +657,7 @@ open fun getObjectConfigFile()
 }
 
 
-open fun getData()
+    open fun getData()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -783,7 +783,7 @@ stringBuffer!!.append(this.getDataFilePath()!!.toFileSystemString())
 
                 @Throws(Exception::class)
             
-open fun getDataDocument()
+    open fun getDataDocument()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -829,7 +829,7 @@ open fun getDataDocument()
 }
 
 
-open fun getDataFile()
+    open fun getDataFile()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -840,7 +840,7 @@ open fun getDataFile()
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -876,7 +876,7 @@ hashMap!!.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 }
 
 
-open fun toVector()
+    open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : java.util.Vector{
 
@@ -910,7 +910,7 @@ vector.add(time)
 }
 
 
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -921,14 +921,14 @@ open fun getKey()
 }
 
 
-open fun setChild()
+    open fun setChild()
         //nullable = true from not(false or (false and true)) = true
 {
 this.isChild= true
 }
 
 
-open fun isChild()
+    open fun isChild()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -939,7 +939,7 @@ open fun isChild()
 }
 
 
-open fun getObjectConfigInterface()
+    open fun getObjectConfigInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformInfoObjectConfigInterface{
 
@@ -950,7 +950,7 @@ open fun getObjectConfigInterface()
 }
 
 
-open fun setObjectConfigInterface(objectConfigInterface: Object)
+    open fun setObjectConfigInterface(objectConfigInterface: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 var objectConfigInterface = objectConfigInterface

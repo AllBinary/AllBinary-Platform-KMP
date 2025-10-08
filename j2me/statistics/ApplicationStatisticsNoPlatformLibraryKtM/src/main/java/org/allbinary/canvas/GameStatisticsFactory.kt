@@ -28,26 +28,20 @@
 
 expect open public class GameStatisticsFactory : BaseGameStatistics {
         
-
-        companion object {
+companion object {
             
-    private val instance: GameStatisticsFactory = GameStatisticsFactory()
-
-    expect val VALUE: Int = 0
-
-    expect open fun getInstance()
+    //private val instance: GameStatisticsFactory
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameStatisticsFactory
 
         }
             
-    expect var value: Int= 0
-
-    expect override fun add(string: String)
+    override fun add(string: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-    expect override fun toString()
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String
 

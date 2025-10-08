@@ -33,7 +33,7 @@ import org.allbinary.logic.communication.http.request.AbResponseHandler
 
 open public class DownloadItemsTag : TableTag {
         
-public constructor        (){
+public constructor (){
 this.setTagHelperFactory(DownloadItemsHelperFactory())
 this.setTagRequestHelperFactory(DownloadItemsRequestHelperFactory())
 }
@@ -41,7 +41,7 @@ this.setTagRequestHelperFactory(DownloadItemsRequestHelperFactory())
 
                 @Throws(JspTagException::class)
             
-open fun doStartTag()
+    open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

@@ -47,7 +47,7 @@ open public class AbSqlColumn : AbSqlTable {
     private val METHOD_GET_COLUMN_WHERE: String = "getColumnWhere"
 
     private val INVALID_RESULT: String = "-1"
-public constructor        (databaseConnectionInfoInterface: DbConnectionInfo)                        
+public constructor (databaseConnectionInfoInterface: DbConnectionInfo)                        
 
                             : super(databaseConnectionInfoInterface){
     //var databaseConnectionInfoInterface = databaseConnectionInfoInterface
@@ -58,7 +58,7 @@ public constructor        (databaseConnectionInfoInterface: DbConnectionInfo)
 }
 
 
-open fun getLargestIntegerInColumnWhere(columnName: String, key: String, value: String)
+    open fun getLargestIntegerInColumnWhere(columnName: String, key: String, value: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var columnName = columnName
@@ -148,7 +148,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET_LARGETS_INTEGER_IN_COL
 }
 
 
-open fun getColumn(columnName: String)
+    open fun getColumn(columnName: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
     //var columnName = columnName
@@ -219,7 +219,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET_COLUMN)
 }
 
 
-open fun getColumnWhere(columnName: String, key: String, value: String)
+    open fun getColumnWhere(columnName: String, key: String, value: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var columnName = columnName

@@ -36,12 +36,11 @@ open public class MirrorMotionGestureEventUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: MirrorMotionGestureEventUtil = MirrorMotionGestureEventUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : MirrorMotionGestureEventUtil{
 
@@ -55,7 +54,7 @@ open fun getInstance()
         }
             
     private val motionEventCircularPool: MotionEventCircularPool
-private constructor        ()
+private constructor ()
             : super()
         {
 this.motionEventCircularPool= MotionEventCircularPool.getInstance(Integer.MAX_VALUE)
@@ -64,7 +63,7 @@ this.motionEventCircularPool= MotionEventCircularPool.getInstance(Integer.MAX_VA
 
                 @Throws(Exception::class)
             
-open fun mirrorVerticle(motionGestureEvent: MotionGestureEvent, halfWidth: Int)
+    open fun mirrorVerticle(motionGestureEvent: MotionGestureEvent, halfWidth: Int)
         //nullable = true from not(false or (false and false)) = true
 : MotionGestureEvent{
 var motionGestureEvent = motionGestureEvent
@@ -97,7 +96,7 @@ event.setCurrentPoint(mirroredCurrentPoint)
 }
 
 
-open fun getNewX(x: Int, halfWidth: Int)
+    open fun getNewX(x: Int, halfWidth: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var x = x

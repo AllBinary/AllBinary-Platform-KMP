@@ -50,7 +50,7 @@ open public class EditValidationView : DownloadableInventoryItemView
         
 
     private var downloadItemId: String
-public constructor        (transformInfoInterface: TransformInfoInterface)                        
+public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface, StringUtil.getInstance()!!.EMPTY_STRING){
 var transformInfoInterface = transformInfoInterface
@@ -64,7 +64,7 @@ this.getFormData()
 
                 @Throws(Exception::class)
             
-open fun getFormData()
+    open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -92,7 +92,7 @@ this.downloadItemId= hashMap!!.get(DownloadItemData.ID) as String
 
                 @Throws(Exception::class)
             
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -174,7 +174,7 @@ this.downloadableItem= vector.get(0) as DownloadableItem
 }
 
 
-open fun toValidationInfoDoc()
+    open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -185,7 +185,7 @@ open fun toValidationInfoDoc()
 }
 
 
-open fun toValidationInfoNode(document: Document)
+    open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -199,7 +199,7 @@ var document = document
 
                 @Throws(MoneyException::class)
             
-open fun validationInfo()
+    open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

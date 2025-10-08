@@ -30,10 +30,11 @@ import org.allbinary.graphics.displayable.StateControlledInterface
 open public class StatePaintable : Paintable
                 , StateControlledInterface {
         
-public constructor        (){
+public constructor (){
 }
 
-override fun setState(state: Int)
+
+    override fun setState(state: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var state = state

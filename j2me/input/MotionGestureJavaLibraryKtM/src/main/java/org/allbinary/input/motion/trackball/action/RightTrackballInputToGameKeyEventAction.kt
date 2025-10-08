@@ -31,12 +31,11 @@ import org.allbinary.input.motion.gesture.TrackballMotionGestureFactory
 
 open public class RightTrackballInputToGameKeyEventAction : GameKeyCompleteMotionGestureInputEvent {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: GameKeyCompleteMotionGestureInputEvent = RightTrackballInputToGameKeyEventAction()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameKeyCompleteMotionGestureInputEvent{
 
@@ -48,7 +47,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()                        
+            private constructor ()                        
 
                             : super("Right Action", TrackballMotionGestureFactory.getInstance()!!.RIGHT, PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()){
 

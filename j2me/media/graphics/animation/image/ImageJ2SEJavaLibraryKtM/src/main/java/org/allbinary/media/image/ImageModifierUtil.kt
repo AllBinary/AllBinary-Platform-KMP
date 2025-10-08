@@ -40,12 +40,11 @@ open public class ImageModifierUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ImageModifierUtil = ImageModifierUtil()
 
-open fun getInstanceOrCreate()
+    open fun getInstanceOrCreate()
         //nullable = true from not(false or (false and true)) = true
 : ImageModifierUtil{
 
@@ -63,7 +62,9 @@ open fun getInstanceOrCreate()
             {
             }            
         
-open fun setBasicColorP(basicColor: BasicColor)
+    private val imageUtil: ImageUtil = ImageUtil.getInstance()!!
+
+    open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var basicColor = basicColor
@@ -72,7 +73,7 @@ open fun setBasicColorP(basicColor: BasicColor)
 
     private val colorArray: IntArray = IntArray(1)
 
-open fun setColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, basicColor: BasicColor)
+    open fun setColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var unusedOriginalImage = unusedOriginalImage
@@ -80,28 +81,8 @@ open fun setColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, bas
     //var imageIndex = imageIndex
     //var basicColor = basicColor
 
-    var newBufferedImage: BufferedImage
+    var newBufferedImage: BufferedImage = this.imageUtil!!.getBufferedImage(image)!!
 
-
-    
-                        if(image.isMutable())
-                        
-                                    {
-                                    
-    var j2seImage: J2SEMutableImage = image as J2SEMutableImage
-
-newBufferedImage= j2seImage!!.getImage() as BufferedImage
-
-                                    }
-                                
-                        else {
-                            
-    var j2seImage: J2SEImmutableImage = image as J2SEImmutableImage
-
-newBufferedImage= j2seImage!!.getImage() as BufferedImage
-
-                        }
-                            
 
     var r: Short = basicColor!!.red
 
@@ -172,7 +153,7 @@ bx= colorModel!!.getBlue(dataElements)
 }
 
 
-open fun changeColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, basicColor: BasicColor)
+    open fun changeColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var unusedOriginalImage = unusedOriginalImage
@@ -180,28 +161,8 @@ open fun changeColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, 
     //var imageIndex = imageIndex
     //var basicColor = basicColor
 
-    var newBufferedImage: BufferedImage
+    var newBufferedImage: BufferedImage = this.imageUtil!!.getBufferedImage(image)!!
 
-
-    
-                        if(image.isMutable())
-                        
-                                    {
-                                    
-    var j2seImage: J2SEMutableImage = image as J2SEMutableImage
-
-newBufferedImage= j2seImage!!.getImage() as BufferedImage
-
-                                    }
-                                
-                        else {
-                            
-    var j2seImage: J2SEImmutableImage = image as J2SEImmutableImage
-
-newBufferedImage= j2seImage!!.getImage() as BufferedImage
-
-                        }
-                            
 
     var MAX: Float = 255
 
@@ -270,7 +231,7 @@ newBufferedImage!!.setRGB(index, index2, (ax shl 24) or (rx shl 16) or (gx shl 8
 }
 
 
-open fun setAlpha(unusedOriginalImage: Image, image: Image, imageIndex: Int, alphaInt: Int)
+    open fun setAlpha(unusedOriginalImage: Image, image: Image, imageIndex: Int, alphaInt: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var unusedOriginalImage = unusedOriginalImage
@@ -281,28 +242,8 @@ open fun setAlpha(unusedOriginalImage: Image, image: Image, imageIndex: Int, alp
     var alpha: Byte = alphaInt as Byte
 
 
-    var newBufferedImage: BufferedImage
+    var newBufferedImage: BufferedImage = this.imageUtil!!.getBufferedImage(image)!!
 
-
-    
-                        if(image.isMutable())
-                        
-                                    {
-                                    
-    var j2seImage: J2SEMutableImage = image as J2SEMutableImage
-
-newBufferedImage= j2seImage!!.getImage() as BufferedImage
-
-                                    }
-                                
-                        else {
-                            
-    var j2seImage: J2SEImmutableImage = image as J2SEImmutableImage
-
-newBufferedImage= j2seImage!!.getImage() as BufferedImage
-
-                        }
-                            
 
     var width: Int = image.getWidth()!!
 
@@ -336,7 +277,7 @@ raster.setPixel(index, index2, colorArray)
 }
 
 
-open fun getImageArray(originalImageArray: Array<Image?>)
+    open fun getImageArray(originalImageArray: Array<Image?>)
         //nullable = true from not(false or (false and false)) = true
 : Array<Image?>{
     //var originalImageArray = originalImageArray
@@ -388,7 +329,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, "getImageArray", e)
 }
 
 
-open fun handleImage(imageArray: Array<Image?>, index: Int, image: Image)
+    open fun handleImage(imageArray: Array<Image?>, index: Int, image: Image)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageArray = imageArray
@@ -397,7 +338,7 @@ open fun handleImage(imageArray: Array<Image?>, index: Int, image: Image)
 }
 
 
-open fun reset()
+    open fun reset()
         //nullable = true from not(false or (false and true)) = true
 {
 }

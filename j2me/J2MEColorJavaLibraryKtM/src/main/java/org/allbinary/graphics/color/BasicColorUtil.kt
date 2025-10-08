@@ -30,12 +30,11 @@ open public class BasicColorUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: BasicColorUtil = BasicColorUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BasicColorUtil{
 
@@ -61,7 +60,7 @@ open fun getInstance()
 
     val ffOpaque: Boolean = true
 
-open fun get(red: Int, green: Int, blue: Int)
+    open fun get(red: Int, green: Int, blue: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var red = red
@@ -98,7 +97,7 @@ value= blue or value
 }
 
 
-open fun get(alphaValue: Int, r: Int, g: Int, b: Int)
+    open fun get(alphaValue: Int, r: Int, g: Int, b: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var alphaValue = alphaValue
@@ -113,7 +112,7 @@ open fun get(alphaValue: Int, r: Int, g: Int, b: Int)
 }
 
 
-open fun get(alphaValue: Int, color: Int)
+    open fun get(alphaValue: Int, color: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var alphaValue = alphaValue
@@ -126,7 +125,7 @@ open fun get(alphaValue: Int, color: Int)
 }
 
 
-open fun invert(color: Int)
+    open fun invert(color: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var color = color

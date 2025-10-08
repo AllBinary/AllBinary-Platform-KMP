@@ -44,7 +44,7 @@ open public class WorkFlowRequestHelper : ModifyTable {
     private val abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
 
     private var workFlowInterface: WorkFlowInterface
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 this.workFlowInterface= NewWorkFlowFactory.getInstance()!!.getInstance(this.abeClientInformation, hashMap, pageContext)
@@ -53,7 +53,7 @@ this.workFlowInterface= NewWorkFlowFactory.getInstance()!!.getInstance(this.abeC
 
                 @Throws(Exception::class)
             
-open fun delete()
+    open fun delete()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -125,7 +125,7 @@ WorkFlowEntityFactory.getInstance()!!.create2()!!.delete(this.workFlowInterface!
 }
 
 
-open fun insert()
+    open fun insert()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -171,7 +171,7 @@ open fun insert()
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

@@ -41,13 +41,13 @@ open public class StaticPagesTag : TableTag {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var xslFile: String
-public constructor        (){
+public constructor (){
 this.setTagHelperFactory(StaticPagesHelperFactory())
 this.setTagRequestHelperFactory(StaticPagesRequestHelperFactory())
 }
 
 
-open fun setXsl(value: String)
+    open fun setXsl(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -57,7 +57,7 @@ this.xslFile= value
 
                 @Throws(LicensingException::class)
             
-open fun generateStaticPages()
+    open fun generateStaticPages()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -115,7 +115,7 @@ open fun generateStaticPages()
 
                 @Throws(LicensingException::class)
             
-open fun makePublic()
+    open fun makePublic()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -173,7 +173,7 @@ open fun makePublic()
 
                 @Throws(JspTagException::class)
             
-open fun doStartTag()
+    open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

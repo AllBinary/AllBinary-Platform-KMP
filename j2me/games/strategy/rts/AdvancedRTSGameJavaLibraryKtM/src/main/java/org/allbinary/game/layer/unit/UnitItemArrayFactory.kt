@@ -48,8 +48,7 @@ open public class UnitItemArrayFactory
         
                 , ItemArraySingletonFactoryInterface {
         
-
-        companion object {
+companion object {
             
     private val ITEMS: Array<CustomItem?> = CustomItemUtil.getInstance()!!.CUSTOM_ITEM_ARRAY
 
@@ -60,7 +59,7 @@ open public class UnitItemArrayFactory
     private var basicColor: BasicColor = BasicColorFactory.getInstance()!!.WHITE
 
     private val resources: Array<BasicGameResources?>
-protected constructor        (resources: Array<BasicGameResources?>)
+protected constructor (resources: Array<BasicGameResources?>)
             : super()
         {
 var resources = resources
@@ -70,7 +69,7 @@ this.resources= resources
 
                 @Throws(Exception::class)
             
-open fun createFlagItem(flagResources: FlagGameResources, layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface)
+    open fun createFlagItem(flagResources: FlagGameResources, layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
 : CustomItem{
 var flagResources = flagResources
@@ -100,7 +99,7 @@ var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
 
                 @Throws(Exception::class)
             
-open fun createFlagItem(flagResources: FlagGameResources, name: String, layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface)
+    open fun createFlagItem(flagResources: FlagGameResources, name: String, layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
 : CustomItem{
 var flagResources = flagResources
@@ -125,7 +124,7 @@ var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
 
                 @Throws(Exception::class)
             
-open fun getItems()
+    open fun getItems()
         //nullable = true from not(false or (false and true)) = true
 : Array<CustomItem?>{
 
@@ -136,7 +135,7 @@ open fun getItems()
 }
 
 
-open fun getResources()
+    open fun getResources()
         //nullable = true from not(false or (false and true)) = true
 : Array<BasicGameResources?>{
 
@@ -147,7 +146,7 @@ open fun getResources()
 }
 
 
-open fun indexOf(basicGameResources: BasicGameResources)
+    open fun indexOf(basicGameResources: BasicGameResources)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var basicGameResources = basicGameResources

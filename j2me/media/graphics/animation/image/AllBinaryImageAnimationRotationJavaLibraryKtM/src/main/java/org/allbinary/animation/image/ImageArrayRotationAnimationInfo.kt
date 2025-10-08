@@ -42,7 +42,7 @@ open public class ImageArrayRotationAnimationInfo
     private var dx: Int
 
     private var dy: Int
-public constructor        (imageArray: Array<Image?>, angleIncrement: Int, totalAngle: Int, dx: Int, dy: Int)
+public constructor (imageArray: Array<Image?>, angleIncrement: Int, totalAngle: Int, dx: Int, dy: Int)
             : super()
         {
 var imageArray = imageArray
@@ -58,7 +58,7 @@ this.dy= dy
 }
 
 
-open fun setImageArray(imageArray: Array<Image?>)
+    open fun setImageArray(imageArray: Array<Image?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var imageArray = imageArray
@@ -66,7 +66,7 @@ this.imageArray= imageArray
 }
 
 
-open fun getImageArray()
+    open fun getImageArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<Image?>{
 
@@ -77,7 +77,7 @@ open fun getImageArray()
 }
 
 
-open fun getAngleInfoP()
+    open fun getAngleInfoP()
         //nullable = true from not(false or (false and true)) = true
 : AngleInfo{
 
@@ -88,7 +88,7 @@ open fun getAngleInfoP()
 }
 
 
-open fun setTotalAngle(totalAngle: Int)
+    open fun setTotalAngle(totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var totalAngle = totalAngle
@@ -96,7 +96,7 @@ this.totalAngle= totalAngle
 }
 
 
-open fun getTotalAngle()
+    open fun getTotalAngle()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -107,7 +107,7 @@ open fun getTotalAngle()
 }
 
 
-open fun setDx(dx: Int)
+    open fun setDx(dx: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var dx = dx
@@ -115,7 +115,7 @@ this.dx= dx
 }
 
 
-open fun getDx()
+    open fun getDx()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -126,7 +126,7 @@ open fun getDx()
 }
 
 
-open fun setDy(dy: Int)
+    open fun setDy(dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var dy = dy
@@ -134,7 +134,7 @@ this.dy= dy
 }
 
 
-open fun getDy()
+    open fun getDy()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

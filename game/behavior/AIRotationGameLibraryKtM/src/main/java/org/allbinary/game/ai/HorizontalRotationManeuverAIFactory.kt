@@ -40,7 +40,8 @@ open public class HorizontalRotationManeuverAIFactory
             public constructor() : super()
             {
             }            
-        override fun getInstance(hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)
+        
+    override fun getInstance(hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)
         //nullable =  from not(true or (false and false)) = 
 : ArtificialIntelligenceInterface{
 var hashtable = hashtable

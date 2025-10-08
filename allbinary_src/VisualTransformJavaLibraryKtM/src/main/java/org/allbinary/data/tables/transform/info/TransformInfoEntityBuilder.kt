@@ -33,10 +33,9 @@ open public class TransformInfoEntityBuilder
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TransformInfoEntity{
 

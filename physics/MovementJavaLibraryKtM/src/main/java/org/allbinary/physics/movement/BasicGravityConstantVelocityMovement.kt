@@ -32,7 +32,7 @@ import org.allbinary.logic.math.BasicDecimal
 
 open public class BasicGravityConstantVelocityMovement : BasicConstantVelocityMovement {
         
-public constructor        (speedBasicDecimal: BasicDecimal)                        
+public constructor (speedBasicDecimal: BasicDecimal)                        
 
                             : super(speedBasicDecimal, VelocityProperties(speedBasicDecimal!!.getUnscaled().toInt(), speedBasicDecimal!!.getUnscaled().toInt())){
 var speedBasicDecimal = speedBasicDecimal
@@ -46,7 +46,8 @@ var speedBasicDecimal = speedBasicDecimal
     private val gravityUtil: GravityUtil = GravityUtil.getInstance()!!
 
                 @Throws(Exception::class)
-            override fun process(layer: AllBinaryGameLayer)
+            
+    override fun process(layer: AllBinaryGameLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var layer = layer

@@ -48,7 +48,7 @@ open public class StreetAddressesEntity : AbSqlBean
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var userName: String
-public constructor        ()                        
+public constructor ()                        
 
                             : super(UserDbInitInfo()){
 
@@ -57,7 +57,7 @@ public constructor        ()
                     
 }
 
-public constructor        (userName: String)                        
+public constructor (userName: String)                        
 
                             : super(UserDbInitInfo()){
 var userName = userName
@@ -69,7 +69,7 @@ this.userName= userName
 }
 
 
-open fun remove(index: Integer)
+    open fun remove(index: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var index = index
@@ -106,7 +106,7 @@ super.deleteWhere(whereHashMap)
 }
 
 
-open fun add(address: StreetAddress)
+    open fun add(address: StreetAddress)
         //nullable = true from not(false or (false and false)) = true
 {
 var address = address
@@ -114,7 +114,7 @@ this.add(address, TableDataFactory.getInstance()!!.INTEGER_MAX_VALUE_STRING)
 }
 
 
-open fun add(address: StreetAddress, index: String)
+    open fun add(address: StreetAddress, index: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var address = address
@@ -169,7 +169,7 @@ this.setDefault(getLastId())
 }
 
 
-open fun update(address: StreetAddress)
+    open fun update(address: StreetAddress)
         //nullable = true from not(false or (false and false)) = true
 {
 var address = address
@@ -210,7 +210,7 @@ this.setDefault(address.getId())
 }
 
 
-open fun getLastId()
+    open fun getLastId()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -221,7 +221,7 @@ open fun getLastId()
 }
 
 
-open fun get()
+    open fun get()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -291,7 +291,7 @@ keyAndValue!!.put(UserData.USERNAME, userName)
 }
 
 
-open fun get(index: Integer)
+    open fun get(index: Integer)
         //nullable = true from not(false or (false and false)) = true
 : StreetAddress{
 var index = index
@@ -350,7 +350,7 @@ keyAndValue!!.put(StreetAddressData.ID, index.toString())
 }
 
 
-open fun getDefault()
+    open fun getDefault()
         //nullable = true from not(false or (false and true)) = true
 : StreetAddress{
 
@@ -430,7 +430,7 @@ addressHashMap= super.getRow(updateKeyAndValue)
 }
 
 
-open fun setDefault(value: String)
+    open fun setDefault(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -487,7 +487,7 @@ super.updateWhere(whereKeyAndValue, updateKeyAndValue)
 }
 
 
-open fun getUserName()
+    open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -498,7 +498,7 @@ open fun getUserName()
 }
 
 
-open fun createTableStatement()
+    open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -513,7 +513,7 @@ stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(this.getTableName
 }
 
 
-open fun createTable()
+    open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -524,7 +524,7 @@ open fun createTable()
 }
 
 
-open fun drop()
+    open fun drop()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

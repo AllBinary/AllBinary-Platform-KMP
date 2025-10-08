@@ -36,7 +36,7 @@ open public class AllBinaryAdjustedJ2SEImageRotationAnimation : AllBinaryJ2SEIma
     private var dx: Int= 0
 
     private var dy: Int= 0
-public constructor        (originalImage: Image, image: Image, angleInfo: AngleInfo, totalAngle: Short, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
+public constructor (originalImage: Image, image: Image, angleInfo: AngleInfo, totalAngle: Short, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
                             : super(originalImage, image, angleInfo, totalAngle, animationBehavior){
     //var originalImage = originalImage
@@ -56,7 +56,7 @@ this.init(dx, dy)
 
                 @Throws(Exception::class)
             
-open fun init(dx: Int, dy: Int)
+    open fun init(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var dx = dx
@@ -66,7 +66,7 @@ this.dy= dy
 }
 
 
-open fun setDx(dx: Int)
+    open fun setDx(dx: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var dx = dx
@@ -74,7 +74,7 @@ this.dx= dx
 }
 
 
-open fun getDx()
+    open fun getDx()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -85,7 +85,7 @@ open fun getDx()
 }
 
 
-open fun setDy(dy: Int)
+    open fun setDy(dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var dy = dy
@@ -93,7 +93,7 @@ this.dy= dy
 }
 
 
-open fun getDy()
+    open fun getDy()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -104,7 +104,7 @@ open fun getDy()
 }
 
 
-open fun paint(graphics: Graphics, x: Int, y: Int)
+    open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics

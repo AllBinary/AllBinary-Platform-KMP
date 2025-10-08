@@ -39,7 +39,7 @@ open public class NoMagneticFieldSensor : AllBinaryMagneticFieldSensor
         
                 @Throws(Exception::class)
             
-open fun getOrientation()
+    open fun getOrientation()
         //nullable = true from not(false or (false and true)) = true
 : Orientation{
 
@@ -49,7 +49,8 @@ open fun getOrientation()
                         return Orientation.NONE
 }
 
-override fun onSensorChange()
+
+    override fun onSensorChange()
         //nullable = true from not(false or (false and true)) = true
 {
 }

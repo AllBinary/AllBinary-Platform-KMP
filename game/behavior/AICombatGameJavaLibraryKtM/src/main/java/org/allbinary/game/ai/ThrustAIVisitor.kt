@@ -37,10 +37,11 @@ open public class ThrustAIVisitor : Visitor {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val TRUE: Boolean = BooleanFactory.getInstance()!!.TRUE
-public constructor        (){
+public constructor (){
 }
 
-override fun visit(anyType: Any)
+
+    override fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var anyType = anyType

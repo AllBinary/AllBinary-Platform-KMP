@@ -31,12 +31,11 @@ import org.allbinary.input.gyro.OrientationMotionGestureFactory
 
 open public class LeftOrientationInputToGameKeyEventAction : GameKeyCompleteMotionGestureInputEvent {
         
-
-        companion object {
+companion object {
             
     private val instance: GameKeyCompleteMotionGestureInputEvent = LeftOrientationInputToGameKeyEventAction()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameKeyCompleteMotionGestureInputEvent{
 
@@ -48,7 +47,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()                        
+            private constructor ()                        
 
                             : super("Left Action", OrientationMotionGestureFactory.getInstance()!!.LEFT, PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()){
 

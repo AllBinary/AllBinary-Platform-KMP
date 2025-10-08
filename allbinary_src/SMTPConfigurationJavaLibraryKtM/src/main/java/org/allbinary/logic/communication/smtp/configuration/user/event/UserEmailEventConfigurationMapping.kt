@@ -36,7 +36,7 @@ open public class UserEmailEventConfigurationMapping
         
 
     private var userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface
-public constructor        (userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface)
+public constructor (userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface)
             : super()
         {
 var userEmailEventConfigurationInterface = userEmailEventConfigurationInterface
@@ -44,7 +44,7 @@ this.userEmailEventConfigurationInterface= userEmailEventConfigurationInterface
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -62,7 +62,7 @@ hashMap!!.put(UserEmailEventConfigurationData.LISTENER_CLASSPATH, this.userEmail
 
                 @Throws(Exception::class)
             
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -75,7 +75,7 @@ open fun getKey()
 
                 @Throws(Exception::class)
             
-open fun toVector()
+    open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 

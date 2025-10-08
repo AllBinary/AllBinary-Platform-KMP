@@ -33,12 +33,11 @@ open public class CommonButtons
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: CommonButtons = CommonButtons()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CommonButtons{
 
@@ -56,7 +55,7 @@ open fun getInstance()
     val NORMAL_BUTTON: Rectangle
 
     val LARGE_BUTTON: Rectangle
-private constructor        ()
+private constructor ()
             : super()
         {
 

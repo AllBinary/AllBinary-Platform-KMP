@@ -42,7 +42,7 @@ open public class TouchJ2ME
     private val DEVICE_ID: Int = 0
 
     private var motionRecognizer: AllMotionRecognizer = AllMotionRecognizer()
-public constructor        ()
+public constructor ()
             : super()
         {
 
@@ -52,7 +52,7 @@ motionGesturesHandler!!.addListener(GameMotionGestureListener(MotionGestureRecei
 }
 
 
-open fun pointerDragged(x: Int, y: Int)
+    open fun pointerDragged(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -71,7 +71,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "pointerDragged", e)
 }
 
 
-open fun pointerPressed(x: Int, y: Int)
+    open fun pointerPressed(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -90,7 +90,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "pointerPressed", e)
 }
 
 
-open fun pointerReleased(x: Int, y: Int)
+    open fun pointerReleased(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x

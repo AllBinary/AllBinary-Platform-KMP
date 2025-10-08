@@ -28,12 +28,11 @@
 
 open public class GameConfigurationPersistanceSingleton : KeyValuePersistance {
         
-
-        companion object {
+companion object {
             
     private var GAME_PERSISTANCE: GameConfigurationPersistanceSingleton = GameConfigurationPersistanceSingleton()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameConfigurationPersistanceSingleton{
 
@@ -45,7 +44,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()                        
+            private constructor ()                        
 
                             : super(GamePersistanceStrings.getInstance()!!.SAVED_GAME_CONFIGURATION_RECORD_ID){
 

@@ -43,7 +43,7 @@ open public class PooledImageArrayRotationAnimationFactory
     private var allBinaryImageRotationAnimationInfo: ImageArrayRotationAnimationInfo
 
     private val animationBehaviorFactory: AnimationBehaviorFactory
-public constructor        (image: Image, animationBehaviorFactory: AnimationBehaviorFactory)
+public constructor (image: Image, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
         {
     //var image = image
@@ -52,7 +52,7 @@ this.animationBehaviorFactory= animationBehaviorFactory
 this.init(image, image.getWidth(), image.getHeight(),  -(image.getWidth() shr 2),  -(image.getHeight() shr 2))
 }
 
-public constructor        (image: Image, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)
+public constructor (image: Image, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
         {
     //var image = image
@@ -63,7 +63,7 @@ this.animationBehaviorFactory= animationBehaviorFactory
 this.init(image, image.getWidth(), image.getHeight(), dx, dy)
 }
 
-public constructor        (image: Image, width: Int, height: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)
+public constructor (image: Image, width: Int, height: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
         {
     //var image = image
@@ -76,7 +76,7 @@ this.animationBehaviorFactory= animationBehaviorFactory
 this.init(image, width, height, dx, dy)
 }
 
-public constructor        (image: Image, width: Int, height: Int, dx: Int, dy: Int, angleIncrement: Short, animationBehaviorFactory: AnimationBehaviorFactory)
+public constructor (image: Image, width: Int, height: Int, dx: Int, dy: Int, angleIncrement: Short, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
         {
     //var image = image
@@ -93,7 +93,7 @@ this.init(image, width, height, dx, dy, angleIncrement)
 
                 @Throws(Exception::class)
             
-open fun init(image: Image, width: Int, height: Int, dx: Int, dy: Int)
+    open fun init(image: Image, width: Int, height: Int, dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var image = image
@@ -113,7 +113,7 @@ this.init(image, width, height, dx, dy, angleIncrement)
 
                 @Throws(Exception::class)
             
-open fun init(image: Image, width: Int, height: Int, dx: Int, dy: Int, angleIncrement: Short)
+    open fun init(image: Image, width: Int, height: Int, dx: Int, dy: Int, angleIncrement: Short)
         //nullable = true from not(false or (false and false)) = true
 {
     //var image = image
@@ -134,7 +134,7 @@ allBinaryImageRotationAnimationInfo= ImageArrayRotationAnimationInfo(imageArray,
 
                 @Throws(Exception::class)
             
-open fun getInstance(instanceId: Int)
+    open fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var instanceId = instanceId
@@ -146,7 +146,7 @@ open fun getInstance(instanceId: Int)
 }
 
 
-open fun setInitialScale(scaleProperties: ScaleProperties)
+    open fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
 {
     //var scaleProperties = scaleProperties

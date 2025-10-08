@@ -42,10 +42,9 @@ open public class Replace
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun main(args: Array<String?>)
+    open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var args = args
@@ -93,7 +92,7 @@ System.out.println("New String: " +testString)
     private val FOUND_KEY: String = "found key total: "
 
     private val hashMap: HashMap<Any, Any>
-public constructor        (key: String, value: String)
+public constructor (key: String, value: String)
             : super()
         {
     //var key = key
@@ -111,7 +110,7 @@ this.hashMap!!.put(arrayOf(key), arrayOf(value))
                                 
 }
 
-public constructor        (keys: Array<String?>, values: Array<String?>)
+public constructor (keys: Array<String?>, values: Array<String?>)
             : super()
         {
     //var keys = keys
@@ -129,7 +128,7 @@ this.hashMap!!.put(keys, values)
                                 
 }
 
-public constructor        (hashMap: HashMap<Any, Any>)
+public constructor (hashMap: HashMap<Any, Any>)
             : super()
         {
 var hashMap = hashMap
@@ -146,7 +145,7 @@ this.hashMap= hashMap
 }
 
 
-open fun all(replace: String)
+    open fun all(replace: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var replace = replace
@@ -158,7 +157,7 @@ var replace = replace
 }
 
 
-open fun upTo(replace: String, total: Int)
+    open fun upTo(replace: String, total: Int)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var replace = replace
@@ -310,7 +309,7 @@ totalNumberOfReplaces++
 }
 
 
-open fun line(replace: String)
+    open fun line(replace: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var replace = replace

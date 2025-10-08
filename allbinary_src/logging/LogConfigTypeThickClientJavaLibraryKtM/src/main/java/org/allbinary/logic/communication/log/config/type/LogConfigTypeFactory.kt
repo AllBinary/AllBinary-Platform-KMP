@@ -30,12 +30,11 @@ open public class LogConfigTypeFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: LogConfigTypeFactory = LogConfigTypeFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : LogConfigTypeFactory{
 

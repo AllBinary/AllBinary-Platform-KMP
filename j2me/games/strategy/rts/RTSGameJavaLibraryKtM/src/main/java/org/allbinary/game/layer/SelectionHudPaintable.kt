@@ -64,14 +64,14 @@ open public class SelectionHudPaintable : InitUpdatePaintable {
     private var name: String = StringUtil.getInstance()!!.EMPTY_STRING
 
     private var animationInterface: Animation
-protected constructor        (){
+protected constructor (){
 this.update()
 this.setAnimationInterface(NullAnimationFactory.getFactoryInstance()!!.getInstance(0))
 this.primitiveLongUtil= PrimitiveLongUtil(10000)
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -88,13 +88,13 @@ this.setHeight(CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE +myFont!!.DEFA
 }
 
 
-open fun updateSelectionInfo()
+    open fun updateSelectionInfo()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun updateInfo()
+    open fun updateInfo()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -102,7 +102,7 @@ open fun updateInfo()
 
     private val backgroundColor: Int = BasicColorFactory.getInstance()!!.GREY.toInt()!!
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -113,7 +113,7 @@ graphics.drawString(getName(), this.textX, y, 0)
 }
 
 
-open fun getPrimitiveLongUtil()
+    open fun getPrimitiveLongUtil()
         //nullable = true from not(false or (false and true)) = true
 : PrimitiveLongUtil{
 
@@ -124,7 +124,7 @@ open fun getPrimitiveLongUtil()
 }
 
 
-open fun setAnimationInterface(animationInterface: Animation)
+    open fun setAnimationInterface(animationInterface: Animation)
         //nullable = true from not(false or (false and false)) = true
 {
 var animationInterface = animationInterface
@@ -132,7 +132,7 @@ this.animationInterface= animationInterface
 }
 
 
-open fun getAnimationInterface()
+    open fun getAnimationInterface()
         //nullable = true from not(false or (false and true)) = true
 : Animation{
 
@@ -143,7 +143,7 @@ open fun getAnimationInterface()
 }
 
 
-open fun setName(name: String)
+    open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name
@@ -151,7 +151,7 @@ this.name= name
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -162,7 +162,7 @@ open fun getName()
 }
 
 
-open fun setBasicColorP(basicColor: BasicColor)
+    open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
 var basicColor = basicColor
@@ -171,7 +171,7 @@ this.setColor(basicColor!!.toInt())
 }
 
 
-open fun getBasicColorP()
+    open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
 
@@ -182,7 +182,7 @@ open fun getBasicColorP()
 }
 
 
-open fun setColor(color: Int)
+    open fun setColor(color: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var color = color
@@ -190,7 +190,7 @@ this.color= color
 }
 
 
-open fun getColor()
+    open fun getColor()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -201,7 +201,7 @@ open fun getColor()
 }
 
 
-open fun getWidth()
+    open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -212,7 +212,7 @@ open fun getWidth()
 }
 
 
-open fun setHeight(height: Int)
+    open fun setHeight(height: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var height = height
@@ -220,7 +220,7 @@ this.height= height
 }
 
 
-open fun getHeight()
+    open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -231,7 +231,7 @@ open fun getHeight()
 }
 
 
-open fun getX()
+    open fun getX()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

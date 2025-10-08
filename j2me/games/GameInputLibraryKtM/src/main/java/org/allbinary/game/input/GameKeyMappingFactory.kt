@@ -30,12 +30,11 @@ open public class GameKeyMappingFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: GameKeyMappingFactory = GameKeyMappingFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameKeyMappingFactory{
 
@@ -49,7 +48,7 @@ open fun getInstance()
         }
             
     private var intKeyToGameKey: Array<GameKey?> = arrayOfNulls(InputFactory.getInstance()!!.MAX)
-private constructor        ()
+private constructor ()
             : super()
         {
 
@@ -82,7 +81,7 @@ this.set(gameKeyFactory!!.LEVEL_UP)
 }
 
 
-open fun getInstance(key: Int)
+    open fun getInstance(key: Int)
         //nullable =  from not(true or (false and false)) = 
 : GameKey{
 var key = key
@@ -94,7 +93,7 @@ var key = key
 }
 
 
-open fun set(gameKey: GameKey)
+    open fun set(gameKey: GameKey)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameKey = gameKey

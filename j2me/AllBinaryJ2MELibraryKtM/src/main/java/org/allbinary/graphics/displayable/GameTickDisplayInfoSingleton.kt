@@ -30,12 +30,11 @@ open public class GameTickDisplayInfoSingleton
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GameTickDisplayInfoSingleton = GameTickDisplayInfoSingleton()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameTickDisplayInfoSingleton{
 
@@ -63,7 +62,7 @@ open fun getInstance()
 
     private var lastHalfHeight: Int = displayInfoSingleton!!.getLastHalfHeight()!!
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 this.lastWidth= displayInfoSingleton!!.getLastWidth()
@@ -73,7 +72,7 @@ this.lastHalfHeight= displayInfoSingleton!!.getLastHalfHeight()
 }
 
 
-open fun getLastWidth()
+    open fun getLastWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -84,7 +83,7 @@ open fun getLastWidth()
 }
 
 
-open fun getLastHeight()
+    open fun getLastHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -95,7 +94,7 @@ open fun getLastHeight()
 }
 
 
-open fun getLastHalfWidth()
+    open fun getLastHalfWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -106,7 +105,7 @@ open fun getLastHalfWidth()
 }
 
 
-open fun getLastHalfHeight()
+    open fun getLastHalfHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

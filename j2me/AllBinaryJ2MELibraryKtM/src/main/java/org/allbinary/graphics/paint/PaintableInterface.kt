@@ -26,14 +26,15 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Graphics
+
 interface PaintableInterface {
         
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun paintThreed(graphics: Graphics)
+    open fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 
 

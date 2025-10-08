@@ -39,10 +39,9 @@ open public class AndroidServicesUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AndroidServicesUtil{
 
@@ -74,7 +73,7 @@ open fun getInstance()
 
     private val SERVICE_NOT_FOUND_RUNNING: String = "Service not found Running: "
 
-open fun isServiceRunning(name: String)
+    open fun isServiceRunning(name: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var name = name

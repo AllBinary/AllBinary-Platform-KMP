@@ -21,12 +21,11 @@ open public class ImageIOUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun read(file: AbFile)
+    open fun read(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : BufferedImage{
 var file = file
@@ -40,7 +39,7 @@ var file = file
 
                 @Throws(Exception::class)
             
-open fun write(renderedImage: RenderedImage, name: String, file: AbFile)
+    open fun write(renderedImage: RenderedImage, name: String, file: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var renderedImage = renderedImage

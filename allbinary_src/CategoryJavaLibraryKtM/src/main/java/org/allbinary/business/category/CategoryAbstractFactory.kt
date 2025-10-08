@@ -42,13 +42,13 @@ open public class CategoryAbstractFactory
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun getRootInstance()
+    open fun getRootInstance()
         //nullable = true from not(false or (false and true)) = true
 : CategoryInterface{
 
@@ -58,7 +58,7 @@ open fun getRootInstance()
 }
 
 
-open fun getRootInstance(categoryAbPath: AbPath)
+    open fun getRootInstance(categoryAbPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
 : CategoryInterface{
 var categoryAbPath = categoryAbPath
@@ -69,7 +69,7 @@ var categoryAbPath = categoryAbPath
 }
 
 
-open fun getRootInstanceFromNode(node: Node)
+    open fun getRootInstanceFromNode(node: Node)
         //nullable = true from not(false or (false and false)) = true
 : CategoryInterface{
 var node = node
@@ -80,7 +80,7 @@ var node = node
 }
 
 
-open fun getInstance(categoryName: String)
+    open fun getInstance(categoryName: String)
         //nullable =  from not(true or (false and false)) = 
 : CategoryInterface{
 var categoryName = categoryName
@@ -124,7 +124,7 @@ var categoryName = categoryName
 }
 
 
-open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, categoryName: String)
+    open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, categoryName: String)
         //nullable =  from not(true or (false and false)) = 
 : CategoryInterface{
 var rootCategoryInterface = rootCategoryInterface
@@ -170,7 +170,7 @@ var categoryName = categoryName
 }
 
 
-open fun getInstance(node: Node)
+    open fun getInstance(node: Node)
         //nullable =  from not(true or (false and false)) = 
 : CategoryInterface{
 var node = node
@@ -214,7 +214,7 @@ var node = node
 }
 
 
-open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, node: Node)
+    open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, node: Node)
         //nullable =  from not(true or (false and false)) = 
 : CategoryInterface{
 var rootCategoryInterface = rootCategoryInterface
@@ -260,7 +260,7 @@ var node = node
 }
 
 
-open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, categoryPropertiesHashMap: HashMap<Any, Any>)
+    open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, categoryPropertiesHashMap: HashMap<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
 : CategoryInterface{
 var rootCategoryInterface = rootCategoryInterface

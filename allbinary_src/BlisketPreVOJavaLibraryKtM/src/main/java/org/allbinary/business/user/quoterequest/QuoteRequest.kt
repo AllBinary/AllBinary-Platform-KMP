@@ -61,7 +61,7 @@ open public class QuoteRequest
     private var timeFrame: String
 
     private var comments: String
-public constructor        (userName: String, request: HttpServletRequest)
+public constructor (userName: String, request: HttpServletRequest)
             : super()
         {
 var userName = userName
@@ -88,7 +88,7 @@ this.setComments(request.getParameter(quoteRequestData!!.COMMENTS) as String)
                                 
 }
 
-public constructor        (hashMap: HashMap<Any, Any>)
+public constructor (hashMap: HashMap<Any, Any>)
             : super()
         {
 var hashMap = hashMap
@@ -114,7 +114,7 @@ this.setComments(hashMap!!.get(quoteRequestData!!.COMMENTS) as String)
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -214,7 +214,7 @@ open fun isValid()
 }
 
 
-open fun validationInfo()
+    open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -314,7 +314,7 @@ open fun validationInfo()
 }
 
 
-open fun toVector()
+    open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -345,7 +345,7 @@ values.add(time)
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -377,7 +377,7 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 }
 
 
-open fun setUserName(value: String)
+    open fun setUserName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -385,7 +385,7 @@ this.userName= value
 }
 
 
-open fun setProjectInfo(value: String)
+    open fun setProjectInfo(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -393,7 +393,7 @@ this.projectInfo= value
 }
 
 
-open fun setUserComments(value: String)
+    open fun setUserComments(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -401,7 +401,7 @@ this.userComments= value
 }
 
 
-open fun setBudget(value: String)
+    open fun setBudget(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -409,7 +409,7 @@ this.budget= value
 }
 
 
-open fun setTimeFrame(value: String)
+    open fun setTimeFrame(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -417,7 +417,7 @@ this.timeFrame= value
 }
 
 
-open fun setComments(value: String)
+    open fun setComments(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -434,7 +434,7 @@ this.comments= value
 }
 
 
-open fun getUserName()
+    open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -445,7 +445,7 @@ open fun getUserName()
 }
 
 
-open fun getProjectInfo()
+    open fun getProjectInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -456,7 +456,7 @@ open fun getProjectInfo()
 }
 
 
-open fun getUserComments()
+    open fun getUserComments()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -467,7 +467,7 @@ open fun getUserComments()
 }
 
 
-open fun getBudget()
+    open fun getBudget()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -478,7 +478,7 @@ open fun getBudget()
 }
 
 
-open fun getTimeFrame()
+    open fun getTimeFrame()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -489,7 +489,7 @@ open fun getTimeFrame()
 }
 
 
-open fun getComments()
+    open fun getComments()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

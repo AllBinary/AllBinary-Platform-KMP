@@ -30,8 +30,7 @@ open public class TempInputRobotNames
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val LOW_NAME: String = "Low Level"
 
@@ -40,7 +39,7 @@ open public class TempInputRobotNames
     val DX_NAME: String = "DirectX"
 
         }
-            public constructor        ()
+            public constructor ()
             : super()
         {
 }

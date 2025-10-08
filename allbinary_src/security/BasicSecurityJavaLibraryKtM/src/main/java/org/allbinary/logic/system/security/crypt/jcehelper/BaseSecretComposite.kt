@@ -31,8 +31,7 @@ open public class BaseSecretComposite
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NULL_SECRET_COMPOSITE: BaseSecretComposite = BaseSecretComposite()
 
@@ -45,7 +44,7 @@ open public class BaseSecretComposite
         
                 @Throws(Exception::class)
             
-open fun encrypt(array: ByteArray)
+    open fun encrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
     //var array = array
@@ -59,7 +58,7 @@ open fun encrypt(array: ByteArray)
 
                 @Throws(Exception::class)
             
-open fun decrypt(array: ByteArray)
+    open fun decrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
 var array = array

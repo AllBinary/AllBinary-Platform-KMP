@@ -34,7 +34,7 @@ open public class AffiliateUser : User {
         
 
     private var affiliateSales: AffiliateSales
-public constructor        ()                        
+public constructor ()                        
 
                             : super(){
 
@@ -44,7 +44,7 @@ public constructor        ()
 this.affiliateSales= AffiliateSales()
 }
 
-public constructor        (userHashMap: HashMap<Any, Any>)                        
+public constructor (userHashMap: HashMap<Any, Any>)                        
 
                             : super(userHashMap){
 var userHashMap = userHashMap
@@ -56,7 +56,7 @@ this.affiliateSales= AffiliateSales()
 }
 
 
-open fun validateSession(weblisketSession: WeblisketSessionInterface)
+    open fun validateSession(weblisketSession: WeblisketSessionInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var weblisketSession = weblisketSession
@@ -65,7 +65,7 @@ this.updateSession(weblisketSession)
 }
 
 
-open fun updateSession(weblisketSession: WeblisketSessionInterface)
+    open fun updateSession(weblisketSession: WeblisketSessionInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var weblisketSession = weblisketSession
@@ -73,7 +73,7 @@ weblisketSession!!.setStoreName(this.getPermissions())
 }
 
 
-open fun isSessionValid()
+    open fun isSessionValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

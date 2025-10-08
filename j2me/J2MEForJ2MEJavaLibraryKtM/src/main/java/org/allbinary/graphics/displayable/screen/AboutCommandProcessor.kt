@@ -33,12 +33,11 @@ open public class AboutCommandProcessor
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AboutCommandProcessor = AboutCommandProcessor()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AboutCommandProcessor{
 
@@ -56,7 +55,7 @@ open fun getInstance()
             {
             }            
         
-open fun process(midletCommandListener: CommandListener, command: Command, canvas: Canvas)
+    open fun process(midletCommandListener: CommandListener, command: Command, canvas: Canvas)
         //nullable = true from not(false or (false and false)) = true
 {
     //var midletCommandListener = midletCommandListener

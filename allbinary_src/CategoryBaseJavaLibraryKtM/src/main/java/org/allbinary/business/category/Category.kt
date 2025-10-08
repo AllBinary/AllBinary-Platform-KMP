@@ -46,8 +46,7 @@ open public class Category
         
                 , CategoryInterface {
         
-
-        companion object {
+companion object {
             
     private val NOT_ROOT: String = "This is not the root so it has no file path."
 
@@ -68,7 +67,7 @@ open public class Category
     private val PROPERTIES: Integer = Integer(1)
 
     private val CATEGORY: Integer = Integer(0)
-public constructor        (categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface)
+public constructor (categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface)
             : super()
         {
 var categoryPropertiesFactoryInterface = categoryPropertiesFactoryInterface
@@ -86,7 +85,7 @@ this.categoryHierarchyInterface= CategoryHierarchy(this, this) as CategoryHierar
 this.log()
 }
 
-public constructor        (categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface, level: Int)
+public constructor (categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface, level: Int)
             : super()
         {
 var categoryPropertiesFactoryInterface = categoryPropertiesFactoryInterface
@@ -96,7 +95,7 @@ this.categoryHierarchyInterface= CategoryHierarchy(this, this, level) as Categor
 this.log()
 }
 
-public constructor        (rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface)
+public constructor (rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface)
             : super()
         {
 var rootCategoryInterface = rootCategoryInterface
@@ -110,7 +109,7 @@ this.log()
 
                 @Throws(Exception::class)
             
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -123,7 +122,7 @@ open fun getKey()
 
                 @Throws(Exception::class)
             
-open fun getRootFilePath()
+    open fun getRootFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 
@@ -154,7 +153,7 @@ rootAbPath= rootCategoryPropertiesInterface!!.getRootFilePath()
 
                 @Throws(Exception::class)
             
-open fun getFilePath()
+    open fun getFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 
@@ -167,7 +166,7 @@ open fun getFilePath()
 
                 @Throws(Exception::class)
             
-open fun getWebAppPath()
+    open fun getWebAppPath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 
@@ -183,7 +182,7 @@ open fun getWebAppPath()
 
                 @Throws(Exception::class)
             
-open fun getPath()
+    open fun getPath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 
@@ -195,7 +194,7 @@ open fun getPath()
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun addChildProperty(categoryPropertiesInterface: CategoryPropertiesInterface)
+    open fun addChildProperty(categoryPropertiesInterface: CategoryPropertiesInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var categoryPropertiesInterface = categoryPropertiesInterface
@@ -209,7 +208,7 @@ this.typeVector!!.add(this.PROPERTIES)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun addChild(categoryInterface: CategoryInterface)
+    open fun addChild(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var categoryInterface = categoryInterface
@@ -238,7 +237,7 @@ this.typeVector!!.add(this.CATEGORY)
 }
 
 
-open fun getChildNodes()
+    open fun getChildNodes()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -250,7 +249,7 @@ open fun getChildNodes()
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun removeChild(categoryInterface: CategoryInterface)
+    open fun removeChild(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var categoryInterface = categoryInterface
@@ -305,7 +304,7 @@ this.removal(removalVector)
 }
 
 
-open fun removal(removalVector: Vector)
+    open fun removal(removalVector: Vector)
         //nullable = true from not(false or (false and false)) = true
 {
 var removalVector = removalVector
@@ -333,7 +332,7 @@ this.childCategoryVector!!.remove(objectIndex)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun removeDuplicateChild(categoryInterface: CategoryInterface)
+    open fun removeDuplicateChild(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var categoryInterface = categoryInterface
@@ -420,7 +419,7 @@ this.removal(removalVector)
 
                 @Throws(Exception::class)
             
-open fun isLeaf()
+    open fun isLeaf()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -462,7 +461,7 @@ open fun isLeaf()
 }
 
 
-open fun getProperties()
+    open fun getProperties()
         //nullable = true from not(false or (false and true)) = true
 : CategoryPropertiesInterface{
 
@@ -473,7 +472,7 @@ open fun getProperties()
 }
 
 
-open fun setProperties(categoryPropertiesInterface: CategoryPropertiesInterface)
+    open fun setProperties(categoryPropertiesInterface: CategoryPropertiesInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var categoryPropertiesInterface = categoryPropertiesInterface
@@ -481,7 +480,7 @@ this.categoryPropertiesInterface= categoryPropertiesInterface
 }
 
 
-open fun getHierarchy()
+    open fun getHierarchy()
         //nullable = true from not(false or (false and true)) = true
 : CategoryHierarchyInterface{
 
@@ -492,7 +491,7 @@ open fun getHierarchy()
 }
 
 
-open fun setHierarchy(categoryHierarchyInterface: CategoryHierarchyInterface)
+    open fun setHierarchy(categoryHierarchyInterface: CategoryHierarchyInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var categoryHierarchyInterface = categoryHierarchyInterface
@@ -503,7 +502,7 @@ this.categoryHierarchyInterface= categoryHierarchyInterface
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -592,7 +591,7 @@ open fun isValid()
 
                 @Throws(Exception::class)
             
-open fun toValidationInfoDoc()
+    open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -605,7 +604,7 @@ open fun toValidationInfoDoc()
 
                 @Throws(Exception::class)
             
-open fun toValidationInfoNode(document: Document)
+    open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -619,7 +618,7 @@ var document = document
 
                 @Throws(Exception::class)
             
-open fun validationInfo()
+    open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -632,7 +631,7 @@ open fun validationInfo()
 
                 @Throws(Exception::class)
             
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -648,7 +647,7 @@ open fun toHashMap()
 
                 @Throws(Exception::class)
             
-open fun toVector()
+    open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -665,7 +664,7 @@ categoryVector!!.add(this.childCategoryVector)
 
                 @Throws(Exception::class)
             
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 {
 

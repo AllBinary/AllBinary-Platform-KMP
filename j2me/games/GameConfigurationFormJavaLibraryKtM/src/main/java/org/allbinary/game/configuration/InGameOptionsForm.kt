@@ -37,8 +37,7 @@ import org.allbinary.logic.communication.log.LogUtil
 
 open public class InGameOptionsForm : CommandForm {
         
-
-        companion object {
+companion object {
             
     val DISPLAY: Command = Command("Options In Game", Command.SCREEN, 1)
 
@@ -47,7 +46,7 @@ open public class InGameOptionsForm : CommandForm {
     val DEFAULT: Command = Command("Default", Command.SCREEN, 1)
 
         }
-             constructor        (commandListener: CommandListener, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+             constructor (commandListener: CommandListener, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(commandListener, title, backgrounBasicColor, foregroundBasicColor){
 var commandListener = commandListener
@@ -67,7 +66,8 @@ gameFeatureFormUtil!!.addChoiceGroup(this, InGameFeatureChoiceGroups.getMultiple
 this.initCommands(commandListener)
 }
 
-override fun initCommands(cmdListener: CommandListener)
+
+    override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var cmdListener = cmdListener

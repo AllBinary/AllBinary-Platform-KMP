@@ -28,13 +28,12 @@
 
 open public class StaticPagesDbInitInfo : DbInitInfo {
         
-
-        companion object {
+companion object {
             
     private val INITFILE: String = "staticpagesbinitdata.dat"
 
         }
-            public constructor        ()                        
+            public constructor ()                        
 
                             : super(INITFILE, true){
 
@@ -43,7 +42,7 @@ open public class StaticPagesDbInitInfo : DbInitInfo {
                     
 }
 
-public constructor        (read: Boolean)                        
+public constructor (read: Boolean)                        
 
                             : super(INITFILE, read){
 var read = read

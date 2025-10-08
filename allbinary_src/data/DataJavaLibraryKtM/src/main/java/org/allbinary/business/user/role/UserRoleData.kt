@@ -30,13 +30,12 @@ open public class UserRoleData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NAME: String = "ROLE"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

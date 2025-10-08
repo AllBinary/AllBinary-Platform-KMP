@@ -23,12 +23,11 @@ open public class FontDebugBase
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: FontDebugBase = FontDebugBase()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : FontDebugBase{
 
@@ -48,7 +47,7 @@ open fun getInstance()
         
     val SET_FONT: String = "setFont"
 
-open fun debugMetrics(currentFont: Font, convertedTextSize: Float, displayMetrics: Any, stringBuffer: StringMaker)
+    open fun debugMetrics(currentFont: Font, convertedTextSize: Float, displayMetrics: Any, stringBuffer: StringMaker)
         //nullable = true from not(false or (false and false)) = true
 {
     //var currentFont = currentFont
@@ -58,7 +57,7 @@ open fun debugMetrics(currentFont: Font, convertedTextSize: Float, displayMetric
 }
 
 
-open fun debugDpi(densityDpi: Int, stringBuffer: StringMaker)
+    open fun debugDpi(densityDpi: Int, stringBuffer: StringMaker)
         //nullable = true from not(false or (false and false)) = true
 {
     //var densityDpi = densityDpi
@@ -66,7 +65,7 @@ open fun debugDpi(densityDpi: Int, stringBuffer: StringMaker)
 }
 
 
-open fun debugDimension(currentFont: Font, convertedTextSize: Float, longestDimensionTotalPixels: Int, stringBuffer: StringMaker)
+    open fun debugDimension(currentFont: Font, convertedTextSize: Float, longestDimensionTotalPixels: Int, stringBuffer: StringMaker)
         //nullable = true from not(false or (false and false)) = true
 {
     //var currentFont = currentFont

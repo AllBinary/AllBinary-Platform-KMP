@@ -43,8 +43,7 @@ open public class CommandForm : Form
                 , MyCommandInterface
                 , MenuListener {
         
-
-        companion object {
+companion object {
             
     val NULL_COMMAND_FORM: CommandForm = CommandForm(NullCommandListener.NULL_COMMAND_LISTENER, StringUtil.getInstance()!!.EMPTY_STRING, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)
 
@@ -57,7 +56,7 @@ open public class CommandForm : Form
     private val repaintProcessor: Processor = ScreenRepaintProcessorFactory.getInstance()!!.getInstance(this)!!
 
     private var commandStack: Stack<Any>
-public constructor        (commandListener: CommandListener, formTitle: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (commandListener: CommandListener, formTitle: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(formTitle){
 var commandListener = commandListener
@@ -80,19 +79,21 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
 
-open fun initCommands(cmdListener: CommandListener)
+    open fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 {
     //var cmdListener = cmdListener
 }
 
-override fun open()
+
+    override fun open()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(this.commonStrings!!.START, this, "open")
 }
 
-override fun close()
+
+    override fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(this.commonStrings!!.START, this, commonStrings!!.CLOSE)
@@ -101,13 +102,14 @@ logUtil!!.put(this.commonStrings!!.START, this, commonStrings!!.CLOSE)
 
                 @Throws(Exception::class)
             
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 this.repaintProcessor!!.process()
 }
 
-override fun getSourceId()
+
+    override fun getSourceId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -117,7 +119,8 @@ override fun getSourceId()
                         return 0
 }
 
-override fun addCommand(command: Command)
+
+    override fun addCommand(command: Command)
         //nullable = true from not(false or (false and false)) = true
 {
 var command = command
@@ -125,7 +128,8 @@ commandStack!!.push(command)
 super.addCommand(command)
 }
 
-override fun removeAllCommands()
+
+    override fun removeAllCommands()
         //nullable = true from not(false or (false and true)) = true
 {
 

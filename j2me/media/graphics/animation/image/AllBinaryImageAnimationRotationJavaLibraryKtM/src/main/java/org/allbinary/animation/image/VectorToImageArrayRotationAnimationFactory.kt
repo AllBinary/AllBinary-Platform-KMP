@@ -44,7 +44,7 @@ open public class VectorToImageArrayRotationAnimationFactory : BaseImageAnimatio
     private var imageArray: Array<Image?>
 
     private var angleIncrement: Int= 0
-public constructor        (vectorInfo: VectorInfo, basicColor: BasicColor, dx: Int, dy: Int)                        
+public constructor (vectorInfo: VectorInfo, basicColor: BasicColor, dx: Int, dy: Int)                        
 
                             : this(vectorInfo, basicColor, dx, dy, AnimationBehaviorFactory.getInstance()){
     //var vectorInfo = vectorInfo
@@ -57,7 +57,7 @@ public constructor        (vectorInfo: VectorInfo, basicColor: BasicColor, dx: I
                     
 }
 
-public constructor        (vectorInfo: VectorInfo, basicColor: BasicColor, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
+public constructor (vectorInfo: VectorInfo, basicColor: BasicColor, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
                             : this(vectorInfo, basicColor, animationBehaviorFactory){
     //var vectorInfo = vectorInfo
@@ -73,7 +73,7 @@ this.animationFactoryInitializationVisitor!!.dx= dx
 this.animationFactoryInitializationVisitor!!.dy= dy
 }
 
-public constructor        (vectorInfo: VectorInfo, basicColor: BasicColor)                        
+public constructor (vectorInfo: VectorInfo, basicColor: BasicColor)                        
 
                             : this(vectorInfo, basicColor, AnimationBehaviorFactory.getInstance()){
     //var vectorInfo = vectorInfo
@@ -84,7 +84,7 @@ public constructor        (vectorInfo: VectorInfo, basicColor: BasicColor)
                     
 }
 
-public constructor        (vectorInfo: VectorInfo, basicColor: BasicColor, animationBehaviorFactory: AnimationBehaviorFactory)                        
+public constructor (vectorInfo: VectorInfo, basicColor: BasicColor, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
                             : super(AnimationFrameToImageUtil.getInstance()!!.getInstanceTranslate(vectorInfo!!.getWidth(), vectorInfo!!.getHeight(), VectorAnimation(vectorInfo!!.getPoints(), basicColor, animationBehaviorFactory!!.getOrCreateInstance())), 0, 0, animationBehaviorFactory){
     //var vectorInfo = vectorInfo
@@ -100,7 +100,7 @@ this.init()
 
                 @Throws(Exception::class)
             
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -113,7 +113,7 @@ this.imageArray= ImageToRotationImageArrayUtil.getInstance()!!.generate(this.get
 
                 @Throws(Exception::class)
             
-open fun getInstance(instanceId: Int)
+    open fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var instanceId = instanceId
@@ -142,7 +142,7 @@ open fun getInstance(instanceId: Int)
 }
 
 
-open fun getAngleIncrement()
+    open fun getAngleIncrement()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -153,7 +153,7 @@ open fun getAngleIncrement()
 }
 
 
-open fun setInitialScale(scaleProperties: ScaleProperties)
+    open fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
 {
     //var scaleProperties = scaleProperties

@@ -31,10 +31,9 @@ open public class AbFileNativeUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun get(file: AbFile)
+    open fun get(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : File{
 var file = file

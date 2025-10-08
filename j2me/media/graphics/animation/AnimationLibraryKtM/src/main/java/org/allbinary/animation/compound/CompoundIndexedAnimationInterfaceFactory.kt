@@ -32,7 +32,7 @@ import org.allbinary.animation.IndexedAnimation
 
 open public class CompoundIndexedAnimationInterfaceFactory : CompoundAnimationInterfaceFactory {
         
-public constructor        (basicAnimationInterfaceFactoryInterfaceArray: Array<AnimationInterfaceFactoryInterface?>)                        
+public constructor (basicAnimationInterfaceFactoryInterfaceArray: Array<AnimationInterfaceFactoryInterface?>)                        
 
                             : this(basicAnimationInterfaceFactoryInterfaceArray, AnimationBehaviorFactory.getInstance()){
     //var basicAnimationInterfaceFactoryInterfaceArray = basicAnimationInterfaceFactoryInterfaceArray
@@ -42,7 +42,7 @@ public constructor        (basicAnimationInterfaceFactoryInterfaceArray: Array<A
                     
 }
 
-public constructor        (basicAnimationInterfaceFactoryInterfaceArray: Array<AnimationInterfaceFactoryInterface?>, animationBehaviorFactory: AnimationBehaviorFactory)                        
+public constructor (basicAnimationInterfaceFactoryInterfaceArray: Array<AnimationInterfaceFactoryInterface?>, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
                             : super(basicAnimationInterfaceFactoryInterfaceArray, animationBehaviorFactory){
     //var basicAnimationInterfaceFactoryInterfaceArray = basicAnimationInterfaceFactoryInterfaceArray
@@ -53,7 +53,8 @@ public constructor        (basicAnimationInterfaceFactoryInterfaceArray: Array<A
                     
 }
 
-override fun createArray(size: Int)
+
+    override fun createArray(size: Int)
         //nullable = true from not(false or (false and false)) = true
 : Array<Animation?>{
     //var size = size
@@ -64,7 +65,8 @@ override fun createArray(size: Int)
                         return arrayOfNulls(size)
 }
 
-override fun getInstance(animationArray: Array<Animation?>)
+
+    override fun getInstance(animationArray: Array<Animation?>)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var animationArray = animationArray

@@ -27,10 +27,11 @@
         
 import org.allbinary.business.user.commerce.money.payment.gateway.PaymentGatewayInterface
 import org.allbinary.data.tree.dom.DomNodeInterface
+
 interface PaymentGatewayDomNodeFactoryInterface {
         
 
-open fun getInstance(paymentGatewayInterface: PaymentGatewayInterface)
+    open fun getInstance(paymentGatewayInterface: PaymentGatewayInterface)
         //nullable =  from not(true or (false and false)) = 
 : DomNodeInterface
 

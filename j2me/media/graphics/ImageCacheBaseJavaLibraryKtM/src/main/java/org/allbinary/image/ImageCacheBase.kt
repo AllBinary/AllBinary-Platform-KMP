@@ -57,7 +57,7 @@ open public class ImageCacheBase
     var volume: Int = 0
 
     var nextIndex: Int = 0
-protected constructor        ()
+protected constructor ()
             : super()
         {
 
@@ -83,7 +83,7 @@ availableListOfList[index]= BasicArrayList()
 }
 
 
-open fun getImage(resourceId: Any)
+    open fun getImage(resourceId: Any)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var resourceId = resourceId
@@ -113,7 +113,7 @@ open fun getImage(resourceId: Any)
 }
 
 
-open fun releaseAll()
+    open fun releaseAll()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -132,7 +132,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-open fun getIndex(width: Int, height: Int)
+    open fun getIndex(width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var width = width
@@ -175,7 +175,7 @@ open fun getIndex(width: Int, height: Int)
 }
 
 
-open fun getFromAvailable(foundIndex: Int, width: Int, height: Int)
+    open fun getFromAvailable(foundIndex: Int, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var foundIndex = foundIndex
@@ -215,7 +215,7 @@ open fun getFromAvailable(foundIndex: Int, width: Int, height: Int)
 
                 @Throws(Exception::class)
             
-open fun get(anyType: Any, width: Int, height: Int)
+    open fun get(anyType: Any, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var anyType = anyType
@@ -231,7 +231,7 @@ open fun get(anyType: Any, width: Int, height: Int)
 
                 @Throws(Exception::class)
             
-open fun get(caller: String, width: Int, height: Int)
+    open fun get(caller: String, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var caller = caller
@@ -246,7 +246,7 @@ open fun get(caller: String, width: Int, height: Int)
 
                 @Throws(Exception::class)
             
-open fun get(key: Any)
+    open fun get(key: Any)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var key = key
@@ -259,7 +259,7 @@ open fun get(key: Any)
 
                 @Throws(Exception::class)
             
-open fun createImage(caller: String, width: Int, height: Int)
+    open fun createImage(caller: String, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var caller = caller
@@ -275,7 +275,7 @@ open fun createImage(caller: String, width: Int, height: Int)
 
                 @Throws(Exception::class)
             
-open fun createImage(key: Any, inputStream: InputStream)
+    open fun createImage(key: Any, inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var key = key
@@ -290,7 +290,8 @@ open fun createImage(key: Any, inputStream: InputStream)
                         return image
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -334,7 +335,7 @@ stringBuffer!!.append(totalAvailable)
 }
 
 
-open fun getHashtableP()
+    open fun getHashtableP()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
 
@@ -345,14 +346,14 @@ open fun getHashtableP()
 }
 
 
-open fun init(image: Image)
+    open fun init(image: Image)
         //nullable = true from not(false or (false and false)) = true
 {
 var image = image
 }
 
 
-open fun initProgress()
+    open fun initProgress()
         //nullable = true from not(false or (false and true)) = true
 {
 }

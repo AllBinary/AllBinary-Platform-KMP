@@ -42,7 +42,7 @@ open public class AdvertisementAreaConstraints
     private var displayInBrowserContraintsInterface: DisplayInBrowserContraintsInterface
 
     private var twoDimensionConstraintsInterface: TwoDimensionalConstraintInterface
-public constructor        (document: Document)
+public constructor (document: Document)
             : super()
         {
 var document = document
@@ -54,7 +54,7 @@ this.twoDimensionConstraintsInterface= TwoDimensionalConstraint(node)
 }
 
 
-open fun setDisplayInBrowserContraints(displayInBrowserContraintsInterface: DisplayInBrowserContraintsInterface)
+    open fun setDisplayInBrowserContraints(displayInBrowserContraintsInterface: DisplayInBrowserContraintsInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var displayInBrowserContraintsInterface = displayInBrowserContraintsInterface
@@ -62,7 +62,7 @@ this.displayInBrowserContraintsInterface= displayInBrowserContraintsInterface
 }
 
 
-open fun getTwoDimensionContraints(twoDimensionConstraintsInterface: TwoDimensionalConstraintInterface)
+    open fun getTwoDimensionContraints(twoDimensionConstraintsInterface: TwoDimensionalConstraintInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var twoDimensionConstraintsInterface = twoDimensionConstraintsInterface
@@ -70,7 +70,7 @@ this.twoDimensionConstraintsInterface= twoDimensionConstraintsInterface
 }
 
 
-open fun getDisplayInBrowserContraints()
+    open fun getDisplayInBrowserContraints()
         //nullable = true from not(false or (false and true)) = true
 : DisplayInBrowserContraintsInterface{
 
@@ -81,7 +81,7 @@ open fun getDisplayInBrowserContraints()
 }
 
 
-open fun getTwoDimensionContraints()
+    open fun getTwoDimensionContraints()
         //nullable = true from not(false or (false and true)) = true
 : TwoDimensionalConstraintInterface{
 

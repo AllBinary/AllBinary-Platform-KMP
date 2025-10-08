@@ -43,7 +43,8 @@ open public class MotionInputMappingEventListener
             public constructor() : super()
             {
             }            
-        override fun onEvent(eventObject: AllBinaryEventObject)
+        
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
@@ -52,7 +53,8 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
 
                 @Throws(Exception::class)
-            override fun onInputMappingEvent(inputMappingEvent: InputMappingEvent)
+            
+    override fun onInputMappingEvent(inputMappingEvent: InputMappingEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var inputMappingEvent = inputMappingEvent

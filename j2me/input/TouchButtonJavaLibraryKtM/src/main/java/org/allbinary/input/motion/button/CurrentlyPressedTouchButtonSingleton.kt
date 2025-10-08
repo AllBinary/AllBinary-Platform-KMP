@@ -31,12 +31,11 @@ open public class CurrentlyPressedTouchButtonSingleton
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: CurrentlyPressedTouchButtonSingleton = CurrentlyPressedTouchButtonSingleton()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CurrentlyPressedTouchButtonSingleton{
 
@@ -50,13 +49,13 @@ open fun getInstance()
         }
             
     val list: BasicArrayList = BasicArrayList()
-protected constructor        ()
+protected constructor ()
             : super()
         {
 }
 
 
-open fun size()
+    open fun size()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -67,7 +66,7 @@ open fun size()
 }
 
 
-open fun remove(index: Int)
+    open fun remove(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : TouchButtonInput{
 var index = index
@@ -79,7 +78,7 @@ var index = index
 }
 
 
-open fun remove(touchButtonInput: TouchButtonInput)
+    open fun remove(touchButtonInput: TouchButtonInput)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var touchButtonInput = touchButtonInput
@@ -91,7 +90,7 @@ var touchButtonInput = touchButtonInput
 }
 
 
-open fun get(index: Int)
+    open fun get(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : TouchButtonInput{
 var index = index
@@ -103,7 +102,7 @@ var index = index
 }
 
 
-open fun contains(touchButtonInput: TouchButtonInput)
+    open fun contains(touchButtonInput: TouchButtonInput)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var touchButtonInput = touchButtonInput
@@ -115,7 +114,7 @@ var touchButtonInput = touchButtonInput
 }
 
 
-open fun add(touchButtonInput: TouchButtonInput)
+    open fun add(touchButtonInput: TouchButtonInput)
         //nullable = true from not(false or (false and false)) = true
 {
 var touchButtonInput = touchButtonInput

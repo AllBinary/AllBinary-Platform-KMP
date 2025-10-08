@@ -57,7 +57,7 @@ open public class GeographicMapCellPositionArea
     private var occupyingGeographicMapCellPositionList: BasicArrayList = LIST
 
     private var surroundingGeographicMapCellPositionList: BasicArrayList = LIST
-public constructor        (layerInterface: AllBinaryLayer)
+public constructor (layerInterface: AllBinaryLayer)
             : super()
         {
     //var layerInterface = layerInterface
@@ -67,7 +67,7 @@ this.layerInterface= layerInterface
 
                 @Throws(Exception::class)
             
-open fun update(geographicMapInterface: BasicGeographicMap)
+    open fun update(geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapInterface = geographicMapInterface
@@ -77,7 +77,7 @@ this.surroundingCircularIndexUtil!!.setSize(this.surroundingGeographicMapCellPos
 }
 
 
-open fun getOccupyingGeographicMapCellPositionList()
+    open fun getOccupyingGeographicMapCellPositionList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -88,7 +88,7 @@ open fun getOccupyingGeographicMapCellPositionList()
 }
 
 
-open fun getSurroundingGeographicMapCellPositionList()
+    open fun getSurroundingGeographicMapCellPositionList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -99,7 +99,7 @@ open fun getSurroundingGeographicMapCellPositionList()
 }
 
 
-open fun getNextSurroundingGeographicMapCellPosition()
+    open fun getNextSurroundingGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPosition{
 

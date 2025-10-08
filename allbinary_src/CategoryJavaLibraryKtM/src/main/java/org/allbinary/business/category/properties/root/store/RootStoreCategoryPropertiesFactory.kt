@@ -43,14 +43,14 @@ open public class RootStoreCategoryPropertiesFactory
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var categoryPropertiesInterface: CategoryPropertiesInterface
-public constructor        (transformInfoInterface: TransformInfoInterface)
+public constructor (transformInfoInterface: TransformInfoInterface)
             : super()
         {
 var transformInfoInterface = transformInfoInterface
 this.categoryPropertiesInterface= RootStoreCategoryProperties(transformInfoInterface) as CategoryPropertiesInterface
 }
 
-public constructor        (transformInfoInterface: TransformInfoInterface, abPath: AbPath)
+public constructor (transformInfoInterface: TransformInfoInterface, abPath: AbPath)
             : super()
         {
 var transformInfoInterface = transformInfoInterface
@@ -58,7 +58,7 @@ var abPath = abPath
 this.categoryPropertiesInterface= RootStoreCategoryProperties(transformInfoInterface, abPath) as CategoryPropertiesInterface
 }
 
-public constructor        (transformInfoInterface: TransformInfoInterface, node: Node)
+public constructor (transformInfoInterface: TransformInfoInterface, node: Node)
             : super()
         {
 var transformInfoInterface = transformInfoInterface
@@ -66,7 +66,7 @@ var node = node
 this.categoryPropertiesInterface= RootStoreCategoryProperties(transformInfoInterface, node) as CategoryPropertiesInterface
 }
 
-public constructor        (transformInfoInterface: TransformInfoInterface, categoryPropertiesHashMap: HashMap<Any, Any>)
+public constructor (transformInfoInterface: TransformInfoInterface, categoryPropertiesHashMap: HashMap<Any, Any>)
             : super()
         {
 var transformInfoInterface = transformInfoInterface
@@ -75,7 +75,7 @@ this.categoryPropertiesInterface= RootStoreCategoryProperties(transformInfoInter
 }
 
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CategoryPropertiesInterface{
 

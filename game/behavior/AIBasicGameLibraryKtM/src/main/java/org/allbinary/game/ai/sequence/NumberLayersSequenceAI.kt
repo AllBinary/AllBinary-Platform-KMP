@@ -34,7 +34,7 @@ open public class NumberLayersSequenceAI : SequenceAI {
         
 
     private var numberOfLayersLeft: Int
-public constructor        (numberOfEnemiesLeft: Int, artificialIntelligenceInterface: Array<ArtificialIntelligenceInterface?>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
+public constructor (numberOfEnemiesLeft: Int, artificialIntelligenceInterface: Array<ArtificialIntelligenceInterface?>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
                             : super(artificialIntelligenceInterface, ownerLayerInterface, gameInput){
 var numberOfEnemiesLeft = numberOfEnemiesLeft
@@ -50,7 +50,8 @@ this.numberOfLayersLeft= numberOfEnemiesLeft
 
 
                 @Throws(Exception::class)
-            override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+            
+    override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager

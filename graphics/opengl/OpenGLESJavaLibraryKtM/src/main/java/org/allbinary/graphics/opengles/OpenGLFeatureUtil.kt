@@ -32,12 +32,11 @@ open public class OpenGLFeatureUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OpenGLFeatureUtil = OpenGLFeatureUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OpenGLFeatureUtil{
 
@@ -51,7 +50,7 @@ open fun getInstance()
         }
             
     private val anyThreed: Boolean
-public constructor        ()
+public constructor ()
             : super()
         {
 
@@ -67,7 +66,7 @@ this.anyThreed= openGLConfiguration!!.isOpenGL() && (features.isFeature(openGLFe
 }
 
 
-open fun isAnyThreed()
+    open fun isAnyThreed()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

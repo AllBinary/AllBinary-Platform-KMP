@@ -25,12 +25,13 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.util.event.EventListenerInterface
+
 interface CapitalEventListenerInterface : EventListenerInterface {
         
 
                 @Throws(Exception::class)
             
-open fun onCapitalChangeEvent(event: CapitalEvent)
+    open fun onCapitalChangeEvent(event: CapitalEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

@@ -35,13 +35,12 @@ import org.allbinary.util.BasicArrayList
 
 open public class DestroyedEventHandler : BasicEventHandler {
         
-
-        companion object {
+companion object {
             
     private val instance: DestroyedEventHandler = DestroyedEventHandler()
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DestroyedEventHandler{
 
@@ -55,11 +54,11 @@ open fun getInstance()
         }
             
     private val list: BasicArrayList = BasicArrayList()
-private constructor        (){
+private constructor (){
 }
 
 
-open fun addListener(collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer)
+    open fun addListener(collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
@@ -75,7 +74,8 @@ var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun removeAllListeners()
+
+    override fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
 {
 this.list.clear()
@@ -83,7 +83,8 @@ super.removeAllListeners()
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun removeListener(eventListenerInterface: EventListenerInterface)
+
+    override fun removeListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventListenerInterface = eventListenerInterface
@@ -93,7 +94,8 @@ super.removeListener(eventListenerInterface)
 
 
                 @Throws(Exception::class)
-            override fun fireEvent(eventObject: AllBinaryEventObject)
+            
+    override fun fireEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
@@ -122,7 +124,8 @@ super.fireEvent(eventObject)
 
 
                 @Throws(Exception::class)
-            override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
+            
+    override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject

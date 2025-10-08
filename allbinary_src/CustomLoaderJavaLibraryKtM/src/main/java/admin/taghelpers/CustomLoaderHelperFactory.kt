@@ -36,15 +36,14 @@ open public class CustomLoaderHelperFactory
         
                 , TagHelperFactoryInterface {
         
-
-        companion object {
+companion object {
             
     private val CLASSNAME: String = "admin.taghelpers.CustomLoaderHelper"
 
     private val FACTORYNAME: String = "CustomLoaderHelperFactory"
 
         }
-            public constructor        ()
+            public constructor ()
             : super()
         {
 }
@@ -52,7 +51,7 @@ open public class CustomLoaderHelperFactory
 
                 @Throws(LicensingException::class)
             
-open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
+    open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
 : Any{
     //var hashMap = hashMap
@@ -70,7 +69,7 @@ open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
 
                 @Throws(LicensingException::class)
             
-open fun getInstance(abeClientInformation: AbeClientInformationInterface)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface)
         //nullable =  from not(true or (false and false)) = 
 : Any{
     //var abeClientInformation = abeClientInformation

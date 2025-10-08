@@ -32,13 +32,13 @@ open public class RuntimeEnvironmentVariables
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun getTest1()
+    open fun getTest1()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -49,7 +49,7 @@ open fun getTest1()
 }
 
 
-open fun getVariable(var: String)
+    open fun getVariable(var: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var var = var
@@ -64,7 +64,7 @@ var var = var
 }
 
 
-open fun get()
+    open fun get()
         //nullable = true from not(false or (false and true)) = true
 : Properties{
 
@@ -180,7 +180,7 @@ environmentVariables!!.put(key, value)
 }
 
 
-open fun getTempDir()
+    open fun getTempDir()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -211,7 +211,7 @@ open fun getTempDir()
 }
 
 
-open fun getLibraryPath()
+    open fun getLibraryPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -242,7 +242,7 @@ open fun getLibraryPath()
 }
 
 
-open fun getClassPath()
+    open fun getClassPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -273,7 +273,7 @@ open fun getClassPath()
 }
 
 
-open fun updateLibraryPath(libPath: String)
+    open fun updateLibraryPath(libPath: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var libPath = libPath
@@ -299,7 +299,7 @@ System.setProperty("java.library.path", libPath +":" +existingPath)
 }
 
 
-open fun getUserHome()
+    open fun getUserHome()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -330,7 +330,7 @@ open fun getUserHome()
 }
 
 
-open fun getUserDir()
+    open fun getUserDir()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -361,7 +361,7 @@ open fun getUserDir()
 }
 
 
-open fun set()
+    open fun set()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -382,7 +382,7 @@ open fun set()
 }
 
 
-open fun setVariable(var: String, val: String)
+    open fun setVariable(var: String, val: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var var = var

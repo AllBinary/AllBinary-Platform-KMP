@@ -45,8 +45,7 @@ import org.allbinary.view.event.ViewPositionEvent
 open public class AllBinaryLayer : Layer
                 , LayerInterface {
         
-
-        companion object {
+companion object {
             
     val NULL_ALLBINARY_LAYER: AllBinaryLayer = AllBinaryLayer(RectangleFactory.SINGLETON, ViewPosition.NULL_VIEW_POSITION)
 
@@ -63,7 +62,7 @@ open public class AllBinaryLayer : Layer
     private val name: String
 
     private var viewPosition: ViewPosition = ViewPosition.NULL_VIEW_POSITION
-public constructor        (rectangle: Rectangle, viewPosition: ViewPosition)                        
+public constructor (rectangle: Rectangle, viewPosition: ViewPosition)                        
 
                             : this(StringUtil.getInstance()!!.EMPTY_STRING, rectangle, viewPosition){
     //var rectangle = rectangle
@@ -74,7 +73,7 @@ public constructor        (rectangle: Rectangle, viewPosition: ViewPosition)
                     
 }
 
-public constructor        (name: String, rectangle: Rectangle, viewPosition: ViewPosition)                        
+public constructor (name: String, rectangle: Rectangle, viewPosition: ViewPosition)                        
 
                             : super(rectangle.getWidth(), rectangle.getHeight()){
     //var name = name
@@ -118,19 +117,21 @@ this.viewPosition!!.setAllbinaryLayer(this)
 
                 @Throws(Exception::class)
             
-open fun onChangeEvent(layerManagerEvent: ViewPositionEvent)
+    open fun onChangeEvent(layerManagerEvent: ViewPositionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerManagerEvent = layerManagerEvent
 }
 
-override fun paintThreed(graphics: Graphics)
+
+    override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
 }
 
-override fun getX2()
+
+    override fun getX2()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -140,7 +141,8 @@ override fun getX2()
                         return this.getXP() +this.getWidth()
 }
 
-override fun getY2()
+
+    override fun getY2()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -150,7 +152,8 @@ override fun getY2()
                         return this.getYP() +this.getHeight()
 }
 
-override fun getZ2()
+
+    override fun getZ2()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -160,7 +163,8 @@ override fun getZ2()
                         return (this.getZP() +this.getDepth()).toInt()
 }
 
-override fun getName()
+
+    override fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -171,14 +175,15 @@ override fun getName()
 }
 
 
-open fun setHalfWidth(halfWidth: Int)
+    open fun setHalfWidth(halfWidth: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var halfWidth = halfWidth
 this.halfWidth= halfWidth
 }
 
-override fun getHalfWidth()
+
+    override fun getHalfWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -189,14 +194,15 @@ override fun getHalfWidth()
 }
 
 
-open fun setHalfHeight(halfHeight: Int)
+    open fun setHalfHeight(halfHeight: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var halfHeight = halfHeight
 this.halfHeight= halfHeight
 }
 
-override fun getHalfHeight()
+
+    override fun getHalfHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -207,7 +213,7 @@ override fun getHalfHeight()
 }
 
 
-open fun getHalfDepth()
+    open fun getHalfDepth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -218,7 +224,7 @@ open fun getHalfDepth()
 }
 
 
-open fun getViewPosition()
+    open fun getViewPosition()
         //nullable = true from not(false or (false and true)) = true
 : ViewPosition{
 
@@ -229,14 +235,15 @@ open fun getViewPosition()
 }
 
 
-open fun setViewPosition(viewPosition: ViewPosition)
+    open fun setViewPosition(viewPosition: ViewPosition)
         //nullable = true from not(false or (false and false)) = true
 {
     //var viewPosition = viewPosition
 this.viewPosition= viewPosition
 }
 
-override fun getGroupInterface()
+
+    override fun getGroupInterface()
         //nullable = true from not(false or (false and true)) = true
 : Array<Group?>{
 
@@ -246,37 +253,8 @@ override fun getGroupInterface()
                         return BasicGroupFactory.getInstance()!!.NONE_ARRAY
 }
 
-override fun implmentsTickableInterface()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
 
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-override fun implmentsGameInputInterface()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-override fun implmentsArtificialIntelligenceCompositeInterface()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
-}
-
-override fun implmentsCollidableInterface()
+    override fun implmentsTickableInterface()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -287,7 +265,40 @@ override fun implmentsCollidableInterface()
 }
 
 
-open fun implementsThreedInterface()
+    override fun implmentsGameInputInterface()
+        //nullable = true from not(false or (false and true)) = true
+: Boolean{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return false
+}
+
+
+    override fun implmentsArtificialIntelligenceCompositeInterface()
+        //nullable = true from not(false or (false and true)) = true
+: Boolean{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return false
+}
+
+
+    override fun implmentsCollidableInterface()
+        //nullable = true from not(false or (false and true)) = true
+: Boolean{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return false
+}
+
+
+    open fun implementsThreedInterface()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -297,7 +308,8 @@ open fun implementsThreedInterface()
                         return OpenGLFeatureUtil.getInstance()!!.isAnyThreed()
 }
 
-override fun getType()
+
+    override fun getType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -308,7 +320,7 @@ override fun getType()
 }
 
 
-open fun getMultiPlayerType()
+    open fun getMultiPlayerType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -318,7 +330,8 @@ open fun getMultiPlayerType()
                         return  -1
 }
 
-override fun toString(stringBuffer: StringMaker)
+
+    override fun toString(stringBuffer: StringMaker)
         //nullable = true from not(false or (true and false)) = true
 {
     //var stringBuffer = stringBuffer
@@ -352,7 +365,8 @@ stringBuffer!!.append(commonLabels!!.HEIGHT_LABEL)
 stringBuffer!!.append(this.getHeight())
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

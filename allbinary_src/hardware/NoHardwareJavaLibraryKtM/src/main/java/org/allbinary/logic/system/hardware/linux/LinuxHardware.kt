@@ -47,13 +47,13 @@ open public class LinuxHardware
         
                 , HardwareInterface {
         
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun getMultimedia(index: Int)
+    open fun getMultimedia(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : MediaInterface{
 var index = index
@@ -64,7 +64,7 @@ var index = index
 }
 
 
-open fun getBridge(index: Int)
+    open fun getBridge(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : BridgeInterface{
 var index = index
@@ -75,7 +75,7 @@ var index = index
 }
 
 
-open fun getCpu(index: Int)
+    open fun getCpu(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : CpuInterface{
 var index = index
@@ -86,7 +86,7 @@ var index = index
 }
 
 
-open fun getEthernet(index: Int)
+    open fun getEthernet(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : EthernetInterface{
 var index = index
@@ -97,7 +97,7 @@ var index = index
 }
 
 
-open fun getFireWire(index: Int)
+    open fun getFireWire(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : FireWireInterface{
 var index = index
@@ -108,7 +108,7 @@ var index = index
 }
 
 
-open fun getHardDriveController(index: Int)
+    open fun getHardDriveController(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : HardDriveControllerInterface{
 var index = index
@@ -119,7 +119,7 @@ var index = index
 }
 
 
-open fun getHardDrive(index: Int)
+    open fun getHardDrive(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : HardDriveInterface{
 var index = index
@@ -130,7 +130,7 @@ var index = index
 }
 
 
-open fun getMachineAccessControlAddress(index: Int)
+    open fun getMachineAccessControlAddress(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : MachineAccessControlAddressInterface{
 var index = index
@@ -141,7 +141,7 @@ var index = index
 }
 
 
-open fun getMonitor(index: Int)
+    open fun getMonitor(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : MonitorInterface{
 var index = index
@@ -152,7 +152,7 @@ var index = index
 }
 
 
-open fun getUsb(index: Int)
+    open fun getUsb(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : UsbInterface{
 var index = index
@@ -163,7 +163,7 @@ var index = index
 }
 
 
-open fun getVideo(index: Int)
+    open fun getVideo(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : VideoInterface{
 var index = index
@@ -173,7 +173,8 @@ var index = index
                             throw RuntimeException()
 }
 
-override fun getComponent(index: Int)
+
+    override fun getComponent(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : HardwareComponentInterface{
 var index = index
@@ -183,7 +184,8 @@ var index = index
                             throw RuntimeException()
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -193,7 +195,8 @@ override fun toString()
                         return StringUtil.getInstance()!!.EMPTY_STRING
 }
 
-override fun compareTo(hardwareInterface: HardwareInterface)
+
+    override fun compareTo(hardwareInterface: HardwareInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var hardwareInterface = hardwareInterface
@@ -204,7 +207,8 @@ var hardwareInterface = hardwareInterface
                         return true
 }
 
-override fun difference(hardwareInterface: HardwareInterface)
+
+    override fun difference(hardwareInterface: HardwareInterface)
         //nullable = true from not(false or (false and false)) = true
 : Hashtable<Any, Any>{
 var hardwareInterface = hardwareInterface
@@ -216,7 +220,7 @@ var hardwareInterface = hardwareInterface
 }
 
 
-open fun isNextHardware(nextLine: String)
+    open fun isNextHardware(nextLine: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var nextLine = nextLine

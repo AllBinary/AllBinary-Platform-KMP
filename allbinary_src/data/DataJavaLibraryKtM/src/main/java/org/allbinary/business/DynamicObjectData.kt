@@ -30,13 +30,12 @@ open public class DynamicObjectData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NAME: String = "DYNAMICCOMPONENT_NAME"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

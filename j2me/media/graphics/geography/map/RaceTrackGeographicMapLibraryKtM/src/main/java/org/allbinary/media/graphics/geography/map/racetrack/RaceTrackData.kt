@@ -56,7 +56,7 @@ open public class RaceTrackData
     private var overPassGeographicMapCellPositionArray: Array<CellPosition?> = NO_OVER_PASSES_ARRAY
 
     private var id: Integer
-public constructor        (id: Integer, cellWidth: Int, cellHeight: Int, miniCellWidth: Int, miniCellHeight: Int)                        
+public constructor (id: Integer, cellWidth: Int, cellHeight: Int, miniCellWidth: Int, miniCellHeight: Int)                        
 
                             : this(id, cellWidth, cellHeight, miniCellWidth, miniCellHeight, 
                             null, 
@@ -72,7 +72,7 @@ public constructor        (id: Integer, cellWidth: Int, cellHeight: Int, miniCel
                     
 }
 
-public constructor        (id: Integer, cellWidth: Int, cellHeight: Int, miniCellWidth: Int, miniCellHeight: Int, cellTypeIdToGeographicMapCellTypeArray: IntArray, mapArray: Array<IntArray?>)
+public constructor (id: Integer, cellWidth: Int, cellHeight: Int, miniCellWidth: Int, miniCellHeight: Int, cellTypeIdToGeographicMapCellTypeArray: IntArray, mapArray: Array<IntArray?>)
             : super()
         {
     //var id = id
@@ -92,7 +92,7 @@ this.cellTypeIdToGeographicMapCellTypeArray= cellTypeIdToGeographicMapCellTypeAr
 }
 
 
-open fun setMapArray(mapArray: Array<IntArray?>)
+    open fun setMapArray(mapArray: Array<IntArray?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var mapArray = mapArray
@@ -100,7 +100,7 @@ this.mapArray= mapArray
 }
 
 
-open fun getMapArray()
+    open fun getMapArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<IntArray?>{
 
@@ -111,7 +111,7 @@ open fun getMapArray()
 }
 
 
-open fun setCellTypeIdToGeographicMapCellTypeArray(cellTypeIdToGeographicMapCellTypeArray: IntArray)
+    open fun setCellTypeIdToGeographicMapCellTypeArray(cellTypeIdToGeographicMapCellTypeArray: IntArray)
         //nullable = true from not(false or (false and false)) = true
 {
 var cellTypeIdToGeographicMapCellTypeArray = cellTypeIdToGeographicMapCellTypeArray
@@ -119,7 +119,7 @@ this.cellTypeIdToGeographicMapCellTypeArray= cellTypeIdToGeographicMapCellTypeAr
 }
 
 
-open fun getCellTypeIdToGeographicMapCellTypeArray()
+    open fun getCellTypeIdToGeographicMapCellTypeArray()
         //nullable = true from not(false or (false and true)) = true
 : IntArray{
 
@@ -130,7 +130,7 @@ open fun getCellTypeIdToGeographicMapCellTypeArray()
 }
 
 
-open fun setCellWidth(cellWidth: Int)
+    open fun setCellWidth(cellWidth: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var cellWidth = cellWidth
@@ -138,7 +138,7 @@ this.cellWidth= cellWidth
 }
 
 
-open fun getCellWidth()
+    open fun getCellWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -149,7 +149,7 @@ open fun getCellWidth()
 }
 
 
-open fun setCellHeight(cellHeight: Int)
+    open fun setCellHeight(cellHeight: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var cellHeight = cellHeight
@@ -157,7 +157,7 @@ this.cellHeight= cellHeight
 }
 
 
-open fun getCellHeight()
+    open fun getCellHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -168,7 +168,7 @@ open fun getCellHeight()
 }
 
 
-open fun getOverPassGeographicMapCellPositionArray()
+    open fun getOverPassGeographicMapCellPositionArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<CellPosition?>{
 
@@ -179,7 +179,7 @@ open fun getOverPassGeographicMapCellPositionArray()
 }
 
 
-open fun setOverPassGeographicMapCellPositionArray(overPassGeographicMapCellPositionArray: Array<CellPosition?>)
+    open fun setOverPassGeographicMapCellPositionArray(overPassGeographicMapCellPositionArray: Array<CellPosition?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var overPassGeographicMapCellPositionArray = overPassGeographicMapCellPositionArray
@@ -187,7 +187,7 @@ this.overPassGeographicMapCellPositionArray= overPassGeographicMapCellPositionAr
 }
 
 
-open fun getTileSetImage()
+    open fun getTileSetImage()
         //nullable = true from not(false or (false and true)) = true
 : Image{
 
@@ -198,7 +198,7 @@ open fun getTileSetImage()
 }
 
 
-open fun setTileSetImage(tileSetImage: Image)
+    open fun setTileSetImage(tileSetImage: Image)
         //nullable = true from not(false or (false and false)) = true
 {
 var tileSetImage = tileSetImage
@@ -206,7 +206,7 @@ this.tileSetImage= tileSetImage
 }
 
 
-open fun getMiniTileSetImage()
+    open fun getMiniTileSetImage()
         //nullable = true from not(false or (false and true)) = true
 : Image{
 
@@ -217,7 +217,7 @@ open fun getMiniTileSetImage()
 }
 
 
-open fun setMiniTileSetImage(miniTileSetImage: Image)
+    open fun setMiniTileSetImage(miniTileSetImage: Image)
         //nullable = true from not(false or (false and false)) = true
 {
 var miniTileSetImage = miniTileSetImage
@@ -225,7 +225,7 @@ this.miniTileSetImage= miniTileSetImage
 }
 
 
-open fun getMiniCellWidth()
+    open fun getMiniCellWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -236,7 +236,7 @@ open fun getMiniCellWidth()
 }
 
 
-open fun setMiniCellWidth(miniCellWidth: Int)
+    open fun setMiniCellWidth(miniCellWidth: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var miniCellWidth = miniCellWidth
@@ -244,7 +244,7 @@ this.miniCellWidth= miniCellWidth
 }
 
 
-open fun getMiniCellHeight()
+    open fun getMiniCellHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -255,7 +255,7 @@ open fun getMiniCellHeight()
 }
 
 
-open fun setMiniCellHeight(miniCellHeight: Int)
+    open fun setMiniCellHeight(miniCellHeight: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var miniCellHeight = miniCellHeight
@@ -263,7 +263,7 @@ this.miniCellHeight= miniCellHeight
 }
 
 
-open fun setId(id: Integer)
+    open fun setId(id: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var id = id
@@ -271,7 +271,7 @@ this.id= id
 }
 
 
-open fun getId()
+    open fun getId()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 

@@ -17,8 +17,7 @@ open public class NullCommandListener
         
                 , CommandListener {
         
-
-        companion object {
+companion object {
             
     val NULL_COMMAND_LISTENER: NullCommandListener = NullCommandListener()
 
@@ -28,7 +27,8 @@ open public class NullCommandListener
             public constructor() : super()
             {
             }            
-        override fun commandAction(c: Command, d: Displayable)
+        
+    override fun commandAction(c: Command, d: Displayable)
         //nullable = true from not(false or (false and false)) = true
 {
 var c = c

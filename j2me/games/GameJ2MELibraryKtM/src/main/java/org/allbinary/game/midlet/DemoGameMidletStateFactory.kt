@@ -30,12 +30,11 @@ open public class DemoGameMidletStateFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var STATE: DemoGameMidletStateFactory = DemoGameMidletStateFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DemoGameMidletStateFactory{
 
@@ -55,7 +54,7 @@ open fun getInstance()
     val START_GAME: DemoGameMidletState = DemoGameMidletState()
 
     val START_INPUT_MAPPING: DemoGameMidletState = DemoGameMidletState()
-private constructor        ()
+private constructor ()
             : super()
         {
 }

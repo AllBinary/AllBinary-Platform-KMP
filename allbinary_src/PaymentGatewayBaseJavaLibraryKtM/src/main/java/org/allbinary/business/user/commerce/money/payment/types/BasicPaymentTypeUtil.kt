@@ -31,15 +31,14 @@ open public class BasicPaymentTypeUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: BasicPaymentTypeUtil = BasicPaymentTypeUtil()
 
                 init{
 }
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BasicPaymentTypeUtil{
 
@@ -51,7 +50,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
@@ -59,7 +58,7 @@ open fun getInstance()
 
     private var paymentTypeVector: Vector = Vector()
 
-open fun add(paymentType: BasicPaymentType)
+    open fun add(paymentType: BasicPaymentType)
         //nullable = true from not(false or (false and false)) = true
 {
 var paymentType = paymentType
@@ -69,7 +68,7 @@ this.paymentTypeVector!!.add(paymentType)
 
                 @Throws(Exception::class)
             
-open fun get(paymentTypeString: String)
+    open fun get(paymentTypeString: String)
         //nullable = true from not(false or (false and false)) = true
 : BasicPaymentType{
 var paymentTypeString = paymentTypeString
@@ -108,7 +107,7 @@ var paymentTypeString = paymentTypeString
 }
 
 
-open fun isContain(paymentType: BasicPaymentType)
+    open fun isContain(paymentType: BasicPaymentType)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var paymentType = paymentType
@@ -120,7 +119,7 @@ var paymentType = paymentType
 }
 
 
-open fun difference(a_PaymentTypeVector: Vector)
+    open fun difference(a_PaymentTypeVector: Vector)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var a_PaymentTypeVector = a_PaymentTypeVector

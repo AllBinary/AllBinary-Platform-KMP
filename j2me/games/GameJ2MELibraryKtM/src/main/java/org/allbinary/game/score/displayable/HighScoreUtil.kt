@@ -46,8 +46,7 @@ open public class HighScoreUtil
         
                 , HighScoresResultsListener {
         
-
-        companion object {
+companion object {
             
     val SUBMIT_TEXTBOX_COMMAND: Command = Command("Submit", Command.SCREEN, 1)
 
@@ -70,7 +69,7 @@ open public class HighScoreUtil
     private val highScoresHelper: HighScoresHelperBase
 
     private var firstTime: Boolean = true
-public constructor        (highScoresFactoryInterface: HighScoresFactoryInterface, highScoresHelper: HighScoresHelperBase, abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, cmdListener: CommandListener, name: String, highScore: HighScore)
+public constructor (highScoresFactoryInterface: HighScoresFactoryInterface, highScoresHelper: HighScoresHelperBase, abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, cmdListener: CommandListener, name: String, highScore: HighScore)
             : super()
         {
     //var highScoresFactoryInterface = highScoresFactoryInterface
@@ -88,7 +87,8 @@ this.abeClientInformation= abeClientInformation
 this.gameInfo= gameInfo
 }
 
-override fun setHighScoresArray(highScoresArray: Array<HighScores?>)
+
+    override fun setHighScoresArray(highScoresArray: Array<HighScores?>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var highScoresArray = highScoresArray
@@ -98,7 +98,7 @@ this.saveHighScore()
 }
 
 
-open fun update(name: String)
+    open fun update(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var name = name
@@ -107,7 +107,7 @@ this.highScore!!.setName(name)
 }
 
 
-open fun saveHighScore()
+    open fun saveHighScore()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(StringMaker().
@@ -155,7 +155,7 @@ this.highScoresHelper!!.setHighScoresArray(highScoresArray)
 }
 
 
-open fun submit(myCanvas: MyCanvas)
+    open fun submit(myCanvas: MyCanvas)
         //nullable = true from not(false or (false and false)) = true
 {
     //var myCanvas = myCanvas

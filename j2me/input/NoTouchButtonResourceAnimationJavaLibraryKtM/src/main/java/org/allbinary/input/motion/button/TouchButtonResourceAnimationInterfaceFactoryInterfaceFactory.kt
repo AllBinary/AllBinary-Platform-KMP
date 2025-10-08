@@ -34,7 +34,7 @@ import org.allbinary.image.ImageCacheFactory
 
 open public class TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory : BaseResourceAnimationInterfaceFactoryInterfaceFactory {
         
-public constructor        ()                        
+public constructor ()                        
 
                             : super("TouchButton Animations"){
 
@@ -43,7 +43,7 @@ public constructor        ()
                     
 }
 
-public constructor        (name: String)                        
+public constructor (name: String)                        
 
                             : super(name){
 var name = name
@@ -55,7 +55,8 @@ var name = name
 
 
                 @Throws(Exception::class)
-            override fun init(level: Int)
+            
+    override fun init(level: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var level = level
@@ -64,7 +65,8 @@ this.init(ImageCacheFactory.getInstance(), level)
 
 
                 @Throws(Exception::class)
-            override fun init(imageCache: ImageCache, level: Int)
+            
+    override fun init(imageCache: ImageCache, level: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var imageCache = imageCache
@@ -85,7 +87,8 @@ var level = level
 super.init(level)
 }
 
-override fun isLoadingLevel(level: Int)
+
+    override fun isLoadingLevel(level: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var level = level
@@ -116,7 +119,8 @@ var level = level
                             
 }
 
-override fun isFeature()
+
+    override fun isFeature()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

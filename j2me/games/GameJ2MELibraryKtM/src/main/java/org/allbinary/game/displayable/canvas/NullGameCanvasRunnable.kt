@@ -40,8 +40,7 @@ open public class NullGameCanvasRunnable
         
                 , GameCanvasRunnableInterface {
         
-
-        companion object {
+companion object {
             
     val NULL_GAME_CANVAS_RUNNABLE: NullGameCanvasRunnable = NullGameCanvasRunnable()
 
@@ -51,7 +50,8 @@ open public class NullGameCanvasRunnable
             public constructor() : super()
             {
             }            
-        override fun getTitle()
+        
+    override fun getTitle()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -61,7 +61,8 @@ open public class NullGameCanvasRunnable
                         return StringUtil.getInstance()!!.EMPTY_STRING
 }
 
-override fun isInitialized()
+
+    override fun isInitialized()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -71,7 +72,8 @@ override fun isInitialized()
                         return false
 }
 
-override fun isPaused()
+
+    override fun isPaused()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -81,17 +83,20 @@ override fun isPaused()
                         return false
 }
 
-override fun unPause()
+
+    override fun unPause()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun pause()
+
+    override fun pause()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun isHighScoreSubmitted()
+
+    override fun isHighScoreSubmitted()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -103,7 +108,8 @@ override fun isHighScoreSubmitted()
 
 
                 @Throws(Exception::class)
-            override fun setHighScoreSubmitted(highScoreSubmitted: Boolean)
+            
+    override fun setHighScoreSubmitted(highScoreSubmitted: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var highScoreSubmitted = highScoreSubmitted
@@ -111,12 +117,14 @@ var highScoreSubmitted = highScoreSubmitted
 
 
                 @Throws(Exception::class)
-            override fun setGameOver()
+            
+    override fun setGameOver()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun isGameOver()
+
+    override fun isGameOver()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -126,7 +134,8 @@ override fun isGameOver()
                         return false
 }
 
-override fun initCommands(cmdListener: CommandListener)
+
+    override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var cmdListener = cmdListener
@@ -134,7 +143,8 @@ var cmdListener = cmdListener
 
 
                 @Throws(Exception::class)
-            override fun getCurrentStateHashtable()
+            
+    override fun getCurrentStateHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
 
@@ -146,7 +156,8 @@ var cmdListener = cmdListener
 
 
                 @Throws(Exception::class)
-            override fun getLoadStateHashtable()
+            
+    override fun getLoadStateHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
 
@@ -158,13 +169,15 @@ var cmdListener = cmdListener
 
 
                 @Throws(Exception::class)
-            override fun setLoadStateHashtable(hashtable: Hashtable<Any, Any>)
+            
+    override fun setLoadStateHashtable(hashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var hashtable = hashtable
 }
 
-override fun getType()
+
+    override fun getType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -176,13 +189,15 @@ override fun getType()
 
 
                 @Throws(Exception::class)
-            override fun setGameState(gameState: GameState)
+            
+    override fun setGameState(gameState: GameState)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameState = gameState
 }
 
-override fun getGameState()
+
+    override fun getGameState()
         //nullable = true from not(false or (false and true)) = true
 : GameState{
 
@@ -192,25 +207,29 @@ override fun getGameState()
                         return GameState.NO_GAME_STATE
 }
 
-override fun itemStateChanged(item: Item)
+
+    override fun itemStateChanged(item: Item)
         //nullable = true from not(false or (false and false)) = true
 {
 var item = item
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 }
 
-override fun paintThreed(graphics: Graphics)
+
+    override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 }
 
-override fun isRunning()
+
+    override fun isRunning()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -220,7 +239,8 @@ override fun isRunning()
                         return false
 }
 
-override fun setRunning(isRunning: Boolean)
+
+    override fun setRunning(isRunning: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var isRunning = isRunning
@@ -228,13 +248,15 @@ var isRunning = isRunning
 
 
                 @Throws(Exception::class)
-            override fun setThread(thread: Thread)
+            
+    override fun setThread(thread: Thread)
         //nullable = true from not(false or (false and false)) = true
 {
 var thread = thread
 }
 
-override fun run()
+
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 }

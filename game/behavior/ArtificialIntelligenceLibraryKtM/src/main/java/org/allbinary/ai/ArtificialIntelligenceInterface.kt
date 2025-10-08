@@ -27,12 +27,13 @@
         
 import org.allbinary.graphics.IdentifierInterface
 import org.allbinary.layer.AllBinaryLayerManager
+
 interface ArtificialIntelligenceInterface : IdentifierInterface {
         
 
                 @Throws(Exception::class)
             
-open fun processAI(layerManager: AllBinaryLayerManager)
+    open fun processAI(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 
 

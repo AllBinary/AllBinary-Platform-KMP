@@ -32,112 +32,113 @@ import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.media.graphics.geography.map.GeographicMapCellHistory
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.util.BasicArrayList
+
 interface WaypointLayerInterface {
         
 
                 @Throws(Exception::class)
             
-open fun init(geographicMapCellHistory: GeographicMapCellHistory, geographicMapCellPositionBasicArrayList: BasicArrayList)
+    open fun init(geographicMapCellHistory: GeographicMapCellHistory, geographicMapCellPositionBasicArrayList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getMoveOutOfBuildAreaPath(geographicMapCellPosition: GeographicMapCellPosition)
+    open fun getMoveOutOfBuildAreaPath(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList
 
                 @Throws(Exception::class)
             
-open fun setClosestGeographicMapCellHistory(pathsList: BasicArrayList)
+    open fun setClosestGeographicMapCellHistory(pathsList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun teleportTo(geographicMapCellPosition: GeographicMapCellPosition)
-        //nullable = true from not(false or (false and false)) = true
-
-
-                @Throws(Exception::class)
-            
-open fun setLoad(resource: Short)
+    open fun teleportTo(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun getSurroundingGeographicMapCellPositionList()
+    open fun setLoad(resource: Short)
+        //nullable = true from not(false or (false and false)) = true
+
+
+                @Throws(Exception::class)
+            
+    open fun getSurroundingGeographicMapCellPositionList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList
 
-open fun isSelected()
+    open fun isSelected()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun shouldAddWaypointFromBuilding()
+    open fun shouldAddWaypointFromBuilding()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun isShowMoreCaptionStates()
+    open fun isShowMoreCaptionStates()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
                 @Throws(Exception::class)
             
-open fun trackTo(reason: String)
+    open fun trackTo(reason: String)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun trackTo(dx: Int, dy: Int)
+    open fun trackTo(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun buildingChase(allbinaryLayer: AllBinaryLayer, cellPosition: GeographicMapCellPosition)
+    open fun buildingChase(allbinaryLayer: AllBinaryLayer, cellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
-open fun getTrackingEvent()
+    open fun getTrackingEvent()
         //nullable = true from not(false or (false and true)) = true
 : TrackingEvent
 
-open fun allStop()
+    open fun allStop()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun isWaypointListEmptyOrOnlyTargets()
+    open fun isWaypointListEmptyOrOnlyTargets()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
                 @Throws(Exception::class)
             
-open fun getCurrentGeographicMapCellPosition()
+    open fun getCurrentGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPosition
 
                 @Throws(Exception::class)
             
-open fun getTopLeftGeographicMapCellPosition()
+    open fun getTopLeftGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPosition
 
-open fun getCaptionAnimationHelper()
+    open fun getCaptionAnimationHelper()
         //nullable = true from not(false or (false and true)) = true
 : CaptionAnimationHelperBase
 
-open fun getWaypointBehavior()
+    open fun getWaypointBehavior()
         //nullable = true from not(false or (false and true)) = true
 : WaypointBehaviorBase
 
-open fun getWaypointLogHelper()
+    open fun getWaypointLogHelper()
         //nullable = true from not(false or (false and true)) = true
 : WaypointLogHelper
 
-open fun getWaypoint2LogHelper()
+    open fun getWaypoint2LogHelper()
         //nullable = true from not(false or (false and true)) = true
 : Waypoint2LogHelper
 
-open fun getWaypointRunnableLogHelper()
+    open fun getWaypointRunnableLogHelper()
         //nullable = true from not(false or (false and true)) = true
 : WaypointRunnableLogHelper
 

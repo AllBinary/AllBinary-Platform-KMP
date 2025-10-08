@@ -27,12 +27,13 @@
         
 import org.allbinary.business.user.commerce.money.payment.gateway.transaction.PaymentTransactionInterface
 import org.allbinary.logic.visual.transform.info.TransformInfoInterface
+
 interface PaymentProcessorInterfaceFactoryInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getInstance(transformInfoInterface: TransformInfoInterface, paymentTransactionInterface: PaymentTransactionInterface)
+    open fun getInstance(transformInfoInterface: TransformInfoInterface, paymentTransactionInterface: PaymentTransactionInterface)
         //nullable =  from not(true or (false and false)) = 
 : PaymentProcessorInterface
 

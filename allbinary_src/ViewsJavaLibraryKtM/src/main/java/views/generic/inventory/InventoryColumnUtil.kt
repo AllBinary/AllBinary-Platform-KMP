@@ -36,12 +36,11 @@ open public class InventoryColumnUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: InventoryColumnUtil = InventoryColumnUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : InventoryColumnUtil{
 
@@ -61,7 +60,7 @@ open fun getInstance()
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-open fun getColumnWhereLike(inventoryEntity: InventoryEntity, category: String, column: String)
+    open fun getColumnWhereLike(inventoryEntity: InventoryEntity, category: String, column: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var inventoryEntity = inventoryEntity

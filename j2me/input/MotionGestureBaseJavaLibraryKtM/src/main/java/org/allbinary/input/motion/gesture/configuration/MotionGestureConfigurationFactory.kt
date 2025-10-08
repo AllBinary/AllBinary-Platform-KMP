@@ -30,12 +30,11 @@ open public class MotionGestureConfigurationFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var config: MotionGestureConfiguration = MotionGestureConfiguration()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : MotionGestureConfiguration{
 
@@ -47,7 +46,7 @@ open fun getInstance()
 
 
         }
-            public constructor        ()
+            public constructor ()
             : super()
         {
 }

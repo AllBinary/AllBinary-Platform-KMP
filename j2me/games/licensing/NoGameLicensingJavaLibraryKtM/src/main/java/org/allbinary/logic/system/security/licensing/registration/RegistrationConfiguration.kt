@@ -31,12 +31,11 @@ open public class RegistrationConfiguration
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: RegistrationConfiguration = RegistrationConfiguration()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : RegistrationConfiguration{
 
@@ -52,7 +51,7 @@ open fun getInstance()
     private var registrationCode: String = "No Registration Code"
 
     val NAME: String = "registrationid"
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -60,7 +59,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun read()
+    open fun read()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -68,12 +67,13 @@ open fun read()
 
                 @Throws(Exception::class)
             
-open fun write()
+    open fun write()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -85,7 +85,7 @@ override fun toString()
 }
 
 
-open fun setRegistrationCode(registrationCode: String)
+    open fun setRegistrationCode(registrationCode: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var registrationCode = registrationCode
@@ -93,7 +93,7 @@ this.registrationCode= registrationCode
 }
 
 
-open fun getRegistrationCode()
+    open fun getRegistrationCode()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

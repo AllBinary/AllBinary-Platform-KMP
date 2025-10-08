@@ -42,7 +42,7 @@ open public class LogoImageFileUtil
     private val fileName: String
 
     private val imageFileAbPath: AbPath
-public constructor        (imageAbPath: AbPath, imageFile: String)
+public constructor (imageAbPath: AbPath, imageFile: String)
             : super()
         {
     //var imageAbPath = imageAbPath
@@ -54,7 +54,7 @@ this.imageFileAbPath= imageAbPath
 
                 @Throws(Exception::class)
             
-open fun saveFiles(fileItem: FileItem)
+    open fun saveFiles(fileItem: FileItem)
         //nullable = true from not(false or (false and false)) = true
 {
     //var fileItem = fileItem

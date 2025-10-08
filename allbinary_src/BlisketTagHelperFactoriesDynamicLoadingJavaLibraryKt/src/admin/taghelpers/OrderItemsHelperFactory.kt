@@ -34,15 +34,14 @@ open public class OrderItemsHelperFactory
         
                 , TagHelperFactoryInterface {
         
-
-        companion object {
+companion object {
             
     private val CLASSNAME: String = "admin.taghelpers.OrderItemsHelper"
 
     private val FACTORYNAME: String = "OrderItemsHelperFactory"
 
         }
-            public constructor        ()
+            public constructor ()
             : super()
         {
 }
@@ -50,7 +49,7 @@ open public class OrderItemsHelperFactory
 
                 @Throws(LicensingException::class)
             
-open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
+    open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
 : Any{
 var hashMap = hashMap

@@ -38,7 +38,7 @@ open public class SteeringVisitor : Visitor {
         
     private val list: BasicArrayList = BasicArrayList()
 
-open fun getList()
+    open fun getList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 

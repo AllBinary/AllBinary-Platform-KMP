@@ -30,12 +30,11 @@ open public class ScaleFactorFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ScaleFactorFactory = ScaleFactorFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ScaleFactorFactory{
 

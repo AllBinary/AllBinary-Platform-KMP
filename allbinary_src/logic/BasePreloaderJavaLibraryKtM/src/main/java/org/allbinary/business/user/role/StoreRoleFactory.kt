@@ -31,12 +31,11 @@ open public class StoreRoleFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: StoreRoleFactory = StoreRoleFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : StoreRoleFactory{
 
@@ -54,7 +53,7 @@ open fun getInstance()
     private val subscriberRoles: Vector<Any> = Vector<Any>()
 
     private val wholesaleRoles: Vector<Any> = Vector<Any>()
-private constructor        ()
+private constructor ()
             : super()
         {
 
@@ -68,7 +67,7 @@ wholesaleRoles!!.add(basicUserRoleFactory!!.WHOLESALECUSTOMER)
 }
 
 
-open fun getRoles()
+    open fun getRoles()
         //nullable = true from not(false or (false and true)) = true
 : Vector<Any>{
 
@@ -79,7 +78,7 @@ open fun getRoles()
 }
 
 
-open fun getSubscriberRoles()
+    open fun getSubscriberRoles()
         //nullable = true from not(false or (false and true)) = true
 : Vector<Any>{
 
@@ -90,7 +89,7 @@ open fun getSubscriberRoles()
 }
 
 
-open fun getWholesaleRoles()
+    open fun getWholesaleRoles()
         //nullable = true from not(false or (false and true)) = true
 : Vector<Any>{
 

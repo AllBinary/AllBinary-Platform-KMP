@@ -30,13 +30,12 @@ open public class GlobalsData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NAME: String = "GLOBALS_NAME"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

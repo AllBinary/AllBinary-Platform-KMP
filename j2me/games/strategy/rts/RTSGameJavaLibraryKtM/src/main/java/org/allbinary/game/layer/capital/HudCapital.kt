@@ -31,13 +31,13 @@ open public class HudCapital : Capital {
         
 
     private var capitalGraphic: NumberStringHud
-public constructor        (moneyGraphic: NumberStringHud){
+public constructor (moneyGraphic: NumberStringHud){
 var moneyGraphic = moneyGraphic
 this.capitalGraphic= moneyGraphic
 }
 
 
-open fun removeMoney(points: Int)
+    open fun removeMoney(points: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var points = points
@@ -46,7 +46,7 @@ this.capitalGraphic!!.reduce(points)
 }
 
 
-open fun getTotalMoney()
+    open fun getTotalMoney()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -57,7 +57,7 @@ open fun getTotalMoney()
 }
 
 
-open fun addMoney(points: Int)
+    open fun addMoney(points: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var points = points

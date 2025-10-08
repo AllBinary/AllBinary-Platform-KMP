@@ -64,12 +64,11 @@ open public class InventorySearchUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: InventorySearchUtil = InventorySearchUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : InventorySearchUtil{
 
@@ -95,7 +94,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun getBasicItemIdColumn(searchRequest: SearchRequest)
+    open fun getBasicItemIdColumn(searchRequest: SearchRequest)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var searchRequest = searchRequest
@@ -161,7 +160,7 @@ column.addAll(substoreIdColumn)
 
                 @Throws(Exception::class)
             
-open fun getNoResults(viewDocumentInterface: TransformDocumentInterface, inventoryNode: Node)
+    open fun getNoResults(viewDocumentInterface: TransformDocumentInterface, inventoryNode: Node)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var viewDocumentInterface = viewDocumentInterface
@@ -188,7 +187,7 @@ inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterf
 }
 
 
-open fun search(abeClientInformation: AbeClientInformationInterface, searchRequest: SearchRequest, column: Vector)
+    open fun search(abeClientInformation: AbeClientInformationInterface, searchRequest: SearchRequest, column: Vector)
         //nullable = true from not(false or (false and false)) = true
 : Array<String?>{
     //var abeClientInformation = abeClientInformation

@@ -31,10 +31,9 @@ open public class LongUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun fillIn(end: String)
+    open fun fillIn(end: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var end = end
@@ -72,7 +71,7 @@ frameStringBuffer!!.append(end)
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

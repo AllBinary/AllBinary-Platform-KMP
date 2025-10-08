@@ -25,18 +25,19 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface HitPointGameObjectInterface : MeteredGameObjectInterface {
         
 
-open fun isMoreThan(aFloat: Float)
+    open fun isMoreThan(aFloat: Float)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
-open fun isCloseDeath()
+    open fun isCloseDeath()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun isDamaged()
+    open fun isDamaged()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 

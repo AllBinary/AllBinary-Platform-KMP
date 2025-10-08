@@ -35,10 +35,9 @@ open public class TransformInfoEntityFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getInstance(transformInfoObjectConfigGeneratorFactoryInterface: TransformInfoObjectConfigGeneratorFactoryInterface, transformInfoObjectConfigAndManipulatorFactoryInterface: TransformInfoObjectConfigAndManipulatorFactoryBase, transformInfoFactoryInterface: TransformInfoFactoryInterface)
+    open fun getInstance(transformInfoObjectConfigGeneratorFactoryInterface: TransformInfoObjectConfigGeneratorFactoryInterface, transformInfoObjectConfigAndManipulatorFactoryInterface: TransformInfoObjectConfigAndManipulatorFactoryBase, transformInfoFactoryInterface: TransformInfoFactoryInterface)
         //nullable =  from not(true or (false and false)) = 
 : TransformInfoEntity{
 var transformInfoObjectConfigGeneratorFactoryInterface = transformInfoObjectConfigGeneratorFactoryInterface
@@ -79,7 +78,7 @@ var transformInfoFactoryInterface = transformInfoFactoryInterface
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

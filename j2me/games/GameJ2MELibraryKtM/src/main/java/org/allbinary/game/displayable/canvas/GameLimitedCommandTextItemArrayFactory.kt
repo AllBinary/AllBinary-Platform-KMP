@@ -32,12 +32,11 @@ open public class GameLimitedCommandTextItemArrayFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GameLimitedCommandTextItemArrayFactory = GameLimitedCommandTextItemArrayFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameLimitedCommandTextItemArrayFactory{
 
@@ -57,7 +56,7 @@ open fun getInstance()
         
     private val commandTextItemArrayFactory: CommandTextItemArrayFactory = CommandTextItemArrayFactory(LimitCommandsVisitor())
 
-open fun getCommandTextItemArrayFactory()
+    open fun getCommandTextItemArrayFactory()
         //nullable = true from not(false or (false and true)) = true
 : CommandTextItemArrayFactory{
 

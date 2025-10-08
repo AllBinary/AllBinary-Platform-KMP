@@ -25,17 +25,17 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.string.CommonSeps
 
 open public class AbPathData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AbPathData = AbPathData()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AbPathData{
 
@@ -48,14 +48,14 @@ open fun getInstance()
 
         }
             
-    val EXTENSION_SEP: String = "."
+    val EXTENSION_SEP: String = CommonSeps.getInstance()!!.PERIOD
 
     val SEPARATORCHAR: Char = 
                 '/'
             
 
-    val SEPARATOR: String = "/"
-private constructor        ()
+    val SEPARATOR: String = CommonSeps.getInstance()!!.FORWARD_SLASH
+private constructor ()
             : super()
         {
 }

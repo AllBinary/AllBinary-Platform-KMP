@@ -30,12 +30,11 @@ open public class SmallLongFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: SmallLongFactory = SmallLongFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : SmallLongFactory{
 
@@ -62,7 +61,7 @@ open fun getInstance()
 
     var lastNegativeMin: Int = 0
 
-open fun init(value: Int, negativeValue: Int)
+    open fun init(value: Int, negativeValue: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -109,7 +108,7 @@ MIN= value
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -154,13 +153,13 @@ lastNegativeMin= NEGATIVE_MAX
                                 
 }
 
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getInstanceNoThrow(index: Long)
+    open fun getInstanceNoThrow(index: Long)
         //nullable = true from not(false or (false and false)) = true
 : Long{
 var index = index
@@ -185,7 +184,7 @@ var index = index
 }
 
 
-open fun getString(index: Int)
+    open fun getString(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var index = index

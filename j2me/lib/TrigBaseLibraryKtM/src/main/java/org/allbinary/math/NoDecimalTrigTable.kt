@@ -37,12 +37,11 @@ open public class NoDecimalTrigTable
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: NoDecimalTrigTable = NoDecimalTrigTable()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : NoDecimalTrigTable{
 
@@ -62,7 +61,7 @@ open fun getInstance()
     private val noDecimalCos: LongArray
 
     private val noDecimalTan: LongArray
-private constructor        ()
+private constructor ()
             : super()
         {
 
@@ -1158,7 +1157,7 @@ noDecimalTan[0]=  -174
 }
 
 
-open fun sin(angle: Int)
+    open fun sin(angle: Int)
         //nullable = true from not(false or (false and false)) = true
 : Long{
 var angle = angle
@@ -1170,7 +1169,7 @@ var angle = angle
 }
 
 
-open fun cos(angle: Int)
+    open fun cos(angle: Int)
         //nullable = true from not(false or (false and false)) = true
 : Long{
 var angle = angle
@@ -1182,7 +1181,7 @@ var angle = angle
 }
 
 
-open fun tan(angle: Int)
+    open fun tan(angle: Int)
         //nullable = true from not(false or (false and false)) = true
 : Long{
 var angle = angle
@@ -1198,7 +1197,7 @@ var angle = angle
 
                 @Throws(Exception::class)
             
-open fun antiTan(dx: Int, dy: Int)
+    open fun antiTan(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
 : Short{
 var dx = dx
@@ -1415,7 +1414,7 @@ stringBuffer!!.append(dy)
 
                 @Throws(Exception::class)
             
-open fun antiTanDebug(screenX: Int, screenY: Int, targetX: Int, targetY: Int)
+    open fun antiTanDebug(screenX: Int, screenY: Int, targetX: Int, targetY: Int)
         //nullable = true from not(false or (false and false)) = true
 : Short{
 var screenX = screenX

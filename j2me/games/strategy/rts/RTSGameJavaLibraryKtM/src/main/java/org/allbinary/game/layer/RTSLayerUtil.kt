@@ -29,7 +29,6 @@
         
 import java.util.Hashtable
 import org.allbinary.util.BasicArrayList
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.direction.DirectionFactory
 import org.allbinary.game.combat.weapon.WeaponProperties
@@ -44,12 +43,11 @@ open public class RTSLayerUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: RTSLayerUtil = RTSLayerUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : RTSLayerUtil{
 
@@ -69,7 +67,7 @@ open fun getInstance()
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-open fun createWeaponProperties(weaponProperties: WeaponProperties, currentLevel: Int, lastLevel: Int)
+    open fun createWeaponProperties(weaponProperties: WeaponProperties, currentLevel: Int, lastLevel: Int)
         //nullable = true from not(false or (false and false)) = true
 : WeaponProperties{
     //var weaponProperties = weaponProperties
@@ -107,7 +105,7 @@ open fun createWeaponProperties(weaponProperties: WeaponProperties, currentLevel
 }
 
 
-open fun downgrade(rtsLayer: RTSLayer)
+    open fun downgrade(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var rtsLayer = rtsLayer
@@ -130,7 +128,7 @@ rtsLayer!!.select()
 }
 
 
-open fun upgrade(rtsLayer: RTSLayer)
+    open fun upgrade(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var rtsLayer = rtsLayer
@@ -155,7 +153,7 @@ rtsLayer!!.select()
 
     private val MAX_RELOAD_TIME: Long = Integer.MAX_VALUE /100000
 
-open fun getCostExponential(cost: Long)
+    open fun getCostExponential(cost: Long)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var cost = cost
@@ -167,7 +165,7 @@ open fun getCostExponential(cost: Long)
 }
 
 
-open fun getWeaponPropertiesCost(weaponProperties: WeaponProperties)
+    open fun getWeaponPropertiesCost(weaponProperties: WeaponProperties)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var weaponProperties = weaponProperties
@@ -183,7 +181,7 @@ cost= this.getCostExponential(cost)
 }
 
 
-open fun getCost(rtsLayer: RTSLayer)
+    open fun getCost(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var rtsLayer = rtsLayer
@@ -216,7 +214,7 @@ total += this.getWeaponPropertiesCost(weaponProperties)
 }
 
 
-open fun getDowngradeCost(rtsLayer: RTSLayer)
+    open fun getDowngradeCost(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var rtsLayer = rtsLayer
@@ -260,7 +258,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-open fun getUpgradeCost(rtsLayer: RTSLayer)
+    open fun getUpgradeCost(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var rtsLayer = rtsLayer
@@ -305,7 +303,7 @@ logUtil!!.put(StringMaker().
 
                 @Throws(Exception::class)
             
-open fun destroyAndClear(list: BasicArrayList)
+    open fun destroyAndClear(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var list = list
@@ -327,7 +325,7 @@ list.clear()
 }
 
 
-open fun createFakeRTSLayerHashtable(baseRaceTrackGeographicMap: BaseRaceTrackGeographicMap)
+    open fun createFakeRTSLayerHashtable(baseRaceTrackGeographicMap: BaseRaceTrackGeographicMap)
         //nullable = true from not(false or (false and false)) = true
 : Hashtable<Any, Any>{
     //var baseRaceTrackGeographicMap = baseRaceTrackGeographicMap

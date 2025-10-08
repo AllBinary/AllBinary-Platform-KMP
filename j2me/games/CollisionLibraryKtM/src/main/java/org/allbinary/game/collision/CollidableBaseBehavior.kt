@@ -46,7 +46,7 @@ open public class CollidableBaseBehavior
     private var collidable: Boolean = true
 
     val ownerLayer: CollidableCompositeLayer
-public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boolean)
+public constructor (ownerLayer: CollidableCompositeLayer, collidable: Boolean)
             : super()
         {
 var ownerLayer = ownerLayer
@@ -56,12 +56,13 @@ this.collidable= collidable
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun getName()
+
+    override fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -72,14 +73,15 @@ override fun getName()
 }
 
 
-open fun setCollidable(collidable: Boolean)
+    open fun setCollidable(collidable: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var collidable = collidable
 this.collidable= collidable
 }
 
-override fun isCollidable()
+
+    override fun isCollidable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -91,7 +93,8 @@ override fun isCollidable()
 
 
                 @Throws(Exception::class)
-            override fun collide(allbinaryCollidableLayer: CollidableCompositeLayer)
+            
+    override fun collide(allbinaryCollidableLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var allbinaryCollidableLayer = allbinaryCollidableLayer
@@ -104,7 +107,8 @@ var allbinaryCollidableLayer = allbinaryCollidableLayer
 
 
     private val layerCollisionUtil: LayerCollisionUtil = LayerCollisionUtil.getInstance()!!
-override fun isCollision(collisionLayer: CollidableCompositeLayer)
+
+    override fun isCollision(collisionLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var collisionLayer = collisionLayer
@@ -116,7 +120,7 @@ var collisionLayer = collisionLayer
 }
 
 
-open fun isCollision(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
+    open fun isCollision(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
@@ -130,7 +134,7 @@ var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterfac
 
                 @Throws(Exception::class)
             
-open fun collide(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
+    open fun collide(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
@@ -141,13 +145,14 @@ var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterfac
 }
 
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
 }
 
-override fun getCollisionTypeWith(layerInterface: AllBinaryLayer)
+
+    override fun getCollisionTypeWith(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 : CollisionType{
 var layerInterface = layerInterface

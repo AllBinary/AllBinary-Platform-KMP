@@ -31,15 +31,14 @@ import org.allbinary.logic.communication.log.LogUtil
 
 open public class ConsolidateMotionRectangles : MotionRectangles {
         
-
-        companion object {
+companion object {
             
     private val NAME: String = "consolidatedMotionRectangles_"
 
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (motionRectangles: MotionRectangles)                        
+public constructor (motionRectangles: MotionRectangles)                        
 
                             : super(NAME, motionRectangles!!.getImageComparisonResult()){
 var motionRectangles = motionRectangles
@@ -70,7 +69,7 @@ consolidateMotionRectangles()
 }
 
 
-open fun consolidateMotionRectangles()
+    open fun consolidateMotionRectangles()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -138,7 +137,7 @@ this.remove(removeVector)
 }
 
 
-open fun remove(removeVector: Vector)
+    open fun remove(removeVector: Vector)
         //nullable = true from not(false or (false and false)) = true
 {
 var removeVector = removeVector

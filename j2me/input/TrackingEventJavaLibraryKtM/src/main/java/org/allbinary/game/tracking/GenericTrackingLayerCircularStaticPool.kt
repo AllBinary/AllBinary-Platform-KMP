@@ -29,12 +29,11 @@ import org.allbinary.layer.AllBinaryLayerCircularPool
 
 open public class GenericTrackingLayerCircularStaticPool : AllBinaryLayerCircularPool {
         
-
-        companion object {
+companion object {
             
     private var SINGLETON: GenericTrackingLayerCircularStaticPool = GenericTrackingLayerCircularStaticPool()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GenericTrackingLayerCircularStaticPool{
 
@@ -46,7 +45,7 @@ open fun getInstance()
 
 
         }
-            private constructor        (){
+            private constructor (){
 }
 
 

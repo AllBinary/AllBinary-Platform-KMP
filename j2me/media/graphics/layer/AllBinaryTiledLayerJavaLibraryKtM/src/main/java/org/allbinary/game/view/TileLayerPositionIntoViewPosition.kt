@@ -36,11 +36,11 @@ open public class TileLayerPositionIntoViewPosition : ViewPosition {
     private var tiledLayer: Layer = 
                 null
             
-public constructor        (){
+public constructor (){
 }
 
 
-open fun getX()
+    open fun getX()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -51,7 +51,7 @@ open fun getX()
 }
 
 
-open fun getY()
+    open fun getY()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -62,7 +62,7 @@ open fun getY()
 }
 
 
-open fun getZ()
+    open fun getZ()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -73,7 +73,7 @@ open fun getZ()
 }
 
 
-open fun setTiledLayer(tiledLayer: AllBinaryTiledLayer)
+    open fun setTiledLayer(tiledLayer: AllBinaryTiledLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var tiledLayer = tiledLayer

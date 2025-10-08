@@ -39,11 +39,11 @@ open public class AllBinaryLayerManager : LayerManager {
     private val deleteLayerManagerEvent: LayerManagerEvent = LayerManagerEvent(this, this.layerManagerEventHandler!!.DELETE)
 
     private var basicLayerProcessorArray: Array<LayerProcessor?> = arrayOfNulls(0)
-protected constructor        (){
+protected constructor (){
 }
 
 
-open fun getLayerProcessorArray()
+    open fun getLayerProcessorArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<LayerProcessor?>{
 
@@ -54,7 +54,7 @@ open fun getLayerProcessorArray()
 }
 
 
-open fun setLayerProcessorArray(layerProcessorArray: Array<LayerProcessor?>)
+    open fun setLayerProcessorArray(layerProcessorArray: Array<LayerProcessor?>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerProcessorArray = layerProcessorArray
@@ -62,7 +62,7 @@ this.basicLayerProcessorArray= layerProcessorArray
 }
 
 
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -85,7 +85,8 @@ open fun log()
 
 
                 @Throws(Exception::class)
-            override fun append(layerInterface: AllBinaryLayer)
+            
+    override fun append(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerInterface = layerInterface
@@ -103,7 +104,8 @@ super.append(layerInterface)
 
 
                 @Throws(Exception::class)
-            override fun append(layerInterface: AllBinaryLayer, index: Int)
+            
+    override fun append(layerInterface: AllBinaryLayer, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerInterface = layerInterface
@@ -123,7 +125,7 @@ super.append(layerInterface, index)
 
                 @Throws(Exception::class)
             
-open fun appendProcessors(layerInterface: AllBinaryLayer)
+    open fun appendProcessors(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerInterface = layerInterface
@@ -156,7 +158,8 @@ layerProcessorInterface= basicLayerProcessorArray[index]!!
 
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun remove(layerInterface: AllBinaryLayer)
+
+    override fun remove(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerInterface = layerInterface
@@ -182,7 +185,7 @@ super.remove(layerInterface)
 
                 @Throws(Exception::class)
             
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -207,7 +210,8 @@ layerProcessorInterface!!.process(this)
 
 
                 @Throws(Exception::class)
-            override fun cleanup()
+            
+    override fun cleanup()
         //nullable = true from not(false or (false and true)) = true
 {
 

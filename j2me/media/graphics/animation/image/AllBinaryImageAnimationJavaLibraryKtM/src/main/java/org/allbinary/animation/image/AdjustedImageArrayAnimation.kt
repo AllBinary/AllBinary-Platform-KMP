@@ -35,7 +35,7 @@ open public class AdjustedImageArrayAnimation : ImageArrayAnimation {
     private var dx: Int= 0
 
     private var dy: Int= 0
-public constructor        (imageArray: Array<Image?>, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
+public constructor (imageArray: Array<Image?>, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
                             : super(imageArray, animationBehavior){
     //var imageArray = imageArray
@@ -52,7 +52,7 @@ this.init(dx, dy)
 
                 @Throws(Exception::class)
             
-open fun init(dx: Int, dy: Int)
+    open fun init(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var dx = dx
@@ -61,7 +61,8 @@ this.setDx(dx)
 this.setDy(dy)
 }
 
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -70,14 +71,16 @@ override fun paint(graphics: Graphics, x: Int, y: Int)
 super.paint(graphics, x +this.dx, y +this.dy)
 }
 
-override fun setDx(dx: Int)
+
+    override fun setDx(dx: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var dx = dx
 this.dx= dx
 }
 
-override fun getDx()
+
+    override fun getDx()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -87,14 +90,16 @@ override fun getDx()
                         return dx
 }
 
-override fun setDy(dy: Int)
+
+    override fun setDy(dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var dy = dy
 this.dy= dy
 }
 
-override fun getDy()
+
+    override fun getDy()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

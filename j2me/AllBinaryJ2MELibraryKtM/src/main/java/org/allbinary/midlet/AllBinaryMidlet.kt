@@ -47,8 +47,7 @@ import org.allbinary.system.Memory
 open public class AllBinaryMidlet : MIDlet
                 , CommandListener {
         
-
-        companion object {
+companion object {
             
     val NULL_ALLBINARY_MIDLET: AllBinaryMidlet = AllBinaryMidlet()
 
@@ -69,12 +68,12 @@ open public class AllBinaryMidlet : MIDlet
     private var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
     private var destroyed: Boolean= false
-public constructor        (){
+public constructor (){
 logUtil!!.put(commonStrings!!.CONSTRUCTOR, this, "AllBinaryMidlet::AllBinaryMidlet")
 }
 
 
-open fun setDisplay(newDisplay: Displayable)
+    open fun setDisplay(newDisplay: Displayable)
         //nullable = true from not(false or (false and false)) = true
 {
     //var newDisplay = newDisplay
@@ -115,7 +114,7 @@ display.setCurrent(newDisplay)
 }
 
 
-open fun getDisplay()
+    open fun getDisplay()
         //nullable = true from not(false or (false and true)) = true
 : Display{
 
@@ -126,7 +125,7 @@ open fun getDisplay()
 }
 
 
-open fun getCurrentDisplayable()
+    open fun getCurrentDisplayable()
         //nullable = true from not(false or (false and true)) = true
 : Displayable{
 
@@ -137,7 +136,7 @@ open fun getCurrentDisplayable()
 }
 
 
-open fun setDestroyed(destroyed: Boolean)
+    open fun setDestroyed(destroyed: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var destroyed = destroyed
@@ -145,7 +144,7 @@ this.destroyed= destroyed
 }
 
 
-open fun isDestroyed()
+    open fun isDestroyed()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -157,27 +156,30 @@ open fun isDestroyed()
 
 
                 @Throws(MIDletStateChangeException::class)
-            override fun startApp()
+            
+    override fun startApp()
         //nullable = true from not(false or (false and true)) = true
 {
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
-override fun pauseApp()
+
+    override fun pauseApp()
         //nullable = true from not(false or (false and true)) = true
 {
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
 
-open fun destroyApp(unconditional: Boolean, isProgress: Boolean)
+    open fun destroyApp(unconditional: Boolean, isProgress: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var unconditional = unconditional
 var isProgress = isProgress
 }
 
-override fun destroyApp(unconditional: Boolean)
+
+    override fun destroyApp(unconditional: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var unconditional = unconditional
@@ -199,7 +201,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
 
                 @Throws(Exception::class)
             
-open fun setStartStateHashtable(hashtable: Hashtable<Any, Any>)
+    open fun setStartStateHashtable(hashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var hashtable = hashtable
@@ -211,7 +213,7 @@ this.hashtable= hashtable
 
                 @Throws(Exception::class)
             
-open fun getStartStateHashtable()
+    open fun getStartStateHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
 logUtil!!.put(StringMaker().
@@ -226,7 +228,7 @@ logUtil!!.put(StringMaker().
 
                 @Throws(Exception::class)
             
-open fun getCurrentStateHashtable()
+    open fun getCurrentStateHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
 logUtil!!.put(commonStrings!!.START, this, "getStateHashtable")
@@ -237,7 +239,8 @@ logUtil!!.put(commonStrings!!.START, this, "getStateHashtable")
                         return NullUtil.getInstance()!!.NULL_TABLE
 }
 
-override fun commandAction(command: Command, displayable: Displayable)
+
+    override fun commandAction(command: Command, displayable: Displayable)
         //nullable = true from not(false or (false and false)) = true
 {
 var command = command

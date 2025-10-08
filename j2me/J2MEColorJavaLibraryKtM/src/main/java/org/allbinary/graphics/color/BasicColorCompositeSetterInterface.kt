@@ -25,10 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface BasicColorCompositeSetterInterface {
         
 
-open fun setBasicColorP(basicColor: BasicColor)
+    open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 
 

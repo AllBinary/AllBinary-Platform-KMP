@@ -48,7 +48,7 @@ open public class GenericProfileAction
     private var genericProfileActionScript: GenericProfileActionScript
 
     private var genericProfileActionJPanel: GenericProfileActionJPanel
-public constructor        (genericProfileActionJPanel: GenericProfileActionJPanel, node: Node)
+public constructor (genericProfileActionJPanel: GenericProfileActionJPanel, node: Node)
             : super()
         {
 var genericProfileActionJPanel = genericProfileActionJPanel
@@ -78,7 +78,7 @@ var node = node
 this.setGenericProfileActionScript(GenericProfileActionScript(this.genericProfileActionJPanel, node))
 }
 
-public constructor        (name: String)
+public constructor (name: String)
             : super()
         {
 var name = name
@@ -87,7 +87,7 @@ this.setGenericProfileActionScript(GenericProfileActionScript(this.genericProfil
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -98,7 +98,7 @@ open fun getName()
 }
 
 
-open fun setName(name: String)
+    open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name
@@ -106,7 +106,7 @@ this.name= name
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -124,7 +124,7 @@ logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -140,7 +140,7 @@ node.appendChild(getGenericProfileActionScript()!!.toXmlNode(document))
 }
 
 
-open fun getGenericProfileActionScript()
+    open fun getGenericProfileActionScript()
         //nullable = true from not(false or (false and true)) = true
 : GenericProfileActionScript{
 
@@ -151,7 +151,7 @@ open fun getGenericProfileActionScript()
 }
 
 
-open fun setGenericProfileActionScript(genericProfileActionScript: GenericProfileActionScript)
+    open fun setGenericProfileActionScript(genericProfileActionScript: GenericProfileActionScript)
         //nullable = true from not(false or (false and false)) = true
 {
 var genericProfileActionScript = genericProfileActionScript

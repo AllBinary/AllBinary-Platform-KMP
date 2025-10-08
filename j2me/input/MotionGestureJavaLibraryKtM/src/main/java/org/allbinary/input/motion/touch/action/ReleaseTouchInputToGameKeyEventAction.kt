@@ -36,12 +36,11 @@ import org.allbinary.string.CommonStrings
 
 open public class ReleaseTouchInputToGameKeyEventAction : GameKeyCompleteMotionGestureInputEvent {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: GameKeyCompleteMotionGestureInputEvent = ReleaseTouchInputToGameKeyEventAction()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameKeyCompleteMotionGestureInputEvent{
 
@@ -55,7 +54,7 @@ open fun getInstance()
         }
             
     private val NONE: GameKey = GameKeyFactory.getInstance()!!.NONE
-private constructor        ()                        
+private constructor ()                        
 
                             : super("Release Action", TouchMotionGestureFactory.getInstance()!!.RELEASED, PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()){
 
@@ -76,7 +75,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 
 }
 
-override fun update()
+
+    override fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 }

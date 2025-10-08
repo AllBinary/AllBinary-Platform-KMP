@@ -32,12 +32,11 @@ open public class PermissionItemsEntityFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: PermissionItemsEntityFactory = PermissionItemsEntityFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PermissionItemsEntityFactory{
 
@@ -48,7 +47,7 @@ open fun getInstance()
 }
 
 
-open fun getPermissionItemsEntityInstance()
+    open fun getPermissionItemsEntityInstance()
         //nullable = true from not(false or (false and true)) = true
 : PermissionItemsEntity{
 
@@ -88,7 +87,7 @@ open fun getPermissionItemsEntityInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }

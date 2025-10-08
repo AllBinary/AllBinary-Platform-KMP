@@ -38,7 +38,7 @@ open public class UserView : HttpContextView {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     var user: UserInterface
-public constructor        (transformInfoInterface: TransformInfoInterface)                        
+public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
@@ -49,7 +49,7 @@ var transformInfoInterface = transformInfoInterface
 }
 
 
-open fun addDomNodeInterfaces()
+    open fun addDomNodeInterfaces()
         //nullable = true from not(false or (false and true)) = true
 {
 this.addDomNodeInterface(UserDomNode(this.user) as DomNodeInterface)
@@ -58,7 +58,7 @@ this.addDomNodeInterface(UserDomNode(this.user) as DomNodeInterface)
 
                 @Throws(Exception::class)
             
-open fun view()
+    open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

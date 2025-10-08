@@ -31,12 +31,11 @@ import org.allbinary.input.motion.gesture.TouchMotionGestureFactory
 
 open public class UpTouchInputToGameKeyEventAction : GameKeyCompleteMotionGestureInputEvent {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: GameKeyCompleteMotionGestureInputEvent = UpTouchInputToGameKeyEventAction()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameKeyCompleteMotionGestureInputEvent{
 
@@ -48,7 +47,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()                        
+            private constructor ()                        
 
                             : super("Up Action", TouchMotionGestureFactory.getInstance()!!.UP, PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()){
 

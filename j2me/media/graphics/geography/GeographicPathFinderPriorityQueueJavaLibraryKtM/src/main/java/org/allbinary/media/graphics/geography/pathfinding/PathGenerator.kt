@@ -33,12 +33,11 @@ open public class PathGenerator
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: PathGenerator = PathGenerator()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PathGenerator{
 
@@ -50,7 +49,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
@@ -58,7 +57,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun init(geographicMapInterface: BasicGeographicMap, totalPaths: Int)
+    open fun init(geographicMapInterface: BasicGeographicMap, totalPaths: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapInterface = geographicMapInterface
@@ -68,7 +67,7 @@ open fun init(geographicMapInterface: BasicGeographicMap, totalPaths: Int)
 
                 @Throws(Exception::class)
             
-open fun getInstanceNoCache(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, totalPaths: Int)
+    open fun getInstanceNoCache(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, totalPaths: Int)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var geographicMapInterface = geographicMapInterface
@@ -87,7 +86,7 @@ open fun getInstanceNoCache(geographicMapInterface: BasicGeographicMap, pathFind
 
                 @Throws(Exception::class)
             
-open fun getInstance(geographicMapInterface: BasicGeographicMap, geographicMapCellHistory: GeographicMapCellHistory, pathFindingInfo: PathFindingInfo, totalPaths: Int)
+    open fun getInstance(geographicMapInterface: BasicGeographicMap, geographicMapCellHistory: GeographicMapCellHistory, pathFindingInfo: PathFindingInfo, totalPaths: Int)
         //nullable =  from not(true or (false and false)) = 
 : BasicArrayList{
     //var geographicMapInterface = geographicMapInterface
@@ -103,7 +102,7 @@ open fun getInstance(geographicMapInterface: BasicGeographicMap, geographicMapCe
 
                 @Throws(Exception::class)
             
-open fun create(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, totalPaths: Int)
+    open fun create(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, totalPaths: Int)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var geographicMapInterface = geographicMapInterface
@@ -131,7 +130,7 @@ open fun create(geographicMapInterface: BasicGeographicMap, pathFindingInfo: Pat
 
                 @Throws(Exception::class)
             
-open fun createN(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, totalPaths: Int, multipassState: MultipassState)
+    open fun createN(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, totalPaths: Int, multipassState: MultipassState)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var geographicMapInterface = geographicMapInterface
@@ -160,7 +159,7 @@ open fun createN(geographicMapInterface: BasicGeographicMap, pathFindingInfo: Pa
 
                 @Throws(Exception::class)
             
-open fun isValid(pathList: BasicArrayList, geographicMapCellHistory: GeographicMapCellHistory)
+    open fun isValid(pathList: BasicArrayList, geographicMapCellHistory: GeographicMapCellHistory)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var pathList = pathList

@@ -44,8 +44,7 @@ import org.allbinary.time.TimeDelayHelper
 
 open public class HorizontalScreenPatrolAI : BasicAI {
         
-
-        companion object {
+companion object {
             
     val SOUND: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(433)!!
 
@@ -66,7 +65,7 @@ open public class HorizontalScreenPatrolAI : BasicAI {
     private val secondaryPlayerQueue: PlayerQueue = SecondaryPlayerQueueFactory.getInstance()!!
 
     private val sound: Sound
-public constructor        (hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
+public constructor (hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
                             : super(ownerLayerInterface, gameInput){
 var hashtable = hashtable
@@ -95,7 +94,8 @@ this.sound= hashtable.get(SOUND as Object) as Sound
 
 
                 @Throws(Exception::class)
-            override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+            
+    override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager
@@ -167,7 +167,7 @@ firedIndex++
 }
 
 
-open fun nextDirection()
+    open fun nextDirection()
         //nullable = true from not(false or (false and true)) = true
 {
 }

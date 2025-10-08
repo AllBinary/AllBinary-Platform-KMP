@@ -31,13 +31,12 @@ open public class LogConfigTypes
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var LOGGING: BasicArrayList = BasicArrayList()
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

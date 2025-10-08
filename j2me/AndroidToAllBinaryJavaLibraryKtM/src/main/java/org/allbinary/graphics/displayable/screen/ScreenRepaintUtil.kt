@@ -32,10 +32,9 @@ open public class ScreenRepaintUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun repaint(displayable: Displayable)
+    open fun repaint(displayable: Displayable)
         //nullable = true from not(false or (false and false)) = true
 {
 var displayable = displayable

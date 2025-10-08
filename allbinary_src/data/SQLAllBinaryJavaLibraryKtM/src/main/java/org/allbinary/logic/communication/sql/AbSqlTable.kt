@@ -42,7 +42,7 @@ open public class AbSqlTable : AbSqlBasic {
     private val TABLE_CREATION_SUCCESS: String = "Table Creation Successful: "
 
     private val DROPPED_SUCCESS: String = " Dropped Successfully"
-public constructor        (databaseConnectionInfoInterface: DbConnectionInfo)                        
+public constructor (databaseConnectionInfoInterface: DbConnectionInfo)                        
 
                             : super(databaseConnectionInfoInterface){
 var databaseConnectionInfoInterface = databaseConnectionInfoInterface
@@ -53,7 +53,7 @@ var databaseConnectionInfoInterface = databaseConnectionInfoInterface
 }
 
 
-open fun setTableName(tableName: String)
+    open fun setTableName(tableName: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var tableName = tableName
@@ -61,7 +61,7 @@ this.tableName= tableName
 }
 
 
-open fun getTableName()
+    open fun getTableName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -73,7 +73,7 @@ open fun getTableName()
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun createTable(data: String)
+    open fun createTable(data: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var data = data
@@ -116,7 +116,7 @@ var data = data
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun dropTable()
+    open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

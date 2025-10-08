@@ -36,12 +36,12 @@ open public class WaypointInfoHudPaintable : SelectionHudPaintable {
     private val keyvalueDrawString: KeyValueDrawString
 
     private var rtsLayer: RTSLayer
-protected constructor        (){
+protected constructor (){
 keyvalueDrawString= KeyValueDrawString("Owner: ", this.textX)
 }
 
 
-open fun updateSelectionInfo()
+    open fun updateSelectionInfo()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setName(this.getRtsLayer()!!.getName())
@@ -52,7 +52,7 @@ getRtsLayer.
 }
 
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -65,7 +65,7 @@ this.getAnimationInterface()!!.paint(graphics, this.imageX, y)
 }
 
 
-open fun setRtsLayer(rtsLayer: RTSLayer)
+    open fun setRtsLayer(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var rtsLayer = rtsLayer
@@ -73,7 +73,7 @@ this.rtsLayer= rtsLayer
 }
 
 
-open fun getRtsLayer()
+    open fun getRtsLayer()
         //nullable = true from not(false or (false and true)) = true
 : RTSLayer{
 

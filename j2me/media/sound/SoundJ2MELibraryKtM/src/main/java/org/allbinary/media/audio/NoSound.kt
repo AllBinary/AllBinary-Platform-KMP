@@ -29,10 +29,9 @@ import org.allbinary.logic.string.StringUtil
 
 open public class NoSound : Sound {
         
-
-        companion object {
+companion object {
             
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : NoSound{
 
@@ -46,7 +45,7 @@ open fun getInstance()
     private val instance: NoSound = NoSound()
 
         }
-            private constructor        ()                        
+            private constructor ()                        
 
                             : super(StringUtil.getInstance()!!.EMPTY_STRING){
 

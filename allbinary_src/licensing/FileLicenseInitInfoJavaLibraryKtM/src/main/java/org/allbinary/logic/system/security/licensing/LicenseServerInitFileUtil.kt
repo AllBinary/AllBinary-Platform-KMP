@@ -41,10 +41,9 @@ open public class LicenseServerInitFileUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun nullOutputStream()
+    open fun nullOutputStream()
         //nullable = true from not(false or (false and true)) = true
 : OutputStream{
 
@@ -55,21 +54,24 @@ open fun nullOutputStream()
                                 {
                                 
                 @Throws(IOException::class)
-            override fun write(b: Int)
+            
+    override fun write(b: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var b = b
 }
 
                 @Throws(IOException::class)
-            override fun write(b: ByteArray, off: Int, len: Int)
+            
+    override fun write(b: ByteArray, off: Int, len: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var b = b
 var off = off
 var len = len
 }
-override fun close()
+
+    override fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -92,7 +94,7 @@ override fun close()
 
     private val NULL_OUTPUT_STREAM: OutputStream = nullOutputStream()!!
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -123,7 +125,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }
 
 
-open fun write()
+    open fun write()
         //nullable = true from not(false or (false and true)) = true
 {
 

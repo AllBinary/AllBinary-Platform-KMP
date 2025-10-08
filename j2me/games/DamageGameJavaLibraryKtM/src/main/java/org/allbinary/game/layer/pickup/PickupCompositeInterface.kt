@@ -25,14 +25,15 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface PickupCompositeInterface {
         
 
-open fun getPickupBehavior()
+    open fun getPickupBehavior()
         //nullable = true from not(false or (false and true)) = true
 : PickupBehavior
 
-open fun setPickupBehavior(pickupBehavior: PickupBehavior)
+    open fun setPickupBehavior(pickupBehavior: PickupBehavior)
         //nullable = true from not(false or (false and false)) = true
 
 

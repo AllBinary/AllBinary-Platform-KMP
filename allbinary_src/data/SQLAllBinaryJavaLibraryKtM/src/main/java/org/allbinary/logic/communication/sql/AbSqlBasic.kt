@@ -93,7 +93,7 @@ open public class AbSqlBasic
     private val METHOD_INITIALIZE: String = "initialize"
 
     private val LOAD_JDBC_DRIVER_FAILED_LABEL: String = "Load JDBC Driver Failed: "
-public constructor        (databaseConnectionInfoInterface: DbConnectionInfo)
+public constructor (databaseConnectionInfoInterface: DbConnectionInfo)
             : super()
         {
     //var databaseConnectionInfoInterface = databaseConnectionInfoInterface
@@ -107,7 +107,7 @@ this.conn=
 
                 @Throws(SQLException::class)
             
-open fun executeSQLStatement(statement: String)
+    open fun executeSQLStatement(statement: String)
         //nullable = true from not(false or (false and false)) = true
 : ResultSet{
     //var statement = statement
@@ -158,7 +158,7 @@ this.conn=
 }
 
 
-open fun create(databaseName: String)
+    open fun create(databaseName: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var databaseName = databaseName
@@ -200,7 +200,7 @@ open fun create(databaseName: String)
 }
 
 
-open fun createConnection()
+    open fun createConnection()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -248,7 +248,7 @@ this.initialize()
 }
 
 
-open fun initialize()
+    open fun initialize()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -298,7 +298,7 @@ this.createConnection()
 }
 
 
-open fun getDatabaseConnectionInfoInterface()
+    open fun getDatabaseConnectionInfoInterface()
         //nullable = true from not(false or (false and true)) = true
 : DatabaseConnectionInfoInterface{
 
@@ -309,7 +309,7 @@ open fun getDatabaseConnectionInfoInterface()
 }
 
 
-open fun setDatabaseConnectionInfoInterface(databaseConnectionInfoInterface: DbConnectionInfo)
+    open fun setDatabaseConnectionInfoInterface(databaseConnectionInfoInterface: DbConnectionInfo)
         //nullable = true from not(false or (false and false)) = true
 {
     //var databaseConnectionInfoInterface = databaseConnectionInfoInterface

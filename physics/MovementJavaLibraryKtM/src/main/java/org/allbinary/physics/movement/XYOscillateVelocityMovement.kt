@@ -39,7 +39,7 @@ open public class XYOscillateVelocityMovement : BasicConstantVelocityMovement {
     private var oscillate: Int= 0
 
     private var oscillatePositive: Boolean= false
-public constructor        (speedBasicDecimal: BasicDecimal, oscillateMin: Int, oscillateMax: Int)                        
+public constructor (speedBasicDecimal: BasicDecimal, oscillateMin: Int, oscillateMax: Int)                        
 
                             : super(speedBasicDecimal, VelocityProperties(speedBasicDecimal!!.getUnscaled().toInt(), speedBasicDecimal!!.getUnscaled().toInt())){
 var speedBasicDecimal = speedBasicDecimal
@@ -55,7 +55,8 @@ this.oscillateMax= oscillateMax
 
 
                 @Throws(Exception::class)
-            override fun process(layer: AllBinaryGameLayer)
+            
+    override fun process(layer: AllBinaryGameLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var layer = layer

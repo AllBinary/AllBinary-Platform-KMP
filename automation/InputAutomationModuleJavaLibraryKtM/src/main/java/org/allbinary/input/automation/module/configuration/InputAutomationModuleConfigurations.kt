@@ -46,7 +46,7 @@ open public class InputAutomationModuleConfigurations
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var hashMap: HashMap<Any, Any>
-public constructor        (abeClientInformation: AbeClientInformationInterface, file: File)
+public constructor (abeClientInformation: AbeClientInformationInterface, file: File)
             : super()
         {
     //var abeClientInformation = abeClientInformation
@@ -100,7 +100,7 @@ this.add(InputAutomationModuleConfiguration(abeClientInformation, node))
                                 
 }
 
-public constructor        (abeClientInformation: AbeClientInformationInterface, document: Document)
+public constructor (abeClientInformation: AbeClientInformationInterface, document: Document)
             : super()
         {
     //var abeClientInformation = abeClientInformation
@@ -125,7 +125,7 @@ this.add(InputAutomationModuleConfiguration(abeClientInformation, node))
 
 }
 
-public constructor        (inputAutomationModuleConfigurationList: List<InputAutomationModuleConfiguration>)
+public constructor (inputAutomationModuleConfigurationList: List<InputAutomationModuleConfiguration>)
             : super()
         {
     //var inputAutomationModuleConfigurationList = inputAutomationModuleConfigurationList
@@ -149,14 +149,14 @@ this.add(inputAutomationModuleConfiguration)
 
 }
 
-public constructor        ()
+public constructor ()
             : super()
         {
 this.setHashMap(HashMap<Any, Any>())
 }
 
 
-open fun add(inputAutomationModuleConfiguration: InputAutomationModuleConfiguration)
+    open fun add(inputAutomationModuleConfiguration: InputAutomationModuleConfiguration)
         //nullable = true from not(false or (false and false)) = true
 {
     //var inputAutomationModuleConfiguration = inputAutomationModuleConfiguration
@@ -164,7 +164,7 @@ this.getHashMap()!!.put(inputAutomationModuleConfiguration!!.getClassName(), inp
 }
 
 
-open fun remove(inputAutomationModuleConfiguration: InputAutomationModuleConfiguration)
+    open fun remove(inputAutomationModuleConfiguration: InputAutomationModuleConfiguration)
         //nullable = true from not(false or (false and false)) = true
 {
     //var inputAutomationModuleConfiguration = inputAutomationModuleConfiguration
@@ -172,7 +172,7 @@ this.getHashMap()!!.remove(inputAutomationModuleConfiguration!!.getClassName())
 }
 
 
-open fun getHashMap()
+    open fun getHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -183,7 +183,7 @@ open fun getHashMap()
 }
 
 
-open fun setHashMap(hashMap: HashMap<Any, Any>)
+    open fun setHashMap(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var hashMap = hashMap

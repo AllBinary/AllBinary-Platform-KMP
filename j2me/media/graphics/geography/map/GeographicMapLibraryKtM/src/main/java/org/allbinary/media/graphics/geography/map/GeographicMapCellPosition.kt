@@ -35,7 +35,7 @@ open public class GeographicMapCellPosition : CellPosition {
     private var point: GPoint
 
     private var midPoint: GPoint
-public constructor        (column: Int, row: Int, columns: Int, rows: Int, width: Int, height: Int)                        
+public constructor (column: Int, row: Int, columns: Int, rows: Int, width: Int, height: Int)                        
 
                             : super(column, row, columns, rows){
 var column = column
@@ -62,7 +62,7 @@ this.midPoint= pointFactory!!.getInstance(x +(width shr 1), y +(height shr 1))
 }
 
 
-open fun getPoint()
+    open fun getPoint()
         //nullable = true from not(false or (false and true)) = true
 : GPoint{
 
@@ -73,7 +73,7 @@ open fun getPoint()
 }
 
 
-open fun getMidPoint()
+    open fun getMidPoint()
         //nullable = true from not(false or (false and true)) = true
 : GPoint{
 
@@ -84,7 +84,7 @@ open fun getMidPoint()
 }
 
 
-open fun setMidPoint(midPoint: GPoint)
+    open fun setMidPoint(midPoint: GPoint)
         //nullable = true from not(false or (false and false)) = true
 {
 var midPoint = midPoint

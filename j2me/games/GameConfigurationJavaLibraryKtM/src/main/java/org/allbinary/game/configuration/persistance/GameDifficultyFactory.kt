@@ -30,12 +30,11 @@ open public class GameDifficultyFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GameDifficultyFactory = GameDifficultyFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameDifficultyFactory{
 
@@ -55,7 +54,7 @@ open fun getInstance()
         
     private var level: Int = 0
 
-open fun setLevel(level: Int)
+    open fun setLevel(level: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var level = level
@@ -63,7 +62,7 @@ this.level= level
 }
 
 
-open fun getLevel()
+    open fun getLevel()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

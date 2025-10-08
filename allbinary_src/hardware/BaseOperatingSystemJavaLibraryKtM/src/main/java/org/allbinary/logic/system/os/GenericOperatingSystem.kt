@@ -46,7 +46,7 @@ open public class GenericOperatingSystem
     private val characterSet: CharacterSet = CharacterSet()
 
     var scalable: Boolean = false
-public constructor        ()
+public constructor ()
             : super()
         {
 
@@ -102,7 +102,8 @@ public constructor        ()
                             
 }
 
-override fun getName()
+
+    override fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -112,7 +113,8 @@ override fun getName()
                         return this.osName
 }
 
-override fun getVersion()
+
+    override fun getVersion()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -122,7 +124,8 @@ override fun getVersion()
                         return this.osVersion
 }
 
-override fun getArch()
+
+    override fun getArch()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -132,7 +135,8 @@ override fun getArch()
                         return this.osArch
 }
 
-override fun getCharacterSet()
+
+    override fun getCharacterSet()
         //nullable = true from not(false or (false and true)) = true
 : CharacterSet{
 
@@ -142,7 +146,8 @@ override fun getCharacterSet()
                         return this.characterSet
 }
 
-override fun isOverScan()
+
+    override fun isOverScan()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -152,7 +157,8 @@ override fun isOverScan()
                         return false
 }
 
-override fun getOverScanXPercent()
+
+    override fun getOverScanXPercent()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -162,7 +168,8 @@ override fun getOverScanXPercent()
                         return 100
 }
 
-override fun getOverScanYPercent()
+
+    override fun getOverScanYPercent()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -172,7 +179,8 @@ override fun getOverScanYPercent()
                         return 100
 }
 
-override fun isScalable()
+
+    override fun isScalable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -182,7 +190,19 @@ override fun isScalable()
                         return this.scalable
 }
 
-override fun toString()
+
+    override fun isAutoHide()
+        //nullable = true from not(false or (false and true)) = true
+: Boolean{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return false
+}
+
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

@@ -33,15 +33,14 @@ import org.allbinary.logic.util.queue.BasicQueue
 open public class BasicEmailQueue : BasicQueue
                 , EmailQueueInterface {
         
-
-        companion object {
+companion object {
             
     private val instance: BasicEmailQueue = BasicEmailQueue()
 
     private var basicEmailQueue: BasicEmailQueue
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BasicEmailQueue{
 
@@ -66,14 +65,14 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        (){
+private constructor (){
 }
 
 
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun offer(emailInterface: EmailInterface)
+    open fun offer(emailInterface: EmailInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var emailInterface = emailInterface
@@ -88,7 +87,7 @@ this.post(emailInterface)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun remove(emailInterface: EmailInterface)
+    open fun remove(emailInterface: EmailInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var emailInterface = emailInterface
@@ -97,7 +96,7 @@ this.remove(emailInterface as Object)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun remove()
+    open fun remove()
         //nullable = true from not(false or (false and true)) = true
 : EmailInterface{
 
@@ -111,7 +110,7 @@ open fun remove()
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun post(emailInterface: EmailInterface)
+    open fun post(emailInterface: EmailInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var emailInterface = emailInterface
@@ -131,7 +130,7 @@ processAllUnsent()
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun processAllUnsent()
+    open fun processAllUnsent()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -163,7 +162,7 @@ processAllUnsent()
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun send(emailInterface: EmailInterface)
+    open fun send(emailInterface: EmailInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var emailInterface = emailInterface

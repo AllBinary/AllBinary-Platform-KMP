@@ -63,7 +63,7 @@ open public class MotionGestureRecognizer
     private val movedMotionGesturesHandler: BasicEventHandler
 
     private val motionEventCircularPool: MotionEventCircularPool
-public constructor        (id: Int)
+public constructor (id: Int)
             : super()
         {
     //var id = id
@@ -93,7 +93,7 @@ this.movedMotionGesturesHandler= movedMotionGesturesHandler
 
                 @Throws(Exception::class)
             
-open fun processPressedMotionEvent(current: GPoint, deviceId: Int, button: Int)
+    open fun processPressedMotionEvent(current: GPoint, deviceId: Int, button: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var current = current
@@ -117,7 +117,7 @@ motionGesturesHandler!!.fireEvent(event)
 
                 @Throws(Exception::class)
             
-open fun processReleasedMotionEvent(current: GPoint, deviceId: Int, button: Int)
+    open fun processReleasedMotionEvent(current: GPoint, deviceId: Int, button: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var current = current
@@ -139,7 +139,7 @@ motionGesturesHandler!!.fireEvent(event)
 
                 @Throws(Exception::class)
             
-open fun processDraggedMotionEvent(current: GPoint, deviceId: Int, buttonMask: Int)
+    open fun processDraggedMotionEvent(current: GPoint, deviceId: Int, buttonMask: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var current = current
@@ -320,7 +320,7 @@ motionGesturesHandler!!.fireEvent(event)
 
                 @Throws(Exception::class)
             
-open fun processMovedMotionEvent(current: GPoint, deviceId: Int, button: Int)
+    open fun processMovedMotionEvent(current: GPoint, deviceId: Int, button: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var current = current
@@ -340,7 +340,7 @@ movedMotionGesturesHandler!!.fireEvent(event)
 }
 
 
-open fun getMotionGesturesHandler()
+    open fun getMotionGesturesHandler()
         //nullable = true from not(false or (false and true)) = true
 : BasicMotionGesturesHandler{
 

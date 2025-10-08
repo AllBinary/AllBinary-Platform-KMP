@@ -47,7 +47,7 @@ open public class ExitRunnable
     private val processor: Processor
 
     private val isProgress: Boolean
-public constructor        (midlet: AllBinaryMidlet, processor: Processor, isProgress: Boolean)
+public constructor (midlet: AllBinaryMidlet, processor: Processor, isProgress: Boolean)
             : super()
         {
 var midlet = midlet
@@ -58,7 +58,8 @@ this.isProgress= isProgress
 this.processor= processor
 }
 
-override fun run()
+
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 

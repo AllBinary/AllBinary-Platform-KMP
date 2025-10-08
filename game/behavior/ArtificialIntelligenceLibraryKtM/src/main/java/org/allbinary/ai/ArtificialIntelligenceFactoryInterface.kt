@@ -25,12 +25,13 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface ArtificialIntelligenceFactoryInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getInstance(playerLayer: Any)
+    open fun getInstance(playerLayer: Any)
         //nullable =  from not(true or (false and false)) = 
 : ArtificialIntelligence
 

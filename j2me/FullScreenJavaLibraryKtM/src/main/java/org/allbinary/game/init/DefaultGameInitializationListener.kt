@@ -29,7 +29,6 @@
         
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.communication.log.ForcedLogUtil
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.game.configuration.event.GameInitializedEvent
 import org.allbinary.game.configuration.event.GameInitializedEventHandler
@@ -48,7 +47,7 @@ open public class DefaultGameInitializationListener
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val swtJOGLProcessor: SWTJOGLProcessor = SWTJOGLProcessor.getInstance()!!
-public constructor        ()
+public constructor ()
             : super()
         {
 
@@ -59,7 +58,7 @@ gameInitializedEventHandler!!.addListener(this as GameInitializedListenerInterfa
 }
 
 
-open fun onEvent(eventObject: AllBinaryEventObject)
+    open fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject
@@ -69,7 +68,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
     var firstTime: Boolean = true
 
-open fun onGameInitialized(gameInitializedEvent: GameInitializedEvent)
+    open fun onGameInitialized(gameInitializedEvent: GameInitializedEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameInitializedEvent = gameInitializedEvent

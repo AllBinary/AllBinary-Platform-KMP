@@ -26,12 +26,13 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.util.event.EventListenerInterface
+
 interface GameNotificationListenerInterface : EventListenerInterface {
         
 
                 @Throws(Exception::class)
             
-open fun onGameNotificationEvent(gameNotificationEvent: GameNotificationEvent)
+    open fun onGameNotificationEvent(gameNotificationEvent: GameNotificationEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

@@ -30,12 +30,11 @@ open public class UnitTechnologySingletonFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: UnitTechnologySingletonFactory = UnitTechnologySingletonFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : UnitTechnologySingletonFactory{
 
@@ -57,13 +56,13 @@ open fun getInstance()
     private var repair: Int= 0
 
     private var speed: Int= 0
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setDamage(0)
@@ -74,7 +73,7 @@ this.setSpeed(0)
 }
 
 
-open fun getDamage()
+    open fun getDamage()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -85,7 +84,7 @@ open fun getDamage()
 }
 
 
-open fun setDamage(damage: Int)
+    open fun setDamage(damage: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var damage = damage
@@ -93,7 +92,7 @@ this.damage= damage
 }
 
 
-open fun getHealth()
+    open fun getHealth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -104,7 +103,7 @@ open fun getHealth()
 }
 
 
-open fun setHealth(health: Int)
+    open fun setHealth(health: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var health = health
@@ -112,7 +111,7 @@ this.health= health
 }
 
 
-open fun getReload()
+    open fun getReload()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -123,7 +122,7 @@ open fun getReload()
 }
 
 
-open fun setReload(reload: Int)
+    open fun setReload(reload: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var reload = reload
@@ -131,7 +130,7 @@ this.reload= reload
 }
 
 
-open fun getRepair()
+    open fun getRepair()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -142,7 +141,7 @@ open fun getRepair()
 }
 
 
-open fun setRepair(repair: Int)
+    open fun setRepair(repair: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var repair = repair
@@ -150,7 +149,7 @@ this.repair= repair
 }
 
 
-open fun getSpeed()
+    open fun getSpeed()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -161,7 +160,7 @@ open fun getSpeed()
 }
 
 
-open fun setSpeed(speed: Int)
+    open fun setSpeed(speed: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var speed = speed

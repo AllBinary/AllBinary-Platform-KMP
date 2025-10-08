@@ -40,8 +40,7 @@ open public class CountedLayerInterfaceFactoryPart
         
                 , PartInterface {
         
-
-        companion object {
+companion object {
             
     val NULL_COUNTED_LAYER_INTERFACE_FACTORY: CountedLayerInterfaceFactoryPart = CountedLayerInterfaceFactoryPart(0, CountedPickedUpLayerInterfaceFactory.NULL_COUNTED_PICKUP_LAYER_FACTORY)
 
@@ -58,7 +57,7 @@ open public class CountedLayerInterfaceFactoryPart
     private var countedPickedUpLayerInterfaceFactory: CountedPickedUpLayerInterfaceFactory = CountedPickedUpLayerInterfaceFactory.NULL_COUNTED_PICKUP_LAYER_FACTORY
 
     private val primitiveLongUtil: PrimitiveLongUtil
-public constructor        (total: Int, countedPickedUpLayerInterfaceFactory: CountedPickedUpLayerInterfaceFactory)
+public constructor (total: Int, countedPickedUpLayerInterfaceFactory: CountedPickedUpLayerInterfaceFactory)
             : super()
         {
 var total = total
@@ -68,7 +67,7 @@ this.init(total, countedPickedUpLayerInterfaceFactory)
 }
 
 
-open fun init(total: Int, countedPickedUpLayerInterfaceFactory: CountedPickedUpLayerInterfaceFactory)
+    open fun init(total: Int, countedPickedUpLayerInterfaceFactory: CountedPickedUpLayerInterfaceFactory)
         //nullable = true from not(false or (false and false)) = true
 {
 var total = total
@@ -80,7 +79,7 @@ this.total= total
 
                 @Throws(Exception::class)
             
-open fun getInstance(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
+    open fun getInstance(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
         //nullable =  from not(true or (false and false)) = 
 : AllBinaryLayer{
 var hashtable = hashtable
@@ -112,7 +111,7 @@ var z = z
 }
 
 
-open fun getTotal()
+    open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -123,7 +122,7 @@ open fun getTotal()
 }
 
 
-open fun setTotal(total: Int)
+    open fun setTotal(total: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var total = total
@@ -135,19 +134,22 @@ this.totalString= this.primitiveLongUtil!!.getCharArray(total)
 this.setXOffset(font.charsWidth(totalString, 0, this.primitiveLongUtil!!.getCurrentTotalDigits()) +(font.getSize() shr 1))
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 }
 
-override fun paintThreed(graphics: Graphics)
+
+    override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 }
 
-override fun getAnimationInterface()
+
+    override fun getAnimationInterface()
         //nullable = true from not(false or (false and true)) = true
 : Animation{
 
@@ -158,7 +160,7 @@ override fun getAnimationInterface()
 }
 
 
-open fun setAnimationInterface(animationInterface: Animation)
+    open fun setAnimationInterface(animationInterface: Animation)
         //nullable = true from not(false or (false and false)) = true
 {
 var animationInterface = animationInterface
@@ -166,7 +168,7 @@ this.animationInterface= animationInterface
 }
 
 
-open fun getXOffset()
+    open fun getXOffset()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -177,7 +179,7 @@ open fun getXOffset()
 }
 
 
-open fun setXOffset(totalStringWidth: Int)
+    open fun setXOffset(totalStringWidth: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var totalStringWidth = totalStringWidth
@@ -185,7 +187,7 @@ this.xOffset= totalStringWidth
 }
 
 
-open fun getTotalString()
+    open fun getTotalString()
         //nullable = true from not(false or (false and true)) = true
 : CharArray{
 
@@ -196,7 +198,7 @@ open fun getTotalString()
 }
 
 
-open fun getCountedPickedUpLayerInterfaceFactory()
+    open fun getCountedPickedUpLayerInterfaceFactory()
         //nullable = true from not(false or (false and true)) = true
 : CountedPickedUpLayerInterfaceFactory{
 
@@ -207,7 +209,7 @@ open fun getCountedPickedUpLayerInterfaceFactory()
 }
 
 
-open fun setCountedPickedUpLayerInterfaceFactory(countedPickedUpLayerInterfaceFactory: CountedPickedUpLayerInterfaceFactory)
+    open fun setCountedPickedUpLayerInterfaceFactory(countedPickedUpLayerInterfaceFactory: CountedPickedUpLayerInterfaceFactory)
         //nullable = true from not(false or (false and false)) = true
 {
 var countedPickedUpLayerInterfaceFactory = countedPickedUpLayerInterfaceFactory

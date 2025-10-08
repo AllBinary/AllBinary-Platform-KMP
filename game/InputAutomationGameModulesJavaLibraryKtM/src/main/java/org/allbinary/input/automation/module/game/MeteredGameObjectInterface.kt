@@ -25,18 +25,19 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface MeteredGameObjectInterface {
         
 
-open fun getRatios()
+    open fun getRatios()
         //nullable = true from not(false or (false and true)) = true
 : Array<Double?>
 
-open fun isGood()
+    open fun isGood()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun isDropping()
+    open fun isDropping()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 

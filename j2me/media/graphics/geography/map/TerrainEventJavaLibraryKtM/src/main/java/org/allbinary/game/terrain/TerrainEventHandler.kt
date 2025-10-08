@@ -35,19 +35,18 @@ import org.allbinary.util.BasicArrayList
 
 open public class TerrainEventHandler : BasicEventHandler {
         
-
-        companion object {
+companion object {
             
     private var hashtable: Hashtable<Any, Any> = NullUtil.getInstance()!!.NULL_TABLE
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 TerrainEventHandler.hashtable= Hashtable<Any, Any>()
 }
 
 
-open fun getInstance(anyType: Any)
+    open fun getInstance(anyType: Any)
         //nullable =  from not(true or (false and false)) = 
 : TerrainEventHandler{
 var anyType = anyType
@@ -77,11 +76,11 @@ TerrainEventHandler.hashtable.put(anyType, eventHandler)
         }
             
     private val list: BasicArrayList = BasicArrayList()
-private constructor        (){
+private constructor (){
 }
 
 
-open fun addListener(terrainEventListener: TerrainEventListener)
+    open fun addListener(terrainEventListener: TerrainEventListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var terrainEventListener = terrainEventListener
@@ -96,14 +95,16 @@ var terrainEventListener = terrainEventListener
                                 
 }
 
-override fun removeAllListeners()
+
+    override fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
 {
 this.list.clear()
 super.removeAllListeners()
 }
 
-override fun removeListener(eventListenerInterface: EventListenerInterface)
+
+    override fun removeListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventListenerInterface = eventListenerInterface
@@ -113,7 +114,8 @@ super.removeListener(eventListenerInterface)
 
 
                 @Throws(Exception::class)
-            override fun fireEvent(eventObject: AllBinaryEventObject)
+            
+    override fun fireEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
@@ -142,7 +144,8 @@ super.fireEvent(eventObject)
 
 
                 @Throws(Exception::class)
-            override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
+            
+    override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject

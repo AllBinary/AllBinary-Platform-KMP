@@ -26,18 +26,19 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.data.tree.dom.document.mapping.DomDocumentMappingInterface
+
 interface DomDocumentQueueInterface {
         
 
                 @Throws(Exception::class)
             
-open fun offer(domDocumentMappingInterface: DomDocumentMappingInterface)
+    open fun offer(domDocumentMappingInterface: DomDocumentMappingInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
                 @Throws(Exception::class)
             
-open fun remove()
+    open fun remove()
         //nullable = true from not(false or (false and true)) = true
 : DomDocumentMappingInterface
 

@@ -45,7 +45,7 @@ open public class SearchRequest : AbContext {
     private var searchParams: SearchParams
 
     private var storeFront: StoreFrontInterface
-public constructor        (storeFront: StoreFrontInterface, searchParams: SearchParams, xslFile: String, contentType: String, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
+public constructor (storeFront: StoreFrontInterface, searchParams: SearchParams, xslFile: String, contentType: String, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
                             : super(propertiesHashMap, pageContext){
 var storeFront = storeFront
@@ -66,7 +66,7 @@ this.contentType= contentType
 }
 
 
-open fun setStoreFront(storeFront: StoreFrontInterface)
+    open fun setStoreFront(storeFront: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var storeFront = storeFront
@@ -74,7 +74,7 @@ this.storeFront= storeFront
 }
 
 
-open fun setParams(searchParams: SearchParams)
+    open fun setParams(searchParams: SearchParams)
         //nullable = true from not(false or (false and false)) = true
 {
 var searchParams = searchParams
@@ -82,7 +82,7 @@ this.searchParams= searchParams
 }
 
 
-open fun setXslFile(value: String)
+    open fun setXslFile(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -90,7 +90,7 @@ this.xslFile= value
 }
 
 
-open fun setFileBaseName(value: String)
+    open fun setFileBaseName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -98,7 +98,7 @@ this.pageName= value
 }
 
 
-open fun setContentType(value: String)
+    open fun setContentType(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -106,7 +106,7 @@ this.contentType= value
 }
 
 
-open fun getStoreFront()
+    open fun getStoreFront()
         //nullable = true from not(false or (false and true)) = true
 : StoreFrontInterface{
 
@@ -117,7 +117,7 @@ open fun getStoreFront()
 }
 
 
-open fun getParams()
+    open fun getParams()
         //nullable = true from not(false or (false and true)) = true
 : SearchParams{
 
@@ -128,7 +128,7 @@ open fun getParams()
 }
 
 
-open fun getXslFile()
+    open fun getXslFile()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -139,7 +139,7 @@ open fun getXslFile()
 }
 
 
-open fun getFileBaseName()
+    open fun getFileBaseName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -150,7 +150,7 @@ open fun getFileBaseName()
 }
 
 
-open fun getContentType()
+    open fun getContentType()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -163,7 +163,7 @@ open fun getContentType()
 
                 @Throws(Exception::class)
             
-open fun getFileBaseNameNode(document: Document)
+    open fun getFileBaseNameNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

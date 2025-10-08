@@ -40,7 +40,7 @@ open public class BasicMenuInputProcessor : PlayerGameInput
     val motionGestureEventList: BasicArrayList = BasicArrayList()
 
     private var canvas: Canvas = NullCanvas.NULL_CANVAS
-protected constructor        (gameKeyEventList: BasicArrayList, playerInputId: Int, gameCanvas: Canvas)                        
+protected constructor (gameKeyEventList: BasicArrayList, playerInputId: Int, gameCanvas: Canvas)                        
 
                             : super(gameKeyEventList, playerInputId){
 var gameKeyEventList = gameKeyEventList
@@ -53,7 +53,8 @@ var gameCanvas = gameCanvas
 this.canvas= gameCanvas
 }
 
-override fun onMotionGestureEvent(motionGestureEvent: MotionGestureEvent)
+
+    override fun onMotionGestureEvent(motionGestureEvent: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var motionGestureEvent = motionGestureEvent
@@ -61,7 +62,7 @@ motionGestureEventList!!.add(motionGestureEvent)
 }
 
 
-open fun setCanvas(canvas: MyCanvas)
+    open fun setCanvas(canvas: MyCanvas)
         //nullable = true from not(false or (false and false)) = true
 {
 var canvas = canvas
@@ -69,7 +70,7 @@ this.canvas= canvas
 }
 
 
-open fun getCanvas()
+    open fun getCanvas()
         //nullable = true from not(false or (false and true)) = true
 : MyCanvas{
 
@@ -82,7 +83,7 @@ open fun getCanvas()
 
                 @Throws(Exception::class)
             
-open fun processInput()
+    open fun processInput()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

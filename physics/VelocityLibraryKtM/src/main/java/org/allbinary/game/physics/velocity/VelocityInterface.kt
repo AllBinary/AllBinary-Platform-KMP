@@ -25,38 +25,39 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface VelocityInterface : BasicVelocityInterface {
         
 
-open fun getMaxForwardVelocity()
+    open fun getMaxForwardVelocity()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getMaxReverseVelocity()
+    open fun getMaxReverseVelocity()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun limitMaxXYForwardVelocity()
+    open fun limitMaxXYForwardVelocity()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun limitMaxXYReverseVelocity()
+    open fun limitMaxXYReverseVelocity()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun limitXYToForwardAndReverseMaxVelocity()
+    open fun limitXYToForwardAndReverseMaxVelocity()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun limitMaxXYVelocity(maxVelocity: Int)
+    open fun limitMaxXYVelocity(maxVelocity: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setMaxForwardVelocity(maxForwardVelocity: Int)
+    open fun setMaxForwardVelocity(maxForwardVelocity: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setMaxReverseVelocity(maxReverseVelocity: Int)
+    open fun setMaxReverseVelocity(maxReverseVelocity: Int)
         //nullable = true from not(false or (false and false)) = true
 
 

@@ -32,8 +32,7 @@ import org.allbinary.logic.communication.log.LogUtil
 
 open public class ConstrainedMotionRectangles : MotionRectangles {
         
-
-        companion object {
+companion object {
             
     private val NAME: String = "constrainedMotionRectangles_"
 
@@ -42,7 +41,7 @@ open public class ConstrainedMotionRectangles : MotionRectangles {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var motionRectangleConstraintsInterface: MotionRectangleConstraintsInterface
-public constructor        (motionRectangleConstraintsInterface: MotionRectangleConstraintsInterface, motionRectangles: MotionRectangles)                        
+public constructor (motionRectangleConstraintsInterface: MotionRectangleConstraintsInterface, motionRectangles: MotionRectangles)                        
 
                             : super(NAME, motionRectangles!!.getImageComparisonResult()){
     //var motionRectangleConstraintsInterface = motionRectangleConstraintsInterface
@@ -57,7 +56,7 @@ this.setMotionRectangleConstraintsInterface(motionRectangleConstraintsInterface)
 
                 @Throws(Exception::class)
             
-open fun applyMotionRectangleConstraints(motionRectangles: MotionRectangles)
+    open fun applyMotionRectangleConstraints(motionRectangles: MotionRectangles)
         //nullable = true from not(false or (false and false)) = true
 {
     //var motionRectangles = motionRectangles
@@ -160,7 +159,7 @@ this.setVector(vector)
 }
 
 
-open fun getMotionRectangleConstraintsInterface()
+    open fun getMotionRectangleConstraintsInterface()
         //nullable = true from not(false or (false and true)) = true
 : MotionRectangleConstraintsInterface{
 
@@ -171,7 +170,7 @@ open fun getMotionRectangleConstraintsInterface()
 }
 
 
-open fun setMotionRectangleConstraintsInterface(motionRectangleConstraintsInterface: MotionRectangleConstraintsInterface)
+    open fun setMotionRectangleConstraintsInterface(motionRectangleConstraintsInterface: MotionRectangleConstraintsInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var motionRectangleConstraintsInterface = motionRectangleConstraintsInterface

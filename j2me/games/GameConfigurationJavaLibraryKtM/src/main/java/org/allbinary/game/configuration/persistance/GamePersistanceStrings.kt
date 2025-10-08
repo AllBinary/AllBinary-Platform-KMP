@@ -30,12 +30,11 @@ open public class GamePersistanceStrings
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GamePersistanceStrings = GamePersistanceStrings()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GamePersistanceStrings{
 

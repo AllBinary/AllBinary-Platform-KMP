@@ -30,15 +30,14 @@ open public class AllMotionRecognizer
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var index: Int = 0
 
         }
             
     private val id: Int
-public constructor        ()
+public constructor ()
             : super()
         {
 this.id= index++
@@ -47,7 +46,7 @@ this.id= index++
 
                 @Throws(Exception::class)
             
-open fun processStartMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
+    open fun processStartMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -59,7 +58,7 @@ var modifiers = modifiers
 
                 @Throws(Exception::class)
             
-open fun processEndMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
+    open fun processEndMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -71,7 +70,7 @@ var modifiers = modifiers
 
                 @Throws(Exception::class)
             
-open fun processDraggedMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
+    open fun processDraggedMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -83,7 +82,7 @@ var modifiers = modifiers
 
                 @Throws(Exception::class)
             
-open fun processMovedMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
+    open fun processMovedMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -93,7 +92,7 @@ var modifiers = modifiers
 }
 
 
-open fun getId()
+    open fun getId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

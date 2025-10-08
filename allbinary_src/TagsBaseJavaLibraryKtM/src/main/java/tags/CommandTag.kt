@@ -30,11 +30,11 @@ open public class CommandTag : CustomTagSupport {
         
 
     private var command: String
-public constructor        (){
+public constructor (){
 }
 
 
-open fun setCommand(command: String)
+    open fun setCommand(command: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var command = command
@@ -42,7 +42,7 @@ this.command= command
 }
 
 
-open fun getCommand()
+    open fun getCommand()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

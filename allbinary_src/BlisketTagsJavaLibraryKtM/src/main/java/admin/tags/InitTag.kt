@@ -29,7 +29,7 @@ import admin.taghelpers.InitHelperFactory
 
 open public class InitTag : TableTag {
         
-public constructor        (){
+public constructor (){
 this.setTagHelperFactory(InitHelperFactory())
 this.setTagRequestHelperFactory(InitHelperFactory())
 }

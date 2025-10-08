@@ -37,14 +37,13 @@ open public class CapturedBufferedImagesCacheSingleton
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var cacheInterface: AutomaticCacheInterface = 
                 null
             
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CacheInterface{
 
@@ -83,7 +82,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, instance, STATIC_BLOCK, e)
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }

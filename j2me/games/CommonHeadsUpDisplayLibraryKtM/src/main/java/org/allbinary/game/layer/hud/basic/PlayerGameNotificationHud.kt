@@ -69,7 +69,7 @@ open public class PlayerGameNotificationHud : GameNotificationHud {
     private var point: CustomGPoint = CustomGPoint.NULL_CUSTOM_POINT
 
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
-public constructor        (location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int, basicColor: BasicColor)                        
+public constructor (location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int, basicColor: BasicColor)                        
 
                             : super(location, direction, maxHeight, maxWidth, bufferZone, basicColor){
 var location = location
@@ -90,7 +90,8 @@ gameNotificationEventHandler!!.removeAllListeners()
 gameNotificationEventHandler!!.addListener(this)
 }
 
-override fun getPoint(x: Int, y: Int)
+
+    override fun getPoint(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : GPoint{
 var x = x
@@ -109,7 +110,8 @@ this.point.setY(y)
     private val PERMANENT_GAME_NOTIFICATION: String = "Permanent Game Notification: "
 
     private var lastString: String = StringUtil.getInstance()!!.EMPTY_STRING
-override fun add(string: String, seconds: Integer, basicColor: BasicColor, permanent: Boolean)
+
+    override fun add(string: String, seconds: Integer, basicColor: BasicColor, permanent: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var string = string
@@ -146,7 +148,8 @@ this.circularIndexUtil!!.setSize(this.permanentGameNotification!!.getSize())
 
 
                 @Throws(Exception::class)
-            override fun processTick()
+            
+    override fun processTick()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -202,7 +205,7 @@ this.circularIndexUtil!!.setSize(this.permanentGameNotification!!.getSize())
 
                 @Throws(Exception::class)
             
-open fun setAndRemove()
+    open fun setAndRemove()
         //nullable = true from not(false or (false and true)) = true
 {
 this.string= this.gameNotification!!.stringList!!.remove(0) as String
@@ -234,7 +237,7 @@ this.setBasicColorP(this.gameNotification!!.colorList!!.remove(0) as BasicColor)
 
                 @Throws(Exception::class)
             
-open fun setNextUnremoveable()
+    open fun setNextUnremoveable()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -255,14 +258,16 @@ this.setBasicColorP(this.permanentGameNotification!!.colorList!!.objectArray[ind
 this.circularIndexUtil!!.next()
 }
 
-override fun clear()
+
+    override fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 this.gameNotification!!.clear()
 this.permanentGameNotification!!.clear()
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

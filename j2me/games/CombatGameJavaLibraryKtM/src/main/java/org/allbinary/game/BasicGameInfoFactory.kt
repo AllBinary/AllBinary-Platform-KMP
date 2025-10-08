@@ -16,12 +16,11 @@ open public class BasicGameInfoFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: BasicGameInfoFactory = BasicGameInfoFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BasicGameInfoFactory{
 
@@ -39,13 +38,13 @@ open fun getInstance()
     var currentDestroyIndex: Int= 0
 
     var total: Int= 0
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun init(total: Int)
+    open fun init(total: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var total = total
@@ -55,7 +54,7 @@ this.total= total
 }
 
 
-open fun isPeaked()
+    open fun isPeaked()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -83,7 +82,7 @@ open fun isPeaked()
 }
 
 
-open fun howManyLeft()
+    open fun howManyLeft()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

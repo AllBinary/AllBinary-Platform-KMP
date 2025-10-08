@@ -28,10 +28,11 @@
 import org.allbinary.business.user.commerce.inventory.order.OrderHistory
 import org.allbinary.data.tables.TableMappingInterface
 import org.allbinary.data.tree.dom.DomNodeInterface
+
 interface PaymentTransactionInterface : TableMappingInterface, DomNodeInterface {
         
 
-open fun getOrderHistory()
+    open fun getOrderHistory()
         //nullable = true from not(false or (false and true)) = true
 : OrderHistory
 

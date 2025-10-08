@@ -45,7 +45,7 @@ open public class AdvertisementAreasEntity : AbSqlBean
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val tableName: String = "advertisements"
-public constructor        ()                        
+public constructor ()                        
 
                             : super(UserDbInitInfo()){
 
@@ -56,7 +56,7 @@ this.setTableName(tableName)
 }
 
 
-open fun delete(value: String)
+    open fun delete(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -90,7 +90,7 @@ var value = value
 
                 @Throws(Exception::class)
             
-open fun get(storeName: String)
+    open fun get(storeName: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var storeName = storeName
@@ -140,7 +140,7 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
 
                 @Throws(Exception::class)
             
-open fun get(storeName: String, advertisementAreaName: String)
+    open fun get(storeName: String, advertisementAreaName: String)
         //nullable = true from not(false or (false and false)) = true
 : AdvertisementAreaInterface{
 var storeName = storeName
@@ -180,7 +180,7 @@ keysAndValues!!.put(AdvertisementAreaData.getInstance()!!.NAME, advertisementAre
 }
 
 
-open fun createTableStatement()
+    open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -201,7 +201,7 @@ stringBuffer!!.append(advertisementAreaData!!.NAME)!!.append(this.sqlTypeStrings
 }
 
 
-open fun createTable()
+    open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -215,7 +215,7 @@ open fun createTable()
 }
 
 
-open fun update(updatedValues: HashMap<Any, Any>)
+    open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var updatedValues = updatedValues
@@ -223,7 +223,7 @@ super.updateWhere(AdvertisementAreaData.getInstance()!!.NAME, updatedValues!!.ge
 }
 
 
-open fun dropTable()
+    open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

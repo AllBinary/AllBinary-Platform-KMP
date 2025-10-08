@@ -26,14 +26,15 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.data.tables.TableMappingInterface
+
 interface StoreFrontUsersStatisticsInterface : TableMappingInterface {
         
 
-open fun getNumberOfUsers()
+    open fun getNumberOfUsers()
         //nullable = true from not(false or (false and true)) = true
 : Long
 
-open fun getNumberOfUsersByRole(role: String)
+    open fun getNumberOfUsersByRole(role: String)
         //nullable = true from not(false or (false and false)) = true
 : Long
 

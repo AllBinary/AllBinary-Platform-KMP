@@ -31,12 +31,11 @@ open public class NotificationUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: NotificationUtil = NotificationUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : NotificationUtil{
 
@@ -54,7 +53,7 @@ open fun getInstance()
             {
             }            
         
-open fun notify(command: Command, resource: String, message: String)
+    open fun notify(command: Command, resource: String, message: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var command = command

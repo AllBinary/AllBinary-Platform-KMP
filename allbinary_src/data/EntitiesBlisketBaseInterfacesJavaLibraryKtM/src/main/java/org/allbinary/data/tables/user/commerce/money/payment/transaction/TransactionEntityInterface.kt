@@ -27,14 +27,15 @@
         
 import org.allbinary.business.user.commerce.money.payment.gateway.transaction.PaymentTransactionInterface
 import org.allbinary.data.tables.BasicDataTableInterface
+
 interface TransactionEntityInterface : BasicDataTableInterface {
         
 
-open fun remove(userName: String, orderNumber: String)
+    open fun remove(userName: String, orderNumber: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun add(userName: String, orderNumber: String, paymentTransactionInterface: PaymentTransactionInterface)
+    open fun add(userName: String, orderNumber: String, paymentTransactionInterface: PaymentTransactionInterface)
         //nullable = true from not(false or (false and false)) = true
 
 

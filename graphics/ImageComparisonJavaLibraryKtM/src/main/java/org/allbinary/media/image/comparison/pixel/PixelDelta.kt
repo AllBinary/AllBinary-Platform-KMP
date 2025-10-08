@@ -36,10 +36,9 @@ open public class PixelDelta
         
                 , CacheableInterface {
         
-
-        companion object {
+companion object {
             
-open fun getKey(point: GPoint, colorDelta: ColorDelta)
+    open fun getKey(point: GPoint, colorDelta: ColorDelta)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var point = point
@@ -60,7 +59,7 @@ var colorDelta = colorDelta
     private var colorDelta: ColorDelta
 
     private var key: Any
-public constructor        (point: GPoint, colorDelta: ColorDelta)
+public constructor (point: GPoint, colorDelta: ColorDelta)
             : super()
         {
 var point = point
@@ -71,7 +70,7 @@ this.key= PixelDelta.getKey(this.getPoint(), this.getColorDelta())
 }
 
 
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -82,7 +81,7 @@ open fun getKey()
 }
 
 
-open fun getPoint()
+    open fun getPoint()
         //nullable = true from not(false or (false and true)) = true
 : GPoint{
 
@@ -93,7 +92,7 @@ open fun getPoint()
 }
 
 
-open fun setPoint(point: GPoint)
+    open fun setPoint(point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 {
 var point = point
@@ -101,7 +100,7 @@ this.point= point
 }
 
 
-open fun getColorDelta()
+    open fun getColorDelta()
         //nullable = true from not(false or (false and true)) = true
 : ColorDelta{
 
@@ -112,14 +111,15 @@ open fun getColorDelta()
 }
 
 
-open fun setColorDelta(colorDelta: ColorDelta)
+    open fun setColorDelta(colorDelta: ColorDelta)
         //nullable = true from not(false or (false and false)) = true
 {
 var colorDelta = colorDelta
 this.colorDelta= colorDelta
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

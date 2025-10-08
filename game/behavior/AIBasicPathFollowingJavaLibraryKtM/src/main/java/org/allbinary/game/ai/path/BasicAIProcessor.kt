@@ -51,7 +51,7 @@ open public class BasicAIProcessor
             
 
     private var basicAI: BasicDirectionAIHelper
-public constructor        (name: String, geographicMapCellHistory: GeographicMapCellHistory, chosenPathList: BasicArrayList, angleInfo: AngleInfo, seed: Int)
+public constructor (name: String, geographicMapCellHistory: GeographicMapCellHistory, chosenPathList: BasicArrayList, angleInfo: AngleInfo, seed: Int)
             : super()
         {
 var name = name
@@ -65,7 +65,7 @@ this.basicAI= BasicDirectionAIHelper(this.getName(), angleInfo)
 }
 
 
-open fun setNewPath(geographicMapCellHistory: GeographicMapCellHistory, chosenPathList: BasicArrayList)
+    open fun setNewPath(geographicMapCellHistory: GeographicMapCellHistory, chosenPathList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var geographicMapCellHistory = geographicMapCellHistory
@@ -76,7 +76,7 @@ this.init()
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 this.geographicMapCellPathHistoryInfo= GeographicMapCellPathHistoryInfo()
@@ -90,7 +90,7 @@ this.update()
 
                 @Throws(Exception::class)
             
-open fun goTowardNextChosenOnPathPosition(currentGeographicMapCellPosition: GeographicMapCellPosition)
+    open fun goTowardNextChosenOnPathPosition(currentGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var currentGeographicMapCellPosition = currentGeographicMapCellPosition
@@ -121,7 +121,7 @@ keyDirection= this.basicAI!!.getAIKeyPressedFromDirection(geographicMapDirection
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 this.geographicMapCellPathHistoryInfo!!.setNextUnvisitedOnPathGeographicMapCellPosition(this.getGeographicMapCellHistory()!!.getFirstUnvisited())
@@ -131,7 +131,7 @@ this.geographicMapCellPathHistoryInfo!!.setNextChosenOnPathGeographicMapCellPosi
 
                 @Throws(Exception::class)
             
-open fun processAI(myManager: AllBinaryLayerManager, currentGeographicMapCellPosition: GeographicMapCellPosition)
+    open fun processAI(myManager: AllBinaryLayerManager, currentGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var myManager = myManager
@@ -163,7 +163,7 @@ this.geographicMapCellPathHistoryInfo!!.setPreviousOnPathGeographicMapCellPositi
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -174,7 +174,7 @@ open fun getName()
 }
 
 
-open fun setName(name: String)
+    open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name
@@ -182,7 +182,7 @@ this.name= name
 }
 
 
-open fun getGeographicMapCellPathHistoryInfo()
+    open fun getGeographicMapCellPathHistoryInfo()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPathHistoryInfo{
 
@@ -193,7 +193,7 @@ open fun getGeographicMapCellPathHistoryInfo()
 }
 
 
-open fun setGeographicMapCellPathHistoryInfo(geographicMapCellPathHistoryInfo: GeographicMapCellPathHistoryInfo)
+    open fun setGeographicMapCellPathHistoryInfo(geographicMapCellPathHistoryInfo: GeographicMapCellPathHistoryInfo)
         //nullable = true from not(false or (false and false)) = true
 {
 var geographicMapCellPathHistoryInfo = geographicMapCellPathHistoryInfo
@@ -201,7 +201,7 @@ this.geographicMapCellPathHistoryInfo= geographicMapCellPathHistoryInfo
 }
 
 
-open fun getGeographicMapCellHistory()
+    open fun getGeographicMapCellHistory()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellHistory{
 
@@ -212,7 +212,7 @@ open fun getGeographicMapCellHistory()
 }
 
 
-open fun setGeographicMapCellHistory(geographicMapCellHistory: GeographicMapCellHistory)
+    open fun setGeographicMapCellHistory(geographicMapCellHistory: GeographicMapCellHistory)
         //nullable = true from not(false or (false and false)) = true
 {
 var geographicMapCellHistory = geographicMapCellHistory

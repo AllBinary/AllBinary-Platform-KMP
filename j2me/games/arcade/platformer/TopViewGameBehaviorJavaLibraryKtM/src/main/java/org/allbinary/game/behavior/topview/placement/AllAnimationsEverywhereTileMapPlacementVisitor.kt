@@ -35,7 +35,7 @@ open public class AllAnimationsEverywhereTileMapPlacementVisitor : TileMapPlacem
             {
             }            
         
-open fun visit(lastMap: TiledMap, mapData: Array<IntArray?>)
+    open fun visit(lastMap: TiledMap, mapData: Array<IntArray?>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var lastMap = lastMap

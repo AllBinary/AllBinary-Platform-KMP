@@ -27,7 +27,6 @@
         
 import java.util.Hashtable
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.media.graphics.geography.map.GeographicMapCellType
@@ -56,7 +55,7 @@ open public class BasicTopViewGeographicMapCellTypeFactory : GeographicMapCellTy
     val OTHER_CELL_TYPE: BasicTopViewGeographicMapCellType
 
     private val maxTileId: Int
-private constructor        (){
+private constructor (){
 this.maxTileId= 9
 
     var basicTopViewGeographicMapStrings: BasicTopViewGeographicMapStrings = BasicTopViewGeographicMapStrings.getInstance()!!
@@ -94,7 +93,7 @@ this.STAIRS_DOWN_CELL_TYPE= STAIRS_DOWN_CELL_TYPE
 this.OTHER_CELL_TYPE= OTHER_CELL_TYPE
 }
 
-public constructor        (tileTypeToTileIdsMap: Hashtable<Any, Any>, maxTileId: Int){
+public constructor (tileTypeToTileIdsMap: Hashtable<Any, Any>, maxTileId: Int){
     //var tileTypeToTileIdsMap = tileTypeToTileIdsMap
     //var maxTileId = maxTileId
 
@@ -295,7 +294,7 @@ type= this.maxTileId -2
 }
 
 
-open fun getStartType()
+    open fun getStartType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -306,7 +305,7 @@ open fun getStartType()
 }
 
 
-open fun getEndType()
+    open fun getEndType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -317,7 +316,7 @@ open fun getEndType()
 }
 
 
-open fun getEmptyType()
+    open fun getEmptyType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -328,7 +327,7 @@ open fun getEmptyType()
 }
 
 
-open fun isPath(cellType: GeographicMapCellType)
+    open fun isPath(cellType: GeographicMapCellType)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var cellType = cellType
@@ -352,7 +351,8 @@ var cellType = cellType
                         return false
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

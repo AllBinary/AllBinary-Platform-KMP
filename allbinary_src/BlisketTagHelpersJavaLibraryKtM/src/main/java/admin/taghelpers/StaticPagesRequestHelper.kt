@@ -68,7 +68,7 @@ open public class StaticPagesRequestHelper : AbContext
     private var searchParams: SearchParams
 
     private var xslFile: String
-public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
+public constructor (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
                             : super(propertiesHashMap, pageContext){
 var propertiesHashMap = propertiesHashMap
@@ -83,7 +83,7 @@ this.getFormData()
 }
 
 
-open fun getFormData()
+    open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
 this.storeName= request.getParameter(StoreFrontData.getInstance()!!.NAME)
@@ -93,7 +93,7 @@ this.searchParams= SearchParams(this.request)
 
                 @Throws(Exception::class)
             
-open fun email()
+    open fun email()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -152,7 +152,7 @@ adminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.STOREGENERA
 }
 
 
-open fun generateStaticPages()
+    open fun generateStaticPages()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -206,7 +206,7 @@ this.email()
 }
 
 
-open fun makePublic()
+    open fun makePublic()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

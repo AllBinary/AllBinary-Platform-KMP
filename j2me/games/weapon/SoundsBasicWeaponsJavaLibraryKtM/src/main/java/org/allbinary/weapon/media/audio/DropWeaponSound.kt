@@ -30,12 +30,11 @@ import org.allbinary.media.audio.Sound
 
 open public class DropWeaponSound : CompositeSound {
         
-
-        companion object {
+companion object {
             
     private var soundInterface: Sound = DropWeaponSound()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : Sound{
 
@@ -47,7 +46,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()                        
+            private constructor ()                        
 
                             : super("resource:/wav/mine.wav"){
 

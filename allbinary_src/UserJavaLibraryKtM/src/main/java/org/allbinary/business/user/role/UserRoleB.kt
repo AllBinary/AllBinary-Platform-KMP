@@ -31,15 +31,14 @@ import org.allbinary.logic.string.StringValidationUtil
 
 open public class UserRoleB : UserRole {
         
-
-        companion object {
+companion object {
             
     var roleVector: Vector = Vector()
 
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getRole(role: String)
+    open fun getRole(role: String)
         //nullable = true from not(false or (false and false)) = true
 : UserRole{
 var role = role
@@ -90,7 +89,7 @@ UserRoleFactory.getInstance()
 }
 
 
-open fun getAll()
+    open fun getAll()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 UserRoleFactory.getInstance()
@@ -103,7 +102,7 @@ UserRoleFactory.getInstance()
 
 
         }
-            protected constructor        (aBasicUserRole: BasicUserRole, aUserFactoryInterface: UserFactoryInterface)                        
+            protected constructor (aBasicUserRole: BasicUserRole, aUserFactoryInterface: UserFactoryInterface)                        
 
                             : super(aBasicUserRole, aUserFactoryInterface){
 var aBasicUserRole = aBasicUserRole

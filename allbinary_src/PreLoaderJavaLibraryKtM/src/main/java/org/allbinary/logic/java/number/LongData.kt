@@ -30,14 +30,13 @@ open public class LongData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var MAX_LONG_LENGTH: Int = Long.MAX_VALUE as Long.
                             toString()!!.length()!!
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

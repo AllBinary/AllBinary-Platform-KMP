@@ -28,18 +28,19 @@
 import java.util.HashMap
 import java.util.Vector
 import org.allbinary.data.tables.BasicDataTableInterface
+
 interface AdvertisementCampaignInternalEntityInterface : BasicDataTableInterface {
         
 
-open fun delete(value: String)
+    open fun delete(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun insert(values: Vector)
+    open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun update(updatedValues: HashMap<Any, Any>)
+    open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 
 

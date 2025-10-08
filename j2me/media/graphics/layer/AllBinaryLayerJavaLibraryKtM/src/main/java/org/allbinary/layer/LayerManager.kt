@@ -33,7 +33,7 @@ open public class LayerManager
     private val list: BasicArrayList = BasicArrayList()
 
     private val anyType: SynchObject = SynchObject()
-public constructor        (layerManagerLogging: LayerManagerLogging)
+public constructor (layerManagerLogging: LayerManagerLogging)
             : super()
         {
     //var layerManagerLogging = layerManagerLogging
@@ -41,14 +41,14 @@ logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 this.layerManagerLogging= layerManagerLogging
 }
 
-public constructor        ()
+public constructor ()
             : super()
         {
 this.layerManagerLogging= LayerManagerNoDebug.getInstance()
 }
 
 
-open fun contains(layerInterface: AllBinaryLayer)
+    open fun contains(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var layerInterface = layerInterface
@@ -62,7 +62,7 @@ open fun contains(layerInterface: AllBinaryLayer)
 
                 @Throws(Exception::class)
             
-open fun insert(layerInterface: AllBinaryLayer)
+    open fun insert(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerInterface = layerInterface
@@ -102,7 +102,7 @@ this.append(layerInterface)
 
                 @Throws(Exception::class)
             
-open fun append(layerInterface: AllBinaryLayer)
+    open fun append(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerInterface = layerInterface
@@ -113,7 +113,7 @@ this.list.add(layerInterface)
 
                 @Throws(Exception::class)
             
-open fun append(layerInterface: AllBinaryLayer, index: Int)
+    open fun append(layerInterface: AllBinaryLayer, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerInterface = layerInterface
@@ -125,7 +125,7 @@ this.list.add(index, layerInterface)
 
                 @Throws(Exception::class)
             
-open fun remove(layerInterface: AllBinaryLayer)
+    open fun remove(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerInterface = layerInterface
@@ -146,7 +146,7 @@ this.layerManagerLogging!!.remove(this, layerInterface, result)
 }
 
 
-open fun getLayerAt(index: Int)
+    open fun getLayerAt(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : Layer{
     //var index = index
@@ -158,7 +158,7 @@ open fun getLayerAt(index: Int)
 }
 
 
-open fun getSize()
+    open fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -171,7 +171,7 @@ open fun getSize()
 
                 @Throws(Exception::class)
             
-open fun cleanup()
+    open fun cleanup()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -190,7 +190,7 @@ System.gc()
 }
 
 
-open fun paint(g: Graphics, x: Int, y: Int)
+    open fun paint(g: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var g = g

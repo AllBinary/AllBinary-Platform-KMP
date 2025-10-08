@@ -17,12 +17,11 @@ open public class ScreenRelationalUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ScreenRelationalUtil = ScreenRelationalUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ScreenRelationalUtil{
 
@@ -40,7 +39,7 @@ open fun getInstance()
             {
             }            
         
-open fun getScale(image: Image)
+    open fun getScale(image: Image)
         //nullable = true from not(false or (false and false)) = true
 : Float{
     //var image = image
@@ -52,7 +51,7 @@ open fun getScale(image: Image)
 }
 
 
-open fun getScale(aWidth: Int, aHeight: Int)
+    open fun getScale(aWidth: Int, aHeight: Int)
         //nullable = true from not(false or (false and false)) = true
 : Float{
     //var aWidth = aWidth
@@ -65,7 +64,7 @@ open fun getScale(aWidth: Int, aHeight: Int)
 }
 
 
-open fun getScale(aWidth: Int, aHeight: Int, add: Int)
+    open fun getScale(aWidth: Int, aHeight: Int, add: Int)
         //nullable = true from not(false or (false and false)) = true
 : Float{
     //var aWidth = aWidth
@@ -106,7 +105,7 @@ open fun getScale(aWidth: Int, aHeight: Int, add: Int)
 }
 
 
-open fun getScaledHeight(aWidth: Int, aHeight: Int)
+    open fun getScaledHeight(aWidth: Int, aHeight: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var aWidth = aWidth
@@ -119,7 +118,7 @@ open fun getScaledHeight(aWidth: Int, aHeight: Int)
 }
 
 
-open fun getScaledHeight(aWidth: Int, aHeight: Int, add: Int)
+    open fun getScaledHeight(aWidth: Int, aHeight: Int, add: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var aWidth = aWidth

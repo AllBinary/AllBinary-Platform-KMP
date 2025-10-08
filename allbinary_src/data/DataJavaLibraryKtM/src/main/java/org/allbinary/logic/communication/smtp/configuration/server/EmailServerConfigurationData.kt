@@ -30,8 +30,7 @@ open public class EmailServerConfigurationData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NAME: String = "EMAIL_SERVER_CONFIGURATION_NAME"
 
@@ -42,7 +41,7 @@ open public class EmailServerConfigurationData
     val PASSWORD: String = "EMAIL_SERVER_CONFIGURATION_PASSWORD"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

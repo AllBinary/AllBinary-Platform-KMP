@@ -48,7 +48,7 @@ open public class PrimitiveLongUtil
     private var currentTotalDigits: Int= 0
 
     private val primitiveLongSingleton: PrimitiveLongSingleton = PrimitiveLongSingleton.getInstance()!!
-public constructor        (powerOfTen: Int)                        
+public constructor (powerOfTen: Int)                        
 
                             : this(powerOfTen, false){
 var powerOfTen = powerOfTen
@@ -67,7 +67,7 @@ var powerOfTen = powerOfTen
                                 
 }
 
-public constructor        (powerOfTen: Int, throwException: Boolean)
+public constructor (powerOfTen: Int, throwException: Boolean)
             : super()
         {
 var powerOfTen = powerOfTen
@@ -79,7 +79,7 @@ this.charArray= CharArray(this.maxDigits)
 }
 
 
-open fun getCharArray(value: Int)
+    open fun getCharArray(value: Int)
         //nullable = true from not(false or (false and false)) = true
 : CharArray{
 var value = value
@@ -160,7 +160,7 @@ this.setCurrentTotalDigits(index)
 }
 
 
-open fun setCurrentTotalDigits(currentTotalDigits: Int)
+    open fun setCurrentTotalDigits(currentTotalDigits: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var currentTotalDigits = currentTotalDigits
@@ -168,7 +168,7 @@ this.currentTotalDigits= currentTotalDigits
 }
 
 
-open fun getCurrentTotalDigits()
+    open fun getCurrentTotalDigits()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -179,7 +179,7 @@ open fun getCurrentTotalDigits()
 }
 
 
-open fun getMaxDigits()
+    open fun getMaxDigits()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

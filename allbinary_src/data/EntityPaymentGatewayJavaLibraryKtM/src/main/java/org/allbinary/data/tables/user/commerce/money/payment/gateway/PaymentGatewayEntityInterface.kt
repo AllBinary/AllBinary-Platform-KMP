@@ -29,26 +29,27 @@ import java.util.Vector
 import org.allbinary.business.user.commerce.money.payment.gateway.PaymentGatewayInterface
 import org.allbinary.business.user.commerce.money.payment.types.BasicPaymentType
 import org.allbinary.data.tables.BasicDataTableInterface
+
 interface PaymentGatewayEntityInterface : BasicDataTableInterface {
         
 
-open fun getPaymentGatewayInterface(storeName: String, paymentType: BasicPaymentType)
+    open fun getPaymentGatewayInterface(storeName: String, paymentType: BasicPaymentType)
         //nullable = true from not(false or (false and false)) = true
 : PaymentGatewayInterface
 
-open fun findPaymentTypeVectorByStore(storeName: String)
+    open fun findPaymentTypeVectorByStore(storeName: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector
 
-open fun remove(storeName: String, paymentType: BasicPaymentType)
+    open fun remove(storeName: String, paymentType: BasicPaymentType)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun add(paymentGatewayInterface: PaymentGatewayInterface)
+    open fun add(paymentGatewayInterface: PaymentGatewayInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun update(paymentGatewayInterface: PaymentGatewayInterface)
+    open fun update(paymentGatewayInterface: PaymentGatewayInterface)
         //nullable = true from not(false or (false and false)) = true
 
 

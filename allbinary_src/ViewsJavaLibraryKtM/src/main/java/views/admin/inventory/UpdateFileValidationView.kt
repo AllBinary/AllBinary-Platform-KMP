@@ -51,15 +51,14 @@ import org.w3c.dom.Node
 open public class UpdateFileValidationView : InventoryItemView
                 , ValidationComponentInterface {
         
-
-        companion object {
+companion object {
             
     private val UPDATEPRODUCT: String = CommonStrings.getInstance()!!.UPDATE
 
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (transformInfoInterface: TransformInfoInterface)                        
+public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
@@ -70,7 +69,7 @@ var transformInfoInterface = transformInfoInterface
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -240,7 +239,7 @@ HttpFileUploadUtil.log(fileItem)
 }
 
 
-open fun toValidationInfoDoc()
+    open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -251,7 +250,7 @@ open fun toValidationInfoDoc()
 }
 
 
-open fun toValidationInfoNode(document: Document)
+    open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -265,7 +264,7 @@ var document = document
 
                 @Throws(Exception::class)
             
-open fun validationInfo()
+    open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -366,7 +365,7 @@ this.validationInfo(stringBuffer, fileName, fileItemFieldName, size)
 
                 @Throws(Exception::class)
             
-open fun isValid(fileName: String, size: Long)
+    open fun isValid(fileName: String, size: Long)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var fileName = fileName
@@ -437,7 +436,7 @@ this.processImageFiles()
 }
 
 
-open fun validationInfo(stringBuffer: StringMaker, fileName: String, fileItemFieldName: String, size: Long)
+    open fun validationInfo(stringBuffer: StringMaker, fileName: String, fileItemFieldName: String, size: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var stringBuffer = stringBuffer

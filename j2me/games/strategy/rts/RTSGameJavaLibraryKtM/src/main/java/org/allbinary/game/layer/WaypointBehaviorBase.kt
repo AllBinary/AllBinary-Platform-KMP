@@ -44,14 +44,14 @@ open public class WaypointBehaviorBase
     var waypointOverridesAttacking: Boolean = true
 
     private var waypoint: WaypointBase
-public constructor        ()
+public constructor ()
             : super()
         {
 this.ownedWaypointList= BasicArrayList(1)
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -62,7 +62,7 @@ open fun getName()
 }
 
 
-open fun isRunning()
+    open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -75,14 +75,14 @@ open fun isRunning()
 
                 @Throws(Exception::class)
             
-open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
+    open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryLayerManager = allBinaryLayerManager
 }
 
 
-open fun getOwnedWaypointList()
+    open fun getOwnedWaypointList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -93,7 +93,7 @@ open fun getOwnedWaypointList()
 }
 
 
-open fun getWaypoint()
+    open fun getWaypoint()
         //nullable = true from not(false or (false and true)) = true
 : WaypointBase{
 
@@ -104,7 +104,7 @@ open fun getWaypoint()
 }
 
 
-open fun setWaypoint(waypoint: WaypointBase)
+    open fun setWaypoint(waypoint: WaypointBase)
         //nullable = true from not(false or (false and false)) = true
 {
     //var waypoint = waypoint
@@ -112,7 +112,7 @@ this.waypoint= waypoint
 }
 
 
-open fun getSteeringVisitorList()
+    open fun getSteeringVisitorList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -123,7 +123,7 @@ open fun getSteeringVisitorList()
 }
 
 
-open fun getMovementLogicAsString()
+    open fun getMovementLogicAsString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -133,7 +133,7 @@ open fun getMovementLogicAsString()
 }
 
 
-open fun isWaypointListEmptyOrOnlyTargets()
+    open fun isWaypointListEmptyOrOnlyTargets()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -143,7 +143,7 @@ open fun isWaypointListEmptyOrOnlyTargets()
 }
 
 
-open fun isInSensorRange(layerInterface: CollidableDestroyableDamageableLayer, targetDistance: Int)
+    open fun isInSensorRange(layerInterface: CollidableDestroyableDamageableLayer, targetDistance: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var layerInterface = layerInterface
@@ -155,7 +155,7 @@ open fun isInSensorRange(layerInterface: CollidableDestroyableDamageableLayer, t
 }
 
 
-open fun getCurrentTargetLayerInterface()
+    open fun getCurrentTargetLayerInterface()
         //nullable = true from not(false or (false and true)) = true
 : CollidableDestroyableDamageableLayer{
 
@@ -165,7 +165,7 @@ open fun getCurrentTargetLayerInterface()
 }
 
 
-open fun getCurrentTargetingStateString()
+    open fun getCurrentTargetingStateString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -175,7 +175,7 @@ open fun getCurrentTargetingStateString()
 }
 
 
-open fun isTrackingWaypoint()
+    open fun isTrackingWaypoint()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -185,7 +185,7 @@ open fun isTrackingWaypoint()
 }
 
 
-open fun getCurrentPathGeographicMapCellPosition()
+    open fun getCurrentPathGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPosition{
 
@@ -195,7 +195,7 @@ open fun getCurrentPathGeographicMapCellPosition()
 }
 
 
-open fun getCurrentGeographicMapCellHistory()
+    open fun getCurrentGeographicMapCellHistory()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellHistory{
 
@@ -205,7 +205,7 @@ open fun getCurrentGeographicMapCellHistory()
 }
 
 
-open fun isWaypointOverridesAttacking()
+    open fun isWaypointOverridesAttacking()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -216,7 +216,7 @@ open fun isWaypointOverridesAttacking()
 }
 
 
-open fun getNextUnvisitedPathGeographicMapCellPosition()
+    open fun getNextUnvisitedPathGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPosition{
 
@@ -226,7 +226,7 @@ open fun getNextUnvisitedPathGeographicMapCellPosition()
 }
 
 
-open fun needToMove()
+    open fun needToMove()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -236,7 +236,7 @@ open fun needToMove()
 }
 
 
-open fun setWaypointPathsList(waypointPathsList: BasicArrayList)
+    open fun setWaypointPathsList(waypointPathsList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var waypointPathsList = waypointPathsList
@@ -247,7 +247,7 @@ open fun setWaypointPathsList(waypointPathsList: BasicArrayList)
 }
 
 
-open fun getWaypointPathsList()
+    open fun getWaypointPathsList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -259,7 +259,7 @@ open fun getWaypointPathsList()
 
                 @Throws(Exception::class)
             
-open fun setTarget(layerInterface: PathFindingLayerInterface)
+    open fun setTarget(layerInterface: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerInterface = layerInterface
@@ -272,7 +272,7 @@ open fun setTarget(layerInterface: PathFindingLayerInterface)
 
                 @Throws(Exception::class)
             
-open fun setTarget(layerInterface: PathFindingLayerInterface, anotherTargetDistance: Int)
+    open fun setTarget(layerInterface: PathFindingLayerInterface, anotherTargetDistance: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerInterface = layerInterface
@@ -286,7 +286,7 @@ open fun setTarget(layerInterface: PathFindingLayerInterface, anotherTargetDista
 
                 @Throws(Exception::class)
             
-open fun clearTarget()
+    open fun clearTarget()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -298,7 +298,7 @@ open fun clearTarget()
 
                 @Throws(Exception::class)
             
-open fun updatePathOnTargetMove(reason: String)
+    open fun updatePathOnTargetMove(reason: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var reason = reason

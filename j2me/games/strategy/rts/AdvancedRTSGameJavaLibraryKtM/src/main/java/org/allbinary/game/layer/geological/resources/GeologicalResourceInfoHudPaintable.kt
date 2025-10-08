@@ -33,20 +33,19 @@ import org.allbinary.graphics.font.MyFont
 
 open public class GeologicalResourceInfoHudPaintable : WaypointInfoHudPaintable {
         
-
-        companion object {
+companion object {
             
     private val RESOURCES: String = "Resources: "
 
         }
             
     private val keyvalueDrawString: KeyValueDrawCharArray
-protected constructor        (){
+protected constructor (){
 keyvalueDrawString= KeyValueDrawCharArray(RESOURCES, this.textX)
 }
 
 
-open fun updateSelectionInfo()
+    open fun updateSelectionInfo()
         //nullable = true from not(false or (false and true)) = true
 {
 super.updateSelectionInfo()
@@ -73,7 +72,7 @@ this.keyvalueDrawString!!.update(this.getPrimitiveLongUtil()!!.getCharArray(tota
 }
 
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

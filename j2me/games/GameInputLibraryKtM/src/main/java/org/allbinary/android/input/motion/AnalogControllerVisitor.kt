@@ -37,7 +37,7 @@ open public class AnalogControllerVisitor
             {
             }            
         
-open fun process(allbinaryLayerManager: AllBinaryLayerManager, analogLocationInputProcessor: AnalogLocationInputProcessor)
+    open fun process(allbinaryLayerManager: AllBinaryLayerManager, analogLocationInputProcessor: AnalogLocationInputProcessor)
         //nullable = true from not(false or (false and false)) = true
 {
 var allbinaryLayerManager = allbinaryLayerManager

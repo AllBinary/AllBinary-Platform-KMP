@@ -28,20 +28,21 @@
 import javax.mail.internet.MimeMessage
 import org.allbinary.data.tree.dom.DomNodeInterface
 import org.allbinary.data.tree.dom.document.mapping.DomDocumentMappingInterface
+
 interface EmailInterface : DomNodeInterface, DomDocumentMappingInterface {
         
 
-open fun getDebugInfo()
+    open fun getDebugInfo()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getMimeMessage()
+    open fun getMimeMessage()
         //nullable = true from not(false or (false and true)) = true
 : MimeMessage
 
                 @Throws(Exception::class)
             
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 : String
 

@@ -55,7 +55,7 @@ open public class HorizontaRotationManeuverAI : BasicAI
     private val baseVelocityInterface: BasicVelocityProperties
 
     private val velocityInterface: VelocityInterface
-public constructor        (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
+public constructor (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
                             : super(ownerLayerInterface, gameInput){
 var ownerLayerInterface = ownerLayerInterface
@@ -82,7 +82,8 @@ this.velocityInterface= baseVelocityInterface as VelocityInterface
 rotationAnimationInterfaceCompositeInterface!!.setFrame(angleIncrementInfo!!.RIGHT_FRAME.toInt())
 }
 
-override fun transition()
+
+    override fun transition()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -103,7 +104,8 @@ allbinaryLayer!!.setPosition(allbinaryLayer!!.getXP(), 1, allbinaryLayer!!.getZP
 
 
                 @Throws(Exception::class)
-            override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+            
+    override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryLayerManager = allBinaryLayerManager
@@ -178,7 +180,7 @@ this.circularIndexUtil!!.next()
 }
 
 
-open fun reverse()
+    open fun reverse()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -219,7 +221,7 @@ this.baseVelocityInterface!!.zero()
 }
 
 
-open fun accelerate()
+    open fun accelerate()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -234,7 +236,7 @@ open fun accelerate()
 }
 
 
-open fun drop()
+    open fun drop()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -263,7 +265,8 @@ open fun drop()
 ownerLayerInterface!!.setPosition(ownerLayerInterface!!.getXP(), y, ownerLayerInterface!!.getZP())
 }
 
-override fun getId()
+
+    override fun getId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

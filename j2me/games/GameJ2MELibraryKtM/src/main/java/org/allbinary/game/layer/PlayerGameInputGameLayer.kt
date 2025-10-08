@@ -40,7 +40,7 @@ open public class PlayerGameInputGameLayer : AllBinaryGameLayer
         
 
     private var playerGameInput: PlayerGameInput
-public constructor        (playerInputId: Int)                        
+public constructor (playerInputId: Int)                        
 
                             : super(Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 0, 0), StaticViewPosition(0, 0, 0)){
 var playerInputId = playerInputId
@@ -55,7 +55,8 @@ this.playerGameInput= PlayerGameInput(this.getGameKeyEventList(), playerInputId)
 logUtil!!.put("Danger Danger Danger: Should Not Be Called Except For Testing Input", this, canvasStrings!!.PAINT)
 }
 
-override fun getPlayerGameInput()
+
+    override fun getPlayerGameInput()
         //nullable = true from not(false or (false and true)) = true
 : PlayerGameInput{
 
@@ -65,20 +66,23 @@ override fun getPlayerGameInput()
                         return this.playerGameInput
 }
 
-override fun initInputProcessors()
+
+    override fun initInputProcessors()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
                 @Throws(Exception::class)
-            override fun processInput(myManager: AllBinaryLayerManager)
+            
+    override fun processInput(myManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var myManager = myManager
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

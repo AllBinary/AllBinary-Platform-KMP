@@ -34,12 +34,11 @@ open public class TouchScreenFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: TouchScreenFactory = TouchScreenFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TouchScreenFactory{
 
@@ -61,7 +60,7 @@ open fun getInstance()
     private var multiTouchDistinct: Boolean= false
 
     private var touchScreenType: TouchScreenType = TouchScreenTypesFactory.getInstance()!!.NOTOUCH
-private constructor        ()
+private constructor ()
             : super()
         {
 
@@ -79,7 +78,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, SINGLETON, commonStrings!!.GET_INSTANCE
 }
 
 
-open fun setMultiTouch(multiTouch: Boolean)
+    open fun setMultiTouch(multiTouch: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var multiTouch = multiTouch
@@ -87,7 +86,7 @@ this.multiTouch= multiTouch
 }
 
 
-open fun isMultiTouch()
+    open fun isMultiTouch()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -98,7 +97,7 @@ open fun isMultiTouch()
 }
 
 
-open fun setTouch(touch: Boolean)
+    open fun setTouch(touch: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var touch = touch
@@ -106,7 +105,7 @@ this.touch= touch
 }
 
 
-open fun isTouch()
+    open fun isTouch()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -117,7 +116,7 @@ open fun isTouch()
 }
 
 
-open fun setMultiTouchDistinct(multiTouchDistinct: Boolean)
+    open fun setMultiTouchDistinct(multiTouchDistinct: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var multiTouchDistinct = multiTouchDistinct
@@ -125,7 +124,7 @@ this.multiTouchDistinct= multiTouchDistinct
 }
 
 
-open fun isMultiTouchDistinct()
+    open fun isMultiTouchDistinct()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -136,7 +135,7 @@ open fun isMultiTouchDistinct()
 }
 
 
-open fun setTouchScreenType(touchScreenType: TouchScreenType)
+    open fun setTouchScreenType(touchScreenType: TouchScreenType)
         //nullable = true from not(false or (false and false)) = true
 {
 var touchScreenType = touchScreenType
@@ -144,7 +143,7 @@ this.touchScreenType= touchScreenType
 }
 
 
-open fun getTouchScreenType()
+    open fun getTouchScreenType()
         //nullable = true from not(false or (false and true)) = true
 : TouchScreenType{
 
@@ -154,7 +153,8 @@ open fun getTouchScreenType()
                         return touchScreenType
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

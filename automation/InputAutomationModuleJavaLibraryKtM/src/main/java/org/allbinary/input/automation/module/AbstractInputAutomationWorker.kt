@@ -59,7 +59,7 @@ open public class AbstractInputAutomationWorker
     private var motionRectanglesWorker: MotionRectanglesWorker
 
     private var captureThread: Thread
-public constructor        (inputAutomationActionInterface: InputAutomationActionInterface)
+public constructor (inputAutomationActionInterface: InputAutomationActionInterface)
             : super()
         {
 var inputAutomationActionInterface = inputAutomationActionInterface
@@ -68,7 +68,7 @@ var inputAutomationActionInterface = inputAutomationActionInterface
 
                 @Throws(Exception::class)
             
-open fun setThread(thread: Thread)
+    open fun setThread(thread: Thread)
         //nullable = true from not(false or (false and false)) = true
 {
 var thread = thread
@@ -76,7 +76,7 @@ var thread = thread
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun isRunning()
+    open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -88,7 +88,7 @@ open fun isRunning()
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun setRunning(running: Boolean)
+    open fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var running = running
@@ -97,7 +97,7 @@ this.running= running
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun isAnyDataWorkerRunning()
+    open fun isAnyDataWorkerRunning()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -126,7 +126,7 @@ open fun isAnyDataWorkerRunning()
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun startDataWorkers()
+    open fun startDataWorkers()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -146,7 +146,7 @@ captureThread!!.start()
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun waitForDataWorkers()
+    open fun waitForDataWorkers()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -161,7 +161,7 @@ Thread.sleep(250)
 
                 @Throws(Exception::class)
             
-open fun stopDataWorkers()
+    open fun stopDataWorkers()
         //nullable = true from not(false or (false and true)) = true
 {
 this.getCaptureWorker()!!.setRunning(false)
@@ -170,7 +170,7 @@ this.getCaptureWorker()!!.setRunning(false)
 
                 @Throws(Exception::class)
             
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -180,7 +180,7 @@ open fun process()
 }
 
 
-open fun run()
+    open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -210,7 +210,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
 }
 
 
-open fun getInputAutomationActionInterface()
+    open fun getInputAutomationActionInterface()
         //nullable = true from not(false or (false and true)) = true
 : InputAutomationActionInterface{
 
@@ -221,7 +221,7 @@ open fun getInputAutomationActionInterface()
 }
 
 
-open fun setInputAutomationActionInterface(inputAutomationActionInterface: InputAutomationActionInterface)
+    open fun setInputAutomationActionInterface(inputAutomationActionInterface: InputAutomationActionInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var inputAutomationActionInterface = inputAutomationActionInterface
@@ -229,7 +229,7 @@ this.inputAutomationActionInterface= inputAutomationActionInterface
 }
 
 
-open fun getCaptureWorker()
+    open fun getCaptureWorker()
         //nullable = true from not(false or (false and true)) = true
 : CaptureWorkerInterface{
 
@@ -240,7 +240,7 @@ open fun getCaptureWorker()
 }
 
 
-open fun setCaptureWorker(captureWorkerInterface: CaptureWorkerInterface)
+    open fun setCaptureWorker(captureWorkerInterface: CaptureWorkerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var captureWorkerInterface = captureWorkerInterface
@@ -248,7 +248,7 @@ this.captureWorkerInterface= captureWorkerInterface
 }
 
 
-open fun getImageComparisonWorker()
+    open fun getImageComparisonWorker()
         //nullable = true from not(false or (false and true)) = true
 : ImageComparisonWorker{
 
@@ -259,7 +259,7 @@ open fun getImageComparisonWorker()
 }
 
 
-open fun setImageComparisonWorker(imageComparisonWorker: ImageComparisonWorker)
+    open fun setImageComparisonWorker(imageComparisonWorker: ImageComparisonWorker)
         //nullable = true from not(false or (false and false)) = true
 {
 var imageComparisonWorker = imageComparisonWorker
@@ -267,7 +267,7 @@ this.imageComparisonWorker= imageComparisonWorker
 }
 
 
-open fun getMotionRectanglesWorker()
+    open fun getMotionRectanglesWorker()
         //nullable = true from not(false or (false and true)) = true
 : MotionRectanglesWorker{
 
@@ -278,7 +278,7 @@ open fun getMotionRectanglesWorker()
 }
 
 
-open fun setMotionRectanglesWorker(motionRectanglesWorker: MotionRectanglesWorker)
+    open fun setMotionRectanglesWorker(motionRectanglesWorker: MotionRectanglesWorker)
         //nullable = true from not(false or (false and false)) = true
 {
 var motionRectanglesWorker = motionRectanglesWorker

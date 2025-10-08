@@ -45,7 +45,7 @@ open public class NativeLibraryHelperWrapper
     private var loader: ClassLoader
 
     private var anyType: Any
-public constructor        (libraryName: String)
+public constructor (libraryName: String)
             : super()
         {
 var libraryName = libraryName
@@ -55,7 +55,7 @@ this.setLibraryName(libraryName)
 
                 @Throws(Exception::class)
             
-open fun load()
+    open fun load()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -86,7 +86,7 @@ method.invoke(anyType,
 }
 
 
-open fun unload()
+    open fun unload()
         //nullable = true from not(false or (false and true)) = true
 {
 this.anyType= 
@@ -99,7 +99,8 @@ System.gc()
 System.gc()
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -110,7 +111,7 @@ override fun toString()
 }
 
 
-open fun getLibraryName()
+    open fun getLibraryName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -121,7 +122,7 @@ open fun getLibraryName()
 }
 
 
-open fun setLibraryName(libraryName: String)
+    open fun setLibraryName(libraryName: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var libraryName = libraryName

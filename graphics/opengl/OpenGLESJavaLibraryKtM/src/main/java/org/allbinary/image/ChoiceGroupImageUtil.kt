@@ -36,12 +36,11 @@ open public class ChoiceGroupImageUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ChoiceGroupImageUtil = ChoiceGroupImageUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ChoiceGroupImageUtil{
 
@@ -59,7 +58,7 @@ open fun getInstance()
             {
             }            
         
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -100,7 +99,7 @@ choiceGroupFactory!!.init(imageArray)
 }
 
 
-open fun update(gl: GL)
+    open fun update(gl: GL)
         //nullable = true from not(false or (false and false)) = true
 {
 var gl = gl
@@ -142,7 +141,7 @@ choiceGroupFactory!!.init(imageArray)
 }
 
 
-open fun update(graphics: Graphics)
+    open fun update(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

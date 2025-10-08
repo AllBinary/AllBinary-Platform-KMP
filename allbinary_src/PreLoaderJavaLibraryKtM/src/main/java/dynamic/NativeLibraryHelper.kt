@@ -34,7 +34,7 @@ open public class NativeLibraryHelper
         
 
     private var library: String
-public constructor        (library: String)
+public constructor (library: String)
             : super()
         {
 var library = library
@@ -42,7 +42,7 @@ this.library= library
 }
 
 
-open fun load()
+    open fun load()
         //nullable = true from not(false or (false and true)) = true
 {
 System.loadLibrary(library)

@@ -33,10 +33,9 @@ open public class CategoryLoaderFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getInstance(categoryFactoryInterface: CategoryFactoryInterface)
+    open fun getInstance(categoryFactoryInterface: CategoryFactoryInterface)
         //nullable =  from not(true or (false and false)) = 
 : CategoryLoaderInterface{
 var categoryFactoryInterface = categoryFactoryInterface
@@ -75,7 +74,7 @@ var categoryFactoryInterface = categoryFactoryInterface
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

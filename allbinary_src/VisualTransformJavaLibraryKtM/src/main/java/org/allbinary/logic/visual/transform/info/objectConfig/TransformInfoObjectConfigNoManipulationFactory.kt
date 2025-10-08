@@ -36,12 +36,11 @@ open public class TransformInfoObjectConfigNoManipulationFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: TransformInfoObjectConfigNoManipulationFactory = TransformInfoObjectConfigNoManipulationFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TransformInfoObjectConfigNoManipulationFactory{
 
@@ -55,7 +54,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -63,7 +62,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getInstance(transformInfoInterface: TransformInfoInterface, objectConfigFileAbPath: AbPath)
+    open fun getInstance(transformInfoInterface: TransformInfoInterface, objectConfigFileAbPath: AbPath)
         //nullable =  from not(true or (false and false)) = 
 : TransformInfoObjectConfigInterface{
 var transformInfoInterface = transformInfoInterface

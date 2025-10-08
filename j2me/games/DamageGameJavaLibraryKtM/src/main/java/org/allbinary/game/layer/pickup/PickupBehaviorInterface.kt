@@ -25,16 +25,17 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface PickupBehaviorInterface {
         
 
                 @Throws(Exception::class)
             
-open fun doPickup(pickupProcessorInterface: PickupProcessorInterface)
+    open fun doPickup(pickupProcessorInterface: PickupProcessorInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun doPickup(pickupLayerInterface: PickedUpLayerInterface)
+    open fun doPickup(pickupLayerInterface: PickedUpLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 
 

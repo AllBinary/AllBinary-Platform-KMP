@@ -32,12 +32,11 @@ open public class NoHardwareComponent
         
                 , HardwareComponentInterface {
         
-
-        companion object {
+companion object {
             
     private val instance: NoHardwareComponent = NoHardwareComponent()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : NoHardwareComponent{
 
@@ -54,7 +53,8 @@ open fun getInstance()
             public constructor() : super()
             {
             }            
-        override fun compareTo(componentInterface: HardwareComponentInterface)
+        
+    override fun compareTo(componentInterface: HardwareComponentInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var componentInterface = componentInterface
@@ -78,7 +78,8 @@ var componentInterface = componentInterface
                         return false
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

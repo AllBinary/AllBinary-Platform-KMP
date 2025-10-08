@@ -52,8 +52,7 @@ import views.business.context.modules.storefront.HttpStoreComponentView
 open public class DownloadableInventoryItemView : HttpStoreComponentView
                 , RequestMapInterface {
         
-
-        companion object {
+companion object {
             
     var TYPE_ID: Int = 11
 
@@ -70,7 +69,7 @@ open public class DownloadableInventoryItemView : HttpStoreComponentView
     var downloadableItem: DownloadableItem
 
     private var requestHashMap: HashMap<Any, Any>
-public constructor        (transformInfoInterface: TransformInfoInterface)                        
+public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
@@ -82,7 +81,7 @@ this.request= this.getPageContext()!!.getRequest() as HttpServletRequest
 this.getFormData()
 }
 
-public constructor        (transformInfoInterface: TransformInfoInterface, empty: String)                        
+public constructor (transformInfoInterface: TransformInfoInterface, empty: String)                        
 
                             : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
@@ -95,7 +94,7 @@ this.request= this.getPageContext()!!.getRequest() as HttpServletRequest
 }
 
 
-open fun getTypeId()
+    open fun getTypeId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -108,7 +107,7 @@ open fun getTypeId()
 
                 @Throws(Exception::class)
             
-open fun getFormData()
+    open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setRequestHashMap(MultipartRequestParams(request).
@@ -117,7 +116,7 @@ this.id= this.getRequestHashMap()!!.get(BasicItemData.ID) as String
 }
 
 
-open fun addDomNodeInterfaces()
+    open fun addDomNodeInterfaces()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -140,7 +139,7 @@ this.addDomNodeInterface(BasicItemView(itemInterface, vector))
 
                 @Throws(Exception::class)
             
-open fun view()
+    open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -173,7 +172,7 @@ open fun view()
 
                 @Throws(Exception::class)
             
-open fun processFile(fileItem: FileItem)
+    open fun processFile(fileItem: FileItem)
         //nullable = true from not(false or (false and false)) = true
 {
     //var fileItem = fileItem
@@ -207,7 +206,7 @@ FileUtil.getInstance()!!.write(ByteArrayInputStream(byteArray), file)
 
                 @Throws(Exception::class)
             
-open fun unzip(fileItem: FileItem)
+    open fun unzip(fileItem: FileItem)
         //nullable = true from not(false or (false and false)) = true
 {
     //var fileItem = fileItem
@@ -231,7 +230,7 @@ ZipFileUtil.getInstance()!!.unzip(fullPath, file, fileName)
 }
 
 
-open fun getItemFilePath()
+    open fun getItemFilePath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -259,7 +258,7 @@ stringBuffer!!.append(filePathData!!.SEPARATOR)
 }
 
 
-open fun setRequestHashMap(requestHashMap: HashMap<Any, Any>)
+    open fun setRequestHashMap(requestHashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var requestHashMap = requestHashMap
@@ -267,7 +266,7 @@ this.requestHashMap= requestHashMap
 }
 
 
-open fun getRequestHashMap()
+    open fun getRequestHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -278,7 +277,7 @@ open fun getRequestHashMap()
 }
 
 
-open fun getDownloadableItem()
+    open fun getDownloadableItem()
         //nullable = true from not(false or (false and true)) = true
 : DownloadableItem{
 

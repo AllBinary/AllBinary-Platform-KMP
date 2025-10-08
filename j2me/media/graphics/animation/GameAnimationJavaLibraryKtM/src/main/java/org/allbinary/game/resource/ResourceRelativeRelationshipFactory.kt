@@ -45,7 +45,8 @@ open public class ResourceRelativeRelationshipFactory
     private var initialized: Boolean= false
 
                 @Throws(Exception::class)
-            override fun init(level: Int)
+            
+    override fun init(level: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var level = level
@@ -54,7 +55,8 @@ this.setInitialized(true)
 
 
                 @Throws(Exception::class)
-            override fun getResourceRelativeRelationshipList(resource: String)
+            
+    override fun getResourceRelativeRelationshipList(resource: String)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var resource = resource
@@ -67,7 +69,8 @@ var resource = resource
 
 
                 @Throws(Exception::class)
-            override fun addResourceRelativeRelationship(resource: String, hardPoint: RelativeRelationship)
+            
+    override fun addResourceRelativeRelationship(resource: String, hardPoint: RelativeRelationship)
         //nullable = true from not(false or (false and false)) = true
 {
 var resource = resource
@@ -90,7 +93,8 @@ list.add(hardPoint)
 this.hashtable.put(resource, list)
 }
 
-override fun isLoadingLevel(level: Int)
+
+    override fun isLoadingLevel(level: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var level = level
@@ -101,7 +105,8 @@ var level = level
                         return false
 }
 
-override fun isFeature()
+
+    override fun isFeature()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -112,7 +117,7 @@ override fun isFeature()
 }
 
 
-open fun setInitialized(initialized: Boolean)
+    open fun setInitialized(initialized: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var initialized = initialized
@@ -120,7 +125,7 @@ this.initialized= initialized
 }
 
 
-open fun isInitialized()
+    open fun isInitialized()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

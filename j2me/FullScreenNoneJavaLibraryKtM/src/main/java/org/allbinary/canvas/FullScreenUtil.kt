@@ -34,12 +34,11 @@ open public class FullScreenUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: FullScreenUtil = FullScreenUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : FullScreenUtil{
 
@@ -59,7 +58,7 @@ open fun getInstance()
         
                 @Throws(Exception::class)
             
-open fun init(fullScreenInterface: Canvas, commandListener: CommandListener)
+    open fun init(fullScreenInterface: Canvas, commandListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 {
     //var fullScreenInterface = fullScreenInterface
@@ -78,14 +77,14 @@ open fun init(fullScreenInterface: Canvas, commandListener: CommandListener)
 }
 
 
-open fun init(fullScreenInterface: Canvas)
+    open fun init(fullScreenInterface: Canvas)
         //nullable = true from not(false or (false and false)) = true
 {
     //var fullScreenInterface = fullScreenInterface
 }
 
 
-open fun isScreenChange(isFullScreen: Boolean)
+    open fun isScreenChange(isFullScreen: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var isFullScreen = isFullScreen
@@ -116,7 +115,7 @@ open fun isScreenChange(isFullScreen: Boolean)
 }
 
 
-open fun isScreenChange(fullScreenInterface: Canvas)
+    open fun isScreenChange(fullScreenInterface: Canvas)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var fullScreenInterface = fullScreenInterface

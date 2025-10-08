@@ -31,8 +31,7 @@ open public class UserConfigurationData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NAME: String = "USER_CONFIGURATION_NAME"
 
@@ -41,7 +40,7 @@ open public class UserConfigurationData
     val ENCRYPTED_EXTENSION: String = DataFileData.ENCRYPTED_EXTENSION
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

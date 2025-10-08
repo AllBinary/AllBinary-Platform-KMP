@@ -31,7 +31,7 @@ import org.allbinary.osgi.service.InputAutomationServiceConsumer
 
 open public class InputAutomationRobotServiceConsumer : InputAutomationServiceConsumer {
         
-public constructor        (bundleContext: BundleContext)                        
+public constructor (bundleContext: BundleContext)                        
 
                             : super(InputAutomationRobotServiceInterface::class.toString()!!, bundleContext, InputAutomationRobotOSGIServiceVisitor()){
 var bundleContext = bundleContext

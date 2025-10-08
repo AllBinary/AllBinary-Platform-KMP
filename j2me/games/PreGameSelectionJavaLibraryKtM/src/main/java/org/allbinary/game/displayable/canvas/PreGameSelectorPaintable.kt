@@ -39,7 +39,7 @@ open public class PreGameSelectorPaintable : InitUpdatePaintable {
     private var canvasDrawLineString: CanvasDrawLineString
 
     private val preGameScrollSelectionForm: PreGameScrollSelectionForm
-public constructor        (title: String, preGameScrollSelectionForm: PreGameScrollSelectionForm){
+public constructor (title: String, preGameScrollSelectionForm: PreGameScrollSelectionForm){
 var title = title
 var preGameScrollSelectionForm = preGameScrollSelectionForm
 this.title= title
@@ -51,7 +51,7 @@ this.preGameScrollSelectionForm= preGameScrollSelectionForm
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -61,7 +61,7 @@ this.canvasDrawLineString= CanvasDrawLineString(displayInfo!!.getLastHalfWidth()
 }
 
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -71,7 +71,7 @@ this.getPreGameSelectionForm()!!.paint(graphics)
 }
 
 
-open fun getPreGameSelectionForm()
+    open fun getPreGameSelectionForm()
         //nullable = true from not(false or (false and true)) = true
 : PreGameScrollSelectionForm{
 

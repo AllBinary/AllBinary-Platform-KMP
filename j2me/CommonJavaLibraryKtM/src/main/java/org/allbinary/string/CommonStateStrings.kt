@@ -30,12 +30,11 @@ open public class CommonStateStrings
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: CommonStateStrings = CommonStateStrings()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CommonStateStrings{
 

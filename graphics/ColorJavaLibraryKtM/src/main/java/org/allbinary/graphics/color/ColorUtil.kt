@@ -33,12 +33,11 @@ open public class ColorUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ColorUtil = ColorUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ColorUtil{
 
@@ -56,7 +55,7 @@ open fun getInstance()
             {
             }            
         
-open fun isGreyishOrWhiteLike(color: Color)
+    open fun isGreyishOrWhiteLike(color: Color)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var color = color
@@ -81,7 +80,7 @@ open fun isGreyishOrWhiteLike(color: Color)
 }
 
 
-open fun isDark(color: Color)
+    open fun isDark(color: Color)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var color = color

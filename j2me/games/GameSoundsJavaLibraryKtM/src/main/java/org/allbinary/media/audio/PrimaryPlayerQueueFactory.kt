@@ -30,12 +30,11 @@ open public class PrimaryPlayerQueueFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: PlayerQueue = PlayerQueue(4)
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PlayerQueue{
 

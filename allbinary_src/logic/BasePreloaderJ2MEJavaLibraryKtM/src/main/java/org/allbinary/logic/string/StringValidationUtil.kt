@@ -30,12 +30,11 @@ open public class StringValidationUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: StringValidationUtil = StringValidationUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : StringValidationUtil{
 
@@ -49,13 +48,13 @@ open fun getInstance()
         }
             
     private val stringUtil: StringUtil = StringUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun containsSpaces(value: String)
+    open fun containsSpaces(value: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var value = value
@@ -80,7 +79,7 @@ var value = value
 }
 
 
-open fun isNumber(value: String)
+    open fun isNumber(value: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var value = value
@@ -142,7 +141,7 @@ var value = value
 }
 
 
-open fun isNumber(digit: Char)
+    open fun isNumber(digit: Char)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var digit = digit
@@ -167,7 +166,7 @@ var digit = digit
 }
 
 
-open fun isValidRequired(value: String, min: Int, max: Int)
+    open fun isValidRequired(value: String, min: Int, max: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var value = value
@@ -196,7 +195,7 @@ var max = max
 }
 
 
-open fun isValidRequiredNumber(value: String, min: Int, max: Int)
+    open fun isValidRequiredNumber(value: String, min: Int, max: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var value = value
@@ -236,7 +235,7 @@ var max = max
 }
 
 
-open fun isValidNotRequired(value: String, min: Int, max: Int)
+    open fun isValidNotRequired(value: String, min: Int, max: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var value = value
@@ -273,7 +272,7 @@ var max = max
 }
 
 
-open fun isValidNotRequiredNumber(value: String, min: Int, max: Int)
+    open fun isValidNotRequiredNumber(value: String, min: Int, max: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var value = value
@@ -323,7 +322,7 @@ var max = max
 }
 
 
-open fun isEmpty(string: String)
+    open fun isEmpty(string: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var string = string

@@ -33,10 +33,9 @@ open public class AngleInfo
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getInstance(angleIncrement: Short)
+    open fun getInstance(angleIncrement: Short)
         //nullable =  from not(true or (false and false)) = 
 : AngleInfo{
 var angleIncrement = angleIncrement
@@ -55,7 +54,7 @@ var angleIncrement = angleIncrement
     private val angleIncrementInfo: AngleIncrementInfo
 
     private var angle: Short = 0
-private constructor        (angleIncrementInfo: AngleIncrementInfo)
+private constructor (angleIncrementInfo: AngleIncrementInfo)
             : super()
         {
 var angleIncrementInfo = angleIncrementInfo
@@ -65,7 +64,7 @@ this.angleIncrementInfo= angleIncrementInfo
 
     private val frameUtil: FrameUtil = FrameUtil.getInstance()!!
 
-open fun adjustAngle(frame: Int)
+    open fun adjustAngle(frame: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var frame = frame
@@ -76,7 +75,7 @@ this.setAngle(frameUtil!!.adjustAngleToFrameAngle(newAngle).toShort())
 }
 
 
-open fun getAngle()
+    open fun getAngle()
         //nullable = true from not(false or (false and true)) = true
 : Short{
 
@@ -87,7 +86,7 @@ open fun getAngle()
 }
 
 
-open fun setAngle(angle: Short)
+    open fun setAngle(angle: Short)
         //nullable = true from not(false or (false and false)) = true
 {
 var angle = angle
@@ -95,7 +94,7 @@ this.angle= angle
 }
 
 
-open fun getAngleIncrementInfo()
+    open fun getAngleIncrementInfo()
         //nullable = true from not(false or (false and true)) = true
 : AngleIncrementInfo{
 
@@ -105,7 +104,8 @@ open fun getAngleIncrementInfo()
                         return this.angleIncrementInfo
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

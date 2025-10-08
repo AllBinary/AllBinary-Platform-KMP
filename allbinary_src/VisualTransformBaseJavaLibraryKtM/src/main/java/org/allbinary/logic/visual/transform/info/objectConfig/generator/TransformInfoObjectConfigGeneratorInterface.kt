@@ -25,12 +25,13 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface TransformInfoObjectConfigGeneratorInterface {
         
 
                 @Throws(Exception::class)
             
-open fun process(input: String)
+    open fun process(input: String)
         //nullable = true from not(false or (false and false)) = true
 : String
 

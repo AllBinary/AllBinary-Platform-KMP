@@ -33,14 +33,15 @@ open public class BasicAdvertisementCategory
         
 
     private var categoryId: String
-public constructor        (categoryId: String)
+public constructor (categoryId: String)
             : super()
         {
 var categoryId = categoryId
 this.categoryId= categoryId
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

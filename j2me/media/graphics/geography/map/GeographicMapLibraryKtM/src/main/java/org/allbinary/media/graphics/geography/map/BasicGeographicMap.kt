@@ -44,7 +44,7 @@ open public class BasicGeographicMap : SimpleGeographicMap
     private val geographicMapCellPositionFactoryInterface: GeographicMapCellPositionFactoryInterface
 
     private val geographicMapCellTypeFactory: GeographicMapCellTypeFactory
-public constructor        (id: Integer, name: String, cellTypeIdToGeographicMapCellType: IntArray, tiledLayer: AllBinaryTiledLayer, foregroundBasicColor: BasicColor, backgroundBasicColor: BasicColor, geographicMapCellPositionFactoryInterface: GeographicMapCellPositionFactoryInterface, geographicMapCellPositionBaseFactory: GeographicMapCellPositionBaseFactory, geographicMapCellTypeFactory: GeographicMapCellTypeFactory)                        
+public constructor (id: Integer, name: String, cellTypeIdToGeographicMapCellType: IntArray, tiledLayer: AllBinaryTiledLayer, foregroundBasicColor: BasicColor, backgroundBasicColor: BasicColor, geographicMapCellPositionFactoryInterface: GeographicMapCellPositionFactoryInterface, geographicMapCellPositionBaseFactory: GeographicMapCellPositionBaseFactory, geographicMapCellTypeFactory: GeographicMapCellTypeFactory)                        
 
                             : super(id, name, cellTypeIdToGeographicMapCellType, tiledLayer, foregroundBasicColor, backgroundBasicColor){
     //var id = id
@@ -68,7 +68,7 @@ this.geographicMapCellTypeFactory= geographicMapCellTypeFactory
 
                 @Throws(Exception::class)
             
-open fun getCellPosition(direction: Int, oldGeographicMapCellPosition: GeographicMapCellPosition)
+    open fun getCellPosition(direction: Int, oldGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellPosition{
     //var direction = direction
@@ -114,7 +114,7 @@ else -> {
 
                 @Throws(Exception::class)
             
-open fun getCellPositionNoThrow(direction: Int, oldGeographicMapCellPosition: GeographicMapCellPosition)
+    open fun getCellPositionNoThrow(direction: Int, oldGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellPosition{
     //var direction = direction
@@ -229,7 +229,7 @@ else -> {
 
                 @Throws(Exception::class)
             
-open fun isOfFourDirections(oldGeographicMapCellPosition: GeographicMapCellPosition, newGeographicMapCellPosition: GeographicMapCellPosition)
+    open fun isOfFourDirections(oldGeographicMapCellPosition: GeographicMapCellPosition, newGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var oldGeographicMapCellPosition = oldGeographicMapCellPosition
@@ -266,7 +266,7 @@ open fun isOfFourDirections(oldGeographicMapCellPosition: GeographicMapCellPosit
 
                 @Throws(Exception::class)
             
-open fun getCellPositionAt(x: Int, y: Int)
+    open fun getCellPositionAt(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellPosition{
     //var x = x
@@ -290,7 +290,7 @@ open fun getCellPositionAt(x: Int, y: Int)
 
                 @Throws(Exception::class)
             
-open fun getCellPositionAtNoThrow(x: Int, y: Int)
+    open fun getCellPositionAtNoThrow(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellPosition{
     //var x = x
@@ -331,7 +331,7 @@ open fun getCellPositionAtNoThrow(x: Int, y: Int)
 
                 @Throws(Exception::class)
             
-open fun isOnMap(geographicMapCellPosition: GeographicMapCellPosition)
+    open fun isOnMap(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var geographicMapCellPosition = geographicMapCellPosition
@@ -371,7 +371,7 @@ open fun isOnMap(geographicMapCellPosition: GeographicMapCellPosition)
 
                 @Throws(Exception::class)
             
-open fun getCellPositionAtNoThrow(x: Int, y: Int, x2: Int, y2: Int, geographicMapCellPositionList: BasicArrayList)
+    open fun getCellPositionAtNoThrow(x: Int, y: Int, x2: Int, y2: Int, geographicMapCellPositionList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var x = x
@@ -432,7 +432,7 @@ geographicMapCellPositionList!!.clear()
 
                 @Throws(Exception::class)
             
-open fun getCellPositionsAt(layer: Layer, currentCellPositionArray: Array<Array<GeographicMapCellPosition?>?>, cellPositionArray: Array<Array<GeographicMapCellPosition?>?>)
+    open fun getCellPositionsAt(layer: Layer, currentCellPositionArray: Array<Array<GeographicMapCellPosition?>?>, cellPositionArray: Array<Array<GeographicMapCellPosition?>?>)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var layer = layer
@@ -499,7 +499,7 @@ cellPositionArray[index]!![index2]= this.getCellPositionAt(x, y)
 
                 @Throws(Exception::class)
             
-open fun getCellTypeAt(x: Int, y: Int)
+    open fun getCellTypeAt(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellType{
 var x = x
@@ -515,7 +515,7 @@ var y = y
 }
 
 
-open fun getGeographicMapCellPositionFactory()
+    open fun getGeographicMapCellPositionFactory()
         //nullable = true from not(false or (false and true)) = true
 : BasicGeographicMapCellPositionFactory{
 
@@ -526,7 +526,7 @@ open fun getGeographicMapCellPositionFactory()
 }
 
 
-open fun getGeographicMapCellPositionFactoryInterface()
+    open fun getGeographicMapCellPositionFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPositionFactoryInterface{
 
@@ -537,7 +537,7 @@ open fun getGeographicMapCellPositionFactoryInterface()
 }
 
 
-open fun getGeographicMapCellTypeFactory()
+    open fun getGeographicMapCellTypeFactory()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellTypeFactory{
 

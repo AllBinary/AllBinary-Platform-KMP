@@ -34,12 +34,11 @@ import org.allbinary.string.CommonSeps
 
 open public class LayerManagerLogging : LayerManagerLoggingBase {
         
-
-        companion object {
+companion object {
             
     private val instance: LayerManagerLogging = LayerManagerLogging()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : LayerManagerLogging{
 
@@ -80,7 +79,8 @@ open fun getInstance()
     private val CLEAR: String = " Clear List"
 
                 @Throws(Exception::class)
-            override fun append(layerInterface: AllBinaryLayer)
+            
+    override fun append(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerInterface = layerInterface
@@ -88,7 +88,8 @@ stringBuilder!!.delete(0, stringBuilder!!.length())
 logUtil!!.put(stringBuilder!!.append(this.hashCode())!!.append(APPEND_)!!.append(layerInterface!!.getName())!!.toString(), this, APPEND)
 }
 
-override fun append(layerInterface: AllBinaryLayer, index: Int)
+
+    override fun append(layerInterface: AllBinaryLayer, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerInterface = layerInterface
@@ -97,7 +98,8 @@ stringBuilder!!.delete(0, stringBuilder!!.length())
 logUtil!!.put(stringBuilder!!.append(this.hashCode())!!.append(APPEND_)!!.append(layerInterface!!.getName())!!.append(_AT_)!!.append(index)!!.toString(), this, APPEND)
 }
 
-override fun remove(layerInterface: AllBinaryLayer)
+
+    override fun remove(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerInterface = layerInterface
@@ -121,7 +123,8 @@ logUtil!!.put(stringBuilder!!.append(this.hashCode())!!.append(ATTEMPT_REMOVE_)!
                             
 }
 
-override fun remove(layerManager: LayerManager, layerInterface: AllBinaryLayer, result: Boolean)
+
+    override fun remove(layerManager: LayerManager, layerInterface: AllBinaryLayer, result: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerManager = layerManager
@@ -167,7 +170,7 @@ LayerManagerLogging.removeFailed= true
 }
 
 
-open fun log(layerManager: LayerManager)
+    open fun log(layerManager: LayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerManager = layerManager
@@ -197,7 +200,8 @@ stringBuilder!!.append(allBinaryLayer!!.getName())!!.append(commonSeps!!.COMMA)
 logUtil!!.put(stringBuilder!!.toString(), this, REMOVE)
 }
 
-override fun clear()
+
+    override fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 stringBuilder!!.delete(0, stringBuilder!!.length())

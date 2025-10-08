@@ -52,13 +52,13 @@ open public class MotionGestureConfiguration
     private var mouseButtonMask: Int = 0
 
     private var activeCommands: BasicArrayList = BasicArrayList()
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun getMotionGestureAction(index: Int)
+    open fun getMotionGestureAction(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : CompleteMotionGestureInputEvent{
 var index = index
@@ -83,7 +83,7 @@ var index = index
 }
 
 
-open fun addMotionGestureAction(list: BasicArrayList, commandAction: CompleteMotionGestureInputEvent)
+    open fun addMotionGestureAction(list: BasicArrayList, commandAction: CompleteMotionGestureInputEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var list = list
@@ -92,14 +92,14 @@ activeCommands!!.add(MotionGestureToMotionGestureActionAssociation(list, command
 }
 
 
-open fun clearMotionGestureAction()
+    open fun clearMotionGestureAction()
         //nullable = true from not(false or (false and true)) = true
 {
 activeCommands!!.clear()
 }
 
 
-open fun getAssociateCommandActionsList()
+    open fun getAssociateCommandActionsList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -110,7 +110,7 @@ open fun getAssociateCommandActionsList()
 }
 
 
-open fun isDiagonalMotionGestureAllowed()
+    open fun isDiagonalMotionGestureAllowed()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -121,7 +121,7 @@ open fun isDiagonalMotionGestureAllowed()
 }
 
 
-open fun isExecutingActionsAllowed()
+    open fun isExecutingActionsAllowed()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -132,7 +132,7 @@ open fun isExecutingActionsAllowed()
 }
 
 
-open fun setExecutingActionsAllowed(executingActionAllowed: Boolean)
+    open fun setExecutingActionsAllowed(executingActionAllowed: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var executingActionAllowed = executingActionAllowed
@@ -140,7 +140,7 @@ this.executingActions= executingActionAllowed
 }
 
 
-open fun setDiagonalMotionGestureAllowed(diagonalMotionGestureAllowed: Boolean)
+    open fun setDiagonalMotionGestureAllowed(diagonalMotionGestureAllowed: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var diagonalMotionGestureAllowed = diagonalMotionGestureAllowed
@@ -148,7 +148,7 @@ this.diagonalMotionGestureAllowed= diagonalMotionGestureAllowed
 }
 
 
-open fun getDiagonalTolerance()
+    open fun getDiagonalTolerance()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -159,7 +159,7 @@ open fun getDiagonalTolerance()
 }
 
 
-open fun setDiagonalTolerance(diagonalTolerance: Int)
+    open fun setDiagonalTolerance(diagonalTolerance: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var diagonalTolerance = diagonalTolerance
@@ -167,7 +167,7 @@ this.diagonalTolerance= diagonalTolerance
 }
 
 
-open fun getMinimumMotionGesture()
+    open fun getMinimumMotionGesture()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -178,7 +178,7 @@ open fun getMinimumMotionGesture()
 }
 
 
-open fun setMinimumMotionGesture(minimumMotionGesture: Int)
+    open fun setMinimumMotionGesture(minimumMotionGesture: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var minimumMotionGesture = minimumMotionGesture
@@ -186,7 +186,7 @@ this.minimumMotionGesture= minimumMotionGesture
 }
 
 
-open fun getButton()
+    open fun getButton()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -197,7 +197,7 @@ open fun getButton()
 }
 
 
-open fun setButton(button: String)
+    open fun setButton(button: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var button = button
@@ -205,7 +205,7 @@ this.button= button
 }
 
 
-open fun getColor()
+    open fun getColor()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
 
@@ -216,7 +216,7 @@ open fun getColor()
 }
 
 
-open fun setColor(color: BasicColor)
+    open fun setColor(color: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
 var color = color
@@ -224,7 +224,7 @@ this.color= color
 }
 
 
-open fun getMouseButtonMask()
+    open fun getMouseButtonMask()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -235,7 +235,7 @@ open fun getMouseButtonMask()
 }
 
 
-open fun setMouseButtonMask(mouseButtonMask: Int)
+    open fun setMouseButtonMask(mouseButtonMask: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var mouseButtonMask = mouseButtonMask

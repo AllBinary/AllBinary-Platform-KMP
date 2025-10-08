@@ -30,12 +30,11 @@ open public class PoolInterfaceFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun getInstance(cacheableInterfaceFactoryInterface: CacheableInterfaceFactoryInterface, poolType: PoolType, cachePolicy: CachePolicy)
+    open fun getInstance(cacheableInterfaceFactoryInterface: CacheableInterfaceFactoryInterface, poolType: PoolType, cachePolicy: CachePolicy)
         //nullable =  from not(true or (false and false)) = 
 : PoolInterface{
 var cacheableInterfaceFactoryInterface = cacheableInterfaceFactoryInterface
@@ -49,7 +48,7 @@ var cachePolicy = cachePolicy
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

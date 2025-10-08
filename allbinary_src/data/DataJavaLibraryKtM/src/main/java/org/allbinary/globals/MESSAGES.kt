@@ -30,13 +30,12 @@ open public class MESSAGES
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var CONTACTADMIN: String = "Please contact the administrator."
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

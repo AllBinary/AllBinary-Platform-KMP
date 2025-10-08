@@ -47,7 +47,7 @@ open public class QuoteRequestHelper : ModifyTable {
     private var storeFrontInterface: StoreFrontInterface
 
     private var quoteRequest: QuoteRequest
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 
@@ -72,7 +72,7 @@ this.quoteRequest= QuoteRequest(this.weblisketSession!!.getUserName(), request)
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -83,7 +83,7 @@ open fun isValid()
 }
 
 
-open fun validationInfo()
+    open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -94,7 +94,7 @@ open fun validationInfo()
 }
 
 
-open fun insert()
+    open fun insert()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -144,7 +144,7 @@ QuoteRequestEntityFactory.getInstance()!!.getQuoteRequestEntityInstance()!!.inse
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -194,7 +194,7 @@ QuoteRequestEntityFactory.getInstance()!!.getQuoteRequestEntityInstance()!!.upda
 }
 
 
-open fun delete()
+    open fun delete()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

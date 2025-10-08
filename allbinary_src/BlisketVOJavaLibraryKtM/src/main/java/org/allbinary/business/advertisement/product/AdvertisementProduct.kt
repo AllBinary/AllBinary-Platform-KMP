@@ -40,13 +40,13 @@ open public class AdvertisementProduct
     private var number: Int= 0
 
     private var constraint: TwoDimensionalConstraintInterface
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun getType()
+    open fun getType()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -57,7 +57,7 @@ open fun getType()
 }
 
 
-open fun getLink()
+    open fun getLink()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -68,7 +68,7 @@ open fun getLink()
 }
 
 
-open fun getNumber()
+    open fun getNumber()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -79,7 +79,7 @@ open fun getNumber()
 }
 
 
-open fun getTwoDimensionalConstraint()
+    open fun getTwoDimensionalConstraint()
         //nullable = true from not(false or (false and true)) = true
 : TwoDimensionalConstraintInterface{
 

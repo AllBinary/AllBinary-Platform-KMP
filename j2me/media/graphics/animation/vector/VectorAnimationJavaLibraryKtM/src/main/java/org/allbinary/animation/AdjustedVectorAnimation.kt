@@ -34,7 +34,7 @@ open public class AdjustedVectorAnimation : VectorAnimation {
     private var dx: Int
 
     private var dy: Int
-public constructor        (currentPoints: Array<Array<IntArray?>?>, basicColor: BasicColor, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
+public constructor (currentPoints: Array<Array<IntArray?>?>, basicColor: BasicColor, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
                             : super(currentPoints, basicColor, animationBehavior){
     //var currentPoints = currentPoints
@@ -50,7 +50,7 @@ this.dx= dx
 this.dy= dy
 }
 
-public constructor        (currentPoints: Array<IntArray?>, basicColor: BasicColor, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
+public constructor (currentPoints: Array<IntArray?>, basicColor: BasicColor, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
                             : super(currentPoints, basicColor, animationBehavior){
     //var currentPoints = currentPoints
@@ -66,7 +66,8 @@ this.dx= dx
 this.dy= dy
 }
 
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics

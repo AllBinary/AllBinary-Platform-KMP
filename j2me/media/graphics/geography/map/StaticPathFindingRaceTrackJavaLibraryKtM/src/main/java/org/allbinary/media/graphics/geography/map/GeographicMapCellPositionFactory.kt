@@ -27,19 +27,17 @@
         
 import java.util.Hashtable
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.game.layer.AllBinaryTiledLayer
 import org.allbinary.logic.string.StringMaker
 
 open public class GeographicMapCellPositionFactory : GeographicMapCellPositionBaseFactory {
         
-
-        companion object {
+companion object {
             
     private val hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
-open fun getHashtable()
+    open fun getHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
 
@@ -61,7 +59,7 @@ open fun getHashtable()
 
                 @Throws(Exception::class)
             
-open fun getInstance(geographicMapInterface: BasicGeographicMap)
+    open fun getInstance(geographicMapInterface: BasicGeographicMap)
         //nullable =  from not(true or (false and false)) = 
 : BasicGeographicMapCellPositionFactory{
     //var geographicMapInterface = geographicMapInterface

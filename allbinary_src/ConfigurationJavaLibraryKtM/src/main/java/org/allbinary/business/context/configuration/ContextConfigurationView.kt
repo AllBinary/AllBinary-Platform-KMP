@@ -41,7 +41,7 @@ open public class ContextConfigurationView
         
 
     private var contextConfigurationInterface: ContextConfigurationInterface
-public constructor        (node: Node)
+public constructor (node: Node)
             : super()
         {
 var node = node
@@ -58,7 +58,7 @@ this.contextConfigurationInterface= ContextConfiguration()
 this.contextConfigurationInterface!!.setEmailServerConfigurationInterface(emailServerConfigurationView!!.getEmailConfigurationInterface() as EmailServerConfigurationInterface)
 }
 
-public constructor        (contextConfigurationInterface: ContextConfigurationInterface)
+public constructor (contextConfigurationInterface: ContextConfigurationInterface)
             : super()
         {
 var contextConfigurationInterface = contextConfigurationInterface
@@ -66,7 +66,7 @@ this.contextConfigurationInterface= contextConfigurationInterface
 }
 
 
-open fun getContextConfigurationInterface()
+    open fun getContextConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
 : ContextConfigurationInterface{
 
@@ -79,7 +79,7 @@ open fun getContextConfigurationInterface()
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

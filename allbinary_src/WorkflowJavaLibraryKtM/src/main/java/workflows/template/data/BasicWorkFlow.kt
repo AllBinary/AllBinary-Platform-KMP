@@ -56,7 +56,7 @@ open public class BasicWorkFlow
     private var propertiesHashMap: HashMap<Any, Any>
 
     private var pageContext: PageContext
-public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
+public constructor (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
             : super()
         {
 var propertiesHashMap = propertiesHashMap
@@ -78,7 +78,7 @@ this.validationDomNodeInterface= TransformFactory.getInstance()!!.getInstance(ab
 
                 @Throws(Exception::class)
             
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -89,7 +89,7 @@ open fun getName()
 }
 
 
-open fun getPropertiesHashMap()
+    open fun getPropertiesHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -100,7 +100,7 @@ open fun getPropertiesHashMap()
 }
 
 
-open fun getPageContext()
+    open fun getPageContext()
         //nullable = true from not(false or (false and true)) = true
 : PageContext{
 
@@ -113,7 +113,7 @@ open fun getPageContext()
 
                 @Throws(Exception::class)
             
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 

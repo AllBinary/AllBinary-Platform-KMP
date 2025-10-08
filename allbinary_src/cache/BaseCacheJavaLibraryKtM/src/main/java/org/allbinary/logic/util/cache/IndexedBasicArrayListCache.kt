@@ -36,10 +36,10 @@ open public class IndexedBasicArrayListCache : BaseBasicArrayListCache
     private var size: Int = 0
 
     var index: Int = 0
-public constructor        (){
+public constructor (){
 }
 
-public constructor        (size: Int){
+public constructor (size: Int){
 var size = size
 this.init(size)
 }
@@ -47,7 +47,7 @@ this.init(size)
 
                 @Throws(Exception::class)
             
-open fun init(size: Int)
+    open fun init(size: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var size = size
@@ -74,7 +74,7 @@ this.size= size
 }
 
 
-open fun get(index: Int)
+    open fun get(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var index = index
@@ -88,7 +88,7 @@ var index = index
 
                 @Throws(Exception::class)
             
-open fun add()
+    open fun add()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -96,7 +96,7 @@ open fun add()
 
                 @Throws(Exception::class)
             
-open fun add(anyType: Any)
+    open fun add(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var anyType = anyType
@@ -105,7 +105,8 @@ this.list.add(anyType)
 
 
                 @Throws(Exception::class)
-            override fun add(cacheableInterface: CacheableInterface)
+            
+    override fun add(cacheableInterface: CacheableInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var cacheableInterface = cacheableInterface
@@ -114,7 +115,8 @@ this.list.add(cacheableInterface)
 
 
                 @Throws(Exception::class)
-            override fun add(cacheableInterfaces: Array<CacheableInterface?>)
+            
+    override fun add(cacheableInterfaces: Array<CacheableInterface?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var cacheableInterfaces = cacheableInterfaces
@@ -124,7 +126,8 @@ var cacheableInterfaces = cacheableInterfaces
                             throw Exception("No Imple")
 }
 
-override fun clear()
+
+    override fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 index= 0

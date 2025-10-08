@@ -38,7 +38,7 @@ open public class GeographicMapCellPositionBaseFactory
         
                 @Throws(Exception::class)
             
-open fun getInstance(geographicMapInterface: BasicGeographicMap)
+    open fun getInstance(geographicMapInterface: BasicGeographicMap)
         //nullable =  from not(true or (false and false)) = 
 : BasicGeographicMapCellPositionFactory{
 var geographicMapInterface = geographicMapInterface

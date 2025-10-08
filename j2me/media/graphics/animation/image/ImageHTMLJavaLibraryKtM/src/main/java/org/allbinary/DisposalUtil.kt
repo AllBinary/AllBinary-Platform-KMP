@@ -31,12 +31,11 @@ open public class DisposalUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: DisposalUtil = DisposalUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DisposalUtil{
 
@@ -54,7 +53,7 @@ open fun getInstance()
             {
             }            
         
-open fun dispose(resource: Resource)
+    open fun dispose(resource: Resource)
         //nullable = true from not(false or (false and false)) = true
 {
     //var resource = resource

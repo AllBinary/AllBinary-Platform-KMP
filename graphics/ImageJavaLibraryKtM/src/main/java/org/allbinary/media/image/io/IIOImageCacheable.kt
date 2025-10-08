@@ -39,7 +39,7 @@ open public class IIOImageCacheable
     private var key: String
 
     private var iioImage: IIOImage
-public constructor        (key: String)
+public constructor (key: String)
             : super()
         {
 var key = key
@@ -47,7 +47,7 @@ this.key= key
 }
 
 
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -58,7 +58,7 @@ open fun getKey()
 }
 
 
-open fun setBufferedImage(bufferedImage: BufferedImage)
+    open fun setBufferedImage(bufferedImage: BufferedImage)
         //nullable = true from not(false or (false and false)) = true
 {
 var bufferedImage = bufferedImage
@@ -68,7 +68,7 @@ this.setIioImage(IIOImage(bufferedImage,
 }
 
 
-open fun getIioImage()
+    open fun getIioImage()
         //nullable = true from not(false or (false and true)) = true
 : IIOImage{
 
@@ -79,14 +79,15 @@ open fun getIioImage()
 }
 
 
-open fun setIioImage(iioImage: IIOImage)
+    open fun setIioImage(iioImage: IIOImage)
         //nullable = true from not(false or (false and false)) = true
 {
 var iioImage = iioImage
 this.iioImage= iioImage
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

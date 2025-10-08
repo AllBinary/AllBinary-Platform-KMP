@@ -59,7 +59,7 @@ open public class AuthenticationTag : CustomTagSupport {
     private var roles: Vector
 
     private var propertiesHashMap: HashMap<Any, Any>
-public constructor        (){
+public constructor (){
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
@@ -68,7 +68,7 @@ this.password= stringUtil!!.EMPTY_STRING
 }
 
 
-open fun setCommand(command: String)
+    open fun setCommand(command: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var command = command
@@ -76,7 +76,7 @@ this.command= command
 }
 
 
-open fun setUserName(userName: String)
+    open fun setUserName(userName: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var userName = userName
@@ -84,7 +84,7 @@ this.userName= userName
 }
 
 
-open fun setPassword(value: String)
+    open fun setPassword(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -92,7 +92,7 @@ this.password= value
 }
 
 
-open fun setNewPassword(value: String)
+    open fun setNewPassword(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -100,7 +100,7 @@ this.newPassword= value
 }
 
 
-open fun setRoles(values: Vector)
+    open fun setRoles(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 {
 var values = values
@@ -110,7 +110,7 @@ this.roles= values
 
                 @Throws(LicensingException::class)
             
-open fun changePassword()
+    open fun changePassword()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -165,7 +165,7 @@ open fun changePassword()
 
                 @Throws(LicensingException::class)
             
-open fun newPassword()
+    open fun newPassword()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -220,7 +220,7 @@ open fun newPassword()
 
                 @Throws(LicensingException::class)
             
-open fun invalidateSession()
+    open fun invalidateSession()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -275,7 +275,7 @@ open fun invalidateSession()
 
                 @Throws(LicensingException::class)
             
-open fun isSessionOld()
+    open fun isSessionOld()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -330,7 +330,7 @@ open fun isSessionOld()
 
                 @Throws(LicensingException::class)
             
-open fun isRoleValid()
+    open fun isRoleValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -389,7 +389,7 @@ open fun isRoleValid()
 
                 @Throws(LicensingException::class)
             
-open fun validRole()
+    open fun validRole()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -447,7 +447,7 @@ open fun validRole()
 
                 @Throws(LicensingException::class)
             
-open fun invalidRole()
+    open fun invalidRole()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -505,7 +505,7 @@ open fun invalidRole()
 
                 @Throws(LicensingException::class)
             
-open fun isAuthenticationSessionValid()
+    open fun isAuthenticationSessionValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -564,7 +564,7 @@ open fun isAuthenticationSessionValid()
 
                 @Throws(LicensingException::class)
             
-open fun processIfNewLogin()
+    open fun processIfNewLogin()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -623,7 +623,7 @@ open fun processIfNewLogin()
 
                 @Throws(LicensingException::class)
             
-open fun processInvalidation()
+    open fun processInvalidation()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -678,7 +678,7 @@ open fun processInvalidation()
 
                 @Throws(JspTagException::class)
             
-open fun doStartTag()
+    open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

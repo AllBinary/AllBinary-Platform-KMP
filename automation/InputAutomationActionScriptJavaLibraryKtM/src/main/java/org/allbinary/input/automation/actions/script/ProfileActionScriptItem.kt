@@ -37,8 +37,7 @@ open public class ProfileActionScriptItem : DefaultMutableTreeNode
                 , ProfileActionScriptItemInterface
                 , ActionListener {
         
-
-        companion object {
+companion object {
             
     private val EDIT: String = "Edit"
 
@@ -71,7 +70,7 @@ open public class ProfileActionScriptItem : DefaultMutableTreeNode
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var jPopupMenu: JPopupMenu
-public constructor        (label: String, node: Node)                        
+public constructor (label: String, node: Node)                        
 
                             : super(label){
 var label = label
@@ -84,7 +83,7 @@ this.init()
 logUtil!!.put("Label: " +label, this, this.commonStrings!!.CONSTRUCTOR)
 }
 
-public constructor        (label: String)                        
+public constructor (label: String)                        
 
                             : super(label){
 var label = label
@@ -97,7 +96,7 @@ logUtil!!.put("Label: " +label, this, this.commonStrings!!.CONSTRUCTOR)
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 setJPopupMenu(JPopupMenu())
@@ -116,7 +115,7 @@ getJPopupMenu()!!.add(jMenuItemDelete)
 
                 @Throws(Exception::class)
             
-open fun process(frame: Long)
+    open fun process(frame: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var frame = frame
@@ -127,7 +126,7 @@ var frame = frame
 }
 
 
-open fun getJPopupMenu()
+    open fun getJPopupMenu()
         //nullable = true from not(false or (false and true)) = true
 : JPopupMenu{
 
@@ -138,7 +137,7 @@ open fun getJPopupMenu()
 }
 
 
-open fun showDialog()
+    open fun showDialog()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -148,7 +147,7 @@ open fun showDialog()
 }
 
 
-open fun actionPerformed(actionEvent: ActionEvent)
+    open fun actionPerformed(actionEvent: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var actionEvent = actionEvent
@@ -164,7 +163,7 @@ var actionEvent = actionEvent
 }
 
 
-open fun setJPopupMenu(jPopupMenu: JPopupMenu)
+    open fun setJPopupMenu(jPopupMenu: JPopupMenu)
         //nullable = true from not(false or (false and false)) = true
 {
 var jPopupMenu = jPopupMenu

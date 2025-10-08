@@ -26,18 +26,19 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.util.BasicArrayList
+
 interface PathFindingInfoInterface {
         
 
-open fun getStartPathFindingNodeList()
+    open fun getStartPathFindingNodeList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList
 
-open fun getEndPathFindingNodeList()
+    open fun getEndPathFindingNodeList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList
 
-open fun getPathFinder()
+    open fun getPathFinder()
         //nullable = true from not(false or (false and true)) = true
 : GeographicPathFinderBase
 

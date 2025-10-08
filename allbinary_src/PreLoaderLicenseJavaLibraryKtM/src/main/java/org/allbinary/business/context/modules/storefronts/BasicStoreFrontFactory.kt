@@ -32,12 +32,11 @@ open public class BasicStoreFrontFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: BasicStoreFrontFactory = BasicStoreFrontFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BasicStoreFrontFactory{
 
@@ -51,7 +50,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -59,7 +58,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getInstance(storeName: String)
+    open fun getInstance(storeName: String)
         //nullable =  from not(true or (false and false)) = 
 : BasicStoreFrontInterface{
 var storeName = storeName

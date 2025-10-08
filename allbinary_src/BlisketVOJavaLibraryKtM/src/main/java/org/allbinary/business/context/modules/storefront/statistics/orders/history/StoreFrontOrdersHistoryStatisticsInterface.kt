@@ -27,26 +27,27 @@
         
 import org.allbinary.business.user.commerce.money.Money
 import org.allbinary.data.tables.TableMappingInterface
+
 interface StoreFrontOrdersHistoryStatisticsInterface : TableMappingInterface {
         
 
-open fun getNumberOfOrders()
+    open fun getNumberOfOrders()
         //nullable = true from not(false or (false and true)) = true
 : Long
 
-open fun getSubTotal()
+    open fun getSubTotal()
         //nullable = true from not(false or (false and true)) = true
 : Money
 
-open fun getShippingCost()
+    open fun getShippingCost()
         //nullable = true from not(false or (false and true)) = true
 : Money
 
-open fun getTaxes()
+    open fun getTaxes()
         //nullable = true from not(false or (false and true)) = true
 : Money
 
-open fun getTotal()
+    open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
 : Money
 

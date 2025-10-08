@@ -29,12 +29,11 @@ import org.allbinary.media.audio.Sound
 
 open public class DowngradeSound : CompositeSound {
         
-
-        companion object {
+companion object {
             
     private var soundInterface: Sound = DowngradeSound()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : Sound{
 
@@ -46,7 +45,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()                        
+            private constructor ()                        
 
                             : super("resource:/wav/downgrade.wav"){
 

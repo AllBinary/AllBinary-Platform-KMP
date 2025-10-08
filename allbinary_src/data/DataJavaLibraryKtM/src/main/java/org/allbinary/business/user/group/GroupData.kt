@@ -30,13 +30,12 @@ open public class GroupData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NAME: String = "GROUP_NAME"
 
         }
-            public constructor        ()
+            public constructor ()
             : super()
         {
 }

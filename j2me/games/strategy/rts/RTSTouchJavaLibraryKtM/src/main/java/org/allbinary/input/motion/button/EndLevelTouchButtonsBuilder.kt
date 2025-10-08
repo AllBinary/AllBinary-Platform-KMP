@@ -28,7 +28,6 @@
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListUtil
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 
 open public class EndLevelTouchButtonsBuilder : TouchButtonsListBuilder {
@@ -41,7 +40,7 @@ open public class EndLevelTouchButtonsBuilder : TouchButtonsListBuilder {
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-open fun getList()
+    open fun getList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 

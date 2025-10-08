@@ -28,13 +28,12 @@
 
 open public class NoTimeDelayHelper : TimeDelayHelper {
         
-
-        companion object {
+companion object {
             
     val SINGLETON: NoTimeDelayHelper = NoTimeDelayHelper()
 
         }
-            public constructor        ()                        
+            public constructor ()                        
 
                             : super(0){
 
@@ -43,7 +42,8 @@ open public class NoTimeDelayHelper : TimeDelayHelper {
                     
 }
 
-override fun isTime()
+
+    override fun isTime()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -53,7 +53,8 @@ override fun isTime()
                         return true
 }
 
-override fun isTimeSince(delay: Int)
+
+    override fun isTimeSince(delay: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var delay = delay
@@ -64,7 +65,8 @@ var delay = delay
                         return true
 }
 
-override fun isTime(currentTime: Long)
+
+    override fun isTime(currentTime: Long)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var currentTime = currentTime
@@ -75,7 +77,8 @@ var currentTime = currentTime
                         return true
 }
 
-override fun isTimeSince(delay: Int, currentTime: Long)
+
+    override fun isTimeSince(delay: Int, currentTime: Long)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var delay = delay

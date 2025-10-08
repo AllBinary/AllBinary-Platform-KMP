@@ -33,10 +33,9 @@ open public class InterfaceCastProxy
         
                 , java.lang.reflect.InvocationHandler {
         
-
-        companion object {
+companion object {
             
-open fun newInstance(anyType: Any)
+    open fun newInstance(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var anyType = anyType
@@ -51,7 +50,7 @@ var anyType = anyType
         }
             
     private var anyType: Any
-private constructor        (anyType: Any)
+private constructor (anyType: Any)
             : super()
         {
 var anyType = anyType
@@ -61,7 +60,7 @@ this.anyType= anyType
 
                 @Throws(Throwable::class)
             
-open fun invoke(proxyObject: Any, proxyMethod: Method, proxyArgs: Array<Any?>)
+    open fun invoke(proxyObject: Any, proxyMethod: Method, proxyArgs: Array<Any?>)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var proxyObject = proxyObject

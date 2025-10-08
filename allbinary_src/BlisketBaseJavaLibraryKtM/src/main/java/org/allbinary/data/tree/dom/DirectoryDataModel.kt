@@ -46,7 +46,7 @@ open public class DirectoryDataModel
     private val fileBasicArrayList: BasicArrayList
 
     private var transformDocumentInterface: TransformDocumentInterface
-public constructor        (file: AbFile)
+public constructor (file: AbFile)
             : super()
         {
     //var file = file
@@ -57,7 +57,7 @@ this.transformDocumentInterface= TransformDocumentFactory.getInstance() as Trans
 
     var NO_TYPE: Int = 0
 
-open fun getTypeId()
+    open fun getTypeId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -70,7 +70,7 @@ open fun getTypeId()
 
                 @Throws(Exception::class)
             
-open fun getTransformInfoInterface()
+    open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformInfoInterface{
 
@@ -81,7 +81,7 @@ open fun getTransformInfoInterface()
 }
 
 
-open fun setTransformDocumentInterface(transformDocumentInterface: TransformDocumentInterface)
+    open fun setTransformDocumentInterface(transformDocumentInterface: TransformDocumentInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var transformDocumentInterface = transformDocumentInterface
@@ -89,7 +89,7 @@ this.transformDocumentInterface= transformDocumentInterface
 }
 
 
-open fun getTransformDocumentInterface()
+    open fun getTransformDocumentInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformDocumentInterface{
 
@@ -102,7 +102,7 @@ open fun getTransformDocumentInterface()
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
     //var document = document
@@ -141,7 +141,7 @@ dirNode!!.appendChild(fileNode)
 
                 @Throws(Exception::class)
             
-open fun toXmlDoc()
+    open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -154,7 +154,7 @@ open fun toXmlDoc()
 
                 @Throws(Exception::class)
             
-open fun view()
+    open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

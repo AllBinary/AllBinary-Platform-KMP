@@ -40,7 +40,7 @@ open public class SecretComposite : BaseSecretComposite {
     private val secretKey: SecretKey
 
     private var key: ByteArray
-public constructor        (secretKey: SecretKey, cipher: Cipher, key: ByteArray){
+public constructor (secretKey: SecretKey, cipher: Cipher, key: ByteArray){
     //var secretKey = secretKey
     //var cipher = cipher
     //var key = key
@@ -51,7 +51,8 @@ this.key= key
 
 
                 @Throws(Exception::class)
-            override fun encrypt(array: ByteArray)
+            
+    override fun encrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
 var array = array
@@ -66,7 +67,8 @@ cipher.init(Cipher.ENCRYPT_MODE, secretKey)
 
 
                 @Throws(Exception::class)
-            override fun decrypt(array: ByteArray)
+            
+    override fun decrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
 var array = array
@@ -79,7 +81,7 @@ cipher.init(Cipher.DECRYPT_MODE, secretKey)
 }
 
 
-open fun mutilate(array: ByteArray)
+    open fun mutilate(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
 var array = array

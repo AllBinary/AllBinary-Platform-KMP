@@ -39,8 +39,7 @@ open public class BasicEventHandler
         
                 , BasicEventHandlerInterface {
         
-
-        companion object {
+companion object {
             
     val PERFORMANCE_MESSAGE: String = "Use Custom onEvent Methods for needed optimization"
 
@@ -49,13 +48,14 @@ open public class BasicEventHandler
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var eventListenerInterfaceList: BasicArrayList
-public constructor        ()
+public constructor ()
             : super()
         {
 this.eventListenerInterfaceList= BasicArrayList()
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -100,14 +100,14 @@ index++
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun removeAllListeners()
+    open fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
 {
 this.eventListenerInterfaceList= BasicArrayList()
 }
 
 
-open fun addListenerSingleThreaded(eventListenerInterface: EventListenerInterface)
+    open fun addListenerSingleThreaded(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventListenerInterface = eventListenerInterface
@@ -124,7 +124,7 @@ var eventListenerInterface = eventListenerInterface
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun addListener(eventListenerInterface: EventListenerInterface)
+    open fun addListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventListenerInterface = eventListenerInterface
@@ -140,7 +140,7 @@ var eventListenerInterface = eventListenerInterface
 }
 
 
-open fun removeListenerSingleThreaded(eventListenerInterface: EventListenerInterface)
+    open fun removeListenerSingleThreaded(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventListenerInterface = eventListenerInterface
@@ -149,7 +149,7 @@ this.eventListenerInterfaceList!!.remove(eventListenerInterface)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun removeListener(eventListenerInterface: EventListenerInterface)
+    open fun removeListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventListenerInterface = eventListenerInterface
@@ -160,7 +160,7 @@ this.eventListenerInterfaceList!!.remove(eventListenerInterface)
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun fireEvent(eventObject: AllBinaryEventObject)
+    open fun fireEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
@@ -193,7 +193,7 @@ index++
 
                 @Throws(Exception::class)
             
-open fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
+    open fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
@@ -202,7 +202,7 @@ eventListenerInterface!!.onEvent(eventObject)
 }
 
 
-open fun getEventListenerInterfaceListP()
+    open fun getEventListenerInterfaceListP()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 

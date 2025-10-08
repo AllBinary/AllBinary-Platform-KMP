@@ -46,8 +46,7 @@ open public class CategoryProperties
         
                 , CategoryPropertiesInterface {
         
-
-        companion object {
+companion object {
             
     private val MAXDEPTH: Int = 100
 
@@ -56,21 +55,21 @@ open public class CategoryProperties
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var category: String
-public constructor        (name: String)
+public constructor (name: String)
             : super()
         {
 var name = name
 this.category= name
 }
 
-public constructor        (node: Node)
+public constructor (node: Node)
             : super()
         {
 var node = node
 this.category= CategoryUtil.getNameFromNode(node)
 }
 
-public constructor        (categoryPropertiesHashMap: HashMap<Any, Any>)
+public constructor (categoryPropertiesHashMap: HashMap<Any, Any>)
             : super()
         {
 var categoryPropertiesHashMap = categoryPropertiesHashMap
@@ -78,7 +77,7 @@ this.category= .toCharArray()
 }
 
 
-open fun isRealRoot()
+    open fun isRealRoot()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -89,7 +88,7 @@ open fun isRealRoot()
 }
 
 
-open fun isRoot()
+    open fun isRoot()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -100,7 +99,7 @@ open fun isRoot()
 }
 
 
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -111,7 +110,7 @@ open fun getKey()
 }
 
 
-open fun getValue()
+    open fun getValue()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -124,7 +123,7 @@ open fun getValue()
 
                 @Throws(Exception::class)
             
-open fun getPath(categoryHierarchyInterface: CategoryHierarchyInterface)
+    open fun getPath(categoryHierarchyInterface: CategoryHierarchyInterface)
         //nullable = true from not(false or (false and false)) = true
 : AbPath{
 var categoryHierarchyInterface = categoryHierarchyInterface
@@ -242,7 +241,7 @@ pathStringBuffer!!.append(abPathData!!.SEPARATOR)
 }
 
 
-open fun getFileName()
+    open fun getFileName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -255,7 +254,7 @@ open fun getFileName()
 
                 @Throws(Exception::class)
             
-open fun getWebAppPath()
+    open fun getWebAppPath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 
@@ -265,7 +264,7 @@ open fun getWebAppPath()
 }
 
 
-open fun setValue(value: String)
+    open fun setValue(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -273,7 +272,7 @@ this.category= value
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -296,7 +295,7 @@ open fun isValid()
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -311,7 +310,7 @@ categoryHashMap!!.put(CategoryData.getInstance()!!.NAME, this.category)
 }
 
 
-open fun toVector()
+    open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -328,7 +327,7 @@ categoryVector!!.add(category)
 
                 @Throws(Exception::class)
             
-open fun toValidationInfoDoc()
+    open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -341,7 +340,7 @@ open fun toValidationInfoDoc()
 
                 @Throws(Exception::class)
             
-open fun toValidationInfoNode(document: Document)
+    open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -355,7 +354,7 @@ var document = document
 
                 @Throws(Exception::class)
             
-open fun validationInfo()
+    open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

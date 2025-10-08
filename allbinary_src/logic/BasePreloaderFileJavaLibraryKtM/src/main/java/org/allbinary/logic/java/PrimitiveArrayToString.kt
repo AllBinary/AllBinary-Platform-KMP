@@ -31,10 +31,9 @@ open public class PrimitiveArrayToString
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun toString(floats: FloatArray)
+    open fun toString(floats: FloatArray)
         //nullable = true from not(false or (true and false)) = true
 : String{
 var floats = floats

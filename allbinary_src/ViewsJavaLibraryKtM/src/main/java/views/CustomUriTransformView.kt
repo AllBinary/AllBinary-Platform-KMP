@@ -53,7 +53,7 @@ open public class CustomUriTransformView
     private var transformInfoInterface: TransformInfoInterface
 
     private var transformDocumentInterface: TransformDocumentInterface
-public constructor        (transformInfoInterface: TransformInfoInterface)
+public constructor (transformInfoInterface: TransformInfoInterface)
             : super()
         {
 var transformInfoInterface = transformInfoInterface
@@ -73,7 +73,7 @@ this.setTransformDocumentInterface(TransformDocumentFactory.getInstance())
 
     var NO_TYPE: Int = 0
 
-open fun getTypeId()
+    open fun getTypeId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -84,7 +84,7 @@ open fun getTypeId()
 }
 
 
-open fun getTransformInfoInterface()
+    open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformInfoInterface{
 
@@ -95,7 +95,7 @@ open fun getTransformInfoInterface()
 }
 
 
-open fun setTransformInfoInterface(transformInfoInterface: TransformInfoInterface)
+    open fun setTransformInfoInterface(transformInfoInterface: TransformInfoInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var transformInfoInterface = transformInfoInterface
@@ -103,7 +103,7 @@ this.transformInfoInterface= transformInfoInterface
 }
 
 
-open fun getTransformDocumentInterface()
+    open fun getTransformDocumentInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformDocumentInterface{
 
@@ -114,7 +114,7 @@ open fun getTransformDocumentInterface()
 }
 
 
-open fun setTransformDocumentInterface(transformDocumentInterface: TransformDocumentInterface)
+    open fun setTransformDocumentInterface(transformDocumentInterface: TransformDocumentInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var transformDocumentInterface = transformDocumentInterface
@@ -122,7 +122,7 @@ this.transformDocumentInterface= transformDocumentInterface
 }
 
 
-open fun toXmlDoc()
+    open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -135,7 +135,7 @@ open fun toXmlDoc()
 
                 @Throws(Exception::class)
             
-open fun getDoc()
+    open fun getDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -165,7 +165,7 @@ open fun getDoc()
 
                 @Throws(Exception::class)
             
-open fun view()
+    open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

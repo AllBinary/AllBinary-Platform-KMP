@@ -46,19 +46,21 @@ open public class BasicEventHandler
     private val eventStrings: EventStrings = EventStrings.getInstance()!!
 
     var eventListenerInterfaceList: BasicArrayList
-public constructor        ()
+public constructor ()
             : super()
         {
 this.eventListenerInterfaceList= BasicArrayList()
 }
 
-override fun removeAllListeners()
+
+    override fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
 {
 this.eventListenerInterfaceList= BasicArrayList()
 }
 
-override fun addListeners(vector: BasicArrayList)
+
+    override fun addListeners(vector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var vector = vector
@@ -82,7 +84,7 @@ this.addListener(eventListenerInterface)
 }
 
 
-open fun removeListeners(vector: BasicArrayList)
+    open fun removeListeners(vector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var vector = vector
@@ -106,22 +108,7 @@ this.removeListener(eventListenerInterface)
 }
 
 
-open fun addListenerSingleThreaded(eventListenerInterface: EventListenerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var eventListenerInterface = eventListenerInterface
-
-    
-                        if(!this.eventListenerInterfaceList!!.contains(eventListenerInterface))
-                        
-                                    {
-                                    this.eventListenerInterfaceList!!.add(eventListenerInterface)
-
-                                    }
-                                
-}
-
-override fun addListener(eventListenerInterface: EventListenerInterface)
+    open fun addListenerSingleThreaded(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventListenerInterface = eventListenerInterface
@@ -137,14 +124,31 @@ override fun addListener(eventListenerInterface: EventListenerInterface)
 }
 
 
-open fun removeListenerSingleThreaded(eventListenerInterface: EventListenerInterface)
+    override fun addListener(eventListenerInterface: EventListenerInterface)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var eventListenerInterface = eventListenerInterface
+
+    
+                        if(!this.eventListenerInterfaceList!!.contains(eventListenerInterface))
+                        
+                                    {
+                                    this.eventListenerInterfaceList!!.add(eventListenerInterface)
+
+                                    }
+                                
+}
+
+
+    open fun removeListenerSingleThreaded(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventListenerInterface = eventListenerInterface
 this.eventListenerInterfaceList!!.remove(eventListenerInterface)
 }
 
-override fun removeListener(eventListenerInterface: EventListenerInterface)
+
+    override fun removeListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventListenerInterface = eventListenerInterface
@@ -153,7 +157,8 @@ this.eventListenerInterfaceList!!.remove(eventListenerInterface)
 
 
                 @Throws(Exception::class)
-            override fun fireEvent(eventObject: AllBinaryEventObject)
+            
+    override fun fireEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject
@@ -183,7 +188,7 @@ index++
 
                 @Throws(Exception::class)
             
-open fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
+    open fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject
@@ -192,7 +197,7 @@ eventListenerInterface!!.onEvent(eventObject)
 }
 
 
-open fun getEventListenerInterfaceListP()
+    open fun getEventListenerInterfaceListP()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -202,7 +207,8 @@ open fun getEventListenerInterfaceListP()
                         return eventListenerInterfaceList
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

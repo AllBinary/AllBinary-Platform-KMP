@@ -37,8 +37,7 @@ open public class GameInfo
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NONE: GameInfo = GameInfo(GameTypeFactory.getInstance()!!.NONE, GameMode.NONE,  -1,  -1)
 
@@ -59,7 +58,7 @@ open public class GameInfo
     private var highestLevel: Int= 0
 
     private var currentLevel: Int
-public constructor        (gameType: GameType, gameMode: GameMode, highestLevel: Int, currentLevel: Int)
+public constructor (gameType: GameType, gameMode: GameMode, highestLevel: Int, currentLevel: Int)
             : super()
         {
     //var gameType = gameType
@@ -73,7 +72,7 @@ this.currentLevel= currentLevel
 this.playerType= PlayerTypesFactory.getInstance()!!.PLAYER_TYPE_ONE
 }
 
-public constructor        (gameType: GameType, gameMode: GameMode, playerType: PlayerType, highestLevel: Int, currentLevel: Int)
+public constructor (gameType: GameType, gameMode: GameMode, playerType: PlayerType, highestLevel: Int, currentLevel: Int)
             : super()
         {
 var gameType = gameType
@@ -89,7 +88,7 @@ this.playerType= playerType
 }
 
 
-open fun getGameType()
+    open fun getGameType()
         //nullable = true from not(false or (false and true)) = true
 : GameType{
 
@@ -100,7 +99,7 @@ open fun getGameType()
 }
 
 
-open fun getGameMode()
+    open fun getGameMode()
         //nullable = true from not(false or (false and true)) = true
 : GameMode{
 
@@ -111,7 +110,7 @@ open fun getGameMode()
 }
 
 
-open fun getPlayerType()
+    open fun getPlayerType()
         //nullable = true from not(false or (false and true)) = true
 : PlayerType{
 
@@ -122,7 +121,7 @@ open fun getPlayerType()
 }
 
 
-open fun getHighestLevel()
+    open fun getHighestLevel()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -133,7 +132,7 @@ open fun getHighestLevel()
 }
 
 
-open fun setHighestLevel(highestLevel: Int)
+    open fun setHighestLevel(highestLevel: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var highestLevel = highestLevel
@@ -141,7 +140,7 @@ this.highestLevel= highestLevel
 }
 
 
-open fun getCurrentLevel()
+    open fun getCurrentLevel()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -156,7 +155,7 @@ open fun getCurrentLevel()
 
     private val SET_CURRENT_LEVEL: String = "setCurrentLevel"
 
-open fun setCurrentLevel(currentLevel: Int)
+    open fun setCurrentLevel(currentLevel: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var currentLevel = currentLevel
@@ -170,7 +169,7 @@ logUtil!!.put(StringMaker().
 
     private val NEXT_GAME_LEVEL: String = "nextGameLevel"
 
-open fun nextGameLevel()
+    open fun nextGameLevel()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -187,7 +186,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-open fun previousGameLevel()
+    open fun previousGameLevel()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -197,7 +196,7 @@ open fun previousGameLevel()
 }
 
 
-open fun isLastLevel()
+    open fun isLastLevel()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -225,7 +224,7 @@ open fun isLastLevel()
 }
 
 
-open fun toHashtable()
+    open fun toHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
 
@@ -243,7 +242,8 @@ hashtable.put(this.gameInfoData!!.CURRENT_LEVEL, this.currentLevel.toString())
                         return hashtable
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

@@ -39,7 +39,7 @@ open public class Rectangle
     private var width: Int
 
     private var height: Int
-public constructor        (point: GPoint, width: Int, height: Int)
+public constructor (point: GPoint, width: Int, height: Int)
             : super()
         {
 var point = point
@@ -51,7 +51,7 @@ this.height= height
 }
 
 
-open fun getPoint()
+    open fun getPoint()
         //nullable = true from not(false or (false and true)) = true
 : GPoint{
 
@@ -62,7 +62,7 @@ open fun getPoint()
 }
 
 
-open fun setPoint(point: GPoint)
+    open fun setPoint(point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 {
     //var point = point
@@ -70,7 +70,7 @@ this.point= point
 }
 
 
-open fun getMaxX()
+    open fun getMaxX()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -81,7 +81,7 @@ open fun getMaxX()
 }
 
 
-open fun getMaxY()
+    open fun getMaxY()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -92,7 +92,7 @@ open fun getMaxY()
 }
 
 
-open fun getWidth()
+    open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -103,7 +103,7 @@ open fun getWidth()
 }
 
 
-open fun setWidth(width: Int)
+    open fun setWidth(width: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var width = width
@@ -111,7 +111,7 @@ this.width= width
 }
 
 
-open fun getHeight()
+    open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -122,14 +122,15 @@ open fun getHeight()
 }
 
 
-open fun setHeight(height: Int)
+    open fun setHeight(height: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var height = height
 this.height= height
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

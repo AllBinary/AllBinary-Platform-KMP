@@ -42,14 +42,13 @@ open public class SetLicenseInitInfo
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var stdinput: BufferedReader = BufferedReader(InputStreamReader(System.in))
 
                 @Throws(Exception::class)
             
-open fun main(args: Array<String?>)
+    open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var args = args
@@ -63,7 +62,7 @@ initInfo!!.createNewLicenseInitInfo(BasicArrayList())
         }
             
     private var vector: BasicArrayList = BasicArrayList()
-public constructor        (options: Array<String?>)
+public constructor (options: Array<String?>)
             : super()
         {
 var options = options
@@ -83,7 +82,7 @@ vector.add(options[index]!!)
 
                 @Throws(Exception::class)
             
-open fun getLicenseInitInfo()
+    open fun getLicenseInitInfo()
         //nullable = true from not(false or (false and true)) = true
 : LicenseInitInfo{
 
@@ -114,7 +113,7 @@ open fun getLicenseInitInfo()
 }
 
 
-open fun createNewLicenseInitInfo(licenceServerVector: BasicArrayList)
+    open fun createNewLicenseInitInfo(licenceServerVector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var licenceServerVector = licenceServerVector

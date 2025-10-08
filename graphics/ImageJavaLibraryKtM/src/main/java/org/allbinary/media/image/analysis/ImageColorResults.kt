@@ -34,7 +34,7 @@ open public class ImageColorResults
     private var colorRange: ColorRange
 
     private var colorAverage: ColorAverage
-public constructor        ()
+public constructor ()
             : super()
         {
 this.setColorRange(ColorRange())
@@ -48,7 +48,7 @@ this.setColorAverage(ColorAverage())
 }
 
 
-open fun getColorRange()
+    open fun getColorRange()
         //nullable = true from not(false or (false and true)) = true
 : ColorRange{
 
@@ -59,7 +59,7 @@ open fun getColorRange()
 }
 
 
-open fun setColorRange(colorRange: ColorRange)
+    open fun setColorRange(colorRange: ColorRange)
         //nullable = true from not(false or (false and false)) = true
 {
 var colorRange = colorRange
@@ -67,7 +67,7 @@ this.colorRange= colorRange
 }
 
 
-open fun getColorAverage()
+    open fun getColorAverage()
         //nullable = true from not(false or (false and true)) = true
 : ColorAverage{
 
@@ -78,7 +78,7 @@ open fun getColorAverage()
 }
 
 
-open fun setColorAverage(colorAverage: ColorAverage)
+    open fun setColorAverage(colorAverage: ColorAverage)
         //nullable = true from not(false or (false and false)) = true
 {
 var colorAverage = colorAverage

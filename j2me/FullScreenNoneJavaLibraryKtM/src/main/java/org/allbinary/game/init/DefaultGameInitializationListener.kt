@@ -47,7 +47,7 @@ open public class DefaultGameInitializationListener
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val swtJOGLProcessor: SWTJOGLProcessor = SWTJOGLProcessor.getInstance()!!
-public constructor        ()
+public constructor ()
             : super()
         {
 
@@ -57,7 +57,8 @@ gameInitializedEventHandler!!.removeAllListeners()
 gameInitializedEventHandler!!.addListener(this as GameInitializedListenerInterface)
 }
 
-override fun onEvent(eventObject: AllBinaryEventObject)
+
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject
@@ -66,7 +67,8 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
 
     var firstTime: Boolean = true
-override fun onGameInitialized(gameInitializedEvent: GameInitializedEvent)
+
+    override fun onGameInitialized(gameInitializedEvent: GameInitializedEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameInitializedEvent = gameInitializedEvent

@@ -33,8 +33,7 @@ open public class GameConfigurationTextInput
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
@@ -42,7 +41,7 @@ open public class GameConfigurationTextInput
 
     var SIMULATOR_PORT: GameConfigurationTextInput = GameConfigurationTextInput("Port: ", "8010")
 
-open fun update(textField: TextField)
+    open fun update(textField: TextField)
         //nullable = true from not(false or (false and false)) = true
 {
 var textField = textField
@@ -56,7 +55,7 @@ gameConfigurationTextInput!!.setText(textField!!.getString())
 }
 
 
-open fun getHashtable()
+    open fun getHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
 
@@ -72,7 +71,7 @@ open fun getHashtable()
     private var label: String = StringUtil.getInstance()!!.EMPTY_STRING
 
     private var text: String = StringUtil.getInstance()!!.EMPTY_STRING
-public constructor        (label: String, text: String)
+public constructor (label: String, text: String)
             : super()
         {
 var label = label
@@ -83,7 +82,7 @@ hashtable.put(this.getLabel(), this)
 }
 
 
-open fun setText(text: String)
+    open fun setText(text: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var text = text
@@ -91,7 +90,7 @@ this.text= text
 }
 
 
-open fun getText()
+    open fun getText()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -102,7 +101,7 @@ open fun getText()
 }
 
 
-open fun setLabel(label: String)
+    open fun setLabel(label: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var label = label
@@ -110,7 +109,7 @@ this.label= label
 }
 
 
-open fun getLabel()
+    open fun getLabel()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

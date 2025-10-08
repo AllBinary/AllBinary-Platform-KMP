@@ -28,7 +28,7 @@
 
 open public class CachingGeographicMapCellPositionFactory : BasicGeographicMapCellPositionFactory {
         
-protected constructor        (geographicMapInterface: BasicGeographicMap)                        
+protected constructor (geographicMapInterface: BasicGeographicMap)                        
 
                             : super(geographicMapInterface){
 var geographicMapInterface = geographicMapInterface
@@ -41,7 +41,7 @@ var geographicMapInterface = geographicMapInterface
 
                 @Throws(Exception::class)
             
-open fun createInstance(i_column: Int, i_row: Int, width: Int, height: Int)
+    open fun createInstance(i_column: Int, i_row: Int, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellPosition{
 var i_column = i_column

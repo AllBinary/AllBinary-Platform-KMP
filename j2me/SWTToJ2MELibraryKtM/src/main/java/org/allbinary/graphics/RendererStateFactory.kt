@@ -30,12 +30,11 @@ open public class RendererStateFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: RendererStateFactory = RendererStateFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : RendererStateFactory{
 
@@ -57,7 +56,7 @@ open fun getInstance()
 
     private var surfaceChanged: Boolean = false
 
-open fun setLoaded(loaded: Boolean)
+    open fun setLoaded(loaded: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var loaded = loaded
@@ -65,7 +64,7 @@ this.loaded= loaded
 }
 
 
-open fun isLoaded()
+    open fun isLoaded()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -76,7 +75,7 @@ open fun isLoaded()
 }
 
 
-open fun setSurfaceChanged(initialized: Boolean)
+    open fun setSurfaceChanged(initialized: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var initialized = initialized
@@ -84,7 +83,7 @@ surfaceChanged= initialized
 }
 
 
-open fun isSurfaceChanged()
+    open fun isSurfaceChanged()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

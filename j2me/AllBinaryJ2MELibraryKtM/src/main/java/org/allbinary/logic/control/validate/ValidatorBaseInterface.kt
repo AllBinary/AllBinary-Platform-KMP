@@ -27,22 +27,23 @@
         
 import java.util.Hashtable
 import org.allbinary.util.BasicArrayList
+
 interface ValidatorBaseInterface {
         
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun validationInfo()
+    open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun toHashtable()
+    open fun toHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>
 
-open fun toList()
+    open fun toList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList
 

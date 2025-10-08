@@ -28,14 +28,16 @@ open public class TerrainEventListener
             }            
         
     private val list: BasicArrayList = BasicArrayList()
-override fun onEvent(eventObject: AllBinaryEventObject)
+
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
-override fun onTerrainEvent(terrainEvent: TerrainEvent)
+
+    override fun onTerrainEvent(terrainEvent: TerrainEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var terrainEvent = terrainEvent
@@ -44,7 +46,7 @@ this.list.add(terrainEvent)
 }
 
 
-open fun getList()
+    open fun getList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 

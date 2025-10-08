@@ -35,12 +35,11 @@ open public class AnimationFactoryImageScaleUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AnimationFactoryImageScaleUtil = AnimationFactoryImageScaleUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AnimationFactoryImageScaleUtil{
 
@@ -62,7 +61,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun createImage(image: Image, width: Int, height: Int, scaleWidth: Int, scaleHeight: Int)
+    open fun createImage(image: Image, width: Int, height: Int, scaleWidth: Int, scaleHeight: Int)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var image = image
@@ -116,7 +115,7 @@ open fun createImage(image: Image, width: Int, height: Int, scaleWidth: Int, sca
 
                 @Throws(Exception::class)
             
-open fun processAdjust(baseImageAnimationFactory: BaseImageAnimationFactory)
+    open fun processAdjust(baseImageAnimationFactory: BaseImageAnimationFactory)
         //nullable = true from not(false or (false and false)) = true
 {
     //var baseImageAnimationFactory = baseImageAnimationFactory
@@ -146,8 +145,8 @@ open fun processAdjust(baseImageAnimationFactory: BaseImageAnimationFactory)
                                     }
                                 
                         else {
-                            animationFactoryInitializationVisitor!!.dx= (animationFactoryInitializationVisitor!!.dx *scaleX).toInt()
-animationFactoryInitializationVisitor!!.dy= (animationFactoryInitializationVisitor!!.dy *scaleY).toInt()
+                            animationFactoryInitializationVisitor!!.dx= (animationFactoryInitializationVisitor!!.originalDx *scaleX).toInt()
+animationFactoryInitializationVisitor!!.dy= (animationFactoryInitializationVisitor!!.originalDy *scaleY).toInt()
 
                         }
                             

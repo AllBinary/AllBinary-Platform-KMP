@@ -31,12 +31,11 @@ open public class AdminRoleFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AdminRoleFactory = AdminRoleFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AdminRoleFactory{
 
@@ -70,7 +69,7 @@ open fun getInstance()
     private val shippingManagementRoles: Vector<Any> = Vector<Any>()
 
     private val webManagementRoles: Vector<Any> = Vector<Any>()
-private constructor        ()
+private constructor ()
             : super()
         {
 
@@ -114,7 +113,7 @@ webManagementRoles!!.add(basicUserRoleFactory!!.VIEWEDITOR)
 }
 
 
-open fun getProductManagementRoles()
+    open fun getProductManagementRoles()
         //nullable = true from not(false or (false and true)) = true
 : Vector<Any>{
 
@@ -125,7 +124,7 @@ open fun getProductManagementRoles()
 }
 
 
-open fun getAdminRoles()
+    open fun getAdminRoles()
         //nullable = true from not(false or (false and true)) = true
 : Vector<Any>{
 
@@ -136,7 +135,7 @@ open fun getAdminRoles()
 }
 
 
-open fun getStoreAdminRoles()
+    open fun getStoreAdminRoles()
         //nullable = true from not(false or (false and true)) = true
 : Vector<Any>{
 
@@ -147,7 +146,7 @@ open fun getStoreAdminRoles()
 }
 
 
-open fun getStoreManagementRoles()
+    open fun getStoreManagementRoles()
         //nullable = true from not(false or (false and true)) = true
 : Vector<Any>{
 
@@ -158,7 +157,7 @@ open fun getStoreManagementRoles()
 }
 
 
-open fun getReviewManagementRoles()
+    open fun getReviewManagementRoles()
         //nullable = true from not(false or (false and true)) = true
 : Vector<Any>{
 
@@ -169,7 +168,7 @@ open fun getReviewManagementRoles()
 }
 
 
-open fun getCustomerManagementRoles()
+    open fun getCustomerManagementRoles()
         //nullable = true from not(false or (false and true)) = true
 : Vector<Any>{
 
@@ -180,7 +179,7 @@ open fun getCustomerManagementRoles()
 }
 
 
-open fun getWorkflowManagementRoles()
+    open fun getWorkflowManagementRoles()
         //nullable = true from not(false or (false and true)) = true
 : Vector<Any>{
 
@@ -191,7 +190,7 @@ open fun getWorkflowManagementRoles()
 }
 
 
-open fun getWebManagementRoles()
+    open fun getWebManagementRoles()
         //nullable = true from not(false or (false and true)) = true
 : Vector<Any>{
 
@@ -202,7 +201,7 @@ open fun getWebManagementRoles()
 }
 
 
-open fun getShippingManagementRoles()
+    open fun getShippingManagementRoles()
         //nullable = true from not(false or (false and true)) = true
 : Vector<Any>{
 
@@ -213,7 +212,7 @@ open fun getShippingManagementRoles()
 }
 
 
-open fun getAdjusterManagementRoles()
+    open fun getAdjusterManagementRoles()
         //nullable = true from not(false or (false and true)) = true
 : Vector<Any>{
 
@@ -224,7 +223,7 @@ open fun getAdjusterManagementRoles()
 }
 
 
-open fun getOrderManagementRoles()
+    open fun getOrderManagementRoles()
         //nullable = true from not(false or (false and true)) = true
 : Vector<Any>{
 

@@ -29,8 +29,7 @@ import org.allbinary.input.media.image.InputImageType
 
 open public class SavedCaptureGenericProfileDataWorkerType : GenericProfileDataWorkerType {
         
-
-        companion object {
+companion object {
             
     var SAVED_CAPTURE: SavedCaptureGenericProfileDataWorkerType = SavedCaptureGenericProfileDataWorkerType("Saved " +InputImageType.CAPTURE.getName(), "c:\\share\\captures\\2\\", 100)
 
@@ -39,7 +38,7 @@ open public class SavedCaptureGenericProfileDataWorkerType : GenericProfileDataW
     private var path: String
 
     private var lastFrame: Int= 0
-public constructor        (name: String, path: String, lastFrame: Int)                        
+public constructor (name: String, path: String, lastFrame: Int)                        
 
                             : super(name){
 var name = name
@@ -54,7 +53,7 @@ this.setLastFrame(lastFrame)
 }
 
 
-open fun getPath()
+    open fun getPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -65,7 +64,7 @@ open fun getPath()
 }
 
 
-open fun setPath(path: String)
+    open fun setPath(path: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var path = path
@@ -73,7 +72,7 @@ this.path= path
 }
 
 
-open fun getLastFrame()
+    open fun getLastFrame()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -84,7 +83,7 @@ open fun getLastFrame()
 }
 
 
-open fun setLastFrame(lastFrame: Int)
+    open fun setLastFrame(lastFrame: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var lastFrame = lastFrame

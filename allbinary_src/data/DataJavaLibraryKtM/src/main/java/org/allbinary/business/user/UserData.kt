@@ -30,8 +30,7 @@ open public class UserData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var MAXLEN: Int = 250
 
@@ -78,7 +77,7 @@ open public class UserData
     val CONFIGURATION: String = "CUSTOMER_CONFIGURATION"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

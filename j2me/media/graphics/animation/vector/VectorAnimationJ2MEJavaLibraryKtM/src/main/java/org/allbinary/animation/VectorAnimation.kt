@@ -42,7 +42,7 @@ open public class VectorAnimation : IndexedAnimation
     private var currentPoints: Array<Array<IntArray?>?> = NullUtil.getInstance()!!.NULL_INT_ARRAY_ARRAY_ARRAY
 
     private var circularIndexUtil: CircularIndexUtil = CircularIndexUtil.getInstance(0)!!
-public constructor        (currentPoints: Array<Array<IntArray?>?>, basicColor: BasicColor, animationBehavior: AnimationBehavior)                        
+public constructor (currentPoints: Array<Array<IntArray?>?>, basicColor: BasicColor, animationBehavior: AnimationBehavior)                        
 
                             : super(animationBehavior){
     //var currentPoints = currentPoints
@@ -56,7 +56,7 @@ this.setPoints(currentPoints)
 this.setBasicColorP(basicColor)
 }
 
-public constructor        (currentPoints: Array<IntArray?>, basicColor: BasicColor, animationBehavior: AnimationBehavior)                        
+public constructor (currentPoints: Array<IntArray?>, basicColor: BasicColor, animationBehavior: AnimationBehavior)                        
 
                             : super(animationBehavior){
     //var currentPoints = currentPoints
@@ -87,7 +87,8 @@ this.setBasicColorP(basicColor)
 
 
                 @Throws(Exception::class)
-            override fun getAnimationSize()
+            
+    override fun getAnimationSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -97,7 +98,8 @@ this.setBasicColorP(basicColor)
                         return this.getSize()
 }
 
-override fun getSize()
+
+    override fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -107,13 +109,15 @@ override fun getSize()
                         return this.currentPoints!!.size
 }
 
-override fun setSequence(sequence: IntArray)
+
+    override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
 {
     //var sequence = sequence
 }
 
-override fun getSequence()
+
+    override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
 : IntArray{
 
@@ -123,20 +127,22 @@ override fun getSequence()
                         return PrimitiveIntUtil.getArrayInstance()
 }
 
-override fun nextFrame()
+
+    override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 this.circularIndexUtil!!.next()
 }
 
-override fun previousFrame()
+
+    override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 this.circularIndexUtil!!.previous()
 }
 
 
-open fun paintVectors(graphics: Graphics, x: Int, y: Int)
+    open fun paintVectors(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -196,7 +202,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "paintVectors", e)
 
 }
 
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -206,7 +213,8 @@ this.basicSetColorUtil!!.setBasicColorP(graphics, basicColor)
 this.paintVectors(graphics, x, y)
 }
 
-override fun getFrame()
+
+    override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -216,14 +224,16 @@ override fun getFrame()
                         return this.circularIndexUtil!!.getIndex()
 }
 
-override fun setFrame(index: Int)
+
+    override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var index = index
 this.circularIndexUtil!!.setIndex(index)
 }
 
-override fun getPoints(frame: Int)
+
+    override fun getPoints(frame: Int)
         //nullable = true from not(false or (false and false)) = true
 : Array<IntArray?>{
 var frame = frame
@@ -235,7 +245,7 @@ var frame = frame
 }
 
 
-open fun setPoints(currentPoints: Array<Array<IntArray?>?>)
+    open fun setPoints(currentPoints: Array<Array<IntArray?>?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var currentPoints = currentPoints

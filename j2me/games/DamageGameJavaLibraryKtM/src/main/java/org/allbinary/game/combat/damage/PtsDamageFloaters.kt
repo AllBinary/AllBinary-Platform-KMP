@@ -39,8 +39,7 @@ import org.allbinary.view.ViewPosition
 
 open public class PtsDamageFloaters : DamageFloaters {
         
-
-        companion object {
+companion object {
             
     private val basicColorArrayIndexer: BasicColorArrayIndexer = BasicColorArrayIndexer(arrayOf(BasicColorFactory.getInstance()!!.WHITE,BasicColorFactory.getInstance()!!.RED,BasicColorFactory.getInstance()!!.YELLOW,BasicColorFactory.getInstance()!!.BLUE))
 
@@ -59,7 +58,7 @@ open public class PtsDamageFloaters : DamageFloaters {
     private var circularIndexUtil: CircularIndexUtil = CircularIndexUtil.getInstance(5)!!
 
     private val primitiveLongUtil: PrimitiveLongUtil
-public constructor        (layerInterface: AllBinaryLayer){
+public constructor (layerInterface: AllBinaryLayer){
 var layerInterface = layerInterface
 this.primitiveLongUtil= PrimitiveLongUtil(100000)
 this.layerInterface= layerInterface
@@ -78,7 +77,8 @@ this.lastDamageString[index]= CHAR_ARRAY
 
 }
 
-override fun add(damage: Int)
+
+    override fun add(damage: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var damage = damage
@@ -93,7 +93,8 @@ this.circularIndexUtil!!.next()
 
 
     private val myRandomFactory: MyRandomFactory = MyRandomFactory.getInstance()!!
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

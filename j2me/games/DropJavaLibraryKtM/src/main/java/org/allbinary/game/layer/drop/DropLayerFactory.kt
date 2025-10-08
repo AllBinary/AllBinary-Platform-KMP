@@ -33,12 +33,11 @@ open public class DropLayerFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val DROP_LAYER_FACTORY: DropLayerFactory = DropLayerFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DropLayerFactory{
 
@@ -52,20 +51,20 @@ open fun getInstance()
         }
             
     private val list: BasicArrayList = BasicArrayList()
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun clear()
+    open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 list.clear()
 }
 
 
-open fun getSize()
+    open fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -78,7 +77,7 @@ open fun getSize()
 
     private val basicArrayListUtil: BasicArrayListUtil = BasicArrayListUtil.getInstance()!!
 
-open fun getRandomInstance()
+    open fun getRandomInstance()
         //nullable = true from not(false or (false and true)) = true
 : PickedUpLayerInterfaceFactoryInterface{
 
@@ -89,7 +88,7 @@ open fun getRandomInstance()
 }
 
 
-open fun add(layerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface)
+    open fun add(layerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
@@ -97,7 +96,7 @@ list.add(layerInterfaceFactoryInterface)
 }
 
 
-open fun getList()
+    open fun getList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 

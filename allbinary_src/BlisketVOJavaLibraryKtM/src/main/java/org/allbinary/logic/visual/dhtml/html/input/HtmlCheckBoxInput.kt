@@ -30,7 +30,7 @@ open public class HtmlCheckBoxInput
             : Object
          {
         
-public constructor        ()
+public constructor ()
             : super()
         {
 }

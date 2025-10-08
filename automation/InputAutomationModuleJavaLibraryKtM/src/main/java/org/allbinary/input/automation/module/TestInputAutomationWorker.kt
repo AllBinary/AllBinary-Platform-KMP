@@ -48,7 +48,7 @@ open public class TestInputAutomationWorker
     private var saveMotionRectanglesAsImagesWorker: SaveMotionRectanglesResultsWorker
 
     private var moveMouseToFirstMotionRectanglesResultsWorker: TestInputForMotionRectanglesResultsWorker
-public constructor        ()
+public constructor ()
             : super()
         {
 this.captureWorker= ScreenCaptureImagesWorker()

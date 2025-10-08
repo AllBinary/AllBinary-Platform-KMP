@@ -27,7 +27,6 @@
         
 import javax.microedition.lcdui.Graphics
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.animation.AnimationInterfaceFactoryInterface
 import org.allbinary.animation.ProceduralAnimationInterfaceFactoryInterface
@@ -43,10 +42,9 @@ import org.allbinary.media.audio.AttackSound
 
 open public class WaypointLayer : AdvancedRTSGameLayer {
         
-
-        companion object {
+companion object {
             
-open fun getStaticType()
+    open fun getStaticType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -60,7 +58,7 @@ open fun getStaticType()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-protected constructor        (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
+protected constructor (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
 
                             : super(remoteInfo, parentLayer, groupInterface, rootName, name, Health(1000), NullRTSFormInputFactory.getInstance(), animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y){
     //var remoteInfo = remoteInfo
@@ -83,7 +81,7 @@ this.setAnimationInterface(this.indexedButShouldBeRotationAnimationInterface)
 }
 
 
-open fun construct(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
+    open fun construct(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var rtsPlayerLayerInterface = rtsPlayerLayerInterface
@@ -92,7 +90,7 @@ this.initVisibility(rtsPlayerLayerInterface)
 }
 
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -108,7 +106,7 @@ var graphics = graphics
 }
 
 
-open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
+    open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager
@@ -123,7 +121,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "processTick", e)
 }
 
 
-open fun damage(damage: Int, damageType: Int)
+    open fun damage(damage: Int, damageType: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var damage = damage
@@ -133,7 +131,7 @@ var damageType = damageType
 
                 @Throws(Exception::class)
             
-open fun getDamage(damageType: Int)
+    open fun getDamage(damageType: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var damageType = damageType
@@ -147,7 +145,7 @@ var damageType = damageType
 
                 @Throws(Exception::class)
             
-open fun setDestroyed(destroyed: Boolean)
+    open fun setDestroyed(destroyed: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var destroyed = destroyed
@@ -164,7 +162,7 @@ super.setDestroyed(destroyed)
 }
 
 
-open fun getType()
+    open fun getType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -175,7 +173,7 @@ open fun getType()
 }
 
 
-open fun isSelfUpgradeable()
+    open fun isSelfUpgradeable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

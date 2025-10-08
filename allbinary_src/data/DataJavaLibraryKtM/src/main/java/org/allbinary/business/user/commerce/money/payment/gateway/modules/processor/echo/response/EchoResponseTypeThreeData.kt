@@ -30,13 +30,12 @@ open public class EchoResponseTypeThreeData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var NAME: String = "ECHOTYPE3"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

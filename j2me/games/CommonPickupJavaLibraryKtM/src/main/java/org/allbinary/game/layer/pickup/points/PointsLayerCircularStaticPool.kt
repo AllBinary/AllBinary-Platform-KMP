@@ -32,7 +32,7 @@ import org.allbinary.layer.AllBinaryLayerFactoryInterface
 
 open public class PointsLayerCircularStaticPool : AllBinaryLayerCircularPool {
         
-public constructor        (allbinaryLayerFactoryInterface: AllBinaryLayerFactoryInterface, total: Int){
+public constructor (allbinaryLayerFactoryInterface: AllBinaryLayerFactoryInterface, total: Int){
 var allbinaryLayerFactoryInterface = allbinaryLayerFactoryInterface
 var total = total
 super.init(allbinaryLayerFactoryInterface, total)
@@ -41,7 +41,7 @@ super.init(allbinaryLayerFactoryInterface, total)
 
                 @Throws(Exception::class)
             
-open fun visit(sourceLayerInterface: AllBinaryLayer)
+    open fun visit(sourceLayerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var sourceLayerInterface = sourceLayerInterface

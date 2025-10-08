@@ -44,7 +44,7 @@ open public class StoreCategoryFactory : CategoryAbstractFactory
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var transformInfoInterface: TransformInfoInterface
-public constructor        (transformInfoInterface: TransformInfoInterface){
+public constructor (transformInfoInterface: TransformInfoInterface){
 var transformInfoInterface = transformInfoInterface
 
     
@@ -59,7 +59,7 @@ this.transformInfoInterface= transformInfoInterface
 }
 
 
-open fun getRootInstance()
+    open fun getRootInstance()
         //nullable = true from not(false or (false and true)) = true
 : CategoryInterface{
 
@@ -93,7 +93,7 @@ open fun getRootInstance()
 }
 
 
-open fun getRootInstance(categoryPath: AbPath)
+    open fun getRootInstance(categoryPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
 : CategoryInterface{
 var categoryPath = categoryPath
@@ -131,7 +131,7 @@ var categoryPath = categoryPath
 }
 
 
-open fun getRootInstanceFromNode(node: Node)
+    open fun getRootInstanceFromNode(node: Node)
         //nullable = true from not(false or (false and false)) = true
 : CategoryInterface{
 var node = node

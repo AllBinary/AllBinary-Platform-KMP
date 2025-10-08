@@ -32,10 +32,9 @@ open public class RectangleCollisionPointUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun allPointsInside(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, list: BasicArrayList)
+    open fun allPointsInside(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var rectX1 = rectX1
@@ -80,7 +79,7 @@ point= list.objectArray[index]!! as GPoint
 }
 
 
-open fun allPointsInside(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, list: BasicArrayList, xCellSize: Int, yCellSize: Int)
+    open fun allPointsInside(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, list: BasicArrayList, xCellSize: Int, yCellSize: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var rectX1 = rectX1
@@ -128,7 +127,7 @@ point= list.objectArray[index]!! as GPoint
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

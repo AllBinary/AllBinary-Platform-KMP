@@ -37,7 +37,8 @@ open public class ThirdPartyInApplicationPurchase
             public constructor() : super()
             {
             }            
-        override fun isPurchased(lockableFeature: LockableFeature)
+        
+    override fun isPurchased(lockableFeature: LockableFeature)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var lockableFeature = lockableFeature
@@ -48,24 +49,28 @@ var lockableFeature = lockableFeature
                         return false
 }
 
-override fun onCreate(anyType: Any, stateObject: Any)
+
+    override fun onCreate(anyType: Any, stateObject: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var anyType = anyType
 var stateObject = stateObject
 }
 
-override fun onDestroy()
+
+    override fun onDestroy()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun onStart()
+
+    override fun onStart()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun onActivityResult(requestCode: Int, resultCode: Int, dataObject: Any)
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, dataObject: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var requestCode = requestCode
@@ -73,35 +78,41 @@ override fun onActivityResult(requestCode: Int, resultCode: Int, dataObject: Any
     //var dataObject = dataObject
 }
 
-override fun onSaveInstanceState(anyType: Any)
+
+    override fun onSaveInstanceState(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var anyType = anyType
 }
 
-override fun onStop()
+
+    override fun onStop()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun requestPurchase(lockableFeature: LockableFeature)
+
+    override fun requestPurchase(lockableFeature: LockableFeature)
         //nullable = true from not(false or (false and false)) = true
 {
 var lockableFeature = lockableFeature
 }
 
-override fun requestReceipts()
+
+    override fun requestReceipts()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun add(lockableFeature: LockableFeature)
+
+    override fun add(lockableFeature: LockableFeature)
         //nullable = true from not(false or (false and false)) = true
 {
 var lockableFeature = lockableFeature
 }
 
-override fun getUserName()
+
+    override fun getUserName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -111,7 +122,8 @@ override fun getUserName()
                         return StringUtil.getInstance()!!.EMPTY_STRING
 }
 
-override fun isEnabled()
+
+    override fun isEnabled()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -122,7 +134,7 @@ override fun isEnabled()
 }
 
 
-open fun requestProducts()
+    open fun requestProducts()
         //nullable = true from not(false or (false and true)) = true
 {
 }

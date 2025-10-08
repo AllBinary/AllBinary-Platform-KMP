@@ -33,7 +33,7 @@ import org.allbinary.view.ViewPosition
 open public class MultiPlayerGameLayer : CollidableDestroyableDamageableLayer
                 , MultiPlayerGameLayerInterface {
         
-public constructor        (remoteInfo: RemoteInfo, groupInterface: Array<Group?>, layerInfo: Rectangle, viewPosition: ViewPosition)                        
+public constructor (remoteInfo: RemoteInfo, groupInterface: Array<Group?>, layerInfo: Rectangle, viewPosition: ViewPosition)                        
 
                             : super(groupInterface, layerInfo, viewPosition){
     //var remoteInfo = remoteInfo
@@ -46,7 +46,7 @@ public constructor        (remoteInfo: RemoteInfo, groupInterface: Array<Group?>
                     
 }
 
-public constructor        (remoteInfo: RemoteInfo, groupInterface: Array<Group?>, name: String, layerInfo: Rectangle, viewPosition: ViewPosition)                        
+public constructor (remoteInfo: RemoteInfo, groupInterface: Array<Group?>, name: String, layerInfo: Rectangle, viewPosition: ViewPosition)                        
 
                             : super(groupInterface, name, layerInfo, viewPosition){
     //var remoteInfo = remoteInfo
@@ -60,7 +60,8 @@ public constructor        (remoteInfo: RemoteInfo, groupInterface: Array<Group?>
                     
 }
 
-override fun getMultiplayerBehavior()
+
+    override fun getMultiplayerBehavior()
         //nullable = true from not(false or (false and true)) = true
 : MultiplayerBehavior{
 
@@ -71,21 +72,21 @@ override fun getMultiplayerBehavior()
 }
 
 
-open fun setPingInfo(show: Boolean)
+    open fun setPingInfo(show: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var show = show
 }
 
 
-open fun setFiring(firing: Short)
+    open fun setFiring(firing: Short)
         //nullable = true from not(false or (false and false)) = true
 {
 var firing = firing
 }
 
 
-open fun getFiring()
+    open fun getFiring()
         //nullable = true from not(false or (false and true)) = true
 : Short{
 

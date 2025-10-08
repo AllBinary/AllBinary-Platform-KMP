@@ -39,7 +39,7 @@ open public class AndroidGameStatistics : BaseGameStatistics {
     private var totalOnDraws: Long= 0
 
     private val STRING_ARRAY: Array<String?> = arrayOfNulls(14)
-public constructor        (){
+public constructor (){
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 

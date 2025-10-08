@@ -35,7 +35,7 @@ open public class GameInputProcessorComposite : PlayerGameInput {
     private val name: String
 
     private val gameInputProcessorInterface: GameInputProcessorInterface
-public constructor        (name: String, gameInputProcessorInterface: GameInputProcessorInterface)                        
+public constructor (name: String, gameInputProcessorInterface: GameInputProcessorInterface)                        
 
                             : super(BasicArrayList(),  -1){
 var name = name
@@ -49,7 +49,8 @@ this.gameInputProcessorInterface= gameInputProcessorInterface
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun update()
+
+    override fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -67,7 +68,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
 
 
     private val NAME_LABEL: String = " GameInputProcessorInterface: "
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

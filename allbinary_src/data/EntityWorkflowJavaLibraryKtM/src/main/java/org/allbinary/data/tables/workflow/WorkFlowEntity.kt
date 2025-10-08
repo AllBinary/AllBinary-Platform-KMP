@@ -54,7 +54,7 @@ open public class WorkFlowEntity : AbSqlBean
     private val METHOD_GET: String = "get()"
 
     private val METHOD_UPDATE: String = "update"
-public constructor        ()                        
+public constructor ()                        
 
                             : super(UserDbInitInfo()){
 
@@ -65,7 +65,7 @@ this.setTableName(tableName)
 }
 
 
-open fun insert(values: Vector)
+    open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 {
     //var values = values
@@ -97,7 +97,7 @@ open fun insert(values: Vector)
 }
 
 
-open fun delete(name: String, storeName: String)
+    open fun delete(name: String, storeName: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var name = name
@@ -137,7 +137,7 @@ super.deleteWhere(keysAndValues)
 
                 @Throws(Exception::class, LicensingException::class)
             
-open fun get(name: String, storeName: String)
+    open fun get(name: String, storeName: String)
         //nullable = true from not(false or (false and false)) = true
 : WorkFlowInterface{
     //var name = name
@@ -193,7 +193,7 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
 }
 
 
-open fun get(storeName: String)
+    open fun get(storeName: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var storeName = storeName
@@ -261,7 +261,7 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
 }
 
 
-open fun update(updatedValues: HashMap<Any, Any>)
+    open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var updatedValues = updatedValues
@@ -289,7 +289,7 @@ super.updateWhere(wherekeysAndValues, updatedValues)
 }
 
 
-open fun createTableStatement()
+    open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -307,7 +307,7 @@ stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.appe
 }
 
 
-open fun createTable()
+    open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -318,7 +318,7 @@ open fun createTable()
 }
 
 
-open fun dropTable()
+    open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

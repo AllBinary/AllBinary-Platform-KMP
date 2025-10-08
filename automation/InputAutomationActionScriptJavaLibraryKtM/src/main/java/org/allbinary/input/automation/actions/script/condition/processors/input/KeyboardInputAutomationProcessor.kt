@@ -39,12 +39,11 @@ open public class KeyboardInputAutomationProcessor
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun process(keyActionScriptInputInterface: KeyboardActionScriptInputInterface)
+    open fun process(keyActionScriptInputInterface: KeyboardActionScriptInputInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyActionScriptInputInterface = keyActionScriptInputInterface
@@ -155,7 +154,7 @@ Thread.sleep(50)
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

@@ -26,12 +26,13 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.game.layer.AllBinaryTiledLayer
+
 interface GeographicMapCellPositionFactoryInitVisitorInterface {
         
 
                 @Throws(Exception::class)
             
-open fun visit(tiledLayer: AllBinaryTiledLayer, cellPosition: GeographicMapCellPosition)
+    open fun visit(tiledLayer: AllBinaryTiledLayer, cellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 
 

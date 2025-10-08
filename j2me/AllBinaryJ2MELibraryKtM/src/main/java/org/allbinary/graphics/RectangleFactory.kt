@@ -30,8 +30,7 @@ open public class RectangleFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val SINGLETON: Rectangle = Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 0, 0)
 

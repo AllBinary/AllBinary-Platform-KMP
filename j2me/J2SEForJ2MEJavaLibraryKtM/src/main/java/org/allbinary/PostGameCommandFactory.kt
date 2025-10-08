@@ -32,12 +32,11 @@ open public class PostGameCommandFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: PostGameCommandFactory = PostGameCommandFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PostGameCommandFactory{
 
@@ -55,7 +54,7 @@ open fun getInstance()
             {
             }            
         
-open fun addCommands(canvas: Canvas)
+    open fun addCommands(canvas: Canvas)
         //nullable = true from not(false or (false and false)) = true
 {
 var canvas = canvas

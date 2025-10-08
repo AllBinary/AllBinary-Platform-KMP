@@ -51,12 +51,11 @@ open public class CurrentDisplayableFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: CurrentDisplayableFactory = CurrentDisplayableFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CurrentDisplayableFactory{
 
@@ -96,7 +95,7 @@ open fun getInstance()
     private var runnable: GameRunnable = NullWaitGameRunnable.getInstance()!!
 
     private var usedRunnable: GameRunnable = NullWaitGameRunnable.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 this.DEFAULT_CHILD_NAME_LIST.add(this.canvasStrings!!.ABOUT)
@@ -107,7 +106,7 @@ this.DEFAULT_CHILD_NAME_LIST.add(HighScoresCanvas.NAME)
 }
 
 
-open fun setMyCanvas(displayable: MyCanvas)
+    open fun setMyCanvas(displayable: MyCanvas)
         //nullable = true from not(false or (false and false)) = true
 {
     //var displayable = displayable
@@ -138,7 +137,7 @@ this.setDisplayable(displayable)
 }
 
 
-open fun setDisplayable(displayable: Displayable)
+    open fun setDisplayable(displayable: Displayable)
         //nullable = true from not(false or (false and false)) = true
 {
     //var displayable = displayable
@@ -147,7 +146,7 @@ this.setOpenGlReadydisplayable(displayable)
 }
 
 
-open fun setOpenGlReadydisplayable(openGlReadydisplayable: Displayable)
+    open fun setOpenGlReadydisplayable(openGlReadydisplayable: Displayable)
         //nullable = true from not(false or (false and false)) = true
 {
     //var openGlReadydisplayable = openGlReadydisplayable
@@ -156,7 +155,7 @@ this.update()
 }
 
 
-open fun getOpenGlReadydisplayable()
+    open fun getOpenGlReadydisplayable()
         //nullable = true from not(false or (false and true)) = true
 : Displayable{
 
@@ -167,7 +166,7 @@ open fun getOpenGlReadydisplayable()
 }
 
 
-open fun setRunnable(runnable: GameRunnable)
+    open fun setRunnable(runnable: GameRunnable)
         //nullable = true from not(false or (false and false)) = true
 {
     //var runnable = runnable
@@ -192,7 +191,7 @@ this.runnable= runnable
 }
 
 
-open fun clearRunnable()
+    open fun clearRunnable()
         //nullable = true from not(false or (false and true)) = true
 {
 PreLogUtil.put(StringMaker().
@@ -201,7 +200,7 @@ this.setUsedRunnable(NullWaitGameRunnable.getInstance())
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -262,7 +261,7 @@ this.setUsedRunnable(NullWaitGameRunnable.getInstance())
 }
 
 
-open fun getDisplayable()
+    open fun getDisplayable()
         //nullable = true from not(false or (false and true)) = true
 : Displayable{
 
@@ -273,7 +272,7 @@ open fun getDisplayable()
 }
 
 
-open fun getUsedRunnable()
+    open fun getUsedRunnable()
         //nullable = true from not(false or (false and true)) = true
 : GameRunnable{
 
@@ -284,7 +283,7 @@ open fun getUsedRunnable()
 }
 
 
-open fun setUsedRunnable(usedRunnable: GameRunnable)
+    open fun setUsedRunnable(usedRunnable: GameRunnable)
         //nullable = true from not(false or (false and false)) = true
 {
 var usedRunnable = usedRunnable

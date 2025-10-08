@@ -33,15 +33,14 @@ open public class BasicUserRole
         
                 , Serializable {
         
-
-        companion object {
+companion object {
             
     private val roleVector: Vector<Any> = Vector<Any>()
 
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getRole(role: String)
+    open fun getRole(role: String)
         //nullable = true from not(false or (false and false)) = true
 : BasicUserRole{
 var role = role
@@ -83,7 +82,7 @@ var role = role
 }
 
 
-open fun getAll()
+    open fun getAll()
         //nullable = true from not(false or (false and true)) = true
 : Vector<Any>{
 
@@ -105,7 +104,7 @@ open fun getAll()
     private val sessionTimeout: Long
 
     private val sessionInactivityTimeout: Long
- constructor        (aRole: String, a_int_RoleId: Int, aSessionTimeout: Long, aSessionInactivityTimeout: Long)                        
+ constructor (aRole: String, a_int_RoleId: Int, aSessionTimeout: Long, aSessionInactivityTimeout: Long)                        
 
                             : this(aRole, aRole, a_int_RoleId, aSessionTimeout, aSessionInactivityTimeout){
 var aRole = aRole
@@ -118,7 +117,7 @@ var aSessionInactivityTimeout = aSessionInactivityTimeout
                     
 }
 
- constructor        (aRole: String, aDisplayValue: String, a_int_RoleId: Int, aSessionTimeout: Long, aSessionInactivityTimeout: Long)
+ constructor (aRole: String, aDisplayValue: String, a_int_RoleId: Int, aSessionTimeout: Long, aSessionInactivityTimeout: Long)
             : super()
         {
 var aRole = aRole
@@ -135,7 +134,7 @@ roleVector!!.add(this)
 }
 
 
-open fun getRoleId()
+    open fun getRoleId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -146,7 +145,7 @@ open fun getRoleId()
 }
 
 
-open fun getRole()
+    open fun getRole()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -157,7 +156,7 @@ open fun getRole()
 }
 
 
-open fun getSessionTimeout()
+    open fun getSessionTimeout()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -168,7 +167,7 @@ open fun getSessionTimeout()
 }
 
 
-open fun getSessionInactivityTimeout()
+    open fun getSessionInactivityTimeout()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -179,7 +178,7 @@ open fun getSessionInactivityTimeout()
 }
 
 
-open fun equals(basicUserRole: BasicUserRole?)
+    open fun equals(basicUserRole: BasicUserRole?)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var basicUserRole = basicUserRole
@@ -203,7 +202,8 @@ var basicUserRole = basicUserRole
                         return false
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

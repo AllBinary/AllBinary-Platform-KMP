@@ -44,7 +44,7 @@ open public class TopViewCharacterBehavior
         
                 @Throws(Exception::class)
             
-open fun terrainEvent(layer: AllBinaryLayer, direction: Direction, x: Int, y: Int, geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellPosition: GeographicMapCellPosition)
+    open fun terrainEvent(layer: AllBinaryLayer, direction: Direction, x: Int, y: Int, geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layer = layer
@@ -56,7 +56,7 @@ open fun terrainEvent(layer: AllBinaryLayer, direction: Direction, x: Int, y: In
 }
 
 
-open fun terrainMove(layer: AllBinaryLayer, geographicMapInterfaceArray: Array<BasicGeographicMap?>, x: Int, y: Int)
+    open fun terrainMove(layer: AllBinaryLayer, geographicMapInterfaceArray: Array<BasicGeographicMap?>, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layer = layer
@@ -66,7 +66,7 @@ open fun terrainMove(layer: AllBinaryLayer, geographicMapInterfaceArray: Array<B
 }
 
 
-open fun hasSolidBlock(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>)
+    open fun hasSolidBlock(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray

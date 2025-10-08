@@ -29,7 +29,7 @@ import org.allbinary.graphics.Rectangle
 
 open public class RectangleLayerBounds : LayerBounds {
         
-public constructor        (rectangle: Rectangle)                        
+public constructor (rectangle: Rectangle)                        
 
                             : super(rectangle){
 var rectangle = rectangle
@@ -39,7 +39,8 @@ var rectangle = rectangle
                     
 }
 
-override fun visit(boundsVisitorInterface: BoundsVisitorInterface)
+
+    override fun visit(boundsVisitorInterface: BoundsVisitorInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var boundsVisitorInterface = boundsVisitorInterface

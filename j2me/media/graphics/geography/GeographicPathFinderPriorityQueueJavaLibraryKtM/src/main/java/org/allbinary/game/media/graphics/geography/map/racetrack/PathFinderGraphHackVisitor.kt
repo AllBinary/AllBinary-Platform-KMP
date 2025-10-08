@@ -30,7 +30,7 @@ import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 
 open public class PathFinderGraphHackVisitor : BasePathFinderGraphVisitor {
         
-public constructor        (geographicMapInterface: BasicGeographicMap, edgeMinimum: Int, minPathWeight: Int, maxPathWeight: Int)                        
+public constructor (geographicMapInterface: BasicGeographicMap, edgeMinimum: Int, minPathWeight: Int, maxPathWeight: Int)                        
 
                             : super(geographicMapInterface, edgeMinimum, minPathWeight, maxPathWeight){
     //var geographicMapInterface = geographicMapInterface
@@ -46,7 +46,7 @@ var maxPathWeight = maxPathWeight
 
                 @Throws(Exception::class)
             
-open fun visit(graph: Any, startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList)
+    open fun visit(graph: Any, startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var graph = graph
@@ -60,7 +60,7 @@ this.fixOverPassEdges(graph)
 
                 @Throws(Exception::class)
             
-open fun fixStart(graph: Any, startPathFindingNodeList: BasicArrayList)
+    open fun fixStart(graph: Any, startPathFindingNodeList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var graph = graph
@@ -70,7 +70,7 @@ var startPathFindingNodeList = startPathFindingNodeList
 
                 @Throws(Exception::class)
             
-open fun fixEnd(graph: Any, endPathFindingNodeList: BasicArrayList)
+    open fun fixEnd(graph: Any, endPathFindingNodeList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var graph = graph
@@ -80,7 +80,7 @@ var endPathFindingNodeList = endPathFindingNodeList
 
                 @Throws(Exception::class)
             
-open fun fixOverPassEdges(graph: Any)
+    open fun fixOverPassEdges(graph: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var graph = graph
@@ -89,7 +89,7 @@ var graph = graph
 
                 @Throws(Exception::class)
             
-open fun fixPath(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, pathList: BasicArrayList)
+    open fun fixPath(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, pathList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var startPathFindingNodeList = startPathFindingNodeList
@@ -100,14 +100,14 @@ var pathList = pathList
 
                 @Throws(Exception::class)
             
-open fun removeOverPassEdges(pathList: BasicArrayList)
+    open fun removeOverPassEdges(pathList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var pathList = pathList
 }
 
 
-open fun isValid(graphPath: Any)
+    open fun isValid(graphPath: Any)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var graphPath = graphPath

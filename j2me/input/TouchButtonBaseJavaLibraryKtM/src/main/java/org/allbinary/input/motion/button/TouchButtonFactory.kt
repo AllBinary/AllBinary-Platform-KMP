@@ -32,12 +32,11 @@ open public class TouchButtonFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: TouchButtonFactory = TouchButtonFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TouchButtonFactory{
 
@@ -55,13 +54,13 @@ open fun getInstance()
     private var list: BasicArrayList = LIST
 
     private var savedList: BasicArrayList = LIST
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun defaultList()
+    open fun defaultList()
         //nullable = true from not(false or (false and true)) = true
 {
 this.list= LIST
@@ -72,7 +71,7 @@ this.toggle(false, LIST)
     private var saved: Boolean = false
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun toggle(save: Boolean, list: BasicArrayList)
+    open fun toggle(save: Boolean, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var save = save
@@ -133,7 +132,7 @@ this.saved= false
 
                 @Throws(Exception::class)
             
-open fun setList(list: BasicArrayList)
+    open fun setList(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var list = list
@@ -155,7 +154,7 @@ this.list= list
 }
 
 
-open fun getList()
+    open fun getList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 

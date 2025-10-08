@@ -39,12 +39,11 @@ open public class AuthenticationHelperUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AuthenticationHelperUtil = AuthenticationHelperUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AuthenticationHelperUtil{
 
@@ -66,7 +65,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun isAuthorized(authenticationHelper: AuthenticationHelper, filePath: String)
+    open fun isAuthorized(authenticationHelper: AuthenticationHelper, filePath: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var authenticationHelper = authenticationHelper

@@ -35,7 +35,7 @@ import org.allbinary.util.BasicArrayList
 
 open public class GeographicMapTopViewLayerBehavior : TopViewGameLayerBehavior {
         
-public constructor        (maxGravityActionIndex: Int)                        
+public constructor (maxGravityActionIndex: Int)                        
 
                             : super(maxGravityActionIndex){
     //var maxGravityActionIndex = maxGravityActionIndex
@@ -48,7 +48,7 @@ public constructor        (maxGravityActionIndex: Int)
 
                 @Throws(Exception::class)
             
-open fun getGeographicMapCellPositionIfNotSolidBlockOrOffMap(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, velocityProperties: VelocityProperties, layer: AllBinaryLayer, x: Int, y: Int)
+    open fun getGeographicMapCellPositionIfNotSolidBlockOrOffMap(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, velocityProperties: VelocityProperties, layer: AllBinaryLayer, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellPosition{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
@@ -67,7 +67,7 @@ var y = y
 
                 @Throws(Exception::class)
             
-open fun getGeographicMapCellPositionIfNotSolidBlockOrOffMap(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, geographicMapCellPosition: GeographicMapCellPosition, velocityProperties: VelocityProperties, layer: AllBinaryLayer)
+    open fun getGeographicMapCellPositionIfNotSolidBlockOrOffMap(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, geographicMapCellPosition: GeographicMapCellPosition, velocityProperties: VelocityProperties, layer: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellPosition{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
@@ -85,7 +85,7 @@ open fun getGeographicMapCellPositionIfNotSolidBlockOrOffMap(geographicMapInterf
 
                 @Throws(Exception::class)
             
-open fun getGeographicMapCellPositionIfNotSolidBlockOrOffMap(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, geographicMapCellPositionList: BasicArrayList, velocityProperties: VelocityProperties, layer: AllBinaryLayer)
+    open fun getGeographicMapCellPositionIfNotSolidBlockOrOffMap(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, geographicMapCellPositionList: BasicArrayList, velocityProperties: VelocityProperties, layer: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellPosition{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
@@ -103,7 +103,7 @@ open fun getGeographicMapCellPositionIfNotSolidBlockOrOffMap(geographicMapInterf
 
                 @Throws(Exception::class)
             
-open fun gravity(velocityProperties: VelocityProperties, geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, geographicMapCellPosition: GeographicMapCellPosition)
+    open fun gravity(velocityProperties: VelocityProperties, geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
     //var velocityProperties = velocityProperties
@@ -115,7 +115,7 @@ open fun gravity(velocityProperties: VelocityProperties, geographicMapInterfaceA
 
                 @Throws(Exception::class)
             
-open fun left(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, velocityProperties: VelocityProperties, layer: AllBinaryLayer)
+    open fun left(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, velocityProperties: VelocityProperties, layer: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
@@ -127,7 +127,7 @@ open fun left(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographi
 
                 @Throws(Exception::class)
             
-open fun move(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, velocityProperties: VelocityProperties, layer: AllBinaryLayer, x: Int, y: Int)
+    open fun move(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, velocityProperties: VelocityProperties, layer: AllBinaryLayer, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
@@ -146,7 +146,7 @@ open fun move(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographi
 
                 @Throws(Exception::class)
             
-open fun moveAndLand(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, geographicMapCellPosition: GeographicMapCellPosition, velocityProperties: VelocityProperties, layer: AllBinaryLayer, x: Int, y: Int)
+    open fun moveAndLand(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, geographicMapCellPosition: GeographicMapCellPosition, velocityProperties: VelocityProperties, layer: AllBinaryLayer, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
@@ -161,7 +161,7 @@ open fun moveAndLand(geographicMapInterfaceArray: Array<BasicGeographicMap?>, ge
 
                 @Throws(Exception::class)
             
-open fun right(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, velocityProperties: VelocityProperties, layer: AllBinaryLayer)
+    open fun right(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, velocityProperties: VelocityProperties, layer: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
@@ -171,7 +171,7 @@ open fun right(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geograph
 }
 
 
-open fun hasSolidBlock(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>)
+    open fun hasSolidBlock(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
@@ -214,7 +214,7 @@ basicTopViewGeographicMapCellTypeFactory= geographicMapInterfaceArray[index]!!.g
 }
 
 
-open fun isOffMap(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>)
+    open fun isOffMap(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var geographicMapInterfaceArray = geographicMapInterfaceArray

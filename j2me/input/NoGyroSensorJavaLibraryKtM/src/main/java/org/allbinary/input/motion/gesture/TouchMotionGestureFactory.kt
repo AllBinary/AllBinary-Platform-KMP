@@ -31,12 +31,11 @@ open public class TouchMotionGestureFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val MOTION: TouchMotionGestureFactory = TouchMotionGestureFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TouchMotionGestureFactory{
 
@@ -72,7 +71,7 @@ open fun getInstance()
     val NO_MOTION: MotionGestureInput
 
     val LAST_MOTION: MotionGestureInput
-private constructor        ()
+private constructor ()
             : super()
         {
 

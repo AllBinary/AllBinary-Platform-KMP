@@ -31,32 +31,31 @@ open public class MultiplayerBehavior
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NULL_MULTIPLAYER_BEHAVIOR: MultiplayerBehavior = MultiplayerBehavior(StringUtil.getInstance()!!.EMPTY_STRING)
 
         }
-            protected constructor        (username: String)
+            protected constructor (username: String)
             : super()
         {
 var username = username
 }
 
 
-open fun startTick()
+    open fun startTick()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun endTick()
+    open fun endTick()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun getApproximateElapsed()
+    open fun getApproximateElapsed()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 

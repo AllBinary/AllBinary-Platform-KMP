@@ -34,12 +34,11 @@ open public class InputImageIOInterfaceFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun getInstance(imageType: InputImageType)
+    open fun getInstance(imageType: InputImageType)
         //nullable =  from not(true or (false and false)) = 
 : ImageIOInterface{
 var imageType = imageType
@@ -94,7 +93,7 @@ var imageType = imageType
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

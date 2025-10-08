@@ -51,7 +51,7 @@ open public class BasicVelocityProperties
     val velocityZBasicDecimal: BasicDecimal
 
     private val axisMathVectorUtil: AxisMathVectorUtil = AxisMathVectorUtil.getInstance()!!
-public constructor        ()
+public constructor ()
             : super()
         {
 this.velocityXBasicDecimal= BasicDecimal()
@@ -59,7 +59,8 @@ this.velocityYBasicDecimal= BasicDecimal()
 this.velocityZBasicDecimal= BasicDecimal()
 }
 
-override fun zero()
+
+    override fun zero()
         //nullable = true from not(false or (false and true)) = true
 {
 this.velocityXBasicDecimal!!.set(0)
@@ -67,7 +68,8 @@ this.velocityYBasicDecimal!!.set(0)
 this.velocityZBasicDecimal!!.set(0)
 }
 
-override fun getVelocityXBasicDecimalP()
+
+    override fun getVelocityXBasicDecimalP()
         //nullable = true from not(false or (false and true)) = true
 : BasicDecimal{
 
@@ -77,7 +79,8 @@ override fun getVelocityXBasicDecimalP()
                         return velocityXBasicDecimal
 }
 
-override fun getVelocityYBasicDecimalP()
+
+    override fun getVelocityYBasicDecimalP()
         //nullable = true from not(false or (false and true)) = true
 : BasicDecimal{
 
@@ -88,7 +91,7 @@ override fun getVelocityYBasicDecimalP()
 }
 
 
-open fun getVelocityZBasicDecimalP()
+    open fun getVelocityZBasicDecimalP()
         //nullable = true from not(false or (false and true)) = true
 : BasicDecimal{
 
@@ -100,7 +103,8 @@ open fun getVelocityZBasicDecimalP()
 
 
     val directionUtil: DirectionUtil = DirectionUtil.getInstance()!!
-override fun setVelocity(magnitudeBasicDecimal: BasicDecimal, direction: Direction, otherDirection: Direction)
+
+    override fun setVelocity(magnitudeBasicDecimal: BasicDecimal, direction: Direction, otherDirection: Direction)
         //nullable = true from not(false or (false and false)) = true
 {
     //var magnitudeBasicDecimal = magnitudeBasicDecimal
@@ -115,7 +119,8 @@ override fun setVelocity(magnitudeBasicDecimal: BasicDecimal, direction: Directi
 this.setVelocity(magnitudeBasicDecimal, angle, otherAngle)
 }
 
-override fun setVelocity(magnitude: Long, direction: Direction, otherDirection: Direction)
+
+    override fun setVelocity(magnitude: Long, direction: Direction, otherDirection: Direction)
         //nullable = true from not(false or (false and false)) = true
 {
     //var magnitude = magnitude
@@ -130,7 +135,8 @@ override fun setVelocity(magnitude: Long, direction: Direction, otherDirection: 
 this.setVelocity(magnitude, angle, otherAngle)
 }
 
-override fun addVelocity(magnitudeBasicDecimal: BasicDecimal, direction: Direction, otherDirection: Direction)
+
+    override fun addVelocity(magnitudeBasicDecimal: BasicDecimal, direction: Direction, otherDirection: Direction)
         //nullable = true from not(false or (false and false)) = true
 {
     //var magnitudeBasicDecimal = magnitudeBasicDecimal
@@ -145,7 +151,8 @@ override fun addVelocity(magnitudeBasicDecimal: BasicDecimal, direction: Directi
 this.addVelocity(magnitudeBasicDecimal, angle, otherAngle)
 }
 
-override fun addVelocity(magnitude: Long, direction: Direction, otherDirection: Direction)
+
+    override fun addVelocity(magnitude: Long, direction: Direction, otherDirection: Direction)
         //nullable = true from not(false or (false and false)) = true
 {
     //var magnitude = magnitude
@@ -160,7 +167,8 @@ override fun addVelocity(magnitude: Long, direction: Direction, otherDirection: 
 this.addVelocity(magnitude, angle, otherAngle)
 }
 
-override fun setVelocity(magnitudeBasicDecimal: BasicDecimal, angle: Angle, otherAngle: Angle)
+
+    override fun setVelocity(magnitudeBasicDecimal: BasicDecimal, angle: Angle, otherAngle: Angle)
         //nullable = true from not(false or (false and false)) = true
 {
     //var magnitudeBasicDecimal = magnitudeBasicDecimal
@@ -172,7 +180,8 @@ override fun setVelocity(magnitudeBasicDecimal: BasicDecimal, angle: Angle, othe
 this.setVelocity(magnitude, angle, otherAngle)
 }
 
-override fun addVelocity(magnitudeBasicDecimal: BasicDecimal, angle: Angle, otherAngle: Angle)
+
+    override fun addVelocity(magnitudeBasicDecimal: BasicDecimal, angle: Angle, otherAngle: Angle)
         //nullable = true from not(false or (false and false)) = true
 {
     //var magnitudeBasicDecimal = magnitudeBasicDecimal
@@ -184,7 +193,8 @@ override fun addVelocity(magnitudeBasicDecimal: BasicDecimal, angle: Angle, othe
 this.addVelocity(magnitude, angle, otherAngle)
 }
 
-override fun setVelocity(magnitude: Long, angle: Angle, otherAngle: Angle)
+
+    override fun setVelocity(magnitude: Long, angle: Angle, otherAngle: Angle)
         //nullable = true from not(false or (false and false)) = true
 {
     //var magnitude = magnitude
@@ -193,7 +203,8 @@ override fun setVelocity(magnitude: Long, angle: Angle, otherAngle: Angle)
 this.setVelocity(magnitude, angle.getValue().toInt(), otherAngle!!.getValue().toInt())
 }
 
-override fun addVelocity(magnitude: Long, angle: Angle, otherAngle: Angle)
+
+    override fun addVelocity(magnitude: Long, angle: Angle, otherAngle: Angle)
         //nullable = true from not(false or (false and false)) = true
 {
     //var magnitude = magnitude
@@ -203,7 +214,7 @@ this.addVelocity(magnitude, angle.getValue().toInt(), otherAngle!!.getValue().to
 }
 
 
-open fun setVelocity(magnitude: Long, angle: Int, otherAngle: Int)
+    open fun setVelocity(magnitude: Long, angle: Int, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var magnitude = magnitude
@@ -223,7 +234,8 @@ velocityYBasicDecimal!!.set(yVector)
 velocityZBasicDecimal!!.set(zVector)
 }
 
-override fun addVelocity(magnitude: Long, angle: Int, otherAngle: Int)
+
+    override fun addVelocity(magnitude: Long, angle: Int, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var magnitude = magnitude
@@ -243,7 +255,8 @@ velocityYBasicDecimal!!.add(yVector)
 velocityZBasicDecimal!!.add(zVector)
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

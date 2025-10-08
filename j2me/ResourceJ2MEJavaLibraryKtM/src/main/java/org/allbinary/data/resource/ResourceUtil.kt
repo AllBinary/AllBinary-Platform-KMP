@@ -36,12 +36,11 @@ open public class ResourceUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var instance: ResourceUtil = ResourceUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ResourceUtil{
 
@@ -55,7 +54,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -63,7 +62,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getResourceAsStream(resource: String)
+    open fun getResourceAsStream(resource: String)
         //nullable = true from not(false or (false and false)) = true
 : InputStream{
 var resource = resource
@@ -235,7 +234,7 @@ inputStream= resource::class.getResourceAsStream(resourcePath)
 
                 @Throws(Exception::class)
             
-open fun getResourceAsStream(resource: String, startIndex: Int)
+    open fun getResourceAsStream(resource: String, startIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 : InputStream{
 var resource = resource
@@ -275,7 +274,7 @@ var startIndex = startIndex
 }
 
 
-open fun addResource(resource: String, value: Integer)
+    open fun addResource(resource: String, value: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var resource = resource

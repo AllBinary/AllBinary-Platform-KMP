@@ -30,8 +30,7 @@ open public class GenericConfigData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var RELATIVE_PATH: String = "./"
 
@@ -46,7 +45,7 @@ open public class GenericConfigData
     var FREE_MMO_GAME_MODULE_RELATIVE_PATH: String = "free/"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

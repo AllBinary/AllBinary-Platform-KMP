@@ -30,7 +30,7 @@ open public class ShakeEvent
             : Object
          {
         
- constructor        ()
+ constructor ()
             : super()
         {
 }

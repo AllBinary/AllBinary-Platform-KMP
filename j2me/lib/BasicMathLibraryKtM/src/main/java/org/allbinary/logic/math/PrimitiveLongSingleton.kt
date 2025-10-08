@@ -31,12 +31,11 @@ open public class PrimitiveLongSingleton
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: PrimitiveLongSingleton = PrimitiveLongSingleton()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PrimitiveLongSingleton{
 
@@ -69,7 +68,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun getNumberFromChar(numberAsChar: Char)
+    open fun getNumberFromChar(numberAsChar: Char)
         //nullable = true from not(false or (false and false)) = true
 : Byte{
 var numberAsChar = numberAsChar

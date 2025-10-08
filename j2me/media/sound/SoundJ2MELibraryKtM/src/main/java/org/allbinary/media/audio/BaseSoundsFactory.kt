@@ -38,14 +38,16 @@ open public class BaseSoundsFactory
             }            
         
     private var initialized: Boolean= false
-override fun init()
+
+    override fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
                 @Throws(Exception::class)
-            override fun getSoundInterfaceArray()
+            
+    override fun getSoundInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<Sound?>{
 
@@ -55,14 +57,16 @@ override fun init()
                         return arrayOfNulls(0)
 }
 
-override fun setInitialized(initialized: Boolean)
+
+    override fun setInitialized(initialized: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var initialized = initialized
 this.initialized= initialized
 }
 
-override fun isInitialized()
+
+    override fun isInitialized()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

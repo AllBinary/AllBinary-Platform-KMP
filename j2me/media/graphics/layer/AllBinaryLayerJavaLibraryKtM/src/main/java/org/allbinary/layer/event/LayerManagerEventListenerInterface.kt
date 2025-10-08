@@ -26,18 +26,19 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.util.event.EventListenerInterface
+
 interface LayerManagerEventListenerInterface : EventListenerInterface {
         
 
                 @Throws(Exception::class)
             
-open fun onCreateLayerManagerEvent(layerManagerEvent: LayerManagerEvent)
+    open fun onCreateLayerManagerEvent(layerManagerEvent: LayerManagerEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun onDeleteLayerManagerEvent(layerManagerEvent: LayerManagerEvent)
+    open fun onDeleteLayerManagerEvent(layerManagerEvent: LayerManagerEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

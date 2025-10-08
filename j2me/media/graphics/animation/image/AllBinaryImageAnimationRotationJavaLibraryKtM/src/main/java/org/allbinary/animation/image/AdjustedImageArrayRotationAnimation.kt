@@ -37,7 +37,7 @@ open public class AdjustedImageArrayRotationAnimation : ImageArrayRotationAnimat
     private var dx: Int= 0
 
     private var dy: Int= 0
-protected constructor        (anyType: Any, animationBehavior: AnimationBehavior)                        
+protected constructor (anyType: Any, animationBehavior: AnimationBehavior)                        
 
                             : super(anyType, animationBehavior){
     //var anyType = anyType
@@ -52,7 +52,7 @@ protected constructor        (anyType: Any, animationBehavior: AnimationBehavior
 this.init(allBinaryImageRotationAnimationInfo!!.getDx(), allBinaryImageRotationAnimationInfo!!.getDy())
 }
 
-public constructor        (imageArray: Array<Image?>, animationBehavior: AnimationBehavior)                        
+public constructor (imageArray: Array<Image?>, animationBehavior: AnimationBehavior)                        
 
                             : this(imageArray, AngleInfo.getInstance(10.toShort()), AngleFactory.getInstance()!!.TOTAL_ANGLE, 0, 0, animationBehavior){
     //var imageArray = imageArray
@@ -63,7 +63,7 @@ public constructor        (imageArray: Array<Image?>, animationBehavior: Animati
                     
 }
 
-public constructor        (imageArray: Array<Image?>, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
+public constructor (imageArray: Array<Image?>, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
                             : this(imageArray, AngleInfo.getInstance(10.toShort()), AngleFactory.getInstance()!!.TOTAL_ANGLE, dx, dy, animationBehavior){
     //var imageArray = imageArray
@@ -76,7 +76,7 @@ public constructor        (imageArray: Array<Image?>, dx: Int, dy: Int, animatio
                     
 }
 
-public constructor        (imageArray: Array<Image?>, angleInfo: AngleInfo, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
+public constructor (imageArray: Array<Image?>, angleInfo: AngleInfo, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
                             : this(imageArray, angleInfo, AngleFactory.getInstance()!!.TOTAL_ANGLE, dx, dy, animationBehavior){
     //var imageArray = imageArray
@@ -90,7 +90,7 @@ public constructor        (imageArray: Array<Image?>, angleInfo: AngleInfo, dx: 
                     
 }
 
-public constructor        (imageArray: Array<Image?>, angleInfo: AngleInfo, totalAngle: Int, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
+public constructor (imageArray: Array<Image?>, angleInfo: AngleInfo, totalAngle: Int, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
                             : super(imageArray, angleInfo, totalAngle, animationBehavior){
     //var imageArray = imageArray
@@ -106,7 +106,7 @@ public constructor        (imageArray: Array<Image?>, angleInfo: AngleInfo, tota
 this.init(dx, dy)
 }
 
-public constructor        (imageArray: Array<Image?>, angleInfo: AngleInfo, totalAngle: Int, animationBehavior: AnimationBehavior)                        
+public constructor (imageArray: Array<Image?>, angleInfo: AngleInfo, totalAngle: Int, animationBehavior: AnimationBehavior)                        
 
                             : super(imageArray, angleInfo, totalAngle, animationBehavior){
     //var imageArray = imageArray
@@ -123,7 +123,7 @@ this.init( -(imageArray[0]!!.getWidth() shr 2),  -(imageArray[0]!!.getHeight() s
 
                 @Throws(Exception::class)
             
-open fun init(dx: Int, dy: Int)
+    open fun init(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var dx = dx
@@ -133,7 +133,7 @@ this.setDy(dy)
 }
 
 
-open fun paint(graphics: Graphics, x: Int, y: Int)
+    open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -143,7 +143,7 @@ super.paint(graphics, x +this.dx, y +this.dy)
 }
 
 
-open fun setDx(dx: Int)
+    open fun setDx(dx: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var dx = dx
@@ -151,7 +151,7 @@ this.dx= dx
 }
 
 
-open fun getDx()
+    open fun getDx()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -162,7 +162,7 @@ open fun getDx()
 }
 
 
-open fun setDy(dy: Int)
+    open fun setDy(dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var dy = dy
@@ -170,7 +170,7 @@ this.dy= dy
 }
 
 
-open fun getDy()
+    open fun getDy()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

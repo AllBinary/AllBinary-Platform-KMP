@@ -33,7 +33,6 @@ import javax.microedition.lcdui.Image
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
 import org.allbinary.graphics.displayable.event.DisplayChangeEvent
 import org.allbinary.graphics.opengles.OpenGLLogUtil
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.platform.graphics.PlatformBitmapBaseFactory
@@ -47,7 +46,7 @@ open public class OpenGLESGL11ExtImage : OpenGLESImage {
     private var a: Int= 0
 
     private val rectangle: IntArray
-public constructor        (image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory)                        
+public constructor (image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory)                        
 
                             : super(image, bitmapFactory, textureFactory){
     //var image = image
@@ -63,7 +62,7 @@ rectangle= intArrayOf(0,this.getHeight(), this.getWidth(),  -this.getHeight())
 }
 
 
-open fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
+    open fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var displayChangeEvent = displayChangeEvent
@@ -79,7 +78,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "onResize", e)
 }
 
 
-open fun set(gl: GL)
+    open fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl
@@ -103,7 +102,7 @@ OpenGLLogUtil.getInstance()!!.logError(gl11, this)
 }
 
 
-open fun draw(gl: GL10, x: Int, y: Int, z: Int)
+    open fun draw(gl: GL10, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl

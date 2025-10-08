@@ -54,7 +54,7 @@ open public class CustomizersView : HttpStoreComponentView
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     val customizersVector: Vector
-public constructor        (transformInfoInterface: TransformInfoInterface)                        
+public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
@@ -66,7 +66,7 @@ this.customizersVector= TransformInfoEntityBuilder.getInstance()!!.getNames(this
 }
 
 
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
     //var document = document
@@ -148,7 +148,7 @@ node.appendChild(viewNameNode)
 }
 
 
-open fun addDomNodeInterfaces()
+    open fun addDomNodeInterfaces()
         //nullable = true from not(false or (false and true)) = true
 {
 this.addDomNodeInterface(this as DomNodeInterface)
@@ -157,7 +157,7 @@ this.addDomNodeInterface(this as DomNodeInterface)
 
                 @Throws(Exception::class)
             
-open fun view()
+    open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

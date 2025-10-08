@@ -40,7 +40,7 @@ open public class ColorAtActionScriptConditionJPanel : javax.swing.JPanel {
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var colorAtActionScriptConditionInterface: ColorAtActionScriptConditionInterface
-public constructor        (colorAtActionScriptConditionInterface: ColorAtActionScriptConditionInterface){
+public constructor (colorAtActionScriptConditionInterface: ColorAtActionScriptConditionInterface){
 var colorAtActionScriptConditionInterface = colorAtActionScriptConditionInterface
 logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 initComponents()
@@ -49,7 +49,7 @@ this.set()
 }
 
 
-open fun set()
+    open fun set()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -67,7 +67,7 @@ this.colorAtActionScriptConditionInterface!!.log()
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -107,7 +107,7 @@ this.colorAtActionScriptConditionInterface!!.log()
 }
 
 
-open fun getColorAtXJTextField()
+    open fun getColorAtXJTextField()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JTextField{
 
@@ -118,7 +118,7 @@ open fun getColorAtXJTextField()
 }
 
 
-open fun setColorAtXJTextField(colorAtXJTextField: javax.swing.JTextField)
+    open fun setColorAtXJTextField(colorAtXJTextField: javax.swing.JTextField)
         //nullable = true from not(false or (false and false)) = true
 {
 var colorAtXJTextField = colorAtXJTextField
@@ -126,7 +126,7 @@ this.colorAtXJTextField= colorAtXJTextField
 }
 
 
-open fun getColorAtYJTextField()
+    open fun getColorAtYJTextField()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JTextField{
 
@@ -137,7 +137,7 @@ open fun getColorAtYJTextField()
 }
 
 
-open fun setColorAtYJTextField(colorAtYJTextField: javax.swing.JTextField)
+    open fun setColorAtYJTextField(colorAtYJTextField: javax.swing.JTextField)
         //nullable = true from not(false or (false and false)) = true
 {
 var colorAtYJTextField = colorAtYJTextField
@@ -145,7 +145,7 @@ this.colorAtYJTextField= colorAtYJTextField
 }
 
 
-open fun getMaxBlueJTextField()
+    open fun getMaxBlueJTextField()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JTextField{
 
@@ -156,7 +156,7 @@ open fun getMaxBlueJTextField()
 }
 
 
-open fun setMaxBlueJTextField(maxBlueJTextField: javax.swing.JTextField)
+    open fun setMaxBlueJTextField(maxBlueJTextField: javax.swing.JTextField)
         //nullable = true from not(false or (false and false)) = true
 {
 var maxBlueJTextField = maxBlueJTextField
@@ -164,7 +164,7 @@ this.maxBlueJTextField= maxBlueJTextField
 }
 
 
-open fun getMaxGreenJTextField()
+    open fun getMaxGreenJTextField()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JTextField{
 
@@ -175,7 +175,7 @@ open fun getMaxGreenJTextField()
 }
 
 
-open fun setMaxGreenJTextField(maxGreenJTextField: javax.swing.JTextField)
+    open fun setMaxGreenJTextField(maxGreenJTextField: javax.swing.JTextField)
         //nullable = true from not(false or (false and false)) = true
 {
 var maxGreenJTextField = maxGreenJTextField
@@ -183,7 +183,7 @@ this.maxGreenJTextField= maxGreenJTextField
 }
 
 
-open fun getMaxRedJTextField()
+    open fun getMaxRedJTextField()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JTextField{
 
@@ -194,7 +194,7 @@ open fun getMaxRedJTextField()
 }
 
 
-open fun setMaxRedJTextField(maxRedJTextField: javax.swing.JTextField)
+    open fun setMaxRedJTextField(maxRedJTextField: javax.swing.JTextField)
         //nullable = true from not(false or (false and false)) = true
 {
 var maxRedJTextField = maxRedJTextField
@@ -202,7 +202,7 @@ this.maxRedJTextField= maxRedJTextField
 }
 
 
-open fun getMinBlueJTextField()
+    open fun getMinBlueJTextField()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JTextField{
 
@@ -213,7 +213,7 @@ open fun getMinBlueJTextField()
 }
 
 
-open fun setMinBlueJTextField(minBlueJTextField: javax.swing.JTextField)
+    open fun setMinBlueJTextField(minBlueJTextField: javax.swing.JTextField)
         //nullable = true from not(false or (false and false)) = true
 {
 var minBlueJTextField = minBlueJTextField
@@ -221,7 +221,7 @@ this.minBlueJTextField= minBlueJTextField
 }
 
 
-open fun getMinGreenJTextField()
+    open fun getMinGreenJTextField()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JTextField{
 
@@ -232,7 +232,7 @@ open fun getMinGreenJTextField()
 }
 
 
-open fun setMinGreenJTextField(minGreenJTextField: javax.swing.JTextField)
+    open fun setMinGreenJTextField(minGreenJTextField: javax.swing.JTextField)
         //nullable = true from not(false or (false and false)) = true
 {
 var minGreenJTextField = minGreenJTextField
@@ -240,7 +240,7 @@ this.minGreenJTextField= minGreenJTextField
 }
 
 
-open fun getMinRedJTextField()
+    open fun getMinRedJTextField()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JTextField{
 
@@ -251,7 +251,7 @@ open fun getMinRedJTextField()
 }
 
 
-open fun setMinRedJTextField(minRedJTextField: javax.swing.JTextField)
+    open fun setMinRedJTextField(minRedJTextField: javax.swing.JTextField)
         //nullable = true from not(false or (false and false)) = true
 {
 var minRedJTextField = minRedJTextField
@@ -259,7 +259,7 @@ this.minRedJTextField= minRedJTextField
 }
 
 
-open fun getYJLabel()
+    open fun getYJLabel()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JLabel{
 
@@ -270,7 +270,7 @@ open fun getYJLabel()
 }
 
 
-open fun setYJLabel(yJLabel: javax.swing.JLabel)
+    open fun setYJLabel(yJLabel: javax.swing.JLabel)
         //nullable = true from not(false or (false and false)) = true
 {
 var yJLabel = yJLabel
@@ -278,7 +278,7 @@ this.yJLabel= yJLabel
 }
 
 
-open fun getColorAtActionJDialog()
+    open fun getColorAtActionJDialog()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JDialog{
 
@@ -289,7 +289,7 @@ open fun getColorAtActionJDialog()
 }
 
 
-open fun setColorAtActionJDialog(colorAtActionJDialog: javax.swing.JDialog)
+    open fun setColorAtActionJDialog(colorAtActionJDialog: javax.swing.JDialog)
         //nullable = true from not(false or (false and false)) = true
 {
 var colorAtActionJDialog = colorAtActionJDialog
@@ -297,7 +297,7 @@ this.colorAtActionJDialog= colorAtActionJDialog
 }
 
 
-open fun initComponents()
+    open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
 colorAtActionJDialog= javax.swing.JDialog()
@@ -337,7 +337,7 @@ okJButton!!.setText("OK")
 okJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -357,7 +357,7 @@ colorAtActionJButton!!.setText("Edit")
 colorAtActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -376,7 +376,7 @@ layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Align
 }
 
 
-open fun okJButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun okJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -385,7 +385,7 @@ this.getColorAtActionJDialog()!!.setVisible(false)
 }
 
 
-open fun colorAtActionJButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun colorAtActionJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt

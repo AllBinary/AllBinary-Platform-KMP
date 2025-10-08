@@ -38,7 +38,7 @@ open public class AbstractInputAutomationFactory : InputAutomationModuleFactoryI
     private var jPanel: JPanel
 
     private var helpSet: HelpSet
-public constructor        (name: String, jPanel: JPanel, helpSet: HelpSet){
+public constructor (name: String, jPanel: JPanel, helpSet: HelpSet){
 var name = name
 var jPanel = jPanel
 var helpSet = helpSet
@@ -47,7 +47,7 @@ this.jPanel= jPanel
 this.helpSet= helpSet
 }
 
-public constructor        (name: String, jPanel: JPanel){
+public constructor (name: String, jPanel: JPanel){
 var name = name
 var jPanel = jPanel
 this.name= name
@@ -59,7 +59,7 @@ this.helpSet= JavaHelpUtil.getInstance()!!.getHelpSet(url)
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -70,7 +70,7 @@ open fun getName()
 }
 
 
-open fun getConfigurationJPanel()
+    open fun getConfigurationJPanel()
         //nullable = true from not(false or (false and true)) = true
 : JPanel{
 
@@ -81,7 +81,7 @@ open fun getConfigurationJPanel()
 }
 
 
-open fun getHelpSet()
+    open fun getHelpSet()
         //nullable = true from not(false or (false and true)) = true
 : HelpSet{
 

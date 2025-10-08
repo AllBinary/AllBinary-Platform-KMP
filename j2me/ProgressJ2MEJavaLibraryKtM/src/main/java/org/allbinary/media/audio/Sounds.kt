@@ -48,7 +48,7 @@ open public class Sounds
     private val soundStrings: SoundStrings = SoundStrings.getInstance()!!
 
     private val soundsFactoryInterface: SoundsFactoryInterface
-public constructor        (soundsFactoryInterface: SoundsFactoryInterface)
+public constructor (soundsFactoryInterface: SoundsFactoryInterface)
             : super()
         {
 var soundsFactoryInterface = soundsFactoryInterface
@@ -58,7 +58,7 @@ this.soundsFactoryInterface= soundsFactoryInterface
 
                 @Throws(Exception::class)
             
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.INIT)
@@ -124,7 +124,7 @@ logUtil!!.put(commonStrings!!.END, this, commonStrings!!.INIT)
 
                 @Throws(Exception::class)
             
-open fun stopAll()
+    open fun stopAll()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(commonStrings!!.START, this, this.soundStrings!!.STOP_ALL)
@@ -174,7 +174,7 @@ progressCanvas!!.addPortion(100, this.soundStrings!!.STOPPING_SOUND, index)
 
                 @Throws(Exception::class)
             
-open fun closeAll()
+    open fun closeAll()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(commonStrings!!.START, this, this.soundStrings!!.CLOSE_ALL)

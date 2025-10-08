@@ -86,7 +86,7 @@ open public class HtmlTable : HtmlTag {
     private var after: String
 
     private var htmlRowsVector: Vector
-public constructor        (before: String, cellpadding: String, cellspacing: String, after: String){
+public constructor (before: String, cellpadding: String, cellspacing: String, after: String){
 var before = before
 var cellpadding = cellpadding
 var cellspacing = cellspacing
@@ -103,7 +103,7 @@ addAttribute(STYLE, this.BORDERCOLLAPSE)
 }
 
 
-open fun addRow(htmlRow: HtmlRow)
+    open fun addRow(htmlRow: HtmlRow)
         //nullable = true from not(false or (false and false)) = true
 {
 var htmlRow = htmlRow
@@ -114,7 +114,8 @@ var htmlRow = htmlRow
 this.htmlRowsVector!!.add(htmlRow)
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

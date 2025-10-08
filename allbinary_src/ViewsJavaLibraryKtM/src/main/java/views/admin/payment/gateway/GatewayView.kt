@@ -37,7 +37,7 @@ open public class GatewayView : PaymentGatewayViewAbstract {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (transformInfoInterface: TransformInfoInterface)                        
+public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
@@ -48,7 +48,7 @@ var transformInfoInterface = transformInfoInterface
 }
 
 
-open fun getFormData(request: HttpServletRequest)
+    open fun getFormData(request: HttpServletRequest)
         //nullable = true from not(false or (false and false)) = true
 {
 var request = request
@@ -67,7 +67,7 @@ super.getFormData(request)
 
                 @Throws(Exception::class)
             
-open fun view()
+    open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

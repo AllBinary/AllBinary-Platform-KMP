@@ -36,7 +36,7 @@ import org.w3c.dom.Node
 open public class StoreThemeCategoryPathView : CategoryView
                 , DomNodeInterface {
         
-public constructor        (categoryInterface: StoreThemeCategoryInterface)                        
+public constructor (categoryInterface: StoreThemeCategoryInterface)                        
 
                             : super(categoryInterface as StoreThemeCategoryInterface){
 var categoryInterface = categoryInterface
@@ -49,7 +49,7 @@ var categoryInterface = categoryInterface
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

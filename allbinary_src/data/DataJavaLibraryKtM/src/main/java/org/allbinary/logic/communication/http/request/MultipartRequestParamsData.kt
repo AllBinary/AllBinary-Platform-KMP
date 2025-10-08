@@ -30,13 +30,12 @@ open public class MultipartRequestParamsData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val HASHMAP: String = "MULTIPART_REQUEST_HASHMAP"
 
         }
-            public constructor        ()
+            public constructor ()
             : super()
         {
 }

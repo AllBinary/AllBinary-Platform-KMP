@@ -30,8 +30,7 @@ open public class EchoPaymentGatewayData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var TRANSACTION_TYPE: String = "transaction_type"
 
@@ -174,7 +173,7 @@ open public class EchoPaymentGatewayData
     var SALES_TAX: String = "sales_tax"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

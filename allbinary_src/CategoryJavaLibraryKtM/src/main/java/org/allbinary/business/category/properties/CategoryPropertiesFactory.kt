@@ -39,21 +39,21 @@ open public class CategoryPropertiesFactory
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var categoryPropertiesInterface: CategoryPropertiesInterface
-public constructor        (name: String)
+public constructor (name: String)
             : super()
         {
 var name = name
 this.categoryPropertiesInterface= CategoryProperties(name) as CategoryPropertiesInterface
 }
 
-public constructor        (node: Node)
+public constructor (node: Node)
             : super()
         {
 var node = node
 this.categoryPropertiesInterface= CategoryProperties(node) as CategoryPropertiesInterface
 }
 
-public constructor        (categoryPropertiesHashMap: HashMap<Any, Any>)
+public constructor (categoryPropertiesHashMap: HashMap<Any, Any>)
             : super()
         {
 var categoryPropertiesHashMap = categoryPropertiesHashMap
@@ -61,7 +61,7 @@ this.categoryPropertiesInterface= CategoryProperties(categoryPropertiesHashMap) 
 }
 
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CategoryPropertiesInterface{
 

@@ -19,7 +19,7 @@ import org.allbinary.logic.util.visitor.Visitor
 
 open public class TextFieldItem : TextItem {
         
-public constructor        (canvas: Canvas, visitor: Visitor, label: String, value: String, maxSize: Int, layout: Int, altText: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (canvas: Canvas, visitor: Visitor, label: String, value: String, maxSize: Int, layout: Int, altText: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : this(canvas, visitor, label, value, maxSize, layout, altText, Font.getDefaultFont(), backgroundBasicColor, foregroundBasicColor){
 var canvas = canvas
@@ -37,7 +37,7 @@ var foregroundBasicColor = foregroundBasicColor
                     
 }
 
-public constructor        (canvas: Canvas, visitor: Visitor, label: String, value: String, maxSize: Int, layout: Int, altText: String, font: Font, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (canvas: Canvas, visitor: Visitor, label: String, value: String, maxSize: Int, layout: Int, altText: String, font: Font, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(label, layout, altText, backgroundBasicColor, foregroundBasicColor){
 var canvas = canvas
@@ -56,7 +56,8 @@ var foregroundBasicColor = foregroundBasicColor
                     
 }
 
-override fun getLabel()
+
+    override fun getLabel()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -66,14 +67,15 @@ override fun getLabel()
                         return StringUtil.getInstance()!!.EMPTY_STRING
 }
 
-override fun setLabel(label: String)
+
+    override fun setLabel(label: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var label = label
 }
 
 
-open fun getString()
+    open fun getString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -84,14 +86,14 @@ open fun getString()
 }
 
 
-open fun setString(string: String)
+    open fun setString(string: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var string = string
 }
 
 
-open fun setFocus(state: Boolean)
+    open fun setFocus(state: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var state = state

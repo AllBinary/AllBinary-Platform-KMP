@@ -39,7 +39,7 @@ open public class KeyPressesAI : BasicAI {
     private var on: Boolean = true
 
     var keys: Array<Integer?>
-public constructor        (hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
+public constructor (hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
                             : super(ownerLayerInterface, gameInput){
 var hashtable = hashtable
@@ -71,7 +71,8 @@ keys[index]= hashtable.get(objectArray[index]!! as Object) as Integer
 
 
                 @Throws(Exception::class)
-            override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+            
+    override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager
@@ -98,7 +99,7 @@ super.processAI(keys[index]!!.toInt())
 
                 @Throws(Exception::class)
             
-open fun toggle()
+    open fun toggle()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -120,7 +121,7 @@ open fun toggle()
 
                 @Throws(Exception::class)
             
-open fun disable()
+    open fun disable()
         //nullable = true from not(false or (false and true)) = true
 {
 setOn(false)
@@ -129,14 +130,14 @@ setOn(false)
 
                 @Throws(Exception::class)
             
-open fun enable()
+    open fun enable()
         //nullable = true from not(false or (false and true)) = true
 {
 setOn(true)
 }
 
 
-open fun setOn(on: Boolean)
+    open fun setOn(on: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var on = on
@@ -144,7 +145,7 @@ this.on= on
 }
 
 
-open fun isOn()
+    open fun isOn()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

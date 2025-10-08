@@ -30,12 +30,11 @@ open public class BooleanFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: BooleanFactory = BooleanFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BooleanFactory{
 
@@ -65,7 +64,7 @@ open fun getInstance()
 
     val NO: String = "no"
 
-open fun toString(bool: Boolean)
+    open fun toString(bool: Boolean)
         //nullable = true from not(false or (true and false)) = true
 : String{
 var bool = bool

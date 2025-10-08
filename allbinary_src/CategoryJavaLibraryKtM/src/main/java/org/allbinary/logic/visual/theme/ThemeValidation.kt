@@ -81,7 +81,7 @@ open public class ThemeValidation
     private var categoryAbPath: AbPath
 
     private var fileAbPath: AbPath
-public constructor        (transformInfoInterface: TransformInfoInterface, cssStyleValidation: CssStyleValidation, categoryThemePath: String)
+public constructor (transformInfoInterface: TransformInfoInterface, cssStyleValidation: CssStyleValidation, categoryThemePath: String)
             : super()
         {
 var transformInfoInterface = transformInfoInterface
@@ -97,7 +97,7 @@ this.styleValidationInterface= cssStyleValidation
 this.init()
 }
 
-public constructor        (transformInfoInterface: TransformInfoInterface, hashMap: HashMap<Any, Any>)
+public constructor (transformInfoInterface: TransformInfoInterface, hashMap: HashMap<Any, Any>)
             : super()
         {
 var transformInfoInterface = transformInfoInterface
@@ -132,7 +132,7 @@ logUtil!!.put("Http Request Constructor", this, stringBuffer!!.toString())
 this.init()
 }
 
-public constructor        (storeThemeCategoryInterface: StoreThemeCategoryInterface, node: Node)
+public constructor (storeThemeCategoryInterface: StoreThemeCategoryInterface, node: Node)
             : super()
         {
 var storeThemeCategoryInterface = storeThemeCategoryInterface
@@ -160,7 +160,7 @@ this.init(storeThemeCategoryInterface)
 
                 @Throws(Exception::class)
             
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -178,7 +178,7 @@ this.init(rootStoreThemeCategoryInterface)
 
                 @Throws(Exception::class)
             
-open fun init(storeThemeCategoryInterface: StoreThemeCategoryInterface)
+    open fun init(storeThemeCategoryInterface: StoreThemeCategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var storeThemeCategoryInterface = storeThemeCategoryInterface
@@ -189,7 +189,7 @@ this.webAppAbPath= storeThemeCategoryInterface!!.getWebAppPath()
 
                 @Throws(Exception::class)
             
-open fun getTransformInfoInterface()
+    open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformInfoInterface{
 
@@ -200,7 +200,7 @@ open fun getTransformInfoInterface()
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -211,7 +211,7 @@ open fun getName()
 }
 
 
-open fun getPreviewImageName()
+    open fun getPreviewImageName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -222,7 +222,7 @@ open fun getPreviewImageName()
 }
 
 
-open fun getPreviewImagePath()
+    open fun getPreviewImagePath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -233,7 +233,7 @@ open fun getPreviewImagePath()
 }
 
 
-open fun getPath()
+    open fun getPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -246,7 +246,7 @@ open fun getPath()
 
                 @Throws(Exception::class)
             
-open fun getCssStyleValidation()
+    open fun getCssStyleValidation()
         //nullable = true from not(false or (false and true)) = true
 : CssStyleValidation{
 
@@ -277,7 +277,7 @@ this.styleValidationInterface= CssStyleValidation(document)
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -356,7 +356,7 @@ open fun isValid()
 }
 
 
-open fun validationInfo()
+    open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -391,7 +391,7 @@ stringBuffer!!.append("Theme Validation Error")
 }
 
 
-open fun toValidationInfoDoc()
+    open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -402,7 +402,7 @@ open fun toValidationInfoDoc()
 }
 
 
-open fun toValidationInfoNode(document: Document)
+    open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -414,7 +414,7 @@ var document = document
 }
 
 
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -425,7 +425,7 @@ open fun getKey()
 }
 
 
-open fun toVector()
+    open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -443,7 +443,7 @@ vector.add(this.getPreviewImagePath())
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -466,7 +466,7 @@ hashMap!!.put(themeData!!.PREVIEW_IMAGE_PATH, this.getPreviewImagePath())
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

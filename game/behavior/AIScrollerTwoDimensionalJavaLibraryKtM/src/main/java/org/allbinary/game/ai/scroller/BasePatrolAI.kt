@@ -39,8 +39,7 @@ import org.allbinary.logic.math.SmallIntegerSingletonFactory
 
 open public class BasePatrolAI : BasicAI {
         
-
-        companion object {
+companion object {
             
     val MAX_DISTANCE: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(2)!!
 
@@ -61,7 +60,7 @@ open public class BasePatrolAI : BasicAI {
     var lastKeyDirection: Int = Canvas.RIGHT
 
     var keyDirection: Int = Canvas.RIGHT
-public constructor        (hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
+public constructor (hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
                             : super(ownerLayerInterface, gameInput){
 var hashtable = hashtable
@@ -76,7 +75,7 @@ this.currentDistance= maxDistance!!.toInt()
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 this.updateTotalDistance()
@@ -84,7 +83,7 @@ this.changeDirectionIfReachedPacingAreaMax()
 }
 
 
-open fun updateTotalDistance()
+    open fun updateTotalDistance()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -97,7 +96,7 @@ xTotalDistance += velocityProperties!!.getVelocityXBasicDecimalP()!!.getScaled()
 }
 
 
-open fun changeDirectionIfReachedPacingAreaMax()
+    open fun changeDirectionIfReachedPacingAreaMax()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -118,7 +117,7 @@ open fun changeDirectionIfReachedPacingAreaMax()
 }
 
 
-open fun nextDirection()
+    open fun nextDirection()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -146,7 +145,7 @@ xTotalDistance= 0
 }
 
 
-open fun disable()
+    open fun disable()
         //nullable = true from not(false or (false and true)) = true
 {
 }

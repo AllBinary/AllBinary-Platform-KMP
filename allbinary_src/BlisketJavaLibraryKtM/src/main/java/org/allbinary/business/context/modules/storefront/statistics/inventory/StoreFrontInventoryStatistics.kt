@@ -44,7 +44,7 @@ open public class StoreFrontInventoryStatistics
     private var totalNumberOfItems: Long= 0
 
     private var totalInventorySaleValueMoney: Money
-public constructor        (storeFrontInterface: StoreFrontInterface)
+public constructor (storeFrontInterface: StoreFrontInterface)
             : super()
         {
 var storeFrontInterface = storeFrontInterface
@@ -82,7 +82,7 @@ this.totalInventorySaleValueMoney!!.add(itemPriceMoney!!.toString())
 }
 
 
-open fun getNumber()
+    open fun getNumber()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -93,7 +93,7 @@ open fun getNumber()
 }
 
 
-open fun getTotal()
+    open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
 : Money{
 
@@ -104,7 +104,7 @@ open fun getTotal()
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -120,7 +120,7 @@ hashMap!!.put(StoreFrontInventoryStatisticsData.getInstance()!!.TOTALVALUE, this
 }
 
 
-open fun toVector()
+    open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -131,7 +131,7 @@ open fun toVector()
 }
 
 
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 

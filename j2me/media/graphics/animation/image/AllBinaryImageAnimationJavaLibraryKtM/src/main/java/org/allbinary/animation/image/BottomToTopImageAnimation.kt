@@ -37,7 +37,7 @@ open public class BottomToTopImageAnimation : ImageSegmentAnimation {
     private var startHeight: Int= 0
 
     private var currentHeight: Int= 0
-public constructor        (image: Image, animationBehavior: AnimationBehavior)                        
+public constructor (image: Image, animationBehavior: AnimationBehavior)                        
 
                             : super(image, animationBehavior){
     //var image = image
@@ -49,21 +49,24 @@ public constructor        (image: Image, animationBehavior: AnimationBehavior)
 this.setFrame(this.getSize() -1)
 }
 
-override fun nextFrame()
+
+    override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 super.previousFrame()
 this.update()
 }
 
-override fun previousFrame()
+
+    override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 super.nextFrame()
 this.update()
 }
 
-override fun setFrame(index: Int)
+
+    override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var index = index
@@ -72,7 +75,7 @@ this.update()
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 this.startHeight= this.getDrawHeight() *this.getFrame() /this.getSize()
@@ -81,7 +84,8 @@ this.currentHeight= this.getDrawHeight() -this.startHeight
 
 
     private var anchor: Int = Anchor.TOP_LEFT
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

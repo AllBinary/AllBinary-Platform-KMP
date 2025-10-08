@@ -38,7 +38,7 @@ open public class CircleFilledAnimation : Animation
     private var width: Int
 
     private var height: Int
-public constructor        (width: Int, height: Int, basicColor: BasicColor)                        
+public constructor (width: Int, height: Int, basicColor: BasicColor)                        
 
                             : super(){
     //var width = width
@@ -53,12 +53,14 @@ this.height= height
 this.setBasicColorP(basicColor)
 }
 
-override fun nextFrame()
+
+    override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics

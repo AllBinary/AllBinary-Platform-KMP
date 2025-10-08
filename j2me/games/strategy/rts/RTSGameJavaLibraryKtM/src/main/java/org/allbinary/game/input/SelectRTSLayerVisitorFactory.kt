@@ -32,12 +32,11 @@ open public class SelectRTSLayerVisitorFactory
         
                 , SelectRTSLayerVisitorFactoryInterface {
         
-
-        companion object {
+companion object {
             
     private val instance: SelectRTSLayerVisitorFactory = SelectRTSLayerVisitorFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : SelectRTSLayerVisitorFactory{
 
@@ -49,13 +48,13 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
 
 
-open fun getInstance(selectedRTSLayersPlayerGameInput: SelectedRTSLayersPlayerGameInput)
+    open fun getInstance(selectedRTSLayersPlayerGameInput: SelectedRTSLayersPlayerGameInput)
         //nullable =  from not(true or (false and false)) = 
 : Visitor{
 var selectedRTSLayersPlayerGameInput = selectedRTSLayersPlayerGameInput

@@ -30,12 +30,11 @@ open public class LicenseLoadingTypeFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: LicenseLoadingTypeFactory = LicenseLoadingTypeFactory()
 
-open fun getIntance()
+    open fun getIntance()
         //nullable = true from not(false or (false and true)) = true
 : LicenseLoadingTypeFactory{
 

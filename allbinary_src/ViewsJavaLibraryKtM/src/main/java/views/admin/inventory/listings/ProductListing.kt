@@ -81,7 +81,7 @@ open public class ProductListing
     private val searchRequest: SearchRequest
 
     private val INVENTORY: String = ".InventoryView"
-public constructor        (searchRequest: SearchRequest)
+public constructor (searchRequest: SearchRequest)
             : super()
         {
 var searchRequest = searchRequest
@@ -94,7 +94,7 @@ this.inventory= InventoryEntity()
 
                 @Throws(Exception::class)
             
-open fun getHashSet(storeFront: StoreFrontInterface)
+    open fun getHashSet(storeFront: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
 : HashSet{
 var storeFront = storeFront
@@ -142,7 +142,7 @@ keywords.addAll(substoreKeywords)
 
                 @Throws(Exception::class)
             
-open fun savePage(file: String, data: String)
+    open fun savePage(file: String, data: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var file = file
@@ -205,7 +205,7 @@ StreamUtil.getInstance()!!.close(idOutData)
 
                 @Throws(Exception::class)
             
-open fun create(keywordData: String, keywordFilenameHashMap: HashMap<Any, Any>, vector: Vector, staticPath: AbPath)
+    open fun create(keywordData: String, keywordFilenameHashMap: HashMap<Any, Any>, vector: Vector, staticPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
 {
 var keywordData = keywordData
@@ -309,7 +309,7 @@ this.savePage(file, productListingPages[index]!!)
 }
 
 
-open fun addStaticPageInfoToDatabase(storeFront: StoreFrontInterface, keywordFilenameHashMap: HashMap<Any, Any>)
+    open fun addStaticPageInfoToDatabase(storeFront: StoreFrontInterface, keywordFilenameHashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var storeFront = storeFront
@@ -351,7 +351,7 @@ this.staticPages!!.insert(insertVector)
 
                 @Throws(Exception::class)
             
-open fun generateAll()
+    open fun generateAll()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -460,7 +460,7 @@ stringBuffer!!.append(INVENTORY)
 
                 @Throws(Exception::class)
             
-open fun generateAll(storeName: String)
+    open fun generateAll(storeName: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var storeName = storeName

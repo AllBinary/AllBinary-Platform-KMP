@@ -37,7 +37,7 @@ open public class ColorAverage
     private var avgGreen: Float= 0.0f
 
     private var avgBlue: Float= 0.0f
-public constructor        ()
+public constructor ()
             : super()
         {
 this.setAvgRed(0)
@@ -45,7 +45,8 @@ this.setAvgGreen(0)
 this.setAvgBlue(0)
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -68,7 +69,7 @@ stringBuffer!!.append("\n")
 }
 
 
-open fun getAvgRed()
+    open fun getAvgRed()
         //nullable = true from not(false or (false and true)) = true
 : Float{
 
@@ -79,7 +80,7 @@ open fun getAvgRed()
 }
 
 
-open fun setAvgRed(avgRed: Float)
+    open fun setAvgRed(avgRed: Float)
         //nullable = true from not(false or (false and false)) = true
 {
 var avgRed = avgRed
@@ -87,7 +88,7 @@ this.avgRed= avgRed
 }
 
 
-open fun getAvgGreen()
+    open fun getAvgGreen()
         //nullable = true from not(false or (false and true)) = true
 : Float{
 
@@ -98,7 +99,7 @@ open fun getAvgGreen()
 }
 
 
-open fun setAvgGreen(avgGreen: Float)
+    open fun setAvgGreen(avgGreen: Float)
         //nullable = true from not(false or (false and false)) = true
 {
 var avgGreen = avgGreen
@@ -106,7 +107,7 @@ this.avgGreen= avgGreen
 }
 
 
-open fun getAvgBlue()
+    open fun getAvgBlue()
         //nullable = true from not(false or (false and true)) = true
 : Float{
 
@@ -117,7 +118,7 @@ open fun getAvgBlue()
 }
 
 
-open fun setAvgBlue(avgBlue: Float)
+    open fun setAvgBlue(avgBlue: Float)
         //nullable = true from not(false or (false and false)) = true
 {
 var avgBlue = avgBlue

@@ -34,15 +34,13 @@ import org.allbinary.graphics.displayable.DisplayInfoSingleton
 import org.allbinary.graphics.font.MyFont
 import org.allbinary.graphics.paint.Paintable
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 
 open public class OwnershipPaintable : Paintable {
         
-
-        companion object {
+companion object {
             
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OwnershipPaintable{
 
@@ -62,13 +60,13 @@ open fun getInstance()
     private var basicColor: BasicColor = BasicColorFactory.getInstance()!!.WHITE
 
     private var color: Int = basicColor!!.toInt()!!
-private constructor        (){
+private constructor (){
 }
 
 
     private var anchor: Int = Anchor.TOP_LEFT
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -97,7 +95,8 @@ graphics.setColor(color)
 graphics.drawString(COPYRIGHT, halfWidth -beginWidth, height -COPYRIGHT_Y, anchor)
 }
 
-override fun setBasicColorP(basicColor: BasicColor)
+
+    override fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
 var basicColor = basicColor
@@ -106,7 +105,7 @@ color= basicColor!!.toInt()
 }
 
 
-open fun getBasicColorP()
+    open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
 

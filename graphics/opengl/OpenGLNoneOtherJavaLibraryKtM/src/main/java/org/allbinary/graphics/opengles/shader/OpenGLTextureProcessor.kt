@@ -26,7 +26,7 @@ open public class OpenGLTextureProcessor
         
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-open fun process(gl: GL10, object3d: Any, index: Int)
+    open fun process(gl: GL10, object3d: Any, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var gl = gl

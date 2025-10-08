@@ -23,13 +23,15 @@ open public class CompleteMotionGestureInputEventListener
             public constructor() : super()
             {
             }            
-        override fun onEvent(eventObject: AllBinaryEventObject)
+        
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject
 }
 
-override fun onCompleteMotionGestureInputEvent(completeMotionGestureInputEvent: CompleteMotionGestureInputEvent)
+
+    override fun onCompleteMotionGestureInputEvent(completeMotionGestureInputEvent: CompleteMotionGestureInputEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var completeMotionGestureInputEvent = completeMotionGestureInputEvent

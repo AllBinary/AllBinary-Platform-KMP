@@ -38,12 +38,11 @@ open public class SolarisOperatingSystemFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: SolarisOperatingSystemFactory = SolarisOperatingSystemFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : SolarisOperatingSystemFactory{
 
@@ -57,13 +56,13 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getOperatingSystemInstance()
+    open fun getOperatingSystemInstance()
         //nullable = true from not(false or (false and true)) = true
 : GenericOperatingSystem{
 
@@ -82,7 +81,7 @@ open fun getOperatingSystemInstance()
                         if(osName!!.compareTo(operatingSystems!!.SOLARIS) == 0)
                         
                                     {
-                                    operatingSystemInterface= Solaris()
+                                    operatingSystemInterface= SolarisOS()
 
                                     }
                                 
@@ -92,7 +91,7 @@ open fun getOperatingSystemInstance()
                         if(operatingSystems!!.isUnknownSpecificOSAllowed())
                         
                                     {
-                                    operatingSystemInterface= Solaris()
+                                    operatingSystemInterface= SolarisOS()
 
                                     }
                                 

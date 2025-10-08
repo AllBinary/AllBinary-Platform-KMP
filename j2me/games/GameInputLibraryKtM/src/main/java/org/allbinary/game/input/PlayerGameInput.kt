@@ -45,7 +45,7 @@ open public class PlayerGameInput : GameInput
     val gameInputStrings: GameInputStrings = GameInputStrings.getInstance()!!
 
     private val playerInputId: Int
-public constructor        (gameKeyEventList: BasicArrayList, playerInputId: Int)                        
+public constructor (gameKeyEventList: BasicArrayList, playerInputId: Int)                        
 
                             : this(gameKeyEventList, BasicArrayList(), playerInputId){
     //var gameKeyEventList = gameKeyEventList
@@ -56,7 +56,7 @@ public constructor        (gameKeyEventList: BasicArrayList, playerInputId: Int)
                     
 }
 
-public constructor        (gameKeyEventList: BasicArrayList, removalGameKeyEventList: BasicArrayList, playerInputId: Int)                        
+public constructor (gameKeyEventList: BasicArrayList, removalGameKeyEventList: BasicArrayList, playerInputId: Int)                        
 
                             : super(gameKeyEventList, removalGameKeyEventList){
     //var gameKeyEventList = gameKeyEventList
@@ -70,25 +70,8 @@ this.playerInputId= playerInputId
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun onPressGameKeyEvent(gameKeyEvent: GameKeyEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var gameKeyEvent = gameKeyEvent
-super.add(gameKeyEvent)
-this.addForRemoval(gameKeyEvent)
-}
 
-@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun onDownGameKeyEvent(gameKeyEvent: GameKeyEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var gameKeyEvent = gameKeyEvent
-super.add(gameKeyEvent)
-}
-
-@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-
-open fun onDownKeyEvent(gameKeyEvent: GameKeyEvent)
+    override fun onPressGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameKeyEvent = gameKeyEvent
@@ -98,7 +81,26 @@ this.addForRemoval(gameKeyEvent)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun onDownKeyEvent(gameKeyEvent: Integer)
+    override fun onDownGameKeyEvent(gameKeyEvent: GameKeyEvent)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var gameKeyEvent = gameKeyEvent
+super.add(gameKeyEvent)
+}
+
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
+    open fun onDownKeyEvent(gameKeyEvent: GameKeyEvent)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var gameKeyEvent = gameKeyEvent
+super.add(gameKeyEvent)
+this.addForRemoval(gameKeyEvent)
+}
+
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
+    open fun onDownKeyEvent(gameKeyEvent: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameKeyEvent = gameKeyEvent
@@ -107,7 +109,8 @@ PreLogUtil.put(StringMaker().
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun onUpGameKeyEvent(gameKeyEvent: GameKeyEvent)
+
+    override fun onUpGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameKeyEvent = gameKeyEvent
@@ -116,13 +119,14 @@ this.addForRemoval(gameKeyEvent)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun onUpKeyEvent(gameKeyEvent: Integer)
+    open fun onUpKeyEvent(gameKeyEvent: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameKeyEvent = gameKeyEvent
 }
 
-override fun onEvent(eventObject: AllBinaryEventObject)
+
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject
@@ -130,7 +134,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
 
-open fun getPlayerInputId()
+    open fun getPlayerInputId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

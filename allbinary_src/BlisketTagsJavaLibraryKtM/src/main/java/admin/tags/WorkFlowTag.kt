@@ -29,7 +29,7 @@ import admin.taghelpers.WorkFlowHelperFactory
 
 open public class WorkFlowTag : TableTag {
         
-public constructor        (){
+public constructor (){
 this.setTagHelperFactory(WorkFlowHelperFactory())
 this.setTagRequestHelperFactory(WorkFlowHelperFactory())
 }

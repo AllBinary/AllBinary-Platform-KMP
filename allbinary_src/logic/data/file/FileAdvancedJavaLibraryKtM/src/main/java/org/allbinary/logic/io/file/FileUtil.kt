@@ -52,12 +52,11 @@ open public class FileUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: FileUtil = FileUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : FileUtil{
 
@@ -68,7 +67,7 @@ open fun getInstance()
 }
 
 
-open fun getNewDirectory(fromFile: AbFile)
+    open fun getNewDirectory(fromFile: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var fromFile = fromFile
@@ -119,7 +118,7 @@ lastIndex= newDirectory!!.lastIndexOf(separatorChar)
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private val streamUtil: StreamUtil = StreamUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -127,7 +126,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun write(inputStream: InputStream, file: AbFile)
+    open fun write(inputStream: InputStream, file: AbFile)
         //nullable = true from not(false or (false and false)) = true
 {
 var inputStream = inputStream
@@ -141,7 +140,7 @@ this.write(inputStream, dataOutputStream)
 
                 @Throws(Exception::class)
             
-open fun write(inputStream: InputStream, dataOutputStream: AbDataOutputStream)
+    open fun write(inputStream: InputStream, dataOutputStream: AbDataOutputStream)
         //nullable = true from not(false or (false and false)) = true
 {
 var inputStream = inputStream
@@ -161,7 +160,7 @@ dataOutputStream!!.flush()
 
                 @Throws(Exception::class)
             
-open fun write(inputStream: InputStream, dataOutputStream: AbDataOutputStream, buffer: ByteArray)
+    open fun write(inputStream: InputStream, dataOutputStream: AbDataOutputStream, buffer: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 {
 var inputStream = inputStream
@@ -182,7 +181,7 @@ dataOutputStream!!.flush()
 
                 @Throws(Exception::class)
             
-open fun copy(dataInputStream: AbFileInputStream, dataOutputStream: AbDataOutputStream)
+    open fun copy(dataInputStream: AbFileInputStream, dataOutputStream: AbDataOutputStream)
         //nullable = true from not(false or (false and false)) = true
 {
 var dataInputStream = dataInputStream
@@ -203,7 +202,7 @@ StreamUtil.getInstance()!!.close(dataInputStream)
 
                 @Throws(Exception::class)
             
-open fun fixPath(file: AbFile, path: AbPath, realPath: AbPath, cloud: String)
+    open fun fixPath(file: AbFile, path: AbPath, realPath: AbPath, cloud: String)
         //nullable = true from not(false or (false and false)) = true
 : AbPath{
 var file = file
@@ -248,7 +247,7 @@ this.directory.create(fixedPath)
 
                 @Throws(Exception::class)
             
-open fun copyToCloud(file: AbFile, path: AbPath, realPath: AbPath, cloud: String)
+    open fun copyToCloud(file: AbFile, path: AbPath, realPath: AbPath, cloud: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var file = file
@@ -261,7 +260,7 @@ this.copyToCloud(file, path, realPath, cloud, false, false)
 
                 @Throws(Exception::class)
             
-open fun copyToCloud(file: AbFile, path: AbPath, realPath: AbPath, cloud: String, overwriteNewer: Boolean, overwriteAll: Boolean)
+    open fun copyToCloud(file: AbFile, path: AbPath, realPath: AbPath, cloud: String, overwriteNewer: Boolean, overwriteAll: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var file = file
@@ -347,7 +346,7 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyToCloud", e)
 
                 @Throws(Exception::class)
             
-open fun copyToCloud(file: AbFile, outFile: AbFile)
+    open fun copyToCloud(file: AbFile, outFile: AbFile)
         //nullable = true from not(false or (false and false)) = true
 {
 var file = file
@@ -358,7 +357,7 @@ this.copyToCloud(file, outFile, false, false)
 
                 @Throws(Exception::class)
             
-open fun copyToCloud(file: AbFile, outFile: AbFile, overwriteNewer: Boolean, overwriteAll: Boolean)
+    open fun copyToCloud(file: AbFile, outFile: AbFile, overwriteNewer: Boolean, overwriteAll: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var file = file
@@ -437,7 +436,7 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyToCloud", e)
 
                 @Throws(Exception::class)
             
-open fun copyPrepare(fromFile: AbFile, toFile: AbFile, overwriteNewer: Boolean, overwriteAll: Boolean)
+    open fun copyPrepare(fromFile: AbFile, toFile: AbFile, overwriteNewer: Boolean, overwriteAll: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var fromFile = fromFile
@@ -553,7 +552,7 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyFile")
 
                 @Throws(Exception::class)
             
-open fun copyFile(fromFile: AbFile, toFile: AbFile)
+    open fun copyFile(fromFile: AbFile, toFile: AbFile)
         //nullable = true from not(false or (false and false)) = true
 {
 var fromFile = fromFile
@@ -564,7 +563,7 @@ this.copyFile(fromFile, toFile, false, false)
 
                 @Throws(Exception::class)
             
-open fun copyFile(fromFile: AbFile, toFile: AbFile, overwriteNewer: Boolean, overwriteAll: Boolean)
+    open fun copyFile(fromFile: AbFile, toFile: AbFile, overwriteNewer: Boolean, overwriteAll: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var fromFile = fromFile
@@ -640,7 +639,7 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyFile", e)
 
                 @Throws(Exception::class)
             
-open fun copyDirectoryPortion(fromDirectoryAbPath: AbPath, toDirectoryAbPath: AbPath, overwriteNewer: Boolean, overwriteAll: Boolean, current: Int, total: Int)
+    open fun copyDirectoryPortion(fromDirectoryAbPath: AbPath, toDirectoryAbPath: AbPath, overwriteNewer: Boolean, overwriteAll: Boolean, current: Int, total: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var fromDirectoryAbPath = fromDirectoryAbPath
@@ -761,7 +760,7 @@ this.copyFile(nextFile, toFile, overwriteNewer, overwriteAll)
 
                 @Throws(Exception::class)
             
-open fun copyDirectory(fromFile: AbFile, to: AbFile)
+    open fun copyDirectory(fromFile: AbFile, to: AbFile)
         //nullable = true from not(false or (false and false)) = true
 {
     //var fromFile = fromFile
@@ -895,7 +894,7 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyDirectory", e)
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun copy(fromAbPath: AbPath, to: AbPath)
+    open fun copy(fromAbPath: AbPath, to: AbPath)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var fromAbPath = fromAbPath
@@ -1145,7 +1144,7 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copy", e)
 }
 
 
-open fun readAsString(fileName: String)
+    open fun readAsString(fileName: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var fileName = fileName
@@ -1160,7 +1159,7 @@ open fun readAsString(fileName: String)
 }
 
 
-open fun readAsString(fileName: String, bytes: ByteArray)
+    open fun readAsString(fileName: String, bytes: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var fileName = fileName
@@ -1215,7 +1214,7 @@ open fun readAsString(fileName: String, bytes: ByteArray)
 }
 
 
-open fun shouldSkip(file: AbFile, skipFiles: Array<String?>)
+    open fun shouldSkip(file: AbFile, skipFiles: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var file = file
@@ -1266,7 +1265,7 @@ skipFile= skipFiles[index]!!
 
                 @Throws(Exception::class)
             
-open fun write(filePath: String, string: String)
+    open fun write(filePath: String, string: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var filePath = filePath
@@ -1298,7 +1297,7 @@ dataOutputStream!!.flush()
 }
 
 
-open fun loadFileAsList(file: AbFile, max: Int, byteArray1: ByteArray)
+    open fun loadFileAsList(file: AbFile, max: Int, byteArray1: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var file = file

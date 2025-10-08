@@ -31,12 +31,11 @@ open public class OpenGLESImageProcessor
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OpenGLESImageProcessor = OpenGLESImageProcessor()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OpenGLESImageProcessor{
 
@@ -54,7 +53,7 @@ open fun getInstance()
             {
             }            
         
-open fun translate(gl: GL10, translateX: Float, translateY: Float)
+    open fun translate(gl: GL10, translateX: Float, translateY: Float)
         //nullable = true from not(false or (false and false)) = true
 {
 var gl = gl
@@ -63,7 +62,7 @@ var translateY = translateY
 }
 
 
-open fun rotate(gl: GL10, angle: Float)
+    open fun rotate(gl: GL10, angle: Float)
         //nullable = true from not(false or (false and false)) = true
 {
 var gl = gl
@@ -71,7 +70,7 @@ var angle = angle
 }
 
 
-open fun scale(gl: GL10, scaleX: Float, scaleY: Float)
+    open fun scale(gl: GL10, scaleX: Float, scaleY: Float)
         //nullable = true from not(false or (false and false)) = true
 {
 var gl = gl
@@ -80,7 +79,7 @@ var scaleY = scaleY
 }
 
 
-open fun colorMask(gl: GL10, red: Float, green: Float, blue: Float, alpha: Float)
+    open fun colorMask(gl: GL10, red: Float, green: Float, blue: Float, alpha: Float)
         //nullable = true from not(false or (false and false)) = true
 {
 var gl = gl

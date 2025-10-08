@@ -16,12 +16,11 @@ open public class InitEmulatorFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: InitEmulatorFactory = InitEmulatorFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : InitEmulatorFactory{
 
@@ -39,7 +38,7 @@ open fun getInstance()
             {
             }            
         
-open fun setInitEmulator(initEmulator: Boolean)
+    open fun setInitEmulator(initEmulator: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var initEmulator = initEmulator
@@ -47,7 +46,7 @@ this.initEmulator= initEmulator
 }
 
 
-open fun isInitEmulator()
+    open fun isInitEmulator()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

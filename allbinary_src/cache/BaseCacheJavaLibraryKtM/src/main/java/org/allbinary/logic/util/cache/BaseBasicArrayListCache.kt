@@ -40,7 +40,7 @@ open public class BaseBasicArrayListCache
         
     val list: BasicArrayList = BasicArrayList()
 
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

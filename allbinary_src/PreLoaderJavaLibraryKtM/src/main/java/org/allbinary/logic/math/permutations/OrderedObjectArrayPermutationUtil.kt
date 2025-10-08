@@ -34,12 +34,11 @@ open public class OrderedObjectArrayPermutationUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OrderedObjectArrayPermutationUtil = OrderedObjectArrayPermutationUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OrderedObjectArrayPermutationUtil{
 
@@ -50,7 +49,7 @@ open fun getInstance()
 }
 
 
-open fun main(args: Array<String?>)
+    open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var args = args
@@ -88,13 +87,13 @@ OrderedObjectArrayPermutationUtil.getInstance()!!.generate(data, permutationVisi
     private val TOTAL_ITERATIONS_TABLE: String = "Total Iterations: "
 
     private val FINISHED: String = "\nFINISHED"
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getNext(data: Array<Any?>)
+    open fun getNext(data: Array<Any?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var data = data
@@ -134,7 +133,7 @@ j--
 }
 
 
-open fun swap(data: Array<Any?>, a: Int, b: Int)
+    open fun swap(data: Array<Any?>, a: Int, b: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var data = data
@@ -148,7 +147,7 @@ data[b]= temp
 }
 
 
-open fun factorial(dataLength: Int)
+    open fun factorial(dataLength: Int)
         //nullable = true from not(false or (false and false)) = true
 : Long{
 var dataLength = dataLength
@@ -181,7 +180,7 @@ temp *= i
 }
 
 
-open fun generate(data: Array<Any?>, visitor: Visitor)
+    open fun generate(data: Array<Any?>, visitor: Visitor)
         //nullable = true from not(false or (false and false)) = true
 {
 var data = data

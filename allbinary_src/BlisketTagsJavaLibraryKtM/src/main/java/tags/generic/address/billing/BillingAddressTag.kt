@@ -33,13 +33,13 @@ import tags.StoreValidationTransformTag
 
 open public class BillingAddressTag : StoreValidationTransformTag {
         
-public constructor        (){
+public constructor (){
 }
 
 
                 @Throws(JspTagException::class)
             
-open fun doStartTag()
+    open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

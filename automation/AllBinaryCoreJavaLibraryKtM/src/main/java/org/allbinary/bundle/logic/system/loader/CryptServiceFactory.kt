@@ -42,13 +42,13 @@ open public class CryptServiceFactory
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var cryptService: CryptService = CryptService()
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun getService(bundle: Bundle, registration: ServiceRegistration)
+    open fun getService(bundle: Bundle, registration: ServiceRegistration)
         //nullable = true from not(false or (false and false)) = true
 : Any{
     //var bundle = bundle
@@ -62,7 +62,7 @@ logUtil!!.put(this.commonStrings!!.START, this, "getService")
 }
 
 
-open fun ungetService(bundle: Bundle, registration: ServiceRegistration, service: Any)
+    open fun ungetService(bundle: Bundle, registration: ServiceRegistration, service: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var bundle = bundle

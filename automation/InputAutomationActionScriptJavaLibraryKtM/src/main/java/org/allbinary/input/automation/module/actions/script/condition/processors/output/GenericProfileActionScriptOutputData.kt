@@ -30,15 +30,14 @@ open public class GenericProfileActionScriptOutputData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var NAME: String = "GENERIC_CONFIGURATION_PROFILE_ACTION_OUTPUT_NAME"
 
     var TYPE: String = "GENERIC_CONFIGURATION_PROFILE_ACTION_OUTPUT_TYPE"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

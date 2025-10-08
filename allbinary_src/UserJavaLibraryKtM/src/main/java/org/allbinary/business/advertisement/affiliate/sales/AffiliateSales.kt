@@ -30,13 +30,13 @@ open public class AffiliateSales
             : Object
          {
         
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

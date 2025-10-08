@@ -37,7 +37,7 @@ open public class DiveAndDirectionalTrackingAICompositeVisitorFactory
             {
             }            
         
-open fun getInstance(diveBombAI: DiveAndDirectionalTrackingAI)
+    open fun getInstance(diveBombAI: DiveAndDirectionalTrackingAI)
         //nullable =  from not(true or (false and false)) = 
 : Visitor{
 var diveBombAI = diveBombAI

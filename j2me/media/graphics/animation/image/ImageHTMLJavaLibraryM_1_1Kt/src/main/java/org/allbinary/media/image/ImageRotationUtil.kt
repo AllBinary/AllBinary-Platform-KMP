@@ -37,12 +37,11 @@ open public class ImageRotationUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ImageRotationUtil = ImageRotationUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ImageRotationUtil{
 
@@ -54,13 +53,13 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
 
 
-open fun rotateImage(originalImage: Image, image: Image, totalAngle: Int)
+    open fun rotateImage(originalImage: Image, image: Image, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var originalImage = originalImage
@@ -105,7 +104,7 @@ this.drawImage(originalImage, image, canvasSurface)
 }
 
 
-open fun rotateImageClear(originalImage: Image, image: Image, canvasSurface: CanvasSurface, totalAngle: Int)
+    open fun rotateImageClear(originalImage: Image, image: Image, canvasSurface: CanvasSurface, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var originalImage = originalImage
@@ -140,7 +139,7 @@ canvasSurface!!.translate(originalImage!!.getWidth() /2, originalImage!!.getHeig
 }
 
 
-open fun rotateImage(originalImage: Image, image: Image, canvasSurface: CanvasSurface, totalAngle: Int)
+    open fun rotateImage(originalImage: Image, image: Image, canvasSurface: CanvasSurface, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var originalImage = originalImage
@@ -173,7 +172,7 @@ open fun rotateImage(originalImage: Image, image: Image, canvasSurface: CanvasSu
 }
 
 
-open fun drawImage(originalImage: Image, image: Image, canvasSurface: CanvasSurface)
+    open fun drawImage(originalImage: Image, image: Image, canvasSurface: CanvasSurface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var originalImage = originalImage
@@ -210,7 +209,7 @@ canvasSurface!!.drawImage(originalPlayNImage,  -originalImage!!.getWidth() /2,  
 
                 @Throws(Exception::class)
             
-open fun createRotatedImage(originalImage: Image, rotationInDegrees: Int)
+    open fun createRotatedImage(originalImage: Image, rotationInDegrees: Int)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var originalImage = originalImage

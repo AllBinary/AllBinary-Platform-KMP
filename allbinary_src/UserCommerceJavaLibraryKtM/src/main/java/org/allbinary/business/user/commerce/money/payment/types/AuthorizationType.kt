@@ -32,14 +32,15 @@ open public class AuthorizationType
         
 
     private var name: String
-public constructor        (name: String)
+public constructor (name: String)
             : super()
         {
 var name = name
 this.name= name
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

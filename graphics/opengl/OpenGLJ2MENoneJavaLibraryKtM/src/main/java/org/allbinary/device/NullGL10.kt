@@ -32,8 +32,7 @@ open public class NullGL10
         
                 , GL10 {
         
-
-        companion object {
+companion object {
             
     val NULL_GL10: NullGL10 = NullGL10()
 

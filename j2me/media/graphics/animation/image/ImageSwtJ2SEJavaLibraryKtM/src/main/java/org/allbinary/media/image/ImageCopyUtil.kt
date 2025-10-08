@@ -35,7 +35,6 @@ import org.allbinary.image.opengles.OpenGLESDeviceImageTranslate
 import org.allbinary.image.opengles.OpenGLESImage
 import org.allbinary.image.opengles.OpenGLESImageExclusionUtil
 import org.allbinary.image.opengles.OpenGLESImageProperties
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonStrings
@@ -50,12 +49,11 @@ open public class ImageCopyUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ImageCopyUtil = ImageCopyUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ImageCopyUtil{
 
@@ -69,7 +67,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -91,7 +89,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun createImageForRotation(originalImage: Image)
+    open fun createImageForRotation(originalImage: Image)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var originalImage = originalImage
@@ -126,7 +124,7 @@ image= openGLUtil!!.add(image)
 
                 @Throws(Exception::class)
             
-open fun createImage(originalImage: Image)
+    open fun createImage(originalImage: Image)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var originalImage = originalImage
@@ -203,7 +201,7 @@ image= openGLUtil!!.add(image)
 
                 @Throws(Exception::class)
             
-open fun createImage(originalImage: Image, width: Int, height: Int)
+    open fun createImage(originalImage: Image, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var originalImage = originalImage
@@ -219,7 +217,7 @@ open fun createImage(originalImage: Image, width: Int, height: Int)
 
                 @Throws(Exception::class)
             
-open fun createImage(originalImage: Image, width: Int, height: Int, mutable: Boolean)
+    open fun createImage(originalImage: Image, width: Int, height: Int, mutable: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var originalImage = originalImage
@@ -352,7 +350,7 @@ image= openGLUtil!!.add(image)
 
                 @Throws(Exception::class)
             
-open fun createImage2(originalImage: Image, width: Int, height: Int, mutable: Boolean)
+    open fun createImage2(originalImage: Image, width: Int, height: Int, mutable: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var originalImage = originalImage
@@ -561,7 +559,7 @@ image= openGLUtil!!.add(image)
 
                 @Throws(Exception::class)
             
-open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
+    open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var originalImage = originalImage

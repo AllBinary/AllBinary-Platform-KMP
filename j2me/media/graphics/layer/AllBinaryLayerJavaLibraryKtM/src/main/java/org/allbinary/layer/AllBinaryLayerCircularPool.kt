@@ -30,13 +30,13 @@ import org.allbinary.util.CircularIndexUtil
 
 open public class AllBinaryLayerCircularPool : BaseCircularPool {
         
-protected constructor        (){
+protected constructor (){
 }
 
 
                 @Throws(Exception::class)
             
-open fun init(allbinaryLayerFactoryInterface: AllBinaryLayerFactoryInterface, total: Int)
+    open fun init(allbinaryLayerFactoryInterface: AllBinaryLayerFactoryInterface, total: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var allbinaryLayerFactoryInterface = allbinaryLayerFactoryInterface

@@ -36,7 +36,8 @@ open public class BaseScalable
             public constructor() : super()
             {
             }            
-        override fun getRatio(ratio: Float)
+        
+    override fun getRatio(ratio: Float)
         //nullable = true from not(false or (false and false)) = true
 : Float{
     //var ratio = ratio
@@ -47,7 +48,8 @@ open public class BaseScalable
                         return 1.toFloat()
 }
 
-override fun getLeft(xOffset: Int)
+
+    override fun getLeft(xOffset: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var xOffset = xOffset
@@ -58,7 +60,8 @@ override fun getLeft(xOffset: Int)
                         return  -1
 }
 
-override fun getTop(yOffset: Int)
+
+    override fun getTop(yOffset: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var yOffset = yOffset
@@ -69,7 +72,8 @@ override fun getTop(yOffset: Int)
                         return  -1
 }
 
-override fun scale(ratio: Float)
+
+    override fun scale(ratio: Float)
         //nullable = true from not(false or (false and false)) = true
 {
 var ratio = ratio

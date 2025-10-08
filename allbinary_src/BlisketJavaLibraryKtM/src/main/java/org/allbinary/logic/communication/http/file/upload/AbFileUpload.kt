@@ -35,7 +35,7 @@ import org.apache.commons.fileupload.servlet.ServletRequestContext
 
 open public class AbFileUpload : FileUpload {
         
-public constructor        (fileItemFactory: FileItemFactory)                        
+public constructor (fileItemFactory: FileItemFactory)                        
 
                             : super(fileItemFactory){
 var fileItemFactory = fileItemFactory
@@ -48,7 +48,7 @@ var fileItemFactory = fileItemFactory
 
                 @Throws(FileUploadException::class, IOException::class)
             
-open fun getItemIterator(request: HttpServletRequest)
+    open fun getItemIterator(request: HttpServletRequest)
         //nullable = true from not(false or (false and false)) = true
 : FileItemIterator{
 var request = request

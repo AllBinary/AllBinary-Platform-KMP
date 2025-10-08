@@ -43,12 +43,11 @@ open public class TransformFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: TransformFactory = TransformFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TransformFactory{
 
@@ -62,7 +61,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -72,7 +71,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, viewName: String, ownerTransformInfoInterface: TransformInfoInterface)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, viewName: String, ownerTransformInfoInterface: TransformInfoInterface)
         //nullable =  from not(true or (false and false)) = 
 : TransformInterface{
     //var abeClientInformation = abeClientInformation
@@ -152,7 +151,7 @@ transformInfoInterface!!.setChild()
 
                 @Throws(Exception::class)
             
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
 : TransformInterface{
     //var abeClientInformation = abeClientInformation
@@ -239,7 +238,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE, e)
 
                 @Throws(Exception::class)
             
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)
         //nullable =  from not(true or (false and false)) = 
 : TransformInterface{
     //var abeClientInformation = abeClientInformation

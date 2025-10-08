@@ -35,7 +35,7 @@ open public class SimultaneousCompoundIndexedAnimation : IndexedAnimation {
         
 
     private var animationInterfaceArray: Array<Animation?>
-public constructor        (animationInterfaceArray: Array<Animation?>, animationBehavior: AnimationBehavior)                        
+public constructor (animationInterfaceArray: Array<Animation?>, animationBehavior: AnimationBehavior)                        
 
                             : super(animationBehavior){
     //var animationInterfaceArray = animationInterfaceArray
@@ -47,7 +47,8 @@ public constructor        (animationInterfaceArray: Array<Animation?>, animation
 this.animationInterfaceArray= animationInterfaceArray
 }
 
-override fun setFrame(frameIndex: Int)
+
+    override fun setFrame(frameIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var frameIndex = frameIndex
@@ -67,7 +68,8 @@ indexedAnimation!!.setFrame(frameIndex)
 
 }
 
-override fun getFrame()
+
+    override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -80,7 +82,8 @@ override fun getFrame()
                         return indexedAnimation!!.getFrame()
 }
 
-override fun getSize()
+
+    override fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -93,7 +96,8 @@ override fun getSize()
                         return indexedAnimation!!.getSize()
 }
 
-override fun previousFrame()
+
+    override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -112,13 +116,15 @@ indexedAnimation!!.previousFrame()
 
 }
 
-override fun setSequence(sequence: IntArray)
+
+    override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
 {
     //var sequence = sequence
 }
 
-override fun getSequence()
+
+    override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
 : IntArray{
 
@@ -130,7 +136,8 @@ override fun getSequence()
 
 
                 @Throws(Exception::class)
-            override fun nextFrame()
+            
+    override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -145,7 +152,8 @@ this.animationInterfaceArray[index]!!.nextFrame()
 
 }
 
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -167,7 +175,8 @@ this.animationInterfaceArray[index]!!.paint(graphics, x, y)
 
 }
 
-override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
+
+    override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -191,7 +200,7 @@ this.animationInterfaceArray[index]!!.paintThreed(graphics, x, y, z)
 }
 
 
-open fun getAnimationInterfaceArray()
+    open fun getAnimationInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<Animation?>{
 
@@ -202,7 +211,7 @@ open fun getAnimationInterfaceArray()
 }
 
 
-open fun setAnimationInterfaceArray(animationInterfaceArray: Array<Animation?>)
+    open fun setAnimationInterfaceArray(animationInterfaceArray: Array<Animation?>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var animationInterfaceArray = animationInterfaceArray

@@ -34,12 +34,11 @@ import org.allbinary.media.graphics.geography.pathfinding.PathFindingInfo
 
 open public class PathFindingInfoFactory : BasePathFindingInfoFactory {
         
-
-        companion object {
+companion object {
             
     private val instance: PathFindingInfoFactory = PathFindingInfoFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PathFindingInfoFactory{
 
@@ -51,13 +50,13 @@ open fun getInstance()
 
 
         }
-            private constructor        (){
+            private constructor (){
 }
 
 
                 @Throws(Exception::class)
             
-open fun getInstance(geographicMapInterface: BasicGeographicMap, graphArray: Array<IntArray?>)
+    open fun getInstance(geographicMapInterface: BasicGeographicMap, graphArray: Array<IntArray?>)
         //nullable =  from not(true or (false and false)) = 
 : PathFindingInfo{
     //var geographicMapInterface = geographicMapInterface

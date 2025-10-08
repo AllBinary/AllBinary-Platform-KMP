@@ -31,10 +31,9 @@ open public class InterfaceUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun viewAll(myClass: KClass<*>, lineBreak: String)
+    open fun viewAll(myClass: KClass<*>, lineBreak: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var myClass = myClass
@@ -68,7 +67,7 @@ stringBuffer!!.append(lineBreak)
 }
 
 
-open fun ::class(interfaceName: String, interfaces: Array<KClass<*>?>)
+    open fun ::class(interfaceName: String, interfaces: Array<KClass<*>?>)
         //nullable = true from not(false or (false and false)) = true
 : KClass<*>{
     //var interfaceName = interfaceName
@@ -115,7 +114,7 @@ open fun ::class(interfaceName: String, interfaces: Array<KClass<*>?>)
 }
 
 
-open fun isImplemented(clazz: KClass<*>, anyType: Any)
+    open fun isImplemented(clazz: KClass<*>, anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var clazz = clazz
@@ -148,7 +147,7 @@ var anyType = anyType
 }
 
 
-open fun isImplemented(className: String, anyType: Any)
+    open fun isImplemented(className: String, anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var className = className
@@ -186,7 +185,7 @@ var anyType = anyType
 }
 
 
-open fun isImplementedView(clazz: KClass<*>, anyType: Any)
+    open fun isImplementedView(clazz: KClass<*>, anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var clazz = clazz
@@ -221,7 +220,7 @@ stringBuffer!!.append("\n")
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

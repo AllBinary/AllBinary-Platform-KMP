@@ -38,12 +38,11 @@ open public class WindowsOperatingSystemFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: WindowsOperatingSystemFactory = WindowsOperatingSystemFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : WindowsOperatingSystemFactory{
 
@@ -57,13 +56,13 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getOperatingSystemInstance()
+    open fun getOperatingSystemInstance()
         //nullable = true from not(false or (false and true)) = true
 : GenericOperatingSystem{
 
@@ -82,7 +81,7 @@ open fun getOperatingSystemInstance()
                         if(osName!!.compareTo(operatingSystems!!.WINDOWS_NT) == 0)
                         
                                     {
-                                    operatingSystemInterface= Windows()
+                                    operatingSystemInterface= WindowsOS()
 
                                     }
                                 
@@ -91,7 +90,7 @@ open fun getOperatingSystemInstance()
                         if(osName!!.compareTo(operatingSystems!!.WINDOWS_10) == 0)
                         
                                     {
-                                    operatingSystemInterface= Windows()
+                                    operatingSystemInterface= WindowsOS()
 
                                     }
                                 
@@ -100,7 +99,7 @@ open fun getOperatingSystemInstance()
                         if(osName!!.compareTo(operatingSystems!!.WINDOWS_11) == 0)
                         
                                     {
-                                    operatingSystemInterface= Windows()
+                                    operatingSystemInterface= WindowsOS()
 
                                     }
                                 
@@ -109,7 +108,7 @@ open fun getOperatingSystemInstance()
                         if(osName!!.compareTo(operatingSystems!!.WINDOWS2000) == 0)
                         
                                     {
-                                    operatingSystemInterface= Windows()
+                                    operatingSystemInterface= WindowsOS()
 
                                     }
                                 
@@ -118,7 +117,7 @@ open fun getOperatingSystemInstance()
                         if(osName!!.compareTo(operatingSystems!!.WINDOWS_XP) == 0)
                         
                                     {
-                                    operatingSystemInterface= Windows()
+                                    operatingSystemInterface= WindowsOS()
 
                                     }
                                 
@@ -127,7 +126,7 @@ open fun getOperatingSystemInstance()
                         if(osName!!.compareTo(operatingSystems!!.WINDOWS_VISTA) == 0)
                         
                                     {
-                                    operatingSystemInterface= Windows()
+                                    operatingSystemInterface= WindowsOS()
 
                                     }
                                 
@@ -137,7 +136,7 @@ open fun getOperatingSystemInstance()
                         if(operatingSystems!!.isUnknownSpecificOSAllowed())
                         
                                     {
-                                    operatingSystemInterface= Windows()
+                                    operatingSystemInterface= WindowsOS()
 
                                     }
                                 

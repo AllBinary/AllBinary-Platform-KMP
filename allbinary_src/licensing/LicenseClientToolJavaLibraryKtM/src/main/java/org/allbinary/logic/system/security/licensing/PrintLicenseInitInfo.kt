@@ -37,14 +37,13 @@ open public class PrintLicenseInitInfo
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val PATH: String = "G:\\mnt\\bc\\mydev\\work\\allbinary_src\\licensing\\data\\"
 
                 @Throws(Exception::class)
             
-open fun main(args: Array<String?>)
+    open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var args = args
@@ -56,7 +55,7 @@ initInfo!!.printInitInfo()
 
 
         }
-            public constructor        (options: Array<String?>)
+            public constructor (options: Array<String?>)
             : super()
         {
 var options = options
@@ -66,7 +65,7 @@ LicenseInitInfoUtil.getInstance()!!.setFilePath(PATH +PATH_GLOBALS.getInstance()
 
                 @Throws(Exception::class)
             
-open fun getLicenseInitInfo()
+    open fun getLicenseInitInfo()
         //nullable = true from not(false or (false and true)) = true
 : LicenseInitInfo{
 
@@ -98,7 +97,7 @@ open fun getLicenseInitInfo()
 }
 
 
-open fun printInitInfo()
+    open fun printInitInfo()
         //nullable = true from not(false or (false and true)) = true
 {
 

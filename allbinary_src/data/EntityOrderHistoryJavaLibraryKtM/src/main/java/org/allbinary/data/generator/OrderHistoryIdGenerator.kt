@@ -33,7 +33,7 @@ open public class OrderHistoryIdGenerator : UniqueIdGenerator {
         
 
     private val IDFILE: String = "orderhistoryId"
-public constructor        (){
+public constructor (){
 
     var stringBuffer: StringMaker = StringMaker()
 

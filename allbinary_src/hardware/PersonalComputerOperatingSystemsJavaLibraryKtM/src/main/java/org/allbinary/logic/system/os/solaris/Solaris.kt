@@ -29,7 +29,7 @@ import org.allbinary.logic.system.os.GenericOperatingSystem
 
 open public class Solaris : GenericOperatingSystem {
         
-public constructor        (){
+public constructor (){
 this.scalable= true
 }
 

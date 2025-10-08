@@ -32,12 +32,11 @@ open public class CircularIndexUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NULL_CIRCULAR_INDEX_UTIL: CircularIndexUtil = CircularIndexUtil(0)
 
-open fun getInstance(max: Int)
+    open fun getInstance(max: Int)
         //nullable =  from not(true or (false and false)) = 
 : CircularIndexUtil{
 var max = max
@@ -49,7 +48,7 @@ var max = max
 }
 
 
-open fun getInstance(index: Int, max: Int)
+    open fun getInstance(index: Int, max: Int)
         //nullable =  from not(true or (false and false)) = 
 : CircularIndexUtil{
 var index = index
@@ -69,7 +68,7 @@ var max = max
     private var lastIndex: Int = 0
 
     private var size: Int = 0
-private constructor        (index: Int, size: Int)
+private constructor (index: Int, size: Int)
             : super()
         {
 var index = index
@@ -78,7 +77,7 @@ this.setSize(size)
 this.setIndex(index)
 }
 
-private constructor        (size: Int)
+private constructor (size: Int)
             : super()
         {
 var size = size
@@ -86,7 +85,7 @@ this.setSize(size)
 }
 
 
-open fun next()
+    open fun next()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -111,7 +110,7 @@ open fun next()
 }
 
 
-open fun previous()
+    open fun previous()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -136,7 +135,7 @@ open fun previous()
 }
 
 
-open fun setIndex(index: Int)
+    open fun setIndex(index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var index = index
@@ -157,7 +156,7 @@ this.index= index
 }
 
 
-open fun getIndex()
+    open fun getIndex()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -168,7 +167,7 @@ open fun getIndex()
 }
 
 
-open fun setSize(size: Int)
+    open fun setSize(size: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var size = size
@@ -178,7 +177,7 @@ this.index= 0
 }
 
 
-open fun getSize()
+    open fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -188,7 +187,8 @@ open fun getSize()
                         return size
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

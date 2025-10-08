@@ -32,7 +32,7 @@ import org.allbinary.layer.AllBinaryLayerManager
 
 open public class ComboSequenceAI : SequenceAI {
         
-public constructor        (artificialIntelligenceInterface: Array<ArtificialIntelligenceInterface?>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
+public constructor (artificialIntelligenceInterface: Array<ArtificialIntelligenceInterface?>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
                             : super(artificialIntelligenceInterface, ownerLayerInterface, gameInput){
 var artificialIntelligenceInterface = artificialIntelligenceInterface
@@ -46,7 +46,8 @@ var gameInput = gameInput
 
 
                 @Throws(Exception::class)
-            override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+            
+    override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager

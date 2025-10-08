@@ -63,7 +63,7 @@ open public class AuthenticationHelper : TagHelper {
     private var timeout: String
 
     private var attemptsInteger: Integer
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)                        
+public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
                             : this(hashMap, pageContext!!.getRequest() as HttpServletRequest){
 var hashMap = hashMap
@@ -74,7 +74,7 @@ var pageContext = pageContext
                     
 }
 
-public constructor        (hashMap: HashMap<Any, Any>, httpServletRequest: HttpServletRequest){
+public constructor (hashMap: HashMap<Any, Any>, httpServletRequest: HttpServletRequest){
 var hashMap = hashMap
 var httpServletRequest = httpServletRequest
 this.weblisketSession= WeblisketSession(hashMap, httpServletRequest)
@@ -93,7 +93,7 @@ this.getFormData()
 
                 @Throws(Exception::class)
             
-open fun getFormData()
+    open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
 this.authenticated= this.weblisketSession!!.getAuthentication()
@@ -106,7 +106,7 @@ this.timeout= this.weblisketSession!!.getTimeout()
 
                 @Throws(Exception::class)
             
-open fun invalidateSession()
+    open fun invalidateSession()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -138,7 +138,7 @@ open fun invalidateSession()
 }
 
 
-open fun isSessionOld()
+    open fun isSessionOld()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -215,7 +215,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "isSessionOld()")
 }
 
 
-open fun isRarelyUsedSession()
+    open fun isRarelyUsedSession()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -282,7 +282,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "isRarelyUsedSession()")
 }
 
 
-open fun validRole()
+    open fun validRole()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -320,7 +320,7 @@ stringBuffer!!.append("Trying New login<p/>")
 }
 
 
-open fun invalidRole()
+    open fun invalidRole()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -362,7 +362,7 @@ stringBuffer!!.append("Trying New login<p/>")
 
                 @Throws(Exception::class)
             
-open fun isAuthenticated()
+    open fun isAuthenticated()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -390,7 +390,7 @@ open fun isAuthenticated()
 }
 
 
-open fun isAuthenticationSessionValid(roles: Vector)
+    open fun isAuthenticationSessionValid(roles: Vector)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var roles = roles
@@ -530,7 +530,7 @@ var roles = roles
 }
 
 
-open fun nextAttempt()
+    open fun nextAttempt()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -552,7 +552,7 @@ open fun nextAttempt()
 }
 
 
-open fun processIfNewLogin(userName: String, password: String)
+    open fun processIfNewLogin(userName: String, password: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var userName = userName
@@ -645,7 +645,7 @@ this.nextAttempt()
 }
 
 
-open fun processInvalidation()
+    open fun processInvalidation()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -697,7 +697,7 @@ open fun processInvalidation()
 }
 
 
-open fun outputSessionInfo()
+    open fun outputSessionInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -763,7 +763,7 @@ stringBuffer!!.append("<br/>\n")
 }
 
 
-open fun getRole()
+    open fun getRole()
         //nullable = true from not(false or (false and true)) = true
 : UserRole{
 

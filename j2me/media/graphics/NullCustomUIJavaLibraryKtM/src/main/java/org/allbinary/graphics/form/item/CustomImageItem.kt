@@ -19,7 +19,7 @@ open public class CustomImageItem : CustomItem {
         
 
     var yOffset: Int = 0
-public constructor        (label: String, image: Image, layout: Int, altText: String, basicColor: BasicColor)                        
+public constructor (label: String, image: Image, layout: Int, altText: String, basicColor: BasicColor)                        
 
                             : super(label, basicColor, basicColor){
 var label = label
@@ -33,7 +33,7 @@ var basicColor = basicColor
                     
 }
 
-public constructor        (label: String, image: Image, layout: Int, altText: String, basicColor: BasicColor, yOffset: Int)                        
+public constructor (label: String, image: Image, layout: Int, altText: String, basicColor: BasicColor, yOffset: Int)                        
 
                             : super(label, basicColor, basicColor){
 var label = label
@@ -49,7 +49,7 @@ var yOffset = yOffset
 }
 
 
-open fun getImage()
+    open fun getImage()
         //nullable = true from not(false or (false and true)) = true
 : Image{
 

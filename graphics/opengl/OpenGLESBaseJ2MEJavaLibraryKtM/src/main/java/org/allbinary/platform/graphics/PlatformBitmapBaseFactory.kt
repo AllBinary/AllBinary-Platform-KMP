@@ -31,8 +31,7 @@ open public class PlatformBitmapBaseFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NULL_PLATFORM_BITMAP_BASE_FACTORY: PlatformBitmapBaseFactory = PlatformBitmapBaseFactory()
 
@@ -43,7 +42,7 @@ open public class PlatformBitmapBaseFactory
             {
             }            
         
-open fun createBitmap(image: Image)
+    open fun createBitmap(image: Image)
         //nullable = true from not(false or (false and false)) = true
 : PlatformBitmapBase{
     //var image = image

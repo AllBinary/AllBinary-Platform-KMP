@@ -36,12 +36,11 @@ open public class VectorMirrorGenerator
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: VectorMirrorGenerator = VectorMirrorGenerator()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : VectorMirrorGenerator{
 
@@ -57,13 +56,13 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val vectorAnimationUtil: VectorAnimationUtil = VectorAnimationUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getInstance(points: Array<Array<IntArray?>?>, width: Int)
+    open fun getInstance(points: Array<Array<IntArray?>?>, width: Int)
         //nullable =  from not(true or (false and false)) = 
 : Array<Array<IntArray?>?>{
 var points = points
@@ -148,7 +147,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
 
                 @Throws(Exception::class)
             
-open fun getInstance(pointBasicArrayList: BasicArrayList, width: Int)
+    open fun getInstance(pointBasicArrayList: BasicArrayList, width: Int)
         //nullable =  from not(true or (false and false)) = 
 : BasicArrayList{
 var pointBasicArrayList = pointBasicArrayList

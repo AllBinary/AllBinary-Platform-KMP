@@ -41,13 +41,13 @@ open public class BasketReview
         
 
     var items: Vector = Vector()
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -58,7 +58,7 @@ open fun isValid()
 }
 
 
-open fun addItem(item: Item)
+    open fun addItem(item: Item)
         //nullable = true from not(false or (false and false)) = true
 {
 var item = item
@@ -66,7 +66,7 @@ items.add(item)
 }
 
 
-open fun getItems()
+    open fun getItems()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -77,7 +77,7 @@ open fun getItems()
 }
 
 
-open fun removeItem(id: String)
+    open fun removeItem(id: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var id = id
@@ -112,7 +112,7 @@ var id = id
 }
 
 
-open fun adjustItem(id: String, num: String)
+    open fun adjustItem(id: String, num: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var id = id
@@ -148,7 +148,7 @@ var num = num
 }
 
 
-open fun getTotalWeight()
+    open fun getTotalWeight()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -184,7 +184,7 @@ weightFloat += Float(item.getWeight()).
 }
 
 
-open fun getNumberOfItems()
+    open fun getNumberOfItems()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -195,7 +195,7 @@ open fun getNumberOfItems()
 }
 
 
-open fun getIds()
+    open fun getIds()
         //nullable = true from not(false or (false and true)) = true
 : Set{
 
@@ -229,7 +229,7 @@ idSet!!.add(item.getId())
 }
 
 
-open fun getNumberOf(id: String)
+    open fun getNumberOf(id: String)
         //nullable = true from not(false or (false and false)) = true
 : Integer{
 var id = id
@@ -275,7 +275,7 @@ var id = id
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

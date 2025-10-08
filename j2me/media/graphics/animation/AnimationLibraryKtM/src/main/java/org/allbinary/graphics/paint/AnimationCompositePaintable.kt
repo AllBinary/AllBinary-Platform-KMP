@@ -32,19 +32,21 @@ open public class AnimationCompositePaintable : InitUpdatePaintable {
         
 
     private val animationInterface: Animation
-public constructor        (animationInterface: Animation){
+public constructor (animationInterface: Animation){
 var animationInterface = animationInterface
 this.animationInterface= animationInterface
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 this.animationInterface!!.paint(graphics, 0, 0)
 }
 
-override fun paintThreed(graphics: Graphics)
+
+    override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

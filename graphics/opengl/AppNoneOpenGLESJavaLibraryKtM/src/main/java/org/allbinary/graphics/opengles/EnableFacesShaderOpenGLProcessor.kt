@@ -16,12 +16,11 @@ import org.allbinary.graphics.threed.min3d.renderer.processor.ObjectThreedOpenGL
 
 open public class EnableFacesShaderOpenGLProcessor : ObjectThreedOpenGLProcessor {
         
-
-        companion object {
+companion object {
             
     private val instance: EnableFacesShaderOpenGLProcessor = EnableFacesShaderOpenGLProcessor()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : EnableFacesShaderOpenGLProcessor{
 
@@ -33,10 +32,11 @@ open fun getInstance()
 
 
         }
-            public constructor        (){
+            public constructor (){
 }
 
-override fun process(gl: GL10, anyType: Any)
+
+    override fun process(gl: GL10, anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl

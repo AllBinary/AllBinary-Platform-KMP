@@ -20,13 +20,12 @@ open public class CustomItem
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NULL_CUSTOM_ITEM: CustomItem = CustomItem(StringUtil.getInstance()!!.EMPTY_STRING, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)
 
         }
-            protected constructor        (label: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)
+            protected constructor (label: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)
             : super()
         {
 var label = label
@@ -35,7 +34,7 @@ var foregroundBasicColor = foregroundBasicColor
 }
 
 
-open fun paint(graphics: Graphics, x: Int, y: Int)
+    open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -44,7 +43,7 @@ var y = y
 }
 
 
-open fun isFocusable()
+    open fun isFocusable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -55,7 +54,7 @@ open fun isFocusable()
 }
 
 
-open fun getLabel()
+    open fun getLabel()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -66,14 +65,14 @@ open fun getLabel()
 }
 
 
-open fun setLabel(label: String)
+    open fun setLabel(label: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var label = label
 }
 
 
-open fun getHeight()
+    open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -84,14 +83,14 @@ open fun getHeight()
 }
 
 
-open fun setHeight(height: Int)
+    open fun setHeight(height: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var height = height
 }
 
 
-open fun getValue()
+    open fun getValue()
         //nullable = true from not(false or (false and true)) = true
 : Float{
 
@@ -102,14 +101,14 @@ open fun getValue()
 }
 
 
-open fun setValue(value: Float)
+    open fun setValue(value: Float)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
 }
 
 
-open fun getMinimumWidth()
+    open fun getMinimumWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -120,7 +119,7 @@ open fun getMinimumWidth()
 }
 
 
-open fun getMinimumHeight()
+    open fun getMinimumHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

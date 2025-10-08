@@ -25,14 +25,15 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface RotationAnimationInterfaceCompositeInterface : IndexedAnimationInterfaceCompositeInterface {
         
 
-open fun getRotationAnimationInterface()
+    open fun getRotationAnimationInterface()
         //nullable = true from not(false or (false and true)) = true
 : RotationAnimation
 
-open fun setFrame(index: Int)
+    open fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
 
 

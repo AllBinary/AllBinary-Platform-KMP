@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.visual.transform.TransformInterface
+
 interface ValidationComponentInterface : TransformInterface, ValidationInterface {
         
 

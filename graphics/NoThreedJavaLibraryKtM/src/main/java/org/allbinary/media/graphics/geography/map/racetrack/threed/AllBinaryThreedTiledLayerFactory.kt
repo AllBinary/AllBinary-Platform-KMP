@@ -33,12 +33,11 @@ open public class AllBinaryThreedTiledLayerFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AllBinaryThreedTiledLayerFactory = AllBinaryThreedTiledLayerFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AllBinaryThreedTiledLayerFactory{
 
@@ -58,7 +57,7 @@ open fun getInstance()
         
                 @Throws(Exception::class)
             
-open fun getInstance(raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrackData)
+    open fun getInstance(raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrackData)
         //nullable =  from not(true or (false and false)) = 
 : AllBinaryTiledLayer{
 var raceTrackInfo = raceTrackInfo

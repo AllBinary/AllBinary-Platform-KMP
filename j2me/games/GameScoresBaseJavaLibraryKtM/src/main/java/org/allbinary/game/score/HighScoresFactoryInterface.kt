@@ -26,18 +26,19 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.game.GameInfo
+
 interface HighScoresFactoryInterface {
         
 
-open fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener)
+    open fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener, preload: Boolean)
+    open fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener, preload: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun createHighScoresHelper()
+    open fun createHighScoresHelper()
         //nullable = true from not(false or (false and true)) = true
 : HighScoresHelperBase
 

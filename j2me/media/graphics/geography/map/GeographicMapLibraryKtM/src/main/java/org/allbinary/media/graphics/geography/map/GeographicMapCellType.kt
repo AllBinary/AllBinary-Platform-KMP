@@ -28,7 +28,6 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.math.SmallIntegerSingletonFactory
 
@@ -40,7 +39,7 @@ open public class GeographicMapCellType
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val type: Int
-public constructor        (type: Int)
+public constructor (type: Int)
             : super()
         {
     //var type = type
@@ -81,7 +80,7 @@ this.type= type
 }
 
 
-open fun getType()
+    open fun getType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -91,7 +90,8 @@ open fun getType()
                         return this.type
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

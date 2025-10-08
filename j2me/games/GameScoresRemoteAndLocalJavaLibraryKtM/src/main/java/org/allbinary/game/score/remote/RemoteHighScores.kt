@@ -39,13 +39,12 @@ import org.allbinary.string.CommonStrings
 
 open public class RemoteHighScores : HighScores {
         
-
-        companion object {
+companion object {
             
     private val hashTable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, softwareInformation: SoftwareInformation, gameInfo: GameInfo, heading: String, columnTwoHeading: String, isAscending: Boolean)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, softwareInformation: SoftwareInformation, gameInfo: GameInfo, heading: String, columnTwoHeading: String, isAscending: Boolean)
         //nullable =  from not(true or (false and false)) = 
 : HighScores{
     //var abeClientInformation = abeClientInformation
@@ -63,7 +62,7 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, softwa
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, softwareInformation: SoftwareInformation, gameInfo: GameInfo, heading: String, columnTwoHeading: String, isAscending: Boolean, preload: Boolean)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, softwareInformation: SoftwareInformation, gameInfo: GameInfo, heading: String, columnTwoHeading: String, isAscending: Boolean, preload: Boolean)
         //nullable =  from not(true or (false and false)) = 
 : HighScores{
     //var abeClientInformation = abeClientInformation
@@ -125,7 +124,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, RemoteErrorHighScoresSingletonFactory.g
     private var ascending: Boolean
 
     val ASCENDING: String = "ASCENDING"
-private constructor        (abeClientInformation: AbeClientInformationInterface, softwareInformation: SoftwareInformation, gameInfo: GameInfo, heading: String, columnTwoHeading: String, ascending: Boolean, preload: Boolean)                        
+private constructor (abeClientInformation: AbeClientInformationInterface, softwareInformation: SoftwareInformation, gameInfo: GameInfo, heading: String, columnTwoHeading: String, ascending: Boolean, preload: Boolean)                        
 
                             : super(gameInfo!!.toString(), heading, columnTwoHeading){
     //var abeClientInformation = abeClientInformation
@@ -154,7 +153,7 @@ this.setAscending(ascending)
 }
 
 
-open fun addHighScore(newHighScore: HighScore)
+    open fun addHighScore(newHighScore: HighScore)
         //nullable = true from not(false or (false and false)) = true
 {
     //var newHighScore = newHighScore
@@ -162,7 +161,7 @@ RemoteHighScoresSubmissionProcessorFactory.getInstance()!!.process(this, this.ab
 }
 
 
-open fun update(hashtable: Hashtable<Any, Any>)
+    open fun update(hashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var hashtable = hashtable
@@ -232,7 +231,7 @@ logUtil!!.put("NextElement: " +nextElement, this, commonStrings!!.PROCESS)
 }
 
 
-open fun setAscending(ascending: Boolean)
+    open fun setAscending(ascending: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var ascending = ascending
@@ -240,7 +239,7 @@ this.ascending= ascending
 }
 
 
-open fun getAscending()
+    open fun getAscending()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -251,7 +250,7 @@ open fun getAscending()
 }
 
 
-open fun getSoftwareInformation()
+    open fun getSoftwareInformation()
         //nullable = true from not(false or (false and true)) = true
 : SoftwareInformation{
 

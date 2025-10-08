@@ -32,10 +32,9 @@ open public class MethodUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun viewAll(myClass: KClass<*>, lineBreak: String)
+    open fun viewAll(myClass: KClass<*>, lineBreak: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var myClass = myClass
@@ -73,7 +72,7 @@ stringBuffer!!.append(lineBreak)
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

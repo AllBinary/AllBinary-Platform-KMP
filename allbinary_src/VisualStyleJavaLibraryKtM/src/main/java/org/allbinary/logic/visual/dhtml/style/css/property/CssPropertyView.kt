@@ -39,14 +39,14 @@ open public class CssPropertyView
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var cssProperty: CssProperty
-public constructor        (name: String)
+public constructor (name: String)
             : super()
         {
 var name = name
 this.cssProperty= CssProperty(name)
 }
 
-public constructor        (node: Node)
+public constructor (node: Node)
             : super()
         {
 var node = node
@@ -54,7 +54,7 @@ this.cssProperty= CssProperty(node)
 }
 
 
-open fun getProperty()
+    open fun getProperty()
         //nullable = true from not(false or (false and true)) = true
 : CssProperty{
 
@@ -67,7 +67,7 @@ open fun getProperty()
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

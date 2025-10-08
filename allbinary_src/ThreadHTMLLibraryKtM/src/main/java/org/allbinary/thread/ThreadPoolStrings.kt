@@ -30,12 +30,11 @@ open public class ThreadPoolStrings
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ThreadPoolStrings = ThreadPoolStrings()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ThreadPoolStrings{
 

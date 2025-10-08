@@ -36,8 +36,7 @@ open public class ConstrainedMotionRectanglesResultsCacheSingleton
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var cacheInterface: CacheInterface = 
                 null
@@ -68,7 +67,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, instance, STATIC_BLOCK, e)
 
 }
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CacheInterface{
 
@@ -82,7 +81,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }

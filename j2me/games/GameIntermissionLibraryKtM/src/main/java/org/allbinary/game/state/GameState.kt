@@ -30,8 +30,7 @@ open public class GameState
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var NO_GAME_STATE: GameState = GameStateFactory.getInstance("NO_GAME_STATE")!!
 
@@ -40,7 +39,7 @@ open public class GameState
         }
             
     private var name: String
-public constructor        (name: String, state: Int)
+public constructor (name: String, state: Int)
             : super()
         {
 var name = name
@@ -48,7 +47,8 @@ var state = state
 this.name= name
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

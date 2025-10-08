@@ -32,12 +32,11 @@ open public class ArtificialIntelligence
         
                 , ArtificialIntelligenceInterface {
         
-
-        companion object {
+companion object {
             
     private val instance: ArtificialIntelligence = ArtificialIntelligence()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ArtificialIntelligence{
 
@@ -49,20 +48,22 @@ open fun getInstance()
 
 
         }
-            public constructor        ()
+            public constructor ()
             : super()
         {
 }
 
 
                 @Throws(Exception::class)
-            override fun processAI(layerManager: AllBinaryLayerManager)
+            
+    override fun processAI(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var layerManager = layerManager
 }
 
-override fun getId()
+
+    override fun getId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

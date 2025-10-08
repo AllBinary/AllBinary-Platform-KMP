@@ -46,7 +46,7 @@ open public class GenericProfile
     private var vector: Vector
 
     private var genericProfileActions: GenericProfileActions
-public constructor        (node: Node)
+public constructor (node: Node)
             : super()
         {
 var node = node
@@ -83,7 +83,7 @@ this.vector.add(genericProfileDataWorkerType)
 
 }
 
-public constructor        (name: String)
+public constructor (name: String)
             : super()
         {
 var name = name
@@ -92,7 +92,7 @@ this.vector= Vector()
 }
 
 
-open fun getGenericProfileDataWorkerTypeVector()
+    open fun getGenericProfileDataWorkerTypeVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -103,7 +103,7 @@ open fun getGenericProfileDataWorkerTypeVector()
 }
 
 
-open fun add(genericProfileDataWorkerType: GenericProfileDataWorkerType)
+    open fun add(genericProfileDataWorkerType: GenericProfileDataWorkerType)
         //nullable = true from not(false or (false and false)) = true
 {
 var genericProfileDataWorkerType = genericProfileDataWorkerType
@@ -114,7 +114,7 @@ var genericProfileDataWorkerType = genericProfileDataWorkerType
 }
 
 
-open fun remove(genericProfileDataWorkerType: GenericProfileDataWorkerType)
+    open fun remove(genericProfileDataWorkerType: GenericProfileDataWorkerType)
         //nullable = true from not(false or (false and false)) = true
 {
 var genericProfileDataWorkerType = genericProfileDataWorkerType
@@ -124,7 +124,7 @@ this.vector.remove(genericProfileDataWorkerType)
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -155,7 +155,7 @@ node.appendChild(genericProfileDataWorkerType!!.toXmlNode(document))
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -166,7 +166,7 @@ open fun getName()
 }
 
 
-open fun setName(name: String)
+    open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name
@@ -174,7 +174,7 @@ this.name= name
 }
 
 
-open fun getGenericProfileActions()
+    open fun getGenericProfileActions()
         //nullable = true from not(false or (false and true)) = true
 : GenericProfileActions{
 
@@ -185,7 +185,7 @@ open fun getGenericProfileActions()
 }
 
 
-open fun setGenericProfileActions(genericProfileActions: GenericProfileActions)
+    open fun setGenericProfileActions(genericProfileActions: GenericProfileActions)
         //nullable = true from not(false or (false and false)) = true
 {
 var genericProfileActions = genericProfileActions

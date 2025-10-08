@@ -39,7 +39,7 @@ open public class GameKeyCompleteMotionGestureInputEvent : CompleteMotionGesture
     private var gameKey: GameKey = GameKey.NULL_GAME_KEY
 
     private var gameKeyEvent: GameKeyEvent = GameKeyEvent.NONE
-public constructor        (name: String, motionGestureInput: MotionGestureInput, inputToGameKeyMapping: InputToGameKeyMapping)                        
+public constructor (name: String, motionGestureInput: MotionGestureInput, inputToGameKeyMapping: InputToGameKeyMapping)                        
 
                             : super(name, motionGestureInput){
 var name = name
@@ -51,7 +51,8 @@ var inputToGameKeyMapping = inputToGameKeyMapping
                     
 }
 
-override fun getSourceId()
+
+    override fun getSourceId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -62,13 +63,13 @@ override fun getSourceId()
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun setGameKeyEvent(gameKeyEvent: GameKeyEvent)
+    open fun setGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameKeyEvent = gameKeyEvent
@@ -76,7 +77,7 @@ this.gameKeyEvent= gameKeyEvent
 }
 
 
-open fun getGameKeyEvent()
+    open fun getGameKeyEvent()
         //nullable = true from not(false or (false and true)) = true
 : GameKeyEvent{
 
@@ -87,7 +88,7 @@ open fun getGameKeyEvent()
 }
 
 
-open fun setGameKey(gameKey: GameKey)
+    open fun setGameKey(gameKey: GameKey)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameKey = gameKey
@@ -95,7 +96,7 @@ this.gameKey= gameKey
 }
 
 
-open fun getGameKey()
+    open fun getGameKey()
         //nullable = true from not(false or (false and true)) = true
 : GameKey{
 

@@ -51,7 +51,7 @@ open public class SearchParams
     private var startPage: String
 
     private var endPage: String
-public constructor        (request: HttpServletRequest)
+public constructor (request: HttpServletRequest)
             : super()
         {
 var request = request
@@ -87,7 +87,7 @@ columnValue= request.getParameter(SearchData.COLUMNVALUE +"[" +index +"]")
 }
 
 
-open fun add(column: String, value: String)
+    open fun add(column: String, value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var column = column
@@ -96,7 +96,7 @@ this.columnsAndSearchValues!!.put(column, value)
 }
 
 
-open fun setOrder(value: String)
+    open fun setOrder(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -104,7 +104,7 @@ this.order= value
 }
 
 
-open fun setSortBy(value: String)
+    open fun setSortBy(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -112,7 +112,7 @@ this.sortBy= value
 }
 
 
-open fun setLength(value: String)
+    open fun setLength(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -120,7 +120,7 @@ this.listLength= value
 }
 
 
-open fun setStartPage(value: String)
+    open fun setStartPage(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -128,7 +128,7 @@ this.startPage= value
 }
 
 
-open fun setEndPage(value: String)
+    open fun setEndPage(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -136,7 +136,7 @@ this.endPage= value
 }
 
 
-open fun get()
+    open fun get()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -147,7 +147,7 @@ open fun get()
 }
 
 
-open fun getOrder()
+    open fun getOrder()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -158,7 +158,7 @@ open fun getOrder()
 }
 
 
-open fun getSortBy()
+    open fun getSortBy()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -169,7 +169,7 @@ open fun getSortBy()
 }
 
 
-open fun getLength()
+    open fun getLength()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -180,7 +180,7 @@ open fun getLength()
 }
 
 
-open fun getLengthInt()
+    open fun getLengthInt()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -205,7 +205,7 @@ open fun getLengthInt()
 }
 
 
-open fun getStartPage()
+    open fun getStartPage()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -216,7 +216,7 @@ open fun getStartPage()
 }
 
 
-open fun getEndPage()
+    open fun getEndPage()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -227,7 +227,7 @@ open fun getEndPage()
 }
 
 
-open fun getStartPageInt()
+    open fun getStartPageInt()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -252,7 +252,7 @@ open fun getStartPageInt()
 }
 
 
-open fun getEndPageInt()
+    open fun getEndPageInt()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -279,7 +279,7 @@ open fun getEndPageInt()
 
                 @Throws(Exception::class)
             
-open fun getParamsNode(document: Document)
+    open fun getParamsNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -300,7 +300,7 @@ paramsNode!!.appendChild(this.getLengthNode(document))
 
                 @Throws(Exception::class)
             
-open fun getFieldsNode(document: Document)
+    open fun getFieldsNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -344,7 +344,7 @@ fieldsNode!!.appendChild(ModDomHelper.createNameValueNodes(document, SearchData.
 
                 @Throws(Exception::class)
             
-open fun getOrderNode(document: Document)
+    open fun getOrderNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -358,7 +358,7 @@ var document = document
 
                 @Throws(Exception::class)
             
-open fun getSortByNode(document: Document)
+    open fun getSortByNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -372,7 +372,7 @@ var document = document
 
                 @Throws(Exception::class)
             
-open fun getLengthNode(document: Document)
+    open fun getLengthNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

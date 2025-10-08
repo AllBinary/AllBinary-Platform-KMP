@@ -32,7 +32,7 @@ import org.allbinary.logic.io.file.AbFileNativeUtil
 
 open public class AbFileOutputStream : FileOutputStream {
         
-public constructor        (name: String)                        
+public constructor (name: String)                        
 
                             : super(name){
 var name = name
@@ -42,7 +42,7 @@ var name = name
                     
 }
 
-public constructor        (name: String, append: Boolean)                        
+public constructor (name: String, append: Boolean)                        
 
                             : super(name, append){
 var name = name
@@ -53,7 +53,7 @@ var append = append
                     
 }
 
-public constructor        (file: AbFile)                        
+public constructor (file: AbFile)                        
 
                             : super(AbFileNativeUtil.get(file)){
 var file = file
@@ -63,7 +63,7 @@ var file = file
                     
 }
 
-public constructor        (file: AbFile, append: Boolean)                        
+public constructor (file: AbFile, append: Boolean)                        
 
                             : super(AbFileNativeUtil.get(file), append){
 var file = file

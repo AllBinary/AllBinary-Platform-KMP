@@ -31,7 +31,7 @@ import org.allbinary.game.collision.CollidableInterfaceCompositeInterface
 
 open public class CollidableWaypointBehavior : CollidableRTSBehavior {
         
-public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
+public constructor (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
 
                             : super(ownerLayer, collidable){
 var ownerLayer = ownerLayer
@@ -43,7 +43,7 @@ var collidable = collidable
 }
 
 
-open fun isCollision(collisionLayer: CollidableCompositeLayer)
+    open fun isCollision(collisionLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var collisionLayer = collisionLayer
@@ -57,14 +57,14 @@ var collisionLayer = collisionLayer
 
                 @Throws(Exception::class)
             
-open fun collide(collisionLayer: CollidableCompositeLayer)
+    open fun collide(collisionLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var collisionLayer = collisionLayer
 }
 
 
-open fun isCollision(collidableInterface: CollidableInterfaceCompositeInterface)
+    open fun isCollision(collidableInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var collidableInterface = collidableInterface
@@ -78,7 +78,7 @@ var collidableInterface = collidableInterface
 
                 @Throws(Exception::class)
             
-open fun collide(collidableInterface: CollidableInterfaceCompositeInterface)
+    open fun collide(collidableInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var collidableInterface = collidableInterface

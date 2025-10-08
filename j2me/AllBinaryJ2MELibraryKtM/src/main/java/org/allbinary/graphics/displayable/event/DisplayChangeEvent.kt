@@ -29,7 +29,7 @@ import org.allbinary.logic.util.event.AllBinaryEventObject
 
 open public class DisplayChangeEvent : AllBinaryEventObject {
         
-public constructor        (anyType: Any)                        
+public constructor (anyType: Any)                        
 
                             : super(anyType){
 var anyType = anyType

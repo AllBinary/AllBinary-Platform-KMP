@@ -40,12 +40,11 @@ open public class AbResponseHandler
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(JspTagException::class)
             
-open fun sendJspTagRedirect(pageContext: PageContext, e: Exception)
+    open fun sendJspTagRedirect(pageContext: PageContext, e: Exception)
         //nullable = true from not(false or (false and false)) = true
 {
 var pageContext = pageContext
@@ -87,7 +86,7 @@ AbResponseHandler.sendRedirect(pageContext, FREEBLISKET_PATH_GLOBALS.getInstance
 
                 @Throws(ServletException::class)
             
-open fun sendServletRedirect(pageContext: PageContext, e: Exception)
+    open fun sendServletRedirect(pageContext: PageContext, e: Exception)
         //nullable = true from not(false or (false and false)) = true
 {
 var pageContext = pageContext
@@ -129,7 +128,7 @@ AbResponseHandler.sendRedirect(pageContext, FREEBLISKET_PATH_GLOBALS.getInstance
 
                 @Throws(JspTagException::class)
             
-open fun sendJspTagLicensingRedirect(pageContext: PageContext, e: Exception)
+    open fun sendJspTagLicensingRedirect(pageContext: PageContext, e: Exception)
         //nullable = true from not(false or (false and false)) = true
 {
 var pageContext = pageContext
@@ -171,7 +170,7 @@ AbResponseHandler.sendRedirect(pageContext, FREEBLISKET_PATH_GLOBALS.getInstance
 
                 @Throws(ServletException::class)
             
-open fun sendServletLicensingRedirect(pageContext: PageContext, e: Exception)
+    open fun sendServletLicensingRedirect(pageContext: PageContext, e: Exception)
         //nullable = true from not(false or (false and false)) = true
 {
 var pageContext = pageContext
@@ -213,7 +212,7 @@ AbResponseHandler.sendRedirect(pageContext, FREEBLISKET_PATH_GLOBALS.getInstance
 
                 @Throws(Exception::class)
             
-open fun sendRedirect(pageContext: PageContext, page: String)
+    open fun sendRedirect(pageContext: PageContext, page: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var pageContext = pageContext
@@ -254,7 +253,7 @@ pageContext!!.getOut()!!.print("Error: " +page)
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }

@@ -38,12 +38,13 @@ open public class ColorFillBasePaintable : Paintable
     var basicColor: BasicColor = BasicColorFactory.getInstance()!!.WHITE
 
     var colorP: Int= 0
-public constructor        (basicColor: BasicColor){
+public constructor (basicColor: BasicColor){
 var basicColor = basicColor
 this.setBasicColorP(basicColor)
 }
 
-override fun setBasicColorP(basicColor: BasicColor)
+
+    override fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
 var basicColor = basicColor
@@ -51,7 +52,8 @@ this.basicColor= basicColor
 this.setColor(this.getBasicColorP()!!.toInt())
 }
 
-override fun getBasicColorP()
+
+    override fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
 
@@ -62,7 +64,7 @@ override fun getBasicColorP()
 }
 
 
-open fun getColor()
+    open fun getColor()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -73,14 +75,15 @@ open fun getColor()
 }
 
 
-open fun setColor(color: Int)
+    open fun setColor(color: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var color = color
 this.colorP= color
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

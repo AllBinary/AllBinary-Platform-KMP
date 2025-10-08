@@ -44,7 +44,7 @@ open public class InventoryRequestHelper : ModifyTable {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val itemInterface: ItemInterface
-public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext){
 var propertiesHashMap = propertiesHashMap
 var pageContext = pageContext
 
@@ -59,7 +59,7 @@ this.itemInterface= itemView!!.getItemInterface()
 
                 @Throws(Exception::class)
             
-open fun insert()
+    open fun insert()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -112,7 +112,7 @@ InventoryEntityFactory.getInstance()!!.getInventoryEntityInstance()!!.insert(val
 }
 
 
-open fun delete()
+    open fun delete()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -173,7 +173,7 @@ stringBuffer!!.append(" from to the Inventory table")
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -221,7 +221,7 @@ this.insert()
 }
 
 
-open fun getItemInterface()
+    open fun getItemInterface()
         //nullable = true from not(false or (false and true)) = true
 : ItemInterface{
 

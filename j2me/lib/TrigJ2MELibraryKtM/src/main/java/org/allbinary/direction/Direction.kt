@@ -31,12 +31,11 @@ open public class Direction
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var directionArray: Array<Direction?> = arrayOfNulls(13)
 
-open fun getInstance(direction: Int)
+    open fun getInstance(direction: Int)
         //nullable =  from not(true or (false and false)) = 
 : Direction{
 var direction = direction
@@ -57,7 +56,7 @@ var direction = direction
     private var value: Int
 
     private var frameFactor: Int
- constructor        (name: String, otherName: String, value: Int, frameFactor: Int)
+ constructor (name: String, otherName: String, value: Int, frameFactor: Int)
             : super()
         {
 var name = name
@@ -71,7 +70,7 @@ this.frameFactor= frameFactor
 directionArray[value]= this
 }
 
- constructor        (name: String, otherName: String, value: Int)
+ constructor (name: String, otherName: String, value: Int)
             : super()
         {
 var name = name
@@ -85,7 +84,7 @@ directionArray[value]= this
 }
 
 
-open fun getValue()
+    open fun getValue()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -96,7 +95,7 @@ open fun getValue()
 }
 
 
-open fun getFrameFactor()
+    open fun getFrameFactor()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -107,7 +106,7 @@ open fun getFrameFactor()
 }
 
 
-open fun getOtherName()
+    open fun getOtherName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -118,7 +117,7 @@ open fun getOtherName()
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -128,7 +127,8 @@ open fun getName()
                         return name
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

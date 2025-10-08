@@ -33,12 +33,11 @@ open public class FileStreamFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: FileStreamFactory = FileStreamFactory(ResourceUtil.getInstance()!!.getContext())
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : FileStreamFactory{
 
@@ -52,7 +51,7 @@ open fun getInstance()
         }
             
     private var context: Any
-private constructor        (context: Context)
+private constructor (context: Context)
             : super()
         {
     //var context = context
@@ -62,7 +61,7 @@ this.context= context
 
                 @Throws(Exception::class)
             
-open fun getFileInputStreamInstance(path: String, fileName: String)
+    open fun getFileInputStreamInstance(path: String, fileName: String)
         //nullable = true from not(false or (false and false)) = true
 : AbFileInputStream{
     //var path = path
@@ -77,7 +76,7 @@ open fun getFileInputStreamInstance(path: String, fileName: String)
 
                 @Throws(Exception::class)
             
-open fun getFileOutputStreamInstance(path: String, fileName: String)
+    open fun getFileOutputStreamInstance(path: String, fileName: String)
         //nullable = true from not(false or (false and false)) = true
 : AbFileOutputStream{
     //var path = path
@@ -96,7 +95,7 @@ context.deleteFile(fileName)
 
                 @Throws(Exception::class)
             
-open fun delete(path: String, fileName: String)
+    open fun delete(path: String, fileName: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var path = path
@@ -105,7 +104,7 @@ this.getContext()!!.deleteFile(fileName)
 }
 
 
-open fun getContext()
+    open fun getContext()
         //nullable = true from not(false or (false and true)) = true
 : Context{
 

@@ -38,7 +38,7 @@ open public class SimultaneousCompoundRotationAnimation : RotationAnimation {
         
 
     private var animationInterfaceArray: Array<RotationAnimation?>
-public constructor        (animationInterfaceArray: Array<RotationAnimation?>, animationBehavior: AnimationBehavior)                        
+public constructor (animationInterfaceArray: Array<RotationAnimation?>, animationBehavior: AnimationBehavior)                        
 
                             : super(animationBehavior){
     //var animationInterfaceArray = animationInterfaceArray
@@ -50,7 +50,8 @@ public constructor        (animationInterfaceArray: Array<RotationAnimation?>, a
 this.animationInterfaceArray= animationInterfaceArray
 }
 
-override fun setFrame(frameIndex: Int)
+
+    override fun setFrame(frameIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var frameIndex = frameIndex
@@ -66,7 +67,8 @@ this.animationInterfaceArray[index]!!.setFrame(frameIndex)
 
 }
 
-override fun getFrame()
+
+    override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -78,7 +80,8 @@ override fun getFrame()
 
 
                 @Throws(Exception::class)
-            override fun getAnimationSize()
+            
+    override fun getAnimationSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -88,7 +91,8 @@ override fun getFrame()
                         return this.animationInterfaceArray[0]!!.getAnimationSize()
 }
 
-override fun getSize()
+
+    override fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -98,7 +102,8 @@ override fun getSize()
                         return this.animationInterfaceArray[0]!!.getSize()
 }
 
-override fun previousFrame()
+
+    override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -115,7 +120,8 @@ this.animationInterfaceArray[index]!!.previousFrame()
 
 
                 @Throws(Exception::class)
-            override fun nextFrame()
+            
+    override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -130,7 +136,8 @@ this.animationInterfaceArray[index]!!.nextFrame()
 
 }
 
-override fun previousRotation()
+
+    override fun previousRotation()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -145,7 +152,8 @@ this.animationInterfaceArray[index]!!.previousRotation()
 
 }
 
-override fun nextRotation()
+
+    override fun nextRotation()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -160,13 +168,15 @@ this.animationInterfaceArray[index]!!.nextRotation()
 
 }
 
-override fun setSequence(sequence: IntArray)
+
+    override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
 {
     //var sequence = sequence
 }
 
-override fun getSequence()
+
+    override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
 : IntArray{
 
@@ -176,7 +186,8 @@ override fun getSequence()
                         return PrimitiveIntUtil.getArrayInstance()
 }
 
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -194,7 +205,8 @@ this.animationInterfaceArray[index]!!.paint(graphics, x, y)
 
 }
 
-override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
+
+    override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -213,7 +225,8 @@ this.animationInterfaceArray[index]!!.paintThreed(graphics, x, y, z)
 
 }
 
-override fun setFrame(direction: Direction)
+
+    override fun setFrame(direction: Direction)
         //nullable = true from not(false or (false and false)) = true
 {
     //var direction = direction
@@ -229,7 +242,8 @@ this.animationInterfaceArray[index]!!.setFrame(direction)
 
 }
 
-override fun setFrame(angle: Angle)
+
+    override fun setFrame(angle: Angle)
         //nullable = true from not(false or (false and false)) = true
 {
     //var angle = angle
@@ -245,14 +259,16 @@ this.animationInterfaceArray[index]!!.setFrame(angle)
 
 }
 
-override fun adjustFrame(newAngle: Angle)
+
+    override fun adjustFrame(newAngle: Angle)
         //nullable = true from not(false or (false and false)) = true
 {
     //var newAngle = newAngle
 this.adjustFrame(newAngle!!.getValue())
 }
 
-override fun adjustFrame(angle: Short)
+
+    override fun adjustFrame(angle: Short)
         //nullable = true from not(false or (false and false)) = true
 {
     //var angle = angle
@@ -268,7 +284,8 @@ this.animationInterfaceArray[index]!!.adjustFrame(angle)
 
 }
 
-override fun getAngleInfoP()
+
+    override fun getAngleInfoP()
         //nullable = true from not(false or (false and true)) = true
 : AngleInfo{
 
@@ -279,7 +296,7 @@ override fun getAngleInfoP()
 }
 
 
-open fun getAnimationInterfaceArray()
+    open fun getAnimationInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<RotationAnimation?>{
 
@@ -290,7 +307,7 @@ open fun getAnimationInterfaceArray()
 }
 
 
-open fun setAnimationInterfaceArray(animationInterfaceArray: Array<RotationAnimation?>)
+    open fun setAnimationInterfaceArray(animationInterfaceArray: Array<RotationAnimation?>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var animationInterfaceArray = animationInterfaceArray
@@ -299,7 +316,8 @@ this.animationInterfaceArray= animationInterfaceArray
 
 
                 @Throws(Exception::class)
-            override fun set(gl: GL)
+            
+    override fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl

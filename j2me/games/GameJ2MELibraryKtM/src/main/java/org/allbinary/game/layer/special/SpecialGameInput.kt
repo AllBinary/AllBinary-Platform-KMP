@@ -41,49 +41,56 @@ open public class SpecialGameInput
             }            
         
                 @Throws(Exception::class)
-            override fun up()
+            
+    override fun up()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
                 @Throws(Exception::class)
-            override fun down()
+            
+    override fun down()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
                 @Throws(Exception::class)
-            override fun right()
+            
+    override fun right()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
                 @Throws(Exception::class)
-            override fun left()
+            
+    override fun left()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
                 @Throws(Exception::class)
-            override fun strafeLeft()
+            
+    override fun strafeLeft()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
                 @Throws(Exception::class)
-            override fun strafeRight()
+            
+    override fun strafeRight()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
                 @Throws(Exception::class)
-            override fun fire(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+            
+    override fun fire(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerManager = layerManager
@@ -92,7 +99,8 @@ open public class SpecialGameInput
 
 
                 @Throws(Exception::class)
-            override fun special1(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+            
+    override fun special1(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerManager = layerManager
@@ -101,7 +109,8 @@ open public class SpecialGameInput
 
 
                 @Throws(Exception::class)
-            override fun special2(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+            
+    override fun special2(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerManager = layerManager
@@ -110,7 +119,8 @@ open public class SpecialGameInput
 
 
                 @Throws(Exception::class)
-            override fun special3(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+            
+    override fun special3(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerManager = layerManager
@@ -119,7 +129,8 @@ open public class SpecialGameInput
 
 
                 @Throws(Exception::class)
-            override fun special4(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+            
+    override fun special4(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerManager = layerManager
@@ -128,20 +139,23 @@ open public class SpecialGameInput
 
 
                 @Throws(Exception::class)
-            override fun special5(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+            
+    override fun special5(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerManager = layerManager
     //var gameKeyEvent = gameKeyEvent
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 }
 
-override fun paintThreed(graphics: Graphics)
+
+    override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

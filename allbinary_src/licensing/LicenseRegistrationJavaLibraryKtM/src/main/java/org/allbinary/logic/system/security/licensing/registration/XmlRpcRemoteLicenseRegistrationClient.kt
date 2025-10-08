@@ -34,7 +34,6 @@ import org.apache.xmlrpc.XmlRpcClient
 import org.apache.xmlrpc.XmlRpcException
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringMaker
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.xmlrpc.XmlRpcAbeClient
 import org.allbinary.logic.java.exception.ExceptionUtil
@@ -46,7 +45,7 @@ open public class XmlRpcRemoteLicenseRegistrationClient : XmlRpcAbeClient {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val PAGE: String = "licenseregistrationserverssl.php"
-public constructor        (clientInfo: AbeClientInformationInterface)                        
+public constructor (clientInfo: AbeClientInformationInterface)                        
 
                             : super(clientInfo, "LicenseRegistrationServer.process"){
 var clientInfo = clientInfo
@@ -60,7 +59,7 @@ this.setServer(0)
 
                 @Throws(Exception::class)
             
-open fun get(anyType: Any, cryptInterface: CryptInterface)
+    open fun get(anyType: Any, cryptInterface: CryptInterface)
         //nullable = true from not(false or (false and false)) = true
 : Any{
     //var anyType = anyType

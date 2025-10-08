@@ -52,8 +52,7 @@ open public class Email
         
                 , EmailInterface {
         
-
-        companion object {
+companion object {
             
     private val DEBUG: String = "mail.debug"
 
@@ -80,7 +79,7 @@ open public class Email
     private var bs: ByteArrayOutputStream
 
     private var isDebug: Boolean
-public constructor        (from: String, to: String, subject: String, server: String, textBody: String, htmlAttachment: String, contentBase: String)
+public constructor (from: String, to: String, subject: String, server: String, textBody: String, htmlAttachment: String, contentBase: String)
             : super()
         {
 var from = from
@@ -94,7 +93,7 @@ this.isDebug= false
 init(from, to, subject, server, textBody, htmlAttachment, contentBase)
 }
 
-public constructor        (from: String, to: String, subject: String, server: String, textBody: String, htmlAttachment: String, contentBase: String, isDebug: Boolean)
+public constructor (from: String, to: String, subject: String, server: String, textBody: String, htmlAttachment: String, contentBase: String, isDebug: Boolean)
             : super()
         {
 var from = from
@@ -112,7 +111,7 @@ init(from, to, subject, server, textBody, htmlAttachment, contentBase)
 
                 @Throws(Exception::class)
             
-open fun init(from: String, to: String, subject: String, server: String, textBody: String, htmlAttachment: String, contentBase: String)
+    open fun init(from: String, to: String, subject: String, server: String, textBody: String, htmlAttachment: String, contentBase: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var from = from
@@ -182,7 +181,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "emailConstructor", e)
 
                 @Throws(MessagingException::class)
             
-open fun init(server: String, authenticator: Authenticator, addresses_from: Array<InternetAddress?>, addresses_to: Array<InternetAddress?>, addresses_cc: Array<InternetAddress?>, addresses_bcc: Array<InternetAddress?>, subject: String, mimeBodyParts: Array<MimeBodyPart?>)
+    open fun init(server: String, authenticator: Authenticator, addresses_from: Array<InternetAddress?>, addresses_to: Array<InternetAddress?>, addresses_cc: Array<InternetAddress?>, addresses_bcc: Array<InternetAddress?>, subject: String, mimeBodyParts: Array<MimeBodyPart?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var server = server
@@ -281,7 +280,7 @@ msg.setContent(mimeMultipart)
 }
 
 
-open fun getMimeMessage()
+    open fun getMimeMessage()
         //nullable = true from not(false or (false and true)) = true
 : MimeMessage{
 
@@ -292,7 +291,7 @@ open fun getMimeMessage()
 }
 
 
-open fun getDebugInfo()
+    open fun getDebugInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -324,7 +323,7 @@ open fun getDebugInfo()
 
                 @Throws(Exception::class)
             
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -337,7 +336,7 @@ open fun log()
 
                 @Throws(Exception::class)
             
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -486,7 +485,7 @@ hashMap!!.put(EmailData.CONTENT, content)
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -503,7 +502,7 @@ var document = document
 
                 @Throws(Exception::class)
             
-open fun toXmlDoc()
+    open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 

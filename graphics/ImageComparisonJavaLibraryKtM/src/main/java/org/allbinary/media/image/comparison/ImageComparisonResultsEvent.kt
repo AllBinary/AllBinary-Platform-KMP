@@ -31,7 +31,7 @@ open public class ImageComparisonResultsEvent : AllBinaryEventObject {
         
 
     private var imageComparisonResult: ImageComparisonResult
-public constructor        (anyType: Any, imageComparisonInfo: ImageComparisonResult)                        
+public constructor (anyType: Any, imageComparisonInfo: ImageComparisonResult)                        
 
                             : super(anyType){
 var anyType = anyType
@@ -44,7 +44,7 @@ this.setImageComparisonResult(imageComparisonInfo)
 }
 
 
-open fun getImageComparisonResult()
+    open fun getImageComparisonResult()
         //nullable = true from not(false or (false and true)) = true
 : ImageComparisonResult{
 
@@ -55,7 +55,7 @@ open fun getImageComparisonResult()
 }
 
 
-open fun setImageComparisonResult(imageComparisonResult: ImageComparisonResult)
+    open fun setImageComparisonResult(imageComparisonResult: ImageComparisonResult)
         //nullable = true from not(false or (false and false)) = true
 {
 var imageComparisonResult = imageComparisonResult

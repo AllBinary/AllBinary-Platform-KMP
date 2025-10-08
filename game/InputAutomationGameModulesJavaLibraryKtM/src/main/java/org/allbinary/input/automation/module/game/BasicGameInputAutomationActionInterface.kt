@@ -27,18 +27,19 @@
         
 import java.awt
 import org.allbinary.input.automation.module.InputAutomationActionInterface
+
 interface BasicGameInputAutomationActionInterface : InputAutomationActionInterface {
         
 
                 @Throws(Exception::class)
             
-open fun attack(rectangle: Rectangle)
+    open fun attack(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun target(rectangle: Rectangle)
+    open fun target(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
 
 

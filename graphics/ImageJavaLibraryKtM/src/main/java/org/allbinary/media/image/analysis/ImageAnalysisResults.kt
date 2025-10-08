@@ -36,7 +36,7 @@ open public class ImageAnalysisResults
     private var imageColorResults: ImageColorResults
 
     private var averageAmbientLevel: Float= 0.0f
-public constructor        ()
+public constructor ()
             : super()
         {
 this.imageColorRangeResults= ImageColorRangeResults()
@@ -44,7 +44,7 @@ this.imageColorResults= ImageColorResults()
 }
 
 
-open fun getImageColorRangeResults()
+    open fun getImageColorRangeResults()
         //nullable = true from not(false or (false and true)) = true
 : ImageColorRangeResults{
 
@@ -55,7 +55,7 @@ open fun getImageColorRangeResults()
 }
 
 
-open fun setImageColorRangeResults(imageColorRangeResults: ImageColorRangeResults)
+    open fun setImageColorRangeResults(imageColorRangeResults: ImageColorRangeResults)
         //nullable = true from not(false or (false and false)) = true
 {
 var imageColorRangeResults = imageColorRangeResults
@@ -63,7 +63,7 @@ this.imageColorRangeResults= imageColorRangeResults
 }
 
 
-open fun getAverageAmbientLevel()
+    open fun getAverageAmbientLevel()
         //nullable = true from not(false or (false and true)) = true
 : Float{
 
@@ -74,7 +74,7 @@ open fun getAverageAmbientLevel()
 }
 
 
-open fun setAverageAmbientLevel(averageAmbientLevel: Float)
+    open fun setAverageAmbientLevel(averageAmbientLevel: Float)
         //nullable = true from not(false or (false and false)) = true
 {
 var averageAmbientLevel = averageAmbientLevel
@@ -82,7 +82,7 @@ this.averageAmbientLevel= averageAmbientLevel
 }
 
 
-open fun getImageColorResults()
+    open fun getImageColorResults()
         //nullable = true from not(false or (false and true)) = true
 : ImageColorResults{
 
@@ -93,7 +93,7 @@ open fun getImageColorResults()
 }
 
 
-open fun setImageColorResults(imageColorResults: ImageColorResults)
+    open fun setImageColorResults(imageColorResults: ImageColorResults)
         //nullable = true from not(false or (false and false)) = true
 {
 var imageColorResults = imageColorResults

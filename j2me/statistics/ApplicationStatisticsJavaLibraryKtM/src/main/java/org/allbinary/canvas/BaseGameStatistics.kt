@@ -50,7 +50,7 @@ open public class BaseGameStatistics
     private var totalFrames: Long= 0
 
     val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
-public constructor        ()
+public constructor ()
             : super()
         {
 }

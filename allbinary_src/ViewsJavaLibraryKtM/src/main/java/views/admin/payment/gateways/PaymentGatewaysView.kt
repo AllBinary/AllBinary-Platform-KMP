@@ -47,7 +47,7 @@ open public class PaymentGatewaysView : HttpStoreComponentView
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var paymentGatewayVector: Vector
-public constructor        (transformInfoInterface: TransformInfoInterface, gatewayVector: Vector)                        
+public constructor (transformInfoInterface: TransformInfoInterface, gatewayVector: Vector)                        
 
                             : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
@@ -62,7 +62,7 @@ this.paymentGatewayVector= gatewayVector
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -122,14 +122,14 @@ paymentGatewaysNode!!.appendChild(paymentGatewayNode)
 }
 
 
-open fun addDomNodeInterfaces()
+    open fun addDomNodeInterfaces()
         //nullable = true from not(false or (false and true)) = true
 {
 this.addDomNodeInterface(this as DomNodeInterface)
 }
 
 
-open fun view()
+    open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

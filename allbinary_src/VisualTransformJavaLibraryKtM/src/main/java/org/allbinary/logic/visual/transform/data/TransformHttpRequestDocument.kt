@@ -42,8 +42,7 @@ open public class TransformHttpRequestDocument
         
                 , TransformDocumentInterface {
         
-
-        companion object {
+companion object {
             
     private val language: String = "en"
 
@@ -58,7 +57,7 @@ open public class TransformHttpRequestDocument
     private var baseNode: Node
 
     private var document: Document
-public constructor        (pageContext: PageContext, weblisketSession: WeblisketSession)
+public constructor (pageContext: PageContext, weblisketSession: WeblisketSession)
             : super()
         {
 var pageContext = pageContext
@@ -110,7 +109,7 @@ document.appendChild(contentTypeNode)
 
 }
 
-public constructor        (searchRequest: SearchRequest)
+public constructor (searchRequest: SearchRequest)
             : super()
         {
 var searchRequest = searchRequest
@@ -153,7 +152,7 @@ document.appendChild(contentTypeNode)
 }
 
 
-open fun getBaseNode()
+    open fun getBaseNode()
         //nullable = true from not(false or (false and true)) = true
 : Node{
 
@@ -164,7 +163,7 @@ open fun getBaseNode()
 }
 
 
-open fun getDoc()
+    open fun getDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -177,7 +176,7 @@ open fun getDoc()
 
                 @Throws(Exception::class)
             
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

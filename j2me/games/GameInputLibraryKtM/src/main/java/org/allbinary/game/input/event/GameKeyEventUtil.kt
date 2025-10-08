@@ -30,10 +30,9 @@ open public class GameKeyEventUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getKey(anyType: Any)
+    open fun getKey(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var anyType = anyType
@@ -49,7 +48,7 @@ var anyType = anyType
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

@@ -25,38 +25,39 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface DisplayInBrowserContraintsInterface {
         
 
-open fun isMountable()
+    open fun isMountable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun isFrameable()
+    open fun isFrameable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun isQuickFrameable()
+    open fun isQuickFrameable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun setMountable(canBeMounted: Boolean)
+    open fun setMountable(canBeMounted: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setFrameable(canBeFramed: Boolean)
+    open fun setFrameable(canBeFramed: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setQuickFrameable(canBeQuickFramed: Boolean)
+    open fun setQuickFrameable(canBeQuickFramed: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setMountedLink(mountedLink: String)
+    open fun setMountedLink(mountedLink: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getMountedLink()
+    open fun getMountedLink()
         //nullable = true from not(false or (false and true)) = true
 : String
 

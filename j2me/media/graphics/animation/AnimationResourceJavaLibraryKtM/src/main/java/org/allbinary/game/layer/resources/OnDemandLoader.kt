@@ -46,7 +46,7 @@ open public class OnDemandLoader
     private val gameLayerPlacementInterfaceBasicArrayListFactoryInterfaceFactory: GameLayerPlacementInterfaceBasicArrayListFactoryInterfaceFactory
 
     private val resourceAnimationInterfaceFactoryInterfaceFactory: BaseResourceAnimationInterfaceFactoryInterfaceFactory
-public constructor        (onDemandResourcesFactory: OnDemandResourcesFactory, gameLayerPlacementInterfaceBasicArrayListFactoryInterfaceFactory: GameLayerPlacementInterfaceBasicArrayListFactoryInterfaceFactory, resourceAnimationInterfaceFactoryInterfaceFactory: BaseResourceAnimationInterfaceFactoryInterfaceFactory)
+public constructor (onDemandResourcesFactory: OnDemandResourcesFactory, gameLayerPlacementInterfaceBasicArrayListFactoryInterfaceFactory: GameLayerPlacementInterfaceBasicArrayListFactoryInterfaceFactory, resourceAnimationInterfaceFactoryInterfaceFactory: BaseResourceAnimationInterfaceFactoryInterfaceFactory)
             : super()
         {
 var onDemandResourcesFactory = onDemandResourcesFactory
@@ -60,7 +60,7 @@ this.resourceAnimationInterfaceFactoryInterfaceFactory= resourceAnimationInterfa
 
                 @Throws(Exception::class)
             
-open fun init(imageCache: ImageCache, level: Int, loadingString: String)
+    open fun init(imageCache: ImageCache, level: Int, loadingString: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageCache = imageCache
@@ -108,7 +108,7 @@ this.initLevel(layerPlacementInterfaceBasicArrayListFactoryInterface, imageCache
 
                 @Throws(Exception::class)
             
-open fun initAll(imageCache: ImageCache, loadingString: String)
+    open fun initAll(imageCache: ImageCache, loadingString: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageCache = imageCache
@@ -146,7 +146,7 @@ onDemandResources= onDemandResourcesFactory!!.remove(onDemandIndex)
 
                 @Throws(Exception::class)
             
-open fun initLevel(layerPlacementInterfaceBasicArrayListFactoryInterface: LayerPlacementInterfaceBasicArrayListFactoryInterface, imageCache: ImageCache, level: Int, loadingString: String)
+    open fun initLevel(layerPlacementInterfaceBasicArrayListFactoryInterface: LayerPlacementInterfaceBasicArrayListFactoryInterface, imageCache: ImageCache, level: Int, loadingString: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerPlacementInterfaceBasicArrayListFactoryInterface = layerPlacementInterfaceBasicArrayListFactoryInterface

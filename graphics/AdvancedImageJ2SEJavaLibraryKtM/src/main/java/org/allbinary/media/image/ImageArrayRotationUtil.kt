@@ -36,12 +36,11 @@ open public class ImageArrayRotationUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ImageArrayRotationUtil = ImageArrayRotationUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ImageArrayRotationUtil{
 
@@ -67,7 +66,7 @@ open fun getInstance()
 
                 @Throws(IOException::class)
             
-open fun process(imageProcessorInput: ImageProcessorInput, input: String, visitor: ImageProcessedVisitor)
+    open fun process(imageProcessorInput: ImageProcessorInput, input: String, visitor: ImageProcessedVisitor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageProcessorInput = imageProcessorInput

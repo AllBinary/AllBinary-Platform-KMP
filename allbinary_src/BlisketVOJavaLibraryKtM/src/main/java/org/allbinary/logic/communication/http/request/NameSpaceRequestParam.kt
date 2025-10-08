@@ -47,7 +47,7 @@ open public class NameSpaceRequestParam
     private var nameSpacePropertiesHashMap: HashMap<Any, Any>
 
     private var value: String
-public constructor        (nameSpace: String, value: String)
+public constructor (nameSpace: String, value: String)
             : super()
         {
 var nameSpace = nameSpace
@@ -178,7 +178,7 @@ packageIndex++
 }
 
 
-open fun getPackages()
+    open fun getPackages()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -198,7 +198,7 @@ open fun getPackages()
 }
 
 
-open fun getPackageProperties(packageIndex: Int)
+    open fun getPackageProperties(packageIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 : HashMap<Any, Any>{
 var packageIndex = packageIndex
@@ -233,7 +233,7 @@ var packageIndex = packageIndex
 }
 
 
-open fun getValue()
+    open fun getValue()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -255,7 +255,7 @@ open fun getValue()
 
                 @Throws(Exception::class)
             
-open fun generatePackagePropertiesHashMap(properties: String)
+    open fun generatePackagePropertiesHashMap(properties: String)
         //nullable = true from not(false or (false and false)) = true
 : HashMap<Any, Any>{
 var properties = properties

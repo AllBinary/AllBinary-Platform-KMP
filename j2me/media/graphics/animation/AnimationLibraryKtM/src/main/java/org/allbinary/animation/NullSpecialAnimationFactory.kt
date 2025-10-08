@@ -34,12 +34,11 @@ open public class NullSpecialAnimationFactory
                 , AnimationInterfaceFactoryInterface
                 , ProceduralAnimationInterfaceFactoryInterface {
         
-
-        companion object {
+companion object {
             
     private var NULL_SPECIAL_ANIMATION_FACTORY: NullSpecialAnimationFactory = NullSpecialAnimationFactory()
 
-open fun getFactoryInstance()
+    open fun getFactoryInstance()
         //nullable = true from not(false or (false and true)) = true
 : NullSpecialAnimationFactory{
 
@@ -51,14 +50,15 @@ open fun getFactoryInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
 
 
                 @Throws(Exception::class)
-            override fun getInstance(instanceId: Int)
+            
+    override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var instanceId = instanceId
@@ -71,7 +71,8 @@ open fun getFactoryInstance()
 
 
                 @Throws(Exception::class)
-            override fun getInstance(animationInterface: Animation)
+            
+    override fun getInstance(animationInterface: Animation)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var animationInterface = animationInterface
@@ -82,7 +83,8 @@ open fun getFactoryInstance()
                         return SpecialAnimation.getInstance()
 }
 
-override fun setInitialScale(scaleProperties: ScaleProperties)
+
+    override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
 {
     //var scaleProperties = scaleProperties

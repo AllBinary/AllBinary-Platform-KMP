@@ -35,7 +35,7 @@ open public class RaceTrackFrictionProperties
     private val ROAD_FRICTION_NOMINATOR: Int
 
     private val GROUND_FRICTION_NOMINATOR: Int
-public constructor        (roadFriction: Int, groundFriction: Int)
+public constructor (roadFriction: Int, groundFriction: Int)
             : super()
         {
 var roadFriction = roadFriction
@@ -45,7 +45,7 @@ GROUND_FRICTION_NOMINATOR= FrictionData.getFrictionDenominator() -groundFriction
 }
 
 
-open fun getRoadFrictionNominator()
+    open fun getRoadFrictionNominator()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -56,7 +56,7 @@ open fun getRoadFrictionNominator()
 }
 
 
-open fun getGroundFrictionNominator()
+    open fun getGroundFrictionNominator()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

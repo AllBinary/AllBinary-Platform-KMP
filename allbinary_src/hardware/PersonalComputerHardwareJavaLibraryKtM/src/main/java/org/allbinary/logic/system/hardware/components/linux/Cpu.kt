@@ -56,14 +56,14 @@ open public class Cpu
     private val CPUFILE: String = "/proc/cpuinfo"
 
     private var cpuHashMap: HashMap<Any, Any>
-public constructor        (filePath: String)
+public constructor (filePath: String)
             : super()
         {
 var filePath = filePath
 this.init(filePath)
 }
 
-public constructor        ()
+public constructor ()
             : super()
         {
 this.init(CPUFILE)
@@ -72,7 +72,7 @@ this.init(CPUFILE)
 
                 @Throws(Exception::class)
             
-open fun init(filePath: String)
+    open fun init(filePath: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var filePath = filePath
@@ -107,7 +107,7 @@ var filePath = filePath
 
                 @Throws(Exception::class)
             
-open fun init(lineNumberReader: LineNumberReader, filePath: String)
+    open fun init(lineNumberReader: LineNumberReader, filePath: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var lineNumberReader = lineNumberReader
@@ -243,7 +243,7 @@ nextLine= lineNumberReader!!.readLine()
 }
 
 
-open fun getProcessor()
+    open fun getProcessor()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -254,7 +254,7 @@ open fun getProcessor()
 }
 
 
-open fun getVendorId()
+    open fun getVendorId()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -265,7 +265,7 @@ open fun getVendorId()
 }
 
 
-open fun getCpuFamily()
+    open fun getCpuFamily()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -276,7 +276,7 @@ open fun getCpuFamily()
 }
 
 
-open fun getModel()
+    open fun getModel()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -287,7 +287,7 @@ open fun getModel()
 }
 
 
-open fun getModelName()
+    open fun getModelName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -298,7 +298,7 @@ open fun getModelName()
 }
 
 
-open fun getStepping()
+    open fun getStepping()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -309,7 +309,7 @@ open fun getStepping()
 }
 
 
-open fun getCpuSpeed()
+    open fun getCpuSpeed()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -320,7 +320,7 @@ open fun getCpuSpeed()
 }
 
 
-open fun getCacheSize()
+    open fun getCacheSize()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -331,7 +331,7 @@ open fun getCacheSize()
 }
 
 
-open fun compareTo(cpuInterface: CpuInterface)
+    open fun compareTo(cpuInterface: CpuInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var cpuInterface = cpuInterface
@@ -343,7 +343,7 @@ var cpuInterface = cpuInterface
 }
 
 
-open fun compareTo(componentInterface: HardwareComponentInterface)
+    open fun compareTo(componentInterface: HardwareComponentInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var componentInterface = componentInterface
@@ -354,7 +354,8 @@ var componentInterface = componentInterface
                         return true
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

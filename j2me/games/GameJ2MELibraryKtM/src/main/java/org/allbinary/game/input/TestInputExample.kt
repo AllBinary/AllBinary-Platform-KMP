@@ -39,45 +39,53 @@ open public class TestInputExample
             }            
         
     private var testValue: Int= 0
-override fun up()
+
+    override fun up()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun down()
+
+    override fun down()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun left()
+
+    override fun left()
         //nullable = true from not(false or (false and true)) = true
 {
 this.testValue++
 }
 
-override fun right()
+
+    override fun right()
         //nullable = true from not(false or (false and true)) = true
 {
 this.testValue--
 }
 
-override fun strafeLeft()
+
+    override fun strafeLeft()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun strafeRight()
+
+    override fun strafeRight()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 }
 
-override fun paintThreed(graphics: Graphics)
+
+    override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

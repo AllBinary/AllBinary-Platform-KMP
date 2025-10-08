@@ -21,13 +21,13 @@ open public class OpenGLBitmap : PlatformBitmapBase {
         
 
     val image: Image
-public constructor        (bitmap: Any){
+public constructor (bitmap: Any){
     //var bitmap = bitmap
 this.image= bitmap as Image
 }
 
 
-open fun getImage()
+    open fun getImage()
         //nullable = true from not(false or (false and true)) = true
 : Image{
 
@@ -38,7 +38,7 @@ open fun getImage()
 }
 
 
-open fun getDepth()
+    open fun getDepth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -72,7 +72,7 @@ open fun getDepth()
 }
 
 
-open fun getPixels(pixels: IntArray, offset: Int, stride: Int, x: Int, y: Int, width: Int, height: Int)
+    open fun getPixels(pixels: IntArray, offset: Int, stride: Int, x: Int, y: Int, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var pixels = pixels
@@ -105,7 +105,7 @@ immutableImage!!.getRGB(pixels, offset, stride, x, y, width, height)
 }
 
 
-open fun setPixels(pixels: IntArray, offset: Int, stride: Int, x: Int, y: Int, width: Int, height: Int)
+    open fun setPixels(pixels: IntArray, offset: Int, stride: Int, x: Int, y: Int, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var pixels = pixels
@@ -119,7 +119,7 @@ this.image.setRGB2(pixels, offset, height, x, y, width, height)
 }
 
 
-open fun getWidth()
+    open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -130,7 +130,7 @@ open fun getWidth()
 }
 
 
-open fun getHeight()
+    open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -141,7 +141,7 @@ open fun getHeight()
 }
 
 
-open fun recycle()
+    open fun recycle()
         //nullable = true from not(false or (false and true)) = true
 {
 DisposalUtil.getInstance()!!.dispose(image)

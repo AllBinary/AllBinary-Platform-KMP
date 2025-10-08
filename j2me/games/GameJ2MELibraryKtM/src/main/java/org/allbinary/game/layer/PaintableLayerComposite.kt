@@ -34,12 +34,13 @@ open public class PaintableLayerComposite : Paintable {
         
 
     private val paintableArray: Array<Layer?>
-public constructor        (paintableArray: Array<Layer?>){
+public constructor (paintableArray: Array<Layer?>){
     //var paintableArray = paintableArray
 this.paintableArray= paintableArray
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -55,7 +56,8 @@ this.paintableArray[index]!!.paint(graphics)
 
 }
 
-override fun paintThreed(graphics: Graphics)
+
+    override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics

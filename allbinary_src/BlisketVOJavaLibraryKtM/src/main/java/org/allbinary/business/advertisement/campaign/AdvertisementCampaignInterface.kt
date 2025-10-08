@@ -27,26 +27,27 @@
         
 import org.allbinary.business.advertisement.AdvertisementsInterface
 import org.allbinary.business.advertisement.search.AdvertisementSearchInterface
+
 interface AdvertisementCampaignInterface {
         
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getComponent()
+    open fun getComponent()
         //nullable = true from not(false or (false and true)) = true
 : Any
 
-open fun setName(name: String)
+    open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setComponentName(name: String)
+    open fun setComponentName(name: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun search(advertisementSearchInterface: AdvertisementSearchInterface)
+    open fun search(advertisementSearchInterface: AdvertisementSearchInterface)
         //nullable = true from not(false or (false and false)) = true
 : AdvertisementsInterface
 

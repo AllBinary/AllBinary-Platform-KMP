@@ -27,12 +27,13 @@
         
 import java.io.Serializable
 import java.util.HashMap
+
 interface UserFactoryInterface : Serializable {
         
 
                 @Throws(Exception::class)
             
-open fun getInstance(hashMap: HashMap<Any, Any>)
+    open fun getInstance(hashMap: HashMap<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
 : UserInterface
 

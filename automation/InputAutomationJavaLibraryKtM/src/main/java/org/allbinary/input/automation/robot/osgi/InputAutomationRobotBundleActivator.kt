@@ -49,7 +49,7 @@ open public class InputAutomationRobotBundleActivator
     private var inputRobotInterface: Array<InputRobotInterface?>
 
     private var serviceFactory: ServiceFactory
-public constructor        ()
+public constructor ()
             : super()
         {
 this.init()
@@ -58,7 +58,7 @@ this.init()
 
                 @Throws(Exception::class)
             
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -70,7 +70,7 @@ open fun init()
 
                 @Throws(Exception::class)
             
-open fun registerAsService(bundleContext: BundleContext)
+    open fun registerAsService(bundleContext: BundleContext)
         //nullable = true from not(false or (false and false)) = true
 {
 var bundleContext = bundleContext
@@ -80,7 +80,7 @@ OSGIActivatorUtil.registerAsService(bundleContext, getServiceFactory(), InputAut
 
                 @Throws(Exception::class)
             
-open fun getInputAutomationRobotChangeListener(context: BundleContext)
+    open fun getInputAutomationRobotChangeListener(context: BundleContext)
         //nullable = true from not(false or (false and false)) = true
 : InputAutomationRobotChangeListener{
 var context = context
@@ -125,7 +125,7 @@ var context = context
 }
 
 
-open fun addRobots(context: BundleContext)
+    open fun addRobots(context: BundleContext)
         //nullable = true from not(false or (false and false)) = true
 {
 var context = context
@@ -166,7 +166,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "addModules")
 }
 
 
-open fun removeRobots(context: BundleContext)
+    open fun removeRobots(context: BundleContext)
         //nullable = true from not(false or (false and false)) = true
 {
 var context = context
@@ -209,7 +209,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "removeRobots")
 
                 @Throws(Exception::class)
             
-open fun start(context: BundleContext)
+    open fun start(context: BundleContext)
         //nullable = true from not(false or (false and false)) = true
 {
 var context = context
@@ -221,7 +221,7 @@ this.registerAsService(context)
 
                 @Throws(Exception::class)
             
-open fun stop(context: BundleContext)
+    open fun stop(context: BundleContext)
         //nullable = true from not(false or (false and false)) = true
 {
 var context = context
@@ -230,7 +230,7 @@ this.removeRobots(context)
 }
 
 
-open fun getServiceFactory()
+    open fun getServiceFactory()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -241,7 +241,7 @@ open fun getServiceFactory()
 }
 
 
-open fun setServiceFactory(serviceObject: ServiceFactory)
+    open fun setServiceFactory(serviceObject: ServiceFactory)
         //nullable = true from not(false or (false and false)) = true
 {
 var serviceObject = serviceObject
@@ -249,7 +249,7 @@ this.serviceFactory= serviceObject
 }
 
 
-open fun getInputRobotInterface()
+    open fun getInputRobotInterface()
         //nullable = true from not(false or (false and true)) = true
 : Array<InputRobotInterface?>{
 
@@ -260,7 +260,7 @@ open fun getInputRobotInterface()
 }
 
 
-open fun setInputRobotInterface(inputRobotInterface: Array<InputRobotInterface?>)
+    open fun setInputRobotInterface(inputRobotInterface: Array<InputRobotInterface?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var inputRobotInterface = inputRobotInterface

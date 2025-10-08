@@ -30,7 +30,7 @@ open public class NamedAngle : Angle {
         
 
     val name: String
-public constructor        (angle: Short, name: String)                        
+public constructor (angle: Short, name: String)                        
 
                             : super(angle){
     //var angle = angle

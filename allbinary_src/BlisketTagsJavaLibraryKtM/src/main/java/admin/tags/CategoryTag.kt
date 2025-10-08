@@ -41,13 +41,13 @@ open public class CategoryTag : TableTag {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var xsl: String
-public constructor        (){
+public constructor (){
 this.setTagHelperFactory(CategoryHelperFactory())
 this.setTagRequestHelperFactory(CategoryRequestHelperFactory())
 }
 
 
-open fun setXsl(value: String)
+    open fun setXsl(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -57,7 +57,7 @@ this.xsl= value
 
                 @Throws(LicensingException::class)
             
-open fun viewCategory()
+    open fun viewCategory()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -115,7 +115,7 @@ open fun viewCategory()
 
                 @Throws(LicensingException::class)
             
-open fun viewCategories()
+    open fun viewCategories()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -173,7 +173,7 @@ open fun viewCategories()
 
                 @Throws(JspTagException::class)
             
-open fun doStartTag()
+    open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

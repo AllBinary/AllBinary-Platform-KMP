@@ -25,26 +25,27 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface DebugInterface {
         
 
-open fun start()
+    open fun start()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun stop()
+    open fun stop()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun getStartTime()
-        //nullable = true from not(false or (false and true)) = true
-: Long
-
-open fun getMaxTime()
+    open fun getStartTime()
         //nullable = true from not(false or (false and true)) = true
 : Long
 
-open fun isRunning()
+    open fun getMaxTime()
+        //nullable = true from not(false or (false and true)) = true
+: Long
+
+    open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 

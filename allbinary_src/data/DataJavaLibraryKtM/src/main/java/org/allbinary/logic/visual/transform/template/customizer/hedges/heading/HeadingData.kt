@@ -30,13 +30,12 @@ open public class HeadingData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NAME: String = "HEADER_NAME"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

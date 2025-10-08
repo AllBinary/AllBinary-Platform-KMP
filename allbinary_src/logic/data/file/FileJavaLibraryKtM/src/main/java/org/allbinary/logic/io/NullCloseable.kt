@@ -33,8 +33,7 @@ open public class NullCloseable
         
                 , Closeable {
         
-
-        companion object {
+companion object {
             
     val NULL_CLOSEABLE: NullCloseable = NullCloseable()
 
@@ -44,7 +43,8 @@ open public class NullCloseable
             public constructor() : super()
             {
             }            
-        override fun close()
+        
+    override fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 }

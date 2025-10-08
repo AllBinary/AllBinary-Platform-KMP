@@ -39,7 +39,7 @@ open public class OpenGLOptions
             {
             }            
         
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 

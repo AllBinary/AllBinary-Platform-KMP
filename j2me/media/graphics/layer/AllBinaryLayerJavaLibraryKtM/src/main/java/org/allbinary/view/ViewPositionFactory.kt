@@ -36,7 +36,8 @@ open public class ViewPositionFactory
             public constructor() : super()
             {
             }            
-        override fun getInstance()
+        
+    override fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ViewPosition{
 

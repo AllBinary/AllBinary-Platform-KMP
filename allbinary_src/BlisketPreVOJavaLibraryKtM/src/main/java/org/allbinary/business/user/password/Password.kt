@@ -46,7 +46,7 @@ open public class Password
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var password: String
-public constructor        (password: String)
+public constructor (password: String)
             : super()
         {
 var password = password
@@ -54,7 +54,7 @@ this.password= password
 }
 
 
-open fun set(value: String)
+    open fun set(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -62,7 +62,7 @@ this.password= value
 }
 
 
-open fun get()
+    open fun get()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -73,7 +73,7 @@ open fun get()
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -137,7 +137,7 @@ valid= Boolean.FALSE
 }
 
 
-open fun getValidationInfo()
+    open fun getValidationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -164,7 +164,7 @@ open fun getValidationInfo()
 }
 
 
-open fun toVector(secret: String)
+    open fun toVector(secret: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var secret = secret
@@ -189,7 +189,7 @@ vector.add(SuperCrypt(random).
 }
 
 
-open fun toHashMap(secret: String)
+    open fun toHashMap(secret: String)
         //nullable = true from not(false or (false and false)) = true
 : HashMap<Any, Any>{
 var secret = secret

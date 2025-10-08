@@ -30,15 +30,14 @@ open public class DataFileData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val UNCRYPTED_EXTENSION: String = "xml"
 
     val ENCRYPTED_EXTENSION: String = "abd"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

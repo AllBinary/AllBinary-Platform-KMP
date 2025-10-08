@@ -36,10 +36,11 @@ open public class TextItemUserIdentifierVisitor : Visitor {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (){
+public constructor (){
 }
 
-override fun visit(anyType: Any)
+
+    override fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var anyType = anyType
@@ -118,7 +119,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.VISIT, e)
 }
 
 
-open fun isLetter(charValue: Char)
+    open fun isLetter(charValue: Char)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var charValue = charValue

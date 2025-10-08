@@ -37,16 +37,15 @@ import org.allbinary.canvas.SpecialMessageUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.time.TimeDelayHelper
 
-open public class LogUtil
+/*actual*/ open public class LogUtil
             : Object
          {
         
-
-        companion object {
+/*actual*/ companion object {
             
     private val instance: LogUtil = LogUtil()
 
-open fun getInstance()
+    /*actual*/ open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : LogUtil{
 
@@ -64,7 +63,7 @@ open fun getInstance()
     private var timeDelayHelper: TimeDelayHelper = TimeDelayHelper(200000)
 
     var abeClientInformation: AbeClientInformationInterface
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -72,7 +71,7 @@ private constructor        ()
 
     private val stringBuffer: StringMaker = StringMaker()
 
-open fun put(log: Log)
+    /*actual*/ open fun put(log: Log)
         //nullable = true from not(false or (false and false)) = true
 {
 var log = log
@@ -107,7 +106,7 @@ this.put(specialMessage, anyType, functionName, exception)
 }
 
 
-open fun put(specialMessage: String, anyType: Any, functionName: String)
+    /*actual*/ open fun put(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var specialMessage = specialMessage
@@ -116,7 +115,7 @@ open fun put(specialMessage: String, anyType: Any, functionName: String)
 }
 
 
-open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)
+    /*actual*/ open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var specialMessage = specialMessage

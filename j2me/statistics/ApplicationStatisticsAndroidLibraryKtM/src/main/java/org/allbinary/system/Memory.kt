@@ -33,10 +33,9 @@ import org.allbinary.logic.string.StringMaker
             : Object
          {
         
-
-        companion object {
+/*actual*/ companion object {
             
-    open fun getInfo()
+    /*actual*/ open fun getInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

@@ -27,6 +27,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.thread.ARunnable
 import javax.microedition.lcdui.Canvas
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
@@ -39,12 +40,11 @@ open public class RepaintBehavior
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: RepaintBehavior = RepaintBehavior()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : RepaintBehavior{
 
@@ -64,7 +64,7 @@ open fun getInstance()
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-open fun repaint(canvas: Canvas)
+    open fun repaint(canvas: Canvas)
         //nullable = true from not(false or (false and false)) = true
 {
     //var canvas = canvas
@@ -73,7 +73,7 @@ open fun repaint(canvas: Canvas)
 
     private val NAME: String = "RepaintBehavior"
 
-open fun onChangeRepaint(canvas: Canvas)
+    open fun onChangeRepaint(canvas: Canvas)
         //nullable = true from not(false or (false and false)) = true
 {
     //var canvas = canvas
@@ -94,9 +94,10 @@ open fun onChangeRepaint(canvas: Canvas)
                                 
                         else {
                             
-    var thread: Thread = Thread(object: NullRunnable()
+    var thread: Thread = Thread(object: ARunnable()
                                 {
-                                override fun run()
+                                
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 

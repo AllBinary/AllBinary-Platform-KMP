@@ -21,24 +21,18 @@
 
         import java.lang.Object        
         
-        import java.lang.Runnable
-        
         
         import kotlin.Array
         import kotlin.reflect.KClass
         
 
-open public class NullRunnable
-            : Object
+open public class NullRunnable : ARunnable {
         
-                , Runnable {
-        
-
-        companion object {
+companion object {
             
     private val instance: NullRunnable = NullRunnable()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : NullRunnable{
 
@@ -50,14 +44,7 @@ open fun getInstance()
 
 
         }
-            public constructor        ()
-            : super()
-        {
-}
-
-override fun run()
-        //nullable = true from not(false or (false and true)) = true
-{
+            private constructor (){
 }
 
 

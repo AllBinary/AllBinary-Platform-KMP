@@ -33,10 +33,9 @@ open public class DomSearchHelper
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getNodeNoThrow(nodeName: String, nodeList: NodeList)
+    open fun getNodeNoThrow(nodeName: String, nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var nodeName = nodeName
@@ -79,7 +78,7 @@ var nodeList = nodeList
 
                 @Throws(Exception::class)
             
-open fun getNode(nodeName: String, nodeList: NodeList)
+    open fun getNode(nodeName: String, nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var nodeName = nodeName
@@ -115,7 +114,7 @@ var nodeList = nodeList
 
                 @Throws(Exception::class)
             
-open fun getChildNodeList(nodeName: String, nodeList: NodeList)
+    open fun getChildNodeList(nodeName: String, nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
 : NodeList{
 var nodeName = nodeName
@@ -133,7 +132,7 @@ var nodeList = nodeList
 
                 @Throws(Exception::class)
             
-open fun getAllNodes(nodeName: String, nodeList: NodeList)
+    open fun getAllNodes(nodeName: String, nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var nodeName = nodeName
@@ -167,7 +166,7 @@ var nodeList = nodeList
 }
 
 
-open fun getAllNodesNoThrow(nodeName: String, nodeList: NodeList)
+    open fun getAllNodesNoThrow(nodeName: String, nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var nodeName = nodeName
@@ -208,7 +207,7 @@ var nodeList = nodeList
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

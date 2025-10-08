@@ -30,12 +30,11 @@ open public class SensorFeatureFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: SensorFeatureFactory = SensorFeatureFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : SensorFeatureFactory{
 
@@ -47,7 +46,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

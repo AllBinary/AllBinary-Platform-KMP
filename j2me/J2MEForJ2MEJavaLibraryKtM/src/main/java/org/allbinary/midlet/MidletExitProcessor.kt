@@ -32,14 +32,15 @@ open public class MidletExitProcessor : Processor {
         
 
     private val midlet: MIDlet
-public constructor        (midlet: MIDlet){
+public constructor (midlet: MIDlet){
 var midlet = midlet
 this.midlet= midlet
 }
 
 
                 @Throws(Exception::class)
-            override fun process()
+            
+    override fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 }

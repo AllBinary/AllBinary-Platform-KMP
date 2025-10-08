@@ -26,34 +26,35 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.business.category.CategoryInterface
+
 interface CategoryHierarchyInterface {
         
 
-open fun getLevel()
+    open fun getLevel()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getLevelString()
+    open fun getLevelString()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getRoot()
+    open fun getRoot()
         //nullable = true from not(false or (false and true)) = true
 : CategoryInterface
 
-open fun getParent()
+    open fun getParent()
         //nullable = true from not(false or (false and true)) = true
 : CategoryInterface
 
-open fun setLevel(level: Int)
+    open fun setLevel(level: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setRoot(categoryInterface: CategoryInterface)
+    open fun setRoot(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setParent(categoryInterface: CategoryInterface)
+    open fun setParent(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 
 

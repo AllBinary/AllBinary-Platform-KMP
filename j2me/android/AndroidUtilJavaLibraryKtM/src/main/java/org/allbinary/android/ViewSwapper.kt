@@ -19,8 +19,7 @@ open public class ViewSwapper
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NULL_VIEW_ARRAY: Array<View?> = arrayOfNulls(0)
 
@@ -35,7 +34,7 @@ open public class ViewSwapper
     private var mainViewArray: Array<View?> = NULL_VIEW_ARRAY
 
     private var topViewArray: Array<View?> = NULL_VIEW_ARRAY
-public constructor        (activity: Activity, rootViewId: Int)
+public constructor (activity: Activity, rootViewId: Int)
             : super()
         {
 var activity = activity
@@ -45,7 +44,7 @@ this.rootViewId= rootViewId
 }
 
 
-open fun setMainViews(viewArray: Array<View?>)
+    open fun setMainViews(viewArray: Array<View?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var viewArray = viewArray
@@ -53,7 +52,7 @@ this.mainViewArray= viewArray
 }
 
 
-open fun setTopViewArray(topViewArray: Array<View?>)
+    open fun setTopViewArray(topViewArray: Array<View?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var topViewArray = topViewArray
@@ -61,7 +60,7 @@ this.topViewArray= topViewArray
 }
 
 
-open fun setMainView(id: Int)
+    open fun setMainView(id: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var id = id

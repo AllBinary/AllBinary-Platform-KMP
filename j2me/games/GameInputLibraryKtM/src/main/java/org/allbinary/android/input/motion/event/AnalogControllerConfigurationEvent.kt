@@ -29,7 +29,7 @@ import org.allbinary.logic.util.event.AllBinaryEventObject
 
 open public class AnalogControllerConfigurationEvent : AllBinaryEventObject {
         
-public constructor        (anyType: Any)                        
+public constructor (anyType: Any)                        
 
                             : super(anyType){
 var anyType = anyType

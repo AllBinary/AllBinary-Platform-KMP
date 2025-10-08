@@ -39,8 +39,7 @@ open public class GameNotification
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NULL_GAME_NOTIFICATION_EVENT: GameNotificationEvent = GameNotificationEvent(NullUtil.getInstance()!!.NULL_OBJECT, StringUtil.getInstance()!!.EMPTY_STRING, Integer(0), BasicColorFactory.getInstance()!!.RED, BooleanFactory.getInstance()!!.FALSE)
 
@@ -57,7 +56,7 @@ open public class GameNotification
 
     val colorList: BasicArrayList = BasicArrayList()
 
-open fun add(string: String, seconds: Integer, basicColor: BasicColor)
+    open fun add(string: String, seconds: Integer, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
 var string = string
@@ -77,7 +76,7 @@ this.colorList!!.add(basicColor)
 }
 
 
-open fun clear()
+    open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 this.stringList!!.clear()
@@ -86,7 +85,7 @@ this.colorList!!.clear()
 }
 
 
-open fun getSize()
+    open fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

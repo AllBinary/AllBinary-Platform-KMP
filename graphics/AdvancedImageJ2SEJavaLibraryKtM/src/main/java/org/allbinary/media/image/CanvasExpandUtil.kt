@@ -33,12 +33,11 @@ open public class CanvasExpandUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: CanvasExpandUtil = CanvasExpandUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CanvasExpandUtil{
 
@@ -62,7 +61,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun process(imageProcessorInput: ImageProcessorInput, increaseX: Int, increaseY: Int, visitor: ImageProcessedVisitor)
+    open fun process(imageProcessorInput: ImageProcessorInput, increaseX: Int, increaseY: Int, visitor: ImageProcessedVisitor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageProcessorInput = imageProcessorInput

@@ -41,12 +41,11 @@ open public class JavaHelpUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: JavaHelpUtil = JavaHelpUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : JavaHelpUtil{
 
@@ -57,7 +56,7 @@ open fun getInstance()
 }
 
 
-open fun main(args: Array<String?>)
+    open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var args = args
@@ -86,13 +85,13 @@ javaHelpUtil!!.show(javaHelpUtil!!.getHelpSet("G:/mnt/bc/mydev/working/automatio
                             null)
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getHelpSet(filePath: String)
+    open fun getHelpSet(filePath: String)
         //nullable = true from not(false or (false and false)) = true
 : HelpSet{
 var filePath = filePath
@@ -123,7 +122,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, getInstance(), "set", e)
 }
 
 
-open fun getHelpSet(url: URL)
+    open fun getHelpSet(url: URL)
         //nullable = true from not(false or (false and false)) = true
 : HelpSet{
 var url = url
@@ -148,7 +147,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, getInstance(), "set", e)
 }
 
 
-open fun show(helpSet: HelpSet)
+    open fun show(helpSet: HelpSet)
         //nullable = true from not(false or (false and false)) = true
 {
 var helpSet = helpSet

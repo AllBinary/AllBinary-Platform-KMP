@@ -37,10 +37,9 @@ open public class AbeClientLicense
         
                 , AbeLicenseInterface {
         
-
-        companion object {
+companion object {
             
-open fun hasRequiredKeys(resultHashtable: Hashtable<Any, Any>)
+    open fun hasRequiredKeys(resultHashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var resultHashtable = resultHashtable
@@ -83,7 +82,7 @@ var resultHashtable = resultHashtable
     private var special: String
 
     private var licenseType: LicenseType
-public constructor        (hashtable: Hashtable<Any, Any>)
+public constructor (hashtable: Hashtable<Any, Any>)
             : super()
         {
 var hashtable = hashtable
@@ -142,7 +141,7 @@ this.licenseType= LicenseTypeFactory.getInstance()!!.getInstance(licenseTypeStri
 }
 
 
-open fun hasKey()
+    open fun hasKey()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -153,7 +152,7 @@ open fun hasKey()
 }
 
 
-open fun getKey(keyName: String)
+    open fun getKey(keyName: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var keyName = keyName
@@ -165,7 +164,7 @@ var keyName = keyName
 }
 
 
-open fun getLicenseId()
+    open fun getLicenseId()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -176,7 +175,7 @@ open fun getLicenseId()
 }
 
 
-open fun getServers()
+    open fun getServers()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -187,7 +186,7 @@ open fun getServers()
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -213,7 +212,8 @@ open fun isValid()
                         return false
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -260,7 +260,7 @@ stringBuffer!!.append(BREAK)
 }
 
 
-open fun setSpecial(special: String)
+    open fun setSpecial(special: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var special = special
@@ -268,7 +268,7 @@ this.special= special
 }
 
 
-open fun getSpecial()
+    open fun getSpecial()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -279,7 +279,7 @@ open fun getSpecial()
 }
 
 
-open fun getLicenseType()
+    open fun getLicenseType()
         //nullable = true from not(false or (false and true)) = true
 : LicenseType{
 

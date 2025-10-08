@@ -30,8 +30,7 @@ open public class BillingAddressData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val MAX: Int = 255
 
@@ -68,7 +67,7 @@ open public class BillingAddressData
     val COUNTRY: String = "BILLINGADDRESS_COUNTRY"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

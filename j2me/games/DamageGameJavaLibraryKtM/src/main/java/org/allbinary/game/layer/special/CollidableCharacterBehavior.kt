@@ -34,7 +34,7 @@ import org.allbinary.logic.communication.log.ForcedLogUtil
 
 open public class CollidableCharacterBehavior : CollidableDestroyableDamageableBehavior {
         
-public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
+public constructor (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
 
                             : super(ownerLayer, collidable){
 var ownerLayer = ownerLayer
@@ -47,7 +47,8 @@ var collidable = collidable
 
 
                 @Throws(Exception::class)
-            override fun collide(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
+            
+    override fun collide(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
@@ -78,7 +79,8 @@ collidableDestroyableDamageableLayer!!.getPickupBehavior()!!.doPickup(collidable
 
 
                 @Throws(Exception::class)
-            override fun collide(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
+            
+    override fun collide(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface

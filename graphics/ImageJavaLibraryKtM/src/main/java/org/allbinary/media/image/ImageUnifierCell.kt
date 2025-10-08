@@ -36,7 +36,7 @@ open public class ImageUnifierCell
     private var width: Integer
 
     private var height: Integer
-public constructor        (width: Integer, height: Integer)
+public constructor (width: Integer, height: Integer)
             : super()
         {
 var width = width
@@ -46,7 +46,7 @@ this.setHeight(height)
 }
 
 
-open fun getWidth()
+    open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -57,7 +57,7 @@ open fun getWidth()
 }
 
 
-open fun setWidth(width: Integer)
+    open fun setWidth(width: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var width = width
@@ -65,7 +65,7 @@ this.width= width
 }
 
 
-open fun getHeight()
+    open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -76,7 +76,7 @@ open fun getHeight()
 }
 
 
-open fun setHeight(height: Integer)
+    open fun setHeight(height: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var height = height

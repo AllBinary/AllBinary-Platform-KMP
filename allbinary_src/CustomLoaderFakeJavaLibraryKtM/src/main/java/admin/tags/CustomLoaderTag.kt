@@ -42,11 +42,11 @@ open public class CustomLoaderTag : CustomTagSupport {
     private var command: String
 
     private var webappPath: String
-public constructor        (){
+public constructor (){
 }
 
 
-open fun setCommand(command: String)
+    open fun setCommand(command: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var command = command
@@ -54,7 +54,7 @@ this.command= command
 }
 
 
-open fun setWebappPath(value: String)
+    open fun setWebappPath(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -64,7 +64,7 @@ this.webappPath= value
 
                 @Throws(LicensingException::class)
             
-open fun setCustomLoaderWebappPath()
+    open fun setCustomLoaderWebappPath()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -92,7 +92,7 @@ URLGLOBALS.init(urlGlobals)
 
                 @Throws(JspTagException::class)
             
-open fun doStartTag()
+    open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

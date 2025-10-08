@@ -35,10 +35,9 @@ open public class AllBinaryAndroidGameInitializationUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 

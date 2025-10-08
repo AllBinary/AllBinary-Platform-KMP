@@ -30,13 +30,12 @@ open public class ProcessingFrameIndexFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var currentFrame: Long = 0L
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun next()
+    open fun next()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -48,7 +47,7 @@ open fun next()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

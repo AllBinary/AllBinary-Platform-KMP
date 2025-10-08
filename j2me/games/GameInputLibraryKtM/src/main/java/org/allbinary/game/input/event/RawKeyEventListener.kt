@@ -25,10 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface RawKeyEventListener {
         
 
-open fun onEvent(keyCode: Int, deviceId: Int, repeated: Boolean)
+    open fun onEvent(keyCode: Int, deviceId: Int, repeated: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
 

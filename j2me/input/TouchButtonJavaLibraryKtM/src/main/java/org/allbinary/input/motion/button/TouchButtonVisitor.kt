@@ -38,7 +38,7 @@ open public class TouchButtonVisitor
         
                 @Throws(Exception::class)
             
-open fun process(touchButtonInput: TouchButtonInput, string: String)
+    open fun process(touchButtonInput: TouchButtonInput, string: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var touchButtonInput = touchButtonInput

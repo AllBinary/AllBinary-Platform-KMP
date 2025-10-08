@@ -21,12 +21,11 @@ import org.allbinary.platform.graphics.PlatformBitmapBase
 
 open public class OpenGLBitmapFactory : PlatformBitmapBaseFactory {
         
-
-        companion object {
+companion object {
             
     private val instance: OpenGLBitmapFactory = OpenGLBitmapFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OpenGLBitmapFactory{
 
@@ -48,15 +47,14 @@ open public inner class Config
             : Object
          {
         
-/*Static stuff is not allowed for Kotlin inner classes
-        companion object {
+/*Static stuff is not allowed for Kotlin inner classescompanion object {
             *//*
         }
             */
 
 
     val bitmapConfig: Bitmap.Config
- constructor        (bitmapConfig: Bitmap.Config)
+ constructor (bitmapConfig: Bitmap.Config)
             : super()
         {
     //var bitmapConfig = bitmapConfig
@@ -69,7 +67,7 @@ this.bitmapConfig= bitmapConfig
             
     val ARGB_8888: Config = Config(Bitmap.Config.ARGB_8888)
 
-open fun createBitmap(width: Int, height: Int, config: OpenGLBitmapFactory.Config)
+    open fun createBitmap(width: Int, height: Int, config: OpenGLBitmapFactory.Config)
         //nullable = true from not(false or (false and false)) = true
 : OpenGLBitmap{
 var width = width
@@ -85,7 +83,7 @@ var config = config
 
                 @Throws(IOException::class)
             
-open fun decodeStream(inputStream: InputStream)
+    open fun decodeStream(inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
 : OpenGLBitmap{
 var inputStream = inputStream
@@ -96,7 +94,8 @@ var inputStream = inputStream
                         return OpenGLBitmap(BitmapFactory.decodeStream(inputStream))
 }
 
-override fun createBitmap(image: Image)
+
+    override fun createBitmap(image: Image)
         //nullable = true from not(false or (false and false)) = true
 : PlatformBitmapBase{
     //var image = image

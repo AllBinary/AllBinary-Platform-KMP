@@ -25,46 +25,47 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface AdvertisementAreaInterface {
         
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getStoreName()
+    open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getDescription()
+    open fun getDescription()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getConstraints()
+    open fun getConstraints()
         //nullable = true from not(false or (false and true)) = true
 : AdvertisementAreaConstraintsInterface
 
-open fun getCampaign()
+    open fun getCampaign()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun setName(name: String)
+    open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setStoreName(storeName: String)
+    open fun setStoreName(storeName: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setDescription(description: String)
+    open fun setDescription(description: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setConstraints(advertisementConstraintsInterface: AdvertisementAreaConstraintsInterface)
+    open fun setConstraints(advertisementConstraintsInterface: AdvertisementAreaConstraintsInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setCampaign(campaign: String)
+    open fun setCampaign(campaign: String)
         //nullable = true from not(false or (false and false)) = true
 
 

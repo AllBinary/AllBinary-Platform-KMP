@@ -56,7 +56,7 @@ open public class AndroidHardware
     private val DEVICES: String = PROC_BUS_INPUT_DIRECTORY +"devices/"
 
     private val MINHARDWARE: Int = 3
-public constructor        ()
+public constructor ()
             : super()
         {
 this.init(DEVICES)
@@ -77,7 +77,7 @@ this.init(DEVICES)
 
                 @Throws(Exception::class)
             
-open fun init(filePath: String)
+    open fun init(filePath: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var filePath = filePath
@@ -116,7 +116,7 @@ logUtil!!.put("Hardware Data: " +this.toString(), this, commonStrings!!.INIT, e)
 
                 @Throws(Exception::class)
             
-open fun get(filePath: String)
+    open fun get(filePath: String)
         //nullable = true from not(false or (false and false)) = true
 : LineNumberReader{
     //var filePath = filePath
@@ -147,7 +147,8 @@ componentInterfaceVector!!.add(UnknownHardware(nextLine))
                         return lineNumberReader
 }
 
-override fun getComponent(index: Int)
+
+    override fun getComponent(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : HardwareComponentInterface{
 var index = index
@@ -158,7 +159,8 @@ var index = index
                         return componentInterfaceVector!!.get(index) as HardwareComponentInterface
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -188,7 +190,8 @@ hardwareBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
                         return hardwareBuffer!!.toString()
 }
 
-override fun compareTo(hardwareInterface: HardwareInterface)
+
+    override fun compareTo(hardwareInterface: HardwareInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var hardwareInterface = hardwareInterface
@@ -199,7 +202,8 @@ var hardwareInterface = hardwareInterface
                         return true
 }
 
-override fun difference(hardwareInterface: HardwareInterface)
+
+    override fun difference(hardwareInterface: HardwareInterface)
         //nullable = true from not(false or (false and false)) = true
 : Hashtable<Any, Any>{
 var hardwareInterface = hardwareInterface

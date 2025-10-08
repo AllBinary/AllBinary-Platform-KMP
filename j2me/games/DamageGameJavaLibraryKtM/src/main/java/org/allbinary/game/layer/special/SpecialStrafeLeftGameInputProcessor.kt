@@ -30,7 +30,7 @@ import org.allbinary.layer.AllBinaryLayerManager
 
 open public class SpecialStrafeLeftGameInputProcessor : SpecialGameInputProcessor {
         
-public constructor        (collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer)                        
+public constructor (collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer)                        
 
                             : super(collidableDestroyableDamageableLayer){
 var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
@@ -42,7 +42,8 @@ var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
 
 
                 @Throws(Exception::class)
-            override fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+            
+    override fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var allbinaryLayerManager = allbinaryLayerManager

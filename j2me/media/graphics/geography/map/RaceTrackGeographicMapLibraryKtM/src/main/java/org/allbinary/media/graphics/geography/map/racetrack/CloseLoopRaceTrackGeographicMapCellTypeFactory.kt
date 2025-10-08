@@ -31,12 +31,11 @@ import org.allbinary.media.graphics.geography.pathfinding.PathFindingNodeCostInf
 
 open public class CloseLoopRaceTrackGeographicMapCellTypeFactory : RaceTrackGeographicMapCellTypeFactory {
         
-
-        companion object {
+companion object {
             
     private val instance: CloseLoopRaceTrackGeographicMapCellTypeFactory = CloseLoopRaceTrackGeographicMapCellTypeFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CloseLoopRaceTrackGeographicMapCellTypeFactory{
 
@@ -48,7 +47,7 @@ open fun getInstance()
 
 
         }
-            private constructor        (){
+            private constructor (){
 this.EMPTY_CELL_TYPE= EmptyRaceRaceTrackGeographicMapCellTypeFactory.getInstance()!!.EMPTY_CELL_TYPE
 this.EASY_CELL_TYPE= this.EMPTY_CELL_TYPE
 this.FINISH_LINE_ROAD_CELL_TYPE= this.START_LINE_ROAD_CELL_TYPE

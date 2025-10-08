@@ -36,7 +36,7 @@ open public class LogTableEntity : AbSqlBean
         
 
     private val tableName: String = "log"
-public constructor        ()                        
+public constructor ()                        
 
                             : super(LogDbInitInfo()){
 
@@ -47,7 +47,7 @@ this.setTableName(tableName)
 }
 
 
-open fun createTableStatement()
+    open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -65,7 +65,7 @@ stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.appe
 }
 
 
-open fun createTable()
+    open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

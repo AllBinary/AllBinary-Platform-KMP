@@ -28,7 +28,6 @@
 import org.allbinary.game.input.RTSLayerFormFactory
 import org.allbinary.graphics.form.item.CustomItem
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.graphics.form.ScrollSelectionForm
 import org.allbinary.graphics.form.item.ItemArraySingletonFactoryInterface
@@ -39,7 +38,7 @@ open public class AdvancedRTSLayerFormFactory : RTSLayerFormFactory {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var scrollSelectionForm: ScrollSelectionForm
-protected constructor        (label: String, itemArrayFactoryInterface: ItemArraySingletonFactoryInterface){
+protected constructor (label: String, itemArrayFactoryInterface: ItemArraySingletonFactoryInterface){
 var label = label
 var itemArrayFactoryInterface = itemArrayFactoryInterface
 
@@ -59,7 +58,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
 
-open fun getInstance(rtsLayer: RTSLayer)
+    open fun getInstance(rtsLayer: RTSLayer)
         //nullable =  from not(true or (false and false)) = 
 : ScrollSelectionForm{
 var rtsLayer = rtsLayer

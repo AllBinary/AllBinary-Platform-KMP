@@ -36,7 +36,7 @@ open public class VelocityBehaviorBase
             {
             }            
         
-open fun reduce(velocityProperties: BasicVelocityProperties, nominator: Int, denominator: Int)
+    open fun reduce(velocityProperties: BasicVelocityProperties, nominator: Int, denominator: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var velocityProperties = velocityProperties
@@ -45,7 +45,7 @@ open fun reduce(velocityProperties: BasicVelocityProperties, nominator: Int, den
 }
 
 
-open fun reduceX(velocityProperties: BasicVelocityProperties, nominator: Int, denominator: Int)
+    open fun reduceX(velocityProperties: BasicVelocityProperties, nominator: Int, denominator: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var velocityProperties = velocityProperties
@@ -54,7 +54,7 @@ open fun reduceX(velocityProperties: BasicVelocityProperties, nominator: Int, de
 }
 
 
-open fun reduceY(velocityProperties: BasicVelocityProperties, nominator: Int, denominator: Int)
+    open fun reduceY(velocityProperties: BasicVelocityProperties, nominator: Int, denominator: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var velocityProperties = velocityProperties

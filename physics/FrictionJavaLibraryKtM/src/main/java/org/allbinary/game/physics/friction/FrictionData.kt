@@ -30,12 +30,11 @@ open public class FrictionData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val FRICTION_DENOMINATOR: Int = 100
 
-open fun getFrictionDenominator()
+    open fun getFrictionDenominator()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -47,7 +46,7 @@ open fun getFrictionDenominator()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

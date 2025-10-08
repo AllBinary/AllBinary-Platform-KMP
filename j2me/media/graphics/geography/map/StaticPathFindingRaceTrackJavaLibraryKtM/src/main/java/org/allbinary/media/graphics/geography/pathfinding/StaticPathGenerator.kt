@@ -29,7 +29,6 @@
         
 import org.allbinary.util.BasicArrayList
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.graphics.CellPosition
@@ -51,14 +50,14 @@ open public class StaticPathGenerator
 
                 @Throws(Exception::class)
             
-open fun init(geographicMapInterface: BasicGeographicMap, totalPaths: Int)
+    open fun init(geographicMapInterface: BasicGeographicMap, totalPaths: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var geographicMapInterface = geographicMapInterface
 var totalPaths = totalPaths
 }
 
-protected constructor        ()
+protected constructor ()
             : super()
         {
 PreLogUtil.put("Using Static Path Finding", this, CommonStrings.getInstance()!!.CONSTRUCTOR)
@@ -67,7 +66,7 @@ PreLogUtil.put("Using Static Path Finding", this, CommonStrings.getInstance()!!.
 
                 @Throws(Exception::class)
             
-open fun getGeographicMapCellPositionListFromBasicGeographicMapCellPositionList(geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory, pathList: BasicArrayList)
+    open fun getGeographicMapCellPositionListFromBasicGeographicMapCellPositionList(geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory, pathList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var geographicMapCellPositionFactory = geographicMapCellPositionFactory
@@ -106,7 +105,7 @@ list.add(geographicMapCellPosition)
 
                 @Throws(Exception::class)
             
-open fun getInstance(geographicMapInterface: BasicGeographicMap, geographicMapCellHistory: GeographicMapCellHistory, pathFindingInfo: PathFindingInfo, totalPaths: Int)
+    open fun getInstance(geographicMapInterface: BasicGeographicMap, geographicMapCellHistory: GeographicMapCellHistory, pathFindingInfo: PathFindingInfo, totalPaths: Int)
         //nullable =  from not(true or (false and false)) = 
 : BasicArrayList{
     //var geographicMapInterface = geographicMapInterface

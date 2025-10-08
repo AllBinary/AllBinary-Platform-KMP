@@ -44,8 +44,7 @@ open public class PersistentInputMapping
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NULL_PERSISTENT_INPUT_MAPPING: PersistentInputMapping = PersistentInputMapping()
 
@@ -60,13 +59,13 @@ open public class PersistentInputMapping
     private var inputMappingEventListenerInterface: InputMappingEventListenerInterface = NullInputMappingEventListener.NULL_INPUT_MAPPING_EVENT_LISTENER
 
     private val inputPersistance: InputPersistance
-protected constructor        ()
+protected constructor ()
             : super()
         {
 inputPersistance= InputPersistance(GamePersistanceStrings.getInstance()!!.SAVED_INPUT_CONFIGURATION_RECORD_ID)
 }
 
-protected constructor        (name: String)
+protected constructor (name: String)
             : super()
         {
 var name = name
@@ -74,7 +73,7 @@ inputPersistance= InputPersistance(name)
 }
 
 
-open fun getTotalMapped()
+    open fun getTotalMapped()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -85,7 +84,7 @@ open fun getTotalMapped()
 }
 
 
-open fun isDefaultNew()
+    open fun isDefaultNew()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -96,7 +95,7 @@ open fun isDefaultNew()
 }
 
 
-open fun getDefault()
+    open fun getDefault()
         //nullable = true from not(false or (false and true)) = true
 : InputToGameKeyMapping{
 
@@ -109,7 +108,7 @@ open fun getDefault()
 
                 @Throws(Exception::class)
             
-open fun setDefault(abeClientInformation: AbeClientInformationInterface)
+    open fun setDefault(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -121,7 +120,7 @@ this.save(abeClientInformation)
 
                 @Throws(Exception::class)
             
-open fun update(abeClientInformation: AbeClientInformationInterface)
+    open fun update(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -134,7 +133,7 @@ this.save(abeClientInformation)
 
                 @Throws(Exception::class)
             
-open fun save(abeClientInformation: AbeClientInformationInterface)
+    open fun save(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -156,7 +155,7 @@ inputMappingEvent!!.setInputToGameKeyMapping(this.getInputMapping())
 
                 @Throws(Exception::class)
             
-open fun init(abeClientInformation: AbeClientInformationInterface)
+    open fun init(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -220,7 +219,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 }
 
 
-open fun setInputMappingEventListenerInterface(inputMappingEventListenerInterface: InputMappingEventListenerInterface)
+    open fun setInputMappingEventListenerInterface(inputMappingEventListenerInterface: InputMappingEventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var inputMappingEventListenerInterface = inputMappingEventListenerInterface
@@ -228,7 +227,7 @@ this.inputMappingEventListenerInterface= inputMappingEventListenerInterface
 }
 
 
-open fun getInputMappingEventListenerInterface()
+    open fun getInputMappingEventListenerInterface()
         //nullable = true from not(false or (false and true)) = true
 : InputMappingEventListenerInterface{
 
@@ -239,7 +238,7 @@ open fun getInputMappingEventListenerInterface()
 }
 
 
-open fun getInputMapping()
+    open fun getInputMapping()
         //nullable = true from not(false or (false and true)) = true
 : InputToGameKeyMapping{
 
@@ -252,7 +251,7 @@ open fun getInputMapping()
 
                 @Throws(Exception::class)
             
-open fun isDelete(input: Input)
+    open fun isDelete(input: Input)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var input = input
@@ -265,7 +264,7 @@ var input = input
 
                 @Throws(Exception::class)
             
-open fun isSystemInput(input: Input)
+    open fun isSystemInput(input: Input)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var input = input

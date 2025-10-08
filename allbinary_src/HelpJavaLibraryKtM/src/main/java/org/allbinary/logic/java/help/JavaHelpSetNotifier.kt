@@ -33,12 +33,11 @@ open public class JavaHelpSetNotifier
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var vector: Vector = Vector()
 
-open fun get()
+    open fun get()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -49,7 +48,7 @@ open fun get()
 }
 
 
-open fun isNotified(helpSet: HelpSet)
+    open fun isNotified(helpSet: HelpSet)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var helpSet = helpSet
@@ -96,7 +95,7 @@ vector.add(url)
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

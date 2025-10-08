@@ -35,12 +35,11 @@ open public class RawKeyEventHandler
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: RawKeyEventHandler = RawKeyEventHandler()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : RawKeyEventHandler{
 
@@ -60,21 +59,21 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     var eventListenerInterfaceList: BasicArrayList
-public constructor        ()
+public constructor ()
             : super()
         {
 this.eventListenerInterfaceList= BasicArrayList()
 }
 
 
-open fun removeAllListeners()
+    open fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
 {
 this.eventListenerInterfaceList= BasicArrayList()
 }
 
 
-open fun addListeners(vector: BasicArrayList)
+    open fun addListeners(vector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var vector = vector
@@ -98,7 +97,7 @@ this.addListener(eventListenerInterface)
 }
 
 
-open fun addListenerSingleThreaded(eventListenerInterface: RawKeyEventListener)
+    open fun addListenerSingleThreaded(eventListenerInterface: RawKeyEventListener)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventListenerInterface = eventListenerInterface
@@ -114,7 +113,7 @@ open fun addListenerSingleThreaded(eventListenerInterface: RawKeyEventListener)
 }
 
 
-open fun addListener(eventListenerInterface: RawKeyEventListener)
+    open fun addListener(eventListenerInterface: RawKeyEventListener)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventListenerInterface = eventListenerInterface
@@ -130,7 +129,7 @@ open fun addListener(eventListenerInterface: RawKeyEventListener)
 }
 
 
-open fun removeListenerSingleThreaded(eventListenerInterface: RawKeyEventListener)
+    open fun removeListenerSingleThreaded(eventListenerInterface: RawKeyEventListener)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventListenerInterface = eventListenerInterface
@@ -138,7 +137,7 @@ this.eventListenerInterfaceList!!.remove(eventListenerInterface)
 }
 
 
-open fun removeListener(eventListenerInterface: RawKeyEventListener)
+    open fun removeListener(eventListenerInterface: RawKeyEventListener)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventListenerInterface = eventListenerInterface
@@ -148,7 +147,7 @@ this.eventListenerInterfaceList!!.remove(eventListenerInterface)
 
                 @Throws(Exception::class)
             
-open fun fireEvent(keyCode: Int, deviceId: Int, repeated: Boolean)
+    open fun fireEvent(keyCode: Int, deviceId: Int, repeated: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
@@ -183,7 +182,7 @@ index++
 
                 @Throws(Exception::class)
             
-open fun process(keyCode: Int, deviceId: Int, repeated: Boolean, eventListenerInterface: RawKeyEventListener)
+    open fun process(keyCode: Int, deviceId: Int, repeated: Boolean, eventListenerInterface: RawKeyEventListener)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
@@ -194,7 +193,7 @@ eventListenerInterface!!.onEvent(keyCode, deviceId, repeated)
 }
 
 
-open fun getEventListenerInterfaceListP()
+    open fun getEventListenerInterfaceListP()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -204,7 +203,8 @@ open fun getEventListenerInterfaceListP()
                         return eventListenerInterfaceList
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

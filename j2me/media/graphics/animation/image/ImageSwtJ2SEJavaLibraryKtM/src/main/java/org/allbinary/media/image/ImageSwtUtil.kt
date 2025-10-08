@@ -33,12 +33,11 @@ open public class ImageSwtUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ImageSwtUtil = ImageSwtUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ImageSwtUtil{
 

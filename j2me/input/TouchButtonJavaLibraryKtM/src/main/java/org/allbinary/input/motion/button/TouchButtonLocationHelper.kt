@@ -44,7 +44,7 @@ open public class TouchButtonLocationHelper
     private var columnsRemainderHalf: Int
 
     private var rowsRemainderHalf: Int
-public constructor        ()
+public constructor ()
             : super()
         {
 
@@ -62,7 +62,7 @@ this.rowsRemainderHalf= (this.rowsRemainder shr 1)
 }
 
 
-open fun getTotalColumns()
+    open fun getTotalColumns()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -73,7 +73,7 @@ open fun getTotalColumns()
 }
 
 
-open fun getTotalRows()
+    open fun getTotalRows()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -84,7 +84,7 @@ open fun getTotalRows()
 }
 
 
-open fun getColumnsRemainder()
+    open fun getColumnsRemainder()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -95,7 +95,7 @@ open fun getColumnsRemainder()
 }
 
 
-open fun getRowsRemainder()
+    open fun getRowsRemainder()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -106,7 +106,7 @@ open fun getRowsRemainder()
 }
 
 
-open fun getColumnsRemainderHalf()
+    open fun getColumnsRemainderHalf()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -117,7 +117,7 @@ open fun getColumnsRemainderHalf()
 }
 
 
-open fun getRowsRemainderHalf()
+    open fun getRowsRemainderHalf()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -127,7 +127,8 @@ open fun getRowsRemainderHalf()
                         return rowsRemainderHalf
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

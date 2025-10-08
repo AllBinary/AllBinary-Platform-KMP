@@ -41,12 +41,11 @@ open public class RequestWorkFlowFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class, LicensingException::class)
             
-open fun getInstance(request: ServletRequest, response: ServletResponse, servletConfig: ServletConfig, servletContext: ServletContext)
+    open fun getInstance(request: ServletRequest, response: ServletResponse, servletConfig: ServletConfig, servletContext: ServletContext)
         //nullable =  from not(true or (false and false)) = 
 : WorkFlowInterface{
 var request = request
@@ -78,7 +77,7 @@ var servletContext = servletContext
 
                 @Throws(Exception::class, LicensingException::class)
             
-open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
+    open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
 : WorkFlowInterface{
 var hashMap = hashMap
@@ -101,7 +100,7 @@ var pageContext = pageContext
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

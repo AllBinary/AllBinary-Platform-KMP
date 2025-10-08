@@ -30,7 +30,7 @@ import admin.taghelpers.PermissionItemsRequestHelperFactory
 
 open public class PermissionItemsTag : TableTag {
         
-public constructor        (){
+public constructor (){
 this.setTagHelperFactory(PermissionItemsHelperFactory())
 this.setTagRequestHelperFactory(PermissionItemsRequestHelperFactory())
 }

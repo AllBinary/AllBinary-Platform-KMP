@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import android.graphics.Matrix
+import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Image
 import org.allbinary.animation.AnimationBehavior
 import org.allbinary.graphics.color.BasicColor
@@ -49,7 +50,7 @@ open public class AllBinaryFlickerAndroidImageRotationAnimation : ImageBaseRotat
     private val increment: Short
 
     private val originalImage: Image
-protected constructor        (originalImage: Image, image: Image, angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
+protected constructor (originalImage: Image, image: Image, angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
 
                             : super(image, angleInfo, totalAngle, animationBehavior){
     //var originalImage = originalImage
@@ -68,7 +69,7 @@ this.increment= (this.angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement())
 }
 
 
-open fun setBasicColorP(basicColor: BasicColor)
+    open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var basicColor = basicColor
@@ -82,7 +83,8 @@ open fun setBasicColorP(basicColor: BasicColor)
                                  || this.getBasicColorP()!!.toInt() != basicColor!!.toInt())
                         
                                     {
-                                    changed= true
+                                    imageModifierUtil!!.setColor(this.originalImage, this.getImage(), 0, basicColor)
+changed= true
 
                                     }
                                 
@@ -100,7 +102,15 @@ this.updateImage()
 }
 
 
-open fun setAlpha(alpha: Int)
+    override fun changeBasicColor(basicColor: BasicColor)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var basicColor = basicColor
+this.setBasicColorP(basicColor)
+}
+
+
+    open fun setAlpha(alpha: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var alpha = alpha
@@ -131,7 +141,7 @@ this.updateImage()
 }
 
 
-open fun nextRotation()
+    open fun nextRotation()
         //nullable = true from not(false or (false and true)) = true
 {
 super.nextRotation()
@@ -140,7 +150,7 @@ this.updateImage()
 }
 
 
-open fun previousRotation()
+    open fun previousRotation()
         //nullable = true from not(false or (false and true)) = true
 {
 super.previousRotation()
@@ -149,14 +159,14 @@ this.updateImage()
 }
 
 
-open fun updateImage()
+    open fun updateImage()
         //nullable = true from not(false or (false and true)) = true
 {
-androidImageUtil!!.rotate(this.getImage(), originalImage, matrix)
+androidImageUtil!!.rotate(this.getImage(), originalImage, matrix, imageModifierUtil!!.paint)
 }
 
 
-open fun setFrame(index: Int)
+    open fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var index = index

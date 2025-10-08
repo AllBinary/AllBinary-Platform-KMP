@@ -43,7 +43,8 @@ open public class HighScoresHelperBase
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     var highScoresArrayP: Array<HighScores?> = LastFetchHighScoresFactory.getInstance()!!.highScoresArray
-override fun setHighScoresArray(highScoresArrayP: Array<HighScores?>)
+
+    override fun setHighScoresArray(highScoresArrayP: Array<HighScores?>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var highScoresArrayP = highScoresArrayP
@@ -74,7 +75,7 @@ this.highScoresArrayP= highScoresArrayP
 }
 
 
-open fun getNextHighScores()
+    open fun getNextHighScores()
         //nullable = true from not(false or (false and true)) = true
 : HighScores{
 
@@ -85,7 +86,7 @@ open fun getNextHighScores()
 }
 
 
-open fun isAnyHighScores()
+    open fun isAnyHighScores()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -95,14 +96,14 @@ open fun isAnyHighScores()
 }
 
 
-open fun setSelectedHighScores(selectedHighScores: HighScores)
+    open fun setSelectedHighScores(selectedHighScores: HighScores)
         //nullable = true from not(false or (false and false)) = true
 {
     //var selectedHighScores = selectedHighScores
 }
 
 
-open fun getSelectedHighScores()
+    open fun getSelectedHighScores()
         //nullable = true from not(false or (false and true)) = true
 : HighScores{
 
@@ -113,7 +114,7 @@ open fun getSelectedHighScores()
 }
 
 
-open fun getHighScoresArray()
+    open fun getHighScoresArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<HighScores?>{
 
@@ -124,7 +125,7 @@ open fun getHighScoresArray()
 }
 
 
-open fun selectHighScores()
+    open fun selectHighScores()
         //nullable = true from not(false or (false and true)) = true
 {
 }

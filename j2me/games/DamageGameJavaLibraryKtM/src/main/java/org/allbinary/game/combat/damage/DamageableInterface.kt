@@ -26,18 +26,19 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.layer.NamedInterface
+
 interface DamageableInterface : NamedInterface {
         
 
                 @Throws(Exception::class)
             
-open fun damage(damage: Int, damageType: Int)
+    open fun damage(damage: Int, damageType: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun getDamage(damageType: Int)
+    open fun getDamage(damageType: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int
 

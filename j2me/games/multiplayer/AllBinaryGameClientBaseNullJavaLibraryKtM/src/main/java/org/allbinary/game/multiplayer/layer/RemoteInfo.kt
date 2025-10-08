@@ -22,20 +22,19 @@ open public class RemoteInfo
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val REMOTE_INFO: RemoteInfo = RemoteInfo()
 
     val NEW_PLAYER_ID: Int = 0
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
 
-public constructor        (username: String, actorSessionId: Int, playerInputId: Int, id: Int)
+public constructor (username: String, actorSessionId: Int, playerInputId: Int, id: Int)
             : super()
         {
 var username = username

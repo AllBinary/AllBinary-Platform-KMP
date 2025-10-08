@@ -47,7 +47,7 @@ open public class SpriteIndexedAnimation : IndexedAnimation
     val image: Image
 
     private val basicColorArray: Array<BasicColor?>
-public constructor        (sprite: Sprite, image: Image, animationBehavior: AnimationBehavior)                        
+public constructor (sprite: Sprite, image: Image, animationBehavior: AnimationBehavior)                        
 
                             : this(sprite, image, BasicColorUtil.getInstance()!!.ZERO_ARRAY, animationBehavior){
     //var sprite = sprite
@@ -59,7 +59,7 @@ public constructor        (sprite: Sprite, image: Image, animationBehavior: Anim
                     
 }
 
-public constructor        (sprite: Sprite, image: Image, basicColorArray: Array<BasicColor?>, animationBehavior: AnimationBehavior)                        
+public constructor (sprite: Sprite, image: Image, basicColorArray: Array<BasicColor?>, animationBehavior: AnimationBehavior)                        
 
                             : super(animationBehavior){
     //var sprite = sprite
@@ -90,7 +90,8 @@ this.basicColorArray= basicColorArray
 
 
                 @Throws(Exception::class)
-            override fun getAnimationSize()
+            
+    override fun getAnimationSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -100,7 +101,8 @@ this.basicColorArray= basicColorArray
                         return this.getSize()
 }
 
-override fun setBasicColorP(basicColor: BasicColor)
+
+    override fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var basicColor = basicColor
@@ -127,7 +129,8 @@ break;
 
 }
 
-override fun getBasicColorP()
+
+    override fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
 
@@ -155,7 +158,7 @@ override fun getBasicColorP()
 }
 
 
-open fun paint(graphics: Graphics, frame: Int, x: Int, y: Int)
+    open fun paint(graphics: Graphics, frame: Int, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -167,7 +170,8 @@ this.sprite.setPosition(x, y)
 sprite.paint(graphics)
 }
 
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -178,26 +182,29 @@ sprite.paint(graphics)
 }
 
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
 sprite.paint(graphics)
 }
 
-override fun nextFrame()
+
+    override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 this.sprite.nextFrame()
 }
 
-override fun previousFrame()
+
+    override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 this.sprite.prevFrame()
 }
 
-override fun getSize()
+
+    override fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -207,14 +214,16 @@ override fun getSize()
                         return this.sprite.getRawFrameCount()
 }
 
-override fun setFrame(frame: Int)
+
+    override fun setFrame(frame: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var frame = frame
 this.sprite.setFrame(frame)
 }
 
-override fun getFrame()
+
+    override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -224,7 +233,8 @@ override fun getFrame()
                         return this.sprite.getFrame()
 }
 
-override fun isLastFrame()
+
+    override fun isLastFrame()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -252,7 +262,7 @@ override fun isLastFrame()
 }
 
 
-open fun getLastFrame()
+    open fun getLastFrame()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -262,13 +272,15 @@ open fun getLastFrame()
                         return this.getSize()
 }
 
-override fun setSequence(sequence: IntArray)
+
+    override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
 {
     //var sequence = sequence
 }
 
-override fun getSequence()
+
+    override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
 : IntArray{
 
@@ -279,14 +291,15 @@ override fun getSequence()
 }
 
 
-open fun close()
+    open fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
                 @Throws(Throwable::class)
-            override fun finalize()
+            
+    override fun finalize()
         //nullable = true from not(false or (false and true)) = true
 {
 }

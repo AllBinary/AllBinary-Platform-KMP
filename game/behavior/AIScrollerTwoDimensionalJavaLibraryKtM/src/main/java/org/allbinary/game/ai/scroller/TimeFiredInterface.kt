@@ -25,10 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface TimeFiredInterface {
         
 
-open fun getLastFireTime()
+    open fun getLastFireTime()
         //nullable = true from not(false or (false and true)) = true
 : Long
 

@@ -34,12 +34,11 @@ open public class MidletExitProcessorFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: MidletExitProcessorFactory = MidletExitProcessorFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : MidletExitProcessorFactory{
 
@@ -57,7 +56,7 @@ open fun getInstance()
             {
             }            
         
-open fun getInstance(midlet: MIDlet)
+    open fun getInstance(midlet: MIDlet)
         //nullable =  from not(true or (false and false)) = 
 : Processor{
 var midlet = midlet

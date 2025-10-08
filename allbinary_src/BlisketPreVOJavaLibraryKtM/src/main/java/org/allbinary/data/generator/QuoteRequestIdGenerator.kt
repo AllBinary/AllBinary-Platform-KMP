@@ -33,7 +33,7 @@ open public class QuoteRequestIdGenerator : UniqueIdGenerator {
         
 
     private val IDFILE: String = "quoterequestId"
-public constructor        (){
+public constructor (){
 
     var stringBuffer: StringMaker = StringMaker()
 

@@ -26,12 +26,13 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.layer.AllBinaryLayer
+
 interface PickupProcessorInterface {
         
 
                 @Throws(Exception::class)
             
-open fun process(sourceLayerInterface: AllBinaryLayer)
+    open fun process(sourceLayerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 
 

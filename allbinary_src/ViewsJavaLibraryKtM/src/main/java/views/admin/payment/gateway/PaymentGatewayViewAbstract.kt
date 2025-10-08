@@ -35,7 +35,7 @@ open public class PaymentGatewayViewAbstract : TransformInfoHttpComposite {
         
 
     private var paymentGatewayPrimaryKey: PaymentGatewayPrimaryKey
-public constructor        (transformInfoInterface: TransformInfoInterface)                        
+public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
@@ -47,7 +47,7 @@ this.getFormData(this.getPageContext()!!.getRequest() as HttpServletRequest)
 }
 
 
-open fun getFormData(request: HttpServletRequest)
+    open fun getFormData(request: HttpServletRequest)
         //nullable = true from not(false or (false and false)) = true
 {
 var request = request
@@ -61,7 +61,7 @@ this.setPaymentGatewayPrimaryKey(PaymentGatewayPrimaryKey(storeName, gatewayName
 }
 
 
-open fun getPaymentGatewayPrimaryKey()
+    open fun getPaymentGatewayPrimaryKey()
         //nullable = true from not(false or (false and true)) = true
 : PaymentGatewayPrimaryKey{
 
@@ -72,7 +72,7 @@ open fun getPaymentGatewayPrimaryKey()
 }
 
 
-open fun setPaymentGatewayPrimaryKey(paymentGatewayPrimaryKey: PaymentGatewayPrimaryKey)
+    open fun setPaymentGatewayPrimaryKey(paymentGatewayPrimaryKey: PaymentGatewayPrimaryKey)
         //nullable = true from not(false or (false and false)) = true
 {
 var paymentGatewayPrimaryKey = paymentGatewayPrimaryKey

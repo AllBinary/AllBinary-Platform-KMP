@@ -47,7 +47,7 @@ open public class LineReader
     private var idFile: AbFileInputStream
 
     private var idData: DataInputStream
-public constructor        (fileName: String)
+public constructor (fileName: String)
             : super()
         {
     //var fileName = fileName
@@ -74,7 +74,7 @@ logUtil!!.put("File: " +fileName, this, "LineReader", e)
 }
 
 
-open fun hasNext()
+    open fun hasNext()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -121,7 +121,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "hasNext", e)
 
                 @Throws(Exception::class)
             
-open fun next()
+    open fun next()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

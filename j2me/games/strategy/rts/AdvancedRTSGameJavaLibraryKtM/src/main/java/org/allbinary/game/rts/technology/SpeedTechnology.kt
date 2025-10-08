@@ -36,7 +36,7 @@ open public class SpeedTechnology
     private var level: Int= 0
 
     private var maxLevel: Int
-public constructor        (maxLevel: Int)
+public constructor (maxLevel: Int)
             : super()
         {
 var maxLevel = maxLevel
@@ -44,7 +44,7 @@ this.maxLevel= maxLevel
 }
 
 
-open fun isCompleted()
+    open fun isCompleted()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -55,7 +55,7 @@ open fun isCompleted()
 }
 
 
-open fun getPercentComplete()
+    open fun getPercentComplete()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -66,7 +66,7 @@ open fun getPercentComplete()
 }
 
 
-open fun getLevel()
+    open fun getLevel()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -77,7 +77,7 @@ open fun getLevel()
 }
 
 
-open fun getMaxLevel()
+    open fun getMaxLevel()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -88,7 +88,7 @@ open fun getMaxLevel()
 }
 
 
-open fun getCost()
+    open fun getCost()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -99,13 +99,13 @@ open fun getCost()
 }
 
 
-open fun downgrade()
+    open fun downgrade()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun getDowngradeCost()
+    open fun getDowngradeCost()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -116,7 +116,7 @@ open fun getDowngradeCost()
 }
 
 
-open fun isDowngradeable()
+    open fun isDowngradeable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -127,7 +127,7 @@ open fun isDowngradeable()
 }
 
 
-open fun getUpgradeCost()
+    open fun getUpgradeCost()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -138,7 +138,7 @@ open fun getUpgradeCost()
 }
 
 
-open fun isUpgradeable()
+    open fun isUpgradeable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -166,7 +166,7 @@ open fun isUpgradeable()
 }
 
 
-open fun upgrade()
+    open fun upgrade()
         //nullable = true from not(false or (false and true)) = true
 {
 this.level++
@@ -177,7 +177,7 @@ unitTechnologySingletonFactory!!.setSpeed(unitTechnologySingletonFactory!!.getSp
 }
 
 
-open fun isSelfUpgradeable()
+    open fun isSelfUpgradeable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

@@ -35,12 +35,11 @@ open public class BlisketServletUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: BlisketServletUtil = BlisketServletUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BlisketServletUtil{
 
@@ -58,7 +57,7 @@ open fun getInstance()
             {
             }            
         
-open fun init(request: HttpServletRequest)
+    open fun init(request: HttpServletRequest)
         //nullable = true from not(false or (false and false)) = true
 {
 var request = request

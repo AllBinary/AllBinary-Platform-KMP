@@ -31,7 +31,7 @@ open public class RTSLayerEvent : AllBinaryEventObject {
         
 
     private var rtsLayer: PathFindingLayerInterface
-public constructor        (rtsLayer: PathFindingLayerInterface)                        
+public constructor (rtsLayer: PathFindingLayerInterface)                        
 
                             : super(rtsLayer){
 var rtsLayer = rtsLayer
@@ -41,7 +41,8 @@ var rtsLayer = rtsLayer
                     
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -58,7 +59,7 @@ stringBuffer!!.append(this.getRtsLayer()!!.toString())
 }
 
 
-open fun getRtsLayer()
+    open fun getRtsLayer()
         //nullable = true from not(false or (false and true)) = true
 : PathFindingLayerInterface{
 
@@ -69,7 +70,7 @@ open fun getRtsLayer()
 }
 
 
-open fun setRtsLayer(rtsLayer: PathFindingLayerInterface)
+    open fun setRtsLayer(rtsLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var rtsLayer = rtsLayer

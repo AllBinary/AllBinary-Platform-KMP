@@ -30,7 +30,6 @@ import java.util.HashMap
 import java.util.Vector
 import org.allbinary.business.entry.EntryData
 import org.allbinary.business.init.db.UserDbInitInfo
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.sql.AbSqlBean
 
@@ -47,7 +46,7 @@ open public class IdGeneratorEntity : AbSqlBean
     val NAME: String = "NAME"
 
     val VALUE: String = "VALUE"
-public constructor        ()                        
+public constructor ()                        
 
                             : super(UserDbInitInfo()){
 
@@ -62,7 +61,7 @@ super.setTableName(tableName)
 
                 @Throws(Exception::class)
             
-open fun get(name: String)
+    open fun get(name: String)
         //nullable = true from not(false or (false and false)) = true
 : Long{
 var name = name
@@ -97,7 +96,7 @@ keysAndValues!!.put(NAME, name)
 }
 
 
-open fun insert(values: Vector)
+    open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 {
 var values = values
@@ -113,7 +112,7 @@ logUtil!!.put(this.commonStrings!!.FAILURE, this, INSERT, e)
 }
 
 
-open fun delete(value: String)
+    open fun delete(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -129,7 +128,7 @@ logUtil!!.put(this.commonStrings!!.FAILURE, this, commonStrings!!.delete, e)
 }
 
 
-open fun update(name: String, value: Long)
+    open fun update(name: String, value: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name
@@ -143,7 +142,7 @@ this.update(map)
 }
 
 
-open fun update(hashMap: HashMap<Any, Any>)
+    open fun update(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var hashMap = hashMap
@@ -151,7 +150,7 @@ super.updateWhere(NAME, hashMap!!.get(NAME as Object) as String, hashMap)
 }
 
 
-open fun createTable()
+    open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -165,7 +164,7 @@ open fun createTable()
 }
 
 
-open fun dropTable()
+    open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

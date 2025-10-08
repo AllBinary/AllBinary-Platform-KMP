@@ -58,7 +58,7 @@ open public class ProgressCanvas : RunnableCanvas
     val GAUGE_PAINTABLE: Paintable = object: Paintable()
                                 {
                                 
-open override fun paint(graphics: Graphics)
+    open override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -93,7 +93,7 @@ paint2(graphics)
 
                 @Throws(Exception::class)
             
-open override fun process()
+    open override fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 pathFindingThreadPool!!.runAPriorityTask()
@@ -103,13 +103,13 @@ pathFindingThreadPool!!.runAPriorityTask()
                             
 
     var inGameProcessor: Processor = Processor.getInstance()!!
- constructor        (){
+ constructor (){
 this.paintable= NullPaintable.getInstance()
 this.backgroundBasicColor= BasicColorFactory.getInstance()!!.WHITE
 this.gauge= CustomGaugeItem.NULL_GAUGE_ITEM
 }
 
- constructor        (title: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor){
+ constructor (title: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor){
     //var title = title
     //var backgroundBasicColor = backgroundBasicColor
     //var foregroundBasicColor = foregroundBasicColor
@@ -118,7 +118,7 @@ this.gauge= CustomGaugeItem(StringUtil.getInstance()!!.EMPTY_STRING, maxValue.to
 }
 
 
-open fun init(gameMidlet: AllBinaryMidlet)
+    open fun init(gameMidlet: AllBinaryMidlet)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameMidlet = gameMidlet
@@ -128,20 +128,21 @@ this.allbinaryMidlet= gameMidlet
 
                 @Throws(Exception::class)
             
-open fun update(graphics: Graphics)
+    open fun update(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 }
 
-override fun initCommands(cmdListener: CommandListener)
+
+    override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var cmdListener = cmdListener
 }
 
 
-open fun getMaxValue()
+    open fun getMaxValue()
         //nullable = true from not(false or (false and true)) = true
 : Float{
 
@@ -152,7 +153,7 @@ open fun getMaxValue()
 }
 
 
-open fun start()
+    open fun start()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.START_METHOD_NAME)
@@ -171,7 +172,7 @@ this.inProgress= true
 
     private val START_BACKGROUND: String = "startBackground"
 
-open fun startBackground(background: Boolean)
+    open fun startBackground(background: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var background = background
@@ -189,7 +190,7 @@ this.paintable= GAUGE_PAINTABLE
 }
 
 
-open fun endActual()
+    open fun endActual()
         //nullable = true from not(false or (false and true)) = true
 {
 this.allbinaryMidlet!!.commandAction(GameCommandsFactory.getInstance()!!.SHOW_GAME_CANVAS, NullCanvas.NULL_CANVAS)
@@ -198,14 +199,14 @@ this.inGame()
 }
 
 
-open fun inGame()
+    open fun inGame()
         //nullable = true from not(false or (false and true)) = true
 {
 this.inGameProcessor= IN_GAME_PROCESSOR
 }
 
 
-open fun end()
+    open fun end()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.END_METHOD_NAME)
@@ -215,7 +216,7 @@ this.paintable= NullPaintable.getInstance()
 }
 
 
-open fun endFromInitialLazyLoadingComplete()
+    open fun endFromInitialLazyLoadingComplete()
         //nullable = true from not(false or (false and true)) = true
 {
 this.gauge.setValue(this.getMaxValue())
@@ -223,7 +224,7 @@ this.inGameProcessor= IN_GAME_PROCESSOR
 }
 
 
-open fun endIfPaintedSinceStart()
+    open fun endIfPaintedSinceStart()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -233,7 +234,7 @@ open fun endIfPaintedSinceStart()
 
     val ADD_EARLY_PORTION: String = "addEarlyPortion"
 
-open fun addEarlyPortion(value: Int, text: String, index: Int)
+    open fun addEarlyPortion(value: Int, text: String, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -245,7 +246,7 @@ this.gauge.setValue(this.gauge.getValue() +this.getMaxValue() /value)
 }
 
 
-open fun addPortion(value: Int, text: String, index: Int)
+    open fun addPortion(value: Int, text: String, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -258,7 +259,7 @@ this.gauge.setValue(this.gauge.getValue() +this.getMaxValue() /value)
 }
 
 
-open fun addPortion(value: Int, text: String)
+    open fun addPortion(value: Int, text: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -277,7 +278,7 @@ this.gauge.setValue(this.gauge.getValue() +this.getMaxValue() /value)
 }
 
 
-open fun setValue(value: Int)
+    open fun setValue(value: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -285,7 +286,8 @@ this.value= value.toFloat()
 this.gauge.setValue(value.toFloat())
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -293,7 +295,7 @@ this.paintable.paint(graphics)
 }
 
 
-open fun paint2(graphics: Graphics)
+    open fun paint2(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -306,14 +308,15 @@ gauge.paint(graphics, 0, 0)
 hasPainted= true
 }
 
-override fun paintThreed(graphics: Graphics)
+
+    override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 }
 
 
-open fun getValue()
+    open fun getValue()
         //nullable = true from not(false or (false and true)) = true
 : Float{
 
@@ -324,7 +327,7 @@ open fun getValue()
 }
 
 
-open fun setText(text: String)
+    open fun setText(text: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var text = text
@@ -332,7 +335,7 @@ this.text= text
 }
 
 
-open fun getText()
+    open fun getText()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -343,7 +346,7 @@ open fun getText()
 }
 
 
-open fun setBackground(background: Boolean)
+    open fun setBackground(background: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var background = background
@@ -351,7 +354,7 @@ this.background= background
 }
 
 
-open fun isBackground()
+    open fun isBackground()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

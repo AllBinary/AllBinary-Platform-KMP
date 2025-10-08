@@ -30,7 +30,7 @@ import org.allbinary.game.input.InputFactory
 
 open public class MotionGestureInput : Input {
         
-public constructor        (id: Int, name: String)                        
+public constructor (id: Int, name: String)                        
 
                             : super(id, name){
 var id = id

@@ -17,13 +17,12 @@ import org.allbinary.logic.string.StringUtil
 
 open public class CustomGaugeItem : CustomItem {
         
-
-        companion object {
+companion object {
             
     val NULL_GAUGE_ITEM: CustomGaugeItem = CustomGaugeItem(StringUtil.getInstance()!!.EMPTY_STRING, 1, 0, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)
 
         }
-            public constructor        (label: String, maxValue: Int, initialValue: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+            public constructor (label: String, maxValue: Int, initialValue: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(label, backgroundBasicColor, foregroundBasicColor){
 var label = label

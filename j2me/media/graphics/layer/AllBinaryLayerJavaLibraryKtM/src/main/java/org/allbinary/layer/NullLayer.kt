@@ -29,12 +29,11 @@ import javax.microedition.lcdui.Graphics
 
 open public class NullLayer : Layer {
         
-
-        companion object {
+companion object {
             
     private val instance: NullLayer = NullLayer()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : NullLayer{
 
@@ -46,7 +45,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()                        
+            private constructor ()                        
 
                             : super(0, 0){
 
@@ -55,7 +54,8 @@ open fun getInstance()
                     
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

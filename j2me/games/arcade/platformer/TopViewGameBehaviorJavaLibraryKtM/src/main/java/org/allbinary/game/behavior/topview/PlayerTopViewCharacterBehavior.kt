@@ -33,7 +33,6 @@ import org.allbinary.graphics.displayable.DisplayInfoSingleton
 import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.string.CommonSeps
 import org.allbinary.logic.string.StringMaker
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.BasicGeographicMapUtil
@@ -52,7 +51,7 @@ open public class PlayerTopViewCharacterBehavior : TopViewCharacterBehavior {
 
                 @Throws(Exception::class)
             
-open fun terrainEvent(layer: AllBinaryLayer, direction: Direction, x: Int, y: Int, geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellPosition: GeographicMapCellPosition)
+    open fun terrainEvent(layer: AllBinaryLayer, direction: Direction, x: Int, y: Int, geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layer = layer
@@ -65,7 +64,7 @@ TrackingEventHandler.getInstance()!!.fireEvent(TrackingEventCircularStaticPool.g
 }
 
 
-open fun terrainMove(layer: AllBinaryLayer, geographicMapInterfaceArray: Array<BasicGeographicMap?>, x: Int, y: Int)
+    open fun terrainMove(layer: AllBinaryLayer, geographicMapInterfaceArray: Array<BasicGeographicMap?>, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layer = layer
@@ -79,7 +78,7 @@ basicGeographicMapUtil!!.setPosition(geographicMapInterfaceArray, x, y)
 }
 
 
-open fun moveIfOnScreen(layer: AllBinaryLayer, ax: Int, ay: Int)
+    open fun moveIfOnScreen(layer: AllBinaryLayer, ax: Int, ay: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layer = layer
@@ -88,7 +87,7 @@ open fun moveIfOnScreen(layer: AllBinaryLayer, ax: Int, ay: Int)
 }
 
 
-open fun isTiledLayerMoveable(terrainTiledLayer: AllBinaryTiledLayer, x: Int, y: Int)
+    open fun isTiledLayerMoveable(terrainTiledLayer: AllBinaryTiledLayer, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var terrainTiledLayer = terrainTiledLayer

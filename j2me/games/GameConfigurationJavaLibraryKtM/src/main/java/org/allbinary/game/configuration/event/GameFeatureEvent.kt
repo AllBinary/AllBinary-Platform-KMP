@@ -31,7 +31,7 @@ open public class GameFeatureEvent : AllBinaryEventObject {
         
 
     private val whatChanged: String
-public constructor        (anyType: Any, whatChanged: String)                        
+public constructor (anyType: Any, whatChanged: String)                        
 
                             : super(anyType){
 var anyType = anyType
@@ -44,7 +44,7 @@ this.whatChanged= whatChanged
 }
 
 
-open fun getWhatChanged()
+    open fun getWhatChanged()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -55,7 +55,7 @@ open fun getWhatChanged()
 }
 
 
-open fun getGameOption()
+    open fun getGameOption()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 

@@ -67,7 +67,7 @@ open public class UserEntity : AbSqlBean
     private val NOT_EQUAL: String = "\"!=\""
 
     private val END_QUOTES: String = "\""
-public constructor        ()                        
+public constructor ()                        
 
                             : super(UserDbInitInfo()){
 
@@ -78,7 +78,7 @@ this.setTableName(tableName)
 }
 
 
-open fun insert(values: Vector)
+    open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 {
 var values = values
@@ -112,7 +112,7 @@ var values = values
 
                 @Throws(Exception::class)
             
-open fun getAdministrators()
+    open fun getAdministrators()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -125,7 +125,7 @@ open fun getAdministrators()
 
                 @Throws(Exception::class)
             
-open fun getStoreManagers(storeFrontInterface: StoreFrontInterface)
+    open fun getStoreManagers(storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var storeFrontInterface = storeFrontInterface
@@ -171,7 +171,7 @@ keysAndValues!!.put(UserData.PERMISSIONS, storeFrontInterface!!.getName())
 
                 @Throws(Exception::class)
             
-open fun getCustomers()
+    open fun getCustomers()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -184,7 +184,7 @@ open fun getCustomers()
 
                 @Throws(Exception::class)
             
-open fun getUsersWithRole(userRole: UserRole)
+    open fun getUsersWithRole(userRole: UserRole)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var userRole = userRole
@@ -229,7 +229,7 @@ keysAndValues!!.put(UserRoleData.NAME.toString(), userRole!!.toString())
 
                 @Throws(Exception::class)
             
-open fun getUsers(storeFrontInterface: StoreFrontInterface)
+    open fun getUsers(storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var storeFrontInterface = storeFrontInterface
@@ -274,7 +274,7 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeFrontInterface!!.g
 
                 @Throws(Exception::class)
             
-open fun getUser(userName: String)
+    open fun getUser(userName: String)
         //nullable = true from not(false or (false and false)) = true
 : UserInterface{
 var userName = userName
@@ -312,7 +312,7 @@ row.put(UserData.USERNAME, userName)
 }
 
 
-open fun deleteWhere(key: String, value: String)
+    open fun deleteWhere(key: String, value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var key = key
@@ -345,7 +345,7 @@ var value = value
 }
 
 
-open fun login(userName: String, password: String)
+    open fun login(userName: String, password: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var userName = userName
@@ -469,7 +469,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "login")
 }
 
 
-open fun update(userName: String, updatedValues: HashMap<Any, Any>)
+    open fun update(userName: String, updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var userName = userName
@@ -478,7 +478,7 @@ super.updateWhere(UserData.USERNAME, userName, updatedValues)
 }
 
 
-open fun dropTables()
+    open fun dropTables()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -489,7 +489,7 @@ open fun dropTables()
 }
 
 
-open fun createTableStatement()
+    open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -507,7 +507,7 @@ stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.appe
 }
 
 
-open fun createTable()
+    open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

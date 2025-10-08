@@ -30,72 +30,73 @@
 import org.allbinary.game.layer.AllBinaryTiledLayer
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.layer.Layer
+
 interface GeographicMapInterface {
         
 
-open fun getId()
+    open fun getId()
         //nullable = true from not(false or (false and true)) = true
 : Integer
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun reset()
+    open fun reset()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun getAllBinaryTiledLayer()
+    open fun getAllBinaryTiledLayer()
         //nullable = true from not(false or (false and true)) = true
 : AllBinaryTiledLayer
 
                 @Throws(Exception::class)
             
-open fun getCellPositionsAt(layer: Layer, currentCellPositionArray: Array<Array<GeographicMapCellPosition?>?>, cellPositionArray: Array<Array<GeographicMapCellPosition?>?>)
+    open fun getCellPositionsAt(layer: Layer, currentCellPositionArray: Array<Array<GeographicMapCellPosition?>?>, cellPositionArray: Array<Array<GeographicMapCellPosition?>?>)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
                 @Throws(Exception::class)
             
-open fun getCellPositionAt(x: Int, y: Int)
+    open fun getCellPositionAt(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellPosition
 
                 @Throws(Exception::class)
             
-open fun getCellPositionAtNoThrow(x: Int, y: Int)
+    open fun getCellPositionAtNoThrow(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellPosition
 
-open fun getCellTypeFromMapCellTypeInt(cellTypeId: Int)
+    open fun getCellTypeFromMapCellTypeInt(cellTypeId: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int
 
                 @Throws(Exception::class)
             
-open fun getCellTypeAt(x: Int, y: Int)
+    open fun getCellTypeAt(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellType
 
                 @Throws(Exception::class)
             
-open fun getCellTypeAt(geographicMapCellPosition: GeographicMapCellPosition)
+    open fun getCellTypeAt(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellType
 
-open fun getGeographicMapCellPositionFactory()
+    open fun getGeographicMapCellPositionFactory()
         //nullable = true from not(false or (false and true)) = true
 : BasicGeographicMapCellPositionFactory
 
-open fun getGeographicMapCellPositionFactoryInterface()
+    open fun getGeographicMapCellPositionFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPositionFactoryInterface
 
-open fun getForegroundBasicColor()
+    open fun getForegroundBasicColor()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor
 
-open fun getBackgroundBasicColor()
+    open fun getBackgroundBasicColor()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor
 

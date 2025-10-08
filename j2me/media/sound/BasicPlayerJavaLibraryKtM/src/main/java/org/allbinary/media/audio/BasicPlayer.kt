@@ -39,8 +39,7 @@ open public class BasicPlayer
                 , Player
                 , Controllable2 {
         
-
-        companion object {
+companion object {
             
     var CONTROL_TYPE: String = "ToneControl"
 
@@ -53,14 +52,15 @@ open public class BasicPlayer
     private var loopCount: Int= 0
 
     val listenersList: BasicArrayList = BasicArrayList()
-public constructor        ()
+public constructor ()
             : super()
         {
 this.setLoopCount(0)
 this.setState(Player.UNREALIZED)
 }
 
-override fun getContentType()
+
+    override fun getContentType()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -70,7 +70,8 @@ override fun getContentType()
                         return StringUtil.getInstance()!!.EMPTY_STRING
 }
 
-override fun getControl(controlType: String)
+
+    override fun getControl(controlType: String)
         //nullable = true from not(false or (false and false)) = true
 : Control{
 var controlType = controlType
@@ -81,7 +82,8 @@ var controlType = controlType
                         return NullControl()
 }
 
-override fun getControls()
+
+    override fun getControls()
         //nullable = true from not(false or (false and true)) = true
 : Array<Control?>{
 
@@ -91,13 +93,15 @@ override fun getControls()
                         return arrayOfNulls(0)
 }
 
-override fun close()
+
+    override fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun addPlayerListener(playerListener: PlayerListener)
+
+    override fun addPlayerListener(playerListener: PlayerListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var playerListener = playerListener
@@ -112,14 +116,16 @@ var playerListener = playerListener
                                 
 }
 
-override fun removePlayerListener(playerListener: PlayerListener)
+
+    override fun removePlayerListener(playerListener: PlayerListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var playerListener = playerListener
 this.listenersList!!.remove(playerListener)
 }
 
-override fun getState()
+
+    override fun getState()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -131,14 +137,15 @@ override fun getState()
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun setState(state: Int)
+    open fun setState(state: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var state = state
 this.state= state
 }
 
-override fun getDuration()
+
+    override fun getDuration()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -148,7 +155,8 @@ override fun getDuration()
                         return 0
 }
 
-override fun getMediaTime()
+
+    override fun getMediaTime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -158,27 +166,31 @@ override fun getMediaTime()
                         return 0
 }
 
-override fun deallocate()
+
+    override fun deallocate()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
                 @Throws(MediaException::class)
-            override fun prefetch()
+            
+    override fun prefetch()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
                 @Throws(MediaException::class)
-            override fun realize()
+            
+    override fun realize()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun setLoopCount(count: Int)
+
+    override fun setLoopCount(count: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var count = count
@@ -186,7 +198,7 @@ this.loopCount= count
 }
 
 
-open fun getLoopCount()
+    open fun getLoopCount()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -199,7 +211,8 @@ open fun getLoopCount()
 
                 @Throws(MediaException::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun setMediaTime(now: Long)
+
+    override fun setMediaTime(now: Long)
         //nullable = true from not(false or (false and false)) = true
 : Long{
 var now = now
@@ -213,7 +226,8 @@ var now = now
 
                 @Throws(MediaException::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun start()
+
+    override fun start()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setState(Player.STARTED)
@@ -222,13 +236,15 @@ this.setState(Player.STARTED)
 
                 @Throws(MediaException::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun stop()
+
+    override fun stop()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setState(Player.PREFETCHED)
 }
 
-override fun setVolume(leftVolume: Int, rightVolume: Int)
+
+    override fun setVolume(leftVolume: Int, rightVolume: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var leftVolume = leftVolume

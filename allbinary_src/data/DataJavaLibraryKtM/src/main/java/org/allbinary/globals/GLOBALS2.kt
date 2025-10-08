@@ -30,8 +30,7 @@ open public class GLOBALS2
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val GETCURRENTLOCATION: String = "Get Current Location"
 

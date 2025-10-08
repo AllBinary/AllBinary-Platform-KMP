@@ -41,7 +41,7 @@ open public class BoundBounceAI : BasicAI {
     private var layerBounds: LayerBounds
 
     private var boundsVisitorInterface: BoundsVisitorInterface
-public constructor        (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput, layerBounds: LayerBounds, boundsVisitorInterface: BoundsVisitorInterface)                        
+public constructor (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput, layerBounds: LayerBounds, boundsVisitorInterface: BoundsVisitorInterface)                        
 
                             : super(ownerLayerInterface, gameInput){
 var ownerLayerInterface = ownerLayerInterface
@@ -57,7 +57,7 @@ this.boundsVisitorInterface= boundsVisitorInterface
 }
 
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -69,7 +69,8 @@ graphics.drawRect(rectange.getPoint()!!.getX(), rectange.getPoint()!!.getY(), re
 
 
                 @Throws(Exception::class)
-            override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+            
+    override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager

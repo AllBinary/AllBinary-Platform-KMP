@@ -31,12 +31,13 @@ open public class PaintableComposite : Paintable {
         
 
     private var paintableArray: Array<PaintableInterface?>
-public constructor        (paintableArray: Array<PaintableInterface?>){
+public constructor (paintableArray: Array<PaintableInterface?>){
     //var paintableArray = paintableArray
 this.paintableArray= paintableArray
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -52,7 +53,8 @@ this.paintableArray[index]!!.paint(graphics)
 
 }
 
-override fun paintThreed(graphics: Graphics)
+
+    override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

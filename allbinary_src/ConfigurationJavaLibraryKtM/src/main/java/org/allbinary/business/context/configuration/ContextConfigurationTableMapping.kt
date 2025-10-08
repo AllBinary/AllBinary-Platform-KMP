@@ -36,7 +36,7 @@ open public class ContextConfigurationTableMapping
         
 
     private var contextConfigurationInterface: ContextConfigurationInterface
-public constructor        (contextConfigurationInterface: ContextConfigurationInterface)
+public constructor (contextConfigurationInterface: ContextConfigurationInterface)
             : super()
         {
 var contextConfigurationInterface = contextConfigurationInterface
@@ -44,7 +44,7 @@ this.contextConfigurationInterface= contextConfigurationInterface
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -60,7 +60,7 @@ open fun toHashMap()
 
                 @Throws(Exception::class)
             
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -73,7 +73,7 @@ open fun getKey()
 
                 @Throws(Exception::class)
             
-open fun toVector()
+    open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 

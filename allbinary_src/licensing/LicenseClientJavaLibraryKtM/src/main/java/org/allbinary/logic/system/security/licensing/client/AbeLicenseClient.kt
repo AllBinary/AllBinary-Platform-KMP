@@ -45,7 +45,7 @@ open public class AbeLicenseClient
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private val MINSERVERS: Int = 3
-public constructor        ()
+public constructor ()
             : super()
         {
 }
@@ -54,7 +54,7 @@ public constructor        ()
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun get(abeClientInformation: AbeClientInformationInterface)
+    open fun get(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
 : AbeLicenseInterface{
     //var abeClientInformation = abeClientInformation

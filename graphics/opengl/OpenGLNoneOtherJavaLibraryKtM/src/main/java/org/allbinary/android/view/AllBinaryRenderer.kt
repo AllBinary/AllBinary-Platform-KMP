@@ -32,12 +32,11 @@ open public class AllBinaryRenderer
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AllBinaryRenderer = AllBinaryRenderer()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AllBinaryRenderer{
 
@@ -55,14 +54,14 @@ open fun getInstance()
             {
             }            
         
-open fun setRunnable(runnable: Runnable)
+    open fun setRunnable(runnable: Runnable)
         //nullable = true from not(false or (false and false)) = true
 {
 var runnable = runnable
 }
 
 
-open fun clearRunnable()
+    open fun clearRunnable()
         //nullable = true from not(false or (false and true)) = true
 {
 }

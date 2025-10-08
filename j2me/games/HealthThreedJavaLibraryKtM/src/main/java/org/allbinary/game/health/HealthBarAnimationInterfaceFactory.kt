@@ -37,7 +37,7 @@ open public class HealthBarAnimationInterfaceFactory
                 , AnimationInterfaceFactoryInterface
                 , ProceduralAnimationInterfaceFactoryInterface {
         
-public constructor        ()
+public constructor ()
             : super()
         {
 }
@@ -45,7 +45,7 @@ public constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getInstance(layerInterface: AllBinaryLayer, location: Int)
+    open fun getInstance(layerInterface: AllBinaryLayer, location: Int)
         //nullable =  from not(true or (false and false)) = 
 : HealthBarAnimation{
 var layerInterface = layerInterface
@@ -60,7 +60,7 @@ var location = location
 
                 @Throws(Exception::class)
             
-open fun getInstance(instanceId: Int)
+    open fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var instanceId = instanceId
@@ -74,7 +74,7 @@ open fun getInstance(instanceId: Int)
 
                 @Throws(Exception::class)
             
-open fun getInstance(animationInterface: Animation)
+    open fun getInstance(animationInterface: Animation)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
 var animationInterface = animationInterface
@@ -86,7 +86,7 @@ var animationInterface = animationInterface
 }
 
 
-open fun setInitialScale(scaleProperties: ScaleProperties)
+    open fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
 {
     //var scaleProperties = scaleProperties

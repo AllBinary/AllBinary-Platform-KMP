@@ -27,10 +27,11 @@
         
 import org.allbinary.game.layer.AllBinaryGameLayerManager
 import org.allbinary.graphics.displayable.DisplayableInterface
+
 interface AllBinaryGameCanvasInterface : DisplayableInterface {
         
 
-open fun getLayerManager()
+    open fun getLayerManager()
         //nullable = true from not(false or (false and true)) = true
 : AllBinaryGameLayerManager
 

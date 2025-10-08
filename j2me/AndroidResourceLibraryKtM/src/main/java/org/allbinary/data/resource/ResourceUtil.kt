@@ -46,12 +46,11 @@ open public class ResourceUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ResourceUtil = ResourceUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ResourceUtil{
 
@@ -71,13 +70,13 @@ open fun getInstance()
     private var resources: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     private var hashMap: Hashtable<Any, Any> = Hashtable<Any, Any>()
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getContext()
+    open fun getContext()
         //nullable = true from not(false or (false and true)) = true
 : Context{
 
@@ -88,7 +87,7 @@ open fun getContext()
 }
 
 
-open fun setContext(activity: Activity)
+    open fun setContext(activity: Activity)
         //nullable = true from not(false or (false and false)) = true
 {
 var activity = activity
@@ -96,7 +95,7 @@ this.context= activity
 }
 
 
-open fun setContext(aContext: Context)
+    open fun setContext(aContext: Context)
         //nullable = true from not(false or (false and false)) = true
 {
 var aContext = aContext
@@ -104,7 +103,7 @@ this.context= aContext
 }
 
 
-open fun getResourceId(resource: String)
+    open fun getResourceId(resource: String)
         //nullable = true from not(false or (false and false)) = true
 : Integer{
 var resource = resource
@@ -129,7 +128,7 @@ var resource = resource
 }
 
 
-open fun addResource(resource: String, value: Integer)
+    open fun addResource(resource: String, value: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var resource = resource
@@ -158,7 +157,7 @@ this.hashMap!!.put(resource, value)
 }
 
 
-open fun containsDuplicate(resource: String, value: Integer)
+    open fun containsDuplicate(resource: String, value: Integer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var resource = resource
@@ -215,7 +214,7 @@ var value = value
 }
 
 
-open fun setResources(resources: Resources)
+    open fun setResources(resources: Resources)
         //nullable = true from not(false or (false and false)) = true
 {
     //var resources = resources
@@ -227,7 +226,7 @@ this.resources= resources
 
                 @Throws(Exception::class)
             
-open fun getResourceAsStream(resource: String)
+    open fun getResourceAsStream(resource: String)
         //nullable = true from not(false or (false and false)) = true
 : InputStream{
     //var resource = resource

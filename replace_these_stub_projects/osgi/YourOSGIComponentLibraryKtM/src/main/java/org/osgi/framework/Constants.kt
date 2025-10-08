@@ -12,10 +12,10 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.string.StringUtil
+
 interface Constants {
         
-
-        companion object {
+companion object {
             
     val BUNDLE_SYMBOLICNAME: String = StringUtil.getInstance()!!.EMPTY_STRING
 

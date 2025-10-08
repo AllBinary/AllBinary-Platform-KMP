@@ -35,7 +35,7 @@ open public class GeographicMapCellPositionEventUtil
     private val geographicMapCellPositionEvent: GeographicMapCellPositionEvent
 
     private val geographicMapCellPositionEventHandler: GeographicMapCellPositionEventHandler = GeographicMapCellPositionEventHandler.getInstance()!!
-public constructor        (anyType: Any)
+public constructor (anyType: Any)
             : super()
         {
 var anyType = anyType
@@ -46,7 +46,7 @@ geographicMapCellPositionEvent= GeographicMapCellPositionEvent(anyType,
 
                 @Throws(Exception::class)
             
-open fun update(geographicMapCellPositionTracking: GeographicMapCellPositionTracking)
+    open fun update(geographicMapCellPositionTracking: GeographicMapCellPositionTracking)
         //nullable = true from not(false or (false and false)) = true
 {
 var geographicMapCellPositionTracking = geographicMapCellPositionTracking
@@ -57,7 +57,7 @@ geographicMapCellPositionEventHandler!!.fireEvent(geographicMapCellPositionEvent
 
                 @Throws(Exception::class)
             
-open fun remove(geographicMapCellPositionTracking: GeographicMapCellPositionTracking)
+    open fun remove(geographicMapCellPositionTracking: GeographicMapCellPositionTracking)
         //nullable = true from not(false or (false and false)) = true
 {
 var geographicMapCellPositionTracking = geographicMapCellPositionTracking

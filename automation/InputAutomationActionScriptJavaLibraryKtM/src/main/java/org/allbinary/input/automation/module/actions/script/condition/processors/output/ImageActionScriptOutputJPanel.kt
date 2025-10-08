@@ -39,7 +39,7 @@ open public class ImageActionScriptOutputJPanel : javax.swing.JPanel {
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var capturedImageActionScriptOutputInterface: ImageActionScriptOutputInterface
-public constructor        (capturedImageActionScriptOutputInterface: ImageActionScriptOutputInterface){
+public constructor (capturedImageActionScriptOutputInterface: ImageActionScriptOutputInterface){
 var capturedImageActionScriptOutputInterface = capturedImageActionScriptOutputInterface
 logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 initComponents()
@@ -48,7 +48,7 @@ this.set()
 }
 
 
-open fun set()
+    open fun set()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setImageTypeJlistModel()
@@ -100,7 +100,7 @@ this.capturedImageActionScriptOutputInterface!!.log()
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -144,7 +144,7 @@ this.capturedImageActionScriptOutputInterface!!.log()
 }
 
 
-open fun setImageTypeJlistModel()
+    open fun setImageTypeJlistModel()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -173,7 +173,7 @@ this.itemTypesJList!!.setModel(defaultListModel)
 }
 
 
-open fun getCapturedImageActionJDialog()
+    open fun getCapturedImageActionJDialog()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JDialog{
 
@@ -184,7 +184,7 @@ open fun getCapturedImageActionJDialog()
 }
 
 
-open fun setCapturedImageActionJDialog(capturedImageActionJDialog: javax.swing.JDialog)
+    open fun setCapturedImageActionJDialog(capturedImageActionJDialog: javax.swing.JDialog)
         //nullable = true from not(false or (false and false)) = true
 {
 var capturedImageActionJDialog = capturedImageActionJDialog
@@ -192,7 +192,7 @@ this.capturedImageActionJDialog= capturedImageActionJDialog
 }
 
 
-open fun initComponents()
+    open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
 capturedImageActionJDialog= javax.swing.JDialog()
@@ -210,7 +210,7 @@ okJButton!!.setText("OK")
 okJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -228,7 +228,7 @@ displayJCheckBox!!.setMargin(java.awt.Insets(0, 0, 0, 0))
 displayJCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -242,7 +242,7 @@ itemTypesJList!!.setModel(object: javax.swing.AbstractListModel()
                                 
     var strings: Array<String?> = arrayOf("Item 1","Item 2","Item 3","Item 4","Item 5")
 
-open override fun getSize()
+    open override fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -252,7 +252,7 @@ open override fun getSize()
                         return strings.size
 }
 
-open override fun getElementAt(i: Int)
+    open override fun getElementAt(i: Int)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var i = i
@@ -277,7 +277,7 @@ capturedImageActionJButton!!.setText("Edit")
 capturedImageActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -296,14 +296,14 @@ layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Align
 }
 
 
-open fun displayJCheckBoxActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun displayJCheckBoxActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
 }
 
 
-open fun okJButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun okJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -312,7 +312,7 @@ this.getCapturedImageActionJDialog()!!.setVisible(false)
 }
 
 
-open fun capturedImageActionJButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun capturedImageActionJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt

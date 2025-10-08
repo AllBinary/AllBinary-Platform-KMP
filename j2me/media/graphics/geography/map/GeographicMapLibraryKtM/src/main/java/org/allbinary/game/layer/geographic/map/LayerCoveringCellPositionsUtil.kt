@@ -36,12 +36,11 @@ open public class LayerCoveringCellPositionsUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: LayerCoveringCellPositionsUtil = LayerCoveringCellPositionsUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : LayerCoveringCellPositionsUtil{
 
@@ -63,7 +62,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun getAll(geographicMapInterface: BasicGeographicMap, layerInterface: AllBinaryLayer, x: Int, y: Int, reusableList: BasicArrayList)
+    open fun getAll(geographicMapInterface: BasicGeographicMap, layerInterface: AllBinaryLayer, x: Int, y: Int, reusableList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var geographicMapInterface = geographicMapInterface
@@ -84,7 +83,7 @@ open fun getAll(geographicMapInterface: BasicGeographicMap, layerInterface: AllB
 
                 @Throws(Exception::class)
             
-open fun getAll(geographicMapInterface: BasicGeographicMap, topLeftGeographicMapCellPosition: GeographicMapCellPosition, layerInterface: AllBinaryLayer, reusableList: BasicArrayList)
+    open fun getAll(geographicMapInterface: BasicGeographicMap, topLeftGeographicMapCellPosition: GeographicMapCellPosition, layerInterface: AllBinaryLayer, reusableList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var geographicMapInterface = geographicMapInterface

@@ -48,12 +48,12 @@ open public class HeadingValidation : Validation
     private var title: TitleValidation
 
     private var logo: LogoValidation
-public constructor        (){
+public constructor (){
 this.title= TitleValidation()
 this.logo= LogoValidation()
 }
 
-public constructor        (document: Document){
+public constructor (document: Document){
 var document = document
 
     var headingNodeList: NodeList = document.getElementsByTagName(HeadingData.NAME)!!
@@ -68,7 +68,7 @@ this.title= TitleValidation(titleNode)
 this.logo= LogoValidation(logoNode)
 }
 
-public constructor        (hashMap: HashMap<Any, Any>){
+public constructor (hashMap: HashMap<Any, Any>){
 var hashMap = hashMap
 this.getFormData(hashMap)
 }
@@ -76,7 +76,7 @@ this.getFormData(hashMap)
 
                 @Throws(Exception::class)
             
-open fun getFormData(hashMap: HashMap<Any, Any>)
+    open fun getFormData(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var hashMap = hashMap
@@ -85,7 +85,7 @@ this.logo= LogoValidation(hashMap)
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -175,7 +175,7 @@ open fun isValid()
 }
 
 
-open fun validationInfo()
+    open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -254,7 +254,7 @@ open fun validationInfo()
 }
 
 
-open fun toValidationInfoDoc()
+    open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -265,7 +265,7 @@ open fun toValidationInfoDoc()
 }
 
 
-open fun toValidationInfoNode(document: Document)
+    open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -279,7 +279,7 @@ var document = document
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

@@ -46,7 +46,7 @@ open public class AllBinaryTiledLayerFactory
         
                 @Throws(Exception::class)
             
-open fun getInstance(raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrackData)
+    open fun getInstance(raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrackData)
         //nullable =  from not(true or (false and false)) = 
 : AllBinaryTiledLayer{
     //var raceTrackInfo = raceTrackInfo
@@ -70,7 +70,7 @@ allbinaryTiledLayer!!.setCells(raceTrackData!!.getMapArray())
 
                 @Throws(Exception::class)
             
-open fun getMiniInstance(raceTrackData: RaceTrackData)
+    open fun getMiniInstance(raceTrackData: RaceTrackData)
         //nullable = true from not(false or (false and false)) = true
 : AllBinaryTiledLayer{
 var raceTrackData = raceTrackData

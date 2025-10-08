@@ -25,73 +25,75 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface AdvertisementsInterface {
         
 
-open fun add(advertisementInterface: AdvertisementInterface)
+    open fun add(advertisementInterface: AdvertisementInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun get(index: Int)
+    open fun get(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : AdvertisementInterface
 
-open fun getCurrentPageNum()
+    open fun getCurrentPageNum()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getErrorDescription()
+    open fun getErrorDescription()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getErrorNum()
+    open fun getErrorNum()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getNumberOfPosters()
+    open fun getNumberOfPosters()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getNumberOfProductsInPage()
+    open fun getNumberOfProductsInPage()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getStatusCode()
+    open fun getStatusCode()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getTotalNumberOfProducts()
+    open fun getTotalNumberOfProducts()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun isSearchValid()
+    open fun isSearchValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun setCurrentPageNum(currentPageNum: Int)
+    open fun setCurrentPageNum(currentPageNum: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setErrorDescription(errorDescription: String)
+    open fun setErrorDescription(errorDescription: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setErrorNum(errorNum: String)
+    open fun setErrorNum(errorNum: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setNumberOfProductsInPage(numberOfProductsInPage: Int)
+    open fun setNumberOfProductsInPage(numberOfProductsInPage: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setStatusCode(statusCode: Int)
+    open fun setStatusCode(statusCode: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setTotalNumberOfProducts(totalNumberOfProducts: Int)
+    open fun setTotalNumberOfProducts(totalNumberOfProducts: Int)
         //nullable = true from not(false or (false and false)) = true
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String
 

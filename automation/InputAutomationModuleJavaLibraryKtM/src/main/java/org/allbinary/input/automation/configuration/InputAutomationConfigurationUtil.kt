@@ -32,12 +32,11 @@ open public class InputAutomationConfigurationUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun getChangeEvent(inputAutomationModuleInterface: InputAutomationModuleFactoryInterface)
+    open fun getChangeEvent(inputAutomationModuleInterface: InputAutomationModuleFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
 : InputAutomationConfigurationModuleChangeEvent{
 var inputAutomationModuleInterface = inputAutomationModuleInterface
@@ -56,7 +55,7 @@ var inputAutomationModuleInterface = inputAutomationModuleInterface
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

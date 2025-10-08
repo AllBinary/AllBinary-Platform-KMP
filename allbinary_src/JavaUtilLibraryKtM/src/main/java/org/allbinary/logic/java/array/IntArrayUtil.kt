@@ -31,10 +31,9 @@ open public class IntArrayUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun toString(array: IntArray)
+    open fun toString(array: IntArray)
         //nullable = true from not(false or (true and false)) = true
 : String{
 var array = array
@@ -68,7 +67,7 @@ stringBuffer!!.append(array[index]!!)
 }
 
 
-open fun toString(array: Array<IntArray?>)
+    open fun toString(array: Array<IntArray?>)
         //nullable = true from not(false or (true and false)) = true
 : String{
 var array = array
@@ -122,7 +121,7 @@ stringBuffer!!.append("}")
 }
 
 
-open fun toString(array: Array<Array<IntArray?>?>)
+    open fun toString(array: Array<Array<IntArray?>?>)
         //nullable = true from not(false or (true and false)) = true
 : String{
 var array = array
@@ -197,7 +196,7 @@ stringBuffer!!.append("}")
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

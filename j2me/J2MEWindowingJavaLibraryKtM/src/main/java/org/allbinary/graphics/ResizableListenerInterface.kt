@@ -25,10 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface ResizableListenerInterface {
         
 
-open fun onResizable(isResizable: Boolean)
+    open fun onResizable(isResizable: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
 

@@ -25,10 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface MultiPlayerGameLayerInterface {
         
 
-open fun getMultiplayerBehavior()
+    open fun getMultiplayerBehavior()
         //nullable = true from not(false or (false and true)) = true
 : MultiplayerBehavior
 

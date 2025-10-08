@@ -30,13 +30,12 @@ open public class InputAutomationModulesData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var NAME: String = "INPUT_AUTOMATION_MODULES"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

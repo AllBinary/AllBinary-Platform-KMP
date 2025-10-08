@@ -38,7 +38,7 @@ open public class FileDomDataModel
         
 
     private var file: AbFile
-public constructor        (file: AbFile)
+public constructor (file: AbFile)
             : super()
         {
 var file = file
@@ -48,7 +48,7 @@ this.file= file
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

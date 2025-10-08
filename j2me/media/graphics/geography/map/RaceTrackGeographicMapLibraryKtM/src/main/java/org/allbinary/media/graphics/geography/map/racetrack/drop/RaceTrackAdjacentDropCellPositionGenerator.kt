@@ -47,12 +47,11 @@ import org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicM
 
 open public class RaceTrackAdjacentDropCellPositionGenerator : RaceTrackDropCellPositionGenerator {
         
-
-        companion object {
+companion object {
             
     private var SINGLETON: RaceTrackAdjacentDropCellPositionGenerator = RaceTrackAdjacentDropCellPositionGenerator()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DropCellPositionGeneratorInterface{
 
@@ -68,13 +67,13 @@ open fun getInstance()
     private val layerCoveringCellPositionsUtil: LayerCoveringCellPositionsUtil = LayerCoveringCellPositionsUtil.getInstance()!!
 
     private var surroundingCellPositions: Array<GeographicMapCellPosition?> = arrayOfNulls(4)
-private constructor        (){
+private constructor (){
 }
 
 
                 @Throws(Exception::class)
             
-open fun getFirstNonRoadAdjacentCellPosition(column: Int, row: Int)
+    open fun getFirstNonRoadAdjacentCellPosition(column: Int, row: Int)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellPosition{
     //var column = column
@@ -135,7 +134,7 @@ break;
 
                 @Throws(Exception::class)
             
-open fun update(allBinaryGameLayerManager: AllBinaryGameLayerManager, geographicMapInterface: BasicGeographicMap)
+    open fun update(allBinaryGameLayerManager: AllBinaryGameLayerManager, geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -149,7 +148,7 @@ super.update(allBinaryGameLayerManager, geographicMapInterface)
 
                 @Throws(Exception::class)
             
-open fun drop(allBinaryLayerManager: AllBinaryLayerManager, index: Int)
+    open fun drop(allBinaryLayerManager: AllBinaryLayerManager, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryLayerManager = allBinaryLayerManager

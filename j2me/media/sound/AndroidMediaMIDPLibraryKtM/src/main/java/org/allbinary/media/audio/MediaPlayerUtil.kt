@@ -34,12 +34,11 @@ open public class MediaPlayerUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: MediaPlayerUtil = MediaPlayerUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : MediaPlayerUtil{
 
@@ -61,7 +60,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun wait(mediaPlayer: MediaPlayer)
+    open fun wait(mediaPlayer: MediaPlayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var mediaPlayer = mediaPlayer

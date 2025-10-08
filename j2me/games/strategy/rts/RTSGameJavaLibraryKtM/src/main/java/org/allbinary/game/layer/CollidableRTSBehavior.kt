@@ -31,7 +31,7 @@ import org.allbinary.game.layer.special.CollidableDestroyableDamageableBehavior
 
 open public class CollidableRTSBehavior : CollidableDestroyableDamageableBehavior {
         
-public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
+public constructor (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
 
                             : super(ownerLayer, collidable){
     //var ownerLayer = ownerLayer
@@ -43,7 +43,7 @@ public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boo
 }
 
 
-open fun isCollision(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
+    open fun isCollision(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
@@ -110,7 +110,7 @@ open fun isCollision(collidableInterfaceCompositeInterface: CollidableCompositeL
 
                 @Throws(Exception::class)
             
-open fun collide(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
+    open fun collide(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
@@ -147,7 +147,7 @@ open fun collide(collidableInterfaceCompositeInterface: CollidableCompositeLayer
 
                 @Throws(Exception::class)
             
-open fun collideNone(collidableInterface: CollidableCompositeLayer)
+    open fun collideNone(collidableInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var collidableInterface = collidableInterface

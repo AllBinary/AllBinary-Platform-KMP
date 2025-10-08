@@ -30,13 +30,13 @@ open public class TransformInfoFactory
             : Object
          {
         
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TransformInfoInterface{
 

@@ -27,12 +27,13 @@
         
 import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.layer.NamedInterface
+
 interface TickableInterface : NamedInterface {
         
 
                 @Throws(Exception::class)
             
-open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
+    open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 
 

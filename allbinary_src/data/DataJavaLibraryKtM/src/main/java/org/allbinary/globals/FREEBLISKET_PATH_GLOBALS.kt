@@ -32,12 +32,11 @@ open public class FREEBLISKET_PATH_GLOBALS
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: FREEBLISKET_PATH_GLOBALS = FREEBLISKET_PATH_GLOBALS()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : FREEBLISKET_PATH_GLOBALS{
 
@@ -73,7 +72,7 @@ open fun getInstance()
     val LICENSEERRORPAGE: String = "LicensingError.jsp"
 
     val ERRORPAGE: String = "Error.jsp"
-private constructor        ()
+private constructor ()
             : super()
         {
 

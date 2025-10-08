@@ -31,12 +31,11 @@ open public class HighScoreCommands
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: HighScoreCommands = HighScoreCommands()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : HighScoreCommands{
 

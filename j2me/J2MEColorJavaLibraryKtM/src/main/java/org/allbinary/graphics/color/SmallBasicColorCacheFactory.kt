@@ -31,12 +31,11 @@ open public class SmallBasicColorCacheFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: SmallBasicColorCacheFactory = SmallBasicColorCacheFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : SmallBasicColorCacheFactory{
 
@@ -56,13 +55,13 @@ open fun getInstance()
     private val BASIC_COLOR_ARRAY: Array<BasicColor?> = arrayOfNulls(SIZE)
 
     private var colorIndex: Int = 0
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun add(basicDefaultColor: BasicColor)
+    open fun add(basicDefaultColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var basicDefaultColor = basicDefaultColor
@@ -72,7 +71,7 @@ colorIndex++
 }
 
 
-open fun getInstance(colorAsInt: Int)
+    open fun getInstance(colorAsInt: Int)
         //nullable =  from not(true or (false and false)) = 
 : BasicColor{
     //var colorAsInt = colorAsInt

@@ -38,7 +38,7 @@ open public class MathVector
     private var direction: Int
 
     var resultBasicDecimal: BasicDecimal
-public constructor        (magnitudeBasicDecimal: BasicDecimal, direction: Int)
+public constructor (magnitudeBasicDecimal: BasicDecimal, direction: Int)
             : super()
         {
 var magnitudeBasicDecimal = magnitudeBasicDecimal
@@ -48,7 +48,7 @@ this.direction= direction
 }
 
 
-open fun getMagnitude()
+    open fun getMagnitude()
         //nullable = true from not(false or (false and true)) = true
 : BasicDecimal{
 
@@ -59,7 +59,7 @@ open fun getMagnitude()
 }
 
 
-open fun getDirection()
+    open fun getDirection()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -70,7 +70,7 @@ open fun getDirection()
 }
 
 
-open fun getResult()
+    open fun getResult()
         //nullable = true from not(false or (false and true)) = true
 : BasicDecimal{
 

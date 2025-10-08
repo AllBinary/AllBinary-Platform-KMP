@@ -32,12 +32,11 @@ open public class ImageCreationUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ImageCreationUtil = ImageCreationUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ImageCreationUtil{
 
@@ -49,7 +48,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
@@ -57,7 +56,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun getInstance(width: Int, height: Int)
+    open fun getInstance(width: Int, height: Int)
         //nullable =  from not(true or (false and false)) = 
 : Image{
     //var width = width
@@ -75,7 +74,7 @@ open fun getInstance(width: Int, height: Int)
 
                 @Throws(Exception::class)
             
-open fun createImage(width: Int, height: Int, maxScaleX: Float, maxScaleY: Float)
+    open fun createImage(width: Int, height: Int, maxScaleX: Float, maxScaleY: Float)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var width = width

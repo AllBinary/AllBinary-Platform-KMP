@@ -34,7 +34,7 @@ open public class GeographicMapCellHistoryProgress
     private var totalVisitedArray: IntArray
 
     private var geographicMapCellHistoryArray: Array<GeographicMapCellHistory?>
-public constructor        (geographicMapCellHistoryArray: Array<GeographicMapCellHistory?>)
+public constructor (geographicMapCellHistoryArray: Array<GeographicMapCellHistory?>)
             : super()
         {
 var geographicMapCellHistoryArray = geographicMapCellHistoryArray
@@ -43,14 +43,14 @@ this.init()
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 this.totalVisitedArray= IntArray(this.geographicMapCellHistoryArray!!.size)
 }
 
 
-open fun isAnyProgress()
+    open fun isAnyProgress()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

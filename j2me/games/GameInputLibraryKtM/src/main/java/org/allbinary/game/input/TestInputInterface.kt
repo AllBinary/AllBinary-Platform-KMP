@@ -26,30 +26,31 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.graphics.paint.PaintableInterface
+
 interface TestInputInterface : PaintableInterface {
         
 
-open fun up()
+    open fun up()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun down()
+    open fun down()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun left()
+    open fun left()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun right()
+    open fun right()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun strafeLeft()
+    open fun strafeLeft()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun strafeRight()
+    open fun strafeRight()
         //nullable = true from not(false or (false and true)) = true
 
 

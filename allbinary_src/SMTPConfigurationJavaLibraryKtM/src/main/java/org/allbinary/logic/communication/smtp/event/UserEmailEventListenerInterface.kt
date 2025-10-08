@@ -26,12 +26,13 @@
         import kotlin.reflect.KClass
         
 import java.util.EventListener
+
 interface UserEmailEventListenerInterface : EventListener {
         
 
                 @Throws(Exception::class)
             
-open fun onEmailSendRequest(userEmailInfoEvent: EmailEvent)
+    open fun onEmailSendRequest(userEmailInfoEvent: EmailEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

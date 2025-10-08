@@ -30,8 +30,7 @@ open public class SpecialItemData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val START_TIME: String = "SPECIALITEM_START_TIME"
 

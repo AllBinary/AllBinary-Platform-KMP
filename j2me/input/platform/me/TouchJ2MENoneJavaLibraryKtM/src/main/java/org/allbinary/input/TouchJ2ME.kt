@@ -30,13 +30,13 @@ open public class TouchJ2ME
             : Object
          {
         
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun pointerDragged(x: Int, y: Int)
+    open fun pointerDragged(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -44,7 +44,7 @@ var y = y
 }
 
 
-open fun pointerPressed(x: Int, y: Int)
+    open fun pointerPressed(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -52,7 +52,7 @@ var y = y
 }
 
 
-open fun pointerReleased(x: Int, y: Int)
+    open fun pointerReleased(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x

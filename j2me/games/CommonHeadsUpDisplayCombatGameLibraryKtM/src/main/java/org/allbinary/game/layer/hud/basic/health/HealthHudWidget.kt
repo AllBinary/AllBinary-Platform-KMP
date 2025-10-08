@@ -52,7 +52,7 @@ open public class HealthHudWidget : BasicHud
     private var xArray: IntArray
 
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
-public constructor        (animationInterface: Animation, healthInterface: Health, location: Int, direction: Int)                        
+public constructor (animationInterface: Animation, healthInterface: Health, location: Int, direction: Int)                        
 
                             : super(location, direction, 16, healthInterface!!.getMaxHealth() *16, 2){
 var animationInterface = animationInterface
@@ -73,7 +73,7 @@ this.update()
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -98,7 +98,8 @@ this.xArray[index]= this.getX() +(index *16)
                                 
 }
 
-override fun setX(x: Int)
+
+    override fun setX(x: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -114,7 +115,8 @@ this.update()
     private val mediumBeatTimeDelayHelper: TimeDelayHelper = TimeDelayHelper(640)
 
     private val fastBeatTimeDelayHelper: TimeDelayHelper = TimeDelayHelper(320)
-override fun onHealthChange()
+
+    override fun onHealthChange()
         //nullable = true from not(false or (false and true)) = true
 {
 max= (this.healthInterface!!.getHealth() /this.healthScale)
@@ -153,7 +155,8 @@ timeDelayHelper= NoTimeDelayHelper.SINGLETON
                                 
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -177,7 +180,8 @@ var graphics = graphics
 
 }
 
-override fun paintThreed(graphics: Graphics)
+
+    override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

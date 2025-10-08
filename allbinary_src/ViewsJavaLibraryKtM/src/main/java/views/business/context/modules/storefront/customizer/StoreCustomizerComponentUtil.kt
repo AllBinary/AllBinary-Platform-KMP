@@ -37,12 +37,11 @@ open public class StoreCustomizerComponentUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: StoreCustomizerComponentUtil = StoreCustomizerComponentUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : StoreCustomizerComponentUtil{
 
@@ -56,7 +55,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -64,7 +63,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun generate(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)
+    open fun generate(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var abeClientInformation = abeClientInformation
@@ -122,7 +121,7 @@ generate(abeClientInformation, transformInfoInterface, allViewsToBeModified)
 
                 @Throws(Exception::class)
             
-open fun generate(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, allViewsToBeModifiedVector: Vector)
+    open fun generate(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, allViewsToBeModifiedVector: Vector)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation

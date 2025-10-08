@@ -43,7 +43,7 @@ open public class StoreFrontUsersStatistics
     private var totalNumberOfUsers: Long
 
     private var totalUsersByRoleHashMap: HashMap<Any, Any>
-public constructor        (storeFrontInterface: StoreFrontInterface)
+public constructor (storeFrontInterface: StoreFrontInterface)
             : super()
         {
 var storeFrontInterface = storeFrontInterface
@@ -80,7 +80,7 @@ totalUsersByRoleHashMap!!.put(nextUserRole, currentNumberOfUsersForRole)
 }
 
 
-open fun getNewTotal(userRole: UserRole)
+    open fun getNewTotal(userRole: UserRole)
         //nullable = true from not(false or (false and false)) = true
 : Long{
 var userRole = userRole
@@ -106,7 +106,7 @@ var userRole = userRole
 }
 
 
-open fun getNumberOfUsers()
+    open fun getNumberOfUsers()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -117,7 +117,7 @@ open fun getNumberOfUsers()
 }
 
 
-open fun getNumberOfUsersByRole(role: String)
+    open fun getNumberOfUsersByRole(role: String)
         //nullable = true from not(false or (false and false)) = true
 : Long{
 var role = role
@@ -132,7 +132,7 @@ var role = role
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -174,7 +174,7 @@ hashMap!!.put(nextUserRole!!.toString(), totalForRole!!.toString())
 }
 
 
-open fun toVector()
+    open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -185,7 +185,7 @@ open fun toVector()
 }
 
 
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 

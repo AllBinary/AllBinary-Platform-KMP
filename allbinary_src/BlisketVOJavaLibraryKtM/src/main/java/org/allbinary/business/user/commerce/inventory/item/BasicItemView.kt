@@ -49,7 +49,7 @@ open public class BasicItemView
     private val itemInterface: ItemInterface
 
     private val vector: Vector
-public constructor        (itemInterface: ItemInterface, vector: Vector)
+public constructor (itemInterface: ItemInterface, vector: Vector)
             : super()
         {
 var itemInterface = itemInterface
@@ -61,7 +61,7 @@ this.vector= vector
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -145,7 +145,7 @@ node.appendChild(customNode)
 }
 
 
-open fun toXmlDoc()
+    open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -156,7 +156,7 @@ open fun toXmlDoc()
 }
 
 
-open fun view()
+    open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

@@ -26,7 +26,7 @@ open public class MultipleScrollSelectionHorizontalForm : ScrollSelectionForm {
         
 
     private val backgroundColor: Int = BasicColorFactory.getInstance()!!.TRANSPARENT_GREY.toInt()!!
-public constructor        (title: String, items: Array<CustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (title: String, items: Array<CustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(title, items, formPaintableFactory, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor){
     //var title = title
@@ -43,7 +43,7 @@ public constructor        (title: String, items: Array<CustomItem?>, formPaintab
                     
 }
 
-public constructor        (title: String, items: Array<CustomItem?>, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (title: String, items: Array<CustomItem?>, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(title, items, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor){
     //var title = title
@@ -59,7 +59,8 @@ public constructor        (title: String, items: Array<CustomItem?>, rectangle: 
                     
 }
 
-override fun getStartIndex()
+
+    override fun getStartIndex()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -69,7 +70,8 @@ override fun getStartIndex()
                         return this.getSelectedIndex()
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics

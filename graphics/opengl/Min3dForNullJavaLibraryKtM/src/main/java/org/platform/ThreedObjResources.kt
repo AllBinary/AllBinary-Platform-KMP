@@ -31,12 +31,11 @@ open public class ThreedObjResources
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ThreedObjResources = ThreedObjResources()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ThreedObjResources{
 
@@ -56,7 +55,7 @@ open fun getInstance()
         
     val hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
-open fun get(resourceName: String)
+    open fun get(resourceName: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var resourceName = resourceName

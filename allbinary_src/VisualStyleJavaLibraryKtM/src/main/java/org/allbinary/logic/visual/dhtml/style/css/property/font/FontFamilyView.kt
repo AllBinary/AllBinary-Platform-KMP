@@ -30,7 +30,7 @@ import org.w3c.dom.Node
 
 open public class FontFamilyView : CssPropertyView {
         
-public constructor        ()                        
+public constructor ()                        
 
                             : super(FontFamilyData.getInstance()!!.VALUE){
 
@@ -39,7 +39,7 @@ public constructor        ()
                     
 }
 
-public constructor        (node: Node)                        
+public constructor (node: Node)                        
 
                             : super(node){
 var node = node

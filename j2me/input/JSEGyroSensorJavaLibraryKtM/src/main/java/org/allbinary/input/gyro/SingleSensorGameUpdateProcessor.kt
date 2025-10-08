@@ -41,7 +41,7 @@ open public class SingleSensorGameUpdateProcessor : SensorGameUpdateProcessor {
 
                 @Throws(Exception::class)
             
-open fun process(anyType: Any)
+    open fun process(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var anyType = anyType
@@ -51,7 +51,7 @@ this.setNoSensors()
 
                 @Throws(Exception::class)
             
-open fun sendNotifications(anyType: Any)
+    open fun sendNotifications(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var anyType = anyType

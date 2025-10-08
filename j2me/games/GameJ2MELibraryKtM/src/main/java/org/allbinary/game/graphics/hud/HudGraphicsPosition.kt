@@ -32,8 +32,7 @@ open public class HudGraphicsPosition
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NULL_HUD_GRAPHICS_POSITION: HudGraphicsPosition = HudGraphicsPosition(PointFactory.getInstance()!!.ZERO_ZERO, 9)
 
@@ -42,7 +41,7 @@ open public class HudGraphicsPosition
     private var anchor: Int= 0
 
     private var point: GPoint = PointFactory.getInstance()!!.ZERO_ZERO
-public constructor        (point: GPoint, anchor: Int)
+public constructor (point: GPoint, anchor: Int)
             : super()
         {
 var point = point
@@ -52,7 +51,7 @@ this.setPoint(point)
 }
 
 
-open fun getAnchor()
+    open fun getAnchor()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -63,7 +62,7 @@ open fun getAnchor()
 }
 
 
-open fun setAnchor(anchor: Int)
+    open fun setAnchor(anchor: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var anchor = anchor
@@ -71,7 +70,7 @@ this.anchor= anchor
 }
 
 
-open fun getPoint()
+    open fun getPoint()
         //nullable = true from not(false or (false and true)) = true
 : GPoint{
 
@@ -82,7 +81,7 @@ open fun getPoint()
 }
 
 
-open fun setPoint(point: GPoint)
+    open fun setPoint(point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 {
 var point = point

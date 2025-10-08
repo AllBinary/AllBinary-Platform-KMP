@@ -44,14 +44,16 @@ open public class SingleKeyPressGameKeyFromMotionGestureEventListener : Complete
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-override fun onEvent(eventObject: AllBinaryEventObject)
+
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
-override fun onCompleteMotionGestureInputEvent(completeMotionGestureInputEvent: CompleteMotionGestureInputEvent)
+
+    override fun onCompleteMotionGestureInputEvent(completeMotionGestureInputEvent: CompleteMotionGestureInputEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var completeMotionGestureInputEvent = completeMotionGestureInputEvent

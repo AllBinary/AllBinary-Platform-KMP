@@ -41,11 +41,11 @@ open public class MultiSelectPaintable : SelectionHudPaintable {
     private val rootNameList: BasicArrayList = BasicArrayList()
 
     private var rootNamesString: String = StringUtil.getInstance()!!.EMPTY_STRING
-public constructor        (){
+public constructor (){
 }
 
 
-open fun update(list: BasicArrayList)
+    open fun update(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var list = list
@@ -110,7 +110,7 @@ this.rootNamesString= stringBuffer!!.toString()
 }
 
 
-open fun clear()
+    open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 this.rootNameList!!.clear()
@@ -123,7 +123,7 @@ this.rootNameList!!.clear()
 
     private val backgroundColor: Int = BasicColorFactory.getInstance()!!.GREY.toInt()!!
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

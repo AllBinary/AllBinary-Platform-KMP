@@ -31,12 +31,11 @@ open public class DistanceUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: DistanceUtil = DistanceUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DistanceUtil{
 
@@ -56,7 +55,7 @@ open fun getInstance()
         
     private val mathUtil: MathUtil = MathUtil.getInstance()!!
 
-open fun getDistance(x1: Int, y1: Int, x2: Int, y2: Int)
+    open fun getDistance(x1: Int, y1: Int, x2: Int, y2: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var x1 = x1

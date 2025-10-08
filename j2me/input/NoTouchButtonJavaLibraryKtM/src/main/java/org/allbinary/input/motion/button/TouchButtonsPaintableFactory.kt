@@ -32,10 +32,9 @@ open public class TouchButtonsPaintableFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getInstance(basicColor: BasicColor)
+    open fun getInstance(basicColor: BasicColor)
         //nullable =  from not(true or (false and false)) = 
 : Paintable{
 var basicColor = basicColor

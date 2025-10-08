@@ -42,13 +42,13 @@ open public class MotionRectangleConstraints
     private var maxMotionRectangles: Int= 0
 
     private var minArea: Int= 0
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun getMinDimension()
+    open fun getMinDimension()
         //nullable = true from not(false or (false and true)) = true
 : Dimension{
 
@@ -59,7 +59,7 @@ open fun getMinDimension()
 }
 
 
-open fun getMaxDimension()
+    open fun getMaxDimension()
         //nullable = true from not(false or (false and true)) = true
 : Dimension{
 
@@ -70,7 +70,7 @@ open fun getMaxDimension()
 }
 
 
-open fun isTooSmall(rectangle: Rectangle)
+    open fun isTooSmall(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var rectangle = rectangle
@@ -99,7 +99,7 @@ var rectangle = rectangle
 }
 
 
-open fun isAreaTooSmall(rectangle: Rectangle)
+    open fun isAreaTooSmall(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var rectangle = rectangle
@@ -128,7 +128,7 @@ var rectangle = rectangle
 }
 
 
-open fun isTooBig(rectangle: Rectangle)
+    open fun isTooBig(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var rectangle = rectangle
@@ -159,7 +159,7 @@ var rectangle = rectangle
 
                 @Throws(Exception::class)
             
-open fun isValid(frame: Long, bufferedImage: BufferedImage, rectangle: Rectangle)
+    open fun isValid(frame: Long, bufferedImage: BufferedImage, rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var frame = frame
@@ -172,7 +172,7 @@ var rectangle = rectangle
 }
 
 
-open fun setMinDimension(minDimension: Dimension)
+    open fun setMinDimension(minDimension: Dimension)
         //nullable = true from not(false or (false and false)) = true
 {
 var minDimension = minDimension
@@ -180,7 +180,7 @@ this.minDimension= minDimension
 }
 
 
-open fun setMaxDimension(maxDimension: Dimension)
+    open fun setMaxDimension(maxDimension: Dimension)
         //nullable = true from not(false or (false and false)) = true
 {
 var maxDimension = maxDimension
@@ -188,7 +188,7 @@ this.maxDimension= maxDimension
 }
 
 
-open fun getMaxMotionRectangles()
+    open fun getMaxMotionRectangles()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -199,7 +199,7 @@ open fun getMaxMotionRectangles()
 }
 
 
-open fun setMaxMotionRectangles(maxMotionRectangles: Int)
+    open fun setMaxMotionRectangles(maxMotionRectangles: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var maxMotionRectangles = maxMotionRectangles
@@ -207,7 +207,7 @@ this.maxMotionRectangles= maxMotionRectangles
 }
 
 
-open fun getMinArea()
+    open fun getMinArea()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -218,7 +218,7 @@ open fun getMinArea()
 }
 
 
-open fun setMinArea(minArea: Int)
+    open fun setMinArea(minArea: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var minArea = minArea

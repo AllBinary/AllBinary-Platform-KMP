@@ -56,7 +56,7 @@ open public class ShippingMethodsView : HttpStoreComponentView
     private var shippingMethods: ShippingMethods
 
     private var storeFrontInterface: StoreFrontInterface
-public constructor        (transformInfoInterface: TransformInfoInterface)                        
+public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
@@ -71,7 +71,7 @@ this.shippingMethods= ShippingMethods(this.abeClientInformation, storeFrontInter
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -169,14 +169,14 @@ shippingMethodsNode!!.appendChild(shippingMethodNode)
 }
 
 
-open fun addDomNodeInterfaces()
+    open fun addDomNodeInterfaces()
         //nullable = true from not(false or (false and true)) = true
 {
 this.addDomNodeInterface(this as DomNodeInterface)
 }
 
 
-open fun view()
+    open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

@@ -30,20 +30,21 @@ import org.allbinary.business.user.UserInterface
 import org.allbinary.logic.communication.smtp.event.UserEmailEventListenerInterface
 import org.allbinary.logic.communication.smtp.event.UserEmailEventNameData
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
+
 interface UserEmailEventsConfigurationInterface {
         
 
-open fun getEventConfigurationHashMap()
+    open fun getEventConfigurationHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>
 
-open fun addUserEmailEventConfiguration(userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface)
+    open fun addUserEmailEventConfiguration(userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun getEventListener(abeClientInformation: AbeClientInformationInterface, userEmailEventNameData: UserEmailEventNameData, userInterface: UserInterface)
+    open fun getEventListener(abeClientInformation: AbeClientInformationInterface, userEmailEventNameData: UserEmailEventNameData, userInterface: UserInterface)
         //nullable = true from not(false or (false and false)) = true
 : UserEmailEventListenerInterface
 

@@ -30,12 +30,11 @@ open public class RTSLayer2LogHelper
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: RTSLayer2LogHelper = RTSLayer2LogHelper()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : RTSLayer2LogHelper{
 
@@ -53,36 +52,28 @@ open fun getInstance()
             {
             }            
         
-open fun steeringUp(pathFindingLayerInterface: PathFindingLayerInterface)
+    open fun steeringUp(pathFindingLayerInterface: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface
 }
 
 
-open fun steeringFireOrStop(pathFindingLayerInterface: PathFindingLayerInterface)
+    open fun steeringFireOrStop(pathFindingLayerInterface: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface
 }
 
 
-open fun buildingAbove(pathFindingLayerInterface: PathFindingLayerInterface)
+    open fun buildingAbove(pathFindingLayerInterface: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface
 }
 
 
-open fun buildingChaseLeft(pathFindingLayerInterface: PathFindingLayerInterface, angle: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var pathFindingLayerInterface = pathFindingLayerInterface
-    //var angle = angle
-}
-
-
-open fun buildingChaseRight(pathFindingLayerInterface: PathFindingLayerInterface, angle: Int)
+    open fun buildingChaseLeft(pathFindingLayerInterface: PathFindingLayerInterface, angle: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface
@@ -90,14 +81,7 @@ open fun buildingChaseRight(pathFindingLayerInterface: PathFindingLayerInterface
 }
 
 
-open fun buildingDown(pathFindingLayerInterface: PathFindingLayerInterface)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var pathFindingLayerInterface = pathFindingLayerInterface
-}
-
-
-open fun buildingChaseDown(pathFindingLayerInterface: PathFindingLayerInterface, angle: Int)
+    open fun buildingChaseRight(pathFindingLayerInterface: PathFindingLayerInterface, angle: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface
@@ -105,7 +89,14 @@ open fun buildingChaseDown(pathFindingLayerInterface: PathFindingLayerInterface,
 }
 
 
-open fun buildingChaseUp(pathFindingLayerInterface: PathFindingLayerInterface, angle: Int)
+    open fun buildingDown(pathFindingLayerInterface: PathFindingLayerInterface)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var pathFindingLayerInterface = pathFindingLayerInterface
+}
+
+
+    open fun buildingChaseDown(pathFindingLayerInterface: PathFindingLayerInterface, angle: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface
@@ -113,13 +104,21 @@ open fun buildingChaseUp(pathFindingLayerInterface: PathFindingLayerInterface, a
 }
 
 
-open fun buildingLeft()
+    open fun buildingChaseUp(pathFindingLayerInterface: PathFindingLayerInterface, angle: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var pathFindingLayerInterface = pathFindingLayerInterface
+    //var angle = angle
+}
+
+
+    open fun buildingLeft()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun buildingRight()
+    open fun buildingRight()
         //nullable = true from not(false or (false and true)) = true
 {
 }

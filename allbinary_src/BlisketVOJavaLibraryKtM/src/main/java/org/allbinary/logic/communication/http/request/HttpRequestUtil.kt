@@ -31,12 +31,11 @@ open public class HttpRequestUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: HttpRequestUtil = HttpRequestUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : HttpRequestUtil{
 
@@ -48,13 +47,13 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
 
 
-open fun getLastSeparatorIndex(requestPath: String)
+    open fun getLastSeparatorIndex(requestPath: String)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var requestPath = requestPath
@@ -80,7 +79,7 @@ var requestPath = requestPath
 
                 @Throws(Exception::class)
             
-open fun generateFileName(requestPath: String)
+    open fun generateFileName(requestPath: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var requestPath = requestPath

@@ -25,26 +25,27 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface FullScreenInterface {
         
 
-open fun isFullScreenMode()
+    open fun isFullScreenMode()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun setFullScreenMode(mode: Boolean)
+    open fun setFullScreenMode(mode: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun stopWaiting()
+    open fun stopWaiting()
         //nullable = true from not(false or (false and true)) = true
 
 
                 @Throws(Exception::class)
             
-open fun waitOnNotify(wait: Int)
+    open fun waitOnNotify(wait: Int)
         //nullable = true from not(false or (false and false)) = true
 
 

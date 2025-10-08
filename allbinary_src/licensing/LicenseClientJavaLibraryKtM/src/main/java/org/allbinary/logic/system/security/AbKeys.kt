@@ -34,12 +34,11 @@ open public class AbKeys
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AbKeys = AbKeys()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AbKeys{
 
@@ -53,7 +52,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -62,7 +61,7 @@ private constructor        ()
                 @Throws(LicensingException::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getKey(abeClientInformation: AbeClientInformationInterface, keyName: String)
+    open fun getKey(abeClientInformation: AbeClientInformationInterface, keyName: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var abeClientInformation = abeClientInformation

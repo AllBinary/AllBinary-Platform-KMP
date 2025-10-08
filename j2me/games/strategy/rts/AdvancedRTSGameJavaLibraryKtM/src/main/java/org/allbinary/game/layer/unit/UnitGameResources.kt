@@ -32,8 +32,7 @@ import org.allbinary.game.configuration.feature.GraphicsFeatureFactory
 
 open public class UnitGameResources : BasicGameResources {
         
-
-        companion object {
+companion object {
             
     private val ICON: String = "_icon"
 
@@ -52,7 +51,7 @@ open public class UnitGameResources : BasicGameResources {
     var RESOURCE_ICON_BUILD: String
 
     var RESOURCE_ICON: String
-protected constructor        (){
+protected constructor (){
 }
 
 
@@ -60,7 +59,7 @@ protected constructor        (){
 
                 @Throws(Exception::class)
             
-open fun init(ROOT: String, sizeString: String)
+    open fun init(ROOT: String, sizeString: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var ROOT = ROOT
@@ -96,7 +95,7 @@ this.RESOURCE_ICON_BUILD= stringBuffer!!.toString()
 
                 @Throws(Exception::class)
             
-open fun getString()
+    open fun getString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

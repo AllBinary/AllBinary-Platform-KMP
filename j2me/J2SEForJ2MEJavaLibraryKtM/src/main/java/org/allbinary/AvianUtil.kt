@@ -30,10 +30,9 @@ open public class AvianUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun isAvian()
+    open fun isAvian()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

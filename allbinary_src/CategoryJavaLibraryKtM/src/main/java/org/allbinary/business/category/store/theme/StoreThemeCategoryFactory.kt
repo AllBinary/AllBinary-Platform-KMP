@@ -49,7 +49,7 @@ open public class StoreThemeCategoryFactory
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var transformInfoInterface: TransformInfoInterface
-public constructor        (transformInfoInterface: TransformInfoInterface)
+public constructor (transformInfoInterface: TransformInfoInterface)
             : super()
         {
 var transformInfoInterface = transformInfoInterface
@@ -66,7 +66,7 @@ this.transformInfoInterface= transformInfoInterface
 }
 
 
-open fun getRootInstance()
+    open fun getRootInstance()
         //nullable = true from not(false or (false and true)) = true
 : CategoryInterface{
 
@@ -100,7 +100,7 @@ open fun getRootInstance()
 }
 
 
-open fun getRootInstance(categoryAbPath: AbPath)
+    open fun getRootInstance(categoryAbPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
 : CategoryInterface{
 var categoryAbPath = categoryAbPath
@@ -138,7 +138,7 @@ var categoryAbPath = categoryAbPath
 }
 
 
-open fun getRootInstanceFromNode(node: Node)
+    open fun getRootInstanceFromNode(node: Node)
         //nullable = true from not(false or (false and false)) = true
 : CategoryInterface{
 var node = node
@@ -179,7 +179,7 @@ var node = node
 }
 
 
-open fun getInstance(categoryPath: String, level: Int)
+    open fun getInstance(categoryPath: String, level: Int)
         //nullable =  from not(true or (false and false)) = 
 : CategoryInterface{
 var categoryPath = categoryPath
@@ -215,7 +215,7 @@ var level = level
 }
 
 
-open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, categoryPath: String)
+    open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, categoryPath: String)
         //nullable =  from not(true or (false and false)) = 
 : CategoryInterface{
 var rootCategoryInterface = rootCategoryInterface
@@ -252,7 +252,7 @@ var categoryPath = categoryPath
 }
 
 
-open fun getInstance(node: Node, level: Int)
+    open fun getInstance(node: Node, level: Int)
         //nullable =  from not(true or (false and false)) = 
 : CategoryInterface{
 var node = node
@@ -288,7 +288,7 @@ var level = level
 }
 
 
-open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, node: Node)
+    open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, node: Node)
         //nullable =  from not(true or (false and false)) = 
 : CategoryInterface{
 var rootCategoryInterface = rootCategoryInterface
@@ -325,7 +325,7 @@ var node = node
 }
 
 
-open fun getInstance(categoryPropertiesHashMap: HashMap<Any, Any>, level: Int)
+    open fun getInstance(categoryPropertiesHashMap: HashMap<Any, Any>, level: Int)
         //nullable =  from not(true or (false and false)) = 
 : CategoryInterface{
 var categoryPropertiesHashMap = categoryPropertiesHashMap
@@ -361,7 +361,7 @@ var level = level
 }
 
 
-open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, categoryPropertiesHashMap: HashMap<Any, Any>)
+    open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, categoryPropertiesHashMap: HashMap<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
 : CategoryInterface{
 var rootCategoryInterface = rootCategoryInterface

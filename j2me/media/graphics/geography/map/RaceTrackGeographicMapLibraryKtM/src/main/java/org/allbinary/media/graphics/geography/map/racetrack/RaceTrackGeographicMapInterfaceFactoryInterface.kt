@@ -27,18 +27,19 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface RaceTrackGeographicMapInterfaceFactoryInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getLevelInstance(id: Integer)
+    open fun getLevelInstance(id: Integer)
         //nullable = true from not(false or (false and false)) = true
 : RaceTrackGeographicMap
 
                 @Throws(Exception::class)
             
-open fun getTrackInstance(id: Integer)
+    open fun getTrackInstance(id: Integer)
         //nullable = true from not(false or (false and false)) = true
 : RaceTrackGeographicMap
 

@@ -36,7 +36,8 @@ open public class HighScoresHelper : HighScoresHelperBase {
             }            
         
     private val circularIndexUtil: CircularIndexUtil = CircularIndexUtil.getInstance(0, 0)!!
-override fun setHighScoresArray(highScoresArrayP: Array<HighScores?>)
+
+    override fun setHighScoresArray(highScoresArrayP: Array<HighScores?>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var highScoresArrayP = highScoresArrayP
@@ -46,7 +47,8 @@ this.circularIndexUtil!!.setSize(this.highScoresArrayP!!.size)
 
 
     var lastIndex: Int =  -1
-override fun getNextHighScores()
+
+    override fun getNextHighScores()
         //nullable = true from not(false or (false and true)) = true
 : HighScores{
 
@@ -71,7 +73,8 @@ lastIndex= this.circularIndexUtil!!.getIndex()
                         return highScores
 }
 
-override fun isAnyHighScores()
+
+    override fun isAnyHighScores()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

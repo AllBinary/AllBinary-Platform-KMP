@@ -37,7 +37,8 @@ open public class AllAnalogControllerVisitor : AnalogControllerVisitor {
             public constructor() : super()
             {
             }            
-        override fun process(allbinaryLayerManager: AllBinaryLayerManager, analogLocationInputProcessor: AnalogLocationInputProcessor)
+        
+    override fun process(allbinaryLayerManager: AllBinaryLayerManager, analogLocationInputProcessor: AnalogLocationInputProcessor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allbinaryLayerManager = allbinaryLayerManager

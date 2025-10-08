@@ -30,8 +30,7 @@ open public class AuthorizeNetAimData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val X_DELIM_DATA: String = "x_delim_data"
 
@@ -50,7 +49,7 @@ open public class AuthorizeNetAimData
     val X_DRIVERS_LICENSE_DOB: String = "x_drivers_license_dob"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

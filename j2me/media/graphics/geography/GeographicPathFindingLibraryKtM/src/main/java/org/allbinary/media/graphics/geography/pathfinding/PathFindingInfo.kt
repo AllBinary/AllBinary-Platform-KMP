@@ -40,7 +40,7 @@ open public class PathFindingInfo
     private val endPathFindingNodeList: BasicArrayList
 
     private val pathFindingNodeCostInfoFactoryInterface: PathFindingNodeCostInfoFactoryBase
-public constructor        (pathFindingNodeCostInfoFactoryInterface: PathFindingNodeCostInfoFactoryBase)
+public constructor (pathFindingNodeCostInfoFactoryInterface: PathFindingNodeCostInfoFactoryBase)
             : super()
         {
     //var pathFindingNodeCostInfoFactoryInterface = pathFindingNodeCostInfoFactoryInterface
@@ -50,7 +50,7 @@ this.endPathFindingNodeList= BasicArrayList(1)
 }
 
 
-open fun getStartPathFindingNodeList()
+    open fun getStartPathFindingNodeList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -61,7 +61,7 @@ open fun getStartPathFindingNodeList()
 }
 
 
-open fun getEndPathFindingNodeList()
+    open fun getEndPathFindingNodeList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -72,7 +72,7 @@ open fun getEndPathFindingNodeList()
 }
 
 
-open fun getPathFinder()
+    open fun getPathFinder()
         //nullable = true from not(false or (false and true)) = true
 : GeographicPathFinderBase{
 
@@ -83,7 +83,7 @@ open fun getPathFinder()
 }
 
 
-open fun addStartPathFindingNode(startPathFindingNode: PathFindingNode)
+    open fun addStartPathFindingNode(startPathFindingNode: PathFindingNode)
         //nullable = true from not(false or (false and false)) = true
 {
 var startPathFindingNode = startPathFindingNode
@@ -91,7 +91,7 @@ this.startPathFindingNodeList!!.add(startPathFindingNode)
 }
 
 
-open fun addEndPathFindingNode(endPathFindingNode: PathFindingNode)
+    open fun addEndPathFindingNode(endPathFindingNode: PathFindingNode)
         //nullable = true from not(false or (false and false)) = true
 {
 var endPathFindingNode = endPathFindingNode
@@ -99,7 +99,7 @@ this.endPathFindingNodeList!!.add(endPathFindingNode)
 }
 
 
-open fun setPathFinder(pathFinder: GeographicPathFinderBase)
+    open fun setPathFinder(pathFinder: GeographicPathFinderBase)
         //nullable = true from not(false or (false and false)) = true
 {
 var pathFinder = pathFinder
@@ -107,7 +107,7 @@ this.pathFinder= pathFinder
 }
 
 
-open fun getPathFindingNodeCostInfoFactoryInterface()
+    open fun getPathFindingNodeCostInfoFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
 : PathFindingNodeCostInfoFactoryBase{
 

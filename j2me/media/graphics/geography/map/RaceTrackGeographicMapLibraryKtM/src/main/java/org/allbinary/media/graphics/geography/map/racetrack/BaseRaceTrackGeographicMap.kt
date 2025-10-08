@@ -26,7 +26,6 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.game.layer.AllBinaryTiledLayer
 import org.allbinary.logic.string.StringMaker
@@ -46,7 +45,7 @@ open public class BaseRaceTrackGeographicMap : BasicGeographicMap
     private var raceTrackData: RaceTrackData
 
     private var miniGeographicMap: BasicGeographicMap
-public constructor        (raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrackData, tiledLayer: AllBinaryTiledLayer, miniGeographicMap: BasicGeographicMap, geographicMapCellPositionFactoryInterface: GeographicMapCellPositionFactoryInterface, geographicMapCellPositionBaseFactory: GeographicMapCellPositionBaseFactory, geographicMapCellTypeFactory: GeographicMapCellTypeFactory)                        
+public constructor (raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrackData, tiledLayer: AllBinaryTiledLayer, miniGeographicMap: BasicGeographicMap, geographicMapCellPositionFactoryInterface: GeographicMapCellPositionFactoryInterface, geographicMapCellPositionBaseFactory: GeographicMapCellPositionBaseFactory, geographicMapCellTypeFactory: GeographicMapCellTypeFactory)                        
 
                             : super(raceTrackInfo!!.getId(), raceTrackInfo!!.getName(), raceTrackData!!.getCellTypeIdToGeographicMapCellTypeArray(), tiledLayer, raceTrackInfo!!.getForegroundBasicColor(), raceTrackInfo!!.getBackgroundBasicColor(), geographicMapCellPositionFactoryInterface, geographicMapCellPositionBaseFactory, geographicMapCellTypeFactory){
     //var raceTrackInfo = raceTrackInfo
@@ -108,7 +107,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR)
 }
 
 
-open fun getRaceTrackInfo()
+    open fun getRaceTrackInfo()
         //nullable = true from not(false or (false and true)) = true
 : RaceTrackInfo{
 
@@ -119,7 +118,7 @@ open fun getRaceTrackInfo()
 }
 
 
-open fun setRaceTrackInfo(aRaceTrackInfo: RaceTrackInfo)
+    open fun setRaceTrackInfo(aRaceTrackInfo: RaceTrackInfo)
         //nullable = true from not(false or (false and false)) = true
 {
 var aRaceTrackInfo = aRaceTrackInfo
@@ -127,7 +126,7 @@ raceTrackInfo= aRaceTrackInfo
 }
 
 
-open fun setMiniBasicGeographicMap(miniBasicGeographicMap: BasicGeographicMap)
+    open fun setMiniBasicGeographicMap(miniBasicGeographicMap: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
 {
 var miniBasicGeographicMap = miniBasicGeographicMap
@@ -135,7 +134,7 @@ this.miniGeographicMap= miniBasicGeographicMap
 }
 
 
-open fun getMiniBasicGeographicMap()
+    open fun getMiniBasicGeographicMap()
         //nullable = true from not(false or (false and true)) = true
 : BasicGeographicMap{
 
@@ -146,7 +145,7 @@ open fun getMiniBasicGeographicMap()
 }
 
 
-open fun getRaceTrackData()
+    open fun getRaceTrackData()
         //nullable = true from not(false or (false and true)) = true
 : RaceTrackData{
 
@@ -157,7 +156,7 @@ open fun getRaceTrackData()
 }
 
 
-open fun setRaceTrackData(raceTrackData: RaceTrackData)
+    open fun setRaceTrackData(raceTrackData: RaceTrackData)
         //nullable = true from not(false or (false and false)) = true
 {
 var raceTrackData = raceTrackData

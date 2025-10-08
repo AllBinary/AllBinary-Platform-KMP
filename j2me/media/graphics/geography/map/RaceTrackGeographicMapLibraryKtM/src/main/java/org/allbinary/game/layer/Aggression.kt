@@ -38,7 +38,7 @@ open public class Aggression
     private var projectile: Integer
 
     private var drops: Integer
-public constructor        (ram: Integer, projectile: Integer, drops: Integer)
+public constructor (ram: Integer, projectile: Integer, drops: Integer)
             : super()
         {
 var ram = ram
@@ -50,7 +50,7 @@ this.setDrops(drops)
 }
 
 
-open fun getRam()
+    open fun getRam()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -61,7 +61,7 @@ open fun getRam()
 }
 
 
-open fun setRam(ram: Integer)
+    open fun setRam(ram: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var ram = ram
@@ -69,7 +69,7 @@ this.ram= ram
 }
 
 
-open fun getProjectile()
+    open fun getProjectile()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -80,7 +80,7 @@ open fun getProjectile()
 }
 
 
-open fun setProjectile(projectile: Integer)
+    open fun setProjectile(projectile: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var projectile = projectile
@@ -88,7 +88,7 @@ this.projectile= projectile
 }
 
 
-open fun getDrops()
+    open fun getDrops()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -99,7 +99,7 @@ open fun getDrops()
 }
 
 
-open fun setDrops(drops: Integer)
+    open fun setDrops(drops: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var drops = drops

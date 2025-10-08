@@ -41,13 +41,13 @@ open public class DeleteCloud
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun delete(prePath: String, current: Int, total: Int)
+    open fun delete(prePath: String, current: Int, total: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var prePath = prePath

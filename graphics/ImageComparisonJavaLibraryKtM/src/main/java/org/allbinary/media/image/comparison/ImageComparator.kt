@@ -45,7 +45,7 @@ open public class ImageComparator
         
 
     private val imageComparatorConstraintsInterface: ImageComparatorConstraintsInterface
-public constructor        (imageComparatorConstraintsInterface: ImageComparatorConstraintsInterface)
+public constructor (imageComparatorConstraintsInterface: ImageComparatorConstraintsInterface)
             : super()
         {
     //var imageComparatorConstraintsInterface = imageComparatorConstraintsInterface
@@ -55,7 +55,7 @@ this.imageComparatorConstraintsInterface= imageComparatorConstraintsInterface
 
                 @Throws(Exception::class)
             
-open fun process(imageComparisonInfo: ImageComparisonResult, point: GPoint)
+    open fun process(imageComparisonInfo: ImageComparisonResult, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageComparisonInfo = imageComparisonInfo
@@ -130,7 +130,7 @@ open fun process(imageComparisonInfo: ImageComparisonResult, point: GPoint)
 
                 @Throws(Exception::class)
             
-open fun compare(bufferedImage1: BufferedImage, bufferedImage2: BufferedImage, frameOne: Long, frameTwo: Long, tolerance: Int)
+    open fun compare(bufferedImage1: BufferedImage, bufferedImage2: BufferedImage, frameOne: Long, frameTwo: Long, tolerance: Int)
         //nullable = true from not(false or (false and false)) = true
 : ImageComparisonResult{
     //var bufferedImage1 = bufferedImage1
@@ -148,7 +148,7 @@ open fun compare(bufferedImage1: BufferedImage, bufferedImage2: BufferedImage, f
 
                 @Throws(Exception::class)
             
-open fun compare(bufferedImage1: BufferedImage, bufferedImage2: BufferedImage, frameOne: Long, frameTwo: Long, tolerance: Int, name: String)
+    open fun compare(bufferedImage1: BufferedImage, bufferedImage2: BufferedImage, frameOne: Long, frameTwo: Long, tolerance: Int, name: String)
         //nullable = true from not(false or (false and false)) = true
 : ImageComparisonResult{
     //var bufferedImage1 = bufferedImage1

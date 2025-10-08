@@ -46,7 +46,7 @@ open public class TransformInfoObjectConfigAndManipulatorFactoryBase
 
                 @Throws(Exception::class)
             
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, objectConfigFileAbPath: AbPath)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, objectConfigFileAbPath: AbPath)
         //nullable =  from not(true or (false and false)) = 
 : TransformInfoObjectConfigInterface{
     //var abeClientInformation = abeClientInformation
@@ -61,7 +61,7 @@ var objectConfigFileAbPath = objectConfigFileAbPath
 
                 @Throws(Exception::class)
             
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)
         //nullable =  from not(true or (false and false)) = 
 : TransformInfoObjectConfigInterface{
     //var abeClientInformation = abeClientInformation
@@ -75,7 +75,7 @@ var transformInfoInterface = transformInfoInterface
 
                 @Throws(Exception::class)
             
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, document: Document)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, document: Document)
         //nullable =  from not(true or (false and false)) = 
 : TransformInfoObjectConfigInterface{
     //var abeClientInformation = abeClientInformation

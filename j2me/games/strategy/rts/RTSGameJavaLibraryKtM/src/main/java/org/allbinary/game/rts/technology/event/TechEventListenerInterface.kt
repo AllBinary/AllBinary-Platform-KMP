@@ -26,10 +26,11 @@
         
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.util.event.EventListenerInterface
+
 interface TechEventListenerInterface : EventListenerInterface {
         
 
-open fun onTechEvent(event: AllBinaryEventObject)
+    open fun onTechEvent(event: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 
 

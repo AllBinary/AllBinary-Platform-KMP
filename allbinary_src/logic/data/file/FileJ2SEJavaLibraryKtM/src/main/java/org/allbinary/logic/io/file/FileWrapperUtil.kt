@@ -32,10 +32,9 @@ open public class FileWrapperUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun wrapFiles(files: Array<Any?>)
+    open fun wrapFiles(files: Array<Any?>)
         //nullable = true from not(false or (false and false)) = true
 : Array<AbFile?>{
 var files = files
@@ -72,7 +71,7 @@ PreLogUtil.put("Exception Wrapping Files", "FileWrapperUtil", "wrapFiles", e)
 }
 
 
-open fun wrapFile(file: File)
+    open fun wrapFile(file: File)
         //nullable = true from not(false or (false and false)) = true
 : AbFile{
 var file = file

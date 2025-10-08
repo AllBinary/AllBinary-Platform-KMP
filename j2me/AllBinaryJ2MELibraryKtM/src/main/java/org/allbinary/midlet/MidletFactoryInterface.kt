@@ -38,7 +38,7 @@ open public class MidletFactoryInterface
             {
             }            
         
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : MIDlet{
 

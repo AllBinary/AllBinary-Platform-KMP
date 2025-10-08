@@ -36,12 +36,11 @@ open public class InGameOptionsFormFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: InGameOptionsFormFactory = InGameOptionsFormFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : InGameOptionsFormFactory{
 
@@ -63,7 +62,7 @@ open fun getInstance()
 
     private var SINGLETON: CommandForm = CommandForm.NULL_COMMAND_FORM
 
-open fun init(commandListener: CommandListener, initInterface: Init, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)
+    open fun init(commandListener: CommandListener, initInterface: Init, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
 var commandListener = commandListener
@@ -94,7 +93,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }
 
 
-open fun get()
+    open fun get()
         //nullable = true from not(false or (false and true)) = true
 : CommandForm{
 

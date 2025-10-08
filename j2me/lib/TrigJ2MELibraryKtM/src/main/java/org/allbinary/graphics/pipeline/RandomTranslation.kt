@@ -32,12 +32,11 @@ open public class RandomTranslation
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun getInstance(vector: BasicArrayList, howMuch: Int)
+    open fun getInstance(vector: BasicArrayList, howMuch: Int)
         //nullable =  from not(true or (false and false)) = 
 : BasicArrayList{
 var vector = vector

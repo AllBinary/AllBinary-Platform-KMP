@@ -30,8 +30,7 @@ open public class DomData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val ID: String = "id"
 
@@ -44,7 +43,7 @@ open public class DomData
     val INDEX: String = "index"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

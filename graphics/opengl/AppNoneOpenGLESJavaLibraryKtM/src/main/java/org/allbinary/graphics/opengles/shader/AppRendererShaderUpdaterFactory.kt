@@ -28,12 +28,11 @@
 
 open public class AppRendererShaderUpdaterFactory : ShaderUpdater {
         
-
-        companion object {
+companion object {
             
     private val instance: AppRendererShaderUpdaterFactory = AppRendererShaderUpdaterFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AppRendererShaderUpdaterFactory{
 
@@ -57,7 +56,7 @@ open fun getInstance()
 
     private val shaderOpenGLProcessorArray: Array<ShaderOpenGLProcessor?> = arrayOfNulls(0)
 
-open fun getTestShaders()
+    open fun getTestShaders()
         //nullable = true from not(false or (false and true)) = true
 : Array<ShaderOpenGLProcessor?>{
 

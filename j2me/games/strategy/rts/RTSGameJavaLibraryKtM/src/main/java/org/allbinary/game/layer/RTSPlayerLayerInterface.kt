@@ -33,26 +33,27 @@ import org.allbinary.game.input.PlayerGameInputCompositeInterface
 import org.allbinary.game.layer.hud.basic.notification.GameNotificationHudCompositeInterface
 import org.allbinary.game.tick.TickableInterface
 import org.allbinary.media.audio.Sound
+
 interface RTSPlayerLayerInterface : GameNotificationHudCompositeInterface, BuildMenuCompositeInterface, PlayerGameInputCompositeInterface, DestroyedEventListenerInterface, TickableInterface, PathFindingLayerInterface {
         
 
-open fun getCapital()
+    open fun getCapital()
         //nullable = true from not(false or (false and true)) = true
 : Capital
 
-open fun getRTSFormInput()
+    open fun getRTSFormInput()
         //nullable = true from not(false or (false and true)) = true
 : RTSFormInput
 
-open fun add(sound: Sound)
+    open fun add(sound: Sound)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getPlayerOwnedRTSLayers()
+    open fun getPlayerOwnedRTSLayers()
         //nullable = true from not(false or (false and true)) = true
 : PlayerOwnedRTSLayers
 
-open fun implmentsArtificialIntelligenceCompositeInterface()
+    open fun implmentsArtificialIntelligenceCompositeInterface()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 

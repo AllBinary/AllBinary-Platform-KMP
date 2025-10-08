@@ -30,14 +30,13 @@ import org.allbinary.logic.util.event.EventListenerInterface
 
 open public class UpKeyEventHandler : UpKeyEventHandlerBase {
         
-
-        companion object {
+companion object {
             
     private val instance: UpKeyEventHandler = UpKeyEventHandler()
 
     private val instanceArray: Array<UpKeyEventHandlerBase?> = arrayOf(UpKeyEventHandlerBase(),UpKeyEventHandlerBase(),UpKeyEventHandlerBase(),UpKeyEventHandlerBase(),UpKeyEventHandlerBase(),UpKeyEventHandlerBase())
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : UpKeyEventHandler{
 
@@ -52,7 +51,7 @@ open fun getInstance()
             
     private val playerInputIdFactory: LocalPlayerInputIdFactory = LocalPlayerInputIdFactory.getInstance()!!
 
-open fun getInstance(deviceId: Int)
+    open fun getInstance(deviceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : UpKeyEventHandlerBase{
 var deviceId = deviceId
@@ -67,7 +66,7 @@ var deviceId = deviceId
 }
 
 
-open fun getInstanceForPlayer(playerInputId: Int)
+    open fun getInstanceForPlayer(playerInputId: Int)
         //nullable = true from not(false or (false and false)) = true
 : UpKeyEventHandlerBase{
 var playerInputId = playerInputId
@@ -78,10 +77,11 @@ var playerInputId = playerInputId
                         return instanceArray[playerInputId]!!
 }
 
-private constructor        (){
+private constructor (){
 }
 
-override fun removeAllListeners()
+
+    override fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
 {
 super.removeAllListeners()
@@ -97,7 +97,8 @@ instanceArray[index]!!.removeAllListeners()
 
 }
 
-override fun removeListenerSingleThreaded(eventListenerInterface: EventListenerInterface)
+
+    override fun removeListenerSingleThreaded(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventListenerInterface = eventListenerInterface
@@ -114,7 +115,8 @@ instanceArray[index]!!.removeListenerSingleThreaded(eventListenerInterface)
 
 }
 
-override fun removeListener(eventListenerInterface: EventListenerInterface)
+
+    override fun removeListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventListenerInterface = eventListenerInterface

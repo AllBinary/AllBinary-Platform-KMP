@@ -34,7 +34,6 @@ import org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer
 import org.allbinary.game.layer.unit.UnitWaypointBehavior
 import org.allbinary.game.media.graphics.geography.map.racetrack.PathFindingInfoFactory
 import org.allbinary.logic.communication.log.ForcedLogUtil
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.util.event.EventStrings
@@ -62,7 +61,7 @@ open public class Waypoint : WaypointBase
     private var endList: BasicArrayList
 
     private var paths: Array<Array<BasicArrayList?>?>
-public constructor        (ownerLayer: PathFindingLayerInterface, sound: Sound)                        
+public constructor (ownerLayer: PathFindingLayerInterface, sound: Sound)                        
 
                             : super(sound){
     //var ownerLayer = ownerLayer
@@ -77,7 +76,7 @@ this.ownerLayer= ownerLayer
 
                 @Throws(Exception::class)
             
-open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
+    open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -111,7 +110,7 @@ this.paths= Array(tiledLayer!!.getColumns()) { arrayOfNulls<BasicArrayList?>(til
 }
 
 
-open fun releaseCachedPaths()
+    open fun releaseCachedPaths()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -150,7 +149,8 @@ open fun releaseCachedPaths()
 
 
                 @Throws(Exception::class)
-            override fun getPathsListFromCacheOnly(geographicMapCellPosition: GeographicMapCellPosition)
+            
+    override fun getPathsListFromCacheOnly(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var geographicMapCellPosition = geographicMapCellPosition
@@ -163,7 +163,8 @@ open fun releaseCachedPaths()
 
 
                 @Throws(Exception::class)
-            override fun getPathsList(geographicMapCellPosition: GeographicMapCellPosition)
+            
+    override fun getPathsList(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var geographicMapCellPosition = geographicMapCellPosition
@@ -190,7 +191,7 @@ this.paths[geographicMapCellPosition!!.getColumn()]!![geographicMapCellPosition!
 }
 
 
-open fun getEndGeographicMapCellPosition(startGeographicMapCellPosition: GeographicMapCellPosition)
+    open fun getEndGeographicMapCellPosition(startGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellPosition{
     //var startGeographicMapCellPosition = startGeographicMapCellPosition
@@ -236,7 +237,7 @@ endGeographicMapCellPosition= this.endList!!.get(index) as GeographicMapCellPosi
 
                 @Throws(Exception::class)
             
-open fun createPaths(startGeographicMapCellPosition: GeographicMapCellPosition)
+    open fun createPaths(startGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var startGeographicMapCellPosition = startGeographicMapCellPosition
@@ -347,7 +348,7 @@ customMapArray[endGeographicMapCellPosition!!.getRow()]!![endGeographicMapCellPo
 }
 
 
-open fun onEvent(eventObject: AllBinaryEventObject)
+    open fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject
@@ -357,7 +358,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
                 @Throws(Exception::class)
             
-open fun onBuildingEvent(event: RTSLayerEvent)
+    open fun onBuildingEvent(event: RTSLayerEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var event = event
@@ -385,7 +386,7 @@ this.paths[columnIndex]!![rowIndex]=
 }
 
 
-open fun reset()
+    open fun reset()
         //nullable = true from not(false or (false and true)) = true
 {
 this.getConnectedWaypointList()!!.clear()
@@ -395,7 +396,7 @@ this.releaseCachedPaths()
 
                 @Throws(Exception::class)
             
-open fun visit(unitLayer: PathFindingLayerInterface)
+    open fun visit(unitLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var unitLayer = unitLayer

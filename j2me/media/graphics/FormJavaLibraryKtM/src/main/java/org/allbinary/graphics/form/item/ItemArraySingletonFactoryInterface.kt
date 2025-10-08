@@ -25,12 +25,13 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface ItemArraySingletonFactoryInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getItems()
+    open fun getItems()
         //nullable = true from not(false or (false and true)) = true
 : Array<CustomItem?>
 

@@ -53,7 +53,7 @@ open public class NoCacheWaypoint : WaypointBase
         
 
     val ownerLayer: PathFindingLayerInterface
-public constructor        (ownerLayer: PathFindingLayerInterface, sound: Sound)                        
+public constructor (ownerLayer: PathFindingLayerInterface, sound: Sound)                        
 
                             : super(sound){
     //var ownerLayer = ownerLayer
@@ -68,7 +68,7 @@ this.ownerLayer= ownerLayer
 
                 @Throws(Exception::class)
             
-open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
+    open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -76,14 +76,15 @@ super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 }
 
 
-open fun releaseCachedPaths()
+    open fun releaseCachedPaths()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
                 @Throws(Exception::class)
-            override fun getPathsListFromCacheOnly(geographicMapCellPosition: GeographicMapCellPosition)
+            
+    override fun getPathsListFromCacheOnly(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var geographicMapCellPosition = geographicMapCellPosition
@@ -96,7 +97,8 @@ open fun releaseCachedPaths()
 
 
                 @Throws(Exception::class)
-            override fun getPathsList(geographicMapCellPosition: GeographicMapCellPosition)
+            
+    override fun getPathsList(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var geographicMapCellPosition = geographicMapCellPosition
@@ -110,7 +112,7 @@ open fun releaseCachedPaths()
 
                 @Throws(Exception::class)
             
-open fun getEndGeographicMapCellPosition(startGeographicMapCellPosition: GeographicMapCellPosition)
+    open fun getEndGeographicMapCellPosition(startGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellPosition{
     //var startGeographicMapCellPosition = startGeographicMapCellPosition
@@ -159,7 +161,7 @@ endGeographicMapCellPosition= endList!!.get(index) as GeographicMapCellPosition
 
                 @Throws(Exception::class)
             
-open fun createPaths(startGeographicMapCellPosition: GeographicMapCellPosition)
+    open fun createPaths(startGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var startGeographicMapCellPosition = startGeographicMapCellPosition
@@ -257,7 +259,7 @@ customMapArray[endGeographicMapCellPosition!!.getRow()]!![endGeographicMapCellPo
 }
 
 
-open fun onEvent(eventObject: AllBinaryEventObject)
+    open fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject
@@ -267,14 +269,14 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
                 @Throws(Exception::class)
             
-open fun onBuildingEvent(event: RTSLayerEvent)
+    open fun onBuildingEvent(event: RTSLayerEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var event = event
 }
 
 
-open fun reset()
+    open fun reset()
         //nullable = true from not(false or (false and true)) = true
 {
 this.getConnectedWaypointList()!!.clear()
@@ -283,7 +285,7 @@ this.getConnectedWaypointList()!!.clear()
 
                 @Throws(Exception::class)
             
-open fun visit(unitLayer: PathFindingLayerInterface)
+    open fun visit(unitLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var unitLayer = unitLayer

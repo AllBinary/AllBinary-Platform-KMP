@@ -40,7 +40,7 @@ open public class MiniBasketView : HttpStoreComponentView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (transformInfoInterface: TransformInfoInterface)                        
+public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
@@ -53,7 +53,7 @@ var transformInfoInterface = transformInfoInterface
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -114,7 +114,7 @@ basketNode!!.appendChild(subTotalNode)
 }
 
 
-open fun addDomNodeInterfaces()
+    open fun addDomNodeInterfaces()
         //nullable = true from not(false or (false and true)) = true
 {
 this.addDomNodeInterface(this as DomNodeInterface)
@@ -123,7 +123,7 @@ this.addDomNodeInterface(this as DomNodeInterface)
 
                 @Throws(Exception::class)
             
-open fun view()
+    open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

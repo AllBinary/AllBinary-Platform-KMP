@@ -38,7 +38,7 @@ open public class Driver
     private var trackPathSelectionSkill: Integer
 
     private var aggression: Aggression
-public constructor        (turnSpeed: Integer, trackPathSelectionSkill: Integer, aggression: Aggression)
+public constructor (turnSpeed: Integer, trackPathSelectionSkill: Integer, aggression: Aggression)
             : super()
         {
 var turnSpeed = turnSpeed
@@ -50,7 +50,7 @@ this.setAggression(aggression)
 }
 
 
-open fun getTurnSpeed()
+    open fun getTurnSpeed()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -61,7 +61,7 @@ open fun getTurnSpeed()
 }
 
 
-open fun setTurnSpeed(turnSpeed: Integer)
+    open fun setTurnSpeed(turnSpeed: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var turnSpeed = turnSpeed
@@ -69,7 +69,7 @@ this.turnSpeed= turnSpeed
 }
 
 
-open fun getTrackPathSelectionSkill()
+    open fun getTrackPathSelectionSkill()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -80,7 +80,7 @@ open fun getTrackPathSelectionSkill()
 }
 
 
-open fun setTrackPathSelectionSkill(trackPathSelectionSkill: Integer)
+    open fun setTrackPathSelectionSkill(trackPathSelectionSkill: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var trackPathSelectionSkill = trackPathSelectionSkill
@@ -88,7 +88,7 @@ this.trackPathSelectionSkill= trackPathSelectionSkill
 }
 
 
-open fun getAggression()
+    open fun getAggression()
         //nullable = true from not(false or (false and true)) = true
 : Aggression{
 
@@ -99,7 +99,7 @@ open fun getAggression()
 }
 
 
-open fun setAggression(aggression: Aggression)
+    open fun setAggression(aggression: Aggression)
         //nullable = true from not(false or (false and false)) = true
 {
 var aggression = aggression

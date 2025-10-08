@@ -60,7 +60,7 @@ open public class TransformInfoObjectConfig
     private var document: Document
 
     private var outputTypeName: String
-public constructor        (transformInfoInterface: Object)
+public constructor (transformInfoInterface: Object)
             : super()
         {
 var transformInfoInterface = transformInfoInterface
@@ -99,7 +99,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "Constructor(TransformInfoInterfa
                                 
 }
 
-public constructor        (transformInfoInterface: Object, document: Object)
+public constructor (transformInfoInterface: Object, document: Object)
             : super()
         {
 var transformInfoInterface = transformInfoInterface
@@ -153,7 +153,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "Constructor(TransformInfoInterfa
                                 
 }
 
-public constructor        (transformInfoInterface: Object, name: Object, type: Object)
+public constructor (transformInfoInterface: Object, name: Object, type: Object)
             : super()
         {
 var transformInfoInterface = transformInfoInterface
@@ -203,7 +203,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "Constructor(TransformInfoInterfa
 }
 
 
-open fun createDocument()
+    open fun createDocument()
         //nullable = true from not(false or (false and true)) = true
 {
 this.document= DomDocumentHelper.create()
@@ -214,7 +214,7 @@ this.document.appendChild(objectConfigNode)
 }
 
 
-open fun getTransformInfoInterface()
+    open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformInfoInterface{
 
@@ -227,7 +227,7 @@ open fun getTransformInfoInterface()
 
                 @Throws(Exception::class)
             
-open fun toXmlDoc()
+    open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -238,7 +238,7 @@ open fun toXmlDoc()
 }
 
 
-open fun setDocument(document: Document)
+    open fun setDocument(document: Document)
         //nullable = true from not(false or (false and false)) = true
 {
 var document = document
@@ -246,7 +246,7 @@ this.document= document
 }
 
 
-open fun containsView(transformInfoInterface: TransformInfoInterface)
+    open fun containsView(transformInfoInterface: TransformInfoInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var transformInfoInterface = transformInfoInterface
@@ -300,7 +300,7 @@ var transformInfoInterface = transformInfoInterface
 
                 @Throws(Exception::class)
             
-open fun getTemplateAttributes()
+    open fun getTemplateAttributes()
         //nullable = true from not(false or (false and true)) = true
 : NamedNodeMap{
 
@@ -316,7 +316,7 @@ open fun getTemplateAttributes()
 
                 @Throws(Exception::class)
             
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -332,7 +332,7 @@ open fun getName()
 
                 @Throws(Exception::class)
             
-open fun setName(name: String)
+    open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name
@@ -345,7 +345,7 @@ attrNode!!.setValue(name)
 
                 @Throws(Exception::class)
             
-open fun getNodeVector(nodeName: String)
+    open fun getNodeVector(nodeName: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var nodeName = nodeName
@@ -399,7 +399,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "getNodeVector(nodename)")
 
                 @Throws(Exception::class)
             
-open fun getTransformDomNodes(nodeName: String)
+    open fun getTransformDomNodes(nodeName: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var nodeName = nodeName
@@ -435,7 +435,7 @@ viewVector!!.add(TransformInfoDomNode(viewNode))
 
                 @Throws(Exception::class)
             
-open fun getTransforms(nodeName: String)
+    open fun getTransforms(nodeName: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var nodeName = nodeName
@@ -472,7 +472,7 @@ viewVector!!.add(TransformInfoDomNode(viewNode).
 
                 @Throws(Exception::class)
             
-open fun getTransformsGroup(group: String)
+    open fun getTransformsGroup(group: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var group = group
@@ -612,7 +612,7 @@ viewVector!!.add(TransformInfoDomNode(viewNode))
 
                 @Throws(Exception::class)
             
-open fun getTransformDomNodes()
+    open fun getTransformDomNodes()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -625,7 +625,7 @@ open fun getTransformDomNodes()
 
                 @Throws(Exception::class)
             
-open fun getTransforms()
+    open fun getTransforms()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -638,7 +638,7 @@ open fun getTransforms()
 
                 @Throws(Exception::class)
             
-open fun getGroupTransforms()
+    open fun getGroupTransforms()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -651,7 +651,7 @@ open fun getGroupTransforms()
 
                 @Throws(Exception::class)
             
-open fun getParentTransforms()
+    open fun getParentTransforms()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -662,7 +662,7 @@ open fun getParentTransforms()
 }
 
 
-open fun getRootNode()
+    open fun getRootNode()
         //nullable = true from not(false or (false and true)) = true
 : Node{
 
@@ -673,7 +673,7 @@ open fun getRootNode()
 }
 
 
-open fun setOutputTypeName(outputTypeName: String)
+    open fun setOutputTypeName(outputTypeName: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var outputTypeName = outputTypeName
@@ -683,7 +683,7 @@ this.outputTypeName= outputTypeName
 
                 @Throws(Exception::class)
             
-open fun getOutputTypeName()
+    open fun getOutputTypeName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -696,7 +696,7 @@ open fun getOutputTypeName()
 
                 @Throws(Exception::class)
             
-open fun getInputOutputTypeName()
+    open fun getInputOutputTypeName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -712,7 +712,7 @@ open fun getInputOutputTypeName()
 
                 @Throws(Exception::class)
             
-open fun getInputOutputTypeFile()
+    open fun getInputOutputTypeFile()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -728,7 +728,7 @@ open fun getInputOutputTypeFile()
 
                 @Throws(Exception::class)
             
-open fun getImportUriPath()
+    open fun getImportUriPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -741,7 +741,8 @@ open fun getImportUriPath()
                         return DomNodeHelper.getTextNodeValue(node)
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

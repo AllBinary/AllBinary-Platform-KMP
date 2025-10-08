@@ -46,7 +46,7 @@ open public class CssProperty
     private var propertyName: String
 
     private var cssPropertyValues: CssPropertyValues
-public constructor        (name: String)
+public constructor (name: String)
             : super()
         {
 var name = name
@@ -54,7 +54,7 @@ this.propertyName= name
 this.cssPropertyValues= CssPropertyValues()
 }
 
-public constructor        (node: Node)
+public constructor (node: Node)
             : super()
         {
 var node = node
@@ -78,7 +78,7 @@ this.cssPropertyValues= CssPropertyValues(propertyValuesNode)
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -89,7 +89,7 @@ open fun getName()
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -106,7 +106,7 @@ hashMap!!.put(CssPropertyData.getInstance()!!.NAME, this.propertyName)
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

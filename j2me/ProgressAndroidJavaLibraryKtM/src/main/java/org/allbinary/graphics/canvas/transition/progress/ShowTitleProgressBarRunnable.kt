@@ -27,7 +27,6 @@
         
 import org.allbinary.animation.transition.TransistionTypes
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import android.app.Activity
 
@@ -35,7 +34,7 @@ open public class ShowTitleProgressBarRunnable : ProgressRunnable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (midletActivity: Activity, progressCanvas: ProgressCanvas)                        
+public constructor (midletActivity: Activity, progressCanvas: ProgressCanvas)                        
 
                             : super(midletActivity, progressCanvas){
 var midletActivity = midletActivity
@@ -48,7 +47,8 @@ var progressCanvas = progressCanvas
 
 
     private val FADE_IN_HALF: IntArray = intArrayOf(TransistionTypes.getInstance()!!.FADE_IN_TO_HALF_ALPHA,TransistionTypes.getInstance()!!.FADE_IN_FROM_HALF_ALPHA)
-override fun run()
+
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 

@@ -38,12 +38,11 @@ open public class Globals
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: Globals = Globals()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : Globals{
 
@@ -57,13 +56,13 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun init(classLoader: ClassLoader, pathString: String)
+    open fun init(classLoader: ClassLoader, pathString: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var classLoader = classLoader

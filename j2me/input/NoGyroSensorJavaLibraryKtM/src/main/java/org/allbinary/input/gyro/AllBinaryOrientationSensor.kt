@@ -32,8 +32,7 @@ import org.allbinary.logic.math.Orientation
 
 open public class AllBinaryOrientationSensor : AllBinarySensor {
         
-
-        companion object {
+companion object {
             
     val NULL_ALLBINARY_ORIENTATION_SENSOR: AllBinaryOrientationSensor = AllBinaryOrientationSensor()
 
@@ -41,20 +40,20 @@ open public class AllBinaryOrientationSensor : AllBinarySensor {
             
     private var listener: CompleteMotionGestureInputEventListenerInterface = NoCompleteMotionGestureInputEventListener.getInstance()!!
 
-open fun setListener(completeMotionGestureInputEventListenerInterface: CompleteMotionGestureInputEventListenerInterface)
+    open fun setListener(completeMotionGestureInputEventListenerInterface: CompleteMotionGestureInputEventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var completeMotionGestureInputEventListenerInterface = completeMotionGestureInputEventListenerInterface
 this.listener= completeMotionGestureInputEventListenerInterface
 }
 
-public constructor        (){
+public constructor (){
 }
 
 
                 @Throws(Exception::class)
             
-open fun getOrientation()
+    open fun getOrientation()
         //nullable = true from not(false or (false and true)) = true
 : Orientation{
 

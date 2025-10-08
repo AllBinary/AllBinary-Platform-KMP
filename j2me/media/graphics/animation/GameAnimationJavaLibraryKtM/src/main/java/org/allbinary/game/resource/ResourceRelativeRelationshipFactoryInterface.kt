@@ -28,18 +28,19 @@
 import org.allbinary.game.configuration.feature.GameFeatureControlledInterface
 import org.allbinary.graphics.RelativeRelationship
 import org.allbinary.util.BasicArrayList
+
 interface ResourceRelativeRelationshipFactoryInterface : GameFeatureControlledInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getResourceRelativeRelationshipList(resource: String)
+    open fun getResourceRelativeRelationshipList(resource: String)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList
 
                 @Throws(Exception::class)
             
-open fun addResourceRelativeRelationship(resource: String, relativeRelationship: RelativeRelationship)
+    open fun addResourceRelativeRelationship(resource: String, relativeRelationship: RelativeRelationship)
         //nullable = true from not(false or (false and false)) = true
 
 

@@ -42,8 +42,7 @@ open public class TitleView
         
                 , DomNodeInterface {
         
-
-        companion object {
+companion object {
             
     private val NAME: String = "None"
 
@@ -54,13 +53,13 @@ open public class TitleView
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var title: String
-public constructor        ()
+public constructor ()
             : super()
         {
 this.title= NAME
 }
 
-public constructor        (node: Node)
+public constructor (node: Node)
             : super()
         {
 var node = node
@@ -91,7 +90,7 @@ this.title= DomNodeHelper.getTextNodeValue(valueNode)
                                 
 }
 
-public constructor        (hashMap: HashMap<Any, Any>)
+public constructor (hashMap: HashMap<Any, Any>)
             : super()
         {
 var hashMap = hashMap
@@ -108,7 +107,7 @@ this.getFormData(hashMap)
 }
 
 
-open fun getTitle()
+    open fun getTitle()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -119,7 +118,7 @@ open fun getTitle()
 }
 
 
-open fun getFormData(hashMap: HashMap<Any, Any>)
+    open fun getFormData(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var hashMap = hashMap
@@ -136,7 +135,7 @@ this.title= hashMap!!.get(TitleData.getInstance()!!.TEXT) as String
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -153,7 +152,7 @@ hashMap!!.put(TitleData.getInstance()!!.TEXT, this.getTitle())
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

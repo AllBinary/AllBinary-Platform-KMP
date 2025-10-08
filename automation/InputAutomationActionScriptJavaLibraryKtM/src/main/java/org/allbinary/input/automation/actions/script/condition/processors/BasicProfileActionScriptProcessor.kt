@@ -35,7 +35,7 @@ import org.w3c.dom.Node
 open public class BasicProfileActionScriptProcessor : ProfileActionScriptItem
                 , ProfileActionScriptProcessorInterface {
         
-public constructor        (label: String, node: Node)                        
+public constructor (label: String, node: Node)                        
 
                             : super(label, node){
 var label = label
@@ -46,7 +46,7 @@ var node = node
                     
 }
 
-public constructor        (label: String)                        
+public constructor (label: String)                        
 
                             : super(label){
 var label = label
@@ -57,7 +57,7 @@ var label = label
 }
 
 
-open fun actionPerformed(actionEvent: ActionEvent)
+    open fun actionPerformed(actionEvent: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var actionEvent = actionEvent
@@ -88,7 +88,7 @@ JTreeInterfaceFactory.getInstance()!!.getJTreeInterface()!!.updateJTree()
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

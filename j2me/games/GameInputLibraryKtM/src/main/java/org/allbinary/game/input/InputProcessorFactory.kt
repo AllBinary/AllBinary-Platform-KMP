@@ -30,12 +30,11 @@ open public class InputProcessorFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: InputProcessorFactory = InputProcessorFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : InputProcessorFactory{
 
@@ -55,7 +54,7 @@ open fun getInstance()
         
     private val inputProcessor: InputProcessor = InputProcessor()
 
-open fun getInputProcessor()
+    open fun getInputProcessor()
         //nullable = true from not(false or (false and true)) = true
 : InputProcessor{
 

@@ -30,8 +30,7 @@ open public class DownloadItemData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NAME: String = "DOWNLOADITEM_NAME"
 

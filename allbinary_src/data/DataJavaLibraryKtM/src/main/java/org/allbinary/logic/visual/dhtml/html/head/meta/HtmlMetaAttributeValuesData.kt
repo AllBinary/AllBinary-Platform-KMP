@@ -30,12 +30,11 @@ open public class HtmlMetaAttributeValuesData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: HtmlMetaAttributeValuesData = HtmlMetaAttributeValuesData()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : HtmlMetaAttributeValuesData{
 
@@ -47,7 +46,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

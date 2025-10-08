@@ -36,7 +36,7 @@ open public class GameInputMapping
     private var name: String = StringUtil.getInstance()!!.EMPTY_STRING
 
     private var gameKey: GameKey = GameKey.NULL_GAME_KEY
-public constructor        (name: String, gameKey: GameKey)
+public constructor (name: String, gameKey: GameKey)
             : super()
         {
 var name = name
@@ -46,7 +46,7 @@ this.setGameKey(gameKey)
 }
 
 
-open fun setGameKey(gameKey: GameKey)
+    open fun setGameKey(gameKey: GameKey)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameKey = gameKey
@@ -54,7 +54,7 @@ this.gameKey= gameKey
 }
 
 
-open fun getGameKey()
+    open fun getGameKey()
         //nullable = true from not(false or (false and true)) = true
 : GameKey{
 
@@ -65,7 +65,7 @@ open fun getGameKey()
 }
 
 
-open fun setName(name: String)
+    open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name
@@ -73,7 +73,7 @@ this.name= name
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

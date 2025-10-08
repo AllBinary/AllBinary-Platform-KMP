@@ -35,12 +35,11 @@ open public class GameOptionsFormFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GameOptionsFormFactory = GameOptionsFormFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameOptionsFormFactory{
 
@@ -54,13 +53,13 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun init(commandListener: CommandListener, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)
+    open fun init(commandListener: CommandListener, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 : CommandForm{
 var commandListener = commandListener

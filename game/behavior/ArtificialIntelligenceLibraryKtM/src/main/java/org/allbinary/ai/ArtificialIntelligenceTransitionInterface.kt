@@ -25,16 +25,16 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface ArtificialIntelligenceTransitionInterface {
         
-
-        companion object {
+companion object {
             
     val ID: Int = 2
 
         }
             
-open fun transition()
+    open fun transition()
         //nullable = true from not(false or (false and true)) = true
 
 

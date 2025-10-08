@@ -29,7 +29,6 @@ import org.allbinary.game.input.resource.TouchButtonDowngradeResource
 import org.allbinary.game.input.resource.TouchButtonUpgradeResource
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListUtil
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.graphics.CellPositionFactory
 
@@ -43,7 +42,7 @@ open public class UpgradeDowngradeTouchButtonsBuilder : BaseTouchInput {
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-open fun getList()
+    open fun getList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 

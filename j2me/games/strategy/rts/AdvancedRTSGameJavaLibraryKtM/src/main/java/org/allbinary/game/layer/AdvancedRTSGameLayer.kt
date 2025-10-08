@@ -31,7 +31,6 @@ import org.allbinary.animation.transition.shake.ShakeAnimationListenerFactory
 import org.allbinary.game.input.form.RTSFormInput
 import org.allbinary.game.layer.building.event.BuildingEventHandler
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.animation.AnimationInterfaceFactoryInterface
 import org.allbinary.animation.ProceduralAnimationInterfaceFactoryInterface
@@ -83,7 +82,7 @@ open public class AdvancedRTSGameLayer : RTSLayer
     private var parentLayer: AdvancedRTSGameLayer
 
     var waypointBehaviorBase: WaypointBehaviorBase
-public constructor        (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, healthInterface: Health, rtsFormInput: RTSFormInput, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
+public constructor (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, healthInterface: Health, rtsFormInput: RTSFormInput, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
 
                             : this(remoteInfo, parentLayer, groupInterface, rootName, name, healthInterface, rtsFormInput, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y, TileLayerPositionIntoViewPosition()){
     //var remoteInfo = remoteInfo
@@ -108,7 +107,7 @@ public constructor        (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameL
                     
 }
 
-public constructor        (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, healthInterface: Health, rtsFormInput: RTSFormInput, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int, viewPosition: ViewPosition)                        
+public constructor (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, healthInterface: Health, rtsFormInput: RTSFormInput, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int, viewPosition: ViewPosition)                        
 
                             : super(remoteInfo, groupInterface, rootName, name, healthInterface, rtsFormInput, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y, viewPosition){
     //var remoteInfo = remoteInfo
@@ -140,7 +139,7 @@ this.duration= GameConfigurationCentral.getInstance()!!.VIBRATION.getValue()!!.t
 this.setParentLayer(parentLayer)
 }
 
-public constructor        ()                        
+public constructor ()                        
 
                             : super(RemoteInfo.REMOTE_INFO){
 
@@ -162,7 +161,7 @@ this.setParentLayer(
 
                 @Throws(Exception::class)
             
-open fun updateWaypointBehavior(geographicMapInterface: BasicGeographicMap)
+    open fun updateWaypointBehavior(geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapInterface = geographicMapInterface
@@ -171,7 +170,7 @@ this.getWaypointBehavior()!!.getWaypoint()!!.setAllBinaryGameLayerManager(this.a
 }
 
 
-open fun initVisibility(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
+    open fun initVisibility(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var rtsPlayerLayerInterface = rtsPlayerLayerInterface
@@ -197,7 +196,7 @@ var rtsPlayerLayerInterface = rtsPlayerLayerInterface
 
                 @Throws(Exception::class)
             
-open fun construct(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
+    open fun construct(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var rtsPlayerLayerInterface = rtsPlayerLayerInterface
@@ -209,7 +208,7 @@ BuildingEventHandler.getInstance()!!.addListener(this.getWaypointBehavior()!!.ge
 
                 @Throws(Exception::class)
             
-open fun setDestroyed(destroyed: Boolean)
+    open fun setDestroyed(destroyed: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var destroyed = destroyed
@@ -229,7 +228,7 @@ RTSLayerUtil.getInstance()!!.destroyAndClear(this.getWaypointBehavior()!!.getOwn
 }
 
 
-open fun getParentLayer()
+    open fun getParentLayer()
         //nullable = true from not(false or (false and true)) = true
 : RTSLayer{
 
@@ -240,7 +239,7 @@ open fun getParentLayer()
 }
 
 
-open fun setParentLayer(parentLayer: AdvancedRTSGameLayer)
+    open fun setParentLayer(parentLayer: AdvancedRTSGameLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var parentLayer = parentLayer
@@ -248,7 +247,7 @@ this.parentLayer= parentLayer
 }
 
 
-open fun getWaypointBehavior()
+    open fun getWaypointBehavior()
         //nullable = true from not(false or (false and true)) = true
 : WaypointBehaviorBase{
 
@@ -259,7 +258,7 @@ open fun getWaypointBehavior()
 }
 
 
-open fun setWaypointBehavior(unitWaypointHelper: WaypointBehaviorBase)
+    open fun setWaypointBehavior(unitWaypointHelper: WaypointBehaviorBase)
         //nullable = true from not(false or (false and false)) = true
 {
 var unitWaypointHelper = unitWaypointHelper
@@ -267,7 +266,7 @@ this.waypointBehaviorBase= unitWaypointHelper
 }
 
 
-open fun getWaypointLogHelper()
+    open fun getWaypointLogHelper()
         //nullable = true from not(false or (false and true)) = true
 : WaypointLogHelper{
 
@@ -278,7 +277,7 @@ open fun getWaypointLogHelper()
 }
 
 
-open fun getWaypoint2LogHelper()
+    open fun getWaypoint2LogHelper()
         //nullable = true from not(false or (false and true)) = true
 : Waypoint2LogHelper{
 
@@ -289,7 +288,7 @@ open fun getWaypoint2LogHelper()
 }
 
 
-open fun getWaypointRunnableLogHelper()
+    open fun getWaypointRunnableLogHelper()
         //nullable = true from not(false or (false and true)) = true
 : WaypointRunnableLogHelper{
 
@@ -300,7 +299,7 @@ open fun getWaypointRunnableLogHelper()
 }
 
 
-open fun shouldAddWaypointFromBuilding()
+    open fun shouldAddWaypointFromBuilding()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -326,7 +325,7 @@ open fun shouldAddWaypointFromBuilding()
 }
 
 
-open fun isWaypointListEmptyOrOnlyTargets()
+    open fun isWaypointListEmptyOrOnlyTargets()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -352,7 +351,7 @@ open fun isWaypointListEmptyOrOnlyTargets()
 
                 @Throws(Exception::class)
             
-open fun buildingChase(allbinaryLayer: AllBinaryLayer, cellPosition: GeographicMapCellPosition)
+    open fun buildingChase(allbinaryLayer: AllBinaryLayer, cellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var allbinaryLayer = allbinaryLayer
@@ -595,7 +594,7 @@ this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstance(this, Canvas.
 
                 @Throws(Exception::class)
             
-open fun getSurroundingGeographicMapCellPositionList()
+    open fun getSurroundingGeographicMapCellPositionList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -612,7 +611,8 @@ geographicMapCellPositionArea!!.update(geographicMapInterface)
                         return geographicMapCellPositionArea!!.getSurroundingGeographicMapCellPositionList()
 }
 
-override fun setSelected(selected: Boolean)
+
+    override fun setSelected(selected: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var selected = selected
@@ -646,7 +646,7 @@ this.waypointRunnableLogHelper= WaypointRunnableLogHelper.getInstance()
 }
 
 
-open fun onDestroyed(destroyedEvent: DestroyedEvent)
+    open fun onDestroyed(destroyedEvent: DestroyedEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var destroyedEvent = destroyedEvent

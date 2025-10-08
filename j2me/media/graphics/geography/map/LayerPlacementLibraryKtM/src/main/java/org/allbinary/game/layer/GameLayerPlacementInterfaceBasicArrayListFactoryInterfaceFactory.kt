@@ -25,14 +25,15 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface GameLayerPlacementInterfaceBasicArrayListFactoryInterfaceFactory {
         
 
-open fun getInstance(level: Int)
+    open fun getInstance(level: Int)
         //nullable =  from not(true or (false and false)) = 
 : LayerPlacementInterfaceBasicArrayListFactoryInterface
 
-open fun size()
+    open fun size()
         //nullable = true from not(false or (false and true)) = true
 : Int
 

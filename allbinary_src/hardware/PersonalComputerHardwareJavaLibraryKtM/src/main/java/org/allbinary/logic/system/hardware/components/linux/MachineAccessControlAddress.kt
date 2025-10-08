@@ -35,13 +35,13 @@ open public class MachineAccessControlAddress
                 , HardwareComponentInterface
                 , MachineAccessControlAddressInterface {
         
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun compareTo(componentInterface: HardwareComponentInterface)
+    open fun compareTo(componentInterface: HardwareComponentInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var componentInterface = componentInterface
@@ -52,7 +52,8 @@ var componentInterface = componentInterface
                         return true
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

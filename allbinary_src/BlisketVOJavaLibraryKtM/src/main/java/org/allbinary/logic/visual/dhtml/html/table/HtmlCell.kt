@@ -50,7 +50,7 @@ open public class HtmlCell : HtmlTag {
     private var body: String
 
     private var after: String
-public constructor        (before: String, width: String, height: String, after: String){
+public constructor (before: String, width: String, height: String, after: String){
 var before = before
 var width = width
 var height = height
@@ -64,14 +64,15 @@ addAttribute(WIDTH, this.width)
 }
 
 
-open fun addText(body: String)
+    open fun addText(body: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var body = body
 this.body= body
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

@@ -30,13 +30,12 @@ open public class RootTransformInfoData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NAME: String = "ROOT_TRANSFORM_INFO_NAME"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

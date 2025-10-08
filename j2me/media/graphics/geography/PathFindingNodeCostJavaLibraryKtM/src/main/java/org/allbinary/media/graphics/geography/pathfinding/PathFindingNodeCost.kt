@@ -37,7 +37,7 @@ open public class PathFindingNodeCost : PathFindingNode
     private val commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
     var pathFindingNodeCostInfo: PathFindingNodeCostInfo
-public constructor        (parent: PathFindingNodeCost, geographicMapCellPosition: GeographicMapCellPosition, pathFindingNodeCostInfo: PathFindingNodeCostInfo)                        
+public constructor (parent: PathFindingNodeCost, geographicMapCellPosition: GeographicMapCellPosition, pathFindingNodeCostInfo: PathFindingNodeCostInfo)                        
 
                             : super(parent, geographicMapCellPosition){
     //var parent = parent
@@ -79,7 +79,7 @@ this.pathFindingNodeCostInfo= pathFindingNodeCostInfo
 }
 
 
-open fun getPathFindingNodeCostInfo()
+    open fun getPathFindingNodeCostInfo()
         //nullable = true from not(false or (false and true)) = true
 : PathFindingNodeCostInfo{
 
@@ -90,14 +90,15 @@ open fun getPathFindingNodeCostInfo()
 }
 
 
-open fun setPathFindingNodeCostInfo(pathFindingNodeCostInfo: PathFindingNodeCostInfo)
+    open fun setPathFindingNodeCostInfo(pathFindingNodeCostInfo: PathFindingNodeCostInfo)
         //nullable = true from not(false or (false and false)) = true
 {
 var pathFindingNodeCostInfo = pathFindingNodeCostInfo
 this.pathFindingNodeCostInfo= pathFindingNodeCostInfo
 }
 
-override fun compareTo(pathFindingNodeCost: PathFindingNodeCost)
+
+    override fun compareTo(pathFindingNodeCost: PathFindingNodeCost)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var pathFindingNodeCost = pathFindingNodeCost
@@ -108,7 +109,8 @@ var pathFindingNodeCost = pathFindingNodeCost
                         return this.pathFindingNodeCostInfo!!.compareTo(pathFindingNodeCost!!.pathFindingNodeCostInfo)
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

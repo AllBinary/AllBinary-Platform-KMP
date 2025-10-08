@@ -30,15 +30,14 @@ open public class AlwaysActionScriptConditionData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var NAME: String = "ALWAYS_ACTION_CONDITION_NAME"
 
     var IS_ON: String = "ALWAYS_ACTION_CONDITION_IS_ON"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

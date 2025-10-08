@@ -38,7 +38,7 @@ open public class StoreFrontComponent : HttpStoreComponentView {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     var newStoreFrontInterface: StoreFrontInterface
-public constructor        (transformInfoInterface: TransformInfoInterface)                        
+public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
@@ -63,7 +63,7 @@ this.newStoreFrontInterface= StoreFront(this.getPageContext()!!.getRequest() as 
 
                 @Throws(Exception::class)
             
-open fun view()
+    open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

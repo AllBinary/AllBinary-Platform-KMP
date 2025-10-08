@@ -17,12 +17,11 @@ import org.allbinary.platform.opengles.PlatformTextureBaseFactory
 
 open public class OpenGLTextureFactory : PlatformTextureBaseFactory {
         
-
-        companion object {
+companion object {
             
     private val instance: OpenGLTextureFactory = OpenGLTextureFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OpenGLTextureFactory{
 
@@ -36,10 +35,11 @@ open fun getInstance()
         }
             
     private val gluUtils: OpenGLGLUUtils = OpenGLGLUUtils.getInstance()!!
-private constructor        (){
+private constructor (){
 }
 
-override fun load(gl: GL10, target: Int, level: Int, image: Image, border: Int, flip: Boolean)
+
+    override fun load(gl: GL10, target: Int, level: Int, image: Image, border: Int, flip: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl

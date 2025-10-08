@@ -48,7 +48,7 @@ open public class StoreFrontOrdersHistoryStatistics
     private var taxesMoney: Money
 
     private var totalMoney: Money
-public constructor        (storeFrontInterface: StoreFrontInterface)
+public constructor (storeFrontInterface: StoreFrontInterface)
             : super()
         {
 var storeFrontInterface = storeFrontInterface
@@ -90,7 +90,7 @@ this.numberOfOrdersLong= numberOfOrders as Long
 }
 
 
-open fun getNumberOfOrders()
+    open fun getNumberOfOrders()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -101,7 +101,7 @@ open fun getNumberOfOrders()
 }
 
 
-open fun getSubTotal()
+    open fun getSubTotal()
         //nullable = true from not(false or (false and true)) = true
 : Money{
 
@@ -112,7 +112,7 @@ open fun getSubTotal()
 }
 
 
-open fun getShippingCost()
+    open fun getShippingCost()
         //nullable = true from not(false or (false and true)) = true
 : Money{
 
@@ -123,7 +123,7 @@ open fun getShippingCost()
 }
 
 
-open fun getTaxes()
+    open fun getTaxes()
         //nullable = true from not(false or (false and true)) = true
 : Money{
 
@@ -134,7 +134,7 @@ open fun getTaxes()
 }
 
 
-open fun getTotal()
+    open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
 : Money{
 
@@ -145,7 +145,7 @@ open fun getTotal()
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -167,7 +167,7 @@ hashMap!!.put(storeFrontOrdersHistoryStatisticsData!!.TOTAL, this.getTotal()!!.t
 }
 
 
-open fun toVector()
+    open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -178,7 +178,7 @@ open fun toVector()
 }
 
 
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 

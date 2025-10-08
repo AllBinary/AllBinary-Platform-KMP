@@ -35,12 +35,11 @@ open public class ArtificialIntelligenceInterfaceFactoryInterfaceFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var SINGLETON: ArtificialIntelligenceInterfaceFactoryInterfaceFactory = ArtificialIntelligenceInterfaceFactoryInterfaceFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ArtificialIntelligenceInterfaceFactoryInterfaceFactory{
 
@@ -60,14 +59,14 @@ open fun getInstance()
         
     private var list: BasicArrayList = BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
 
-open fun clear()
+    open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 list= BasicArrayList()
 }
 
 
-open fun getInstance(hashtable: Hashtable<Any, Any>)
+    open fun getInstance(hashtable: Hashtable<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
 : ArtificialIntelligenceInterfaceFactoryInterface{
 var hashtable = hashtable
@@ -88,7 +87,7 @@ var hashtable = hashtable
 }
 
 
-open fun add(artificialIntelligenceInterfaceFactoryInterface: ArtificialIntelligenceInterfaceFactoryInterface)
+    open fun add(artificialIntelligenceInterfaceFactoryInterface: ArtificialIntelligenceInterfaceFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var artificialIntelligenceInterfaceFactoryInterface = artificialIntelligenceInterfaceFactoryInterface

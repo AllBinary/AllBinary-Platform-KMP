@@ -30,8 +30,7 @@ import org.allbinary.game.layer.resources.GameGraphicsResourceUtil
 
 open public class FlagGameResources : BasicGameResources {
         
-
-        companion object {
+companion object {
             
     private val ICON: String = "_icon"
 
@@ -50,7 +49,7 @@ open public class FlagGameResources : BasicGameResources {
     var RESOURCE_ICON_BUILD: String
 
     var RESOURCE_ICON: String
-protected constructor        (){
+protected constructor (){
 }
 
 
@@ -58,7 +57,7 @@ protected constructor        (){
 
                 @Throws(Exception::class)
             
-open fun init(ROOT: String, sizeString: String)
+    open fun init(ROOT: String, sizeString: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var ROOT = ROOT

@@ -30,16 +30,15 @@ import org.allbinary.logic.string.StringMaker
 import java.util.logging.Logger
 import org.allbinary.string.CommonStrings
 
-open public class LogUtil
+/*actual*/ open public class LogUtil
             : Object
          {
         
-
-        companion object {
+/*actual*/ companion object {
             
     private val instance: LogUtil = LogUtil()
 
-open fun getInstance()
+    /*actual*/ open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : LogUtil{
 
@@ -53,20 +52,20 @@ open fun getInstance()
         }
             
     private val logger: Logger = Logger.getLogger(LogUtil::class.toString()!!)!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun init()
+    /*actual*/ open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 PreLogUtil.put("Loggin Initialized", "LogUtil", "init()")
 }
 
 
-open fun put(log: Log)
+    /*actual*/ open fun put(log: Log)
         //nullable = true from not(false or (false and false)) = true
 {
 var log = log
@@ -122,7 +121,7 @@ logger.log(Level.INFO, message)
 }
 
 
-open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)
+    /*actual*/ open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var specialMessage = specialMessage

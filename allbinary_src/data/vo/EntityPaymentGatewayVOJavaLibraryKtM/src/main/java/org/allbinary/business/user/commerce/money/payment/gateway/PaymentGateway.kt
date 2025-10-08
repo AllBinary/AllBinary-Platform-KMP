@@ -107,7 +107,7 @@ open public class PaymentGateway
     private var lastModified: String
 
     private var timeEntered: String
-public constructor        (hashMap: HashMap<Any, Any>)
+public constructor (hashMap: HashMap<Any, Any>)
             : super()
         {
 var hashMap = hashMap
@@ -115,7 +115,7 @@ this.getFormData(hashMap)
 }
 
 
-open fun getFormData(hashMap: HashMap<Any, Any>)
+    open fun getFormData(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var hashMap = hashMap
@@ -318,7 +318,7 @@ this.timeEntered= hashMap!!.get(EntryData.getInstance()!!.TIMECREATED.toString()
 }
 
 
-open fun getStoreName()
+    open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -329,7 +329,7 @@ open fun getStoreName()
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -340,7 +340,7 @@ open fun getName()
 }
 
 
-open fun getEnable()
+    open fun getEnable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -351,7 +351,7 @@ open fun getEnable()
 }
 
 
-open fun getPaymentMethod()
+    open fun getPaymentMethod()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -362,7 +362,7 @@ open fun getPaymentMethod()
 }
 
 
-open fun getMode()
+    open fun getMode()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -373,7 +373,7 @@ open fun getMode()
 }
 
 
-open fun getTestProtocol()
+    open fun getTestProtocol()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -384,7 +384,7 @@ open fun getTestProtocol()
 }
 
 
-open fun getTestServer()
+    open fun getTestServer()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -395,7 +395,7 @@ open fun getTestServer()
 }
 
 
-open fun getTestPort()
+    open fun getTestPort()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -406,7 +406,7 @@ open fun getTestPort()
 }
 
 
-open fun getTestPath()
+    open fun getTestPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -417,7 +417,7 @@ open fun getTestPath()
 }
 
 
-open fun getServerProtocol()
+    open fun getServerProtocol()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -428,7 +428,7 @@ open fun getServerProtocol()
 }
 
 
-open fun getServer()
+    open fun getServer()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -439,7 +439,7 @@ open fun getServer()
 }
 
 
-open fun getServerPort()
+    open fun getServerPort()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -450,7 +450,7 @@ open fun getServerPort()
 }
 
 
-open fun getServerPath()
+    open fun getServerPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -461,7 +461,7 @@ open fun getServerPath()
 }
 
 
-open fun getUserName()
+    open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -472,7 +472,7 @@ open fun getUserName()
 }
 
 
-open fun getPassword()
+    open fun getPassword()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -483,7 +483,7 @@ open fun getPassword()
 }
 
 
-open fun getProxyProtocol()
+    open fun getProxyProtocol()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -494,7 +494,7 @@ open fun getProxyProtocol()
 }
 
 
-open fun getProxyServer()
+    open fun getProxyServer()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -505,7 +505,7 @@ open fun getProxyServer()
 }
 
 
-open fun getProxyPath()
+    open fun getProxyPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -516,7 +516,7 @@ open fun getProxyPath()
 }
 
 
-open fun getProxyPort()
+    open fun getProxyPort()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -527,7 +527,7 @@ open fun getProxyPort()
 }
 
 
-open fun getProxyUserName()
+    open fun getProxyUserName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -538,7 +538,7 @@ open fun getProxyUserName()
 }
 
 
-open fun getProxyPassword()
+    open fun getProxyPassword()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -549,7 +549,7 @@ open fun getProxyPassword()
 }
 
 
-open fun getTimeout()
+    open fun getTimeout()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -560,7 +560,7 @@ open fun getTimeout()
 }
 
 
-open fun getProxyTimeout()
+    open fun getProxyTimeout()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -571,7 +571,7 @@ open fun getProxyTimeout()
 }
 
 
-open fun getSpecial1()
+    open fun getSpecial1()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -582,7 +582,7 @@ open fun getSpecial1()
 }
 
 
-open fun getSpecial2()
+    open fun getSpecial2()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -593,7 +593,7 @@ open fun getSpecial2()
 }
 
 
-open fun getSpecial3()
+    open fun getSpecial3()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -604,7 +604,7 @@ open fun getSpecial3()
 }
 
 
-open fun getSpecial4()
+    open fun getSpecial4()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -615,7 +615,7 @@ open fun getSpecial4()
 }
 
 
-open fun getSpecial5()
+    open fun getSpecial5()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -626,7 +626,7 @@ open fun getSpecial5()
 }
 
 
-open fun getSpecial6()
+    open fun getSpecial6()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -637,7 +637,7 @@ open fun getSpecial6()
 }
 
 
-open fun getSpecial7()
+    open fun getSpecial7()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -648,7 +648,7 @@ open fun getSpecial7()
 }
 
 
-open fun getSpecial8()
+    open fun getSpecial8()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -659,7 +659,7 @@ open fun getSpecial8()
 }
 
 
-open fun getSpecial9()
+    open fun getSpecial9()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -670,7 +670,7 @@ open fun getSpecial9()
 }
 
 
-open fun getLastModified()
+    open fun getLastModified()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -681,7 +681,7 @@ open fun getLastModified()
 }
 
 
-open fun getTimeEntered()
+    open fun getTimeEntered()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -692,7 +692,7 @@ open fun getTimeEntered()
 }
 
 
-open fun setEnable(value: String)
+    open fun setEnable(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -700,7 +700,7 @@ this.enable= value
 }
 
 
-open fun setStoreName(value: String)
+    open fun setStoreName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -708,7 +708,7 @@ this.storeName= value
 }
 
 
-open fun setName(value: String)
+    open fun setName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -716,7 +716,7 @@ this.name= value
 }
 
 
-open fun setPaymentMethod(value: String)
+    open fun setPaymentMethod(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -724,7 +724,7 @@ this.paymentMethod= value
 }
 
 
-open fun setMode(value: String)
+    open fun setMode(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -732,7 +732,7 @@ this.mode= value
 }
 
 
-open fun setTestProtocol(value: String)
+    open fun setTestProtocol(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -740,7 +740,7 @@ this.testProtocol= value
 }
 
 
-open fun setTestServer(value: String)
+    open fun setTestServer(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -748,7 +748,7 @@ this.testServer= value
 }
 
 
-open fun setTestPort(value: String)
+    open fun setTestPort(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -756,7 +756,7 @@ this.testPort= value
 }
 
 
-open fun setTestPath(value: String)
+    open fun setTestPath(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -764,7 +764,7 @@ this.testPath= value
 }
 
 
-open fun setServerProtocol(value: String)
+    open fun setServerProtocol(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -772,7 +772,7 @@ this.serverProtocol= value
 }
 
 
-open fun setServer(value: String)
+    open fun setServer(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -780,7 +780,7 @@ this.server= value
 }
 
 
-open fun setServerPort(value: String)
+    open fun setServerPort(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -788,7 +788,7 @@ this.serverPort= value
 }
 
 
-open fun setServerPath(value: String)
+    open fun setServerPath(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -796,7 +796,7 @@ this.serverPath= value
 }
 
 
-open fun setTimeout(value: String)
+    open fun setTimeout(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -804,7 +804,7 @@ this.timeout= value
 }
 
 
-open fun setUserName(value: String)
+    open fun setUserName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -812,7 +812,7 @@ this.userName= value
 }
 
 
-open fun setPassword(value: String)
+    open fun setPassword(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -820,7 +820,7 @@ this.password= value
 }
 
 
-open fun setProxyProtocol(value: String)
+    open fun setProxyProtocol(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -828,7 +828,7 @@ this.proxyProtocol= value
 }
 
 
-open fun setProxyServer(value: String)
+    open fun setProxyServer(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -836,7 +836,7 @@ this.proxyServer= value
 }
 
 
-open fun setProxyPort(value: String)
+    open fun setProxyPort(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -844,7 +844,7 @@ this.proxyPort= value
 }
 
 
-open fun setProxyPath(value: String)
+    open fun setProxyPath(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -852,7 +852,7 @@ this.proxyPath= value
 }
 
 
-open fun setProxyUserName(value: String)
+    open fun setProxyUserName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -860,7 +860,7 @@ this.proxyUserName= value
 }
 
 
-open fun setProxyPassword(value: String)
+    open fun setProxyPassword(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -868,7 +868,7 @@ this.proxyPassword= value
 }
 
 
-open fun setProxyTimeout(value: String)
+    open fun setProxyTimeout(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -876,7 +876,7 @@ this.proxyTimeout= value
 }
 
 
-open fun setSpecial1(value: String)
+    open fun setSpecial1(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -884,7 +884,7 @@ this.special1= value
 }
 
 
-open fun setSpecial2(value: String)
+    open fun setSpecial2(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -892,7 +892,7 @@ this.special2= value
 }
 
 
-open fun setSpecial3(value: String)
+    open fun setSpecial3(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -900,7 +900,7 @@ this.special3= value
 }
 
 
-open fun setSpecial4(value: String)
+    open fun setSpecial4(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -908,7 +908,7 @@ this.special4= value
 }
 
 
-open fun setSpecial5(value: String)
+    open fun setSpecial5(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -916,7 +916,7 @@ this.special5= value
 }
 
 
-open fun setSpecial6(value: String)
+    open fun setSpecial6(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -924,7 +924,7 @@ this.special6= value
 }
 
 
-open fun setSpecial7(value: String)
+    open fun setSpecial7(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -932,7 +932,7 @@ this.special7= value
 }
 
 
-open fun setSpecial8(value: String)
+    open fun setSpecial8(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -940,7 +940,7 @@ this.special8= value
 }
 
 
-open fun setSpecial9(value: String)
+    open fun setSpecial9(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -948,7 +948,7 @@ this.special9= value
 }
 
 
-open fun setLastModified(value: String)
+    open fun setLastModified(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -956,7 +956,7 @@ this.lastModified= value
 }
 
 
-open fun setTimeEntered(value: String)
+    open fun setTimeEntered(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -966,7 +966,7 @@ this.timeEntered= value
 
                 @Throws(Exception::class)
             
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -979,7 +979,7 @@ open fun toHashMap()
 
                 @Throws(Exception::class)
             
-open fun toHashMap(isEncrypted: Boolean)
+    open fun toHashMap(isEncrypted: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : HashMap<Any, Any>{
 var isEncrypted = isEncrypted
@@ -1067,7 +1067,7 @@ paymentGatewayHashMap!!.put(EntryData.getInstance()!!.LASTMODIFIED.toString(), t
 }
 
 
-open fun toVector()
+    open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -1078,7 +1078,7 @@ open fun toVector()
 }
 
 
-open fun toVector(isEncrypted: Boolean)
+    open fun toVector(isEncrypted: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var isEncrypted = isEncrypted
@@ -1168,7 +1168,7 @@ updateVector!!.add(this.special9)
 
                 @Throws(Exception::class)
             
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 

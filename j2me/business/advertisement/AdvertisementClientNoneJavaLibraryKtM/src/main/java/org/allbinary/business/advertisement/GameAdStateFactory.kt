@@ -18,12 +18,11 @@ open public class GameAdStateFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GameAdStateFactory = GameAdStateFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameAdStateFactory{
 
@@ -45,7 +44,7 @@ open fun getInstance()
 
     private var gameAdState: GameAdState = gameAdStateArray[0]!!
 
-open fun getCurrentInstance()
+    open fun getCurrentInstance()
         //nullable = true from not(false or (false and true)) = true
 : GameAdState{
 
@@ -58,7 +57,7 @@ open fun getCurrentInstance()
 
                 @Throws(Exception::class)
             
-open fun getInstance(softwareInformation: SoftwareInformation)
+    open fun getInstance(softwareInformation: SoftwareInformation)
         //nullable =  from not(true or (false and false)) = 
 : GameAdState{
     //var softwareInformation = softwareInformation
@@ -71,7 +70,7 @@ this.gameAdState= gameAdStateArray[0]!!
 }
 
 
-open fun isEnabled()
+    open fun isEnabled()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

@@ -25,10 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface AllBinarySensorListener {
         
 
-open fun onSensorChange()
+    open fun onSensorChange()
         //nullable = true from not(false or (false and true)) = true
 
 

@@ -41,7 +41,7 @@ open public class PaymentType
     private val paymentTransactionInterfaceFactoryInterface: PaymentTransactionInterfaceFactoryInterface
 
     private val paymentProcessorInterfaceFactoryInterface: PaymentProcessorInterfaceFactoryInterface
-protected constructor        (basicPaymentType: BasicPaymentType)
+protected constructor (basicPaymentType: BasicPaymentType)
             : super()
         {
 var basicPaymentType = basicPaymentType
@@ -55,7 +55,7 @@ this.paymentProcessorInterfaceFactoryInterface=
 PaymentTypeUtil.getInstance()!!.add(this)
 }
 
-protected constructor        (basicPaymentType: BasicPaymentType, paymentTransactionInterfaceFactoryInterface: PaymentTransactionInterfaceFactoryInterface, paymentProcessorInterfaceFactoryInterface: PaymentProcessorInterfaceFactoryInterface)
+protected constructor (basicPaymentType: BasicPaymentType, paymentTransactionInterfaceFactoryInterface: PaymentTransactionInterfaceFactoryInterface, paymentProcessorInterfaceFactoryInterface: PaymentProcessorInterfaceFactoryInterface)
             : super()
         {
 var basicPaymentType = basicPaymentType
@@ -70,7 +70,7 @@ PaymentTypeUtil.getInstance()!!.add(this)
 
                 @Throws(Exception::class)
             
-open fun getPaymentTransactionInterfaceFactoryInterface()
+    open fun getPaymentTransactionInterfaceFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
 : PaymentTransactionInterfaceFactoryInterface{
 
@@ -97,7 +97,7 @@ open fun getPaymentTransactionInterfaceFactoryInterface()
 
                 @Throws(Exception::class)
             
-open fun getPaymentProcessorInterfaceFactoryInterface()
+    open fun getPaymentProcessorInterfaceFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
 : PaymentProcessorInterfaceFactoryInterface{
 
@@ -122,7 +122,7 @@ open fun getPaymentProcessorInterfaceFactoryInterface()
 }
 
 
-open fun toVector()
+    open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -159,7 +159,7 @@ vector.addAll(this.getBasicPaymentType()!!.toVector())
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -196,7 +196,7 @@ hashMap!!.putAll(this.getBasicPaymentType()!!.toHashMap())
 }
 
 
-open fun getBasicPaymentType()
+    open fun getBasicPaymentType()
         //nullable = true from not(false or (false and true)) = true
 : BasicPaymentType{
 

@@ -36,7 +36,7 @@ open public class Display
             {
             }            
         
-open fun sleep()
+    open fun sleep()
         //nullable = true from not(false or (false and true)) = true
 {
 }

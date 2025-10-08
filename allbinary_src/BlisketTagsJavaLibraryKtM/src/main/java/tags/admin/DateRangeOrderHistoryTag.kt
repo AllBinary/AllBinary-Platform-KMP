@@ -36,7 +36,7 @@ open public class DateRangeOrderHistoryTag : StoreValidationTransformTag {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var status: String
-public constructor        ()                        
+public constructor ()                        
 
                             : super(){
 
@@ -46,7 +46,7 @@ public constructor        ()
 }
 
 
-open fun setStatus(value: String)
+    open fun setStatus(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -56,7 +56,7 @@ this.status= value
 
                 @Throws(JspTagException::class)
             
-open fun doStartTag()
+    open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

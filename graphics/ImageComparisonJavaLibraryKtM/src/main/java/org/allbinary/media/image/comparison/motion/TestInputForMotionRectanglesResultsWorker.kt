@@ -56,14 +56,14 @@ open public class TestInputForMotionRectanglesResultsWorker
     private var running: Boolean= false
 
     private var motionRectanglesVector: Vector
-public constructor        ()
+public constructor ()
             : super()
         {
 this.motionRectanglesVector= Vector()
 }
 
 
-open fun getMotionRectanglesVector()
+    open fun getMotionRectanglesVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -74,7 +74,7 @@ open fun getMotionRectanglesVector()
 }
 
 
-open fun onMotionRectanglesImageComparisonResultsEvent(motionRectanglesImageComparisonResultsEvent: MotionRectanglesResultsEvent)
+    open fun onMotionRectanglesImageComparisonResultsEvent(motionRectanglesImageComparisonResultsEvent: MotionRectanglesResultsEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var motionRectanglesImageComparisonResultsEvent = motionRectanglesImageComparisonResultsEvent
@@ -83,7 +83,7 @@ this.run()
 }
 
 
-open fun onEvent(allBinaryEventObject: AllBinaryEventObject)
+    open fun onEvent(allBinaryEventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryEventObject = allBinaryEventObject
@@ -92,7 +92,7 @@ this.onMotionRectanglesImageComparisonResultsEvent(allBinaryEventObject as Motio
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun isRunning()
+    open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -104,7 +104,7 @@ open fun isRunning()
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun setRunning(running: Boolean)
+    open fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var running = running
@@ -112,7 +112,7 @@ this.running= running
 }
 
 
-open fun run()
+    open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 

@@ -42,7 +42,7 @@ open public class ImageArrayAnimation : IndexedAnimation {
     private var totalFrames: Int= 0
 
     var circularIndexUtil: CircularIndexUtil = CircularIndexUtil.NULL_CIRCULAR_INDEX_UTIL
-public constructor        (imageArray: Array<Image?>, animationBehavior: AnimationBehavior)                        
+public constructor (imageArray: Array<Image?>, animationBehavior: AnimationBehavior)                        
 
                             : super(animationBehavior){
     //var imageArray = imageArray
@@ -56,7 +56,8 @@ this.setImageArray(imageArray)
 
 
                 @Throws(Exception::class)
-            override fun getAnimationSize()
+            
+    override fun getAnimationSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -66,26 +67,30 @@ this.setImageArray(imageArray)
                         return this.getSize()
 }
 
-override fun nextFrame()
+
+    override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 this.circularIndexUtil!!.next()
 }
 
-override fun previousFrame()
+
+    override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 this.circularIndexUtil!!.previous()
 }
 
-override fun setFrame(index: Int)
+
+    override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var index = index
 this.circularIndexUtil!!.setIndex(index)
 }
 
-override fun getFrame()
+
+    override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -95,7 +100,8 @@ override fun getFrame()
                         return this.circularIndexUtil!!.getIndex()
 }
 
-override fun getSize()
+
+    override fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -105,13 +111,15 @@ override fun getSize()
                         return this.totalFrames
 }
 
-override fun setSequence(sequence: IntArray)
+
+    override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
 {
 var sequence = sequence
 }
 
-override fun getSequence()
+
+    override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
 : IntArray{
 
@@ -122,7 +130,7 @@ override fun getSequence()
 }
 
 
-open fun getImage(index: Int)
+    open fun getImage(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : Image{
 var index = index
@@ -134,7 +142,7 @@ var index = index
 }
 
 
-open fun getImageArray()
+    open fun getImageArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<Image?>{
 
@@ -145,7 +153,7 @@ open fun getImageArray()
 }
 
 
-open fun setImageArray(imageArray: Array<Image?>)
+    open fun setImageArray(imageArray: Array<Image?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var imageArray = imageArray
@@ -156,7 +164,8 @@ this.circularIndexUtil= CircularIndexUtil.getInstance(this.totalFrames)
 
 
     private var anchor: Int = Anchor.TOP_LEFT
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

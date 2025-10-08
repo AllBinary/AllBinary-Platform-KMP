@@ -34,12 +34,11 @@ open public class GameKeyCompleteMotionGestureInputEventFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: GameKeyCompleteMotionGestureInputEventFactory = GameKeyCompleteMotionGestureInputEventFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameKeyCompleteMotionGestureInputEventFactory{
 
@@ -61,7 +60,7 @@ open fun getInstance()
 
     private val eventList: BasicArrayList = BasicArrayList()
 
-open fun add(gameKeyCompleteMotionGestureInputEvent: GameKeyCompleteMotionGestureInputEvent)
+    open fun add(gameKeyCompleteMotionGestureInputEvent: GameKeyCompleteMotionGestureInputEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameKeyCompleteMotionGestureInputEvent = gameKeyCompleteMotionGestureInputEvent
@@ -69,7 +68,7 @@ eventList!!.add(gameKeyCompleteMotionGestureInputEvent)
 }
 
 
-open fun updateAll()
+    open fun updateAll()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(StringMaker().

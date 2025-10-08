@@ -35,12 +35,11 @@ open public class AbeLicenseInterfaceFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: AbeLicenseInterfaceFactory = AbeLicenseInterfaceFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AbeLicenseInterfaceFactory{
 
@@ -66,7 +65,7 @@ open fun getInstance()
     private var abeLicenseInterface: AbeLicenseInterface = 
                 null
             
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -74,7 +73,7 @@ private constructor        ()
 
                 @Throws(LicensingException::class)
             
-open fun getLicenseInstance(abeClientInformation: AbeClientInformationInterface)
+    open fun getLicenseInstance(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
 : AbeLicenseInterface{
     //var abeClientInformation = abeClientInformation
@@ -105,7 +104,7 @@ open fun getLicenseInstance(abeClientInformation: AbeClientInformationInterface)
 
                 @Throws(LicensingException::class)
             
-open fun get(abeClientInformation: AbeClientInformationInterface)
+    open fun get(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
 : AbeLicenseInterface{
     //var abeClientInformation = abeClientInformation
@@ -153,7 +152,7 @@ logUtil!!.put("Licensing Failure", this, commonStrings!!.GET, e)
 }
 
 
-open fun isTimeToGetKey()
+    open fun isTimeToGetKey()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -188,7 +187,7 @@ time= currentTime
 }
 
 
-open fun setCheck(check: Boolean)
+    open fun setCheck(check: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var check = check
@@ -196,7 +195,7 @@ this.check= check
 }
 
 
-open fun isCheck()
+    open fun isCheck()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

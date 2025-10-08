@@ -38,7 +38,7 @@ open public class LurchAI : BasicAI {
     var currentRelativeAngle: Int = 0
 
     private var currentSpeed: Int= 0
-public constructor        (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
+public constructor (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
                             : super(ownerLayerInterface, gameInput){
 var ownerLayerInterface = ownerLayerInterface
@@ -51,7 +51,8 @@ var gameInput = gameInput
 
 
                 @Throws(Exception::class)
-            override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+            
+    override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager
@@ -136,7 +137,7 @@ ownerLayerInterface!!.setPosition(x, ownerLayerInterface!!.getYP(), ownerLayerIn
 }
 
 
-open fun reverse()
+    open fun reverse()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -160,7 +161,7 @@ open fun reverse()
 }
 
 
-open fun accelerate()
+    open fun accelerate()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -175,7 +176,7 @@ open fun accelerate()
 }
 
 
-open fun drop()
+    open fun drop()
         //nullable = true from not(false or (false and true)) = true
 {
 

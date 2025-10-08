@@ -56,7 +56,7 @@ open public class MeteredGameObject
     private val IS_GOOD_LABEL: String = "isGood: "
 
     private val IS_DROPPPING_LABEL: String = "isDropping: "
-public constructor        (bufferedImage: Array<BufferedImage?>, minX: Object, maxX: Object, y: Object)
+public constructor (bufferedImage: Array<BufferedImage?>, minX: Object, maxX: Object, y: Object)
             : super()
         {
 var bufferedImage = bufferedImage
@@ -112,7 +112,7 @@ this.getRatios()[index]= Double(nominator /this.getSize())
 }
 
 
-open fun isGood()
+    open fun isGood()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -123,7 +123,7 @@ open fun isGood()
 }
 
 
-open fun setGood(good: Boolean)
+    open fun setGood(good: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var good = good
@@ -131,7 +131,7 @@ this.good= good
 }
 
 
-open fun isDropping()
+    open fun isDropping()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -142,7 +142,7 @@ open fun isDropping()
 }
 
 
-open fun setDropping(dropping: Boolean)
+    open fun setDropping(dropping: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var dropping = dropping
@@ -150,7 +150,7 @@ this.dropping= dropping
 }
 
 
-open fun getRatios()
+    open fun getRatios()
         //nullable = true from not(false or (false and true)) = true
 : Array<Double?>{
 
@@ -160,7 +160,8 @@ open fun getRatios()
                         return this.ratios
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -201,7 +202,7 @@ stringBuffer!!.append(this.isDropping())
 }
 
 
-open fun setRatios(ratios: Array<Double?>)
+    open fun setRatios(ratios: Array<Double?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var ratios = ratios
@@ -209,7 +210,7 @@ this.ratios= ratios
 }
 
 
-open fun getMinX()
+    open fun getMinX()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -220,7 +221,7 @@ open fun getMinX()
 }
 
 
-open fun setMinX(minX: Integer)
+    open fun setMinX(minX: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var minX = minX
@@ -228,7 +229,7 @@ this.minX= minX
 }
 
 
-open fun getMaxX()
+    open fun getMaxX()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -239,7 +240,7 @@ open fun getMaxX()
 }
 
 
-open fun setMaxX(maxX: Integer)
+    open fun setMaxX(maxX: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var maxX = maxX
@@ -247,7 +248,7 @@ this.maxX= maxX
 }
 
 
-open fun getY()
+    open fun getY()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -258,7 +259,7 @@ open fun getY()
 }
 
 
-open fun setY(y: Integer)
+    open fun setY(y: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var y = y
@@ -266,7 +267,7 @@ this.y= y
 }
 
 
-open fun getSize()
+    open fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -277,7 +278,7 @@ open fun getSize()
 }
 
 
-open fun setSize(size: Integer)
+    open fun setSize(size: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var size = size

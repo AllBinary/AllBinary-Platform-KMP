@@ -40,7 +40,7 @@ open public class OpenGLESStrings
         
                 @Throws(Exception::class)
             
-open fun set(gl: GL10)
+    open fun set(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl
@@ -51,7 +51,7 @@ open fun set(gl: GL10)
 }
 
 
-open fun initFont(gl: GL10, width: Int, height: Int)
+    open fun initFont(gl: GL10, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl
@@ -66,7 +66,7 @@ open fun initFont(gl: GL10, width: Int, height: Int)
 
                 @Throws(Exception::class)
             
-open fun update(gl: GL10, width: Int, height: Int)
+    open fun update(gl: GL10, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl
@@ -79,7 +79,7 @@ open fun update(gl: GL10, width: Int, height: Int)
 }
 
 
-open fun drawChar(gl: GL10, graphics: Graphics, character: Char, x: Int, y: Int, anchor: Int)
+    open fun drawChar(gl: GL10, graphics: Graphics, character: Char, x: Int, y: Int, anchor: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl
@@ -95,7 +95,7 @@ open fun drawChar(gl: GL10, graphics: Graphics, character: Char, x: Int, y: Int,
 }
 
 
-open fun drawChars(gl: GL10, graphics: Graphics, data: CharArray, offset: Int, length: Int, x: Int, y: Int, anchor: Int)
+    open fun drawChars(gl: GL10, graphics: Graphics, data: CharArray, offset: Int, length: Int, x: Int, y: Int, anchor: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl
@@ -113,7 +113,7 @@ open fun drawChars(gl: GL10, graphics: Graphics, data: CharArray, offset: Int, l
 }
 
 
-open fun drawString(gl: GL10, graphics: Graphics, string: String, x: Int, y: Int, anchor: Int)
+    open fun drawString(gl: GL10, graphics: Graphics, string: String, x: Int, y: Int, anchor: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl
@@ -129,7 +129,7 @@ open fun drawString(gl: GL10, graphics: Graphics, string: String, x: Int, y: Int
 }
 
 
-open fun drawSubstring(gl: GL10, graphics: Graphics, string: String, offset: Int, len: Int, x: Int, y: Int, anchor: Int)
+    open fun drawSubstring(gl: GL10, graphics: Graphics, string: String, offset: Int, len: Int, x: Int, y: Int, anchor: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl

@@ -26,12 +26,13 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.util.event.EventListenerInterface
+
 interface ScrollMapEventListenerInterface : EventListenerInterface {
         
 
                 @Throws(Exception::class)
             
-open fun onMoveEvent(layerManagerEvent: ScrollMapEvent)
+    open fun onMoveEvent(layerManagerEvent: ScrollMapEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

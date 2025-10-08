@@ -30,12 +30,11 @@ open public class ScreenListenerHandler
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ScreenListenerHandler = ScreenListenerHandler()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ScreenListenerHandler{
 
@@ -55,7 +54,7 @@ open fun getInstance()
         
     private var screenListenerInterface: ScreenListenerInterface = ScreenEmptyListener()
 
-open fun setListener(screenListenerInterface: ScreenListenerInterface)
+    open fun setListener(screenListenerInterface: ScreenListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var screenListenerInterface = screenListenerInterface
@@ -63,7 +62,7 @@ this.screenListenerInterface= screenListenerInterface
 }
 
 
-open fun fire(isFullScreen: Boolean)
+    open fun fire(isFullScreen: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var isFullScreen = isFullScreen
@@ -71,7 +70,7 @@ this.screenListenerInterface!!.onFullScreen(isFullScreen)
 }
 
 
-open fun fire()
+    open fun fire()
         //nullable = true from not(false or (false and true)) = true
 {
 this.screenListenerInterface!!.onFullScreenDisplay()

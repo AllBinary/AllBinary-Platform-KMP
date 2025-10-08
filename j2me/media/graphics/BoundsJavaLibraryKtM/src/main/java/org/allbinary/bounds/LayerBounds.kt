@@ -42,7 +42,7 @@ open public class LayerBounds
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     var rectangle: Rectangle
-protected constructor        (rectangle: Rectangle)
+protected constructor (rectangle: Rectangle)
             : super()
         {
 var rectangle = rectangle
@@ -50,7 +50,7 @@ this.rectangle= rectangle
 }
 
 
-open fun getRectangleP()
+    open fun getRectangleP()
         //nullable = true from not(false or (false and true)) = true
 : Rectangle{
 
@@ -61,20 +61,22 @@ open fun getRectangleP()
 }
 
 
-open fun visit(boundsVisitorInterface: BoundsVisitorInterface)
+    open fun visit(boundsVisitorInterface: BoundsVisitorInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var boundsVisitorInterface = boundsVisitorInterface
 }
 
-override fun onEvent(eventObject: AllBinaryEventObject)
+
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
-override fun onBoundsChangeEvent(boundsChangeEvent: BoundsChangeEvent)
+
+    override fun onBoundsChangeEvent(boundsChangeEvent: BoundsChangeEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var boundsChangeEvent = boundsChangeEvent

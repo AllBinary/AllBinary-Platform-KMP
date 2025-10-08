@@ -36,12 +36,11 @@ open public class FileListFetcher
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: FileListFetcher = FileListFetcher()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : FileListFetcher{
 
@@ -61,7 +60,7 @@ open fun getInstance()
         
     private val subDirectory: SubDirectory = SubDirectory.getInstance()!!
 
-open fun getFiles(path: String)
+    open fun getFiles(path: String)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var path = path
@@ -89,7 +88,7 @@ System.out.println("Error: " +e +"\nMsg: " +e.message)
 }
 
 
-open fun getFiles(path: String, includeExtension: String)
+    open fun getFiles(path: String, includeExtension: String)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var path = path
@@ -125,7 +124,7 @@ System.out.println("Error: " +e +"\nMsg: " +e.message)
 }
 
 
-open fun getFiles(path: String, pathIncludes: String, includeExtension: String)
+    open fun getFiles(path: String, pathIncludes: String, includeExtension: String)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var path = path

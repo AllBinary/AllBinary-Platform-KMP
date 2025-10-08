@@ -32,19 +32,17 @@ import org.allbinary.game.layer.unit.UnitLayer
 import org.allbinary.game.layer.unit.UnitWaypointBehavior
 import org.allbinary.util.BasicArrayList
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 
 open public class AssignWaypointsUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AssignWaypointsUtil = AssignWaypointsUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AssignWaypointsUtil{
 
@@ -67,7 +65,7 @@ open fun getInstance()
     private val WAYPOINT_EVENT: RTSLayerEvent = RTSLayerEvent(
                             null)
 
-open fun set(unitLayer: UnitLayer, ownerAdvancedRTSGameLayer: AdvancedRTSGameLayer)
+    open fun set(unitLayer: UnitLayer, ownerAdvancedRTSGameLayer: AdvancedRTSGameLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var unitLayer = unitLayer

@@ -30,7 +30,7 @@ import org.allbinary.logic.util.event.AllBinaryEventObject
 
 open public class BoundsChangeEvent : AllBinaryEventObject {
         
-public constructor        (rectangle: Rectangle)                        
+public constructor (rectangle: Rectangle)                        
 
                             : super(rectangle){
 var rectangle = rectangle
@@ -41,7 +41,7 @@ var rectangle = rectangle
 }
 
 
-open fun getRectangle()
+    open fun getRectangle()
         //nullable = true from not(false or (false and true)) = true
 : Rectangle{
 

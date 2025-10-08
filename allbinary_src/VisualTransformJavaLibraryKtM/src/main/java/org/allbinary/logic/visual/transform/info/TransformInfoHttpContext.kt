@@ -39,7 +39,7 @@ open public class TransformInfoHttpContext : TransformInfoHttp {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (databaseHashMap: HashMap<Any, Any>, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
+public constructor (databaseHashMap: HashMap<Any, Any>, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
                             : super(databaseHashMap, propertiesHashMap, pageContext){
 var databaseHashMap = databaseHashMap
@@ -68,7 +68,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
 this.setStoreName(StringUtil.getInstance()!!.EMPTY_STRING)
 }
 
-public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
+public constructor (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
                             : super(propertiesHashMap, pageContext){
 var propertiesHashMap = propertiesHashMap
@@ -92,7 +92,7 @@ this.setStoreName(StringUtil.getInstance()!!.EMPTY_STRING)
 
                 @Throws(Exception::class)
             
-open fun getPath()
+    open fun getPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -113,7 +113,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 
                 @Throws(Exception::class)
             
-open fun getTemplateFilePath()
+    open fun getTemplateFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 
@@ -126,7 +126,7 @@ open fun getTemplateFilePath()
 
                 @Throws(Exception::class)
             
-open fun getObjectConfigFilePath()
+    open fun getObjectConfigFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 
@@ -139,7 +139,7 @@ open fun getObjectConfigFilePath()
 
                 @Throws(Exception::class)
             
-open fun getDataFilePath()
+    open fun getDataFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 

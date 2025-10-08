@@ -48,7 +48,7 @@ open public class TransformInfoPropertiesDocument
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val document: Document
-public constructor        (filePath: String)
+public constructor (filePath: String)
             : super()
         {
     //var filePath = filePath
@@ -59,7 +59,7 @@ this.document= DomDocumentFileHelper.create(xmlFile)
 }
 
 
-open fun toTransformInfoPropertiesHashMap()
+    open fun toTransformInfoPropertiesHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 

@@ -26,10 +26,11 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.util.event.EventListenerInterface
+
 interface GameFeatureListenerInterface : EventListenerInterface {
         
 
-open fun onGameFeatureChange(gameFeatureEvent: GameFeatureEvent)
+    open fun onGameFeatureChange(gameFeatureEvent: GameFeatureEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

@@ -37,7 +37,7 @@ open public class StoreEmailInfo : BasicEmailInfo {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var storeFrontInterface: StoreFrontInterface
-public constructor        (storeFrontInterface: StoreFrontInterface, subject: String, textBody: String)                        
+public constructor (storeFrontInterface: StoreFrontInterface, subject: String, textBody: String)                        
 
                             : super(subject, textBody){
 var storeFrontInterface = storeFrontInterface
@@ -66,7 +66,7 @@ this.init()
 
                 @Throws(Exception::class)
             
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 

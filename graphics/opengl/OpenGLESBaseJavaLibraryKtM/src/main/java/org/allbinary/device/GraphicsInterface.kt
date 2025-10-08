@@ -27,10 +27,11 @@
         
 import javax.microedition.lcdui.Font
 import org.allbinary.graphics.font.FontDebugBase
+
 interface GraphicsInterface {
         
 
-open fun setFont(font: Font, fontDebug: FontDebugBase)
+    open fun setFont(font: Font, fontDebug: FontDebugBase)
         //nullable = true from not(false or (false and false)) = true
 
 

@@ -30,7 +30,7 @@ import org.allbinary.layer.AllBinaryLayer
 
 open public class HealthBarTwodAnimation : HealthBarAnimation {
         
-public constructor        (layerInterface: AllBinaryLayer, location: Int)                        
+public constructor (layerInterface: AllBinaryLayer, location: Int)                        
 
                             : super(layerInterface, location){
     //var layerInterface = layerInterface
@@ -41,7 +41,8 @@ public constructor        (layerInterface: AllBinaryLayer, location: Int)
                     
 }
 
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics

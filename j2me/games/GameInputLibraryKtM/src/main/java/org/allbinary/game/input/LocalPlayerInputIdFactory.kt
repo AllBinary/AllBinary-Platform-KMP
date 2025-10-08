@@ -33,12 +33,11 @@ open public class LocalPlayerInputIdFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: LocalPlayerInputIdFactory = LocalPlayerInputIdFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : LocalPlayerInputIdFactory{
 
@@ -64,7 +63,7 @@ open fun getInstance()
     private val playersInPlay: BooleanArray = BooleanArray(MAX_NUMBER_OF_PLAYERS)
 
     private var totalDevicesMapped: Int = 0
-private constructor        ()
+private constructor ()
             : super()
         {
 
@@ -80,7 +79,7 @@ deviceIdToplayerId[index]=  -1
 }
 
 
-open fun getDeviceId(playerInputId: Int)
+    open fun getDeviceId(playerInputId: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var playerInputId = playerInputId
@@ -92,7 +91,7 @@ var playerInputId = playerInputId
 }
 
 
-open fun getPlayerForDevice(deviceId: Int)
+    open fun getPlayerForDevice(deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var deviceId = deviceId
@@ -178,7 +177,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-open fun getTotalDevicesInPlay()
+    open fun getTotalDevicesInPlay()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -210,7 +209,7 @@ open fun getTotalDevicesInPlay()
 }
 
 
-open fun isPlayerInPlay(playerInputId: Int)
+    open fun isPlayerInPlay(playerInputId: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var playerInputId = playerInputId
@@ -222,7 +221,7 @@ var playerInputId = playerInputId
 }
 
 
-open fun setPlayerInPlay(playerInputId: Int)
+    open fun setPlayerInPlay(playerInputId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var playerInputId = playerInputId
@@ -232,7 +231,7 @@ playersInPlay[playerInputId]= true
 }
 
 
-open fun setPlayerOutOfPlay(playerInputId: Int)
+    open fun setPlayerOutOfPlay(playerInputId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var playerInputId = playerInputId
@@ -242,7 +241,7 @@ playersInPlay[playerInputId]= false
 }
 
 
-open fun getPlayersInPlay()
+    open fun getPlayersInPlay()
         //nullable = true from not(false or (false and true)) = true
 : BooleanArray{
 

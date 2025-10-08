@@ -95,7 +95,7 @@ open public class InitSql
     private val NO_RESULTS_IN_RESULT_SET: String = "No Results in ResultSet"
 
     private val INSERT_END: String = "')"
-public constructor        (databaseConnectionInfoInterface: DbConnectionInfo)
+public constructor (databaseConnectionInfoInterface: DbConnectionInfo)
             : super()
         {
 var databaseConnectionInfoInterface = databaseConnectionInfoInterface
@@ -103,7 +103,7 @@ this.setDatabaseConnectionInfoInterface(databaseConnectionInfoInterface)
 }
 
 
-open fun setTable(tableName: String)
+    open fun setTable(tableName: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var tableName = tableName
@@ -111,7 +111,7 @@ this.tableName= tableName
 }
 
 
-open fun setDatabaseConnectionInfoInterface(databaseConnectionInfoInterface: DbConnectionInfo)
+    open fun setDatabaseConnectionInfoInterface(databaseConnectionInfoInterface: DbConnectionInfo)
         //nullable = true from not(false or (false and false)) = true
 {
 var databaseConnectionInfoInterface = databaseConnectionInfoInterface
@@ -119,7 +119,7 @@ this.databaseConnectionInfoInterface= databaseConnectionInfoInterface
 }
 
 
-open fun createTable(tableData: String)
+    open fun createTable(tableData: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var tableData = tableData
@@ -158,7 +158,7 @@ this.executeSQLStatement(tableData)
 }
 
 
-open fun dropTable()
+    open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -193,7 +193,7 @@ open fun dropTable()
 }
 
 
-open fun getRow(keysAndValues: HashMap<Any, Any>)
+    open fun getRow(keysAndValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 : HashMap<Any, Any>{
 var keysAndValues = keysAndValues
@@ -341,7 +341,7 @@ result.put(columnName, field)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun updateWhere(key: String, value: String, updatedKeyValuePairs: HashMap<Any, Any>)
+    open fun updateWhere(key: String, value: String, updatedKeyValuePairs: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var key = key
@@ -440,7 +440,7 @@ this.executeSQLStatement(sqlStatement)
 }
 
 
-open fun insert(values: Vector)
+    open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 {
 var values = values
@@ -504,7 +504,7 @@ this.executeSQLStatement(sqlStatement)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getValue(value: String)
+    open fun getValue(value: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var value = value
@@ -535,7 +535,7 @@ var value = value
 
                 @Throws(Exception::class, SQLException::class)
             
-open fun executeSQLStatement(statement: String)
+    open fun executeSQLStatement(statement: String)
         //nullable = true from not(false or (false and false)) = true
 : ResultSet{
 var statement = statement
@@ -603,7 +603,7 @@ stmt.close()
 
                 @Throws(SQLException::class)
             
-open fun createConnection()
+    open fun createConnection()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -636,7 +636,7 @@ PreLogUtil.put(this.commonStrings!!.EXCEPTION, INIT_SQL, "createConnection()", s
 
                 @Throws(Exception::class)
             
-open fun initialize()
+    open fun initialize()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -700,7 +700,7 @@ this.createConnection()
 }
 
 
-open fun getDatabaseConnectionInfoInterface()
+    open fun getDatabaseConnectionInfoInterface()
         //nullable = true from not(false or (false and true)) = true
 : DatabaseConnectionInfoInterface{
 

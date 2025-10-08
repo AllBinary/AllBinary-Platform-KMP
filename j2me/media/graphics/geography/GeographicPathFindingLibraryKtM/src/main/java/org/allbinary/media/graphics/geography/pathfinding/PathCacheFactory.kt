@@ -34,12 +34,11 @@ open public class PathCacheFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var pathFactory: PathCacheFactory = PathCacheFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PathCacheFactory{
 
@@ -53,13 +52,13 @@ open fun getInstance()
         }
             
     private var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getSize()
+    open fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -70,7 +69,7 @@ open fun getSize()
 }
 
 
-open fun add(pathId: Integer, list: BasicArrayList)
+    open fun add(pathId: Integer, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var pathId = pathId
@@ -79,7 +78,7 @@ this.hashtable.put(pathId, list)
 }
 
 
-open fun remove(pathId: Integer)
+    open fun remove(pathId: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var pathId = pathId
@@ -89,7 +88,7 @@ this.hashtable.remove(pathId)
 
                 @Throws(Exception::class)
             
-open fun removeAll()
+    open fun removeAll()
         //nullable = true from not(false or (false and true)) = true
 {
 this.hashtable.clear()
@@ -110,7 +109,7 @@ this.hashtable.clear()
 
                 @Throws(Exception::class)
             
-open fun getInstance(pathIdInteger: Integer)
+    open fun getInstance(pathIdInteger: Integer)
         //nullable =  from not(true or (false and false)) = 
 : BasicArrayList{
 var pathIdInteger = pathIdInteger

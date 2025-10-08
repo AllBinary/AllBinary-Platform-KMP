@@ -37,7 +37,7 @@ open public class FakeLayerManager : AllBinaryGameLayerManager
     private var geographicMapInterfaceArray: Array<BasicGeographicMap?>
 
     private var geographicMapCellTypeArray: Array<GeographicMapCellType?>
-public constructor        (gameInfo: GameInfo)                        
+public constructor (gameInfo: GameInfo)                        
 
                             : super(BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE, gameInfo){
 var gameInfo = gameInfo
@@ -48,7 +48,7 @@ var gameInfo = gameInfo
 }
 
 
-open fun getGeographicMapInterface()
+    open fun getGeographicMapInterface()
         //nullable = true from not(false or (false and true)) = true
 : Array<BasicGeographicMap?>{
 
@@ -59,7 +59,7 @@ open fun getGeographicMapInterface()
 }
 
 
-open fun setGeographicMapInterface(geographicMapInterfaceArray: Array<BasicGeographicMap?>)
+    open fun setGeographicMapInterface(geographicMapInterfaceArray: Array<BasicGeographicMap?>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapInterfaceArray = geographicMapInterfaceArray
@@ -68,7 +68,7 @@ this.geographicMapCellTypeArray= arrayOfNulls(this.geographicMapInterfaceArray!!
 }
 
 
-open fun geographicMapCellTypeArray()
+    open fun geographicMapCellTypeArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<GeographicMapCellType?>{
 

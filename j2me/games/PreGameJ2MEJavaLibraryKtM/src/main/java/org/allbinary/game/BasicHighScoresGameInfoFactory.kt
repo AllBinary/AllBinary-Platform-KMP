@@ -30,12 +30,11 @@ open public class BasicHighScoresGameInfoFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: BasicHighScoresGameInfoFactory = BasicHighScoresGameInfoFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BasicHighScoresGameInfoFactory{
 

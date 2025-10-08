@@ -36,14 +36,15 @@ open public class DestroyEventFactory
         
 
     private var combatGameCanvas: AllBinaryGameCanvas
-public constructor        (combatGameCanvas: AllBinaryGameCanvas)
+public constructor (combatGameCanvas: AllBinaryGameCanvas)
             : super()
         {
 var combatGameCanvas = combatGameCanvas
 this.combatGameCanvas= combatGameCanvas
 }
 
-override fun getInstance()
+
+    override fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AllBinaryEventObject{
 

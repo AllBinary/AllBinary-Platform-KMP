@@ -46,7 +46,7 @@ open public class RequestHandler : HttpServlet {
 
                 @Throws(ServletException::class)
             
-open fun init(config: ServletConfig)
+    open fun init(config: ServletConfig)
         //nullable = true from not(false or (false and false)) = true
 {
 var config = config
@@ -54,7 +54,7 @@ super.init(config)
 }
 
 
-open fun destroy()
+    open fun destroy()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -62,7 +62,7 @@ open fun destroy()
 
                 @Throws(ServletException::class, IOException::class)
             
-open fun processRequest(request: HttpServletRequest, response: HttpServletResponse)
+    open fun processRequest(request: HttpServletRequest, response: HttpServletResponse)
         //nullable = true from not(false or (false and false)) = true
 {
 var request = request
@@ -121,7 +121,7 @@ response.sendRedirect(abcs.globals.URLGLOBALS.ERRORPAGE)
 
                 @Throws(ServletException::class, IOException::class)
             
-open fun doGet(request: HttpServletRequest, response: HttpServletResponse)
+    open fun doGet(request: HttpServletRequest, response: HttpServletResponse)
         //nullable = true from not(false or (false and false)) = true
 {
 var request = request
@@ -132,7 +132,7 @@ processRequest(request, response)
 
                 @Throws(ServletException::class, IOException::class)
             
-open fun doPost(request: HttpServletRequest, response: HttpServletResponse)
+    open fun doPost(request: HttpServletRequest, response: HttpServletResponse)
         //nullable = true from not(false or (false and false)) = true
 {
 var request = request
@@ -141,7 +141,7 @@ processRequest(request, response)
 }
 
 
-open fun getServletInfo()
+    open fun getServletInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

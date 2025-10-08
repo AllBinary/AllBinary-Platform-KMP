@@ -36,15 +36,14 @@ open public class ValidatedViewHelperFactory
         
                 , TagHelperFactoryInterface {
         
-
-        companion object {
+companion object {
             
     private val CLASSNAME: String = "taghelpers.ValidationViewHelper"
 
     private val FACTORYNAME: String = "taghelpers.ValidationViewHelperFactory"
 
         }
-            public constructor        ()
+            public constructor ()
             : super()
         {
 }
@@ -52,7 +51,7 @@ open public class ValidatedViewHelperFactory
 
                 @Throws(Exception::class, LicensingException::class)
             
-open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
+    open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
 : Any{
 var hashMap = hashMap

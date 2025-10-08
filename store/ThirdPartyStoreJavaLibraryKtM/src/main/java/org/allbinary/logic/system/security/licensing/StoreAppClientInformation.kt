@@ -32,7 +32,7 @@ open public class StoreAppClientInformation : AbeClientInformation
         
 
     private val longArrayIdentifier: LongArray
-public constructor        (name: String, version: String, specialName: String, shortName: String, longArrayIdentifier: LongArray)                        
+public constructor (name: String, version: String, specialName: String, shortName: String, longArrayIdentifier: LongArray)                        
 
                             : super(name, version, specialName, shortName){
     //var name = name
@@ -47,7 +47,8 @@ var longArrayIdentifier = longArrayIdentifier
 this.longArrayIdentifier= longArrayIdentifier
 }
 
-override fun getLongArrayIdentifier()
+
+    override fun getLongArrayIdentifier()
         //nullable = true from not(false or (false and true)) = true
 : LongArray{
 

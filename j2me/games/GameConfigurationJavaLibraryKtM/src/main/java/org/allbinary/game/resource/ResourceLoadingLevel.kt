@@ -34,7 +34,7 @@ open public class ResourceLoadingLevel
     private val name: String
 
     private val level: Int
- constructor        (name: String, level: Int)
+ constructor (name: String, level: Int)
             : super()
         {
 var name = name
@@ -44,7 +44,7 @@ this.level= level
 }
 
 
-open fun getLevel()
+    open fun getLevel()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -55,7 +55,7 @@ open fun getLevel()
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

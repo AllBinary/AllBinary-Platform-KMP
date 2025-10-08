@@ -28,38 +28,39 @@
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.media.graphics.geography.map.GeographicMapCellType
+
 interface TopViewCharacterInterface {
         
 
-open fun terrainMove(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, x: Int, y: Int)
+    open fun terrainMove(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun terrainEvent(x: Int, y: Int, geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, geographicMapCellPosition: GeographicMapCellPosition)
+    open fun terrainEvent(x: Int, y: Int, geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun move()
+    open fun move()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun upp()
+    open fun upp()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun leftp()
+    open fun leftp()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun rightp()
+    open fun rightp()
         //nullable = true from not(false or (false and true)) = true
 
 
                 @Throws(Exception::class)
             
-open fun reset()
+    open fun reset()
         //nullable = true from not(false or (false and true)) = true
 
 

@@ -28,12 +28,11 @@
 
 open public class NoScoreable : Scoreable {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: NoScoreable = NoScoreable()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : NoScoreable{
 
@@ -45,7 +44,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()                        
+            private constructor ()                        
 
                             : super(0){
 
@@ -54,13 +53,15 @@ open fun getInstance()
                     
 }
 
-override fun addPoints(points: Int)
+
+    override fun addPoints(points: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var points = points
 }
 
-override fun removePoints(points: Int)
+
+    override fun removePoints(points: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var points = points

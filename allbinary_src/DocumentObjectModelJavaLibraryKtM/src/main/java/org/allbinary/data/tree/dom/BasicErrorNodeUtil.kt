@@ -33,12 +33,11 @@ open public class BasicErrorNodeUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun get(document: Document, errorText: String)
+    open fun get(document: Document, errorText: String)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -66,7 +65,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, ErrorData.getInstan
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

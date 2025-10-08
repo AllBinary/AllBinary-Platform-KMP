@@ -32,17 +32,19 @@ open public class GameCanvasPaintHelper : ProcessPaintable {
         
 
     private var gameCanvas: AllBinaryGameCanvas
-public constructor        (gameCanvas: AllBinaryGameCanvas){
+public constructor (gameCanvas: AllBinaryGameCanvas){
 var gameCanvas = gameCanvas
 this.gameCanvas= gameCanvas
 }
 
-override fun process()
+
+    override fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

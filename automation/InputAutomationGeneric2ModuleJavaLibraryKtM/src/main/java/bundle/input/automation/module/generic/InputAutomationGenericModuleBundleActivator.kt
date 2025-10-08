@@ -30,13 +30,13 @@ import org.allbinary.input.automation.module.osgi.InputAutomationModuleBundleAct
 
 open public class InputAutomationGenericModuleBundleActivator : InputAutomationModuleBundleActivator {
         
-public constructor        (){
+public constructor (){
 }
 
 
                 @Throws(Exception::class)
             
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 

@@ -34,14 +34,13 @@ open public class NullAnimationFactory
                 , AnimationInterfaceFactoryInterface
                 , ProceduralAnimationInterfaceFactoryInterface {
         
-
-        companion object {
+companion object {
             
     var NULL_NOT_FOR_USE_ANIMATION_FACTORY: NullAnimationFactory = NullAnimationFactory()
 
     private var NULL_ANIMATION_FACTORY: NullAnimationFactory = NullAnimationFactory()
 
-open fun getFactoryInstance()
+    open fun getFactoryInstance()
         //nullable = true from not(false or (false and true)) = true
 : NullAnimationFactory{
 
@@ -57,7 +56,7 @@ open fun getFactoryInstance()
     private val NULL_ANIMATION: Animation = object: Animation()
                                 {
                                 
-open override fun paint(graphics: Graphics, x: Int, y: Int)
+    open override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -69,12 +68,13 @@ open override fun paint(graphics: Graphics, x: Int, y: Int)
                             
 
     val EMPTY_ARRAY: Array<Animation?> = arrayOfNulls(0)
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
-override fun getInstance(instanceId: Int)
+
+    override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var instanceId = instanceId
@@ -87,7 +87,8 @@ override fun getInstance(instanceId: Int)
 
 
                 @Throws(Exception::class)
-            override fun getInstance(animationInterface: Animation)
+            
+    override fun getInstance(animationInterface: Animation)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
 var animationInterface = animationInterface
@@ -98,7 +99,8 @@ var animationInterface = animationInterface
                         return NULL_ANIMATION
 }
 
-override fun setInitialScale(scaleProperties: ScaleProperties)
+
+    override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
 {
     //var scaleProperties = scaleProperties

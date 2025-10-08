@@ -32,12 +32,11 @@ open public class AndroidOperatingSystemFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AndroidOperatingSystemFactory = AndroidOperatingSystemFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AndroidOperatingSystemFactory{
 
@@ -51,7 +50,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -59,7 +58,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getOperatingSystemInstance()
+    open fun getOperatingSystemInstance()
         //nullable = true from not(false or (false and true)) = true
 : GenericOperatingSystem{
 

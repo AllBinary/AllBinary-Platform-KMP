@@ -30,12 +30,11 @@ open public class HtmlMetaData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: HtmlMetaData = HtmlMetaData()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : HtmlMetaData{
 
@@ -47,7 +46,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

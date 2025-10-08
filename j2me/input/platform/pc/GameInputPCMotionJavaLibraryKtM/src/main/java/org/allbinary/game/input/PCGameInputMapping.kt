@@ -41,7 +41,8 @@ open public class PCGameInputMapping : PersistentInputMapping {
             }            
         
                 @Throws(Exception::class)
-            override fun init(abeClientInformation: AbeClientInformationInterface)
+            
+    override fun init(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -63,7 +64,8 @@ this.save(abeClientInformation)
                                 
 }
 
-override fun isDelete(input: Input)
+
+    override fun isDelete(input: Input)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var input = input
@@ -91,7 +93,8 @@ var input = input
                             
 }
 
-override fun isSystemInput(input: Input)
+
+    override fun isSystemInput(input: Input)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var input = input

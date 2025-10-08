@@ -39,7 +39,7 @@ open public class BasicEmail
         
 
     private var email: AbEmail
-public constructor        (emailInfo: EmailInfo, to: String)
+public constructor (emailInfo: EmailInfo, to: String)
             : super()
         {
 var emailInfo = emailInfo
@@ -51,7 +51,7 @@ this.email= AbEmail(basicEmailInfo!!.getEmailServerConfigurationInterface()!!.ge
 }
 
 
-open fun getEmail()
+    open fun getEmail()
         //nullable = true from not(false or (false and true)) = true
 : Email{
 
@@ -62,7 +62,7 @@ open fun getEmail()
 }
 
 
-open fun getMimeMessage()
+    open fun getMimeMessage()
         //nullable = true from not(false or (false and true)) = true
 : MimeMessage{
 
@@ -73,7 +73,7 @@ open fun getMimeMessage()
 }
 
 
-open fun getDebugInfo()
+    open fun getDebugInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -86,7 +86,7 @@ open fun getDebugInfo()
 
                 @Throws(Exception::class)
             
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -99,7 +99,7 @@ open fun log()
 
                 @Throws(Exception::class)
             
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -112,7 +112,7 @@ open fun toHashMap()
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -126,7 +126,7 @@ var document = document
 
                 @Throws(Exception::class)
             
-open fun toXmlDoc()
+    open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 

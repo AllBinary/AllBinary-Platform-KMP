@@ -37,8 +37,7 @@ import org.w3c.dom.NodeList
 open public class AlwaysActionScriptCondition : BasicProfileActionScriptCondition
                 , AlwaysActionScriptConditionInterface {
         
-
-        companion object {
+companion object {
             
     private val NAME: String = "Always On/Off"
 
@@ -49,7 +48,7 @@ open public class AlwaysActionScriptCondition : BasicProfileActionScriptConditio
     private var alwaysActionScriptConditionJPanel: AlwaysActionScriptConditionJPanel
 
     private var isOn: Boolean= false
-public constructor        (node: Node)                        
+public constructor (node: Node)                        
 
                             : super(AlwaysActionScriptCondition.NAME, node){
 var node = node
@@ -117,7 +116,7 @@ this.setIsOn(.
 this.init()
 }
 
-public constructor        ()                        
+public constructor ()                        
 
                             : super(AlwaysActionScriptCondition.NAME){
 
@@ -128,14 +127,14 @@ this.init()
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 this.alwaysActionScriptConditionJPanel= AlwaysActionScriptConditionJPanel(this)
 }
 
 
-open fun isIsOn()
+    open fun isIsOn()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -146,7 +145,7 @@ open fun isIsOn()
 }
 
 
-open fun setIsOn(isOn: Boolean)
+    open fun setIsOn(isOn: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var isOn = isOn
@@ -154,14 +153,14 @@ this.isOn= isOn
 }
 
 
-open fun showDialog()
+    open fun showDialog()
         //nullable = true from not(false or (false and true)) = true
 {
 this.alwaysActionScriptConditionJPanel!!.getAlwaysActionJDialog()!!.setVisible(true)
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -179,7 +178,7 @@ logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -197,7 +196,7 @@ node.appendChild(ModDomHelper.createNodeWithValueNodes(document, AlwaysActionScr
 
                 @Throws(Exception::class)
             
-open fun shouldProcess(frame: Long)
+    open fun shouldProcess(frame: Long)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var frame = frame
@@ -222,7 +221,7 @@ var frame = frame
 }
 
 
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put("Is On: " +this.isIsOn(), this, "log")

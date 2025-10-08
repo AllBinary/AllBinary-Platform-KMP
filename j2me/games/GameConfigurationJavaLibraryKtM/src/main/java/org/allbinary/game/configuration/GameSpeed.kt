@@ -30,12 +30,11 @@ open public class GameSpeed
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GameSpeed = GameSpeed()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameSpeed{
 
@@ -53,7 +52,7 @@ open fun getInstance()
             {
             }            
         
-open fun getSpeed()
+    open fun getSpeed()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -67,7 +66,7 @@ open fun getSpeed()
 }
 
 
-open fun getDelay()
+    open fun getDelay()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

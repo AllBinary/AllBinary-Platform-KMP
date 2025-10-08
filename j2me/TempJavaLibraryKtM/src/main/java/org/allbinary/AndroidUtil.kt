@@ -30,10 +30,9 @@ open public class AndroidUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun isMemoryRestrictive()
+    open fun isMemoryRestrictive()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -44,7 +43,7 @@ open fun isMemoryRestrictive()
 }
 
 
-open fun isAndroid()
+    open fun isAndroid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -56,7 +55,7 @@ open fun isAndroid()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

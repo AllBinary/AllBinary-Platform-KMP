@@ -15,12 +15,11 @@ import android.view.KeyEvent
 
 open public class AndroidAPI9KeyFactory : AndroidKeyFactory {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: AndroidAPI9KeyFactory = AndroidAPI9KeyFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AndroidAPI9KeyFactory{
 
@@ -32,7 +31,7 @@ open fun getInstance()
 
 
         }
-            protected constructor        (){
+            protected constructor (){
 KEYCODE_BUTTON_L1= AndroidGameKey(KeyEvent.KEYCODE_BUTTON_L1, "BUTTON L1")
 KEYCODE_BUTTON_R1= AndroidGameKey(KeyEvent.KEYCODE_BUTTON_R1, "BUTTON R1")
 KEYCODE_BUTTON_THUMBR= AndroidGameKey(KeyEvent.KEYCODE_BUTTON_THUMBR, "BUTTON THUMBR")

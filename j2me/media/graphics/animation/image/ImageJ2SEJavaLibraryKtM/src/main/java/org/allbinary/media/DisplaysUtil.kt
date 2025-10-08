@@ -25,7 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.awt
+import java.awt.Dimension
+import java.awt.DisplayMode
+import java.awt.GraphicsDevice
+import java.awt.GraphicsEnvironment
+import java.awt.Toolkit
 import org.allbinary.graphics.PointFactory
 import org.allbinary.graphics.Rectangle
 
@@ -33,10 +37,9 @@ open public class DisplaysUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DisplaysUtil{
 
@@ -56,7 +59,7 @@ open fun getInstance()
             {
             }            
         
-open fun getPrimaryScreenSize()
+    open fun getPrimaryScreenSize()
         //nullable = true from not(false or (false and true)) = true
 : Rectangle{
 
@@ -70,7 +73,7 @@ open fun getPrimaryScreenSize()
 }
 
 
-open fun getScreenSizesAsRectangleArray()
+    open fun getScreenSizesAsRectangleArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<Rectangle?>{
 

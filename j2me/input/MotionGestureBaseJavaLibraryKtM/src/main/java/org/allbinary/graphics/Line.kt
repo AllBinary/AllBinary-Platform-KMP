@@ -38,7 +38,7 @@ open public class Line
     private var deltaX: Double= 0.0
 
     private var deltaY: Double= 0.0
-public constructor        (p1: GPoint, p2: GPoint)
+public constructor (p1: GPoint, p2: GPoint)
             : super()
         {
 var p1 = p1
@@ -50,7 +50,7 @@ this.setP2(p2)
 }
 
 
-open fun getGradient()
+    open fun getGradient()
         //nullable = true from not(false or (false and true)) = true
 : Double{
 
@@ -61,7 +61,7 @@ open fun getGradient()
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 deltaX= getP1()!!.getX().toDouble() -getP2()!!.getX()
@@ -69,7 +69,7 @@ deltaY= getP1()!!.getY().toDouble() -getP2()!!.getY()
 }
 
 
-open fun getDeltaX()
+    open fun getDeltaX()
         //nullable = true from not(false or (false and true)) = true
 : Double{
 
@@ -80,7 +80,7 @@ open fun getDeltaX()
 }
 
 
-open fun getDeltaY()
+    open fun getDeltaY()
         //nullable = true from not(false or (false and true)) = true
 : Double{
 
@@ -91,7 +91,7 @@ open fun getDeltaY()
 }
 
 
-open fun getP1()
+    open fun getP1()
         //nullable = true from not(false or (false and true)) = true
 : GPoint{
 
@@ -102,7 +102,7 @@ open fun getP1()
 }
 
 
-open fun getP2()
+    open fun getP2()
         //nullable = true from not(false or (false and true)) = true
 : GPoint{
 
@@ -113,7 +113,7 @@ open fun getP2()
 }
 
 
-open fun setP1(p1: GPoint)
+    open fun setP1(p1: GPoint)
         //nullable = true from not(false or (false and false)) = true
 {
 var p1 = p1
@@ -122,7 +122,7 @@ this.update()
 }
 
 
-open fun setP2(p2: GPoint)
+    open fun setP2(p2: GPoint)
         //nullable = true from not(false or (false and false)) = true
 {
 var p2 = p2

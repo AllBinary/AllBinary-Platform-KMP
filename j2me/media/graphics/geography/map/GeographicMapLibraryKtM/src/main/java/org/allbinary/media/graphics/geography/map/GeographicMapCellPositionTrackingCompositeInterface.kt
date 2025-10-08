@@ -11,10 +11,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface GeographicMapCellPositionTrackingCompositeInterface {
         
 
-open fun getGeographicMapCellPositionTracking()
+    open fun getGeographicMapCellPositionTracking()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPositionTracking
 

@@ -29,28 +29,29 @@ import java.util.HashMap
 import java.util.Vector
 import org.allbinary.business.user.quoterequest.QuoteRequest
 import org.allbinary.data.tables.BasicDataTableInterface
+
 interface QuoteRequestEntityInterface : BasicDataTableInterface {
         
 
                 @Throws(Exception::class)
             
-open fun get(userName: String, id: Int)
+    open fun get(userName: String, id: Int)
         //nullable = true from not(false or (false and false)) = true
 : QuoteRequest
 
-open fun getIds(userName: String)
+    open fun getIds(userName: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector
 
-open fun deleteWhere(key: String, value: String)
+    open fun deleteWhere(key: String, value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun insert(values: Vector)
+    open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun update(userName: String, updatedValues: HashMap<Any, Any>)
+    open fun update(userName: String, updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 
 

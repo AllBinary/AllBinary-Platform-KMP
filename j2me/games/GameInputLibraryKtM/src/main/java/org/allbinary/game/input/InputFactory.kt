@@ -34,12 +34,11 @@ open public class InputFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: InputFactory = InputFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : InputFactory{
 
@@ -65,7 +64,7 @@ open fun getInstance()
     val inputIntegerArray: Array<Input?> = arrayOfNulls(this.MAX)
 
     val NO_INPUT: Input = Input(0, commonStrings!!.UNKNOWN)
-private constructor        ()
+private constructor ()
             : super()
         {
 
@@ -85,7 +84,7 @@ inputIntegerArray[index]= NO_INPUT
 }
 
 
-open fun add(id: Int, input: Input)
+    open fun add(id: Int, input: Input)
         //nullable = true from not(false or (false and false)) = true
 {
 var id = id
@@ -94,7 +93,7 @@ this.inputIntegerArray[id]= input
 }
 
 
-open fun getInstance(id: Int)
+    open fun getInstance(id: Int)
         //nullable =  from not(true or (false and false)) = 
 : Input{
 var id = id

@@ -25,12 +25,13 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface PoolInterface : CacheInterface {
         
 
                 @Throws(Exception::class)
             
-open fun remove(key: Any)
+    open fun remove(key: Any)
         //nullable = true from not(false or (false and false)) = true
 : CacheableInterface
 

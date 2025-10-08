@@ -25,10 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface ScoreableInterfaceCompositeInterface {
         
 
-open fun getScoreableInterface()
+    open fun getScoreableInterface()
         //nullable = true from not(false or (false and true)) = true
 : Scoreable
 

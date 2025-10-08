@@ -30,21 +30,22 @@ import org.allbinary.logic.string.StringUtil
 
 open public class NoPlayer : BasicPlayer {
         
-
-        companion object {
+companion object {
             
     val NO_PLAYER: NoPlayer = NoPlayer()
 
         }
-            public constructor        (){
+            public constructor (){
 }
 
-override fun close()
+
+    override fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun getContentType()
+
+    override fun getContentType()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -54,7 +55,8 @@ override fun getContentType()
                         return StringUtil.getInstance()!!.NULL_STRING
 }
 
-override fun getControl(controlType: String)
+
+    override fun getControl(controlType: String)
         //nullable = true from not(false or (false and false)) = true
 : Control{
 var controlType = controlType
@@ -65,7 +67,8 @@ var controlType = controlType
                         return NullControl()
 }
 
-override fun getControls()
+
+    override fun getControls()
         //nullable = true from not(false or (false and true)) = true
 : Array<Control?>{
 

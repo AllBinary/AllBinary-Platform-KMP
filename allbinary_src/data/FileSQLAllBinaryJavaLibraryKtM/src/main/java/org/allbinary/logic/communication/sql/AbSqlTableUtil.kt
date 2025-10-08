@@ -38,7 +38,6 @@ import org.allbinary.logic.io.file.FileUtil
 import org.allbinary.logic.io.file.directory.Directory
 import org.allbinary.logic.io.path.AbPath
 import org.allbinary.logic.io.path.AbPathData
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.globals.PATH_GLOBALS
 import java.io.OutputStream
@@ -50,12 +49,11 @@ open public class AbSqlTableUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AbSqlTableUtil = AbSqlTableUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AbSqlTableUtil{
 
@@ -126,7 +124,7 @@ open fun getInstance()
     val sqlStrings: SqlStrings = SqlStrings.getInstance()!!
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getOutputStream(backupPath: String, tableName: String)
+    open fun getOutputStream(backupPath: String, tableName: String)
         //nullable = true from not(false or (false and false)) = true
 : OutputStream{
 var backupPath = backupPath
@@ -192,7 +190,7 @@ backupFile!!.createNewFile()
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun backupFile(path: AbPath, backupPath: String, tableName: String)
+    open fun backupFile(path: AbPath, backupPath: String, tableName: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var path = path
@@ -267,7 +265,7 @@ FileUtil.getInstance()!!.copy(path, backupAbPath)
 }
 
 
-open fun convertNewLines(value: String)
+    open fun convertNewLines(value: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var value = value
@@ -325,7 +323,7 @@ lastIndex= index +1
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun backupTable(abSqlTable: AbSqlTable)
+    open fun backupTable(abSqlTable: AbSqlTable)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var abSqlTable = abSqlTable
@@ -443,7 +441,7 @@ StreamUtil.getInstance()!!.close(outputStream)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun restoreTable(abSqlTable: AbSqlTable, portion: Portion)
+    open fun restoreTable(abSqlTable: AbSqlTable, portion: Portion)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var abSqlTable = abSqlTable

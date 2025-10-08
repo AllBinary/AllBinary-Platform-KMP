@@ -15,7 +15,7 @@ import org.allbinary.graphics.color.BasicColor
 
 open public class CustomCustomItem : CustomItem {
         
-protected constructor        (label: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+protected constructor (label: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(label, backgroundBasicColor, foregroundBasicColor){
 var label = label

@@ -32,7 +32,7 @@ open public class NativeLibraryClassLoader : ClassLoader {
         
 
     private var message: String = "This Class Loader Does Not Load Classes - Only For Loading and Unloading of Native Libraries"
-public constructor        (parent: ClassLoader)                        
+public constructor (parent: ClassLoader)                        
 
                             : super(parent){
 var parent = parent

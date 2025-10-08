@@ -37,12 +37,11 @@ open public class Directory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: Directory = Directory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : Directory{
 
@@ -54,13 +53,13 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
 
 
-open fun create(directoryAbPath: AbPath)
+    open fun create(directoryAbPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var directoryAbPath = directoryAbPath
@@ -74,7 +73,7 @@ var directoryAbPath = directoryAbPath
 
                 @Throws(Exception::class)
             
-open fun remove(existingDirectoryAbPath: AbPath)
+    open fun remove(existingDirectoryAbPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
 {
 var existingDirectoryAbPath = existingDirectoryAbPath
@@ -82,7 +81,7 @@ this.remove(existingDirectoryAbPath!!.toFileSystemString())
 }
 
 
-open fun create(directory: String)
+    open fun create(directory: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var directory = directory
@@ -133,7 +132,7 @@ PreLogUtil.put("Error Creating Directories: " +directory, this, "create", e)
 
                 @Throws(Exception::class)
             
-open fun remove(existingDirectory: String)
+    open fun remove(existingDirectory: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var existingDirectory = existingDirectory
@@ -180,7 +179,7 @@ var existingDirectory = existingDirectory
 }
 
 
-open fun search(fileFilter: FileFilter, file: AbFile)
+    open fun search(fileFilter: FileFilter, file: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var fileFilter = fileFilter
@@ -193,7 +192,7 @@ var file = file
 }
 
 
-open fun search(fileFilter: FileFilter, file: AbFile, isRecursiveSearch: Boolean)
+    open fun search(fileFilter: FileFilter, file: AbFile, isRecursiveSearch: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var fileFilter = fileFilter
@@ -281,7 +280,7 @@ fileList!!.addAll(recursiveFileList)
 }
 
 
-open fun search(file: AbFile)
+    open fun search(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var file = file
@@ -293,7 +292,7 @@ var file = file
 }
 
 
-open fun search(file: AbFile, isRecursiveSearch: Boolean)
+    open fun search(file: AbFile, isRecursiveSearch: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var file = file
@@ -376,7 +375,7 @@ fileList!!.addAll(recursiveFileList)
 }
 
 
-open fun search(searchValue: String, file: AbFile)
+    open fun search(searchValue: String, file: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var searchValue = searchValue
@@ -389,7 +388,7 @@ var file = file
 }
 
 
-open fun search(searchValue: String, file: AbFile, isRecursiveSearch: Boolean)
+    open fun search(searchValue: String, file: AbFile, isRecursiveSearch: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var searchValue = searchValue
@@ -481,7 +480,7 @@ fileList!!.addAll(recursiveFileList)
 }
 
 
-open fun search(level: Int, file: AbFile)
+    open fun search(level: Int, file: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var level = level
@@ -494,7 +493,7 @@ var file = file
 }
 
 
-open fun search(level: Int, file: AbFile, isRecursiveSearch: Boolean)
+    open fun search(level: Int, file: AbFile, isRecursiveSearch: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var level = level

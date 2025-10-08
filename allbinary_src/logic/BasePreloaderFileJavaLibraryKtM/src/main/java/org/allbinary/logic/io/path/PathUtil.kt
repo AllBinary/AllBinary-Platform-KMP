@@ -33,12 +33,11 @@ open public class PathUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: PathUtil = PathUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PathUtil{
 
@@ -54,13 +53,13 @@ open fun getInstance()
     private val abPathData: AbPathData = AbPathData.getInstance()!!
 
     private val filePathData: FilePathData = FilePathData.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getExtensionIndex(filePath: String)
+    open fun getExtensionIndex(filePath: String)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var filePath = filePath
@@ -104,7 +103,7 @@ var filePath = filePath
 }
 
 
-open fun getExtension(abFilePath: AbFilePath)
+    open fun getExtension(abFilePath: AbFilePath)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var abFilePath = abFilePath
@@ -116,7 +115,7 @@ var abFilePath = abFilePath
 }
 
 
-open fun getExtension(abPath: AbPath)
+    open fun getExtension(abPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var abPath = abPath
@@ -128,7 +127,7 @@ var abPath = abPath
 }
 
 
-open fun getExtension(filePath: String)
+    open fun getExtension(filePath: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var filePath = filePath
@@ -157,7 +156,7 @@ var filePath = filePath
 
                 @Throws(Exception::class)
             
-open fun getWithoutExtension(abFilePath: AbFilePath)
+    open fun getWithoutExtension(abFilePath: AbFilePath)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var abFilePath = abFilePath
@@ -171,7 +170,7 @@ var abFilePath = abFilePath
 
                 @Throws(Exception::class)
             
-open fun getWithoutExtension(abPath: AbPath)
+    open fun getWithoutExtension(abPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var abPath = abPath
@@ -185,7 +184,7 @@ var abPath = abPath
 
                 @Throws(Exception::class)
             
-open fun getWithoutExtension(filePath: String)
+    open fun getWithoutExtension(filePath: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var filePath = filePath
@@ -212,7 +211,7 @@ var filePath = filePath
 }
 
 
-open fun isValid(path: String)
+    open fun isValid(path: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var path = path
@@ -245,7 +244,7 @@ var path = path
 }
 
 
-open fun isValidStart(path: String)
+    open fun isValidStart(path: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var path = path
@@ -274,7 +273,7 @@ var path = path
 }
 
 
-open fun isValidEnd(path: String)
+    open fun isValidEnd(path: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var path = path
@@ -319,7 +318,7 @@ var path = path
 }
 
 
-open fun adjustStart(path: String)
+    open fun adjustStart(path: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var path = path
@@ -340,7 +339,7 @@ var path = path
 }
 
 
-open fun adjustEnd(path: String)
+    open fun adjustEnd(path: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var path = path
@@ -361,7 +360,7 @@ var path = path
 }
 
 
-open fun adjust(path: String)
+    open fun adjust(path: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var path = path
@@ -399,7 +398,7 @@ var path = path
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getNameFromPath(categoryPath: String)
+    open fun getNameFromPath(categoryPath: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var categoryPath = categoryPath
@@ -457,7 +456,7 @@ var categoryPath = categoryPath
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun removeNameFromPath(path: String)
+    open fun removeNameFromPath(path: String)
         //nullable = true from not(false or (false and false)) = true
 : AbPath{
 var path = path

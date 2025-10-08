@@ -13,20 +13,18 @@
         
 import java.io.IOException
 import java.io.InputStream
-import javax.microedition.lcdui.Image
 import org.allbinary.graphics.OpenGLBitmap
-import org.allbinary.media.image.ImageModifierUtil
+import org.allbinary.graphics.color.BasicColor
 
 open public class OpenGLImageUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OpenGLImageUtil = OpenGLImageUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OpenGLImageUtil{
 
@@ -39,7 +37,7 @@ open fun getInstance()
 
                 @Throws(IOException::class)
             
-open fun createImage(inputStream: InputStream)
+    open fun createImage(inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
 : OpenGLBitmap{
     //var inputStream = inputStream
@@ -57,7 +55,7 @@ open fun createImage(inputStream: InputStream)
             {
             }            
         
-open fun paint(alphaBitmap: OpenGLBitmap, originalBitmap: OpenGLBitmap, index: Int)
+    open fun paint(alphaBitmap: OpenGLBitmap, originalBitmap: OpenGLBitmap, index: Int)
         //nullable = true from not(false or (false and false)) = true
 : OpenGLBitmap{
     //var alphaBitmap = alphaBitmap
@@ -70,9 +68,23 @@ open fun paint(alphaBitmap: OpenGLBitmap, originalBitmap: OpenGLBitmap, index: I
 }
 
 
+    open fun paint(colorBitmap: OpenGLBitmap, originalBitmap: OpenGLBitmap, alpha: Int, basicColor: BasicColor)
+        //nullable = true from not(false or (false and false)) = true
+: OpenGLBitmap{
+    //var colorBitmap = colorBitmap
+    //var originalBitmap = originalBitmap
+    //var alpha = alpha
+    //var basicColor = basicColor
+
+
+
+                            throw RuntimeException()
+}
+
+
                 @Throws(IOException::class)
             
-open fun createImage(name: String)
+    open fun createImage(name: String)
         //nullable = true from not(false or (false and false)) = true
 : OpenGLBitmap{
     //var name = name

@@ -32,7 +32,7 @@ open public class TouchScreenType
         
 
     private val name: String
- constructor        (name: String)
+ constructor (name: String)
             : super()
         {
 var name = name
@@ -40,7 +40,7 @@ this.name= name
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -50,7 +50,8 @@ open fun getName()
                         return name
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

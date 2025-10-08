@@ -36,8 +36,7 @@ open public class ColorDeltaFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var cacheInterface: AutomaticCacheInterface = 
                 null
@@ -70,7 +69,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, instance, STATIC_BLOCK, e)
 
                 @Throws(Exception::class)
             
-open fun getInstance(rgb1: Int, rgb2: Int)
+    open fun getInstance(rgb1: Int, rgb2: Int)
         //nullable =  from not(true or (false and false)) = 
 : ColorDelta{
 var rgb1 = rgb1
@@ -100,7 +99,7 @@ var rgb2 = rgb2
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }

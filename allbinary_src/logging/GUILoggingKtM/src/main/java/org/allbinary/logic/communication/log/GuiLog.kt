@@ -35,12 +35,11 @@ open public class GuiLog
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GuiLog = GuiLog()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GuiLog{
 
@@ -54,14 +53,14 @@ open fun getInstance()
         }
             
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun showDialog(msg: String)
+    open fun showDialog(msg: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var msg = msg
@@ -110,7 +109,7 @@ error.show()
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun put(specialMessage: String, anyType: Any, functionName: String)
+    open fun put(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var specialMessage = specialMessage
@@ -126,7 +125,7 @@ var functionName = functionName
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Exception)
+    open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Exception)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var specialMessage = specialMessage
@@ -159,7 +158,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, "put", e)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun put(specialMessage: String, className: String, functionName: String)
+    open fun put(specialMessage: String, className: String, functionName: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var specialMessage = specialMessage
@@ -175,7 +174,7 @@ var functionName = functionName
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun put(specialMessage: String, className: String, functionName: String, exception: Exception)
+    open fun put(specialMessage: String, className: String, functionName: String, exception: Exception)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var specialMessage = specialMessage

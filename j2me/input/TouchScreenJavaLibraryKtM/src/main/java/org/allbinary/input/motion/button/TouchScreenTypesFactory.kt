@@ -30,12 +30,11 @@ open public class TouchScreenTypesFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: TouchScreenTypesFactory = TouchScreenTypesFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TouchScreenTypesFactory{
 

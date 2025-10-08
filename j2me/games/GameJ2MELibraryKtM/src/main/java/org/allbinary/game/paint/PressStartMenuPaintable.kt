@@ -49,7 +49,7 @@ open public class PressStartMenuPaintable : Paintable {
     private val KEY_START: String = "Press or Click F2 To Begin"
 
     private val MENU_START: String = "Press Start From The Menu To Begin"
-public constructor        (){
+public constructor (){
 
     
                         if(TouchScreenFactory.getInstance()!!.isTouch())
@@ -77,7 +77,8 @@ public constructor        (){
 
 
     private var anchor: Int = Anchor.TOP_LEFT
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -127,7 +128,7 @@ graphics.drawString(startString, displayInfo!!.getLastHalfWidth() -beginWidth, d
 }
 
 
-open fun setFlash(flash: Boolean)
+    open fun setFlash(flash: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var flash = flash
@@ -135,7 +136,7 @@ this.flash= flash
 }
 
 
-open fun isFlash()
+    open fun isFlash()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

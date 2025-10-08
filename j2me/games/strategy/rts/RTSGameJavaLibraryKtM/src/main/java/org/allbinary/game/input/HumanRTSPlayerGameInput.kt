@@ -40,7 +40,6 @@ import org.allbinary.media.audio.SelectBuildingSound
 import org.allbinary.util.BasicArrayList
 import org.allbinary.string.CommonSeps
 import org.allbinary.logic.string.StringMaker
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.game.displayable.canvas.AllBinaryGameCanvas
@@ -84,7 +83,7 @@ open public class HumanRTSPlayerGameInput : RTSPlayerGameInput
     private val touchButtonsBuilderFactory: TouchButtonsBuilderFactory
 
     private val notYoursGameNotificationEvent: GameNotificationEvent
-public constructor        (gameCanvas: AllBinaryGameCanvas, geographicMapInterface: BasicGeographicMap, inputList: BasicArrayList, playerInputId: Int, towerInfoPaintable: RTSLayerInfoPaintable, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerPositionFinderInterface: LayerPositionFinderInterface, selectRTSLayerVisitorFactoryInterface: SelectRTSLayerVisitorFactoryInterface)                        
+public constructor (gameCanvas: AllBinaryGameCanvas, geographicMapInterface: BasicGeographicMap, inputList: BasicArrayList, playerInputId: Int, towerInfoPaintable: RTSLayerInfoPaintable, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerPositionFinderInterface: LayerPositionFinderInterface, selectRTSLayerVisitorFactoryInterface: SelectRTSLayerVisitorFactoryInterface)                        
 
                             : this(gameCanvas, inputList, playerInputId, towerInfoPaintable, rtsPlayerLayerInterface, layerPositionFinderInterface, selectRTSLayerVisitorFactoryInterface, 
                             null){
@@ -102,7 +101,7 @@ public constructor        (gameCanvas: AllBinaryGameCanvas, geographicMapInterfa
                     
 }
 
-public constructor        (gameCanvas: AllBinaryGameCanvas, inputList: BasicArrayList, playerInputId: Int, towerInfoPaintable: RTSLayerInfoPaintable, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerPositionFinderInterface: LayerPositionFinderInterface, selectRTSLayerVisitorFactoryInterface: SelectRTSLayerVisitorFactoryInterface, touchButtonsBuilderFactory: TouchButtonsBuilderFactory)                        
+public constructor (gameCanvas: AllBinaryGameCanvas, inputList: BasicArrayList, playerInputId: Int, towerInfoPaintable: RTSLayerInfoPaintable, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerPositionFinderInterface: LayerPositionFinderInterface, selectRTSLayerVisitorFactoryInterface: SelectRTSLayerVisitorFactoryInterface, touchButtonsBuilderFactory: TouchButtonsBuilderFactory)                        
 
                             : super(gameCanvas, inputList, playerInputId, towerInfoPaintable, rtsPlayerLayerInterface, layerPositionFinderInterface, selectRTSLayerVisitorFactoryInterface){
     //var gameCanvas = gameCanvas
@@ -128,7 +127,7 @@ BasicMotionGesturesHandler.getInstance()!!.addListener(this)
 
                 @Throws(Exception::class)
             
-open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
+    open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -144,7 +143,7 @@ this.notYoursGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.get
 
                 @Throws(Exception::class)
             
-open fun processDraggingMotionInput(layerManager: AllBinaryLayerManager)
+    open fun processDraggingMotionInput(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var layerManager = layerManager
@@ -245,7 +244,7 @@ this.getSelectedRtsFormInput()!!.setSelectedStickyItemIndex( -1)
 
     val SPACE: String = CommonSeps.getInstance()!!.SPACE
 
-open fun makeSelection()
+    open fun makeSelection()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -352,7 +351,7 @@ this.updatePaintable()
 
                 @Throws(Exception::class)
             
-open fun processSelectionBoxMotionInput(layerManager: AllBinaryLayerManager)
+    open fun processSelectionBoxMotionInput(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var layerManager = layerManager
@@ -406,7 +405,7 @@ this.endPoint= PointFactory.getInstance()!!.ZERO_ZERO
 
                 @Throws(Exception::class)
             
-open fun processMotionInput(layerManager: AllBinaryLayerManager)
+    open fun processMotionInput(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var layerManager = layerManager
@@ -443,7 +442,7 @@ getMotionGestureInputList()!!.clear()
 }
 
 
-open fun setSelectedRtsFormInput(selectedRtsFormInput: RTSFormInput)
+    open fun setSelectedRtsFormInput(selectedRtsFormInput: RTSFormInput)
         //nullable = true from not(false or (false and false)) = true
 {
 var selectedRtsFormInput = selectedRtsFormInput
@@ -458,7 +457,7 @@ this.setSelectedRtsLayer(
 }
 
 
-open fun updateForm(rtsLayer: RTSLayer)
+    open fun updateForm(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var rtsLayer = rtsLayer
@@ -490,7 +489,7 @@ this.getSelectedBuildingPlayerGameInput()!!.setSelectedRTSLayer(
 }
 
 
-open fun updateForm(scrollSelectionForm: ScrollSelectionForm, rtfFormInput: RTSFormInput)
+    open fun updateForm(scrollSelectionForm: ScrollSelectionForm, rtfFormInput: RTSFormInput)
         //nullable = true from not(false or (false and false)) = true
 {
 var scrollSelectionForm = scrollSelectionForm
@@ -502,7 +501,7 @@ this.setSelectedRtsFormInput(rtfFormInput)
 
                 @Throws(Exception::class)
             
-open fun setSelectedRTSLayer(rtsLayer: RTSLayer, geographicMapCellPosition: GeographicMapCellPosition)
+    open fun setSelectedRTSLayer(rtsLayer: RTSLayer, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
 var rtsLayer = rtsLayer
@@ -626,7 +625,7 @@ this.updatePaintable()
 
     private val multiSelectPaintable: MultiSelectPaintable = MultiSelectPaintable()
 
-open fun updatePaintable()
+    open fun updatePaintable()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -669,7 +668,7 @@ this.getRTSLayerInfoPaintable()!!.updateRTSLayerInfo(rtsLayer!!.createHudPaintab
 }
 
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -719,7 +718,7 @@ graphics.drawRect(rectX1, rectY1, rectX2 -rectX1, rectY2 -rectY1)
 }
 
 
-open fun onMotionGestureEvent(motionGestureEvent: MotionGestureEvent)
+    open fun onMotionGestureEvent(motionGestureEvent: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var motionGestureEvent = motionGestureEvent
@@ -729,7 +728,7 @@ getMotionGestureInputList()!!.add(motionGestureEvent)
 
     private var selectedRtsLayer: RTSLayer
 
-open fun getSelectedRtsLayer()
+    open fun getSelectedRtsLayer()
         //nullable = true from not(false or (false and true)) = true
 : RTSLayer{
 
@@ -740,7 +739,7 @@ open fun getSelectedRtsLayer()
 }
 
 
-open fun setSelectedRtsLayer(selectedRtsLayer: RTSLayer)
+    open fun setSelectedRtsLayer(selectedRtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var selectedRtsLayer = selectedRtsLayer

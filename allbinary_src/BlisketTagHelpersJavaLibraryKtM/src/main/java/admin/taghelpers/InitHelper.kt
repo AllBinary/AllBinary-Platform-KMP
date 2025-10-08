@@ -34,13 +34,13 @@ open public class InitHelper : BasicTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 }
 
 
-open fun drop()
+    open fun drop()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -82,7 +82,7 @@ open fun drop()
 }
 
 
-open fun create()
+    open fun create()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -117,7 +117,7 @@ open fun create()
 }
 
 
-open fun view()
+    open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -163,7 +163,7 @@ open fun view()
 }
 
 
-open fun restore()
+    open fun restore()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -212,7 +212,7 @@ open fun restore()
 }
 
 
-open fun backup()
+    open fun backup()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

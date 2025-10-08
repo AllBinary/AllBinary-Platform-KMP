@@ -38,13 +38,12 @@ import org.allbinary.weapon.media.audio.DropWeaponSound
 
 open public class MineLayer : SimpleWeaponLayer {
         
-
-        companion object {
+companion object {
             
     private val NAME: String = "MineLayer"
 
         }
-            public constructor        (viewPosition: ViewPosition)                        
+            public constructor (viewPosition: ViewPosition)                        
 
                             : super(NAME, NoMovementFactory.getInstance()!!.getMovmentInstance(), FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(MineWeaponResources.getInstance()!!.RESOURCE)!!.getInstance(0), Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 10, 10), viewPosition){
 var viewPosition = viewPosition
@@ -56,7 +55,8 @@ var viewPosition = viewPosition
 
 
     private val viewPositionEventHandler: ViewPositionEventHandler = ViewPositionEventHandler.getInstance()!!
-override fun init(x: Int, y: Int, z: Int)
+
+    override fun init(x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -67,7 +67,8 @@ this.viewPositionEventHandler!!.addListener(this as AllBinaryLayer)
 SecondaryPlayerQueueFactory.getInstance()!!.add(DropWeaponSound.getInstance())
 }
 
-override fun damage(damage: Int, damageType: Int)
+
+    override fun damage(damage: Int, damageType: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var damage = damage
@@ -75,7 +76,8 @@ var damageType = damageType
 this.totalDamage= this.getInitDamage() +1
 }
 
-override fun getDamage(damageType: Int)
+
+    override fun getDamage(damageType: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var damageType = damageType
@@ -87,7 +89,8 @@ super.getDamage(damageType)
                         return this.getInitDamage()
 }
 
-override fun setDestroyed(destroyed: Boolean)
+
+    override fun setDestroyed(destroyed: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var destroyed = destroyed

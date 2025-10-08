@@ -22,8 +22,7 @@ open public class AndroidMediaPlayerWrapperListener
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val ON_BUFFERING_UPDATE: String = "onBufferingUpdate()"
 
@@ -40,7 +39,7 @@ open public class AndroidMediaPlayerWrapperListener
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var androidMediaPlayerWrapper: AndroidMediaPlayerWrapper = AndroidMediaPlayerWrapper.NULL_ANDROID_MEDIA_PLAYER_WRAPPER
-public constructor        (androidMediaPlayerWrapper: AndroidMediaPlayerWrapper, listeningLevel: Int)
+public constructor (androidMediaPlayerWrapper: AndroidMediaPlayerWrapper, listeningLevel: Int)
             : super()
         {
     //var androidMediaPlayerWrapper = androidMediaPlayerWrapper
@@ -76,7 +75,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 
 }
 
-public constructor        (androidMediaPlayerWrapper: AndroidMediaPlayerWrapper)
+public constructor (androidMediaPlayerWrapper: AndroidMediaPlayerWrapper)
             : super()
         {
     //var androidMediaPlayerWrapper = androidMediaPlayerWrapper
@@ -104,8 +103,7 @@ open public inner class MediaPlayerOnBufferingUpdateListener
         
                 , MediaPlayer.OnBufferingUpdateListener {
         
-/*Static stuff is not allowed for Kotlin inner classes
-        companion object {
+/*Static stuff is not allowed for Kotlin inner classescompanion object {
             *//*
         }
             */
@@ -115,7 +113,8 @@ open public inner class MediaPlayerOnBufferingUpdateListener
             public constructor() : super()
             {
             }            
-        override fun onBufferingUpdate(mediaPlayer: MediaPlayer, i: Int)
+        
+    override fun onBufferingUpdate(mediaPlayer: MediaPlayer, i: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var mediaPlayer = mediaPlayer
@@ -131,8 +130,7 @@ open public inner class MediaPlayerOnPreparedListener
         
                 , MediaPlayer.OnPreparedListener {
         
-/*Static stuff is not allowed for Kotlin inner classes
-        companion object {
+/*Static stuff is not allowed for Kotlin inner classescompanion object {
             *//*
         }
             */
@@ -142,7 +140,8 @@ open public inner class MediaPlayerOnPreparedListener
             public constructor() : super()
             {
             }            
-        override fun onPrepared(mp: MediaPlayer)
+        
+    override fun onPrepared(mp: MediaPlayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var mp = mp
@@ -157,8 +156,7 @@ open public inner class MediaPlayerOnErrorListener
         
                 , MediaPlayer.OnErrorListener {
         
-/*Static stuff is not allowed for Kotlin inner classes
-        companion object {
+/*Static stuff is not allowed for Kotlin inner classescompanion object {
             *//*
         }
             */
@@ -168,7 +166,8 @@ open public inner class MediaPlayerOnErrorListener
             public constructor() : super()
             {
             }            
-        override fun onError(mp: MediaPlayer, what: Int, extra: Int)
+        
+    override fun onError(mp: MediaPlayer, what: Int, extra: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var mp = mp
@@ -190,8 +189,7 @@ open public inner class MediaPlayerOnCompletionListener
         
                 , MediaPlayer.OnCompletionListener {
         
-/*Static stuff is not allowed for Kotlin inner classes
-        companion object {
+/*Static stuff is not allowed for Kotlin inner classescompanion object {
             *//*
         }
             */
@@ -201,7 +199,8 @@ open public inner class MediaPlayerOnCompletionListener
             public constructor() : super()
             {
             }            
-        override fun onCompletion(mp: MediaPlayer)
+        
+    override fun onCompletion(mp: MediaPlayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var mp = mp
@@ -213,7 +212,8 @@ open public inner class MediaPlayerOnCompletionListener
             
     private var mOnBufferingUpdateListener: MediaPlayer.OnBufferingUpdateListener = object: MediaPlayerOnBufferingUpdateListener()
                                 {
-                                override fun onBufferingUpdate(mediaPlayer: MediaPlayer, i: Int)
+                                
+    override fun onBufferingUpdate(mediaPlayer: MediaPlayer, i: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var mediaPlayer = mediaPlayer
@@ -228,7 +228,8 @@ this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(Player
 
     private var mOnPreparedListener: MediaPlayer.OnPreparedListener = object: MediaPlayerOnPreparedListener()
                                 {
-                                override fun onPrepared(mp: MediaPlayer)
+                                
+    override fun onPrepared(mp: MediaPlayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var mp = mp
@@ -242,7 +243,7 @@ this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(Player
     private var mOnErrorListener: MediaPlayer.OnErrorListener = object: MediaPlayerOnErrorListener()
                                 {
                                 
-open override fun onError(mp: MediaPlayer, what: Int, extra: Int)
+    open override fun onError(mp: MediaPlayer, what: Int, extra: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var mp = mp
@@ -264,7 +265,7 @@ this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(Player
     private var mOnCompletionListener: MediaPlayer.OnCompletionListener = object: MediaPlayerOnCompletionListener()
                                 {
                                 
-open override fun onCompletion(mp: MediaPlayer)
+    open override fun onCompletion(mp: MediaPlayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var mp = mp

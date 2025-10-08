@@ -32,12 +32,11 @@ open public class NullTickable
         
                 , TickableInterface {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: NullTickable = NullTickable()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : NullTickable{
 
@@ -56,7 +55,8 @@ open fun getInstance()
             }            
         
                 @Throws(Exception::class)
-            override fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
+            
+    override fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager
@@ -64,7 +64,8 @@ var allBinaryLayerManager = allBinaryLayerManager
 
 
     private val NAME: String = "NulLTickable"
-override fun getName()
+
+    override fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

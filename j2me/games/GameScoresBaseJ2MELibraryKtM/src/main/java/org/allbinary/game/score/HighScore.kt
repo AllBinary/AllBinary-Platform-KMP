@@ -44,7 +44,7 @@ open public class HighScore
     private val score: Long
 
     private val scoreString: String
-public constructor        (id: Int, name: String, gameInfo: GameInfo, score: Long)
+public constructor (id: Int, name: String, gameInfo: GameInfo, score: Long)
             : super()
         {
 var id = id
@@ -59,7 +59,7 @@ this.scoreString= (this.score).toString()
 }
 
 
-open fun getId()
+    open fun getId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -70,7 +70,7 @@ open fun getId()
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -81,7 +81,7 @@ open fun getName()
 }
 
 
-open fun getScore()
+    open fun getScore()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -94,7 +94,7 @@ open fun getScore()
 
                 @Throws(Exception::class)
             
-open fun getAsBytes()
+    open fun getAsBytes()
         //nullable = true from not(false or (false and true)) = true
 : ByteArray{
 
@@ -113,7 +113,7 @@ outputStream!!.writeLong(this.getScore())
 }
 
 
-open fun getGameInfo()
+    open fun getGameInfo()
         //nullable = true from not(false or (false and true)) = true
 : GameInfo{
 
@@ -124,7 +124,7 @@ open fun getGameInfo()
 }
 
 
-open fun getScoreString()
+    open fun getScoreString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -135,14 +135,15 @@ open fun getScoreString()
 }
 
 
-open fun setName(name: String)
+    open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name
 this.name= name
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

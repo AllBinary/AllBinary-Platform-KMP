@@ -30,12 +30,11 @@ open public class CustomItemUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: CustomItemUtil = CustomItemUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CustomItemUtil{
 

@@ -34,12 +34,11 @@ open public class DamageUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: DamageUtil = DamageUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DamageUtil{
 
@@ -55,7 +54,7 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val COLLIDE: String = "collide"
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -63,7 +62,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun process(damageableInterface: DamageableInterface, damageableInterface2: DamageableInterface)
+    open fun process(damageableInterface: DamageableInterface, damageableInterface2: DamageableInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var damageableInterface = damageableInterface
@@ -74,7 +73,7 @@ damageableInterface!!.damage(damageableInterface2!!.getDamage(0), 0)
 
                 @Throws(Exception::class)
             
-open fun debugDamage(collidableInterfaceCompositeInterface1: CollidableCompositeLayer, collidableInterfaceCompositeInterface: CollidableCompositeLayer)
+    open fun debugDamage(collidableInterfaceCompositeInterface1: CollidableCompositeLayer, collidableInterfaceCompositeInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var collidableInterfaceCompositeInterface1 = collidableInterfaceCompositeInterface1

@@ -30,8 +30,7 @@ open public class GameSkillType
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var MANA: GameSkillType = GameSkillType("Mana")
 
@@ -48,7 +47,7 @@ open public class GameSkillType
     private val SPELL_GAME_SKILL_TYPE: String = "SpellGameSkillType: "
 
     private var name: String
-private constructor        (name: String)
+private constructor (name: String)
             : super()
         {
 var name = name
@@ -56,7 +55,7 @@ this.setName(name)
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -67,14 +66,15 @@ open fun getName()
 }
 
 
-open fun setName(name: String)
+    open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name
 this.name= name
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

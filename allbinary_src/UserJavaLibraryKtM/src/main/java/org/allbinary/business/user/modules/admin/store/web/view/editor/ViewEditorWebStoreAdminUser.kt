@@ -31,7 +31,7 @@ import org.allbinary.logic.communication.http.request.session.WeblisketSessionIn
 
 open public class ViewEditorWebStoreAdminUser : User {
         
-public constructor        ()                        
+public constructor ()                        
 
                             : super(){
 
@@ -40,7 +40,7 @@ public constructor        ()
                     
 }
 
-public constructor        (userHashMap: HashMap<Any, Any>)                        
+public constructor (userHashMap: HashMap<Any, Any>)                        
 
                             : super(userHashMap){
 var userHashMap = userHashMap
@@ -51,7 +51,7 @@ var userHashMap = userHashMap
 }
 
 
-open fun validateSession(weblisketSession: WeblisketSessionInterface)
+    open fun validateSession(weblisketSession: WeblisketSessionInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var weblisketSession = weblisketSession
@@ -60,7 +60,7 @@ this.updateSession(weblisketSession)
 }
 
 
-open fun updateSession(weblisketSession: WeblisketSessionInterface)
+    open fun updateSession(weblisketSession: WeblisketSessionInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var weblisketSession = weblisketSession

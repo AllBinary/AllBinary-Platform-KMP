@@ -39,12 +39,12 @@ open public class GenericProfileActionsJPanel : javax.swing.JPanel {
     private var genericProfileActions: GenericProfileActions
 
     private var genericProfileActionJPanel: GenericProfileActionJPanel
-public constructor        (){
+public constructor (){
 initComponents()
 }
 
 
-open fun initComponents()
+    open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
 newProfileActionJDialog= javax.swing.JDialog()
@@ -65,7 +65,7 @@ okNewProfileActionJButton!!.setText("Ok")
 okNewProfileActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -84,7 +84,7 @@ genericProfileActionsJPanel!!.setPreferredSize(java.awt.Dimension(10000, 10000))
 genericProfileActionsJList!!.addListSelectionListener(object: javax.swing.event.ListSelectionListener()
                                 {
                                 
-open override fun valueChanged(evt: javax.swing.event.ListSelectionEvent)
+    open override fun valueChanged(evt: javax.swing.event.ListSelectionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -98,7 +98,7 @@ newActionJButton!!.setText("New")
 newActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -111,7 +111,7 @@ deleteActionJButton!!.setText("Delete")
 deleteActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -124,7 +124,7 @@ saveJButton!!.setText("Save")
 saveJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -155,7 +155,7 @@ layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Align
 }
 
 
-open fun setModel()
+    open fun setModel()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -173,7 +173,7 @@ open fun setModel()
 }
 
 
-open fun saveJButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun saveJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -188,7 +188,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "saveJButtonActionPerformed"
 }
 
 
-open fun updateProfileActionUI(profileActionNameString: String)
+    open fun updateProfileActionUI(profileActionNameString: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var profileActionNameString = profileActionNameString
@@ -218,7 +218,7 @@ logUtil!!.put("Setting Configuration Profile Actions JPanel", this, "genericProf
 }
 
 
-open fun genericProfileActionsJListValueChanged(evt: javax.swing.event.ListSelectionEvent)
+    open fun genericProfileActionsJListValueChanged(evt: javax.swing.event.ListSelectionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -236,7 +236,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "genericProfileActionsJListV
 }
 
 
-open fun okNewProfileActionJButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun okNewProfileActionJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -258,7 +258,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "okNewProfileActionJButtonAc
 }
 
 
-open fun deleteActionJButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun deleteActionJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -291,7 +291,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "deleteActionJButtonActionPe
 
                 @Throws(Exception::class)
             
-open fun selectFirstElement()
+    open fun selectFirstElement()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setModel()
@@ -314,7 +314,7 @@ this.blankGenericProfileActionJPanel!!.repaint()
 }
 
 
-open fun getGenericProfileActionJPanel()
+    open fun getGenericProfileActionJPanel()
         //nullable = true from not(false or (false and true)) = true
 : GenericProfileActionJPanel{
 
@@ -325,7 +325,7 @@ open fun getGenericProfileActionJPanel()
 }
 
 
-open fun setGenericProfileActionJPanel(genericProfileActionJPanel: GenericProfileActionJPanel)
+    open fun setGenericProfileActionJPanel(genericProfileActionJPanel: GenericProfileActionJPanel)
         //nullable = true from not(false or (false and false)) = true
 {
 var genericProfileActionJPanel = genericProfileActionJPanel
@@ -333,7 +333,7 @@ this.genericProfileActionJPanel= genericProfileActionJPanel
 }
 
 
-open fun getGenericProfileActions()
+    open fun getGenericProfileActions()
         //nullable = true from not(false or (false and true)) = true
 : GenericProfileActions{
 
@@ -344,7 +344,7 @@ open fun getGenericProfileActions()
 }
 
 
-open fun setGenericProfileActions(genericProfileActions: GenericProfileActions)
+    open fun setGenericProfileActions(genericProfileActions: GenericProfileActions)
         //nullable = true from not(false or (false and false)) = true
 {
 var genericProfileActions = genericProfileActions
@@ -352,7 +352,7 @@ this.genericProfileActions= genericProfileActions
 }
 
 
-open fun newActionJButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun newActionJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt

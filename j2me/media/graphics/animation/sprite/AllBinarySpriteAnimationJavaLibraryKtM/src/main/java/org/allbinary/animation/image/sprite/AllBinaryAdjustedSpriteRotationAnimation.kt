@@ -36,7 +36,7 @@ open public class AllBinaryAdjustedSpriteRotationAnimation : AllBinarySpriteRota
     private var dx: Int
 
     private var dy: Int
-public constructor        (sprite: Sprite, image: Image, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
+public constructor (sprite: Sprite, image: Image, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
                             : super(sprite, image, animationBehavior){
     //var sprite = sprite
@@ -52,7 +52,8 @@ this.dx= dx
 this.dy= dy
 }
 
-override fun paint(g: Graphics, x: Int, y: Int)
+
+    override fun paint(g: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var g = g

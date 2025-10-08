@@ -33,7 +33,7 @@ open public class TrackingEvent : AllBinaryEventObject {
         
 
     private var layerInterface: AllBinaryLayer = AllBinaryLayer.NULL_ALLBINARY_LAYER
-public constructor        ()                        
+public constructor ()                        
 
                             : super(TrackingEventHandler.getInstance()){
 
@@ -42,7 +42,7 @@ public constructor        ()
                     
 }
 
-public constructor        (allBinaryLayerInterface: AllBinaryLayer)                        
+public constructor (allBinaryLayerInterface: AllBinaryLayer)                        
 
                             : super(allBinaryLayerInterface){
 var allBinaryLayerInterface = allBinaryLayerInterface
@@ -54,7 +54,7 @@ this.setLayerInterface(allBinaryLayerInterface)
 }
 
 
-open fun init(anyType: Any)
+    open fun init(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var anyType = anyType
@@ -62,7 +62,7 @@ this.setSource(anyType)
 }
 
 
-open fun getLayerInterface()
+    open fun getLayerInterface()
         //nullable = true from not(false or (false and true)) = true
 : AllBinaryLayer{
 
@@ -73,7 +73,7 @@ open fun getLayerInterface()
 }
 
 
-open fun setLayerInterface(layerInterface: AllBinaryLayer)
+    open fun setLayerInterface(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var layerInterface = layerInterface
@@ -81,14 +81,15 @@ this.layerInterface= layerInterface
 }
 
 
-open fun setLayerInterfaceForCircularStaticPool(layerInterface: AllBinaryLayer)
+    open fun setLayerInterfaceForCircularStaticPool(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var layerInterface = layerInterface
 this.layerInterface= layerInterface
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

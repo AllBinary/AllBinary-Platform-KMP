@@ -45,12 +45,11 @@ import org.w3c.dom.NodeList
 open public class KeyboardActionScriptInput : BasicProfileActionScriptInput
                 , KeyboardActionScriptInputInterface {
         
-
-        companion object {
+companion object {
             
     private val NAME: String = "Keyboard"
 
-open fun getText(integerArray: Array<Integer?>)
+    open fun getText(integerArray: Array<Integer?>)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var integerArray = integerArray
@@ -104,7 +103,7 @@ index++
     private var release: Boolean= false
 
     private var delayBetweenKeys: Int= 0
-public constructor        (node: Node)                        
+public constructor (node: Node)                        
 
                             : super(NAME, node){
 var node = node
@@ -226,7 +225,7 @@ this.setAllowsChildren(false)
 this.keyboardActionScriptInputJPanel= KeyboardActionScriptInputJPanel(this)
 }
 
-public constructor        ()                        
+public constructor ()                        
 
                             : super(NAME){
 
@@ -248,7 +247,7 @@ this.keyboardActionScriptInputJPanel= KeyboardActionScriptInputJPanel(this)
 }
 
 
-open fun getDelayBetweenKeys()
+    open fun getDelayBetweenKeys()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -259,7 +258,7 @@ open fun getDelayBetweenKeys()
 }
 
 
-open fun setDelayBetweenKeys(delayBetweenKeys: Int)
+    open fun setDelayBetweenKeys(delayBetweenKeys: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var delayBetweenKeys = delayBetweenKeys
@@ -267,7 +266,7 @@ this.delayBetweenKeys= delayBetweenKeys
 }
 
 
-open fun isPress()
+    open fun isPress()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -278,7 +277,7 @@ open fun isPress()
 }
 
 
-open fun setPress(press: Boolean)
+    open fun setPress(press: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var press = press
@@ -286,7 +285,7 @@ this.press= press
 }
 
 
-open fun isRelease()
+    open fun isRelease()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -297,7 +296,7 @@ open fun isRelease()
 }
 
 
-open fun setRelease(release: Boolean)
+    open fun setRelease(release: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var release = release
@@ -305,7 +304,7 @@ this.release= release
 }
 
 
-open fun isNormal()
+    open fun isNormal()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -316,7 +315,7 @@ open fun isNormal()
 }
 
 
-open fun setNormal()
+    open fun setNormal()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setPress(true)
@@ -324,7 +323,7 @@ this.setRelease(true)
 }
 
 
-open fun getKeyArray()
+    open fun getKeyArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<Integer?>{
 
@@ -335,7 +334,7 @@ open fun getKeyArray()
 }
 
 
-open fun setKeyArray(keyArray: Array<Integer?>)
+    open fun setKeyArray(keyArray: Array<Integer?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyArray = keyArray
@@ -349,14 +348,14 @@ this.keyArray= keyArray
 }
 
 
-open fun showDialog()
+    open fun showDialog()
         //nullable = true from not(false or (false and true)) = true
 {
 this.keyboardActionScriptInputJPanel!!.getKeyActionJDialog()!!.setVisible(true)
 }
 
 
-open fun getText()
+    open fun getText()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -367,7 +366,7 @@ open fun getText()
 }
 
 
-open fun setText(text: String)
+    open fun setText(text: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var text = text
@@ -379,7 +378,7 @@ this.setKeyArray(integerArray)
 }
 
 
-open fun integerArrayValue(text: String)
+    open fun integerArrayValue(text: String)
         //nullable = true from not(false or (false and false)) = true
 : Array<Integer?>{
 var text = text
@@ -450,7 +449,7 @@ index++
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -480,7 +479,7 @@ logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -498,7 +497,7 @@ node.appendChild(ModDomHelper.createNodeWithValueNodes(document, KeyboardActionS
 
                 @Throws(Exception::class)
             
-open fun process(frame: Long)
+    open fun process(frame: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var frame = frame
@@ -506,13 +505,14 @@ KeyboardInputAutomationProcessor.process(this)
 }
 
 
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(this.toString(), this, "log")
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

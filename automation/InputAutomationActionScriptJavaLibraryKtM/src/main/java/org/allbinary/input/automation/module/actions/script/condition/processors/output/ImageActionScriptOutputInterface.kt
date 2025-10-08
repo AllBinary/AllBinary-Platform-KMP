@@ -25,34 +25,35 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface ImageActionScriptOutputInterface : ProfileActionScriptOutputInterface {
         
 
-open fun getImageTypes()
+    open fun getImageTypes()
         //nullable = true from not(false or (false and true)) = true
 : ImageTypes
 
-open fun setImageTypes(imageTypes: ImageTypes)
+    open fun setImageTypes(imageTypes: ImageTypes)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun isSaved()
+    open fun isSaved()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun setSaved(saved: Boolean)
+    open fun setSaved(saved: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun isDisplay()
+    open fun isDisplay()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun setDisplay(display: Boolean)
+    open fun setDisplay(display: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 
 

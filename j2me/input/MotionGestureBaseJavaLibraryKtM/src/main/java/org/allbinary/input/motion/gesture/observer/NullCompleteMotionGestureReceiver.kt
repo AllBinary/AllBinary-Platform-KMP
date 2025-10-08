@@ -36,7 +36,7 @@ open public class NullCompleteMotionGestureReceiver
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        ()
+public constructor ()
             : super()
         {
 
@@ -47,7 +47,8 @@ logUtil!!.put("Null Gesture Reciever", this, commonStrings!!.CONSTRUCTOR)
 
 
                 @Throws(Exception::class)
-            override fun onMotionGestureCompleted(list: BasicArrayList)
+            
+    override fun onMotionGestureCompleted(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var list = list

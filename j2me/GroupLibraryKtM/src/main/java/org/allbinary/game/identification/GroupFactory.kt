@@ -34,12 +34,11 @@ open public class GroupFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var instance: GroupFactory = GroupFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GroupFactory{
 
@@ -63,7 +62,7 @@ open fun getInstance()
 
     private var index: Int = 0
 
-open fun getNextGroup()
+    open fun getNextGroup()
         //nullable = true from not(false or (false and true)) = true
 : Group{
 
@@ -78,7 +77,7 @@ index++
 }
 
 
-open fun getNextGroup(name: String)
+    open fun getNextGroup(name: String)
         //nullable = true from not(false or (false and false)) = true
 : Group{
     //var name = name
@@ -94,7 +93,7 @@ group.setName(name)
 }
 
 
-open fun init(groups: Short, nameArray: Array<String?>)
+    open fun init(groups: Short, nameArray: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var groups = groups

@@ -33,12 +33,11 @@ open public class AnalogControllerConfigurationFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AnalogControllerConfigurationFactory = AnalogControllerConfigurationFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AnalogControllerConfigurationFactory{
 
@@ -58,13 +57,13 @@ open fun getInstance()
     private var available: Boolean= false
 
     private val analogControllerConfigurationEvent: AnalogControllerConfigurationEvent = AnalogControllerConfigurationEvent(this)
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun isAvailable()
+    open fun isAvailable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -77,7 +76,7 @@ open fun isAvailable()
 
                 @Throws(Exception::class)
             
-open fun setAvailable(available: Boolean)
+    open fun setAvailable(available: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var available = available

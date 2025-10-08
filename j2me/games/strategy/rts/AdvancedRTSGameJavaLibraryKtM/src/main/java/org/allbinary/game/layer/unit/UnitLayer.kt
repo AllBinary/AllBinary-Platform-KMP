@@ -54,7 +54,6 @@ import org.allbinary.game.layer.waypoint.event.WaypointEventHandlerFactory
 import org.allbinary.media.audio.AttackSound
 import org.allbinary.util.BasicArrayList
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.animation.Animation
 import org.allbinary.animation.AnimationInterfaceFactoryInterface
@@ -143,8 +142,7 @@ open public class UnitLayer : AdvancedRTSGameLayer
                 , BuildingEventListenerInterface
                 , TrackingEventListenerInterface {
         
-
-        companion object {
+companion object {
             
     private val partialPositionList: BasicArrayList = BasicArrayList(4)
 
@@ -152,7 +150,7 @@ open public class UnitLayer : AdvancedRTSGameLayer
 
     private val MOVE: String = "Moving"
 
-open fun getStaticType()
+    open fun getStaticType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -163,7 +161,7 @@ open fun getStaticType()
 }
 
 
-open fun getPartialpositionlist()
+    open fun getPartialpositionlist()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -229,7 +227,7 @@ open fun getPartialpositionlist()
     private var movementAngle: NamedAngle = this.angleFactory!!.NOT_ANGLE
 
     private var steeringInsideGeographicMapCellPosition: GeographicMapCellPosition
-protected constructor        (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, vehicleProperties: VehicleProperties, healthInterface: Health, maxLoad: Integer, moveSoundInterface: Sound, waypointLayerInterfaceFactoryInterface: LayerInterfaceFactoryInterface, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, decalAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, direction: Direction, x: Int, y: Int, z: Int)                        
+protected constructor (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, vehicleProperties: VehicleProperties, healthInterface: Health, maxLoad: Integer, moveSoundInterface: Sound, waypointLayerInterfaceFactoryInterface: LayerInterfaceFactoryInterface, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, decalAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, direction: Direction, x: Int, y: Int, z: Int)                        
 
                             : this(remoteInfo, parentLayer, groupInterface, rootName, name, vehicleProperties, healthInterface, maxLoad, moveSoundInterface, waypointLayerInterfaceFactoryInterface, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, decalAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, direction, x, y, z, TileLayerPositionIntoViewPosition()){
     //var remoteInfo = remoteInfo
@@ -260,7 +258,7 @@ protected constructor        (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGa
                     
 }
 
-protected constructor        (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, vehicleProperties: VehicleProperties, healthInterface: Health, maxLoad: Integer, moveSoundInterface: Sound, waypointLayerInterfaceFactoryInterface: LayerInterfaceFactoryInterface, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, decalAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, direction: Direction, x: Int, y: Int, z: Int, viewPosition: ViewPosition)                        
+protected constructor (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, vehicleProperties: VehicleProperties, healthInterface: Health, maxLoad: Integer, moveSoundInterface: Sound, waypointLayerInterfaceFactoryInterface: LayerInterfaceFactoryInterface, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, decalAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, direction: Direction, x: Int, y: Int, z: Int, viewPosition: ViewPosition)                        
 
                             : this(remoteInfo, parentLayer, groupInterface, rootName, name, vehicleProperties, healthInterface, maxLoad, moveSoundInterface, waypointLayerInterfaceFactoryInterface, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, decalAnimationInterfaceFactoryInterface, NullRotationAnimationFactory.getFactoryInstance(), proceduralAnimationInterfaceFactoryInterface, rectangle, direction, x, y, z, viewPosition){
     //var remoteInfo = remoteInfo
@@ -292,7 +290,7 @@ protected constructor        (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGa
                     
 }
 
-protected constructor        (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, vehicleProperties: VehicleProperties, healthInterface: Health, maxLoad: Integer, moveSoundInterface: Sound, waypointLayerInterfaceFactoryInterface: LayerInterfaceFactoryInterface, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, decalAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, resourceAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, direction: Direction, x: Int, y: Int, z: Int)                        
+protected constructor (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, vehicleProperties: VehicleProperties, healthInterface: Health, maxLoad: Integer, moveSoundInterface: Sound, waypointLayerInterfaceFactoryInterface: LayerInterfaceFactoryInterface, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, decalAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, resourceAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, direction: Direction, x: Int, y: Int, z: Int)                        
 
                             : this(remoteInfo, parentLayer, groupInterface, rootName, name, vehicleProperties, healthInterface, maxLoad, moveSoundInterface, waypointLayerInterfaceFactoryInterface, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, decalAnimationInterfaceFactoryInterface, resourceAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, direction, x, y, z, TileLayerPositionIntoViewPosition()){
     //var remoteInfo = remoteInfo
@@ -324,7 +322,7 @@ protected constructor        (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGa
                     
 }
 
-protected constructor        (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, vehicleProperties: VehicleProperties, healthInterface: Health, maxResourceLoad: Integer, moveSoundInterface: Sound, waypointLayerInterfaceFactoryInterface: LayerInterfaceFactoryInterface, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, decalAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, resourceAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, direction: Direction, x: Int, y: Int, z: Int, viewPosition: ViewPosition)                        
+protected constructor (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, vehicleProperties: VehicleProperties, healthInterface: Health, maxResourceLoad: Integer, moveSoundInterface: Sound, waypointLayerInterfaceFactoryInterface: LayerInterfaceFactoryInterface, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, decalAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, resourceAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, direction: Direction, x: Int, y: Int, z: Int, viewPosition: ViewPosition)                        
 
                             : super(remoteInfo, parentLayer, groupInterface, rootName, name, healthInterface, WaypointRTSFormInput(groupInterface, true), animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y, viewPosition){
     //var remoteInfo = remoteInfo
@@ -403,7 +401,7 @@ this.initPathAnimation= PathAnimation(this, LinePathRelativeAnimation.getInstanc
 
                 @Throws(Exception::class)
             
-open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
+    open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -414,7 +412,7 @@ this.initPathAnimation!!.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 
                 @Throws(Exception::class)
             
-open fun updateWaypointBehavior(geographicMapInterface: BasicGeographicMap)
+    open fun updateWaypointBehavior(geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapInterface = geographicMapInterface
@@ -451,7 +449,7 @@ this.initRangeHack()
 
                 @Throws(Exception::class)
             
-open fun construct(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
+    open fun construct(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var rtsPlayerLayerInterface = rtsPlayerLayerInterface
@@ -469,7 +467,7 @@ this.getUnitWaypointBehavior()!!.setLastPathGeographicMapCellPosition(this.getUn
 
                 @Throws(Exception::class)
             
-open fun updateSensorGeographicMapCellPositionList()
+    open fun updateSensorGeographicMapCellPositionList()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -590,7 +588,7 @@ this.sensorGeographicMapCellPositionList!!.add(currentGeographicMapCellPosition)
 }
 
 
-open fun getSensorGeographicMapCellPositionList()
+    open fun getSensorGeographicMapCellPositionList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -601,7 +599,7 @@ open fun getSensorGeographicMapCellPositionList()
 }
 
 
-open fun select()
+    open fun select()
         //nullable = true from not(false or (false and true)) = true
 {
 this.pathAnimation= this.initPathAnimation
@@ -609,14 +607,15 @@ super.select()
 }
 
 
-open fun deselect()
+    open fun deselect()
         //nullable = true from not(false or (false and true)) = true
 {
 this.pathAnimation= NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
 super.deselect()
 }
 
-override fun setSelected(selected: Boolean)
+
+    override fun setSelected(selected: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var selected = selected
@@ -658,7 +657,7 @@ this.rtsLayer2LogHelper= RTSLayer2LogHelper.getInstance()
 
                 @Throws(Exception::class)
             
-open fun setClosestGeographicMapCellHistory(pathsList: BasicArrayList)
+    open fun setClosestGeographicMapCellHistory(pathsList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pathsList = pathsList
@@ -718,7 +717,7 @@ this.teleportTo(geographicMapCellPosition)
 
                 @Throws(Exception::class)
             
-open fun init(geographicMapCellHistory: GeographicMapCellHistory, geographicMapCellPositionBasicArrayList: BasicArrayList)
+    open fun init(geographicMapCellHistory: GeographicMapCellHistory, geographicMapCellPositionBasicArrayList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapCellHistory = geographicMapCellHistory
@@ -727,7 +726,7 @@ geographicMapCellHistory!!.track(geographicMapCellPositionBasicArrayList)
 }
 
 
-open fun onMovement(trackingEvent: TrackingEvent)
+    open fun onMovement(trackingEvent: TrackingEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var trackingEvent = trackingEvent
@@ -756,7 +755,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "onMovement", e)
 
                 @Throws(Exception::class)
             
-open fun onMovementFound(trackingEvent: TrackingEvent)
+    open fun onMovementFound(trackingEvent: TrackingEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var trackingEvent = trackingEvent
@@ -775,7 +774,7 @@ open fun onMovementFound(trackingEvent: TrackingEvent)
 }
 
 
-open fun initRangeHack()
+    open fun initRangeHack()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -797,7 +796,7 @@ this.fireTimeHelper!!.delay= (weaponProperties!!.getReloadTime().toInt())
 
                 @Throws(Exception::class)
             
-open fun processBuiltTick(allBinaryLayerManager: AllBinaryLayerManager)
+    open fun processBuiltTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryLayerManager = allBinaryLayerManager
@@ -864,7 +863,7 @@ this.getUnitWaypointBehavior()!!.processTick(allBinaryLayerManager)
 }
 
 
-open fun teleportTo(geographicMapCellPosition: GeographicMapCellPosition)
+    open fun teleportTo(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapCellPosition = geographicMapCellPosition
@@ -877,7 +876,7 @@ this.setPosition(point.getX() -this.getHalfWidth(), point.getY() -this.getHalfHe
 
                 @Throws(Exception::class)
             
-open fun getCurrentGeographicMapCellPosition()
+    open fun getCurrentGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPosition{
 
@@ -914,7 +913,7 @@ open fun getCurrentGeographicMapCellPosition()
 
                 @Throws(Exception::class)
             
-open fun fire(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+    open fun fire(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerManager = layerManager
@@ -938,7 +937,7 @@ open fun fire(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
 
                 @Throws(Exception::class)
             
-open fun left()
+    open fun left()
         //nullable = true from not(false or (false and true)) = true
 {
 this.initResourceAnimation!!.previousRotation()
@@ -949,7 +948,7 @@ this.rotationAnimationInterface!!.previousRotation()
 
                 @Throws(Exception::class)
             
-open fun right()
+    open fun right()
         //nullable = true from not(false or (false and true)) = true
 {
 this.initResourceAnimation!!.nextRotation()
@@ -958,7 +957,7 @@ this.rotationAnimationInterface!!.nextRotation()
 }
 
 
-open fun down()
+    open fun down()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -976,7 +975,7 @@ open fun down()
 }
 
 
-open fun up()
+    open fun up()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -994,7 +993,7 @@ open fun up()
 }
 
 
-open fun initInputProcessors()
+    open fun initInputProcessors()
         //nullable = true from not(false or (false and true)) = true
 {
 this.inputProcessorArray[Canvas.RIGHT]= SpecialRightGameInputProcessor(this)
@@ -1009,7 +1008,7 @@ super.initInputProcessors()
 
                 @Throws(Exception::class)
             
-open fun processInput(layerManager: AllBinaryLayerManager)
+    open fun processInput(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var layerManager = layerManager
@@ -1041,7 +1040,7 @@ this.move()
 }
 
 
-open fun accelerate(accelerate: BasicDecimal)
+    open fun accelerate(accelerate: BasicDecimal)
         //nullable = true from not(false or (false and false)) = true
 {
     //var accelerate = accelerate
@@ -1051,7 +1050,7 @@ this.getVehicleProperties()!!.getVelocityProperties()!!.addVelocity(accelerate.g
 
                 @Throws(Exception::class)
             
-open fun fireAll(layerManager: AllBinaryLayerManager)
+    open fun fireAll(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerManager = layerManager
@@ -1068,7 +1067,7 @@ hashtable.put(SmallIntegerSingletonFactory.getInstance()!!.getInstance(1), Small
 }
 
 
-open fun downgrade()
+    open fun downgrade()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -1083,7 +1082,7 @@ open fun downgrade()
 }
 
 
-open fun upgrade()
+    open fun upgrade()
         //nullable = true from not(false or (false and true)) = true
 {
 super.upgrade()
@@ -1091,7 +1090,7 @@ this.initRangeHack()
 }
 
 
-open fun groundFriction()
+    open fun groundFriction()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -1102,7 +1101,8 @@ this.getVehicleProperties()!!.getVehicleFrictionProperties()!!.friction(this.get
 
 
                 @Throws(Exception::class)
-            override fun trackTo(reason: String)
+            
+    override fun trackTo(reason: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var reason = reason
@@ -1124,7 +1124,8 @@ this.trackTo(dx, dy)
 
 
                 @Throws(Exception::class)
-            override fun trackTo(dx: Int, dy: Int)
+            
+    override fun trackTo(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var dx = dx
@@ -1138,7 +1139,7 @@ this.trackTo(dx, dy, angleOfTarget)
 
                 @Throws(Exception::class)
             
-open fun turnTo(dx: Int, dy: Int, targetAngle: Int)
+    open fun turnTo(dx: Int, dy: Int, targetAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var dx = dx
@@ -1355,7 +1356,7 @@ this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstance(this, Canvas.
 }
 
 
-open fun handleDeltalX(dx: Int, dy: Int)
+    open fun handleDeltalX(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var dx = dx
@@ -1383,7 +1384,7 @@ this.rtsLogHelper!!.handle(this, this.movementAngle)
 }
 
 
-open fun handleDeltalY(dx: Int, dy: Int)
+    open fun handleDeltalY(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var dx = dx
@@ -1413,7 +1414,7 @@ this.rtsLogHelper!!.handle(this, this.movementAngle)
 
                 @Throws(Exception::class)
             
-open fun trackTo(dx: Int, dy: Int, targetAngle: Int)
+    open fun trackTo(dx: Int, dy: Int, targetAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var dx = dx
@@ -1472,7 +1473,7 @@ this.fireOrMove()
 
                 @Throws(Exception::class)
             
-open fun fireOrMove()
+    open fun fireOrMove()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -1509,7 +1510,7 @@ TrackingEventHandler.getInstance()!!.fireEvent(this.getTrackingEvent())
 }
 
 
-open fun move()
+    open fun move()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -1608,7 +1609,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "move", e)
 }
 
 
-open fun allStop()
+    open fun allStop()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -1619,7 +1620,7 @@ velocityProperties!!.getVelocityYBasicDecimalP()!!.set(0)
 }
 
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -1654,7 +1655,7 @@ this.resourceAnimation!!.paint(graphics, viewX, viewY)
 
                 @Throws(Exception::class)
             
-open fun onBuildingEvent(event: RTSLayerEvent)
+    open fun onBuildingEvent(event: RTSLayerEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var event = event
@@ -1665,7 +1666,7 @@ this.getUnitWaypointBehavior()!!.moveAwayFromBuilding(buildingLayer)
 }
 
 
-open fun getVehicleProperties()
+    open fun getVehicleProperties()
         //nullable = true from not(false or (false and true)) = true
 : VehicleProperties{
 
@@ -1678,7 +1679,7 @@ open fun getVehicleProperties()
 
                 @Throws(Exception::class)
             
-open fun damage(damage: Int, damageType: Int)
+    open fun damage(damage: Int, damageType: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var damage = damage
@@ -1699,7 +1700,7 @@ this.damageFloaters!!.add(damage)
 
                 @Throws(Exception::class)
             
-open fun getDamage(damageType: Int)
+    open fun getDamage(damageType: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var damageType = damageType
@@ -1713,7 +1714,7 @@ open fun getDamage(damageType: Int)
 
                 @Throws(Exception::class)
             
-open fun setDestroyed(destroyed: Boolean)
+    open fun setDestroyed(destroyed: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var destroyed = destroyed
@@ -1783,7 +1784,7 @@ vibration.vibrate(duration *4, 0, 0)
 }
 
 
-open fun getLoad()
+    open fun getLoad()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -1796,7 +1797,7 @@ open fun getLoad()
 
                 @Throws(Exception::class)
             
-open fun clearResourceAnimation()
+    open fun clearResourceAnimation()
         //nullable = true from not(false or (false and true)) = true
 {
 this.resourceAnimation= NullIndexedAnimationFactory.getFactoryInstance()!!.getInstance(0) as IndexedAnimation
@@ -1805,7 +1806,7 @@ this.resourceAnimation= NullIndexedAnimationFactory.getFactoryInstance()!!.getIn
 
                 @Throws(Exception::class)
             
-open fun setLoad(resource: Short)
+    open fun setLoad(resource: Short)
         //nullable = true from not(false or (false and false)) = true
 {
 var resource = resource
@@ -1827,7 +1828,7 @@ this.resourceLoad= resource
 }
 
 
-open fun addLoad(resource: Int)
+    open fun addLoad(resource: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var resource = resource
@@ -1839,7 +1840,7 @@ this.resourceLoad += resource
 
                 @Throws(Exception::class)
             
-open fun handleCost(ownerLayer: PathFindingLayerInterface)
+    open fun handleCost(ownerLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var ownerLayer = ownerLayer
@@ -1857,7 +1858,7 @@ this.setLoad(0.toShort())
 }
 
 
-open fun createHudPaintable()
+    open fun createHudPaintable()
         //nullable = true from not(false or (false and true)) = true
 : SelectionHudPaintable{
 
@@ -1873,7 +1874,7 @@ rtsLayerHudPaintable!!.setRtsLayer(this)
 }
 
 
-open fun getHudPaintable()
+    open fun getHudPaintable()
         //nullable = true from not(false or (false and true)) = true
 : SelectionHudPaintable{
 
@@ -1887,7 +1888,7 @@ open fun getHudPaintable()
 }
 
 
-open fun getType()
+    open fun getType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -1898,7 +1899,7 @@ open fun getType()
 }
 
 
-open fun getUnitWaypointBehavior()
+    open fun getUnitWaypointBehavior()
         //nullable = true from not(false or (false and true)) = true
 : UnitWaypointBehavior{
 
@@ -1909,7 +1910,7 @@ open fun getUnitWaypointBehavior()
 }
 
 
-open fun getTrackingEvent()
+    open fun getTrackingEvent()
         //nullable = true from not(false or (false and true)) = true
 : TrackingEvent{
 
@@ -1920,7 +1921,7 @@ open fun getTrackingEvent()
 }
 
 
-open fun getCaptionAnimationHelper()
+    open fun getCaptionAnimationHelper()
         //nullable = true from not(false or (false and true)) = true
 : CaptionAnimationHelperBase{
 
@@ -1931,7 +1932,7 @@ open fun getCaptionAnimationHelper()
 }
 
 
-open fun isSelfUpgradeable()
+    open fun isSelfUpgradeable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -1942,7 +1943,7 @@ open fun isSelfUpgradeable()
 }
 
 
-open fun getMaxResourceLoad()
+    open fun getMaxResourceLoad()
         //nullable = true from not(false or (false and true)) = true
 : Short{
 

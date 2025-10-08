@@ -32,8 +32,7 @@ open public class NullInputMappingEventListener
         
                 , InputMappingEventListenerInterface {
         
-
-        companion object {
+companion object {
             
     val NULL_INPUT_MAPPING_EVENT_LISTENER: NullInputMappingEventListener = NullInputMappingEventListener()
 
@@ -45,13 +44,15 @@ open public class NullInputMappingEventListener
             }            
         
                 @Throws(Exception::class)
-            override fun onInputMappingEvent(inputMappingEvent: InputMappingEvent)
+            
+    override fun onInputMappingEvent(inputMappingEvent: InputMappingEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var inputMappingEvent = inputMappingEvent
 }
 
-override fun onEvent(eventObject: AllBinaryEventObject)
+
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject

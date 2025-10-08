@@ -27,78 +27,79 @@
         
 import org.allbinary.game.identification.GroupInterfaceCompositeInterface
 import org.allbinary.graphics.paint.PaintableInterface
+
 interface LayerInterface : NamedInterface, PaintableInterface, GroupInterfaceCompositeInterface, PositionInterface {
         
 
-open fun getHeight()
+    open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getWidth()
+    open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getHalfHeight()
+    open fun getHalfHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getHalfWidth()
+    open fun getHalfWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getXP()
+    open fun getXP()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getYP()
+    open fun getYP()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getZP()
+    open fun getZP()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getX2()
+    open fun getX2()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getY2()
+    open fun getY2()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getZ2()
+    open fun getZ2()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun isVisible()
+    open fun isVisible()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun move(dx: Int, dy: Int, dz: Int)
+    open fun move(dx: Int, dy: Int, dz: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setVisible(visible: Boolean)
+    open fun setVisible(visible: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun implmentsTickableInterface()
+    open fun implmentsTickableInterface()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun implmentsCollidableInterface()
+    open fun implmentsCollidableInterface()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun implmentsGameInputInterface()
+    open fun implmentsGameInputInterface()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun implmentsArtificialIntelligenceCompositeInterface()
+    open fun implmentsArtificialIntelligenceCompositeInterface()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun getType()
+    open fun getType()
         //nullable = true from not(false or (false and true)) = true
 : Int
 

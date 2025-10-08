@@ -33,12 +33,11 @@ open public class TimeUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: TimeUtil = TimeUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TimeUtil{
 
@@ -58,7 +57,7 @@ open fun getInstance()
             {
             }            
         
-open fun setCalendar(calendar: Calendar, yearString: String, monthString: String, dayString: String, hourString: String)
+    open fun setCalendar(calendar: Calendar, yearString: String, monthString: String, dayString: String, hourString: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var calendar = calendar
@@ -86,7 +85,7 @@ calendar.set(year, month, day, hour, 0)
 }
 
 
-open fun setCalendar(calendar: Calendar, yearString: String, monthString: String, dayString: String, hourString: String, minuteString: String, secondString: String)
+    open fun setCalendar(calendar: Calendar, yearString: String, monthString: String, dayString: String, hourString: String, minuteString: String, secondString: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var calendar = calendar
@@ -124,7 +123,7 @@ calendar.set(year, month, day, hour, minute, second)
 }
 
 
-open fun setExpirationCalendar(calendar: Calendar, yearsString: String, monthsString: String, daysString: String, hoursString: String, minutesString: String, secondsString: String)
+    open fun setExpirationCalendar(calendar: Calendar, yearsString: String, monthsString: String, daysString: String, hoursString: String, minutesString: String, secondsString: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var calendar = calendar
@@ -162,7 +161,7 @@ calendar.set(year, month, day, hour, minute, second)
 }
 
 
-open fun getTotalTime(yearString: String, monthString: String, dayString: String, hourString: String, minuteString: String, secondString: String)
+    open fun getTotalTime(yearString: String, monthString: String, dayString: String, hourString: String, minuteString: String, secondString: String)
         //nullable = true from not(false or (false and false)) = true
 : Long{
 var yearString = yearString

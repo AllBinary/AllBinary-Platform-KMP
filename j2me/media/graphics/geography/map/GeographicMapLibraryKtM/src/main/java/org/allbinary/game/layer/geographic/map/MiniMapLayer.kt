@@ -62,7 +62,7 @@ open public class MiniMapLayer : AllBinaryLayer
     private val positionList: BasicArrayList
 
     private var animationInterface: CircleFilledAnimation
-public constructor        (geographicMapInterface: BasicGeographicMap, viewPosition: ViewPosition)                        
+public constructor (geographicMapInterface: BasicGeographicMap, viewPosition: ViewPosition)                        
 
                             : super(Rectangle(PointFactory.getInstance()!!.getInstance(0, viewPosition!!.getY()), geographicMapInterface!!.getAllBinaryTiledLayer()!!.getWidth(), geographicMapInterface!!.getAllBinaryTiledLayer()!!.getHeight()), viewPosition){
 var geographicMapInterface = geographicMapInterface
@@ -84,14 +84,14 @@ this.init()
 
                 @Throws(Exception::class)
             
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 allBinaryTiledLayer!!.setPosition(this.x, this.y, this.z)
 }
 
 
-open fun onEvent(eventObject: AllBinaryEventObject)
+    open fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
@@ -102,7 +102,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun onRemoveGeographicMapCellPositionEvent(geographicMapCellPositionEvent: GeographicMapCellPositionEvent)
+    open fun onRemoveGeographicMapCellPositionEvent(geographicMapCellPositionEvent: GeographicMapCellPositionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var geographicMapCellPositionEvent = geographicMapCellPositionEvent
@@ -129,7 +129,7 @@ this.positionList!!.remove(index)
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun onGeographicMapCellPositionEvent(geographicMapCellPositionEvent: GeographicMapCellPositionEvent)
+    open fun onGeographicMapCellPositionEvent(geographicMapCellPositionEvent: GeographicMapCellPositionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var geographicMapCellPositionEvent = geographicMapCellPositionEvent
@@ -195,7 +195,7 @@ layerIndex= this.basicColorList!!.size() -1
 }
 
 
-open fun paintDots(graphics: Graphics)
+    open fun paintDots(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -231,7 +231,7 @@ this.animationInterface!!.paint(graphics, point.getX() +this.x, point.getY() +th
 }
 
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

@@ -30,15 +30,14 @@ open public class FinalPositionRaceTrackFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val FIRST_POSITION: Int = 1
 
     private var index: Int = FIRST_POSITION
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : Int{
 
@@ -50,7 +49,7 @@ open fun getInstance()
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun reset()
+    open fun reset()
         //nullable = true from not(false or (false and true)) = true
 {
 index= FIRST_POSITION
@@ -58,7 +57,7 @@ index= FIRST_POSITION
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

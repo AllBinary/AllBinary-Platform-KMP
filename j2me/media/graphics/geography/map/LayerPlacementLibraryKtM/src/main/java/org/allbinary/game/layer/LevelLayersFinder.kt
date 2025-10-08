@@ -37,12 +37,11 @@ open public class LevelLayersFinder
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: LevelLayersFinder = LevelLayersFinder()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : LevelLayersFinder{
 
@@ -60,7 +59,7 @@ open fun getInstance()
             {
             }            
         
-open fun get(hashtable: Hashtable<Any, Any>)
+    open fun get(hashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var hashtable = hashtable

@@ -30,8 +30,7 @@ open public class NameSpaceRequestParamData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NAME: String = "NAMESPACE_REQUESTDATA_NAME"
 
@@ -46,7 +45,7 @@ open public class NameSpaceRequestParamData
     val DOCUMENT: String = "NAMESPACE_REQUESTDATA_DOCUMENT"
 
         }
-            public constructor        ()
+            public constructor ()
             : super()
         {
 }

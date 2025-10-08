@@ -32,8 +32,7 @@ open public class UserEmailEventNameData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var userNameEvenNameHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -90,7 +89,7 @@ open public class UserEmailEventNameData
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getInstance(userEmailEventNameString: String)
+    open fun getInstance(userEmailEventNameString: String)
         //nullable =  from not(true or (false and false)) = 
 : UserEmailEventNameData{
 var userEmailEventNameString = userEmailEventNameString
@@ -128,7 +127,7 @@ var userEmailEventNameString = userEmailEventNameString
     private var eventNameId: Int= 0
 
     private var eventHandlerName: String
-public constructor        (eventHandlerName: String)
+public constructor (eventHandlerName: String)
             : super()
         {
 var eventHandlerName = eventHandlerName
@@ -139,7 +138,7 @@ this.userNameEvenNameHashMap!!.put(this.eventHandlerName, this)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun initNextId()
+    open fun initNextId()
         //nullable = true from not(false or (false and true)) = true
 {
 this.eventNameId= UserEmailEventNameData.nextId
@@ -147,7 +146,7 @@ UserEmailEventNameData.nextId++
 }
 
 
-open fun isEvent(userEmailEventNameString: String)
+    open fun isEvent(userEmailEventNameString: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var userEmailEventNameString = userEmailEventNameString
@@ -158,7 +157,8 @@ var userEmailEventNameString = userEmailEventNameString
                         return this.userNameEvenNameHashMap!!.containsKey(userEmailEventNameString)
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

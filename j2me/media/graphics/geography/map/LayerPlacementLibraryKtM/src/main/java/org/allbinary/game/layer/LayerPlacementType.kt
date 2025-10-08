@@ -32,7 +32,7 @@ open public class LayerPlacementType
         
 
     private var type: Int
- constructor        (type: Int)
+ constructor (type: Int)
             : super()
         {
 var type = type
@@ -40,7 +40,7 @@ this.type= type
 }
 
 
-open fun getType()
+    open fun getType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -51,7 +51,7 @@ open fun getType()
 }
 
 
-open fun setType(type: Int)
+    open fun setType(type: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var type = type

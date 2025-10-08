@@ -30,12 +30,11 @@ open public class PersistanceStrings
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: PersistanceStrings = PersistanceStrings()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PersistanceStrings{
 

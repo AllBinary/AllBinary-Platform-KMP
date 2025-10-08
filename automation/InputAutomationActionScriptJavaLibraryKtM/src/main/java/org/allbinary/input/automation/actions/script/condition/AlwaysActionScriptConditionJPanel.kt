@@ -36,7 +36,7 @@ open public class AlwaysActionScriptConditionJPanel : javax.swing.JPanel {
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var alwaysActionScriptConditionInterface: AlwaysActionScriptConditionInterface
-public constructor        (alwaysActionScriptConditionInterface: AlwaysActionScriptConditionInterface){
+public constructor (alwaysActionScriptConditionInterface: AlwaysActionScriptConditionInterface){
 var alwaysActionScriptConditionInterface = alwaysActionScriptConditionInterface
 logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 initComponents()
@@ -45,7 +45,7 @@ this.set()
 }
 
 
-open fun set()
+    open fun set()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -66,7 +66,7 @@ this.alwaysActionScriptConditionInterface!!.log()
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -87,7 +87,7 @@ this.alwaysActionScriptConditionInterface!!.log()
 }
 
 
-open fun getAlwaysActionJDialog()
+    open fun getAlwaysActionJDialog()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JDialog{
 
@@ -98,7 +98,7 @@ open fun getAlwaysActionJDialog()
 }
 
 
-open fun setAlwaysActionJDialog(alwaysActionJDialog: javax.swing.JDialog)
+    open fun setAlwaysActionJDialog(alwaysActionJDialog: javax.swing.JDialog)
         //nullable = true from not(false or (false and false)) = true
 {
 var alwaysActionJDialog = alwaysActionJDialog
@@ -106,7 +106,7 @@ this.alwaysActionJDialog= alwaysActionJDialog
 }
 
 
-open fun initComponents()
+    open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
 alwaysActionJDialog= javax.swing.JDialog()
@@ -122,7 +122,7 @@ okJButton!!.setText("OK")
 okJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -144,7 +144,7 @@ alwaysActionJButton!!.setText("Edit")
 alwaysActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -163,7 +163,7 @@ layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Align
 }
 
 
-open fun okJButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun okJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -172,7 +172,7 @@ this.getAlwaysActionJDialog()!!.setVisible(false)
 }
 
 
-open fun alwaysActionJButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun alwaysActionJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt

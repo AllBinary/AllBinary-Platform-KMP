@@ -58,8 +58,7 @@ open public class DiveAndDirectionalTrackingAI : BasicAI
                 , TrackingEventListenerInterface
                 , DestroyedEventListenerInterface {
         
-
-        companion object {
+companion object {
             
     private val directionToKeyMap: IntArray = intArrayOf(Canvas.LEFT,Canvas.DOWN,Canvas.UP,Canvas.RIGHT)
 
@@ -94,7 +93,7 @@ open public class DiveAndDirectionalTrackingAI : BasicAI
     private val directionFactory: DirectionFactory = DirectionFactory.getInstance()!!
 
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
-public constructor        (ownerLayerInterface: AllBinaryLayer, artificialIntelligenceInterface: ArtificialIntelligenceInterface, gameInput: GameInput, visitor: Visitor)                        
+public constructor (ownerLayerInterface: AllBinaryLayer, artificialIntelligenceInterface: ArtificialIntelligenceInterface, gameInput: GameInput, visitor: Visitor)                        
 
                             : super(ownerLayerInterface, gameInput){
 var ownerLayerInterface = ownerLayerInterface
@@ -121,7 +120,8 @@ this.init()
 
 
                 @Throws(Exception::class)
-            override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+            
+    override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager
@@ -154,7 +154,7 @@ this.list.clear()
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 this.dive= false
@@ -165,7 +165,7 @@ TrackingEventHandler.getInstance()!!.addListener(this)
 
                 @Throws(Exception::class)
             
-open fun target(allBinaryLayerManager: AllBinaryLayerManager)
+    open fun target(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager
@@ -313,7 +313,7 @@ this.lastTrackingLayerInterface= lastTrackingEvent!!.getLayerInterface()
 
                 @Throws(Exception::class)
             
-open fun verticalTargeting(x: Int)
+    open fun verticalTargeting(x: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -352,7 +352,7 @@ var x = x
 
                 @Throws(Exception::class)
             
-open fun horizontalTargeting(y: Int)
+    open fun horizontalTargeting(y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var y = y
@@ -389,7 +389,7 @@ var y = y
 }
 
 
-open fun setDive()
+    open fun setDive()
         //nullable = true from not(false or (false and true)) = true
 {
 this.dive= true
@@ -400,7 +400,7 @@ TrackingEventHandler.getInstance()!!.removeListener(this)
 
                 @Throws(Exception::class)
             
-open fun moveRight()
+    open fun moveRight()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setLastDirection(this.directionFactory!!.RIGHT)
@@ -411,7 +411,7 @@ this.aiVistor!!.visit(this)
 
                 @Throws(Exception::class)
             
-open fun moveLeft()
+    open fun moveLeft()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setLastDirection(this.directionFactory!!.LEFT)
@@ -422,7 +422,7 @@ this.aiVistor!!.visit(this)
 
                 @Throws(Exception::class)
             
-open fun moveDown()
+    open fun moveDown()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setLastDirection(this.directionFactory!!.DOWN)
@@ -433,7 +433,7 @@ this.aiVistor!!.visit(this)
 
                 @Throws(Exception::class)
             
-open fun moveUp()
+    open fun moveUp()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setLastDirection(this.directionFactory!!.UP)
@@ -444,7 +444,7 @@ this.aiVistor!!.visit(this)
 
                 @Throws(Exception::class)
             
-open fun dive()
+    open fun dive()
         //nullable = true from not(false or (false and true)) = true
 {
 this.directionalInterface!!.setFrame(this.directionOfTarget)
@@ -454,7 +454,7 @@ this.aiVistor!!.visit(this)
 
                 @Throws(Exception::class)
             
-open fun attack()
+    open fun attack()
         //nullable = true from not(false or (false and true)) = true
 {
 super.processAI(Canvas.KEY_NUM1)
@@ -463,7 +463,7 @@ super.processAI(Canvas.KEY_NUM1)
 
                 @Throws(Exception::class)
             
-open fun drop()
+    open fun drop()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -479,7 +479,7 @@ this.aiVistor!!.visit(this)
 }
 
 
-open fun isBeyondTarget()
+    open fun isBeyondTarget()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -613,21 +613,24 @@ open fun isBeyondTarget()
                             
 }
 
-override fun onEvent(eventObject: AllBinaryEventObject)
+
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
-override fun onMovement(trackingEvent: TrackingEvent)
+
+    override fun onMovement(trackingEvent: TrackingEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var trackingEvent = trackingEvent
 this.list.add(trackingEvent)
 }
 
-override fun onDestroyed(destroyedEvent: DestroyedEvent)
+
+    override fun onDestroyed(destroyedEvent: DestroyedEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var destroyedEvent = destroyedEvent
@@ -644,7 +647,7 @@ DestroyedEventHandler.getInstance()!!.removeListener(this)
 }
 
 
-open fun setLastDirection(lastDirection: Direction)
+    open fun setLastDirection(lastDirection: Direction)
         //nullable = true from not(false or (false and false)) = true
 {
 var lastDirection = lastDirection
@@ -663,7 +666,8 @@ this.lastDirection= lastDirection
                                 
 }
 
-override fun setLastKey(lastKey: Int)
+
+    override fun setLastKey(lastKey: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var lastKey = lastKey
@@ -707,7 +711,7 @@ super.setLastKey(lastKey)
 }
 
 
-open fun getLastDirection()
+    open fun getLastDirection()
         //nullable = true from not(false or (false and true)) = true
 : Direction{
 
@@ -717,7 +721,8 @@ open fun getLastDirection()
                         return lastDirection
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

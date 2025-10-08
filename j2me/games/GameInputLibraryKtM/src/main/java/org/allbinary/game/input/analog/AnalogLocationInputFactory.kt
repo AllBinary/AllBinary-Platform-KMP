@@ -17,12 +17,11 @@ open public class AnalogLocationInputFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AnalogLocationInputFactory = AnalogLocationInputFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AnalogLocationInputFactory{
 
@@ -36,13 +35,13 @@ open fun getInstance()
         }
             
     private val list: BasicArrayList = BasicArrayList()
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun addPlayer(playerInputId: Int)
+    open fun addPlayer(playerInputId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var playerInputId = playerInputId
@@ -71,7 +70,7 @@ list.add(analogLocationInput)
 }
 
 
-open fun getInstance(playerInputId: Int)
+    open fun getInstance(playerInputId: Int)
         //nullable =  from not(true or (false and false)) = 
 : AnalogLocationInput{
 var playerInputId = playerInputId
@@ -83,7 +82,7 @@ var playerInputId = playerInputId
 }
 
 
-open fun getList()
+    open fun getList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 

@@ -35,7 +35,7 @@ open public class ThirdPartyStore
     private var authorized: Boolean= false
 
     private val name: String
-public constructor        (name: String)
+public constructor (name: String)
             : super()
         {
 var name = name
@@ -43,14 +43,14 @@ this.name= name
 }
 
 
-open fun authorize(clientInformationInterface: AbeClientInformationInterface)
+    open fun authorize(clientInformationInterface: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var clientInformationInterface = clientInformationInterface
 }
 
 
-open fun isAuthorized()
+    open fun isAuthorized()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -61,7 +61,7 @@ open fun isAuthorized()
 }
 
 
-open fun setAuthorized(authorized: Boolean)
+    open fun setAuthorized(authorized: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var authorized = authorized
@@ -69,7 +69,7 @@ this.authorized= authorized
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

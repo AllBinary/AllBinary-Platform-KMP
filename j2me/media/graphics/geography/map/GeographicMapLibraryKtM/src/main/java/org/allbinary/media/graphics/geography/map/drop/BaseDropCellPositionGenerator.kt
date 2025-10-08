@@ -41,7 +41,7 @@ open public class BaseDropCellPositionGenerator
             {
             }            
         
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -54,7 +54,7 @@ open fun getName()
 
                 @Throws(Exception::class)
             
-open fun update(allBinaryGameLayerManager: AllBinaryGameLayerManager, geographicMapInterface: BasicGeographicMap)
+    open fun update(allBinaryGameLayerManager: AllBinaryGameLayerManager, geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -64,7 +64,7 @@ var geographicMapInterface = geographicMapInterface
 
                 @Throws(Exception::class)
             
-open fun isDropAllowedAt(geographicMapCellPosition: GeographicMapCellPosition)
+    open fun isDropAllowedAt(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var geographicMapCellPosition = geographicMapCellPosition
@@ -78,7 +78,7 @@ var geographicMapCellPosition = geographicMapCellPosition
 
                 @Throws(Exception::class)
             
-open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
+    open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager

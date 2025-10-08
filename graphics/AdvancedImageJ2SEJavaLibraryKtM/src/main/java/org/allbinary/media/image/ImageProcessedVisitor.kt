@@ -27,12 +27,13 @@
         
 import java.awt.image.BufferedImage
 import java.io.IOException
+
 interface ImageProcessedVisitor : ImageProcessorInputCompositeInterface {
         
 
                 @Throws(IOException::class)
             
-open fun visit(generatedBufferedImage: BufferedImage, nameEnding: String, index: Int)
+    open fun visit(generatedBufferedImage: BufferedImage, nameEnding: String, index: Int)
         //nullable = true from not(false or (false and false)) = true
 
 

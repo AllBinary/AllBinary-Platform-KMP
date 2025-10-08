@@ -32,12 +32,11 @@ open public class ImageModifierUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ImageModifierUtil = ImageModifierUtil()
 
-open fun getInstanceOrCreate()
+    open fun getInstanceOrCreate()
         //nullable = true from not(false or (false and true)) = true
 : ImageModifierUtil{
 
@@ -55,7 +54,7 @@ open fun getInstanceOrCreate()
             {
             }            
         
-open fun setColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, basicColor: BasicColor)
+    open fun setColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var unusedOriginalImage = unusedOriginalImage
@@ -65,7 +64,7 @@ open fun setColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, bas
 }
 
 
-open fun changeColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, basicColor: BasicColor)
+    open fun changeColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var unusedOriginalImage = unusedOriginalImage
@@ -75,7 +74,7 @@ open fun changeColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, 
 }
 
 
-open fun setAlpha(originalImage: Image, image: Image, imageIndex: Int, alphaInt: Int)
+    open fun setAlpha(originalImage: Image, image: Image, imageIndex: Int, alphaInt: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var originalImage = originalImage
@@ -85,7 +84,7 @@ open fun setAlpha(originalImage: Image, image: Image, imageIndex: Int, alphaInt:
 }
 
 
-open fun getImageArray(originalImageArray: Array<Image?>)
+    open fun getImageArray(originalImageArray: Array<Image?>)
         //nullable = true from not(false or (false and false)) = true
 : Array<Image?>{
     //var originalImageArray = originalImageArray
@@ -97,7 +96,7 @@ open fun getImageArray(originalImageArray: Array<Image?>)
 }
 
 
-open fun handleImage(imageArray: Array<Image?>, index: Int, image: Image)
+    open fun handleImage(imageArray: Array<Image?>, index: Int, image: Image)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageArray = imageArray
@@ -106,7 +105,7 @@ open fun handleImage(imageArray: Array<Image?>, index: Int, image: Image)
 }
 
 
-open fun reset()
+    open fun reset()
         //nullable = true from not(false or (false and true)) = true
 {
 }

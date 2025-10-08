@@ -32,12 +32,11 @@ open public class DirectionUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: DirectionUtil = DirectionUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DirectionUtil{
 
@@ -53,7 +52,7 @@ open fun getInstance()
     private var directionArray: Array<Angle?> = arrayOfNulls(10)
 
     private var directionArray2: Array<Angle?> = arrayOfNulls(10)
-private constructor        ()
+private constructor ()
             : super()
         {
 
@@ -73,7 +72,7 @@ directionArray2[directionFactory!!.DOWN.getValue()]= angleFactory!!.DOWN
 }
 
 
-open fun getAngle(direction: Direction)
+    open fun getAngle(direction: Direction)
         //nullable = true from not(false or (false and false)) = true
 : Angle{
 var direction = direction
@@ -85,7 +84,7 @@ var direction = direction
 }
 
 
-open fun getFrameAngle(direction: Direction)
+    open fun getFrameAngle(direction: Direction)
         //nullable = true from not(false or (false and false)) = true
 : Angle{
 var direction = direction

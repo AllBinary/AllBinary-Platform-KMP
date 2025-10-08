@@ -38,7 +38,7 @@ open public class HtmlLengthInput : HtmlValueInput {
     private var length: String
 
     private var size: String
-public constructor        (before: String, type: String, name: String, value: String, after: String)                        
+public constructor (before: String, type: String, name: String, value: String, after: String)                        
 
                             : super(before, type, name, value, after){
 var before = before
@@ -53,7 +53,7 @@ var after = after
 }
 
 
-open fun setMaxLength(length: Integer)
+    open fun setMaxLength(length: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var length = length
@@ -63,7 +63,7 @@ addAttribute(MAXLENGTH, this.length)
 }
 
 
-open fun setSize(size: Integer)
+    open fun setSize(size: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var size = size

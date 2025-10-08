@@ -28,7 +28,7 @@
 
 open public class TouchFeature : Feature {
         
- constructor        (name: String)                        
+ constructor (name: String)                        
 
                             : super(name){
 var name = name

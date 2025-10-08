@@ -31,12 +31,11 @@ open public class WaypointRunnableLogHelper
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: WaypointRunnableLogHelper = WaypointRunnableLogHelper()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : WaypointRunnableLogHelper{
 
@@ -54,14 +53,14 @@ open fun getInstance()
             {
             }            
         
-open fun start(pathFindingLayerInterface: PathFindingLayerInterface)
+    open fun start(pathFindingLayerInterface: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface
 }
 
 
-open fun end(pathFindingLayerInterface: PathFindingLayerInterface)
+    open fun end(pathFindingLayerInterface: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface

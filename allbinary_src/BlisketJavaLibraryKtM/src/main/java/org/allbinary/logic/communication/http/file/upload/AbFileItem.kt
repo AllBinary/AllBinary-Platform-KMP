@@ -55,7 +55,7 @@ open public class AbFileItem
     private var fieldName: String
 
     private val byteArray: ByteArray
-public constructor        (name: String, fieldName: String, byteArray: ByteArray)
+public constructor (name: String, fieldName: String, byteArray: ByteArray)
             : super()
         {
 var name = name
@@ -69,7 +69,7 @@ this.byteArray= byteArray
 
                 @Throws(IOException::class)
             
-open fun getInputStream()
+    open fun getInputStream()
         //nullable = true from not(false or (false and true)) = true
 : InputStream{
 
@@ -79,7 +79,7 @@ open fun getInputStream()
 }
 
 
-open fun getContentType()
+    open fun getContentType()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -90,7 +90,7 @@ open fun getContentType()
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -101,7 +101,7 @@ open fun getName()
 }
 
 
-open fun isInMemory()
+    open fun isInMemory()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -112,7 +112,7 @@ open fun isInMemory()
 }
 
 
-open fun getSize()
+    open fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -123,7 +123,7 @@ open fun getSize()
 }
 
 
-open fun get()
+    open fun get()
         //nullable = true from not(false or (false and true)) = true
 : ByteArray{
 
@@ -136,7 +136,7 @@ open fun get()
 
                 @Throws(UnsupportedEncodingException::class)
             
-open fun getString(encoding: String)
+    open fun getString(encoding: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var encoding = encoding
@@ -148,7 +148,7 @@ var encoding = encoding
 }
 
 
-open fun getString()
+    open fun getString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -181,7 +181,7 @@ open fun getString()
 
                 @Throws(Exception::class)
             
-open fun write(file: File)
+    open fun write(file: File)
         //nullable = true from not(false or (false and false)) = true
 {
 var file = file
@@ -194,7 +194,7 @@ var file = file
 
                 @Throws(Exception::class)
             
-open fun write(file: AbFile)
+    open fun write(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
 {
 var file = file
@@ -205,14 +205,14 @@ var file = file
 }
 
 
-open fun delete()
+    open fun delete()
         //nullable = true from not(false or (false and true)) = true
 {
 ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, "delete()")
 }
 
 
-open fun getFieldName()
+    open fun getFieldName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -223,7 +223,7 @@ open fun getFieldName()
 }
 
 
-open fun setFieldName(name: String)
+    open fun setFieldName(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name
@@ -231,7 +231,7 @@ this.fieldName= name
 }
 
 
-open fun isFormField()
+    open fun isFormField()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -259,7 +259,7 @@ open fun isFormField()
 }
 
 
-open fun setFormField(state: Boolean)
+    open fun setFormField(state: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var state = state
@@ -268,7 +268,7 @@ var state = state
 
                 @Throws(IOException::class)
             
-open fun getOutputStream()
+    open fun getOutputStream()
         //nullable = true from not(false or (false and true)) = true
 : OutputStream{
 
@@ -278,7 +278,7 @@ open fun getOutputStream()
 }
 
 
-open fun getHeaders()
+    open fun getHeaders()
         //nullable = true from not(false or (false and true)) = true
 : FileItemHeaders{
 
@@ -288,7 +288,7 @@ open fun getHeaders()
 }
 
 
-open fun setHeaders(fih: FileItemHeaders)
+    open fun setHeaders(fih: FileItemHeaders)
         //nullable = true from not(false or (false and false)) = true
 {
 var fih = fih

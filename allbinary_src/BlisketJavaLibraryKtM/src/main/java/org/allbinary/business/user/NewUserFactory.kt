@@ -37,12 +37,11 @@ open public class NewUserFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : UserInterface{
 
@@ -55,7 +54,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun getInstance(transformInfoInterface: TransformInfoInterface)
+    open fun getInstance(transformInfoInterface: TransformInfoInterface)
         //nullable =  from not(true or (false and false)) = 
 : UserInterface{
 var transformInfoInterface = transformInfoInterface
@@ -83,7 +82,7 @@ hashMap!!.put(UserRoleData.NAME.toString(), role)
 
                 @Throws(Exception::class)
             
-open fun getInstance(httpServletRequest: HttpServletRequest, propertiesHashMap: HashMap<Any, Any>)
+    open fun getInstance(httpServletRequest: HttpServletRequest, propertiesHashMap: HashMap<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
 : UserInterface{
 var httpServletRequest = httpServletRequest
@@ -123,7 +122,7 @@ requestHashMap!!.put(UserRoleData.NAME.toString(), roleString)
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

@@ -46,13 +46,13 @@ open public class InputMapping
     private val hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
     private val mappedList: BasicArrayList = BasicArrayList()
-protected constructor        ()
+protected constructor ()
             : super()
         {
 }
 
 
-open fun getTotalMapped()
+    open fun getTotalMapped()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -63,7 +63,7 @@ open fun getTotalMapped()
 }
 
 
-open fun isDefaultNew()
+    open fun isDefaultNew()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -74,7 +74,7 @@ open fun isDefaultNew()
 }
 
 
-open fun getDefault()
+    open fun getDefault()
         //nullable = true from not(false or (false and true)) = true
 : InputToGameKeyMapping{
 
@@ -85,7 +85,7 @@ open fun getDefault()
 }
 
 
-open fun removeAll()
+    open fun removeAll()
         //nullable = true from not(false or (false and true)) = true
 {
 this.hashtable.clear()
@@ -93,7 +93,7 @@ this.mappedList!!.clear()
 }
 
 
-open fun remove(input: Input, mappedToInput: Input)
+    open fun remove(input: Input, mappedToInput: Input)
         //nullable = true from not(false or (false and false)) = true
 {
     //var input = input
@@ -143,7 +143,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "InputMapping::remove")
 
                 @Throws(Exception::class)
             
-open fun add(inputToGameKeyMapping: InputToGameKeyMapping)
+    open fun add(inputToGameKeyMapping: InputToGameKeyMapping)
         //nullable = true from not(false or (false and false)) = true
 {
     //var inputToGameKeyMapping = inputToGameKeyMapping
@@ -154,7 +154,7 @@ open fun add(inputToGameKeyMapping: InputToGameKeyMapping)
 }
 
 
-open fun add(input: Input, mappedToInput: Input)
+    open fun add(input: Input, mappedToInput: Input)
         //nullable = true from not(false or (false and false)) = true
 {
     //var input = input
@@ -175,7 +175,7 @@ this.mappedList!!.add(mappedToInput)
 }
 
 
-open fun isMapped(input: Input)
+    open fun isMapped(input: Input)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var input = input
@@ -187,7 +187,7 @@ open fun isMapped(input: Input)
 }
 
 
-open fun getMappedInput(id: Input)
+    open fun getMappedInput(id: Input)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var id = id
@@ -221,7 +221,7 @@ this.hashtable.put(id, list)
 }
 
 
-open fun getHashtable()
+    open fun getHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
 

@@ -33,12 +33,11 @@ open public class OpenGLImageSpecificFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OpenGLImageSpecificFactory = OpenGLImageSpecificFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OpenGLImageSpecificFactory{
 
@@ -60,7 +59,7 @@ open fun getInstance()
 
     var updating: Boolean = false
 
-open fun setImageFactory(imageFactory: OpenGLImageFactory)
+    open fun setImageFactory(imageFactory: OpenGLImageFactory)
         //nullable = true from not(false or (false and false)) = true
 {
 var imageFactory = imageFactory
@@ -70,7 +69,7 @@ PreLogUtil.put(StringMaker().
 }
 
 
-open fun getImageFactory()
+    open fun getImageFactory()
         //nullable = true from not(false or (false and true)) = true
 : OpenGLImageFactory{
 

@@ -36,7 +36,7 @@ open public class Input
     private var id: Int= 0
 
     private var name: String = StringUtil.getInstance()!!.EMPTY_STRING
-public constructor        (id: Int, name: String)
+public constructor (id: Int, name: String)
             : super()
         {
 var id = id
@@ -46,7 +46,7 @@ this.setName(name)
 }
 
 
-open fun getId()
+    open fun getId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -57,7 +57,7 @@ open fun getId()
 }
 
 
-open fun setId(key: Int)
+    open fun setId(key: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var key = key
@@ -65,7 +65,7 @@ this.id= key
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -76,14 +76,15 @@ open fun getName()
 }
 
 
-open fun setName(keyName: String)
+    open fun setName(keyName: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyName = keyName
 this.name= keyName
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

@@ -32,7 +32,7 @@ import org.allbinary.layer.AllBinaryLayerManager
 
 open public class ScrollOverAtEndAI : BasicAI {
         
-public constructor        (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
+public constructor (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
                             : super(ownerLayerInterface, gameInput){
 var ownerLayerInterface = ownerLayerInterface
@@ -45,7 +45,8 @@ var gameInput = gameInput
 
 
                 @Throws(Exception::class)
-            override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+            
+    override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager

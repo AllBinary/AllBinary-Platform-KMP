@@ -30,15 +30,14 @@ open public class BasicDecimal
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val ZERO_BIGDECIMAL: BasicDecimal = BasicDecimal()
 
         }
             
     private var units: Long
-public constructor        (bigDecimal: BasicDecimal)
+public constructor (bigDecimal: BasicDecimal)
             : super()
         {
 var bigDecimal = bigDecimal
@@ -46,14 +45,14 @@ this.units= bigDecimal!!.getUnscaled()
 this.updateScaled()
 }
 
-public constructor        ()
+public constructor ()
             : super()
         {
 this.units= 0
 this.updateScaled()
 }
 
-public constructor        (units: Long)
+public constructor (units: Long)
             : super()
         {
 var units = units
@@ -62,7 +61,7 @@ this.updateScaled()
 }
 
 
-open fun set(value: Int)
+    open fun set(value: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -71,7 +70,7 @@ this.updateScaled()
 }
 
 
-open fun set(value: Long)
+    open fun set(value: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -80,7 +79,7 @@ this.updateScaled()
 }
 
 
-open fun set(bigDecimal: BasicDecimal)
+    open fun set(bigDecimal: BasicDecimal)
         //nullable = true from not(false or (false and false)) = true
 {
 var bigDecimal = bigDecimal
@@ -89,7 +88,7 @@ this.updateScaled()
 }
 
 
-open fun add(value: Int)
+    open fun add(value: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -98,7 +97,7 @@ this.updateScaled()
 }
 
 
-open fun add(value: Long)
+    open fun add(value: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -107,7 +106,7 @@ this.updateScaled()
 }
 
 
-open fun add(bigDecimal: BasicDecimal)
+    open fun add(bigDecimal: BasicDecimal)
         //nullable = true from not(false or (false and false)) = true
 {
 var bigDecimal = bigDecimal
@@ -116,7 +115,7 @@ this.updateScaled()
 }
 
 
-open fun subtract(value: Int)
+    open fun subtract(value: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -125,7 +124,7 @@ this.updateScaled()
 }
 
 
-open fun subtract(value: Long)
+    open fun subtract(value: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -134,7 +133,7 @@ this.updateScaled()
 }
 
 
-open fun subtract(bigDecimal: BasicDecimal)
+    open fun subtract(bigDecimal: BasicDecimal)
         //nullable = true from not(false or (false and false)) = true
 {
 var bigDecimal = bigDecimal
@@ -143,7 +142,7 @@ this.updateScaled()
 }
 
 
-open fun multiply(value: Int)
+    open fun multiply(value: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -152,7 +151,7 @@ this.updateScaled()
 }
 
 
-open fun multiply(value: Long)
+    open fun multiply(value: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -161,7 +160,7 @@ this.updateScaled()
 }
 
 
-open fun multiply(bigDecimal: BasicDecimal)
+    open fun multiply(bigDecimal: BasicDecimal)
         //nullable = true from not(false or (false and false)) = true
 {
 var bigDecimal = bigDecimal
@@ -170,7 +169,7 @@ this.updateScaled()
 }
 
 
-open fun divide(value: Int)
+    open fun divide(value: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -179,7 +178,7 @@ this.updateScaled()
 }
 
 
-open fun divide(value: Long)
+    open fun divide(value: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -188,7 +187,7 @@ this.updateScaled()
 }
 
 
-open fun divide(bigDecimal: BasicDecimal)
+    open fun divide(bigDecimal: BasicDecimal)
         //nullable = true from not(false or (false and false)) = true
 {
 var bigDecimal = bigDecimal
@@ -197,7 +196,7 @@ this.updateScaled()
 }
 
 
-open fun getUnscaled()
+    open fun getUnscaled()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -210,14 +209,14 @@ open fun getUnscaled()
 
     private var scaled: Int= 0
 
-open fun updateScaled()
+    open fun updateScaled()
         //nullable = true from not(false or (false and true)) = true
 {
 this.scaled= (this.units /factorValue).toInt()
 }
 
 
-open fun getScaled()
+    open fun getScaled()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -227,7 +226,8 @@ open fun getScaled()
                         return this.scaled
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -242,7 +242,7 @@ override fun toString()
 
     private val factorValue: Int = ScaleFactorFactory.getInstance()!!.DEFAULT_SCALE_VALUE
 
-open fun getScaledFactor()
+    open fun getScaledFactor()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -253,7 +253,7 @@ open fun getScaledFactor()
 }
 
 
-open fun getScaledFactorValue()
+    open fun getScaledFactorValue()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

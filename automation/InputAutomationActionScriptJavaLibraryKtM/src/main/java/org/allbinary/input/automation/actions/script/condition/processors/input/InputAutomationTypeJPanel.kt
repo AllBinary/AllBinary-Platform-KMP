@@ -28,12 +28,12 @@
 
 open public class InputAutomationTypeJPanel : javax.swing.JPanel {
         
-public constructor        (){
+public constructor (){
 initComponents()
 }
 
 
-open fun getInputAutomationTypeJComboBox()
+    open fun getInputAutomationTypeJComboBox()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JComboBox{
 
@@ -44,7 +44,7 @@ open fun getInputAutomationTypeJComboBox()
 }
 
 
-open fun setInputAutomationTypeJComboBox(inputAutomationTypeJComboBox: javax.swing.JComboBox)
+    open fun setInputAutomationTypeJComboBox(inputAutomationTypeJComboBox: javax.swing.JComboBox)
         //nullable = true from not(false or (false and false)) = true
 {
 var inputAutomationTypeJComboBox = inputAutomationTypeJComboBox
@@ -52,7 +52,7 @@ this.inputAutomationTypeJComboBox= inputAutomationTypeJComboBox
 }
 
 
-open fun initComponents()
+    open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
 inputAutomationTypeJComboBox= javax.swing.JComboBox()

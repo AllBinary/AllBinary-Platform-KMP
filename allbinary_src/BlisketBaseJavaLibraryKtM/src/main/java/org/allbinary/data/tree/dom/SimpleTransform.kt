@@ -41,7 +41,7 @@ open public class SimpleTransform
     private val xsltFilePath: AbPath
 
     private val dataFilePath: AbPath
-public constructor        (xsltFilePath: AbPath, dataFilePath: AbPath)
+public constructor (xsltFilePath: AbPath, dataFilePath: AbPath)
             : super()
         {
 var xsltFilePath = xsltFilePath
@@ -53,7 +53,7 @@ this.dataFilePath= dataFilePath
 
                 @Throws(Exception::class)
             
-open fun transform()
+    open fun transform()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

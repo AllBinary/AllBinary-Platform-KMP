@@ -28,16 +28,15 @@
 
 open public class LicensingException : java.lang.Exception {
         
-
-        companion object {
+companion object {
             
     val serialVersionUID: Long = 1L
 
         }
-            public constructor        (){
+            public constructor (){
 }
 
-public constructor        (msg: String)                        
+public constructor (msg: String)                        
 
                             : super(msg){
 var msg = msg

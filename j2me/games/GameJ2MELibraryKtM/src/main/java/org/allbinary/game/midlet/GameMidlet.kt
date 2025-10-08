@@ -161,12 +161,12 @@ open public class GameMidlet : ProgressMidlet
 
     private var thread: Thread = NullThread.NULL_THREAD
 
-    private var loadGameForm: CommandForm = CommandForm.NULL_COMMAND_FORM
+    private var loadGameForm: CommandForm
 
     private var isFullScreen: Boolean= false
 
     private var resized: Boolean= false
-public constructor        (clientInformationFactory: ClientInformationFactory)                        
+public constructor (clientInformationFactory: ClientInformationFactory)                        
 
                             : super(clientInformationFactory){
     //var clientInformationFactory = clientInformationFactory
@@ -175,6 +175,7 @@ public constructor        (clientInformationFactory: ClientInformationFactory)
                             //For kotlin this is before the body of the constructor.
                     
 SmallIntegerSingletonFactory.getInstance()!!.init(0x291, 6)
+loadGameForm= CommandForm.NULL_COMMAND_FORM
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
@@ -186,7 +187,7 @@ this.init()
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -194,7 +195,7 @@ open fun init()
 
                 @Throws(Exception::class)
             
-open fun setDemo()
+    open fun setDemo()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -206,7 +207,7 @@ open fun setDemo()
 
                 @Throws(Exception::class)
             
-open fun createGame()
+    open fun createGame()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -218,7 +219,7 @@ open fun createGame()
 
                 @Throws(Exception::class)
             
-open fun mediaShutdown()
+    open fun mediaShutdown()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -228,12 +229,13 @@ open fun mediaShutdown()
 }
 
 
-open fun stopAll()
+    open fun stopAll()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun pauseApp()
+
+    override fun pauseApp()
         //nullable = true from not(false or (false and true)) = true
 {
 this.pauseAppBackground(true)
@@ -244,7 +246,7 @@ gameAdState!!.getAdvertisements()!!.stopAll()
 }
 
 
-open fun pauseAppBackground(background: Boolean)
+    open fun pauseAppBackground(background: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var background = background
@@ -267,7 +269,7 @@ AllBinarySensorManager.getInstance()!!.shutdown()
 }
 
 
-open fun unPauseApp()
+    open fun unPauseApp()
         //nullable = true from not(false or (false and true)) = true
 {
 this.unPauseAppBackground(true)
@@ -278,7 +280,7 @@ gameAdState!!.getAdvertisements()!!.startAll()
 }
 
 
-open fun unPauseAppBackground(background: Boolean)
+    open fun unPauseAppBackground(background: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var background = background
@@ -303,7 +305,8 @@ AllBinarySensorManager.getInstance()!!.init()
                             
 }
 
-override fun destroyApp(unconditional: Boolean, isProgress: Boolean)
+
+    override fun destroyApp(unconditional: Boolean, isProgress: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var unconditional = unconditional
@@ -333,7 +336,8 @@ this.destroyApp(unconditional)
                                 
 }
 
-override fun destroyApp(unconditional: Boolean)
+
+    override fun destroyApp(unconditional: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var unconditional = unconditional
@@ -373,7 +377,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
 logUtil!!.put(commonStrings!!.END, this, METHOD_NAME)
 }
 
-override fun startApp()
+
+    override fun startApp()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -428,7 +433,8 @@ notifyDestroyed()
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun commandAction(command: Command, displayable: Displayable)
+
+    override fun commandAction(command: Command, displayable: Displayable)
         //nullable = true from not(false or (false and false)) = true
 {
     //var command = command
@@ -1125,7 +1131,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, midletStrings!!.COMMAND_ACTION, e
 }
 
 
-open fun updateFullScreen()
+    open fun updateFullScreen()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -1152,7 +1158,7 @@ canvas.setFullScreenMode(isFullScreen)
 }
 
 
-open fun onEvent(eventObject: AllBinaryEventObject)
+    open fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject
@@ -1162,7 +1168,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
                 @Throws(Exception::class)
             
-open fun getInputMappingInstructionsCanvas()
+    open fun getInputMappingInstructionsCanvas()
         //nullable = true from not(false or (false and true)) = true
 : MyCanvas{
 
@@ -1175,7 +1181,7 @@ open fun getInputMappingInstructionsCanvas()
 
                 @Throws(Exception::class)
             
-open fun getInputMappingCanvas()
+    open fun getInputMappingCanvas()
         //nullable = true from not(false or (false and true)) = true
 : MyCanvas{
 
@@ -1188,7 +1194,7 @@ open fun getInputMappingCanvas()
 
                 @Throws(Exception::class)
             
-open fun getAboutCanvas()
+    open fun getAboutCanvas()
         //nullable = true from not(false or (false and true)) = true
 : MyCanvas{
 
@@ -1201,7 +1207,7 @@ open fun getAboutCanvas()
 
                 @Throws(Exception::class)
             
-open fun getHelpPaintable()
+    open fun getHelpPaintable()
         //nullable = true from not(false or (false and true)) = true
 : HelpPaintable{
 
@@ -1213,7 +1219,7 @@ open fun getHelpPaintable()
 
                 @Throws(Exception::class)
             
-open fun createHighScoresCanvas()
+    open fun createHighScoresCanvas()
         //nullable = true from not(false or (false and true)) = true
 : HighScoresCanvas{
 
@@ -1225,7 +1231,7 @@ open fun createHighScoresCanvas()
 
                 @Throws(Exception::class)
             
-open fun startGameCanvasRunnableInterface()
+    open fun startGameCanvasRunnableInterface()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -1241,7 +1247,7 @@ threadFactoryUtil!!.start(thread)
 
                 @Throws(Exception::class)
             
-open fun stopGameCanvasRunnableInterface()
+    open fun stopGameCanvasRunnableInterface()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(commonStrings!!.START, this, gameStrings!!.STOP_GAME_CANVAS_RUNNABLE_INTERFACE)
@@ -1288,7 +1294,7 @@ logUtil!!.put(commonStrings!!.END, this, gameStrings!!.STOP_GAME_CANVAS_RUNNABLE
 }
 
 
-open fun getGameCanvasRunnableInterface()
+    open fun getGameCanvasRunnableInterface()
         //nullable = true from not(false or (false and true)) = true
 : GameCanvasRunnableInterface{
 
@@ -1299,7 +1305,7 @@ open fun getGameCanvasRunnableInterface()
 }
 
 
-open fun setGameCanvasRunnableInterface(gameCanvasRunnableInterface: GameCanvasRunnableInterface)
+    open fun setGameCanvasRunnableInterface(gameCanvasRunnableInterface: GameCanvasRunnableInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameCanvasRunnableInterface = gameCanvasRunnableInterface
@@ -1307,7 +1313,7 @@ this.allbinaryGameCanvasRunnableInterface= gameCanvasRunnableInterface
 }
 
 
-open fun createGameLayerManager()
+    open fun createGameLayerManager()
         //nullable = true from not(false or (false and true)) = true
 : AllBinaryGameLayerManager{
 
@@ -1321,7 +1327,7 @@ open fun createGameLayerManager()
 }
 
 
-open fun getGameOptionsForm()
+    open fun getGameOptionsForm()
         //nullable = true from not(false or (false and true)) = true
 : CommandForm{
 
@@ -1337,7 +1343,7 @@ open fun getGameOptionsForm()
 
                 @Throws(Exception::class)
             
-open fun save()
+    open fun save()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.SAVE)
@@ -1349,7 +1355,8 @@ GamePersistanceSingleton.getInstance()!!.save(abeClientInformation, hashtable)
 
 
                 @Throws(Exception::class)
-            override fun getCurrentStateHashtable()
+            
+    override fun getCurrentStateHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
 logUtil!!.put(commonStrings!!.START, this, "getCurrentStateHashtable")
@@ -1388,7 +1395,7 @@ hashtable.put(key, currentHashtable!!.get(key as Object))
 }
 
 
-open fun setLoadGameForm(loadGameForm: LoadGameForm)
+    open fun setLoadGameForm(loadGameForm: LoadGameForm)
         //nullable = true from not(false or (false and false)) = true
 {
     //var loadGameForm = loadGameForm
@@ -1396,7 +1403,7 @@ this.loadGameForm= loadGameForm
 }
 
 
-open fun getLoadGameForm()
+    open fun getLoadGameForm()
         //nullable = true from not(false or (false and true)) = true
 : LoadGameForm{
 
@@ -1407,7 +1414,7 @@ open fun getLoadGameForm()
 }
 
 
-open fun setResized(resized: Boolean)
+    open fun setResized(resized: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var resized = resized
@@ -1415,7 +1422,7 @@ this.resized= resized
 }
 
 
-open fun isResized()
+    open fun isResized()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -1428,7 +1435,7 @@ open fun isResized()
 
     private var startedBefore: Boolean = false
 
-open fun isDemoLoading()
+    open fun isDemoLoading()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

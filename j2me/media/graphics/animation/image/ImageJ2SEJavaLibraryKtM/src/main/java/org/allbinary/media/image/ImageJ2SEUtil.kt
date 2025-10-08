@@ -25,18 +25,17 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.awt
+import java.awt.Color
 
 open public class ImageJ2SEUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ImageJ2SEUtil = ImageJ2SEUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ImageJ2SEUtil{
 

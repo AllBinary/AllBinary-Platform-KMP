@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.game.layer.AllBinaryTiledLayer
 import org.allbinary.logic.string.StringMaker
@@ -48,7 +47,7 @@ open public class BasicGeographicMapCellPositionFactory
     val rows: Int
 
     private val tiledLayer: AllBinaryTiledLayer
-protected constructor        (geographicMapInterface: BasicGeographicMap)
+protected constructor (geographicMapInterface: BasicGeographicMap)
             : super()
         {
     //var geographicMapInterface = geographicMapInterface
@@ -65,7 +64,7 @@ this.init()
 
                 @Throws(Exception::class)
             
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -107,7 +106,7 @@ this.createInstance(column, row, width, height)
 
                 @Throws(Exception::class)
             
-open fun visit(geographicMapCelPositionFactoryInitVisitorInterface: GeographicMapCellPositionFactoryInitVisitorInterface)
+    open fun visit(geographicMapCelPositionFactoryInitVisitorInterface: GeographicMapCellPositionFactoryInitVisitorInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapCelPositionFactoryInitVisitorInterface = geographicMapCelPositionFactoryInitVisitorInterface
@@ -160,7 +159,7 @@ logUtil!!.put(StringMaker().
 
                 @Throws(Exception::class)
             
-open fun getInstance(i_column: Int, i_row: Int)
+    open fun getInstance(i_column: Int, i_row: Int)
         //nullable =  from not(true or (false and false)) = 
 : GeographicMapCellPosition{
     //var i_column = i_column
@@ -175,7 +174,7 @@ open fun getInstance(i_column: Int, i_row: Int)
 
                 @Throws(Exception::class)
             
-open fun getInstance(anotherMapGeographicMapCellPosition: GeographicMapCellPosition)
+    open fun getInstance(anotherMapGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable =  from not(true or (false and false)) = 
 : GeographicMapCellPosition{
     //var anotherMapGeographicMapCellPosition = anotherMapGeographicMapCellPosition
@@ -189,7 +188,7 @@ open fun getInstance(anotherMapGeographicMapCellPosition: GeographicMapCellPosit
 
                 @Throws(Exception::class)
             
-open fun createInstance(i_column: Int, i_row: Int, width: Int, height: Int)
+    open fun createInstance(i_column: Int, i_row: Int, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellPosition{
     //var i_column = i_column
@@ -219,7 +218,7 @@ geographicMapCellPositionArray[i_row]!![i_column]= cellPosition
 }
 
 
-open fun getColumns()
+    open fun getColumns()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -230,7 +229,7 @@ open fun getColumns()
 }
 
 
-open fun getRows()
+    open fun getRows()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

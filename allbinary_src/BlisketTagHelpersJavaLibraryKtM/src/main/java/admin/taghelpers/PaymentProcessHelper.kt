@@ -35,7 +35,7 @@ open public class PaymentProcessHelper : TagHelper {
         
 
     private var paymentProcessorComponent: PaymentProcessorComponent
-public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext){
 var propertiesHashMap = propertiesHashMap
 var pageContext = pageContext
 
@@ -47,7 +47,7 @@ this.paymentProcessorComponent= PaymentProcessorComponent(transformInfoInterface
 
                 @Throws(Exception::class)
             
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

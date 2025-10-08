@@ -30,12 +30,11 @@ open public class StatePaintableFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: StatePaintable = StatePaintable()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : StatePaintable{
 

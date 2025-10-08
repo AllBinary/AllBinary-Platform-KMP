@@ -39,12 +39,11 @@ open public class ModDomHelper
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun createTextNode(document: Document, name: String, text: String)
+    open fun createTextNode(document: Document, name: String, text: String)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -67,7 +66,7 @@ newValueNode!!.appendChild(newValueTextNode)
 
                 @Throws(Exception::class)
             
-open fun createValueNode(document: Document, text: String)
+    open fun createValueNode(document: Document, text: String)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -82,7 +81,7 @@ var text = text
 
                 @Throws(Exception::class)
             
-open fun createNameNode(document: Document, text: String)
+    open fun createNameNode(document: Document, text: String)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -97,7 +96,7 @@ var text = text
 
                 @Throws(Exception::class)
             
-open fun createIndexNode(document: Document, index: Int)
+    open fun createIndexNode(document: Document, index: Int)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -113,7 +112,7 @@ var index = index
 
                 @Throws(Exception::class)
             
-open fun createNameValueNodes(document: Document, elementName: String, nameText: String, valueText: String)
+    open fun createNameValueNodes(document: Document, elementName: String, nameText: String, valueText: String)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -135,7 +134,7 @@ newNode!!.appendChild(ModDomHelper.createValueNode(document, valueText))
 
                 @Throws(Exception::class)
             
-open fun createNameValueNodes(document: Document, elementNameAndNameText: String, valueText: String)
+    open fun createNameValueNodes(document: Document, elementNameAndNameText: String, valueText: String)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -154,7 +153,7 @@ var valueText = valueText
 
                 @Throws(Exception::class)
             
-open fun createNameValueIndexNodes(document: Document, elementNameAndNameText: String, index: Int, valueText: String)
+    open fun createNameValueIndexNodes(document: Document, elementNameAndNameText: String, index: Int, valueText: String)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -175,7 +174,7 @@ newNode!!.appendChild(ModDomHelper.createIndexNode(document, index))
 
                 @Throws(Exception::class)
             
-open fun createNameValueNodes(document: Document, rootNode: String, hashMap: HashMap<Any, Any>)
+    open fun createNameValueNodes(document: Document, rootNode: String, hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -194,7 +193,7 @@ var hashMap = hashMap
 
                 @Throws(Exception::class)
             
-open fun createNameValueNodes(document: Document, node: Node, hashMap: HashMap<Any, Any>)
+    open fun createNameValueNodes(document: Document, node: Node, hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -284,7 +283,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 
                 @Throws(Exception::class)
             
-open fun createNameValueNodes(document: Document, rootNodeName: String, duplicateNodeName: String, valueVector: Vector)
+    open fun createNameValueNodes(document: Document, rootNodeName: String, duplicateNodeName: String, valueVector: Vector)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -323,7 +322,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, duplicateNodeName, 
 
                 @Throws(Exception::class)
             
-open fun createNameValueIndexNodes(document: Document, rootNodeName: String, duplicateNodeName: String, valueVector: Vector)
+    open fun createNameValueIndexNodes(document: Document, rootNodeName: String, duplicateNodeName: String, valueVector: Vector)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -362,7 +361,7 @@ node.appendChild(ModDomHelper.createNameValueIndexNodes(document, duplicateNodeN
 
                 @Throws(Exception::class)
             
-open fun createNodeWithValueNodes(document: Document, rootNode: String, hashMap: HashMap<Any, Any>)
+    open fun createNodeWithValueNodes(document: Document, rootNode: String, hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -381,7 +380,7 @@ var hashMap = hashMap
 
                 @Throws(Exception::class)
             
-open fun createNodeWithValueNodes(document: Document, node: Node, hashMap: HashMap<Any, Any>)
+    open fun createNodeWithValueNodes(document: Document, node: Node, hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -428,7 +427,7 @@ node.appendChild(ModDomHelper.createTextNode(document, name, value))
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

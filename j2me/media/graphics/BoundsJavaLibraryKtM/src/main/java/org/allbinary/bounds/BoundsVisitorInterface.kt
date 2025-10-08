@@ -25,30 +25,31 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface BoundsVisitorInterface {
         
 
-open fun getX()
+    open fun getX()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getY()
+    open fun getY()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun maxX()
+    open fun maxX()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun maxY()
+    open fun maxY()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun minX()
+    open fun minX()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun minY()
+    open fun minY()
         //nullable = true from not(false or (false and true)) = true
 
 

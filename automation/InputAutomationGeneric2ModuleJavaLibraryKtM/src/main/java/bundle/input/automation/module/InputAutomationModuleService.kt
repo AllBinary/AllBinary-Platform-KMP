@@ -34,7 +34,7 @@ open public class InputAutomationModuleService
         
 
     private var inputAutomationModuleInterfaceArray: Array<InputAutomationModuleFactoryInterface?>
-public constructor        (inputAutomationModuleInterfaceArray: Array<InputAutomationModuleFactoryInterface?>)
+public constructor (inputAutomationModuleInterfaceArray: Array<InputAutomationModuleFactoryInterface?>)
             : super()
         {
 var inputAutomationModuleInterfaceArray = inputAutomationModuleInterfaceArray
@@ -42,7 +42,7 @@ this.setInputAutomationModuleInterfaceArray(inputAutomationModuleInterfaceArray)
 }
 
 
-open fun getInputAutomationModuleInterfaceArray()
+    open fun getInputAutomationModuleInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<InputAutomationModuleFactoryInterface?>{
 
@@ -53,7 +53,7 @@ open fun getInputAutomationModuleInterfaceArray()
 }
 
 
-open fun setInputAutomationModuleInterfaceArray(inputAutomationModuleInterfaceArray: Array<InputAutomationModuleFactoryInterface?>)
+    open fun setInputAutomationModuleInterfaceArray(inputAutomationModuleInterfaceArray: Array<InputAutomationModuleFactoryInterface?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var inputAutomationModuleInterfaceArray = inputAutomationModuleInterfaceArray

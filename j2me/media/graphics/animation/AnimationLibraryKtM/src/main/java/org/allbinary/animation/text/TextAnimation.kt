@@ -42,7 +42,7 @@ open public class TextAnimation : IndexedAnimation {
     var textArray: Array<String?> = StringUtil.getInstance()!!.ONE_EMPTY_STRING_ARRAY
 
     private var anchor: Int = Anchor.TOP_LEFT
-public constructor        (animationBehavior: AnimationBehavior)                        
+public constructor (animationBehavior: AnimationBehavior)                        
 
                             : super(animationBehavior){
     //var animationBehavior = animationBehavior
@@ -52,7 +52,7 @@ public constructor        (animationBehavior: AnimationBehavior)
                     
 }
 
-public constructor        (text: String, animationBehavior: AnimationBehavior)                        
+public constructor (text: String, animationBehavior: AnimationBehavior)                        
 
                             : super(animationBehavior){
     //var text = text
@@ -66,12 +66,14 @@ this.setText(text)
 
 
                 @Throws(Exception::class)
-            override fun nextFrame()
+            
+    override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -98,7 +100,7 @@ graphics.drawString(textArray[index]!!, x, y +(index *height), anchor)
 }
 
 
-open fun setText(text: String)
+    open fun setText(text: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var text = text
@@ -175,7 +177,7 @@ index++
 textArray[index]= list.get(index) as String
 }
 
-this.textArray= list.toArray() as Array<String?>
+this.textArray= textArray
 
                                     }
                                 
@@ -187,7 +189,7 @@ this.textArray= list.toArray() as Array<String?>
 }
 
 
-open fun getText()
+    open fun getText()
         //nullable = true from not(false or (false and true)) = true
 : Array<String?>{
 
@@ -198,7 +200,7 @@ open fun getText()
 }
 
 
-open fun getHeight()
+    open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

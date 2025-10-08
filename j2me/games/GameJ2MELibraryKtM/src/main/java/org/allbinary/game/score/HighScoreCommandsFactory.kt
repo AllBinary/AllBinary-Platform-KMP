@@ -29,12 +29,11 @@ import javax.microedition.lcdui.Command
 
 open public class HighScoreCommandsFactory : HighScoreCommandsBaseFactory {
         
-
-        companion object {
+companion object {
             
     private val instance: HighScoreCommandsFactory = HighScoreCommandsFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : HighScoreCommandsFactory{
 
@@ -46,7 +45,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()                        
+            private constructor ()                        
 
                             : super(arrayOf(HighScoreCommands.getInstance()!!.PERSONAL,HighScoreCommands.getInstance()!!.WORLD)){
 

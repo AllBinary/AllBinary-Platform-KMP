@@ -30,7 +30,7 @@ open public class AbCrypt
             : Object
          {
         
-public constructor        (algorithm: String, key: String)
+public constructor (algorithm: String, key: String)
             : super()
         {
 var algorithm = algorithm
@@ -38,7 +38,7 @@ var key = key
 }
 
 
-open fun encrypt(array: ByteArray)
+    open fun encrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
 var array = array
@@ -50,7 +50,7 @@ var array = array
 }
 
 
-open fun decrypt(array: ByteArray)
+    open fun decrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
 var array = array
@@ -62,7 +62,7 @@ var array = array
 }
 
 
-open fun mutilate(array: ByteArray)
+    open fun mutilate(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
 var array = array

@@ -30,10 +30,9 @@ import org.allbinary.logic.string.StringUtil
 
 open public class J2MEGameKey : Input {
         
-
-        companion object {
+companion object {
             
-open fun getString(keyCode: Int)
+    open fun getString(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var keyCode = keyCode
@@ -68,7 +67,7 @@ var keyCode = keyCode
 
 
         }
-            protected constructor        (key: Int, keyName: String)                        
+            protected constructor (key: Int, keyName: String)                        
 
                             : super(key, keyName){
 var key = key
@@ -94,7 +93,8 @@ inputFactory!!.add(id, this)
                                 
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

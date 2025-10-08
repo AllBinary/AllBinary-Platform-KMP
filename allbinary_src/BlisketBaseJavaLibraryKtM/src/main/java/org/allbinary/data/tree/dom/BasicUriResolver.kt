@@ -63,7 +63,7 @@ open public class BasicUriResolver
     private val RESOLVE: String = "resolve"
 
     private var extension: String
-public constructor        (extension: String)
+public constructor (extension: String)
             : super()
         {
 var extension = extension
@@ -71,7 +71,7 @@ this.extension= extension
 }
 
 
-open fun getExtension()
+    open fun getExtension()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -84,7 +84,7 @@ open fun getExtension()
 
                 @Throws(TransformerException::class)
             
-open fun resolve(href: String, base: String)
+    open fun resolve(href: String, base: String)
         //nullable = true from not(false or (false and false)) = true
 : Source{
 var href = href
@@ -144,7 +144,8 @@ logUtil!!.put(stringBuffer!!.toString(), this, RESOLVE)
 
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

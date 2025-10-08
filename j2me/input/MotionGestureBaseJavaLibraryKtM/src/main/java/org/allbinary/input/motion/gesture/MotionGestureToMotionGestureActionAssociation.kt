@@ -36,7 +36,7 @@ open public class MotionGestureToMotionGestureActionAssociation
     private var list: BasicArrayList
 
     private var motionGestureAction: CompleteMotionGestureInputEvent
-public constructor        (list: BasicArrayList, commandAction: CompleteMotionGestureInputEvent)
+public constructor (list: BasicArrayList, commandAction: CompleteMotionGestureInputEvent)
             : super()
         {
 var list = list
@@ -46,7 +46,7 @@ this.motionGestureAction= commandAction
 }
 
 
-open fun getMotionGesture()
+    open fun getMotionGesture()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -57,7 +57,7 @@ open fun getMotionGesture()
 }
 
 
-open fun setMotionGestures(list: BasicArrayList)
+    open fun setMotionGestures(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var list = list
@@ -65,7 +65,7 @@ this.list= list
 }
 
 
-open fun getCommandAction()
+    open fun getCommandAction()
         //nullable = true from not(false or (false and true)) = true
 : CompleteMotionGestureInputEvent{
 
@@ -76,7 +76,7 @@ open fun getCommandAction()
 }
 
 
-open fun setMotionGestureAction(commandAction: CompleteMotionGestureInputEvent)
+    open fun setMotionGestureAction(commandAction: CompleteMotionGestureInputEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var commandAction = commandAction
@@ -84,7 +84,7 @@ this.motionGestureAction= commandAction
 }
 
 
-open fun isMotionGestureArrayEquals(aList: BasicArrayList)
+    open fun isMotionGestureArrayEquals(aList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var aList = aList

@@ -42,7 +42,7 @@ open public class AffiliateSalesEntity : AbSqlBean
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val tableName: String = "affiliate"
-public constructor        ()                        
+public constructor ()                        
 
                             : super(UserDbInitInfo()){
 
@@ -53,7 +53,7 @@ this.setTableName(tableName)
 }
 
 
-open fun delete(value: String)
+    open fun delete(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -85,7 +85,7 @@ var value = value
 }
 
 
-open fun createTableStatement()
+    open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -106,7 +106,7 @@ stringBuffer!!.append(entryData!!.ID)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT
 }
 
 
-open fun createTable()
+    open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -120,7 +120,7 @@ open fun createTable()
 }
 
 
-open fun update(updatedValues: HashMap<Any, Any>)
+    open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var updatedValues = updatedValues
@@ -128,7 +128,7 @@ super.updateWhere(EntryData.getInstance()!!.ID, updatedValues!!.get(EntryData.ge
 }
 
 
-open fun dropTable()
+    open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

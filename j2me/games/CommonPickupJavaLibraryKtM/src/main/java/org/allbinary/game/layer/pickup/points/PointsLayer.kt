@@ -36,7 +36,7 @@ open public class PointsLayer : AllBinaryLayer {
         
 
     private val points: Int
-public constructor        (points: Int)                        
+public constructor (points: Int)                        
 
                             : super(Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 0, 0), ViewPosition()){
 var points = points
@@ -47,14 +47,15 @@ var points = points
 this.points= points
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 }
 
 
-open fun visit(scoreableInterface: ScoreableInterface)
+    open fun visit(scoreableInterface: ScoreableInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var scoreableInterface = scoreableInterface

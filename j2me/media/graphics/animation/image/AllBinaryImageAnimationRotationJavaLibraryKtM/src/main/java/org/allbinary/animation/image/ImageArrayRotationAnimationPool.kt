@@ -32,12 +32,11 @@ import org.allbinary.logic.util.cache.PoolInterface
 
 open public class ImageArrayRotationAnimationPool : BasicArrayListResetablePool {
         
-
-        companion object {
+companion object {
             
     private var IMAGE_ROTATION_ANIMATION_POOL: PoolInterface = ImageArrayRotationAnimationPool(ImageArrayRotationAnimationCacheableInterfaceFactory())
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PoolInterface{
 
@@ -49,7 +48,7 @@ open fun getInstance()
 
 
         }
-            public constructor        (cacheableInterfaceFactoryInterface: CacheableInterfaceFactoryInterface)                        
+            public constructor (cacheableInterfaceFactoryInterface: CacheableInterfaceFactoryInterface)                        
 
                             : super(cacheableInterfaceFactoryInterface){
 var cacheableInterfaceFactoryInterface = cacheableInterfaceFactoryInterface
@@ -62,7 +61,7 @@ var cacheableInterfaceFactoryInterface = cacheableInterfaceFactoryInterface
 
                 @Throws(Exception::class)
             
-open fun remove(key: Any)
+    open fun remove(key: Any)
         //nullable = true from not(false or (false and false)) = true
 : CacheableInterface{
 var key = key

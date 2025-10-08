@@ -38,12 +38,11 @@ import org.allbinary.util.BasicArrayList
 
 open public class FeaturedAnimationInterfaceFactoryInterfaceFactory : FeaturedResourceFactory {
         
-
-        companion object {
+companion object {
             
     private var INSTANCE: FeaturedAnimationInterfaceFactoryInterfaceFactory = FeaturedAnimationInterfaceFactoryInterfaceFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : FeaturedAnimationInterfaceFactoryInterfaceFactory{
 
@@ -55,13 +54,13 @@ open fun getInstance()
 
 
         }
-            private constructor        (){
+            private constructor (){
 }
 
 
                 @Throws(Exception::class)
             
-open fun getRectangle(resource: String)
+    open fun getRectangle(resource: String)
         //nullable = true from not(false or (false and false)) = true
 : Rectangle{
 var resource = resource
@@ -75,7 +74,7 @@ var resource = resource
 
                 @Throws(Exception::class)
             
-open fun getRectangle(resource: String, x: Int, y: Int)
+    open fun getRectangle(resource: String, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : Rectangle{
     //var resource = resource
@@ -136,7 +135,7 @@ open fun getRectangle(resource: String, x: Int, y: Int)
 
                 @Throws(Exception::class)
             
-open fun getProcedural(resource: String)
+    open fun getProcedural(resource: String)
         //nullable = true from not(false or (false and false)) = true
 : ProceduralAnimationInterfaceFactoryInterface{
 var resource = resource
@@ -150,7 +149,7 @@ var resource = resource
 
                 @Throws(Exception::class)
             
-open fun get(resource: String)
+    open fun get(resource: String)
         //nullable = true from not(false or (false and false)) = true
 : AnimationInterfaceFactoryInterface{
 var resource = resource
@@ -164,7 +163,7 @@ var resource = resource
 
                 @Throws(Exception::class)
             
-open fun getBasicAnimationInterfaceFactoryInstance(resource: String)
+    open fun getBasicAnimationInterfaceFactoryInstance(resource: String)
         //nullable = true from not(false or (false and false)) = true
 : BasicAnimationInterfaceFactoryInterface{
     //var resource = resource

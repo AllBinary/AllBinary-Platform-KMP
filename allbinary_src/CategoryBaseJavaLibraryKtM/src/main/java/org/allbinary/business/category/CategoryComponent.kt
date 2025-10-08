@@ -34,7 +34,7 @@ import org.w3c.dom.Document
 open public class CategoryComponent : CategoryView
                 , TransformInterface {
         
-public constructor        (categoryInterface: CategoryInterface)                        
+public constructor (categoryInterface: CategoryInterface)                        
 
                             : super(categoryInterface){
 var categoryInterface = categoryInterface
@@ -47,7 +47,7 @@ var categoryInterface = categoryInterface
 
     var NO_TYPE: Int = 0
 
-open fun getTypeId()
+    open fun getTypeId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -58,7 +58,7 @@ open fun getTypeId()
 }
 
 
-open fun getTransformDocumentInterface()
+    open fun getTransformDocumentInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformDocumentInterface{
 
@@ -71,7 +71,7 @@ open fun getTransformDocumentInterface()
 
                 @Throws(Exception::class)
             
-open fun getTransformInfoInterface()
+    open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformInfoInterface{
 
@@ -82,7 +82,7 @@ open fun getTransformInfoInterface()
 }
 
 
-open fun setTransformDocumentInterface(viewDocumentInterface: TransformDocumentInterface)
+    open fun setTransformDocumentInterface(viewDocumentInterface: TransformDocumentInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var viewDocumentInterface = viewDocumentInterface
@@ -91,7 +91,7 @@ var viewDocumentInterface = viewDocumentInterface
 
                 @Throws(Exception::class)
             
-open fun toXmlDoc()
+    open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -109,7 +109,7 @@ document.appendChild(CategoryView(this.getCategoryInterface()).
 
                 @Throws(Exception::class)
             
-open fun view()
+    open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

@@ -29,7 +29,7 @@ import javax.sound.sampled.Control
 
 open public class NullJ2SEControl : Control {
         
- constructor        (type: Type)                        
+ constructor (type: Type)                        
 
                             : super(type){
 var type = type

@@ -30,12 +30,11 @@ open public class StoreFrontUsersStatisticsData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: StoreFrontUsersStatisticsData = StoreFrontUsersStatisticsData()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : StoreFrontUsersStatisticsData{
 
@@ -47,7 +46,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

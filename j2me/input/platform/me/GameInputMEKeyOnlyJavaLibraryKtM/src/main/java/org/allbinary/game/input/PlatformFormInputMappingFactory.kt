@@ -33,12 +33,11 @@ open public class PlatformFormInputMappingFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: PlatformFormInputMappingFactory = PlatformFormInputMappingFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PlatformFormInputMappingFactory{
 
@@ -60,7 +59,7 @@ open fun getInstance()
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-open fun getOrCreate()
+    open fun getOrCreate()
         //nullable = true from not(false or (false and true)) = true
 : InputToGameKeyMapping{
 

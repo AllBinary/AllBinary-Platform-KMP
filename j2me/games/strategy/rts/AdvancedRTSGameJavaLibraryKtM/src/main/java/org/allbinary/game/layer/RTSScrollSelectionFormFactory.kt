@@ -40,12 +40,11 @@ open public class RTSScrollSelectionFormFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun getInstance(formLabel: String, items: Array<CustomItem?>)
+    open fun getInstance(formLabel: String, items: Array<CustomItem?>)
         //nullable =  from not(true or (false and false)) = 
 : MultipleScrollSelectionHorizontalForm{
     //var formLabel = formLabel

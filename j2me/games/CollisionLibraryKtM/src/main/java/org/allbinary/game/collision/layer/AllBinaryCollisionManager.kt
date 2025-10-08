@@ -33,12 +33,11 @@ open public class AllBinaryCollisionManager
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var allBinaryCollisionManager: AllBinaryCollisionManager = AllBinaryCollisionManager()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AllBinaryCollisionManager{
 
@@ -50,7 +49,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
@@ -58,7 +57,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun process(layerManager: LayerManager, collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface, startIndex: Int)
+    open fun process(layerManager: LayerManager, collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface, startIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var layerManager = layerManager
@@ -85,7 +84,7 @@ this.collide(layerManager, collidableInterfaceCompositeInterface, collidableInte
 
                 @Throws(Exception::class)
             
-open fun collide(layerManager: LayerManager, collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface, collidableInterfaceCompositeInterface2: CollidableInterfaceCompositeInterface)
+    open fun collide(layerManager: LayerManager, collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface, collidableInterfaceCompositeInterface2: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var layerManager = layerManager

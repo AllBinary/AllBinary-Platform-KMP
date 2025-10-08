@@ -48,7 +48,7 @@ open public class AbTransformer
     private var inputStream: InputStream
 
     private var uriResolver: URIResolver
-public constructor        (transformInfoInterface: TransformInfoInterface)
+public constructor (transformInfoInterface: TransformInfoInterface)
             : super()
         {
 var transformInfoInterface = transformInfoInterface
@@ -56,7 +56,7 @@ this.transformInfoInterface= transformInfoInterface
 }
 
 
-open fun getTransformInfoInterface()
+    open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformInfoInterface{
 
@@ -67,7 +67,7 @@ open fun getTransformInfoInterface()
 }
 
 
-open fun setInputStream(inputStream: InputStream)
+    open fun setInputStream(inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
 {
 var inputStream = inputStream
@@ -75,7 +75,7 @@ this.inputStream= inputStream
 }
 
 
-open fun setURIResolver(uriResolver: URIResolver)
+    open fun setURIResolver(uriResolver: URIResolver)
         //nullable = true from not(false or (false and false)) = true
 {
 var uriResolver = uriResolver
@@ -83,7 +83,7 @@ this.uriResolver= uriResolver
 }
 
 
-open fun getInputStream()
+    open fun getInputStream()
         //nullable = true from not(false or (false and true)) = true
 : InputStream{
 
@@ -94,7 +94,7 @@ open fun getInputStream()
 }
 
 
-open fun getURIResolver()
+    open fun getURIResolver()
         //nullable = true from not(false or (false and true)) = true
 : URIResolver{
 
@@ -105,7 +105,7 @@ open fun getURIResolver()
 }
 
 
-open fun getStreamSource()
+    open fun getStreamSource()
         //nullable = true from not(false or (false and true)) = true
 : StreamSource{
 
@@ -118,7 +118,7 @@ open fun getStreamSource()
 
                 @Throws(Exception::class)
             
-open fun translate(xmlDocumentStr: String)
+    open fun translate(xmlDocumentStr: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var xmlDocumentStr = xmlDocumentStr

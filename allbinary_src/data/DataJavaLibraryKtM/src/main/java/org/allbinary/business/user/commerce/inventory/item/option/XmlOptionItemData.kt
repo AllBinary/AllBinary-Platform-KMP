@@ -30,8 +30,7 @@ open public class XmlOptionItemData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val XML_FILE_STATUS: String = "XMLOPTIONITEM_XML_FILE_STATUS"
 

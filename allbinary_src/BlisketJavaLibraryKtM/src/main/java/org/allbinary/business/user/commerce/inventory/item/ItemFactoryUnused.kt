@@ -35,12 +35,11 @@ open public class ItemFactoryUnused
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(MoneyException::class)
             
-open fun getInstance(hashMap: HashMap<Any, Any>)
+    open fun getInstance(hashMap: HashMap<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
 : TableMappingInterface{
 var hashMap = hashMap
@@ -54,7 +53,7 @@ var hashMap = hashMap
 
                 @Throws(Exception::class, MoneyException::class)
             
-open fun getInstance(request: HttpServletRequest)
+    open fun getInstance(request: HttpServletRequest)
         //nullable =  from not(true or (false and false)) = 
 : TableMappingInterface{
 var request = request
@@ -68,7 +67,7 @@ var request = request
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

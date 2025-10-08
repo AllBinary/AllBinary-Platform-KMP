@@ -29,14 +29,13 @@ import org.allbinary.canvas.Processor
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.paint.NullPaintable
 import org.allbinary.image.ImageCacheFactory
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 
 open public class LazyProgressCanvas : ProgressCanvas {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-protected constructor        (title: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+protected constructor (title: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(title, backgroundBasicColor, foregroundBasicColor){
     //var title = title
@@ -48,14 +47,16 @@ protected constructor        (title: String, backgroundBasicColor: BasicColor, f
                     
 }
 
-override fun start()
+
+    override fun start()
         //nullable = true from not(false or (false and true)) = true
 {
 super.start()
 this.hasPainted= false
 }
 
-override fun end()
+
+    override fun end()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -72,14 +73,14 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.END_METHOD_NAME)
 }
 
 
-open fun inGame()
+    open fun inGame()
         //nullable = true from not(false or (false and true)) = true
 {
 inGameProcessor= Processor.getInstance()
 }
 
 
-open fun endFromInitialLazyLoadingComplete()
+    open fun endFromInitialLazyLoadingComplete()
         //nullable = true from not(false or (false and true)) = true
 {
 super.endFromInitialLazyLoadingComplete()
@@ -87,7 +88,7 @@ this.paintable= NullPaintable.getInstance()
 }
 
 
-open fun endIfPaintedSinceStart()
+    open fun endIfPaintedSinceStart()
         //nullable = true from not(false or (false and true)) = true
 {
 

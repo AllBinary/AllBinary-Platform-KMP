@@ -35,12 +35,11 @@ open public class AbXslHelper
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AbXslHelper = AbXslHelper()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AbXslHelper{
 
@@ -60,7 +59,7 @@ open fun getInstance()
         
                 @Throws(Exception::class)
             
-open fun translate(xslFile: AbFile, xmlFile: AbFile)
+    open fun translate(xslFile: AbFile, xmlFile: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var xslFile = xslFile
@@ -75,7 +74,7 @@ open fun translate(xslFile: AbFile, xmlFile: AbFile)
 
                 @Throws(Exception::class)
             
-open fun translate(xslPath: AbPath, xmlPath: AbPath)
+    open fun translate(xslPath: AbPath, xmlPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var xslPath = xslPath
@@ -90,7 +89,7 @@ open fun translate(xslPath: AbPath, xmlPath: AbPath)
 
                 @Throws(Exception::class)
             
-open fun translate(xsltFilePath: String, xmlFilePath: String)
+    open fun translate(xsltFilePath: String, xmlFilePath: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var xsltFilePath = xsltFilePath

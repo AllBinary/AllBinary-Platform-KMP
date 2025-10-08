@@ -30,10 +30,9 @@ open public class BasicColorUtilFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BasicColorUtil{
 

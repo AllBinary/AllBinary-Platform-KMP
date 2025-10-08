@@ -36,8 +36,7 @@ open public class NullGL10
         
                 , GL10 {
         
-
-        companion object {
+companion object {
             
     val NULL_GL10: NullGL10 = NullGL10()
 
@@ -47,7 +46,8 @@ open public class NullGL10
             public constructor() : super()
             {
             }            
-        override fun glActiveTexture(texture: Int)
+        
+    override fun glActiveTexture(texture: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var texture = texture
@@ -58,7 +58,8 @@ open public class NullGL10
                         return 
 }
 
-override fun glAlphaFunc(func: Int, ref: Float)
+
+    override fun glAlphaFunc(func: Int, ref: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var func = func
@@ -70,7 +71,8 @@ override fun glAlphaFunc(func: Int, ref: Float)
                         return 
 }
 
-override fun glBindTexture(target: Int, texture: Int)
+
+    override fun glBindTexture(target: Int, texture: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var target = target
@@ -82,7 +84,8 @@ override fun glBindTexture(target: Int, texture: Int)
                         return 
 }
 
-override fun glBlendFunc(sfactor: Int, dfactor: Int)
+
+    override fun glBlendFunc(sfactor: Int, dfactor: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var sfactor = sfactor
@@ -94,7 +97,8 @@ override fun glBlendFunc(sfactor: Int, dfactor: Int)
                         return 
 }
 
-override fun glClear(mask: Int)
+
+    override fun glClear(mask: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var mask = mask
@@ -105,7 +109,8 @@ override fun glClear(mask: Int)
                         return 
 }
 
-override fun glClearColor(red: Float, green: Float, blue: Float, alpha: Float)
+
+    override fun glClearColor(red: Float, green: Float, blue: Float, alpha: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var red = red
@@ -119,7 +124,8 @@ override fun glClearColor(red: Float, green: Float, blue: Float, alpha: Float)
                         return 
 }
 
-override fun glClearDepthf(depth: Float)
+
+    override fun glClearDepthf(depth: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var depth = depth
@@ -130,7 +136,8 @@ override fun glClearDepthf(depth: Float)
                         return 
 }
 
-override fun glClearStencil(s: Int)
+
+    override fun glClearStencil(s: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var s = s
@@ -141,7 +148,8 @@ override fun glClearStencil(s: Int)
                         return 
 }
 
-override fun glClientActiveTexture(texture: Int)
+
+    override fun glClientActiveTexture(texture: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var texture = texture
@@ -152,7 +160,8 @@ override fun glClientActiveTexture(texture: Int)
                         return 
 }
 
-override fun glColor4f(red: Float, green: Float, blue: Float, alpha: Float)
+
+    override fun glColor4f(red: Float, green: Float, blue: Float, alpha: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var red = red
@@ -166,7 +175,8 @@ override fun glColor4f(red: Float, green: Float, blue: Float, alpha: Float)
                         return 
 }
 
-override fun glColorMask(red: Boolean, green: Boolean, blue: Boolean, alpha: Boolean)
+
+    override fun glColorMask(red: Boolean, green: Boolean, blue: Boolean, alpha: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var red = red
@@ -180,7 +190,8 @@ override fun glColorMask(red: Boolean, green: Boolean, blue: Boolean, alpha: Boo
                         return 
 }
 
-override fun glColorPointer(size: Int, type: Int, stride: Int, pointer: Buffer)
+
+    override fun glColorPointer(size: Int, type: Int, stride: Int, pointer: Buffer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var size = size
@@ -194,7 +205,8 @@ override fun glColorPointer(size: Int, type: Int, stride: Int, pointer: Buffer)
                         return 
 }
 
-override fun glCompressedTexImage2D(target: Int, level: Int, internalformat: Int, width: Int, height: Int, border: Int, imageSize: Int, data: Buffer)
+
+    override fun glCompressedTexImage2D(target: Int, level: Int, internalformat: Int, width: Int, height: Int, border: Int, imageSize: Int, data: Buffer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var target = target
@@ -212,7 +224,8 @@ override fun glCompressedTexImage2D(target: Int, level: Int, internalformat: Int
                         return 
 }
 
-override fun glCompressedTexSubImage2D(target: Int, level: Int, xoffset: Int, yoffset: Int, width: Int, height: Int, format: Int, imageSize: Int, data: Buffer)
+
+    override fun glCompressedTexSubImage2D(target: Int, level: Int, xoffset: Int, yoffset: Int, width: Int, height: Int, format: Int, imageSize: Int, data: Buffer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var target = target
@@ -231,7 +244,8 @@ override fun glCompressedTexSubImage2D(target: Int, level: Int, xoffset: Int, yo
                         return 
 }
 
-override fun glCopyTexImage2D(target: Int, level: Int, internalformat: Int, x: Int, y: Int, width: Int, height: Int, border: Int)
+
+    override fun glCopyTexImage2D(target: Int, level: Int, internalformat: Int, x: Int, y: Int, width: Int, height: Int, border: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var target = target
@@ -249,7 +263,8 @@ override fun glCopyTexImage2D(target: Int, level: Int, internalformat: Int, x: I
                         return 
 }
 
-override fun glCopyTexSubImage2D(target: Int, level: Int, xoffset: Int, yoffset: Int, x: Int, y: Int, width: Int, height: Int)
+
+    override fun glCopyTexSubImage2D(target: Int, level: Int, xoffset: Int, yoffset: Int, x: Int, y: Int, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var target = target
@@ -267,7 +282,8 @@ override fun glCopyTexSubImage2D(target: Int, level: Int, xoffset: Int, yoffset:
                         return 
 }
 
-override fun glCullFace(mode: Int)
+
+    override fun glCullFace(mode: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var mode = mode
@@ -278,7 +294,8 @@ override fun glCullFace(mode: Int)
                         return 
 }
 
-override fun glDeleteTextures(n: Int, textures: IntArray, offset: Int)
+
+    override fun glDeleteTextures(n: Int, textures: IntArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var n = n
@@ -291,7 +308,8 @@ override fun glDeleteTextures(n: Int, textures: IntArray, offset: Int)
                         return 
 }
 
-override fun glDeleteTextures(n: Int, textures: IntBuffer)
+
+    override fun glDeleteTextures(n: Int, textures: IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var n = n
@@ -303,7 +321,8 @@ override fun glDeleteTextures(n: Int, textures: IntBuffer)
                         return 
 }
 
-override fun glDepthFunc(func: Int)
+
+    override fun glDepthFunc(func: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var func = func
@@ -314,7 +333,8 @@ override fun glDepthFunc(func: Int)
                         return 
 }
 
-override fun glDepthMask(flag: Boolean)
+
+    override fun glDepthMask(flag: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var flag = flag
@@ -325,7 +345,8 @@ override fun glDepthMask(flag: Boolean)
                         return 
 }
 
-override fun glDepthRangef(zNear: Float, zFar: Float)
+
+    override fun glDepthRangef(zNear: Float, zFar: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var zNear = zNear
@@ -337,7 +358,8 @@ override fun glDepthRangef(zNear: Float, zFar: Float)
                         return 
 }
 
-override fun glDisable(cap: Int)
+
+    override fun glDisable(cap: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var cap = cap
@@ -348,7 +370,8 @@ override fun glDisable(cap: Int)
                         return 
 }
 
-override fun glDisableClientState(array: Int)
+
+    override fun glDisableClientState(array: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var array = array
@@ -359,7 +382,8 @@ override fun glDisableClientState(array: Int)
                         return 
 }
 
-override fun glDrawArrays(mode: Int, first: Int, count: Int)
+
+    override fun glDrawArrays(mode: Int, first: Int, count: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var mode = mode
@@ -372,7 +396,8 @@ override fun glDrawArrays(mode: Int, first: Int, count: Int)
                         return 
 }
 
-override fun glDrawElements(mode: Int, count: Int, type: Int, indices: Buffer)
+
+    override fun glDrawElements(mode: Int, count: Int, type: Int, indices: Buffer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var mode = mode
@@ -386,7 +411,8 @@ override fun glDrawElements(mode: Int, count: Int, type: Int, indices: Buffer)
                         return 
 }
 
-override fun glEnable(cap: Int)
+
+    override fun glEnable(cap: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var cap = cap
@@ -397,7 +423,8 @@ override fun glEnable(cap: Int)
                         return 
 }
 
-override fun glEnableClientState(array: Int)
+
+    override fun glEnableClientState(array: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var array = array
@@ -408,7 +435,8 @@ override fun glEnableClientState(array: Int)
                         return 
 }
 
-override fun glFinish()
+
+    override fun glFinish()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -418,7 +446,8 @@ override fun glFinish()
                         return 
 }
 
-override fun glFlush()
+
+    override fun glFlush()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -428,7 +457,8 @@ override fun glFlush()
                         return 
 }
 
-override fun glFogf(pname: Int, param: Float)
+
+    override fun glFogf(pname: Int, param: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pname = pname
@@ -440,7 +470,8 @@ override fun glFogf(pname: Int, param: Float)
                         return 
 }
 
-override fun glFogfv(pname: Int, params: FloatArray, offset: Int)
+
+    override fun glFogfv(pname: Int, params: FloatArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pname = pname
@@ -453,7 +484,8 @@ override fun glFogfv(pname: Int, params: FloatArray, offset: Int)
                         return 
 }
 
-override fun glFogfv(pname: Int, params: FloatBuffer)
+
+    override fun glFogfv(pname: Int, params: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pname = pname
@@ -465,7 +497,8 @@ override fun glFogfv(pname: Int, params: FloatBuffer)
                         return 
 }
 
-override fun glFrontFace(mode: Int)
+
+    override fun glFrontFace(mode: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var mode = mode
@@ -476,7 +509,8 @@ override fun glFrontFace(mode: Int)
                         return 
 }
 
-override fun glFrustumf(left: Float, right: Float, bottom: Float, top: Float, zNear: Float, zFar: Float)
+
+    override fun glFrustumf(left: Float, right: Float, bottom: Float, top: Float, zNear: Float, zFar: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var left = left
@@ -492,7 +526,8 @@ override fun glFrustumf(left: Float, right: Float, bottom: Float, top: Float, zN
                         return 
 }
 
-override fun glGenTextures(n: Int, textures: IntArray, offset: Int)
+
+    override fun glGenTextures(n: Int, textures: IntArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var n = n
@@ -505,7 +540,8 @@ override fun glGenTextures(n: Int, textures: IntArray, offset: Int)
                         return 
 }
 
-override fun glGenTextures(n: Int, textures: IntBuffer)
+
+    override fun glGenTextures(n: Int, textures: IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var n = n
@@ -517,7 +553,8 @@ override fun glGenTextures(n: Int, textures: IntBuffer)
                         return 
 }
 
-override fun glGetError()
+
+    override fun glGetError()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -527,7 +564,8 @@ override fun glGetError()
                         return 0
 }
 
-override fun glGetIntegerv(pname: Int, params: IntArray, offset: Int)
+
+    override fun glGetIntegerv(pname: Int, params: IntArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pname = pname
@@ -540,7 +578,8 @@ override fun glGetIntegerv(pname: Int, params: IntArray, offset: Int)
                         return 
 }
 
-override fun glGetIntegerv(pname: Int, params: IntBuffer)
+
+    override fun glGetIntegerv(pname: Int, params: IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pname = pname
@@ -552,7 +591,8 @@ override fun glGetIntegerv(pname: Int, params: IntBuffer)
                         return 
 }
 
-override fun glGetString(name: Int)
+
+    override fun glGetString(name: Int)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var name = name
@@ -563,7 +603,8 @@ override fun glGetString(name: Int)
                         return StringUtil.getInstance()!!.EMPTY_STRING
 }
 
-override fun glHint(target: Int, mode: Int)
+
+    override fun glHint(target: Int, mode: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var target = target
@@ -575,7 +616,8 @@ override fun glHint(target: Int, mode: Int)
                         return 
 }
 
-override fun glLightModelf(pname: Int, param: Float)
+
+    override fun glLightModelf(pname: Int, param: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pname = pname
@@ -587,7 +629,8 @@ override fun glLightModelf(pname: Int, param: Float)
                         return 
 }
 
-override fun glLightModelfv(pname: Int, params: FloatArray, offset: Int)
+
+    override fun glLightModelfv(pname: Int, params: FloatArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pname = pname
@@ -600,7 +643,8 @@ override fun glLightModelfv(pname: Int, params: FloatArray, offset: Int)
                         return 
 }
 
-override fun glLightModelfv(pname: Int, params: FloatBuffer)
+
+    override fun glLightModelfv(pname: Int, params: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pname = pname
@@ -612,7 +656,8 @@ override fun glLightModelfv(pname: Int, params: FloatBuffer)
                         return 
 }
 
-override fun glLightf(light: Int, pname: Int, param: Float)
+
+    override fun glLightf(light: Int, pname: Int, param: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var light = light
@@ -625,7 +670,8 @@ override fun glLightf(light: Int, pname: Int, param: Float)
                         return 
 }
 
-override fun glLightfv(light: Int, pname: Int, params: FloatArray, offset: Int)
+
+    override fun glLightfv(light: Int, pname: Int, params: FloatArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var light = light
@@ -639,7 +685,8 @@ override fun glLightfv(light: Int, pname: Int, params: FloatArray, offset: Int)
                         return 
 }
 
-override fun glLightfv(light: Int, pname: Int, params: FloatBuffer)
+
+    override fun glLightfv(light: Int, pname: Int, params: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var light = light
@@ -652,7 +699,8 @@ override fun glLightfv(light: Int, pname: Int, params: FloatBuffer)
                         return 
 }
 
-override fun glLineWidth(width: Float)
+
+    override fun glLineWidth(width: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var width = width
@@ -663,7 +711,8 @@ override fun glLineWidth(width: Float)
                         return 
 }
 
-override fun glLoadIdentity()
+
+    override fun glLoadIdentity()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -673,7 +722,8 @@ override fun glLoadIdentity()
                         return 
 }
 
-override fun glLoadMatrixf(m: FloatArray, offset: Int)
+
+    override fun glLoadMatrixf(m: FloatArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var m = m
@@ -685,7 +735,8 @@ override fun glLoadMatrixf(m: FloatArray, offset: Int)
                         return 
 }
 
-override fun glLoadMatrixf(m: FloatBuffer)
+
+    override fun glLoadMatrixf(m: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var m = m
@@ -696,7 +747,8 @@ override fun glLoadMatrixf(m: FloatBuffer)
                         return 
 }
 
-override fun glLogicOp(opcode: Int)
+
+    override fun glLogicOp(opcode: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var opcode = opcode
@@ -707,7 +759,8 @@ override fun glLogicOp(opcode: Int)
                         return 
 }
 
-override fun glMaterialf(face: Int, pname: Int, param: Float)
+
+    override fun glMaterialf(face: Int, pname: Int, param: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var face = face
@@ -720,7 +773,8 @@ override fun glMaterialf(face: Int, pname: Int, param: Float)
                         return 
 }
 
-override fun glMaterialfv(face: Int, pname: Int, params: FloatArray, offset: Int)
+
+    override fun glMaterialfv(face: Int, pname: Int, params: FloatArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var face = face
@@ -734,7 +788,8 @@ override fun glMaterialfv(face: Int, pname: Int, params: FloatArray, offset: Int
                         return 
 }
 
-override fun glMaterialfv(face: Int, pname: Int, params: FloatBuffer)
+
+    override fun glMaterialfv(face: Int, pname: Int, params: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var face = face
@@ -747,7 +802,8 @@ override fun glMaterialfv(face: Int, pname: Int, params: FloatBuffer)
                         return 
 }
 
-override fun glMatrixMode(mode: Int)
+
+    override fun glMatrixMode(mode: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var mode = mode
@@ -758,7 +814,8 @@ override fun glMatrixMode(mode: Int)
                         return 
 }
 
-override fun glMultMatrixf(m: FloatArray, offset: Int)
+
+    override fun glMultMatrixf(m: FloatArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var m = m
@@ -770,7 +827,8 @@ override fun glMultMatrixf(m: FloatArray, offset: Int)
                         return 
 }
 
-override fun glMultMatrixf(m: FloatBuffer)
+
+    override fun glMultMatrixf(m: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var m = m
@@ -781,7 +839,8 @@ override fun glMultMatrixf(m: FloatBuffer)
                         return 
 }
 
-override fun glMultiTexCoord4f(target: Int, s: Float, t: Float, r: Float, q: Float)
+
+    override fun glMultiTexCoord4f(target: Int, s: Float, t: Float, r: Float, q: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var target = target
@@ -796,7 +855,8 @@ override fun glMultiTexCoord4f(target: Int, s: Float, t: Float, r: Float, q: Flo
                         return 
 }
 
-override fun glNormal3f(nx: Float, ny: Float, nz: Float)
+
+    override fun glNormal3f(nx: Float, ny: Float, nz: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var nx = nx
@@ -809,7 +869,8 @@ override fun glNormal3f(nx: Float, ny: Float, nz: Float)
                         return 
 }
 
-override fun glNormalPointer(type: Int, stride: Int, pointer: Buffer)
+
+    override fun glNormalPointer(type: Int, stride: Int, pointer: Buffer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var type = type
@@ -822,7 +883,8 @@ override fun glNormalPointer(type: Int, stride: Int, pointer: Buffer)
                         return 
 }
 
-override fun glOrthof(left: Float, right: Float, bottom: Float, top: Float, zNear: Float, zFar: Float)
+
+    override fun glOrthof(left: Float, right: Float, bottom: Float, top: Float, zNear: Float, zFar: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var left = left
@@ -838,7 +900,8 @@ override fun glOrthof(left: Float, right: Float, bottom: Float, top: Float, zNea
                         return 
 }
 
-override fun glPixelStorei(pname: Int, param: Int)
+
+    override fun glPixelStorei(pname: Int, param: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pname = pname
@@ -850,7 +913,8 @@ override fun glPixelStorei(pname: Int, param: Int)
                         return 
 }
 
-override fun glPointSize(size: Float)
+
+    override fun glPointSize(size: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var size = size
@@ -861,7 +925,8 @@ override fun glPointSize(size: Float)
                         return 
 }
 
-override fun glPolygonOffset(factor: Float, units: Float)
+
+    override fun glPolygonOffset(factor: Float, units: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var factor = factor
@@ -873,7 +938,8 @@ override fun glPolygonOffset(factor: Float, units: Float)
                         return 
 }
 
-override fun glPopMatrix()
+
+    override fun glPopMatrix()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -883,7 +949,8 @@ override fun glPopMatrix()
                         return 
 }
 
-override fun glPushMatrix()
+
+    override fun glPushMatrix()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -893,7 +960,8 @@ override fun glPushMatrix()
                         return 
 }
 
-override fun glReadPixels(x: Int, y: Int, width: Int, height: Int, format: Int, type: Int, pixels: Buffer)
+
+    override fun glReadPixels(x: Int, y: Int, width: Int, height: Int, format: Int, type: Int, pixels: Buffer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var x = x
@@ -910,7 +978,8 @@ override fun glReadPixels(x: Int, y: Int, width: Int, height: Int, format: Int, 
                         return 
 }
 
-override fun glRotatef(angle: Float, x: Float, y: Float, z: Float)
+
+    override fun glRotatef(angle: Float, x: Float, y: Float, z: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var angle = angle
@@ -924,7 +993,8 @@ override fun glRotatef(angle: Float, x: Float, y: Float, z: Float)
                         return 
 }
 
-override fun glRotatex(angle: Int, x: Int, y: Int, z: Int)
+
+    override fun glRotatex(angle: Int, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var angle = angle
@@ -938,7 +1008,8 @@ override fun glRotatex(angle: Int, x: Int, y: Int, z: Int)
                         return 
 }
 
-override fun glSampleCoverage(value: Float, invert: Boolean)
+
+    override fun glSampleCoverage(value: Float, invert: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var value = value
@@ -950,7 +1021,8 @@ override fun glSampleCoverage(value: Float, invert: Boolean)
                         return 
 }
 
-override fun glScalef(x: Float, y: Float, z: Float)
+
+    override fun glScalef(x: Float, y: Float, z: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var x = x
@@ -963,7 +1035,8 @@ override fun glScalef(x: Float, y: Float, z: Float)
                         return 
 }
 
-override fun glScalex(x: Int, y: Int, z: Int)
+
+    override fun glScalex(x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var x = x
@@ -976,7 +1049,8 @@ override fun glScalex(x: Int, y: Int, z: Int)
                         return 
 }
 
-override fun glScissor(x: Int, y: Int, width: Int, height: Int)
+
+    override fun glScissor(x: Int, y: Int, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var x = x
@@ -990,7 +1064,8 @@ override fun glScissor(x: Int, y: Int, width: Int, height: Int)
                         return 
 }
 
-override fun glShadeModel(mode: Int)
+
+    override fun glShadeModel(mode: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var mode = mode
@@ -1001,7 +1076,8 @@ override fun glShadeModel(mode: Int)
                         return 
 }
 
-override fun glStencilFunc(func: Int, ref: Int, mask: Int)
+
+    override fun glStencilFunc(func: Int, ref: Int, mask: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var func = func
@@ -1014,7 +1090,8 @@ override fun glStencilFunc(func: Int, ref: Int, mask: Int)
                         return 
 }
 
-override fun glStencilMask(mask: Int)
+
+    override fun glStencilMask(mask: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var mask = mask
@@ -1025,7 +1102,8 @@ override fun glStencilMask(mask: Int)
                         return 
 }
 
-override fun glStencilOp(fail: Int, zfail: Int, zpass: Int)
+
+    override fun glStencilOp(fail: Int, zfail: Int, zpass: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var fail = fail
@@ -1038,7 +1116,8 @@ override fun glStencilOp(fail: Int, zfail: Int, zpass: Int)
                         return 
 }
 
-override fun glTexCoordPointer(size: Int, type: Int, stride: Int, pointer: Buffer)
+
+    override fun glTexCoordPointer(size: Int, type: Int, stride: Int, pointer: Buffer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var size = size
@@ -1052,7 +1131,8 @@ override fun glTexCoordPointer(size: Int, type: Int, stride: Int, pointer: Buffe
                         return 
 }
 
-override fun glTexEnvf(target: Int, pname: Int, param: Float)
+
+    override fun glTexEnvf(target: Int, pname: Int, param: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var target = target
@@ -1065,7 +1145,8 @@ override fun glTexEnvf(target: Int, pname: Int, param: Float)
                         return 
 }
 
-override fun glTexEnvfv(target: Int, pname: Int, params: FloatArray, offset: Int)
+
+    override fun glTexEnvfv(target: Int, pname: Int, params: FloatArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var target = target
@@ -1079,7 +1160,8 @@ override fun glTexEnvfv(target: Int, pname: Int, params: FloatArray, offset: Int
                         return 
 }
 
-override fun glTexEnvfv(target: Int, pname: Int, params: FloatBuffer)
+
+    override fun glTexEnvfv(target: Int, pname: Int, params: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var target = target
@@ -1092,7 +1174,8 @@ override fun glTexEnvfv(target: Int, pname: Int, params: FloatBuffer)
                         return 
 }
 
-override fun glTexImage2D(target: Int, level: Int, internalformat: Int, width: Int, height: Int, border: Int, format: Int, type: Int, pixels: Buffer)
+
+    override fun glTexImage2D(target: Int, level: Int, internalformat: Int, width: Int, height: Int, border: Int, format: Int, type: Int, pixels: Buffer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var target = target
@@ -1111,7 +1194,8 @@ override fun glTexImage2D(target: Int, level: Int, internalformat: Int, width: I
                         return 
 }
 
-override fun glTexParameterf(target: Int, pname: Int, param: Float)
+
+    override fun glTexParameterf(target: Int, pname: Int, param: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var target = target
@@ -1124,7 +1208,8 @@ override fun glTexParameterf(target: Int, pname: Int, param: Float)
                         return 
 }
 
-override fun glTexParameteri(target: Int, pname: Int, param: Int)
+
+    override fun glTexParameteri(target: Int, pname: Int, param: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var target = target
@@ -1137,7 +1222,8 @@ override fun glTexParameteri(target: Int, pname: Int, param: Int)
                         return 
 }
 
-override fun glTexSubImage2D(target: Int, level: Int, xoffset: Int, yoffset: Int, width: Int, height: Int, format: Int, type: Int, pixels: Buffer)
+
+    override fun glTexSubImage2D(target: Int, level: Int, xoffset: Int, yoffset: Int, width: Int, height: Int, format: Int, type: Int, pixels: Buffer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var target = target
@@ -1156,7 +1242,8 @@ override fun glTexSubImage2D(target: Int, level: Int, xoffset: Int, yoffset: Int
                         return 
 }
 
-override fun glTranslatef(x: Float, y: Float, z: Float)
+
+    override fun glTranslatef(x: Float, y: Float, z: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var x = x
@@ -1169,7 +1256,8 @@ override fun glTranslatef(x: Float, y: Float, z: Float)
                         return 
 }
 
-override fun glVertexPointer(size: Int, type: Int, stride: Int, pointer: Buffer)
+
+    override fun glVertexPointer(size: Int, type: Int, stride: Int, pointer: Buffer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var size = size
@@ -1183,7 +1271,8 @@ override fun glVertexPointer(size: Int, type: Int, stride: Int, pointer: Buffer)
                         return 
 }
 
-override fun glViewport(x: Int, y: Int, width: Int, height: Int)
+
+    override fun glViewport(x: Int, y: Int, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var x = x
@@ -1197,7 +1286,8 @@ override fun glViewport(x: Int, y: Int, width: Int, height: Int)
                         return 
 }
 
-override fun glBegin(i: Int)
+
+    override fun glBegin(i: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var i = i
@@ -1208,7 +1298,8 @@ override fun glBegin(i: Int)
                         return 
 }
 
-override fun glEnd()
+
+    override fun glEnd()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -1218,7 +1309,8 @@ override fun glEnd()
                         return 
 }
 
-override fun glVertex3f(f: Float, f2: Float, f3: Float)
+
+    override fun glVertex3f(f: Float, f2: Float, f3: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var f = f
@@ -1231,7 +1323,8 @@ override fun glVertex3f(f: Float, f2: Float, f3: Float)
                         return 
 }
 
-override fun glPolygonMode(i: Int, i1: Int)
+
+    override fun glPolygonMode(i: Int, i1: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var i = i

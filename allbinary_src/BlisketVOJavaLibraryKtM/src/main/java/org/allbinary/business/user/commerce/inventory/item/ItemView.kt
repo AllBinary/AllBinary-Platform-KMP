@@ -42,7 +42,7 @@ open public class ItemView
     private val itemInterface: OrderItemInterface
 
     private val vector: Vector
-public constructor        (itemInterface: OrderItemInterface, vector: Vector)
+public constructor (itemInterface: OrderItemInterface, vector: Vector)
             : super()
         {
 var itemInterface = itemInterface
@@ -54,7 +54,7 @@ this.vector= vector
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

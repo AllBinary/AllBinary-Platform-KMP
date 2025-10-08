@@ -32,14 +32,15 @@ open public class Component
         
 
     private var name: String
-public constructor        (componentName: String)
+public constructor (componentName: String)
             : super()
         {
 var componentName = componentName
 this.name= componentName
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

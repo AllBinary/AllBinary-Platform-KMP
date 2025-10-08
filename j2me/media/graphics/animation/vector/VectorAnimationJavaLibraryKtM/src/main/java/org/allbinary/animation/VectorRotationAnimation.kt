@@ -34,7 +34,7 @@ import org.allbinary.math.FrameUtil
 
 open public class VectorRotationAnimation : VectorBaseRotationAnimation {
         
-public constructor        (currentPoints: Array<Array<IntArray?>?>, basicColor: BasicColor, animationBehavior: AnimationBehavior)                        
+public constructor (currentPoints: Array<Array<IntArray?>?>, basicColor: BasicColor, animationBehavior: AnimationBehavior)                        
 
                             : super(AngleInfo.getInstance((AngleFactory.getInstance()!!.TOTAL_ANGLE /currentPoints!!.size).toShort()), currentPoints, basicColor, animationBehavior){
     //var currentPoints = currentPoints
@@ -47,7 +47,8 @@ public constructor        (currentPoints: Array<Array<IntArray?>?>, basicColor: 
 this.angleInfo!!.adjustAngle(this.getFrame())
 }
 
-override fun setFrame(direction: Direction)
+
+    override fun setFrame(direction: Direction)
         //nullable = true from not(false or (false and false)) = true
 {
     //var direction = direction
@@ -57,14 +58,16 @@ override fun setFrame(direction: Direction)
 this.adjustFrame(angle)
 }
 
-override fun setFrame(angle: Angle)
+
+    override fun setFrame(angle: Angle)
         //nullable = true from not(false or (false and false)) = true
 {
     //var angle = angle
 this.adjustFrame(angle)
 }
 
-override fun setFrame(index: Int)
+
+    override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var index = index
@@ -73,15 +76,15 @@ this.angleInfo!!.adjustAngle(this.getFrame())
 }
 
 
-    private val frameUtil: FrameUtil = FrameUtil.getInstance()!!
-override fun adjustFrame(newAngle: Short)
+    override fun adjustFrame(newAngle: Short)
         //nullable = true from not(false or (false and false)) = true
 {
     //var newAngle = newAngle
 this.setFrame(frameUtil!!.getFrameForAngle(newAngle, this.angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement().toInt()))
 }
 
-override fun adjustFrame(newAngle: Angle)
+
+    override fun adjustFrame(newAngle: Angle)
         //nullable = true from not(false or (false and false)) = true
 {
     //var newAngle = newAngle

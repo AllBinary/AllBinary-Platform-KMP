@@ -29,14 +29,13 @@ import org.allbinary.game.configuration.GameConfigurationCentral
 
 open public class AllBinaryVibration : AllBinaryVibrationME {
         
-
-        companion object {
+companion object {
             
     private var NO_VIBRATION: AllBinaryVibrationME = AllBinaryNoVibration()
 
     private var VIBRATION: AllBinaryVibrationME = NO_VIBRATION
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AllBinaryVibrationME{
 
@@ -47,7 +46,7 @@ open fun getInstance()
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -68,10 +67,11 @@ open fun init()
 
 
         }
-            private constructor        (){
+            private constructor (){
 }
 
-override fun vibrate(duration: Int, type: Int, volume: Int)
+
+    override fun vibrate(duration: Int, type: Int, volume: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var duration = duration

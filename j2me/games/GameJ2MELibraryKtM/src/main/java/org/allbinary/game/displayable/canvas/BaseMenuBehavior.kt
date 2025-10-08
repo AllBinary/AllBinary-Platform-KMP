@@ -32,12 +32,11 @@ open public class BaseMenuBehavior
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: BaseMenuBehavior = BaseMenuBehavior()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BaseMenuBehavior{
 
@@ -57,7 +56,7 @@ open fun getInstance()
         
                 @Throws(Exception::class)
             
-open fun onDisplayChangeEvent(allBinaryGameCanvas: AllBinaryGameCanvas, displayChangeEvent: DisplayChangeEvent)
+    open fun onDisplayChangeEvent(allBinaryGameCanvas: AllBinaryGameCanvas, displayChangeEvent: DisplayChangeEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameCanvas = allBinaryGameCanvas
@@ -65,7 +64,7 @@ open fun onDisplayChangeEvent(allBinaryGameCanvas: AllBinaryGameCanvas, displayC
 }
 
 
-open fun initSpecialPaint(allBinaryGameCanvas: AllBinaryGameCanvas)
+    open fun initSpecialPaint(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameCanvas = allBinaryGameCanvas
@@ -75,7 +74,7 @@ allBinaryGameCanvas!!.setNonBotPaintableP(NullPaintable.getInstance())
 
                 @Throws(Exception::class)
             
-open fun initMenu(allBinaryGameCanvas: AllBinaryGameCanvas)
+    open fun initMenu(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameCanvas = allBinaryGameCanvas
@@ -84,7 +83,7 @@ open fun initMenu(allBinaryGameCanvas: AllBinaryGameCanvas)
 
                 @Throws(Exception::class)
             
-open fun updateMenu(allBinaryGameCanvas: AllBinaryGameCanvas)
+    open fun updateMenu(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameCanvas = allBinaryGameCanvas
@@ -93,14 +92,14 @@ open fun updateMenu(allBinaryGameCanvas: AllBinaryGameCanvas)
 
                 @Throws(Exception::class)
             
-open fun popupMenu(allBinaryGameCanvas: AllBinaryGameCanvas)
+    open fun popupMenu(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameCanvas = allBinaryGameCanvas
 }
 
 
-open fun closeMenu(allBinaryGameCanvas: AllBinaryGameCanvas)
+    open fun closeMenu(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameCanvas = allBinaryGameCanvas

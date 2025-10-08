@@ -35,7 +35,7 @@ open public class HighScoresCanvasInputProcessor : PlayerGameInput {
         
 
     private val highScoresCanvas: HighScoresCanvas
-public constructor        (highScoresCanvas: HighScoresCanvas)                        
+public constructor (highScoresCanvas: HighScoresCanvas)                        
 
                             : super(BasicArrayList(),  -1){
 var highScoresCanvas = highScoresCanvas
@@ -47,19 +47,20 @@ this.highScoresCanvas= highScoresCanvas
 }
 
 
-open fun open()
+    open fun open()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun close()
+    open fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun onPressGameKeyEvent(gameKeyEvent: GameKeyEvent)
+
+    override fun onPressGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameKeyEvent = gameKeyEvent
@@ -68,7 +69,8 @@ this.update()
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun onDownGameKeyEvent(gameKeyEvent: GameKeyEvent)
+
+    override fun onDownGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameKeyEvent = gameKeyEvent
@@ -77,7 +79,8 @@ this.update()
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun onUpGameKeyEvent(gameKeyEvent: GameKeyEvent)
+
+    override fun onUpGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameKeyEvent = gameKeyEvent
@@ -86,14 +89,14 @@ this.update()
 }
 
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 }
 
 
-open fun getHighScoresCanvas()
+    open fun getHighScoresCanvas()
         //nullable = true from not(false or (false and true)) = true
 : HighScoresCanvas{
 

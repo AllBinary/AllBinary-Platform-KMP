@@ -42,12 +42,11 @@ import org.allbinary.util.BasicArrayList
 
 open public class GroupLayerManagerListener : LayerManagerEventListener {
         
-
-        companion object {
+companion object {
             
     private var SINGLETON: GroupLayerManagerListener = GroupLayerManagerListener()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GroupLayerManagerListener{
 
@@ -63,12 +62,12 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val list: BasicArrayList = BasicArrayList()
-private constructor        (){
+private constructor (){
 LayerManagerEventHandler.getInstance()!!.addListener(this)
 }
 
 
-open fun clear()
+    open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -91,7 +90,7 @@ groupList!!.clear()
 }
 
 
-open fun getGroupSize(groupInterfaceCompositeInterface: GroupInterfaceCompositeInterface)
+    open fun getGroupSize(groupInterfaceCompositeInterface: GroupInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var groupInterfaceCompositeInterface = groupInterfaceCompositeInterface
@@ -106,7 +105,7 @@ open fun getGroupSize(groupInterfaceCompositeInterface: GroupInterfaceCompositeI
 }
 
 
-open fun getGroupSize(groupInterface: Group)
+    open fun getGroupSize(groupInterface: Group)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var groupInterface = groupInterface
@@ -121,7 +120,7 @@ open fun getGroupSize(groupInterface: Group)
 }
 
 
-open fun getList(groupInterface: Group)
+    open fun getList(groupInterface: Group)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var groupInterface = groupInterface
@@ -136,7 +135,7 @@ open fun getList(groupInterface: Group)
 }
 
 
-open fun getList(groupId: Int)
+    open fun getList(groupId: Int)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var groupId = groupId
@@ -151,7 +150,7 @@ open fun getList(groupId: Int)
 }
 
 
-open fun getGroupSize(groupId: Int)
+    open fun getGroupSize(groupId: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var groupId = groupId
@@ -169,7 +168,7 @@ open fun getGroupSize(groupId: Int)
 }
 
 
-open fun areAllOtherGroupsEmpty(groupInterface: Group)
+    open fun areAllOtherGroupsEmpty(groupInterface: Group)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var groupInterface = groupInterface
@@ -222,7 +221,7 @@ open fun areAllOtherGroupsEmpty(groupInterface: Group)
 }
 
 
-open fun isIdInList(id: Int, excludeGroupList: BasicArrayList)
+    open fun isIdInList(id: Int, excludeGroupList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var id = id
@@ -285,7 +284,7 @@ groupId= groupInterface!!.getGroupId().toInt()
 }
 
 
-open fun areAllOtherGroupsLessThan(excludeGroupList: BasicArrayList, maxSize: Int)
+    open fun areAllOtherGroupsLessThan(excludeGroupList: BasicArrayList, maxSize: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var excludeGroupList = excludeGroupList
@@ -334,7 +333,7 @@ open fun areAllOtherGroupsLessThan(excludeGroupList: BasicArrayList, maxSize: In
 }
 
 
-open fun init(total: Int)
+    open fun init(total: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var total = total
@@ -346,7 +345,8 @@ this.list.add(BasicArrayList())
 
 }
 
-override fun onEvent(eventObject: AllBinaryEventObject)
+
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject
@@ -355,7 +355,8 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
 
                 @Throws(Exception::class)
-            override fun onCreateLayerManagerEvent(layerManagerEvent: LayerManagerEvent)
+            
+    override fun onCreateLayerManagerEvent(layerManagerEvent: LayerManagerEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerManagerEvent = layerManagerEvent
@@ -415,7 +416,8 @@ groupList= this.list.objectArray[id]!! as BasicArrayList
 
 
                 @Throws(Exception::class)
-            override fun onDeleteLayerManagerEvent(layerManagerEvent: LayerManagerEvent)
+            
+    override fun onDeleteLayerManagerEvent(layerManagerEvent: LayerManagerEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerManagerEvent = layerManagerEvent
@@ -450,7 +452,7 @@ groupList!!.remove(layerInterface)
 }
 
 
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 {
 

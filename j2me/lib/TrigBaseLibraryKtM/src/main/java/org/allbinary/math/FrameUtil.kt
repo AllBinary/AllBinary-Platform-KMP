@@ -30,12 +30,11 @@ open public class FrameUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: FrameUtil = FrameUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : FrameUtil{
 
@@ -47,13 +46,13 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
 
 
-open fun getFrameForAngle(angle: Short, angleIncrement: Int)
+    open fun getFrameForAngle(angle: Short, angleIncrement: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var angle = angle
@@ -66,7 +65,7 @@ open fun getFrameForAngle(angle: Short, angleIncrement: Int)
 }
 
 
-open fun getFrameAngle(frame: Int, angleIncrement: Int)
+    open fun getFrameAngle(frame: Int, angleIncrement: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var frame = frame
@@ -82,7 +81,7 @@ open fun getFrameAngle(frame: Int, angleIncrement: Int)
 }
 
 
-open fun adjustAngleToFrameAngle(currentAngle: Int)
+    open fun adjustAngleToFrameAngle(currentAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var currentAngle = currentAngle

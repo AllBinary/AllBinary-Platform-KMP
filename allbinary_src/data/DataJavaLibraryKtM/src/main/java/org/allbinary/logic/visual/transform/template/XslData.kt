@@ -30,12 +30,11 @@ open public class XslData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: XslData = XslData()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : XslData{
 
@@ -47,7 +46,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

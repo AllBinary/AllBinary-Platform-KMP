@@ -27,22 +27,23 @@
         
 import org.allbinary.animation.AnimationInterface
 import org.allbinary.animation.IndexedAnimation
+
 interface CompoundAnimationInterface : AnimationInterface {
         
 
-open fun nextAnimation()
+    open fun nextAnimation()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun previousAnimation()
+    open fun previousAnimation()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun setAnimation(index: Int)
+    open fun setAnimation(index: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getCurrentAnimation()
+    open fun getCurrentAnimation()
         //nullable = true from not(false or (false and true)) = true
 : IndexedAnimation
 

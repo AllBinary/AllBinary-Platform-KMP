@@ -23,12 +23,11 @@
         
         import java.lang.Math
         
-        import java.lang.Runnable
-        
         
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.thread.ARunnable
 import java.io.ByteArrayInputStream
 import java.io.InputStream
 import javax.microedition.media.Control
@@ -55,7 +54,7 @@ open public class PCClipWavPlayer : BasicPlayer
     private val audioInputStream: AudioInputStream
 
     private val clip: Clip
-public constructor        (inputStream: InputStream){
+public constructor (inputStream: InputStream){
 var inputStream = inputStream
 
     var audioInputStream: AudioInputStream = AudioInputStream(ByteArrayInputStream(NullUtil.getInstance()!!.NULL_BYTE_ARRAY), NullAudioFormat.NULL_AUDIO_FORMAT, 0)
@@ -91,12 +90,14 @@ this.audioInputStream= audioInputStream
 this.clip= clip
 }
 
-override fun close()
+
+    override fun close()
         //nullable = true from not(false or (false and true)) = true
 {
-MusicThreadPool.getInstance()!!.runTask(object: Runnable()
+MusicThreadPool.getInstance()!!.runTask(object: ARunnable()
                                 {
-                                override fun run()
+                                
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -116,7 +117,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
 
                 @Throws(Exception::class)
             
-open fun close2()
+    open fun close2()
         //nullable = true from not(false or (false and true)) = true
 {
 this.clip.drain()
@@ -124,7 +125,8 @@ this.clip.flush()
 this.clip.close()
 }
 
-override fun getContentType()
+
+    override fun getContentType()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -137,12 +139,14 @@ override fun getContentType()
 
                 @Throws(MediaException::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun start()
+
+    override fun start()
         //nullable = true from not(false or (false and true)) = true
 {
-MusicThreadPool.getInstance()!!.runTask(object: Runnable()
+MusicThreadPool.getInstance()!!.runTask(object: ARunnable()
                                 {
-                                override fun run()
+                                
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -162,7 +166,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
 
                 @Throws(Exception::class)
             
-open fun start2()
+    open fun start2()
         //nullable = true from not(false or (false and true)) = true
 {
 this.clip.setFramePosition(0)
@@ -174,7 +178,7 @@ super.start()
 
                 @Throws(Exception::class)
             
-open fun create(audioInputStream: AudioInputStream)
+    open fun create(audioInputStream: AudioInputStream)
         //nullable = true from not(false or (false and false)) = true
 : Clip{
 var audioInputStream = audioInputStream
@@ -193,12 +197,14 @@ clip.open(audioInputStream)
 
                 @Throws(MediaException::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun stop()
+
+    override fun stop()
         //nullable = true from not(false or (false and true)) = true
 {
-MusicThreadPool.getInstance()!!.runTask(object: Runnable()
+MusicThreadPool.getInstance()!!.runTask(object: ARunnable()
                                 {
-                                override fun run()
+                                
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -218,14 +224,15 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
 
                 @Throws(Exception::class)
             
-open fun stop2()
+    open fun stop2()
         //nullable = true from not(false or (false and true)) = true
 {
 clip.stop()
 super.stop()
 }
 
-override fun getControl(controlType: String)
+
+    override fun getControl(controlType: String)
         //nullable = true from not(false or (false and false)) = true
 : Control{
 var controlType = controlType
@@ -236,7 +243,8 @@ var controlType = controlType
                         return NullControl()
 }
 
-override fun getControls()
+
+    override fun getControls()
         //nullable = true from not(false or (false and true)) = true
 : Array<Control?>{
 
@@ -246,7 +254,8 @@ override fun getControls()
                         return arrayOfNulls(0)
 }
 
-override fun setVolume(leftVolume: Int, rightVolume: Int)
+
+    override fun setVolume(leftVolume: Int, rightVolume: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var leftVolume = leftVolume
@@ -255,7 +264,7 @@ this.setVolume((leftVolume.toFloat()) /100.0f)
 }
 
 
-open fun getVolume()
+    open fun getVolume()
         //nullable = true from not(false or (false and true)) = true
 : Float{
 
@@ -269,7 +278,7 @@ open fun getVolume()
 }
 
 
-open fun setVolume(volume: Float)
+    open fun setVolume(volume: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var volume = volume
@@ -291,7 +300,8 @@ open fun setVolume(volume: Float)
 masterGainFloatControl!!.setValue(20f *Math.log10(volume).toFloat())
 }
 
-override fun getDuration()
+
+    override fun getDuration()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -301,7 +311,8 @@ override fun getDuration()
                         return this.clip.getMicrosecondLength() /1000
 }
 
-override fun update(event: LineEvent)
+
+    override fun update(event: LineEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var event = event

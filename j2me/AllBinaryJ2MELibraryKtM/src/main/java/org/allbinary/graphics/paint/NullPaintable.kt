@@ -28,12 +28,11 @@
 
 open public class NullPaintable : Paintable {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: NullPaintable = NullPaintable()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : Paintable{
 
@@ -45,7 +44,7 @@ open fun getInstance()
 
 
         }
-            private constructor        (){
+            private constructor (){
 }
 
 

@@ -31,7 +31,7 @@ import org.allbinary.game.input.mapping.PersistentInputMapping
 
 open public class DesktopDefaultGameInputMapping : PersistentInputMapping {
         
-public constructor        ()                        
+public constructor ()                        
 
                             : super(GamePersistanceStrings.getInstance()!!.DEFAULT_INPUT_MAPPING_RECORD_ID){
 

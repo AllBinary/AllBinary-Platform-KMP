@@ -27,7 +27,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
@@ -49,7 +48,7 @@ open public class BasicTopViewGeographicMapCellType
     val cost: Int
 
     private val types: IntArray
-public constructor        (name: String, type: Int, cost: Int)
+public constructor (name: String, type: Int, cost: Int)
             : super()
         {
     //var name = name
@@ -78,7 +77,7 @@ this.types= IntArray(1)
 this.types[0]= type
 }
 
-public constructor        (name: String, types: IntArray, cost: Int)
+public constructor (name: String, types: IntArray, cost: Int)
             : super()
         {
     //var name = name
@@ -123,7 +122,7 @@ this.types= types
 this.cost= cost
 }
 
-public constructor        (name: String, types: BasicArrayList, cost: Int)
+public constructor (name: String, types: BasicArrayList, cost: Int)
             : super()
         {
     //var name = name
@@ -174,7 +173,7 @@ this.types= typeArray
 }
 
 
-open fun isType(type: GeographicMapCellType)
+    open fun isType(type: GeographicMapCellType)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var type = type
@@ -186,7 +185,7 @@ open fun isType(type: GeographicMapCellType)
 }
 
 
-open fun isType(type: Int)
+    open fun isType(type: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var type = type
@@ -224,7 +223,7 @@ open fun isType(type: Int)
 }
 
 
-open fun getTypes()
+    open fun getTypes()
         //nullable = true from not(false or (false and true)) = true
 : IntArray{
 
@@ -234,7 +233,8 @@ open fun getTypes()
                         return this.types
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

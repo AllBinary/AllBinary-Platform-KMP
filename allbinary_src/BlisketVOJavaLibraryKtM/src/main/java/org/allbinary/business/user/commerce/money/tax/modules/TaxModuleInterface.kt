@@ -27,18 +27,19 @@
         
 import org.allbinary.business.context.modules.storefront.StoreFrontInterface
 import org.allbinary.business.user.address.StreetAddress
+
 interface TaxModuleInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getTaxRate(streetAddress: StreetAddress, storeFrontInterface: StoreFrontInterface)
+    open fun getTaxRate(streetAddress: StreetAddress, storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
 : Float
 
                 @Throws(Exception::class)
             
-open fun isValid(streetAddress: StreetAddress, storeFrontInterface: StoreFrontInterface)
+    open fun isValid(streetAddress: StreetAddress, storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 

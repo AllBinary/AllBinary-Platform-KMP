@@ -32,7 +32,6 @@ import org.allbinary.game.layer.CollidableCompositeLayer
 import org.allbinary.game.layer.CollidableRTSBehavior
 import org.allbinary.util.BasicArrayList
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.game.input.event.GameKeyEventFactory
 import org.allbinary.game.layer.AllBinaryTiledLayer
@@ -50,7 +49,7 @@ open public class CollidableUnitBehavior : CollidableRTSBehavior {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val layerPartialCellPositionsUtil: LayerPartialCellPositionsUtil = LayerPartialCellPositionsUtil.getInstance()!!
-public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
+public constructor (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
 
                             : super(ownerLayer, collidable){
     //var ownerLayer = ownerLayer
@@ -64,7 +63,7 @@ public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boo
 
                 @Throws(Exception::class)
             
-open fun collideNone(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
+    open fun collideNone(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
@@ -92,7 +91,7 @@ open public inner class SimpleSteeringVisitor : SteeringVisitor {
             {
             }            
         
-open fun visit(anyType: Any)
+    open fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{
     //var anyType = anyType
@@ -156,7 +155,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "visit", e)
 
                 @Throws(Exception::class)
             
-open fun steer(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
+    open fun steer(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
@@ -211,7 +210,7 @@ open fun steer(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
 
                 @Throws(Exception::class)
             
-open fun chase(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
+    open fun chase(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
@@ -255,7 +254,7 @@ open fun chase(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
 
                 @Throws(Exception::class)
             
-open fun collideUnit(unitLayer: UnitLayer)
+    open fun collideUnit(unitLayer: UnitLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var unitLayer = unitLayer

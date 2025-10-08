@@ -40,13 +40,13 @@ open public class OrderItemsTag : TableTag {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var status: String
-public constructor        (){
+public constructor (){
 this.setTagHelperFactory(OrderItemsHelperFactory())
 this.setTagRequestHelperFactory(OrderItemsRequestHelperFactory())
 }
 
 
-open fun setStatus(value: String)
+    open fun setStatus(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -56,7 +56,7 @@ this.status= value
 
                 @Throws(LicensingException::class)
             
-open fun setOrderStatus()
+    open fun setOrderStatus()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -148,7 +148,7 @@ open fun setOrderStatus()
 
                 @Throws(JspTagException::class)
             
-open fun doStartTag()
+    open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

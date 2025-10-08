@@ -36,7 +36,7 @@ import org.allbinary.math.FrameUtil
 
 open public class AllBinarySpriteRotationAnimation : HackRotationSpriteIndexedAnimation {
         
-public constructor        (sprite: Sprite, image: Image, animationBehavior: AnimationBehavior)                        
+public constructor (sprite: Sprite, image: Image, animationBehavior: AnimationBehavior)                        
 
                             : super(sprite, image, AngleInfo.getInstance((AngleFactory.getInstance()!!.TOTAL_ANGLE /sprite.getRawFrameCount()).toShort()), animationBehavior){
     //var sprite = sprite
@@ -49,21 +49,24 @@ public constructor        (sprite: Sprite, image: Image, animationBehavior: Anim
 this.angleInfo!!.adjustAngle(this.sprite.getFrame())
 }
 
-override fun nextRotation()
+
+    override fun nextRotation()
         //nullable = true from not(false or (false and true)) = true
 {
 this.sprite.nextFrame()
 this.angleInfo!!.adjustAngle(this.sprite.getFrame())
 }
 
-override fun previousRotation()
+
+    override fun previousRotation()
         //nullable = true from not(false or (false and true)) = true
 {
 this.sprite.prevFrame()
 this.angleInfo!!.adjustAngle(this.sprite.getFrame())
 }
 
-override fun setFrame(direction: Direction)
+
+    override fun setFrame(direction: Direction)
         //nullable = true from not(false or (false and false)) = true
 {
 var direction = direction
@@ -73,14 +76,16 @@ var direction = direction
 this.adjustFrame(angle)
 }
 
-override fun setFrame(angle: Angle)
+
+    override fun setFrame(angle: Angle)
         //nullable = true from not(false or (false and false)) = true
 {
 var angle = angle
 this.adjustFrame(angle)
 }
 
-override fun setFrame(index: Int)
+
+    override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var index = index
@@ -88,7 +93,8 @@ this.sprite.setFrame(index)
 this.angleInfo!!.adjustAngle(this.getFrame())
 }
 
-override fun adjustFrame(angle: Angle)
+
+    override fun adjustFrame(angle: Angle)
         //nullable = true from not(false or (false and false)) = true
 {
 var angle = angle
@@ -96,8 +102,7 @@ this.adjustFrame(angle.getValue())
 }
 
 
-    private val frameUtil: FrameUtil = FrameUtil.getInstance()!!
-override fun adjustFrame(angle: Short)
+    override fun adjustFrame(angle: Short)
         //nullable = true from not(false or (false and false)) = true
 {
 var angle = angle

@@ -16,10 +16,9 @@ open public class Encoder
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun encode(value: ByteArray)
+    open fun encode(value: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var value = value
@@ -31,7 +30,7 @@ var value = value
 }
 
 
-open fun decode(value: String)
+    open fun decode(value: String)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
 var value = value
@@ -44,7 +43,7 @@ var value = value
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

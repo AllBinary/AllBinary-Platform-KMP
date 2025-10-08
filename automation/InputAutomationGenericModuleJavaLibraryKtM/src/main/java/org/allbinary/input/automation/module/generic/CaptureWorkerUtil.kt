@@ -34,12 +34,11 @@ open public class CaptureWorkerUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun processProfileActionConditions(vector: Vector, frame: Long)
+    open fun processProfileActionConditions(vector: Vector, frame: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var vector = vector
@@ -85,7 +84,7 @@ logUtil!!.put(commonStrings!!.START, "CaptureWorkerUtil", "processProfileActionC
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        ()
+public constructor ()
             : super()
         {
 }

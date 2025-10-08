@@ -26,14 +26,15 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.input.automation.robot.osgi.InputAutomationRobotChangeEvent
+
 interface InputAutomationRobotChangeListener {
         
 
-open fun onAdd(inputAutomationRobotChangeEvent: InputAutomationRobotChangeEvent)
+    open fun onAdd(inputAutomationRobotChangeEvent: InputAutomationRobotChangeEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun onRemove(inputAutomationRobotChangeEvent: InputAutomationRobotChangeEvent)
+    open fun onRemove(inputAutomationRobotChangeEvent: InputAutomationRobotChangeEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

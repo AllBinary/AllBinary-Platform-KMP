@@ -31,74 +31,75 @@ import org.allbinary.business.category.properties.CategoryPropertiesInterface
 import org.allbinary.data.tables.TableMappingInterface
 import org.allbinary.logic.control.validate.ValidationInterface
 import org.allbinary.logic.io.path.AbPath
+
 interface CategoryInterface : TableMappingInterface, ValidationInterface {
         
 
-open fun getChildNodes()
+    open fun getChildNodes()
         //nullable = true from not(false or (false and true)) = true
 : Vector
 
-open fun addChildProperty(categoryPropertiesInterface: CategoryPropertiesInterface)
+    open fun addChildProperty(categoryPropertiesInterface: CategoryPropertiesInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
-open fun addChild(categoryInterface: CategoryInterface)
+    open fun addChild(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
-open fun removeChild(categoryInterface: CategoryInterface)
+    open fun removeChild(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
                 @Throws(Exception::class)
             
-open fun isLeaf()
+    open fun isLeaf()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun getProperties()
+    open fun getProperties()
         //nullable = true from not(false or (false and true)) = true
 : CategoryPropertiesInterface
 
-open fun setProperties(categoryPropertiesInterface: CategoryPropertiesInterface)
+    open fun setProperties(categoryPropertiesInterface: CategoryPropertiesInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getHierarchy()
+    open fun getHierarchy()
         //nullable = true from not(false or (false and true)) = true
 : CategoryHierarchyInterface
 
-open fun setHierarchy(categoryHierarchyInterface: CategoryHierarchyInterface)
+    open fun setHierarchy(categoryHierarchyInterface: CategoryHierarchyInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun getPath()
+    open fun getPath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath
 
                 @Throws(Exception::class)
             
-open fun getFilePath()
+    open fun getFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath
 
                 @Throws(Exception::class)
             
-open fun getWebAppPath()
+    open fun getWebAppPath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath
 
                 @Throws(Exception::class)
             
-open fun getRootFilePath()
+    open fun getRootFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath
 
                 @Throws(Exception::class)
             
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 
 

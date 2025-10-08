@@ -36,7 +36,7 @@ open public class ClientInformationFactory
             {
             }            
         
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ClientInformation{
 

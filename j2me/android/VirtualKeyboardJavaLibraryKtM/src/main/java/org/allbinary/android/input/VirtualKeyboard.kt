@@ -34,8 +34,7 @@ open public class VirtualKeyboard
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NULL_VIRTUAL_KEYBOARD: VirtualKeyboard = VirtualKeyboard()
 
@@ -46,7 +45,7 @@ open public class VirtualKeyboard
             {
             }            
         
-open fun onEvent(eventObject: AllBinaryEventObject)
+    open fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
@@ -54,20 +53,20 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
 
-open fun onVirtualKeyboardEvent(virtualKeyboardEvent: VirtualKeyboardEvent)
+    open fun onVirtualKeyboardEvent(virtualKeyboardEvent: VirtualKeyboardEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var virtualKeyboardEvent = virtualKeyboardEvent
 }
 
 
-open fun forceHide()
+    open fun forceHide()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun hide()
+    open fun hide()
         //nullable = true from not(false or (false and true)) = true
 {
 }

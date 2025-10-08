@@ -51,7 +51,7 @@ open public class CryptService
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private val abCryptUtil: AbCryptUtil = AbCryptUtil.getInstance()!!
-public constructor        ()
+public constructor ()
             : super()
         {
 Globals.getInstance()!!.init(this::class.java.classLoader, "./")
@@ -59,7 +59,7 @@ logUtil!!.put("Set Globals: " +URLGLOBALS.getWebappPath(), this, this.commonStri
 }
 
 
-open fun getDecryptedInputStream(abeClientInformation: AbeClientInformationInterface, name: String, inputStream: InputStream)
+    open fun getDecryptedInputStream(abeClientInformation: AbeClientInformationInterface, name: String, inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
 : InputStream{
     //var abeClientInformation = abeClientInformation
@@ -95,7 +95,7 @@ this.showLicenseDialog(abeClientInformation, e)
 }
 
 
-open fun showLicenseDialog(abeClientInformation: AbeClientInformationInterface, e: Exception)
+    open fun showLicenseDialog(abeClientInformation: AbeClientInformationInterface, e: Exception)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation

@@ -27,18 +27,19 @@
         
 import javax.microedition.lcdui.Displayable
 import javax.microedition.midlet.MIDlet
+
 interface MidletCompositeInterface {
         
 
-open fun setMidlet(midlet: MIDlet)
+    open fun setMidlet(midlet: MIDlet)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getMidlet()
+    open fun getMidlet()
         //nullable = true from not(false or (false and true)) = true
 : AllBinaryMidlet
 
-open fun getDisplayable()
+    open fun getDisplayable()
         //nullable = true from not(false or (false and true)) = true
 : Displayable
 

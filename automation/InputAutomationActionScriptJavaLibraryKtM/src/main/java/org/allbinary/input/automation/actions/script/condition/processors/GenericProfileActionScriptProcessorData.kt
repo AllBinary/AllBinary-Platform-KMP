@@ -30,13 +30,12 @@ open public class GenericProfileActionScriptProcessorData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var NAME: String = "GENERIC_CONFIGURATION_PROFILE_ACTION_PROCESSOR_NAME"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

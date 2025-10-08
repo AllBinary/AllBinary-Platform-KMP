@@ -27,6 +27,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.thread.ARunnable
 import java.util.Hashtable
 import java.util.Vector
 import javax.microedition.lcdui.Command
@@ -133,8 +134,7 @@ open public class DemoCanvas : RunnableCanvas
                 , DisplayChangeEventListener
                 , DemoPaintableInterface {
         
-
-        companion object {
+companion object {
             
     private val id: Int = 0
 
@@ -207,7 +207,7 @@ open public class DemoCanvas : RunnableCanvas
     private val inputToGameKeyMapping: InputToGameKeyMapping = PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()!!
 
     private var gameRunnable: GameRunnable = NullWaitGameRunnable.getInstance()!!
-public constructor        (abeClientInformation: AbeClientInformationInterface, commandListener: CommandListener, highScoresFactoryInterface: HighScoresFactoryInterface, paintable: Paintable, overlayPaintable: InitUpdatePaintable, gameInitializationInterfaceFactoryInterface: BasicBuildGameInitializerFactory, isContinue: Boolean)                        
+public constructor (abeClientInformation: AbeClientInformationInterface, commandListener: CommandListener, highScoresFactoryInterface: HighScoresFactoryInterface, paintable: Paintable, overlayPaintable: InitUpdatePaintable, gameInitializationInterfaceFactoryInterface: BasicBuildGameInitializerFactory, isContinue: Boolean)                        
 
                             : super(commandListener, CurrentDisplayableFactory.getInstance()!!.DEFAULT_CHILD_NAME_LIST){
     //var abeClientInformation = abeClientInformation
@@ -252,14 +252,16 @@ this.demoGameRunnable= DemoGameStartupRunnable(this)
 DisplayChangeEventHandler.getInstance()!!.addListener(this)
 }
 
-override fun onEvent(eventObject: AllBinaryEventObject)
+
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
-override fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
+
+    override fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var displayChangeEvent = displayChangeEvent
@@ -296,7 +298,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, this.canvasStrings!!.ON_DISPLAY_C
 }
 
 
-open fun getCustomCommands()
+    open fun getCustomCommands()
         //nullable = true from not(false or (false and true)) = true
 : Array<Any?>{
 
@@ -396,7 +398,8 @@ commandList!!.add(gameCommandsFactory!!.DISPLAY_ABOUT)
                             
 }
 
-override fun initCommands(cmdListener: CommandListener)
+
+    override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var cmdListener = cmdListener
@@ -425,7 +428,7 @@ this.setCommandListener(cmdListener)
 
                 @Throws(Exception::class)
             
-open fun initPostPaint()
+    open fun initPostPaint()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -433,13 +436,14 @@ open fun initPostPaint()
 
                 @Throws(Exception::class)
             
-open fun mediaInit()
+    open fun mediaInit()
         //nullable = true from not(false or (false and true)) = true
 {
 AllBinaryMediaManager.init(EarlySoundsFactory.getInstance())
 }
 
-override fun itemStateChanged(item: Item)
+
+    override fun itemStateChanged(item: Item)
         //nullable = true from not(false or (false and false)) = true
 {
 var item = item
@@ -449,7 +453,7 @@ ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, this)
 
                 @Throws(Exception::class)
             
-open fun initMenu()
+    open fun initMenu()
         //nullable = true from not(false or (false and true)) = true
 {
 this.close()
@@ -490,21 +494,24 @@ scrollSelectionForm!!.init(rectangle2, formType2)
 this.open()
 }
 
-override fun open()
+
+    override fun open()
         //nullable = true from not(false or (false and true)) = true
 {
 BasicMotionGesturesHandler.getInstance()!!.addListener(this.getMenuInputProcessor())
 GameKeyEventHandler.getInstance()!!.addListener(this.getMenuInputProcessor())
 }
 
-override fun close()
+
+    override fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 BasicMotionGesturesHandler.getInstance()!!.removeListener(this.getMenuInputProcessor())
 GameKeyEventHandler.getInstance()!!.removeListener(this.getMenuInputProcessor())
 }
 
-override fun getSourceId()
+
+    override fun getSourceId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -514,28 +521,32 @@ override fun getSourceId()
                         return id
 }
 
-override fun keyPressed(keyCode: Int)
+
+    override fun keyPressed(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
 this.keyPressed(keyCode, 0)
 }
 
-override fun keyReleased(keyCode: Int)
+
+    override fun keyReleased(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
 this.keyReleased(keyCode, 0)
 }
 
-override fun keyRepeated(keyCode: Int)
+
+    override fun keyRepeated(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
 this.keyRepeated(keyCode, 0)
 }
 
-override fun keyPressed(keyCode: Int, deviceId: Int)
+
+    override fun keyPressed(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
@@ -543,7 +554,8 @@ var deviceId = deviceId
 this.addGameKeyEvent(keyCode, false)
 }
 
-override fun keyReleased(keyCode: Int, deviceId: Int)
+
+    override fun keyReleased(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
@@ -553,7 +565,8 @@ this.removeGameKeyEvent(keyCode, false)
 
 
     private var isSingleKeyRepeatableProcessing: Boolean = Features.getInstance()!!.isFeature(InputFeatureFactory.getInstance()!!.SINGLE_KEY_REPEAT_PRESS)!!
-override fun keyRepeated(keyCode: Int, deviceId: Int)
+
+    override fun keyRepeated(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
@@ -576,7 +589,7 @@ var deviceId = deviceId
 
     private var lastKeyNotMapped: Int =  -1
 
-open fun addGameKeyEvent(keyCode: Int, repeated: Boolean)
+    open fun addGameKeyEvent(keyCode: Int, repeated: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
@@ -621,7 +634,7 @@ logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
 }
 
 
-open fun removeGameKeyEvent(keyCode: Int, repeated: Boolean)
+    open fun removeGameKeyEvent(keyCode: Int, repeated: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
@@ -657,7 +670,8 @@ logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.REMOVE_KEY_EVENT,
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun pause()
+
+    override fun pause()
         //nullable = true from not(false or (false and true)) = true
 {
 this.close()
@@ -667,7 +681,8 @@ this.gameCanvas!!.pause()
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun unPause()
+
+    override fun unPause()
         //nullable = true from not(false or (false and true)) = true
 {
 this.open()
@@ -676,7 +691,8 @@ this.gameRunnable= this.gameCanvas!!.gameRunnable
 this.setPaused(false)
 }
 
-override fun isPausable()
+
+    override fun isPausable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -703,7 +719,8 @@ override fun isPausable()
                             
 }
 
-override fun isGameOver()
+
+    override fun isGameOver()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 logUtil!!.put(StringMaker().
@@ -717,7 +734,8 @@ logUtil!!.put(StringMaker().
 
 
                 @Throws(Exception::class)
-            override fun setLoadStateHashtable(hashtable: Hashtable<Any, Any>)
+            
+    override fun setLoadStateHashtable(hashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var hashtable = hashtable
@@ -726,7 +744,8 @@ logUtil!!.put("Trying to continue a demo lol - only continue a game canvas not t
 
 
                 @Throws(Exception::class)
-            override fun getLoadStateHashtable()
+            
+    override fun getLoadStateHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
 logUtil!!.put("Trying to continue a demo lol - only continue a game canvas not the demo", this, "getLoadStateHashtable")
@@ -739,7 +758,8 @@ logUtil!!.put("Trying to continue a demo lol - only continue a game canvas not t
 
 
                 @Throws(Exception::class)
-            override fun getCurrentStateHashtable()
+            
+    override fun getCurrentStateHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
 logUtil!!.put("Trying to save the AI lol", this, "getCurrentStateHashtable")
@@ -750,13 +770,15 @@ logUtil!!.put("Trying to save the AI lol", this, "getCurrentStateHashtable")
                         return this.nullUtil!!.NULL_TABLE
 }
 
-override fun setHighScoreSubmitted(isNotUsed: Boolean)
+
+    override fun setHighScoreSubmitted(isNotUsed: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var isNotUsed = isNotUsed
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -769,7 +791,8 @@ this.fullscreenPaintable!!.paint(graphics)
 this.progressPaintable!!.paint(graphics)
 }
 
-override fun paintThreed(graphics: Graphics)
+
+    override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -778,14 +801,15 @@ this.paintedSpecialAnimationInterface!!.paintThreed(graphics, 0, 0, 0)
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun setGameOver()
+
+    override fun setGameOver()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put("Not Implemented since not a game", this, "setGameOver")
 }
 
 
-open fun demoStateChange()
+    open fun demoStateChange()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -845,7 +869,7 @@ this.setState()
 
     private val SET_STATE: String = "setState"
 
-open fun setState()
+    open fun setState()
         //nullable = true from not(false or (false and true)) = true
 {
 PreLogUtil.put(SmallIntegerSingletonFactory.getInstance()!!.createInstance(this.state)!!.toString(), this, SET_STATE)
@@ -896,7 +920,7 @@ gameAdState!!.processPageAdState()
 
                 @Throws(Exception::class)
             
-open fun getNextRandom()
+    open fun getNextRandom()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -908,7 +932,7 @@ open fun getNextRandom()
 
                 @Throws(Exception::class)
             
-open fun createGameLayerManager(randomValue: Int)
+    open fun createGameLayerManager(randomValue: Int)
         //nullable = true from not(false or (false and false)) = true
 : AllBinaryGameLayerManager{
 var randomValue = randomValue
@@ -921,7 +945,7 @@ var randomValue = randomValue
 
                 @Throws(Exception::class)
             
-open fun createRunnable(randomLevel: Int)
+    open fun createRunnable(randomLevel: Int)
         //nullable = true from not(false or (false and false)) = true
 : GameCanvasRunnableInterface{
 var randomLevel = randomLevel
@@ -934,7 +958,7 @@ var randomLevel = randomLevel
 
                 @Throws(Exception::class)
             
-open fun create()
+    open fun create()
         //nullable = true from not(false or (false and true)) = true
 {
 PreLogUtil.put(commonStrings!!.START, this, "create")
@@ -955,7 +979,7 @@ this.getHighScoresFactoryInterface()!!.fetchHighScores(gameInfo, this.highScores
 
                 @Throws(Exception::class)
             
-open fun start()
+    open fun start()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -978,7 +1002,7 @@ this.threadFactoryUtil!!.start(this.canvasThread)
 }
 
 
-open fun preDemoProcess()
+    open fun preDemoProcess()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -1011,7 +1035,8 @@ this.overlayPaintable!!.update()
 
 
                 @Throws(Exception::class)
-            override fun process()
+            
+    override fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 super.process()
@@ -1086,7 +1111,7 @@ threadFactoryUtil!!.start(thread)
 
                 @Throws(Exception::class)
             
-open fun startDemoGame()
+    open fun startDemoGame()
         //nullable = true from not(false or (false and true)) = true
 {
 DemoCanvasProgressUtil.showProgress(this)
@@ -1095,7 +1120,7 @@ DemoCanvasProgressUtil.showProgress(this)
 
                 @Throws(Exception::class)
             
-open fun stopGameDemo()
+    open fun stopGameDemo()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -1111,7 +1136,8 @@ this.gameCanvas!!.setRunning(false)
 ThreadUtil.getInstance()!!.join(this.canvasThread)
 }
 
-override fun showGamePaintable()
+
+    override fun showGamePaintable()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -1148,7 +1174,7 @@ this.setPaintableInterface(this.getDefaultPaintableInterface())
 }
 
 
-open fun isReadyForStateChange()
+    open fun isReadyForStateChange()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -1161,7 +1187,7 @@ open fun isReadyForStateChange()
 
                 @Throws(Exception::class)
             
-open fun processGame()
+    open fun processGame()
         //nullable = true from not(false or (false and true)) = true
 {
 this.gameRunnable!!.run()
@@ -1190,7 +1216,8 @@ this.gameRunnable!!.run()
                             
 }
 
-override fun run()
+
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(commonStrings!!.START_RUNNABLE, this, commonStrings!!.RUN)
@@ -1292,7 +1319,7 @@ logUtil!!.put(commonStrings!!.END_RUNNABLE, this, commonStrings!!.RUN)
 
                 @Throws(Exception::class)
             
-open fun run3()
+    open fun run3()
         //nullable = true from not(false or (false and true)) = true
 {
 this.loopTimeHelper!!.setStartTime()
@@ -1300,7 +1327,8 @@ this.processGame()
 this.processLoopSleep()
 }
 
-override fun setRunning(running: Boolean)
+
+    override fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var running = running
@@ -1353,7 +1381,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, SET_RUNNING, e)
 
                 @Throws(Exception::class)
             
-open fun end()
+    open fun end()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -1380,13 +1408,15 @@ DisplayChangeEventHandler.getInstance()!!.removeListener(this)
 this.stopGameDemo()
 }
 
-override fun setGameState(gameState: GameState)
+
+    override fun setGameState(gameState: GameState)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameState = gameState
 }
 
-override fun getGameState()
+
+    override fun getGameState()
         //nullable = true from not(false or (false and true)) = true
 : GameState{
 
@@ -1397,7 +1427,7 @@ override fun getGameState()
 }
 
 
-open fun getGameCanvasRunnableInterface()
+    open fun getGameCanvasRunnableInterface()
         //nullable = true from not(false or (false and true)) = true
 : AllBinaryGameCanvas{
 
@@ -1408,7 +1438,7 @@ open fun getGameCanvasRunnableInterface()
 }
 
 
-open fun isDemoLoading()
+    open fun isDemoLoading()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -1448,7 +1478,7 @@ open fun isDemoLoading()
 }
 
 
-open fun getState()
+    open fun getState()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -1459,14 +1489,15 @@ open fun getState()
 }
 
 
-open fun setState(state: Int)
+    open fun setState(state: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var state = state
 this.state= state
 }
 
-override fun isHighScoreSubmitted()
+
+    override fun isHighScoreSubmitted()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 logUtil!!.put("Wow the AI got a high score!", this, "isHighScoreSubmitted")
@@ -1478,7 +1509,7 @@ logUtil!!.put("Wow the AI got a high score!", this, "isHighScoreSubmitted")
 }
 
 
-open fun getRealHighScoresPaintable()
+    open fun getRealHighScoresPaintable()
         //nullable = true from not(false or (false and true)) = true
 : HighScoresPaintable{
 
@@ -1489,7 +1520,7 @@ open fun getRealHighScoresPaintable()
 }
 
 
-open fun setSpecialAnimationInterface(specialAnimationInterface: SpecialAnimation)
+    open fun setSpecialAnimationInterface(specialAnimationInterface: SpecialAnimation)
         //nullable = true from not(false or (false and false)) = true
 {
 var specialAnimationInterface = specialAnimationInterface
@@ -1498,7 +1529,7 @@ this.specialAnimationInterface= specialAnimationInterface
 }
 
 
-open fun getSpecialAnimationInterface()
+    open fun getSpecialAnimationInterface()
         //nullable = true from not(false or (false and true)) = true
 : SpecialAnimation{
 
@@ -1509,7 +1540,7 @@ open fun getSpecialAnimationInterface()
 }
 
 
-open fun setPaintableInterface(paintableInterface: PaintableInterface)
+    open fun setPaintableInterface(paintableInterface: PaintableInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var paintableInterface = paintableInterface
@@ -1517,7 +1548,7 @@ this.paintableInterface= paintableInterface
 }
 
 
-open fun getPaintableInterface()
+    open fun getPaintableInterface()
         //nullable = true from not(false or (false and true)) = true
 : PaintableInterface{
 
@@ -1528,7 +1559,7 @@ open fun getPaintableInterface()
 }
 
 
-open fun setDefaultPaintableInterface(defaultPaintableInterface: Paintable)
+    open fun setDefaultPaintableInterface(defaultPaintableInterface: Paintable)
         //nullable = true from not(false or (false and false)) = true
 {
 var defaultPaintableInterface = defaultPaintableInterface
@@ -1536,7 +1567,7 @@ this.defaultPaintableInterface= defaultPaintableInterface
 }
 
 
-open fun getDefaultPaintableInterface()
+    open fun getDefaultPaintableInterface()
         //nullable = true from not(false or (false and true)) = true
 : Paintable{
 
@@ -1547,7 +1578,7 @@ open fun getDefaultPaintableInterface()
 }
 
 
-open fun getHighScoresFactoryInterface()
+    open fun getHighScoresFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
 : HighScoresFactoryInterface{
 
@@ -1558,7 +1589,7 @@ open fun getHighScoresFactoryInterface()
 }
 
 
-open fun setMenuInputProcessor(menuInputProcessor: BasicMenuInputProcessor)
+    open fun setMenuInputProcessor(menuInputProcessor: BasicMenuInputProcessor)
         //nullable = true from not(false or (false and false)) = true
 {
 var menuInputProcessor = menuInputProcessor
@@ -1566,7 +1597,7 @@ this.menuInputProcessor= menuInputProcessor
 }
 
 
-open fun getMenuInputProcessor()
+    open fun getMenuInputProcessor()
         //nullable = true from not(false or (false and true)) = true
 : BasicMenuInputProcessor{
 
@@ -1577,7 +1608,7 @@ open fun getMenuInputProcessor()
 }
 
 
-open fun getMenuForm()
+    open fun getMenuForm()
         //nullable = true from not(false or (false and true)) = true
 : ScrollSelectionForm{
 
@@ -1588,14 +1619,15 @@ open fun getMenuForm()
 }
 
 
-open fun setMenuForm(menuForm: ScrollSelectionForm)
+    open fun setMenuForm(menuForm: ScrollSelectionForm)
         //nullable = true from not(false or (false and false)) = true
 {
 var menuForm = menuForm
 this.menuForm= menuForm
 }
 
-override fun isInitialized()
+
+    override fun isInitialized()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -1606,7 +1638,7 @@ override fun isInitialized()
 }
 
 
-open fun getOverlayPaintable()
+    open fun getOverlayPaintable()
         //nullable = true from not(false or (false and true)) = true
 : Paintable{
 
@@ -1617,7 +1649,7 @@ open fun getOverlayPaintable()
 }
 
 
-open fun setBasicGameDemoPaintable(basicGameDemoPaintable: StatePaintable)
+    open fun setBasicGameDemoPaintable(basicGameDemoPaintable: StatePaintable)
         //nullable = true from not(false or (false and false)) = true
 {
 var basicGameDemoPaintable = basicGameDemoPaintable
@@ -1625,7 +1657,7 @@ this.basicGameDemoPaintable= basicGameDemoPaintable
 }
 
 
-open fun getBasicGameDemoPaintable()
+    open fun getBasicGameDemoPaintable()
         //nullable = true from not(false or (false and true)) = true
 : StatePaintable{
 
@@ -1636,7 +1668,7 @@ open fun getBasicGameDemoPaintable()
 }
 
 
-open fun setTempWait(tempWait: Int)
+    open fun setTempWait(tempWait: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var tempWait = tempWait
@@ -1644,7 +1676,7 @@ this.tempWait= tempWait
 }
 
 
-open fun getTempWait()
+    open fun getTempWait()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -1654,7 +1686,8 @@ open fun getTempWait()
                         return tempWait
 }
 
-override fun isSingleThread()
+
+    override fun isSingleThread()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -1665,7 +1698,7 @@ override fun isSingleThread()
 }
 
 
-open fun isRunningInAnotherThread()
+    open fun isRunningInAnotherThread()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -1699,7 +1732,7 @@ open fun isRunningInAnotherThread()
 }
 
 
-open fun getGameInitializationInterfaceFactoryInterface()
+    open fun getGameInitializationInterfaceFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
 : BasicBuildGameInitializerFactory{
 
@@ -1709,7 +1742,8 @@ open fun getGameInitializationInterfaceFactoryInterface()
                         return gameInitializationInterfaceFactoryInterface
 }
 
-override fun getType()
+
+    override fun getType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

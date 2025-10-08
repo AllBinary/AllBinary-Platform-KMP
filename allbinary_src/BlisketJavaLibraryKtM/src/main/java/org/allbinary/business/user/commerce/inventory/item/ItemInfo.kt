@@ -40,7 +40,7 @@ open public class ItemInfo
     var creationDate: Array<String?>
 
     var lastModified: Array<String?>
-public constructor        ()
+public constructor ()
             : super()
         {
 }

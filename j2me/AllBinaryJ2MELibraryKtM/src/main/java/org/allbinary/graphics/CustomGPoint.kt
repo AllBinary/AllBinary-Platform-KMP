@@ -28,8 +28,7 @@
 
 open public class CustomGPoint : GPoint {
         
-
-        companion object {
+companion object {
             
     val NULL_CUSTOM_POINT: CustomGPoint = CustomGPoint(0, 0, 0)
 
@@ -40,7 +39,7 @@ open public class CustomGPoint : GPoint {
     private var y: Int= 0
 
     private var z: Int= 0
-private constructor        (point: GPoint)                        
+private constructor (point: GPoint)                        
 
                             : super(point){
 var point = point
@@ -50,7 +49,7 @@ var point = point
                     
 }
 
-public constructor        (x: Int, y: Int)                        
+public constructor (x: Int, y: Int)                        
 
                             : super(x, y){
 var x = x
@@ -61,7 +60,7 @@ var y = y
                     
 }
 
-public constructor        (x: Int, y: Int, z: Int)                        
+public constructor (x: Int, y: Int, z: Int)                        
 
                             : super(x, y, z){
 var x = x
@@ -74,14 +73,15 @@ var z = z
 }
 
 
-open fun setX(x: Int)
+    open fun setX(x: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
 this.x= x
 }
 
-override fun getX()
+
+    override fun getX()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -92,14 +92,15 @@ override fun getX()
 }
 
 
-open fun setY(y: Int)
+    open fun setY(y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var y = y
 this.y= y
 }
 
-override fun getY()
+
+    override fun getY()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -110,14 +111,15 @@ override fun getY()
 }
 
 
-open fun setZ(z: Int)
+    open fun setZ(z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var z = z
 this.z= z
 }
 
-override fun getZ()
+
+    override fun getZ()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

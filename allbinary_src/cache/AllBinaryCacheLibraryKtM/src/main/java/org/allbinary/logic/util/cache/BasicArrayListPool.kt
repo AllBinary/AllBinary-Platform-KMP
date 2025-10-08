@@ -29,7 +29,7 @@ import org.allbinary.util.BasicArrayList
 
 open public class BasicArrayListPool : AbstractArrayListPool {
         
-public constructor        (cacheableInterfaceFactoryInterface: CacheableInterfaceFactoryInterface)                        
+public constructor (cacheableInterfaceFactoryInterface: CacheableInterfaceFactoryInterface)                        
 
                             : super(cacheableInterfaceFactoryInterface){
 var cacheableInterfaceFactoryInterface = cacheableInterfaceFactoryInterface
@@ -40,7 +40,7 @@ var cacheableInterfaceFactoryInterface = cacheableInterfaceFactoryInterface
 }
 
 
-open fun clear()
+    open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 this.buffers.clear()
@@ -49,7 +49,7 @@ this.buffers.clear()
 
                 @Throws(Exception::class)
             
-open fun remove(key: Any)
+    open fun remove(key: Any)
         //nullable = true from not(false or (false and false)) = true
 : CacheableInterface{
 var key = key
@@ -83,7 +83,7 @@ var key = key
 
                 @Throws(Exception::class)
             
-open fun addAll(usedList: BasicArrayList)
+    open fun addAll(usedList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var usedList = usedList
@@ -106,7 +106,7 @@ usedList!!.clear()
 
                 @Throws(Exception::class)
             
-open fun releaseUsedBackToPool(usedList: BasicArrayList)
+    open fun releaseUsedBackToPool(usedList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var usedList = usedList

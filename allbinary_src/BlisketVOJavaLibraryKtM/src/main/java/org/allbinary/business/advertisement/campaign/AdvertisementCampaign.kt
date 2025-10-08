@@ -37,7 +37,7 @@ open public class AdvertisementCampaign
         
 
     private var hashMap: HashMap<Any, Any>
-public constructor        (hashMap: HashMap<Any, Any>)
+public constructor (hashMap: HashMap<Any, Any>)
             : super()
         {
 var hashMap = hashMap
@@ -45,7 +45,7 @@ this.hashMap= hashMap
 }
 
 
-open fun getComponent()
+    open fun getComponent()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -56,7 +56,7 @@ open fun getComponent()
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -67,7 +67,7 @@ open fun getName()
 }
 
 
-open fun setComponentName(name: String)
+    open fun setComponentName(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name
@@ -75,7 +75,7 @@ this.hashMap!!.put(DynamicObjectData.NAME, name)
 }
 
 
-open fun setName(name: String)
+    open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name
@@ -83,7 +83,7 @@ this.hashMap!!.put(AdvertisementCampaignData.getInstance()!!.NAME, name)
 }
 
 
-open fun search(advertisementSearchInterface: AdvertisementSearchInterface)
+    open fun search(advertisementSearchInterface: AdvertisementSearchInterface)
         //nullable = true from not(false or (false and false)) = true
 : AdvertisementsInterface{
 var advertisementSearchInterface = advertisementSearchInterface

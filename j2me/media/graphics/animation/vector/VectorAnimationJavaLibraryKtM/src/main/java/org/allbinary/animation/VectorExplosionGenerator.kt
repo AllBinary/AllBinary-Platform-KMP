@@ -35,12 +35,11 @@ open public class VectorExplosionGenerator
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: VectorExplosionGenerator = VectorExplosionGenerator()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : VectorExplosionGenerator{
 
@@ -58,7 +57,7 @@ open fun getInstance()
     val ROTATION: VectorExplosionType = VectorExplosionType()
 
     private val vectorAnimationUtil: VectorAnimationUtil = VectorAnimationUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -66,7 +65,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getInstance(list: BasicArrayList, howMuch: Int, type: VectorExplosionType)
+    open fun getInstance(list: BasicArrayList, howMuch: Int, type: VectorExplosionType)
         //nullable =  from not(true or (false and false)) = 
 : BasicArrayList{
 var list = list
@@ -102,7 +101,7 @@ points[index]!![1]= point.getY()
 
                 @Throws(Exception::class)
             
-open fun getInstance(points: Array<IntArray?>, howMuch: Int, type: VectorExplosionType)
+    open fun getInstance(points: Array<IntArray?>, howMuch: Int, type: VectorExplosionType)
         //nullable =  from not(true or (false and false)) = 
 : Array<Array<IntArray?>?>{
 var points = points
@@ -127,7 +126,7 @@ var type = type
 
                 @Throws(Exception::class)
             
-open fun getInstance(points: Array<IntArray?>, howMuch: Int, type: VectorExplosionType, startFrame: Boolean)
+    open fun getInstance(points: Array<IntArray?>, howMuch: Int, type: VectorExplosionType, startFrame: Boolean)
         //nullable =  from not(true or (false and false)) = 
 : BasicArrayList{
 var points = points
@@ -185,7 +184,7 @@ frameIndex++
 
                 @Throws(Exception::class)
             
-open fun getInstance(tempBasicArrayList: BasicArrayList, points: Array<IntArray?>, howMuch: Int, type: VectorExplosionType)
+    open fun getInstance(tempBasicArrayList: BasicArrayList, points: Array<IntArray?>, howMuch: Int, type: VectorExplosionType)
         //nullable =  from not(true or (false and false)) = 
 : BasicArrayList{
 var tempBasicArrayList = tempBasicArrayList
@@ -278,7 +277,7 @@ index++
 
                 @Throws(Exception::class)
             
-open fun createPointsBasicArrayList(points: Array<IntArray?>)
+    open fun createPointsBasicArrayList(points: Array<IntArray?>)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var points = points

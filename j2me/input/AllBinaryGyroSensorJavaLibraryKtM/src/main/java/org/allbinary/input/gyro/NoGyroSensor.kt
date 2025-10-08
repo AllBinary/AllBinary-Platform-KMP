@@ -32,13 +32,14 @@ import org.allbinary.logic.math.Orientation
 open public class NoGyroSensor : AllBinaryOrientationSensor
                 , AllBinarySensorListener {
         
-public constructor        (){
+public constructor (){
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 }
 
 
                 @Throws(Exception::class)
-            override fun getOrientation()
+            
+    override fun getOrientation()
         //nullable = true from not(false or (false and true)) = true
 : Orientation{
 
@@ -48,7 +49,8 @@ logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
                         return Orientation.NONE
 }
 
-override fun onSensorChange()
+
+    override fun onSensorChange()
         //nullable = true from not(false or (false and true)) = true
 {
 }

@@ -31,14 +31,15 @@ import org.allbinary.data.tables.TableMappingInterface
 import org.allbinary.logic.control.validate.ValidationInterface
 import org.allbinary.logic.visual.theme.ThemeValidation
 import org.allbinary.logic.visual.transform.info.CompositeTransformInfoInterface
+
 interface StoreThemeCategoryInterface : CategoryInterface, TableMappingInterface, ValidationInterface, CompositeTransformInfoInterface {
         
 
-open fun addTheme(themeValidation: ThemeValidation)
+    open fun addTheme(themeValidation: ThemeValidation)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getThemes()
+    open fun getThemes()
         //nullable = true from not(false or (false and true)) = true
 : Vector
 

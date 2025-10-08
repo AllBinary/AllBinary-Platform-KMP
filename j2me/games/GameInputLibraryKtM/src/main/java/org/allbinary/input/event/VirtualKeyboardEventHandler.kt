@@ -36,12 +36,11 @@ import org.allbinary.string.CommonStrings
 
 open public class VirtualKeyboardEventHandler : BasicEventHandler {
         
-
-        companion object {
+companion object {
             
     private val gameKeyEventHandler: VirtualKeyboardEventHandler = VirtualKeyboardEventHandler()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : VirtualKeyboardEventHandler{
 
@@ -53,7 +52,7 @@ open fun getInstance()
 
 
         }
-            private constructor        (){
+            private constructor (){
 }
 
 
@@ -62,7 +61,8 @@ open fun getInstance()
     val HIDE_EVENT: VirtualKeyboardEvent = VirtualKeyboardEvent(BooleanFactory.getInstance()!!.FALSE)
 
                 @Throws(Exception::class)
-            override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
+            
+    override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject
@@ -74,7 +74,7 @@ virtualKeyboardEventListenerInterface!!.onVirtualKeyboardEvent(eventObject as Vi
 }
 
 
-open fun open()
+    open fun open()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -89,7 +89,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "open", e)
 }
 
 
-open fun close()
+    open fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 

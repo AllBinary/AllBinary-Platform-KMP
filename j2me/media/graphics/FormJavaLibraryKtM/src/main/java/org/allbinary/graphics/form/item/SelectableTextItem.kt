@@ -30,7 +30,7 @@ import org.allbinary.graphics.color.BasicColor
 
 open public class SelectableTextItem : TextItem {
         
-public constructor        (label: String, layout: Int, altText: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (label: String, layout: Int, altText: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(label, layout, altText, backgroundBasicColor, foregroundBasicColor){
 var label = label
@@ -44,7 +44,8 @@ var foregroundBasicColor = foregroundBasicColor
                     
 }
 
-override fun isFocusable()
+
+    override fun isFocusable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -54,7 +55,8 @@ override fun isFocusable()
                         return true
 }
 
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

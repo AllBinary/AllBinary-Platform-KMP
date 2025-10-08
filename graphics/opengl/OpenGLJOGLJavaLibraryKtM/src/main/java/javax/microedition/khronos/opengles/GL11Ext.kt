@@ -11,10 +11,10 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface GL11Ext : javax.microedition.khronos.opengles.GL {
         
-
-        companion object {
+companion object {
             
     val GL_MATRIX_INDEX_ARRAY_BUFFER_BINDING_OES: Int = 35742
 
@@ -50,87 +50,87 @@ interface GL11Ext : javax.microedition.khronos.opengles.GL {
 
         }
             
-open fun glTexParameterfv(target: Int, pname: Int, param: FloatArray, offset: Int)
+    open fun glTexParameterfv(target: Int, pname: Int, param: FloatArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glCurrentPaletteMatrixOES(matrixpaletteindex: Int)
+    open fun glCurrentPaletteMatrixOES(matrixpaletteindex: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glDrawTexfOES(x: Float, y: Float, z: Float, width: Float, height: Float)
+    open fun glDrawTexfOES(x: Float, y: Float, z: Float, width: Float, height: Float)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glDrawTexfvOES(coords: FloatArray, offset: Int)
+    open fun glDrawTexfvOES(coords: FloatArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glDrawTexfvOES(coords: java.nio.FloatBuffer)
+    open fun glDrawTexfvOES(coords: java.nio.FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glDrawTexiOES(x: Int, y: Int, z: Int, width: Int, height: Int)
+    open fun glDrawTexiOES(x: Int, y: Int, z: Int, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glDrawTexivOES(coords: IntArray, offset: Int)
+    open fun glDrawTexivOES(coords: IntArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glDrawTexivOES(coords: java.nio.IntBuffer)
+    open fun glDrawTexivOES(coords: java.nio.IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glDrawTexsOES(x: Short, y: Short, z: Short, width: Short, height: Short)
+    open fun glDrawTexsOES(x: Short, y: Short, z: Short, width: Short, height: Short)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glDrawTexsvOES(coords: ShortArray, offset: Int)
+    open fun glDrawTexsvOES(coords: ShortArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glDrawTexsvOES(coords: java.nio.ShortBuffer)
+    open fun glDrawTexsvOES(coords: java.nio.ShortBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glDrawTexxOES(x: Int, y: Int, z: Int, width: Int, height: Int)
+    open fun glDrawTexxOES(x: Int, y: Int, z: Int, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glDrawTexxvOES(coords: IntArray, offset: Int)
+    open fun glDrawTexxvOES(coords: IntArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glDrawTexxvOES(coords: java.nio.IntBuffer)
+    open fun glDrawTexxvOES(coords: java.nio.IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glEnable(cap: Int)
+    open fun glEnable(cap: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glEnableClientState(array: Int)
+    open fun glEnableClientState(array: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glLoadPaletteFromModelViewMatrixOES()
+    open fun glLoadPaletteFromModelViewMatrixOES()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun glMatrixIndexPointerOES(size: Int, type: Int, stride: Int, pointer: java.nio.Buffer)
+    open fun glMatrixIndexPointerOES(size: Int, type: Int, stride: Int, pointer: java.nio.Buffer)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glMatrixIndexPointerOES(size: Int, type: Int, stride: Int, offset: Int)
+    open fun glMatrixIndexPointerOES(size: Int, type: Int, stride: Int, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glWeightPointerOES(size: Int, type: Int, stride: Int, pointer: java.nio.Buffer)
+    open fun glWeightPointerOES(size: Int, type: Int, stride: Int, pointer: java.nio.Buffer)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glWeightPointerOES(size: Int, type: Int, stride: Int, offset: Int)
+    open fun glWeightPointerOES(size: Int, type: Int, stride: Int, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 
 

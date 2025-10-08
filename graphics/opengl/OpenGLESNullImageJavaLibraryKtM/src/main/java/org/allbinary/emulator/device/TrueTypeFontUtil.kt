@@ -32,12 +32,11 @@ import org.allbinary.image.opengles.OpenGLESImage
 
 open public class TrueTypeFontUtil : TrueTypeFontUtilBase {
         
-
-        companion object {
+companion object {
             
     private val instance: TrueTypeFontUtil = TrueTypeFontUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TrueTypeFontUtil{
 
@@ -51,7 +50,7 @@ open fun getInstance()
         }
             
     var fontImage: OpenGLESImage = OpenGLESImage.NULL_OPENGL_IMAGE
-private constructor        ()                        
+private constructor ()                        
 
                             : super(1){
 
@@ -60,7 +59,8 @@ private constructor        ()
                     
 }
 
-override fun getAsTextureSize(textureSize: Int)
+
+    override fun getAsTextureSize(textureSize: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var textureSize = textureSize
@@ -70,7 +70,8 @@ var textureSize = textureSize
                             throw RuntimeException()
 }
 
-override fun getCellSize(cellSize: Int)
+
+    override fun getCellSize(cellSize: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var cellSize = cellSize
@@ -81,7 +82,7 @@ var cellSize = cellSize
 }
 
 
-open fun getFontBitmap(filename: String, fontSize: Int, cellSize: Int, basicColor: BasicColor)
+    open fun getFontBitmap(filename: String, fontSize: Int, cellSize: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var filename = filename
@@ -95,13 +96,13 @@ open fun getFontBitmap(filename: String, fontSize: Int, cellSize: Int, basicColo
 }
 
 
-open fun saveFontAtlasAsFile()
+    open fun saveFontAtlasAsFile()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun getFontBitmap(gl: GL10, filename: String, cellSize: Int, basicColor: BasicColor)
+    open fun getFontBitmap(gl: GL10, filename: String, cellSize: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var gl = gl
@@ -115,7 +116,7 @@ open fun getFontBitmap(gl: GL10, filename: String, cellSize: Int, basicColor: Ba
 }
 
 
-open fun getFontWidths(filename: String, fontSize: Int)
+    open fun getFontWidths(filename: String, fontSize: Int)
         //nullable = true from not(false or (false and false)) = true
 : IntArray{
     //var filename = filename

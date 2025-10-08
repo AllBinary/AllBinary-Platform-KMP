@@ -49,7 +49,7 @@ open public class DownloadableItemView
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var downloadableItem: DownloadableItem
-public constructor        (downloadableItem: DownloadableItem)
+public constructor (downloadableItem: DownloadableItem)
             : super()
         {
 var downloadableItem = downloadableItem
@@ -59,7 +59,7 @@ this.downloadableItem= downloadableItem
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -165,7 +165,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 }
 
 
-open fun toXmlDoc()
+    open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -176,7 +176,7 @@ open fun toXmlDoc()
 }
 
 
-open fun view()
+    open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

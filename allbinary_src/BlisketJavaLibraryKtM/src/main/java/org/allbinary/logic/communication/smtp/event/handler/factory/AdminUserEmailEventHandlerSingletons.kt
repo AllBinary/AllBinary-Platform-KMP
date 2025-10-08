@@ -39,12 +39,11 @@ open public class AdminUserEmailEventHandlerSingletons
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AdminUserEmailEventHandlerSingletons = AdminUserEmailEventHandlerSingletons()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AdminUserEmailEventHandlerSingletons{
 
@@ -62,7 +61,7 @@ open fun getInstance()
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private val userEmailEventHandlerHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
-private constructor        ()
+private constructor ()
             : super()
         {
 
@@ -79,7 +78,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, userEmailEventNameData: UserEmailEventNameData)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, userEmailEventNameData: UserEmailEventNameData)
         //nullable =  from not(true or (false and false)) = 
 : UserEmailEventHandler{
     //var abeClientInformation = abeClientInformation

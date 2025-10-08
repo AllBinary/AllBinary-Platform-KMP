@@ -31,12 +31,11 @@ open public class AxisMathVectorUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AxisMathVectorUtil = AxisMathVectorUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AxisMathVectorUtil{
 
@@ -56,7 +55,7 @@ open fun getInstance()
         
     private val noDecimalTrigTable: NoDecimalTrigTable = NoDecimalTrigTable.getInstance()!!
 
-open fun calculateX(magnitude: Long, angle: Int)
+    open fun calculateX(magnitude: Long, angle: Int)
         //nullable = true from not(false or (false and false)) = true
 : Long{
 var magnitude = magnitude
@@ -69,7 +68,7 @@ var angle = angle
 }
 
 
-open fun calculateY(magnitude: Long, angle: Int)
+    open fun calculateY(magnitude: Long, angle: Int)
         //nullable = true from not(false or (false and false)) = true
 : Long{
 var magnitude = magnitude
@@ -82,7 +81,7 @@ var angle = angle
 }
 
 
-open fun calculateZ(magnitude: Long, otherAngle: Int)
+    open fun calculateZ(magnitude: Long, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 : Long{
 var magnitude = magnitude

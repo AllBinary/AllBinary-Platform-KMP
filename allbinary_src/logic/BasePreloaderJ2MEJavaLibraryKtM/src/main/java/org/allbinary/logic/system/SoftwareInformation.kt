@@ -38,7 +38,7 @@ open public class SoftwareInformation
     private val shortName: String
 
     private val version: String
-public constructor        (name: String, version: String, shortName: String)
+public constructor (name: String, version: String, shortName: String)
             : super()
         {
     //var name = name
@@ -50,7 +50,7 @@ this.shortName= shortName
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -61,7 +61,7 @@ open fun getName()
 }
 
 
-open fun getVersion()
+    open fun getVersion()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -72,7 +72,7 @@ open fun getVersion()
 }
 
 
-open fun toShortString()
+    open fun toShortString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -82,7 +82,8 @@ open fun toShortString()
                         return this.shortName
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

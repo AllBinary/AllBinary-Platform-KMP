@@ -43,7 +43,7 @@ open public class HighScoresCanvasLevelChangeInputProcessor : HighScoresCanvasIn
     private val INSTRUCTIONS: String = "(Right = Next Track, Left = Previous Track)"
 
     private var anchor: Int = Anchor.TOP_LEFT
-public constructor        (highScoresCanvas: HighScoresCanvas)                        
+public constructor (highScoresCanvas: HighScoresCanvas)                        
 
                             : super(highScoresCanvas){
 var highScoresCanvas = highScoresCanvas
@@ -53,20 +53,23 @@ var highScoresCanvas = highScoresCanvas
                     
 }
 
-override fun open()
+
+    override fun open()
         //nullable = true from not(false or (false and true)) = true
 {
 GameKeyEventHandler.getInstance()!!.addListener(this)
 }
 
-override fun close()
+
+    override fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 GameKeyEventHandler.getInstance()!!.removeListener(this)
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun update()
+
+    override fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -112,7 +115,8 @@ this.getHighScoresCanvas()!!.executeUpdate()
 list.clear()
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

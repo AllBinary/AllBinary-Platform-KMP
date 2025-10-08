@@ -44,7 +44,7 @@ open public class PaymentGatewayView
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var paymentGatewayInterface: PaymentGatewayInterface
-public constructor        (paymentGatewayInterface: PaymentGatewayInterface)
+public constructor (paymentGatewayInterface: PaymentGatewayInterface)
             : super()
         {
     //var paymentGatewayInterface = paymentGatewayInterface
@@ -52,7 +52,7 @@ this.paymentGatewayInterface= paymentGatewayInterface
 }
 
 
-open fun getPaymentGatewayInterface()
+    open fun getPaymentGatewayInterface()
         //nullable = true from not(false or (false and true)) = true
 : PaymentGatewayInterface{
 
@@ -65,7 +65,7 @@ open fun getPaymentGatewayInterface()
 
                 @Throws(Exception::class)
             
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -81,7 +81,7 @@ open fun toHashMap()
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
     //var document = document

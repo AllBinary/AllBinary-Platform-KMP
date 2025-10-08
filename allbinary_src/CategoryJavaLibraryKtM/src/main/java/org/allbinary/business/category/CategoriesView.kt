@@ -36,7 +36,7 @@ open public class CategoriesView
         
 
     private var categoryInterface: CategoryInterface
-public constructor        (categoryInterface: CategoryInterface)
+public constructor (categoryInterface: CategoryInterface)
             : super()
         {
 var categoryInterface = categoryInterface
@@ -46,7 +46,7 @@ this.categoryInterface= categoryInterface
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

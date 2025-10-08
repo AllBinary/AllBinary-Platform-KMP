@@ -50,13 +50,12 @@ import org.allbinary.util.BasicArrayList
 
 open public class RecordStoreHighScores : HighScores {
         
-
-        companion object {
+companion object {
             
     private val hashTable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, highScoreName: String, heading: String, columnTwoHeading: String, recordComparatorInterface: RecordComparator)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, highScoreName: String, heading: String, columnTwoHeading: String, recordComparatorInterface: RecordComparator)
         //nullable =  from not(true or (false and false)) = 
 : HighScores{
     //var abeClientInformation = abeClientInformation
@@ -112,7 +111,7 @@ hashTable!!.put(highScores!!.getName(), highScores)
     private val abeClientInformation: AbeClientInformationInterface
 
     private val recordComparatorInterface: RecordComparator
-private constructor        (abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, name: String, heading: String, columnTwoHeading: String, recordComparatorInterface: RecordComparator)                        
+private constructor (abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, name: String, heading: String, columnTwoHeading: String, recordComparatorInterface: RecordComparator)                        
 
                             : super(name, heading, columnTwoHeading){
     //var abeClientInformation = abeClientInformation
@@ -132,7 +131,7 @@ this.load()
 }
 
 
-open fun getRecordId(abeClientInformation: AbeClientInformationInterface)
+    open fun getRecordId(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var abeClientInformation = abeClientInformation
@@ -145,7 +144,8 @@ open fun getRecordId(abeClientInformation: AbeClientInformationInterface)
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun addHighScore(newHighScore: HighScore)
+
+    override fun addHighScore(newHighScore: HighScore)
         //nullable = true from not(false or (false and false)) = true
 {
     //var newHighScore = newHighScore
@@ -213,7 +213,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
 }
 
 
-open fun removeLowestHighScore()
+    open fun removeLowestHighScore()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -325,7 +325,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "removeLowestHighScore", e)
 }
 
 
-open fun load()
+    open fun load()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -465,7 +465,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.LOAD, e)
 }
 
 
-open fun isTooManyHighScores()
+    open fun isTooManyHighScores()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -499,7 +499,8 @@ open fun isTooManyHighScores()
 
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun isBestScore(newHighScore: HighScore)
+
+    override fun isBestScore(newHighScore: HighScore)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var newHighScore = newHighScore
@@ -572,7 +573,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
 
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

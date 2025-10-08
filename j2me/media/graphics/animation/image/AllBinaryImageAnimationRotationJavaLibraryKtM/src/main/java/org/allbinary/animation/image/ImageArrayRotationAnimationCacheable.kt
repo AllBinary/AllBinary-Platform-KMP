@@ -31,7 +31,7 @@ import org.allbinary.logic.util.cache.CacheableInterface
 open public class ImageArrayRotationAnimationCacheable : AdjustedImageArrayRotationAnimation
                 , CacheableInterface {
         
-public constructor        (anyType: Any, animationBehavior: AnimationBehavior)                        
+public constructor (anyType: Any, animationBehavior: AnimationBehavior)                        
 
                             : super(anyType, animationBehavior){
     //var anyType = anyType
@@ -43,7 +43,7 @@ public constructor        (anyType: Any, animationBehavior: AnimationBehavior)
 }
 
 
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -53,7 +53,8 @@ open fun getKey()
                         return null
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

@@ -28,12 +28,11 @@
 
 open public class ItemPaintableFactory : ItemPaintable {
         
-
-        companion object {
+companion object {
             
     private val instance: ItemPaintableFactory = ItemPaintableFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ItemPaintable{
 
@@ -53,7 +52,7 @@ open fun getInstance()
         
                 @Throws(Exception::class)
             
-open fun getInstance(paintableForm: PaintableForm)
+    open fun getInstance(paintableForm: PaintableForm)
         //nullable =  from not(true or (false and false)) = 
 : ItemPaintable{
 var paintableForm = paintableForm

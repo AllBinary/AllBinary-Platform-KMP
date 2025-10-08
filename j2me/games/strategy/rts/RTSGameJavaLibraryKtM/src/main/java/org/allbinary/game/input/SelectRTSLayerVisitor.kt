@@ -29,7 +29,7 @@ import org.allbinary.logic.util.visitor.Visitor
 
 open public class SelectRTSLayerVisitor : Visitor {
         
-public constructor        (){
+public constructor (){
 }
 
 

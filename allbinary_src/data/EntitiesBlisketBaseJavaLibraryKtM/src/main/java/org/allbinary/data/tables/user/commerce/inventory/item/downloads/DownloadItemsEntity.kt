@@ -43,7 +43,7 @@ open public class DownloadItemsEntity : AbSqlBean
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val tableName: String = "downloaditems"
-public constructor        ()                        
+public constructor ()                        
 
                             : super(InventoryDbInitInfo()){
 
@@ -54,7 +54,7 @@ this.setTableName(tableName)
 }
 
 
-open fun insert(values: Vector)
+    open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 {
 var values = values
@@ -86,7 +86,7 @@ var values = values
 }
 
 
-open fun delete(value: String)
+    open fun delete(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -118,7 +118,7 @@ var value = value
 }
 
 
-open fun update(updatedValues: HashMap<Any, Any>)
+    open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var updatedValues = updatedValues
@@ -126,7 +126,7 @@ super.updateWhere(DownloadItemData.ID, updatedValues!!.get(DownloadItemData.ID) 
 }
 
 
-open fun getForItem(id: String)
+    open fun getForItem(id: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var id = id
@@ -173,7 +173,7 @@ returnVector!!.add(DownloadableItem(hashMap))
 }
 
 
-open fun getForItem(id: String, downloadItemId: String)
+    open fun getForItem(id: String, downloadItemId: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var id = id
@@ -222,7 +222,7 @@ returnVector!!.add(DownloadableItem(hashMap))
 }
 
 
-open fun createTableStatement()
+    open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -238,7 +238,7 @@ stringBuffer!!.append(DownloadItemData.FILE)!!.append(this.sqlTypeStrings!!.MAX_
 }
 
 
-open fun createTable()
+    open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -249,7 +249,7 @@ open fun createTable()
 }
 
 
-open fun dropTable()
+    open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

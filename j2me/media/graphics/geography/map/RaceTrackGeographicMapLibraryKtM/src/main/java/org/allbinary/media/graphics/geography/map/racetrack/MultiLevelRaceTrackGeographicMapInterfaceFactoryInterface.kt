@@ -25,20 +25,21 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface MultiLevelRaceTrackGeographicMapInterfaceFactoryInterface : RaceTrackGeographicMapInterfaceFactoryInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getFirstWaveWithTrack(track: Int)
+    open fun getFirstWaveWithTrack(track: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int
 
-open fun getTotalTracks()
+    open fun getTotalTracks()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getTotalLevels()
+    open fun getTotalLevels()
         //nullable = true from not(false or (false and true)) = true
 : Int
 

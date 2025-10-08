@@ -38,13 +38,13 @@ open public class LicenseInitInfo
     private var id: String = StringUtil.getInstance()!!.EMPTY_STRING
 
     private var serverVector: BasicArrayList = BasicArrayList()
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun getLicenseId()
+    open fun getLicenseId()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -55,7 +55,7 @@ open fun getLicenseId()
 }
 
 
-open fun getServer(index: Int)
+    open fun getServer(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var index = index
@@ -67,7 +67,7 @@ var index = index
 }
 
 
-open fun getNumberOfServers()
+    open fun getNumberOfServers()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -78,7 +78,7 @@ open fun getNumberOfServers()
 }
 
 
-open fun setLicenseId(value: String)
+    open fun setLicenseId(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -86,14 +86,14 @@ this.id= value
 }
 
 
-open fun clearServers()
+    open fun clearServers()
         //nullable = true from not(false or (false and true)) = true
 {
 this.serverVector= BasicArrayList()
 }
 
 
-open fun setServer(value: String, index: Int)
+    open fun setServer(value: String, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -102,7 +102,7 @@ this.serverVector!!.add(index, value)
 }
 
 
-open fun addServer(value: String)
+    open fun addServer(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -110,7 +110,7 @@ this.serverVector!!.add(value)
 }
 
 
-open fun getServerList()
+    open fun getServerList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -121,7 +121,7 @@ open fun getServerList()
 }
 
 
-open fun setServerList(servers: BasicArrayList)
+    open fun setServerList(servers: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var servers = servers

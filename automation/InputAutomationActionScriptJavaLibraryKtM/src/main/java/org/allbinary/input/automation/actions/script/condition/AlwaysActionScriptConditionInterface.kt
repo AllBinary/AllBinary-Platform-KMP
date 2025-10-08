@@ -25,18 +25,19 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface AlwaysActionScriptConditionInterface {
         
 
-open fun setIsOn(isOn: Boolean)
+    open fun setIsOn(isOn: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun isIsOn()
+    open fun isIsOn()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 
 

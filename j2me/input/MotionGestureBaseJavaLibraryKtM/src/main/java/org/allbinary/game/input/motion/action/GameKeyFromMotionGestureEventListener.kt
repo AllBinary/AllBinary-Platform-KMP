@@ -47,14 +47,16 @@ open public class GameKeyFromMotionGestureEventListener : CompleteMotionGestureI
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var previousGameKeyEvent: GameKeyEvent = GameKeyEvent.NONE
-override fun onEvent(eventObject: AllBinaryEventObject)
+
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
-override fun onCompleteMotionGestureInputEvent(completeMotionGestureInputEvent: CompleteMotionGestureInputEvent)
+
+    override fun onCompleteMotionGestureInputEvent(completeMotionGestureInputEvent: CompleteMotionGestureInputEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var completeMotionGestureInputEvent = completeMotionGestureInputEvent

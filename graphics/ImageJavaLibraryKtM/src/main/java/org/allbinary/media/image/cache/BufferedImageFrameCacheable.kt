@@ -38,7 +38,7 @@ open public class BufferedImageFrameCacheable
     private var frame: Long
 
     private var bufferedImage: BufferedImage
-public constructor        (bufferedImage: BufferedImage, frame: Long)
+public constructor (bufferedImage: BufferedImage, frame: Long)
             : super()
         {
 var bufferedImage = bufferedImage
@@ -48,7 +48,7 @@ this.setBufferedImage(bufferedImage)
 }
 
 
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -59,7 +59,7 @@ open fun getKey()
 }
 
 
-open fun getBufferedImage()
+    open fun getBufferedImage()
         //nullable = true from not(false or (false and true)) = true
 : BufferedImage{
 
@@ -70,7 +70,7 @@ open fun getBufferedImage()
 }
 
 
-open fun setBufferedImage(bufferedImage: BufferedImage)
+    open fun setBufferedImage(bufferedImage: BufferedImage)
         //nullable = true from not(false or (false and false)) = true
 {
 var bufferedImage = bufferedImage
@@ -78,7 +78,7 @@ this.bufferedImage= bufferedImage
 }
 
 
-open fun getFrame()
+    open fun getFrame()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -89,14 +89,15 @@ open fun getFrame()
 }
 
 
-open fun setFrame(frame: Long)
+    open fun setFrame(frame: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var frame = frame
 this.frame= frame
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

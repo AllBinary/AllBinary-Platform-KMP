@@ -36,10 +36,10 @@ open public class KeylessBasicArrayListCache : IndexedBasicArrayListCache {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val basicArrayListUtil: BasicArrayListUtil = BasicArrayListUtil.getInstance()!!
-public constructor        (){
+public constructor (){
 }
 
-public constructor        (size: Int)                        
+public constructor (size: Int)                        
 
                             : super(size){
 var size = size
@@ -50,7 +50,7 @@ var size = size
 }
 
 
-open fun get()
+    open fun get()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -84,7 +84,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET, e)
 
 }
 
-override fun clear()
+
+    override fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 super.clear()
@@ -104,7 +105,8 @@ basicArrayList!!.clear()
 
 }
 
-override fun log()
+
+    override fun log()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

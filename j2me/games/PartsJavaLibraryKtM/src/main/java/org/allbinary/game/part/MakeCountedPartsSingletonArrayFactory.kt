@@ -37,12 +37,11 @@ open public class MakeCountedPartsSingletonArrayFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: MakeCountedPartsSingletonArrayFactory = MakeCountedPartsSingletonArrayFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : MakeCountedPartsSingletonArrayFactory{
 
@@ -66,7 +65,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun getInstance(partInterfaceArray: Array<PartInterface?>)
+    open fun getInstance(partInterfaceArray: Array<PartInterface?>)
         //nullable =  from not(true or (false and false)) = 
 : Array<PartInterface?>{
     //var partInterfaceArray = partInterfaceArray

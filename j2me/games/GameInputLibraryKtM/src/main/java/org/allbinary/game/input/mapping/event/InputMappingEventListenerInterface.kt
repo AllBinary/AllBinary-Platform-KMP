@@ -26,12 +26,13 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.util.event.EventListenerInterface
+
 interface InputMappingEventListenerInterface : EventListenerInterface {
         
 
                 @Throws(Exception::class)
             
-open fun onInputMappingEvent(inputMappingEvent: InputMappingEvent)
+    open fun onInputMappingEvent(inputMappingEvent: InputMappingEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

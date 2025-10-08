@@ -34,12 +34,11 @@ open public class ImagesRatioUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ImagesRatioUtil = ImagesRatioUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ImagesRatioUtil{
 
@@ -53,7 +52,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -61,7 +60,7 @@ private constructor        ()
 
     private val imageUtil: ImageUtil = ImageUtil.getInstance()!!
 
-open fun isEqual(bufferedImageArray: Array<BufferedImage?>, totalImages: Int)
+    open fun isEqual(bufferedImageArray: Array<BufferedImage?>, totalImages: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var bufferedImageArray = bufferedImageArray
@@ -106,7 +105,7 @@ open fun isEqual(bufferedImageArray: Array<BufferedImage?>, totalImages: Int)
 }
 
 
-open fun getAverage(bufferedImageArray: Array<BufferedImage?>, totalImages: Int)
+    open fun getAverage(bufferedImageArray: Array<BufferedImage?>, totalImages: Int)
         //nullable = true from not(false or (false and false)) = true
 : Double{
     //var bufferedImageArray = bufferedImageArray
@@ -141,7 +140,7 @@ ratio += (bufferedImageArray[index]!!.getWidth().toDouble() /bufferedImageArray[
 
                 @Throws(Exception::class)
             
-open fun fudge(bufferedImage: BufferedImage, ratio: Double)
+    open fun fudge(bufferedImage: BufferedImage, ratio: Double)
         //nullable = true from not(false or (false and false)) = true
 : BufferedImage{
 var bufferedImage = bufferedImage
@@ -252,7 +251,7 @@ g.drawImage(bufferedImage, point.x, point.y, bufferedImage!!.getWidth(), buffere
 
                 @Throws(Exception::class)
             
-open fun fudge(bufferedImageArray: Array<BufferedImage?>, totalImages: Int, ratio: Double)
+    open fun fudge(bufferedImageArray: Array<BufferedImage?>, totalImages: Int, ratio: Double)
         //nullable = true from not(false or (false and false)) = true
 : Array<BufferedImage?>{
     //var bufferedImageArray = bufferedImageArray

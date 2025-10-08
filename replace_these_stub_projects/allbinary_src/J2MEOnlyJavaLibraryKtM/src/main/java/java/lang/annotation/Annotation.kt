@@ -11,10 +11,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface Annotation {
         
 
-open fun annotationType()
+    open fun annotationType()
         //nullable = true from not(false or (false and true)) = true
 : KClass<*>
 

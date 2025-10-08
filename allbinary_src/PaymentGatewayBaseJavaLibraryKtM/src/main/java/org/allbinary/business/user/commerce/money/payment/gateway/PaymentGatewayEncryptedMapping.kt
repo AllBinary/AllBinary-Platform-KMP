@@ -36,7 +36,7 @@ open public class PaymentGatewayEncryptedMapping
         
 
     private var paymentGatewayInterface: PaymentGatewayInterface
-public constructor        (paymentGatewayInterface: PaymentGatewayInterface)
+public constructor (paymentGatewayInterface: PaymentGatewayInterface)
             : super()
         {
 var paymentGatewayInterface = paymentGatewayInterface
@@ -46,7 +46,7 @@ this.paymentGatewayInterface= paymentGatewayInterface
 
                 @Throws(Exception::class)
             
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -57,7 +57,7 @@ open fun toHashMap()
 }
 
 
-open fun toVector()
+    open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -70,7 +70,7 @@ open fun toVector()
 
                 @Throws(Exception::class)
             
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 

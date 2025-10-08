@@ -41,12 +41,11 @@ open public class GameFeatureFormUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GameFeatureFormUtil = GameFeatureFormUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameFeatureFormUtil{
 
@@ -66,7 +65,7 @@ open fun getInstance()
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-open fun getChoiceGroup(hashtable: Hashtable<Any, Any>, name: String, option: Int)
+    open fun getChoiceGroup(hashtable: Hashtable<Any, Any>, name: String, option: Int)
         //nullable = true from not(false or (false and false)) = true
 : ChoiceGroup{
 var hashtable = hashtable
@@ -125,7 +124,7 @@ choiceGroup!!.append(gameFeature!!.toString(), NullCanvas.NULL_IMAGE)
 }
 
 
-open fun addChoiceGroup(form: CommandForm, hashtable: Hashtable<Any, Any>, option: Int)
+    open fun addChoiceGroup(form: CommandForm, hashtable: Hashtable<Any, Any>, option: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var form = form
@@ -166,7 +165,7 @@ form.append(this.getChoiceGroup(hashtable, name, option))
 
                 @Throws(Exception::class)
             
-open fun setDefault(form: CommandForm)
+    open fun setDefault(form: CommandForm)
         //nullable = true from not(false or (false and false)) = true
 {
 var form = form

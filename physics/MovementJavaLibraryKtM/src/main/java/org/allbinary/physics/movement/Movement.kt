@@ -33,12 +33,13 @@ open public class Movement
         
                 , MovementInterface {
         
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
-override fun init(speedBasicDecimal: BasicDecimal, angle: Int, otherAngle: Int)
+
+    override fun init(speedBasicDecimal: BasicDecimal, angle: Int, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var speedBasicDecimal = speedBasicDecimal
@@ -48,13 +49,15 @@ var otherAngle = otherAngle
 
 
                 @Throws(Exception::class)
-            override fun process(layer: AllBinaryGameLayer)
+            
+    override fun process(layer: AllBinaryGameLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var layer = layer
 }
 
-override fun stop()
+
+    override fun stop()
         //nullable = true from not(false or (false and true)) = true
 {
 }

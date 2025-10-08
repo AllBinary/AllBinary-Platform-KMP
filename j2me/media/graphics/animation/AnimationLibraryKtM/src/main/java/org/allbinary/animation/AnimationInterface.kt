@@ -27,16 +27,17 @@
         
 import javax.microedition.lcdui.Graphics
 import org.allbinary.graphics.paint.LocationPaintableInterface
+
 interface AnimationInterface : LocationPaintableInterface {
         
 
                 @Throws(Exception::class)
             
-open fun nextFrame()
+    open fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
+    open fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 
 

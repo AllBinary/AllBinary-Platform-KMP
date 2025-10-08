@@ -46,12 +46,11 @@ open public class CompleteMotionGestureInputToGameMotionGestureInput
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: CompleteMotionGestureInputToGameMotionGestureInput = CompleteMotionGestureInputToGameMotionGestureInput()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CompleteMotionGestureInputToGameMotionGestureInput{
 
@@ -71,7 +70,7 @@ open fun getInstance()
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 

@@ -49,14 +49,14 @@ open public class AdminConfiguration
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var contextConfigurationInterface: ContextConfigurationInterface
-public constructor        ()
+public constructor ()
             : super()
         {
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 this.contextConfigurationInterface= ContextConfigurationInterfaceFactory.getInstance()!!.getInstance(AdminConfigurationData.CONTEXTNAME)
 }
 
-public constructor        (request: HttpServletRequest)
+public constructor (request: HttpServletRequest)
             : super()
         {
 var request = request
@@ -65,7 +65,7 @@ this.getFormData(RequestParams(request).
                             toHashMap())
 }
 
-public constructor        (storeHashMap: HashMap<Any, Any>)
+public constructor (storeHashMap: HashMap<Any, Any>)
             : super()
         {
 var storeHashMap = storeHashMap
@@ -76,7 +76,7 @@ this.getFormData(storeHashMap)
 
                 @Throws(Exception::class)
             
-open fun getFormData(storeHashMap: HashMap<Any, Any>)
+    open fun getFormData(storeHashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var storeHashMap = storeHashMap
@@ -88,7 +88,7 @@ this.setContextConfigurationInterface(ContextConfiguration(storeHashMap) as Cont
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun write()
+    open fun write()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -101,7 +101,7 @@ cryptFileWriter!!.write(ContextConfigurationPathUtil.getAbPath(AdminConfiguratio
 }
 
 
-open fun getContextConfigurationInterface()
+    open fun getContextConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
 : ContextConfigurationInterface{
 
@@ -112,7 +112,7 @@ open fun getContextConfigurationInterface()
 }
 
 
-open fun setContextConfigurationInterface(contextConfigurationInterface: ContextConfigurationInterface)
+    open fun setContextConfigurationInterface(contextConfigurationInterface: ContextConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var contextConfigurationInterface = contextConfigurationInterface

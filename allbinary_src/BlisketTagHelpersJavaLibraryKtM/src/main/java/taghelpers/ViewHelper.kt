@@ -50,7 +50,7 @@ open public class ViewHelper
     private val abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
 
     private var componentInterface: TransformInterface
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
+public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext)
             : super()
         {
 var hashMap = hashMap
@@ -61,7 +61,7 @@ this.componentInterface= TransformFactory.getInstance()!!.getInstance(this.abeCl
 
     var NO_TYPE: Int = 0
 
-open fun getTypeId()
+    open fun getTypeId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -74,7 +74,7 @@ open fun getTypeId()
 
                 @Throws(Exception::class)
             
-open fun view()
+    open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -119,7 +119,7 @@ open fun view()
 
                 @Throws(Exception::class)
             
-open fun toXmlDoc()
+    open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -161,7 +161,7 @@ open fun toXmlDoc()
 }
 
 
-open fun getViewObject()
+    open fun getViewObject()
         //nullable = true from not(false or (false and true)) = true
 : TransformInterface{
 
@@ -174,7 +174,7 @@ open fun getViewObject()
 
                 @Throws(Exception::class)
             
-open fun getTransformInfoInterface()
+    open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformInfoInterface{
 
@@ -185,7 +185,7 @@ open fun getTransformInfoInterface()
 }
 
 
-open fun getTransformDocumentInterface()
+    open fun getTransformDocumentInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformDocumentInterface{
 
@@ -196,7 +196,7 @@ open fun getTransformDocumentInterface()
 }
 
 
-open fun setTransformDocumentInterface(viewDocumentInterface: TransformDocumentInterface)
+    open fun setTransformDocumentInterface(viewDocumentInterface: TransformDocumentInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var viewDocumentInterface = viewDocumentInterface

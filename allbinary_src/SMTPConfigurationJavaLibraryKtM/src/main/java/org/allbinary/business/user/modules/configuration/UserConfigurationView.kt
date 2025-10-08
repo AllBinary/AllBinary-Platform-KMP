@@ -44,7 +44,7 @@ open public class UserConfigurationView
         
 
     private var userConfigurationInterface: UserConfigurationInterface
-public constructor        (node: Node)
+public constructor (node: Node)
             : super()
         {
 var node = node
@@ -78,7 +78,7 @@ this.userConfigurationInterface!!.setTimeCreated(timeCreatedView!!.getTimeCreate
 this.userConfigurationInterface!!.setTimeLastModified(timeLastModifiedView!!.getTimeLastModified())
 }
 
-public constructor        (userConfigurationInterface: UserConfigurationInterface)
+public constructor (userConfigurationInterface: UserConfigurationInterface)
             : super()
         {
 var userConfigurationInterface = userConfigurationInterface
@@ -86,7 +86,7 @@ this.userConfigurationInterface= userConfigurationInterface
 }
 
 
-open fun getUserConfigurationInterface()
+    open fun getUserConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
 : UserConfigurationInterface{
 
@@ -99,7 +99,7 @@ open fun getUserConfigurationInterface()
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

@@ -41,8 +41,7 @@ open public class InitializerDatabase
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val MAXDB: Int = 30
 
@@ -69,7 +68,7 @@ open public class InitializerDatabase
     private var adminPort: String
 
     private var initDb: DynamicInitDb
-public constructor        (abeClientInformation: AbeClientInformationInterface, map: Map)
+public constructor (abeClientInformation: AbeClientInformationInterface, map: Map)
             : super()
         {
     //var abeClientInformation = abeClientInformation
@@ -115,7 +114,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "getFormData()")
 this.getFormData(abeClientInformation, hashMap)
 }
 
-public constructor        (abeClientInformation: AbeClientInformationInterface, initHashMap: HashMap<Any, Any>)
+public constructor (abeClientInformation: AbeClientInformationInterface, initHashMap: HashMap<Any, Any>)
             : super()
         {
     //var abeClientInformation = abeClientInformation
@@ -124,7 +123,7 @@ this.getFormData(abeClientInformation, initHashMap)
 }
 
 
-open fun getFormData(abeClientInformation: AbeClientInformationInterface, hashMap: HashMap<Any, Any>)
+    open fun getFormData(abeClientInformation: AbeClientInformationInterface, hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -162,7 +161,7 @@ logUtil!!.put("Unable to get form data", this, "getFormData()", e)
 }
 
 
-open fun isJdbcDriverValid(jdbcDriverClassPathString: String)
+    open fun isJdbcDriverValid(jdbcDriverClassPathString: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var jdbcDriverClassPathString = jdbcDriverClassPathString
@@ -198,7 +197,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -242,7 +241,7 @@ open fun isValid()
 }
 
 
-open fun getJdbcDriverValidationInfo(jdbcDriver: String)
+    open fun getJdbcDriverValidationInfo(jdbcDriver: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var jdbcDriver = jdbcDriver
@@ -260,7 +259,7 @@ stringBuffer!!.append(") you have provided is not valid.<br/>")
 }
 
 
-open fun getInvalidInfo()
+    open fun getInvalidInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -320,7 +319,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.getAdminJdbcDriver()
 }
 
 
-open fun createUsers()
+    open fun createUsers()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -344,7 +343,7 @@ logUtil!!.put("Unable to Create Users", this, "createUsers()", e)
 }
 
 
-open fun createDatabases()
+    open fun createDatabases()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -368,7 +367,7 @@ logUtil!!.put("Unable to Create Databases", this, "createDatabases()", e)
 }
 
 
-open fun createTables()
+    open fun createTables()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -392,7 +391,7 @@ logUtil!!.put("Unable to Create Tables", this, "createTables()", e)
 }
 
 
-open fun getAdminDbUserName()
+    open fun getAdminDbUserName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -403,7 +402,7 @@ open fun getAdminDbUserName()
 }
 
 
-open fun setAdminDbUserName(adminDbUserName: String)
+    open fun setAdminDbUserName(adminDbUserName: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var adminDbUserName = adminDbUserName
@@ -411,7 +410,7 @@ this.adminDbUserName= adminDbUserName
 }
 
 
-open fun getAdminDbPassword()
+    open fun getAdminDbPassword()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -422,7 +421,7 @@ open fun getAdminDbPassword()
 }
 
 
-open fun setAdminDbPassword(adminDbPassword: String)
+    open fun setAdminDbPassword(adminDbPassword: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var adminDbPassword = adminDbPassword
@@ -430,7 +429,7 @@ this.adminDbPassword= adminDbPassword
 }
 
 
-open fun getAdminJdbcDriver()
+    open fun getAdminJdbcDriver()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -441,7 +440,7 @@ open fun getAdminJdbcDriver()
 }
 
 
-open fun setAdminJdbcDriver(adminJdbcDriver: String)
+    open fun setAdminJdbcDriver(adminJdbcDriver: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var adminJdbcDriver = adminJdbcDriver
@@ -449,7 +448,7 @@ this.adminJdbcDriver= adminJdbcDriver
 }
 
 
-open fun getAdminSchema()
+    open fun getAdminSchema()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -460,7 +459,7 @@ open fun getAdminSchema()
 }
 
 
-open fun setAdminSchema(adminSchema: String)
+    open fun setAdminSchema(adminSchema: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var adminSchema = adminSchema
@@ -468,7 +467,7 @@ this.adminSchema= adminSchema
 }
 
 
-open fun getAdminServer()
+    open fun getAdminServer()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -479,7 +478,7 @@ open fun getAdminServer()
 }
 
 
-open fun setAdminServer(adminServer: String)
+    open fun setAdminServer(adminServer: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var adminServer = adminServer
@@ -487,7 +486,7 @@ this.adminServer= adminServer
 }
 
 
-open fun getAdminPort()
+    open fun getAdminPort()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -498,7 +497,7 @@ open fun getAdminPort()
 }
 
 
-open fun setAdminPort(adminPort: String)
+    open fun setAdminPort(adminPort: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var adminPort = adminPort

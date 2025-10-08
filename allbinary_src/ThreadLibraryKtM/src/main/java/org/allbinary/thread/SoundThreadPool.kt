@@ -30,12 +30,11 @@ open public class SoundThreadPool
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ThreadPool = ThreadPool("Sound", 1)
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ThreadPool{
 

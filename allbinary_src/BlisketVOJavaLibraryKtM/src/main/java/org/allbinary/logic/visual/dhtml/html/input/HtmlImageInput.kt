@@ -30,7 +30,7 @@ open public class HtmlImageInput
             : Object
          {
         
-public constructor        ()
+public constructor ()
             : super()
         {
 }

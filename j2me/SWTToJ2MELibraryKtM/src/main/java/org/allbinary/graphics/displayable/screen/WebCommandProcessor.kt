@@ -31,7 +31,6 @@ import javax.microedition.lcdui.Canvas
 import javax.microedition.lcdui.Command
 import javax.microedition.lcdui.CommandListener
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.util.BasicArrayList
 
@@ -39,12 +38,11 @@ open public class WebCommandProcessor
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: WebCommandProcessor = WebCommandProcessor()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : WebCommandProcessor{
 
@@ -68,7 +66,7 @@ open fun getInstance()
 
     val list: BasicArrayList = BasicArrayList()
 
-open fun process(midletCommandListener: CommandListener, command: Command, canvas: Canvas)
+    open fun process(midletCommandListener: CommandListener, command: Command, canvas: Canvas)
         //nullable = true from not(false or (false and false)) = true
 {
     //var midletCommandListener = midletCommandListener

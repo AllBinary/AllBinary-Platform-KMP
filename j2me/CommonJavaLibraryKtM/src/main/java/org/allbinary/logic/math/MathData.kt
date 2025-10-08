@@ -32,12 +32,11 @@ open public class MathData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: MathData = MathData()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : MathData{
 
@@ -49,7 +48,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
@@ -61,7 +60,7 @@ open fun getInstance()
 
     var MINUS: String = "-"
 
-    var DIVIDE: String = "/"
+    var DIVIDE: String = CommonSeps.getInstance()!!.FORWARD_SLASH
 
     var MULTIPLY: String = CommonPhoneStrings.getInstance()!!.STAR
 

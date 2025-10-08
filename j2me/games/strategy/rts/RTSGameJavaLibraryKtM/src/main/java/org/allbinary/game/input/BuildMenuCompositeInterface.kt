@@ -26,18 +26,19 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.graphics.form.ScrollSelectionForm
+
 interface BuildMenuCompositeInterface {
         
 
-open fun getCurrentScrollSelectionForm()
+    open fun getCurrentScrollSelectionForm()
         //nullable = true from not(false or (false and true)) = true
 : ScrollSelectionForm
 
-open fun setCurrentScrollSelectionForm(currentScrollSelectionForm: ScrollSelectionForm)
+    open fun setCurrentScrollSelectionForm(currentScrollSelectionForm: ScrollSelectionForm)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getBuildingScrollSelectionForm()
+    open fun getBuildingScrollSelectionForm()
         //nullable = true from not(false or (false and true)) = true
 : ScrollSelectionForm
 

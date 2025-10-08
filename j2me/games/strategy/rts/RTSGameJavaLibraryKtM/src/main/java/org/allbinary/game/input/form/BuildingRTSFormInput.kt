@@ -38,7 +38,6 @@ import org.allbinary.media.audio.BuildingSound
 import org.allbinary.util.BasicArrayList
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringMaker
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.logic.system.security.licensing.LockedFeatureNotificationUtil
@@ -86,7 +85,7 @@ open public class BuildingRTSFormInput : RTSFormInput {
     private val mapEdgeGameNotificationEvent: GameNotificationEvent
 
     private val dropCellPositionHistory: DropCellPositionHistory = DropCellPositionHistory.getInstance()!!
-public constructor        (groupInterface: Array<Group?>, isUnitProducer: Boolean)                        
+public constructor (groupInterface: Array<Group?>, isUnitProducer: Boolean)                        
 
                             : super(groupInterface){
     //var groupInterface = groupInterface
@@ -116,7 +115,7 @@ this.mapEdgeGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.ge
 
                 @Throws(Exception::class)
             
-open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
+    open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -141,7 +140,7 @@ this.mapEdgeGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.getF
 
                 @Throws(Exception::class)
             
-open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, itemIndex: Int)
+    open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, itemIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedRtsLayer = associatedRtsLayer
@@ -154,7 +153,7 @@ this.buildFromMotionInput(rtsPlayerLayerInterface, layerManager, item, itemIndex
 }
 
 
-open fun isPositionBlocked()
+    open fun isPositionBlocked()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -165,7 +164,7 @@ open fun isPositionBlocked()
 }
 
 
-open fun isDemoLocked(item: CustomItem)
+    open fun isDemoLocked(item: CustomItem)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var item = item
@@ -202,7 +201,7 @@ open fun isDemoLocked(item: CustomItem)
 
                 @Throws(Exception::class)
             
-open fun buildFromMotionInput(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, itemIndex: Int)
+    open fun buildFromMotionInput(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, itemIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
@@ -351,7 +350,7 @@ this.attemptBuild(rtsPlayerLayerInterface, layerManager, this.newUnconstructedRT
 
                 @Throws(Exception::class)
             
-open fun attemptBuild(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, layerInterface: RTSLayer, itemIndex: Int)
+    open fun attemptBuild(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, layerInterface: RTSLayer, itemIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
@@ -483,7 +482,7 @@ this.add(rtsPlayerLayerInterface, layerManager, layerInterface)
 
                 @Throws(Exception::class)
             
-open fun isBuildAttemptValid(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerInterface: RTSLayer)
+    open fun isBuildAttemptValid(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerInterface: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
@@ -577,7 +576,7 @@ open fun isBuildAttemptValid(rtsPlayerLayerInterface: RTSPlayerLayerInterface, l
 
                 @Throws(Exception::class)
             
-open fun add(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, layerInterface: RTSLayer)
+    open fun add(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, layerInterface: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
@@ -608,7 +607,7 @@ rtsPlayerLayerInterface!!.add(BuildingSound.getInstance())
 }
 
 
-open fun isSurroundingCellsOffMap(layerInterface: RTSLayer)
+    open fun isSurroundingCellsOffMap(layerInterface: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var layerInterface = layerInterface

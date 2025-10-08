@@ -26,18 +26,19 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.io.path.AbPath
+
 interface RootCategoryPropertiesInterface {
         
 
                 @Throws(Exception::class)
             
-open fun setRootFilePath(value: AbPath)
+    open fun setRootFilePath(value: AbPath)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun getRootFilePath()
+    open fun getRootFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath
 

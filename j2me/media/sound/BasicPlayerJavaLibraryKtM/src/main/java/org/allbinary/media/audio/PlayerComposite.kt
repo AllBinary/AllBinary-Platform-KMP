@@ -49,7 +49,7 @@ open public class PlayerComposite
     private val player: Player
 
     private val timeElapsedHelper: TimeDelayHelper = TimeDelayHelper(0)
-public constructor        (player: Player)
+public constructor (player: Player)
             : super()
         {
     //var player = player
@@ -57,7 +57,7 @@ this.player= player
 this.timeElapsedHelper!!.delay= 570
 }
 
-public constructor        (player: Player, repeatTime: Int)
+public constructor (player: Player, repeatTime: Int)
             : super()
         {
     //var player = player
@@ -67,33 +67,38 @@ this.timeElapsedHelper!!.delay= repeatTime
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun addPlayerListener(playerListener: PlayerListener)
+
+    override fun addPlayerListener(playerListener: PlayerListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var playerListener = playerListener
 this.player.addPlayerListener(playerListener)
 }
 
-override fun removePlayerListener(playerListener: PlayerListener)
+
+    override fun removePlayerListener(playerListener: PlayerListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var playerListener = playerListener
 this.player.removePlayerListener(playerListener)
 }
 
-override fun close()
+
+    override fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 this.player.close()
 }
 
-override fun deallocate()
+
+    override fun deallocate()
         //nullable = true from not(false or (false and true)) = true
 {
 this.player.deallocate()
 }
 
-override fun getContentType()
+
+    override fun getContentType()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -103,7 +108,8 @@ override fun getContentType()
                         return this.player.getContentType()
 }
 
-override fun getDuration()
+
+    override fun getDuration()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -113,7 +119,8 @@ override fun getDuration()
                         return this.player.getDuration()
 }
 
-override fun getMediaTime()
+
+    override fun getMediaTime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -123,7 +130,8 @@ override fun getMediaTime()
                         return this.player.getMediaTime()
 }
 
-override fun prefetch()
+
+    override fun prefetch()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -136,7 +144,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "prefetch", e)
 
 }
 
-override fun realize()
+
+    override fun realize()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -149,7 +158,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "realize", e)
 
 }
 
-override fun getState()
+
+    override fun getState()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -159,14 +169,16 @@ override fun getState()
                         return this.player.getState()
 }
 
-override fun setLoopCount(count: Int)
+
+    override fun setLoopCount(count: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var count = count
 this.player.setLoopCount(count)
 }
 
-override fun setMediaTime(now: Long)
+
+    override fun setMediaTime(now: Long)
         //nullable = true from not(false or (false and false)) = true
 : Long{
 var now = now
@@ -191,7 +203,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "setMediaTime", e)
 
 
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
-override fun start()
+
+    override fun start()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -212,7 +225,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME
 
 }
 
-override fun stop()
+
+    override fun stop()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -225,7 +239,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "stop", e)
 
 }
 
-override fun getControl(controlType: String)
+
+    override fun getControl(controlType: String)
         //nullable = true from not(false or (false and false)) = true
 : Control{
 var controlType = controlType
@@ -236,7 +251,8 @@ var controlType = controlType
                         return this.player.getControl(controlType)
 }
 
-override fun getControls()
+
+    override fun getControls()
         //nullable = true from not(false or (false and true)) = true
 : Array<Control?>{
 
@@ -247,7 +263,7 @@ override fun getControls()
 }
 
 
-open fun setVolume(leftVolume: Int, rightVolume: Int)
+    open fun setVolume(leftVolume: Int, rightVolume: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var leftVolume = leftVolume
@@ -259,7 +275,7 @@ controllable2.setVolume(leftVolume, rightVolume)
 }
 
 
-open fun getPlayerP()
+    open fun getPlayerP()
         //nullable = true from not(false or (false and true)) = true
 : Player{
 

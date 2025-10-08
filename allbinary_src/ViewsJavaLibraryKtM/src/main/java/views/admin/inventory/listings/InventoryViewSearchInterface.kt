@@ -25,30 +25,31 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface InventoryViewSearchInterface {
         
 
                 @Throws(Exception::class)
             
-open fun searchSingleStaticPage()
+    open fun searchSingleStaticPage()
         //nullable = true from not(false or (false and true)) = true
 : String
 
                 @Throws(Exception::class)
             
-open fun searchSingleDynamicPage()
+    open fun searchSingleDynamicPage()
         //nullable = true from not(false or (false and true)) = true
 : String
 
                 @Throws(Exception::class)
             
-open fun search()
+    open fun search()
         //nullable = true from not(false or (false and true)) = true
 : Array<String?>
 
                 @Throws(Exception::class)
             
-open fun getProduct(product: String)
+    open fun getProduct(product: String)
         //nullable = true from not(false or (false and false)) = true
 : String
 

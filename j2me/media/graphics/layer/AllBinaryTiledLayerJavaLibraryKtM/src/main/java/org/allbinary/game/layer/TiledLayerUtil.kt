@@ -31,12 +31,11 @@ open public class TiledLayerUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: TiledLayerUtil = TiledLayerUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TiledLayerUtil{
 
@@ -54,7 +53,7 @@ open fun getInstance()
             {
             }            
         
-open fun keepOnMapX(terrainTiledLayer: AllBinaryTiledLayer, x: Int, width: Int, mapBorderBufferWidth: Int)
+    open fun keepOnMapX(terrainTiledLayer: AllBinaryTiledLayer, x: Int, width: Int, mapBorderBufferWidth: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var terrainTiledLayer = terrainTiledLayer
@@ -93,7 +92,7 @@ var mapBorderBufferWidth = mapBorderBufferWidth
 }
 
 
-open fun keepOnMapY(terrainTiledLayer: AllBinaryTiledLayer, y: Int, height: Int, mapBorderBufferHeight: Int)
+    open fun keepOnMapY(terrainTiledLayer: AllBinaryTiledLayer, y: Int, height: Int, mapBorderBufferHeight: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var terrainTiledLayer = terrainTiledLayer
@@ -132,7 +131,7 @@ var mapBorderBufferHeight = mapBorderBufferHeight
 }
 
 
-open fun keepOnMapX(terrainTiledLayer: AllBinaryTiledLayer, x: Int, width: Int)
+    open fun keepOnMapX(terrainTiledLayer: AllBinaryTiledLayer, x: Int, width: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var terrainTiledLayer = terrainTiledLayer
@@ -170,7 +169,7 @@ var width = width
 }
 
 
-open fun keepOnMapY(terrainTiledLayer: AllBinaryTiledLayer, y: Int, height: Int)
+    open fun keepOnMapY(terrainTiledLayer: AllBinaryTiledLayer, y: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var terrainTiledLayer = terrainTiledLayer

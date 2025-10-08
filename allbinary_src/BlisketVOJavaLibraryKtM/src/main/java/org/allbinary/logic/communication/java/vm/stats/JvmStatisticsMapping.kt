@@ -32,7 +32,7 @@ import org.allbinary.data.tables.TableMappingInterface
 open public class JvmStatisticsMapping : JvmStatistics
                 , TableMappingInterface {
         
-public constructor        ()                        
+public constructor ()                        
 
                             : super(){
 
@@ -42,7 +42,7 @@ public constructor        ()
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -68,7 +68,7 @@ hashMap!!.put(JvmStatisticsData.TOTAL_MEMORY_MEGABYTES, this.getTotalMemoryMegab
 
                 @Throws(Exception::class)
             
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -81,7 +81,7 @@ open fun getKey()
 
                 @Throws(Exception::class)
             
-open fun toVector()
+    open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 

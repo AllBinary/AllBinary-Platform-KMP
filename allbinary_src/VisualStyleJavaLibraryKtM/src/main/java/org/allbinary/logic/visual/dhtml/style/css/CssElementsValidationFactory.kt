@@ -34,12 +34,11 @@ open public class CssElementsValidationFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun getInstance(cssElementStyleNodeList: Vector)
+    open fun getInstance(cssElementStyleNodeList: Vector)
         //nullable =  from not(true or (false and false)) = 
 : Vector{
     //var cssElementStyleNodeList = cssElementStyleNodeList
@@ -75,7 +74,7 @@ styles.add(cssValidationInterface)
 }
 
 
-open fun getInstance(hashMap: HashMap<Any, Any>)
+    open fun getInstance(hashMap: HashMap<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
 : Vector{
     //var hashMap = hashMap
@@ -91,7 +90,7 @@ open fun getInstance(hashMap: HashMap<Any, Any>)
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

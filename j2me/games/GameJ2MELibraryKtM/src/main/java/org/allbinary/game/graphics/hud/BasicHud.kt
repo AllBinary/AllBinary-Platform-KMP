@@ -75,7 +75,7 @@ open public class BasicHud
     private var basicColor: BasicColor = BasicColorFactory.getInstance()!!.BLACK
 
     private var color: Int
-public constructor        (location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int)                        
+public constructor (location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int)                        
 
                             : this(location, direction, maxHeight, maxWidth, bufferZone, BasicColorFactory.getInstance()!!.WHITE){
 var location = location
@@ -89,7 +89,7 @@ var bufferZone = bufferZone
                     
 }
 
-public constructor        (location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int, basicColor: BasicColor)
+public constructor (location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int, basicColor: BasicColor)
             : super()
         {
 var location = location
@@ -109,7 +109,7 @@ this.color= basicColor!!.toInt()
 }
 
 
-open fun getLocation()
+    open fun getLocation()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -120,7 +120,7 @@ open fun getLocation()
 }
 
 
-open fun getDirection()
+    open fun getDirection()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -133,7 +133,7 @@ open fun getDirection()
 
                 @Throws(Exception::class)
             
-open fun getHudGraphicsPosition(width: Int, height: Int)
+    open fun getHudGraphicsPosition(width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 : HudGraphicsPosition{
 var width = width
@@ -235,7 +235,7 @@ anchor= 0
 }
 
 
-open fun onEvent(eventObject: AllBinaryEventObject)
+    open fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
@@ -243,7 +243,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
 
-open fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
+    open fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var displayChangeEvent = displayChangeEvent
@@ -266,7 +266,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, canvasStrings!!.ON_DISPLAY_CHANGE
 }
 
 
-open fun getPoint(x: Int, y: Int)
+    open fun getPoint(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : GPoint{
 var x = x
@@ -279,7 +279,7 @@ var y = y
 }
 
 
-open fun getBufferZone()
+    open fun getBufferZone()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -290,7 +290,7 @@ open fun getBufferZone()
 }
 
 
-open fun setBufferZone(bufferZone: Int)
+    open fun setBufferZone(bufferZone: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var bufferZone = bufferZone
@@ -315,7 +315,7 @@ this.bufferZone= bufferZone
 }
 
 
-open fun getMaxWidth()
+    open fun getMaxWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -326,7 +326,7 @@ open fun getMaxWidth()
 }
 
 
-open fun setMaxWidth(maxWidth: Int)
+    open fun setMaxWidth(maxWidth: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var maxWidth = maxWidth
@@ -334,7 +334,7 @@ this.maxWidth= maxWidth
 }
 
 
-open fun getMaxHeight()
+    open fun getMaxHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -345,7 +345,7 @@ open fun getMaxHeight()
 }
 
 
-open fun setMaxHeight(maxHeight: Int)
+    open fun setMaxHeight(maxHeight: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var maxHeight = maxHeight
@@ -353,7 +353,7 @@ this.maxHeight= maxHeight
 }
 
 
-open fun setLocation(location: Int)
+    open fun setLocation(location: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var location = location
@@ -361,7 +361,7 @@ this.location= location
 }
 
 
-open fun setDirection(direction: Int)
+    open fun setDirection(direction: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var direction = direction
@@ -369,7 +369,7 @@ this.direction= direction
 }
 
 
-open fun paint(graphics: Graphics, string: String, string2: String, offset: Int)
+    open fun paint(graphics: Graphics, string: String, string2: String, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -382,7 +382,7 @@ graphics.drawString(string2, x +offset, getY(), hudGraphicsPosition!!.getAnchor(
 }
 
 
-open fun paint(graphics: Graphics, string: String, string2: String, offset: Int, offset2: Int)
+    open fun paint(graphics: Graphics, string: String, string2: String, offset: Int, offset2: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -396,7 +396,7 @@ graphics.drawString(string2, x +offset2, getY(), hudGraphicsPosition!!.getAnchor
 }
 
 
-open fun paint(graphics: Graphics, charArray: CharArray, offset: Int, len: Int, charArray2: CharArray, offset2: Int, len2: Int, xOffset: Int, xOffset2: Int)
+    open fun paint(graphics: Graphics, charArray: CharArray, offset: Int, len: Int, charArray2: CharArray, offset2: Int, len2: Int, xOffset: Int, xOffset2: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -417,7 +417,7 @@ graphics.drawChars(charArray2, offset2, len2, x +xOffset2, y, hudGraphicsPositio
 }
 
 
-open fun paint(graphics: Graphics, charArray: CharArray, offset: Int, len: Int, charArray2: CharArray, offset2: Int, len2: Int, xOffset: Int)
+    open fun paint(graphics: Graphics, charArray: CharArray, offset: Int, len: Int, charArray2: CharArray, offset2: Int, len2: Int, xOffset: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -437,7 +437,7 @@ graphics.drawChars(charArray2, offset2, len2, x +xOffset, y, hudGraphicsPosition
 }
 
 
-open fun paint(graphics: Graphics, charArray: CharArray, offset: Int, len: Int)
+    open fun paint(graphics: Graphics, charArray: CharArray, offset: Int, len: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -454,7 +454,7 @@ graphics.drawChars(charArray, offset, len, x, y, hudGraphicsPosition!!.getAnchor
 
     var offsetY: Int= 0
 
-open fun paint(graphics: Graphics, string: String)
+    open fun paint(graphics: Graphics, string: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -467,7 +467,7 @@ graphics.drawString(string, x, y, hudGraphicsPosition!!.getAnchor())
 }
 
 
-open fun getHudGraphicsPosition()
+    open fun getHudGraphicsPosition()
         //nullable = true from not(false or (false and true)) = true
 : HudGraphicsPosition{
 
@@ -478,7 +478,7 @@ open fun getHudGraphicsPosition()
 }
 
 
-open fun getColor()
+    open fun getColor()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -489,7 +489,7 @@ open fun getColor()
 }
 
 
-open fun getX()
+    open fun getX()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -500,7 +500,7 @@ open fun getX()
 }
 
 
-open fun setX(x: Int)
+    open fun setX(x: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -508,7 +508,7 @@ this.x= x
 }
 
 
-open fun setBasicColorP(basicColor: BasicColor)
+    open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
 var basicColor = basicColor
@@ -516,7 +516,7 @@ this.basicColor= basicColor
 }
 
 
-open fun getBasicColorP()
+    open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
 
@@ -527,7 +527,7 @@ open fun getBasicColorP()
 }
 
 
-open fun setY(y: Int)
+    open fun setY(y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var y = y
@@ -535,7 +535,7 @@ this.y= y
 }
 
 
-open fun getY()
+    open fun getY()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

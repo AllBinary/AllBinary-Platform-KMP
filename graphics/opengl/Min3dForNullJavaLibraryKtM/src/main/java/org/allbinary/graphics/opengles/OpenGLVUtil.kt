@@ -28,12 +28,11 @@
 
 open public class OpenGLVUtil : OpenGLVUtilBase {
         
-
-        companion object {
+companion object {
             
     private val instance: OpenGLVUtil = OpenGLVUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OpenGLVUtil{
 

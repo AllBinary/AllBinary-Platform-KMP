@@ -31,7 +31,6 @@ import org.allbinary.game.layer.CostLayerInterfaceFactoryInterface
 import org.allbinary.game.rts.technology.event.TechEventListenerInterface
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.communication.log.ForcedLogUtil
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.animation.Animation
 import org.allbinary.graphics.font.MyFont
@@ -60,7 +59,7 @@ open public class RTSLayerCostAnimation : Animation
     private val adjustedCostX: Int = myFont!!.stringWidth(DOLLAR)!!
 
     private val layerInterfaceFactoryInterface: CostLayerInterfaceFactoryInterface
-public constructor        (image: Image, layerInterfaceFactoryInterface: CostLayerInterfaceFactoryInterface){
+public constructor (image: Image, layerInterfaceFactoryInterface: CostLayerInterfaceFactoryInterface){
 var image = image
 var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
 this.image= image
@@ -69,7 +68,7 @@ this.update()
 }
 
 
-open fun onEvent(event: AllBinaryEventObject)
+    open fun onEvent(event: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var event = event
@@ -77,7 +76,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
 
-open fun onTechEvent(event: AllBinaryEventObject)
+    open fun onTechEvent(event: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var event = event
@@ -97,7 +96,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "onTechEvent", e)
 
                 @Throws(Exception::class)
             
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 this.len= 0
@@ -106,7 +105,7 @@ this.len= this.primitiveLongUtil!!.getCurrentTotalDigits()
 }
 
 
-open fun paint(graphics: Graphics, x: Int, y: Int)
+    open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

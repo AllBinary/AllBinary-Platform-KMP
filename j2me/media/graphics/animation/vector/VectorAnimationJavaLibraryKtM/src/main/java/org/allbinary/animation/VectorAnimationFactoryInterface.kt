@@ -26,10 +26,11 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.graphics.color.BasicColor
+
 interface VectorAnimationFactoryInterface {
         
 
-open fun getInstance(points: Array<Array<IntArray?>?>, basicColor: BasicColor)
+    open fun getInstance(points: Array<Array<IntArray?>?>, basicColor: BasicColor)
         //nullable =  from not(true or (false and false)) = 
 : VectorAnimation
 

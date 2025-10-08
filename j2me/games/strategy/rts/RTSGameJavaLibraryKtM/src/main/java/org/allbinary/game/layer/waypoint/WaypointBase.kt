@@ -46,7 +46,7 @@ open public class WaypointBase
     private val connectedWaypointList: BasicArrayList = BasicArrayList()
 
     private val sound: Sound
-public constructor        (sound: Sound)
+public constructor (sound: Sound)
             : super()
         {
     //var sound = sound
@@ -54,7 +54,7 @@ this.sound= sound
 }
 
 
-open fun getSound()
+    open fun getSound()
         //nullable = true from not(false or (false and true)) = true
 : Sound{
 
@@ -69,7 +69,7 @@ open fun getSound()
 
                 @Throws(Exception::class)
             
-open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
+    open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -77,7 +77,7 @@ this.allBinaryGameLayerManager= allBinaryGameLayerManager
 }
 
 
-open fun getConnectedWaypointList()
+    open fun getConnectedWaypointList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -88,7 +88,7 @@ open fun getConnectedWaypointList()
 }
 
 
-open fun onEvent(eventObject: AllBinaryEventObject)
+    open fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject
@@ -98,7 +98,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
                 @Throws(Exception::class)
             
-open fun getPathFindingInfo(geographicMapCellPosition: GeographicMapCellPosition)
+    open fun getPathFindingInfo(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : PathFindingInfo{
     //var geographicMapCellPosition = geographicMapCellPosition
@@ -112,7 +112,7 @@ open fun getPathFindingInfo(geographicMapCellPosition: GeographicMapCellPosition
 
                 @Throws(Exception::class)
             
-open fun getPathsList(geographicMapCellPosition: GeographicMapCellPosition, pathFindingInfo: PathFindingInfo, multipassState: MultipassState)
+    open fun getPathsList(geographicMapCellPosition: GeographicMapCellPosition, pathFindingInfo: PathFindingInfo, multipassState: MultipassState)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var geographicMapCellPosition = geographicMapCellPosition
@@ -128,7 +128,7 @@ open fun getPathsList(geographicMapCellPosition: GeographicMapCellPosition, path
 
                 @Throws(Exception::class)
             
-open fun getPathsList(geographicMapCellPosition: GeographicMapCellPosition)
+    open fun getPathsList(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var geographicMapCellPosition = geographicMapCellPosition
@@ -142,7 +142,7 @@ open fun getPathsList(geographicMapCellPosition: GeographicMapCellPosition)
 
                 @Throws(Exception::class)
             
-open fun getPathsListFromCacheOnly(geographicMapCellPosition: GeographicMapCellPosition)
+    open fun getPathsListFromCacheOnly(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var geographicMapCellPosition = geographicMapCellPosition
@@ -156,20 +156,20 @@ open fun getPathsListFromCacheOnly(geographicMapCellPosition: GeographicMapCellP
 
                 @Throws(Exception::class)
             
-open fun visit(unitLayer: PathFindingLayerInterface)
+    open fun visit(unitLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var unitLayer = unitLayer
 }
 
 
-open fun reset()
+    open fun reset()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun getType()
+    open fun getType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

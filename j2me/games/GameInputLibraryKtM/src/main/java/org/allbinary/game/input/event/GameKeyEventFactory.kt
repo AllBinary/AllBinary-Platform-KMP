@@ -35,12 +35,11 @@ open public class GameKeyEventFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GameKeyEventFactory = GameKeyEventFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameKeyEventFactory{
 
@@ -63,13 +62,13 @@ open fun getInstance()
 
     private var ARRAY: Array<Array<GameKeyEvent?>?> = Array(MAX_SOURCES) { arrayOfNulls<GameKeyEvent?>(InputFactory.getInstance()!!.MAX) }
                                                             
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -102,7 +101,7 @@ ARRAY[index]!![index2]= GameKeyEvent(nullUtil!!.NULL_OBJECT, index, index2)
 
                 @Throws(Exception::class)
             
-open fun getInstance(anyType: GameKeyEventSourceInterface, key: Int)
+    open fun getInstance(anyType: GameKeyEventSourceInterface, key: Int)
         //nullable =  from not(true or (false and false)) = 
 : GameKeyEvent{
 var anyType = anyType
@@ -120,7 +119,7 @@ var key = key
 
                 @Throws(Exception::class)
             
-open fun getInstance(anyType: GameKeyEventSourceInterface, input: Input)
+    open fun getInstance(anyType: GameKeyEventSourceInterface, input: Input)
         //nullable =  from not(true or (false and false)) = 
 : GameKeyEvent{
 var anyType = anyType

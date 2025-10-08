@@ -43,8 +43,7 @@ import org.allbinary.string.CommonStrings
 open public class BasicAI : ArtificialIntelligence
                 , GameKeyEventSourceInterface {
         
-
-        companion object {
+companion object {
             
     val AI_VISITOR: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(2)!!
 
@@ -63,7 +62,7 @@ open public class BasicAI : ArtificialIntelligence
     private var lastKey: Int =  -1
 
     private val gameKeyEventFactory: GameKeyEventFactory = GameKeyEventFactory.getInstance()!!
-public constructor        (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput){
+public constructor (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput){
 var ownerLayerInterface = ownerLayerInterface
 var gameInput = gameInput
 this.ownerLayerInterface= ownerLayerInterface
@@ -72,7 +71,8 @@ this.gameInput= gameInput
 
 
                 @Throws(Exception::class)
-            override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+            
+    override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager
@@ -85,7 +85,7 @@ var allBinaryLayerManager = allBinaryLayerManager
 
                 @Throws(Exception::class)
             
-open fun processAI(key: Int)
+    open fun processAI(key: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var key = key
@@ -101,7 +101,7 @@ var key = key
 }
 
 
-open fun setLastKey(lastKey: Int)
+    open fun setLastKey(lastKey: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var lastKey = lastKey
@@ -109,7 +109,7 @@ this.lastKey= lastKey
 }
 
 
-open fun getLastKey()
+    open fun getLastKey()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -120,7 +120,7 @@ open fun getLastKey()
 }
 
 
-open fun getOwnerLayerInterface()
+    open fun getOwnerLayerInterface()
         //nullable = true from not(false or (false and true)) = true
 : AllBinaryLayer{
 
@@ -131,7 +131,7 @@ open fun getOwnerLayerInterface()
 }
 
 
-open fun getGameInput()
+    open fun getGameInput()
         //nullable = true from not(false or (false and true)) = true
 : GameInput{
 
@@ -142,7 +142,7 @@ open fun getGameInput()
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -152,7 +152,8 @@ open fun getName()
                         return this::class.toString()!!
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -169,7 +170,8 @@ stringBuffer!!.append(CanvasUtil.getKeyName(this.getLastKey()))
                         return stringBuffer!!.toString()
 }
 
-override fun getSourceId()
+
+    override fun getSourceId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

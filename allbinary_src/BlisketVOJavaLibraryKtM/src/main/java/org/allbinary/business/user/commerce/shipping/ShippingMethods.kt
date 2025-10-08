@@ -45,7 +45,7 @@ open public class ShippingMethods
     private var shippingVector: Vector
 
     private var defaultShippingMethodInterface: ShippingInterface
-public constructor        (abeClientInformation: AbeClientInformationInterface, storeFrontInterface: StoreFrontInterface)
+public constructor (abeClientInformation: AbeClientInformationInterface, storeFrontInterface: StoreFrontInterface)
             : super()
         {
     //var abeClientInformation = abeClientInformation
@@ -57,7 +57,7 @@ this.shippingVector= ShippingMethodsFactory(abeClientInformation, storeFrontInte
 }
 
 
-open fun get()
+    open fun get()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -70,7 +70,7 @@ open fun get()
 
                 @Throws(Exception::class)
             
-open fun getShippingInterface(name: String)
+    open fun getShippingInterface(name: String)
         //nullable = true from not(false or (false and false)) = true
 : ShippingInterface{
 var name = name
@@ -119,7 +119,7 @@ shipping= shippingVector!!.get(index) as ShippingInterface
 
                 @Throws(Exception::class)
             
-open fun getDefault()
+    open fun getDefault()
         //nullable = true from not(false or (false and true)) = true
 : ShippingInterface{
 

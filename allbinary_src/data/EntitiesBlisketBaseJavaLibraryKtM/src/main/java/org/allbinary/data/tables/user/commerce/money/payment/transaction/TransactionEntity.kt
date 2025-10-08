@@ -45,7 +45,7 @@ open public class TransactionEntity : AbSqlBean
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val tableName: String = "vtrans"
-public constructor        ()                        
+public constructor ()                        
 
                             : super(UserDbInitInfo()){
 
@@ -56,7 +56,7 @@ this.setTableName(tableName)
 }
 
 
-open fun remove(userName: String, orderNumber: String)
+    open fun remove(userName: String, orderNumber: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var userName = userName
@@ -94,7 +94,7 @@ super.deleteWhere(whereHashMap)
 }
 
 
-open fun add(userName: String, orderNumber: String, paymentTransactionInterface: PaymentTransactionInterface)
+    open fun add(userName: String, orderNumber: String, paymentTransactionInterface: PaymentTransactionInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var userName = userName
@@ -144,7 +144,7 @@ super.insert(values)
 }
 
 
-open fun createTableStatement()
+    open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -165,7 +165,7 @@ stringBuffer!!.append(OrderData.ID)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLU
 }
 
 
-open fun createTable()
+    open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -176,7 +176,7 @@ open fun createTable()
 }
 
 
-open fun dropTable()
+    open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

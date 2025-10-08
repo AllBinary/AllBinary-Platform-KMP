@@ -32,12 +32,11 @@ open public class BottomLimiter
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: BottomLimiter = BottomLimiter()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BottomLimiter{
 
@@ -57,13 +56,13 @@ open fun getInstance()
     private var lower: Int= 0
 
     private var higher: Int= 0
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun init(lower: Int, higher: Int)
+    open fun init(lower: Int, higher: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var lower = lower
@@ -73,7 +72,7 @@ this.higher= higher
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -100,7 +99,7 @@ bottom= displayInfo!!.getLastHeight() -deltaY
 }
 
 
-open fun getDeltaY()
+    open fun getDeltaY()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -111,7 +110,7 @@ open fun getDeltaY()
 }
 
 
-open fun getBottom()
+    open fun getBottom()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

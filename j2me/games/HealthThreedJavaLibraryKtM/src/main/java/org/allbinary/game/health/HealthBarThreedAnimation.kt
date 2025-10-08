@@ -44,7 +44,7 @@ open public class HealthBarThreedAnimation : HealthBarAnimation {
     private var rectangle: Rectangle
 
     private val basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
-public constructor        (layerInterface: AllBinaryLayer, location: Int)                        
+public constructor (layerInterface: AllBinaryLayer, location: Int)                        
 
                             : super(layerInterface, location){
 var layerInterface = layerInterface
@@ -62,7 +62,7 @@ rectangle.setTexturesEnabled(false)
 }
 
 
-open fun updateColor()
+    open fun updateColor()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -84,7 +84,7 @@ colorBufferList!!.set(index, this.basicColor)
 }
 
 
-open fun updateSize()
+    open fun updateSize()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -145,7 +145,7 @@ number3dBufferList!!.set(index++, col.toFloat() *w -width5, row.toFloat() *h -he
 }
 
 
-open fun onHealthChange(newX2: Int)
+    open fun onHealthChange(newX2: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var newX2 = newX2
@@ -157,7 +157,7 @@ this.updateSize()
 
     private val object3dProcessor: Object3dProcessor = Object3dProcessorUtil.getInstance()!!.getInstanceObject3dProcessor()!!
 
-open fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
+    open fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics

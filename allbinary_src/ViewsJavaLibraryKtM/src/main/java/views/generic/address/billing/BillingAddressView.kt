@@ -45,7 +45,7 @@ open public class BillingAddressView : HttpStoreComponentView
     private var request: HttpServletRequest
 
     var streetAddress: StreetAddress
-public constructor        (transformInfoInterface: TransformInfoInterface)                        
+public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
@@ -57,7 +57,7 @@ this.request= this.getPageContext()!!.getRequest() as HttpServletRequest
 }
 
 
-open fun getRequest()
+    open fun getRequest()
         //nullable = true from not(false or (false and true)) = true
 : HttpServletRequest{
 
@@ -70,7 +70,7 @@ open fun getRequest()
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -105,7 +105,7 @@ formNode!!.appendChild(streetAddress!!.toXmlNode(document))
 }
 
 
-open fun addDomNodeInterfaces()
+    open fun addDomNodeInterfaces()
         //nullable = true from not(false or (false and true)) = true
 {
 this.addDomNodeInterface(this as DomNodeInterface)
@@ -115,7 +115,7 @@ this.addDomNodeInterface(StatesView() as DomNodeInterface)
 
                 @Throws(Exception::class)
             
-open fun view()
+    open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

@@ -35,8 +35,7 @@ open public class BasicGameResources
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val stringBuffer: StringMaker = StringMaker()
 
@@ -47,13 +46,13 @@ open public class BasicGameResources
     var RESOURCE: String = StringUtil.getInstance()!!.EMPTY_STRING
 
     var RESOURCE_DESTROY: String = StringUtil.getInstance()!!.EMPTY_STRING
-protected constructor        ()
+protected constructor ()
             : super()
         {
 }
 
 
-open fun init(ROOT: String, SIZE: Array<String?>)
+    open fun init(ROOT: String, SIZE: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var ROOT = ROOT
@@ -94,7 +93,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 
                 @Throws(Exception::class)
             
-open fun getString()
+    open fun getString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -107,7 +106,7 @@ open fun getString()
 
                 @Throws(Exception::class)
             
-open fun init(ROOT: String, sizeString: String)
+    open fun init(ROOT: String, sizeString: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var ROOT = ROOT

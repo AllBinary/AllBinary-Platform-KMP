@@ -37,7 +37,7 @@ open public class HighScoreCommandsBaseFactory
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val HIGH_SCORE_COMMANDS: Array<Command?>
-protected constructor        (HIGH_SCORE_COMMANDS: Array<Command?>)
+protected constructor (HIGH_SCORE_COMMANDS: Array<Command?>)
             : super()
         {
 var HIGH_SCORE_COMMANDS = HIGH_SCORE_COMMANDS
@@ -58,7 +58,7 @@ var HIGH_SCORE_COMMANDS = HIGH_SCORE_COMMANDS
 }
 
 
-open fun isHighScoreCommand(command: Command)
+    open fun isHighScoreCommand(command: Command)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var command = command
@@ -94,7 +94,7 @@ var command = command
 
                 @Throws(Exception::class)
             
-open fun getIndex(command: Command)
+    open fun getIndex(command: Command)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var command = command

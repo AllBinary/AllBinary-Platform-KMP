@@ -25,54 +25,55 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface PaymentInterface {
         
 
-open fun setName(value: String)
+    open fun setName(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setType(value: String)
+    open fun setType(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setExpiration(value: String)
+    open fun setExpiration(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setNumber(value: String)
+    open fun setNumber(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getId()
+    open fun getId()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getType()
+    open fun getType()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getExpiration()
+    open fun getExpiration()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getEncryption()
+    open fun getEncryption()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getNumber()
+    open fun getNumber()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getLastFour()
+    open fun getLastFour()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun isDefault()
+    open fun isDefault()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 

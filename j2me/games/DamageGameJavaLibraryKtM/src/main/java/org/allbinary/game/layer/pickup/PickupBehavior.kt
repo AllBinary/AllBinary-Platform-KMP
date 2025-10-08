@@ -39,8 +39,7 @@ open public class PickupBehavior
         
                 , PickupBehaviorInterface {
         
-
-        companion object {
+companion object {
             
     val NULL_PICKUP_BEHAVIOR: PickupBehavior = PickupBehavior(CollidableCompositeLayer.NULL_COLLIDABLE_COMPOSITE_LAYER, 0)
 
@@ -51,7 +50,7 @@ open public class PickupBehavior
     private val countedIndex: Int
 
     private val ownerLayerInterface: CollidableCompositeLayer
-public constructor        (ownerLayerInterface: CollidableCompositeLayer, countedIndex: Int)
+public constructor (ownerLayerInterface: CollidableCompositeLayer, countedIndex: Int)
             : super()
         {
     //var ownerLayerInterface = ownerLayerInterface
@@ -60,7 +59,8 @@ this.ownerLayerInterface= ownerLayerInterface
 this.countedIndex= countedIndex
 }
 
-override fun doPickup(pickupProcessorInterface: PickupProcessorInterface)
+
+    override fun doPickup(pickupProcessorInterface: PickupProcessorInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pickupProcessorInterface = pickupProcessorInterface
@@ -88,7 +88,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "doPickup", e)
 
 }
 
-override fun doPickup(pickupLayerInterface: PickedUpLayerInterface)
+
+    override fun doPickup(pickupLayerInterface: PickedUpLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var pickupLayerInterface = pickupLayerInterface
@@ -149,7 +150,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, "doPickup", e)
 }
 
 
-open fun add(countedPickedUpLayerInterfaceFactoryInterface: CountedPickedUpLayerInterfaceFactoryInterface)
+    open fun add(countedPickedUpLayerInterfaceFactoryInterface: CountedPickedUpLayerInterfaceFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var countedPickedUpLayerInterfaceFactoryInterface = countedPickedUpLayerInterfaceFactoryInterface
@@ -160,7 +161,7 @@ this.add(countedPickedUpLayerInterfaceFactoryInterface, partIndex)
 }
 
 
-open fun add(countedPickedUpLayerInterfaceFactoryInterface: CountedPickedUpLayerInterfaceFactoryInterface, partIndex: Int)
+    open fun add(countedPickedUpLayerInterfaceFactoryInterface: CountedPickedUpLayerInterfaceFactoryInterface, partIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var countedPickedUpLayerInterfaceFactoryInterface = countedPickedUpLayerInterfaceFactoryInterface
@@ -175,7 +176,7 @@ countedLayerInterfaceFactory!!.setTotal(countedLayerInterfaceFactory!!.getTotal(
 }
 
 
-open fun getFirstAvailableCountedLayerInterfaceFactory(pickedUpLayerTypeArray: Array<PickedUpLayerType?>)
+    open fun getFirstAvailableCountedLayerInterfaceFactory(pickedUpLayerTypeArray: Array<PickedUpLayerType?>)
         //nullable = true from not(false or (false and false)) = true
 : CountedLayerInterfaceFactoryPart{
 var pickedUpLayerTypeArray = pickedUpLayerTypeArray
@@ -246,7 +247,7 @@ countedPickedUpLayerInterfaceFactory= nextCountedLayerInterfaceFactory!!.getCoun
 
                 @Throws(Exception::class)
             
-open fun getCountedLayerInterfaceFactoryForSlot(slotIndex: Int)
+    open fun getCountedLayerInterfaceFactoryForSlot(slotIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 : CountedLayerInterfaceFactoryPart{
 var slotIndex = slotIndex
@@ -310,7 +311,7 @@ nextCountedLayerInterfaceFactory= collidableDestroyableDamageableLayer!!.getPart
 }
 
 
-open fun getCountedIndex()
+    open fun getCountedIndex()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

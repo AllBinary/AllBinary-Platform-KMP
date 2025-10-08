@@ -37,7 +37,7 @@ open public class SimplePathFinderGraphVisitorFactory : PathFinderGraphVisitorFa
     private val minPathWeight: Int
 
     private val maxPathWeight: Int
-public constructor        ()                        
+public constructor ()                        
 
                             : this(10, 8, 100000){
 
@@ -46,7 +46,7 @@ public constructor        ()
                     
 }
 
-public constructor        (edgeMinimum: Int, minPathWeight: Int, maxPathWeight: Int){
+public constructor (edgeMinimum: Int, minPathWeight: Int, maxPathWeight: Int){
 var edgeMinimum = edgeMinimum
 var minPathWeight = minPathWeight
 var maxPathWeight = maxPathWeight
@@ -56,7 +56,7 @@ this.maxPathWeight= maxPathWeight
 }
 
 
-open fun getInstance(geographicMapInterface: BasicGeographicMap)
+    open fun getInstance(geographicMapInterface: BasicGeographicMap)
         //nullable =  from not(true or (false and false)) = 
 : PathFinderGraphVisitorBase{
 var geographicMapInterface = geographicMapInterface

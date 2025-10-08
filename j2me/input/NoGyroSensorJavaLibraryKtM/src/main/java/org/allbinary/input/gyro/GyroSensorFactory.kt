@@ -30,21 +30,20 @@ open public class GyroSensorFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var allBinaryGyroSensor: AllBinaryOrientationSensor = AllBinaryOrientationSensor.NULL_ALLBINARY_ORIENTATION_SENSOR
 
                 @Throws(Exception::class)
             
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 GyroSensorFactory.allBinaryGyroSensor= NoGyroSensor()
 }
 
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AllBinaryOrientationSensor{
 

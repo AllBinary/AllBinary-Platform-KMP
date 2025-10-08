@@ -40,12 +40,11 @@ open public class DrawStringUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: DrawStringUtil = DrawStringUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DrawStringUtil{
 
@@ -63,7 +62,7 @@ open fun getInstance()
             {
             }            
         
-open fun paintVerticle(graphics: Graphics, string: String, x: Int, y: Int, anchor: Int)
+    open fun paintVerticle(graphics: Graphics, string: String, x: Int, y: Int, anchor: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -154,7 +153,7 @@ graphics.drawChar(aChar, x +offsetX, y +(charHeight *index) +offsetY, anchor)
 
     private var anchor: Int = Anchor.TOP_LEFT
 
-open fun drawCenterString(graphics: Graphics, string: String, offset: Int, length: Int, x: Int, y: Int)
+    open fun drawCenterString(graphics: Graphics, string: String, offset: Int, length: Int, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -180,7 +179,7 @@ PreLogUtil.put(StringMaker().
 
     private val EMPTY_STRING: String = StringUtil.getInstance()!!.EMPTY_STRING
 
-open fun drawCenterStrings(graphics: Graphics, stringArray: Array<String?>, maxWidth: Int, x: Int, y: Int)
+    open fun drawCenterStrings(graphics: Graphics, stringArray: Array<String?>, maxWidth: Int, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics

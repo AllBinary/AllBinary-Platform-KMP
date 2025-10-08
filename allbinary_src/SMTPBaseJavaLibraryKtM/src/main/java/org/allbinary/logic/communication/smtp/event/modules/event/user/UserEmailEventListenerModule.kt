@@ -42,7 +42,7 @@ open public class UserEmailEventListenerModule
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var userInterface: UserInterface
-public constructor        (userInterface: UserInterface)
+public constructor (userInterface: UserInterface)
             : super()
         {
 var userInterface = userInterface
@@ -52,7 +52,7 @@ this.userInterface= userInterface
 
                 @Throws(Exception::class)
             
-open fun onEmailSendFailure(emailEvent: EmailEvent)
+    open fun onEmailSendFailure(emailEvent: EmailEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var emailEvent = emailEvent
@@ -68,7 +68,7 @@ EmailQueueFactory.getInstance()!!.offer(email.getEmail() as EmailInterface)
 
                 @Throws(Exception::class)
             
-open fun onEmailSendRequest(emailEvent: EmailEvent)
+    open fun onEmailSendRequest(emailEvent: EmailEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var emailEvent = emailEvent

@@ -30,12 +30,11 @@ open public class URLGLOBALS
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var urlGlobalsInterface: UrlGlobalsInterface = AppUrlGlobals.NULL_APP_URL_GLOBALS
 
-open fun init(urlGlobalsInterface: UrlGlobalsInterface)
+    open fun init(urlGlobalsInterface: UrlGlobalsInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var urlGlobalsInterface = urlGlobalsInterface
@@ -43,7 +42,7 @@ URLGLOBALS.urlGlobalsInterface= urlGlobalsInterface
 }
 
 
-open fun isTestingMode()
+    open fun isTestingMode()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -54,7 +53,7 @@ open fun isTestingMode()
 }
 
 
-open fun getWebappPath()
+    open fun getWebappPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -65,7 +64,7 @@ open fun getWebappPath()
 }
 
 
-open fun getTestHtmlPath()
+    open fun getTestHtmlPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -78,7 +77,7 @@ open fun getTestHtmlPath()
 
                 @Throws(Exception::class)
             
-open fun getMainPath()
+    open fun getMainPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

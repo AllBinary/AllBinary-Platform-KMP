@@ -33,8 +33,7 @@ import org.allbinary.logic.communication.log.LogUtil
 
 open public class AllMotionRecognizer : MotionRecognizer {
         
-
-        companion object {
+companion object {
             
     private var index: Int = 0
 
@@ -51,7 +50,7 @@ open public class AllMotionRecognizer : MotionRecognizer {
     private val touchButtonRecognizer: TouchButtonRecognizer
 
     private val id: Int
-public constructor        (){
+public constructor (){
 this.id= index++
 this.motionGestureRecognizer= MotionGestureRecognizer(id)
 this.touchButtonRecognizer= TouchButtonRecognizer()
@@ -59,7 +58,8 @@ this.touchButtonRecognizer= TouchButtonRecognizer()
 
 
                 @Throws(Exception::class)
-            override fun processStartMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
+            
+    override fun processStartMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var x = x
@@ -93,7 +93,8 @@ this.motionGestureRecognizer!!.processPressedMotionEvent(point, deviceId, modifi
 
 
                 @Throws(Exception::class)
-            override fun processEndMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
+            
+    override fun processEndMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var x = x
@@ -135,7 +136,8 @@ this.motionGestureRecognizer!!.processReleasedMotionEvent(point, deviceId, modif
 
 
                 @Throws(Exception::class)
-            override fun processDraggedMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
+            
+    override fun processDraggedMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var x = x
@@ -174,7 +176,7 @@ this.motionGestureRecognizer!!.processDraggedMotionEvent(point, deviceId, modifi
 
                 @Throws(Exception::class)
             
-open fun processMovedMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
+    open fun processMovedMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var x = x
@@ -200,7 +202,7 @@ this.motionGestureRecognizer!!.processMovedMotionEvent(point, deviceId, modifier
 }
 
 
-open fun getMotionGestureRecognizer()
+    open fun getMotionGestureRecognizer()
         //nullable = true from not(false or (false and true)) = true
 : MotionGestureRecognizer{
 

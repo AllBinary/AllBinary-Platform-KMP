@@ -31,7 +31,7 @@ import org.allbinary.animation.AnimationBehaviorFactory
 
 open public class LeftToRightImageAnimationFactory : BaseImageAnimationFactory {
         
-public constructor        (image: Image, sequenceArray: IntArray, dx: Int, dy: Int)                        
+public constructor (image: Image, sequenceArray: IntArray, dx: Int, dy: Int)                        
 
                             : this(image, sequenceArray, dx, dy, AnimationBehaviorFactory.getInstance()){
     //var image = image
@@ -44,7 +44,7 @@ public constructor        (image: Image, sequenceArray: IntArray, dx: Int, dy: I
                     
 }
 
-public constructor        (image: Image, sequenceArray: IntArray, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
+public constructor (image: Image, sequenceArray: IntArray, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
                             : super(image, sequenceArray, image.getWidth(), image.getHeight(), dx, dy, animationBehaviorFactory){
     //var image = image
@@ -58,7 +58,7 @@ public constructor        (image: Image, sequenceArray: IntArray, dx: Int, dy: I
                     
 }
 
-public constructor        (image: Image, sequenceArray: IntArray)                        
+public constructor (image: Image, sequenceArray: IntArray)                        
 
                             : this(image, sequenceArray, AnimationBehaviorFactory.getInstance()){
     //var image = image
@@ -69,7 +69,7 @@ public constructor        (image: Image, sequenceArray: IntArray)
                     
 }
 
-public constructor        (image: Image, sequenceArray: IntArray, animationBehaviorFactory: AnimationBehaviorFactory)                        
+public constructor (image: Image, sequenceArray: IntArray, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
                             : super(image, sequenceArray, image.getWidth(), image.getHeight(), animationBehaviorFactory){
     //var image = image
@@ -83,7 +83,8 @@ public constructor        (image: Image, sequenceArray: IntArray, animationBehav
 
 
                 @Throws(Exception::class)
-            override fun getInstance(instanceId: Int)
+            
+    override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var instanceId = instanceId

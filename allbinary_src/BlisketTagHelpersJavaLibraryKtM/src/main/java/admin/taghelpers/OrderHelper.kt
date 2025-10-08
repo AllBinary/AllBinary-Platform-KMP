@@ -59,7 +59,7 @@ open public class OrderHelper : TagHelper {
     private var pageContext: PageContext
 
     private var request: HttpServletRequest
-public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext){
 var propertiesHashMap = propertiesHashMap
 var pageContext = pageContext
 this.propertiesHashMap= propertiesHashMap
@@ -81,7 +81,7 @@ this.weblisketSession= WeblisketSession(this.propertiesHashMap, this.pageContext
 }
 
 
-open fun setPaymentGateway()
+    open fun setPaymentGateway()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -201,7 +201,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "setPaymentGateway()", e)
 }
 
 
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

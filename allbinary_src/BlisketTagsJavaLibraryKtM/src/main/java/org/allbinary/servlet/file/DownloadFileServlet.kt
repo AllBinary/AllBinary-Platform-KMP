@@ -63,7 +63,7 @@ open public class DownloadFileServlet : HttpServlet {
 
                 @Throws(ServletException::class, IOException::class)
             
-open fun processRequest(request: HttpServletRequest, response: HttpServletResponse)
+    open fun processRequest(request: HttpServletRequest, response: HttpServletResponse)
         //nullable = true from not(false or (false and false)) = true
 {
 var request = request
@@ -226,7 +226,7 @@ response.sendError(HttpServletResponse.SC_NOT_FOUND)
 
                 @Throws(ServletException::class, IOException::class)
             
-open fun doGet(request: HttpServletRequest, response: HttpServletResponse)
+    open fun doGet(request: HttpServletRequest, response: HttpServletResponse)
         //nullable = true from not(false or (false and false)) = true
 {
 var request = request
@@ -237,7 +237,7 @@ processRequest(request, response)
 
                 @Throws(ServletException::class, IOException::class)
             
-open fun doPost(request: HttpServletRequest, response: HttpServletResponse)
+    open fun doPost(request: HttpServletRequest, response: HttpServletResponse)
         //nullable = true from not(false or (false and false)) = true
 {
 var request = request
@@ -246,7 +246,7 @@ processRequest(request, response)
 }
 
 
-open fun getServletInfo()
+    open fun getServletInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

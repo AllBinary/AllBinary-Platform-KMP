@@ -33,12 +33,11 @@ open public class DirectionFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: DirectionFactory = DirectionFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DirectionFactory{
 
@@ -78,7 +77,7 @@ open fun getInstance()
     val BOTTOM: Direction = Direction("BOTTOM", "BOTTOM", 11)
 
     val ALL_DIRECTION: Direction = Direction("ALL_DIRECTION", "ALL_DIRECTION", 12)
-private constructor        ()
+private constructor ()
             : super()
         {
 

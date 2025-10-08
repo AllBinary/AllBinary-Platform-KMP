@@ -44,7 +44,7 @@ open public class GameAdState
     private val adConfiguration: AdConfiguration
 
     private val advertisements: Advertisements = Advertisements()
-public constructor        (adConfiguration: AdConfiguration)
+public constructor (adConfiguration: AdConfiguration)
             : super()
         {
 var adConfiguration = adConfiguration
@@ -53,14 +53,14 @@ VirtualKeyboardEventHandler.getInstance()!!.addListener(this)
 }
 
 
-open fun initViewArray(viewArray: Array<Any?>)
+    open fun initViewArray(viewArray: Array<Any?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var viewArray = viewArray
 }
 
 
-open fun init(anyType: Any)
+    open fun init(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var anyType = anyType
@@ -68,13 +68,13 @@ this.init()
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun isShowingAt()
+    open fun isShowingAt()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -85,7 +85,7 @@ open fun isShowingAt()
 }
 
 
-open fun isShowingAt(location: Int)
+    open fun isShowingAt(location: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var location = location
@@ -97,18 +97,19 @@ var location = location
 }
 
 
-open fun show()
+    open fun show()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun hide()
+    open fun hide()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun onEvent(eventObject: AllBinaryEventObject)
+
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
@@ -117,14 +118,15 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
 
                 @Throws(Exception::class)
-            override fun onVirtualKeyboardEvent(virtualKeyboardEvent: VirtualKeyboardEvent)
+            
+    override fun onVirtualKeyboardEvent(virtualKeyboardEvent: VirtualKeyboardEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var virtualKeyboardEvent = virtualKeyboardEvent
 }
 
 
-open fun processAdState(gameState: GameState, gameType: GameType)
+    open fun processAdState(gameState: GameState, gameType: GameType)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameState = gameState
@@ -132,7 +134,7 @@ var gameType = gameType
 }
 
 
-open fun processPageAdState()
+    open fun processPageAdState()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -140,7 +142,7 @@ open fun processPageAdState()
 
                 @Throws(Exception::class)
             
-open fun playingAdState()
+    open fun playingAdState()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -148,20 +150,20 @@ open fun playingAdState()
 
                 @Throws(Exception::class)
             
-open fun notPlayingAdState()
+    open fun notPlayingAdState()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun setGameIsReady(gameIsReady: Boolean)
+    open fun setGameIsReady(gameIsReady: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameIsReady = gameIsReady
 }
 
 
-open fun isGameIsReady()
+    open fun isGameIsReady()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -172,7 +174,7 @@ open fun isGameIsReady()
 }
 
 
-open fun getAdvertisements()
+    open fun getAdvertisements()
         //nullable = true from not(false or (false and true)) = true
 : Advertisements{
 
@@ -183,7 +185,7 @@ open fun getAdvertisements()
 }
 
 
-open fun getAdConfiguration()
+    open fun getAdConfiguration()
         //nullable = true from not(false or (false and true)) = true
 : AdConfiguration{
 
@@ -196,7 +198,7 @@ open fun getAdConfiguration()
 
     private var okayToShowAds: Boolean= false
 
-open fun isOkayToShowPageAd()
+    open fun isOkayToShowPageAd()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -207,7 +209,7 @@ open fun isOkayToShowPageAd()
 }
 
 
-open fun setOkayToShowAds(okayToShowAds: Boolean)
+    open fun setOkayToShowAds(okayToShowAds: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var okayToShowAds = okayToShowAds
@@ -215,7 +217,7 @@ this.okayToShowAds= okayToShowAds
 }
 
 
-open fun isOkayToShowAds()
+    open fun isOkayToShowAds()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -226,7 +228,7 @@ open fun isOkayToShowAds()
 }
 
 
-open fun isEnabled()
+    open fun isEnabled()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

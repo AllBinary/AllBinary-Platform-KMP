@@ -42,6 +42,8 @@ open public class ThreadPool
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
+    val NULL_RUNNABLE: NullRunnable = NullRunnable.getInstance()!!
+
     val threadPoolStrings: ThreadPoolStrings = ThreadPoolStrings.getInstance()!!
 
     val threadObjectUtil: ThreadObjectUtil = ThreadObjectUtil.getInstance()!!
@@ -53,7 +55,7 @@ open public class ThreadPool
     private var numThreads: Int= 0
 
     private var runningTask: Boolean= false
-public constructor        (poolName: String, numThreads: Int)                        
+public constructor (poolName: String, numThreads: Int)                        
 
                             : this(poolName, numThreads, 5){
     //var poolName = poolName
@@ -64,7 +66,7 @@ public constructor        (poolName: String, numThreads: Int)
                     
 }
 
-public constructor        (poolName: String, numThreads: Int, priority: Int)
+public constructor (poolName: String, numThreads: Int, priority: Int)
             : super()
         {
     //var poolName = poolName
@@ -77,7 +79,7 @@ public constructor        (poolName: String, numThreads: Int, priority: Int)
 
                 @Throws(Exception::class)
             
-open fun runAPriorityTask()
+    open fun runAPriorityTask()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -90,12 +92,26 @@ open fun runAPriorityTask()
                                     }
                                 
                         else {
-                            currentPriorityRunnable= this.getTask() as PriorityRunnable
+                            
+    var runnable: Runnable = this.getTask()!!
+
 
     
-                        if(currentPriorityRunnable != 
-                                    null
-                                )
+                        if(runnable == NULL_RUNNABLE)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 
+
+                                    }
+                                
+currentPriorityRunnable= runnable as PriorityRunnable
+
+    
+                        if(!(currentPriorityRunnable == threadObjectUtil!!.NULL_PRIORITY_RUNNABLE))
                         
                                     {
                                     currentPriorityRunnable!!.reset()
@@ -111,7 +127,7 @@ currentPriorityRunnable!!.run()
 
                 @Throws(Exception::class)
             
-open fun runATask()
+    open fun runATask()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -131,7 +147,7 @@ open fun runATask()
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -148,7 +164,7 @@ taskQueue= BasicArrayList()
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun runTaskWithPriority(task: PriorityRunnable)
+    open fun runTaskWithPriority(task: PriorityRunnable)
         //nullable = true from not(false or (false and false)) = true
 {
     //var task = task
@@ -201,9 +217,7 @@ break;
 
 
     
-                        if(lowerPriorityRunnable == 
-                                    null
-                                )
+                        if(lowerPriorityRunnable == threadObjectUtil!!.NULL_PRIORITY_RUNNABLE || lowerPriorityRunnable == NULL_RUNNABLE)
                         
                                     {
                                     this.taskQueue!!.add(task)
@@ -225,7 +239,7 @@ this.taskQueue!!.add(index, task)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun runTask(task: Runnable)
+    open fun runTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
 {
     //var task = task
@@ -255,7 +269,7 @@ open fun runTask(task: Runnable)
                 @Throws(InterruptedException::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getTask()
+    open fun getTask()
         //nullable = true from not(false or (false and true)) = true
 : Runnable{
 
@@ -267,7 +281,7 @@ open fun getTask()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return NULL_RUNNABLE
 
                                     }
                                 
@@ -280,7 +294,7 @@ open fun getTask()
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun clear()
+    open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 taskQueue!!.clear()
@@ -288,7 +302,7 @@ taskQueue!!.clear()
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun close()
+    open fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -305,25 +319,16 @@ this.currentPriorityRunnable= threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
 }
 
 
-open fun join()
+    open fun join()
         //nullable = true from not(false or (false and true)) = true
 {
-
-        
-        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-        synchronized(this) 
-
-        //mutex.withLock
-        {
 isAlive= false
 taskQueue!!.clear()
 this.currentPriorityRunnable= threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
 }
 
-}
 
-
-open fun isBusy()
+    open fun isBusy()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -373,13 +378,13 @@ open fun isBusy()
 }
 
 
-open fun threadStarted()
+    open fun threadStarted()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun threadStopped()
+    open fun threadStopped()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -396,14 +401,14 @@ this.currentPriorityRunnable= threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
 }
 
 
-open fun startTask(task: Runnable)
+    open fun startTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
 {
     //var task = task
 }
 
 
-open fun completedTask(task: Runnable)
+    open fun completedTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
 {
     //var task = task

@@ -37,13 +37,13 @@ open public class BaseTouchInput
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private val basicArrayListUtil: BasicArrayListUtil = BasicArrayListUtil.getInstance()!!
- constructor        ()
+ constructor ()
             : super()
         {
 }
 
 
-open fun getList()
+    open fun getList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -53,7 +53,8 @@ open fun getList()
                         return basicArrayListUtil!!.getImmutableInstance()
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

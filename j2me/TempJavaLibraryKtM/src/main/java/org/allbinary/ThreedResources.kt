@@ -30,12 +30,11 @@ open public class ThreedResources
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val threedResources: ThreedResources = ThreedResources()
 
-open fun getThreedResources()
+    open fun getThreedResources()
         //nullable = true from not(false or (false and true)) = true
 : ThreedResources{
 
@@ -53,7 +52,7 @@ open fun getThreedResources()
             {
             }            
         
-open fun add()
+    open fun add()
         //nullable = true from not(false or (false and true)) = true
 {
 }

@@ -31,12 +31,11 @@ open public class InputAutomationModuleConfigurationsSingletonFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var inputAutomationModuleConfigurations: InputAutomationModuleConfigurations = InputAutomationModuleConfigurations(InputAutomationConfigurationFactory.getInstance()!!.getInputAutomationModuleConfigurationList())
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : InputAutomationModuleConfigurations{
 
@@ -48,7 +47,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

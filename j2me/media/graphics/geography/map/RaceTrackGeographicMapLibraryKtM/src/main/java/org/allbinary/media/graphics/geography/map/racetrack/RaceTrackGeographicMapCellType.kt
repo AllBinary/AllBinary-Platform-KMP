@@ -34,7 +34,7 @@ open public class RaceTrackGeographicMapCellType : GeographicMapCellType {
     val name: String
 
     private val travelCost: Int
-public constructor        (type: Int, travelCost: Int)                        
+public constructor (type: Int, travelCost: Int)                        
 
                             : super(type){
     //var type = type
@@ -50,7 +50,7 @@ this.travelCost= travelCost
 this.name= commonStrings!!.UNKNOWN
 }
 
-public constructor        (name: String, type: Int, travelCost: Int)                        
+public constructor (name: String, type: Int, travelCost: Int)                        
 
                             : super(type){
     //var name = name
@@ -65,7 +65,7 @@ this.travelCost= travelCost
 }
 
 
-open fun getTravelCost()
+    open fun getTravelCost()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

@@ -42,8 +42,7 @@ open public class Initializer
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val MAXDB: Int = 30
 
@@ -126,7 +125,7 @@ open public class Initializer
     private var staticPagesServer: String
 
     private var staticPagesPort: String
-public constructor        (map: Map)
+public constructor (map: Map)
             : super()
         {
 var map = map
@@ -171,7 +170,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "getFormData()")
 this.getFormData(hashMap)
 }
 
-public constructor        (initHashMap: HashMap<Any, Any>)
+public constructor (initHashMap: HashMap<Any, Any>)
             : super()
         {
 var initHashMap = initHashMap
@@ -179,7 +178,7 @@ this.getFormData(initHashMap)
 }
 
 
-open fun getFormData(hashMap: HashMap<Any, Any>)
+    open fun getFormData(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var hashMap = hashMap
@@ -231,7 +230,7 @@ logUtil!!.put("Unable to get form data", this, "getFormData()", e)
 }
 
 
-open fun isJdbcDriverValid(jdbcDriverClassPathString: String)
+    open fun isJdbcDriverValid(jdbcDriverClassPathString: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var jdbcDriverClassPathString = jdbcDriverClassPathString
@@ -267,7 +266,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -464,7 +463,7 @@ open fun isValid()
 }
 
 
-open fun getJdbcDriverValidationInfo(jdbcDriver: String)
+    open fun getJdbcDriverValidationInfo(jdbcDriver: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var jdbcDriver = jdbcDriver
@@ -482,7 +481,7 @@ stringBuffer!!.append(") you have provided is not valid.<br/>")
 }
 
 
-open fun getJdbcDriverSolutionInfo()
+    open fun getJdbcDriverSolutionInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -505,7 +504,7 @@ stringBuffer!!.append("Solution: Use a valid JDBC driver.<p/>")
 }
 
 
-open fun getInvalidInfo()
+    open fun getInvalidInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -721,7 +720,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.staticPagesJdbcDrive
 
                 @Throws(Exception::class)
             
-open fun set()
+    open fun set()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put("Creating DB connection files", this, "set()")

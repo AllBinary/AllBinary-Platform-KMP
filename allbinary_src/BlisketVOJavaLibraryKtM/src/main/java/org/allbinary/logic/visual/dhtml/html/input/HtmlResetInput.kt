@@ -30,7 +30,7 @@ open public class HtmlResetInput
             : Object
          {
         
-public constructor        ()
+public constructor ()
             : super()
         {
 }

@@ -26,14 +26,15 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.communication.smtp.configuration.user.event.UserEmailEventsConfigurationInterface
+
 interface UserEmailConfigurationInterface {
         
 
-open fun getUserEmailEventsConfigurationInterface()
+    open fun getUserEmailEventsConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
 : UserEmailEventsConfigurationInterface
 
-open fun setUserEmailEventsConfigurationInterface(emailEventsConfigurationInterface: UserEmailEventsConfigurationInterface)
+    open fun setUserEmailEventsConfigurationInterface(emailEventsConfigurationInterface: UserEmailEventsConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
 
 

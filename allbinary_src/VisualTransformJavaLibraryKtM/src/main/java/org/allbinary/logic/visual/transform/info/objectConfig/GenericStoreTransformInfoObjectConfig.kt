@@ -49,7 +49,7 @@ open public class GenericStoreTransformInfoObjectConfig : TransformInfoObjectCon
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val abeClientInformation: AbeClientInformationInterface
-public constructor        (abeClientInformation: Object, transformInfoInterface: Object)                        
+public constructor (abeClientInformation: Object, transformInfoInterface: Object)                        
 
                             : super(transformInfoInterface){
     //var abeClientInformation = abeClientInformation
@@ -61,7 +61,7 @@ public constructor        (abeClientInformation: Object, transformInfoInterface:
 this.abeClientInformation= abeClientInformation
 }
 
-public constructor        (abeClientInformation: Object, transformInfoInterface: Object, document: Object)                        
+public constructor (abeClientInformation: Object, transformInfoInterface: Object, document: Object)                        
 
                             : super(transformInfoInterface, document){
     //var abeClientInformation = abeClientInformation
@@ -75,7 +75,7 @@ this.abeClientInformation= abeClientInformation
 this.setDocument(this.generate(this.toXmlDoc()))
 }
 
-public constructor        (abeClientInformation: Object, transformInfoInterface: Object, name: Object, type: Object)                        
+public constructor (abeClientInformation: Object, transformInfoInterface: Object, name: Object, type: Object)                        
 
                             : super(transformInfoInterface, name, type){
     //var abeClientInformation = abeClientInformation
@@ -93,7 +93,7 @@ this.setDocument(this.generate(this.toXmlDoc()))
 
                 @Throws(Exception::class)
             
-open fun generate(objectConfigDocument: Document)
+    open fun generate(objectConfigDocument: Document)
         //nullable = true from not(false or (false and false)) = true
 : Document{
     //var objectConfigDocument = objectConfigDocument
@@ -145,7 +145,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "generate()")
 
                 @Throws(Exception::class)
             
-open fun createReplaceHashMap(transformInfoHttpStoreInterface: TransformInfoHttp, objectConfigDocumentString: String)
+    open fun createReplaceHashMap(transformInfoHttpStoreInterface: TransformInfoHttp, objectConfigDocumentString: String)
         //nullable = true from not(false or (false and false)) = true
 : HashMap<Any, Any>{
     //var transformInfoHttpStoreInterface = transformInfoHttpStoreInterface
@@ -174,7 +174,7 @@ hashMap!!.put(transformInfoObjectConfigData!!.VARKEY +TransformInfoData.getInsta
 
                 @Throws(Exception::class)
             
-open fun createHashMap(transformInfoHttpStoreInterface: TransformInfoHttp, objectConfigDocumentString: String)
+    open fun createHashMap(transformInfoHttpStoreInterface: TransformInfoHttp, objectConfigDocumentString: String)
         //nullable = true from not(false or (false and false)) = true
 : HashMap<Any, Any>{
     //var transformInfoHttpStoreInterface = transformInfoHttpStoreInterface
@@ -235,7 +235,7 @@ hashMap!!.put(templateNameKey, selectedTemplate)
 
                 @Throws(Exception::class)
             
-open fun generate(objectConfigDocumentString: String, hashMap: HashMap<Any, Any>)
+    open fun generate(objectConfigDocumentString: String, hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 : Document{
 var objectConfigDocumentString = objectConfigDocumentString

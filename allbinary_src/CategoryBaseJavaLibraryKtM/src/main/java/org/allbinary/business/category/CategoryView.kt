@@ -43,7 +43,7 @@ open public class CategoryView
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var categoryInterface: CategoryInterface
-public constructor        (categoryInterface: CategoryInterface)
+public constructor (categoryInterface: CategoryInterface)
             : super()
         {
 var categoryInterface = categoryInterface
@@ -51,7 +51,7 @@ this.categoryInterface= categoryInterface
 }
 
 
-open fun getCategoryInterface()
+    open fun getCategoryInterface()
         //nullable = true from not(false or (false and true)) = true
 : CategoryInterface{
 
@@ -64,7 +64,7 @@ open fun getCategoryInterface()
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

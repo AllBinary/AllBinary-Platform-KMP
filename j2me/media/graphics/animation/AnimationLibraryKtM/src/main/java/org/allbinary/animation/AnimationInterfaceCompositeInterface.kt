@@ -25,10 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface AnimationInterfaceCompositeInterface {
         
 
-open fun getAnimationInterface()
+    open fun getAnimationInterface()
         //nullable = true from not(false or (false and true)) = true
 : Animation
 

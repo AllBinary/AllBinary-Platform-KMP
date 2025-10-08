@@ -44,12 +44,11 @@ open public class ZipFileUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ZipFileUtil = ZipFileUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ZipFileUtil{
 
@@ -71,7 +70,7 @@ open fun getInstance()
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-open fun create(outFilename: String, fileBasicArrayList: BasicArrayList)
+    open fun create(outFilename: String, fileBasicArrayList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var outFilename = outFilename
@@ -169,7 +168,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "create", e)
 
                 @Throws(Exception::class)
             
-open fun unzip(path: String, zipFile: AbFile, fileName: String)
+    open fun unzip(path: String, zipFile: AbFile, fileName: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var path = path

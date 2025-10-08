@@ -25,10 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface DirectionCompositeInterface {
         
 
-open fun getDirection()
+    open fun getDirection()
         //nullable = true from not(false or (false and true)) = true
 : Direction
 

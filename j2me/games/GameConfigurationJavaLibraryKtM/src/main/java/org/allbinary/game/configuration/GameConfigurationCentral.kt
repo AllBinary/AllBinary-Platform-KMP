@@ -42,12 +42,11 @@ open public class GameConfigurationCentral
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: GameConfigurationCentral = GameConfigurationCentral()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameConfigurationCentral{
 
@@ -93,7 +92,7 @@ open fun getInstance()
     val MAX_LAYERS: GameConfiguration
 
     private var gameControlFidelity: Int = 36
-private constructor        ()
+private constructor ()
             : super()
         {
 
@@ -117,7 +116,7 @@ MAX_LAYERS= GameConfiguration("Max Layers", smallIntegerSingletonFactory!!.getIn
 }
 
 
-open fun load(abeClientInformation: AbeClientInformationInterface)
+    open fun load(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -168,7 +167,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.LOAD, e)
 }
 
 
-open fun setGameControlFidelity(gameControlFidelity: Int)
+    open fun setGameControlFidelity(gameControlFidelity: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameControlFidelity = gameControlFidelity
@@ -176,7 +175,7 @@ this.gameControlFidelity= gameControlFidelity
 }
 
 
-open fun getGameControlFidelity()
+    open fun getGameControlFidelity()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -186,7 +185,8 @@ open fun getGameControlFidelity()
                         return this.gameControlFidelity
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

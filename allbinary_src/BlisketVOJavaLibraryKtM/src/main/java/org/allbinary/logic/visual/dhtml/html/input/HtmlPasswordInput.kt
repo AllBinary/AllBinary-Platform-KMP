@@ -30,7 +30,7 @@
 
 open public class HtmlPasswordInput : HtmlLengthInput {
         
-public constructor        (before: String, name: String, value: String, after: String)                        
+public constructor (before: String, name: String, value: String, after: String)                        
 
                             : super(before, HtmlInputData.getInstance()!!.PASSWORD, name, value, after){
 var before = before

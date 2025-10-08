@@ -16,12 +16,11 @@ open public class OpenGLESNullGraphicsFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OpenGLESGraphics = OpenGLESGraphics()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OpenGLESGraphics{
 

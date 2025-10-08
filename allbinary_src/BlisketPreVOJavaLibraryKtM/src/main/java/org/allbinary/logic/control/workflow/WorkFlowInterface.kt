@@ -27,18 +27,19 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface WorkFlowInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
                 @Throws(Exception::class)
             
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 : Integer
 

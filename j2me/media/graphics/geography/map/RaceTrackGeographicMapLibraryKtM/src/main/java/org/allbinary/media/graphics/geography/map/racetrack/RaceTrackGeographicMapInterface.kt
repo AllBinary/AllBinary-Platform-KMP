@@ -26,22 +26,23 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.media.graphics.geography.map.GeographicMapInterface
+
 interface RaceTrackGeographicMapInterface : GeographicMapInterface {
         
 
-open fun getRaceTrackInfo()
+    open fun getRaceTrackInfo()
         //nullable = true from not(false or (false and true)) = true
 : RaceTrackInfo
 
-open fun setRaceTrackInfo(aRaceTrackInfo: RaceTrackInfo)
+    open fun setRaceTrackInfo(aRaceTrackInfo: RaceTrackInfo)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getRaceTrackData()
+    open fun getRaceTrackData()
         //nullable = true from not(false or (false and true)) = true
 : RaceTrackData
 
-open fun setRaceTrackData(raceTrackData: RaceTrackData)
+    open fun setRaceTrackData(raceTrackData: RaceTrackData)
         //nullable = true from not(false or (false and false)) = true
 
 

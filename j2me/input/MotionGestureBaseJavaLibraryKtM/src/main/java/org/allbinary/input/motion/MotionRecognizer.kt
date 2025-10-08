@@ -38,7 +38,7 @@ open public class MotionRecognizer
         
                 @Throws(Exception::class)
             
-open fun processStartMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
+    open fun processStartMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -50,7 +50,7 @@ var modifiers = modifiers
 
                 @Throws(Exception::class)
             
-open fun processEndMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
+    open fun processEndMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -62,7 +62,7 @@ var modifiers = modifiers
 
                 @Throws(Exception::class)
             
-open fun processDraggedMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
+    open fun processDraggedMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x

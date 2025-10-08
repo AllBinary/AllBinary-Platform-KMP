@@ -32,12 +32,11 @@ open public class HttpFilePermissionsUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: HttpFilePermissionsUtil = HttpFilePermissionsUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : HttpFilePermissionsUtil{
 
@@ -57,7 +56,7 @@ open fun getInstance()
         
                 @Throws(Exception::class)
             
-open fun create(path: AbPath)
+    open fun create(path: AbPath)
         //nullable = true from not(false or (false and false)) = true
 {
 var path = path

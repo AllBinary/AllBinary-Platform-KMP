@@ -30,7 +30,7 @@ import org.allbinary.layer.AllBinaryLayer
 
 open public class SourceCollisionHelper : CollisionHelper {
         
-public constructor        (layerInterface: AllBinaryLayer)                        
+public constructor (layerInterface: AllBinaryLayer)                        
 
                             : super(layerInterface){
 var layerInterface = layerInterface
@@ -40,7 +40,8 @@ var layerInterface = layerInterface
                     
 }
 
-override fun isCollidable(layerInterface: CollidableCompositeLayer)
+
+    override fun isCollidable(layerInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var layerInterface = layerInterface

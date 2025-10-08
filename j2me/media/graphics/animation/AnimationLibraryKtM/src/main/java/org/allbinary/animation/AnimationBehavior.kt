@@ -30,12 +30,11 @@ open public class AnimationBehavior
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AnimationBehavior = AnimationBehavior()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AnimationBehavior{
 
@@ -53,7 +52,7 @@ open fun getInstance()
             {
             }            
         
-open fun reset()
+    open fun reset()
         //nullable = true from not(false or (false and true)) = true
 {
 }

@@ -31,8 +31,7 @@ open public class NullDemoPaintable
         
                 , DemoPaintableInterface {
         
-
-        companion object {
+companion object {
             
     val NULL_DEMO_PAINTABLE: NullDemoPaintable = NullDemoPaintable()
 
@@ -42,7 +41,8 @@ open public class NullDemoPaintable
             public constructor() : super()
             {
             }            
-        override fun showGamePaintable()
+        
+    override fun showGamePaintable()
         //nullable = true from not(false or (false and true)) = true
 {
 }

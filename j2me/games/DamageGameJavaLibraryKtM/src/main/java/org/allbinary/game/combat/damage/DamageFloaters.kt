@@ -29,12 +29,11 @@ import org.allbinary.graphics.paint.Paintable
 
 open public class DamageFloaters : Paintable {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: DamageFloaters = DamageFloaters()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DamageFloaters{
 
@@ -52,7 +51,7 @@ open fun getInstance()
             {
             }            
         
-open fun add(damage: Int)
+    open fun add(damage: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var damage = damage

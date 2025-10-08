@@ -32,10 +32,9 @@ open public class CanvasUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getKeyName(key: Int)
+    open fun getKeyName(key: Int)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var key = key
@@ -116,7 +115,7 @@ var key = key
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

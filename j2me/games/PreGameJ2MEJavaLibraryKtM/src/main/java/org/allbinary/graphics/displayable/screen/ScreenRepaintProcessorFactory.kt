@@ -33,12 +33,11 @@ open public class ScreenRepaintProcessorFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ScreenRepaintProcessorFactory = ScreenRepaintProcessorFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ScreenRepaintProcessorFactory{
 
@@ -50,13 +49,13 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
 
 
-open fun getInstance(displayable: Displayable)
+    open fun getInstance(displayable: Displayable)
         //nullable =  from not(true or (false and false)) = 
 : Processor{
 var displayable = displayable

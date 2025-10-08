@@ -36,7 +36,7 @@ open public class LayerProcessor
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private val layerManager: LayerManager
-public constructor        (layerManager: LayerManager)
+public constructor (layerManager: LayerManager)
             : super()
         {
     //var layerManager = layerManager
@@ -45,7 +45,8 @@ this.layerManager= layerManager
 
 
                 @Throws(Exception::class)
-            override fun process(allBinaryLayerManager: AllBinaryLayerManager, layerInterface: AllBinaryLayer, index: Int)
+            
+    override fun process(allBinaryLayerManager: AllBinaryLayerManager, layerInterface: AllBinaryLayer, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager
@@ -59,7 +60,8 @@ var index = index
 
 
                 @Throws(Exception::class)
-            override fun isProcessorLayer(layerInterface: AllBinaryLayer)
+            
+    override fun isProcessorLayer(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var layerInterface = layerInterface
@@ -69,7 +71,8 @@ var layerInterface = layerInterface
                             throw Exception(commonStrings!!.NOT_IMPLEMENTED)
 }
 
-override fun getLayerManager()
+
+    override fun getLayerManager()
         //nullable = true from not(false or (false and true)) = true
 : LayerManager{
 
@@ -81,7 +84,8 @@ override fun getLayerManager()
 
 
                 @Throws(Exception::class)
-            override fun process(allBinaryLayerManager: AllBinaryLayerManager)
+            
+    override fun process(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager

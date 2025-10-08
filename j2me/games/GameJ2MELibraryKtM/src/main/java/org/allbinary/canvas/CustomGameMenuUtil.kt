@@ -35,10 +35,9 @@ open public class CustomGameMenuUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun add(canvas: MyCanvas)
+    open fun add(canvas: MyCanvas)
         //nullable = true from not(false or (false and false)) = true
 {
     //var canvas = canvas

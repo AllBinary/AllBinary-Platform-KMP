@@ -36,8 +36,7 @@ open public class KeySingletonFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var keyStringHashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
@@ -75,7 +74,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, "KeySingleFactory", STATIC_BLOCK, e)
 
 }
 
-open fun getHashtable()
+    open fun getHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
 
@@ -86,7 +85,7 @@ open fun getHashtable()
 }
 
 
-open fun getInstance(index: Int)
+    open fun getInstance(index: Int)
         //nullable =  from not(true or (false and false)) = 
 : Integer{
 var index = index
@@ -98,7 +97,7 @@ var index = index
 }
 
 
-open fun getArray()
+    open fun getArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<Integer?>{
 
@@ -112,7 +111,7 @@ open fun getArray()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }

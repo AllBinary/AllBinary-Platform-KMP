@@ -57,7 +57,7 @@ open public class CustomTextAnimationFactory
     var font: Font
 
     var scaleProperties: ScaleProperties
-public constructor        (text: String, fontSize: Int, dx: Int, dy: Int)                        
+public constructor (text: String, fontSize: Int, dx: Int, dy: Int)                        
 
                             : this(text, fontSize, AnimationBehaviorFactory.getInstance()){
     //var text = text
@@ -72,7 +72,7 @@ this.dx= dx
 this.dy= dy
 }
 
-public constructor        (text: String, fontSize: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
+public constructor (text: String, fontSize: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
                             : this(text, fontSize, animationBehaviorFactory){
     //var text = text
@@ -88,7 +88,7 @@ this.dx= dx
 this.dy= dy
 }
 
-public constructor        (text: String, fontSize: Int)                        
+public constructor (text: String, fontSize: Int)                        
 
                             : this(text, fontSize, AnimationBehaviorFactory.getInstance()){
     //var text = text
@@ -99,7 +99,7 @@ public constructor        (text: String, fontSize: Int)
                     
 }
 
-public constructor        (text: String, fontSize: Int, animationBehaviorFactory: AnimationBehaviorFactory)
+public constructor (text: String, fontSize: Int, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
         {
     //var text = text
@@ -115,7 +115,8 @@ this.font= Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, this.initScaleHeight
 
 
                 @Throws(Exception::class)
-            override fun getInstance(instanceId: Int)
+            
+    override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var instanceId = instanceId
@@ -144,14 +145,15 @@ customTextAnimation!!.setBasicColorP(basicColor)
                         return customTextAnimation
 }
 
-override fun setInitialScale(scaleProperties: ScaleProperties)
+
+    override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
 {
     //var scaleProperties = scaleProperties
 }
 
 
-open fun getWidth()
+    open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -162,7 +164,7 @@ open fun getWidth()
 }
 
 
-open fun getHeight()
+    open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

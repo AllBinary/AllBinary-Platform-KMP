@@ -35,10 +35,9 @@ open public class StoreFrontViewFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getInstance(storeName: String)
+    open fun getInstance(storeName: String)
         //nullable =  from not(true or (false and false)) = 
 : DomNodeInterface{
 var storeName = storeName
@@ -82,7 +81,7 @@ var storeName = storeName
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }

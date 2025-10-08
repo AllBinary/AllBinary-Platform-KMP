@@ -25,12 +25,13 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface ProfileActionScriptItemInterface {
         
 
                 @Throws(Exception::class)
             
-open fun process(frame: Long)
+    open fun process(frame: Long)
         //nullable = true from not(false or (false and false)) = true
 
 

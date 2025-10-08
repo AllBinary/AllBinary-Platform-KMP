@@ -30,8 +30,7 @@ open public class BaseViewWrapper
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NULL_VIEW_WRAPPER: BaseViewWrapper = BaseViewWrapper()
 

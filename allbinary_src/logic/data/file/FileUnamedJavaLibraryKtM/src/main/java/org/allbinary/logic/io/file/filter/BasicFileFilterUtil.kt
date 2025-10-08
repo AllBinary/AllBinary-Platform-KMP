@@ -33,10 +33,9 @@ open public class BasicFileFilterUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getInstance(extension: String)
+    open fun getInstance(extension: String)
         //nullable =  from not(true or (false and false)) = 
 : FileFilter{
     //var extension = extension
@@ -56,7 +55,7 @@ vector.add(extension)
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

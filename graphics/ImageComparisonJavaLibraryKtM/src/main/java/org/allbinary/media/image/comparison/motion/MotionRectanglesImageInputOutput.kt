@@ -53,7 +53,7 @@ open public class MotionRectanglesImageInputOutput
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val NUMBER_OF_IMAGES: Int = 1
-public constructor        ()
+public constructor ()
             : super()
         {
 }
@@ -61,7 +61,7 @@ public constructor        ()
 
                 @Throws(Exception::class)
             
-open fun save(frame: Long)
+    open fun save(frame: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var frame = frame
@@ -104,7 +104,7 @@ this.save(motionRectangles, frame)
 
                 @Throws(Exception::class)
             
-open fun save(motionRectangles: MotionRectangles, frame: Long)
+    open fun save(motionRectangles: MotionRectangles, frame: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var motionRectangles = motionRectangles

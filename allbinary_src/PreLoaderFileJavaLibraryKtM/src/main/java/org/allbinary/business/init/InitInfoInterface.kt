@@ -26,48 +26,49 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.io.path.AbPath
+
 interface InitInfoInterface {
         
 
-open fun isTesting()
+    open fun isTesting()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun getTesting()
+    open fun getTesting()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getTestHtmlPath()
+    open fun getTestHtmlPath()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getMainPath()
+    open fun getMainPath()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun setTesting(value: String)
+    open fun setTesting(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setTestHtmlPath(value: AbPath)
+    open fun setTestHtmlPath(value: AbPath)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setMainPath(value: AbPath)
+    open fun setMainPath(value: AbPath)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun isTestingValid(testing: String)
+    open fun isTestingValid(testing: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
-open fun isTestHtmlPathValid(value: AbPath)
+    open fun isTestHtmlPathValid(value: AbPath)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
-open fun isMainPathValid(value: AbPath)
+    open fun isMainPathValid(value: AbPath)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 

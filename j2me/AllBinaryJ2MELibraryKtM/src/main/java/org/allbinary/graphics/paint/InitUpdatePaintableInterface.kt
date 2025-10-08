@@ -27,6 +27,7 @@
         
 import org.allbinary.init.InitInterface
 import org.allbinary.init.UpdateInterface
+
 interface InitUpdatePaintableInterface : InitInterface, UpdateInterface, PaintableInterface {
         
 

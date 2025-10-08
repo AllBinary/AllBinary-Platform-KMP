@@ -31,12 +31,11 @@ open public class ScaleBaseProcessor
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ScaleBaseProcessor = ScaleBaseProcessor()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ScaleBaseProcessor{
 
@@ -54,7 +53,7 @@ open fun getInstance()
             {
             }            
         
-open fun update(originalImage: Image, originalImageArray: Array<Image?>, imageToShowArray: Array<Image?>, index: Int, scaleX: Float, scaleY: Float, maxScaleX: Float, maxScaleY: Float)
+    open fun update(originalImage: Image, originalImageArray: Array<Image?>, imageToShowArray: Array<Image?>, index: Int, scaleX: Float, scaleY: Float, maxScaleX: Float, maxScaleY: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var originalImage = originalImage

@@ -32,12 +32,11 @@ open public class BasicOptionItemsEntityFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: BasicOptionItemsEntityFactory = BasicOptionItemsEntityFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BasicOptionItemsEntityFactory{
 
@@ -51,13 +50,13 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getBasicOptionItemsEntityInstance()
+    open fun getBasicOptionItemsEntityInstance()
         //nullable = true from not(false or (false and true)) = true
 : BasicOptionItemsEntity{
 

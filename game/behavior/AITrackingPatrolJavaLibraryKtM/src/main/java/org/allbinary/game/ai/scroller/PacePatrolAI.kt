@@ -53,7 +53,7 @@ open public class PacePatrolAI : BasePatrolAI
     private var firingDistance: Int= 0
 
     var isFollowLimitedByTerrain: Boolean = false
-public constructor        (hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
+public constructor (hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
                             : super(hashtable, ownerLayerInterface, gameInput){
 var hashtable = hashtable
@@ -69,7 +69,8 @@ this.trackingList= BasicArrayList()
 
 
                 @Throws(Exception::class)
-            override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+            
+    override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager
@@ -130,7 +131,7 @@ super.processAI(Canvas.KEY_NUM1)
 }
 
 
-open fun setFiringDirectionForTargetIfInRange()
+    open fun setFiringDirectionForTargetIfInRange()
         //nullable = true from not(false or (false and true)) = true
 : Direction{
 
@@ -225,19 +226,22 @@ lastTrackingLayerInterface= lastTrackingEvent!!.getLayerInterface()
                         return direction
 }
 
-override fun disable()
+
+    override fun disable()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun onEvent(eventObject: AllBinaryEventObject)
+
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
-override fun onMovement(trackingEvent: TrackingEvent)
+
+    override fun onMovement(trackingEvent: TrackingEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var trackingEvent = trackingEvent
@@ -246,7 +250,7 @@ this.trackingList!!.add(trackingEvent)
 }
 
 
-open fun getFiringDistance()
+    open fun getFiringDistance()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -257,7 +261,7 @@ open fun getFiringDistance()
 }
 
 
-open fun setFiringDistance(firingDistance: Int)
+    open fun setFiringDistance(firingDistance: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var firingDistance = firingDistance

@@ -72,7 +72,7 @@ open public class InitDbCrypted : AbDatabaseManagement {
     private var logDbInitInfo: LogDbInitInfo
 
     private val SQL_FILE: String = "initWeblisket.sql"
-public constructor        (databaseConnectionInfoInterface: DatabaseConnectionInfoInterface)                        
+public constructor (databaseConnectionInfoInterface: DatabaseConnectionInfoInterface)                        
 
                             : super(databaseConnectionInfoInterface as DbConnectionInfo){
 var databaseConnectionInfoInterface = databaseConnectionInfoInterface
@@ -83,7 +83,7 @@ var databaseConnectionInfoInterface = databaseConnectionInfoInterface
 }
 
 
-open fun addUsers()
+    open fun addUsers()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -228,7 +228,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.METHOD_ADD_USERS, e)
 }
 
 
-open fun addDatabases()
+    open fun addDatabases()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -350,7 +350,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.METHOD_ADD_DATABASES, e
 }
 
 
-open fun addTables()
+    open fun addTables()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

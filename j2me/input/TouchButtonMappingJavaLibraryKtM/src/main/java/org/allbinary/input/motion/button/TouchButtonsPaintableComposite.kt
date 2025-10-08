@@ -59,7 +59,7 @@ open public class TouchButtonsPaintableComposite : ProcessPaintable
     private var timeHelper: TimeDelayHelper = TimeDelayHelper(250)
 
     private var released: Boolean = true
-public constructor        (inputMappingInterface: InputMappingInterface, basicColor: BasicColor){
+public constructor (inputMappingInterface: InputMappingInterface, basicColor: BasicColor){
     //var inputMappingInterface = inputMappingInterface
     //var basicColor = basicColor
 this.inputMappingInterface= inputMappingInterface
@@ -67,7 +67,8 @@ CompleteMotionGestureInputEventHandler.getInstance()!!.addListener(this)
 this.touchButtonsPaintable= TouchButtonsMappingPaintable(basicColor)
 }
 
-override fun onEvent(eventObject: AllBinaryEventObject)
+
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject
@@ -82,7 +83,8 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
     private val FAST_REPEAT: String = "Ignoring: MotionGestureInput Repeated To Quickly"
 
     private val IGNORE: String = "Ignoring: Until Released"
-override fun onCompleteMotionGestureInputEvent(completeMotionGestureInputEvent: CompleteMotionGestureInputEvent)
+
+    override fun onCompleteMotionGestureInputEvent(completeMotionGestureInputEvent: CompleteMotionGestureInputEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var completeMotionGestureInputEvent = completeMotionGestureInputEvent
@@ -155,7 +157,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
 
 }
 
-override fun process()
+
+    override fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 CompleteMotionGestureInputEventHandler.getInstance()!!.removeListener(this)

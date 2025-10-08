@@ -43,7 +43,7 @@ open public class CustomTextBox : GameCommandCanvas {
         
 
     private val textFieldItem: TextFieldItem
-public constructor        (cmdListener: CommandListener, label: String, text: String, maxSize: Int, constraints: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (cmdListener: CommandListener, label: String, text: String, maxSize: Int, constraints: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : this(cmdListener, label, text, maxSize, constraints, Font.getDefaultFont(), backgroundBasicColor, foregroundBasicColor){
     //var cmdListener = cmdListener
@@ -59,7 +59,7 @@ public constructor        (cmdListener: CommandListener, label: String, text: St
                     
 }
 
-public constructor        (cmdListener: CommandListener, label: String, text: String, maxSize: Int, constraints: Int, font: Font, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (cmdListener: CommandListener, label: String, text: String, maxSize: Int, constraints: Int, font: Font, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(cmdListener, label, backgroundBasicColor, foregroundBasicColor){
     //var cmdListener = cmdListener
@@ -86,7 +86,7 @@ this.setTitle(label)
 }
 
 
-open fun submit()
+    open fun submit()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -94,7 +94,7 @@ open fun submit()
 
     private val inputFactory: InputFactory = InputFactory.getInstance()!!
 
-open fun onEvent(keyCode: Int, deviceId: Int, repeated: Boolean)
+    open fun onEvent(keyCode: Int, deviceId: Int, repeated: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
@@ -105,28 +105,32 @@ logUtil!!.put(StringMaker().
 this.keyPressed(keyCode, deviceId)
 }
 
-override fun keyPressed(keyCode: Int)
+
+    override fun keyPressed(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
 this.keyPressed(keyCode, 0)
 }
 
-override fun keyReleased(keyCode: Int)
+
+    override fun keyReleased(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
 this.keyReleased(keyCode, 0)
 }
 
-override fun keyRepeated(keyCode: Int)
+
+    override fun keyRepeated(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
 this.keyRepeated(keyCode, 0)
 }
 
-override fun keyPressed(keyCode: Int, deviceId: Int)
+
+    override fun keyPressed(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
@@ -162,14 +166,16 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.KEY_PRESSED, e
 
 }
 
-override fun keyReleased(keyCode: Int, deviceId: Int)
+
+    override fun keyReleased(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
     //var deviceId = deviceId
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -190,7 +196,7 @@ super.paint(graphics)
 }
 
 
-open fun paint(graphics: Graphics, x: Int, y: Int)
+    open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -200,7 +206,7 @@ textFieldItem!!.paint(graphics, x, y)
 }
 
 
-open fun getTextFieldItem()
+    open fun getTextFieldItem()
         //nullable = true from not(false or (false and true)) = true
 : TextFieldItem{
 

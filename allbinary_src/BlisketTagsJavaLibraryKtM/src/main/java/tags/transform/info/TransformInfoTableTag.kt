@@ -30,7 +30,7 @@ import taghelpers.transform.info.TransformInfoHelperFactory
 
 open public class TransformInfoTableTag : TableTag {
         
-public constructor        (){
+public constructor (){
 this.setTagHelperFactory(TransformInfoHelperFactory())
 }
 

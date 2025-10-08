@@ -66,7 +66,7 @@ open public class AbDatabaseManagement : AbSqlBean {
     val UNABLE_TO_CREATE_TABLES: String = "Unable to Create Tables"
 
     val ADD_TABLES_RESULTS_LABEL: String = "Add Table Results: "
-public constructor        (databaseConnectionInfoInterface: DatabaseConnectionInfoInterface)                        
+public constructor (databaseConnectionInfoInterface: DatabaseConnectionInfoInterface)                        
 
                             : super(databaseConnectionInfoInterface as DbConnectionInfo){
 var databaseConnectionInfoInterface = databaseConnectionInfoInterface
@@ -76,7 +76,7 @@ var databaseConnectionInfoInterface = databaseConnectionInfoInterface
                     
 }
 
-public constructor        (connectionInfo: DbConnectionInfo)                        
+public constructor (connectionInfo: DbConnectionInfo)                        
 
                             : super(connectionInfo){
 var connectionInfo = connectionInfo
@@ -87,7 +87,7 @@ var connectionInfo = connectionInfo
 }
 
 
-open fun getHostName()
+    open fun getHostName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -115,7 +115,7 @@ logUtil!!.put(this.FAILED, this, GET_HOST_NAME, e)
 
                 @Throws(Exception::class)
             
-open fun addDbUser(hostName: String, db: String, userName: String, password: String)
+    open fun addDbUser(hostName: String, db: String, userName: String, password: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var hostName = hostName
@@ -148,7 +148,7 @@ super.executeSQLStatement(sqlStatement)
 }
 
 
-open fun addDbUser(db: String, userName: String, password: String)
+    open fun addDbUser(db: String, userName: String, password: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var db = db
@@ -189,7 +189,7 @@ logUtil!!.put(this.UNABLE_TO_CREATE_USER +userName, this, this.METHOD_ADD_USER, 
 }
 
 
-open fun addDb(db: String)
+    open fun addDb(db: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var db = db

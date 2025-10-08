@@ -30,12 +30,11 @@ open public class CollisionTypeFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var SINGLETON: CollisionTypeFactory = CollisionTypeFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CollisionTypeFactory{
 

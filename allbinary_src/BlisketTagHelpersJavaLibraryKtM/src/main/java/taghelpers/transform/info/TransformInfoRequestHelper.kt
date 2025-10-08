@@ -40,14 +40,14 @@ open public class TransformInfoRequestHelper : ModifyTable {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var transformInfoInterface: TransformInfoHttpInterface
-public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext){
 var propertiesHashMap = propertiesHashMap
 var pageContext = pageContext
 this.transformInfoInterface= TransformInfoHttpStoreNoManipulation(propertiesHashMap, pageContext)
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -97,7 +97,7 @@ TransformInfoEntityBuilder.getInstance()!!.update(hashMapData)
 }
 
 
-open fun insert()
+    open fun insert()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -147,7 +147,7 @@ TransformInfoEntityBuilder.getInstance()!!.insert(values)
 }
 
 
-open fun delete()
+    open fun delete()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

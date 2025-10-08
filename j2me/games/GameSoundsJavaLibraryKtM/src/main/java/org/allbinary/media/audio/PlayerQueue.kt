@@ -35,8 +35,7 @@ open public class PlayerQueue
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val TOTAL: String = "Sounds In Queue: "
 
@@ -47,7 +46,7 @@ open public class PlayerQueue
     private val list: BasicArrayList = BasicArrayList()
 
     private var max: Int
- constructor        (max: Int)
+ constructor (max: Int)
             : super()
         {
 var max = max
@@ -55,7 +54,7 @@ this.max= max
 }
 
 
-open fun add(sound: Sound)
+    open fun add(sound: Sound)
         //nullable = true from not(false or (false and false)) = true
 {
 var sound = sound
@@ -78,7 +77,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD)
 }
 
 
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -149,13 +148,14 @@ PreLogUtil.put(StringMaker().
 }
 
 
-open fun clear()
+    open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 this.list.clear()
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

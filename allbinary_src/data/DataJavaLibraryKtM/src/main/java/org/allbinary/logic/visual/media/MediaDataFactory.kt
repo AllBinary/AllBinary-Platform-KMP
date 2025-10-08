@@ -30,12 +30,11 @@ open public class MediaDataFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: MediaDataFactory = MediaDataFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : MediaDataFactory{
 

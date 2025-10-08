@@ -25,10 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface MovementCompositeInterface {
         
 
-open fun getMovement()
+    open fun getMovement()
         //nullable = true from not(false or (false and true)) = true
 : Movement
 

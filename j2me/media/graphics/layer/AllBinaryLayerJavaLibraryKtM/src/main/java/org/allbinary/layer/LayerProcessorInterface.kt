@@ -25,22 +25,23 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface LayerProcessorInterface : BasicLayerProcessorInterface {
         
 
-open fun getLayerManager()
+    open fun getLayerManager()
         //nullable = true from not(false or (false and true)) = true
 : LayerManager
 
                 @Throws(Exception::class)
             
-open fun process(allBinaryLayerManager: AllBinaryLayerManager, layerInterface: AllBinaryLayer, index: Int)
+    open fun process(allBinaryLayerManager: AllBinaryLayerManager, layerInterface: AllBinaryLayer, index: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun isProcessorLayer(layerInterface: AllBinaryLayer)
+    open fun isProcessorLayer(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 

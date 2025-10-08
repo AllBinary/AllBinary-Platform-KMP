@@ -36,32 +36,32 @@ open public class ShakeAnimationListener
             {
             }            
         
-open fun onSmallShakeEvent()
+    open fun onSmallShakeEvent()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun onMediumShakeEvent()
+    open fun onMediumShakeEvent()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun onLargeShakeEvent()
+    open fun onLargeShakeEvent()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun onShakeEvent(shakeEvent: ShakeEvent)
+    open fun onShakeEvent(shakeEvent: ShakeEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var shakeEvent = shakeEvent
 }
 
 
-open fun getType()
+    open fun getType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

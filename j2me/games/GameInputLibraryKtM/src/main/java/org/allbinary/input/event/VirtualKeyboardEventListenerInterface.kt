@@ -26,12 +26,13 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.util.event.EventListenerInterface
+
 interface VirtualKeyboardEventListenerInterface : EventListenerInterface {
         
 
                 @Throws(Exception::class)
             
-open fun onVirtualKeyboardEvent(virtualKeyboardEvent: VirtualKeyboardEvent)
+    open fun onVirtualKeyboardEvent(virtualKeyboardEvent: VirtualKeyboardEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

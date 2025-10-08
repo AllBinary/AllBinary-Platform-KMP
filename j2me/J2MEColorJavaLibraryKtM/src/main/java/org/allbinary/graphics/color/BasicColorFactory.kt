@@ -31,12 +31,11 @@ open public class BasicColorFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: BasicColorFactory = BasicColorFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BasicColorFactory{
 
@@ -54,6 +53,8 @@ open fun getInstance()
             {
             }            
         
+    val NULL_COLOR: BasicColor = BasicColor(255, 255, 255, 255, "null color")
+
     val TAN: BasicColor = BasicColor(0xE9D8B5)
 
     val SKIN_PINK: BasicColor = BasicColor(0xFDCECE)

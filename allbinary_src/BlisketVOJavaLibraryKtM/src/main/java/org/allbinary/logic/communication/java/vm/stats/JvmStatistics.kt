@@ -36,14 +36,14 @@ open public class JvmStatistics
         
 
     private var runtime: Runtime
-public constructor        ()
+public constructor ()
             : super()
         {
 runtime= Runtime.getRuntime()
 }
 
 
-open fun getFreeMemoryBytes()
+    open fun getFreeMemoryBytes()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -54,7 +54,7 @@ open fun getFreeMemoryBytes()
 }
 
 
-open fun getFreeMemoryKilobytes()
+    open fun getFreeMemoryKilobytes()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -65,7 +65,7 @@ open fun getFreeMemoryKilobytes()
 }
 
 
-open fun getFreeMemoryMegabytes()
+    open fun getFreeMemoryMegabytes()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -76,7 +76,7 @@ open fun getFreeMemoryMegabytes()
 }
 
 
-open fun getMaxMemoryBytes()
+    open fun getMaxMemoryBytes()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -87,7 +87,7 @@ open fun getMaxMemoryBytes()
 }
 
 
-open fun getMaxMemoryKilobytes()
+    open fun getMaxMemoryKilobytes()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -98,7 +98,7 @@ open fun getMaxMemoryKilobytes()
 }
 
 
-open fun getMaxMemoryMegabytes()
+    open fun getMaxMemoryMegabytes()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -109,7 +109,7 @@ open fun getMaxMemoryMegabytes()
 }
 
 
-open fun getTotalMemoryBytes()
+    open fun getTotalMemoryBytes()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -120,7 +120,7 @@ open fun getTotalMemoryBytes()
 }
 
 
-open fun getTotalMemoryKilobytes()
+    open fun getTotalMemoryKilobytes()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -131,7 +131,7 @@ open fun getTotalMemoryKilobytes()
 }
 
 
-open fun getTotalMemoryMegabytes()
+    open fun getTotalMemoryMegabytes()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -142,7 +142,7 @@ open fun getTotalMemoryMegabytes()
 }
 
 
-open fun getFreeMemoryBytesLong()
+    open fun getFreeMemoryBytesLong()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -153,7 +153,7 @@ open fun getFreeMemoryBytesLong()
 }
 
 
-open fun getFreeMemoryKilobytesLong()
+    open fun getFreeMemoryKilobytesLong()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -164,7 +164,7 @@ open fun getFreeMemoryKilobytesLong()
 }
 
 
-open fun getFreeMemoryMegabytesLong()
+    open fun getFreeMemoryMegabytesLong()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -175,7 +175,7 @@ open fun getFreeMemoryMegabytesLong()
 }
 
 
-open fun getMaxMemoryBytesLong()
+    open fun getMaxMemoryBytesLong()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -186,7 +186,7 @@ open fun getMaxMemoryBytesLong()
 }
 
 
-open fun getMaxMemoryKilobytesLong()
+    open fun getMaxMemoryKilobytesLong()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -197,7 +197,7 @@ open fun getMaxMemoryKilobytesLong()
 }
 
 
-open fun getMaxMemoryMegabytesLong()
+    open fun getMaxMemoryMegabytesLong()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -208,7 +208,7 @@ open fun getMaxMemoryMegabytesLong()
 }
 
 
-open fun getTotalMemoryBytesLong()
+    open fun getTotalMemoryBytesLong()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -219,7 +219,7 @@ open fun getTotalMemoryBytesLong()
 }
 
 
-open fun getTotalMemoryKilobytesLong()
+    open fun getTotalMemoryKilobytesLong()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -230,7 +230,7 @@ open fun getTotalMemoryKilobytesLong()
 }
 
 
-open fun getTotalMemoryMegabytesLong()
+    open fun getTotalMemoryMegabytesLong()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -241,7 +241,7 @@ open fun getTotalMemoryMegabytesLong()
 }
 
 
-open fun getFreeMemoryBytesString()
+    open fun getFreeMemoryBytesString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -252,7 +252,7 @@ open fun getFreeMemoryBytesString()
 }
 
 
-open fun getFreeMemoryKilobytesString()
+    open fun getFreeMemoryKilobytesString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -263,7 +263,7 @@ open fun getFreeMemoryKilobytesString()
 }
 
 
-open fun getFreeMemoryMegabytesString()
+    open fun getFreeMemoryMegabytesString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -274,7 +274,7 @@ open fun getFreeMemoryMegabytesString()
 }
 
 
-open fun getMaxMemoryBytesString()
+    open fun getMaxMemoryBytesString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -285,7 +285,7 @@ open fun getMaxMemoryBytesString()
 }
 
 
-open fun getMaxMemoryKilobytesString()
+    open fun getMaxMemoryKilobytesString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -296,7 +296,7 @@ open fun getMaxMemoryKilobytesString()
 }
 
 
-open fun getMaxMemoryMegabytesString()
+    open fun getMaxMemoryMegabytesString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -307,7 +307,7 @@ open fun getMaxMemoryMegabytesString()
 }
 
 
-open fun getTotalMemoryBytesString()
+    open fun getTotalMemoryBytesString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -318,7 +318,7 @@ open fun getTotalMemoryBytesString()
 }
 
 
-open fun getTotalMemoryKilobytesString()
+    open fun getTotalMemoryKilobytesString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -329,7 +329,7 @@ open fun getTotalMemoryKilobytesString()
 }
 
 
-open fun getTotalMemoryMegabytesString()
+    open fun getTotalMemoryMegabytesString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -340,7 +340,7 @@ open fun getTotalMemoryMegabytesString()
 }
 
 
-open fun getNumberOfThreads()
+    open fun getNumberOfThreads()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -351,7 +351,7 @@ open fun getNumberOfThreads()
 }
 
 
-open fun getNumberOfThreadsLong()
+    open fun getNumberOfThreadsLong()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -362,7 +362,7 @@ open fun getNumberOfThreadsLong()
 }
 
 
-open fun getNumberOfThreadsString()
+    open fun getNumberOfThreadsString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -373,7 +373,7 @@ open fun getNumberOfThreadsString()
 }
 
 
-open fun collectGarbage()
+    open fun collectGarbage()
         //nullable = true from not(false or (false and true)) = true
 {
 runtime.gc()

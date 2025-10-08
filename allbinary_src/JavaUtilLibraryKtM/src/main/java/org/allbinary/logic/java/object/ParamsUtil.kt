@@ -31,10 +31,9 @@ open public class ParamsUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun viewParams(params: Array<KClass<*>?>)
+    open fun viewParams(params: Array<KClass<*>?>)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var params = params
@@ -75,7 +74,7 @@ stringBuffer!!.append(params[index]!!.getName())
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

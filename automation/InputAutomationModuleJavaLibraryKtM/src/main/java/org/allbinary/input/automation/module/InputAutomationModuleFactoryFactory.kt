@@ -51,7 +51,7 @@ open public class InputAutomationModuleFactoryFactory
     private var defaultListModelHelper: DefaultListModelHelper
 
     private var helpSetListenerInterface: HelpSetListener
-public constructor        (helpSetListenerInterface: HelpSetListener)
+public constructor (helpSetListenerInterface: HelpSetListener)
             : super()
         {
     //var helpSetListenerInterface = helpSetListenerInterface
@@ -82,7 +82,7 @@ logUtil!!.put("Loaded " +this.hashMap!!.size +"/" +this.defaultListModelHelper!!
 }
 
 
-open fun add(inputAutomationModuleConfiguration: InputAutomationModuleConfiguration)
+    open fun add(inputAutomationModuleConfiguration: InputAutomationModuleConfiguration)
         //nullable = true from not(false or (false and false)) = true
 {
     //var inputAutomationModuleConfiguration = inputAutomationModuleConfiguration
@@ -109,7 +109,7 @@ this.helpSetListenerInterface!!.helpSetAdded(helpSetEvent)
 }
 
 
-open fun getListModel()
+    open fun getListModel()
         //nullable = true from not(false or (false and true)) = true
 : ListModel{
 
@@ -120,7 +120,7 @@ open fun getListModel()
 }
 
 
-open fun getInstance(moduleName: String)
+    open fun getInstance(moduleName: String)
         //nullable =  from not(true or (false and false)) = 
 : InputAutomationModuleFactoryInterface{
     //var moduleName = moduleName

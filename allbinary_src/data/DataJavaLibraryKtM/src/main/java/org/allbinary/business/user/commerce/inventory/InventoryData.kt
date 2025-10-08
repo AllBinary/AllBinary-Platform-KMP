@@ -30,8 +30,7 @@ open public class InventoryData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val INVENTORY: String = "INVENTORY"
 

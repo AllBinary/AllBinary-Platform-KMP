@@ -27,10 +27,11 @@
         
 import org.allbinary.game.layer.RTSLayer
 import org.allbinary.graphics.form.ScrollSelectionForm
+
 interface RTSLayerFormFactoryInterface {
         
 
-open fun getInstance(rtsLayer: RTSLayer)
+    open fun getInstance(rtsLayer: RTSLayer)
         //nullable =  from not(true or (false and false)) = 
 : ScrollSelectionForm
 

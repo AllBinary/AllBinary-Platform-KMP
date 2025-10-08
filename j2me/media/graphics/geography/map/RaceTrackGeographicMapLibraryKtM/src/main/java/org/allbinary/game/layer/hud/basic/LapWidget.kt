@@ -40,7 +40,7 @@ open public class LapWidget : BasicHud {
     private val OF_STR: String = " of "
 
     private var string: String = StringUtil.getInstance()!!.EMPTY_STRING
-public constructor        (location: Int, direction: Int, basicColor: BasicColor)                        
+public constructor (location: Int, direction: Int, basicColor: BasicColor)                        
 
                             : super(location, direction, 15, 40, 2, basicColor){
 var location = location
@@ -53,7 +53,7 @@ var basicColor = basicColor
 }
 
 
-open fun update(lapInfo: LapInfo)
+    open fun update(lapInfo: LapInfo)
         //nullable = true from not(false or (false and false)) = true
 {
 var lapInfo = lapInfo
@@ -69,7 +69,7 @@ this.string= stringBuffer!!.toString()
 }
 
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

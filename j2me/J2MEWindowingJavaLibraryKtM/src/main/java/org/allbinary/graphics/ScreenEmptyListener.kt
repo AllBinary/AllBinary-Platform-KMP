@@ -36,13 +36,15 @@ open public class ScreenEmptyListener
             public constructor() : super()
             {
             }            
-        override fun onFullScreen(isFullScreen: Boolean)
+        
+    override fun onFullScreen(isFullScreen: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var isFullScreen = isFullScreen
 }
 
-override fun onFullScreenDisplay()
+
+    override fun onFullScreenDisplay()
         //nullable = true from not(false or (false and true)) = true
 {
 }

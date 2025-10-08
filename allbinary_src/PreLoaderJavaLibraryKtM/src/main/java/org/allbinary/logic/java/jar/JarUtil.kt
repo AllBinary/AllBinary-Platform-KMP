@@ -37,12 +37,11 @@ open public class JarUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun main(args: Array<String?>)
+    open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var args = args
@@ -54,7 +53,7 @@ JarUtil(URL("file:///G:/mnt/bc/mydev/working/j2me/MiniSpaceWars/MiniSpaceWars/di
         }
             
     private var jarURL: URL
-public constructor        (jarURL: URL)
+public constructor (jarURL: URL)
             : super()
         {
 var jarURL = jarURL
@@ -62,7 +61,7 @@ this.jarURL= jarURL
 }
 
 
-open fun show()
+    open fun show()
         //nullable = true from not(false or (false and true)) = true
 {
 

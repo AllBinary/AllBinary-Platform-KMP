@@ -37,7 +37,8 @@ open public class LayerManagerEventListener
             public constructor() : super()
             {
             }            
-        override fun onEvent(eventObject: AllBinaryEventObject)
+        
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject
@@ -45,7 +46,8 @@ open public class LayerManagerEventListener
 
 
                 @Throws(Exception::class)
-            override fun onCreateLayerManagerEvent(layerManagerEvent: LayerManagerEvent)
+            
+    override fun onCreateLayerManagerEvent(layerManagerEvent: LayerManagerEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerManagerEvent = layerManagerEvent
@@ -53,7 +55,8 @@ open public class LayerManagerEventListener
 
 
                 @Throws(Exception::class)
-            override fun onDeleteLayerManagerEvent(layerManagerEvent: LayerManagerEvent)
+            
+    override fun onDeleteLayerManagerEvent(layerManagerEvent: LayerManagerEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerManagerEvent = layerManagerEvent

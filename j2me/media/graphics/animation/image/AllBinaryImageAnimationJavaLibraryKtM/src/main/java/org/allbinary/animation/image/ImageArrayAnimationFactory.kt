@@ -45,7 +45,7 @@ open public class ImageArrayAnimationFactory
     private val imageArray: Array<Image?>
 
     private val animationBehaviorFactory: AnimationBehaviorFactory
-public constructor        (imageArray: Array<Image?>, dx: Int, dy: Int)                        
+public constructor (imageArray: Array<Image?>, dx: Int, dy: Int)                        
 
                             : this(imageArray, dx, dy, AnimationBehaviorFactory.getInstance()){
     //var imageArray = imageArray
@@ -57,7 +57,7 @@ public constructor        (imageArray: Array<Image?>, dx: Int, dy: Int)
                     
 }
 
-public constructor        (imageArray: Array<Image?>, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
+public constructor (imageArray: Array<Image?>, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
                             : this(imageArray, animationBehaviorFactory){
     //var imageArray = imageArray
@@ -72,7 +72,7 @@ this.dx= dx
 this.dy= dy
 }
 
-public constructor        (imageArray: Array<Image?>)                        
+public constructor (imageArray: Array<Image?>)                        
 
                             : this(imageArray, AnimationBehaviorFactory.getInstance()){
     //var imageArray = imageArray
@@ -82,7 +82,7 @@ public constructor        (imageArray: Array<Image?>)
                     
 }
 
-public constructor        (imageArray: Array<Image?>, animationBehaviorFactory: AnimationBehaviorFactory)
+public constructor (imageArray: Array<Image?>, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
         {
     //var imageArray = imageArray
@@ -93,7 +93,8 @@ this.animationBehaviorFactory= animationBehaviorFactory
 
 
                 @Throws(Exception::class)
-            override fun getInstance(instanceId: Int)
+            
+    override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var instanceId = instanceId
@@ -121,7 +122,8 @@ this.animationBehaviorFactory= animationBehaviorFactory
                             
 }
 
-override fun setInitialScale(scaleProperties: ScaleProperties)
+
+    override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
 {
     //var scaleProperties = scaleProperties

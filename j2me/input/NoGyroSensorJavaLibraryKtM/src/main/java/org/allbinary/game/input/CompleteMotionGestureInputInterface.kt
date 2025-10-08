@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.layer.NamedInterface
+
 interface CompleteMotionGestureInputInterface : NamedInterface {
         
 

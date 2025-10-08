@@ -38,12 +38,11 @@ open public class HelperFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(LicensingException::class)
             
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, factoryName: String, className: String, hashMap: HashMap<Any, Any>, httpServletRequest: HttpServletRequest)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, factoryName: String, className: String, hashMap: HashMap<Any, Any>, httpServletRequest: HttpServletRequest)
         //nullable =  from not(true or (false and false)) = 
 : Any{
     //var abeClientInformation = abeClientInformation
@@ -122,7 +121,7 @@ params[1]= httpServletRequest as Object
 
                 @Throws(LicensingException::class)
             
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, factoryName: String, className: String, hashMap: HashMap<Any, Any>, pageContext: PageContext)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, factoryName: String, className: String, hashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
 : Any{
     //var abeClientInformation = abeClientInformation
@@ -201,7 +200,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, factoryName +"->HelperFactory", "getIns
 
                 @Throws(LicensingException::class)
             
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, factoryName: String, className: String, hashMap: HashMap<Any, Any>, specialhashMap: HashMap<Any, Any>, pageContext: PageContext)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, factoryName: String, className: String, hashMap: HashMap<Any, Any>, specialhashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
 : Any{
     //var abeClientInformation = abeClientInformation
@@ -283,7 +282,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, factoryName +"->HelperFactory", "getIns
 
                 @Throws(LicensingException::class)
             
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, factoryName: String, className: String)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, factoryName: String, className: String)
         //nullable =  from not(true or (false and false)) = 
 : Any{
     //var abeClientInformation = abeClientInformation
@@ -348,7 +347,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, factoryName +"->HelperFactory", "getIns
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        ()
+public constructor ()
             : super()
         {
 }

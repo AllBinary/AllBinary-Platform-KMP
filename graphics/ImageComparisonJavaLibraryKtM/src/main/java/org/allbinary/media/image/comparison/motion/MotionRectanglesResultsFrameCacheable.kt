@@ -37,7 +37,7 @@ open public class MotionRectanglesResultsFrameCacheable
     private var motionRectangles: MotionRectangles
 
     private var frame: Long
-public constructor        (motionRectangles: MotionRectangles, frame: Long)
+public constructor (motionRectangles: MotionRectangles, frame: Long)
             : super()
         {
 var motionRectangles = motionRectangles
@@ -47,7 +47,7 @@ this.setMotionRectangles(motionRectangles)
 }
 
 
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -58,7 +58,7 @@ open fun getKey()
 }
 
 
-open fun getMotionRectangles()
+    open fun getMotionRectangles()
         //nullable = true from not(false or (false and true)) = true
 : MotionRectangles{
 
@@ -69,14 +69,15 @@ open fun getMotionRectangles()
 }
 
 
-open fun setMotionRectangles(motionRectangles: MotionRectangles)
+    open fun setMotionRectangles(motionRectangles: MotionRectangles)
         //nullable = true from not(false or (false and false)) = true
 {
 var motionRectangles = motionRectangles
 this.motionRectangles= motionRectangles
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

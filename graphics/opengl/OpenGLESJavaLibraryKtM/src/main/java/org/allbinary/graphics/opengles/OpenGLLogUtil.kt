@@ -22,12 +22,11 @@ open public class OpenGLLogUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OpenGLLogUtil = OpenGLLogUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OpenGLLogUtil{
 
@@ -47,7 +46,7 @@ open fun getInstance()
         
     private val MAX_TEXTURE: String = " Max Texture Size: "
 
-open fun logError(gl: GL10)
+    open fun logError(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl
@@ -102,7 +101,7 @@ stringBuffer!!.append(maxTextureSize[0]!!)
 
     private val IMAGE: String = " Image: "
 
-open fun logError(gl: GL10, image: Image)
+    open fun logError(gl: GL10, image: Image)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl

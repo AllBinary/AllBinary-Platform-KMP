@@ -67,7 +67,7 @@ open public class TouchButton : Paintable {
     var animationY: Int= 0
 
     var hintAnimationY: Int= 0
-public constructor        (touchButtonInput: TouchButtonInput, touchButtonResource: TouchButtonResource, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int)                        
+public constructor (touchButtonInput: TouchButtonInput, touchButtonResource: TouchButtonResource, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int)                        
 
                             : this(touchButtonInput, FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(touchButtonResource!!.RESOURCE)!!.getInstance(0), FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(touchButtonResource!!.HINT)!!.getInstance(0), rawRectangle, cellPosition, xBorder, yBorder){
 var touchButtonInput = touchButtonInput
@@ -82,7 +82,7 @@ var yBorder = yBorder
                     
 }
 
-public constructor        (touchButtonInput: TouchButtonInput, animationInterface: Animation, hintAnimationInterface: Animation, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int){
+public constructor (touchButtonInput: TouchButtonInput, animationInterface: Animation, hintAnimationInterface: Animation, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int){
 var touchButtonInput = touchButtonInput
 var animationInterface = animationInterface
 var hintAnimationInterface = hintAnimationInterface
@@ -103,14 +103,15 @@ logUtil!!.put(StringMaker().
 }
 
 
-open fun paintHint(graphics: Graphics)
+    open fun paintHint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 this.hintAnimationInterface!!.paint(graphics, animationX, this.hintAnimationY)
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -118,7 +119,7 @@ this.animationInterface!!.paint(graphics, animationX, animationY)
 }
 
 
-open fun updateRectangle()
+    open fun updateRectangle()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -144,7 +145,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "updateRectangle", e)
 }
 
 
-open fun getCellPosition()
+    open fun getCellPosition()
         //nullable = true from not(false or (false and true)) = true
 : CellPosition{
 
@@ -155,7 +156,7 @@ open fun getCellPosition()
 }
 
 
-open fun getRectangle()
+    open fun getRectangle()
         //nullable = true from not(false or (false and true)) = true
 : Rectangle{
 
@@ -166,7 +167,7 @@ open fun getRectangle()
 }
 
 
-open fun getTouchButtonInput()
+    open fun getTouchButtonInput()
         //nullable = true from not(false or (false and true)) = true
 : TouchButtonInput{
 
@@ -176,7 +177,8 @@ open fun getTouchButtonInput()
                         return touchButtonInput
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

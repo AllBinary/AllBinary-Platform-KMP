@@ -39,7 +39,7 @@ open public class InputProcessor
         
     val gameInputStrings: GameInputStrings = GameInputStrings.getInstance()!!
 
-open fun keyPressed(keyCode: Int, deviceId: Int)
+    open fun keyPressed(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
@@ -47,7 +47,7 @@ open fun keyPressed(keyCode: Int, deviceId: Int)
 }
 
 
-open fun keyReleased(canvas: Canvas, keyCode: Int, deviceId: Int)
+    open fun keyReleased(canvas: Canvas, keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var canvas = canvas

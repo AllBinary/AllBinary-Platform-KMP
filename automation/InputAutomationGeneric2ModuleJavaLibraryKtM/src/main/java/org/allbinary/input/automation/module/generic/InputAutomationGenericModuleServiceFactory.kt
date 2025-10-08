@@ -31,12 +31,11 @@ import org.allbinary.logic.communication.log.LogUtil
 
 open public class InputAutomationGenericModuleServiceFactory : InputAutomationModuleServiceFactory {
         
-
-        companion object {
+companion object {
             
     private var inputAutomationGenericModuleServiceFactory: InputAutomationGenericModuleServiceFactory = InputAutomationGenericModuleServiceFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : InputAutomationGenericModuleServiceFactory{
 
@@ -50,7 +49,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (){
+public constructor (){
 
         try {
             

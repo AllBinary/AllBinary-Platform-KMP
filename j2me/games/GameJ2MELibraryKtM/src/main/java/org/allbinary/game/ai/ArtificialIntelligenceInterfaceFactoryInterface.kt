@@ -29,12 +29,13 @@ import java.util.Hashtable
 import org.allbinary.ai.ArtificialIntelligenceInterface
 import org.allbinary.game.input.GameInput
 import org.allbinary.layer.AllBinaryLayer
+
 interface ArtificialIntelligenceInterfaceFactoryInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getInstance(hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)
+    open fun getInstance(hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)
         //nullable =  from not(true or (false and false)) = 
 : ArtificialIntelligenceInterface
 

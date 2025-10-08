@@ -29,7 +29,6 @@ import javax.microedition.lcdui.Canvas
 import javax.microedition.lcdui.Graphics
 import org.allbinary.util.BasicArrayList
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.configuration.feature.InputFeatureFactory
@@ -59,7 +58,7 @@ open public class ScrollMapPlayerGameInput : PlayerGameInput {
     private var maxBottom: Int= 0
 
     private var maxRight: Int= 0
-public constructor        (geographicMapInterface: BasicGeographicMap, list: BasicArrayList, playerInputId: Int)                        
+public constructor (geographicMapInterface: BasicGeographicMap, list: BasicArrayList, playerInputId: Int)                        
 
                             : super(list, playerInputId){
 var geographicMapInterface = geographicMapInterface
@@ -80,7 +79,7 @@ this.init()
 
                 @Throws(Exception::class)
             
-open fun move(dx: Int, dy: Int)
+    open fun move(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var dx = dx
@@ -94,7 +93,7 @@ ScrollMapEventHandler.getInstance()!!.fireEvent(scrollMapEvent)
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 this.maxBottom= this.getSpecialHeight()
@@ -104,7 +103,7 @@ this.maxRight= this.getSpecialWidth()
 
                 @Throws(Exception::class)
             
-open fun scrollMiddleX()
+    open fun scrollMiddleX()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -139,7 +138,7 @@ this.move(diffX, 0)
 
                 @Throws(Exception::class)
             
-open fun scrollY(anchor: Int)
+    open fun scrollY(anchor: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var anchor = anchor
@@ -197,7 +196,7 @@ this.move(0, diffY)
 
                 @Throws(Exception::class)
             
-open fun up()
+    open fun up()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -217,7 +216,7 @@ open fun up()
 
                 @Throws(Exception::class)
             
-open fun down()
+    open fun down()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -237,7 +236,7 @@ open fun down()
 
                 @Throws(Exception::class)
             
-open fun right()
+    open fun right()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -257,7 +256,7 @@ open fun right()
 
                 @Throws(Exception::class)
             
-open fun left()
+    open fun left()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -275,7 +274,7 @@ open fun left()
 }
 
 
-open fun initInputProcessors()
+    open fun initInputProcessors()
         //nullable = true from not(false or (false and true)) = true
 {
 this.inputProcessorArray[Canvas.UP]= ScrollMapUpGameInputProcessor(this)
@@ -288,7 +287,7 @@ GameInputProcessorUtil.init(this.inputProcessorArray)
 
                 @Throws(Exception::class)
             
-open fun processInput(key: Int)
+    open fun processInput(key: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var key = key
@@ -299,7 +298,7 @@ inputProcessorArray[key]!!.process(
 
                 @Throws(Exception::class)
             
-open fun processInput(layerManager: AllBinaryLayerManager)
+    open fun processInput(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var layerManager = layerManager
@@ -347,7 +346,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.PROCESS_INPUT,
 }
 
 
-open fun getSpecialHeight()
+    open fun getSpecialHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -381,7 +380,7 @@ open fun getSpecialHeight()
 }
 
 
-open fun getSpecialWidth()
+    open fun getSpecialWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -415,7 +414,7 @@ open fun getSpecialWidth()
 }
 
 
-open fun keepOnMapMaxY(newY: Int)
+    open fun keepOnMapMaxY(newY: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var newY = newY
@@ -447,7 +446,7 @@ var newY = newY
 }
 
 
-open fun keepOnMapMinY(newY: Int)
+    open fun keepOnMapMinY(newY: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var newY = newY
@@ -479,7 +478,7 @@ var newY = newY
 }
 
 
-open fun keepOnMapMaxX(newX: Int)
+    open fun keepOnMapMaxX(newX: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var newX = newX
@@ -511,7 +510,7 @@ var newX = newX
 }
 
 
-open fun keepOnMapMinX(newX: Int)
+    open fun keepOnMapMinX(newX: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var newX = newX

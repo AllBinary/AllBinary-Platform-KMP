@@ -36,12 +36,11 @@ open public class DecalAnimationInterfaceFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: DecalAnimationInterfaceFactory = DecalAnimationInterfaceFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DecalAnimationInterfaceFactory{
 
@@ -61,7 +60,7 @@ open fun getInstance()
         
                 @Throws(Exception::class)
             
-open fun getInstance(basicGameResources: BasicGameResources, basicColor: BasicColor)
+    open fun getInstance(basicGameResources: BasicGameResources, basicColor: BasicColor)
         //nullable =  from not(true or (false and false)) = 
 : AnimationInterfaceFactoryInterface{
 var basicGameResources = basicGameResources

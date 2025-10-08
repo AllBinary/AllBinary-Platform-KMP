@@ -32,12 +32,11 @@ open public class DownloadItemsEntityFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: DownloadItemsEntityFactory = DownloadItemsEntityFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DownloadItemsEntityFactory{
 
@@ -51,13 +50,13 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getDownloadItemsEntityInstance()
+    open fun getDownloadItemsEntityInstance()
         //nullable = true from not(false or (false and true)) = true
 : DownloadItemsEntity{
 

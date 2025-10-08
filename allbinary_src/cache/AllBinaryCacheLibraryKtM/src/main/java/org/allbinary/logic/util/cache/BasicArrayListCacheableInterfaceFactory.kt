@@ -39,7 +39,7 @@ open public class BasicArrayListCacheableInterfaceFactory
         
                 @Throws(Exception::class)
             
-open fun getInstance(key: Any)
+    open fun getInstance(key: Any)
         //nullable =  from not(true or (false and false)) = 
 : CacheableInterface{
 var key = key

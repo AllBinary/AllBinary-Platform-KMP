@@ -34,12 +34,11 @@ open public class UserEmailEventListenerFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface, userInterface: UserInterface)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface, userInterface: UserInterface)
         //nullable =  from not(true or (false and false)) = 
 : UserEmailEventListenerInterface{
     //var abeClientInformation = abeClientInformation
@@ -64,7 +63,7 @@ params[0]= userInterface as Object
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

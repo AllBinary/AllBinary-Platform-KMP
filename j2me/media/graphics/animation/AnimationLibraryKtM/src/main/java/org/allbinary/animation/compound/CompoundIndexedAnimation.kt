@@ -40,7 +40,7 @@ open public class CompoundIndexedAnimation : IndexedAnimation
     private var circularIndexUtil: CircularIndexUtil
 
     private var animationInterfaceArray: Array<Animation?>
-public constructor        (animationInterfaceArray: Array<Animation?>, animationBehavior: AnimationBehavior)                        
+public constructor (animationInterfaceArray: Array<Animation?>, animationBehavior: AnimationBehavior)                        
 
                             : super(animationBehavior){
     //var animationInterfaceArray = animationInterfaceArray
@@ -53,7 +53,8 @@ this.animationInterfaceArray= animationInterfaceArray
 this.circularIndexUtil= CircularIndexUtil.getInstance(this.animationInterfaceArray!!.size)
 }
 
-override fun setFrame(index: Int)
+
+    override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var index = index
@@ -63,7 +64,8 @@ override fun setFrame(index: Int)
 indexedAnimation!!.setFrame(index)
 }
 
-override fun getFrame()
+
+    override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -76,7 +78,8 @@ override fun getFrame()
                         return indexedAnimation!!.getFrame()
 }
 
-override fun getSize()
+
+    override fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -89,7 +92,8 @@ override fun getSize()
                         return indexedAnimation!!.getSize()
 }
 
-override fun previousFrame()
+
+    override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -98,13 +102,15 @@ override fun previousFrame()
 indexedAnimation!!.previousFrame()
 }
 
-override fun setSequence(sequence: IntArray)
+
+    override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
 {
 var sequence = sequence
 }
 
-override fun getSequence()
+
+    override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
 : IntArray{
 
@@ -116,13 +122,15 @@ override fun getSequence()
 
 
                 @Throws(Exception::class)
-            override fun nextFrame()
+            
+    override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.nextFrame()
 }
 
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -131,7 +139,8 @@ override fun paint(graphics: Graphics, x: Int, y: Int)
 this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.paint(graphics, x, y)
 }
 
-override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
+
+    override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -141,7 +150,8 @@ override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
 this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.paintThreed(graphics, x, y, z)
 }
 
-override fun getCurrentAnimation()
+
+    override fun getCurrentAnimation()
         //nullable = true from not(false or (false and true)) = true
 : IndexedAnimation{
 
@@ -151,7 +161,8 @@ override fun getCurrentAnimation()
                         return this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!! as IndexedAnimation
 }
 
-override fun nextAnimation()
+
+    override fun nextAnimation()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -161,7 +172,8 @@ this.circularIndexUtil!!.next()
 this.setFrame(frame)
 }
 
-override fun previousAnimation()
+
+    override fun previousAnimation()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -171,7 +183,8 @@ this.circularIndexUtil!!.previous()
 this.setFrame(frame)
 }
 
-override fun setAnimation(index: Int)
+
+    override fun setAnimation(index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var index = index
@@ -183,7 +196,7 @@ this.setFrame(frame)
 }
 
 
-open fun getAnimationInterfaceArray()
+    open fun getAnimationInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<Animation?>{
 
@@ -194,7 +207,7 @@ open fun getAnimationInterfaceArray()
 }
 
 
-open fun setAnimationInterfaceArray(animationInterfaceArray: Array<Animation?>)
+    open fun setAnimationInterfaceArray(animationInterfaceArray: Array<Animation?>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var animationInterfaceArray = animationInterfaceArray
@@ -203,7 +216,8 @@ this.animationInterfaceArray= animationInterfaceArray
 
 
                 @Throws(Exception::class)
-            override fun set(gl: GL)
+            
+    override fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl

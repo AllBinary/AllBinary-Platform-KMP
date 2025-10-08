@@ -30,8 +30,7 @@ open public class ShippingAddressData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val SETTOBILLINGADDRESS: String = "Set To Billing Address"
 
@@ -64,7 +63,7 @@ open public class ShippingAddressData
     val TAX: String = "SHIPPINGADDRESS_TAX"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

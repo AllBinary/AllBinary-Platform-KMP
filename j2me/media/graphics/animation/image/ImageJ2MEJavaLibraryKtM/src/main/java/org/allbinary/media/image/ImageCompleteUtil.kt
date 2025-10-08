@@ -31,12 +31,11 @@ open public class ImageCompleteUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ImageCompleteUtil = ImageCompleteUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ImageCompleteUtil{
 
@@ -56,7 +55,7 @@ open fun getInstance()
         
                 @Throws(Exception::class)
             
-open fun waitFor(image: Image, name: String)
+    open fun waitFor(image: Image, name: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var image = image

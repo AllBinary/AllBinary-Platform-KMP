@@ -39,12 +39,11 @@ open public class NewWorkFlowFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: NewWorkFlowFactory = NewWorkFlowFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : NewWorkFlowFactory{
 
@@ -58,7 +57,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -66,7 +65,7 @@ private constructor        ()
 
                 @Throws(Exception::class, LicensingException::class)
             
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, hashMap: HashMap<Any, Any>, pageContext: PageContext)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, hashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
 : WorkFlowInterface{
     //var abeClientInformation = abeClientInformation
@@ -139,7 +138,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "getInstance(HashMap)", e)
 
                 @Throws(Exception::class, LicensingException::class)
             
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, className: String)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, className: String)
         //nullable =  from not(true or (false and false)) = 
 : WorkFlowInterface{
     //var abeClientInformation = abeClientInformation

@@ -30,31 +30,31 @@ open public class SideScrollerAnimation
             : Object
          {
         
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun jump()
+    open fun jump()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun walk()
+    open fun walk()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun run()
+    open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun crouch()
+    open fun crouch()
         //nullable = true from not(false or (false and true)) = true
 {
 }

@@ -36,7 +36,7 @@ open public class MagicGameObject : MeteredGameObject
         
 
     private val MP_LABEL: String = "MP:"
-public constructor        (bufferedImage: Array<BufferedImage?>, minX: Object, maxX: Object, y: Object)                        
+public constructor (bufferedImage: Array<BufferedImage?>, minX: Object, maxX: Object, y: Object)                        
 
                             : super(bufferedImage, minX, maxX, y){
 var bufferedImage = bufferedImage
@@ -49,7 +49,8 @@ var y = y
                     
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

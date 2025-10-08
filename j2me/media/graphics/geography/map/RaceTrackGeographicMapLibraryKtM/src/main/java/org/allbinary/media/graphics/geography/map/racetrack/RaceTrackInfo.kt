@@ -49,7 +49,7 @@ open public class RaceTrackInfo
     private var worstContinuePosition: Int= 0
 
     private var totalLaps: Int= 0
-public constructor        (id: Integer, name: String, raceTrackFrictionProperties: RaceTrackFrictionProperties, foregroundBasicColor: BasicColor, backgroundBasicColor: BasicColor, qualifyTime: Int, worstContinuePosition: Int, totalLaps: Int)
+public constructor (id: Integer, name: String, raceTrackFrictionProperties: RaceTrackFrictionProperties, foregroundBasicColor: BasicColor, backgroundBasicColor: BasicColor, qualifyTime: Int, worstContinuePosition: Int, totalLaps: Int)
             : super()
         {
 var id = id
@@ -71,7 +71,7 @@ this.setTotalLaps(totalLaps)
 }
 
 
-open fun getId()
+    open fun getId()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -82,7 +82,7 @@ open fun getId()
 }
 
 
-open fun setId(id: Integer)
+    open fun setId(id: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var id = id
@@ -90,7 +90,7 @@ this.id= id
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -101,7 +101,7 @@ open fun getName()
 }
 
 
-open fun setName(name: String)
+    open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name
@@ -109,7 +109,7 @@ this.name= name
 }
 
 
-open fun getQualifyTime()
+    open fun getQualifyTime()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -120,7 +120,7 @@ open fun getQualifyTime()
 }
 
 
-open fun setQualifyTime(qualifyTime: Int)
+    open fun setQualifyTime(qualifyTime: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var qualifyTime = qualifyTime
@@ -128,7 +128,7 @@ this.qualifyTime= qualifyTime
 }
 
 
-open fun getWorstContinuePosition()
+    open fun getWorstContinuePosition()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -139,7 +139,7 @@ open fun getWorstContinuePosition()
 }
 
 
-open fun setWorstContinuePosition(worstContinuePosition: Int)
+    open fun setWorstContinuePosition(worstContinuePosition: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var worstContinuePosition = worstContinuePosition
@@ -147,7 +147,7 @@ this.worstContinuePosition= worstContinuePosition
 }
 
 
-open fun getTotalLaps()
+    open fun getTotalLaps()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -158,7 +158,7 @@ open fun getTotalLaps()
 }
 
 
-open fun setTotalLaps(totalLaps: Int)
+    open fun setTotalLaps(totalLaps: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var totalLaps = totalLaps
@@ -166,7 +166,7 @@ this.totalLaps= totalLaps
 }
 
 
-open fun getForegroundBasicColor()
+    open fun getForegroundBasicColor()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
 
@@ -177,7 +177,7 @@ open fun getForegroundBasicColor()
 }
 
 
-open fun setForegroundBasicColor(foregroundBasicColor: BasicColor)
+    open fun setForegroundBasicColor(foregroundBasicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
 var foregroundBasicColor = foregroundBasicColor
@@ -185,7 +185,7 @@ this.foregroundBasicColor= foregroundBasicColor
 }
 
 
-open fun getBackgroundBasicColor()
+    open fun getBackgroundBasicColor()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
 
@@ -196,7 +196,7 @@ open fun getBackgroundBasicColor()
 }
 
 
-open fun setBackgroundBasicColor(backgroundBasicColor: BasicColor)
+    open fun setBackgroundBasicColor(backgroundBasicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
 var backgroundBasicColor = backgroundBasicColor
@@ -204,7 +204,7 @@ this.backgroundBasicColor= backgroundBasicColor
 }
 
 
-open fun getRaceTrackFrictionProperties()
+    open fun getRaceTrackFrictionProperties()
         //nullable = true from not(false or (false and true)) = true
 : RaceTrackFrictionProperties{
 
@@ -215,7 +215,7 @@ open fun getRaceTrackFrictionProperties()
 }
 
 
-open fun setRaceTrackFrictionProperties(raceTrackFrictionProperties: RaceTrackFrictionProperties)
+    open fun setRaceTrackFrictionProperties(raceTrackFrictionProperties: RaceTrackFrictionProperties)
         //nullable = true from not(false or (false and false)) = true
 {
 var raceTrackFrictionProperties = raceTrackFrictionProperties

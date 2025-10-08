@@ -34,7 +34,7 @@ open public class PreGameLockableFormPaintableFactory : ItemPaintableFactory {
         
 
     private val lockedIndex: Int
-public constructor        (lockedIndex: Int){
+public constructor (lockedIndex: Int){
 var lockedIndex = lockedIndex
 this.lockedIndex= lockedIndex
 }
@@ -42,7 +42,7 @@ this.lockedIndex= lockedIndex
 
                 @Throws(Exception::class)
             
-open fun getInstance(paintableForm: PaintableForm)
+    open fun getInstance(paintableForm: PaintableForm)
         //nullable =  from not(true or (false and false)) = 
 : ItemPaintable{
 var paintableForm = paintableForm

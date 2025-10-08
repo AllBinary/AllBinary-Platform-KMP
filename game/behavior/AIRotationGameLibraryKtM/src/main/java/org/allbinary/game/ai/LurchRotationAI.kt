@@ -37,7 +37,7 @@ open public class LurchRotationAI : LurchAI {
         
 
     private var rotationAnimationInterface: IndexedAnimation
-public constructor        (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
+public constructor (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
                             : super(ownerLayerInterface, gameInput){
 var ownerLayerInterface = ownerLayerInterface
@@ -53,7 +53,8 @@ this.rotationAnimationInterface= rotationAnimationInterfaceCompositeInterface!!.
 this.update()
 }
 
-override fun reverse()
+
+    override fun reverse()
         //nullable = true from not(false or (false and true)) = true
 {
 super.reverse()
@@ -61,7 +62,7 @@ this.update()
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 

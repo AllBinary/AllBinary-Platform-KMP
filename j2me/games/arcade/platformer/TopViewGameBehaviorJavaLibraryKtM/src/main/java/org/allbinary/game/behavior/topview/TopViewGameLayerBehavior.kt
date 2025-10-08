@@ -42,13 +42,13 @@ open public class TopViewGameLayerBehavior : GameLayerBehavior {
     var isFallingWithoutJumpAttempt: Boolean = false
 
     var gravityActionIndex: Int = 0
-public constructor        (maxGravityActionIndex: Int){
+public constructor (maxGravityActionIndex: Int){
     //var maxGravityActionIndex = maxGravityActionIndex
 this.maxGravityActionIndex= maxGravityActionIndex
 }
 
 
-open fun gravity()
+    open fun gravity()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -64,7 +64,7 @@ this.isFallingWithoutJumpAttempt= true
 }
 
 
-open fun land(velocityProperties: VelocityProperties)
+    open fun land(velocityProperties: VelocityProperties)
         //nullable = true from not(false or (false and false)) = true
 {
     //var velocityProperties = velocityProperties
@@ -73,7 +73,7 @@ this.land()
 }
 
 
-open fun land()
+    open fun land()
         //nullable = true from not(false or (false and true)) = true
 {
 this.gravityActionIndex= 0
@@ -83,7 +83,7 @@ this.isJumpOver= false
 }
 
 
-open fun up(velocityProperties: VelocityProperties, acceleration: BasicAccelerationProperties, jumpBehavior: InitialJumpBehavior, accelerationMultiplier: Int)
+    open fun up(velocityProperties: VelocityProperties, acceleration: BasicAccelerationProperties, jumpBehavior: InitialJumpBehavior, accelerationMultiplier: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var velocityProperties = velocityProperties
@@ -133,7 +133,7 @@ isJumpAction= false
 }
 
 
-open fun inputFrames(velocityProperties: VelocityProperties)
+    open fun inputFrames(velocityProperties: VelocityProperties)
         //nullable = true from not(false or (false and false)) = true
 {
     //var velocityProperties = velocityProperties

@@ -31,10 +31,9 @@ open public class ForcedLogUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun log(message: String, anyType: Any)
+    open fun log(message: String, anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var message = message

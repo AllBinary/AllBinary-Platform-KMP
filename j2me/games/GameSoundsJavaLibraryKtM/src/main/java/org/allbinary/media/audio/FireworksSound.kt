@@ -28,12 +28,11 @@
 
 open public class FireworksSound : CompositeSound {
         
-
-        companion object {
+companion object {
             
     private var soundInterface: Sound = FireworksSound()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : Sound{
 
@@ -45,7 +44,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()                        
+            private constructor ()                        
 
                             : super("resource:/wav/fireworks.wav"){
 

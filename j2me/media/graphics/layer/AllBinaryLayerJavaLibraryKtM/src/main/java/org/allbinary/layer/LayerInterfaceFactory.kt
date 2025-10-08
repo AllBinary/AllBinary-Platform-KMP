@@ -39,12 +39,11 @@ open public class LayerInterfaceFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: LayerInterfaceFactory = LayerInterfaceFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : LayerInterfaceFactory{
 
@@ -66,7 +65,7 @@ open fun getInstance()
 
     private var list: BasicArrayList = BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 list= BasicArrayList()
@@ -77,7 +76,7 @@ list= BasicArrayList()
 
                 @Throws(Exception::class)
             
-open fun getInstance(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
+    open fun getInstance(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
         //nullable =  from not(true or (false and false)) = 
 : AllBinaryLayer{
     //var hashtable = hashtable
@@ -103,7 +102,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-open fun add(layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface)
+    open fun add(layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface

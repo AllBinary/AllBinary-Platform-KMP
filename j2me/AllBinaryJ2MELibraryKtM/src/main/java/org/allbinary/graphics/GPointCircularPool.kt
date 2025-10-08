@@ -30,7 +30,7 @@ import org.allbinary.util.CircularIndexUtil
 
 open public class GPointCircularPool : BaseCircularPool {
         
-public constructor        (size: Int){
+public constructor (size: Int){
 var size = size
 this.circularIndexUtil= CircularIndexUtil.getInstance(size)
 this.OBJECT_ARRAY= arrayOfNulls(size)

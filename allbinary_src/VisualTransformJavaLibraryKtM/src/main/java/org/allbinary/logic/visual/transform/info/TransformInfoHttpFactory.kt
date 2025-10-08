@@ -38,12 +38,11 @@ open public class TransformInfoHttpFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun getInstance(propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
+    open fun getInstance(propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
 : TransformInfoInterface{
 var propertiesHashMap = propertiesHashMap
@@ -123,7 +122,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, "TransformInfoFactory", commonStrings!!
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

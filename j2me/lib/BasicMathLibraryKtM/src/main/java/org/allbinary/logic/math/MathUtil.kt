@@ -16,12 +16,11 @@ open public class MathUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: MathUtil = MathUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : MathUtil{
 
@@ -39,7 +38,7 @@ open fun getInstance()
             {
             }            
         
-open fun getTotalDigits(digits: Int)
+    open fun getTotalDigits(digits: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var digits = digits
@@ -61,7 +60,7 @@ total++
 }
 
 
-open fun sqrt(value: Int)
+    open fun sqrt(value: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var value = value
@@ -101,7 +100,7 @@ result= (accumulated +(value /accumulated)) shr 1
 }
 
 
-open fun abs(value: Int)
+    open fun abs(value: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var value = value
@@ -120,7 +119,7 @@ var value = value
 }
 
 
-open fun abs(value: Long)
+    open fun abs(value: Long)
         //nullable = true from not(false or (false and false)) = true
 : Long{
 var value = value
@@ -139,7 +138,7 @@ var value = value
 }
 
 
-open fun min(value: Int, value2: Int)
+    open fun min(value: Int, value2: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var value = value
@@ -159,7 +158,7 @@ var value2 = value2
 }
 
 
-open fun max(value: Int, value2: Int)
+    open fun max(value: Int, value2: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var value = value

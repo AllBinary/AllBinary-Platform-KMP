@@ -40,7 +40,7 @@ open public class CommonGameInitialization : BaseGameInitialization {
         
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-protected constructor        (resourceInitializationArray: Array<ResourceInitialization?>, portion: Int)                        
+protected constructor (resourceInitializationArray: Array<ResourceInitialization?>, portion: Int)                        
 
                             : super(resourceInitializationArray, portion){
     //var resourceInitializationArray = resourceInitializationArray
@@ -53,7 +53,8 @@ var portion = portion
 
 
                 @Throws(Exception::class)
-            override fun init(abeClientInformation: AbeClientInformationInterface, commandListener: CommandListener, level: Int)
+            
+    override fun init(abeClientInformation: AbeClientInformationInterface, commandListener: CommandListener, level: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -89,7 +90,7 @@ super.resourceInitialization(level)
 
                 @Throws(Exception::class)
             
-open fun initGame()
+    open fun initGame()
         //nullable = true from not(false or (false and true)) = true
 {
 

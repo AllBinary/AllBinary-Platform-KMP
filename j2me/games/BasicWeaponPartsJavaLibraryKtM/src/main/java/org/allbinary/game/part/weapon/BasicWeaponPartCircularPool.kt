@@ -34,8 +34,7 @@ open public class BasicWeaponPartCircularPool
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NULL_BASIC_WEAPON_PART_CIRCULAR_POOL: BasicWeaponPartCircularPool = BasicWeaponPartCircularPool()
 
@@ -50,7 +49,7 @@ open public class BasicWeaponPartCircularPool
 
                 @Throws(Exception::class)
             
-open fun init(basicWeaponPartFactoryInterface: BasicWeaponPartFactoryInterface)
+    open fun init(basicWeaponPartFactoryInterface: BasicWeaponPartFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var basicWeaponPartFactoryInterface = basicWeaponPartFactoryInterface
@@ -61,7 +60,7 @@ basicWeaponPart= basicWeaponPartFactoryInterface!!.getInstance()
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getInstance(sourceLayerInterface: AllBinaryLayer, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface, relativeRelationship: RelativeRelationship)
+    open fun getInstance(sourceLayerInterface: AllBinaryLayer, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface, relativeRelationship: RelativeRelationship)
         //nullable =  from not(true or (false and false)) = 
 : BasicWeaponPart{
     //var sourceLayerInterface = sourceLayerInterface

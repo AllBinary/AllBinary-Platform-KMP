@@ -35,12 +35,11 @@ open public class NullAIFactory
         
                 , ArtificialIntelligenceInterfaceFactoryInterface {
         
-
-        companion object {
+companion object {
             
     private var NULL_AI: NullAI = NullAI()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ArtificialIntelligenceInterface{
 
@@ -57,7 +56,8 @@ open fun getInstance()
             public constructor() : super()
             {
             }            
-        override fun getInstance(hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)
+        
+    override fun getInstance(hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)
         //nullable =  from not(true or (false and false)) = 
 : ArtificialIntelligenceInterface{
 var hashtable = hashtable

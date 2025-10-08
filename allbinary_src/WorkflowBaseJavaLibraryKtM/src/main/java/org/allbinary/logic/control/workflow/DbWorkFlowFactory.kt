@@ -37,12 +37,11 @@ open public class DbWorkFlowFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: DbWorkFlowFactory = DbWorkFlowFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DbWorkFlowFactory{
 
@@ -56,7 +55,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -64,7 +63,7 @@ private constructor        ()
 
                 @Throws(Exception::class, LicensingException::class)
             
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, hashMap: HashMap<Any, Any>)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, hashMap: HashMap<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
 : WorkFlowInterface{
     //var abeClientInformation = abeClientInformation

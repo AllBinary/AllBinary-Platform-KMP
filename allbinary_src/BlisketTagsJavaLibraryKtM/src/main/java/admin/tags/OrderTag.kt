@@ -47,11 +47,11 @@ open public class OrderTag : CustomTagSupport {
     private var storeName: String
 
     private var propertiesHashMap: HashMap<Any, Any>
-public constructor        (){
+public constructor (){
 }
 
 
-open fun setCommand(command: String)
+    open fun setCommand(command: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var command = command
@@ -59,7 +59,7 @@ this.command= command
 }
 
 
-open fun setStoreName(value: String)
+    open fun setStoreName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -69,7 +69,7 @@ this.storeName= value
 
                 @Throws(LicensingException::class)
             
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -127,7 +127,7 @@ open fun process()
 
                 @Throws(LicensingException::class)
             
-open fun setPaymentGateway()
+    open fun setPaymentGateway()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -185,7 +185,7 @@ open fun setPaymentGateway()
 
                 @Throws(JspTagException::class)
             
-open fun doStartTag()
+    open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

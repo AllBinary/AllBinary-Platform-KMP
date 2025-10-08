@@ -26,18 +26,19 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.graphics.Rectangle
+
 interface RectangleResourceFactoryInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getRectangle(resource: String)
+    open fun getRectangle(resource: String)
         //nullable = true from not(false or (false and false)) = true
 : Rectangle
 
                 @Throws(Exception::class)
             
-open fun getRectangleArrayOfArrays(resource: String)
+    open fun getRectangleArrayOfArrays(resource: String)
         //nullable = true from not(false or (false and false)) = true
 : Array<Array<Rectangle?>?>
 

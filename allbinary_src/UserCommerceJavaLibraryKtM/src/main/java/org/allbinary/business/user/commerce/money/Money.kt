@@ -39,20 +39,20 @@ open public class Money
     private var units: Long
 
     private val DEFAULT_CURRENCY: String = "USD"
-public constructor        (money: Money)
+public constructor (money: Money)
             : super()
         {
 var money = money
 this.units= money.getUnits() as Long
 }
 
-public constructor        ()
+public constructor ()
             : super()
         {
 this.units= 0 as Long
 }
 
-public constructor        (usDollarStr: String)
+public constructor (usDollarStr: String)
             : super()
         {
 var usDollarStr = usDollarStr
@@ -69,7 +69,7 @@ var usDollarStr = usDollarStr
                                 
 }
 
-public constructor        (units: Long)
+public constructor (units: Long)
             : super()
         {
 var units = units
@@ -77,7 +77,7 @@ this.units= units as Long
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -107,7 +107,7 @@ open fun isValid()
 }
 
 
-open fun add(moreMoney: Money)
+    open fun add(moreMoney: Money)
         //nullable = true from not(false or (false and false)) = true
 {
 var moreMoney = moreMoney
@@ -115,7 +115,7 @@ this.add(moreMoney!!.toString())
 }
 
 
-open fun add(usDollarStr: String)
+    open fun add(usDollarStr: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var usDollarStr = usDollarStr
@@ -123,7 +123,7 @@ this.units= this.units.longValue() +convertUsdToUnits(usDollarStr) as Long
 }
 
 
-open fun subtract(usDollarStr: String)
+    open fun subtract(usDollarStr: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var usDollarStr = usDollarStr
@@ -131,7 +131,7 @@ this.units= this.units.longValue() -convertUsdToUnits(usDollarStr) as Long
 }
 
 
-open fun multiply(multiplier: Float)
+    open fun multiply(multiplier: Float)
         //nullable = true from not(false or (false and false)) = true
 {
 var multiplier = multiplier
@@ -140,7 +140,7 @@ this.units= Float(this.units.longValue() *multiplier.toFloat()).
 }
 
 
-open fun multiply(multiplier: Int)
+    open fun multiply(multiplier: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var multiplier = multiplier
@@ -148,7 +148,7 @@ this.units= this.units.longValue() *multiplier as Long
 }
 
 
-open fun convertUnitsTo(currency: String)
+    open fun convertUnitsTo(currency: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var currency = currency
@@ -191,7 +191,7 @@ stringBuffer!!.append(cents as Long.
 }
 
 
-open fun convertUsdToUnits(usDollarStr: String)
+    open fun convertUsdToUnits(usDollarStr: String)
         //nullable = true from not(false or (false and false)) = true
 : Long{
 var usDollarStr = usDollarStr
@@ -239,7 +239,7 @@ localUnit += centsStr as Long.
 }
 
 
-open fun getUnits()
+    open fun getUnits()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -250,7 +250,7 @@ open fun getUnits()
 }
 
 
-open fun getUnitsLong()
+    open fun getUnitsLong()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -260,7 +260,8 @@ open fun getUnitsLong()
                         return units
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

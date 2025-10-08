@@ -31,10 +31,9 @@ import org.allbinary.string.CommonSeps
 
 open public class CellPosition : V {
         
-
-        companion object {
+companion object {
             
-open fun toString(basicGeographicMapCellPosition: CellPosition)
+    open fun toString(basicGeographicMapCellPosition: CellPosition)
         //nullable = true from not(false or (true and false)) = true
 : String{
 var basicGeographicMapCellPosition = basicGeographicMapCellPosition
@@ -46,7 +45,7 @@ var basicGeographicMapCellPosition = basicGeographicMapCellPosition
 }
 
 
-open fun toString(i_column: Int, i_row: Int)
+    open fun toString(i_column: Int, i_row: Int)
         //nullable = true from not(false or (true and false)) = true
 : String{
 var i_column = i_column
@@ -77,7 +76,7 @@ stringBuffer!!.append(commonSeps!!.PARENTHESIS_CLOSE)
     private val column: Int
 
     private val row: Int
-public constructor        (column: Int, row: Int, columns: Int, rows: Int){
+public constructor (column: Int, row: Int, columns: Int, rows: Int){
 var column = column
 var row = row
 var columns = columns
@@ -88,7 +87,7 @@ this.id= (row *columns) +column
 }
 
 
-open fun getColumn()
+    open fun getColumn()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -99,7 +98,7 @@ open fun getColumn()
 }
 
 
-open fun getRow()
+    open fun getRow()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -109,7 +108,8 @@ open fun getRow()
                         return row
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -119,7 +119,8 @@ override fun toString()
                         return CellPosition.toString(this.getColumn(), this.getRow())
 }
 
-override fun getId()
+
+    override fun getId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

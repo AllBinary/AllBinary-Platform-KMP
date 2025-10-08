@@ -34,8 +34,7 @@ import org.allbinary.logic.string.StringMaker
 
 open public class ProfilingRefreshHelper : AndroidGameStatistics {
         
-
-        companion object {
+companion object {
             
     private val instance: ProfilingRefreshHelper = ProfilingRefreshHelper()
 
@@ -59,7 +58,7 @@ open public class ProfilingRefreshHelper : AndroidGameStatistics {
     private var worstFrameProcessingTime: Int= 0
 
     private var frameProcessingTimeElapsed: Long= 0
-private constructor        (){
+private constructor (){
 }
 
 

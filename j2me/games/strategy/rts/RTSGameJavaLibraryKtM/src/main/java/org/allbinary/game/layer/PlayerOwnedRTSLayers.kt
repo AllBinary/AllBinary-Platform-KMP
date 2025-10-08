@@ -39,7 +39,8 @@ open public class PlayerOwnedRTSLayers
             }            
         
     val rtsLayerList: BasicArrayList = BasicArrayList()
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

@@ -33,10 +33,9 @@ open public class PaymentFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getInstance(request: ServletRequest)
+    open fun getInstance(request: ServletRequest)
         //nullable =  from not(true or (false and false)) = 
 : PaymentInterface{
 var request = request
@@ -75,7 +74,7 @@ var request = request
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

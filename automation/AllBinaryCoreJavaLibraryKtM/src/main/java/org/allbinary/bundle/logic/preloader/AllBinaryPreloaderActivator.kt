@@ -39,14 +39,13 @@ open public class AllBinaryPreloaderActivator
         
                 , BundleActivator {
         
-
-        companion object {
+companion object {
             
     private var context: BundleContext
 
     private val CRYPT_REGISTRY_NAME: String = "bundle.abcs.logic.system.loader.CryptService"
 
-open fun getBundleContext()
+    open fun getBundleContext()
         //nullable = true from not(false or (false and true)) = true
 : BundleContext{
 
@@ -60,7 +59,7 @@ open fun getBundleContext()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        ()
+public constructor ()
             : super()
         {
 }
@@ -70,7 +69,7 @@ public constructor        ()
 
                 @Throws(Exception::class)
             
-open fun start(context: BundleContext)
+    open fun start(context: BundleContext)
         //nullable = true from not(false or (false and false)) = true
 {
 var context = context
@@ -93,7 +92,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "start", e)
 
                 @Throws(Exception::class)
             
-open fun registerAsService()
+    open fun registerAsService()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -118,7 +117,7 @@ serviceReference= context.getServiceReference(CRYPT_REGISTRY_NAME)
 
                 @Throws(Exception::class)
             
-open fun stop(context: BundleContext)
+    open fun stop(context: BundleContext)
         //nullable = true from not(false or (false and false)) = true
 {
 var context = context

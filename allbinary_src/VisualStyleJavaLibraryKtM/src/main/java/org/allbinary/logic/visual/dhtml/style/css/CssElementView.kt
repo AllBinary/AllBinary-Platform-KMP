@@ -64,7 +64,7 @@ open public class CssElementView
     var cssElementVector: Vector
 
     var cssPropertyVector: Vector
-public constructor        ()
+public constructor ()
             : super()
         {
 this.cssPropertyVector= Vector()
@@ -76,7 +76,7 @@ this.description= stringUtil!!.EMPTY_STRING
 this.value= stringUtil!!.EMPTY_STRING
 }
 
-public constructor        (node: Node)
+public constructor (node: Node)
             : super()
         {
 var node = node
@@ -175,7 +175,7 @@ this.cssPropertyVector= CssPropertiesValidationFactory.getInstance(nodeList)
 }
 
 
-open fun getValue()
+    open fun getValue()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -186,7 +186,7 @@ open fun getValue()
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -205,7 +205,7 @@ hashMap!!.put(this.DESCRIPTION, this.description)
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

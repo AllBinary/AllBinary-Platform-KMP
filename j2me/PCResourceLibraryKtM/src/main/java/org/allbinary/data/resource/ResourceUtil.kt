@@ -43,12 +43,11 @@ open public class ResourceUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ResourceUtil = ResourceUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ResourceUtil{
 
@@ -66,13 +65,13 @@ open fun getInstance()
     private var path: String = StringUtil.getInstance()!!.EMPTY_STRING
 
     private var ext: String = StringUtil.getInstance()!!.EMPTY_STRING
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun setLoadingPaths(path: String, ext: String)
+    open fun setLoadingPaths(path: String, ext: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var path = path
@@ -82,7 +81,7 @@ this.ext= ext
 }
 
 
-open fun setClassLoader(classLoader: ClassLoader)
+    open fun setClassLoader(classLoader: ClassLoader)
         //nullable = true from not(false or (false and false)) = true
 {
     //var classLoader = classLoader
@@ -91,7 +90,7 @@ open fun setClassLoader(classLoader: ClassLoader)
 
                 @Throws(Exception::class)
             
-open fun getResourceAsStream(resource: String)
+    open fun getResourceAsStream(resource: String)
         //nullable = true from not(false or (false and false)) = true
 : InputStream{
     //var resource = resource
@@ -134,7 +133,7 @@ open fun getResourceAsStream(resource: String)
 
                 @Throws(Exception::class)
             
-open fun getResourceAsStream(resource: String, startIndex: Int)
+    open fun getResourceAsStream(resource: String, startIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 : InputStream{
     //var resource = resource
@@ -176,7 +175,7 @@ StreamUtil.getInstance()!!.getByteArray(inputStream, ByteArrayOutputStream(), by
 }
 
 
-open fun addResource(resource: String, value: Integer)
+    open fun addResource(resource: String, value: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var resource = resource

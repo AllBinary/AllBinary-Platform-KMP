@@ -52,7 +52,7 @@ open public class Item : BasicItem
     private var shippingAddress: StreetAddress
 
     private var special: String
-public constructor        (itemHashMap: HashMap<Any, Any>)                        
+public constructor (itemHashMap: HashMap<Any, Any>)                        
 
                             : super(itemHashMap){
 var itemHashMap = itemHashMap
@@ -63,7 +63,7 @@ var itemHashMap = itemHashMap
 this.setData(itemHashMap)
 }
 
-public constructor        (){
+public constructor (){
 
     var EMPTY: String = StringUtil.getInstance()!!.EMPTY_STRING
 
@@ -75,7 +75,7 @@ shippingAddress= StreetAddress()
 }
 
 
-open fun setData(itemHashMap: HashMap<Any, Any>)
+    open fun setData(itemHashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var itemHashMap = itemHashMap
@@ -94,7 +94,7 @@ this.shippingAddress= StreetAddress(itemHashMap)
 }
 
 
-open fun setGroup(value: String)
+    open fun setGroup(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -102,7 +102,7 @@ this.group= value
 }
 
 
-open fun setTax(value: String)
+    open fun setTax(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -110,7 +110,7 @@ this.tax= value
 }
 
 
-open fun setShippingType(value: String)
+    open fun setShippingType(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -118,7 +118,7 @@ this.shippingType= value
 }
 
 
-open fun setShippingCost(value: String)
+    open fun setShippingCost(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -126,7 +126,7 @@ this.shippingCost= value
 }
 
 
-open fun setShippingAddress(value: StreetAddress)
+    open fun setShippingAddress(value: StreetAddress)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -134,7 +134,7 @@ this.shippingAddress= value
 }
 
 
-open fun setSpecial(value: String)
+    open fun setSpecial(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -142,7 +142,7 @@ this.special= value
 }
 
 
-open fun getGroup()
+    open fun getGroup()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -153,7 +153,7 @@ open fun getGroup()
 }
 
 
-open fun getTax()
+    open fun getTax()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -164,7 +164,7 @@ open fun getTax()
 }
 
 
-open fun getShippingType()
+    open fun getShippingType()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -175,7 +175,7 @@ open fun getShippingType()
 }
 
 
-open fun getShippingCost()
+    open fun getShippingCost()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -186,7 +186,7 @@ open fun getShippingCost()
 }
 
 
-open fun getShippingAddress()
+    open fun getShippingAddress()
         //nullable = true from not(false or (false and true)) = true
 : StreetAddress{
 
@@ -197,7 +197,7 @@ open fun getShippingAddress()
 }
 
 
-open fun getSpecial()
+    open fun getSpecial()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -208,7 +208,7 @@ open fun getSpecial()
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 

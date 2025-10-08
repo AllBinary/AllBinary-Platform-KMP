@@ -43,7 +43,7 @@ open public class StoreFrontView
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var storeFrontInterface: StoreFrontInterface
-public constructor        (storeFrontInterface: StoreFrontInterface)
+public constructor (storeFrontInterface: StoreFrontInterface)
             : super()
         {
 var storeFrontInterface = storeFrontInterface
@@ -65,7 +65,7 @@ this.storeFrontInterface= storeFrontInterface
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

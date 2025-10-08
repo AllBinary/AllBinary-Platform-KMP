@@ -25,34 +25,35 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface LifeInterface {
         
 
-open fun get()
+    open fun get()
         //nullable = true from not(false or (false and true)) = true
 : Short
 
-open fun set(lives: Short)
+    open fun set(lives: Short)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun reset()
+    open fun reset()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun add(lives: Short)
+    open fun add(lives: Short)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun deaths(lives: Short)
+    open fun deaths(lives: Short)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getMaxlives()
+    open fun getMaxlives()
         //nullable = true from not(false or (false and true)) = true
 : Short
 
-open fun isAlive()
+    open fun isAlive()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 

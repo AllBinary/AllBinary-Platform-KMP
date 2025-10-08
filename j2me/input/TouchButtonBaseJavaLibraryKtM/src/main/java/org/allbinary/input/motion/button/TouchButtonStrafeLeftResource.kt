@@ -28,12 +28,11 @@
 
 open public class TouchButtonStrafeLeftResource : TouchButtonResource {
         
-
-        companion object {
+companion object {
             
     private val instance: TouchButtonResource = TouchButtonStrafeLeftResource()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TouchButtonResource{
 
@@ -45,7 +44,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()                        
+            private constructor ()                        
 
                             : super("/touch_button_strafe_left_arrow_64_by_64.png", "/touch_button_strafe_left_arrow_hint_64_by_64.png"){
 

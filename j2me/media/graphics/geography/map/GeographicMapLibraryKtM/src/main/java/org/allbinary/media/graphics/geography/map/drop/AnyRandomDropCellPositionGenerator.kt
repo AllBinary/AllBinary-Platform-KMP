@@ -48,7 +48,7 @@ open public class AnyRandomDropCellPositionGenerator : BaseDropCellPositionGener
 
                 @Throws(Exception::class)
             
-open fun update(allBinaryGameLayerManager: AllBinaryGameLayerManager, geographicMapInterface: BasicGeographicMap)
+    open fun update(allBinaryGameLayerManager: AllBinaryGameLayerManager, geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -101,7 +101,7 @@ geographicMapCellPosition= basicGeographicMapCellPositionFactory!!.getInstance(r
 
                 @Throws(Exception::class)
             
-open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
+    open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager

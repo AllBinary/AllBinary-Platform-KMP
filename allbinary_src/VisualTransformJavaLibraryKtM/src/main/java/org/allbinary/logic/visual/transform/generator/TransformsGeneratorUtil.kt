@@ -37,12 +37,11 @@ open public class TransformsGeneratorUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: TransformsGeneratorUtil = TransformsGeneratorUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TransformsGeneratorUtil{
 
@@ -56,7 +55,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -64,7 +63,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun generateComponentsFromObjectConfig(abeClientInformation: Object, transformInfoInterface: Object, group: Object)
+    open fun generateComponentsFromObjectConfig(abeClientInformation: Object, transformInfoInterface: Object, group: Object)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var abeClientInformation = abeClientInformation
@@ -104,7 +103,7 @@ var group = group
 
                 @Throws(Exception::class)
             
-open fun generateComponentsFromObjectConfig(abeClientInformation: Object, transformInfoObjectConfigInterface: Object, transformInfoInterface: Object, group: Object)
+    open fun generateComponentsFromObjectConfig(abeClientInformation: Object, transformInfoObjectConfigInterface: Object, transformInfoInterface: Object, group: Object)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var abeClientInformation = abeClientInformation

@@ -31,12 +31,11 @@ open public class CategoryData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: CategoryData = CategoryData()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CategoryData{
 
@@ -48,7 +47,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

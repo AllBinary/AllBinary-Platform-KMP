@@ -33,12 +33,11 @@ import org.allbinary.graphics.font.MyFont
 
 open public class RTSLayerHudPaintable : SelectionHudPaintable {
         
-
-        companion object {
+companion object {
             
     private val instance: RTSLayerHudPaintable = RTSLayerHudPaintable()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : RTSLayerHudPaintable{
 
@@ -60,11 +59,11 @@ open fun getInstance()
     var costY: Int= 0
 
     var costY1: Int= 0
-private constructor        (){
+private constructor (){
 }
 
 
-open fun updateSelectionInfo()
+    open fun updateSelectionInfo()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -93,7 +92,7 @@ this.costY1= (y +((weaponProperties!!.size +1) *charHeight))
 }
 
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -118,7 +117,7 @@ graphics.drawString(weaponProperties[index]!!, this.textX, y +((index +1) *charH
 }
 
 
-open fun setRtsLayer(rtsLayer: RTSLayer)
+    open fun setRtsLayer(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var rtsLayer = rtsLayer
@@ -126,7 +125,7 @@ this.rtsLayer= rtsLayer
 }
 
 
-open fun getRtsLayer()
+    open fun getRtsLayer()
         //nullable = true from not(false or (false and true)) = true
 : RTSLayer{
 

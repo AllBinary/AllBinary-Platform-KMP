@@ -27,7 +27,6 @@
         
 import java.util.Hashtable
 import javax.microedition.lcdui.Command
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.data.resource.ResourceUtil
 
@@ -35,12 +34,11 @@ open public class CommandUriAction
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: CommandUriAction = CommandUriAction()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CommandUriAction{
 
@@ -62,7 +60,7 @@ open fun getInstance()
 
     private var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
-open fun add(command: Command, url: String)
+    open fun add(command: Command, url: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var command = command
@@ -71,7 +69,7 @@ hashtable.put(command, url)
 }
 
 
-open fun process(command: Command)
+    open fun process(command: Command)
         //nullable = true from not(false or (false and false)) = true
 {
 var command = command
@@ -85,7 +83,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
 }
 
 
-open fun getIntent(command: Command)
+    open fun getIntent(command: Command)
         //nullable = true from not(false or (false and false)) = true
 : Intent{
 var command = command

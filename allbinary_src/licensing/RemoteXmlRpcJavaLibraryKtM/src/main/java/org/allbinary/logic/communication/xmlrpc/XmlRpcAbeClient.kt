@@ -41,8 +41,7 @@ open public class XmlRpcAbeClient
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var isOnline: Boolean = true
 
@@ -91,7 +90,7 @@ open public class XmlRpcAbeClient
     val HOST_NOT_RESOLVED: String = "Host is unresolved"
 
     private val myRandomFactory: MyRandomFactory = MyRandomFactory.getInstance()!!
-public constructor        (clientInfo: AbeClientInformationInterface, remoteMethod: String)
+public constructor (clientInfo: AbeClientInformationInterface, remoteMethod: String)
             : super()
         {
 var clientInfo = clientInfo
@@ -133,7 +132,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.CONSTRUCTOR)
 
                 @Throws(Exception::class)
             
-open fun get(anyType: Any)
+    open fun get(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var anyType = anyType
@@ -148,7 +147,7 @@ ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, this)
 
                 @Throws(Exception::class)
             
-open fun tryAnother(anyType: Any)
+    open fun tryAnother(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var anyType = anyType
@@ -191,7 +190,7 @@ var anyType = anyType
 }
 
 
-open fun getClientInfo()
+    open fun getClientInfo()
         //nullable = true from not(false or (false and true)) = true
 : AbeClientInformationInterface{
 
@@ -202,7 +201,7 @@ open fun getClientInfo()
 }
 
 
-open fun getClient()
+    open fun getClient()
         //nullable = true from not(false or (false and true)) = true
 : XmlRpcHandler{
 
@@ -213,7 +212,7 @@ open fun getClient()
 }
 
 
-open fun setClient(client: XmlRpcClient)
+    open fun setClient(client: XmlRpcClient)
         //nullable = true from not(false or (false and false)) = true
 {
 var client = client
@@ -221,7 +220,7 @@ this.client= client
 }
 
 
-open fun getServer()
+    open fun getServer()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -232,7 +231,7 @@ open fun getServer()
 }
 
 
-open fun setServer(server: Int)
+    open fun setServer(server: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var server = server
@@ -240,7 +239,7 @@ this.server= server
 }
 
 
-open fun getStart()
+    open fun getStart()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -251,7 +250,7 @@ open fun getStart()
 }
 
 
-open fun setStart(start: Int)
+    open fun setStart(start: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var start = start
@@ -259,7 +258,7 @@ this.start= start
 }
 
 
-open fun getMaxServers()
+    open fun getMaxServers()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -270,7 +269,7 @@ open fun getMaxServers()
 }
 
 
-open fun setMaxServers(maxServers: Int)
+    open fun setMaxServers(maxServers: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var maxServers = maxServers
@@ -278,7 +277,7 @@ this.maxServers= maxServers
 }
 
 
-open fun isIsDone()
+    open fun isIsDone()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -289,7 +288,7 @@ open fun isIsDone()
 }
 
 
-open fun setIsDone(isDone: Boolean)
+    open fun setIsDone(isDone: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var isDone = isDone
@@ -297,7 +296,7 @@ this.isDone= isDone
 }
 
 
-open fun getRemoteMethod()
+    open fun getRemoteMethod()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

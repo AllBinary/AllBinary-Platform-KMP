@@ -30,13 +30,12 @@ open public class CustomizerTransformInfoData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NAME: String = "CUSTOMIZER_TRANSFORM_INFO_NAME"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

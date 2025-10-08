@@ -34,7 +34,7 @@ open public class CapturedImageWorkerResultsEvent : AllBinaryEventObject {
     private val frame: Long
 
     private var bufferedImage: BufferedImage
-public constructor        (anyType: Any, frame: Long, bufferedImage: BufferedImage)                        
+public constructor (anyType: Any, frame: Long, bufferedImage: BufferedImage)                        
 
                             : super(anyType){
 var anyType = anyType
@@ -49,7 +49,7 @@ setBufferedImage(bufferedImage)
 }
 
 
-open fun getBufferedImage()
+    open fun getBufferedImage()
         //nullable = true from not(false or (false and true)) = true
 : BufferedImage{
 
@@ -60,7 +60,7 @@ open fun getBufferedImage()
 }
 
 
-open fun setBufferedImage(bufferedImage: BufferedImage)
+    open fun setBufferedImage(bufferedImage: BufferedImage)
         //nullable = true from not(false or (false and false)) = true
 {
 var bufferedImage = bufferedImage
@@ -68,7 +68,7 @@ this.bufferedImage= bufferedImage
 }
 
 
-open fun getFrame()
+    open fun getFrame()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 

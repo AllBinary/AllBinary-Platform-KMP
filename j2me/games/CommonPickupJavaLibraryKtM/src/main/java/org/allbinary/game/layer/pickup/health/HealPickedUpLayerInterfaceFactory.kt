@@ -37,21 +37,20 @@ import org.allbinary.layer.AllBinaryLayer
 open public class HealPickedUpLayerInterfaceFactory : PickedUpLayerInterfaceFactory
                 , PickupProcessorInterface {
         
-
-        companion object {
+companion object {
             
     private var pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface = CountedPickedUpLayerInterfaceFactory.NULL_COUNTED_PICKUP_LAYER_FACTORY
 
                 @Throws(Exception::class)
             
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 pickedUpLayerInterfaceFactoryInterface= HealPickedUpLayerInterfaceFactory()
 }
 
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PickedUpLayerInterfaceFactoryInterface{
 
@@ -65,7 +64,7 @@ open fun getInstance()
         }
             
     private var pool: HealLayerCircularStaticPool = HealLayerCircularStaticPool(HealLayerFactory(), 1)
-private constructor        ()                        
+private constructor ()                        
 
                             : super(PickedUpLayerTypeFactory.getInstance()!!.HEAL, IconLayerFactory.getInstance(FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(HealthResources.getInstance()!!.RESOURCE)!!.getInstance(0), 10, 10), FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(HealthResources.getInstance()!!.RESOURCE)!!.getInstance(0)){
 
@@ -75,7 +74,7 @@ private constructor        ()
 }
 
 
-open fun getTotal()
+    open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -87,7 +86,8 @@ open fun getTotal()
 
 
                 @Throws(Exception::class)
-            override fun process(sourceLayerInterface: AllBinaryLayer)
+            
+    override fun process(sourceLayerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var sourceLayerInterface = sourceLayerInterface

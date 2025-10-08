@@ -37,12 +37,11 @@ open public class MyRandomFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: MyRandomFactory = MyRandomFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : MyRandomFactory{
 
@@ -53,7 +52,7 @@ open fun getInstance()
 }
 
 
-open fun main(args: Array<String?>)
+    open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var args = args
@@ -152,14 +151,14 @@ found= false
     private val mathUtil: MathUtil = MathUtil.getInstance()!!
 
     private var rand: Random
-private constructor        ()
+private constructor ()
             : super()
         {
 rand= Random(System.currentTimeMillis())
 }
 
 
-open fun setSeed(seed: Long)
+    open fun setSeed(seed: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var seed = seed
@@ -167,7 +166,7 @@ rand= Random(seed)
 }
 
 
-open fun getNextInt(range: Int)
+    open fun getNextInt(range: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var range = range
@@ -182,7 +181,7 @@ var range = range
 }
 
 
-open fun getAbsoluteNextInt(range: Int)
+    open fun getAbsoluteNextInt(range: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var range = range
@@ -194,7 +193,7 @@ var range = range
 }
 
 
-open fun getAbsoluteNextIntAllowZero(range: Int)
+    open fun getAbsoluteNextIntAllowZero(range: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var range = range
@@ -223,7 +222,7 @@ var range = range
 }
 
 
-open fun shuffle(intArray: IntArray)
+    open fun shuffle(intArray: IntArray)
         //nullable = true from not(false or (false and false)) = true
 {
     //var intArray = intArray
@@ -231,7 +230,7 @@ this.shuffle(intArray, intArray!!.size *7)
 }
 
 
-open fun shuffle(intArray: IntArray, shuffleTotal: Int)
+    open fun shuffle(intArray: IntArray, shuffleTotal: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var intArray = intArray
@@ -266,7 +265,7 @@ intArray[randomIndex2]= value
 }
 
 
-open fun shuffle(intArray: IntArray, intArray2: IntArray)
+    open fun shuffle(intArray: IntArray, intArray2: IntArray)
         //nullable = true from not(false or (false and false)) = true
 {
     //var intArray = intArray
@@ -275,7 +274,7 @@ this.shuffle(intArray, intArray2, intArray!!.size *7)
 }
 
 
-open fun shuffle(intArray: IntArray, intArray2: IntArray, shuffleTotal: Int)
+    open fun shuffle(intArray: IntArray, intArray2: IntArray, shuffleTotal: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var intArray = intArray

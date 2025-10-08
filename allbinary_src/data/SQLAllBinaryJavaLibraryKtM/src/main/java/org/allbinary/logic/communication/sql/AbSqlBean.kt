@@ -40,7 +40,7 @@ open public class AbSqlBean : AbSqlRow {
     private val METHOD_GET_FIELD: String = "getField"
 
     private val METHOD_IS_SUBSET_OF_ENTRY: String = "isSubsetOfEntry"
-public constructor        (databaseConnectionInfoInterface: DbConnectionInfo)                        
+public constructor (databaseConnectionInfoInterface: DbConnectionInfo)                        
 
                             : super(databaseConnectionInfoInterface){
     //var databaseConnectionInfoInterface = databaseConnectionInfoInterface
@@ -51,7 +51,7 @@ public constructor        (databaseConnectionInfoInterface: DbConnectionInfo)
 }
 
 
-open fun getField(key: String, value: String, requestedField: String)
+    open fun getField(key: String, value: String, requestedField: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var key = key
@@ -131,7 +131,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET_FIELD)
 }
 
 
-open fun getField(keysAndValues: HashMap<Any, Any>, requestedField: String)
+    open fun getField(keysAndValues: HashMap<Any, Any>, requestedField: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var keysAndValues = keysAndValues
@@ -249,7 +249,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET_FIELD)
 }
 
 
-open fun isSubsetOfEntry(key: String, value: String, columnsAndValues: HashMap<Any, Any>)
+    open fun isSubsetOfEntry(key: String, value: String, columnsAndValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var key = key

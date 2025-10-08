@@ -23,9 +23,10 @@ import android.media.MediaPlayer
 import android.os.IBinder
 import org.allbinary.android.NullAndroidCanvas
 import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonStateStrings
 import org.allbinary.string.CommonStrings
-import org.allbinary.thread.NullRunnable
+import org.allbinary.thread.ARunnable
 
 open public class BaseMusicService : Service {
         
@@ -52,7 +53,8 @@ open public class BaseMusicService : Service {
     private var leftVolume: Int =  -1
 
     private var rightVolume: Int =  -1
-override fun onBind(intent: Intent)
+
+    override fun onBind(intent: Intent)
         //nullable = true from not(false or (false and false)) = true
 : IBinder?{
     //var intent = intent
@@ -64,13 +66,15 @@ logUtil!!.put(commonStrings!!.START, this, commonStateStrings!!.BIND)
                         return null
 }
 
-override fun onCreate()
+
+    override fun onCreate()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(commonStrings!!.START, this, commonStateStrings!!.CREATE)
 }
 
-override fun onDestroy()
+
+    override fun onDestroy()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(commonStrings!!.START, this, commonStateStrings!!.DESTROY)
@@ -81,7 +85,8 @@ logUtil!!.put(commonStrings!!.START, this, commonStateStrings!!.DESTROY)
                                 )
                         
                                     {
-                                    player.stop()
+                                    logUtil!!.put(commonStrings!!.START, this, commonStateStrings!!.PAUSE)
+player.stop()
 player.reset()
 player.release()
 
@@ -89,7 +94,54 @@ player.release()
                                 
 }
 
-override fun onStart(intent: Intent, startid: Int)
+
+    open fun pause()
+        //nullable = true from not(false or (false and true)) = true
+{
+
+    
+                        if(player != 
+                                    null
+                                )
+                        
+                                    {
+                                    logUtil!!.put(commonStrings!!.START, this, commonStateStrings!!.PAUSE)
+player.pause()
+
+                                    }
+                                
+}
+
+
+    open fun resume()
+        //nullable = true from not(false or (false and true)) = true
+{
+
+    
+                        if(player != 
+                                    null
+                                 && !player.isPlaying())
+                        
+                                    {
+                                    logUtil!!.put(commonStrings!!.START, this, commonStateStrings!!.RESUME)
+player.start()
+
+                                    }
+                                
+}
+
+
+    open fun start()
+        //nullable = true from not(false or (false and true)) = true
+{
+player= MediaPlayer.create(this, songId)
+player.setVolume((leftVolume.toFloat()) /100.0f, (rightVolume.toFloat()) /100.0f)
+player.setLooping(false)
+player.start()
+}
+
+
+    override fun onStart(intent: Intent, startid: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var intent = intent
@@ -98,7 +150,8 @@ onStartCommand(intent)
 logUtil!!.put(commonStrings!!.START, this, commonStateStrings!!.START)
 }
 
-override fun onStartCommand(intent: Intent, flags: Int, startId: Int)
+
+    override fun onStartCommand(intent: Intent, flags: Int, startId: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var intent = intent
@@ -113,7 +166,7 @@ onStartCommand(intent)
 }
 
 
-open fun onStartCommand(intent: Intent)
+    open fun onStartCommand(intent: Intent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var intent = intent
@@ -128,9 +181,45 @@ logUtil!!.put(commonStrings!!.START, this, commonStateStrings!!.ON_START_COMMAND
                                 )
                         
                                     {
-                                    songId= intent.getIntExtra(musicStrings!!.SONG_EXTRA,  -1)
-leftVolume= intent.getIntExtra(musicStrings!!.LEFT_VOLUME,  -1)
-rightVolume= intent.getIntExtra(musicStrings!!.RIGHT_VOLUME,  -1)
+                                    
+    var command: Int = intent.getIntExtra(commonStateStrings!!.ON_START_COMMAND,  -1)!!
+
+logUtil!!.put(CommonLabels.getInstance()!!.COMMAND_LABEL +command, this, commonStateStrings!!.ON_START_COMMAND)
+
+    
+                        if(command == 1)
+                        
+                                    {
+                                    this.pause()
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 
+
+                                    }
+                                
+                             else 
+    
+                        if(command == 2)
+                        
+                                    {
+                                    this.resume()
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 
+
+                                    }
+                                
+                        else {
+                            this.songId= intent.getIntExtra(musicStrings!!.SONG_EXTRA,  -1)
+this.leftVolume= intent.getIntExtra(musicStrings!!.LEFT_VOLUME,  -1)
+this.rightVolume= intent.getIntExtra(musicStrings!!.RIGHT_VOLUME,  -1)
+
+                        }
+                            
 
                                     }
                                 
@@ -160,9 +249,10 @@ rightVolume= intent.getIntExtra(musicStrings!!.RIGHT_VOLUME,  -1)
 
 logUtil!!.put(ALREADY_PLAYING, this, commonStateStrings!!.ON_START_COMMAND)
 
-    var runnable: Runnable = object: NullRunnable()
+    var runnable: Runnable = object: ARunnable()
                                 {
-                                override fun run()
+                                
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -197,10 +287,7 @@ thread.start()
 
                                     }
                                 
-player= MediaPlayer.create(this, songId)
-player.setVolume((leftVolume.toFloat()) /100.0f, (rightVolume.toFloat()) /100.0f)
-player.setLooping(false)
-player.start()
+this.start()
 
                                     }
                                 

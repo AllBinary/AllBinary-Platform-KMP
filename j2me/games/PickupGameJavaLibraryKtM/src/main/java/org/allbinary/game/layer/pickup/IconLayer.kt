@@ -35,15 +35,14 @@ import org.allbinary.view.ViewPosition
 
 open public class IconLayer : AllBinaryLayer {
         
-
-        companion object {
+companion object {
             
     val NULL_ICON_LAYER: IconLayer = IconLayer(NullAnimationFactory.getFactoryInstance()!!.getInstance(0), 0, 0)
 
         }
             
     private var animationInterface: Animation
-public constructor        (animationInterface: Animation, width: Int, height: Int)                        
+public constructor (animationInterface: Animation, width: Int, height: Int)                        
 
                             : super(Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, width, height), ViewPosition()){
 var animationInterface = animationInterface
@@ -56,14 +55,16 @@ var height = height
 this.animationInterface= animationInterface
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 this.animationInterface!!.paint(graphics, x, y)
 }
 
-override fun paintThreed(graphics: Graphics)
+
+    override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -71,7 +72,7 @@ this.animationInterface!!.paintThreed(graphics, x, y, z)
 }
 
 
-open fun getAnimationInterface()
+    open fun getAnimationInterface()
         //nullable = true from not(false or (false and true)) = true
 : Animation{
 

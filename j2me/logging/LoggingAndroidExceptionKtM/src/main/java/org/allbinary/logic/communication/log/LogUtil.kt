@@ -26,16 +26,15 @@
         import kotlin.reflect.KClass
         
 
-open public class LogUtil
+/*actual*/ open public class LogUtil
             : Object
          {
         
-
-        companion object {
+/*actual*/ companion object {
             
     private val instance: LogUtil = LogUtil()
 
-open fun getInstance()
+    /*actual*/ open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : LogUtil{
 
@@ -51,13 +50,13 @@ open fun getInstance()
     private val LABEL: String = "org.allbinary"
 
     private val LOG_SUCCESS: String = "org.allbinary: "
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun put(log: Log)
+    /*actual*/ open fun put(log: Log)
         //nullable = true from not(false or (false and false)) = true
 {
     //var log = log
@@ -87,7 +86,7 @@ open fun put(log: Log)
 }
 
 
-open fun put(specialMessage: String, anyType: Any, functionName: String)
+    /*actual*/ open fun put(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var specialMessage = specialMessage
@@ -96,7 +95,7 @@ open fun put(specialMessage: String, anyType: Any, functionName: String)
 }
 
 
-open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)
+    /*actual*/ open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var specialMessage = specialMessage

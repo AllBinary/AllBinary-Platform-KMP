@@ -26,10 +26,11 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.util.event.EventListenerInterface
+
 interface BaseMotionGestureEventListener : EventListenerInterface {
         
 
-open fun onMotionGestureEvent(motionGestureEvent: MotionGestureEvent)
+    open fun onMotionGestureEvent(motionGestureEvent: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

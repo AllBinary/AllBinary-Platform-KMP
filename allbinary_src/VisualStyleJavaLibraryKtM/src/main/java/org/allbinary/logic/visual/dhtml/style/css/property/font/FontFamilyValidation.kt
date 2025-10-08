@@ -36,7 +36,7 @@ open public class FontFamilyValidation : FontFamilyView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        ()                        
+public constructor ()                        
 
                             : super(){
 
@@ -45,7 +45,7 @@ public constructor        ()
                     
 }
 
-public constructor        (node: Node)                        
+public constructor (node: Node)                        
 
                             : super(node){
 var node = node
@@ -58,7 +58,7 @@ var node = node
 
                 @Throws(Exception::class)
             
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -112,7 +112,7 @@ open fun isValid()
 
                 @Throws(Exception::class)
             
-open fun validationInfo()
+    open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -149,7 +149,7 @@ stringBuffer!!.append("Css Font Family Property Validation Error")
 
                 @Throws(Exception::class)
             
-open fun toValidationInfoDoc()
+    open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -162,7 +162,7 @@ open fun toValidationInfoDoc()
 
                 @Throws(Exception::class)
             
-open fun toValidationInfoNode(document: Document)
+    open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

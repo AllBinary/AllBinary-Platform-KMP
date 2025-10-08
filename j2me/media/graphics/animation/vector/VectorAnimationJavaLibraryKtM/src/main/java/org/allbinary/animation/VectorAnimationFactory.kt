@@ -37,7 +37,8 @@ open public class VectorAnimationFactory
             public constructor() : super()
             {
             }            
-        override fun getInstance(points: Array<Array<IntArray?>?>, basicColor: BasicColor)
+        
+    override fun getInstance(points: Array<Array<IntArray?>?>, basicColor: BasicColor)
         //nullable =  from not(true or (false and false)) = 
 : VectorAnimation{
     //var points = points

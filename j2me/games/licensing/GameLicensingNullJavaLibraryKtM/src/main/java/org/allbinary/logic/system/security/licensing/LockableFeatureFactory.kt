@@ -31,12 +31,11 @@ open public class LockableFeatureFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: LockableFeatureFactory = LockableFeatureFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : LockableFeatureFactory{
 
@@ -56,7 +55,7 @@ open fun getInstance()
         
     private val list: BasicArrayList = BasicArrayList()
 
-open fun getList()
+    open fun getList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 

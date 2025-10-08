@@ -35,10 +35,9 @@ import org.allbinary.graphics.color.BasicColor
 
 open public class PositionWidget : BasicHud {
         
-
-        companion object {
+companion object {
             
-open fun toString(position: Int)
+    open fun toString(position: Int)
         //nullable = true from not(false or (true and false)) = true
 : String{
 var position = position
@@ -91,7 +90,7 @@ stringBuffer!!.append(position.toString())
     private var position: Int= 0
 
     private var positionString: String = StringUtil.getInstance()!!.EMPTY_STRING
-public constructor        (position: Int, location: Int, direction: Int, basicColor: BasicColor)                        
+public constructor (position: Int, location: Int, direction: Int, basicColor: BasicColor)                        
 
                             : super(location, direction, 10, 40, 2, basicColor){
 var position = position
@@ -105,7 +104,7 @@ var basicColor = basicColor
 }
 
 
-open fun get()
+    open fun get()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -116,7 +115,7 @@ open fun get()
 }
 
 
-open fun set(position: Int)
+    open fun set(position: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var position = position
@@ -125,7 +124,7 @@ this.positionString= PositionWidget.toString(this.get())
 }
 
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

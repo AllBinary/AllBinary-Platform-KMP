@@ -28,7 +28,7 @@
 
 open public class StaticViewPosition : ViewPosition {
         
-public constructor        (x: Int, y: Int, z: Int)                        
+public constructor (x: Int, y: Int, z: Int)                        
 
                             : super(x, y, z){
 var x = x
@@ -40,7 +40,8 @@ var z = z
                     
 }
 
-override fun getX()
+
+    override fun getX()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -50,7 +51,8 @@ override fun getX()
                         return this.getRawX()
 }
 
-override fun getY()
+
+    override fun getY()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -60,7 +62,8 @@ override fun getY()
                         return this.getRawY()
 }
 
-override fun getZ()
+
+    override fun getZ()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

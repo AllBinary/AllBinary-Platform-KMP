@@ -57,7 +57,7 @@ open public class ClientInformation
     private var licenseId: String = StringUtil.getInstance()!!.EMPTY_STRING
 
     private var licenseServers: BasicArrayList = BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
-public constructor        (name: String, version: String, specialName: String, shortName: String)
+public constructor (name: String, version: String, specialName: String, shortName: String)
             : super()
         {
     //var name = name
@@ -72,12 +72,14 @@ this.shortName= StringMaker().
 this.init()
 }
 
-override fun init()
+
+    override fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun getOperatingSystemInterface()
+
+    override fun getOperatingSystemInterface()
         //nullable = true from not(false or (false and true)) = true
 : GenericOperatingSystem{
 
@@ -87,7 +89,8 @@ override fun getOperatingSystemInterface()
                         return operatingSystemInterface
 }
 
-override fun getName()
+
+    override fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -97,7 +100,8 @@ override fun getName()
                         return this.name
 }
 
-override fun getSpecialName()
+
+    override fun getSpecialName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -107,7 +111,8 @@ override fun getSpecialName()
                         return this.specialName
 }
 
-override fun getVersion()
+
+    override fun getVersion()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -117,7 +122,8 @@ override fun getVersion()
                         return this.version
 }
 
-override fun getLicenseId()
+
+    override fun getLicenseId()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -127,7 +133,8 @@ override fun getLicenseId()
                         return this.licenseId
 }
 
-override fun getLicenseServers()
+
+    override fun getLicenseServers()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -137,7 +144,8 @@ override fun getLicenseServers()
                         return this.licenseServers
 }
 
-override fun getLicenseServer(index: Int)
+
+    override fun getLicenseServer(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var index = index
@@ -148,7 +156,8 @@ var index = index
                         return this.licenseServers!!.objectArray[index]!! as String
 }
 
-override fun getNumberOfLicenseServers()
+
+    override fun getNumberOfLicenseServers()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -158,7 +167,8 @@ override fun getNumberOfLicenseServers()
                         return this.licenseServers!!.size()
 }
 
-override fun toHashtable()
+
+    override fun toHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
 
@@ -189,7 +199,8 @@ clientInfoHashtable!!.put(abeClientInformationData!!.HARDWARE, hardwareString)
                         return clientInfoHashtable
 }
 
-override fun isSameId(alicenseId: String)
+
+    override fun isSameId(alicenseId: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var alicenseId = alicenseId
@@ -217,7 +228,8 @@ var alicenseId = alicenseId
                             
 }
 
-override fun isLargerOrDifferentServerList(list: BasicArrayList)
+
+    override fun isLargerOrDifferentServerList(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var list = list
@@ -285,14 +297,15 @@ var list = list
 }
 
 
-open fun setHardSale(hardSale: Boolean)
+    open fun setHardSale(hardSale: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var hardSale = hardSale
 this.hardSale= hardSale
 }
 
-override fun isHardSale()
+
+    override fun isHardSale()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -303,7 +316,7 @@ override fun isHardSale()
 }
 
 
-open fun setOperatingSystemInterface(operatingSystemInterface: GenericOperatingSystem)
+    open fun setOperatingSystemInterface(operatingSystemInterface: GenericOperatingSystem)
         //nullable = true from not(false or (false and false)) = true
 {
 var operatingSystemInterface = operatingSystemInterface
@@ -311,7 +324,7 @@ this.operatingSystemInterface= operatingSystemInterface
 }
 
 
-open fun setLicenseId(licenseId: String)
+    open fun setLicenseId(licenseId: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var licenseId = licenseId
@@ -319,14 +332,15 @@ this.licenseId= licenseId
 }
 
 
-open fun setLicenseServers(licenseServers: BasicArrayList)
+    open fun setLicenseServers(licenseServers: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var licenseServers = licenseServers
 this.licenseServers= licenseServers
 }
 
-override fun toShortString()
+
+    override fun toShortString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

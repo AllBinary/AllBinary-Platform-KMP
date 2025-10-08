@@ -30,12 +30,11 @@ open public class PaymentTransactionKeysFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: PaymentTransactionKeysFactory = PaymentTransactionKeysFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PaymentTransactionKeysFactory{
 

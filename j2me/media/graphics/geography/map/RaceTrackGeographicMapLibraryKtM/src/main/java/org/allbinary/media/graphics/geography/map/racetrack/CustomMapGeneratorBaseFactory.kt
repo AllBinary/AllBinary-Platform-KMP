@@ -30,12 +30,11 @@ open public class CustomMapGeneratorBaseFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: CustomMapGeneratorBaseFactory = CustomMapGeneratorBaseFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CustomMapGeneratorBaseFactory{
 
@@ -47,7 +46,7 @@ open fun getInstance()
 
 
         }
-            public constructor        ()
+            public constructor ()
             : super()
         {
 }
@@ -55,7 +54,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun getInstance(raceTrackGeographicMap: RaceTrackGeographicMap)
+    open fun getInstance(raceTrackGeographicMap: RaceTrackGeographicMap)
         //nullable =  from not(true or (false and false)) = 
 : CustomMapGeneratorBase{
     //var raceTrackGeographicMap = raceTrackGeographicMap

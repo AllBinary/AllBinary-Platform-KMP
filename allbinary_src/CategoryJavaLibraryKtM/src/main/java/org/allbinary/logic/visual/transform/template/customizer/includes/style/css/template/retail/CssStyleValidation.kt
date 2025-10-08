@@ -45,22 +45,22 @@ open public class CssStyleValidation : Validation
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     var cssStyleElementVector: Vector
-public constructor        (){
+public constructor (){
 this.cssStyleElementVector= Vector()
 }
 
-public constructor        (document: Document){
+public constructor (document: Document){
 var document = document
 this.cssStyleElementVector= StylesValidationFactory.getInstance()!!.getInstance(document)
 }
 
-public constructor        (hashMap: HashMap<Any, Any>){
+public constructor (hashMap: HashMap<Any, Any>){
 var hashMap = hashMap
 this.cssStyleElementVector= StylesValidationFactory.getInstance(hashMap)
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -136,7 +136,7 @@ open fun isValid()
 }
 
 
-open fun validationInfo()
+    open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -170,7 +170,7 @@ open fun validationInfo()
 }
 
 
-open fun toValidationInfoDoc()
+    open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -181,7 +181,7 @@ open fun toValidationInfoDoc()
 }
 
 
-open fun toValidationInfoNode(document: Document)
+    open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -195,7 +195,7 @@ var document = document
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

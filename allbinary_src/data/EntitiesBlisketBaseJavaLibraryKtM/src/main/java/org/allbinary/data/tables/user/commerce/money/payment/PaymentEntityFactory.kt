@@ -32,12 +32,11 @@ open public class PaymentEntityFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: PaymentEntityFactory = PaymentEntityFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PaymentEntityFactory{
 
@@ -51,13 +50,13 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getPaymentEntityInstance()
+    open fun getPaymentEntityInstance()
         //nullable = true from not(false or (false and true)) = true
 : PaymentEntity{
 

@@ -44,7 +44,7 @@ open public class BasicGeographicMapFactory
         
                 @Throws(Exception::class)
             
-open fun getInstance(raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrackData, tiledLayerFactoryInterface: AllBinaryTiledLayerFactoryInterface, geographicMapCellPositionFactoryInterface: GeographicMapCellPositionFactoryInterface, geographicMapCellTypeFactory: GeographicMapCellTypeFactory)
+    open fun getInstance(raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrackData, tiledLayerFactoryInterface: AllBinaryTiledLayerFactoryInterface, geographicMapCellPositionFactoryInterface: GeographicMapCellPositionFactoryInterface, geographicMapCellTypeFactory: GeographicMapCellTypeFactory)
         //nullable =  from not(true or (false and false)) = 
 : BasicGeographicMap{
     //var raceTrackInfo = raceTrackInfo

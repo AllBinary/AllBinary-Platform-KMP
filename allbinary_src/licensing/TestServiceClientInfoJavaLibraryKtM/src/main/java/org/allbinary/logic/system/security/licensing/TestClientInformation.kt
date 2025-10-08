@@ -28,7 +28,7 @@
 
 open public class TestClientInformation : AbeClientInformation {
         
-public constructor        ()                        
+public constructor ()                        
 
                             : super("Test App Name", "0.0.1", "Test App Name 0.0.1", "TA"){
 

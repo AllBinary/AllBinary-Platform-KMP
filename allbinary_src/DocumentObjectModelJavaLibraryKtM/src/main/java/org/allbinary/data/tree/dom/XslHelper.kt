@@ -41,12 +41,11 @@ open public class XslHelper
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: XslHelper = XslHelper()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : XslHelper{
 
@@ -58,7 +57,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
@@ -66,7 +65,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun translate(xsltStreamSource: StreamSource, xmlStreamSource: StreamSource, streamResult: StreamResult)
+    open fun translate(xsltStreamSource: StreamSource, xmlStreamSource: StreamSource, streamResult: StreamResult)
         //nullable = true from not(false or (false and false)) = true
 : OutputStream{
     //var xsltStreamSource = xsltStreamSource
@@ -99,7 +98,7 @@ transformer.transform(xmlStreamSource, streamResult)
 
                 @Throws(Exception::class)
             
-open fun translate(resolver: URIResolver, xsltStreamSource: StreamSource, xmlStreamSource: StreamSource, streamResult: StreamResult)
+    open fun translate(resolver: URIResolver, xsltStreamSource: StreamSource, xmlStreamSource: StreamSource, streamResult: StreamResult)
         //nullable = true from not(false or (false and false)) = true
 : OutputStream{
     //var resolver = resolver
@@ -134,7 +133,7 @@ transformer.transform(xmlStreamSource, streamResult)
 
                 @Throws(Exception::class)
             
-open fun translate(xsltStreamSource: StreamSource, xmlDocument: Document)
+    open fun translate(xsltStreamSource: StreamSource, xmlDocument: Document)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var xsltStreamSource = xsltStreamSource
@@ -162,7 +161,7 @@ open fun translate(xsltStreamSource: StreamSource, xmlDocument: Document)
 
                 @Throws(Exception::class)
             
-open fun translate(xsltStreamSource: StreamSource, xmlStreamSource: StreamSource)
+    open fun translate(xsltStreamSource: StreamSource, xmlStreamSource: StreamSource)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var xsltStreamSource = xsltStreamSource
@@ -190,7 +189,7 @@ open fun translate(xsltStreamSource: StreamSource, xmlStreamSource: StreamSource
 
                 @Throws(Exception::class)
             
-open fun translate(resolver: URIResolver, xsltStreamSource: StreamSource, xmlStreamSource: StreamSource)
+    open fun translate(resolver: URIResolver, xsltStreamSource: StreamSource, xmlStreamSource: StreamSource)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var resolver = resolver
@@ -219,7 +218,7 @@ open fun translate(resolver: URIResolver, xsltStreamSource: StreamSource, xmlStr
 
                 @Throws(Exception::class)
             
-open fun export(outputFile: File, xsltFilePath: String, xmlDocument: Document)
+    open fun export(outputFile: File, xsltFilePath: String, xmlDocument: Document)
         //nullable = true from not(false or (false and false)) = true
 {
     //var outputFile = outputFile

@@ -25,42 +25,43 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface CpuInterface {
         
 
-open fun getProcessor()
+    open fun getProcessor()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getVendorId()
+    open fun getVendorId()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getCpuFamily()
+    open fun getCpuFamily()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getModel()
+    open fun getModel()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getModelName()
+    open fun getModelName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getStepping()
+    open fun getStepping()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getCpuSpeed()
+    open fun getCpuSpeed()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getCacheSize()
+    open fun getCacheSize()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun compareTo(cpuInterface: CpuInterface)
+    open fun compareTo(cpuInterface: CpuInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 

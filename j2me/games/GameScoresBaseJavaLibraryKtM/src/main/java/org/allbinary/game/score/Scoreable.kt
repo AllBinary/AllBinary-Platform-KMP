@@ -34,8 +34,7 @@ open public class Scoreable
         
                 , ScoreableInterface {
         
-
-        companion object {
+companion object {
             
     val NULL_SCOREABLE: Scoreable = Scoreable( -1)
 
@@ -44,21 +43,23 @@ open public class Scoreable
         }
             
     private var points: Int
-public constructor        (points: Int)
+public constructor (points: Int)
             : super()
         {
 var points = points
 this.points= points
 }
 
-override fun addPoints(points: Int)
+
+    override fun addPoints(points: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var points = points
 this.points += points
 }
 
-override fun removePoints(points: Int)
+
+    override fun removePoints(points: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var points = points
@@ -66,14 +67,15 @@ this.points -= points
 }
 
 
-open fun setPoints(points: Int)
+    open fun setPoints(points: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var points = points
 this.points= points
 }
 
-override fun getPoints()
+
+    override fun getPoints()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

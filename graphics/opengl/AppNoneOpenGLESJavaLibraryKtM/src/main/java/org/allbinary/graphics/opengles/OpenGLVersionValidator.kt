@@ -31,12 +31,11 @@ open public class OpenGLVersionValidator
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OpenGLVersionValidator = OpenGLVersionValidator()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OpenGLVersionValidator{
 
@@ -54,7 +53,7 @@ open fun getInstance()
             {
             }            
         
-open fun isAvailable(glVersionRequired: String)
+    open fun isAvailable(glVersionRequired: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var glVersionRequired = glVersionRequired
@@ -66,7 +65,7 @@ open fun isAvailable(glVersionRequired: String)
 }
 
 
-open fun setShaderComposite(shaderComposite: ShaderComposite, anyType: Any)
+    open fun setShaderComposite(shaderComposite: ShaderComposite, anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var shaderComposite = shaderComposite

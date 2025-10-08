@@ -34,12 +34,11 @@ open public class NullIndexedAnimationFactory
                 , AnimationInterfaceFactoryInterface
                 , ProceduralAnimationInterfaceFactoryInterface {
         
-
-        companion object {
+companion object {
             
     private var NULL_INDEXED_ANIMATION_FACTORY: NullIndexedAnimationFactory = NullIndexedAnimationFactory()
 
-open fun getFactoryInstance()
+    open fun getFactoryInstance()
         //nullable = true from not(false or (false and true)) = true
 : NullIndexedAnimationFactory{
 
@@ -54,7 +53,8 @@ open fun getFactoryInstance()
             
     private val NULL_ANIMATION: Animation = object: NullIndexedAnimation(AnimationBehavior.getInstance())
                                 {
-                                override fun paint(graphics: Graphics, x: Int, y: Int)
+                                
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -64,14 +64,15 @@ open fun getFactoryInstance()
 
                                 }
                             
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
                 @Throws(Exception::class)
-            override fun getInstance(instanceId: Int)
+            
+    override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var instanceId = instanceId
@@ -84,7 +85,8 @@ private constructor        ()
 
 
                 @Throws(Exception::class)
-            override fun getInstance(animationInterface: Animation)
+            
+    override fun getInstance(animationInterface: Animation)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var animationInterface = animationInterface
@@ -95,7 +97,8 @@ private constructor        ()
                         return NULL_ANIMATION
 }
 
-override fun setInitialScale(scaleProperties: ScaleProperties)
+
+    override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
 {
     //var scaleProperties = scaleProperties

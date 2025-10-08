@@ -34,7 +34,7 @@ open public class HtmlMetaAttributeData
     private var id: Int
 
     private var name: String
-public constructor        (id: Int, value: String)
+public constructor (id: Int, value: String)
             : super()
         {
 var id = id
@@ -44,7 +44,7 @@ this.id= id
 }
 
 
-open fun equals(htmlMetaAttributeData: HtmlMetaAttributeData?)
+    open fun equals(htmlMetaAttributeData: HtmlMetaAttributeData?)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var htmlMetaAttributeData = htmlMetaAttributeData
@@ -72,7 +72,8 @@ var htmlMetaAttributeData = htmlMetaAttributeData
                             
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

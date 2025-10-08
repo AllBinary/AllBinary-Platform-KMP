@@ -42,7 +42,7 @@ open public class ValidationTransformTag : TransformTag {
     private var xslFile: String
 
     private var logic: Boolean
-public constructor        ()                        
+public constructor ()                        
 
                             : super(ValidatedViewHelperFactory()){
 
@@ -53,7 +53,7 @@ this.logic= true
 }
 
 
-open fun setXsl(value: String)
+    open fun setXsl(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -62,7 +62,7 @@ this.setTemplateFile(this.xslFile)
 }
 
 
-open fun setLogic(logic: Boolean)
+    open fun setLogic(logic: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var logic = logic
@@ -72,7 +72,7 @@ this.logic= logic
 
                 @Throws(Exception::class)
             
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -115,7 +115,7 @@ open fun isValid()
 
                 @Throws(Exception::class)
             
-open fun validationInfo()
+    open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -158,7 +158,7 @@ open fun validationInfo()
 
                 @Throws(JspTagException::class)
             
-open fun doStartTag()
+    open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -298,7 +298,7 @@ AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 }
 
 
-open fun doEndTag()
+    open fun doEndTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

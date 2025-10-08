@@ -31,14 +31,13 @@ open public class MediaData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
                 @Throws(Exception::class)
             
-open fun get(a_Name: String)
+    open fun get(a_Name: String)
         //nullable = true from not(false or (false and false)) = true
 : MediaData{
 var a_Name = a_Name
@@ -71,7 +70,7 @@ var a_Name = a_Name
 }
 
 
-open fun getDefault()
+    open fun getDefault()
         //nullable = true from not(false or (false and true)) = true
 : MediaData{
 
@@ -82,7 +81,7 @@ open fun getDefault()
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -100,7 +99,7 @@ open fun toHashMap()
     private var type: String
 
     private var extension: String
-protected constructor        (a_Name: String)
+protected constructor (a_Name: String)
             : super()
         {
 var a_Name = a_Name
@@ -111,7 +110,7 @@ MediaData.hashMap!!.put(a_Name, this)
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -122,7 +121,7 @@ open fun getName()
 }
 
 
-open fun getType()
+    open fun getType()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -133,7 +132,7 @@ open fun getType()
 }
 
 
-open fun getExtension()
+    open fun getExtension()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -144,7 +143,7 @@ open fun getExtension()
 }
 
 
-open fun isConvertableTo(mediaData: MediaData)
+    open fun isConvertableTo(mediaData: MediaData)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var mediaData = mediaData
@@ -168,7 +167,8 @@ var mediaData = mediaData
                         return false
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

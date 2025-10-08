@@ -67,7 +67,7 @@ open public class OrderHistoryHelper : TagHelper {
     private var status: String
 
     private var newStatus: String
-public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext){
 var propertiesHashMap = propertiesHashMap
 var pageContext = pageContext
 this.propertiesHashMap= propertiesHashMap
@@ -92,7 +92,7 @@ this.getFormData()
 }
 
 
-open fun getFormData()
+    open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
 this.id= request.getParameter(OrderData.ID)
@@ -111,7 +111,7 @@ this.groupId= request.getParameter(ShippingMethodData.GROUP)
 }
 
 
-open fun setOrderStatus()
+    open fun setOrderStatus()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

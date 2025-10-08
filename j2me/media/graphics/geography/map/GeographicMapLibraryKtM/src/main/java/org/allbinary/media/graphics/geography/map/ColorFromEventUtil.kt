@@ -33,12 +33,11 @@ open public class ColorFromEventUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ColorFromEventUtil = ColorFromEventUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ColorFromEventUtil{
 
@@ -60,7 +59,7 @@ open fun getInstance()
 
     val COLOR_INT: Int = YELLOW.toInt()!!
 
-open fun getForegroundColor(gameCanvasInterface: AllBinaryGameCanvas)
+    open fun getForegroundColor(gameCanvasInterface: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
 : BasicColor{
     //var gameCanvasInterface = gameCanvasInterface

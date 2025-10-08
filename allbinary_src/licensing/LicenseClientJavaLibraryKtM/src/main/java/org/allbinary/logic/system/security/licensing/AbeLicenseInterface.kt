@@ -26,37 +26,39 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.util.BasicArrayList
+
 interface AbeLicenseInterface {
         
 
-open fun hasKey()
+    open fun hasKey()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun getKey(keyName: String)
+    open fun getKey(keyName: String)
         //nullable = true from not(false or (false and false)) = true
 : String
 
-open fun getLicenseId()
+    open fun getLicenseId()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getServers()
+    open fun getServers()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList
 
-open fun getSpecial()
+    open fun getSpecial()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getLicenseType()
+    open fun getLicenseType()
         //nullable = true from not(false or (false and true)) = true
 : LicenseType
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String
 

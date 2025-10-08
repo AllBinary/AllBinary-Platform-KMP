@@ -30,17 +30,15 @@
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringMaker
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 
 open public class ImageThreadPool : ThreadPool {
         
-
-        companion object {
+companion object {
             
     private val instance: ThreadPool = ImageThreadPool("ImageLoader", 1)
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ThreadPool{
 
@@ -54,7 +52,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (poolName: String, numThreads: Int)                        
+public constructor (poolName: String, numThreads: Int)                        
 
                             : super(poolName, numThreads){
     //var poolName = poolName
@@ -67,7 +65,7 @@ public constructor        (poolName: String, numThreads: Int)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun runTask(task: Runnable)
+    open fun runTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
 {
 var task = task
@@ -75,14 +73,14 @@ super.runTask(task)
 }
 
 
-open fun startTask(task: Runnable)
+    open fun startTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
 {
 var task = task
 }
 
 
-open fun completedTask(task: Runnable)
+    open fun completedTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
 {
 var task = task

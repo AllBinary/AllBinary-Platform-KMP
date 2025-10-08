@@ -43,7 +43,7 @@ open public class KeyValueDrawString
     private var valueX: Int
 
     private var value: String = StringUtil.getInstance()!!.EMPTY_STRING
-public constructor        (label: String, x: Int)
+public constructor (label: String, x: Int)
             : super()
         {
 var label = label
@@ -55,7 +55,7 @@ this.valueX= this.labelWidth +x
 }
 
 
-open fun paint(graphics: Graphics, y: Int)
+    open fun paint(graphics: Graphics, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -65,7 +65,7 @@ graphics.drawString(this.value, this.valueX, y, 0)
 }
 
 
-open fun update(value: String)
+    open fun update(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value

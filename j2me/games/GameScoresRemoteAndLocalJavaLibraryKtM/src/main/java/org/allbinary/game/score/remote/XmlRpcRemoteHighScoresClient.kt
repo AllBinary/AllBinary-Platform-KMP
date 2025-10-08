@@ -43,7 +43,7 @@ open public class XmlRpcRemoteHighScoresClient : XmlRpcAbeClient {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var page: String
-public constructor        (clientInfo: AbeClientInformationInterface, page: String, remoteMethod: String)                        
+public constructor (clientInfo: AbeClientInformationInterface, page: String, remoteMethod: String)                        
 
                             : super(clientInfo, remoteMethod){
 var clientInfo = clientInfo
@@ -60,7 +60,7 @@ this.setServer(0)
 
                 @Throws(Exception::class)
             
-open fun get(anyType: Any, cryptInterface: CryptInterface)
+    open fun get(anyType: Any, cryptInterface: CryptInterface)
         //nullable = true from not(false or (false and false)) = true
 : Any{
     //var anyType = anyType

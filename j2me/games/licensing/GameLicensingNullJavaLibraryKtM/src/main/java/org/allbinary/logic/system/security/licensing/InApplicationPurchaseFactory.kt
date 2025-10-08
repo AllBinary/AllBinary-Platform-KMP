@@ -31,12 +31,11 @@ open public class InApplicationPurchaseFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: InApplicationPurchaseFactory = InApplicationPurchaseFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : InApplicationPurchaseFactory{
 
@@ -48,13 +47,13 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
 
 
-open fun init(anyType: Any, stateObject: Any)
+    open fun init(anyType: Any, stateObject: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var anyType = anyType
@@ -62,7 +61,7 @@ var stateObject = stateObject
 }
 
 
-open fun onCreate(anyType: Any, stateObject: Any)
+    open fun onCreate(anyType: Any, stateObject: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var anyType = anyType
@@ -70,13 +69,13 @@ var stateObject = stateObject
 }
 
 
-open fun onStart()
+    open fun onStart()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun onResult(requestCode: Int, resultCode: Int, data: Any)
+    open fun onResult(requestCode: Int, resultCode: Int, data: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var requestCode = requestCode
@@ -85,33 +84,33 @@ open fun onResult(requestCode: Int, resultCode: Int, data: Any)
 }
 
 
-open fun onSaveState(anyType: Any)
+    open fun onSaveState(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var anyType = anyType
 }
 
 
-open fun onStop()
+    open fun onStop()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun onDestroy()
+    open fun onDestroy()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun purchase(lockableFeature: LockableFeature)
+    open fun purchase(lockableFeature: LockableFeature)
         //nullable = true from not(false or (false and false)) = true
 {
 var lockableFeature = lockableFeature
 }
 
 
-open fun isPurchased(lockableFeature: LockableFeature)
+    open fun isPurchased(lockableFeature: LockableFeature)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var lockableFeature = lockableFeature
@@ -123,14 +122,14 @@ var lockableFeature = lockableFeature
 }
 
 
-open fun add(lockableFeature: LockableFeature)
+    open fun add(lockableFeature: LockableFeature)
         //nullable = true from not(false or (false and false)) = true
 {
 var lockableFeature = lockableFeature
 }
 
 
-open fun getUserName()
+    open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -141,7 +140,7 @@ open fun getUserName()
 }
 
 
-open fun isEnabled()
+    open fun isEnabled()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

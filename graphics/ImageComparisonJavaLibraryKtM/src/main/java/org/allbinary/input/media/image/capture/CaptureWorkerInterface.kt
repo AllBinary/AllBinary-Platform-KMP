@@ -27,6 +27,7 @@
         
 import org.allbinary.logic.util.event.handler.BasicEventHandlerInterface
 import org.allbinary.thread.RunnableInterface
+
 interface CaptureWorkerInterface : RunnableInterface, BasicEventHandlerInterface {
         
 

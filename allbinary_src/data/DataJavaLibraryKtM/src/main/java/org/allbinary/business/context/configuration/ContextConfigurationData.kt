@@ -31,12 +31,11 @@ open public class ContextConfigurationData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ContextConfigurationData = ContextConfigurationData()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ContextConfigurationData{
 
@@ -48,7 +47,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

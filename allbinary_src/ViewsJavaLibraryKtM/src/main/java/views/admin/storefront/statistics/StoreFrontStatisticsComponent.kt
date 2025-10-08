@@ -42,7 +42,7 @@ open public class StoreFrontStatisticsComponent : HttpStoreComponentView {
     var newStoreFrontInterface: StoreFrontInterface
 
     private var domNodeInterface: DomNodeInterface
-public constructor        (transformInfoInterface: TransformInfoInterface)                        
+public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
@@ -55,7 +55,7 @@ this.domNodeInterface= RealTimeStoreFrontStatisticsView(RealTimeStoreFrontStatis
 }
 
 
-open fun addDomNodeInterfaces()
+    open fun addDomNodeInterfaces()
         //nullable = true from not(false or (false and true)) = true
 {
 this.addDomNodeInterface(this.domNodeInterface as DomNodeInterface)
@@ -64,7 +64,7 @@ this.addDomNodeInterface(this.domNodeInterface as DomNodeInterface)
 
                 @Throws(Exception::class)
             
-open fun view()
+    open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

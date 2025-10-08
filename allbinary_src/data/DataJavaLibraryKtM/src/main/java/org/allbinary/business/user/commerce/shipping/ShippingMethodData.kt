@@ -30,8 +30,7 @@ open public class ShippingMethodData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val DESCRIPTION: String = "SHIPPINGMETHOD_DESCRIPTION"
 
@@ -44,7 +43,7 @@ open public class ShippingMethodData
     val COST: String = "SHIPPINGMETHOD_COST"
 
         }
-            public constructor        ()
+            public constructor ()
             : super()
         {
 }

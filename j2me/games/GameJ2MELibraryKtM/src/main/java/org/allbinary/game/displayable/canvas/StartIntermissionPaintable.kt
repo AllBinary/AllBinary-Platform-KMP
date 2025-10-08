@@ -61,7 +61,7 @@ open public class StartIntermissionPaintable : InitUpdatePaintable {
     private var hasChanged: Boolean = true
 
     val lastWidth: IntArray
-public constructor        (gameCanvas: AllBinaryGameCanvas, stringArray: Array<String?>, lineArray: IntArray, basicColor: BasicColor)                        
+public constructor (gameCanvas: AllBinaryGameCanvas, stringArray: Array<String?>, lineArray: IntArray, basicColor: BasicColor)                        
 
                             : this(gameCanvas, stringArray, lineArray, basicColor, Font.getDefaultFont()){
     //var gameCanvas = gameCanvas
@@ -74,7 +74,7 @@ public constructor        (gameCanvas: AllBinaryGameCanvas, stringArray: Array<S
                     
 }
 
-public constructor        (gameCanvas: AllBinaryGameCanvas, stringArray: Array<String?>, lineArray: IntArray, basicColor: BasicColor, font: Font){
+public constructor (gameCanvas: AllBinaryGameCanvas, stringArray: Array<String?>, lineArray: IntArray, basicColor: BasicColor, font: Font){
     //var gameCanvas = gameCanvas
     //var stringArray = stringArray
     //var lineArray = lineArray
@@ -92,7 +92,8 @@ this.font= font
 
 
     private var anchor: Int = Anchor.TOP_LEFT
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -135,7 +136,8 @@ fontDebugFactory!!.setFont(existingFont, graphics)
     private val BEGIN_LEVEL: String = "Begin Level "
 
     private val EMPTY_STRING: String = StringUtil.getInstance()!!.EMPTY_STRING
-override fun update()
+
+    override fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -155,7 +157,8 @@ this.stringArray[index]= this.EMPTY_STRING
 
 }
 
-override fun setBasicColorP(basicColor: BasicColor)
+
+    override fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
 var basicColor = basicColor
@@ -163,7 +166,7 @@ this.basicColor= basicColor
 }
 
 
-open fun getBasicColorP()
+    open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
 

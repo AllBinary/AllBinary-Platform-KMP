@@ -35,7 +35,7 @@ open public class AdjustedRightToLeftImageAnimation : RightToLeftImageAnimation 
     private var dx: Int= 0
 
     private var dy: Int= 0
-public constructor        (image: Image, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
+public constructor (image: Image, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
                             : super(image, animationBehavior){
     //var image = image
@@ -52,7 +52,7 @@ this.init(dx, dy)
 
                 @Throws(Exception::class)
             
-open fun init(dx: Int, dy: Int)
+    open fun init(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var dx = dx
@@ -61,7 +61,8 @@ this.dx= dx
 this.dy= dy
 }
 
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics

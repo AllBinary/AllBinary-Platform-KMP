@@ -33,7 +33,7 @@ open public class FileEmailQueue
         
 
     private var domDocumentQueueInterface: DomDocumentQueueInterface
-public constructor        ()
+public constructor ()
             : super()
         {
 }

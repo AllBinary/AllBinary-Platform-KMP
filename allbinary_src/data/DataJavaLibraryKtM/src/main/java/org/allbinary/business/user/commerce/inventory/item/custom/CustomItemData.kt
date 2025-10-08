@@ -30,8 +30,7 @@ open public class CustomItemData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val PACKAGE: String = "CUSTOMITEM_PACKAGE"
 

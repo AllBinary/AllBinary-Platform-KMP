@@ -49,7 +49,7 @@ open public class RemoteHighScoresProcessor
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private val noCrypt: NoCrypt = NoCrypt()
-public constructor        ()
+public constructor ()
             : super()
         {
 }
@@ -58,7 +58,7 @@ public constructor        ()
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun process(remoteHighScores: RemoteHighScores, abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo)
+    open fun process(remoteHighScores: RemoteHighScores, abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo)
         //nullable = true from not(false or (false and false)) = true
 {
     //var remoteHighScores = remoteHighScores

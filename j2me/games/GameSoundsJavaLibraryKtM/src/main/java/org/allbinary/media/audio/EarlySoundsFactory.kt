@@ -28,12 +28,11 @@
 
 open public class EarlySoundsFactory : BaseSoundsFactory {
         
-
-        companion object {
+companion object {
             
     private val instance: EarlySoundsFactory = EarlySoundsFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : EarlySoundsFactory{
 
@@ -52,7 +51,8 @@ open fun getInstance()
             }            
         
                 @Throws(Exception::class)
-            override fun getSoundInterfaceArray()
+            
+    override fun getSoundInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<Sound?>{
 

@@ -32,12 +32,11 @@ open public class DestroyableBaseBehavior
         
                 , DestroyableInterface {
         
-
-        companion object {
+companion object {
             
     private val instance: DestroyableBaseBehavior = DestroyableBaseBehavior()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DestroyableBaseBehavior{
 
@@ -54,7 +53,8 @@ open fun getInstance()
             public constructor() : super()
             {
             }            
-        override fun getName()
+        
+    override fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -66,7 +66,8 @@ open fun getInstance()
 
 
                 @Throws(Exception::class)
-            override fun isDestroyed()
+            
+    override fun isDestroyed()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -76,7 +77,7 @@ open fun getInstance()
 }
 
 
-open fun setDestroyed(destroyed: Boolean)
+    open fun setDestroyed(destroyed: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var destroyed = destroyed

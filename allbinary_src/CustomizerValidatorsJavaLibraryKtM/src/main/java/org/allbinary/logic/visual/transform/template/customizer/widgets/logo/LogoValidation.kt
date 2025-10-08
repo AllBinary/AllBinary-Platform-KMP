@@ -54,7 +54,7 @@ open public class LogoValidation : Validation
     private var logoFile: String
 
     private var isFile: Boolean
-public constructor        (){
+public constructor (){
 this.isFile= false
 this.logoAbPath= 
                                         null
@@ -64,14 +64,14 @@ this.logoFile=
                                     
 }
 
-public constructor        (node: Node){
+public constructor (node: Node){
 var node = node
 this.isFile= false
 this.logoAbPath= AbPath(DomSearchHelper.getNode(LogoData.getInstance()!!.IMAGEPATH, node.getChildNodes())!!.getNodeValue())
 this.logoFile= DomSearchHelper.getNode(LogoData.getInstance()!!.IMAGEFILENAME, node.getChildNodes())!!.getNodeValue()
 }
 
-public constructor        (hashMap: HashMap<Any, Any>){
+public constructor (hashMap: HashMap<Any, Any>){
 var hashMap = hashMap
 this.isFile= true
 this.getFormData(hashMap)
@@ -80,7 +80,7 @@ this.getFormData(hashMap)
 
                 @Throws(Exception::class)
             
-open fun getFormData(hashMap: HashMap<Any, Any>)
+    open fun getFormData(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var hashMap = hashMap
@@ -116,7 +116,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "getFormData()")
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -260,7 +260,7 @@ open fun isValid()
 }
 
 
-open fun validationInfo()
+    open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -295,7 +295,7 @@ stringBuffer!!.append("Logo is not valid.")
 }
 
 
-open fun toValidationInfoDoc()
+    open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -306,7 +306,7 @@ open fun toValidationInfoDoc()
 }
 
 
-open fun toValidationInfoNode(document: Document)
+    open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -318,7 +318,7 @@ var document = document
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -357,7 +357,7 @@ hashMap!!.put(LogoData.getInstance()!!.IMAGEFILENAME, this.logoFile)
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -374,7 +374,7 @@ var document = document
 
                 @Throws(Exception::class)
             
-open fun processLogoFile()
+    open fun processLogoFile()
         //nullable = true from not(false or (false and true)) = true
 {
 

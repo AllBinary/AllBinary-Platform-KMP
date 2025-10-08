@@ -33,7 +33,7 @@ open public class StoreWorkFlowWrapper : WorkFlowWrapper {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (anyType: Any)                        
+public constructor (anyType: Any)                        
 
                             : super(anyType){
 var anyType = anyType
@@ -46,7 +46,7 @@ var anyType = anyType
 
                 @Throws(Exception::class)
             
-open fun getStoreName()
+    open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

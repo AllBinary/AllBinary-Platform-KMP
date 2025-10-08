@@ -41,16 +41,18 @@ open public class ARectangleFilledAnimation : Animation
     var width: Int= 0
 
     var height: Int= 0
-public constructor        (){
+public constructor (){
 this.setBasicColorP(BasicColorFactory.getInstance()!!.BLACK)
 }
 
-override fun nextFrame()
+
+    override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun paint(graphics: Graphics, unusedX: Int, unusedY: Int)
+
+    override fun paint(graphics: Graphics, unusedX: Int, unusedY: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics

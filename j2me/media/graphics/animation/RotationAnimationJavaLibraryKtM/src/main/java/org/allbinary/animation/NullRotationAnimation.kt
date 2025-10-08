@@ -15,7 +15,7 @@ import org.allbinary.math.AngleInfo
 
 open public class NullRotationAnimation : RotationAnimation {
         
- constructor        (angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
+ constructor (angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
 
                             : super(angleInfo, totalAngle, animationBehavior){
     //var angleInfo = angleInfo
@@ -27,7 +27,7 @@ open public class NullRotationAnimation : RotationAnimation {
                     
 }
 
- constructor        (animationBehavior: AnimationBehavior)                        
+ constructor (animationBehavior: AnimationBehavior)                        
 
                             : super(animationBehavior){
     //var animationBehavior = animationBehavior
@@ -39,7 +39,8 @@ open public class NullRotationAnimation : RotationAnimation {
 
 
                 @Throws(Exception::class)
-            override fun getAnimationSize()
+            
+    override fun getAnimationSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

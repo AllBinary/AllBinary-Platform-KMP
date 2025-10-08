@@ -42,7 +42,7 @@ open public class StoreFrontsEntity : AbSqlBean
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val tableName: String = "storefronts"
-public constructor        ()                        
+public constructor ()                        
 
                             : super(UserDbInitInfo()){
 
@@ -53,7 +53,7 @@ this.setTableName(tableName)
 }
 
 
-open fun insert(values: Vector)
+    open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 {
 var values = values
@@ -85,7 +85,7 @@ var values = values
 }
 
 
-open fun delete(value: String)
+    open fun delete(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -119,7 +119,7 @@ var value = value
 
                 @Throws(Exception::class)
             
-open fun getStoreFrontInterface(name: String)
+    open fun getStoreFrontInterface(name: String)
         //nullable = true from not(false or (false and false)) = true
 : StoreFront{
 var name = name
@@ -157,7 +157,7 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, name)
 }
 
 
-open fun getStoreFrontNames()
+    open fun getStoreFrontNames()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -171,7 +171,7 @@ open fun getStoreFrontNames()
 }
 
 
-open fun update(updatedValues: HashMap<Any, Any>)
+    open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var updatedValues = updatedValues
@@ -179,7 +179,7 @@ super.updateWhere(StoreFrontData.getInstance()!!.NAME, updatedValues!!.get(Store
 }
 
 
-open fun createTableStatement()
+    open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -256,7 +256,7 @@ stringBuffer!!.append(this.sqlStrings!!.END)
 }
 
 
-open fun createTable()
+    open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -267,7 +267,7 @@ open fun createTable()
 }
 
 
-open fun dropTable()
+    open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

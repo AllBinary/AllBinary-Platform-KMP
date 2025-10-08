@@ -59,7 +59,7 @@ open public class OrderStatusEmail
     private var storeFrontInterface: StoreFrontInterface
 
     private var user: UserInterface
-public constructor        (abeClientInformation: AbeClientInformationInterface, orderHistory: OrderHistory)
+public constructor (abeClientInformation: AbeClientInformationInterface, orderHistory: OrderHistory)
             : super()
         {
     //var abeClientInformation = abeClientInformation
@@ -76,7 +76,7 @@ this.user= UserEntityFactory.getInstance()!!.getUser(orderHistory!!.getUserName(
 
                 @Throws(Exception::class)
             
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 this.notifyStoreAdmin()
@@ -86,7 +86,7 @@ this.notifyUser()
 
                 @Throws(Exception::class)
             
-open fun notifyStoreAdmin()
+    open fun notifyStoreAdmin()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -147,7 +147,7 @@ adminUserEmailEventHandler!!.receiveEmailInfo(userEmailEventNameData, adminEmail
 
                 @Throws(Exception::class)
             
-open fun notifyUser()
+    open fun notifyUser()
         //nullable = true from not(false or (false and true)) = true
 {
 

@@ -37,8 +37,7 @@ open public class CountedLayersHudPaintable
         
                 , PaintableInterface {
         
-
-        companion object {
+companion object {
             
     private val XXString: String = "XX"
 
@@ -57,7 +56,7 @@ open public class CountedLayersHudPaintable
     private val startIndex: Int
 
     private val dropSize: Int
-public constructor        (partInterfaceArray: Array<PartInterface?>, dropSize: Int, startIndex: Int, countedTotalStringColor: Int, countedPartsBorder: Int)
+public constructor (partInterfaceArray: Array<PartInterface?>, dropSize: Int, startIndex: Int, countedTotalStringColor: Int, countedPartsBorder: Int)
             : super()
         {
 var partInterfaceArray = partInterfaceArray
@@ -72,7 +71,8 @@ this.countedPartsBorder= countedPartsBorder
 this.dropSize= dropSize
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -155,7 +155,8 @@ graphics.drawRect(lastWidth -(XXStringWidth +this.dropSize), 40, XXStringWidth +
                                 
 }
 
-override fun paintThreed(graphics: Graphics)
+
+    override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

@@ -20,7 +20,8 @@ open public class CollisionThreedProcessor : CollisionProcessor {
             public constructor() : super()
             {
             }            
-        override fun isCollision(myLayer: AllBinaryLayer, myLayer2: AllBinaryLayer)
+        
+    override fun isCollision(myLayer: AllBinaryLayer, myLayer2: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var myLayer = myLayer

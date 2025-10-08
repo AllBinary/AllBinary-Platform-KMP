@@ -37,8 +37,7 @@ open public class MotionEventFactory
         
                 , AllBinaryEventObjectFactoryInterface {
         
-
-        companion object {
+companion object {
             
     private var index: Int = 0
 
@@ -47,7 +46,7 @@ open public class MotionEventFactory
     private val source: Any
 
     private val id: Int
-public constructor        (source: Any, id: Int)
+public constructor (source: Any, id: Int)
             : super()
         {
 var source = source
@@ -57,7 +56,8 @@ this.id= id
 index= TouchMotionGestureFactory.getInstance()!!.LAST_MOTION.getId()
 }
 
-override fun getInstance()
+
+    override fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AllBinaryEventObject{
 

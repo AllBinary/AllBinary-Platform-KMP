@@ -41,11 +41,11 @@ open public class BasicTextEmailTag : CustomTagSupport {
     private var subject: String
 
     private var body: String
-public constructor        (){
+public constructor (){
 }
 
 
-open fun setSubject(value: String)
+    open fun setSubject(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -53,7 +53,7 @@ this.subject= value
 }
 
 
-open fun setBody(value: String)
+    open fun setBody(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -61,7 +61,7 @@ this.body= value
 }
 
 
-open fun send()
+    open fun send()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -112,7 +112,7 @@ method.invoke(anyType,
 
                 @Throws(JspTagException::class)
             
-open fun doStartTag()
+    open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

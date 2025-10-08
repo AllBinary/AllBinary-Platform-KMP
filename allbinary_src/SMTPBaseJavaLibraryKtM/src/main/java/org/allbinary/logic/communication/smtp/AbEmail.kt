@@ -37,7 +37,7 @@ open public class AbEmail
         
 
     private var email: Email
-public constructor        (server: String, from: String, to: String, subject: String, textBody: String, htmlAttachment: String, contentBase: String)
+public constructor (server: String, from: String, to: String, subject: String, textBody: String, htmlAttachment: String, contentBase: String)
             : super()
         {
 var server = server
@@ -64,7 +64,7 @@ var contentBase = contentBase
 }
 
 
-open fun getMimeMessage()
+    open fun getMimeMessage()
         //nullable = true from not(false or (false and true)) = true
 : MimeMessage{
 
@@ -75,7 +75,7 @@ open fun getMimeMessage()
 }
 
 
-open fun getDebugInfo()
+    open fun getDebugInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -88,7 +88,7 @@ open fun getDebugInfo()
 
                 @Throws(Exception::class)
             
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -101,7 +101,7 @@ open fun log()
 
                 @Throws(Exception::class)
             
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -114,7 +114,7 @@ open fun toHashMap()
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -126,7 +126,7 @@ var document = document
 }
 
 
-open fun getEmail()
+    open fun getEmail()
         //nullable = true from not(false or (false and true)) = true
 : Email{
 
@@ -139,7 +139,7 @@ open fun getEmail()
 
                 @Throws(Exception::class)
             
-open fun toXmlDoc()
+    open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 

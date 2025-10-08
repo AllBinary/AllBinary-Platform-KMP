@@ -15,10 +15,9 @@ import org.allbinary.logic.string.StringUtil
 
 open public class AndroidGameKey : Input {
         
-
-        companion object {
+companion object {
             
-open fun getString(keyCode: Int)
+    open fun getString(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var keyCode = keyCode
@@ -53,7 +52,7 @@ var keyCode = keyCode
 
 
         }
-             constructor        (keyCode: Int, name: String)                        
+             constructor (keyCode: Int, name: String)                        
 
                             : super(keyCode, name){
 var keyCode = keyCode
@@ -68,7 +67,8 @@ var name = name
 inputFactory!!.inputIntegerArray[this.getId()]= this
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

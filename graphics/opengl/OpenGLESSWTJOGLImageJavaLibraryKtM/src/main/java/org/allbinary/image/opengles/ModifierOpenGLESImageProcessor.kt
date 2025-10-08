@@ -29,12 +29,11 @@ import javax.microedition.khronos.opengles.GL10
 
 open public class ModifierOpenGLESImageProcessor : OpenGLESImageProcessor {
         
-
-        companion object {
+companion object {
             
     private val instance: ModifierOpenGLESImageProcessor = ModifierOpenGLESImageProcessor()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ModifierOpenGLESImageProcessor{
 
@@ -51,7 +50,8 @@ open fun getInstance()
             public constructor() : super()
             {
             }            
-        override fun colorMask(gl: GL10, red: Float, green: Float, blue: Float, alpha: Float)
+        
+    override fun colorMask(gl: GL10, red: Float, green: Float, blue: Float, alpha: Float)
         //nullable = true from not(false or (false and false)) = true
 {
 var gl = gl

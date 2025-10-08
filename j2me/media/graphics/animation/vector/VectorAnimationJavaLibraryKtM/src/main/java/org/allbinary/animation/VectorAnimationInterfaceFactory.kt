@@ -40,7 +40,7 @@ open public class VectorAnimationInterfaceFactory
     private var basicColor: BasicColor = BasicColorFactory.getInstance()!!.WHITE
 
     val animationBehaviorFactory: AnimationBehaviorFactory
-public constructor        (currentPoints: Array<Array<IntArray?>?>, basicColor: BasicColor)                        
+public constructor (currentPoints: Array<Array<IntArray?>?>, basicColor: BasicColor)                        
 
                             : this(currentPoints, basicColor, AnimationBehaviorFactory.getInstance()){
     //var currentPoints = currentPoints
@@ -51,7 +51,7 @@ public constructor        (currentPoints: Array<Array<IntArray?>?>, basicColor: 
                     
 }
 
-public constructor        (currentPoints: Array<Array<IntArray?>?>, basicColor: BasicColor, animationBehaviorFactory: AnimationBehaviorFactory)
+public constructor (currentPoints: Array<Array<IntArray?>?>, basicColor: BasicColor, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
         {
     //var currentPoints = currentPoints
@@ -64,7 +64,8 @@ this.animationBehaviorFactory= animationBehaviorFactory
 
 
                 @Throws(Exception::class)
-            override fun getInstance(instanceId: Int)
+            
+    override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var instanceId = instanceId
@@ -76,7 +77,7 @@ this.animationBehaviorFactory= animationBehaviorFactory
 }
 
 
-open fun setBasicColorP(basicColor: BasicColor)
+    open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
 var basicColor = basicColor
@@ -84,7 +85,7 @@ this.basicColor= basicColor
 }
 
 
-open fun getBasicColorP()
+    open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
 
@@ -94,7 +95,8 @@ open fun getBasicColorP()
                         return basicColor
 }
 
-override fun setInitialScale(scaleProperties: ScaleProperties)
+
+    override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
 {
     //var scaleProperties = scaleProperties

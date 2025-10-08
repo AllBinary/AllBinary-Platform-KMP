@@ -30,12 +30,11 @@ open public class RectangleCollisionUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: RectangleCollisionUtil = RectangleCollisionUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : RectangleCollisionUtil{
 
@@ -47,13 +46,13 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
 
 
-open fun isCollision(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, rect2X1: Int, rect2Y1: Int, rect2X2: Int, rect2Y2: Int)
+    open fun isCollision(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, rect2X1: Int, rect2Y1: Int, rect2X2: Int, rect2Y2: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var rectX1 = rectX1
@@ -89,7 +88,7 @@ open fun isCollision(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, rect2X1
 }
 
 
-open fun isInside(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, x: Int, y: Int)
+    open fun isInside(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var rectX1 = rectX1

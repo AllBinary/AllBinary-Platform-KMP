@@ -40,7 +40,7 @@ open public class UserEmailEventConfiguration
     private var name: String
 
     private var eventListenerClassPath: String
-public constructor        ()
+public constructor ()
             : super()
         {
 this.setName(StringUtil.getInstance()!!.EMPTY_STRING)
@@ -56,7 +56,7 @@ this.setEventListenerClassPath(StringUtil.getInstance()!!.EMPTY_STRING)
                                 
 }
 
-public constructor        (hashMap: HashMap<Any, Any>)
+public constructor (hashMap: HashMap<Any, Any>)
             : super()
         {
 var hashMap = hashMap
@@ -74,7 +74,7 @@ this.setEventListenerClassPath(hashMap!!.get(UserEmailEventConfigurationData.LIS
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -85,7 +85,7 @@ open fun getName()
 }
 
 
-open fun setName(name: String)
+    open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name
@@ -93,7 +93,7 @@ this.name= name
 }
 
 
-open fun getEventListenerClassPath()
+    open fun getEventListenerClassPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -104,7 +104,7 @@ open fun getEventListenerClassPath()
 }
 
 
-open fun setEventListenerClassPath(eventListenerClassPath: String)
+    open fun setEventListenerClassPath(eventListenerClassPath: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventListenerClassPath = eventListenerClassPath
@@ -112,7 +112,7 @@ this.eventListenerClassPath= eventListenerClassPath
 }
 
 
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

@@ -35,12 +35,11 @@ open public class AllBinarySensorManager
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: AllBinarySensorManager = AllBinarySensorManager()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AllBinarySensorManager{
 
@@ -60,7 +59,7 @@ open fun getInstance()
     val ORIENTATION_SENSOR_INPUT: String = "Orientation Sensor Input"
 
     val ORIENTATION_TYPE: String = "Orientation Type"
-private constructor        ()
+private constructor ()
             : super()
         {
 
@@ -75,7 +74,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRU
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -83,7 +82,7 @@ open fun init()
 
     private val list: BasicArrayList = BasicArrayList()
 
-open fun getSensorNamesList()
+    open fun getSensorNamesList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -94,7 +93,7 @@ open fun getSensorNamesList()
 }
 
 
-open fun shutdown()
+    open fun shutdown()
         //nullable = true from not(false or (false and true)) = true
 {
 }

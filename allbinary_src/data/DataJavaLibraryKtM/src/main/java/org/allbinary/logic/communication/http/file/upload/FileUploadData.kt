@@ -30,12 +30,11 @@ open public class FileUploadData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: FileUploadData = FileUploadData()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : FileUploadData{
 

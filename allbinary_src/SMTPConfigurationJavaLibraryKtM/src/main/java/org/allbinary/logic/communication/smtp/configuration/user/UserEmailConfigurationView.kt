@@ -49,7 +49,7 @@ open public class UserEmailConfigurationView
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var userEmailConfigurationInterface: UserEmailConfigurationInterface
-public constructor        (node: Node)
+public constructor (node: Node)
             : super()
         {
 var node = node
@@ -75,7 +75,7 @@ this.userEmailConfigurationInterface= UserEmailConfiguration() as UserEmailConfi
 this.userEmailConfigurationInterface!!.setUserEmailEventsConfigurationInterface(userEmailEventsConfigurationView!!.getUserEmailEventsConfigurationInterface())
 }
 
-public constructor        (userEmailConfigurationInterface: UserEmailConfigurationInterface)
+public constructor (userEmailConfigurationInterface: UserEmailConfigurationInterface)
             : super()
         {
 var userEmailConfigurationInterface = userEmailConfigurationInterface
@@ -83,7 +83,7 @@ this.userEmailConfigurationInterface= userEmailConfigurationInterface
 }
 
 
-open fun getEmailConfigurationInterface()
+    open fun getEmailConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
 : UserEmailConfigurationInterface{
 
@@ -96,7 +96,7 @@ open fun getEmailConfigurationInterface()
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

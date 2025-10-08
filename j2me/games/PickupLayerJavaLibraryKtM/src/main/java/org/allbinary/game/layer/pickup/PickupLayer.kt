@@ -49,7 +49,7 @@ open public class PickupLayer : MultiPlayerGameLayer
     private var destroyed: Boolean= false
 
     private var animationInterface: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
-public constructor        (name: String, remoteInfo: RemoteInfo, viewPosition: ViewPosition)                        
+public constructor (name: String, remoteInfo: RemoteInfo, viewPosition: ViewPosition)                        
 
                             : super(remoteInfo, BasicGroupFactory.getInstance()!!.NONE_ARRAY, name, Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 0, 0), viewPosition){
     //var name = name
@@ -64,7 +64,7 @@ this.setLayerWidth(10)
 this.setLayerHeight(10)
 }
 
-public constructor        (name: String, remoteInfo: RemoteInfo, total: Int, pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface, animationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition)                        
+public constructor (name: String, remoteInfo: RemoteInfo, total: Int, pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface, animationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition)                        
 
                             : super(remoteInfo, BasicGroupFactory.getInstance()!!.NONE_ARRAY, name, rectangle, viewPosition){
     //var name = name
@@ -84,7 +84,7 @@ this.setLayerHeight(10)
 this.init(pickedUpLayerInterfaceFactoryInterface, animationInterface)
 }
 
-public constructor        (name: String, viewPosition: ViewPosition)                        
+public constructor (name: String, viewPosition: ViewPosition)                        
 
                             : this(name, RemoteInfo.REMOTE_INFO, viewPosition){
     //var name = name
@@ -95,7 +95,7 @@ public constructor        (name: String, viewPosition: ViewPosition)
                     
 }
 
-public constructor        (name: String, total: Int, pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface, animationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition)                        
+public constructor (name: String, total: Int, pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface, animationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition)                        
 
                             : this(name, RemoteInfo.REMOTE_INFO, total, pickedUpLayerInterfaceFactoryInterface, animationInterface, rectangle, viewPosition){
     //var name = name
@@ -111,7 +111,7 @@ public constructor        (name: String, total: Int, pickedUpLayerInterfaceFacto
 }
 
 
-open fun init(pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface, animationInterface: Animation)
+    open fun init(pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface, animationInterface: Animation)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pickedUpLayerInterfaceFactoryInterface = pickedUpLayerInterfaceFactoryInterface
@@ -122,7 +122,7 @@ this.setDestroyed(false)
 }
 
 
-open fun init(x: Int, y: Int, z: Int)
+    open fun init(x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -131,7 +131,8 @@ var z = z
 this.setPosition(x, y, z)
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -147,7 +148,8 @@ var graphics = graphics
 this.animationInterface!!.paint(graphics, viewX, viewY)
 }
 
-override fun paintThreed(graphics: Graphics)
+
+    override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -163,7 +165,8 @@ var graphics = graphics
 this.animationInterface!!.paintThreed(graphics, viewX, viewY, 3)
 }
 
-override fun getPickedUpLayerInterfaceFactoryInterface()
+
+    override fun getPickedUpLayerInterfaceFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
 : PickedUpLayerInterfaceFactoryInterface{
 
@@ -173,13 +176,15 @@ override fun getPickedUpLayerInterfaceFactoryInterface()
                         return this.pickedUpLayerInterfaceFactoryInterface
 }
 
-override fun setPickedUp()
+
+    override fun setPickedUp()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setDestroyed(true)
 }
 
-override fun isDestroyed()
+
+    override fun isDestroyed()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -190,7 +195,7 @@ override fun isDestroyed()
 }
 
 
-open fun setDestroyed(destroyed: Boolean)
+    open fun setDestroyed(destroyed: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var destroyed = destroyed
@@ -206,14 +211,16 @@ this.destroyed= destroyed
                                 
 }
 
-override fun damage(damage: Int, damageType: Int)
+
+    override fun damage(damage: Int, damageType: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var damage = damage
 var damageType = damageType
 }
 
-override fun getDamage(damageType: Int)
+
+    override fun getDamage(damageType: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var damageType = damageType
@@ -226,7 +233,8 @@ var damageType = damageType
 
 
                 @Throws(Exception::class)
-            override fun set(gl: GL)
+            
+    override fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
 {
 var gl = gl

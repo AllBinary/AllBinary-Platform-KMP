@@ -66,7 +66,7 @@ open public class PermissionItemsRequestHelper : ModifyTable {
     private var timeEntered: String
 
     private var lastModified: String
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 this.request= pageContext!!.getRequest() as HttpServletRequest
@@ -74,7 +74,7 @@ this.getFormData()
 }
 
 
-open fun getFormData()
+    open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
 this.id= request.getParameter(BasicItemData.ID)
@@ -92,7 +92,7 @@ this.lastModified= request.getParameter(EntryData.getInstance()!!.LASTMODIFIED)
 }
 
 
-open fun getHashMap()
+    open fun getHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -125,7 +125,7 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 }
 
 
-open fun insert()
+    open fun insert()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -195,7 +195,7 @@ PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!
 }
 
 
-open fun delete()
+    open fun delete()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -242,7 +242,7 @@ open fun delete()
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

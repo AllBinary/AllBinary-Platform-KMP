@@ -36,7 +36,7 @@ open public class HelperTag : PropertiesTag {
     private val tagHelperFactoryInterface: TagHelperFactoryInterface
 
     private var anyType: Any
-public constructor        (tagHelperFactoryInterface: TagHelperFactoryInterface){
+public constructor (tagHelperFactoryInterface: TagHelperFactoryInterface){
     //var tagHelperFactoryInterface = tagHelperFactoryInterface
 
     
@@ -53,7 +53,7 @@ this.tagHelperFactoryInterface= tagHelperFactoryInterface
 
                 @Throws(Exception::class)
             
-open fun setHelper()
+    open fun setHelper()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -79,7 +79,7 @@ this.anyType= tagHelperFactoryInterface!!.getInstance(this.getPropertiesHashMap(
 }
 
 
-open fun getHelper()
+    open fun getHelper()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -90,7 +90,7 @@ open fun getHelper()
 }
 
 
-open fun doEndTag()
+    open fun doEndTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

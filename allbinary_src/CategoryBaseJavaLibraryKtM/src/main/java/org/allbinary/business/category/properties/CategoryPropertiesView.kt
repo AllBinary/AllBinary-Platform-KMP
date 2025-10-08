@@ -38,7 +38,7 @@ open public class CategoryPropertiesView
         
 
     var categoryPropertiesInterface: CategoryPropertiesInterface
-public constructor        (categoryPropertiesInterface: CategoryPropertiesInterface)
+public constructor (categoryPropertiesInterface: CategoryPropertiesInterface)
             : super()
         {
 var categoryPropertiesInterface = categoryPropertiesInterface
@@ -48,7 +48,7 @@ this.categoryPropertiesInterface= categoryPropertiesInterface
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

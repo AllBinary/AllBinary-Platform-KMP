@@ -35,8 +35,7 @@ open public class InputProbability
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var INPUT_PROBABILITY: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(0)!!
 
@@ -49,7 +48,7 @@ open public class InputProbability
     private val max: Int
 
     private val timeDelayHelper: TimeDelayHelper
-public constructor        (likelyhoodIntegerArray: Array<Array<Integer?>?>, repeatLikelyhoodIntegerArray: Array<Integer?>, max: Int, timeDelayHelper: TimeDelayHelper)
+public constructor (likelyhoodIntegerArray: Array<Array<Integer?>?>, repeatLikelyhoodIntegerArray: Array<Integer?>, max: Int, timeDelayHelper: TimeDelayHelper)
             : super()
         {
 var likelyhoodIntegerArray = likelyhoodIntegerArray
@@ -63,7 +62,7 @@ this.timeDelayHelper= timeDelayHelper
 }
 
 
-open fun getLikelyhoodIntegerArray()
+    open fun getLikelyhoodIntegerArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<Array<Integer?>?>{
 
@@ -74,7 +73,7 @@ open fun getLikelyhoodIntegerArray()
 }
 
 
-open fun getRepeatLikelyhoodIntegerArray()
+    open fun getRepeatLikelyhoodIntegerArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<Integer?>{
 
@@ -85,7 +84,7 @@ open fun getRepeatLikelyhoodIntegerArray()
 }
 
 
-open fun getMax()
+    open fun getMax()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -96,7 +95,7 @@ open fun getMax()
 }
 
 
-open fun getTimeDelayHelper()
+    open fun getTimeDelayHelper()
         //nullable = true from not(false or (false and true)) = true
 : TimeDelayHelper{
 
@@ -107,7 +106,7 @@ open fun getTimeDelayHelper()
 }
 
 
-open fun toHashtable()
+    open fun toHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
 

@@ -34,12 +34,11 @@ open public class GameSkill
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
-open fun getInstance(gameSkillType: GameSkillType, extra: String)
+    open fun getInstance(gameSkillType: GameSkillType, extra: String)
         //nullable =  from not(true or (false and false)) = 
 : GameSkill{
 var gameSkillType = gameSkillType
@@ -68,7 +67,7 @@ var extra = extra
     private val EXTRA_LABEL: String = "Extra: "
 
     private val TIME_LABEL: String = "Time: "
-public constructor        (gameSkillType: GameSkillType, extra: String, time: Int)
+public constructor (gameSkillType: GameSkillType, extra: String, time: Int)
             : super()
         {
 var gameSkillType = gameSkillType
@@ -83,7 +82,7 @@ hashMap!!.put(StringBuilder().
 }
 
 
-open fun getGameSkillType()
+    open fun getGameSkillType()
         //nullable = true from not(false or (false and true)) = true
 : GameSkillType{
 
@@ -94,7 +93,7 @@ open fun getGameSkillType()
 }
 
 
-open fun setGameSkillType(gameSkillType: GameSkillType)
+    open fun setGameSkillType(gameSkillType: GameSkillType)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameSkillType = gameSkillType
@@ -102,7 +101,7 @@ this.gameSkillType= gameSkillType
 }
 
 
-open fun getExtra()
+    open fun getExtra()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -113,7 +112,7 @@ open fun getExtra()
 }
 
 
-open fun setExtra(extra: String)
+    open fun setExtra(extra: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var extra = extra
@@ -121,7 +120,7 @@ this.extra= extra
 }
 
 
-open fun getTime()
+    open fun getTime()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -132,7 +131,7 @@ open fun getTime()
 }
 
 
-open fun setTime(time: Int)
+    open fun setTime(time: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var time = time
@@ -140,7 +139,7 @@ this.time= time
 }
 
 
-open fun addProperty(gameSkillPropertyInterface: GameSkillPropertyInterface)
+    open fun addProperty(gameSkillPropertyInterface: GameSkillPropertyInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameSkillPropertyInterface = gameSkillPropertyInterface
@@ -148,7 +147,7 @@ this.vector.add(gameSkillPropertyInterface)
 }
 
 
-open fun getProperties()
+    open fun getProperties()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -158,7 +157,8 @@ open fun getProperties()
                         return this.vector
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

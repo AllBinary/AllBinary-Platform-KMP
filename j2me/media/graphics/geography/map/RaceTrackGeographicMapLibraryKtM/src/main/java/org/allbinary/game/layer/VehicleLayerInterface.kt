@@ -31,56 +31,57 @@ import org.allbinary.layer.LayerInterface
 import org.allbinary.logic.math.BasicDecimal
 import org.allbinary.media.graphics.geography.map.GeographicMapCellHistory
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPositionTracking
+
 interface VehicleLayerInterface : LayerInterface, VehiclePropertiesCompositeInterface {
         
 
-open fun getGameKeyEventList()
+    open fun getGameKeyEventList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList
 
-open fun getSpeedBasicDecimal()
+    open fun getSpeedBasicDecimal()
         //nullable = true from not(false or (false and true)) = true
 : BasicDecimal
 
-open fun isReadyForExplosion()
+    open fun isReadyForExplosion()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun getRotationAnimationInterface()
+    open fun getRotationAnimationInterface()
         //nullable = true from not(false or (false and true)) = true
 : RotationAnimation
 
-open fun setRotationAnimationInterface(animationInterface: RotationAnimation)
+    open fun setRotationAnimationInterface(animationInterface: RotationAnimation)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun isDestroyed()
+    open fun isDestroyed()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun isFinish()
+    open fun isFinish()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun getFinalPosition()
+    open fun getFinalPosition()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
                 @Throws(Exception::class)
             
-open fun handleFinish()
+    open fun handleFinish()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun getGeographicMapCellPositionTracking()
+    open fun getGeographicMapCellPositionTracking()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPositionTracking
 
-open fun getGeographicMapCellHistoryArray()
+    open fun getGeographicMapCellHistoryArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<GeographicMapCellHistory?>
 
-open fun setGeographicMapCellHistoryArray(geographicMapCellHistory: Array<GeographicMapCellHistory?>)
+    open fun setGeographicMapCellHistoryArray(geographicMapCellHistory: Array<GeographicMapCellHistory?>)
         //nullable = true from not(false or (false and false)) = true
 
 

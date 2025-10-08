@@ -29,32 +29,33 @@ import java.io.InputStream
 import javax.xml.transform.URIResolver
 import javax.xml.transform.stream.StreamSource
 import org.allbinary.logic.visual.transform.info.CompositeTransformInfoInterface
+
 interface BasicTransformerInterface : CompositeTransformInfoInterface {
         
 
-open fun setInputStream(inputStream: InputStream)
+    open fun setInputStream(inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setURIResolver(uriResolver: URIResolver)
+    open fun setURIResolver(uriResolver: URIResolver)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getStreamSource()
+    open fun getStreamSource()
         //nullable = true from not(false or (false and true)) = true
 : StreamSource
 
-open fun getInputStream()
+    open fun getInputStream()
         //nullable = true from not(false or (false and true)) = true
 : InputStream
 
-open fun getURIResolver()
+    open fun getURIResolver()
         //nullable = true from not(false or (false and true)) = true
 : URIResolver
 
                 @Throws(Exception::class)
             
-open fun translate(xmlDocumentStr: String)
+    open fun translate(xmlDocumentStr: String)
         //nullable = true from not(false or (false and false)) = true
 : String
 

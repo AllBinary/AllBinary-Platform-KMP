@@ -26,14 +26,15 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.layer.LayerInterface
+
 interface PickedUpLayerInterface : LayerInterface {
         
 
-open fun getPickedUpLayerInterfaceFactoryInterface()
+    open fun getPickedUpLayerInterfaceFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
 : PickedUpLayerInterfaceFactoryInterface
 
-open fun setPickedUp()
+    open fun setPickedUp()
         //nullable = true from not(false or (false and true)) = true
 
 

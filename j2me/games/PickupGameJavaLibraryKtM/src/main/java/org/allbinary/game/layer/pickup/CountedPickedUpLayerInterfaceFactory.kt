@@ -35,15 +35,14 @@ import org.allbinary.util.BasicArrayList
 open public class CountedPickedUpLayerInterfaceFactory : PickedUpLayerInterfaceFactory
                 , CountedPickedUpLayerInterfaceFactoryInterface {
         
-
-        companion object {
+companion object {
             
     val NULL_COUNTED_PICKUP_LAYER_FACTORY: CountedPickedUpLayerInterfaceFactory = CountedPickedUpLayerInterfaceFactory(PickedUpLayerTypeFactory.getInstance()!!.NONE, IconLayer.NULL_ICON_LAYER, NullAnimationFactory.getFactoryInstance()!!.getInstance(0))
 
         }
             
     private val id: Int
-public constructor        (pickeUpLayerType: PickedUpLayerType, iconLayer: IconLayer, animationInterface: Animation)                        
+public constructor (pickeUpLayerType: PickedUpLayerType, iconLayer: IconLayer, animationInterface: Animation)                        
 
                             : super(pickeUpLayerType, iconLayer, animationInterface){
 var pickeUpLayerType = pickeUpLayerType
@@ -62,7 +61,8 @@ list.add(this)
 
 
                 @Throws(Exception::class)
-            override fun getInstance(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
+            
+    override fun getInstance(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
         //nullable =  from not(true or (false and false)) = 
 : AllBinaryLayer{
 var hashtable = hashtable
@@ -75,7 +75,8 @@ var z = z
                             throw Exception(CommonStrings.getInstance()!!.NOT_IMPLEMENTED)
 }
 
-override fun getTotal()
+
+    override fun getTotal()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -85,7 +86,8 @@ override fun getTotal()
                         return  -1
 }
 
-override fun getId()
+
+    override fun getId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

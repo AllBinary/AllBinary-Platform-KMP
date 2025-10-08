@@ -29,22 +29,23 @@ import org.allbinary.business.context.modules.storefront.statistics.advertisemen
 import org.allbinary.business.context.modules.storefront.statistics.inventory.StoreFrontInventoryStatisticsInterface
 import org.allbinary.business.context.modules.storefront.statistics.orders.history.StoreFrontOrdersHistoryStatisticsInterface
 import org.allbinary.business.context.modules.storefront.statistics.users.StoreFrontUsersStatisticsInterface
+
 interface StoreFrontStatisticsInterface {
         
 
-open fun getAdvertisements()
+    open fun getAdvertisements()
         //nullable = true from not(false or (false and true)) = true
 : StoreFrontAdvertisementsStatisticsInterface
 
-open fun getUsers()
+    open fun getUsers()
         //nullable = true from not(false or (false and true)) = true
 : StoreFrontUsersStatisticsInterface
 
-open fun getInventory()
+    open fun getInventory()
         //nullable = true from not(false or (false and true)) = true
 : StoreFrontInventoryStatisticsInterface
 
-open fun getOrders()
+    open fun getOrders()
         //nullable = true from not(false or (false and true)) = true
 : StoreFrontOrdersHistoryStatisticsInterface
 

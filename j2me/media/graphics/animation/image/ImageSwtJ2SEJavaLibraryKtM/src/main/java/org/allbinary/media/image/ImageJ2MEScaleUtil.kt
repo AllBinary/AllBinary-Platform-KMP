@@ -31,12 +31,11 @@ open public class ImageJ2MEScaleUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ImageJ2MEScaleUtil = ImageJ2MEScaleUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ImageJ2MEScaleUtil{
 
@@ -48,7 +47,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
@@ -56,7 +55,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun scale(images: Array<Image?>, width: Int, height: Int)
+    open fun scale(images: Array<Image?>, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 : Array<Image?>{
     //var images = images
@@ -85,7 +84,7 @@ scaledImages[index]= this.scale(images[index]!!, width, height)
 
                 @Throws(Exception::class)
             
-open fun scale(image: Image, width: Int, height: Int)
+    open fun scale(image: Image, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var image = image

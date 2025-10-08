@@ -30,12 +30,11 @@ open public class ImageStrings
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ImageStrings = ImageStrings()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ImageStrings{
 

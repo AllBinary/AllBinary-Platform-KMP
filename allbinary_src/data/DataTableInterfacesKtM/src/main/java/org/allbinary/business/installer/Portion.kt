@@ -37,7 +37,7 @@ open public class Portion
     private val current: Integer
 
     private val total: Integer
-public constructor        (hashMap: HashMap<Any, Any>)
+public constructor (hashMap: HashMap<Any, Any>)
             : super()
         {
 var hashMap = hashMap
@@ -46,7 +46,7 @@ this.total= hashMap!!.get("total") as Integer
 }
 
 
-open fun getCurrent()
+    open fun getCurrent()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -57,7 +57,7 @@ open fun getCurrent()
 }
 
 
-open fun getTotal()
+    open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 

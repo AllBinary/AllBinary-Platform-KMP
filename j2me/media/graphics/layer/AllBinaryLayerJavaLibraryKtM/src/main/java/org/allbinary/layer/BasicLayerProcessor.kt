@@ -33,8 +33,7 @@ open public class BasicLayerProcessor
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NULL_LAYER_PROCESSOR: BasicLayerProcessor = BasicLayerProcessor()
 
@@ -43,13 +42,13 @@ open public class BasicLayerProcessor
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val list: BasicArrayList = BasicArrayList()
-protected constructor        ()
+protected constructor ()
             : super()
         {
 }
 
 
-open fun add(layerInterface: AllBinaryLayer)
+    open fun add(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var layerInterface = layerInterface
@@ -67,7 +66,7 @@ var layerInterface = layerInterface
 
                 @Throws(Exception::class)
             
-open fun process(allBinaryLayerManager: AllBinaryLayerManager)
+    open fun process(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager
@@ -78,7 +77,7 @@ var allBinaryLayerManager = allBinaryLayerManager
 }
 
 
-open fun getList()
+    open fun getList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 

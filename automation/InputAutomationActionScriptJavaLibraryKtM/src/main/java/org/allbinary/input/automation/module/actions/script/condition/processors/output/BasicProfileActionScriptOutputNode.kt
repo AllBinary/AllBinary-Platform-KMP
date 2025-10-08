@@ -33,7 +33,7 @@ open public class BasicProfileActionScriptOutputNode
             : Object
          {
         
-public constructor        (node: Node)
+public constructor (node: Node)
             : super()
         {
 var node = node
@@ -42,7 +42,7 @@ var node = node
 
 }
 
-public constructor        ()
+public constructor ()
             : super()
         {
 }
@@ -50,7 +50,7 @@ public constructor        ()
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

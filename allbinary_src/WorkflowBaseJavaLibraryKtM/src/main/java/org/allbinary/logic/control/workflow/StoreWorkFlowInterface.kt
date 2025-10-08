@@ -25,12 +25,13 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface StoreWorkFlowInterface : WorkFlowInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getStoreName()
+    open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
 : String
 

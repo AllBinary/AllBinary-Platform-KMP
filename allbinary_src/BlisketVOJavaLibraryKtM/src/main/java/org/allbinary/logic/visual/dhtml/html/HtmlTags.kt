@@ -33,14 +33,14 @@ open public class HtmlTags
         
 
     private var htmlTagVector: Vector
-public constructor        ()
+public constructor ()
             : super()
         {
 htmlTagVector= Vector()
 }
 
 
-open fun get(index: Int)
+    open fun get(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : HtmlTag{
 var index = index
@@ -52,7 +52,7 @@ var index = index
 }
 
 
-open fun add(htmlTag: HtmlTag)
+    open fun add(htmlTag: HtmlTag)
         //nullable = true from not(false or (false and false)) = true
 {
 var htmlTag = htmlTag
@@ -60,7 +60,7 @@ htmlTagVector!!.add(htmlTag)
 }
 
 
-open fun size()
+    open fun size()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

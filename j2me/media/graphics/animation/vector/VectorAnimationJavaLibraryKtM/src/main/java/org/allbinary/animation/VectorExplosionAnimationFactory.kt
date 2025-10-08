@@ -37,7 +37,7 @@ open public class VectorExplosionAnimationFactory
     private var basicColor: BasicColor = BasicColorFactory.getInstance()!!.WHITE
 
     val animationBehaviorFactory: AnimationBehaviorFactory
-public constructor        (basicColor: BasicColor)                        
+public constructor (basicColor: BasicColor)                        
 
                             : this(basicColor, AnimationBehaviorFactory.getInstance()){
     //var basicColor = basicColor
@@ -47,7 +47,7 @@ public constructor        (basicColor: BasicColor)
                     
 }
 
-public constructor        (basicColor: BasicColor, animationBehaviorFactory: AnimationBehaviorFactory)
+public constructor (basicColor: BasicColor, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
         {
     //var basicColor = basicColor
@@ -60,7 +60,8 @@ this.setBasicColorP(basicColor)
     private val vectorExplosionGenerator: VectorExplosionGenerator = VectorExplosionGenerator.getInstance()!!
 
                 @Throws(Exception::class)
-            override fun getInstance(animationInterface: Animation)
+            
+    override fun getInstance(animationInterface: Animation)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var animationInterface = animationInterface
@@ -84,7 +85,7 @@ this.setBasicColorP(basicColor)
 }
 
 
-open fun setBasicColorP(basicColor: BasicColor)
+    open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
 var basicColor = basicColor
@@ -92,7 +93,7 @@ this.basicColor= basicColor
 }
 
 
-open fun getBasicColorP()
+    open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
 

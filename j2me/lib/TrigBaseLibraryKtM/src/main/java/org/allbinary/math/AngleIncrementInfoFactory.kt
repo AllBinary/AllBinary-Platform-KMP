@@ -30,12 +30,11 @@ open public class AngleIncrementInfoFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AngleIncrementInfoFactory = AngleIncrementInfoFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AngleIncrementInfoFactory{
 
@@ -55,7 +54,7 @@ open fun getInstance()
         
     private val angleIncrementInfo: Array<AngleIncrementInfo?> = arrayOfNulls(AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt())
 
-open fun getInstance(angleIncrement: Short)
+    open fun getInstance(angleIncrement: Short)
         //nullable =  from not(true or (false and false)) = 
 : AngleIncrementInfo{
 var angleIncrement = angleIncrement

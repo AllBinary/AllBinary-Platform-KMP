@@ -25,10 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface StateControlledInterface {
         
 
-open fun setState(state: Int)
+    open fun setState(state: Int)
         //nullable = true from not(false or (false and false)) = true
 
 

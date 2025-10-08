@@ -32,12 +32,11 @@ open public class LogConfigTypeFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: LogConfigTypeFactory = LogConfigTypeFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : LogConfigTypeFactory{
 
@@ -187,7 +186,7 @@ open fun getInstance()
     val STATICPAGEGENERATIONLOGGING: LogConfigType = LogConfigType("Static Page Generation Logging", NO_DESCRIPTION)
 
     val STATICPAGEGENERATIONLOGGINGERROR: LogConfigType = LogConfigType("Static Page Generation Logging Error", NO_DESCRIPTION)
-private constructor        ()
+private constructor ()
             : super()
         {
 PreLogUtil.put("FreeBlisket", this, CommonStrings.getInstance()!!.CONSTRUCTOR)

@@ -34,7 +34,7 @@ open public class BaseAnimationInterfaceFactoryInterfaceComposite
         
 
     private var basicAnimationInterfaceFactoryInterfaceArray: Array<BasicAnimationInterfaceFactoryInterface?>
-public constructor        (basicAnimationInterfaceFactoryInterfaceArray: Array<BasicAnimationInterfaceFactoryInterface?>)
+public constructor (basicAnimationInterfaceFactoryInterfaceArray: Array<BasicAnimationInterfaceFactoryInterface?>)
             : super()
         {
 var basicAnimationInterfaceFactoryInterfaceArray = basicAnimationInterfaceFactoryInterfaceArray
@@ -43,7 +43,8 @@ this.basicAnimationInterfaceFactoryInterfaceArray= basicAnimationInterfaceFactor
 
 
                 @Throws(Exception::class)
-            override fun getInstance(instanceId: Int)
+            
+    override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var instanceId = instanceId
@@ -55,7 +56,7 @@ this.basicAnimationInterfaceFactoryInterfaceArray= basicAnimationInterfaceFactor
 }
 
 
-open fun getBasicAnimationInterfaceFactoryInterfaceArray()
+    open fun getBasicAnimationInterfaceFactoryInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<BasicAnimationInterfaceFactoryInterface?>{
 
@@ -66,14 +67,15 @@ open fun getBasicAnimationInterfaceFactoryInterfaceArray()
 }
 
 
-open fun setBasicAnimationInterfaceFactoryInterfaceArray(basicAnimationInterfaceFactoryInterfaceArray: Array<BasicAnimationInterfaceFactoryInterface?>)
+    open fun setBasicAnimationInterfaceFactoryInterfaceArray(basicAnimationInterfaceFactoryInterfaceArray: Array<BasicAnimationInterfaceFactoryInterface?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var basicAnimationInterfaceFactoryInterfaceArray = basicAnimationInterfaceFactoryInterfaceArray
 this.basicAnimationInterfaceFactoryInterfaceArray= basicAnimationInterfaceFactoryInterfaceArray
 }
 
-override fun setInitialScale(scaleProperties: ScaleProperties)
+
+    override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
 {
     //var scaleProperties = scaleProperties

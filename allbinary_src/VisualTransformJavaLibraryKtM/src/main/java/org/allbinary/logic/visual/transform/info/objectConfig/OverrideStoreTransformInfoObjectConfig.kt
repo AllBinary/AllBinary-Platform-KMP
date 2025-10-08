@@ -31,7 +31,7 @@ import org.w3c.dom.Document
 
 open public class OverrideStoreTransformInfoObjectConfig : GenericStoreTransformInfoObjectConfig {
         
-public constructor        (abeClientInformation: Object, transformInfoInterface: Object)                        
+public constructor (abeClientInformation: Object, transformInfoInterface: Object)                        
 
                             : super(abeClientInformation, transformInfoInterface){
     //var abeClientInformation = abeClientInformation
@@ -42,7 +42,7 @@ public constructor        (abeClientInformation: Object, transformInfoInterface:
                     
 }
 
-public constructor        (abeClientInformation: Object, transformInfoInterface: Object, document: Object)                        
+public constructor (abeClientInformation: Object, transformInfoInterface: Object, document: Object)                        
 
                             : super(abeClientInformation, transformInfoInterface, document){
     //var abeClientInformation = abeClientInformation
@@ -55,7 +55,7 @@ var document = document
 this.setDocument(this.generate(this.toXmlDoc()))
 }
 
-public constructor        (abeClientInformation: Object, transformInfoInterface: Object, name: Object, type: Object)                        
+public constructor (abeClientInformation: Object, transformInfoInterface: Object, name: Object, type: Object)                        
 
                             : super(abeClientInformation, transformInfoInterface, name, type){
     //var abeClientInformation = abeClientInformation
@@ -72,7 +72,7 @@ this.setDocument(this.generate(this.toXmlDoc()))
 
                 @Throws(Exception::class)
             
-open fun generate(objectConfigDocument: Document)
+    open fun generate(objectConfigDocument: Document)
         //nullable = true from not(false or (false and false)) = true
 : Document{
 var objectConfigDocument = objectConfigDocument

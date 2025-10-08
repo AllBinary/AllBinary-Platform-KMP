@@ -32,14 +32,14 @@ open public class Time
         
 
     private var timeLong: Long
-public constructor        (time: String)
+public constructor (time: String)
             : super()
         {
 var time = time
 this.timeLong= time as Long
 }
 
-public constructor        (time: Long)
+public constructor (time: Long)
             : super()
         {
 var time = time
@@ -47,7 +47,7 @@ this.timeLong= time as Long
 }
 
 
-open fun getLong()
+    open fun getLong()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -58,7 +58,7 @@ open fun getLong()
 }
 
 
-open fun getlong()
+    open fun getlong()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -68,7 +68,8 @@ open fun getlong()
                         return this.timeLong!!.longValue()
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

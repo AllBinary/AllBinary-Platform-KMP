@@ -37,12 +37,11 @@ open public class GameConfigurationUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GameConfigurationUtil = GameConfigurationUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameConfigurationUtil{
 
@@ -66,7 +65,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun change(gameOptionsForm: GameOptionsForm, gauge: GameConfigurationGauge)
+    open fun change(gameOptionsForm: GameOptionsForm, gauge: GameConfigurationGauge)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameOptionsForm = gameOptionsForm
@@ -90,7 +89,7 @@ this.updateChallange(gameOptionsForm, gameConfiguration)
 
                 @Throws(Exception::class)
             
-open fun update(gauge: GameConfigurationGauge)
+    open fun update(gauge: GameConfigurationGauge)
         //nullable = true from not(false or (false and false)) = true
 {
 var gauge = gauge
@@ -122,7 +121,7 @@ gameConfiguration!!.setValue(value)
 
                 @Throws(Exception::class)
             
-open fun setDefault(gauge: GameConfigurationGauge)
+    open fun setDefault(gauge: GameConfigurationGauge)
         //nullable = true from not(false or (false and false)) = true
 {
 var gauge = gauge
@@ -147,7 +146,7 @@ gameConfiguration!!.setValue(gameConfiguration!!.getDefaultValue())
 
                 @Throws(Exception::class)
             
-open fun updateChallange(gameOptionsForm: GameOptionsForm, gameConfiguration: GameConfiguration)
+    open fun updateChallange(gameOptionsForm: GameOptionsForm, gameConfiguration: GameConfiguration)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameOptionsForm = gameOptionsForm
@@ -244,7 +243,7 @@ gameConfigurationCentral!!.SPEED_CHALLENGE_LEVEL.setValue(gameConfiguration!!.ge
 
     private var COMPETITION_VALUE: Int = 1
 
-open fun updateCompetitionValue()
+    open fun updateCompetitionValue()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(commonStrings!!.START, this, "updateCompetitionValue")
@@ -256,7 +255,7 @@ COMPETITION_VALUE= (COMPETITION_VALUE shr 2)
 }
 
 
-open fun getCompetitionValue()
+    open fun getCompetitionValue()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

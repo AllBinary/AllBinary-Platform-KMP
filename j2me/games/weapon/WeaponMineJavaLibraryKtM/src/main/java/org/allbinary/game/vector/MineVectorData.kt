@@ -30,8 +30,7 @@ open public class MineVectorData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var points: Array<Array<IntArray?>?> = arrayOf(arrayOf(intArrayOf(10,5)
 ,intArrayOf(2,6)
@@ -54,7 +53,7 @@ open public class MineVectorData
 ))
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

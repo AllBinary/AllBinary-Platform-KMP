@@ -35,12 +35,11 @@ open public class TransformInfoObjectConfigGeneratorFactory
         
                 , TransformInfoObjectConfigGeneratorFactoryInterface {
         
-
-        companion object {
+companion object {
             
     private val instance: TransformInfoObjectConfigGeneratorFactory = TransformInfoObjectConfigGeneratorFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TransformInfoObjectConfigGeneratorFactory{
 
@@ -54,7 +53,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -62,7 +61,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getInstance(transformInfoInterface: TransformInfoInterface)
+    open fun getInstance(transformInfoInterface: TransformInfoInterface)
         //nullable =  from not(true or (false and false)) = 
 : TransformInfoObjectConfigGenerator{
 var transformInfoInterface = transformInfoInterface

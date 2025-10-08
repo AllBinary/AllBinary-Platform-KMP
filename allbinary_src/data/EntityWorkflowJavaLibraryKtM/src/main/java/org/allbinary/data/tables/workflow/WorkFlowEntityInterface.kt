@@ -30,28 +30,29 @@ import java.util.Vector
 import org.allbinary.data.tables.BasicDataTableInterface
 import org.allbinary.logic.control.workflow.WorkFlowInterface
 import org.allbinary.logic.system.security.licensing.LicensingException
+
 interface WorkFlowEntityInterface : BasicDataTableInterface {
         
 
-open fun get(storeName: String)
+    open fun get(storeName: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector
 
                 @Throws(Exception::class, LicensingException::class)
             
-open fun get(name: String, storeName: String)
+    open fun get(name: String, storeName: String)
         //nullable = true from not(false or (false and false)) = true
 : WorkFlowInterface
 
-open fun delete(name: String, storeName: String)
+    open fun delete(name: String, storeName: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun insert(values: Vector)
+    open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun update(updatedValues: HashMap<Any, Any>)
+    open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 
 

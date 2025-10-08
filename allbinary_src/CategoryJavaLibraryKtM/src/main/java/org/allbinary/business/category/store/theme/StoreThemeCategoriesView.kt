@@ -37,7 +37,7 @@ open public class StoreThemeCategoriesView
         
 
     private var categoryInterface: StoreThemeCategoryInterface
-public constructor        (categoryInterface: StoreThemeCategoryInterface)
+public constructor (categoryInterface: StoreThemeCategoryInterface)
             : super()
         {
 var categoryInterface = categoryInterface
@@ -47,7 +47,7 @@ this.categoryInterface= categoryInterface
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

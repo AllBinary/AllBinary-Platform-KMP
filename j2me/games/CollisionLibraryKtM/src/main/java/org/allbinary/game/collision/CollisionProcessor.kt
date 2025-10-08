@@ -23,7 +23,7 @@ open public class CollisionProcessor
             {
             }            
         
-open fun isCollision(myLayer: AllBinaryLayer, myLayer2: AllBinaryLayer)
+    open fun isCollision(myLayer: AllBinaryLayer, myLayer2: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var myLayer = myLayer

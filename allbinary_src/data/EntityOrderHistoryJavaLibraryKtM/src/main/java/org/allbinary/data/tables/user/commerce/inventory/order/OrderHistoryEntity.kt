@@ -73,7 +73,7 @@ open public class OrderHistoryEntity : AbSqlBean
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val tableName: String = "orderhistory"
-public constructor        ()                        
+public constructor ()                        
 
                             : super(HistoryDbInitInfo()){
 
@@ -84,7 +84,7 @@ this.setTableName(tableName)
 }
 
 
-open fun insert(userName: String, order: Order)
+    open fun insert(userName: String, order: Order)
         //nullable = true from not(false or (false and false)) = true
 {
 var userName = userName
@@ -282,7 +282,7 @@ this.insert(vector)
 }
 
 
-open fun insert(values: Vector)
+    open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 {
 var values = values
@@ -314,7 +314,7 @@ var values = values
 }
 
 
-open fun setStatus(orderId: String, status: String)
+    open fun setStatus(orderId: String, status: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var orderId = orderId
@@ -368,7 +368,7 @@ super.updateWhere(OrderData.ID, orderId, updateHashMap)
 }
 
 
-open fun setPaymentMethod(orderId: String, paymentMethod: String)
+    open fun setPaymentMethod(orderId: String, paymentMethod: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var orderId = orderId
@@ -407,7 +407,7 @@ super.updateWhere(OrderData.ID, orderId, updateHashMap)
 
                 @Throws(Exception::class)
             
-open fun getStoreOrders(storeFrontInterface: StoreFrontInterface)
+    open fun getStoreOrders(storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var storeFrontInterface = storeFrontInterface
@@ -450,7 +450,7 @@ orderReviewVector!!.add(orderReview)
 
                 @Throws(Exception::class)
             
-open fun getOrders(userName: String)
+    open fun getOrders(userName: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var userName = userName
@@ -493,7 +493,7 @@ orderReviewVector!!.add(orderReview)
 
                 @Throws(Exception::class)
             
-open fun getOrders(status: String, fromDate: String, toDate: String)
+    open fun getOrders(status: String, fromDate: String, toDate: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var status = status
@@ -538,7 +538,7 @@ orderReviewVector!!.add(orderReview)
 
                 @Throws(Exception::class)
             
-open fun getOrders(fromDate: String, toDate: String)
+    open fun getOrders(fromDate: String, toDate: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var fromDate = fromDate
@@ -578,7 +578,7 @@ orderReviewVector!!.add(orderReview)
 
                 @Throws(Exception::class)
             
-open fun getOrder(id: String)
+    open fun getOrder(id: String)
         //nullable = true from not(false or (false and false)) = true
 : OrderHistory{
 var id = id
@@ -619,7 +619,7 @@ whereHashMap!!.put(OrderData.ID, id)
 }
 
 
-open fun createTableStatement()
+    open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -716,7 +716,7 @@ stringBuffer!!.append(") )")
 }
 
 
-open fun createTable()
+    open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -727,7 +727,7 @@ open fun createTable()
 }
 
 
-open fun dropTable()
+    open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -740,7 +740,7 @@ open fun dropTable()
 
                 @Throws(Exception::class)
             
-open fun update(whereHashMap: HashMap<Any, Any>, orderHashMap: HashMap<Any, Any>)
+    open fun update(whereHashMap: HashMap<Any, Any>, orderHashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var whereHashMap = whereHashMap

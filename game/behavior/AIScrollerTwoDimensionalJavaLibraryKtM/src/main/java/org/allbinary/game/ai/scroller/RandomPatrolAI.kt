@@ -36,7 +36,7 @@ open public class RandomPatrolAI : BasePatrolAI {
         
 
     private var changedDirection: Boolean = true
-public constructor        (hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
+public constructor (hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
                             : super(hashtable, ownerLayerInterface, gameInput){
 var hashtable = hashtable
@@ -50,7 +50,7 @@ this.updateRandomDistance()
 }
 
 
-open fun updateRandomDistance()
+    open fun updateRandomDistance()
         //nullable = true from not(false or (false and true)) = true
 {
 this.currentDistance= MyRandomFactory.getInstance()!!.getAbsoluteNextInt(this.maxDistance!!.toInt())
@@ -58,7 +58,8 @@ this.currentDistance= MyRandomFactory.getInstance()!!.getAbsoluteNextInt(this.ma
 
 
                 @Throws(Exception::class)
-            override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+            
+    override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager
@@ -77,7 +78,8 @@ this.changedDirection= false
                                 
 }
 
-override fun nextDirection()
+
+    override fun nextDirection()
         //nullable = true from not(false or (false and true)) = true
 {
 super.nextDirection()

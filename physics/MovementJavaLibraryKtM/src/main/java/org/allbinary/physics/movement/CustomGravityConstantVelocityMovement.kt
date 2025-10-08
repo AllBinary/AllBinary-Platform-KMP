@@ -34,7 +34,7 @@ open public class CustomGravityConstantVelocityMovement : BasicConstantVelocityM
         
 
     private var customGravity: Int
-public constructor        (speedBasicDecimal: BasicDecimal, customGravity: Int)                        
+public constructor (speedBasicDecimal: BasicDecimal, customGravity: Int)                        
 
                             : super(speedBasicDecimal, VelocityProperties(speedBasicDecimal!!.getUnscaled().toInt(), speedBasicDecimal!!.getUnscaled().toInt())){
 var speedBasicDecimal = speedBasicDecimal
@@ -50,7 +50,8 @@ this.customGravity= customGravity
     private val gravityUtil: GravityUtil = GravityUtil.getInstance()!!
 
                 @Throws(Exception::class)
-            override fun process(layer: AllBinaryGameLayer)
+            
+    override fun process(layer: AllBinaryGameLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var layer = layer

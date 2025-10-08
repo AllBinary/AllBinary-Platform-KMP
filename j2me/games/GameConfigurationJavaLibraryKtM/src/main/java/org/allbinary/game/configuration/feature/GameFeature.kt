@@ -28,7 +28,7 @@
 
 open public class GameFeature : Feature {
         
-public constructor        (name: String)                        
+public constructor (name: String)                        
 
                             : super(name){
 var name = name

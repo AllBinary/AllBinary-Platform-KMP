@@ -52,7 +52,7 @@ open public class ShippingHelper : TagHelper {
     private var request: HttpServletRequest
 
     private var shippingType: String
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 this.propertiesHashMap= propertiesHashMap
@@ -77,14 +77,14 @@ this.getFormData()
 }
 
 
-open fun getFormData()
+    open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
 this.shippingType= request.getParameter(ShippingMethodData.NAME)
 }
 
 
-open fun setShippingType()
+    open fun setShippingType()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

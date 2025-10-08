@@ -38,13 +38,13 @@ open public class CustomMapGeneratorBase
         
                 @Throws(Exception::class)
             
-open fun copyMapIntoCustomMap()
+    open fun copyMapIntoCustomMap()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun getCustomMapArray()
+    open fun getCustomMapArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<IntArray?>{
 
@@ -57,7 +57,7 @@ open fun getCustomMapArray()
 
                 @Throws(Exception::class)
             
-open fun getCustomType(column: Int, row: Int, currentType: Int)
+    open fun getCustomType(column: Int, row: Int, currentType: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var column = column

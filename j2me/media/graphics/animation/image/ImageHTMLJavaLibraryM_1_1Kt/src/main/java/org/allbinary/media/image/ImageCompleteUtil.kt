@@ -35,12 +35,11 @@ open public class ImageCompleteUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ImageCompleteUtil = ImageCompleteUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ImageCompleteUtil{
 
@@ -62,7 +61,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun waitFor(image: Image, name: String)
+    open fun waitFor(image: Image, name: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var image = image
@@ -74,7 +73,7 @@ var name = name
 
                 @Throws(Exception::class)
             
-open fun isReady(image: Image, name: String, timeDelayHelper: TimeDelayHelper)
+    open fun isReady(image: Image, name: String, timeDelayHelper: TimeDelayHelper)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var image = image
@@ -132,7 +131,7 @@ PreLogUtil.put(COMPLETE +image.getName(), this, commonStrings!!.SUCCESS)
 
                 @Throws(Exception::class)
             
-open fun handleTimeout(name: String)
+    open fun handleTimeout(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var name = name
@@ -141,7 +140,7 @@ open fun handleTimeout(name: String)
 
                 @Throws(Exception::class)
             
-open fun waitForAll()
+    open fun waitForAll()
         //nullable = true from not(false or (false and true)) = true
 {
 }

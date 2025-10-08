@@ -49,7 +49,7 @@ open public class CompoundContextTransformInfoObjectConfig : GenericStoreTransfo
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (abeClientInformation: Object, transformInfoInterface: Object)                        
+public constructor (abeClientInformation: Object, transformInfoInterface: Object)                        
 
                             : super(abeClientInformation, transformInfoInterface){
     //var abeClientInformation = abeClientInformation
@@ -60,7 +60,7 @@ var transformInfoInterface = transformInfoInterface
                     
 }
 
-public constructor        (abeClientInformation: Object, transformInfoInterface: Object, document: Object)                        
+public constructor (abeClientInformation: Object, transformInfoInterface: Object, document: Object)                        
 
                             : super(abeClientInformation, transformInfoInterface, document){
     //var abeClientInformation = abeClientInformation
@@ -73,7 +73,7 @@ var document = document
 this.setDocument(this.generate(this.toXmlDoc()))
 }
 
-public constructor        (abeClientInformation: Object, transformInfoInterface: Object, name: Object, type: Object)                        
+public constructor (abeClientInformation: Object, transformInfoInterface: Object, name: Object, type: Object)                        
 
                             : super(abeClientInformation, transformInfoInterface, name, type){
     //var abeClientInformation = abeClientInformation
@@ -90,7 +90,7 @@ this.setDocument(this.generate(this.toXmlDoc()))
 
                 @Throws(Exception::class)
             
-open fun get()
+    open fun get()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -202,7 +202,7 @@ rootView= replace.all(rootView)
 
                 @Throws(Exception::class)
             
-open fun createInputStream()
+    open fun createInputStream()
         //nullable = true from not(false or (false and true)) = true
 : InputStream{
 

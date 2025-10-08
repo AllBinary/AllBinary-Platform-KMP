@@ -33,10 +33,9 @@ open public class NumberInSameGroupSequence
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : NumberInSameGroupSequence{
 
@@ -70,7 +69,7 @@ open fun getInstance()
     var NUMBER_ON_SAME_TEAM_SEQUENCE_NINE: Integer
 
     var NUMBER_ON_SAME_TEAM_SEQUENCE: Array<Integer?>
-private constructor        ()
+private constructor ()
             : super()
         {
 

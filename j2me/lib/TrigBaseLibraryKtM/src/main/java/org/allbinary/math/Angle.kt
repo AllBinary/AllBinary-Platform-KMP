@@ -32,7 +32,7 @@ open public class Angle
         
 
     private var value: Short
-public constructor        (angle: Short)
+public constructor (angle: Short)
             : super()
         {
     //var angle = angle
@@ -40,7 +40,7 @@ this.value= angle
 }
 
 
-open fun getValue()
+    open fun getValue()
         //nullable = true from not(false or (false and true)) = true
 : Short{
 

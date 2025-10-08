@@ -30,12 +30,11 @@ import org.allbinary.graphics.threed.min3d.renderer.processor.ObjectThreedOpenGL
 
 open public class WithNormalAttributePointerOpenGLProcessor : ObjectThreedOpenGLProcessor {
         
-
-        companion object {
+companion object {
             
     private val instance: WithNormalAttributePointerOpenGLProcessor = WithNormalAttributePointerOpenGLProcessor()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : WithNormalAttributePointerOpenGLProcessor{
 
@@ -47,10 +46,11 @@ open fun getInstance()
 
 
         }
-            public constructor        (){
+            public constructor (){
 }
 
-override fun process(gl: GL10, aObject3d: Any)
+
+    override fun process(gl: GL10, aObject3d: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl

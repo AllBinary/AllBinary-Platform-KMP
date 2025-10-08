@@ -49,7 +49,7 @@ open public class ImageArrayBaseRotationAnimation : RotationAnimation {
     private var currentImage: Image
 
     private var totalFrames: Int= 0
-public constructor        (originalImageArray: Array<Image?>, angleInfo: AngleInfo, animationBehavior: AnimationBehavior)                        
+public constructor (originalImageArray: Array<Image?>, angleInfo: AngleInfo, animationBehavior: AnimationBehavior)                        
 
                             : super(angleInfo, animationBehavior){
     //var originalImageArray = originalImageArray
@@ -66,7 +66,8 @@ this.currentImage= this.imageArray[this.circularIndexUtil!!.getIndex()]!!
 
 
                 @Throws(Exception::class)
-            override fun getAnimationSize()
+            
+    override fun getAnimationSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -76,7 +77,8 @@ this.currentImage= this.imageArray[this.circularIndexUtil!!.getIndex()]!!
                         return this.getSize()
 }
 
-override fun setAlpha(alpha: Int)
+
+    override fun setAlpha(alpha: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var alpha = alpha
@@ -96,7 +98,8 @@ imageModifierUtil!!.setAlpha(this.originalImageArray[index]!!, this.imageArray[i
                                 
 }
 
-override fun nextRotation()
+
+    override fun nextRotation()
         //nullable = true from not(false or (false and true)) = true
 {
 super.nextRotation()
@@ -107,7 +110,8 @@ imageModifierUtil!!.setAlpha(this.originalImageArray[index]!!, this.imageArray[i
 this.currentImage= this.imageArray[index]!!
 }
 
-override fun previousRotation()
+
+    override fun previousRotation()
         //nullable = true from not(false or (false and true)) = true
 {
 super.previousRotation()
@@ -118,7 +122,8 @@ imageModifierUtil!!.setAlpha(this.originalImageArray[index]!!, this.imageArray[i
 this.currentImage= this.imageArray[index]!!
 }
 
-override fun setFrame(index2: Int)
+
+    override fun setFrame(index2: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var index2 = index2
@@ -130,13 +135,15 @@ imageModifierUtil!!.setAlpha(this.originalImageArray[index]!!, this.imageArray[i
 this.currentImage= this.imageArray[index]!!
 }
 
-override fun setSequence(sequence: IntArray)
+
+    override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
 {
     //var sequence = sequence
 }
 
-override fun getSequence()
+
+    override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
 : IntArray{
 
@@ -147,7 +154,7 @@ override fun getSequence()
 }
 
 
-open fun setImageArray(imageArray: Array<Image?>)
+    open fun setImageArray(imageArray: Array<Image?>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageArray = imageArray
@@ -158,7 +165,8 @@ this.circularIndexUtil= CircularIndexUtil.getInstance(this.totalFrames)
 
 
     private var anchor: Int = Anchor.TOP_LEFT
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -168,7 +176,7 @@ graphics.drawImage(this.currentImage, x, y, anchor)
 }
 
 
-open fun close()
+    open fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -207,7 +215,8 @@ disposalUtil!!.dispose(this.currentImage)
 
 
                 @Throws(Throwable::class)
-            override fun finalize()
+            
+    override fun finalize()
         //nullable = true from not(false or (false and true)) = true
 {
 

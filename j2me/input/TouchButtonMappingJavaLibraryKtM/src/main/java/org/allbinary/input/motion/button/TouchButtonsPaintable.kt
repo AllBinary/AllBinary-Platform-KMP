@@ -41,13 +41,14 @@ open public class TouchButtonsPaintable : Paintable {
     val basicSetColorUtil: BasicColorSetUtil = BasicColorSetUtil.getInstance()!!
 
     private val touchButtonFactory: TouchButtonFactory = TouchButtonFactory.getInstance()!!
-public constructor        (basicColor: BasicColor){
+public constructor (basicColor: BasicColor){
 var basicColor = basicColor
 this.foregroundBasicColor= basicColor
 this.foregroundColor= basicColor!!.toInt()
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

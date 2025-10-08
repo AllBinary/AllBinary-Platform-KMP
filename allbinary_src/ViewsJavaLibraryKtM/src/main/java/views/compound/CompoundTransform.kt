@@ -42,7 +42,7 @@ open public class CompoundTransform : AbTransformer {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
-public constructor        (transformInfoInterface: TransformInfoInterface)                        
+public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface

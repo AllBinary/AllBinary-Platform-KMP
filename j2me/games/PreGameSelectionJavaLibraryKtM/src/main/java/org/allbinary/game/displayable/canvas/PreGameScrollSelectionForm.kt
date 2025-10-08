@@ -34,7 +34,7 @@ import org.allbinary.graphics.form.ScrollCurrentSelectionForm
 
 open public class PreGameScrollSelectionForm : ScrollCurrentSelectionForm {
         
-public constructor        (title: String, items: Array<CustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (title: String, items: Array<CustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(title, items, formPaintableFactory, rectangle, FormTypeFactory.getInstance()!!.TEMP_HORIZONTAL_FORM, 0, false, backgroundBasicColor, foregroundBasicColor){
 var title = title
@@ -52,7 +52,7 @@ var foregroundBasicColor = foregroundBasicColor
 
                 @Throws(Exception::class)
             
-open fun init(rectangle: Rectangle)
+    open fun init(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
 {
 var rectangle = rectangle

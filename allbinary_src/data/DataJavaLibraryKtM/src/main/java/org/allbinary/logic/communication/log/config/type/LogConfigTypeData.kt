@@ -30,12 +30,11 @@ open public class LogConfigTypeData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: LogConfigTypeData = LogConfigTypeData()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : LogConfigTypeData{
 
@@ -47,7 +46,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

@@ -25,22 +25,23 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface MinMaxIntConstraintInterface {
         
 
-open fun getMax()
+    open fun getMax()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getMin()
+    open fun getMin()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun setMax(max: Int)
+    open fun setMax(max: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setMin(min: Int)
+    open fun setMin(min: Int)
         //nullable = true from not(false or (false and false)) = true
 
 

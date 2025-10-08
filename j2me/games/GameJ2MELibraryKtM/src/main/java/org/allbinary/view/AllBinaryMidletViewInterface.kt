@@ -14,18 +14,19 @@
 import org.allbinary.game.configuration.event.GameInitializedListenerInterface
 import org.allbinary.game.midlet.DemoGameMidletEventListener
 import org.allbinary.midlet.MidletCompositeInterface
+
 interface AllBinaryMidletViewInterface : MidletCompositeInterface, EmulatorViewInterface, DemoGameMidletEventListener, GameInitializedListenerInterface {
         
 
-open fun onResume()
+    open fun onResume()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun onPause()
+    open fun onPause()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun onDestroy()
+    open fun onDestroy()
         //nullable = true from not(false or (false and true)) = true
 
 

@@ -30,13 +30,13 @@ import org.allbinary.logic.util.event.handler.BasicEventHandler
 
 open public class CapitalEventHandler : BasicEventHandler {
         
-public constructor        (){
+public constructor (){
 }
 
 
                 @Throws(Exception::class)
             
-open fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
+    open fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject

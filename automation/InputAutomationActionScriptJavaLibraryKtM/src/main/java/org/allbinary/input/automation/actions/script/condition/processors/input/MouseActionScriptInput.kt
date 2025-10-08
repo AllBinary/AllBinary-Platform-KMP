@@ -42,8 +42,7 @@ import org.w3c.dom.NodeList
 open public class MouseActionScriptInput : BasicProfileActionScriptInput
                 , MouseActionScriptInputInterface {
         
-
-        companion object {
+companion object {
             
     private val NAME: String = "Mouse"
 
@@ -56,7 +55,7 @@ open public class MouseActionScriptInput : BasicProfileActionScriptInput
     private var buttons: Int= 0
 
     private var mouseActionScriptInputJPanel: MouseActionScriptInputJPanel
-public constructor        (node: Node)                        
+public constructor (node: Node)                        
 
                             : super(NAME, node){
 var node = node
@@ -156,7 +155,7 @@ this.setAllowsChildren(false)
 this.mouseActionScriptInputJPanel= MouseActionScriptInputJPanel(this)
 }
 
-public constructor        ()                        
+public constructor ()                        
 
                             : super(NAME){
 
@@ -169,7 +168,7 @@ this.mouseActionScriptInputJPanel= MouseActionScriptInputJPanel(this)
 }
 
 
-open fun setPoint(point: Point)
+    open fun setPoint(point: Point)
         //nullable = true from not(false or (false and false)) = true
 {
 var point = point
@@ -177,7 +176,7 @@ this.point= point
 }
 
 
-open fun getPoint()
+    open fun getPoint()
         //nullable = true from not(false or (false and true)) = true
 : Point{
 
@@ -188,7 +187,7 @@ open fun getPoint()
 }
 
 
-open fun getButtonClicks()
+    open fun getButtonClicks()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -199,7 +198,7 @@ open fun getButtonClicks()
 }
 
 
-open fun setButtonClicks(buttons: Int)
+    open fun setButtonClicks(buttons: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var buttons = buttons
@@ -207,14 +206,14 @@ this.buttons= buttons
 }
 
 
-open fun showDialog()
+    open fun showDialog()
         //nullable = true from not(false or (false and true)) = true
 {
 this.mouseActionScriptInputJPanel!!.getMouseActionJDialog()!!.setVisible(true)
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -232,7 +231,7 @@ logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -259,7 +258,7 @@ mouseNode!!.appendChild(ModDomHelper.createNodeWithValueNodes(document, MouseAct
 
                 @Throws(Exception::class)
             
-open fun process(frame: Long)
+    open fun process(frame: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var frame = frame
@@ -267,7 +266,7 @@ MouseInputAutomationProcessor.process(this)
 }
 
 
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 {
 

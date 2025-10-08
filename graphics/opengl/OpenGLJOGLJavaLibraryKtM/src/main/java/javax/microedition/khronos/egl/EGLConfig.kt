@@ -16,7 +16,7 @@ open public class EGLConfig
             : Object
          {
         
-public constructor        ()
+public constructor ()
             : super()
         {
 

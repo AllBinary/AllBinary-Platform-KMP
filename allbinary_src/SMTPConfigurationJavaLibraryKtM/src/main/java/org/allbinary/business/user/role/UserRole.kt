@@ -37,7 +37,7 @@ open public class UserRole
     private var basicUserRole: BasicUserRole
 
     private var userFactoryInterface: UserFactoryInterface
-protected constructor        (aBasicUserRole: BasicUserRole, aUserFactoryInterface: UserFactoryInterface)
+protected constructor (aBasicUserRole: BasicUserRole, aUserFactoryInterface: UserFactoryInterface)
             : super()
         {
 var aBasicUserRole = aBasicUserRole
@@ -46,7 +46,8 @@ this.basicUserRole= aBasicUserRole
 this.userFactoryInterface= aUserFactoryInterface
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -57,7 +58,7 @@ override fun toString()
 }
 
 
-open fun getBasicUserRole()
+    open fun getBasicUserRole()
         //nullable = true from not(false or (false and true)) = true
 : BasicUserRole{
 
@@ -70,7 +71,7 @@ open fun getBasicUserRole()
 
                 @Throws(Exception::class)
             
-open fun getUserFactory()
+    open fun getUserFactory()
         //nullable = true from not(false or (false and true)) = true
 : UserFactoryInterface{
 
@@ -81,7 +82,7 @@ open fun getUserFactory()
 }
 
 
-open fun getSessionTimeout()
+    open fun getSessionTimeout()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -92,7 +93,7 @@ open fun getSessionTimeout()
 }
 
 
-open fun getSessionInactivityTimeout()
+    open fun getSessionInactivityTimeout()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 

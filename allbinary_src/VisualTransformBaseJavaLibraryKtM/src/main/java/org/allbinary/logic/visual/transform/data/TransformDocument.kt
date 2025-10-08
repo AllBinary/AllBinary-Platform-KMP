@@ -45,7 +45,7 @@ open public class TransformDocument
     private var baseNode: Node
 
     private var document: Document
-public constructor        ()
+public constructor ()
             : super()
         {
 
@@ -85,7 +85,7 @@ document.appendChild(this.baseNode)
 }
 
 
-open fun getBaseNode()
+    open fun getBaseNode()
         //nullable = true from not(false or (false and true)) = true
 : Node{
 
@@ -96,7 +96,7 @@ open fun getBaseNode()
 }
 
 
-open fun getDoc()
+    open fun getDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -109,7 +109,7 @@ open fun getDoc()
 
                 @Throws(Exception::class)
             
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

@@ -31,13 +31,12 @@ open public class PointFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var pointArray: Array<Array<Point?>?> = Array(3000) { arrayOfNulls<Point?>(3000) }
                                                             
 
-open fun getInstance(x: Int, y: Int)
+    open fun getInstance(x: Int, y: Int)
         //nullable =  from not(true or (false and false)) = 
 : Point{
 var x = x
@@ -65,7 +64,7 @@ var y = y
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

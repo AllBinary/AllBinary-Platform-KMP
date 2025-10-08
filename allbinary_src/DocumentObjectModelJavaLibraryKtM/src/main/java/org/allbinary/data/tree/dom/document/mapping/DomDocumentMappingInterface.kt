@@ -26,12 +26,13 @@
         import kotlin.reflect.KClass
         
 import org.w3c.dom.Document
+
 interface DomDocumentMappingInterface {
         
 
                 @Throws(Exception::class)
             
-open fun toXmlDoc()
+    open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document
 

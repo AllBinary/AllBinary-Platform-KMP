@@ -29,7 +29,6 @@ import java.util.HashSet
 import java.util.PriorityQueue
 import java.util.Set
 import org.allbinary.game.layer.AllBinaryTiledLayer
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.math.MathUtil
 import org.allbinary.string.CommonStrings
@@ -66,7 +65,7 @@ open public class PathFinder : GeographicPathFinderBase {
 
                 @Throws(Exception::class)
             
-open fun init(geographicMapInterface: BasicGeographicMap)
+    open fun init(geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapInterface = geographicMapInterface
@@ -120,7 +119,7 @@ costArray[column]!![row]= node
 }
 
 
-open fun search(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, totalPaths: Int)
+    open fun search(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, totalPaths: Int)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var startPathFindingNodeList = startPathFindingNodeList
@@ -151,7 +150,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "search", e)
 
                 @Throws(Exception::class)
             
-open fun searchN(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, totalPaths: Int, multipassState: MultipassState)
+    open fun searchN(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, totalPaths: Int, multipassState: MultipassState)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var startPathFindingNodeList = startPathFindingNodeList
@@ -199,7 +198,7 @@ var totalPaths = totalPaths
 
                 @Throws(Exception::class)
             
-open fun search(startPathFindingNode: PathFindingNode, endPathFindingNode: PathFindingNode)
+    open fun search(startPathFindingNode: PathFindingNode, endPathFindingNode: PathFindingNode)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var startPathFindingNode = startPathFindingNode
@@ -221,7 +220,7 @@ pathList!!.add(list)
 
                 @Throws(Exception::class)
             
-open fun searchStart(startPathFindingNode: PathFindingNode, endPathFindingNode: PathFindingNode, multipassState: MultipassState)
+    open fun searchStart(startPathFindingNode: PathFindingNode, endPathFindingNode: PathFindingNode, multipassState: MultipassState)
         //nullable = true from not(false or (false and false)) = true
 {
     //var startPathFindingNode = startPathFindingNode
@@ -233,7 +232,7 @@ this.findPathStart(startPathFindingNode!!.geographicMapCellPosition, endPathFind
 
                 @Throws(Exception::class)
             
-open fun searchN(startPathFindingNode: PathFindingNode, endPathFindingNode: PathFindingNode, multipassState: MultipassState)
+    open fun searchN(startPathFindingNode: PathFindingNode, endPathFindingNode: PathFindingNode, multipassState: MultipassState)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var startPathFindingNode = startPathFindingNode
@@ -273,7 +272,7 @@ multipassState!!.step= 0
 
                 @Throws(Exception::class)
             
-open fun findPath(start: GeographicMapCellPosition, target: GeographicMapCellPosition)
+    open fun findPath(start: GeographicMapCellPosition, target: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var start = start
@@ -446,7 +445,7 @@ neighbor.parent= current
 
                 @Throws(Exception::class)
             
-open fun findPathStart(start: GeographicMapCellPosition, target: GeographicMapCellPosition, multipassState: MultipassState)
+    open fun findPathStart(start: GeographicMapCellPosition, target: GeographicMapCellPosition, multipassState: MultipassState)
         //nullable = true from not(false or (false and false)) = true
 {
     //var start = start
@@ -506,7 +505,7 @@ multipassState!!.step++
 
                 @Throws(Exception::class)
             
-open fun findPathEnd(start: GeographicMapCellPosition, target: GeographicMapCellPosition, multipassState: MultipassState)
+    open fun findPathEnd(start: GeographicMapCellPosition, target: GeographicMapCellPosition, multipassState: MultipassState)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var start = start
@@ -647,7 +646,7 @@ total++
 }
 
 
-open fun extractPath(start: GeographicMapCellPosition, current: PathFindingNodeCost)
+    open fun extractPath(start: GeographicMapCellPosition, current: PathFindingNodeCost)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var start = start

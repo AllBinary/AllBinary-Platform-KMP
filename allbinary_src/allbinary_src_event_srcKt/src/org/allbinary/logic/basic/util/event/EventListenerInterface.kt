@@ -26,12 +26,13 @@
         import kotlin.reflect.KClass
         
 import java.util.EventListener
+
 interface EventListenerInterface : EventListener {
         
 
                 @Throws(Exception::class)
             
-open fun onEvent(eventObject: AllBinaryEventObject)
+    open fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 
 

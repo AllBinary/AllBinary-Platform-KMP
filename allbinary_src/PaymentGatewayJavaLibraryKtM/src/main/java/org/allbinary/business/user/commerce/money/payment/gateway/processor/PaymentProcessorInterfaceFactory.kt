@@ -38,12 +38,11 @@ open public class PaymentProcessorInterfaceFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: PaymentProcessorInterfaceFactory = PaymentProcessorInterfaceFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PaymentProcessorInterfaceFactory{
 
@@ -57,7 +56,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -66,7 +65,7 @@ private constructor        ()
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getInstance(transformInfoInterface: TransformInfoInterface)
+    open fun getInstance(transformInfoInterface: TransformInfoInterface)
         //nullable =  from not(true or (false and false)) = 
 : PaymentProcessorInterface{
 var transformInfoInterface = transformInfoInterface

@@ -26,14 +26,15 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.input.automation.configuration.InputAutomationConfigurationModuleChangeEvent
+
 interface InputAutomationConfigurationModuleChangeListener {
         
 
-open fun onAdd(inputAutomationConfigurationChangeEvent: InputAutomationConfigurationModuleChangeEvent)
+    open fun onAdd(inputAutomationConfigurationChangeEvent: InputAutomationConfigurationModuleChangeEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun onRemove(inputAutomationConfigurationChangeEvent: InputAutomationConfigurationModuleChangeEvent)
+    open fun onRemove(inputAutomationConfigurationChangeEvent: InputAutomationConfigurationModuleChangeEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

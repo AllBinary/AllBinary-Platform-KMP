@@ -31,12 +31,11 @@ open public class LicenseTypeFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: LicenseTypeFactory = LicenseTypeFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : LicenseTypeFactory{
 
@@ -60,7 +59,7 @@ open fun getInstance()
 
     val NORMAL: LicenseType = LicenseType("Normal")
 
-open fun getInstance(name: String)
+    open fun getInstance(name: String)
         //nullable =  from not(true or (false and false)) = 
 : LicenseType{
 var name = name

@@ -31,10 +31,9 @@ open public class PrimitiveIntUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getArrayInstance()
+    open fun getArrayInstance()
         //nullable = true from not(false or (false and true)) = true
 : IntArray{
 
@@ -45,7 +44,7 @@ open fun getArrayInstance()
 }
 
 
-open fun getTwoDimensionalArrayInstance()
+    open fun getTwoDimensionalArrayInstance()
         //nullable = true from not(false or (false and true)) = true
 : Array<IntArray?>{
 
@@ -57,7 +56,7 @@ open fun getTwoDimensionalArrayInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

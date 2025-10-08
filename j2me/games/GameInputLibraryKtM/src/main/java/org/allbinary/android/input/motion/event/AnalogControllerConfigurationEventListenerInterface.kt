@@ -26,12 +26,13 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.util.event.EventListenerInterface
+
 interface AnalogControllerConfigurationEventListenerInterface : EventListenerInterface {
         
 
                 @Throws(Exception::class)
             
-open fun onAnalogControllerConfigurationEvent(analogControllerConfigurationEvent: AnalogControllerConfigurationEvent)
+    open fun onAnalogControllerConfigurationEvent(analogControllerConfigurationEvent: AnalogControllerConfigurationEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

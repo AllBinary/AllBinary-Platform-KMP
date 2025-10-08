@@ -30,12 +30,11 @@ open public class CollidableAlwaysPickupNeverCollideBehaviorFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: CollidableAlwaysPickupNeverCollideBehavior = CollidableAlwaysPickupNeverCollideBehavior()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CollidableAlwaysPickupNeverCollideBehavior{
 

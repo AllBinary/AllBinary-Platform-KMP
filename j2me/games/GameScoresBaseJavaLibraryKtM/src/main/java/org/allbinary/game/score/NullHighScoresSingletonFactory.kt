@@ -31,12 +31,11 @@ open public class NullHighScoresSingletonFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: HighScores = HighScores("Loading", "High Scores Not Loaded", CommonStrings.getInstance()!!.PERIODS)
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : HighScores{
 

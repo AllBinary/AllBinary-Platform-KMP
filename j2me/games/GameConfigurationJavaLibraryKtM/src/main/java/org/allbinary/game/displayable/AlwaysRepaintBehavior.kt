@@ -27,6 +27,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.thread.ARunnable
 import javax.microedition.lcdui.Canvas
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
@@ -36,12 +37,11 @@ import org.allbinary.thread.NullRunnable
 
 open public class AlwaysRepaintBehavior : RepaintBehavior {
         
-
-        companion object {
+companion object {
             
     private val instance: AlwaysRepaintBehavior = AlwaysRepaintBehavior()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AlwaysRepaintBehavior{
 
@@ -60,7 +60,8 @@ open fun getInstance()
             }            
         
     private val NAME: String = "AlwaysRepaintBehavior"
-override fun repaint(canvas: Canvas)
+
+    override fun repaint(canvas: Canvas)
         //nullable = true from not(false or (false and false)) = true
 {
     //var canvas = canvas
@@ -81,9 +82,10 @@ override fun repaint(canvas: Canvas)
                                 
                         else {
                             
-    var thread: Thread = Thread(object: NullRunnable()
+    var thread: Thread = Thread(object: ARunnable()
                                 {
-                                override fun run()
+                                
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -109,7 +111,8 @@ thread.start()
                             
 }
 
-override fun onChangeRepaint(canvas: Canvas)
+
+    override fun onChangeRepaint(canvas: Canvas)
         //nullable = true from not(false or (false and false)) = true
 {
     //var canvas = canvas

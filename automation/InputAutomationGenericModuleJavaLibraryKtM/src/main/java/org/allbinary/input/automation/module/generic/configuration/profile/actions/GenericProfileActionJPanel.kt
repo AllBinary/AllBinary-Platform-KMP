@@ -41,12 +41,12 @@ open public class GenericProfileActionJPanel : javax.swing.JPanel {
     private var genericProfileAction: GenericProfileAction
 
     private var genericProfileActionScriptJPanel: GenericProfileActionScriptJPanel
-public constructor        (){
+public constructor (){
 initComponents()
 }
 
 
-open fun updateProfileActionUI()
+    open fun updateProfileActionUI()
         //nullable = true from not(false or (false and true)) = true
 {
 this.blankProfileActionScriptJPanel!!.removeAll()
@@ -66,7 +66,7 @@ logUtil!!.put("Updated UI", this, "updateUI")
 }
 
 
-open fun getGenericProfileAction()
+    open fun getGenericProfileAction()
         //nullable = true from not(false or (false and true)) = true
 : GenericProfileAction{
 
@@ -77,7 +77,7 @@ open fun getGenericProfileAction()
 }
 
 
-open fun setGenericProfileAction(genericProfileAction: GenericProfileAction)
+    open fun setGenericProfileAction(genericProfileAction: GenericProfileAction)
         //nullable = true from not(false or (false and false)) = true
 {
 var genericProfileAction = genericProfileAction
@@ -85,7 +85,7 @@ this.genericProfileAction= genericProfileAction
 }
 
 
-open fun getGenericProfileActionScriptJPanel()
+    open fun getGenericProfileActionScriptJPanel()
         //nullable = true from not(false or (false and true)) = true
 : GenericProfileActionScriptJPanel{
 
@@ -96,7 +96,7 @@ open fun getGenericProfileActionScriptJPanel()
 }
 
 
-open fun setGenericProfileActionScriptJPanel(genericProfileActionScriptJPanel: GenericProfileActionScriptJPanel)
+    open fun setGenericProfileActionScriptJPanel(genericProfileActionScriptJPanel: GenericProfileActionScriptJPanel)
         //nullable = true from not(false or (false and false)) = true
 {
 var genericProfileActionScriptJPanel = genericProfileActionScriptJPanel
@@ -104,7 +104,7 @@ this.genericProfileActionScriptJPanel= genericProfileActionScriptJPanel
 }
 
 
-open fun initComponents()
+    open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
 genericProfileActionScriptJScrollPane= javax.swing.JScrollPane()
@@ -129,7 +129,7 @@ newColorAtJButton!!.setText("Color Range At")
 newColorAtJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -142,7 +142,7 @@ newTimeIntervalJButton!!.setText("Time Interval")
 newTimeIntervalJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -155,7 +155,7 @@ newAlwaysJButton!!.setText("Always On/Off")
 newAlwaysJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -173,7 +173,7 @@ layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Align
 }
 
 
-open fun newTimeIntervalJButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun newTimeIntervalJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -183,7 +183,7 @@ this.updateProfileActionUI()
 }
 
 
-open fun newAlwaysJButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun newAlwaysJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -193,7 +193,7 @@ this.updateProfileActionUI()
 }
 
 
-open fun newColorAtJButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun newColorAtJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt

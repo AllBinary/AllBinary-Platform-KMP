@@ -39,12 +39,11 @@ open public class ImageAnalysis
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ImageAnalysis = ImageAnalysis()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ImageAnalysis{
 
@@ -57,7 +56,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun process(bufferedImage: BufferedImage, colorRangeInterface: ColorRangeInterface)
+    open fun process(bufferedImage: BufferedImage, colorRangeInterface: ColorRangeInterface)
         //nullable = true from not(false or (false and false)) = true
 : ImageAnalysisResults{
 var bufferedImage = bufferedImage
@@ -123,7 +122,7 @@ colorAverage!!.setAvgBlue(blueTotal.toFloat() /totalPixels)
 }
 
 
-open fun processColorRangeResults(imageAnalysisResults: ImageAnalysisResults, colorRangeInterface: ColorRangeInterface, color: Color)
+    open fun processColorRangeResults(imageAnalysisResults: ImageAnalysisResults, colorRangeInterface: ColorRangeInterface, color: Color)
         //nullable = true from not(false or (false and false)) = true
 {
 var imageAnalysisResults = imageAnalysisResults
@@ -146,7 +145,7 @@ imageAnalysisResults!!.getImageColorRangeResults()!!.addTotalPixelsChecked()
 }
 
 
-open fun processImageColorResults(imageColorResults: ImageColorResults, colorRangeInterface: ColorRangeInterface, color: Color)
+    open fun processImageColorResults(imageColorResults: ImageColorResults, colorRangeInterface: ColorRangeInterface, color: Color)
         //nullable = true from not(false or (false and false)) = true
 {
 var imageColorResults = imageColorResults
@@ -212,7 +211,7 @@ var color = color
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -220,7 +219,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun process(bufferedImageArray: Array<BufferedImage?>, colorRangeInterface: ColorRangeInterface)
+    open fun process(bufferedImageArray: Array<BufferedImage?>, colorRangeInterface: ColorRangeInterface)
         //nullable = true from not(false or (false and false)) = true
 : Array<ImageAnalysisResults?>{
 var bufferedImageArray = bufferedImageArray

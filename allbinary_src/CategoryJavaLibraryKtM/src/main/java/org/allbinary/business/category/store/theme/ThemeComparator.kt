@@ -32,13 +32,13 @@ open public class ThemeComparator
         
                 , Comparator {
         
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun compare(anyType: Any, object2: Any)
+    open fun compare(anyType: Any, object2: Any)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var anyType = anyType

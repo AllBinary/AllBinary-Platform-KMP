@@ -35,15 +35,14 @@ open public class AuthenticationHelperFactory
         
                 , TagHelperFactoryInterface {
         
-
-        companion object {
+companion object {
             
     private val CLASSNAME: String = "admin.taghelpers.AuthenticationHelper"
 
     private val FACTORYNAME: String = "AuthenticationHelperFactory"
 
         }
-            public constructor        ()
+            public constructor ()
             : super()
         {
 }
@@ -51,7 +50,7 @@ open public class AuthenticationHelperFactory
 
                 @Throws(LicensingException::class)
             
-open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
+    open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
 : Any{
 var hashMap = hashMap
@@ -66,7 +65,7 @@ var pageContext = pageContext
 
                 @Throws(LicensingException::class)
             
-open fun getInstance(hashMap: HashMap<Any, Any>, httpServletRequest: HttpServletRequest)
+    open fun getInstance(hashMap: HashMap<Any, Any>, httpServletRequest: HttpServletRequest)
         //nullable =  from not(true or (false and false)) = 
 : Any{
 var hashMap = hashMap

@@ -21,28 +21,26 @@
 
         import java.lang.Object        
         
-        import java.lang.Runnable
-        
         
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.thread.ARunnable
 import java.io.File
 import org.allbinary.logic.communication.log.LogUtil
 
 open public class FileJDialog : javax.swing.JDialog {
         
-
-        companion object {
+companion object {
             
-open fun main(args: Array<String?>)
+    open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var args = args
-java.awt.EventQueue.invokeLater(object: Runnable()
+java.awt.EventQueue.invokeLater(object: ARunnable()
                                 {
                                 
-open fun run()
+    open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 FileJDialog(javax.swing.JFrame(), true).
@@ -59,7 +57,7 @@ FileJDialog(javax.swing.JFrame(), true).
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var finishedListenerInterface: FileJDialogListenerInterface
-public constructor        ()                        
+public constructor ()                        
 
                             : super(){
 
@@ -70,7 +68,7 @@ initComponents()
 this.getJFileChooser1()!!.setMultiSelectionEnabled(true)
 }
 
-public constructor        (parent: java.awt.Frame, modal: Boolean)                        
+public constructor (parent: java.awt.Frame, modal: Boolean)                        
 
                             : super(parent, modal){
 var parent = parent
@@ -84,7 +82,7 @@ this.getJFileChooser1()!!.setMultiSelectionEnabled(true)
 }
 
 
-open fun addFinishedListener(finishedListenerInterface: FileJDialogListenerInterface)
+    open fun addFinishedListener(finishedListenerInterface: FileJDialogListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var finishedListenerInterface = finishedListenerInterface
@@ -92,7 +90,7 @@ this.finishedListenerInterface= finishedListenerInterface
 }
 
 
-open fun initComponents()
+    open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
 jFileChooser1= javax.swing.JFileChooser()
@@ -100,7 +98,7 @@ setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE)
 jFileChooser1!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -119,7 +117,7 @@ pack()
 }
 
 
-open fun jFileChooser1ActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun jFileChooser1ActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -158,7 +156,7 @@ logUtil!!.put("Starting Action Command: " +evt.getActionCommand(), this, "Action
 }
 
 
-open fun getJFileChooser1()
+    open fun getJFileChooser1()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JFileChooser{
 
@@ -169,7 +167,7 @@ open fun getJFileChooser1()
 }
 
 
-open fun setJFileChooser1(jFileChooser1: javax.swing.JFileChooser)
+    open fun setJFileChooser1(jFileChooser1: javax.swing.JFileChooser)
         //nullable = true from not(false or (false and false)) = true
 {
 var jFileChooser1 = jFileChooser1

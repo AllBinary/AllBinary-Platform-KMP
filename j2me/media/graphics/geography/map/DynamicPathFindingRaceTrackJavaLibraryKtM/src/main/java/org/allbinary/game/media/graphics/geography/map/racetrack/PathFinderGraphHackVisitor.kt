@@ -32,7 +32,6 @@ import org.allbinary.util.BasicArrayList
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.game.layer.AllBinaryTiledLayer
 import org.allbinary.graphics.CellPosition
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.BasicGeographicMapCellPositionFactory
 import org.allbinary.media.graphics.geography.map.BasicGeographicMapUtil
@@ -44,7 +43,7 @@ open public class PathFinderGraphHackVisitor : BasePathFinderGraphVisitor<V, E> 
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (geographicMapInterface: BasicGeographicMap, edgeMinimum: Int, minPathWeight: Int, maxPathWeight: Int)                        
+public constructor (geographicMapInterface: BasicGeographicMap, edgeMinimum: Int, minPathWeight: Int, maxPathWeight: Int)                        
 
                             : super(geographicMapInterface, edgeMinimum, minPathWeight, maxPathWeight){
     //var geographicMapInterface = geographicMapInterface
@@ -60,7 +59,7 @@ var maxPathWeight = maxPathWeight
 
                 @Throws(Exception::class)
             
-open fun visit(graph: SimpleWeightedGraph, startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList)
+    open fun visit(graph: SimpleWeightedGraph, startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var graph = graph
@@ -74,7 +73,7 @@ this.fixOverPassEdges(graph)
 
                 @Throws(Exception::class)
             
-open fun fixStart(graph: SimpleWeightedGraph<CellPosition, DefaultWeightedEdge>, startPathFindingNodeList: BasicArrayList)
+    open fun fixStart(graph: SimpleWeightedGraph<CellPosition, DefaultWeightedEdge>, startPathFindingNodeList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var graph = graph
@@ -126,7 +125,7 @@ graph.removeEdge(geographicMapCellPosition, geographicMapCellPositionNeighbor)
 
                 @Throws(Exception::class)
             
-open fun fixEnd(graph: SimpleWeightedGraph<CellPosition, DefaultWeightedEdge>, endPathFindingNodeList: BasicArrayList)
+    open fun fixEnd(graph: SimpleWeightedGraph<CellPosition, DefaultWeightedEdge>, endPathFindingNodeList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var graph = graph
@@ -179,7 +178,7 @@ graph.addEdge(geographicMapCellPosition, geographicMapCellPositionNeighbor)
 
                 @Throws(Exception::class)
             
-open fun fixOverPassEdges(graph: SimpleWeightedGraph<CellPosition, DefaultWeightedEdge>)
+    open fun fixOverPassEdges(graph: SimpleWeightedGraph<CellPosition, DefaultWeightedEdge>)
         //nullable = true from not(false or (false and false)) = true
 {
 var graph = graph
@@ -224,7 +223,7 @@ graph.addEdge(overPassGeographicMapCellPosition, leftUnderPassGeographicMapCellP
 
                 @Throws(Exception::class)
             
-open fun fixPath(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, pathList: BasicArrayList)
+    open fun fixPath(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, pathList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var startPathFindingNodeList = startPathFindingNodeList
@@ -269,7 +268,7 @@ this.removeOverPassEdges(pathList)
 
                 @Throws(Exception::class)
             
-open fun removeOverPassEdges(pathList: BasicArrayList)
+    open fun removeOverPassEdges(pathList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var pathList = pathList
@@ -312,7 +311,7 @@ var pathList = pathList
 }
 
 
-open fun isValid(graphPath: GraphPath)
+    open fun isValid(graphPath: GraphPath)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var graphPath = graphPath

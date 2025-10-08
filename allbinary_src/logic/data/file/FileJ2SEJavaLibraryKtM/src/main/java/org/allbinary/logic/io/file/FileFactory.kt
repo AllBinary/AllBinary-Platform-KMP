@@ -30,12 +30,11 @@ open public class FileFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: FileFactory = FileFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : FileFactory{
 
@@ -55,7 +54,7 @@ open fun getInstance()
         
                 @Throws(Exception::class)
             
-open fun getInstance(filePath: String)
+    open fun getInstance(filePath: String)
         //nullable =  from not(true or (false and false)) = 
 : AbFile{
 var filePath = filePath
@@ -69,7 +68,7 @@ var filePath = filePath
 
                 @Throws(Exception::class)
             
-open fun getInstance(file: AbFile, childFilePath: String)
+    open fun getInstance(file: AbFile, childFilePath: String)
         //nullable =  from not(true or (false and false)) = 
 : AbFile{
 var file = file
@@ -84,7 +83,7 @@ var childFilePath = childFilePath
 
                 @Throws(Exception::class)
             
-open fun isFile(path: String)
+    open fun isFile(path: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var path = path

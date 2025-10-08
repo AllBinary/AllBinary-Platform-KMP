@@ -27,6 +27,7 @@
         
 import org.allbinary.animation.AnimationInterfaceCompositeInterface
 import org.allbinary.graphics.paint.PaintableInterface
+
 interface PartInterface : PaintableInterface, AnimationInterfaceCompositeInterface {
         
 

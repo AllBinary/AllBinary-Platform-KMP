@@ -25,18 +25,19 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface AnimationListenerInterface {
         
 
-open fun onAnimationStart()
+    open fun onAnimationStart()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun onAnimationEnd()
+    open fun onAnimationEnd()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun onAnimationRepeat()
+    open fun onAnimationRepeat()
         //nullable = true from not(false or (false and true)) = true
 
 

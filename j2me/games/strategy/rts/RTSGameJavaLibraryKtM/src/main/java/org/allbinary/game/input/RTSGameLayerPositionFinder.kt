@@ -34,12 +34,11 @@ open public class RTSGameLayerPositionFinder
         
                 , LayerPositionFinderInterface {
         
-
-        companion object {
+companion object {
             
     private val instance: RTSGameLayerPositionFinder = RTSGameLayerPositionFinder()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : RTSGameLayerPositionFinder{
 
@@ -51,13 +50,13 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
 
 
-open fun getLayerInterface(geographicMapCellPosition: GeographicMapCellPosition)
+    open fun getLayerInterface(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : AllBinaryLayer{
 var geographicMapCellPosition = geographicMapCellPosition

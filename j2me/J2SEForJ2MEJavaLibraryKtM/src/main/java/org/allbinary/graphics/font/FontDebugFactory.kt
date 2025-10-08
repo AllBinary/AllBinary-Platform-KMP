@@ -32,12 +32,11 @@ open public class FontDebugFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: FontDebugFactory = FontDebugFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : FontDebugFactory{
 
@@ -55,7 +54,7 @@ open fun getInstance()
             {
             }            
         
-open fun setFont(font: Font, graphics: Graphics)
+    open fun setFont(font: Font, graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var font = font

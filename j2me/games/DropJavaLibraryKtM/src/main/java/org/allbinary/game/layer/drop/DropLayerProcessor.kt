@@ -32,12 +32,11 @@ import org.allbinary.util.BasicArrayList
 
 open public class DropLayerProcessor : BasicLayerProcessor {
         
-
-        companion object {
+companion object {
             
     private val LAYER_PROCESSOR: BasicLayerProcessor = DropLayerProcessor()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BasicLayerProcessor{
 
@@ -49,12 +48,13 @@ open fun getInstance()
 
 
         }
-            private constructor        (){
+            private constructor (){
 }
 
 
                 @Throws(Exception::class)
-            override fun process(allBinaryLayerManager: AllBinaryLayerManager)
+            
+    override fun process(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager

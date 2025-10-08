@@ -28,12 +28,11 @@
 
 open public class NullDropCellPositionGenerator : BaseDropCellPositionGenerator {
         
-
-        companion object {
+companion object {
             
     private val instance: NullDropCellPositionGenerator = NullDropCellPositionGenerator()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : NullDropCellPositionGenerator{
 

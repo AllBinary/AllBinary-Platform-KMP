@@ -32,12 +32,11 @@ open public class SmallIntegerSingletonFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : SmallIntegerSingletonFactory{
 
@@ -64,7 +63,7 @@ open fun getInstance()
 
     var lastNegativeMin: Int = 0
 
-open fun init(value: Int, negativeValue: Int)
+    open fun init(value: Int, negativeValue: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -111,7 +110,7 @@ MIN= value
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -146,13 +145,13 @@ lastNegativeMin= NEGATIVE_MAX
                                 
 }
 
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getInstance(index: Int)
+    open fun getInstance(index: Int)
         //nullable =  from not(true or (false and false)) = 
 : Integer{
 var index = index
@@ -164,7 +163,7 @@ var index = index
 }
 
 
-open fun getInstanceNoThrow(index: Int)
+    open fun getInstanceNoThrow(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : Integer{
 var index = index
@@ -189,7 +188,7 @@ var index = index
 }
 
 
-open fun createInstance(index: Int)
+    open fun createInstance(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : Integer{
 var index = index
@@ -215,7 +214,7 @@ var index = index
 }
 
 
-open fun getString(index: Int)
+    open fun getString(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var index = index

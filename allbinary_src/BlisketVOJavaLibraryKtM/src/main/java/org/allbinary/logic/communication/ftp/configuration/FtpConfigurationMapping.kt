@@ -36,7 +36,7 @@ open public class FtpConfigurationMapping
         
 
     private var ftpConfigurationInterface: FtpConfigurationInterface
-public constructor        (ftpConfigurationInterface: FtpConfigurationInterface)
+public constructor (ftpConfigurationInterface: FtpConfigurationInterface)
             : super()
         {
 var ftpConfigurationInterface = ftpConfigurationInterface
@@ -44,7 +44,7 @@ this.ftpConfigurationInterface= ftpConfigurationInterface
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -64,7 +64,7 @@ hashMap!!.put(FtpConfigurationData.PATH, this.ftpConfigurationInterface!!.getPat
 
                 @Throws(Exception::class)
             
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -77,7 +77,7 @@ open fun getKey()
 
                 @Throws(Exception::class)
             
-open fun toVector()
+    open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 

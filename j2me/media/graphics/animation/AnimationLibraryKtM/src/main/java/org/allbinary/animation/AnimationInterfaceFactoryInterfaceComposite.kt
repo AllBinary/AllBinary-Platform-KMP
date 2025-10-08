@@ -34,7 +34,7 @@ open public class AnimationInterfaceFactoryInterfaceComposite
         
 
     private val animationInterfaceFactoryInterfaceArray: Array<AnimationInterfaceFactoryInterface?>
-public constructor        (basicAnimationInterfaceFactoryInterfaceArray: Array<AnimationInterfaceFactoryInterface?>)
+public constructor (basicAnimationInterfaceFactoryInterfaceArray: Array<AnimationInterfaceFactoryInterface?>)
             : super()
         {
     //var basicAnimationInterfaceFactoryInterfaceArray = basicAnimationInterfaceFactoryInterfaceArray
@@ -43,7 +43,8 @@ this.animationInterfaceFactoryInterfaceArray= basicAnimationInterfaceFactoryInte
 
 
                 @Throws(Exception::class)
-            override fun getInstance(instanceId: Int)
+            
+    override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var instanceId = instanceId
@@ -55,7 +56,7 @@ this.animationInterfaceFactoryInterfaceArray= basicAnimationInterfaceFactoryInte
 }
 
 
-open fun getAnimationInterfaceFactoryInterfaceArray()
+    open fun getAnimationInterfaceFactoryInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<AnimationInterfaceFactoryInterface?>{
 
@@ -65,7 +66,8 @@ open fun getAnimationInterfaceFactoryInterfaceArray()
                         return animationInterfaceFactoryInterfaceArray
 }
 
-override fun setInitialScale(scaleProperties: ScaleProperties)
+
+    override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
 {
     //var scaleProperties = scaleProperties

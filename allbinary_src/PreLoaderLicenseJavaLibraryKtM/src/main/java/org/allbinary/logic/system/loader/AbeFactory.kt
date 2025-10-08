@@ -42,12 +42,11 @@ open public class AbeFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AbeFactory = AbeFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AbeFactory{
 
@@ -63,7 +62,7 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var useCustomLoader: Boolean = false
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -72,7 +71,7 @@ private constructor        ()
                 @Throws(LicensingException::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, className: String)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, className: String)
         //nullable =  from not(true or (false and false)) = 
 : Any{
     //var abeClientInformation = abeClientInformation
@@ -124,7 +123,7 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, classN
                 @Throws(LicensingException::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, className: String, classes: Array<KClass<*>?>, params: Array<Any?>)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, className: String, classes: Array<KClass<*>?>, params: Array<Any?>)
         //nullable =  from not(true or (false and false)) = 
 : Any{
     //var abeClientInformation = abeClientInformation
@@ -228,7 +227,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "getInstance(className,params)", 
                 @Throws(LicensingException::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun ::class(abeClientInformation: AbeClientInformationInterface, className: String)
+    open fun ::class(abeClientInformation: AbeClientInformationInterface, className: String)
         //nullable = true from not(false or (false and false)) = true
 : KClass<*>{
     //var abeClientInformation = abeClientInformation

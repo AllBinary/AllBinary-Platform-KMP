@@ -30,12 +30,11 @@ open public class StoreFrontsData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: StoreFrontsData = StoreFrontsData()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : StoreFrontsData{
 

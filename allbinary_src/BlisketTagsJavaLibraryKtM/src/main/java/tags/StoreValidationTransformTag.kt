@@ -36,7 +36,7 @@ open public class StoreValidationTransformTag : ValidationTransformTag {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var storeName: String
-public constructor        ()                        
+public constructor ()                        
 
                             : super(){
 
@@ -46,7 +46,7 @@ public constructor        ()
 }
 
 
-open fun setStoreName(value: String)
+    open fun setStoreName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -57,7 +57,7 @@ this.getPropertiesHashMap()!!.put(StoreFrontData.getInstance()!!.NAME, this.stor
 
                 @Throws(JspTagException::class)
             
-open fun doStartTag()
+    open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

@@ -44,13 +44,13 @@ open public class UserEmailEventsConfiguration
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var emailEventHashMap: HashMap<Any, Any>
-public constructor        ()
+public constructor ()
             : super()
         {
 this.init()
 }
 
-public constructor        (hashMap: HashMap<Any, Any>)
+public constructor (hashMap: HashMap<Any, Any>)
             : super()
         {
 var hashMap = hashMap
@@ -58,7 +58,7 @@ this.init()
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 this.emailEventHashMap= HashMap<Any, Any>()
@@ -74,7 +74,7 @@ this.emailEventHashMap= HashMap<Any, Any>()
 }
 
 
-open fun getEventConfigurationHashMap()
+    open fun getEventConfigurationHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -85,7 +85,7 @@ open fun getEventConfigurationHashMap()
 }
 
 
-open fun addUserEmailEventConfiguration(userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface)
+    open fun addUserEmailEventConfiguration(userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var userEmailEventConfigurationInterface = userEmailEventConfigurationInterface
@@ -104,7 +104,7 @@ this.emailEventHashMap!!.put(userEmailEventConfigurationInterface!!.getName(), u
 
                 @Throws(Exception::class)
             
-open fun getEventListener(abeClientInformation: AbeClientInformationInterface, userEmailEventNameData: UserEmailEventNameData, userInterface: UserInterface)
+    open fun getEventListener(abeClientInformation: AbeClientInformationInterface, userEmailEventNameData: UserEmailEventNameData, userInterface: UserInterface)
         //nullable = true from not(false or (false and false)) = true
 : UserEmailEventListenerInterface{
     //var abeClientInformation = abeClientInformation

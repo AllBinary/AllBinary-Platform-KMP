@@ -55,7 +55,7 @@ open public class VelocityWidget : BasicHud {
     private val offset: Int
 
     private var offset2: Int= 0
-public constructor        (powerOfTenVelocity: Int, location: Int, direction: Int, basicColor: BasicColor)                        
+public constructor (powerOfTenVelocity: Int, location: Int, direction: Int, basicColor: BasicColor)                        
 
                             : super(location, direction, 14, MyFont.getInstance()!!.getSize() *(5 +MathUtil.getInstance()!!.getTotalDigits(powerOfTenVelocity) +1), 2, basicColor){
 var powerOfTenVelocity = powerOfTenVelocity
@@ -76,7 +76,7 @@ this.offset= myFont!!.stringWidth(this.primitiveLongUtil!!.getMaxDigits()) +myFo
 }
 
 
-open fun get()
+    open fun get()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -87,7 +87,7 @@ open fun get()
 }
 
 
-open fun add(value: Int)
+    open fun add(value: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -95,7 +95,7 @@ this.set(this.velocity +value)
 }
 
 
-open fun set(value: Int)
+    open fun set(value: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -142,7 +142,7 @@ this.offset2= this.offset -myFont!!.stringWidth(this.totalDigits) -myFont!!.stri
 }
 
 
-open fun reduce(value: Int)
+    open fun reduce(value: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -150,7 +150,7 @@ this.set(this.velocity -value)
 }
 
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

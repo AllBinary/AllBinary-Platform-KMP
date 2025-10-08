@@ -40,8 +40,7 @@ import org.allbinary.util.BasicArrayList
 
 open public class InputToGameKeyMapping : InputMapping {
         
-
-        companion object {
+companion object {
             
     val NULL_INPUT_TO_GAME_KEY_MAPPING: InputToGameKeyMapping = InputToGameKeyMapping()
 
@@ -54,13 +53,13 @@ open public class InputToGameKeyMapping : InputMapping {
     var negativePlatformToGameKeyMapping: Array<GameKey?> = arrayOfNulls(0)
 
     private val platformToGameKeyMapping: Array<GameKey?> = arrayOfNulls(InputFactory.getInstance()!!.MAX)
-public constructor        (){
+public constructor (){
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 this.clear()
 }
 
 
-open fun clear()
+    open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -75,14 +74,16 @@ platformToGameKeyMapping[index]= gameKeyFactory!!.NONE
 
 }
 
-override fun removeAll()
+
+    override fun removeAll()
         //nullable = true from not(false or (false and true)) = true
 {
 super.removeAll()
 this.clear()
 }
 
-override fun add(inputToGameKeyMapping: InputToGameKeyMapping)
+
+    override fun add(inputToGameKeyMapping: InputToGameKeyMapping)
         //nullable = true from not(false or (false and false)) = true
 {
     //var inputToGameKeyMapping = inputToGameKeyMapping
@@ -110,7 +111,7 @@ override fun add(inputToGameKeyMapping: InputToGameKeyMapping)
 }
 
 
-open fun addAll(input: Input, list: BasicArrayList)
+    open fun addAll(input: Input, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var input = input
@@ -130,7 +131,8 @@ this.add(input, mappedToInput)
 
 }
 
-override fun add(input: Input, mappedToInput: Input)
+
+    override fun add(input: Input, mappedToInput: Input)
         //nullable = true from not(false or (false and false)) = true
 {
 var input = input
@@ -139,7 +141,8 @@ super.add(input, mappedToInput)
 this.set(input, mappedToInput)
 }
 
-override fun remove(input: Input, mappedToInput: Input)
+
+    override fun remove(input: Input, mappedToInput: Input)
         //nullable = true from not(false or (false and false)) = true
 {
 var input = input
@@ -151,7 +154,7 @@ this.set(input, gameKeyFactory!!.NONE)
 }
 
 
-open fun set(input: Input, mappedToInput: Input)
+    open fun set(input: Input, mappedToInput: Input)
         //nullable = true from not(false or (false and false)) = true
 {
 var input = input
@@ -171,7 +174,7 @@ var mappedToInput = mappedToInput
 }
 
 
-open fun getMaxMappable()
+    open fun getMaxMappable()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -182,7 +185,7 @@ open fun getMaxMappable()
 }
 
 
-open fun getReverseInstance(id: Int)
+    open fun getReverseInstance(id: Int)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var id = id
@@ -233,7 +236,7 @@ var id = id
 
                 @Throws(Exception::class)
             
-open fun init(canvas: Canvas, gameKey: GameKey)
+    open fun init(canvas: Canvas, gameKey: GameKey)
         //nullable = true from not(false or (false and false)) = true
 {
 var canvas = canvas
@@ -278,7 +281,7 @@ var gameKey = gameKey
 
                 @Throws(Exception::class)
             
-open fun getSmallestCanvasGameKeyCode(canvas: Canvas)
+    open fun getSmallestCanvasGameKeyCode(canvas: Canvas)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var canvas = canvas
@@ -315,7 +318,7 @@ nextKey= canvas.getKeyCode(mappedGameKeys[index]!!.getId())
 }
 
 
-open fun init(canvas: Canvas)
+    open fun init(canvas: Canvas)
         //nullable = true from not(false or (false and false)) = true
 {
 var canvas = canvas
@@ -375,7 +378,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, t)
 }
 
 
-open fun getInstance(canvas: Canvas, id: Int)
+    open fun getInstance(canvas: Canvas, id: Int)
         //nullable =  from not(true or (false and false)) = 
 : GameKey{
 var canvas = canvas
@@ -418,7 +421,7 @@ var id = id
 }
 
 
-open fun getInstance(id: Int)
+    open fun getInstance(id: Int)
         //nullable =  from not(true or (false and false)) = 
 : GameKey{
 var id = id

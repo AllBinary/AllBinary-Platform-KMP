@@ -41,14 +41,15 @@ open public class Sound
     private var resource: String
 
     var player: Player = NoPlayer.NO_PLAYER
-protected constructor        (resource: String)
+protected constructor (resource: String)
             : super()
         {
 var resource = resource
 this.resource= resource
 }
 
-override fun getResource()
+
+    override fun getResource()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -58,7 +59,8 @@ override fun getResource()
                         return this.resource
 }
 
-override fun getPlayerP()
+
+    override fun getPlayerP()
         //nullable = true from not(false or (false and true)) = true
 : Player{
 
@@ -69,7 +71,7 @@ override fun getPlayerP()
 }
 
 
-open fun setPlayerP(player: Player)
+    open fun setPlayerP(player: Player)
         //nullable = true from not(false or (false and false)) = true
 {
     //var player = player
@@ -78,13 +80,14 @@ this.player= player
 
 
                 @Throws(Exception::class)
-            override fun init()
+            
+    override fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun getDuration()
+    open fun getDuration()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -94,7 +97,8 @@ open fun getDuration()
                         return  -1
 }
 
-override fun run()
+
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 

@@ -16,12 +16,11 @@ open public class ThreadObjectUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ThreadObjectUtil = ThreadObjectUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ThreadObjectUtil{
 
@@ -41,7 +40,7 @@ open fun getInstance()
         
     val NULL_PRIORITY_RUNNABLE: PriorityRunnable = NullPriorityRunnable()
 
-open fun notifyObject(anyType: Object)
+    open fun notifyObject(anyType: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 var anyType = anyType
@@ -51,7 +50,7 @@ anyType!!.notify()
 
                 @Throws(Exception::class)
             
-open fun waitObject(anyType: Object)
+    open fun waitObject(anyType: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 var anyType = anyType
@@ -61,7 +60,7 @@ anyType!!.wait()
 
                 @Throws(Exception::class)
             
-open fun waitObject(anyType: Object, delay: Long)
+    open fun waitObject(anyType: Object, delay: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var anyType = anyType

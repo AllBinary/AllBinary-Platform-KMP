@@ -26,12 +26,11 @@ open public class MediaUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: MediaUtil = MediaUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : MediaUtil{
 
@@ -42,7 +41,7 @@ open fun getInstance()
 }
 
 
-open fun getImageBufferPropertyHashMap(bufferedImage: BufferedImage)
+    open fun getImageBufferPropertyHashMap(bufferedImage: BufferedImage)
         //nullable = true from not(false or (false and false)) = true
 : HashMap<Any, Any>{
     //var bufferedImage = bufferedImage
@@ -86,7 +85,7 @@ hashMap!!.put(propertyStringArray[index]!!, propertyObject!!.toString())
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -94,7 +93,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun saveImageFile(originalImageFile: AbFile, newImageFileName: String, category: String, mediaData: MediaData, newWidth: Int, newHeight: Int)
+    open fun saveImageFile(originalImageFile: AbFile, newImageFileName: String, category: String, mediaData: MediaData, newWidth: Int, newHeight: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var originalImageFile = originalImageFile

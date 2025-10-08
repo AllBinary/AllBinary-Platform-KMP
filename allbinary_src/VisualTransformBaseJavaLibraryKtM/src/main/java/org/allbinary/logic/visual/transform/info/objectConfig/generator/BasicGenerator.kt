@@ -31,11 +31,11 @@ open public class BasicGenerator : TransformInfoObjectConfigGenerator {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (){
+public constructor (){
 }
 
 
-open fun process(input: String)
+    open fun process(input: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var input = input

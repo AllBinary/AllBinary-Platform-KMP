@@ -28,18 +28,19 @@
 import java.util.HashMap
 import javax.servlet.jsp.PageContext
 import org.allbinary.logic.communication.http.request.session.WeblisketSessionInterface
+
 interface TransformInfoHttpInterface : TransformInfoInterface {
         
 
-open fun getWeblisketSession()
+    open fun getWeblisketSession()
         //nullable = true from not(false or (false and true)) = true
 : WeblisketSessionInterface
 
-open fun getPageContext()
+    open fun getPageContext()
         //nullable = true from not(false or (false and true)) = true
 : PageContext
 
-open fun getPropertiesHashMap()
+    open fun getPropertiesHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>
 

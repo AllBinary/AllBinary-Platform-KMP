@@ -28,7 +28,7 @@
 
 open public class InputFeature : Feature {
         
- constructor        (name: String)                        
+ constructor (name: String)                        
 
                             : super(name){
 var name = name

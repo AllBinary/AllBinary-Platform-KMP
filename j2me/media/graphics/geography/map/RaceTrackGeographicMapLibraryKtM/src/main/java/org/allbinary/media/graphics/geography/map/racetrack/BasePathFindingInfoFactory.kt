@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.game.layer.AllBinaryTiledLayer
 import org.allbinary.logic.string.StringMaker
@@ -50,7 +49,7 @@ open public class BasePathFindingInfoFactory
 
                 @Throws(Exception::class)
             
-open fun init(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, mapArray: Array<IntArray?>)
+    open fun init(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, mapArray: Array<IntArray?>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapInterface = geographicMapInterface
@@ -66,7 +65,7 @@ open class RaceTrackGeographicMapCellPositionFactoryInitVisitor
     private var startLineId: Int
 
     private var finishLineId: Int
-public constructor        ()
+public constructor ()
             : super()
         {
 
@@ -79,7 +78,7 @@ this.finishLineId= raceTrackGeographicMapCellTypeFactory!!.getEndType()
 
                 @Throws(Exception::class)
             
-open fun visit(tiledLayer: AllBinaryTiledLayer, cellPosition: GeographicMapCellPosition)
+    open fun visit(tiledLayer: AllBinaryTiledLayer, cellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
     //var tiledLayer = tiledLayer
@@ -170,7 +169,7 @@ geographicMapInterface!!.getGeographicMapCellPositionFactory()!!.visit(RaceTrack
 
                 @Throws(Exception::class)
             
-open fun addStartPathFindingNode(pathFindingInfo: PathFindingInfo, startGeographicMapCellPosition: GeographicMapCellPosition)
+    open fun addStartPathFindingNode(pathFindingInfo: PathFindingInfo, startGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pathFindingInfo = pathFindingInfo
@@ -182,7 +181,7 @@ pathFindingInfo!!.addStartPathFindingNode(PathFindingNode(
 
                 @Throws(Exception::class)
             
-open fun addEndPathFindingNode(pathFindingInfo: PathFindingInfo, endGeographicMapCellPosition: GeographicMapCellPosition)
+    open fun addEndPathFindingNode(pathFindingInfo: PathFindingInfo, endGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pathFindingInfo = pathFindingInfo

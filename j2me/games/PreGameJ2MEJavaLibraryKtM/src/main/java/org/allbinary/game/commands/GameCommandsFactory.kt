@@ -33,12 +33,11 @@ open public class GameCommandsFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GameCommandsFactory = GameCommandsFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameCommandsFactory{
 
@@ -104,7 +103,7 @@ open fun getInstance()
     val FEATURE_UPDATE: Command = Command("Feature Update", Command.SCREEN, 1)
 
     val BUY_COMMAND: Command = Command("BUY", Command.SCREEN, 1)
-protected constructor        ()
+protected constructor ()
             : super()
         {
 }

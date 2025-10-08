@@ -42,7 +42,7 @@ open public class BasicInputMappingHelpPaintable : HelpPaintable {
     private var gameInputMappingArray: Array<GameInputMapping?>
 
     private val NONE: GameKey = GameKeyFactory.getInstance()!!.NONE
-protected constructor        (gameInputMappingArray: Array<GameInputMapping?>, basicColor: BasicColor)                        
+protected constructor (gameInputMappingArray: Array<GameInputMapping?>, basicColor: BasicColor)                        
 
                             : super(basicColor){
     //var gameInputMappingArray = gameInputMappingArray
@@ -56,7 +56,7 @@ this.update(NONE, NONE)
 }
 
 
-open fun update(selectedGameKey: GameKey, selectedInput: Input)
+    open fun update(selectedGameKey: GameKey, selectedInput: Input)
         //nullable = true from not(false or (false and false)) = true
 {
     //var selectedGameKey = selectedGameKey
@@ -104,7 +104,7 @@ super.setInputInfoP(keyInfo)
 }
 
 
-open fun get(keyList: BasicArrayList)
+    open fun get(keyList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var keyList = keyList

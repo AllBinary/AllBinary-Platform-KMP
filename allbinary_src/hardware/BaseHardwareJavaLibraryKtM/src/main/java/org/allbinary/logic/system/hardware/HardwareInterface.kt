@@ -27,21 +27,23 @@
         
 import java.util.Hashtable
 import org.allbinary.logic.system.hardware.components.interfaces.HardwareComponentInterface
+
 interface HardwareInterface {
         
 
-open fun getComponent(index: Int)
+    open fun getComponent(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : HardwareComponentInterface
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String
 
-open fun compareTo(hardwareInterface: HardwareInterface)
+    open fun compareTo(hardwareInterface: HardwareInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
-open fun difference(hardwareInterface: HardwareInterface)
+    open fun difference(hardwareInterface: HardwareInterface)
         //nullable = true from not(false or (false and false)) = true
 : Hashtable<Any, Any>
 

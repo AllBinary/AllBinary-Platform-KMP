@@ -39,7 +39,7 @@ open public class ColorCacheable
     private var key: Any
 
     private var color: Color
-public constructor        (key: Any)
+public constructor (key: Any)
             : super()
         {
 var key = key
@@ -50,7 +50,7 @@ key.
 }
 
 
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -61,7 +61,7 @@ open fun getKey()
 }
 
 
-open fun getColor()
+    open fun getColor()
         //nullable = true from not(false or (false and true)) = true
 : Color{
 
@@ -72,7 +72,7 @@ open fun getColor()
 }
 
 
-open fun setColor(color: Color)
+    open fun setColor(color: Color)
         //nullable = true from not(false or (false and false)) = true
 {
 var color = color

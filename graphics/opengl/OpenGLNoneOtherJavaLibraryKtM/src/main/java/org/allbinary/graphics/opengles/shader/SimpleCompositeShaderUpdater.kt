@@ -28,7 +28,7 @@
 
 open public class SimpleCompositeShaderUpdater : CompositeShaderUpdater {
         
-public constructor        (uniformBlockArray: Array<String?>, uniformArray: Array<String?>, attributeArray: Array<String?>)                        
+public constructor (uniformBlockArray: Array<String?>, uniformArray: Array<String?>, attributeArray: Array<String?>)                        
 
                             : super(uniformBlockArray, uniformArray, attributeArray){
     //var uniformBlockArray = uniformBlockArray
@@ -40,7 +40,7 @@ public constructor        (uniformBlockArray: Array<String?>, uniformArray: Arra
                     
 }
 
-public constructor        (uniformBlockArray: Array<String?>, uniformArray: Array<String?>, attributeArray: Array<String?>, attributeHandleArray: IntArray)                        
+public constructor (uniformBlockArray: Array<String?>, uniformArray: Array<String?>, attributeArray: Array<String?>, attributeHandleArray: IntArray)                        
 
                             : super(uniformBlockArray, uniformArray, attributeArray, attributeHandleArray){
     //var uniformBlockArray = uniformBlockArray

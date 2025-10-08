@@ -43,7 +43,7 @@ open public class CategoryPrivateTree
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     var categoryFactoryInterface: CategoryFactoryInterface
-public constructor        (categoryFactoryInterface: CategoryFactoryInterface)
+public constructor (categoryFactoryInterface: CategoryFactoryInterface)
             : super()
         {
 var categoryFactoryInterface = categoryFactoryInterface
@@ -66,7 +66,7 @@ this.categoryFactoryInterface= categoryFactoryInterface
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun save(categoryInterface: CategoryInterface)
+    open fun save(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var categoryInterface = categoryInterface
@@ -102,7 +102,7 @@ cryptFileWriter!!.write(categoryInterface!!.getFilePath(), document)
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun delete(categoryInterface: CategoryInterface)
+    open fun delete(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var categoryInterface = categoryInterface

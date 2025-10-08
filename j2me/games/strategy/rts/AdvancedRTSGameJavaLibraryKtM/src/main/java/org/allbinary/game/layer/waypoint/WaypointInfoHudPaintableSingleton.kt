@@ -30,12 +30,11 @@ open public class WaypointInfoHudPaintableSingleton
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: WaypointInfoHudPaintable = WaypointInfoHudPaintable()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : WaypointInfoHudPaintable{
 

@@ -40,7 +40,7 @@ open public class MotionRectangles
     private var imageComparisonResult: ImageComparisonResult
 
     val MAX_PIXEL_DISTANCE_THRESHOLD: Int = 2
-public constructor        (name: String, imageComparisonResult: ImageComparisonResult)
+public constructor (name: String, imageComparisonResult: ImageComparisonResult)
             : super()
         {
 var name = name
@@ -51,7 +51,7 @@ this.setVector(Vector())
 }
 
 
-open fun getVector()
+    open fun getVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -62,7 +62,7 @@ open fun getVector()
 }
 
 
-open fun setVector(rectangleVector: Vector)
+    open fun setVector(rectangleVector: Vector)
         //nullable = true from not(false or (false and false)) = true
 {
 var rectangleVector = rectangleVector
@@ -70,7 +70,7 @@ this.rectangleVector= rectangleVector
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -81,7 +81,7 @@ open fun getName()
 }
 
 
-open fun getImageComparisonResult()
+    open fun getImageComparisonResult()
         //nullable = true from not(false or (false and true)) = true
 : ImageComparisonResult{
 
@@ -92,7 +92,7 @@ open fun getImageComparisonResult()
 }
 
 
-open fun setImageComparisonResult(imageComparisonResult: ImageComparisonResult)
+    open fun setImageComparisonResult(imageComparisonResult: ImageComparisonResult)
         //nullable = true from not(false or (false and false)) = true
 {
 var imageComparisonResult = imageComparisonResult

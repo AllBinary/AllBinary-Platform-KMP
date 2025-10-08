@@ -30,7 +30,7 @@ open public class DemoGameMidletState
             : Object
          {
         
-public constructor        ()
+public constructor ()
             : super()
         {
 }

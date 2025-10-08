@@ -44,7 +44,7 @@ open public class LoadGameForm : CommandForm {
         
 
     private var areChoices: Boolean= false
-public constructor        (commandListener: CommandListener, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (commandListener: CommandListener, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(commandListener, title, backgrounBasicColor, foregroundBasicColor){
 var commandListener = commandListener
@@ -60,7 +60,8 @@ this.update()
 this.initCommands(commandListener)
 }
 
-override fun initCommands(cmdListener: CommandListener)
+
+    override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var cmdListener = cmdListener
@@ -76,7 +77,8 @@ this.setCommandListener(cmdListener)
 
 
                 @Throws(Exception::class)
-            override fun update()
+            
+    override fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -103,7 +105,7 @@ super.update()
 }
 
 
-open fun add(list: BasicArrayList, name: String, option: Int)
+    open fun add(list: BasicArrayList, name: String, option: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var list = list
@@ -125,7 +127,7 @@ this.append(choiceGroup)
 }
 
 
-open fun getChoiceGroup(list: BasicArrayList, name: String, option: Int)
+    open fun getChoiceGroup(list: BasicArrayList, name: String, option: Int)
         //nullable = true from not(false or (false and false)) = true
 : ChoiceGroup{
 var list = list
@@ -163,7 +165,7 @@ choiceGroup!!.append(anyType!!.toString(), NullCanvas.NULL_IMAGE)
 }
 
 
-open fun getSelectedId()
+    open fun getSelectedId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -194,7 +196,7 @@ open fun getSelectedId()
 }
 
 
-open fun getSelectedText()
+    open fun getSelectedText()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

@@ -40,7 +40,7 @@ open public class PaymentGatewayInterfaceFactory
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        ()
+public constructor ()
             : super()
         {
 }
@@ -48,7 +48,7 @@ public constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getInstance(httpServletRequest: HttpServletRequest)
+    open fun getInstance(httpServletRequest: HttpServletRequest)
         //nullable =  from not(true or (false and false)) = 
 : PaymentGatewayInterface{
 var httpServletRequest = httpServletRequest
@@ -94,7 +94,7 @@ var httpServletRequest = httpServletRequest
 
                 @Throws(Exception::class)
             
-open fun getInstance(paymentType: BasicPaymentType)
+    open fun getInstance(paymentType: BasicPaymentType)
         //nullable =  from not(true or (false and false)) = 
 : PaymentGatewayInterface{
 var paymentType = paymentType
@@ -112,7 +112,7 @@ hashMap!!.put(PaymentGatewayData.NAME.toString(), paymentType!!.getName())
 
                 @Throws(Exception::class)
             
-open fun getInstance(hashMap: HashMap<Any, Any>)
+    open fun getInstance(hashMap: HashMap<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
 : PaymentGatewayInterface{
 var hashMap = hashMap

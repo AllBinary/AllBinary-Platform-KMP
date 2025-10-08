@@ -38,7 +38,7 @@ open public class GeologicalGeographicMapCellPositionFactory
         
 
     private val resourcePerMapCellType: IntArray
-public constructor        (resourcePerMapCellType: IntArray)
+public constructor (resourcePerMapCellType: IntArray)
             : super()
         {
 var resourcePerMapCellType = resourcePerMapCellType
@@ -48,7 +48,7 @@ this.resourcePerMapCellType= resourcePerMapCellType
 
                 @Throws(Exception::class)
             
-open fun getInstance(geographicMapInterface: BasicGeographicMap, i_column: Int, i_row: Int, columns: Int, rows: Int, width: Int, height: Int)
+    open fun getInstance(geographicMapInterface: BasicGeographicMap, i_column: Int, i_row: Int, columns: Int, rows: Int, width: Int, height: Int)
         //nullable =  from not(true or (false and false)) = 
 : GeographicMapCellPosition{
     //var geographicMapInterface = geographicMapInterface

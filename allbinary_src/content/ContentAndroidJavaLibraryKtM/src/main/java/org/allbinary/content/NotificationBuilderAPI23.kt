@@ -43,7 +43,8 @@ open public class NotificationBuilderAPI23 : NotificationBuilder {
             public constructor() : super()
             {
             }            
-        override fun build(context: Context, command: Command, message: String, integer: Integer, pendingIntent: PendingIntent)
+        
+    override fun build(context: Context, command: Command, message: String, integer: Integer, pendingIntent: PendingIntent)
         //nullable = true from not(false or (false and false)) = true
 : Parcelable{
 var context = context

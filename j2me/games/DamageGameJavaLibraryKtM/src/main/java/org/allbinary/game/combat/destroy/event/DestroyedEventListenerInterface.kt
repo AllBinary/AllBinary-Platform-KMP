@@ -26,12 +26,13 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.util.event.EventListenerInterface
+
 interface DestroyedEventListenerInterface : EventListenerInterface {
         
 
                 @Throws(Exception::class)
             
-open fun onDestroyed(destroyedEvent: DestroyedEvent)
+    open fun onDestroyed(destroyedEvent: DestroyedEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

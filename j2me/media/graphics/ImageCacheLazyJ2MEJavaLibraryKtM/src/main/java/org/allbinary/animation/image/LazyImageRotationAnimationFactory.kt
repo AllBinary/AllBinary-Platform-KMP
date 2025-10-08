@@ -41,7 +41,7 @@ open public class LazyImageRotationAnimationFactory
     private val animationInterfaceFactoryInterface: BaseImageAnimationFactory
 
     var scaleProperties: ScaleProperties = ScaleProperties.instance
-public constructor        (layoutIndex: Int, associatedLazyAnimationId: Int, animationInterfaceFactoryInterface: BaseImageAnimationFactory)
+public constructor (layoutIndex: Int, associatedLazyAnimationId: Int, animationInterfaceFactoryInterface: BaseImageAnimationFactory)
             : super()
         {
     //var layoutIndex = layoutIndex
@@ -55,7 +55,7 @@ ImageCacheFactory.getInstance()!!.hasAnyLazyAnimationFactories= true
 
                 @Throws(Exception::class)
             
-open fun getInstance(instanceId: Int)
+    open fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var instanceId = instanceId
@@ -85,7 +85,7 @@ open fun getInstance(instanceId: Int)
 }
 
 
-open fun setInitialScale(scaleProperties: ScaleProperties)
+    open fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
 {
     //var scaleProperties = scaleProperties

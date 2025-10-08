@@ -31,7 +31,7 @@ open public class ColorChangeEvent : AllBinaryEventObject {
         
 
     private var basicColor: BasicColor = BasicColorFactory.getInstance()!!.WHITE
-public constructor        (anyType: Any)                        
+public constructor (anyType: Any)                        
 
                             : super(anyType){
 var anyType = anyType
@@ -42,7 +42,7 @@ var anyType = anyType
 }
 
 
-open fun setBasicColorP(basicColor: BasicColor)
+    open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
 var basicColor = basicColor
@@ -50,7 +50,7 @@ this.basicColor= basicColor
 }
 
 
-open fun getBasicColorP()
+    open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
 

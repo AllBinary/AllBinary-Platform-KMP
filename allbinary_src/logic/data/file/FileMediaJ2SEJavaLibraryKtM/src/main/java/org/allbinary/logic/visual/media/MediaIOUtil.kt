@@ -17,12 +17,11 @@ open public class MediaIOUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: MediaIOUtil = MediaIOUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : MediaIOUtil{
 
@@ -40,7 +39,7 @@ open fun getInstance()
             {
             }            
         
-open fun getReaderFormatNames()
+    open fun getReaderFormatNames()
         //nullable = true from not(false or (false and true)) = true
 : Array<String?>{
 
@@ -51,7 +50,7 @@ open fun getReaderFormatNames()
 }
 
 
-open fun getWriterFormatNames()
+    open fun getWriterFormatNames()
         //nullable = true from not(false or (false and true)) = true
 : Array<String?>{
 

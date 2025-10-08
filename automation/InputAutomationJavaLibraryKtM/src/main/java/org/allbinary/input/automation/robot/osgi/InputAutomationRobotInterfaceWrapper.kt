@@ -33,7 +33,7 @@ open public class InputAutomationRobotInterfaceWrapper
         
 
     private var inputRobotInterface: InputRobotInterface
-public constructor        (inputRobotInterface: InputRobotInterface)
+public constructor (inputRobotInterface: InputRobotInterface)
             : super()
         {
 var inputRobotInterface = inputRobotInterface
@@ -41,7 +41,7 @@ this.setInputRobotInterface(inputRobotInterface)
 }
 
 
-open fun getInputRobotInterface()
+    open fun getInputRobotInterface()
         //nullable = true from not(false or (false and true)) = true
 : InputRobotInterface{
 
@@ -52,7 +52,7 @@ open fun getInputRobotInterface()
 }
 
 
-open fun setInputRobotInterface(inputRobotInterface: InputRobotInterface)
+    open fun setInputRobotInterface(inputRobotInterface: InputRobotInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var inputRobotInterface = inputRobotInterface

@@ -34,12 +34,11 @@ open public class GameLevelDisplayChangeEventListenersFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GameLevelDisplayChangeEventListenersFactory = GameLevelDisplayChangeEventListenersFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameLevelDisplayChangeEventListenersFactory{
 
@@ -59,7 +58,7 @@ open fun getInstance()
         
     private val list: BasicArrayList = BasicArrayList()
 
-open fun add(displayChangeEventListener: DisplayChangeEventListener)
+    open fun add(displayChangeEventListener: DisplayChangeEventListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var displayChangeEventListener = displayChangeEventListener
@@ -68,7 +67,7 @@ DisplayChangeEventHandler.getInstance()!!.addListener(displayChangeEventListener
 }
 
 
-open fun clear()
+    open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 

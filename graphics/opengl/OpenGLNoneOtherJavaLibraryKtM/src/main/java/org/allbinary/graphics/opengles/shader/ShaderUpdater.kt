@@ -34,12 +34,11 @@ open public class ShaderUpdater
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ShaderUpdater = ShaderUpdater()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ShaderUpdater{
 
@@ -61,7 +60,7 @@ open fun getInstance()
 
     val rendererStrings: RendererStrings = RendererStrings.getInstance()!!
 
-open fun onSurfaceCreated(gl: GL10, eglConfig: EGLConfig)
+    open fun onSurfaceCreated(gl: GL10, eglConfig: EGLConfig)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl

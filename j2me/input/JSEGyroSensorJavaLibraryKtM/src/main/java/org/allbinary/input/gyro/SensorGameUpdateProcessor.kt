@@ -42,7 +42,7 @@ open public class SensorGameUpdateProcessor
         
     private var inputSensor: AllBinarySensor
 
-open fun setInputSensor(inputSensor: AllBinarySensor)
+    open fun setInputSensor(inputSensor: AllBinarySensor)
         //nullable = true from not(false or (false and false)) = true
 {
 var inputSensor = inputSensor
@@ -50,7 +50,7 @@ this.inputSensor= inputSensor
 }
 
 
-open fun getInputSensor()
+    open fun getInputSensor()
         //nullable = true from not(false or (false and true)) = true
 : AllBinarySensor{
 
@@ -63,7 +63,7 @@ open fun getInputSensor()
 
                 @Throws(Exception::class)
             
-open fun process(anyType: Any)
+    open fun process(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var anyType = anyType
@@ -72,14 +72,14 @@ var anyType = anyType
 
                 @Throws(Exception::class)
             
-open fun sendNotifications(anyType: Any)
+    open fun sendNotifications(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var anyType = anyType
 }
 
 
-open fun isAnySensor()
+    open fun isAnySensor()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -107,7 +107,7 @@ open fun isAnySensor()
 }
 
 
-open fun setNoSensors()
+    open fun setNoSensors()
         //nullable = true from not(false or (false and true)) = true
 {
 GyroSensorFactory.getInstance()!!.setCompleteMotionGestureInputEventListener(NoCompleteMotionGestureInputEventListener.getInstance())

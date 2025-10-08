@@ -59,7 +59,7 @@ open public class OrderItemsEntity : AbSqlBean
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val tableName: String = "orderitems"
-public constructor        ()                        
+public constructor ()                        
 
                             : super(HistoryDbInitInfo()){
 
@@ -70,7 +70,7 @@ this.setTableName(tableName)
 }
 
 
-open fun insert(userName: String, order: OrderInterface)
+    open fun insert(userName: String, order: OrderInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var userName = userName
@@ -188,7 +188,7 @@ this.insert(vector)
 }
 
 
-open fun setStatus(orderId: String, groupId: String, status: String)
+    open fun setStatus(orderId: String, groupId: String, status: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var orderId = orderId
@@ -222,7 +222,7 @@ super.updateWhere(whereHashMap, updateHashMap)
 }
 
 
-open fun isEverythingShipped(orderId: String)
+    open fun isEverythingShipped(orderId: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var orderId = orderId
@@ -281,7 +281,7 @@ var orderId = orderId
 }
 
 
-open fun getBasketReview(orderId: String)
+    open fun getBasketReview(orderId: String)
         //nullable = true from not(false or (false and false)) = true
 : BasketReview{
 var orderId = orderId
@@ -379,7 +379,7 @@ basketReview!!.addItem(item)
 }
 
 
-open fun createTableStatement()
+    open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -488,7 +488,7 @@ stringBuffer!!.append(") )")
 }
 
 
-open fun createTable()
+    open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -499,7 +499,7 @@ open fun createTable()
 }
 
 
-open fun dropTable()
+    open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

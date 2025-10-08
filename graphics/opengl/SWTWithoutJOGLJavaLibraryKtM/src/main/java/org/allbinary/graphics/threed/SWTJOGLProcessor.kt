@@ -34,12 +34,11 @@ open public class SWTJOGLProcessor
         
                 , Runnable {
         
-
-        companion object {
+companion object {
             
     private val instance: SWTJOGLProcessor = SWTJOGLProcessor()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : SWTJOGLProcessor{
 
@@ -59,7 +58,8 @@ open fun getInstance()
         
     var glHolder: GLHolder = object: GLHolder()
                                 {
-                                override fun run(renderer: Any)
+                                
+    override fun run(renderer: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var renderer = renderer
@@ -68,7 +68,7 @@ var renderer = renderer
                                 }
                             
 
-open fun init(display: Any, comp: Any)
+    open fun init(display: Any, comp: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var display = display
@@ -76,14 +76,14 @@ open fun init(display: Any, comp: Any)
 }
 
 
-open fun setRenderer(renderer: Any)
+    open fun setRenderer(renderer: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var renderer = renderer
 }
 
 
-open fun isJOGL()
+    open fun isJOGL()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -94,32 +94,32 @@ open fun isJOGL()
 }
 
 
-open fun createSurface()
+    open fun createSurface()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun onSurfaceCreated()
+    open fun onSurfaceCreated()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun onSurfaceChanged(event: Any)
+    open fun onSurfaceChanged(event: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var event = event
 }
 
 
-open fun onSurfaceChanged()
+    open fun onSurfaceChanged()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun onSurfaceChanged(width: Int, height: Int)
+    open fun onSurfaceChanged(width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var width = width
@@ -127,25 +127,26 @@ open fun onSurfaceChanged(width: Int, height: Int)
 }
 
 
-open fun addListener()
+    open fun addListener()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun addListeners(midlet: MIDlet)
+    open fun addListeners(midlet: MIDlet)
         //nullable = true from not(false or (false and false)) = true
 {
     //var midlet = midlet
 }
 
-override fun run()
+
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun clear()
+    open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 }

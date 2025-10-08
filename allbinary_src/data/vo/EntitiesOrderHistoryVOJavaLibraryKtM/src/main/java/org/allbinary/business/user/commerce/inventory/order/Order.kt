@@ -66,7 +66,7 @@ open public class Order
     private var storeComment: String
 
     private var storeCancelComment: String
-public constructor        (basket: BasketInterface)
+public constructor (basket: BasketInterface)
             : super()
         {
 var basket = basket
@@ -77,7 +77,7 @@ id=
 shippingType= StringUtil.getInstance()!!.EMPTY_STRING
 }
 
-public constructor        (storeName: String, basket: BasketInterface, id: String, shippingType: String, special: String, paymentMethod: String)
+public constructor (storeName: String, basket: BasketInterface, id: String, shippingType: String, special: String, paymentMethod: String)
             : super()
         {
 var storeName = storeName
@@ -95,7 +95,7 @@ this.paymentMethod= paymentMethod
 }
 
 
-open fun isIdValid()
+    open fun isIdValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -121,7 +121,7 @@ open fun isIdValid()
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -132,7 +132,7 @@ open fun isValid()
 }
 
 
-open fun getIdValidationInfo()
+    open fun getIdValidationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -161,7 +161,7 @@ open fun getIdValidationInfo()
 }
 
 
-open fun setShippingMethod(shippingType: String)
+    open fun setShippingMethod(shippingType: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var shippingType = shippingType
@@ -169,7 +169,7 @@ this.shippingType= shippingType
 }
 
 
-open fun setPaymentMethod(value: String)
+    open fun setPaymentMethod(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -177,7 +177,7 @@ this.paymentMethod= value
 }
 
 
-open fun setSpecial(special: String)
+    open fun setSpecial(special: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var special = special
@@ -185,7 +185,7 @@ this.special= special
 }
 
 
-open fun setId(value: String)
+    open fun setId(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -193,7 +193,7 @@ this.id= value
 }
 
 
-open fun setStoreName(value: String)
+    open fun setStoreName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -201,7 +201,7 @@ this.storeName= value
 }
 
 
-open fun setUserComments(value: String)
+    open fun setUserComments(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -209,7 +209,7 @@ this.userComment= value
 }
 
 
-open fun setUserCancelComments(value: String)
+    open fun setUserCancelComments(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -217,7 +217,7 @@ this.userCancelComment= value
 }
 
 
-open fun setStoreComments(value: String)
+    open fun setStoreComments(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -225,7 +225,7 @@ this.storeComment= value
 }
 
 
-open fun setStoreCancelComments(value: String)
+    open fun setStoreCancelComments(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -233,7 +233,7 @@ this.storeCancelComment= value
 }
 
 
-open fun getBasket()
+    open fun getBasket()
         //nullable = true from not(false or (false and true)) = true
 : BasketInterface{
 
@@ -244,7 +244,7 @@ open fun getBasket()
 }
 
 
-open fun getShippingMethod()
+    open fun getShippingMethod()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -255,7 +255,7 @@ open fun getShippingMethod()
 }
 
 
-open fun getPaymentMethod()
+    open fun getPaymentMethod()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -266,7 +266,7 @@ open fun getPaymentMethod()
 }
 
 
-open fun getSpecial()
+    open fun getSpecial()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -277,7 +277,7 @@ open fun getSpecial()
 }
 
 
-open fun getId()
+    open fun getId()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -288,7 +288,7 @@ open fun getId()
 }
 
 
-open fun getStoreName()
+    open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -299,7 +299,7 @@ open fun getStoreName()
 }
 
 
-open fun getUserComments()
+    open fun getUserComments()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -310,7 +310,7 @@ open fun getUserComments()
 }
 
 
-open fun getUserCancelComments()
+    open fun getUserCancelComments()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -321,7 +321,7 @@ open fun getUserCancelComments()
 }
 
 
-open fun getStoreComments()
+    open fun getStoreComments()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -332,7 +332,7 @@ open fun getStoreComments()
 }
 
 
-open fun getStoreCancelComments()
+    open fun getStoreCancelComments()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -343,7 +343,7 @@ open fun getStoreCancelComments()
 }
 
 
-open fun reviewOrder(paymentMethod: String)
+    open fun reviewOrder(paymentMethod: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var paymentMethod = paymentMethod
@@ -355,7 +355,7 @@ var paymentMethod = paymentMethod
 }
 
 
-open fun viewOrder(paymentMethod: String)
+    open fun viewOrder(paymentMethod: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var paymentMethod = paymentMethod
@@ -367,7 +367,7 @@ var paymentMethod = paymentMethod
 }
 
 
-open fun emailOrder(userName: String, paymentMethod: String, storeFrontInterface: StoreFrontInterface)
+    open fun emailOrder(userName: String, paymentMethod: String, storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var userName = userName
@@ -381,7 +381,7 @@ var storeFrontInterface = storeFrontInterface
 }
 
 
-open fun toHashMapOrder()
+    open fun toHashMapOrder()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -406,7 +406,7 @@ hashMap!!.put(OrderData.STORECANCELCOMMENT, this.storeCancelComment)
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

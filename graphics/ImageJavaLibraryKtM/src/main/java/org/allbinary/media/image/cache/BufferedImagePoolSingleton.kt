@@ -36,8 +36,7 @@ open public class BufferedImagePoolSingleton
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var poolInterface: PoolInterface = 
                 null
@@ -68,7 +67,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, instance, STATIC_BLOCK, e)
 
 }
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PoolInterface{
 
@@ -80,7 +79,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

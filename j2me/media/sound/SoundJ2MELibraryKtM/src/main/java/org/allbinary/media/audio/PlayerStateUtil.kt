@@ -32,12 +32,11 @@ open public class PlayerStateUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: PlayerStateUtil = PlayerStateUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PlayerStateUtil{
 
@@ -67,7 +66,7 @@ open fun getInstance()
 
     val CLOSED: String = "CLOSED"
 
-open fun convert(state: Int)
+    open fun convert(state: Int)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var state = state

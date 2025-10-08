@@ -26,7 +26,7 @@ open public class TempExplosionWeaponLayer : SimpleWeaponLayer {
     val weaponProperties: WeaponProperties = WeaponProperties(0, 1000, 0.toShort())
 
     private val timeDelayHelper: TimeDelayHelper = TimeDelayHelper(0)
-public constructor        (name: String, movement: Movement, animationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition, timeDelay: Int)                        
+public constructor (name: String, movement: Movement, animationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition, timeDelay: Int)                        
 
                             : super(name, movement, animationInterface, rectangle, viewPosition){
     //var name = name
@@ -44,7 +44,8 @@ this.timeDelayHelper!!.delay= timeDelay
 
 
                 @Throws(Exception::class)
-            override fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
+            
+    override fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager

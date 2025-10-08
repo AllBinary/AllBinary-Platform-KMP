@@ -38,7 +38,7 @@ open public class StoreFrontOrdersHistoryStatisticsView
         
 
     private var storeFrontOrdersHistoryStatisticsInterface: StoreFrontOrdersHistoryStatisticsInterface
-public constructor        (storeFrontOrdersHistoryStatisticsInterface: StoreFrontOrdersHistoryStatisticsInterface)
+public constructor (storeFrontOrdersHistoryStatisticsInterface: StoreFrontOrdersHistoryStatisticsInterface)
             : super()
         {
 var storeFrontOrdersHistoryStatisticsInterface = storeFrontOrdersHistoryStatisticsInterface
@@ -48,7 +48,7 @@ this.storeFrontOrdersHistoryStatisticsInterface= storeFrontOrdersHistoryStatisti
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

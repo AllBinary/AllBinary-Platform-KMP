@@ -32,10 +32,9 @@ open public class DomNodeListHelper
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getVector(nodeList: NodeList)
+    open fun getVector(nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var nodeList = nodeList

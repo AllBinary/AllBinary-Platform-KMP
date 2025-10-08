@@ -37,10 +37,9 @@ import org.allbinary.logic.communication.log.LogUtil
 
 open public class OwnershipPaintable : Paintable {
         
-
-        companion object {
+companion object {
             
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OwnershipPaintable{
 
@@ -60,12 +59,13 @@ open fun getInstance()
     private var basicColor: BasicColor = BasicColorFactory.getInstance()!!.WHITE
 
     private var color: Int = basicColor!!.toInt()!!
-private constructor        (){
+private constructor (){
 }
 
 
     private var anchor: Int = Anchor.TOP_LEFT
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -94,7 +94,8 @@ graphics.setColor(color)
 graphics.drawString(COPYRIGHT, halfWidth -beginWidth, height -COPYRIGHT_Y, anchor)
 }
 
-override fun setBasicColorP(basicColor: BasicColor)
+
+    override fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
 var basicColor = basicColor
@@ -103,7 +104,7 @@ color= basicColor!!.toInt()
 }
 
 
-open fun getBasicColorP()
+    open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
 

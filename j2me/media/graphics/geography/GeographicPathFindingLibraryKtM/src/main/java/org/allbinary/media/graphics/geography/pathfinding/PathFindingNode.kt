@@ -38,7 +38,7 @@ open public class PathFindingNode
     var parent: PathFindingNode
 
     var geographicMapCellPosition: GeographicMapCellPosition
-public constructor        (parent: PathFindingNode, geographicMapCellPosition: GeographicMapCellPosition)
+public constructor (parent: PathFindingNode, geographicMapCellPosition: GeographicMapCellPosition)
             : super()
         {
 var parent = parent
@@ -62,7 +62,7 @@ this.setGeographicMapCellPosition(geographicMapCellPosition)
 }
 
 
-open fun setParent(parent: PathFindingNode)
+    open fun setParent(parent: PathFindingNode)
         //nullable = true from not(false or (false and false)) = true
 {
 var parent = parent
@@ -70,14 +70,15 @@ this.parent= parent
 }
 
 
-open fun setGeographicMapCellPosition(geographicMapCellPosition: GeographicMapCellPosition)
+    open fun setGeographicMapCellPosition(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
 var geographicMapCellPosition = geographicMapCellPosition
 this.geographicMapCellPosition= geographicMapCellPosition
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

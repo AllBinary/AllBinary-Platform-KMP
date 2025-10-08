@@ -17,12 +17,11 @@ open public class SqlTypeStrings
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: SqlTypeStrings = SqlTypeStrings()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : SqlTypeStrings{
 

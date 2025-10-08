@@ -27,12 +27,13 @@
         
 import org.allbinary.game.layer.pickup.PickedUpLayerInterface
 import org.allbinary.layer.LayerInterface
+
 interface DropLayerInterface : LayerInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getDroppedLayer()
+    open fun getDroppedLayer()
         //nullable = true from not(false or (false and true)) = true
 : PickedUpLayerInterface
 

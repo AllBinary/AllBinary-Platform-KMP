@@ -30,13 +30,12 @@ open public class AbTagData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val PARENT: String = "TAG_PARENT"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

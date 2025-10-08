@@ -27,26 +27,27 @@
         
 import java.awt
 import org.allbinary.media.image.analysis.ColorRangeInterface
+
 interface ColorAtActionScriptConditionInterface {
         
 
-open fun getPoint()
+    open fun getPoint()
         //nullable = true from not(false or (false and true)) = true
 : Point
 
-open fun setPoint(point: Point)
+    open fun setPoint(point: Point)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getColorRangeInterface()
+    open fun getColorRangeInterface()
         //nullable = true from not(false or (false and true)) = true
 : ColorRangeInterface
 
-open fun setColorRangeInterface(colorRangeInterface: ColorRangeInterface)
+    open fun setColorRangeInterface(colorRangeInterface: ColorRangeInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 
 

@@ -31,44 +31,45 @@ import java.util.HashMap
 import java.util.Set
 import org.allbinary.business.user.commerce.money.Money
 import org.allbinary.business.user.commerce.money.MoneyException
+
 interface BasketInterface {
         
 
-open fun addItem(id: String, num: String)
+    open fun addItem(id: String, num: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun removeItem(id: String)
+    open fun removeItem(id: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun adjustItem(id: String, num: String)
+    open fun adjustItem(id: String, num: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getTotalWeight()
+    open fun getTotalWeight()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getNumberOfItems()
+    open fun getNumberOfItems()
         //nullable = true from not(false or (false and true)) = true
 : Integer
 
-open fun getIds()
+    open fun getIds()
         //nullable = true from not(false or (false and true)) = true
 : Set
 
-open fun getItems()
+    open fun getItems()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>
 
-open fun getNumberOf(product: String)
+    open fun getNumberOf(product: String)
         //nullable = true from not(false or (false and false)) = true
 : Integer
 
                 @Throws(MoneyException::class)
             
-open fun getSubTotal()
+    open fun getSubTotal()
         //nullable = true from not(false or (false and true)) = true
 : Money
 

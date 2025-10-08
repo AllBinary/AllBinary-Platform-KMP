@@ -38,7 +38,7 @@ import org.allbinary.logic.util.event.AllBinaryEventObject
 open public class GameScrollMenuPaintable : BasicGameDemoPaintable
                 , ColorChangeListener {
         
-public constructor        (mainDemoStatePaintable: Paintable, ownershipPaintable: Paintable, helpPaintableInterface: Paintable, basicColor: BasicColor)                        
+public constructor (mainDemoStatePaintable: Paintable, ownershipPaintable: Paintable, helpPaintableInterface: Paintable, basicColor: BasicColor)                        
 
                             : super(mainDemoStatePaintable, ownershipPaintable, helpPaintableInterface){
 var mainDemoStatePaintable = mainDemoStatePaintable
@@ -53,21 +53,23 @@ this.setColor(basicColor)
 ColorChangeEventHandler.getInstance()!!.addListener(this)
 }
 
-override fun setState(state: Int)
+
+    override fun setState(state: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var state = state
 this.setCurrentStatePaintable(this.getMainDemoStatePaintable())
 }
 
-override fun onEvent(eventObject: AllBinaryEventObject)
+
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
 }
 
 
-open fun setColor(basicColor: BasicColor)
+    open fun setColor(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
 var basicColor = basicColor

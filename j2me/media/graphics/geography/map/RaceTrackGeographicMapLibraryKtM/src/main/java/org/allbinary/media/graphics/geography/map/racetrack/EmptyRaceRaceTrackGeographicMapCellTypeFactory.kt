@@ -30,12 +30,11 @@ import org.allbinary.media.graphics.geography.pathfinding.PathFindingNodeCostInf
 
 open public class EmptyRaceRaceTrackGeographicMapCellTypeFactory : RaceTrackGeographicMapCellTypeFactory {
         
-
-        companion object {
+companion object {
             
     private val instance: EmptyRaceRaceTrackGeographicMapCellTypeFactory = EmptyRaceRaceTrackGeographicMapCellTypeFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : EmptyRaceRaceTrackGeographicMapCellTypeFactory{
 
@@ -47,7 +46,7 @@ open fun getInstance()
 
 
         }
-            private constructor        (){
+            private constructor (){
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

@@ -49,7 +49,7 @@ open public class InputAutomationServiceConsumer
     private var bundleContext: BundleContext
 
     private var osgiServiceVisitorInterface: OSGIServiceVisitorInterface
-public constructor        (registryName: String, bundleContext: BundleContext, osgiServiceVisitorInterface: OSGIServiceVisitorInterface)
+public constructor (registryName: String, bundleContext: BundleContext, osgiServiceVisitorInterface: OSGIServiceVisitorInterface)
             : super()
         {
     //var registryName = registryName
@@ -63,7 +63,7 @@ this.setOsgiServiceVisitorInterface(osgiServiceVisitorInterface)
 
                 @Throws(Exception::class)
             
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(this.commonStrings!!.START, this, commonStrings!!.PROCESS)
@@ -104,7 +104,7 @@ osgiServiceInterface= vector.get(index) as OSGIServiceInterface
 
                 @Throws(Exception::class)
             
-open fun getServiceReferences()
+    open fun getServiceReferences()
         //nullable = true from not(false or (false and true)) = true
 : Array<ServiceReference?>{
 
@@ -116,7 +116,7 @@ open fun getServiceReferences()
 }
 
 
-open fun getBundleContext()
+    open fun getBundleContext()
         //nullable = true from not(false or (false and true)) = true
 : BundleContext{
 
@@ -127,7 +127,7 @@ open fun getBundleContext()
 }
 
 
-open fun setBundleContext(aBundleContext: BundleContext)
+    open fun setBundleContext(aBundleContext: BundleContext)
         //nullable = true from not(false or (false and false)) = true
 {
 var aBundleContext = aBundleContext
@@ -135,7 +135,7 @@ bundleContext= aBundleContext
 }
 
 
-open fun getRegistryName()
+    open fun getRegistryName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -146,7 +146,7 @@ open fun getRegistryName()
 }
 
 
-open fun setRegistryName(registryName: String)
+    open fun setRegistryName(registryName: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var registryName = registryName
@@ -154,7 +154,7 @@ this.registryName= registryName
 }
 
 
-open fun getOsgiServiceVisitorInterface()
+    open fun getOsgiServiceVisitorInterface()
         //nullable = true from not(false or (false and true)) = true
 : OSGIServiceVisitorInterface{
 
@@ -165,7 +165,7 @@ open fun getOsgiServiceVisitorInterface()
 }
 
 
-open fun setOsgiServiceVisitorInterface(osgiServiceVisitorInterface: OSGIServiceVisitorInterface)
+    open fun setOsgiServiceVisitorInterface(osgiServiceVisitorInterface: OSGIServiceVisitorInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var osgiServiceVisitorInterface = osgiServiceVisitorInterface

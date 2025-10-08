@@ -35,12 +35,11 @@ open public class OSGIServiceUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OSGIServiceUtil = OSGIServiceUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OSGIServiceUtil{
 
@@ -54,7 +53,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -62,7 +61,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getServicesObjectVector(bundleContext: Object, serviceReferences: Array<ServiceReference?>)
+    open fun getServicesObjectVector(bundleContext: Object, serviceReferences: Array<ServiceReference?>)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
     //var bundleContext = bundleContext

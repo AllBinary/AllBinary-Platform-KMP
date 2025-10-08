@@ -26,18 +26,19 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.control.contraints.size.TwoDimensionalConstraintInterface
+
 interface AdvertisementImageInterface {
         
 
-open fun getFileName()
+    open fun getFileName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getUrl()
+    open fun getUrl()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getTwoDimensionalConstraint()
+    open fun getTwoDimensionalConstraint()
         //nullable = true from not(false or (false and true)) = true
 : TwoDimensionalConstraintInterface
 

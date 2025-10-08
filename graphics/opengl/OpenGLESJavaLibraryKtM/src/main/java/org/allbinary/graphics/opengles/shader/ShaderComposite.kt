@@ -75,7 +75,7 @@ open public class ShaderComposite
     var uniformTextureUnitOpenGLProcessor: OpenGLTextureProcessor = NullOpenGLTextureProcessor.getInstance()!!
 
     var programHandle: Int= 0
-public constructor        (requiresOpenGLVersion: String, shaderArray: Array<Shader?>, compositeShaderUpdater: CompositeShaderUpdater, shaderInitializer: ShaderInitializer, modelViewProjection: ModelViewProjection, colorOpenGLProcessor: OpenGLProcessor, vertexOpenGLProcessor: OpenGLProcessor, disableProgramShaderOpenGLProcessor: OpenGLProcessor)
+public constructor (requiresOpenGLVersion: String, shaderArray: Array<Shader?>, compositeShaderUpdater: CompositeShaderUpdater, shaderInitializer: ShaderInitializer, modelViewProjection: ModelViewProjection, colorOpenGLProcessor: OpenGLProcessor, vertexOpenGLProcessor: OpenGLProcessor, disableProgramShaderOpenGLProcessor: OpenGLProcessor)
             : super()
         {
     //var requiresOpenGLVersion = requiresOpenGLVersion
@@ -97,7 +97,7 @@ this.disableProgramShaderOpenGLProcessor= disableProgramShaderOpenGLProcessor
 }
 
 
-open fun init(gl: GL10)
+    open fun init(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
 {
 var gl = gl

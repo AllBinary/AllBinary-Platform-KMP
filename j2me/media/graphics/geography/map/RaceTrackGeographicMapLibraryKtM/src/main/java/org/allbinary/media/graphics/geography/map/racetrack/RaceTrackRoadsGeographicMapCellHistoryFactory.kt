@@ -31,12 +31,11 @@ open public class RaceTrackRoadsGeographicMapCellHistoryFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var geographicMapCellHistory: GeographicMapCellHistory = GeographicMapCellHistory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GeographicMapCellHistory{
 
@@ -48,7 +47,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

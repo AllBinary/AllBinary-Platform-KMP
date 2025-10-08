@@ -35,17 +35,17 @@ open public class IndexedAnimation : Animation
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     val animationBehaviorP: AnimationBehavior
-private constructor        (){
+private constructor (){
 this.animationBehaviorP= AnimationBehavior.getInstance()
 }
 
-protected constructor        (animationBehavior: AnimationBehavior){
+protected constructor (animationBehavior: AnimationBehavior){
     //var animationBehavior = animationBehavior
 this.animationBehaviorP= animationBehavior
 }
 
 
-open fun getAnimationBehavior()
+    open fun getAnimationBehavior()
         //nullable = true from not(false or (false and true)) = true
 : AnimationBehavior{
 
@@ -55,20 +55,23 @@ open fun getAnimationBehavior()
                         return animationBehaviorP
 }
 
-override fun reset()
+
+    override fun reset()
         //nullable = true from not(false or (false and true)) = true
 {
 this.animationBehaviorP!!.reset()
 this.setFrame(0)
 }
 
-override fun setFrame(index: Int)
+
+    override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var index = index
 }
 
-override fun getFrame()
+
+    override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -81,7 +84,7 @@ override fun getFrame()
 
                 @Throws(Exception::class)
             
-open fun getAnimationSize()
+    open fun getAnimationSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -90,7 +93,8 @@ open fun getAnimationSize()
                             throw Exception(commonStrings!!.NOT_IMPLEMENTED)
 }
 
-override fun getSize()
+
+    override fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -100,13 +104,14 @@ override fun getSize()
                         return 0
 }
 
-override fun previousFrame()
+
+    override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun isLastFrame()
+    open fun isLastFrame()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -133,13 +138,15 @@ open fun isLastFrame()
                             
 }
 
-override fun setSequence(sequence: IntArray)
+
+    override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
 {
     //var sequence = sequence
 }
 
-override fun getSequence()
+
+    override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
 : IntArray{
 
@@ -150,7 +157,7 @@ override fun getSequence()
 }
 
 
-open fun setState(indexedAnimation: IndexedAnimation)
+    open fun setState(indexedAnimation: IndexedAnimation)
         //nullable = true from not(false or (false and false)) = true
 {
     //var indexedAnimation = indexedAnimation
@@ -160,7 +167,7 @@ this.setDy(indexedAnimation!!.getDy())
 }
 
 
-open fun getWidth()
+    open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

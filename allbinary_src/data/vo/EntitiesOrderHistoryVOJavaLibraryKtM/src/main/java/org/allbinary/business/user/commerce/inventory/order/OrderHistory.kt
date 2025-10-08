@@ -74,7 +74,7 @@ open public class OrderHistory : Order
     private var taxes: Money
 
     private var total: Money
-public constructor        (basketInterface: BasketInterface)                        
+public constructor (basketInterface: BasketInterface)                        
 
                             : super(basketInterface){
 var basketInterface = basketInterface
@@ -84,7 +84,7 @@ var basketInterface = basketInterface
                     
 }
 
-public constructor        (basketInterface: BasketInterface, orderHistory: OrderHistory)                        
+public constructor (basketInterface: BasketInterface, orderHistory: OrderHistory)                        
 
                             : super(orderHistory!!.getStoreName(), basketInterface, orderHistory!!.getId(), orderHistory!!.getShippingMethod(), orderHistory!!.getSpecial(), orderHistory!!.getPaymentMethod()){
 var basketInterface = basketInterface
@@ -112,7 +112,7 @@ super.setStoreComments(orderHistory!!.getStoreComments() as String)
 super.setStoreCancelComments(orderHistory!!.getStoreCancelComments() as String)
 }
 
-public constructor        (basketInterface: BasketInterface, orderHistoryHashMap: HashMap<Any, Any>)                        
+public constructor (basketInterface: BasketInterface, orderHistoryHashMap: HashMap<Any, Any>)                        
 
                             : super(orderHistoryHashMap!!.get(StoreFrontData.getInstance()!!.NAME) as String, basketInterface, orderHistoryHashMap!!.get(OrderData.ID) as String, orderHistoryHashMap!!.get(ShippingMethodData.NAME) as String, orderHistoryHashMap!!.get(EntryData.getInstance()!!.SPECIAL) as String, orderHistoryHashMap!!.get(PaymentData.METHOD) as String){
 var basketInterface = basketInterface
@@ -141,7 +141,7 @@ super.setStoreCancelComments(orderHistoryHashMap!!.get(OrderData.STORECANCELCOMM
 }
 
 
-open fun setUserName(value: String)
+    open fun setUserName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -149,7 +149,7 @@ this.userName= value
 }
 
 
-open fun setDefaultShippingAddress(shippingAddress: StreetAddress)
+    open fun setDefaultShippingAddress(shippingAddress: StreetAddress)
         //nullable = true from not(false or (false and false)) = true
 {
 var shippingAddress = shippingAddress
@@ -157,7 +157,7 @@ this.shippingAddress= shippingAddress
 }
 
 
-open fun setBillingAddress(billingAddress: StreetAddress)
+    open fun setBillingAddress(billingAddress: StreetAddress)
         //nullable = true from not(false or (false and false)) = true
 {
 var billingAddress = billingAddress
@@ -165,7 +165,7 @@ this.billingAddress= billingAddress
 }
 
 
-open fun setPaymentInfo(payment: Payment)
+    open fun setPaymentInfo(payment: Payment)
         //nullable = true from not(false or (false and false)) = true
 {
 var payment = payment
@@ -173,7 +173,7 @@ this.payment= payment
 }
 
 
-open fun setShipDate(value: String)
+    open fun setShipDate(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -181,7 +181,7 @@ this.shipDate= value
 }
 
 
-open fun setOrderDate(value: String)
+    open fun setOrderDate(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -189,7 +189,7 @@ this.orderDate= value
 }
 
 
-open fun setTransDate(value: String)
+    open fun setTransDate(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -197,7 +197,7 @@ this.transDate= value
 }
 
 
-open fun setCancelDate(value: String)
+    open fun setCancelDate(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -205,7 +205,7 @@ this.cancelDate= value
 }
 
 
-open fun setStatus(value: String)
+    open fun setStatus(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -213,7 +213,7 @@ this.status= value
 }
 
 
-open fun setSubTotal(value: Money)
+    open fun setSubTotal(value: Money)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -221,7 +221,7 @@ this.subTotal= value
 }
 
 
-open fun setShippingCost(value: Money)
+    open fun setShippingCost(value: Money)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -229,7 +229,7 @@ this.shippingCost= value
 }
 
 
-open fun setTaxes(value: Money)
+    open fun setTaxes(value: Money)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -237,7 +237,7 @@ this.taxes= value
 }
 
 
-open fun setTotal(value: Money)
+    open fun setTotal(value: Money)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -245,7 +245,7 @@ this.total= value
 }
 
 
-open fun getUserName()
+    open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -256,7 +256,7 @@ open fun getUserName()
 }
 
 
-open fun getShippingAddress()
+    open fun getShippingAddress()
         //nullable = true from not(false or (false and true)) = true
 : StreetAddress{
 
@@ -267,7 +267,7 @@ open fun getShippingAddress()
 }
 
 
-open fun getBillingAddress()
+    open fun getBillingAddress()
         //nullable = true from not(false or (false and true)) = true
 : StreetAddress{
 
@@ -278,7 +278,7 @@ open fun getBillingAddress()
 }
 
 
-open fun getPaymentInfo()
+    open fun getPaymentInfo()
         //nullable = true from not(false or (false and true)) = true
 : Payment{
 
@@ -289,7 +289,7 @@ open fun getPaymentInfo()
 }
 
 
-open fun getShipDate()
+    open fun getShipDate()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -300,7 +300,7 @@ open fun getShipDate()
 }
 
 
-open fun getOrderDate()
+    open fun getOrderDate()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -311,7 +311,7 @@ open fun getOrderDate()
 }
 
 
-open fun getTransDate()
+    open fun getTransDate()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -322,7 +322,7 @@ open fun getTransDate()
 }
 
 
-open fun getCancelDate()
+    open fun getCancelDate()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -333,7 +333,7 @@ open fun getCancelDate()
 }
 
 
-open fun getStatus()
+    open fun getStatus()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -344,7 +344,7 @@ open fun getStatus()
 }
 
 
-open fun getSubTotal()
+    open fun getSubTotal()
         //nullable = true from not(false or (false and true)) = true
 : Money{
 
@@ -355,7 +355,7 @@ open fun getSubTotal()
 }
 
 
-open fun getShippingCost()
+    open fun getShippingCost()
         //nullable = true from not(false or (false and true)) = true
 : Money{
 
@@ -366,7 +366,7 @@ open fun getShippingCost()
 }
 
 
-open fun getTaxes()
+    open fun getTaxes()
         //nullable = true from not(false or (false and true)) = true
 : Money{
 
@@ -377,7 +377,7 @@ open fun getTaxes()
 }
 
 
-open fun getTotal()
+    open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
 : Money{
 
@@ -388,7 +388,7 @@ open fun getTotal()
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -426,7 +426,7 @@ hashMap!!.put(OrderHistoryData.TAX, this.taxes.toString())
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

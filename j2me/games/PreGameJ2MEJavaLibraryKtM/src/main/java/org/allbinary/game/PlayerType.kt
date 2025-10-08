@@ -35,7 +35,7 @@ open public class PlayerType
     private var id: Int
 
     private var name: String = StringUtil.getInstance()!!.EMPTY_STRING
- constructor        (name: String, value: Int)
+ constructor (name: String, value: Int)
             : super()
         {
     //var name = name
@@ -45,7 +45,7 @@ this.id= value
 }
 
 
-open fun getId()
+    open fun getId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -56,7 +56,7 @@ open fun getId()
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -66,7 +66,8 @@ open fun getName()
                         return name
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

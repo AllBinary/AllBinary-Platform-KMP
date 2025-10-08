@@ -45,7 +45,7 @@ open public class QuoteRequestEntity : AbSqlBean
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val tableName: String = "quoterequest"
-public constructor        ()                        
+public constructor ()                        
 
                             : super(UserDbInitInfo()){
 
@@ -56,7 +56,7 @@ this.setTableName(tableName)
 }
 
 
-open fun insert(values: Vector)
+    open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 {
 var values = values
@@ -90,7 +90,7 @@ var values = values
 
                 @Throws(Exception::class)
             
-open fun get(userName: String, id: Int)
+    open fun get(userName: String, id: Int)
         //nullable = true from not(false or (false and false)) = true
 : QuoteRequest{
 var userName = userName
@@ -130,7 +130,7 @@ row.put(QuoteRequestData.getInstance()!!.ID, id.toString())
 }
 
 
-open fun getIds(userName: String)
+    open fun getIds(userName: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var userName = userName
@@ -142,7 +142,7 @@ var userName = userName
 }
 
 
-open fun deleteWhere(key: String, value: String)
+    open fun deleteWhere(key: String, value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var key = key
@@ -175,7 +175,7 @@ var value = value
 }
 
 
-open fun createTableStatement()
+    open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -213,7 +213,7 @@ stringBuffer!!.append(this.sqlStrings!!.END)
 }
 
 
-open fun createTable()
+    open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -224,7 +224,7 @@ open fun createTable()
 }
 
 
-open fun dropTable()
+    open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -238,7 +238,7 @@ open fun dropTable()
 }
 
 
-open fun update(userName: String, updatedValues: HashMap<Any, Any>)
+    open fun update(userName: String, updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var userName = userName

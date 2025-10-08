@@ -26,19 +26,17 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.game.layer.PathFindingLayerInterface
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringMaker
 
 open public class WaypointRunnableSelectedLogHelper : WaypointRunnableLogHelper {
         
-
-        companion object {
+companion object {
             
     private val instance: WaypointRunnableSelectedLogHelper = WaypointRunnableSelectedLogHelper()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : WaypointRunnableSelectedLogHelper{
 
@@ -60,7 +58,7 @@ open fun getInstance()
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-open fun start(pathFindingLayerInterface: PathFindingLayerInterface)
+    open fun start(pathFindingLayerInterface: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface
@@ -69,7 +67,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-open fun end(pathFindingLayerInterface: PathFindingLayerInterface)
+    open fun end(pathFindingLayerInterface: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface

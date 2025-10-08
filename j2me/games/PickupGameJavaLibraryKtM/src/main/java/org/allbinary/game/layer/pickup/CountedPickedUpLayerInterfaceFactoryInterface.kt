@@ -26,14 +26,15 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.layer.LayerInterfaceFactoryInterface
+
 interface CountedPickedUpLayerInterfaceFactoryInterface : PickedUpLayerInterfaceFactoryInterface, LayerInterfaceFactoryInterface {
         
 
-open fun getId()
+    open fun getId()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getTotal()
+    open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
 : Int
 

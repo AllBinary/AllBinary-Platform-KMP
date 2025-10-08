@@ -32,12 +32,11 @@ open public class CategoryEntityFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: CategoryEntityFactory = CategoryEntityFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CategoryEntityFactory{
 
@@ -51,13 +50,13 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getCategoryEntityInstance()
+    open fun getCategoryEntityInstance()
         //nullable = true from not(false or (false and true)) = true
 : CategoryEntity{
 

@@ -27,7 +27,6 @@
         
 import org.allbinary.util.BasicArrayList
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.game.layer.geographic.map.MiniMapLayer
 import org.allbinary.logic.util.event.AllBinaryEventObject
@@ -37,12 +36,11 @@ import org.allbinary.logic.util.event.handler.BasicEventHandler
 
 open public class GeographicMapCellPositionEventHandler : BasicEventHandler {
         
-
-        companion object {
+companion object {
             
     private var instance: GeographicMapCellPositionEventHandler = GeographicMapCellPositionEventHandler()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GeographicMapCellPositionEventHandler{
 
@@ -58,11 +56,11 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val list: BasicArrayList = BasicArrayList()
-private constructor        (){
+private constructor (){
 }
 
 
-open fun addListener(miniMapLayer: MiniMapLayer)
+    open fun addListener(miniMapLayer: MiniMapLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var miniMapLayer = miniMapLayer
@@ -78,7 +76,7 @@ var miniMapLayer = miniMapLayer
 }
 
 
-open fun removeAllListeners()
+    open fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
 {
 this.list.clear()
@@ -86,7 +84,7 @@ super.removeAllListeners()
 }
 
 
-open fun removeListener(eventListenerInterface: EventListenerInterface)
+    open fun removeListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventListenerInterface = eventListenerInterface
@@ -97,7 +95,7 @@ super.removeListener(eventListenerInterface)
 
                 @Throws(Exception::class)
             
-open fun fireEvent(eventObject: AllBinaryEventObject)
+    open fun fireEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
@@ -128,7 +126,7 @@ super.fireEvent(eventObject)
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun fireRemoveEvent(eventObject: AllBinaryEventObject)
+    open fun fireRemoveEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
@@ -188,7 +186,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE
 
                 @Throws(Exception::class)
             
-open fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
+    open fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject

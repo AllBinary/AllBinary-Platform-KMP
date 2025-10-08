@@ -26,12 +26,13 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.util.event.EventListenerInterface
+
 interface ViewPositionEventListenerInterface : EventListenerInterface {
         
 
                 @Throws(Exception::class)
             
-open fun onChangeEvent(layerManagerEvent: ViewPositionEvent)
+    open fun onChangeEvent(layerManagerEvent: ViewPositionEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

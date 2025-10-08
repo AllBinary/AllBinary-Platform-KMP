@@ -33,12 +33,11 @@ open public class RandomRotationFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: RandomRotationFactory = RandomRotationFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : RandomRotationFactory{
 
@@ -62,7 +61,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun getInstance(vector: BasicArrayList, howMuch: Int)
+    open fun getInstance(vector: BasicArrayList, howMuch: Int)
         //nullable =  from not(true or (false and false)) = 
 : BasicArrayList{
 var vector = vector
@@ -80,7 +79,7 @@ graphicsPipe!!.rotate(angleFactory!!.getInstance(getNextRandomAngle(howMuch)))
 }
 
 
-open fun getNextRandomAngle(howMuch: Int)
+    open fun getNextRandomAngle(howMuch: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var howMuch = howMuch

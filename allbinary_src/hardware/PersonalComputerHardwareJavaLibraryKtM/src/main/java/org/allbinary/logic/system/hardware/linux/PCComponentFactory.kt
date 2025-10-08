@@ -44,12 +44,11 @@ open public class PCComponentFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: PCComponentFactory = PCComponentFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PCComponentFactory{
 
@@ -65,13 +64,13 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val componentFactory: ComponentFactory = ComponentFactory.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getInstance(component: String, componentData: String)
+    open fun getInstance(component: String, componentData: String)
         //nullable =  from not(true or (false and false)) = 
 : HardwareComponentInterface{
 var component = component
@@ -221,7 +220,7 @@ var componentData = componentData
 }
 
 
-open fun getComponentType(component: String)
+    open fun getComponentType(component: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var component = component

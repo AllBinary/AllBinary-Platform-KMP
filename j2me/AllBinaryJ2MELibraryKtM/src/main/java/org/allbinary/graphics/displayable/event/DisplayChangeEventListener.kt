@@ -26,12 +26,13 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.util.event.EventListenerInterface
+
 interface DisplayChangeEventListener : EventListenerInterface {
         
 
                 @Throws(Exception::class)
             
-open fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
+    open fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

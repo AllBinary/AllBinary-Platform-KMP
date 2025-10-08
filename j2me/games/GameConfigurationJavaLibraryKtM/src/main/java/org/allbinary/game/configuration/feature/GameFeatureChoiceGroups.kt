@@ -32,14 +32,13 @@ open public class GameFeatureChoiceGroups
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var gameFeatureChoiceGroupsExclusive: GameFeatureChoiceGroups = GameFeatureChoiceGroups()
 
     private var gameFeatureChoiceGroupsMultiple: GameFeatureChoiceGroups = GameFeatureChoiceGroups()
 
-open fun getExclusiveInstance()
+    open fun getExclusiveInstance()
         //nullable = true from not(false or (false and true)) = true
 : GameFeatureChoiceGroups{
 
@@ -50,7 +49,7 @@ open fun getExclusiveInstance()
 }
 
 
-open fun getMultipleInstance()
+    open fun getMultipleInstance()
         //nullable = true from not(false or (false and true)) = true
 : GameFeatureChoiceGroups{
 
@@ -64,13 +63,13 @@ open fun getMultipleInstance()
         }
             
     private var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun get()
+    open fun get()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
 
@@ -81,7 +80,7 @@ open fun get()
 }
 
 
-open fun add(name: String, list: BasicArrayList)
+    open fun add(name: String, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name

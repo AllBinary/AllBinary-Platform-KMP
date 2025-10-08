@@ -34,12 +34,11 @@ open public class BufferedWriterUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: BufferedWriterUtil = BufferedWriterUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BufferedWriterUtil{
 
@@ -59,7 +58,7 @@ open fun getInstance()
         
                 @Throws(Exception::class)
             
-open fun overwrite(path: String, data: String)
+    open fun overwrite(path: String, data: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var path = path
@@ -82,7 +81,7 @@ this.write(abFile, data)
 
                 @Throws(Exception::class)
             
-open fun overwrite(abFile: AbFile, data: String)
+    open fun overwrite(abFile: AbFile, data: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abFile = abFile
@@ -102,7 +101,7 @@ this.write(abFile, data)
 
                 @Throws(Exception::class)
             
-open fun write(abFile: AbFile, data: String)
+    open fun write(abFile: AbFile, data: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abFile = abFile

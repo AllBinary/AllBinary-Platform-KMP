@@ -11,6 +11,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import android.app.Activity
 import android.content.Intent
 import org.allbinary.android.AndroidServicesUtil
 import org.allbinary.data.resource.ResourceUtil
@@ -30,7 +31,50 @@ open public class MusicManager
             : Object
          {
         
+companion object {
+            
+    open fun pause(activity: Activity, clazz: KClass<*>)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var activity = activity
+var clazz = clazz
 
+    var commonStateStrings: CommonStateStrings = CommonStateStrings.getInstance()!!
+
+
+    var musicPauseIntent: Intent = Intent(activity, clazz)
+
+musicPauseIntent!!.putExtra(commonStateStrings!!.ON_START_COMMAND, 1)
+activity.startService(musicPauseIntent)
+}
+
+
+    open fun resume(activity: Activity, clazz: KClass<*>)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var activity = activity
+var clazz = clazz
+
+    
+                        if(AndroidServicesUtil.getInstance()!!.isServiceRunning(clazz.toString()!!))
+                        
+                                    {
+                                    
+    var commonStateStrings: CommonStateStrings = CommonStateStrings.getInstance()!!
+
+
+    var musicResumeIntent: Intent = Intent(activity, clazz)
+
+musicResumeIntent!!.putExtra(commonStateStrings!!.ON_START_COMMAND, 2)
+activity.startService(musicResumeIntent)
+
+                                    }
+                                
+}
+
+
+        }
+            
     private val PLAY: String = "Play "
 
     private val FOR: String = " for: "
@@ -66,7 +110,7 @@ open public class MusicManager
     private val musicServiceClass: KClass<*>
 
     private val currentIntent: Intent
-public constructor        (musicServiceClass: KClass<*>, songList: BasicArrayList)
+public constructor (musicServiceClass: KClass<*>, songList: BasicArrayList)
             : super()
         {
     //var musicServiceClass = musicServiceClass
@@ -78,7 +122,7 @@ this.songList= songList
 }
 
 
-open fun nextSong(nextSongSound: Sound, leftVolume: Int, rightVolume: Int)
+    open fun nextSong(nextSongSound: Sound, leftVolume: Int, rightVolume: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var nextSongSound = nextSongSound
@@ -102,14 +146,14 @@ this.reset()
 }
 
 
-open fun reset()
+    open fun reset()
         //nullable = true from not(false or (false and true)) = true
 {
 this.timeDelayHelper!!.delay= 0
 }
 
 
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -163,7 +207,7 @@ open fun process()
 }
 
 
-open fun show()
+    open fun show()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -186,7 +230,7 @@ PreLogUtil.put(StringBuilder().
 }
 
 
-open fun startNewSong()
+    open fun startNewSong()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -241,7 +285,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION_LABEL +resource, this, commonStrings!!.
 
                 @Throws(Exception::class)
             
-open fun stop()
+    open fun stop()
         //nullable = true from not(false or (false and true)) = true
 {
 this.resourceUtil!!.getContext()!!.stopService(this.currentIntent)

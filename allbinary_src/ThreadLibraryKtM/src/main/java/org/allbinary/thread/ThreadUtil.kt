@@ -33,12 +33,11 @@ open public class ThreadUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ThreadUtil = ThreadUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ThreadUtil{
 
@@ -60,7 +59,7 @@ open fun getInstance()
 
     val JOIN: String = "join"
 
-open fun isRunning(thread: Thread)
+    open fun isRunning(thread: Thread)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var thread = thread
@@ -93,7 +92,7 @@ var thread = thread
 
                 @Throws(Exception::class)
             
-open fun join(thread: Thread)
+    open fun join(thread: Thread)
         //nullable = true from not(false or (false and false)) = true
 {
 var thread = thread

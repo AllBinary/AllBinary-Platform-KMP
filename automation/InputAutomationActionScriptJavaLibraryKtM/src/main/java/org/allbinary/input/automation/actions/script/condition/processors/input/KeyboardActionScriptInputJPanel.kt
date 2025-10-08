@@ -45,7 +45,7 @@ open public class KeyboardActionScriptInputJPanel : javax.swing.JPanel {
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var keyActionScriptInputInterface: KeyboardActionScriptInputInterface
-public constructor        (keyActionScriptInputInterface: KeyboardActionScriptInputInterface){
+public constructor (keyActionScriptInputInterface: KeyboardActionScriptInputInterface){
 var keyActionScriptInputInterface = keyActionScriptInputInterface
 logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 initComponents()
@@ -95,7 +95,7 @@ this.set()
 }
 
 
-open fun set()
+    open fun set()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -111,7 +111,7 @@ this.keyActionScriptInputInterface!!.log()
 
                 @Throws(Exception::class)
             
-open fun updateInputType()
+    open fun updateInputType()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -132,7 +132,7 @@ open fun updateInputType()
 }
 
 
-open fun getSelectedKey()
+    open fun getSelectedKey()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -162,7 +162,7 @@ open fun getSelectedKey()
 }
 
 
-open fun updateKeys()
+    open fun updateKeys()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -174,7 +174,7 @@ this.keyActionScriptInputInterface!!.setText(text)
 
                 @Throws(Exception::class)
             
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 this.updateInputType()
@@ -184,7 +184,7 @@ this.keyActionScriptInputInterface!!.log()
 }
 
 
-open fun getKeyActionJDialog()
+    open fun getKeyActionJDialog()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JDialog{
 
@@ -195,7 +195,7 @@ open fun getKeyActionJDialog()
 }
 
 
-open fun setKeyActionJDialog(keyActionJDialog: javax.swing.JDialog)
+    open fun setKeyActionJDialog(keyActionJDialog: javax.swing.JDialog)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyActionJDialog = keyActionJDialog
@@ -203,7 +203,7 @@ this.keyActionJDialog= keyActionJDialog
 }
 
 
-open fun initComponents()
+    open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
 keyActionJDialog= javax.swing.JDialog()
@@ -235,7 +235,7 @@ addKeyJLabel!!.setText("Add Key:")
 keyNameJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -257,7 +257,7 @@ pressJRadioButton!!.setMargin(java.awt.Insets(0, 0, 0, 0))
 pressJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -272,7 +272,7 @@ releaseJRadioButton!!.setMargin(java.awt.Insets(0, 0, 0, 0))
 releaseJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -288,7 +288,7 @@ normalJRadioButton!!.setMargin(java.awt.Insets(0, 0, 0, 0))
 normalJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -304,7 +304,7 @@ simultaneousJRadioButton!!.setMargin(java.awt.Insets(0, 0, 0, 0))
 simultaneousJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -319,7 +319,7 @@ sequenceJRadioButton!!.setMargin(java.awt.Insets(0, 0, 0, 0))
 sequenceJRadioButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -333,7 +333,7 @@ okJButton!!.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER)
 okJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -346,7 +346,7 @@ jPanel1!!.add(okJButton)
 keyIntegerJComboBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -366,7 +366,7 @@ keyActionJButton!!.setText("Edit")
 keyActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -385,7 +385,7 @@ layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Align
 }
 
 
-open fun prependText(integer: Integer)
+    open fun prependText(integer: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var integer = integer
@@ -406,7 +406,7 @@ this.textJTextField!!.setText(newKey +this.textJTextField!!.getText())
 }
 
 
-open fun keyIntegerJComboBoxActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun keyIntegerJComboBoxActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -415,7 +415,7 @@ this.keyNameJComboBox!!.setSelectedIndex(this.keyIntegerJComboBox!!.getSelectedI
 }
 
 
-open fun sequenceJRadioButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun sequenceJRadioButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -432,7 +432,7 @@ this.simultaneousJRadioButton!!.setSelected(false)
 }
 
 
-open fun simultaneousJRadioButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun simultaneousJRadioButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -449,7 +449,7 @@ this.sequenceJRadioButton!!.setSelected(false)
 }
 
 
-open fun keyNameJComboBoxActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun keyNameJComboBoxActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -461,7 +461,7 @@ this.keyIntegerJComboBox!!.setSelectedIndex(this.keyNameJComboBox!!.getSelectedI
 }
 
 
-open fun okJButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun okJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -477,7 +477,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "okButtonActionPerformed", e
 }
 
 
-open fun keyActionJButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun keyActionJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -485,7 +485,7 @@ this.getKeyActionJDialog()!!.setVisible(true)
 }
 
 
-open fun normalJRadioButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun normalJRadioButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -503,7 +503,7 @@ this.releaseJRadioButton!!.setSelected(false)
 }
 
 
-open fun releaseJRadioButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun releaseJRadioButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -522,7 +522,7 @@ this.normalJRadioButton!!.setSelected(false)
 }
 
 
-open fun pressJRadioButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun pressJRadioButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt

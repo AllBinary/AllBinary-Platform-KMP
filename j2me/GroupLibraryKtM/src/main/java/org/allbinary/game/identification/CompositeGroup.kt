@@ -35,8 +35,7 @@ open public class CompositeGroup
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val ADDING_LABEL: String = "Adding: "
 
@@ -49,7 +48,7 @@ open public class CompositeGroup
     private val groupInterface: Group
 
     private val list: BasicArrayList = BasicArrayList()
-public constructor        (groupInterface: Group)
+public constructor (groupInterface: Group)
             : super()
         {
     //var groupInterface = groupInterface
@@ -57,14 +56,14 @@ this.groupInterface= groupInterface
 }
 
 
-open fun clear()
+    open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 this.list.clear()
 }
 
 
-open fun add(groupInterface: Group)
+    open fun add(groupInterface: Group)
         //nullable = true from not(false or (false and false)) = true
 {
     //var groupInterface = groupInterface
@@ -83,7 +82,7 @@ this.list.add(groupInterface)
 }
 
 
-open fun isInGroup(groupInterface: Group)
+    open fun isInGroup(groupInterface: Group)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var groupInterface = groupInterface
@@ -112,7 +111,7 @@ open fun isInGroup(groupInterface: Group)
 }
 
 
-open fun getGroup()
+    open fun getGroup()
         //nullable = true from not(false or (false and true)) = true
 : Group{
 

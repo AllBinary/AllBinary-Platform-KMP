@@ -30,8 +30,7 @@ open public class SpecialGameInputFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NO_SPECIAL_GAME_INPUT: SpecialGameInput = SpecialGameInput()
 

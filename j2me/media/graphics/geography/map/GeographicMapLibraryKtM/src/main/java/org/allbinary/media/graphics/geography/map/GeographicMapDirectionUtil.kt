@@ -34,12 +34,11 @@ open public class GeographicMapDirectionUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GeographicMapDirectionUtil = GeographicMapDirectionUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GeographicMapDirectionUtil{
 
@@ -51,7 +50,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
@@ -61,7 +60,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun getDirectionFromCellPositionToAdjacentCellPosition(fromGeographicMapCellPosition: GeographicMapCellPosition, toGeographicMapCellPosition: GeographicMapCellPosition)
+    open fun getDirectionFromCellPositionToAdjacentCellPosition(fromGeographicMapCellPosition: GeographicMapCellPosition, toGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : Direction{
 var fromGeographicMapCellPosition = fromGeographicMapCellPosition
@@ -168,7 +167,7 @@ var toGeographicMapCellPosition = toGeographicMapCellPosition
 
                 @Throws(Exception::class)
             
-open fun getEightDirectionFromCellPositionToAdjacentCellPosition(fromGeographicMapCellPosition: GeographicMapCellPosition, toGeographicMapCellPosition: GeographicMapCellPosition)
+    open fun getEightDirectionFromCellPositionToAdjacentCellPosition(fromGeographicMapCellPosition: GeographicMapCellPosition, toGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : Direction{
 var fromGeographicMapCellPosition = fromGeographicMapCellPosition
@@ -351,7 +350,7 @@ var toGeographicMapCellPosition = toGeographicMapCellPosition
 
                 @Throws(Exception::class)
             
-open fun getDirectionFromCellPositionToCellPosition(fromGeographicMapCellPosition: GeographicMapCellPosition, toGeographicMapCellPosition: GeographicMapCellPosition)
+    open fun getDirectionFromCellPositionToCellPosition(fromGeographicMapCellPosition: GeographicMapCellPosition, toGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : Direction{
 var fromGeographicMapCellPosition = fromGeographicMapCellPosition
@@ -443,7 +442,7 @@ stringMaker!!.delete(0, stringMaker!!.length())
 
                 @Throws(Exception::class)
             
-open fun getEightDirectionFromCellPositionToCellPosition(fromGeographicMapCellPosition: GeographicMapCellPosition, toGeographicMapCellPosition: GeographicMapCellPosition)
+    open fun getEightDirectionFromCellPositionToCellPosition(fromGeographicMapCellPosition: GeographicMapCellPosition, toGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : Direction{
 var fromGeographicMapCellPosition = fromGeographicMapCellPosition

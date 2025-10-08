@@ -31,8 +31,7 @@ import org.allbinary.graphics.color.BasicColor
 
 open public class CaptionAnimationHelperBase : Animation {
         
-
-        companion object {
+companion object {
             
     val INSTANCE: CaptionAnimationHelperBase = CaptionAnimationHelperBase()
 
@@ -43,7 +42,7 @@ open public class CaptionAnimationHelperBase : Animation {
             {
             }            
         
-open fun isShowing()
+    open fun isShowing()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -54,20 +53,21 @@ open fun isShowing()
 }
 
 
-open fun tick()
+    open fun tick()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun update(message: String, basicColor: BasicColor)
+    open fun update(message: String, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
 var message = message
 var basicColor = basicColor
 }
 
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

@@ -37,7 +37,7 @@ open public class OpenGLVUtilBase
             {
             }            
         
-open fun glTexEnvix(gl: GL10, target: Int, pname: Int, param: Int)
+    open fun glTexEnvix(gl: GL10, target: Int, pname: Int, param: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl
@@ -47,7 +47,7 @@ open fun glTexEnvix(gl: GL10, target: Int, pname: Int, param: Int)
 }
 
 
-open fun glTexParameterix(gl: GL10, target: Int, pname: Int, param: Int)
+    open fun glTexParameterix(gl: GL10, target: Int, pname: Int, param: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl
@@ -57,7 +57,7 @@ open fun glTexParameterix(gl: GL10, target: Int, pname: Int, param: Int)
 }
 
 
-open fun glGenerateMipmap(gl: GL10, textureId: Int, target: Int, generateMipMap: Boolean)
+    open fun glGenerateMipmap(gl: GL10, textureId: Int, target: Int, generateMipMap: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl

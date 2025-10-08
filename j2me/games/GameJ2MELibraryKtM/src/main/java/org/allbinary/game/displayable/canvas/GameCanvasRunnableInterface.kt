@@ -31,72 +31,73 @@ import javax.microedition.lcdui.ItemStateListener
 import org.allbinary.game.state.GameStateCompositeInterface
 import org.allbinary.graphics.paint.PaintableInterface
 import org.allbinary.thread.RunnableInterface
+
 interface GameCanvasRunnableInterface : RunnableInterface, PaintableInterface, ItemStateListener, GameStateCompositeInterface {
         
 
-open fun getTitle()
+    open fun getTitle()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun isInitialized()
+    open fun isInitialized()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun isPaused()
+    open fun isPaused()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun unPause()
+    open fun unPause()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun pause()
+    open fun pause()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun isHighScoreSubmitted()
+    open fun isHighScoreSubmitted()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
                 @Throws(Exception::class)
             
-open fun setHighScoreSubmitted(highScoreSubmitted: Boolean)
+    open fun setHighScoreSubmitted(highScoreSubmitted: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun setGameOver()
+    open fun setGameOver()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun isGameOver()
+    open fun isGameOver()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun initCommands(cmdListener: CommandListener)
+    open fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun getCurrentStateHashtable()
+    open fun getCurrentStateHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>
 
                 @Throws(Exception::class)
             
-open fun getLoadStateHashtable()
+    open fun getLoadStateHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>
 
                 @Throws(Exception::class)
             
-open fun setLoadStateHashtable(hashtable: Hashtable<Any, Any>)
+    open fun setLoadStateHashtable(hashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getType()
+    open fun getType()
         //nullable = true from not(false or (false and true)) = true
 : Int
 

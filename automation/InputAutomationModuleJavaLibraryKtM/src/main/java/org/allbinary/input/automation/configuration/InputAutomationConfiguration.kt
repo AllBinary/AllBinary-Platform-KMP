@@ -47,12 +47,11 @@ open public class InputAutomationConfiguration
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val FILENAME: String = "InputAutomationConfig.xml"
 
-open fun getFile()
+    open fun getFile()
         //nullable = true from not(false or (false and true)) = true
 : File{
 
@@ -70,13 +69,13 @@ open fun getFile()
     private var installed: Boolean= false
 
     private var inputAutomationModuleConfigurationList: List<InputAutomationModuleConfiguration>
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun isInstalled()
+    open fun isInstalled()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -87,7 +86,7 @@ open fun isInstalled()
 }
 
 
-open fun setInstalled(installed: Boolean)
+    open fun setInstalled(installed: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var installed = installed
@@ -96,7 +95,7 @@ logUtil!!.put("Installed: " +installed, this, "setIntalled")
 }
 
 
-open fun getInputAutomationModuleConfigurationList()
+    open fun getInputAutomationModuleConfigurationList()
         //nullable = true from not(false or (false and true)) = true
 : List<InputAutomationModuleConfiguration>{
 
@@ -109,7 +108,7 @@ open fun getInputAutomationModuleConfigurationList()
 
                 @Throws(Exception::class)
             
-open fun save()
+    open fun save()
         //nullable = true from not(false or (false and true)) = true
 {
 

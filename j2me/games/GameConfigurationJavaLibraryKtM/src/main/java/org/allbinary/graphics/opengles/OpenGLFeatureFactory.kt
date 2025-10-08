@@ -30,12 +30,11 @@ open public class OpenGLFeatureFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OpenGLFeatureFactory = OpenGLFeatureFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OpenGLFeatureFactory{
 
@@ -47,7 +46,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

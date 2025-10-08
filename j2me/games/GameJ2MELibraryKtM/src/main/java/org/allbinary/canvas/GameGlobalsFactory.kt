@@ -34,12 +34,11 @@ open public class GameGlobalsFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GameGlobalsFactory = GameGlobalsFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameGlobalsFactory{
 

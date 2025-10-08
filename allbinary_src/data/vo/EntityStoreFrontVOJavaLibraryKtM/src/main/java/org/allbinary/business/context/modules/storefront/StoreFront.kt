@@ -63,8 +63,7 @@ open public class StoreFront
         
                 , StoreFrontInterface {
         
-
-        companion object {
+companion object {
             
     private val RESOURCES: String = " Resources" +AbPathData.getInstance()!!.SEPARATOR
 
@@ -145,13 +144,13 @@ open public class StoreFront
     private val EMPTY_STRING: String = StringUtil.getInstance()!!.EMPTY_STRING
 
     private val ONE_EMPTY_STRING_ARRAY: Array<String?> = StringUtil.getInstance()!!.ONE_EMPTY_STRING_ARRAY
-public constructor        ()
+public constructor ()
             : super()
         {
 this.contextConfigurationInterface= ContextConfiguration()
 }
 
-public constructor        (request: HttpServletRequest)
+public constructor (request: HttpServletRequest)
             : super()
         {
     //var request = request
@@ -169,7 +168,7 @@ this.getFormData(RequestParams(request).
 this.setContextConfigurationInterface(ContextConfigurationInterfaceFactory.getInstance()!!.getInstance("Admin"))
 }
 
-public constructor        (hashMap: HashMap<Any, Any>)
+public constructor (hashMap: HashMap<Any, Any>)
             : super()
         {
     //var hashMap = hashMap
@@ -194,7 +193,7 @@ this.setContextConfigurationInterface(ContextConfigurationInterfaceFactory.getIn
 }
 
 
-open fun isColumn(columnName: String)
+    open fun isColumn(columnName: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var columnName = columnName
@@ -225,7 +224,7 @@ var columnName = columnName
 
                 @Throws(Exception::class)
             
-open fun createPath(key: String, hashMap: HashMap<Any, Any>)
+    open fun createPath(key: String, hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 : AbPath{
 var key = key
@@ -240,7 +239,7 @@ var hashMap = hashMap
 
                 @Throws(Exception::class)
             
-open fun createPath(append: String, key: String, hashMap: HashMap<Any, Any>)
+    open fun createPath(append: String, key: String, hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 : AbPath{
 var append = append
@@ -254,7 +253,7 @@ var hashMap = hashMap
 }
 
 
-open fun get(key: String, hashMap: HashMap<Any, Any>)
+    open fun get(key: String, hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var key = key
@@ -267,7 +266,7 @@ var hashMap = hashMap
 }
 
 
-open fun create(append: String, key: String, hashMap: HashMap<Any, Any>)
+    open fun create(append: String, key: String, hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var append = append
@@ -320,7 +319,7 @@ var hashMap = hashMap
 
                 @Throws(Exception::class)
             
-open fun getFormData(storeHashMap: HashMap<Any, Any>)
+    open fun getFormData(storeHashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var storeHashMap = storeHashMap
@@ -357,7 +356,7 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
 }
 
 
-open fun isNameValid()
+    open fun isNameValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -429,7 +428,7 @@ this.name= Replace(hashMap).
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -680,7 +679,7 @@ valid= this.isNameValid()
 }
 
 
-open fun nameValidationInfo()
+    open fun nameValidationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -713,7 +712,7 @@ stringBuffer!!.append(" and > 0 characters.<br>")
 }
 
 
-open fun validationInfo()
+    open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -977,7 +976,7 @@ stringBuffer!!.append(" and > 0 characters.<br>")
 }
 
 
-open fun getTestHtmlPath()
+    open fun getTestHtmlPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -988,7 +987,7 @@ open fun getTestHtmlPath()
 }
 
 
-open fun getCurrentHostName()
+    open fun getCurrentHostName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1016,7 +1015,7 @@ open fun getCurrentHostName()
 }
 
 
-open fun getCurrentHostNamePath()
+    open fun getCurrentHostNamePath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1044,7 +1043,7 @@ open fun getCurrentHostNamePath()
 }
 
 
-open fun getCurrentHomeHostName()
+    open fun getCurrentHomeHostName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1072,7 +1071,7 @@ open fun getCurrentHomeHostName()
 }
 
 
-open fun getCurrentHomeHostNamePath()
+    open fun getCurrentHomeHostNamePath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1100,7 +1099,7 @@ open fun getCurrentHomeHostNamePath()
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1111,7 +1110,7 @@ open fun getName()
 }
 
 
-open fun getBasketName()
+    open fun getBasketName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1122,7 +1121,7 @@ open fun getBasketName()
 }
 
 
-open fun getHomeHostName()
+    open fun getHomeHostName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1133,7 +1132,7 @@ open fun getHomeHostName()
 }
 
 
-open fun getHomeHostNamePath()
+    open fun getHomeHostNamePath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1144,7 +1143,7 @@ open fun getHomeHostNamePath()
 }
 
 
-open fun getHostName()
+    open fun getHostName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1155,7 +1154,7 @@ open fun getHostName()
 }
 
 
-open fun getHostNamePath()
+    open fun getHostNamePath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1166,7 +1165,7 @@ open fun getHostNamePath()
 }
 
 
-open fun getTestHomeHostName()
+    open fun getTestHomeHostName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1177,7 +1176,7 @@ open fun getTestHomeHostName()
 }
 
 
-open fun getTestHomeHostNamePath()
+    open fun getTestHomeHostNamePath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1188,7 +1187,7 @@ open fun getTestHomeHostNamePath()
 }
 
 
-open fun getTestHostName()
+    open fun getTestHostName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1199,7 +1198,7 @@ open fun getTestHostName()
 }
 
 
-open fun getTestHostNamePath()
+    open fun getTestHostNamePath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1210,7 +1209,7 @@ open fun getTestHostNamePath()
 }
 
 
-open fun getStaticPath()
+    open fun getStaticPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1221,7 +1220,7 @@ open fun getStaticPath()
 }
 
 
-open fun getCategoryPath()
+    open fun getCategoryPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1232,7 +1231,7 @@ open fun getCategoryPath()
 }
 
 
-open fun getInventoryControl()
+    open fun getInventoryControl()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1245,7 +1244,7 @@ open fun getInventoryControl()
 
                 @Throws(Exception::class)
             
-open fun getSubStores()
+    open fun getSubStores()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -1272,7 +1271,7 @@ open fun getSubStores()
 }
 
 
-open fun getTagLocation()
+    open fun getTagLocation()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1283,7 +1282,7 @@ open fun getTagLocation()
 }
 
 
-open fun getPackageLocation()
+    open fun getPackageLocation()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1294,7 +1293,7 @@ open fun getPackageLocation()
 }
 
 
-open fun getFtp()
+    open fun getFtp()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1305,7 +1304,7 @@ open fun getFtp()
 }
 
 
-open fun getFtpUserName()
+    open fun getFtpUserName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1316,7 +1315,7 @@ open fun getFtpUserName()
 }
 
 
-open fun getFtpPassword()
+    open fun getFtpPassword()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1327,7 +1326,7 @@ open fun getFtpPassword()
 }
 
 
-open fun getTestFtp()
+    open fun getTestFtp()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1338,7 +1337,7 @@ open fun getTestFtp()
 }
 
 
-open fun getTestFtpUserName()
+    open fun getTestFtpUserName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1349,7 +1348,7 @@ open fun getTestFtpUserName()
 }
 
 
-open fun getTestFtpPassword()
+    open fun getTestFtpPassword()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1360,7 +1359,7 @@ open fun getTestFtpPassword()
 }
 
 
-open fun getFtpPath()
+    open fun getFtpPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1371,7 +1370,7 @@ open fun getFtpPath()
 }
 
 
-open fun getTestFtpPath()
+    open fun getTestFtpPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1382,7 +1381,7 @@ open fun getTestFtpPath()
 }
 
 
-open fun getTimeCreated()
+    open fun getTimeCreated()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1393,7 +1392,7 @@ open fun getTimeCreated()
 }
 
 
-open fun getLastModified()
+    open fun getLastModified()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1404,7 +1403,7 @@ open fun getLastModified()
 }
 
 
-open fun setName(value: String)
+    open fun setName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -1412,7 +1411,7 @@ this.name= value
 }
 
 
-open fun setBasketName(value: String)
+    open fun setBasketName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -1420,7 +1419,7 @@ this.basketName= value
 }
 
 
-open fun setHomeHostName(value: String)
+    open fun setHomeHostName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -1430,7 +1429,7 @@ this.homeHostName= value
 
                 @Throws(Exception::class)
             
-open fun setHomeHostNamePath(value: String)
+    open fun setHomeHostNamePath(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -1438,7 +1437,7 @@ this.homeHostNamePath= AbPath(value)
 }
 
 
-open fun setHostName(value: String)
+    open fun setHostName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -1448,7 +1447,7 @@ this.hostName= value
 
                 @Throws(Exception::class)
             
-open fun setHostNamePath(value: String)
+    open fun setHostNamePath(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -1456,7 +1455,7 @@ this.hostNamePath= AbPath(value)
 }
 
 
-open fun setTestHomeHostName(value: String)
+    open fun setTestHomeHostName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -1466,7 +1465,7 @@ this.testHomeHostName= value
 
                 @Throws(Exception::class)
             
-open fun setTestHomeHostNamePath(value: String)
+    open fun setTestHomeHostNamePath(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -1474,7 +1473,7 @@ this.testHomeHostNamePath= AbPath(value)
 }
 
 
-open fun setTestHostName(value: String)
+    open fun setTestHostName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -1484,7 +1483,7 @@ this.testHostName= value
 
                 @Throws(Exception::class)
             
-open fun setTestHostNamePath(value: String)
+    open fun setTestHostNamePath(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -1494,7 +1493,7 @@ this.testHostNamePath= AbPath(value)
 
                 @Throws(Exception::class)
             
-open fun setImagePath(value: String)
+    open fun setImagePath(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -1504,7 +1503,7 @@ this.imagePath= AbPath(value)
 
                 @Throws(Exception::class)
             
-open fun setStaticPath(value: String)
+    open fun setStaticPath(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -1514,7 +1513,7 @@ this.staticPath= AbPath(value)
 
                 @Throws(Exception::class)
             
-open fun setCategoryPath(value: String)
+    open fun setCategoryPath(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -1522,7 +1521,7 @@ this.categoryPath= AbPath(value)
 }
 
 
-open fun setSubStores(value: String)
+    open fun setSubStores(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -1530,7 +1529,7 @@ this.subStores= value
 }
 
 
-open fun setTagLocation(value: String)
+    open fun setTagLocation(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -1538,7 +1537,7 @@ this.tagLocation= value
 }
 
 
-open fun setPackageLocation(value: String)
+    open fun setPackageLocation(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -1546,7 +1545,7 @@ this.packageLocation= value
 }
 
 
-open fun setInventoryControl(value: String)
+    open fun setInventoryControl(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -1554,7 +1553,7 @@ this.inventoryControl= value
 }
 
 
-open fun getPackageLocation(value: String)
+    open fun getPackageLocation(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -1562,7 +1561,7 @@ this.packageLocation= value
 }
 
 
-open fun setFtp(value: String)
+    open fun setFtp(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -1570,7 +1569,7 @@ this.ftp= value
 }
 
 
-open fun setFtpUserName(value: String)
+    open fun setFtpUserName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -1578,7 +1577,7 @@ this.ftpUserName= value
 }
 
 
-open fun setFtpPassword(value: String)
+    open fun setFtpPassword(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -1586,7 +1585,7 @@ this.ftpPassword= value
 }
 
 
-open fun setTestFtp(value: String)
+    open fun setTestFtp(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -1594,7 +1593,7 @@ this.testFtp= value
 }
 
 
-open fun setTestFtpUserName(value: String)
+    open fun setTestFtpUserName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -1602,7 +1601,7 @@ this.testFtpUserName= value
 }
 
 
-open fun setTestFtpPassword(value: String)
+    open fun setTestFtpPassword(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -1610,7 +1609,7 @@ this.testFtpPassword= value
 }
 
 
-open fun setTimeCreated(value: String)
+    open fun setTimeCreated(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -1618,7 +1617,7 @@ this.timeCreated= value
 }
 
 
-open fun setLastModified(value: String)
+    open fun setLastModified(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -1628,7 +1627,7 @@ this.lastModified= value
 
                 @Throws(Exception::class)
             
-open fun setFtpPath(value: String)
+    open fun setFtpPath(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var value = value
@@ -1638,7 +1637,7 @@ this.ftpPath= AbPath(value)
 
                 @Throws(Exception::class)
             
-open fun setTestFtpPath(value: String)
+    open fun setTestFtpPath(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var value = value
@@ -1648,7 +1647,7 @@ this.testFtpPath= AbPath(value)
 
                 @Throws(Exception::class)
             
-open fun createDirectories()
+    open fun createDirectories()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -1703,7 +1702,7 @@ open fun createDirectories()
 
                 @Throws(Exception::class)
             
-open fun install(current: Int, total: Int)
+    open fun install(current: Int, total: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var current = current
@@ -1858,7 +1857,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 
                 @Throws(Exception::class)
             
-open fun installViews(fromDirectoryAbPath: AbPath, toDirectoryAbPath: AbPath, current: Int, total: Int)
+    open fun installViews(fromDirectoryAbPath: AbPath, toDirectoryAbPath: AbPath, current: Int, total: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var fromDirectoryAbPath = fromDirectoryAbPath
@@ -1871,7 +1870,7 @@ FileUtil.getInstance()!!.copyDirectoryPortion(fromDirectoryAbPath, toDirectoryAb
 
                 @Throws(Exception::class)
             
-open fun installResources(fromDirectoryAbPath: AbPath, current: Int, total: Int)
+    open fun installResources(fromDirectoryAbPath: AbPath, current: Int, total: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var fromDirectoryAbPath = fromDirectoryAbPath
@@ -1901,7 +1900,7 @@ FileUtil.getInstance()!!.copyDirectoryPortion(installCategoryAbPath, categoryAbP
 
                 @Throws(Exception::class)
             
-open fun installMedia(fromDirectoryAbPath: AbPath, current: Int, total: Int)
+    open fun installMedia(fromDirectoryAbPath: AbPath, current: Int, total: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var fromDirectoryAbPath = fromDirectoryAbPath
@@ -1927,7 +1926,7 @@ FileUtil.getInstance()!!.copyDirectoryPortion(viewStoreImagesDirectoryAbPath, st
 
                 @Throws(Exception::class)
             
-open fun toVector()
+    open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -1981,7 +1980,7 @@ dataVector!!.add(time)
 
                 @Throws(Exception::class)
             
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -2035,7 +2034,7 @@ dataHashMap!!.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 }
 
 
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -2046,7 +2045,7 @@ open fun getKey()
 }
 
 
-open fun getContextConfigurationInterface()
+    open fun getContextConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
 : ContextConfigurationInterface{
 
@@ -2057,7 +2056,7 @@ open fun getContextConfigurationInterface()
 }
 
 
-open fun setContextConfigurationInterface(contextConfigurationInterface: ContextConfigurationInterface)
+    open fun setContextConfigurationInterface(contextConfigurationInterface: ContextConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var contextConfigurationInterface = contextConfigurationInterface

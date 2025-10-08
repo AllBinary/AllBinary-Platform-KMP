@@ -33,12 +33,13 @@ open public class TrackingEventFactory
         
                 , AllBinaryEventObjectFactoryInterface {
         
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
-override fun getInstance()
+
+    override fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AllBinaryEventObject{
 

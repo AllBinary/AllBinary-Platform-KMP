@@ -38,13 +38,13 @@ open public class ImageUnifierProperties
     private var columns: Integer
 
     private var imageUnifierCell: ImageUnifierCell
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun getWidth()
+    open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -55,7 +55,7 @@ open fun getWidth()
 }
 
 
-open fun getHeight()
+    open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -66,7 +66,7 @@ open fun getHeight()
 }
 
 
-open fun getRows()
+    open fun getRows()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -77,7 +77,7 @@ open fun getRows()
 }
 
 
-open fun setRows(rows: Integer)
+    open fun setRows(rows: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var rows = rows
@@ -85,7 +85,7 @@ this.rows= rows
 }
 
 
-open fun getColumns()
+    open fun getColumns()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -96,7 +96,7 @@ open fun getColumns()
 }
 
 
-open fun setColumns(columns: Integer)
+    open fun setColumns(columns: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var columns = columns
@@ -104,7 +104,7 @@ this.columns= columns
 }
 
 
-open fun getImageUnifierCell()
+    open fun getImageUnifierCell()
         //nullable = true from not(false or (false and true)) = true
 : ImageUnifierCell{
 
@@ -115,7 +115,7 @@ open fun getImageUnifierCell()
 }
 
 
-open fun setImageUnifierCell(imageUnifierCell: ImageUnifierCell)
+    open fun setImageUnifierCell(imageUnifierCell: ImageUnifierCell)
         //nullable = true from not(false or (false and false)) = true
 {
 var imageUnifierCell = imageUnifierCell

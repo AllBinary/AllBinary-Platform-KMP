@@ -31,12 +31,11 @@ import org.allbinary.media.image.ImageModifierUtil
 
 open public class SetColorProcessor : ModifierBaseProcessor {
         
-
-        companion object {
+companion object {
             
     private val instance: SetColorProcessor = SetColorProcessor()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : SetColorProcessor{
 
@@ -53,7 +52,8 @@ open fun getInstance()
             public constructor() : super()
             {
             }            
-        override fun update(imageModifierUtil: ImageModifierUtil, originalImage: Image, imageToShow: Image, index: Int, basicColor: BasicColor)
+        
+    override fun update(imageModifierUtil: ImageModifierUtil, originalImage: Image, imageToShow: Image, index: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageModifierUtil = imageModifierUtil

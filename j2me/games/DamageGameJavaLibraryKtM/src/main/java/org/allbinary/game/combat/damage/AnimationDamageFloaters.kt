@@ -48,7 +48,7 @@ open public class AnimationDamageFloaters : DamageFloaters {
     private var dx: Int
 
     private var dy: Int
-public constructor        (layerInterface: AllBinaryLayer, animationInterfaceArray: Array<IndexedAnimation?>, dx: Int, dy: Int){
+public constructor (layerInterface: AllBinaryLayer, animationInterfaceArray: Array<IndexedAnimation?>, dx: Int, dy: Int){
 var layerInterface = layerInterface
 var animationInterfaceArray = animationInterfaceArray
 var dx = dx
@@ -70,7 +70,8 @@ this.dx= dx
 this.dy= dy
 }
 
-override fun add(damage: Int)
+
+    override fun add(damage: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var damage = damage
@@ -81,7 +82,8 @@ animationInterfaceArray[i]!!.setFrame(0)
 this.circularIndexUtil!!.next()
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

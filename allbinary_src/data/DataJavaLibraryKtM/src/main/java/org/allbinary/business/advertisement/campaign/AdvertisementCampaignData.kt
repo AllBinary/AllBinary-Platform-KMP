@@ -30,12 +30,11 @@ open public class AdvertisementCampaignData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AdvertisementCampaignData = AdvertisementCampaignData()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AdvertisementCampaignData{
 
@@ -47,7 +46,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

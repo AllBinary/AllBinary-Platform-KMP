@@ -32,12 +32,11 @@ open public class ParentInventoryTagHelper
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ParentInventoryTagHelper = ParentInventoryTagHelper()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ParentInventoryTagHelper{
 
@@ -57,7 +56,7 @@ open fun getInstance()
         
                 @Throws(Exception::class)
             
-open fun isValid(tagClass: Any, parentTag: Tag)
+    open fun isValid(tagClass: Any, parentTag: Tag)
         //nullable = true from not(false or (false and false)) = true
 {
 var tagClass = tagClass

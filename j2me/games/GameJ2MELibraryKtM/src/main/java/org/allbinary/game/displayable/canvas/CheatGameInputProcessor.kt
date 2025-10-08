@@ -38,8 +38,7 @@ import org.allbinary.util.BasicArrayList
 
 open public class CheatGameInputProcessor : PlayerGameInput {
         
-
-        companion object {
+companion object {
             
     var inputProcessor: SpecialGameInputInterface = SpecialGameInputFactory.NO_SPECIAL_GAME_INPUT
 
@@ -48,7 +47,7 @@ open public class CheatGameInputProcessor : PlayerGameInput {
     private val PROCESS_GAME: String = "processGame"
 
     private val gameCanvas: AllBinaryGameCanvas
-public constructor        (gameCanvas: AllBinaryGameCanvas)                        
+public constructor (gameCanvas: AllBinaryGameCanvas)                        
 
                             : super(BasicArrayList(),  -1){
 var gameCanvas = gameCanvas
@@ -62,7 +61,8 @@ this.gameCanvas= gameCanvas
 
     private val gameKeyFactory: GameKeyFactory = GameKeyFactory.getInstance()!!
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun update()
+
+    override fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 

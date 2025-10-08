@@ -38,12 +38,11 @@ open public class LinuxOperatingSystemFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: LinuxOperatingSystemFactory = LinuxOperatingSystemFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : LinuxOperatingSystemFactory{
 
@@ -57,13 +56,13 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getOperatingSystemInstance()
+    open fun getOperatingSystemInstance()
         //nullable = true from not(false or (false and true)) = true
 : GenericOperatingSystem{
 
@@ -82,7 +81,7 @@ open fun getOperatingSystemInstance()
                         if(osName!!.compareTo(operatingSystems!!.LINUX) == 0)
                         
                                     {
-                                    operatingSystemInterface= Linux()
+                                    operatingSystemInterface= LinuxOS()
 
                                     }
                                 
@@ -92,7 +91,7 @@ open fun getOperatingSystemInstance()
                         if(operatingSystems!!.isUnknownSpecificOSAllowed())
                         
                                     {
-                                    operatingSystemInterface= Linux()
+                                    operatingSystemInterface= LinuxOS()
 
                                     }
                                 

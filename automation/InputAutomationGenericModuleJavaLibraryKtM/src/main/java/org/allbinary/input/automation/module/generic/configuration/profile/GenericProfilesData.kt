@@ -30,13 +30,12 @@ open public class GenericProfilesData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var NAME: String = "GENERIC_PROFILES_NAME"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

@@ -31,7 +31,7 @@ open public class ShippingAddressesEntity : StreetAddressesEntity {
         
 
     private val TABLENAME: String = "shipping"
-public constructor        (userName: String)                        
+public constructor (userName: String)                        
 
                             : super(userName){
 var userName = userName

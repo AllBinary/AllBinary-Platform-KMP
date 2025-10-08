@@ -37,7 +37,7 @@ open public class ThemePropertiesView
         
 
     private var themeInterface: ThemeInterface
-public constructor        (themeInterface: ThemeInterface)
+public constructor (themeInterface: ThemeInterface)
             : super()
         {
 var themeInterface = themeInterface
@@ -47,7 +47,7 @@ this.themeInterface= themeInterface
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

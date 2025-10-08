@@ -22,12 +22,11 @@ open public class JTreeInterfaceFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: JTreeInterfaceFactory = JTreeInterfaceFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : JTreeInterfaceFactory{
 
@@ -47,7 +46,7 @@ open fun getInstance()
         
     private var jTreeInterface: JTreeInterface
 
-open fun set(jTreeInterface: JTreeInterface)
+    open fun set(jTreeInterface: JTreeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var jTreeInterface = jTreeInterface
@@ -55,7 +54,7 @@ this.jTreeInterface= jTreeInterface
 }
 
 
-open fun getJTreeInterface()
+    open fun getJTreeInterface()
         //nullable = true from not(false or (false and true)) = true
 : JTreeInterface{
 

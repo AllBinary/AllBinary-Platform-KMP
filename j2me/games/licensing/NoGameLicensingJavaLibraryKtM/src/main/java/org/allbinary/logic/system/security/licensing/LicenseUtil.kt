@@ -31,12 +31,11 @@ open public class LicenseUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: LicenseUtil = LicenseUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : LicenseUtil{
 
@@ -54,14 +53,14 @@ open fun getInstance()
             {
             }            
         
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun isRunning()
+    open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -73,14 +72,14 @@ open fun isRunning()
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun setRunning(running: Boolean)
+    open fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var running = running
 }
 
 
-open fun shouldWait(commandListener: CommandListener)
+    open fun shouldWait(commandListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var commandListener = commandListener

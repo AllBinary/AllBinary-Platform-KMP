@@ -30,12 +30,11 @@ open public class BasicGroupFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: BasicGroupFactory = BasicGroupFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BasicGroupFactory{
 

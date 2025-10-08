@@ -30,12 +30,11 @@ open public class OrientationData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: OrientationData = OrientationData()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OrientationData{
 
@@ -47,7 +46,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

@@ -33,12 +33,11 @@ open public class FeatureResourceInitializationUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: FeatureResourceInitializationUtil = FeatureResourceInitializationUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : FeatureResourceInitializationUtil{
 
@@ -60,7 +59,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun init(level: Int)
+    open fun init(level: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var level = level

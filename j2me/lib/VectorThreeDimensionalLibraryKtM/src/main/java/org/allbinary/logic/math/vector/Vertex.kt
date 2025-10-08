@@ -40,7 +40,7 @@ open public class Vertex
     var y: BasicDecimal = BasicDecimal()
 
     var z: BasicDecimal = BasicDecimal()
-public constructor        (x: Int, y: Int, z: Int)
+public constructor (x: Int, y: Int, z: Int)
             : super()
         {
 var x = x
@@ -51,7 +51,7 @@ this.y.set(y)
 this.z.set(z)
 }
 
-public constructor        (x: Int, y: Int)
+public constructor (x: Int, y: Int)
             : super()
         {
 var x = x
@@ -60,12 +60,13 @@ this.x.set(x)
 this.y.set(y)
 }
 
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

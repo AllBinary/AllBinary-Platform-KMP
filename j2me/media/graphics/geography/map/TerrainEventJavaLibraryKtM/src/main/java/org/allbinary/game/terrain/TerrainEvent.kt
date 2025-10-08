@@ -33,7 +33,7 @@ open public class TerrainEvent : AllBinaryEventObject {
         
 
     private var basicTerrainInfo: BasicTerrainInfo = BasicTerrainInfo.NULL_BASIC_TERRAIN_INFO
-public constructor        ()                        
+public constructor ()                        
 
                             : super(NullUtil.getInstance()!!.NULL_OBJECT){
 
@@ -42,7 +42,7 @@ public constructor        ()
                     
 }
 
-public constructor        (basicTerrainInfo: BasicTerrainInfo)                        
+public constructor (basicTerrainInfo: BasicTerrainInfo)                        
 
                             : super(basicTerrainInfo){
     //var basicTerrainInfo = basicTerrainInfo
@@ -53,7 +53,8 @@ public constructor        (basicTerrainInfo: BasicTerrainInfo)
 this.setBasicTerrainInfo(basicTerrainInfo)
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -70,7 +71,7 @@ stringBuffer!!.append(this.basicTerrainInfo!!.toString())
 }
 
 
-open fun getBasicTerrainInfo()
+    open fun getBasicTerrainInfo()
         //nullable = true from not(false or (false and true)) = true
 : BasicTerrainInfo{
 
@@ -81,7 +82,7 @@ open fun getBasicTerrainInfo()
 }
 
 
-open fun setBasicTerrainInfo(basicTerrainInfo: BasicTerrainInfo)
+    open fun setBasicTerrainInfo(basicTerrainInfo: BasicTerrainInfo)
         //nullable = true from not(false or (false and false)) = true
 {
 var basicTerrainInfo = basicTerrainInfo
@@ -89,7 +90,7 @@ this.basicTerrainInfo= basicTerrainInfo
 }
 
 
-open fun setBasicTerrainInfoForCircularStaticPool(basicTerrainInfo: BasicTerrainInfo)
+    open fun setBasicTerrainInfoForCircularStaticPool(basicTerrainInfo: BasicTerrainInfo)
         //nullable = true from not(false or (false and false)) = true
 {
 var basicTerrainInfo = basicTerrainInfo

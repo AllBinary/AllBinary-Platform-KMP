@@ -38,10 +38,9 @@ open public class ImageTypes
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun valueOf(anyType: Array<Any?>)
+    open fun valueOf(anyType: Array<Any?>)
         //nullable = true from not(false or (false and false)) = true
 : ImageTypes{
 var anyType = anyType
@@ -72,12 +71,12 @@ imageTypes!!.getVector()!!.add(imageType)
         }
             
     private var vector: Vector = Vector()
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
-public constructor        (node: Node)
+public constructor (node: Node)
             : super()
         {
 var node = node
@@ -119,7 +118,7 @@ this.getVector()!!.add(InputImageType.getInstance(nextImageTypeString))
 }
 
 
-open fun getVector()
+    open fun getVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -132,7 +131,7 @@ open fun getVector()
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -162,7 +161,8 @@ newNode!!.appendChild(ModDomHelper.createTextNode(document, ImageActionScriptOut
                         return newNode
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

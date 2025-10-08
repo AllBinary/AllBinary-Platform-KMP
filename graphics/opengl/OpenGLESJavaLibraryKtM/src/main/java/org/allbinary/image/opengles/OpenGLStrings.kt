@@ -16,12 +16,11 @@ open public class OpenGLStrings
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OpenGLStrings = OpenGLStrings()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OpenGLStrings{
 

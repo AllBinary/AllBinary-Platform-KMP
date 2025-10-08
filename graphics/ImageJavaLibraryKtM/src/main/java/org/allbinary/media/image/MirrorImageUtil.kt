@@ -35,12 +35,11 @@ open public class MirrorImageUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: MirrorImageUtil = MirrorImageUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : MirrorImageUtil{
 
@@ -56,13 +55,13 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val imageUtil: ImageUtil = ImageUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getImage(bufferedImage: BufferedImage, verticle: Boolean, horizontal: Boolean)
+    open fun getImage(bufferedImage: BufferedImage, verticle: Boolean, horizontal: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : BufferedImage{
 var bufferedImage = bufferedImage
@@ -126,7 +125,7 @@ g.dispose()
 }
 
 
-open fun getImages(bufferedImage: BufferedImage, verticle: Boolean, horizontal: Boolean)
+    open fun getImages(bufferedImage: BufferedImage, verticle: Boolean, horizontal: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Array<BufferedImage?>{
 var bufferedImage = bufferedImage

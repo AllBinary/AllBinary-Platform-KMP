@@ -53,7 +53,7 @@ open public class ImageComparisonWorker : BasicEventHandler
     private var running: Boolean= false
 
     private var index2: Int= 0
-public constructor        (imageComparatorConstraintsInterface: ImageComparatorConstraintsInterface){
+public constructor (imageComparatorConstraintsInterface: ImageComparatorConstraintsInterface){
     //var imageComparatorConstraintsInterface = imageComparatorConstraintsInterface
 this.imageComparatorConstraintsInterface= imageComparatorConstraintsInterface
 this.imageComparator= ImageComparator(imageComparatorConstraintsInterface)
@@ -61,7 +61,7 @@ this.imageComparator= ImageComparator(imageComparatorConstraintsInterface)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun isRunning()
+    open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -73,7 +73,7 @@ open fun isRunning()
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun setRunning(running: Boolean)
+    open fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var running = running
@@ -82,7 +82,7 @@ this.running= running
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun onCaptureEvent(capturedImageWorkerResultsEvent: CapturedImageWorkerResultsEvent)
+    open fun onCaptureEvent(capturedImageWorkerResultsEvent: CapturedImageWorkerResultsEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var capturedImageWorkerResultsEvent = capturedImageWorkerResultsEvent
@@ -100,7 +100,7 @@ this.bufferedImageVector!!.add(capturedImageWorkerResultsEvent)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun onEvent(allBinaryEventObject: AllBinaryEventObject)
+    open fun onEvent(allBinaryEventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryEventObject = allBinaryEventObject
@@ -108,7 +108,7 @@ this.onCaptureEvent(allBinaryEventObject as CapturedImageWorkerResultsEvent)
 }
 
 
-open fun run()
+    open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 

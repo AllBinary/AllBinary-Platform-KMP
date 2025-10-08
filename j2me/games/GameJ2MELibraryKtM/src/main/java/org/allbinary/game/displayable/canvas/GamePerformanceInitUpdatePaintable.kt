@@ -45,12 +45,14 @@ open public class GamePerformanceInitUpdatePaintable : InitUpdatePaintable {
     private val yArray: IntArray = intArrayOf(halfHeight +30,halfHeight +30,halfHeight +30 +15,halfHeight +30 +15,halfHeight +30 +30,halfHeight +30 +30,halfHeight +30 +45,halfHeight +30 +45)
 
     private var baseRefreshHelperCharArray: Array<CharArray?> = Array(0) { CharArray(0) }
-override fun init()
+
+    override fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun update()
+
+    override fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 baseRefreshHelperCharArray= GameStatisticsFactory.getInstance()!!.toCharArray()
@@ -58,7 +60,8 @@ baseRefreshHelperCharArray= GameStatisticsFactory.getInstance()!!.toCharArray()
 
 
     private val RED: Int = BasicColorFactory.getInstance()!!.RED.toInt()!!
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

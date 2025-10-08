@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
@@ -39,7 +38,7 @@ open public class RaceTrackGeographicMap : BaseRaceTrackGeographicMap {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val customMapGenerator: CustomMapGeneratorBase
-public constructor        (raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrackData, tiledLayerFactoryInterface: AllBinaryTiledLayerFactoryInterface, geographicMapCellPositionFactoryInterface: GeographicMapCellPositionFactoryInterface, geographicMapCellPositionBaseFactory: GeographicMapCellPositionBaseFactory, geographicMapCellTypeFactory: GeographicMapCellTypeFactory, customMapGeneratorBaseFactory: CustomMapGeneratorBaseFactory)                        
+public constructor (raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrackData, tiledLayerFactoryInterface: AllBinaryTiledLayerFactoryInterface, geographicMapCellPositionFactoryInterface: GeographicMapCellPositionFactoryInterface, geographicMapCellPositionBaseFactory: GeographicMapCellPositionBaseFactory, geographicMapCellTypeFactory: GeographicMapCellTypeFactory, customMapGeneratorBaseFactory: CustomMapGeneratorBaseFactory)                        
 
                             : super(raceTrackInfo, raceTrackData, tiledLayerFactoryInterface!!.getInstance(raceTrackInfo, raceTrackData), BasicGeographicMapFactory().
                             getInstance(raceTrackInfo, raceTrackData, tiledLayerFactoryInterface, geographicMapCellPositionFactoryInterface, geographicMapCellTypeFactory), geographicMapCellPositionFactoryInterface, geographicMapCellPositionBaseFactory, geographicMapCellTypeFactory){
@@ -57,7 +56,7 @@ public constructor        (raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrac
 this.customMapGenerator= customMapGeneratorBaseFactory!!.getInstance(this)
 }
 
-public constructor        (raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrackData, tiledLayerFactoryInterface: AllBinaryTiledLayerFactoryInterface, geographicMapCellPositionFactoryInterface: GeographicMapCellPositionFactoryInterface, geographicMapCellTypeFactory: GeographicMapCellTypeFactory, customMapGeneratorBaseFactory: CustomMapGeneratorBaseFactory)                        
+public constructor (raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrackData, tiledLayerFactoryInterface: AllBinaryTiledLayerFactoryInterface, geographicMapCellPositionFactoryInterface: GeographicMapCellPositionFactoryInterface, geographicMapCellTypeFactory: GeographicMapCellTypeFactory, customMapGeneratorBaseFactory: CustomMapGeneratorBaseFactory)                        
 
                             : this(raceTrackInfo, raceTrackData, tiledLayerFactoryInterface, geographicMapCellPositionFactoryInterface, GeographicMapCellPositionBaseFactory(), geographicMapCellTypeFactory, customMapGeneratorBaseFactory){
     //var raceTrackInfo = raceTrackInfo
@@ -73,7 +72,7 @@ public constructor        (raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrac
 }
 
 
-open fun getCustomMapGenerator()
+    open fun getCustomMapGenerator()
         //nullable = true from not(false or (false and true)) = true
 : CustomMapGeneratorBase{
 
@@ -86,7 +85,7 @@ open fun getCustomMapGenerator()
 
                 @Throws(Exception::class)
             
-open fun isValid(geographicMapCellPosition: GeographicMapCellPosition)
+    open fun isValid(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var geographicMapCellPosition = geographicMapCellPosition

@@ -32,7 +32,7 @@ open public class ImageCacheable
         
 
     private var name: String
-public constructor        (name: String, anyType: Any)
+public constructor (name: String, anyType: Any)
             : super()
         {
 var name = name
@@ -40,7 +40,7 @@ var anyType = anyType
 }
 
 
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -50,7 +50,8 @@ open fun getKey()
                         return name
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

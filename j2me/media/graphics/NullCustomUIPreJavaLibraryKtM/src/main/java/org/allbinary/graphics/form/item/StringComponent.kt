@@ -18,8 +18,7 @@ open public class StringComponent
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NULL_STRING_COMPONENT: StringComponent = StringComponent()
 
@@ -30,7 +29,7 @@ open public class StringComponent
             {
             }            
         
-open fun getBackgroundBasicColor()
+    open fun getBackgroundBasicColor()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
 
@@ -41,14 +40,14 @@ open fun getBackgroundBasicColor()
 }
 
 
-open fun setBackgroundBasicColor(backgroundBasicColor: BasicColor)
+    open fun setBackgroundBasicColor(backgroundBasicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
 var backgroundBasicColor = backgroundBasicColor
 }
 
 
-open fun getForegroundBasicColor()
+    open fun getForegroundBasicColor()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
 
@@ -59,7 +58,7 @@ open fun getForegroundBasicColor()
 }
 
 
-open fun setForegroundBasicColor(foregroundBasicColor: BasicColor)
+    open fun setForegroundBasicColor(foregroundBasicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
 var foregroundBasicColor = foregroundBasicColor

@@ -36,12 +36,11 @@ open public class FileLockUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: FileLockUtil = FileLockUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : FileLockUtil{
 
@@ -55,7 +54,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -63,7 +62,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getAll(vector: Vector, isReturnOnFailure: Boolean)
+    open fun getAll(vector: Vector, isReturnOnFailure: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var vector = vector
@@ -126,7 +125,7 @@ logUtil!!.put("Total Locks Obtained: " +fileLockVector!!.size, this, "getAll")
 
                 @Throws(Exception::class)
             
-open fun getAllPossible(vector: Vector)
+    open fun getAllPossible(vector: Vector)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var vector = vector
@@ -140,7 +139,7 @@ var vector = vector
 
                 @Throws(Exception::class)
             
-open fun getAllOrNone(vector: Vector)
+    open fun getAllOrNone(vector: Vector)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var vector = vector
@@ -174,7 +173,7 @@ var vector = vector
 
                 @Throws(Exception::class)
             
-open fun getLock(file: AbFile)
+    open fun getLock(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : FileLock{
 var file = file
@@ -204,7 +203,7 @@ logUtil!!.put("Exception returns null", this, "getLock", e)
 
                 @Throws(Exception::class)
             
-open fun getLock(fileOutputStream: AbFileOutputStream)
+    open fun getLock(fileOutputStream: AbFileOutputStream)
         //nullable = true from not(false or (false and false)) = true
 : FileLock{
 var fileOutputStream = fileOutputStream
@@ -239,7 +238,7 @@ StreamUtil.getInstance()!!.close(fileOutputStream)
 
                 @Throws(Exception::class)
             
-open fun getLock(fileChannel: FileChannel)
+    open fun getLock(fileChannel: FileChannel)
         //nullable = true from not(false or (false and false)) = true
 : FileLock{
 var fileChannel = fileChannel

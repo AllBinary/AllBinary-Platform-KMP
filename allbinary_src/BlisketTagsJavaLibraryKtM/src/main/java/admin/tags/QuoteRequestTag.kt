@@ -40,13 +40,13 @@ open public class QuoteRequestTag : TableTag {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var storeName: String
-public constructor        (){
+public constructor (){
 this.setTagHelperFactory(QuoteHelperFactory())
 this.setTagRequestHelperFactory(QuoteRequestHelperFactory())
 }
 
 
-open fun setStoreName(storeName: String)
+    open fun setStoreName(storeName: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var storeName = storeName
@@ -56,7 +56,7 @@ this.storeName= storeName
 
                 @Throws(LicensingException::class)
             
-open fun email()
+    open fun email()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -114,7 +114,7 @@ open fun email()
 
                 @Throws(JspTagException::class)
             
-open fun doStartTag()
+    open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

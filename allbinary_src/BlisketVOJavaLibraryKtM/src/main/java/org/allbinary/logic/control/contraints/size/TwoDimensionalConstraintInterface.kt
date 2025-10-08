@@ -25,22 +25,23 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface TwoDimensionalConstraintInterface {
         
 
-open fun getHeight()
+    open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : SizeConstraintInterface
 
-open fun getWidth()
+    open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : SizeConstraintInterface
 
-open fun setHeight(heightSizeConstraintInterface: SizeConstraintInterface)
+    open fun setHeight(heightSizeConstraintInterface: SizeConstraintInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setWidth(widthSizeConstraintInterface: SizeConstraintInterface)
+    open fun setWidth(widthSizeConstraintInterface: SizeConstraintInterface)
         //nullable = true from not(false or (false and false)) = true
 
 

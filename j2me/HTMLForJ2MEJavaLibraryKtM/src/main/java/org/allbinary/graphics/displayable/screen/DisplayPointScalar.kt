@@ -31,12 +31,11 @@ open public class DisplayPointScalar
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: DisplayPointScalar = DisplayPointScalar()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DisplayPointScalar{
 
@@ -54,7 +53,7 @@ open fun getInstance()
             {
             }            
         
-open fun process(point: GPoint)
+    open fun process(point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 : GPoint{
     //var point = point

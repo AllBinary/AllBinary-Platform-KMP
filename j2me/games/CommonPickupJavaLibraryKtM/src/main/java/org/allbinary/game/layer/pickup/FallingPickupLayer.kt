@@ -33,13 +33,12 @@ import org.allbinary.view.ViewPosition
 open public class FallingPickupLayer : PickupLayer
                 , TickableInterface {
         
-
-        companion object {
+companion object {
             
     private val NAME: String = "FallingPickupLayer"
 
         }
-            public constructor        (remoteInfo: RemoteInfo)                        
+            public constructor (remoteInfo: RemoteInfo)                        
 
                             : super(NAME, remoteInfo, ViewPosition()){
 var remoteInfo = remoteInfo
@@ -49,7 +48,7 @@ var remoteInfo = remoteInfo
                     
 }
 
-public constructor        ()                        
+public constructor ()                        
 
                             : super(NAME, ViewPosition()){
 
@@ -58,14 +57,16 @@ public constructor        ()
                     
 }
 
-override fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
+
+    override fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager
 this.setPosition(this.x, this.y +1, this.z)
 }
 
-override fun implmentsTickableInterface()
+
+    override fun implmentsTickableInterface()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

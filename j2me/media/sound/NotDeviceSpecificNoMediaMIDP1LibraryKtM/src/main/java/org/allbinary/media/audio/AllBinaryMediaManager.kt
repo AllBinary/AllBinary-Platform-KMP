@@ -38,12 +38,11 @@ open public class AllBinaryMediaManager
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val THIS: String = "AllBinaryMediaManagerNoMediaMIDP1"
 
-open fun isMuted()
+    open fun isMuted()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -54,14 +53,14 @@ open fun isMuted()
 }
 
 
-open fun setMuted(aMuted: Boolean)
+    open fun setMuted(aMuted: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var aMuted = aMuted
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -74,7 +73,7 @@ open fun update()
 
                 @Throws(Exception::class)
             
-open fun init(soundsFactoryInterface: SoundsFactoryInterface)
+    open fun init(soundsFactoryInterface: SoundsFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var soundsFactoryInterface = soundsFactoryInterface
@@ -93,7 +92,7 @@ Sounds(soundsFactoryInterface).
 
                 @Throws(Exception::class)
             
-open fun shutdown(soundsFactoryInterface: SoundsFactoryInterface)
+    open fun shutdown(soundsFactoryInterface: SoundsFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var soundsFactoryInterface = soundsFactoryInterface
@@ -105,7 +104,7 @@ System.gc()
 }
 
 
-open fun createPlayer(stream: InputStream, type: String)
+    open fun createPlayer(stream: InputStream, type: String)
         //nullable = true from not(false or (false and false)) = true
 : Player{
 var stream = stream
@@ -125,7 +124,7 @@ logUtil!!.put(commonString!!.START, THIS, "creatPlayer(InputStream)")
 }
 
 
-open fun createPlayer(locator: String)
+    open fun createPlayer(locator: String)
         //nullable = true from not(false or (false and false)) = true
 : Player{
 var locator = locator
@@ -145,7 +144,7 @@ logUtil!!.put(commonString!!.START, THIS, "creatPlayer(locator)")
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun playTone(frequency: Int, time: Int, volume: Int)
+    open fun playTone(frequency: Int, time: Int, volume: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var frequency = frequency
@@ -154,7 +153,7 @@ var volume = volume
 }
 
 
-open fun getSupportedContentTypes(protocol: String)
+    open fun getSupportedContentTypes(protocol: String)
         //nullable = true from not(false or (false and false)) = true
 : Array<String?>{
 var protocol = protocol
@@ -166,7 +165,7 @@ var protocol = protocol
 }
 
 
-open fun getSupportedProtocols(content_type: String)
+    open fun getSupportedProtocols(content_type: String)
         //nullable = true from not(false or (false and false)) = true
 : Array<String?>{
 var content_type = content_type
@@ -179,7 +178,7 @@ var content_type = content_type
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

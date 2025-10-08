@@ -37,13 +37,13 @@ open public class UpsShippingModule
     private val name: String = "UPS"
 
     private val description: String = "Brown Mail"
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun getCost(order: OrderInterface)
+    open fun getCost(order: OrderInterface)
         //nullable = true from not(false or (false and false)) = true
 : Money{
 var order = order
@@ -55,7 +55,7 @@ var order = order
 }
 
 
-open fun getDescription()
+    open fun getDescription()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -66,7 +66,7 @@ open fun getDescription()
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

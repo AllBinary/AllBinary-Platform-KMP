@@ -35,24 +35,27 @@ open public class RunAtEndAnimationListener
         
 
     var runnable: Runnable
-protected constructor        (runnable: Runnable)
+protected constructor (runnable: Runnable)
             : super()
         {
 var runnable = runnable
 this.runnable= runnable
 }
 
-override fun onAnimationStart()
+
+    override fun onAnimationStart()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun onAnimationEnd()
+
+    override fun onAnimationEnd()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun onAnimationRepeat()
+
+    override fun onAnimationRepeat()
         //nullable = true from not(false or (false and true)) = true
 {
 }

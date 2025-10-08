@@ -30,12 +30,11 @@ open public class SWTProcessorUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: SWTProcessorUtil = SWTProcessorUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : SWTProcessorUtil{
 

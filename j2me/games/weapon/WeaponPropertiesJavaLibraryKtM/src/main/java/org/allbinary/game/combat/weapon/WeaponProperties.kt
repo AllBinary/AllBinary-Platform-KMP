@@ -33,8 +33,7 @@ import org.allbinary.string.CommonStrings
 
 open public class WeaponProperties : SimpleWeaponProperties {
         
-
-        companion object {
+companion object {
             
     val NULL_WEAPON_PROPERTIES: WeaponProperties = WeaponProperties(0L, 0L, 0L, 0, 0.toShort())
 
@@ -57,7 +56,7 @@ open public class WeaponProperties : SimpleWeaponProperties {
     private val MAX: Long = 10240L
 
     private val ZERO: Short = 0
-public constructor        (reloadTime: Long, targetingTime: Long, speed: Long, damage: Int, dissipation: Short){
+public constructor (reloadTime: Long, targetingTime: Long, speed: Long, damage: Int, dissipation: Short){
 var reloadTime = reloadTime
 var targetingTime = targetingTime
 var speed = speed
@@ -105,7 +104,7 @@ this.setRange((value *9).toInt() /10)
                                 
 }
 
-public constructor        (speed: Long, damage: Int, dissipation: Short)                        
+public constructor (speed: Long, damage: Int, dissipation: Short)                        
 
                             : this( -1L,  -1L, speed, damage, dissipation){
 var speed = speed
@@ -118,7 +117,7 @@ var dissipation = dissipation
 }
 
 
-open fun setReloadTime(reloadTime: Long)
+    open fun setReloadTime(reloadTime: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var reloadTime = reloadTime
@@ -126,7 +125,7 @@ this.reloadTime= reloadTime
 }
 
 
-open fun getReloadTime()
+    open fun getReloadTime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -137,7 +136,7 @@ open fun getReloadTime()
 }
 
 
-open fun setTargetingTime(targetingTime: Long)
+    open fun setTargetingTime(targetingTime: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var targetingTime = targetingTime
@@ -145,7 +144,7 @@ this.targetingTime= targetingTime
 }
 
 
-open fun getTargetingTime()
+    open fun getTargetingTime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -156,7 +155,7 @@ open fun getTargetingTime()
 }
 
 
-open fun getSpeed()
+    open fun getSpeed()
         //nullable = true from not(false or (false and true)) = true
 : BasicDecimal{
 
@@ -167,7 +166,7 @@ open fun getSpeed()
 }
 
 
-open fun setSpeed(speed: BasicDecimal)
+    open fun setSpeed(speed: BasicDecimal)
         //nullable = true from not(false or (false and false)) = true
 {
 var speed = speed
@@ -175,7 +174,7 @@ this.speed= speed
 }
 
 
-open fun getDamage(range: Int)
+    open fun getDamage(range: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var range = range
@@ -187,7 +186,7 @@ var range = range
 }
 
 
-open fun toStringArray()
+    open fun toStringArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<String?>{
 
@@ -211,7 +210,8 @@ stringArray[index++]= stringBuffer!!.append(RELOAD)!!.append(this.getReloadTime(
                         return stringArray
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

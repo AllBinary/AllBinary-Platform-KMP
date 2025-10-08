@@ -38,12 +38,11 @@ open public class GameFeatureUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GameFeatureUtil = GameFeatureUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameFeatureUtil{
 
@@ -69,7 +68,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun setDefault(choiceGroup: ChoiceGroup)
+    open fun setDefault(choiceGroup: ChoiceGroup)
         //nullable = true from not(false or (false and false)) = true
 {
 var choiceGroup = choiceGroup
@@ -142,7 +141,7 @@ choiceGroup!!.setSelectedIndex(index, false)
 
                 @Throws(Exception::class)
             
-open fun updateMultiple(choiceGroup: ChoiceGroup)
+    open fun updateMultiple(choiceGroup: ChoiceGroup)
         //nullable = true from not(false or (false and false)) = true
 {
 var choiceGroup = choiceGroup
@@ -217,7 +216,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
 
                 @Throws(Exception::class)
             
-open fun updateExclusive(choiceGroup: ChoiceGroup)
+    open fun updateExclusive(choiceGroup: ChoiceGroup)
         //nullable = true from not(false or (false and false)) = true
 {
 var choiceGroup = choiceGroup
@@ -275,7 +274,7 @@ updateExclusive(selectedChoiceLabel)
 }
 
 
-open fun isExclusive(itemLabel: String)
+    open fun isExclusive(itemLabel: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var itemLabel = itemLabel
@@ -313,7 +312,7 @@ var itemLabel = itemLabel
 
                 @Throws(Exception::class)
             
-open fun updateExclusive(selectedChoiceLabel: String)
+    open fun updateExclusive(selectedChoiceLabel: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var selectedChoiceLabel = selectedChoiceLabel
@@ -355,7 +354,7 @@ updateExclusive(gameFeature, basicArrayList)
 
                 @Throws(Exception::class)
             
-open fun updateExclusive(gameFeature: Feature, list: BasicArrayList)
+    open fun updateExclusive(gameFeature: Feature, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameFeature = gameFeature

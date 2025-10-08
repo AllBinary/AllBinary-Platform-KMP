@@ -30,12 +30,11 @@ open public class ColorTemperatureUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ColorTemperatureUtil = ColorTemperatureUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ColorTemperatureUtil{
 
@@ -55,7 +54,7 @@ open fun getInstance()
         
     private val basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
 
-open fun getBasicColor(thirdTemp: Int)
+    open fun getBasicColor(thirdTemp: Int)
         //nullable = true from not(false or (false and false)) = true
 : BasicColor{
 var thirdTemp = thirdTemp

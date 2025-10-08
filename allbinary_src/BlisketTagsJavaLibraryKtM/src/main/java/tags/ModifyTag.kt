@@ -39,7 +39,7 @@ open public class ModifyTag : HelperTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (tagHelperFactoryInterface: TagHelperFactoryInterface)                        
+public constructor (tagHelperFactoryInterface: TagHelperFactoryInterface)                        
 
                             : super(tagHelperFactoryInterface){
 var tagHelperFactoryInterface = tagHelperFactoryInterface
@@ -61,7 +61,7 @@ var tagHelperFactoryInterface = tagHelperFactoryInterface
 
                 @Throws(LicensingException::class)
             
-open fun insert()
+    open fun insert()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -108,7 +108,7 @@ open fun insert()
 
                 @Throws(LicensingException::class)
             
-open fun delete()
+    open fun delete()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -155,7 +155,7 @@ open fun delete()
 
                 @Throws(LicensingException::class)
             
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -202,7 +202,7 @@ open fun update()
 
                 @Throws(JspTagException::class)
             
-open fun doStartTag()
+    open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

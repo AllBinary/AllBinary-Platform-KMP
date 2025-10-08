@@ -38,12 +38,11 @@ open public class TransformTemplateFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: TransformTemplateFactory = TransformTemplateFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TransformTemplateFactory{
 
@@ -57,7 +56,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -65,7 +64,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, templateName: String, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, templateName: String, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
 : TransformTemplateInterface{
     //var abeClientInformation = abeClientInformation

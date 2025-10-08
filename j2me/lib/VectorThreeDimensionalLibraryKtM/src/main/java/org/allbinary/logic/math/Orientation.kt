@@ -31,14 +31,13 @@ open public class Orientation
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var NONE: Orientation = Orientation(0, 0, 0)
 
     private var SINGLETON: Orientation = Orientation(0, 0, 0)
 
-open fun getInstance(yaw: Int, pitch: Int, roll: Int)
+    open fun getInstance(yaw: Int, pitch: Int, roll: Int)
         //nullable =  from not(true or (false and false)) = 
 : Orientation{
 var yaw = yaw
@@ -62,7 +61,7 @@ SINGLETON.roll.set(roll)
     var pitch: BasicDecimal = BasicDecimal()
 
     var roll: BasicDecimal = BasicDecimal()
-private constructor        (yaw: Int, pitch: Int, roll: Int)
+private constructor (yaw: Int, pitch: Int, roll: Int)
             : super()
         {
 var yaw = yaw
@@ -73,7 +72,8 @@ this.pitch.set(pitch)
 this.roll.set(roll)
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

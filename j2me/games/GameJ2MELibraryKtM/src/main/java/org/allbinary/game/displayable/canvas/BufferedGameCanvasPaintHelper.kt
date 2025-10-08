@@ -36,8 +36,7 @@ import org.allbinary.util.CircularIndexUtil
 
 open public class BufferedGameCanvasPaintHelper : ProcessPaintable {
         
-
-        companion object {
+companion object {
             
     private val MAX_IMAGES: Int = 4
 
@@ -52,7 +51,7 @@ open public class BufferedGameCanvasPaintHelper : ProcessPaintable {
     private val circularIndexUtil: CircularIndexUtil = CircularIndexUtil.getInstance(MAX_IMAGES)!!
 
     private val drawCircularIndexUtil: CircularIndexUtil = CircularIndexUtil.getInstance(MAX_IMAGES -1, MAX_IMAGES)!!
-public constructor        (gameCanvas: AllBinaryGameCanvas){
+public constructor (gameCanvas: AllBinaryGameCanvas){
 var gameCanvas = gameCanvas
 
 
@@ -60,7 +59,8 @@ var gameCanvas = gameCanvas
                             throw Exception("No Longer Used")
 }
 
-override fun process()
+
+    override fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -73,7 +73,8 @@ this.drawCircularIndexUtil!!.next()
 
 
     private var anchor: Int = Anchor.TOP_LEFT
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

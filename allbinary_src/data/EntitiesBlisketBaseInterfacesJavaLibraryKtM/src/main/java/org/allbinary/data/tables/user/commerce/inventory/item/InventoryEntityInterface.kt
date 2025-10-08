@@ -31,34 +31,35 @@ import org.allbinary.business.context.modules.storefront.StoreFrontInterface
 import org.allbinary.business.user.commerce.inventory.item.ItemInterface
 import org.allbinary.business.user.commerce.money.MoneyException
 import org.allbinary.data.tables.BasicDataTableInterface
+
 interface InventoryEntityInterface : BasicDataTableInterface {
         
 
                 @Throws(MoneyException::class)
             
-open fun getItem(id: String)
+    open fun getItem(id: String)
         //nullable = true from not(false or (false and false)) = true
 : ItemInterface
 
                 @Throws(Exception::class)
             
-open fun getItems(storeFrontInterface: StoreFrontInterface)
+    open fun getItems(storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
 : Vector
 
-open fun getWeight(id: String)
+    open fun getWeight(id: String)
         //nullable = true from not(false or (false and false)) = true
 : String
 
-open fun deleteWhere(key: String, value: String)
+    open fun deleteWhere(key: String, value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun insert(values: Vector)
+    open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun update(updatedValues: HashMap<Any, Any>)
+    open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 
 

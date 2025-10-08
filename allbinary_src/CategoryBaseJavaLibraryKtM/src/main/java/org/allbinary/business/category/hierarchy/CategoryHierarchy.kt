@@ -43,7 +43,7 @@ open public class CategoryHierarchy
     private var parentCategoryInterface: CategoryInterface
 
     private var level: Int
-public constructor        (rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface)
+public constructor (rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface)
             : super()
         {
 var rootCategoryInterface = rootCategoryInterface
@@ -53,7 +53,7 @@ this.setRoot(rootCategoryInterface)
 this.setParent(parentCategoryInterface)
 }
 
-public constructor        (rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, level: Int)
+public constructor (rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, level: Int)
             : super()
         {
 var rootCategoryInterface = rootCategoryInterface
@@ -64,7 +64,7 @@ this.setRoot(rootCategoryInterface)
 this.setParent(parentCategoryInterface)
 }
 
-public constructor        (rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, categoryPropertiesHashMap: HashMap<Any, Any>)
+public constructor (rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, categoryPropertiesHashMap: HashMap<Any, Any>)
             : super()
         {
 var rootCategoryInterface = rootCategoryInterface
@@ -79,7 +79,7 @@ this.setParent(parentCategoryInterface)
 }
 
 
-open fun getLevel()
+    open fun getLevel()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -90,7 +90,7 @@ open fun getLevel()
 }
 
 
-open fun getLevelString()
+    open fun getLevelString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -101,7 +101,7 @@ open fun getLevelString()
 }
 
 
-open fun setLevel(level: Int)
+    open fun setLevel(level: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var level = level
@@ -109,7 +109,7 @@ this.level= level
 }
 
 
-open fun setParent(categoryInterface: CategoryInterface)
+    open fun setParent(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var categoryInterface = categoryInterface
@@ -117,7 +117,7 @@ this.parentCategoryInterface= categoryInterface
 }
 
 
-open fun setRoot(categoryInterface: CategoryInterface)
+    open fun setRoot(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var categoryInterface = categoryInterface
@@ -125,7 +125,7 @@ this.rootCategoryInterface= categoryInterface
 }
 
 
-open fun getRoot()
+    open fun getRoot()
         //nullable = true from not(false or (false and true)) = true
 : CategoryInterface{
 
@@ -136,7 +136,7 @@ open fun getRoot()
 }
 
 
-open fun getParent()
+    open fun getParent()
         //nullable = true from not(false or (false and true)) = true
 : CategoryInterface{
 

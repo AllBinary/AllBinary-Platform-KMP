@@ -57,8 +57,7 @@ import org.allbinary.util.BasicArrayList
 
 open public class ImageCache : ImageCacheBase {
         
-
-        companion object {
+companion object {
             
     val NULL_IMAGE_CACHE: ImageCache = ImageCache()
 
@@ -96,8 +95,7 @@ open public class ImageCache : ImageCacheBase {
 
 open public inner class NotHTMLProcessor : Processor {
         
-/*Static stuff is not allowed for Kotlin inner classes
-        companion object {
+/*Static stuff is not allowed for Kotlin inner classescompanion object {
             *//*
         }
             */
@@ -108,7 +106,7 @@ open public inner class NotHTMLProcessor : Processor {
             {
             }            
         
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 concurrentImageLoadingProcessor!!.runTask()
@@ -120,8 +118,7 @@ concurrentImageLoadingProcessor!!.runTask()
             
 open public inner class NotHTMLEndProcessor : Processor {
         
-/*Static stuff is not allowed for Kotlin inner classes
-        companion object {
+/*Static stuff is not allowed for Kotlin inner classescompanion object {
             *//*
         }
             */
@@ -132,7 +129,7 @@ open public inner class NotHTMLEndProcessor : Processor {
             {
             }            
         
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -147,8 +144,7 @@ progressCanvas!!.endIfPaintedSinceStart()
             
 open public inner class HTMLEndProcessor : Processor {
         
-/*Static stuff is not allowed for Kotlin inner classes
-        companion object {
+/*Static stuff is not allowed for Kotlin inner classescompanion object {
             *//*
         }
             */
@@ -159,7 +155,7 @@ open public inner class HTMLEndProcessor : Processor {
             {
             }            
         
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -203,8 +199,7 @@ endProcessor= NotHTMLEndProcessor()
 
 open public inner class FirstProcessor : Processor {
         
-/*Static stuff is not allowed for Kotlin inner classes
-        companion object {
+/*Static stuff is not allowed for Kotlin inner classescompanion object {
             *//*
         }
             */
@@ -215,7 +210,7 @@ open public inner class FirstProcessor : Processor {
             {
             }            
         
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -255,11 +250,11 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.END_METHOD_NAME)
     private var processor: Processor = FirstProcessor()
 
     private var endProcessor: Processor = Processor.getInstance()!!
-public constructor        (){
+public constructor (){
 }
 
 
-open fun addListener(renderer: Any)
+    open fun addListener(renderer: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var renderer = renderer
@@ -268,7 +263,7 @@ var renderer = renderer
 
                 @Throws(Exception::class)
             
-open fun waitForLoadNow()
+    open fun waitForLoadNow()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -299,7 +294,7 @@ firstTime= false
 
                 @Throws(Exception::class)
             
-open fun loadImageForAnimation()
+    open fun loadImageForAnimation()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -481,7 +476,7 @@ loadNowList!!.remove(lazyImageRotationAnimation)
 
                 @Throws(Exception::class)
             
-open fun loadImages()
+    open fun loadImages()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -496,7 +491,7 @@ loadImage()
 
                 @Throws(Exception::class)
             
-open fun loadImageForAnimations()
+    open fun loadImageForAnimations()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -510,7 +505,7 @@ loadImageForAnimation()
 
                 @Throws(Exception::class)
             
-open fun loadRemainingAnimations()
+    open fun loadRemainingAnimations()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -558,7 +553,7 @@ loadImageForAnimation()
 
                 @Throws(Exception::class)
             
-open fun loadImageForAnimation(lazyImageRotationAnimation: LazyImageRotationAnimation)
+    open fun loadImageForAnimation(lazyImageRotationAnimation: LazyImageRotationAnimation)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var lazyImageRotationAnimation = lazyImageRotationAnimation
@@ -589,7 +584,7 @@ open fun loadImageForAnimation(lazyImageRotationAnimation: LazyImageRotationAnim
 
                 @Throws(Exception::class)
             
-open fun loadImage()
+    open fun loadImage()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -626,7 +621,7 @@ this.loadImage(image)
 
                 @Throws(Exception::class)
             
-open fun loadImage(image: Image)
+    open fun loadImage(image: Image)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var image = image
@@ -710,7 +705,7 @@ open fun loadImage(image: Image)
 
                 @Throws(Exception::class)
             
-open fun init(image: Image, image2: Image)
+    open fun init(image: Image, image2: Image)
         //nullable = true from not(false or (false and false)) = true
 {
     //var image = image
@@ -721,7 +716,7 @@ image.init(image2.getImage())
 
                 @Throws(Exception::class)
             
-open fun creatImage(key: String)
+    open fun creatImage(key: String)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var key = key
@@ -742,7 +737,7 @@ image.setName(key)
 
                 @Throws(Exception::class)
             
-open fun get(caller: String, width: Int, height: Int)
+    open fun get(caller: String, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var caller = caller
@@ -805,7 +800,7 @@ listOfList[foundIndex]!!.add(image)
 
                 @Throws(Exception::class)
             
-open fun get(key: Any)
+    open fun get(key: Any)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var key = key
@@ -849,7 +844,7 @@ this.hashtable.put(key, image)
 }
 
 
-open fun getIndex(key: Any)
+    open fun getIndex(key: Any)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var key = key
@@ -896,7 +891,7 @@ logUtil!!.put(StringMaker().
 
                 @Throws(Exception::class)
             
-open fun createImage(key: Any, inputStream: InputStream)
+    open fun createImage(key: Any, inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var key = key
@@ -966,7 +961,7 @@ loadList!!.add(image)
 
                 @Throws(Exception::class)
             
-open fun createImageLater(key: String, width: Int, height: Int)
+    open fun createImageLater(key: String, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var key = key
@@ -980,7 +975,7 @@ open fun createImageLater(key: String, width: Int, height: Int)
 }
 
 
-open fun getAssociated(lazyImageRotationAnimation: LazyImageRotationAnimation)
+    open fun getAssociated(lazyImageRotationAnimation: LazyImageRotationAnimation)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
     //var lazyImageRotationAnimation = lazyImageRotationAnimation
@@ -1044,7 +1039,7 @@ this.loadAfterList!!.remove(list.get(index))
 }
 
 
-open fun add(lazyImageRotationAnimation: LazyImageRotationAnimation)
+    open fun add(lazyImageRotationAnimation: LazyImageRotationAnimation)
         //nullable = true from not(false or (false and false)) = true
 {
     //var lazyImageRotationAnimation = lazyImageRotationAnimation
@@ -1063,7 +1058,7 @@ this.loadAfterList!!.add(lazyImageRotationAnimation)
 
                 @Throws(Exception::class)
             
-open fun insertFirst(lazyImageRotationAnimation: LazyImageRotationAnimation)
+    open fun insertFirst(lazyImageRotationAnimation: LazyImageRotationAnimation)
         //nullable = true from not(false or (false and false)) = true
 {
     //var lazyImageRotationAnimation = lazyImageRotationAnimation
@@ -1096,14 +1091,14 @@ this.runTask()
 
                 @Throws(Exception::class)
             
-open fun runTask()
+    open fun runTask()
         //nullable = true from not(false or (false and true)) = true
 {
 this.processor.process()
 }
 
 
-open fun initProgress()
+    open fun initProgress()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -1118,7 +1113,7 @@ open fun initProgress()
 }
 
 
-open fun isLazy()
+    open fun isLazy()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

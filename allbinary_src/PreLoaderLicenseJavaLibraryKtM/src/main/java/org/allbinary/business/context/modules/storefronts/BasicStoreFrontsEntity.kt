@@ -37,7 +37,7 @@ open public class BasicStoreFrontsEntity : InitSql {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val tableName: String = "storefronts"
-public constructor        ()                        
+public constructor ()                        
 
                             : super(UserDbInitInfo()){
 
@@ -50,7 +50,7 @@ this.setTable(tableName)
 
                 @Throws(Exception::class)
             
-open fun getStoreFrontInterface(name: String)
+    open fun getStoreFrontInterface(name: String)
         //nullable = true from not(false or (false and false)) = true
 : BasicStoreFrontInterface{
 var name = name

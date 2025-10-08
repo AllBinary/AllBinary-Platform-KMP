@@ -43,7 +43,7 @@ open public class CommandTextItemArrayFactory
     private val list: BasicArrayList = BasicArrayList()
 
     private val visitorInterface: Visitor
-public constructor        (visitorInterface: Visitor)
+public constructor (visitorInterface: Visitor)
             : super()
         {
     //var visitorInterface = visitorInterface
@@ -51,7 +51,7 @@ this.visitorInterface= visitorInterface
 }
 
 
-open fun getInstance(vector: Vector<Any>, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)
+    open fun getInstance(vector: Vector<Any>, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)
         //nullable =  from not(true or (false and false)) = 
 : Array<CustomItem?>{
 var vector = vector

@@ -34,7 +34,7 @@ open public class ArrayAI : BasicAI {
         
 
     private val artificialIntelligenceInterfaceArray: Array<ArtificialIntelligenceInterface?>
-public constructor        (artificialIntelligenceInterface: Array<ArtificialIntelligenceInterface?>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
+public constructor (artificialIntelligenceInterface: Array<ArtificialIntelligenceInterface?>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
                             : super(ownerLayerInterface, gameInput){
 var artificialIntelligenceInterface = artificialIntelligenceInterface
@@ -49,7 +49,8 @@ this.artificialIntelligenceInterfaceArray= artificialIntelligenceInterface
 
 
                 @Throws(Exception::class)
-            override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+            
+    override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager
@@ -70,7 +71,7 @@ this.artificialIntelligenceInterfaceArray[index]!!.processAI(allBinaryLayerManag
 }
 
 
-open fun getArtificialIntelligenceInterface()
+    open fun getArtificialIntelligenceInterface()
         //nullable = true from not(false or (false and true)) = true
 : Array<ArtificialIntelligenceInterface?>{
 

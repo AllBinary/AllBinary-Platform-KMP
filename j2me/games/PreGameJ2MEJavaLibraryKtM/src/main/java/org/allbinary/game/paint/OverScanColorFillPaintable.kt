@@ -30,7 +30,7 @@ import org.allbinary.graphics.color.BasicColor
 
 open public class OverScanColorFillPaintable : ColorFillPaintable {
         
-public constructor        (basicColor: BasicColor)                        
+public constructor (basicColor: BasicColor)                        
 
                             : super(basicColor){
 var basicColor = basicColor
@@ -40,7 +40,8 @@ var basicColor = basicColor
                     
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

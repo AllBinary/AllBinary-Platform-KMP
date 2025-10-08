@@ -25,10 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface CollidableInterfaceCompositeInterface {
         
 
-open fun getCollidableInferface()
+    open fun getCollidableInferface()
         //nullable = true from not(false or (false and true)) = true
 : CollidableBaseBehavior
 

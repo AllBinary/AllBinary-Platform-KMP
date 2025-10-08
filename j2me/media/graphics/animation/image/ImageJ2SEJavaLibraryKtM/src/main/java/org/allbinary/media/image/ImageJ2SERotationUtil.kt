@@ -27,19 +27,19 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.awt
+import java.awt.Graphics2D
+import java.awt.Image
 import java.awt.image.BufferedImage
 
 open public class ImageJ2SERotationUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ImageJ2SERotationUtil = ImageJ2SERotationUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ImageJ2SERotationUtil{
 
@@ -55,13 +55,13 @@ open fun getInstance()
     private val imageUtil: ImageUtil = ImageUtil.getInstance()!!
 
     private val imageJ2SEUtil: ImageJ2SEUtil = ImageJ2SEUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getRotatedImage(bufferedImage: Image, totalAngle: Int)
+    open fun getRotatedImage(bufferedImage: Image, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 : BufferedImage{
     //var bufferedImage = bufferedImage
@@ -74,7 +74,7 @@ open fun getRotatedImage(bufferedImage: Image, totalAngle: Int)
 }
 
 
-open fun getRotatedImage(bufferedImage: Image, radians: Double)
+    open fun getRotatedImage(bufferedImage: Image, radians: Double)
         //nullable = true from not(false or (false and false)) = true
 : BufferedImage{
     //var bufferedImage = bufferedImage
@@ -92,7 +92,7 @@ open fun getRotatedImage(bufferedImage: Image, radians: Double)
 }
 
 
-open fun getRotatedImage(bufferedImage: Image, newBufferedImage: BufferedImage, g: Graphics2D, radians: Double)
+    open fun getRotatedImage(bufferedImage: Image, newBufferedImage: BufferedImage, g: Graphics2D, radians: Double)
         //nullable = true from not(false or (false and false)) = true
 : BufferedImage{
     //var bufferedImage = bufferedImage
@@ -117,7 +117,7 @@ g.dispose()
 
     private val TWO_PIE: Double = 2 *Math.PI
 
-open fun rotateImage(bufferedImage: Image, newBufferedImage: BufferedImage, totalAngle: Int)
+    open fun rotateImage(bufferedImage: Image, newBufferedImage: BufferedImage, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 : BufferedImage{
     //var bufferedImage = bufferedImage
@@ -136,7 +136,7 @@ g.clearRect(0, 0, newBufferedImage!!.getWidth(), newBufferedImage!!.getHeight())
 }
 
 
-open fun getRotatedImage(bufferedImage: Image, newBufferedImage: BufferedImage, totalAngle: Int)
+    open fun getRotatedImage(bufferedImage: Image, newBufferedImage: BufferedImage, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 : BufferedImage{
     //var bufferedImage = bufferedImage
@@ -153,7 +153,7 @@ open fun getRotatedImage(bufferedImage: Image, newBufferedImage: BufferedImage, 
 }
 
 
-open fun getRotatedImages(bufferedImage: Image, numberOfFrames: Int, totalAngle: Int)
+    open fun getRotatedImages(bufferedImage: Image, numberOfFrames: Int, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 : Array<BufferedImage?>{
     //var bufferedImage = bufferedImage
@@ -190,7 +190,7 @@ bufferedImageArray[index]= this.getRotatedImage(bufferedImage, radians)
 }
 
 
-open fun createSpriteImage(bufferedImageArray: Array<BufferedImage?>)
+    open fun createSpriteImage(bufferedImageArray: Array<BufferedImage?>)
         //nullable = true from not(false or (false and false)) = true
 : BufferedImage{
     //var bufferedImageArray = bufferedImageArray

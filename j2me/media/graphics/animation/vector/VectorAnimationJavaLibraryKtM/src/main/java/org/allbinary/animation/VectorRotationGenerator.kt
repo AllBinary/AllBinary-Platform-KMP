@@ -39,12 +39,11 @@ open public class VectorRotationGenerator
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: VectorRotationGenerator = VectorRotationGenerator()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : VectorRotationGenerator{
 
@@ -60,13 +59,13 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val vectorAnimationUtil: VectorAnimationUtil = VectorAnimationUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getInstance(vectorRotationInfo: VectorInfo)
+    open fun getInstance(vectorRotationInfo: VectorInfo)
         //nullable =  from not(true or (false and false)) = 
 : Array<Array<IntArray?>?>{
 var vectorRotationInfo = vectorRotationInfo
@@ -80,7 +79,7 @@ var vectorRotationInfo = vectorRotationInfo
 
     private val angleFactory: AngleFactory = AngleFactory.getInstance()!!
 
-open fun getInstance(width: Int, height: Int, points: Array<IntArray?>, frames: Int)
+    open fun getInstance(width: Int, height: Int, points: Array<IntArray?>, frames: Int)
         //nullable =  from not(true or (false and false)) = 
 : Array<Array<IntArray?>?>{
 var width = width
@@ -154,7 +153,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
 
                 @Throws(Exception::class)
             
-open fun getInstance(width: Int, height: Int, pointBasicArrayList: BasicArrayList, angle: Angle)
+    open fun getInstance(width: Int, height: Int, pointBasicArrayList: BasicArrayList, angle: Angle)
         //nullable =  from not(true or (false and false)) = 
 : BasicArrayList{
 var width = width

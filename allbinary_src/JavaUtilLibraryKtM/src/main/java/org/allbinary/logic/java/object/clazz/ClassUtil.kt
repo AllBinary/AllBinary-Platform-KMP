@@ -34,10 +34,9 @@ open public class ClassUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun viewAll(anyType: Any, lineBreak: String)
+    open fun viewAll(anyType: Any, lineBreak: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var anyType = anyType
@@ -64,7 +63,7 @@ var lineBreak = lineBreak
 }
 
 
-open fun viewAll(myClass: KClass<*>, lineBreak: String)
+    open fun viewAll(myClass: KClass<*>, lineBreak: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var myClass = myClass
@@ -125,7 +124,7 @@ stringBuffer!!.append(MethodUtil.viewAll(myClass::class.java, lineBreak))
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

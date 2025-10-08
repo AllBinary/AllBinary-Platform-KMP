@@ -58,7 +58,7 @@ open public class CaptionIndexedAnimation : IndexedAnimation {
     private var timeDelayHelper: TimeDelayHelper
 
     private var player: Player
-public constructor        (animationInterface: Animation, movieIndexedAnimationInterface: IndexedAnimation, player: Player, captionDx: Int, captionDy: Int, dx: Int, dy: Int, time: Int, animationBehavior: AnimationBehavior)                        
+public constructor (animationInterface: Animation, movieIndexedAnimationInterface: IndexedAnimation, player: Player, captionDx: Int, captionDy: Int, dx: Int, dy: Int, time: Int, animationBehavior: AnimationBehavior)                        
 
                             : super(animationBehavior){
     //var animationInterface = animationInterface
@@ -92,7 +92,8 @@ this.player.start()
 
 
                 @Throws(Exception::class)
-            override fun nextFrame()
+            
+    override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -115,7 +116,8 @@ this.player.start()
                                 
 }
 
-override fun isLastFrame()
+
+    override fun isLastFrame()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -142,20 +144,23 @@ override fun isLastFrame()
                             
 }
 
-override fun previousFrame()
+
+    override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 this.movieIndexedAnimationInterface!!.previousFrame()
 }
 
-override fun setFrame(index: Int)
+
+    override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var index = index
 this.movieIndexedAnimationInterface!!.setFrame(index)
 }
 
-override fun getFrame()
+
+    override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -165,7 +170,8 @@ override fun getFrame()
                         return this.movieIndexedAnimationInterface!!.getFrame()
 }
 
-override fun getSize()
+
+    override fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -175,13 +181,15 @@ override fun getSize()
                         return this.movieIndexedAnimationInterface!!.getSize()
 }
 
-override fun setSequence(sequence: IntArray)
+
+    override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
 {
 var sequence = sequence
 }
 
-override fun getSequence()
+
+    override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
 : IntArray{
 
@@ -191,7 +199,8 @@ override fun getSequence()
                         return PrimitiveIntUtil.getArrayInstance()
 }
 
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -201,7 +210,8 @@ this.animationInterface!!.paint(graphics, x +this.captionDx, y +this.captionDy)
 this.movieIndexedAnimationInterface!!.paint(graphics, x +this.captionDx +dx, y +this.captionDy +dy)
 }
 
-override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
+
+    override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics

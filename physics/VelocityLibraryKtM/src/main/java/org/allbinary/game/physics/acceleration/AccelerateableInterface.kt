@@ -26,10 +26,11 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.math.BasicDecimal
+
 interface AccelerateableInterface {
         
 
-open fun accelerate(accelerate: BasicDecimal)
+    open fun accelerate(accelerate: BasicDecimal)
         //nullable = true from not(false or (false and false)) = true
 
 

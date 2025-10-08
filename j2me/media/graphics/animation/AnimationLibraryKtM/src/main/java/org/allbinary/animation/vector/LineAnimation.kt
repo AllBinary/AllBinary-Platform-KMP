@@ -42,13 +42,13 @@ open public class LineAnimation : Animation
     private var tempLine: Array<IntArray?> = NullUtil.getInstance()!!.NULL_INT_ARRAY_ARRAY
 
     private var line: Array<IntArray?> = Array(2) { IntArray(2) }
-public constructor        (basicColor: BasicColor){
+public constructor (basicColor: BasicColor){
 var basicColor = basicColor
 this.setBasicColorP(basicColor)
 }
 
 
-open fun init(x: Int, y: Int)
+    open fun init(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -62,7 +62,8 @@ this.line= this.newLine
 this.newLine= this.tempLine
 }
 
-override fun setPosition(x: Int, y: Int, z: Int)
+
+    override fun setPosition(x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -77,7 +78,8 @@ this.line= this.newLine
 this.newLine= this.tempLine
 }
 
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -90,7 +92,8 @@ this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP(), this.ge
 graphics.drawLine(currentLine[0]!![0]!!, currentLine[0]!![1]!!, currentLine[1]!![0]!!, currentLine[1]!![1]!!)
 }
 
-override fun nextFrame()
+
+    override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 }

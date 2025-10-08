@@ -36,12 +36,11 @@ import org.w3c.dom.Document
 
 open public class TransformInfoObjectConfigAndManipulatorFactory : TransformInfoObjectConfigAndManipulatorFactoryBase {
         
-
-        companion object {
+companion object {
             
     private val instance: TransformInfoObjectConfigAndManipulatorFactory = TransformInfoObjectConfigAndManipulatorFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TransformInfoObjectConfigAndManipulatorFactory{
 
@@ -55,13 +54,13 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        (){
+private constructor (){
 }
 
 
                 @Throws(Exception::class)
             
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, objectConfigFileAbPath: AbPath)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, objectConfigFileAbPath: AbPath)
         //nullable =  from not(true or (false and false)) = 
 : TransformInfoObjectConfigInterface{
     //var abeClientInformation = abeClientInformation
@@ -100,7 +99,7 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, transf
 
                 @Throws(Exception::class)
             
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)
         //nullable =  from not(true or (false and false)) = 
 : TransformInfoObjectConfigInterface{
     //var abeClientInformation = abeClientInformation
@@ -170,7 +169,7 @@ var transformInfoInterface = transformInfoInterface
 
                 @Throws(Exception::class)
             
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, document: Document)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, document: Document)
         //nullable =  from not(true or (false and false)) = 
 : TransformInfoObjectConfigInterface{
     //var abeClientInformation = abeClientInformation

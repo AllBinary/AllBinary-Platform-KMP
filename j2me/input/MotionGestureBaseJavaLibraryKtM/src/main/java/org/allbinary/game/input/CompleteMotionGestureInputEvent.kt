@@ -35,8 +35,7 @@ import org.allbinary.string.CommonStrings
 open public class CompleteMotionGestureInputEvent : AllBinaryEventObject
                 , CompleteMotionGestureInputInterface {
         
-
-        companion object {
+companion object {
             
     val NULL_COMPLETE_MOTION_GESTURE_INPUT_EVENT: CompleteMotionGestureInputEvent = CompleteMotionGestureInputEvent(StringUtil.getInstance()!!.EMPTY_STRING, TouchMotionGestureFactory.getInstance()!!.NO_MOTION)
 
@@ -47,7 +46,7 @@ open public class CompleteMotionGestureInputEvent : AllBinaryEventObject
     private var name: String = StringUtil.getInstance()!!.EMPTY_STRING
 
     private var motionGestureInput: MotionGestureInput = TouchMotionGestureFactory.getInstance()!!.NO_MOTION
-public constructor        (name: String, motionGestureInput: MotionGestureInput)                        
+public constructor (name: String, motionGestureInput: MotionGestureInput)                        
 
                             : super(motionGestureInput){
 var name = name
@@ -71,14 +70,15 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "InputToGameKeyEventAction", e)
 }
 
 
-open fun setName(name: String)
+    open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name
 this.name= name
 }
 
-override fun getName()
+
+    override fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -89,7 +89,7 @@ override fun getName()
 }
 
 
-open fun setMotionGestureInput(motionGestureInput: MotionGestureInput)
+    open fun setMotionGestureInput(motionGestureInput: MotionGestureInput)
         //nullable = true from not(false or (false and false)) = true
 {
 var motionGestureInput = motionGestureInput
@@ -97,7 +97,7 @@ this.motionGestureInput= motionGestureInput
 }
 
 
-open fun getMotionGestureInput()
+    open fun getMotionGestureInput()
         //nullable = true from not(false or (false and true)) = true
 : MotionGestureInput{
 

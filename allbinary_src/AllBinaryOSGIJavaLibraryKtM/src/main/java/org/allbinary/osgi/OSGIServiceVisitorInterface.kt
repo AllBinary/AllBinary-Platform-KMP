@@ -26,10 +26,11 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.util.visitor.VisitorInterface
+
 interface OSGIServiceVisitorInterface : VisitorInterface {
         
 
-open fun visit(osgiServiceInterface: OSGIServiceInterface)
+    open fun visit(osgiServiceInterface: OSGIServiceInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 

@@ -26,10 +26,11 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.util.event.BasicEventListenerInterface
+
 interface MotionRectanglesResultsListener : BasicEventListenerInterface {
         
 
-open fun onMotionRectanglesImageComparisonResultsEvent(motionRectanglesImageComparisonResultsEvent: MotionRectanglesResultsEvent)
+    open fun onMotionRectanglesImageComparisonResultsEvent(motionRectanglesImageComparisonResultsEvent: MotionRectanglesResultsEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

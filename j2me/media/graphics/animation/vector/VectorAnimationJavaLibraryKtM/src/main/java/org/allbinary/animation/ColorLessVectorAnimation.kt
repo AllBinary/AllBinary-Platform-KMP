@@ -30,7 +30,7 @@ import org.allbinary.graphics.color.BasicColorFactory
 
 open public class ColorLessVectorAnimation : VectorAnimation {
         
-public constructor        (currentPoints: Array<Array<IntArray?>?>, animationBehavior: AnimationBehavior)                        
+public constructor (currentPoints: Array<Array<IntArray?>?>, animationBehavior: AnimationBehavior)                        
 
                             : super(currentPoints, BasicColorFactory.getInstance()!!.WHITE, animationBehavior){
     //var currentPoints = currentPoints
@@ -41,7 +41,7 @@ public constructor        (currentPoints: Array<Array<IntArray?>?>, animationBeh
                     
 }
 
-public constructor        (currentPoints: Array<IntArray?>, animationBehavior: AnimationBehavior)                        
+public constructor (currentPoints: Array<IntArray?>, animationBehavior: AnimationBehavior)                        
 
                             : super(currentPoints, BasicColorFactory.getInstance()!!.WHITE, animationBehavior){
     //var currentPoints = currentPoints
@@ -52,7 +52,8 @@ public constructor        (currentPoints: Array<IntArray?>, animationBehavior: A
                     
 }
 
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

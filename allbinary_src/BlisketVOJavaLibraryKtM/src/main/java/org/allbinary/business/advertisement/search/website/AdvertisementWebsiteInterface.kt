@@ -25,9 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface AdvertisementWebsiteInterface {
         
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String
 

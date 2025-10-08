@@ -34,7 +34,7 @@ import org.allbinary.input.automation.module.ImageComparatorConstraints
 
 open public class NoImageComparatorConstraints : ImageComparatorConstraints {
         
-public constructor        ()                        
+public constructor ()                        
 
                             : super(1){
 
@@ -45,7 +45,7 @@ this.setMaxNonMatchingPixelDeltas(.MAX_VALUE())
 }
 
 
-open fun isColorAllowed(frame: Int, point: GPoint, color: Color)
+    open fun isColorAllowed(frame: Int, point: GPoint, color: Color)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var frame = frame
@@ -59,7 +59,7 @@ var color = color
 }
 
 
-open fun isImageValid(bufferedImage: BufferedImage)
+    open fun isImageValid(bufferedImage: BufferedImage)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var bufferedImage = bufferedImage

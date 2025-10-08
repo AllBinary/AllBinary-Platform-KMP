@@ -25,12 +25,13 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface ArtificialIntelligenceCompositeInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getArtificialIntelligenceInterface()
+    open fun getArtificialIntelligenceInterface()
         //nullable = true from not(false or (false and true)) = true
 : ArtificialIntelligenceInterface
 

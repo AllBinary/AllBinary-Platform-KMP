@@ -42,7 +42,7 @@ open public class ScrollCurrentSelectionForm : ScrollSelectionForm {
     private var maxWidth: Int = 0
 
     private val moveForSmallScreen: Boolean
-public constructor        (title: String, items: Array<CustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, formType: FormType, border: Int, moveForSmallScreen: Boolean, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (title: String, items: Array<CustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, formType: FormType, border: Int, moveForSmallScreen: Boolean, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(title, items, formPaintableFactory, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor){
     //var title = title
@@ -62,7 +62,7 @@ this.moveForSmallScreen= moveForSmallScreen
 this.init()
 }
 
-public constructor        (title: String, items: Array<CustomItem?>, rectangle: Rectangle, formType: FormType, border: Int, moveForSmallScreen: Boolean, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (title: String, items: Array<CustomItem?>, rectangle: Rectangle, formType: FormType, border: Int, moveForSmallScreen: Boolean, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(title, items, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor){
     //var title = title
@@ -83,7 +83,8 @@ this.init()
 
 
                 @Throws(Exception::class)
-            override fun init(rectangle: Rectangle, formType: FormType)
+            
+    override fun init(rectangle: Rectangle, formType: FormType)
         //nullable = true from not(false or (false and false)) = true
 {
     //var rectangle = rectangle
@@ -93,7 +94,7 @@ this.init()
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -236,7 +237,8 @@ dx= ((this.rectangle.getWidth() -maxWidth) /2)
                             
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -363,7 +365,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, canvasStrings!!.PAINT, e)
 
 }
 
-override fun getDiffX(item: CustomItemInterface)
+
+    override fun getDiffX(item: CustomItemInterface)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var item = item
@@ -374,7 +377,8 @@ var item = item
                         return ((maxWidth -item.getMinimumWidth()) shr 1)
 }
 
-override fun getDx()
+
+    override fun getDx()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -384,7 +388,8 @@ override fun getDx()
                         return dx
 }
 
-override fun getDy()
+
+    override fun getDy()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

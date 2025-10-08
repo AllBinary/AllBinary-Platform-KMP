@@ -59,7 +59,7 @@ open public class StoreFileGenerator : TransformInfoObjectConfigGenerator {
     private val fileAbPath: AbPath
 
     private val file: AbFile
-public constructor        (transformInfoInterface: TransformInfoInterface){
+public constructor (transformInfoInterface: TransformInfoInterface){
 var transformInfoInterface = transformInfoInterface
 
     var httpTransformInfoInterface: TransformInfoHttpInterface = transformInfoInterface as TransformInfoHttpInterface
@@ -162,7 +162,7 @@ this.file= AbFile(this.fileAbPath)
 
                 @Throws(Exception::class)
             
-open fun process(input: String)
+    open fun process(input: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var input = input

@@ -29,13 +29,12 @@ import javax.microedition.lcdui.Graphics
 
 open public class NullLayer : Layer {
         
-
-        companion object {
+companion object {
             
     val NULL_LAYER: Layer = NullLayer(0, 0, 0, 0, false)
 
         }
-             constructor        (x: Int, y: Int, width: Int, height: Int, visible: Boolean)                        
+             constructor (x: Int, y: Int, width: Int, height: Int, visible: Boolean)                        
 
                             : super(x, y, width, height, visible){
 var x = x
@@ -49,7 +48,8 @@ var visible = visible
                     
 }
 
-override fun paint(g: Graphics)
+
+    override fun paint(g: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var g = g

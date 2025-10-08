@@ -25,14 +25,14 @@ open public class XmlRpcClient
         
 
     private val url: URL
-public constructor        (url: URL)
+public constructor (url: URL)
             : super()
         {
 var url = url
 this.url= url
 }
 
-public constructor        (url: String)                        
+public constructor (url: String)                        
 
                             : this(URL(url)){
 var url = url
@@ -42,7 +42,7 @@ var url = url
                     
 }
 
-public constructor        (hostname: String, port: Int)                        
+public constructor (hostname: String, port: Int)                        
 
                             : this(URL("http://" +hostname +':' +port +"/RPC2")){
 var hostname = hostname
@@ -54,7 +54,7 @@ var port = port
 }
 
 
-open fun getURL()
+    open fun getURL()
         //nullable = true from not(false or (false and true)) = true
 : URL{
 
@@ -65,7 +65,7 @@ open fun getURL()
 }
 
 
-open fun setBasicAuthentication(user: String, password: String)
+    open fun setBasicAuthentication(user: String, password: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var user = user
@@ -74,7 +74,8 @@ var password = password
 
 
                 @Throws(XmlRpcException::class, IOException::class)
-            override fun execute(method: String, params: Vector<Any>)
+            
+    override fun execute(method: String, params: Vector<Any>)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var method = method
@@ -89,7 +90,7 @@ var params = params
 
                 @Throws(XmlRpcException::class, IOException::class)
             
-open fun execute(method: String, params: Vector<Any>, cryptInterface: CryptInterface)
+    open fun execute(method: String, params: Vector<Any>, cryptInterface: CryptInterface)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var method = method

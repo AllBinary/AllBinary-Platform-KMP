@@ -43,7 +43,7 @@ open public class StaticPagesEntity : AbSqlBean
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val TABLENAME: String = "staticpages"
-public constructor        ()                        
+public constructor ()                        
 
                             : super(StaticPagesDbInitInfo()){
 
@@ -54,7 +54,7 @@ this.setTableName(TABLENAME)
 }
 
 
-open fun insert(values: Vector)
+    open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 {
 var values = values
@@ -86,7 +86,7 @@ var values = values
 }
 
 
-open fun getFile(store: String, keywords: String)
+    open fun getFile(store: String, keywords: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var store = store
@@ -107,7 +107,7 @@ whereHashMap!!.put(BasicItemData.KEYWORDS, keywords)
 }
 
 
-open fun delete(keywords: String)
+    open fun delete(keywords: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var keywords = keywords
@@ -115,7 +115,7 @@ super.deleteWhere(BasicItemData.KEYWORDS, keywords)
 }
 
 
-open fun dropTable()
+    open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -129,7 +129,7 @@ open fun dropTable()
 }
 
 
-open fun update(updatedValues: HashMap<Any, Any>)
+    open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var updatedValues = updatedValues
@@ -137,7 +137,7 @@ super.updateWhere(BasicItemData.KEYWORDS, updatedValues!!.get(BasicItemData.KEYW
 }
 
 
-open fun createTableStatement()
+    open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -152,7 +152,7 @@ stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(TABLENAME)!!.appe
 }
 
 
-open fun createTable()
+    open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

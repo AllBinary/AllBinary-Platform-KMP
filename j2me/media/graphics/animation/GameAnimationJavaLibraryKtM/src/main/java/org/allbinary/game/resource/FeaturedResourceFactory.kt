@@ -44,7 +44,7 @@ open public class FeaturedResourceFactory
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val list: BasicArrayList = BasicArrayList()
-public constructor        ()
+public constructor ()
             : super()
         {
 }
@@ -72,7 +72,7 @@ public constructor        ()
 
                 @Throws(Exception::class)
             
-open fun init(level: Int)
+    open fun init(level: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var level = level
@@ -143,14 +143,14 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 }
 
 
-open fun clear()
+    open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 this.list.clear()
 }
 
 
-open fun add(featureInterface: GameFeatureControlledInterface)
+    open fun add(featureInterface: GameFeatureControlledInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var featureInterface = featureInterface
@@ -160,7 +160,7 @@ this.list.add(featureInterface)
 }
 
 
-open fun getList()
+    open fun getList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 

@@ -23,12 +23,11 @@ open public class ToastUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ToastUtil = ToastUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ToastUtil{
 
@@ -48,7 +47,7 @@ open fun getInstance()
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-open fun makeToast(view: View, context: Context, message: String, time: Int)
+    open fun makeToast(view: View, context: Context, message: String, time: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var view = view
@@ -63,14 +62,15 @@ open class MakeToast
         
 
     val string: String
-public constructor        (string: String)
+public constructor (string: String)
             : super()
         {
 var string = string
 this.string= string
 }
 
-override fun run()
+
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 

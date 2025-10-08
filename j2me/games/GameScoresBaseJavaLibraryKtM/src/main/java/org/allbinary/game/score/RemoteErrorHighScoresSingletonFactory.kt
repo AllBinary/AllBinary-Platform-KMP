@@ -31,12 +31,11 @@ open public class RemoteErrorHighScoresSingletonFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: HighScores = HighScores("Loading", "Remote High Scores Did Not Load", CommonStrings.getInstance()!!.PERIODS)
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : HighScores{
 

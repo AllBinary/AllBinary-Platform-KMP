@@ -47,19 +47,19 @@ open public class InitDb
     private val METHOD_CALL_TEMP_MAIN_PATH: String = "useTemporaryMainPath"
 
     private val METHOD_CALL_MAIN_PATH: String = "useNormalMainPath"
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
-public constructor        (dbConnectionInfo: DbConnectionInfo)
+public constructor (dbConnectionInfo: DbConnectionInfo)
             : super()
         {
 var dbConnectionInfo = dbConnectionInfo
 }
 
 
-open fun setHelper(anyType: Any)
+    open fun setHelper(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var anyType = anyType
@@ -67,7 +67,7 @@ this.anyType= anyType
 }
 
 
-open fun getHelper()
+    open fun getHelper()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -78,7 +78,7 @@ open fun getHelper()
 }
 
 
-open fun getHostName()
+    open fun getHostName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -111,7 +111,7 @@ open fun getHostName()
 }
 
 
-open fun addUsers()
+    open fun addUsers()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -144,7 +144,7 @@ open fun addUsers()
 }
 
 
-open fun addDatabases()
+    open fun addDatabases()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -177,7 +177,7 @@ open fun addDatabases()
 }
 
 
-open fun addTables()
+    open fun addTables()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -210,7 +210,7 @@ open fun addTables()
 }
 
 
-open fun useTemporaryMainPath()
+    open fun useTemporaryMainPath()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -243,7 +243,7 @@ open fun useTemporaryMainPath()
 }
 
 
-open fun useNormalMainPath()
+    open fun useNormalMainPath()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

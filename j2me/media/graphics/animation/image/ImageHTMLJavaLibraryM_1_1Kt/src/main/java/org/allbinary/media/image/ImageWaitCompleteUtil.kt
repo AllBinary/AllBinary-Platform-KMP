@@ -28,7 +28,6 @@
 import java.util.Hashtable
 import javax.microedition.lcdui.Image
 import org.allbinary.image.GameFeatureImageCacheFactory
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.string.CommonStrings
@@ -46,12 +45,13 @@ open public class ImageWaitCompleteUtil : ImageCompleteUtil {
     private val timeDelayHelper: TimeDelayHelper = TimeDelayHelper(18000)
 
     private val allTimeDelayHelper: TimeDelayHelper = TimeDelayHelper(120000)
-public constructor        (){
+public constructor (){
 }
 
 
                 @Throws(Exception::class)
-            override fun waitFor(image: Image, name: String)
+            
+    override fun waitFor(image: Image, name: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var image = image
@@ -63,7 +63,7 @@ this.waitFor(image, name, this.timeDelayHelper)
 
                 @Throws(Exception::class)
             
-open fun handleTimeout(name: String)
+    open fun handleTimeout(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var name = name
@@ -84,7 +84,7 @@ open fun handleTimeout(name: String)
 
                 @Throws(Exception::class)
             
-open fun waitFor(image: Image, name: String, timeDelayHelper: TimeDelayHelper)
+    open fun waitFor(image: Image, name: String, timeDelayHelper: TimeDelayHelper)
         //nullable = true from not(false or (false and false)) = true
 {
     //var image = image
@@ -127,7 +127,7 @@ open fun waitFor(image: Image, name: String, timeDelayHelper: TimeDelayHelper)
 
                 @Throws(Exception::class)
             
-open fun waitForAll()
+    open fun waitForAll()
         //nullable = true from not(false or (false and true)) = true
 {
 this.allTimeDelayHelper!!.setStartTime()

@@ -30,12 +30,11 @@ open public class LoadedShaderManager
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ShaderManager = ShaderManager( -1,  -1)
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ShaderManager{
 

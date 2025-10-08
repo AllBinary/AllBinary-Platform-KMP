@@ -25,38 +25,39 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface FtpConfigurationInterface {
         
 
-open fun getServer()
+    open fun getServer()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getPath()
+    open fun getPath()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getUserName()
+    open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getPassword()
+    open fun getPassword()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun setServer(value: String)
+    open fun setServer(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setPath(value: String)
+    open fun setPath(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setUserName(value: String)
+    open fun setUserName(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setPassword(value: String)
+    open fun setPassword(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 

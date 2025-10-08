@@ -43,7 +43,7 @@ open public class SmallDelete
     private var fileName: String
 
     private var string: String
-public constructor        (fileName: String)
+public constructor (fileName: String)
             : super()
         {
 var fileName = fileName
@@ -52,7 +52,7 @@ string= FileUtil.getInstance()!!.readAsString(fileName)
 }
 
 
-open fun deleteAtStart(start: String, end: String)
+    open fun deleteAtStart(start: String, end: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var start = start
@@ -61,7 +61,7 @@ var end = end
         try {
             
     var beginIndex: Int= 0
-    var endIndex: Int= 0
+var endIndex: Int= 0
 
 beginIndex= this.string.indexOf(start)
 endIndex= this.string.indexOf(end)
@@ -114,7 +114,7 @@ idOutData!!.writeBytes(text)
 }
 
 
-open fun deleteBetween(start: String, end: String, newText: String)
+    open fun deleteBetween(start: String, end: String, newText: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var start = start
@@ -124,7 +124,7 @@ var newText = newText
         try {
             
     var beginIndex: Int= 0
-    var endIndex: Int= 0
+var endIndex: Int= 0
 
 beginIndex= this.string.indexOf(start)
 endIndex= this.string.indexOf(end)

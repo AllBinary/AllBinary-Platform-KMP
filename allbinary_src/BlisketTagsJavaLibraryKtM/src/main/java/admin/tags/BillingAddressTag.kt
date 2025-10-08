@@ -39,13 +39,13 @@ open public class BillingAddressTag : TableTag {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var value: String
-public constructor        (){
+public constructor (){
 this.setTagHelperFactory(BillingAddressHelperFactory())
 this.setTagRequestHelperFactory(BillingAddressHelperFactory())
 }
 
 
-open fun setValue(value: String)
+    open fun setValue(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -55,7 +55,7 @@ this.value= value
 
                 @Throws(LicensingException::class)
             
-open fun set()
+    open fun set()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -113,7 +113,7 @@ open fun set()
 
                 @Throws(LicensingException::class)
             
-open fun setToShippingAddress()
+    open fun setToShippingAddress()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -171,7 +171,7 @@ open fun setToShippingAddress()
 
                 @Throws(JspTagException::class)
             
-open fun doStartTag()
+    open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

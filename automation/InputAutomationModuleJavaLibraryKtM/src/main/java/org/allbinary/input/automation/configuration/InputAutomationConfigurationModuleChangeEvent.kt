@@ -33,7 +33,7 @@ open public class InputAutomationConfigurationModuleChangeEvent
         
 
     private var inputAutomationModuleConfiguration: InputAutomationModuleConfiguration
-public constructor        (inputAutomationModuleConfiguration: InputAutomationModuleConfiguration)
+public constructor (inputAutomationModuleConfiguration: InputAutomationModuleConfiguration)
             : super()
         {
 var inputAutomationModuleConfiguration = inputAutomationModuleConfiguration
@@ -41,7 +41,7 @@ this.setInputAutomationModuleConfiguration(inputAutomationModuleConfiguration)
 }
 
 
-open fun getInputAutomationModuleConfiguration()
+    open fun getInputAutomationModuleConfiguration()
         //nullable = true from not(false or (false and true)) = true
 : InputAutomationModuleConfiguration{
 
@@ -52,7 +52,7 @@ open fun getInputAutomationModuleConfiguration()
 }
 
 
-open fun setInputAutomationModuleConfiguration(inputAutomationModuleConfiguration: InputAutomationModuleConfiguration)
+    open fun setInputAutomationModuleConfiguration(inputAutomationModuleConfiguration: InputAutomationModuleConfiguration)
         //nullable = true from not(false or (false and false)) = true
 {
 var inputAutomationModuleConfiguration = inputAutomationModuleConfiguration

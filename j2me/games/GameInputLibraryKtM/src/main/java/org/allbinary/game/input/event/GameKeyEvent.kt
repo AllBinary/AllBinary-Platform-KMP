@@ -31,8 +31,7 @@ import org.allbinary.logic.util.event.AllBinaryEventObject
 
 open public class GameKeyEvent : AllBinaryEventObject {
         
-
-        companion object {
+companion object {
             
     val NONE: GameKeyEvent = GameKeyEvent(NullUtil.getInstance()!!.NULL_OBJECT,  -1,  -1,  -1,  -1, false)
 
@@ -47,7 +46,7 @@ open public class GameKeyEvent : AllBinaryEventObject {
     private var gameActionKey: Int= 0
 
     private var originalKey: Int= 0
-public constructor        (anyType: Any, sourceId: Int, originalKey: Int, gameActionKey: Int, key: Int, repeated: Boolean)                        
+public constructor (anyType: Any, sourceId: Int, originalKey: Int, gameActionKey: Int, key: Int, repeated: Boolean)                        
 
                             : super(anyType){
 var anyType = anyType
@@ -67,7 +66,7 @@ this.setGameActionKey(gameActionKey)
 this.setRepeatEvents(repeated)
 }
 
-public constructor        (anyType: Any, sourceId: Int, key: Int)                        
+public constructor (anyType: Any, sourceId: Int, key: Int)                        
 
                             : super(anyType){
 var anyType = anyType
@@ -83,7 +82,7 @@ this.setRepeatEvents(false)
 }
 
 
-open fun init(anyType: Any)
+    open fun init(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var anyType = anyType
@@ -91,7 +90,7 @@ this.setSource(anyType)
 }
 
 
-open fun setRepeatEvents(repeated: Boolean)
+    open fun setRepeatEvents(repeated: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var repeated = repeated
@@ -99,7 +98,7 @@ this.repeated= repeated
 }
 
 
-open fun hasRepeatEvents()
+    open fun hasRepeatEvents()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -110,7 +109,7 @@ open fun hasRepeatEvents()
 }
 
 
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -120,7 +119,8 @@ open fun getKey()
                         return key
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -136,7 +136,7 @@ stringBuffer!!.append(this.getKey())
 }
 
 
-open fun getOriginalKey()
+    open fun getOriginalKey()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -147,7 +147,7 @@ open fun getOriginalKey()
 }
 
 
-open fun setOriginalKey(originalKey: Int)
+    open fun setOriginalKey(originalKey: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var originalKey = originalKey
@@ -155,7 +155,7 @@ this.originalKey= originalKey
 }
 
 
-open fun getGameActionKey()
+    open fun getGameActionKey()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -166,7 +166,7 @@ open fun getGameActionKey()
 }
 
 
-open fun setGameActionKey(gameActionKey: Int)
+    open fun setGameActionKey(gameActionKey: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameActionKey = gameActionKey
@@ -174,7 +174,7 @@ this.gameActionKey= gameActionKey
 }
 
 
-open fun getSourceId()
+    open fun getSourceId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

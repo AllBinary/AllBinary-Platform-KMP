@@ -26,12 +26,13 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
+
 interface PaymentGatewayInterfaceFactoryInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getInstance(hashMap: HashMap<Any, Any>)
+    open fun getInstance(hashMap: HashMap<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
 : PaymentGatewayInterface
 

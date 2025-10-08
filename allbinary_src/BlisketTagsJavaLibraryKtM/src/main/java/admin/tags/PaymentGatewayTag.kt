@@ -36,7 +36,7 @@ open public class PaymentGatewayTag : TableTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (){
+public constructor (){
 this.setTagHelperFactory(PaymentGatewayHelperFactory())
 this.setTagRequestHelperFactory(PaymentGatewayHelperFactory())
 }
@@ -44,7 +44,7 @@ this.setTagRequestHelperFactory(PaymentGatewayHelperFactory())
 
                 @Throws(LicensingException::class, Exception::class)
             
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -99,7 +99,7 @@ logUtil!!.put("LicensingException", this, commonStrings!!.PROCESS, e)
 
                 @Throws(JspTagException::class)
             
-open fun doStartTag()
+    open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

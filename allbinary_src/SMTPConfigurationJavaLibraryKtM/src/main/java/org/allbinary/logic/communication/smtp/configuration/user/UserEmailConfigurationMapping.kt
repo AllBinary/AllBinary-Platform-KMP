@@ -36,7 +36,7 @@ open public class UserEmailConfigurationMapping
         
 
     private var userEmailConfigurationInterface: UserEmailConfigurationInterface
-public constructor        (userEmailConfigurationInterface: UserEmailConfigurationInterface)
+public constructor (userEmailConfigurationInterface: UserEmailConfigurationInterface)
             : super()
         {
 var userEmailConfigurationInterface = userEmailConfigurationInterface
@@ -44,7 +44,7 @@ this.userEmailConfigurationInterface= userEmailConfigurationInterface
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -60,7 +60,7 @@ open fun toHashMap()
 
                 @Throws(Exception::class)
             
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -73,7 +73,7 @@ open fun getKey()
 
                 @Throws(Exception::class)
             
-open fun toVector()
+    open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 

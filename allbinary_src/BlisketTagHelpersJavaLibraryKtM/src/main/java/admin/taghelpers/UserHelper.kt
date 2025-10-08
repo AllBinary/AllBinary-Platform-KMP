@@ -58,7 +58,7 @@ open public class UserHelper : Table {
     private val path: String
 
     private val portion: Portion
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 this.hashMap= hashMap
@@ -69,7 +69,7 @@ this.portion= Portion(hashMap)
 }
 
 
-open fun delete()
+    open fun delete()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -133,7 +133,7 @@ stringBuffer!!.append(" from to the user table")
 
                 @Throws(Exception::class)
             
-open fun insert()
+    open fun insert()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -198,7 +198,7 @@ UserEntityFactory.getInstance()!!.insert(values)
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -251,7 +251,7 @@ UserEntityFactory.getInstance()!!.update(user.getUserName(), values)
 }
 
 
-open fun drop()
+    open fun drop()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -297,7 +297,7 @@ open fun drop()
 }
 
 
-open fun create()
+    open fun create()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -343,7 +343,7 @@ open fun create()
 }
 
 
-open fun restore()
+    open fun restore()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -392,7 +392,7 @@ open fun restore()
 }
 
 
-open fun backup()
+    open fun backup()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

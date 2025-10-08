@@ -32,7 +32,7 @@ import org.allbinary.layer.LayerProcessor
 
 open public class OptimizedTickableLayerProcessor : LayerProcessor {
         
-public constructor        ()                        
+public constructor ()                        
 
                             : super(OptimizedTickableLayerManager()){
 
@@ -43,7 +43,8 @@ public constructor        ()
 
 
                 @Throws(Exception::class)
-            override fun process(allBinaryLayerManager: AllBinaryLayerManager, layerInterface: AllBinaryLayer, index: Int)
+            
+    override fun process(allBinaryLayerManager: AllBinaryLayerManager, layerInterface: AllBinaryLayer, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager
@@ -55,7 +56,8 @@ var index = index
 tickableInterface!!.processTick(allBinaryLayerManager)
 }
 
-override fun isProcessorLayer(layerInterface: AllBinaryLayer)
+
+    override fun isProcessorLayer(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var layerInterface = layerInterface

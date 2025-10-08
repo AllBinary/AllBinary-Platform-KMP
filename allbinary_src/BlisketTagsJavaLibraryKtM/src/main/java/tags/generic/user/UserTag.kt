@@ -34,11 +34,11 @@ open public class UserTag : StoreValidationTransformTag {
         
 
     private var role: String
-public constructor        (){
+public constructor (){
 }
 
 
-open fun setRole(value: String)
+    open fun setRole(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -49,7 +49,7 @@ this.getPropertiesHashMap()!!.put(UserRoleData.NAME, this.role)
 
                 @Throws(JspTagException::class)
             
-open fun doStartTag()
+    open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

@@ -30,22 +30,22 @@ open public class CreditCardType
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val MAXLEN: Int = 19
 
         }
             
     private var name: String
-public constructor        (cardType: String)
+public constructor (cardType: String)
             : super()
         {
 var cardType = cardType
 this.name= cardType
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

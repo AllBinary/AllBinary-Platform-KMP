@@ -46,13 +46,13 @@ open public class GenericProfileActionScriptJPanel : javax.swing.JPanel
     private var defaultMutableTreeNode: DefaultMutableTreeNode = DefaultMutableTreeNode("Root")
 
     private var genericProfileActionScript: GenericProfileActionScript
-public constructor        (){
+public constructor (){
 logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 initComponents()
 }
 
 
-open fun updateJTree()
+    open fun updateJTree()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -64,7 +64,7 @@ logUtil!!.put("Updated UI", this, "updateJTree")
 }
 
 
-open fun getGenericProfileActionScript()
+    open fun getGenericProfileActionScript()
         //nullable = true from not(false or (false and true)) = true
 : GenericProfileActionScript{
 
@@ -75,7 +75,7 @@ open fun getGenericProfileActionScript()
 }
 
 
-open fun setGenericProfileActionScript(genericProfileActionScript: GenericProfileActionScript)
+    open fun setGenericProfileActionScript(genericProfileActionScript: GenericProfileActionScript)
         //nullable = true from not(false or (false and false)) = true
 {
 var genericProfileActionScript = genericProfileActionScript
@@ -83,7 +83,7 @@ this.genericProfileActionScript= genericProfileActionScript
 }
 
 
-open fun getActionScriptJTree()
+    open fun getActionScriptJTree()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JTree{
 
@@ -94,7 +94,7 @@ open fun getActionScriptJTree()
 }
 
 
-open fun setActionScriptJTree(actionScriptJTree: javax.swing.JTree)
+    open fun setActionScriptJTree(actionScriptJTree: javax.swing.JTree)
         //nullable = true from not(false or (false and false)) = true
 {
 var actionScriptJTree = actionScriptJTree
@@ -102,7 +102,7 @@ this.actionScriptJTree= actionScriptJTree
 }
 
 
-open fun initComponents()
+    open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
 jScrollPane1= javax.swing.JScrollPane()
@@ -112,14 +112,14 @@ actionScriptJTree!!.setPreferredSize(java.awt.Dimension(500, 500))
 actionScriptJTree!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
-open override fun mouseClicked(evt: java.awt.event.MouseEvent)
+    open override fun mouseClicked(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
 actionScriptJTreeMouseClicked(evt)
 }
 
-open override fun mouseReleased(evt: java.awt.event.MouseEvent)
+    open override fun mouseReleased(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -133,7 +133,7 @@ add(jScrollPane1)
 }
 
 
-open fun actionScriptJTreeMouseReleased(evt: java.awt.event.MouseEvent)
+    open fun actionScriptJTreeMouseReleased(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -182,7 +182,7 @@ jPopupMenu!!.show(evt.getSource() as JComponent, evt.getX(), evt.getY())
 }
 
 
-open fun actionScriptJTreeMouseClicked(evt: java.awt.event.MouseEvent)
+    open fun actionScriptJTreeMouseClicked(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt

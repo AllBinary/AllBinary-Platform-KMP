@@ -21,8 +21,7 @@ open public class BasicArrayList
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SIZE: String = ", Size: "
 
@@ -33,7 +32,7 @@ open public class BasicArrayList
     var objectArray: Array<Any?>
 
     private var currentIndex: Int = 0
-public constructor        (size: Int)                        
+public constructor (size: Int)                        
 
                             : super(){
     //var size = size
@@ -57,14 +56,14 @@ public constructor        (size: Int)
 objectArray= arrayOfNulls(size)
 }
 
-public constructor        (objectArray: Array<Any?>)
+public constructor (objectArray: Array<Any?>)
             : super()
         {
     //var objectArray = objectArray
 this.objectArray= objectArray
 }
 
-public constructor        ()                        
+public constructor ()                        
 
                             : this(7){
 
@@ -74,7 +73,7 @@ public constructor        ()
 }
 
 
-open fun add(index: Int, element: Any)
+    open fun add(index: Int, element: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var index = index
@@ -105,7 +104,7 @@ currentIndex++
 }
 
 
-open fun add(anyType: Any)
+    open fun add(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var anyType = anyType
@@ -119,7 +118,7 @@ objectArray[currentIndex++]= anyType
 }
 
 
-open fun remove(index: Int)
+    open fun remove(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : Any{
     //var index = index
@@ -163,7 +162,7 @@ objectArray[--currentIndex]=
 }
 
 
-open fun remove(anyType: Any)
+    open fun remove(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var anyType = anyType
@@ -255,7 +254,7 @@ objectArray[--currentIndex]=
 }
 
 
-open fun removeAll2(list: BasicArrayList)
+    open fun removeAll2(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var list = list
@@ -295,7 +294,7 @@ open fun removeAll2(list: BasicArrayList)
 }
 
 
-open fun addAll2(list: BasicArrayList)
+    open fun addAll2(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var list = list
@@ -321,7 +320,7 @@ objectArray[currentIndex++]= list.objectArray[index]!!
 }
 
 
-open fun addAll(list: BasicArrayList)
+    open fun addAll(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var list = list
@@ -336,7 +335,7 @@ open fun addAll(list: BasicArrayList)
 }
 
 
-open fun addAll(newObjectArray: Array<Any?>)
+    open fun addAll(newObjectArray: Array<Any?>)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var newObjectArray = newObjectArray
@@ -355,7 +354,7 @@ currentIndex += numSize
 }
 
 
-open fun ensureCapacity(minSize: Int)
+    open fun ensureCapacity(minSize: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var minSize = minSize
@@ -382,7 +381,7 @@ objectArray= arrayUtil!!.copyOf(objectArray, newCapacity)
 }
 
 
-open fun trimToSize()
+    open fun trimToSize()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -396,7 +395,7 @@ open fun trimToSize()
 }
 
 
-open fun indexOf(anyType: Any)
+    open fun indexOf(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var anyType = anyType
@@ -458,7 +457,7 @@ open fun indexOf(anyType: Any)
 }
 
 
-open fun lastIndexOf(anyType: Any)
+    open fun lastIndexOf(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var anyType = anyType
@@ -520,7 +519,7 @@ open fun lastIndexOf(anyType: Any)
 }
 
 
-open fun get(index: Int)
+    open fun get(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : Any{
     //var index = index
@@ -551,7 +550,7 @@ stringBuffer!!.append(currentIndex)
 }
 
 
-open fun set(index: Int, element: Any)
+    open fun set(index: Int, element: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{
     //var index = index
@@ -587,7 +586,7 @@ objectArray[index]= element
 }
 
 
-open fun clear()
+    open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -606,7 +605,7 @@ currentIndex= 0
 }
 
 
-open fun size()
+    open fun size()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -617,7 +616,7 @@ open fun size()
 }
 
 
-open fun isEmpty()
+    open fun isEmpty()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -628,7 +627,7 @@ open fun isEmpty()
 }
 
 
-open fun contains(anyType: Any)
+    open fun contains(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var anyType = anyType
@@ -640,7 +639,7 @@ open fun contains(anyType: Any)
 }
 
 
-open fun toArray()
+    open fun toArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<Any?>{
 
@@ -651,7 +650,7 @@ open fun toArray()
 }
 
 
-open fun toArray(objectArray: Array<Any?>)
+    open fun toArray(objectArray: Array<Any?>)
         //nullable = true from not(false or (false and false)) = true
 : Array<Any?>{
     //var objectArray = objectArray
@@ -677,7 +676,8 @@ System.arraycopy(this.objectArray, 0, objectArray, 0, currentIndex)
                         return objectArray
 }
 
-override fun clone()
+
+    override fun clone()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -707,7 +707,8 @@ list.add(anyType)
                         return list
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

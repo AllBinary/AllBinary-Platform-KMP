@@ -31,7 +31,6 @@ import org.allbinary.animation.Animation
 import org.allbinary.graphics.GPoint
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.GeographicMapCellHistory
@@ -49,7 +48,7 @@ open public class PathAnimation : Animation {
     private val pathFindingLayer: PathFindingLayerInterface
 
     var allBinaryGameLayerManager: AllBinaryGameLayerManager
-public constructor        (pathFindingLayer: PathFindingLayerInterface, linePathAnimation: LinePathAnimation){
+public constructor (pathFindingLayer: PathFindingLayerInterface, linePathAnimation: LinePathAnimation){
     //var pathFindingLayer = pathFindingLayer
     //var linePathAnimation = linePathAnimation
 this.pathFindingLayer= pathFindingLayer
@@ -59,7 +58,7 @@ this.linePathAnimation= linePathAnimation
 
                 @Throws(Exception::class)
             
-open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
+    open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -69,7 +68,7 @@ this.allBinaryGameLayerManager= allBinaryGameLayerManager
 
                 @Throws(Exception::class)
             
-open fun nextFrame()
+    open fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -81,7 +80,7 @@ open fun nextFrame()
 
     private val endColor: BasicColor = BasicColorFactory.getInstance()!!.GREEN
 
-open fun paint(graphics: Graphics, x: Int, y: Int)
+    open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics

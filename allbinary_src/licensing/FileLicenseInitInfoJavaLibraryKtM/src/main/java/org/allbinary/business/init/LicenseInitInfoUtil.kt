@@ -21,8 +21,6 @@
 
         import java.lang.Object        
         
-        import java.lang.Thread
-        
         
         import kotlin.Array
         import kotlin.reflect.KClass
@@ -43,12 +41,11 @@ open public class LicenseInitInfoUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: LicenseInitInfoUtil = LicenseInitInfoUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : LicenseInitInfoUtil{
 
@@ -68,16 +65,18 @@ open fun getInstance()
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
+    private val stringUtil: StringUtil = StringUtil.getInstance()!!
+
     val INITFILENAME: String = "licenseinitdata.dat"
 
     val ABOUT: String = "about"
 
     val PRIVACY_POLICY: String = "privacy_policy"
 
-    private var filePath: String = StringUtil.getInstance()!!.EMPTY_STRING
+    private var filePath: String = stringUtil!!.EMPTY_STRING
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun setFilePath(filePath: String)
+    open fun setFilePath(filePath: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var filePath = filePath
@@ -88,15 +87,13 @@ this.filePath= filePath
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun write(initData: LicenseInitInfo)
+    open fun write(initData: LicenseInitInfo)
         //nullable = true from not(false or (false and false)) = true
 {
 var initData = initData
 
     
-                        if(this.filePath == 
-                                    null
-                                )
+                        if(this.filePath == stringUtil!!.EMPTY_STRING)
                         
                                     {
                                     this.filePath= URLGLOBALS.getMainPath() +PATH_GLOBALS.getInstance()!!.INIT_PATH
@@ -118,16 +115,17 @@ dataOutputStream!!.writeUTF(DatabaseEncoder.encode(licenseIdCrypted))
 
 dataOutputStream!!.writeInt(numberOfLicenseServers)
 
+    var licenseServerCrypted: ByteArray
+
+
 
 
 
                         for (index in 0 until numberOfLicenseServers)
 
         {
-
-    var licenseServerCrypted: ByteArray = WeakCrypt(3).
-                            encrypt(initData!!.getServer(index))!!.encodeToByteArray()!!
-
+licenseServerCrypted= WeakCrypt(3).
+                            encrypt(initData!!.getServer(index))!!.encodeToByteArray()
 dataOutputStream!!.writeUTF(DatabaseEncoder.encode(licenseServerCrypted))
 }
 
@@ -147,7 +145,7 @@ FileStreamFactory.getInstance()!!.delete(this.filePath, INITFILENAME)
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun read()
+    open fun read()
         //nullable = true from not(false or (false and true)) = true
 : LicenseInitInfo{
 
@@ -161,7 +159,7 @@ open fun read()
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun readAgain(initializeCounter: Int)
+    open fun readAgain(initializeCounter: Int)
         //nullable = true from not(false or (false and false)) = true
 : LicenseInitInfo{
 var initializeCounter = initializeCounter
@@ -170,9 +168,7 @@ var initializeCounter = initializeCounter
 
 
     
-                        if(this.filePath == 
-                                    null
-                                )
+                        if(this.filePath == stringUtil!!.EMPTY_STRING)
                         
                                     {
                                     this.filePath= URLGLOBALS.getMainPath() +PATH_GLOBALS.getInstance()!!.INIT_PATH
@@ -253,21 +249,6 @@ logUtil!!.put(NEXT_FILE +initInfo!!.getServer(index), this, METHOD_NAME)
 
         try {
             logUtil!!.put("Command Failed: " +INITFILENAME, this, METHOD_NAME, e)
-Thread.sleep(2000)
-
-    
-                        if(initializeCounter < 3)
-                        
-                                    {
-                                    initializeCounter++
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return readAgain(initializeCounter++)
-
-                                    }
-                                
 } catch(se: Exception)
             {
 logUtil!!.put("LicenseInitInfo Read Retry: " +INITFILENAME, this, "readAgain()", se)
@@ -282,7 +263,7 @@ logUtil!!.put("LicenseInitInfo Read Retry: " +INITFILENAME, this, "readAgain()",
 }
 
 
-open fun getFilePath()
+    open fun getFilePath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

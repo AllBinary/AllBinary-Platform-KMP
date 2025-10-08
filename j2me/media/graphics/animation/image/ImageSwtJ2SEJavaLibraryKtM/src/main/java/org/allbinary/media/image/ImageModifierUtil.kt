@@ -42,12 +42,11 @@ open public class ImageModifierUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ImageModifierUtil = ImageModifierUtil()
 
-open fun getInstanceOrCreate()
+    open fun getInstanceOrCreate()
         //nullable = true from not(false or (false and true)) = true
 : ImageModifierUtil{
 
@@ -69,14 +68,14 @@ open fun getInstanceOrCreate()
 
     private val features: Features = Features.getInstance()!!
 
-open fun setBasicColorP(basicColor: BasicColor)
+    open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var basicColor = basicColor
 }
 
 
-open fun setColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, basicColor: BasicColor)
+    open fun setColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var unusedOriginalImage = unusedOriginalImage
@@ -180,7 +179,7 @@ imageData!!.data[index3 +2]= b as Byte
 }
 
 
-open fun changeColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, basicColor: BasicColor)
+    open fun changeColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var unusedOriginalImage = unusedOriginalImage
@@ -310,7 +309,7 @@ imageData!!.data[index3 +2]= bx as Byte
 }
 
 
-open fun setAlpha(unusedOriginalImage: Image, image: Image, imageIndex: Int, alphaInt: Int)
+    open fun setAlpha(unusedOriginalImage: Image, image: Image, imageIndex: Int, alphaInt: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var unusedOriginalImage = unusedOriginalImage
@@ -347,7 +346,7 @@ this.setAlpha(image, alphaInt)
 }
 
 
-open fun setAlpha(image: Image, alphaInt: Int)
+    open fun setAlpha(image: Image, alphaInt: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var image = image
@@ -382,7 +381,7 @@ newBufferedImage!!.getImageData()!!.alpha= alpha
 }
 
 
-open fun getImageArray(originalImageArray: Array<Image?>)
+    open fun getImageArray(originalImageArray: Array<Image?>)
         //nullable = true from not(false or (false and false)) = true
 : Array<Image?>{
     //var originalImageArray = originalImageArray
@@ -433,7 +432,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, "getImageArray", e)
 }
 
 
-open fun handleImage(imageArray: Array<Image?>, index: Int, image: Image)
+    open fun handleImage(imageArray: Array<Image?>, index: Int, image: Image)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageArray = imageArray
@@ -442,7 +441,7 @@ open fun handleImage(imageArray: Array<Image?>, index: Int, image: Image)
 }
 
 
-open fun reset()
+    open fun reset()
         //nullable = true from not(false or (false and true)) = true
 {
 }

@@ -37,7 +37,7 @@ open public class ComparableObject
             {
             }            
         
-open fun compareTo(anyType: Any)
+    open fun compareTo(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var anyType = anyType

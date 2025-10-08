@@ -56,8 +56,7 @@ open public class CollidableDestroyableDamageableLayer : CollidableCompositeLaye
                 , SpecialGameInputInterface
                 , OpenGLSurfaceChangedInterface {
         
-
-        companion object {
+companion object {
             
     val NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER: CollidableDestroyableDamageableLayer = CollidableDestroyableDamageableLayer(BasicGroupFactory.getInstance()!!.NONE_ARRAY, RectangleFactory.SINGLETON, ViewPosition.NULL_VIEW_POSITION)
 
@@ -84,7 +83,7 @@ open public class CollidableDestroyableDamageableLayer : CollidableCompositeLaye
     private var pickupBehavior: PickupBehavior
 
     var allBinaryGameLayerManagerP: AllBinaryGameLayerManager = AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER
-public constructor        (groupInterface: Array<Group?>, layerInfo: Rectangle, viewPosition: ViewPosition)                        
+public constructor (groupInterface: Array<Group?>, layerInfo: Rectangle, viewPosition: ViewPosition)                        
 
                             : super(layerInfo, viewPosition){
     //var groupInterface = groupInterface
@@ -100,7 +99,7 @@ this.groupInterface= groupInterface
 this.pickupBehavior= PickupBehavior.NULL_PICKUP_BEHAVIOR
 }
 
-public constructor        (groupInterface: Array<Group?>, name: String, layerInfo: Rectangle, viewPosition: ViewPosition)                        
+public constructor (groupInterface: Array<Group?>, name: String, layerInfo: Rectangle, viewPosition: ViewPosition)                        
 
                             : super(name, layerInfo, viewPosition){
     //var groupInterface = groupInterface
@@ -120,7 +119,7 @@ this.pickupBehavior= PickupBehavior.NULL_PICKUP_BEHAVIOR
 
                 @Throws(Exception::class)
             
-open fun initPosition()
+    open fun initPosition()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setPosition(this.initX, this.initY, this.initZ)
@@ -129,7 +128,7 @@ this.setPosition(this.initX, this.initY, this.initZ)
 
                 @Throws(Exception::class)
             
-open fun initPosition(x: Int, y: Int, z: Int)
+    open fun initPosition(x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var x = x
@@ -140,7 +139,8 @@ this.initY= y
 this.initZ= z
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -149,7 +149,8 @@ super.paint(graphics)
 
 
                 @Throws(Exception::class)
-            override fun damage(damage: Int, damageType: Int)
+            
+    override fun damage(damage: Int, damageType: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var damage = damage
@@ -162,7 +163,8 @@ super.paint(graphics)
 
 
                 @Throws(Exception::class)
-            override fun getDamage(damageType: Int)
+            
+    override fun getDamage(damageType: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var damageType = damageType
@@ -174,7 +176,8 @@ super.paint(graphics)
 
 
                 @Throws(Exception::class)
-            override fun isDestroyed()
+            
+    override fun isDestroyed()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -183,7 +186,8 @@ super.paint(graphics)
                             throw Exception(commonStrings!!.NOT_IMPLEMENTED)
 }
 
-override fun getGroupInterface()
+
+    override fun getGroupInterface()
         //nullable = true from not(false or (false and true)) = true
 : Array<Group?>{
 
@@ -194,7 +198,7 @@ override fun getGroupInterface()
 }
 
 
-open fun setGroupInterface(teamInterface: Array<Group?>)
+    open fun setGroupInterface(teamInterface: Array<Group?>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var teamInterface = teamInterface
@@ -204,7 +208,7 @@ this.groupInterface= teamInterface
 
                 @Throws(Exception::class)
             
-open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
+    open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -226,7 +230,7 @@ this.allBinaryGameLayerManagerP= allBinaryGameLayerManager
 }
 
 
-open fun isReadyForExplosion()
+    open fun isReadyForExplosion()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -237,7 +241,7 @@ open fun isReadyForExplosion()
 }
 
 
-open fun setReadyForExplosion(isReadyForExplosion: Boolean)
+    open fun setReadyForExplosion(isReadyForExplosion: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var isReadyForExplosion = isReadyForExplosion
@@ -245,7 +249,7 @@ this.readyForExplosion= isReadyForExplosion
 }
 
 
-open fun getInitWidth()
+    open fun getInitWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -256,7 +260,7 @@ open fun getInitWidth()
 }
 
 
-open fun getInitHeight()
+    open fun getInitHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -267,7 +271,7 @@ open fun getInitHeight()
 }
 
 
-open fun getInitX()
+    open fun getInitX()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -278,7 +282,7 @@ open fun getInitX()
 }
 
 
-open fun getInitY()
+    open fun getInitY()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -290,94 +294,56 @@ open fun getInitY()
 
 
                 @Throws(Exception::class)
-            override fun up()
+            
+    override fun up()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
                 @Throws(Exception::class)
-            override fun down()
+            
+    override fun down()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
                 @Throws(Exception::class)
-            override fun right()
+            
+    override fun right()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
                 @Throws(Exception::class)
-            override fun left()
+            
+    override fun left()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
                 @Throws(Exception::class)
-            override fun strafeLeft()
+            
+    override fun strafeLeft()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
                 @Throws(Exception::class)
-            override fun strafeRight()
+            
+    override fun strafeRight()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
                 @Throws(Exception::class)
-            override fun fire(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var layerManager = layerManager
-    //var gameKeyEvent = gameKeyEvent
-}
-
-
-                @Throws(Exception::class)
-            override fun special1(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var layerManager = layerManager
-    //var gameKeyEvent = gameKeyEvent
-}
-
-
-                @Throws(Exception::class)
-            override fun special2(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var layerManager = layerManager
-    //var gameKeyEvent = gameKeyEvent
-}
-
-
-                @Throws(Exception::class)
-            override fun special3(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var layerManager = layerManager
-    //var gameKeyEvent = gameKeyEvent
-}
-
-
-                @Throws(Exception::class)
-            override fun special4(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var layerManager = layerManager
-    //var gameKeyEvent = gameKeyEvent
-}
-
-
-                @Throws(Exception::class)
-            override fun special5(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+            
+    override fun fire(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerManager = layerManager
@@ -387,7 +353,57 @@ open fun getInitY()
 
                 @Throws(Exception::class)
             
-open fun up(yAnalogValue: Int)
+    override fun special1(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var layerManager = layerManager
+    //var gameKeyEvent = gameKeyEvent
+}
+
+
+                @Throws(Exception::class)
+            
+    override fun special2(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var layerManager = layerManager
+    //var gameKeyEvent = gameKeyEvent
+}
+
+
+                @Throws(Exception::class)
+            
+    override fun special3(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var layerManager = layerManager
+    //var gameKeyEvent = gameKeyEvent
+}
+
+
+                @Throws(Exception::class)
+            
+    override fun special4(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var layerManager = layerManager
+    //var gameKeyEvent = gameKeyEvent
+}
+
+
+                @Throws(Exception::class)
+            
+    override fun special5(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var layerManager = layerManager
+    //var gameKeyEvent = gameKeyEvent
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun up(yAnalogValue: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var yAnalogValue = yAnalogValue
@@ -396,7 +412,7 @@ open fun up(yAnalogValue: Int)
 
                 @Throws(Exception::class)
             
-open fun down(yAnalogValue: Int)
+    open fun down(yAnalogValue: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var yAnalogValue = yAnalogValue
@@ -405,7 +421,7 @@ open fun down(yAnalogValue: Int)
 
                 @Throws(Exception::class)
             
-open fun right(xAnalogValue: Int)
+    open fun right(xAnalogValue: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var xAnalogValue = xAnalogValue
@@ -414,7 +430,7 @@ open fun right(xAnalogValue: Int)
 
                 @Throws(Exception::class)
             
-open fun left(xAnalogValue: Int)
+    open fun left(xAnalogValue: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var xAnalogValue = xAnalogValue
@@ -423,7 +439,7 @@ open fun left(xAnalogValue: Int)
 
                 @Throws(Exception::class)
             
-open fun rightTrigger(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent, xAnalogValue: Int)
+    open fun rightTrigger(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent, xAnalogValue: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerManager = layerManager
@@ -434,7 +450,7 @@ open fun rightTrigger(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKey
 
                 @Throws(Exception::class)
             
-open fun leftTrigger(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent, xAnalogValue: Int)
+    open fun leftTrigger(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent, xAnalogValue: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerManager = layerManager
@@ -443,13 +459,14 @@ open fun leftTrigger(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyE
 }
 
 
-open fun onDestroyed(destroyedEvent: DestroyedEvent)
+    open fun onDestroyed(destroyedEvent: DestroyedEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var destroyedEvent = destroyedEvent
 }
 
-override fun getPickupBehavior()
+
+    override fun getPickupBehavior()
         //nullable = true from not(false or (false and true)) = true
 : PickupBehavior{
 
@@ -459,7 +476,8 @@ override fun getPickupBehavior()
                         return pickupBehavior
 }
 
-override fun setPickupBehavior(pickupBehavior: PickupBehavior)
+
+    override fun setPickupBehavior(pickupBehavior: PickupBehavior)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pickupBehavior = pickupBehavior
@@ -469,14 +487,14 @@ this.pickupBehavior= pickupBehavior
 
                 @Throws(Exception::class)
             
-open fun addPart(pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface)
+    open fun addPart(pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pickedUpLayerInterfaceFactoryInterface = pickedUpLayerInterfaceFactoryInterface
 }
 
 
-open fun setPartInterfaceArray(partInterfaceArray: Array<PartInterface?>)
+    open fun setPartInterfaceArray(partInterfaceArray: Array<PartInterface?>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var partInterfaceArray = partInterfaceArray
@@ -484,7 +502,7 @@ this.partInterfaceArrayP= partInterfaceArray
 }
 
 
-open fun getPartInterfaceArray()
+    open fun getPartInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<PartInterface?>{
 
@@ -496,7 +514,8 @@ open fun getPartInterfaceArray()
 
 
                 @Throws(Exception::class)
-            override fun set(gl: GL)
+            
+    override fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl
@@ -506,7 +525,8 @@ open fun getPartInterfaceArray()
                             throw Exception(commonStrings!!.NOT_IMPLEMENTED)
 }
 
-override fun toString(stringBuffer: StringMaker)
+
+    override fun toString(stringBuffer: StringMaker)
         //nullable = true from not(false or (true and false)) = true
 {
     //var stringBuffer = stringBuffer
@@ -565,7 +585,8 @@ stringBuffer!!.append(positionStrings!!.Z_LABEL)
 stringBuffer!!.append(initZ)
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

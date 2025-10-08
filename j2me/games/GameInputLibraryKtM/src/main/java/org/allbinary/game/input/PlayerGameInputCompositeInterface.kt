@@ -25,10 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface PlayerGameInputCompositeInterface : GameInputInterface {
         
 
-open fun getPlayerGameInput()
+    open fun getPlayerGameInput()
         //nullable = true from not(false or (false and true)) = true
 : PlayerGameInput
 

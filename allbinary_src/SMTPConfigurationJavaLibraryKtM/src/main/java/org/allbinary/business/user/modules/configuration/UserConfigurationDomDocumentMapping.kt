@@ -37,7 +37,7 @@ open public class UserConfigurationDomDocumentMapping
         
 
     private var userConfigurationInterface: UserConfigurationInterface
-public constructor        (userConfigurationInterface: UserConfigurationInterface)
+public constructor (userConfigurationInterface: UserConfigurationInterface)
             : super()
         {
 var userConfigurationInterface = userConfigurationInterface
@@ -47,7 +47,7 @@ this.userConfigurationInterface= userConfigurationInterface
 
                 @Throws(Exception::class)
             
-open fun toXmlDoc()
+    open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -68,7 +68,7 @@ document.appendChild(node)
 
                 @Throws(Exception::class)
             
-open fun toDomDocumentString()
+    open fun toDomDocumentString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

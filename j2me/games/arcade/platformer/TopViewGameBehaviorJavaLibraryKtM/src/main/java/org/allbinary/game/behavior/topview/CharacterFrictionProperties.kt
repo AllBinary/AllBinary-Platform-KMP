@@ -36,7 +36,7 @@ open public class CharacterFrictionProperties : FrictionProperties {
     private val AIR_FRICTION_NOMINATOR: Int
 
     private val COLLISION_FRICTION_NOMINATOR: Int
-public constructor        (airFriction: Int, waterFriction: Int, collisionFriction: Int){
+public constructor (airFriction: Int, waterFriction: Int, collisionFriction: Int){
 var airFriction = airFriction
 var waterFriction = waterFriction
 var collisionFriction = collisionFriction
@@ -46,7 +46,7 @@ WATER_FRICTION_NOMINATOR= FrictionData.getFrictionDenominator() -waterFriction
 }
 
 
-open fun getWATER_FRICTION_NOMINATOR()
+    open fun getWATER_FRICTION_NOMINATOR()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -57,7 +57,7 @@ open fun getWATER_FRICTION_NOMINATOR()
 }
 
 
-open fun getAIR_FRICTION_NOMINATOR()
+    open fun getAIR_FRICTION_NOMINATOR()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -68,7 +68,7 @@ open fun getAIR_FRICTION_NOMINATOR()
 }
 
 
-open fun getCOLLISION_FRICTION_NOMINATOR()
+    open fun getCOLLISION_FRICTION_NOMINATOR()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

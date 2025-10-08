@@ -30,8 +30,7 @@ open public class PermissionItemData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val WHO: String = "PERMISSIONSITEM_WHO"
 

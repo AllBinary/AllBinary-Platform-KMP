@@ -52,12 +52,11 @@ open public class TaxFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: TaxFactory = TaxFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TaxFactory{
 
@@ -75,7 +74,7 @@ open fun getInstance()
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private val TAXATIONFILENAME: String = "taxationMethod.xml"
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -83,7 +82,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getInstance(abeClientInformation: AbeClientInformationInterface, storeFrontInterface: StoreFrontInterface)
+    open fun getInstance(abeClientInformation: AbeClientInformationInterface, storeFrontInterface: StoreFrontInterface)
         //nullable =  from not(true or (false and false)) = 
 : TaxModuleInterface{
     //var abeClientInformation = abeClientInformation

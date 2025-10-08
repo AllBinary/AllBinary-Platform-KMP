@@ -64,7 +64,7 @@ open public class RunnableCanvas : MyCanvas
     val commonLabels: CommonLabels = CommonLabels.getInstance()!!
 
     val threadObjectUtil: ThreadObjectUtil = ThreadObjectUtil.getInstance()!!
-public constructor        (commandListener: CommandListener, childNameList: BasicArrayList, hasParam: Boolean)                        
+public constructor (commandListener: CommandListener, childNameList: BasicArrayList, hasParam: Boolean)                        
 
                             : super(CommonStrings.getInstance()!!.UNKNOWN, childNameList){
     //var commandListener = commandListener
@@ -99,7 +99,7 @@ this.runnableCanvasRefreshHelper= RunnableCanvasRefreshHelper(this)
                                 
 }
 
-public constructor        (commandListener: CommandListener, childNameList: BasicArrayList)                        
+public constructor (commandListener: CommandListener, childNameList: BasicArrayList)                        
 
                             : this(commandListener, childNameList, true){
     //var commandListener = commandListener
@@ -110,7 +110,7 @@ public constructor        (commandListener: CommandListener, childNameList: Basi
                     
 }
 
-public constructor        ()                        
+public constructor ()                        
 
                             : this(NullCommandListener.NULL_COMMAND_LISTENER, CanvasStrings.getInstance()!!.EMPTY_CHILD_NAME_LIST, false){
 
@@ -120,7 +120,7 @@ public constructor        ()
 }
 
 
-open fun initCommands(cmdListener: CommandListener)
+    open fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var cmdListener = cmdListener
@@ -128,7 +128,7 @@ logUtil!!.put(commonStrings!!.NOT_IMPLEMENTED, this, "initCommands")
 }
 
 
-open fun isMainCanvas()
+    open fun isMainCanvas()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -157,14 +157,16 @@ open fun isMainCanvas()
                             
 }
 
-override fun setThread(thread: Thread)
+
+    override fun setThread(thread: Thread)
         //nullable = true from not(false or (false and false)) = true
 {
 var thread = thread
 this.thread= thread
 }
 
-override fun setRunning(running: Boolean)
+
+    override fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var running = running
@@ -201,7 +203,8 @@ logUtil!!.put(StringMaker().
 
     private val NOT_EQUAL: String = " != "
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun isRunning()
+
+    override fun isRunning()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -257,7 +260,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, IS_RUNNING)
 }
 
 
-open fun getLoopTimeHelperP()
+    open fun getLoopTimeHelperP()
         //nullable = true from not(false or (false and true)) = true
 : TimeDelayHelper{
 
@@ -270,7 +273,7 @@ open fun getLoopTimeHelperP()
 
     private var pauseWait: Long = 0
 
-open fun setWait(wait: Int)
+    open fun setWait(wait: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var wait = wait
@@ -281,7 +284,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-open fun getWait()
+    open fun getWait()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -292,20 +295,21 @@ open fun getWait()
 }
 
 
-open fun setCurrentThread()
+    open fun setCurrentThread()
         //nullable = true from not(false or (false and true)) = true
 {
 this.currentThread= Thread.currentThread()
 }
 
 
-open fun setCurrentThreadFake()
+    open fun setCurrentThreadFake()
         //nullable = true from not(false or (false and true)) = true
 {
 this.currentThread= thread
 }
 
-override fun showNotify()
+
+    override fun showNotify()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -323,7 +327,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "showNotify", e)
 
                 @Throws(Exception::class)
             
-open fun stopWaiting()
+    open fun stopWaiting()
         //nullable = true from not(false or (false and true)) = true
 {
 this.notified= true
@@ -344,7 +348,7 @@ this.repaint()
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun waitOnNotify(wait: Long)
+    open fun waitOnNotify(wait: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var wait = wait
@@ -377,14 +381,14 @@ var wait = wait
 
                 @Throws(Exception::class)
             
-open fun processSleep()
+    open fun processSleep()
         //nullable = true from not(false or (false and true)) = true
 {
 Thread.sleep(pauseWait)
 }
 
 
-open fun isPausable()
+    open fun isPausable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -397,7 +401,7 @@ open fun isPausable()
 
                 @Throws(Exception::class)
             
-open fun processGameSleep(sleep: Long)
+    open fun processGameSleep(sleep: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var sleep = sleep
@@ -413,7 +417,7 @@ Thread.sleep(sleep)
 
                 @Throws(Exception::class)
             
-open fun processLoopSleep()
+    open fun processLoopSleep()
         //nullable = true from not(false or (false and true)) = true
 {
 this.runnableCanvasRefreshHelper!!.process()
@@ -473,7 +477,7 @@ logUtil!!.put(stringMaker!!.append(END_PAUSE)!!.append(System.currentTimeMillis(
 }
 
 
-open fun isSingleThread()
+    open fun isSingleThread()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -483,7 +487,8 @@ open fun isSingleThread()
                         return false
 }
 
-override fun run()
+
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setCurrentThread()
@@ -492,13 +497,13 @@ this.setCurrentThread()
 
                 @Throws(Exception::class)
             
-open fun end2()
+    open fun end2()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun getType()
+    open fun getType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

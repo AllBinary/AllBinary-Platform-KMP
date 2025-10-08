@@ -29,7 +29,7 @@ import org.allbinary.logic.system.os.GenericOperatingSystem
 
 open public class Linux : GenericOperatingSystem {
         
-public constructor        (){
+public constructor (){
 this.scalable= true
 }
 

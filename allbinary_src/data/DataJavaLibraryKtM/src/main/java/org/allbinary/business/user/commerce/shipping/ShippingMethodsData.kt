@@ -30,8 +30,7 @@ open public class ShippingMethodsData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val SHIPPINGMETHODSORDERSUMMARIES: String = "SHIPPINGMETHODS_ORDERSUMMARIES"
 

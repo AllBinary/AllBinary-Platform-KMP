@@ -30,12 +30,11 @@ open public class EmailQueueFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var emailQueueInterface: EmailQueueInterface = BasicEmailQueue.getInstance() as EmailQueueInterface
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : EmailQueueInterface{
 
@@ -47,7 +46,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

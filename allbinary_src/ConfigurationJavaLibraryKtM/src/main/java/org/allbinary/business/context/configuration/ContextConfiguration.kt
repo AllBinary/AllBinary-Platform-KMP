@@ -42,14 +42,14 @@ open public class ContextConfiguration
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var emailServerConfigurationInterface: EmailServerConfigurationInterface
-public constructor        ()
+public constructor ()
             : super()
         {
 logUtil!!.put(commonStrings!!.START, this, "ContextConfiguration")
 this.setEmailServerConfigurationInterface(EmailServerConfiguration() as EmailServerConfigurationInterface)
 }
 
-public constructor        (hashMap: HashMap<Any, Any>)
+public constructor (hashMap: HashMap<Any, Any>)
             : super()
         {
 var hashMap = hashMap
@@ -58,7 +58,7 @@ this.setEmailServerConfigurationInterface(EmailServerConfiguration(hashMap) as E
 }
 
 
-open fun getEmailServerConfigurationInterface()
+    open fun getEmailServerConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
 : EmailServerConfigurationInterface{
 
@@ -69,7 +69,7 @@ open fun getEmailServerConfigurationInterface()
 }
 
 
-open fun setEmailServerConfigurationInterface(emailServerConfigurationInterface: EmailServerConfigurationInterface)
+    open fun setEmailServerConfigurationInterface(emailServerConfigurationInterface: EmailServerConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var emailServerConfigurationInterface = emailServerConfigurationInterface

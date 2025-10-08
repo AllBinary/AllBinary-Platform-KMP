@@ -25,10 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface LifeInterfaceCompositeInterface {
         
 
-open fun getLifeInterface()
+    open fun getLifeInterface()
         //nullable = true from not(false or (false and true)) = true
 : Life
 

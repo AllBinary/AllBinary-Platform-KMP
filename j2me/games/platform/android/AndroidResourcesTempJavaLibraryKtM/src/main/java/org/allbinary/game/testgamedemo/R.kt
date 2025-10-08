@@ -23,15 +23,13 @@ open public class R
             : Object
          {
         
-
-        companion object {
+companion object {
             
 open public class attr
             : Object
          {
         
-/*Static stuff is not allowed for Kotlin inner classes
-        companion object {
+/*Static stuff is not allowed for Kotlin inner classescompanion object {
             *//*
         }
             */
@@ -49,8 +47,7 @@ open public class drawable
             : Object
          {
         
-/*Static stuff is not allowed for Kotlin inner classes
-        companion object {
+/*Static stuff is not allowed for Kotlin inner classescompanion object {
             *//*
         }
             */
@@ -68,8 +65,7 @@ open public class id
             : Object
          {
         
-/*Static stuff is not allowed for Kotlin inner classes
-        companion object {
+/*Static stuff is not allowed for Kotlin inner classescompanion object {
             */
     val custom_web_view: Int = 0x7f050000
 
@@ -97,8 +93,7 @@ open public class layout
             : Object
          {
         
-/*Static stuff is not allowed for Kotlin inner classes
-        companion object {
+/*Static stuff is not allowed for Kotlin inner classescompanion object {
             */
     val webview_layout: Int = 0x7f020000
 /*
@@ -118,8 +113,7 @@ open public class raw
             : Object
          {
         
-/*Static stuff is not allowed for Kotlin inner classes
-        companion object {
+/*Static stuff is not allowed for Kotlin inner classescompanion object {
             */
     val about: Int = 0x7f030000
 
@@ -201,8 +195,7 @@ open public class string
             : Object
          {
         
-/*Static stuff is not allowed for Kotlin inner classes
-        companion object {
+/*Static stuff is not allowed for Kotlin inner classescompanion object {
             */
     val progressbar_in_title_string: Int = 0x7f050001
 /*

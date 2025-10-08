@@ -25,18 +25,19 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface IndexedAnimationInterface : SequentialAnimationInterface {
         
 
-open fun reset()
+    open fun reset()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun setFrame(index: Int)
+    open fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getFrame()
+    open fun getFrame()
         //nullable = true from not(false or (false and true)) = true
 : Int
 

@@ -39,7 +39,7 @@ open public class AllBinaryJ2METiledLayer : AllBinaryTiledLayer {
     val tiledLayer: TiledLayer
 
     val debugColor: Int
-public constructor        (dataId: Integer, tiledLayer: TiledLayer, mapTwoDArray: Array<IntArray?>, debugColor: Int)                        
+public constructor (dataId: Integer, tiledLayer: TiledLayer, mapTwoDArray: Array<IntArray?>, debugColor: Int)                        
 
                             : super(dataId, tiledLayer!!.getWidth(), tiledLayer!!.getHeight(), tiledLayer!!.getCellWidth(), tiledLayer!!.getCellHeight()){
     //var dataId = dataId
@@ -56,7 +56,7 @@ this.setCells(mapTwoDArray)
 }
 
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -66,7 +66,7 @@ this.tiledLayer!!.paint(graphics)
 
     val font2: Font = Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, 4)!!
 
-open fun paintDebug(graphics: Graphics)
+    open fun paintDebug(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -159,7 +159,7 @@ graphics.setFont(font)
 }
 
 
-open fun move(dx: Int, dy: Int)
+    open fun move(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var dx = dx
@@ -169,7 +169,7 @@ super.move( -dx,  -dy)
 }
 
 
-open fun setPosition(x: Int, y: Int, z: Int)
+    open fun setPosition(x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var x = x
@@ -180,7 +180,7 @@ super.setPosition( -x,  -y, z)
 }
 
 
-open fun getTiledLayer()
+    open fun getTiledLayer()
         //nullable = true from not(false or (false and true)) = true
 : TiledLayer{
 
@@ -191,7 +191,7 @@ open fun getTiledLayer()
 }
 
 
-open fun getCellWidth()
+    open fun getCellWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -202,7 +202,7 @@ open fun getCellWidth()
 }
 
 
-open fun getCellHeight()
+    open fun getCellHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -213,7 +213,7 @@ open fun getCellHeight()
 }
 
 
-open fun getCell(col: Int, row: Int)
+    open fun getCell(col: Int, row: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var col = col
@@ -226,7 +226,7 @@ open fun getCell(col: Int, row: Int)
 }
 
 
-open fun getColumns()
+    open fun getColumns()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -237,7 +237,7 @@ open fun getColumns()
 }
 
 
-open fun getRows()
+    open fun getRows()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -248,7 +248,7 @@ open fun getRows()
 }
 
 
-open fun setCell(col: Int, row: Int, index: Int)
+    open fun setCell(col: Int, row: Int, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var col = col
@@ -258,7 +258,7 @@ this.tiledLayer!!.setCell(col, row, index)
 }
 
 
-open fun getAnimatedTile(animationTileIndex: Int)
+    open fun getAnimatedTile(animationTileIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var animationTileIndex = animationTileIndex

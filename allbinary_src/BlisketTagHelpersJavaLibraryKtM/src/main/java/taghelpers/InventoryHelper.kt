@@ -61,7 +61,7 @@ open public class InventoryHelper : TagHelper {
     private var id: String
 
     private var searchRequest: SearchRequest
-public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext){
 var propertiesHashMap = propertiesHashMap
 var pageContext = pageContext
 this.response= pageContext!!.getResponse() as HttpServletResponse
@@ -96,14 +96,14 @@ this.getFormData()
 }
 
 
-open fun getFormData()
+    open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
 this.id= this.request.getParameter(BasicItemData.ID)
 }
 
 
-open fun viewSummary()
+    open fun viewSummary()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -152,7 +152,7 @@ open fun viewSummary()
 }
 
 
-open fun search()
+    open fun search()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

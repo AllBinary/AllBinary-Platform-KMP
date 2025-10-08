@@ -35,7 +35,7 @@ open public class CollidableDestroyableDamageableBehavior : CollidableBaseBehavi
         
 
     val damageUtil: DamageUtil = DamageUtil.getInstance()!!
-public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
+public constructor (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
 
                             : super(ownerLayer, collidable){
     //var ownerLayer = ownerLayer
@@ -46,7 +46,8 @@ public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boo
                     
 }
 
-override fun isCollision(collisionLayer: CollidableCompositeLayer)
+
+    override fun isCollision(collisionLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var collisionLayer = collisionLayer
@@ -72,7 +73,8 @@ override fun isCollision(collisionLayer: CollidableCompositeLayer)
 
 
                 @Throws(Exception::class)
-            override fun collide(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
+            
+    override fun collide(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
@@ -85,7 +87,8 @@ override fun isCollision(collisionLayer: CollidableCompositeLayer)
 ownerCollidableDestroyableDamageableLayer!!.damage(collidableDestroyableDamageableLayer!!.getDamage(0), 0)
 }
 
-override fun isCollision(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
+
+    override fun isCollision(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
@@ -99,7 +102,8 @@ ForcedLogUtil.log("No Longer Used", this)
 
 
                 @Throws(Exception::class)
-            override fun collide(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
+            
+    override fun collide(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface

@@ -30,12 +30,11 @@ open public class PartInterfaceUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: Array<PartInterface?> = arrayOfNulls(0)
 
-open fun getZeroArray()
+    open fun getZeroArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<PartInterface?>{
 

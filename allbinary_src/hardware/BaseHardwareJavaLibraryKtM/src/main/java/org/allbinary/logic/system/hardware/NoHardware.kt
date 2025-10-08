@@ -35,12 +35,11 @@ open public class NoHardware
         
                 , HardwareInterface {
         
-
-        companion object {
+companion object {
             
     private val instance: HardwareInterface = NoHardware()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : HardwareInterface{
 
@@ -57,7 +56,8 @@ open fun getInstance()
             public constructor() : super()
             {
             }            
-        override fun getComponent(index: Int)
+        
+    override fun getComponent(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : HardwareComponentInterface{
 var index = index
@@ -68,7 +68,8 @@ var index = index
                         return NoHardwareComponent.getInstance()
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -78,7 +79,8 @@ override fun toString()
                         return "No Hardware"
 }
 
-override fun compareTo(hardwareInterface: HardwareInterface)
+
+    override fun compareTo(hardwareInterface: HardwareInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var hardwareInterface = hardwareInterface
@@ -89,7 +91,8 @@ var hardwareInterface = hardwareInterface
                         return true
 }
 
-override fun difference(hardwareInterface: HardwareInterface)
+
+    override fun difference(hardwareInterface: HardwareInterface)
         //nullable = true from not(false or (false and false)) = true
 : Hashtable<Any, Any>{
 var hardwareInterface = hardwareInterface

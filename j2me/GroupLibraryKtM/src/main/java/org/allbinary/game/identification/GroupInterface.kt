@@ -25,14 +25,15 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface GroupInterface {
         
 
-open fun getGroupName()
+    open fun getGroupName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getGroupId()
+    open fun getGroupId()
         //nullable = true from not(false or (false and true)) = true
 : Short
 

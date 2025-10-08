@@ -30,10 +30,9 @@ open public class J2MEUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun isJ2ME()
+    open fun isJ2ME()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -44,7 +43,7 @@ open fun isJ2ME()
 }
 
 
-open fun isJ2SE()
+    open fun isJ2SE()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -56,7 +55,7 @@ open fun isJ2SE()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

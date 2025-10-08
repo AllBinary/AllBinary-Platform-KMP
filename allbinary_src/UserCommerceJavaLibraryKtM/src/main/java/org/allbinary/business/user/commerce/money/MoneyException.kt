@@ -28,7 +28,7 @@
 
 open public class MoneyException : Exception {
         
-public constructor        (){
+public constructor (){
 }
 
 

@@ -31,8 +31,7 @@ import org.allbinary.thread.ABRunnable
 
 open public class DemoGameStartupRunnable : ABRunnable {
         
-
-        companion object {
+companion object {
             
     val TYPE: Int = 4
 
@@ -41,12 +40,13 @@ open public class DemoGameStartupRunnable : ABRunnable {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val demoCanvas: DemoCanvas
-public constructor        (demoCanvas: DemoCanvas){
+public constructor (demoCanvas: DemoCanvas){
 var demoCanvas = demoCanvas
 this.demoCanvas= demoCanvas
 }
 
-override fun run()
+
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -67,7 +67,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 
 }
 
-override fun getType()
+
+    override fun getType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

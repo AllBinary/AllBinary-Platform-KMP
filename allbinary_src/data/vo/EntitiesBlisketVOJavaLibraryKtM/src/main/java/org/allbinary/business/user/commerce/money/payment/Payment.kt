@@ -77,7 +77,7 @@ open public class Payment
     private var magneticInkCheckReader: String
 
     private var isDefault: Boolean = false
-public constructor        (payment: HashMap<Any, Any>)
+public constructor (payment: HashMap<Any, Any>)
             : super()
         {
 var payment = payment
@@ -120,7 +120,7 @@ this.driversLicense= payment.get(PaymentData.DRIVERSLICENSE) as String
 this.magneticInkCheckReader= payment.get(PaymentData.MAGNETICINKCHECKREADER) as String
 }
 
-public constructor        (request: ServletRequest)
+public constructor (request: ServletRequest)
             : super()
         {
 var request = request
@@ -140,13 +140,13 @@ this.driversLicense= request.getParameter(PaymentData.DRIVERSLICENSE)
 this.magneticInkCheckReader= request.getParameter(PaymentData.MAGNETICINKCHECKREADER)
 }
 
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -236,7 +236,7 @@ open fun isValid()
 }
 
 
-open fun setTenderType(value: String)
+    open fun setTenderType(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -244,7 +244,7 @@ this.tenderType= value
 }
 
 
-open fun setTransactionType(value: String)
+    open fun setTransactionType(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -252,7 +252,7 @@ this.transactionType= value
 }
 
 
-open fun setAuthorizationCode(value: String)
+    open fun setAuthorizationCode(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -260,7 +260,7 @@ this.authorizationCode= value
 }
 
 
-open fun setCheckType(value: String)
+    open fun setCheckType(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -268,7 +268,7 @@ this.checkType= value
 }
 
 
-open fun setCheckNumber(value: String)
+    open fun setCheckNumber(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -276,7 +276,7 @@ this.checkNumber= value
 }
 
 
-open fun setDriversLicense(value: String)
+    open fun setDriversLicense(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -284,7 +284,7 @@ this.driversLicense= value
 }
 
 
-open fun setMagneticInkCheckReader(value: String)
+    open fun setMagneticInkCheckReader(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -292,7 +292,7 @@ this.magneticInkCheckReader= value
 }
 
 
-open fun setAba(value: String)
+    open fun setAba(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -300,7 +300,7 @@ this.aba= value
 }
 
 
-open fun setAccountType(value: String)
+    open fun setAccountType(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -308,7 +308,7 @@ this.accountType= value
 }
 
 
-open fun setName(value: String)
+    open fun setName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -316,7 +316,7 @@ this.name= value
 }
 
 
-open fun setType(value: String)
+    open fun setType(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -324,7 +324,7 @@ this.type= value
 }
 
 
-open fun setExpiration(value: String)
+    open fun setExpiration(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -332,7 +332,7 @@ this.expiration= value
 }
 
 
-open fun setNumber(value: String)
+    open fun setNumber(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -340,7 +340,7 @@ this.number= value
 }
 
 
-open fun getId()
+    open fun getId()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -351,7 +351,7 @@ open fun getId()
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -362,7 +362,7 @@ open fun getName()
 }
 
 
-open fun getType()
+    open fun getType()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -373,7 +373,7 @@ open fun getType()
 }
 
 
-open fun getExpiration()
+    open fun getExpiration()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -384,7 +384,7 @@ open fun getExpiration()
 }
 
 
-open fun getEncryption()
+    open fun getEncryption()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -395,7 +395,7 @@ open fun getEncryption()
 }
 
 
-open fun getNumber()
+    open fun getNumber()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -406,7 +406,7 @@ open fun getNumber()
 }
 
 
-open fun getTenderType()
+    open fun getTenderType()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -417,7 +417,7 @@ open fun getTenderType()
 }
 
 
-open fun getTransactionType()
+    open fun getTransactionType()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -428,7 +428,7 @@ open fun getTransactionType()
 }
 
 
-open fun getAba()
+    open fun getAba()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -439,7 +439,7 @@ open fun getAba()
 }
 
 
-open fun getAccount()
+    open fun getAccount()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -450,7 +450,7 @@ open fun getAccount()
 }
 
 
-open fun getAccountType()
+    open fun getAccountType()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -461,7 +461,7 @@ open fun getAccountType()
 }
 
 
-open fun getAuthorizationCode()
+    open fun getAuthorizationCode()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -472,7 +472,7 @@ open fun getAuthorizationCode()
 }
 
 
-open fun getCheckNumber()
+    open fun getCheckNumber()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -483,7 +483,7 @@ open fun getCheckNumber()
 }
 
 
-open fun getCheckType()
+    open fun getCheckType()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -494,7 +494,7 @@ open fun getCheckType()
 }
 
 
-open fun getDriversLicense()
+    open fun getDriversLicense()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -505,7 +505,7 @@ open fun getDriversLicense()
 }
 
 
-open fun getMagneticInkCheckReader()
+    open fun getMagneticInkCheckReader()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -516,7 +516,7 @@ open fun getMagneticInkCheckReader()
 }
 
 
-open fun getLastFour()
+    open fun getLastFour()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -544,7 +544,7 @@ open fun getLastFour()
 }
 
 
-open fun isDefault()
+    open fun isDefault()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -555,7 +555,7 @@ open fun isDefault()
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -598,7 +598,7 @@ hashMap!!.put(PaymentData.MAGNETICINKCHECKREADER, this.magneticInkCheckReader)
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -616,7 +616,7 @@ var document = document
 }
 
 
-open fun toXmlDoc()
+    open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -627,7 +627,7 @@ open fun toXmlDoc()
 }
 
 
-open fun view()
+    open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -638,7 +638,7 @@ open fun view()
 }
 
 
-open fun toValidationInfoDoc()
+    open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -649,7 +649,7 @@ open fun toValidationInfoDoc()
 }
 
 
-open fun toValidationInfoNode(document: Document)
+    open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -661,7 +661,7 @@ var document = document
 }
 
 
-open fun validationInfo()
+    open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

@@ -32,7 +32,7 @@ open public class InputAutomationRobotChangeEvent
         
 
     private var inputAutomationRobotInterfaceWrapper: InputAutomationRobotInterfaceWrapper
-public constructor        (inputAutomationRobotInterfaceWrapper: InputAutomationRobotInterfaceWrapper)
+public constructor (inputAutomationRobotInterfaceWrapper: InputAutomationRobotInterfaceWrapper)
             : super()
         {
 var inputAutomationRobotInterfaceWrapper = inputAutomationRobotInterfaceWrapper
@@ -40,7 +40,7 @@ this.setInputAutomationRobotInterfaceWrapper(inputAutomationRobotInterfaceWrappe
 }
 
 
-open fun getInputAutomationRobotInterfaceWrapper()
+    open fun getInputAutomationRobotInterfaceWrapper()
         //nullable = true from not(false or (false and true)) = true
 : InputAutomationRobotInterfaceWrapper{
 
@@ -51,7 +51,7 @@ open fun getInputAutomationRobotInterfaceWrapper()
 }
 
 
-open fun setInputAutomationRobotInterfaceWrapper(inputAutomationRobotInterfaceWrapper: InputAutomationRobotInterfaceWrapper)
+    open fun setInputAutomationRobotInterfaceWrapper(inputAutomationRobotInterfaceWrapper: InputAutomationRobotInterfaceWrapper)
         //nullable = true from not(false or (false and false)) = true
 {
 var inputAutomationRobotInterfaceWrapper = inputAutomationRobotInterfaceWrapper

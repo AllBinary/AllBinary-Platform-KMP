@@ -31,7 +31,7 @@ import org.allbinary.animation.AnimationBehaviorFactory
 
 open public class RightToLeftImageAnimationFactory : BaseImageAnimationFactory {
         
-public constructor        (image: Image, dx: Int, dy: Int)                        
+public constructor (image: Image, dx: Int, dy: Int)                        
 
                             : this(image, dx, dy, AnimationBehaviorFactory.getInstance()){
     //var image = image
@@ -43,7 +43,7 @@ public constructor        (image: Image, dx: Int, dy: Int)
                     
 }
 
-public constructor        (image: Image, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
+public constructor (image: Image, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
                             : super(image, image.getWidth(), image.getHeight(), dx, dy, animationBehaviorFactory){
     //var image = image
@@ -56,7 +56,7 @@ public constructor        (image: Image, dx: Int, dy: Int, animationBehaviorFact
                     
 }
 
-public constructor        (image: Image)                        
+public constructor (image: Image)                        
 
                             : this(image, AnimationBehaviorFactory.getInstance()){
     //var image = image
@@ -66,7 +66,7 @@ public constructor        (image: Image)
                     
 }
 
-public constructor        (image: Image, animationBehaviorFactory: AnimationBehaviorFactory)                        
+public constructor (image: Image, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
                             : super(image, image.getWidth(), image.getHeight(), animationBehaviorFactory){
     //var image = image
@@ -79,7 +79,8 @@ public constructor        (image: Image, animationBehaviorFactory: AnimationBeha
 
 
                 @Throws(Exception::class)
-            override fun getInstance(instanceId: Int)
+            
+    override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var instanceId = instanceId

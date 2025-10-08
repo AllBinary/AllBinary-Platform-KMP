@@ -33,13 +33,14 @@ open public class OnlyTouchButtonRecognizer : MotionRecognizer {
     private val touchButtonRecognizer: TouchButtonRecognizer
 
     private var touchButtonProcessing: Boolean = false
-public constructor        (){
+public constructor (){
 this.touchButtonRecognizer= TouchButtonRecognizer()
 }
 
 
                 @Throws(Exception::class)
-            override fun processStartMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
+            
+    override fun processStartMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -59,7 +60,8 @@ var modifiers = modifiers
 
 
                 @Throws(Exception::class)
-            override fun processEndMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
+            
+    override fun processEndMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -92,7 +94,8 @@ var modifiers = modifiers
 
 
                 @Throws(Exception::class)
-            override fun processDraggedMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
+            
+    override fun processDraggedMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x

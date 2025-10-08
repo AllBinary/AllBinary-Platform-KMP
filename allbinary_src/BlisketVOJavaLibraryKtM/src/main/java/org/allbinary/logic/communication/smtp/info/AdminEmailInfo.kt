@@ -36,7 +36,7 @@ open public class AdminEmailInfo : BasicEmailInfo {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (subject: String, textBody: String)                        
+public constructor (subject: String, textBody: String)                        
 
                             : super(subject, textBody){
 var subject = subject
@@ -63,7 +63,7 @@ this.init()
 
                 @Throws(Exception::class)
             
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 

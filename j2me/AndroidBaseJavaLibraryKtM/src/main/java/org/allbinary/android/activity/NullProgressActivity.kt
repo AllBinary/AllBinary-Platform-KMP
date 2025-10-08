@@ -33,8 +33,7 @@ open public class NullProgressActivity
         
                 , ProgressActivityInterface {
         
-
-        companion object {
+companion object {
             
     val NULL_PROGRESS_ACTIVITY: NullProgressActivity = NullProgressActivity()
 
@@ -44,25 +43,29 @@ open public class NullProgressActivity
             public constructor() : super()
             {
             }            
-        override fun runOnUiThread(action: Runnable)
+        
+    override fun runOnUiThread(action: Runnable)
         //nullable = true from not(false or (false and false)) = true
 {
 var action = action
 }
 
-override fun onDismissTitleProgressBar()
+
+    override fun onDismissTitleProgressBar()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun onShowTitleProgressBar(value: Int, indeterminate: Boolean)
+
+    override fun onShowTitleProgressBar(value: Int, indeterminate: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
 var indeterminate = indeterminate
 }
 
-override fun onTitleProgressBarSetProgress(value: Int)
+
+    override fun onTitleProgressBarSetProgress(value: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value

@@ -40,7 +40,7 @@ open public class PaymentGatewayComponent : HttpStoreComponentView {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var paymentGatewayInterface: PaymentGatewayInterface
-public constructor        (transformInfoInterface: TransformInfoInterface, paymentGatewayInterface: PaymentGatewayInterface)                        
+public constructor (transformInfoInterface: TransformInfoInterface, paymentGatewayInterface: PaymentGatewayInterface)                        
 
                             : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
@@ -55,7 +55,7 @@ this.paymentGatewayInterface= paymentGatewayInterface
 
                 @Throws(Exception::class)
             
-open fun addDomNodeInterfaces()
+    open fun addDomNodeInterfaces()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -71,7 +71,7 @@ this.addDomNodeInterface(domNodeInterface)
 }
 
 
-open fun view()
+    open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

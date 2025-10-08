@@ -28,12 +28,11 @@
 
 open public class LayerManagerNoDebug : LayerManagerLoggingBase {
         
-
-        companion object {
+companion object {
             
     private val instance: LayerManagerNoDebug = LayerManagerNoDebug()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : LayerManagerNoDebug{
 

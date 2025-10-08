@@ -30,7 +30,7 @@ open public class StatisticalMatchConstraints
             : Object
          {
         
-public constructor        ()
+public constructor ()
             : super()
         {
 }

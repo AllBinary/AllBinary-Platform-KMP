@@ -26,22 +26,23 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.time.TimeDelayHelper
+
 interface IntermissionInterface {
         
 
-open fun getTimeDelayHelper()
+    open fun getTimeDelayHelper()
         //nullable = true from not(false or (false and true)) = true
 : TimeDelayHelper
 
-open fun isEnabled()
+    open fun isEnabled()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun setEnabled(value: Boolean)
+    open fun setEnabled(value: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setListener(enableListener: IntermissionEnableListenerInterface)
+    open fun setListener(enableListener: IntermissionEnableListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 
 

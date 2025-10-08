@@ -36,7 +36,7 @@ open public class TileLayerItem : CustomItem
         
 
     private val tiledLayer: AllBinaryTiledLayer
-public constructor        (label: String, tiledLayer: AllBinaryTiledLayer, layout: Int, altText: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (label: String, tiledLayer: AllBinaryTiledLayer, layout: Int, altText: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(label, backgroundBasicColor, foregroundBasicColor){
 var label = label
@@ -53,14 +53,14 @@ this.tiledLayer= tiledLayer
 }
 
 
-open fun setOwner(owner: Screen)
+    open fun setOwner(owner: Screen)
         //nullable = true from not(false or (false and false)) = true
 {
 var owner = owner
 }
 
 
-open fun getMinimumWidth()
+    open fun getMinimumWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -71,7 +71,7 @@ open fun getMinimumWidth()
 }
 
 
-open fun getMinimumHeight()
+    open fun getMinimumHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -82,7 +82,7 @@ open fun getMinimumHeight()
 }
 
 
-open fun getMinContentHeight()
+    open fun getMinContentHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -93,7 +93,7 @@ open fun getMinContentHeight()
 }
 
 
-open fun getMinContentWidth()
+    open fun getMinContentWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -104,7 +104,7 @@ open fun getMinContentWidth()
 }
 
 
-open fun getPrefContentHeight(width: Int)
+    open fun getPrefContentHeight(width: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var width = width
@@ -116,7 +116,7 @@ var width = width
 }
 
 
-open fun getPrefContentWidth(height: Int)
+    open fun getPrefContentWidth(height: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var height = height
@@ -128,7 +128,7 @@ var height = height
 }
 
 
-open fun paint(graphics: Graphics, x: Int, y: Int)
+    open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -139,7 +139,7 @@ this.tiledLayer!!.paint(graphics)
 }
 
 
-open fun paintUnselected(graphics: Graphics, x: Int, y: Int)
+    open fun paintUnselected(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

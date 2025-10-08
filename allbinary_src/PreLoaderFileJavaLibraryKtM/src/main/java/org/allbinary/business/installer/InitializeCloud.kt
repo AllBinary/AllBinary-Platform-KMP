@@ -40,8 +40,7 @@ open public class InitializeCloud
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val CLOUD: String = "cloud/"
 
@@ -50,13 +49,13 @@ open public class InitializeCloud
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun initialize(cloud: String, overwriteNewer: Boolean, overwriteAll: Boolean, current: Int, total: Int)
+    open fun initialize(cloud: String, overwriteNewer: Boolean, overwriteAll: Boolean, current: Int, total: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var cloud = cloud

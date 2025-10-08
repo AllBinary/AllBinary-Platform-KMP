@@ -28,7 +28,7 @@
 
 open public class HtmlPostForm : HtmlForm {
         
-public constructor        (action: String)                        
+public constructor (action: String)                        
 
                             : super(action){
 var action = action

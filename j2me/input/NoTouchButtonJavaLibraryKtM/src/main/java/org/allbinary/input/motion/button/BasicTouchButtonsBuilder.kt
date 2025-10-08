@@ -32,12 +32,11 @@ import org.allbinary.util.BasicArrayListUtil
 
 open public class BasicTouchButtonsBuilder : BaseTouchInput {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: BasicTouchButtonsBuilder = BasicTouchButtonsBuilder()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BaseTouchInput{
 
@@ -56,7 +55,8 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-override fun getList()
+
+    override fun getList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 

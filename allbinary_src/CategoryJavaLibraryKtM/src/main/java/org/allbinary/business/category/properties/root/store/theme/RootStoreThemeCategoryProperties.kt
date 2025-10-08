@@ -41,7 +41,7 @@ import org.w3c.dom.Node
 
 open public class RootStoreThemeCategoryProperties : RootStoreCategoryProperties {
         
-public constructor        (transformInfoInterface: TransformInfoInterface)                        
+public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
@@ -51,7 +51,7 @@ var transformInfoInterface = transformInfoInterface
                     
 }
 
-public constructor        (transformInfoInterface: TransformInfoInterface, abPath: AbPath)                        
+public constructor (transformInfoInterface: TransformInfoInterface, abPath: AbPath)                        
 
                             : super(transformInfoInterface, abPath){
 var transformInfoInterface = transformInfoInterface
@@ -62,7 +62,7 @@ var abPath = abPath
                     
 }
 
-public constructor        (transformInfoInterface: TransformInfoInterface, node: Node)                        
+public constructor (transformInfoInterface: TransformInfoInterface, node: Node)                        
 
                             : super(transformInfoInterface, node){
 var transformInfoInterface = transformInfoInterface
@@ -73,7 +73,7 @@ var node = node
                     
 }
 
-public constructor        (transformInfoInterface: TransformInfoInterface, categoryPropertiesHashMap: HashMap<Any, Any>)                        
+public constructor (transformInfoInterface: TransformInfoInterface, categoryPropertiesHashMap: HashMap<Any, Any>)                        
 
                             : super(transformInfoInterface, categoryPropertiesHashMap){
 var transformInfoInterface = transformInfoInterface
@@ -87,7 +87,7 @@ var categoryPropertiesHashMap = categoryPropertiesHashMap
 
                 @Throws(Exception::class)
             
-open fun initPath()
+    open fun initPath()
         //nullable = true from not(false or (false and true)) = true
 {
 

@@ -30,8 +30,7 @@ open public class EmailData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val SERVER: String = "EMAIL_SERVER"
 
@@ -50,7 +49,7 @@ open public class EmailData
     val CONTENT: String = "EMAIL_CONTENT"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

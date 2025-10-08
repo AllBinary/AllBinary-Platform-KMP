@@ -52,7 +52,7 @@ open public class HttpComponentView : TransformInfoHttpComposite
     private var domNodeInterfaceVector: Vector
 
     private var transformDocumentInterface: TransformDocumentInterface
-public constructor        (transformInfoInterface: TransformInfoInterface)                        
+public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
@@ -76,7 +76,7 @@ this.setTransformDocumentInterface(TransformHttpRequestDocumentFactory.getInstan
 
     var NO_TYPE: Int = 0
 
-open fun getTypeId()
+    open fun getTypeId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -87,7 +87,7 @@ open fun getTypeId()
 }
 
 
-open fun getTransformDocumentInterface()
+    open fun getTransformDocumentInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformDocumentInterface{
 
@@ -98,7 +98,7 @@ open fun getTransformDocumentInterface()
 }
 
 
-open fun setTransformDocumentInterface(transformDocumentInterface: TransformDocumentInterface)
+    open fun setTransformDocumentInterface(transformDocumentInterface: TransformDocumentInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var transformDocumentInterface = transformDocumentInterface
@@ -106,7 +106,7 @@ this.transformDocumentInterface= transformDocumentInterface
 }
 
 
-open fun addDomNodeInterface(domNodeInterface: DomNodeInterface)
+    open fun addDomNodeInterface(domNodeInterface: DomNodeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var domNodeInterface = domNodeInterface
@@ -116,7 +116,7 @@ this.domNodeInterfaceVector!!.add(domNodeInterface)
 
                 @Throws(Exception::class)
             
-open fun toXmlDoc()
+    open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -164,7 +164,7 @@ this.transformDocumentInterface!!.getBaseNode()!!.appendChild(domNodeInterface!!
 
                 @Throws(Exception::class)
             
-open fun getDoc()
+    open fun getDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -207,7 +207,7 @@ open fun getDoc()
 
                 @Throws(Exception::class)
             
-open fun view()
+    open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

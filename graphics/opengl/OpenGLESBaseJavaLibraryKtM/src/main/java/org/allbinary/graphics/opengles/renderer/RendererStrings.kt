@@ -30,12 +30,11 @@ open public class RendererStrings
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: RendererStrings = RendererStrings()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : RendererStrings{
 

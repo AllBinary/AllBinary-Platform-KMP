@@ -28,22 +28,23 @@
 import java.util.HashMap
 import java.util.Vector
 import org.allbinary.data.tables.BasicDataTableInterface
+
 interface StaticPagesEntityInterface : BasicDataTableInterface {
         
 
-open fun getFile(store: String, keywords: String)
+    open fun getFile(store: String, keywords: String)
         //nullable = true from not(false or (false and false)) = true
 : String
 
-open fun delete(value: String)
+    open fun delete(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun insert(values: Vector)
+    open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun update(updatedValues: HashMap<Any, Any>)
+    open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 
 

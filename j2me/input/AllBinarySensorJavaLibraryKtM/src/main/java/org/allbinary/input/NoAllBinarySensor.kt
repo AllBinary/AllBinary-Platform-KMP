@@ -28,12 +28,11 @@
 
 open public class NoAllBinarySensor : AllBinarySensor {
         
-
-        companion object {
+companion object {
             
     private val instance: NoAllBinarySensor = NoAllBinarySensor()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : NoAllBinarySensor{
 
@@ -45,7 +44,7 @@ open fun getInstance()
 
 
         }
-            private constructor        (){
+            private constructor (){
 }
 
 

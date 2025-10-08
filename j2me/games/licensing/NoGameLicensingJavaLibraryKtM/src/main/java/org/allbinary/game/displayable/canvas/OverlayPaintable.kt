@@ -34,10 +34,11 @@ open public class OverlayPaintable : InitUpdatePaintable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (){
+public constructor (){
 }
 
-override fun update()
+
+    override fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -52,7 +53,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
 
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

@@ -30,15 +30,14 @@ import org.allbinary.layer.AllBinaryLayer
 
 open public class ViewPosition : GPoint {
         
-
-        companion object {
+companion object {
             
     val NULL_VIEW_POSITION: ViewPosition = ViewPosition()
 
         }
             
     private var allbinaryLayer: AllBinaryLayer = AllBinaryLayer.NULL_ALLBINARY_LAYER
-public constructor        ()                        
+public constructor ()                        
 
                             : super(0, 0, 0){
 
@@ -47,7 +46,7 @@ public constructor        ()
                     
 }
 
-protected constructor        (x: Int, y: Int)                        
+protected constructor (x: Int, y: Int)                        
 
                             : super(x, y, 0){
 var x = x
@@ -58,7 +57,7 @@ var y = y
                     
 }
 
-protected constructor        (x: Int, y: Int, z: Int)                        
+protected constructor (x: Int, y: Int, z: Int)                        
 
                             : super(x, y, z){
 var x = x
@@ -70,7 +69,8 @@ var z = z
                     
 }
 
-override fun getX()
+
+    override fun getX()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -80,7 +80,8 @@ override fun getX()
                         return this.allbinaryLayer!!.getXP()
 }
 
-override fun getY()
+
+    override fun getY()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -90,7 +91,8 @@ override fun getY()
                         return this.allbinaryLayer!!.getYP()
 }
 
-override fun getZ()
+
+    override fun getZ()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -101,7 +103,7 @@ override fun getZ()
 }
 
 
-open fun getX2()
+    open fun getX2()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -112,7 +114,7 @@ open fun getX2()
 }
 
 
-open fun getY2()
+    open fun getY2()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -123,7 +125,7 @@ open fun getY2()
 }
 
 
-open fun getZ2()
+    open fun getZ2()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -134,7 +136,7 @@ open fun getZ2()
 }
 
 
-open fun setAllbinaryLayer(allbinaryLayer: AllBinaryLayer)
+    open fun setAllbinaryLayer(allbinaryLayer: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var allbinaryLayer = allbinaryLayer

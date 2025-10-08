@@ -39,14 +39,14 @@ open public class TimeLastModifiedView
         
 
     private var timeLastModified: TimeLastModified
-public constructor        (timeLastModified: TimeLastModified)
+public constructor (timeLastModified: TimeLastModified)
             : super()
         {
 var timeLastModified = timeLastModified
 this.setTimeLastModified(timeLastModified)
 }
 
-public constructor        (node: Node)
+public constructor (node: Node)
             : super()
         {
 var node = node
@@ -56,7 +56,7 @@ this.setTimeLastModified(TimeLastModified(DomNodeHelper.getTextNodeValue(node)))
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -68,7 +68,7 @@ var document = document
 }
 
 
-open fun getTimeLastModified()
+    open fun getTimeLastModified()
         //nullable = true from not(false or (false and true)) = true
 : TimeLastModified{
 
@@ -79,7 +79,7 @@ open fun getTimeLastModified()
 }
 
 
-open fun setTimeLastModified(timeLastModified: TimeLastModified)
+    open fun setTimeLastModified(timeLastModified: TimeLastModified)
         //nullable = true from not(false or (false and false)) = true
 {
 var timeLastModified = timeLastModified

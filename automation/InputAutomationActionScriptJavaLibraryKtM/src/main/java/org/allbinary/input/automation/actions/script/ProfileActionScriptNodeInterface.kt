@@ -27,14 +27,15 @@
         
 import javax.swing.tree.MutableTreeNode
 import org.allbinary.data.tree.dom.DomNodeInterface
+
 interface ProfileActionScriptNodeInterface : DomNodeInterface, MutableTreeNode {
         
 
-open fun addCondition(profileActionConditionInterface: ProfileActionScriptNodeInterface)
+    open fun addCondition(profileActionConditionInterface: ProfileActionScriptNodeInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun removeCondition(profileActionConditionInterface: ProfileActionScriptNodeInterface)
+    open fun removeCondition(profileActionConditionInterface: ProfileActionScriptNodeInterface)
         //nullable = true from not(false or (false and false)) = true
 
 

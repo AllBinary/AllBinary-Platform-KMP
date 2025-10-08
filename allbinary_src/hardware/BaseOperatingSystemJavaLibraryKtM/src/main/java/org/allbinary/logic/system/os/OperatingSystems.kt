@@ -30,12 +30,11 @@ open public class OperatingSystems
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OperatingSystems = OperatingSystems()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OperatingSystems{
 
@@ -67,7 +66,7 @@ open fun getInstance()
     val WINDOWS_XP: String = "Windows XP"
 
     val ANDROID: String = LINUX
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -75,7 +74,7 @@ private constructor        ()
 
     private var unknownSpecificOSAllowed: Boolean = true
 
-open fun isUnknownSpecificOSAllowed()
+    open fun isUnknownSpecificOSAllowed()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -86,7 +85,7 @@ open fun isUnknownSpecificOSAllowed()
 }
 
 
-open fun setUnknownSpecificOSAllowed(aUnknownSpecificOSAllowed: Boolean)
+    open fun setUnknownSpecificOSAllowed(aUnknownSpecificOSAllowed: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var aUnknownSpecificOSAllowed = aUnknownSpecificOSAllowed

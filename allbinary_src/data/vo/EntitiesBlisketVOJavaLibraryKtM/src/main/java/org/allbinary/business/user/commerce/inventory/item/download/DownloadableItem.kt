@@ -65,7 +65,7 @@ open public class DownloadableItem
     private val validTime: Long
 
     private val retries: String
-public constructor        (id: String)
+public constructor (id: String)
             : super()
         {
 var id = id
@@ -92,7 +92,7 @@ this.validTime= .concatToString()
 this.retries= EMPTY_STRING
 }
 
-public constructor        (hashMap: HashMap<Any, Any>)
+public constructor (hashMap: HashMap<Any, Any>)
             : super()
         {
 var hashMap = hashMap
@@ -169,7 +169,7 @@ this.retries= hashMap!!.get(DownloadItemData.RETRIES) as String
 }
 
 
-open fun toVector()
+    open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -205,7 +205,7 @@ values.add(time)
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -241,7 +241,7 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 }
 
 
-open fun getId()
+    open fun getId()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -252,7 +252,7 @@ open fun getId()
 }
 
 
-open fun getSystem()
+    open fun getSystem()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -263,7 +263,7 @@ open fun getSystem()
 }
 
 
-open fun getPlatform()
+    open fun getPlatform()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -274,7 +274,7 @@ open fun getPlatform()
 }
 
 
-open fun getSpecialName()
+    open fun getSpecialName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -285,7 +285,7 @@ open fun getSpecialName()
 }
 
 
-open fun getVersion()
+    open fun getVersion()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -296,7 +296,7 @@ open fun getVersion()
 }
 
 
-open fun getChanges()
+    open fun getChanges()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -307,7 +307,7 @@ open fun getChanges()
 }
 
 
-open fun getLicenseFile()
+    open fun getLicenseFile()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -318,7 +318,7 @@ open fun getLicenseFile()
 }
 
 
-open fun getFile()
+    open fun getFile()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -329,7 +329,7 @@ open fun getFile()
 }
 
 
-open fun getSize()
+    open fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -340,7 +340,7 @@ open fun getSize()
 }
 
 
-open fun getValidTime()
+    open fun getValidTime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -351,7 +351,7 @@ open fun getValidTime()
 }
 
 
-open fun getRetries()
+    open fun getRetries()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

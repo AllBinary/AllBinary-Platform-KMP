@@ -33,14 +33,13 @@ open public class AccelerometerSensorFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var allBinaryAccelerometerSensor: AllBinaryOrientationSensor = AllBinaryOrientationSensor.NULL_ALLBINARY_ORIENTATION_SENSOR
 
                 @Throws(Exception::class)
             
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -93,7 +92,7 @@ open fun init()
 }
 
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AllBinaryOrientationSensor{
 

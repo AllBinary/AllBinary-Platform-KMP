@@ -68,7 +68,7 @@ open public class CommandFormInputProcessor : BasicMenuInputProcessor {
     private var form: ScrollSelectionForm
 
     private var hasPressed: Boolean = false
-public constructor        (gameKeyEventList: BasicArrayList, playerInputId: Int, gameCanvas: MyCanvas, form: ScrollSelectionForm)                        
+public constructor (gameKeyEventList: BasicArrayList, playerInputId: Int, gameCanvas: MyCanvas, form: ScrollSelectionForm)                        
 
                             : super(gameKeyEventList, playerInputId, gameCanvas){
     //var gameKeyEventList = gameKeyEventList
@@ -85,7 +85,7 @@ this.form= form
 
                 @Throws(Exception::class)
             
-open fun processInput(key: Int)
+    open fun processInput(key: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var key = key
@@ -128,7 +128,7 @@ this.form.processInput(key)
 
     private val PROCESS_COMMAND: String = "processCommand"
 
-open fun processCommand()
+    open fun processCommand()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -185,7 +185,8 @@ logUtil!!.put(command.toString(), this, PROCESS_COMMAND)
 
 
                 @Throws(Exception::class)
-            override fun processInput()
+            
+    override fun processInput()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -273,7 +274,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, this.gameInputStrings!!.PROCESS_I
 
                 @Throws(Exception::class)
             
-open fun processMotionInputs()
+    open fun processMotionInputs()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -302,7 +303,7 @@ motionGestureEventList!!.clear()
 
                 @Throws(Exception::class)
             
-open fun processMotionInput(motionGestureEvent: MotionGestureEvent)
+    open fun processMotionInput(motionGestureEvent: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var motionGestureEvent = motionGestureEvent
@@ -404,7 +405,8 @@ this.hasPressed= true
 
 
     private val NAME_LABEL: String = " ScrollSelectionForm: "
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

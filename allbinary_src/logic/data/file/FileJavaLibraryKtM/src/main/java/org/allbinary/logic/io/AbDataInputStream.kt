@@ -30,7 +30,7 @@ import java.io.InputStream
 
 open public class AbDataInputStream : DataInputStream {
         
-public constructor        (out: InputStream)                        
+public constructor (out: InputStream)                        
 
                             : super(out){
 var out = out

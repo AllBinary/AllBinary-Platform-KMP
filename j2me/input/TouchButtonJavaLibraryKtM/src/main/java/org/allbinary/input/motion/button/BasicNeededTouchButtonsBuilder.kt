@@ -40,7 +40,8 @@ open public class BasicNeededTouchButtonsBuilder : BaseTouchInput {
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-override fun getList()
+
+    override fun getList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 

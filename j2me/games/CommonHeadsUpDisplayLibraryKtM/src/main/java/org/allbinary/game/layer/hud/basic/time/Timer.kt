@@ -52,7 +52,7 @@ open public class Timer
     private val MAX: CharArray = charArrayOf('L','O','L')
 
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
-public constructor        (maxTime: Int)
+public constructor (maxTime: Int)
             : super()
         {
 var maxTime = maxTime
@@ -61,7 +61,7 @@ this.maxTime= maxTime.toLong()
 }
 
 
-open fun start()
+    open fun start()
         //nullable = true from not(false or (false and true)) = true
 {
 this.hundredthTime= 0
@@ -69,7 +69,7 @@ this.startTime= this.gameTickTimeDelayHelper!!.startTime
 }
 
 
-open fun get()
+    open fun get()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -80,7 +80,7 @@ open fun get()
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -129,7 +129,7 @@ this.totalDigits= this.primitiveLongUtil!!.getCurrentTotalDigits()
 }
 
 
-open fun reduce(value: Int)
+    open fun reduce(value: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -137,7 +137,7 @@ this.modifier -= value
 }
 
 
-open fun add(value: Int)
+    open fun add(value: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -145,7 +145,7 @@ this.modifier += value
 }
 
 
-open fun getTimeChars()
+    open fun getTimeChars()
         //nullable = true from not(false or (false and true)) = true
 : CharArray{
 
@@ -156,7 +156,7 @@ open fun getTimeChars()
 }
 
 
-open fun getCurrentTotalDigits()
+    open fun getCurrentTotalDigits()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

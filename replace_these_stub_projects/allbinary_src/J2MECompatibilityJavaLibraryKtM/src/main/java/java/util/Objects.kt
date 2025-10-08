@@ -16,10 +16,9 @@ open public class Objects
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun <T> requireNonNull(value: T)
+    open fun <T> requireNonNull(value: T)
         //nullable = true from not(false or (false and false)) = true
 : T{
     //var value = value
@@ -49,7 +48,7 @@ open fun <T> requireNonNull(value: T)
 }
 
 
-open fun <T> requireNonNull(value: T, message: String)
+    open fun <T> requireNonNull(value: T, message: String)
         //nullable = true from not(false or (false and false)) = true
 : T{
     //var value = value

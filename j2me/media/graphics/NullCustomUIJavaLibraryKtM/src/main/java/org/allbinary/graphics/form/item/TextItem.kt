@@ -17,7 +17,7 @@ import org.allbinary.graphics.color.BasicColor
 open public class TextItem : CustomCustomItem
                 , CustomItemInterface {
         
-public constructor        (label: String, layout: Int, altText: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (label: String, layout: Int, altText: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(label, backgroundBasicColor, foregroundBasicColor){
 var label = label
@@ -32,13 +32,14 @@ var foregroundBasicColor = foregroundBasicColor
 }
 
 
-open fun keyPressed(keyCode: Int)
+    open fun keyPressed(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var keyCode = keyCode
 }
 
-override fun paintUnselected(graphics: Graphics, x: Int, y: Int)
+
+    override fun paintUnselected(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -47,7 +48,7 @@ var y = y
 }
 
 
-open fun getLabelStringComponent()
+    open fun getLabelStringComponent()
         //nullable = true from not(false or (false and true)) = true
 : StringComponent{
 

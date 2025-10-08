@@ -32,8 +32,7 @@ open public class NullThread
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NULL_THREAD: Thread = Thread()
 

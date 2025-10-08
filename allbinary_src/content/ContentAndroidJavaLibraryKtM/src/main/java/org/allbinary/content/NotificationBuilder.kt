@@ -37,8 +37,7 @@ open public class NotificationBuilder
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NULL_NOTIFICATION_BUILDER: NotificationBuilder = NotificationBuilder()
 
@@ -49,7 +48,7 @@ open public class NotificationBuilder
             {
             }            
         
-open fun build(context: Context, command: Command, message: String, integer: Integer, pendingIntent: PendingIntent)
+    open fun build(context: Context, command: Command, message: String, integer: Integer, pendingIntent: PendingIntent)
         //nullable = true from not(false or (false and false)) = true
 : Parcelable{
 var context = context

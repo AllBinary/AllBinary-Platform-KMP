@@ -40,7 +40,7 @@ open public class GeographicMapCellPositionTracking
     private var newGeographicMapCellPosition: GeographicMapCellPosition
 
     private var currentCellType: GeographicMapCellType
-public constructor        ()
+public constructor ()
             : super()
         {
 }
@@ -48,7 +48,7 @@ public constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getCurrentOverCellType(geographicMap: BasicGeographicMap)
+    open fun getCurrentOverCellType(geographicMap: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellType{
     //var geographicMap = geographicMap
@@ -74,7 +74,7 @@ open fun getCurrentOverCellType(geographicMap: BasicGeographicMap)
 
                 @Throws(Exception::class)
             
-open fun updateStart(gameCanvasInterface: AllBinaryGameCanvas, layer: AllBinaryLayer)
+    open fun updateStart(gameCanvasInterface: AllBinaryGameCanvas, layer: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var gameCanvasInterface = gameCanvasInterface
@@ -118,7 +118,7 @@ this.newGeographicMapCellPosition= geographicMapInterface!!.getCellPositionAt(la
 }
 
 
-open fun updateEnd()
+    open fun updateEnd()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -143,7 +143,7 @@ open fun updateEnd()
 }
 
 
-open fun getPreviousGeographicMapCellPosition()
+    open fun getPreviousGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPosition{
 
@@ -154,7 +154,7 @@ open fun getPreviousGeographicMapCellPosition()
 }
 
 
-open fun getCurrentGeographicMapCellPosition()
+    open fun getCurrentGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPosition{
 

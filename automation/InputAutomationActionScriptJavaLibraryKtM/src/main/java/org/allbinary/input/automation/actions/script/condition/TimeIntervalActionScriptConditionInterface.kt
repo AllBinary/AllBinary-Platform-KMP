@@ -26,14 +26,15 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.time.TimeDelayHelper
+
 interface TimeIntervalActionScriptConditionInterface {
         
 
-open fun getTimeDelayHelper()
+    open fun getTimeDelayHelper()
         //nullable = true from not(false or (false and true)) = true
 : TimeDelayHelper
 
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 
 

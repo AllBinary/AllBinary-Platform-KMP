@@ -40,7 +40,7 @@ open public class FtpConfigurationView
         
 
     private var ftpConfigurationInterface: FtpConfigurationInterface
-public constructor        (node: Node)
+public constructor (node: Node)
             : super()
         {
 var node = node
@@ -66,7 +66,7 @@ this.getFtpConfigurationInterface()!!.setPassword(password)
 this.getFtpConfigurationInterface()!!.setPath(path)
 }
 
-public constructor        (ftpConfigurationInterface: FtpConfigurationInterface)
+public constructor (ftpConfigurationInterface: FtpConfigurationInterface)
             : super()
         {
 var ftpConfigurationInterface = ftpConfigurationInterface
@@ -76,7 +76,7 @@ this.setFtpConfigurationInterface(ftpConfigurationInterface)
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -97,7 +97,7 @@ var document = document
 }
 
 
-open fun getFtpConfigurationInterface()
+    open fun getFtpConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
 : FtpConfigurationInterface{
 
@@ -108,7 +108,7 @@ open fun getFtpConfigurationInterface()
 }
 
 
-open fun setFtpConfigurationInterface(ftpConfigurationInterface: FtpConfigurationInterface)
+    open fun setFtpConfigurationInterface(ftpConfigurationInterface: FtpConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var ftpConfigurationInterface = ftpConfigurationInterface

@@ -31,12 +31,11 @@ open public class InitializerData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: InitializerData = InitializerData()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : InitializerData{
 
@@ -136,7 +135,7 @@ open fun getInstance()
 
     val STATICPAGESPORT: String = "STATICPAGESPORT"
 
-open fun getJdbcDriverSolutionInfo()
+    open fun getJdbcDriverSolutionInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

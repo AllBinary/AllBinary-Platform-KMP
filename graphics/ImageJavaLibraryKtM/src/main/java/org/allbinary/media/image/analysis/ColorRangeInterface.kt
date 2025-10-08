@@ -26,58 +26,59 @@
         import kotlin.reflect.KClass
         
 import java.awt
+
 interface ColorRangeInterface {
         
 
-open fun getMinRed()
+    open fun getMinRed()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun setMinRed(minRed: Int)
+    open fun setMinRed(minRed: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getMaxRed()
+    open fun getMaxRed()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun setMaxRed(maxRed: Int)
+    open fun setMaxRed(maxRed: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getMinGreen()
+    open fun getMinGreen()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun setMinGreen(minGreen: Int)
+    open fun setMinGreen(minGreen: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getMaxGreen()
+    open fun getMaxGreen()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun setMaxGreen(maxGreen: Int)
+    open fun setMaxGreen(maxGreen: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getMinBlue()
+    open fun getMinBlue()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun setMinBlue(minBlue: Int)
+    open fun setMinBlue(minBlue: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getMaxBlue()
+    open fun getMaxBlue()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun setMaxBlue(maxBlue: Int)
+    open fun setMaxBlue(maxBlue: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun isInRange(color: Color)
+    open fun isInRange(color: Color)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 

@@ -29,15 +29,14 @@ import org.allbinary.game.configuration.feature.GameFeature
 
 open public class RaceTrackGameFeature : GameFeature {
         
-
-        companion object {
+companion object {
             
     val MINI_MAP: GameFeature = RaceTrackGameFeature("Mini Map")
 
     val AUTO_FINISH_AI: GameFeature = RaceTrackGameFeature("Auto Finish AI")
 
         }
-            protected constructor        (name: String)                        
+            protected constructor (name: String)                        
 
                             : super(name){
 var name = name

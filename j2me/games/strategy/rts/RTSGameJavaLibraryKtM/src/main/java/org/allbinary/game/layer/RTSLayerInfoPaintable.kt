@@ -33,18 +33,18 @@ open public class RTSLayerInfoPaintable : InitUpdatePaintable {
         
 
     private var initUpdatePaintable: InitUpdatePaintable = NullInitUpdatePaintable.getInstance()!!
-public constructor        (){
+public constructor (){
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 this.initUpdatePaintable!!.update()
 }
 
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -52,7 +52,7 @@ this.initUpdatePaintable!!.paint(graphics)
 }
 
 
-open fun updateRTSLayerInfo(hudPaintable: InitUpdatePaintable)
+    open fun updateRTSLayerInfo(hudPaintable: InitUpdatePaintable)
         //nullable = true from not(false or (false and false)) = true
 {
 var hudPaintable = hudPaintable
@@ -60,7 +60,7 @@ this.initUpdatePaintable= hudPaintable
 }
 
 
-open fun updateRTSLayerInfo(hudPaintable: SelectionHudPaintable)
+    open fun updateRTSLayerInfo(hudPaintable: SelectionHudPaintable)
         //nullable = true from not(false or (false and false)) = true
 {
 var hudPaintable = hudPaintable

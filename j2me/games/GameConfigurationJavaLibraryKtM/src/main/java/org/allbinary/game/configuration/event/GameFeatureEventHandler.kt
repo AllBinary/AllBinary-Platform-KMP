@@ -31,12 +31,11 @@ import org.allbinary.logic.util.event.handler.BasicEventHandler
 
 open public class GameFeatureEventHandler : BasicEventHandler {
         
-
-        companion object {
+companion object {
             
     private val gameKeyEventHandler: GameFeatureEventHandler = GameFeatureEventHandler()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameFeatureEventHandler{
 
@@ -48,12 +47,13 @@ open fun getInstance()
 
 
         }
-            private constructor        (){
+            private constructor (){
 }
 
 
                 @Throws(Exception::class)
-            override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
+            
+    override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject

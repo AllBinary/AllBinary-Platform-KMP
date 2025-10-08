@@ -30,12 +30,11 @@ open public class MusicStrings
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: MusicStrings = MusicStrings()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : MusicStrings{
 

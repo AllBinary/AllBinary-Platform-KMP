@@ -62,12 +62,13 @@ open public class FormInputProcessor : InputProcessor {
     private val platformKeyFactory: PlatformKeyFactory = PlatformKeyFactory.getInstance()!!
 
     private val allBinaryGameCanvas: AllBinaryGameCanvas
-public constructor        (allBinaryGameCanvas: AllBinaryGameCanvas){
+public constructor (allBinaryGameCanvas: AllBinaryGameCanvas){
 var allBinaryGameCanvas = allBinaryGameCanvas
 this.allBinaryGameCanvas= allBinaryGameCanvas
 }
 
-override fun keyPressed(keyCode: Int, deviceId: Int)
+
+    override fun keyPressed(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var keyCode = keyCode
@@ -90,7 +91,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, this.gameInputStrings!!.ADD_KEY_E
 
 }
 
-override fun keyReleased(canvas: Canvas, keyCode: Int, deviceId: Int)
+
+    override fun keyReleased(canvas: Canvas, keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var canvas = canvas

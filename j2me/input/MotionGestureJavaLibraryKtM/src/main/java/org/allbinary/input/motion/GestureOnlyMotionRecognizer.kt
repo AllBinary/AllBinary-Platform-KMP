@@ -31,8 +31,7 @@ import org.allbinary.input.motion.gesture.MotionGestureRecognizer
 
 open public class GestureOnlyMotionRecognizer : MotionRecognizer {
         
-
-        companion object {
+companion object {
             
     private var index: Int = 0
 
@@ -43,14 +42,15 @@ open public class GestureOnlyMotionRecognizer : MotionRecognizer {
     private val motionGestureRecognizer: MotionGestureRecognizer
 
     private val id: Int
-public constructor        (){
+public constructor (){
 this.id= index++
 this.motionGestureRecognizer= MotionGestureRecognizer(id)
 }
 
 
                 @Throws(Exception::class)
-            override fun processStartMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
+            
+    override fun processStartMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -67,7 +67,8 @@ this.motionGestureRecognizer!!.processPressedMotionEvent(point, deviceId, modifi
 
 
                 @Throws(Exception::class)
-            override fun processEndMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
+            
+    override fun processEndMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -84,7 +85,8 @@ this.motionGestureRecognizer!!.processReleasedMotionEvent(point, deviceId, modif
 
 
                 @Throws(Exception::class)
-            override fun processDraggedMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
+            
+    override fun processDraggedMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x

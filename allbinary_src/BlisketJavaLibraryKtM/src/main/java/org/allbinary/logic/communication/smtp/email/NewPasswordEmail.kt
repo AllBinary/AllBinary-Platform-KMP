@@ -51,7 +51,7 @@ open public class NewPasswordEmail
     private var userInterface: UserInterface
 
     private var newPassword: String
-public constructor        (abeClientInformation: AbeClientInformationInterface, userInterface: UserInterface, newPassword: String)
+public constructor (abeClientInformation: AbeClientInformationInterface, userInterface: UserInterface, newPassword: String)
             : super()
         {
     //var abeClientInformation = abeClientInformation
@@ -65,7 +65,7 @@ this.newPassword= newPassword
 
                 @Throws(Exception::class)
             
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 this.notifyStoreAdmin()
@@ -75,7 +75,7 @@ this.notifyUser()
 
                 @Throws(Exception::class)
             
-open fun notifyStoreAdmin()
+    open fun notifyStoreAdmin()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -123,7 +123,7 @@ adminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.NEWPASSWORD
 
                 @Throws(Exception::class)
             
-open fun notifyUser()
+    open fun notifyUser()
         //nullable = true from not(false or (false and true)) = true
 {
 

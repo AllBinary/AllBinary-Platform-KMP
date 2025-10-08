@@ -35,10 +35,9 @@ open public class KeyCharDefaultComboBoxModelFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DefaultComboBoxModel{
 
@@ -75,7 +74,7 @@ defaultComboBoxModel!!.addElement(Character.toString(keyChar))
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

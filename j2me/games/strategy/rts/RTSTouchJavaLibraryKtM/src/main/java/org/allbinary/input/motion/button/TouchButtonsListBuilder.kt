@@ -37,7 +37,7 @@ open public class TouchButtonsListBuilder : BaseTouchInput {
         
     private val baseTouchInputList: BasicArrayList = BasicArrayList()
 
-open fun add(list: BasicArrayList)
+    open fun add(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var list = list
@@ -58,7 +58,7 @@ list.addAll(
 }
 
 
-open fun add(baseTouchInput: BaseTouchInput)
+    open fun add(baseTouchInput: BaseTouchInput)
         //nullable = true from not(false or (false and false)) = true
 {
 var baseTouchInput = baseTouchInput

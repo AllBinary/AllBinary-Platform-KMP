@@ -46,7 +46,7 @@ open public class OrderItemsRequestHelper : TagHelper {
     private var groupId: String
 
     private var status: String
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 this.request= pageContext!!.getRequest() as HttpServletRequest
@@ -54,7 +54,7 @@ this.getFormData()
 }
 
 
-open fun getFormData()
+    open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
 this.id= request.getParameter(OrderData.ID)
@@ -63,7 +63,7 @@ this.status= request.getParameter(OrderHistoryData.STATUS)
 }
 
 
-open fun setOrderStatus(newStatus: String)
+    open fun setOrderStatus(newStatus: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var newStatus = newStatus
@@ -117,7 +117,7 @@ OrderItemsEntityFactory.getInstance()!!.setStatus(id, groupId, newStatus)
 }
 
 
-open fun setOrderStatus()
+    open fun setOrderStatus()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

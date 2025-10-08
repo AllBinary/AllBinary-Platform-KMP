@@ -43,7 +43,7 @@ open public class OpenGLESGL11VBOImage : OpenGLESImage {
     private val glUtil: GLUtil = GLUtil.getInstance()!!
 
     private var textureVertexFloatBuffer: FloatBuffer = ByteBuffer.allocateDirect(4 *4 *2)!!.order(ByteOrder.nativeOrder())!!.asFloatBuffer()!!
-public constructor        (image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory)                        
+public constructor (image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory)                        
 
                             : super(image, bitmapFactory, textureFactory){
     //var image = image
@@ -59,7 +59,7 @@ this.regionTextureVertexFloatBuffer!!.put(FloatBuffer.wrap(regionTextureRectangl
 }
 
 
-open fun initVertices()
+    open fun initVertices()
         //nullable = true from not(false or (false and true)) = true
 {
 textureVertexFloatBuffer!!.put(0)
@@ -74,7 +74,7 @@ textureVertexFloatBuffer!!.rewind()
 }
 
 
-open fun set(gl: GL)
+    open fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl
@@ -103,7 +103,7 @@ OpenGLLogUtil.getInstance()!!.logError(gl10, this)
 
     private var regionTextureVertexFloatBuffer: FloatBuffer = ByteBuffer.allocateDirect(4 *4 *2)!!.order(ByteOrder.nativeOrder())!!.asFloatBuffer()!!
 
-open fun drawRegion(gl: GL10, viewHeight: Int, x_src: Float, y_src: Float, width: Float, height: Float, x: Int, y: Int, z: Int)
+    open fun drawRegion(gl: GL10, viewHeight: Int, x_src: Float, y_src: Float, width: Float, height: Float, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl
@@ -146,7 +146,7 @@ gl.glDisable(GL10.GL_TEXTURE_2D)
 }
 
 
-open fun draw(gl: GL10, x: Int, y: Int, z: Int)
+    open fun draw(gl: GL10, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl

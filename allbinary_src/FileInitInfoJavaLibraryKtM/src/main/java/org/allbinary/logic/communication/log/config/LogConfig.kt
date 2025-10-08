@@ -59,7 +59,7 @@ open public class LogConfig
     private var path: String
 
     private var fileName: String
-public constructor        (aName: String, aDescription: String, aPath: String, aFileName: String)
+public constructor (aName: String, aDescription: String, aPath: String, aFileName: String)
             : super()
         {
 var aName = aName
@@ -73,7 +73,7 @@ this.path= aPath
 this.fileName= aFileName
 }
 
-public constructor        (node: Node)
+public constructor (node: Node)
             : super()
         {
 var node = node
@@ -102,7 +102,7 @@ this.fileName= DomNodeHelper.getTextNodeValue(fileValueNode)
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -113,7 +113,7 @@ open fun getName()
 }
 
 
-open fun isEnabled()
+    open fun isEnabled()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -124,21 +124,21 @@ open fun isEnabled()
 }
 
 
-open fun enable()
+    open fun enable()
         //nullable = true from not(false or (false and true)) = true
 {
 this.isEnabled= true
 }
 
 
-open fun disable()
+    open fun disable()
         //nullable = true from not(false or (false and true)) = true
 {
 this.isEnabled= false
 }
 
 
-open fun getDescription()
+    open fun getDescription()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -149,7 +149,7 @@ open fun getDescription()
 }
 
 
-open fun getFileName()
+    open fun getFileName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -160,7 +160,7 @@ open fun getFileName()
 }
 
 
-open fun setName(value: String)
+    open fun setName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -168,7 +168,7 @@ this.name= value
 }
 
 
-open fun setDescription(value: String)
+    open fun setDescription(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -176,7 +176,7 @@ this.description= value
 }
 
 
-open fun setPath(value: String)
+    open fun setPath(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -184,7 +184,7 @@ this.path= value
 }
 
 
-open fun setFileName(value: String)
+    open fun setFileName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -194,7 +194,7 @@ this.fileName= value
 
                 @Throws(Exception::class)
             
-open fun getDoc()
+    open fun getDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -219,7 +219,7 @@ stringBuffer!!.append(this.getFileName())
 
                 @Throws(Exception::class)
             
-open fun getTypeVector()
+    open fun getTypeVector()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 

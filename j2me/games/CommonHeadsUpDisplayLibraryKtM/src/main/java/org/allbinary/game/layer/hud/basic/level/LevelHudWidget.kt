@@ -50,7 +50,7 @@ open public class LevelHudWidget : BasicHud
     private val offset: Int
 
     private val primitiveLongUtil: PrimitiveLongUtil
-public constructor        (maxlevel: Int, location: Int, direction: Int)                        
+public constructor (maxlevel: Int, location: Int, direction: Int)                        
 
                             : this(maxlevel, location, direction, MyFont.getInstance()!!.getSize() *4){
 var maxlevel = maxlevel
@@ -62,7 +62,7 @@ var direction = direction
                     
 }
 
-public constructor        (maxlevel: Int, location: Int, direction: Int, maxWidth: Int)                        
+public constructor (maxlevel: Int, location: Int, direction: Int, maxWidth: Int)                        
 
                             : super(location, direction, 14, maxWidth, 2, BasicColorFactory.getInstance()!!.GREY){
 var maxlevel = maxlevel
@@ -88,7 +88,7 @@ this.update()
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 levelNumberCharArray= this.primitiveLongUtil!!.getCharArray(this.level)
@@ -96,7 +96,7 @@ levelNumberTotalDigits= this.primitiveLongUtil!!.getCurrentTotalDigits()
 }
 
 
-open fun setLevel(level: Int)
+    open fun setLevel(level: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var level = level
@@ -105,7 +105,7 @@ this.update()
 }
 
 
-open fun nextLevel()
+    open fun nextLevel()
         //nullable = true from not(false or (false and true)) = true
 {
 this.level++
@@ -113,7 +113,7 @@ this.update()
 }
 
 
-open fun previousLevel()
+    open fun previousLevel()
         //nullable = true from not(false or (false and true)) = true
 {
 this.level--
@@ -130,7 +130,7 @@ this.update()
 }
 
 
-open fun isComplete()
+    open fun isComplete()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -157,14 +157,16 @@ open fun isComplete()
                             
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 super.paint(graphics, levelString, 0, levelString!!.size, levelNumberCharArray, 0, levelNumberTotalDigits, this.offset)
 }
 
-override fun paintThreed(graphics: Graphics)
+
+    override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

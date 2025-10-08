@@ -32,8 +32,7 @@ open public class ScaleProperties
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val instance: ScaleProperties = ScaleProperties()
 
@@ -53,7 +52,8 @@ open public class ScaleProperties
     var scaleHeight: Int= 0
 
     var shouldScale: Boolean= false
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

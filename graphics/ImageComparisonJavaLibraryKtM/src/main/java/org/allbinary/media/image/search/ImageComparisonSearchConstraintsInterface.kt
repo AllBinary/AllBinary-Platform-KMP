@@ -26,10 +26,11 @@
         import kotlin.reflect.KClass
         
 import java.util.Vector
+
 interface ImageComparisonSearchConstraintsInterface {
         
 
-open fun getStatisticalMatchConstraintsVector()
+    open fun getStatisticalMatchConstraintsVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector
 

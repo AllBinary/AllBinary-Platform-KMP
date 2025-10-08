@@ -38,7 +38,7 @@ open public class PreGameLockablePaintable : LockablePaintable {
     private val halfWidth: Int
 
     private val paintableForm: ScrollCurrentSelectionForm
-public constructor        (paintableForm: ScrollCurrentSelectionForm, lockedIndex: Int)                        
+public constructor (paintableForm: ScrollCurrentSelectionForm, lockedIndex: Int)                        
 
                             : super(lockedIndex){
 var paintableForm = paintableForm
@@ -52,7 +52,7 @@ this.halfWidth= GameFeatureImageCacheFactory.getInstance()!!.get(LockedResources
 }
 
 
-open fun paint(graphics: Graphics, currentIndex: Int, x: Int, y: Int)
+    open fun paint(graphics: Graphics, currentIndex: Int, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -71,7 +71,7 @@ var y = y
 }
 
 
-open fun getPaintableForm()
+    open fun getPaintableForm()
         //nullable = true from not(false or (false and true)) = true
 : ScrollCurrentSelectionForm{
 

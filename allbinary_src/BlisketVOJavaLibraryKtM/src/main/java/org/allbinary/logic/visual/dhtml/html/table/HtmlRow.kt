@@ -45,7 +45,7 @@ open public class HtmlRow : HtmlTag {
     private var after: String
 
     private var htmlCellsVector: Vector
-public constructor        (before: String, after: String){
+public constructor (before: String, after: String){
 var before = before
 var after = after
 this.before= before.toCharArray().concatToString()
@@ -54,7 +54,7 @@ this.htmlCellsVector= Vector()
 }
 
 
-open fun addCell(htmlCell: HtmlCell)
+    open fun addCell(htmlCell: HtmlCell)
         //nullable = true from not(false or (false and false)) = true
 {
 var htmlCell = htmlCell
@@ -63,7 +63,7 @@ this.numberOfColumns++
 }
 
 
-open fun getNumberOfColumns()
+    open fun getNumberOfColumns()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -73,7 +73,8 @@ open fun getNumberOfColumns()
                         return numberOfColumns
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

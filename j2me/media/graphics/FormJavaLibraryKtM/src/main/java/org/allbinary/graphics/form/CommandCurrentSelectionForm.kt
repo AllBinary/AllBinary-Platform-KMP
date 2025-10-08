@@ -45,7 +45,7 @@ open public class CommandCurrentSelectionForm : ScrollCurrentSelectionForm {
     val selectedAnimationArray: Array<Animation?> = arrayOfNulls(16)
 
     val unSelectedAnimationArray: Array<Animation?> = arrayOfNulls(16)
-public constructor        (title: String, items: Array<CustomItem?>, rectangle: Rectangle, formType: FormType, border: Int, moveForSmallScreen: Boolean, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (title: String, items: Array<CustomItem?>, rectangle: Rectangle, formType: FormType, border: Int, moveForSmallScreen: Boolean, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(title, items, rectangle, formType, border, moveForSmallScreen, backgroundBasicColor, foregroundBasicColor){
     //var title = title
@@ -65,7 +65,7 @@ this.update(items)
 }
 
 
-open fun initAnimations()
+    open fun initAnimations()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -94,7 +94,7 @@ this.unSelectedAnimationArray[index]= nullAnimation
 }
 
 
-open fun update(items: Array<CustomItem?>)
+    open fun update(items: Array<CustomItem?>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var items = items
@@ -111,7 +111,7 @@ this.update(index, items[index]!!)
 }
 
 
-open fun update(index: Int, item: CustomItem)
+    open fun update(index: Int, item: CustomItem)
         //nullable = true from not(false or (false and false)) = true
 {
     //var index = index
@@ -169,7 +169,7 @@ adjustedBorder= 4
 }
 
 
-open fun getSelectedCommand()
+    open fun getSelectedCommand()
         //nullable = true from not(false or (false and true)) = true
 : Command{
 
@@ -185,7 +185,8 @@ open fun getSelectedCommand()
                         return commandTextItem!!.getCommand()
 }
 
-override fun append(item: CustomItem)
+
+    override fun append(item: CustomItem)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var item = item
@@ -200,21 +201,24 @@ this.update(result, item)
                         return result
 }
 
-override fun delete(itemNum: Int)
+
+    override fun delete(itemNum: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var itemNum = itemNum
 super.delete(itemNum)
 }
 
-override fun deleteAll()
+
+    override fun deleteAll()
         //nullable = true from not(false or (false and true)) = true
 {
 this.initAnimations()
 super.deleteAll()
 }
 
-override fun insert(itemNum: Int, item: CustomItem)
+
+    override fun insert(itemNum: Int, item: CustomItem)
         //nullable = true from not(false or (false and false)) = true
 {
     //var itemNum = itemNum
@@ -222,7 +226,8 @@ override fun insert(itemNum: Int, item: CustomItem)
 super.insert(itemNum, item)
 }
 
-override fun set(itemNum: Int, item: CustomItem)
+
+    override fun set(itemNum: Int, item: CustomItem)
         //nullable = true from not(false or (false and false)) = true
 {
     //var itemNum = itemNum
@@ -232,7 +237,8 @@ super.set(itemNum, item)
 
 
                 @Throws(Exception::class)
-            override fun paintItem(graphics: Graphics, index: Int, item: CustomItemInterface, x: Int, y: Int)
+            
+    override fun paintItem(graphics: Graphics, index: Int, item: CustomItemInterface, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var graphics = graphics
@@ -250,7 +256,8 @@ this.selectedAnimationArray[index]!!.paint(graphics, x, y)
 
 
                 @Throws(Exception::class)
-            override fun paintUnselectedItem(graphics: Graphics, index: Int, item: CustomItemInterface, x: Int, y: Int)
+            
+    override fun paintUnselectedItem(graphics: Graphics, index: Int, item: CustomItemInterface, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var graphics = graphics

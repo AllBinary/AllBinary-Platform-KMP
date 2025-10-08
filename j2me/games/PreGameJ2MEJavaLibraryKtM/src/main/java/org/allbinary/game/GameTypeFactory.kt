@@ -31,12 +31,11 @@ open public class GameTypeFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GameTypeFactory = GameTypeFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameTypeFactory{
 

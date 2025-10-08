@@ -38,7 +38,7 @@ open public class BasicProjectileWeaponPart : BasicWeaponPart {
         
 
     private var weaponLayerCircularStaticPool: WeaponLayerCircularPool
-public constructor        (animationInterface: Animation, weaponLayerCircularStaticPool: WeaponLayerCircularPool)                        
+public constructor (animationInterface: Animation, weaponLayerCircularStaticPool: WeaponLayerCircularPool)                        
 
                             : super(animationInterface){
     //var animationInterface = animationInterface
@@ -50,7 +50,7 @@ public constructor        (animationInterface: Animation, weaponLayerCircularSta
 this.weaponLayerCircularStaticPool= weaponLayerCircularStaticPool
 }
 
-public constructor        (animationInterface: Animation, sourceLayerInterface: AllBinaryLayer, weaponLayerCircularStaticPool: WeaponLayerCircularPool, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface, relativeRelationship: RelativeRelationship)                        
+public constructor (animationInterface: Animation, sourceLayerInterface: AllBinaryLayer, weaponLayerCircularStaticPool: WeaponLayerCircularPool, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface, relativeRelationship: RelativeRelationship)                        
 
                             : super(animationInterface, sourceLayerInterface, weaponProperties, scoreableInterface, relativeRelationship){
     //var animationInterface = animationInterface
@@ -68,7 +68,8 @@ this.weaponLayerCircularStaticPool= weaponLayerCircularStaticPool
 
 
                 @Throws(Exception::class)
-            override fun process(allbinaryLayerManager: AllBinaryLayerManager, angle: Short, otherAngle: Short, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface)
+            
+    override fun process(allbinaryLayerManager: AllBinaryLayerManager, angle: Short, otherAngle: Short, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allbinaryLayerManager = allbinaryLayerManager

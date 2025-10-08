@@ -38,7 +38,7 @@ open public class TimeIntervalActionScriptConditionJPanel : javax.swing.JPanel {
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var timeIntervalActionScriptConditionInterface: TimeIntervalActionScriptConditionInterface
-public constructor        (timeIntervalActionScriptConditionInterface: TimeIntervalActionScriptConditionInterface){
+public constructor (timeIntervalActionScriptConditionInterface: TimeIntervalActionScriptConditionInterface){
 var timeIntervalActionScriptConditionInterface = timeIntervalActionScriptConditionInterface
 logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 initComponents()
@@ -47,7 +47,7 @@ this.set()
 }
 
 
-open fun set()
+    open fun set()
         //nullable = true from not(false or (false and true)) = true
 {
 this.getTimeIntervalJTextField()!!.setText(this.timeIntervalActionScriptConditionInterface!!.getTimeDelayHelper()!!.delay.toString())
@@ -55,7 +55,7 @@ this.timeIntervalActionScriptConditionInterface!!.log()
 }
 
 
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 this.timeIntervalActionScriptConditionInterface!!.getTimeDelayHelper()!!.delay= Integer(Integer.valueOf(this.getTimeIntervalJTextField()!!.getText()))
@@ -63,7 +63,7 @@ this.timeIntervalActionScriptConditionInterface!!.log()
 }
 
 
-open fun getTimeIntervalJTextField()
+    open fun getTimeIntervalJTextField()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JTextField{
 
@@ -74,7 +74,7 @@ open fun getTimeIntervalJTextField()
 }
 
 
-open fun setTimeIntervalJTextField(timeIntervalJTextField: javax.swing.JTextField)
+    open fun setTimeIntervalJTextField(timeIntervalJTextField: javax.swing.JTextField)
         //nullable = true from not(false or (false and false)) = true
 {
 var timeIntervalJTextField = timeIntervalJTextField
@@ -82,7 +82,7 @@ this.timeIntervalJTextField= timeIntervalJTextField
 }
 
 
-open fun getTimeIntervalActionJDialog()
+    open fun getTimeIntervalActionJDialog()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JDialog{
 
@@ -93,7 +93,7 @@ open fun getTimeIntervalActionJDialog()
 }
 
 
-open fun setTimeIntervalActionJDialog(timeIntervalActionJDialog: javax.swing.JDialog)
+    open fun setTimeIntervalActionJDialog(timeIntervalActionJDialog: javax.swing.JDialog)
         //nullable = true from not(false or (false and false)) = true
 {
 var timeIntervalActionJDialog = timeIntervalActionJDialog
@@ -101,7 +101,7 @@ this.timeIntervalActionJDialog= timeIntervalActionJDialog
 }
 
 
-open fun initComponents()
+    open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
 timeIntervalActionJDialog= javax.swing.JDialog()
@@ -117,7 +117,7 @@ okJButton!!.setText("OK")
 okJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -138,7 +138,7 @@ timeIntervalActionJButton!!.setText("Edit")
 timeIntervalActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -157,7 +157,7 @@ layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Align
 }
 
 
-open fun okJButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun okJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
@@ -166,7 +166,7 @@ this.getTimeIntervalActionJDialog()!!.setVisible(false)
 }
 
 
-open fun timeIntervalActionJButtonActionPerformed(evt: java.awt.event.ActionEvent)
+    open fun timeIntervalActionJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt

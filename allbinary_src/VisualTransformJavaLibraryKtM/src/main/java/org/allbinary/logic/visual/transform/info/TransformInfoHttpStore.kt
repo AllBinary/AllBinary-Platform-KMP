@@ -41,7 +41,7 @@ open public class TransformInfoHttpStore : TransformInfoHttp
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
+public constructor (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
                             : super(propertiesHashMap, pageContext, true){
 var propertiesHashMap = propertiesHashMap
@@ -61,7 +61,7 @@ var pageContext = pageContext
                                 
 }
 
-public constructor        (databaseHashMap: HashMap<Any, Any>, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
+public constructor (databaseHashMap: HashMap<Any, Any>, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
                             : super(databaseHashMap, propertiesHashMap, pageContext){
 var databaseHashMap = databaseHashMap
@@ -90,7 +90,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "Constructor(HashMap, HashMap , P
 this.setStoreName(databaseHashMap!!.get(StoreFrontData.getInstance()!!.NAME) as String)
 }
 
-public constructor        (storeFrontInterface: StoreFrontInterface, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
+public constructor (storeFrontInterface: StoreFrontInterface, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
                             : super(propertiesHashMap, pageContext){
 var storeFrontInterface = storeFrontInterface
@@ -115,7 +115,7 @@ this.setStoreName(storeFrontInterface!!.getName())
 
                 @Throws(Exception::class)
             
-open fun getPath()
+    open fun getPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -135,7 +135,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 
                 @Throws(Exception::class)
             
-open fun getTemplateFilePath()
+    open fun getTemplateFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 
@@ -148,7 +148,7 @@ open fun getTemplateFilePath()
 
                 @Throws(Exception::class)
             
-open fun getObjectConfigFilePath()
+    open fun getObjectConfigFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 
@@ -161,7 +161,7 @@ open fun getObjectConfigFilePath()
 
                 @Throws(Exception::class)
             
-open fun getDataFilePath()
+    open fun getDataFilePath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
 

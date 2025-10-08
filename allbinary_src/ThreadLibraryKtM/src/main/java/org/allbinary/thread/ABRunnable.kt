@@ -40,14 +40,16 @@ open public class ABRunnable
             }            
         
     private var running: Boolean = false
-override fun setThread(thread: Thread)
+
+    override fun setThread(thread: Thread)
         //nullable = true from not(false or (false and false)) = true
 {
 var thread = thread
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun isRunning()
+
+    override fun isRunning()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -58,20 +60,22 @@ override fun isRunning()
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
-override fun setRunning(running: Boolean)
+
+    override fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var running = running
 this.running= running
 }
 
-override fun run()
+
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun getType()
+    open fun getType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

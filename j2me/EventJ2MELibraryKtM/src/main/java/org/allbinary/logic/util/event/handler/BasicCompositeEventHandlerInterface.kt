@@ -25,14 +25,15 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface BasicCompositeEventHandlerInterface {
         
 
-open fun getEventHandler()
+    open fun getEventHandler()
         //nullable = true from not(false or (false and true)) = true
 : BasicEventHandlerInterface
 
-open fun setEventHandler(basicEventHandlerInterface: BasicEventHandlerInterface)
+    open fun setEventHandler(basicEventHandlerInterface: BasicEventHandlerInterface)
         //nullable = true from not(false or (false and false)) = true
 
 

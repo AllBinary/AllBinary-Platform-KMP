@@ -30,8 +30,7 @@ open public class CpuInfo
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val PROCESSOR: CpuInfo = CpuInfo("processor")
 
@@ -72,14 +71,15 @@ open public class CpuInfo
         }
             
     private var name: String
-private constructor        (name: String)
+private constructor (name: String)
             : super()
         {
 var name = name
 this.name= name
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

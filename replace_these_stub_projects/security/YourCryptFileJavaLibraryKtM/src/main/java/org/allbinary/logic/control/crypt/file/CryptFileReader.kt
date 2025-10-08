@@ -18,7 +18,7 @@ open public class CryptFileReader
             : Object
          {
         
-public constructor        (decryptedExtension: String, encryptedExtension: String)
+public constructor (decryptedExtension: String, encryptedExtension: String)
             : super()
         {
 var decryptedExtension = decryptedExtension
@@ -28,7 +28,7 @@ var encryptedExtension = encryptedExtension
 
                 @Throws(Exception::class)
             
-open fun get(fileAbPath: AbPath)
+    open fun get(fileAbPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var fileAbPath = fileAbPath
@@ -42,7 +42,7 @@ var fileAbPath = fileAbPath
 
                 @Throws(Exception::class)
             
-open fun getInputStream(fileAbPath: AbPath)
+    open fun getInputStream(fileAbPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
 : InputStream{
 var fileAbPath = fileAbPath

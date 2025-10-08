@@ -57,7 +57,7 @@ open public class WaypointPathRunnableBase
 
     var running: Boolean= false
 
-open fun isRunning()
+    open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -68,7 +68,7 @@ open fun isRunning()
 }
 
 
-open fun setRunning(isRunning: Boolean)
+    open fun setRunning(isRunning: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var isRunning = isRunning
@@ -78,14 +78,14 @@ this.running= isRunning
 
                 @Throws(Exception::class)
             
-open fun setThread(thread: Thread)
+    open fun setThread(thread: Thread)
         //nullable = true from not(false or (false and false)) = true
 {
     //var thread = thread
 }
 
 
-open fun setTargetLayer(waypointLayer: PathFindingLayerInterface)
+    open fun setTargetLayer(waypointLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var waypointLayer = waypointLayer
@@ -94,7 +94,7 @@ this.setPriority()
 }
 
 
-open fun setPriority()
+    open fun setPriority()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -123,7 +123,7 @@ this.priority= distanceCategory
 }
 
 
-open fun getTargetLayer()
+    open fun getTargetLayer()
         //nullable = true from not(false or (false and true)) = true
 : PathFindingLayerInterface{
 
@@ -134,7 +134,7 @@ open fun getTargetLayer()
 }
 
 
-open fun setUnitLayer(unitLayer: PathFindingLayerInterface)
+    open fun setUnitLayer(unitLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var unitLayer = unitLayer
@@ -142,7 +142,7 @@ this.pathFindingLayer= unitLayer
 }
 
 
-open fun getPriority()
+    open fun getPriority()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -153,7 +153,7 @@ open fun getPriority()
 }
 
 
-open fun isDone()
+    open fun isDone()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -164,13 +164,13 @@ open fun isDone()
 }
 
 
-open fun run()
+    open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun reset()
+    open fun reset()
         //nullable = true from not(false or (false and true)) = true
 {
 }

@@ -18,12 +18,11 @@ open public class MultiPlayerGameFeatureFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: MultiPlayerGameFeatureFactory = MultiPlayerGameFeatureFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : MultiPlayerGameFeatureFactory{
 
@@ -35,13 +34,13 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
 
 
-open fun addCommands(anyType: Any)
+    open fun addCommands(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var anyType = anyType

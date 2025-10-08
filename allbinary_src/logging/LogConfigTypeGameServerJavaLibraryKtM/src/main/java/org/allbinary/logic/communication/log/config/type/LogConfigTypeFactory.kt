@@ -32,12 +32,11 @@ open public class LogConfigTypeFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: LogConfigTypeFactory = LogConfigTypeFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : LogConfigTypeFactory{
 
@@ -61,7 +60,7 @@ open fun getInstance()
     val GAME_SIMULATOR: LogConfigType = LogConfigType("Game Simulator", NO_DESCRIPTION)
 
     val CUSTOM_TYPES: LogConfigType = LogConfigType("Custom Types", NO_DESCRIPTION)
-private constructor        ()
+private constructor ()
             : super()
         {
 LogConfigTypes.LOGGING.add(this.INIT_SERVER)

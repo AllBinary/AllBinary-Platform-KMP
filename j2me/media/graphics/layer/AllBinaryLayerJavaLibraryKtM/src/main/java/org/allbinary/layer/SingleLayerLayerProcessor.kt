@@ -28,7 +28,7 @@
 
 open public class SingleLayerLayerProcessor : LayerProcessor {
         
-public constructor        ()                        
+public constructor ()                        
 
                             : super(SingleLayerLayerManager()){
 
@@ -39,7 +39,8 @@ public constructor        ()
 
 
                 @Throws(Exception::class)
-            override fun process(allBinaryLayerManager: AllBinaryLayerManager)
+            
+    override fun process(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager

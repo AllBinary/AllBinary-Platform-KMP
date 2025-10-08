@@ -25,12 +25,13 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface ProceduralAnimationInterfaceFactoryInterface : BasicAnimationInterfaceFactoryInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getInstance(animationInterface: Animation)
+    open fun getInstance(animationInterface: Animation)
         //nullable =  from not(true or (false and false)) = 
 : Animation
 

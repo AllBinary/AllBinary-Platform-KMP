@@ -30,12 +30,11 @@ open public class NullOpenGLTextureProcessor
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OpenGLTextureProcessor = OpenGLTextureProcessor()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OpenGLTextureProcessor{
 

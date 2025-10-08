@@ -16,8 +16,7 @@ import org.allbinary.logic.string.StringUtil
 
 open public class NullCanvas : Canvas {
         
-
-        companion object {
+companion object {
             
     val NULL_IMAGE_ARRAY: Array<Image?> = arrayOfNulls(0)
 
@@ -28,16 +27,18 @@ open public class NullCanvas : Canvas {
     val NULL_SCREEN: Form = Form(StringUtil.getInstance()!!.EMPTY_STRING)
 
         }
-            public constructor        (){
+            public constructor (){
 }
 
-override fun setFullScreenMode(mode: Boolean)
+
+    override fun setFullScreenMode(mode: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var mode = mode
 }
 
-override fun sizeChanged(w: Int, h: Int)
+
+    override fun sizeChanged(w: Int, h: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var w = w
@@ -45,7 +46,7 @@ var h = h
 }
 
 
-open fun getCommandStack()
+    open fun getCommandStack()
         //nullable = true from not(false or (false and true)) = true
 : Stack<Any>{
 
@@ -55,7 +56,7 @@ open fun getCommandStack()
 }
 
 
-open fun isCommand(command: Command)
+    open fun isCommand(command: Command)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var command = command
@@ -65,32 +66,35 @@ var command = command
                             throw RuntimeException()
 }
 
-override fun addCommand(command: Command)
+
+    override fun addCommand(command: Command)
         //nullable = true from not(false or (false and false)) = true
 {
 var command = command
 }
 
-override fun removeCommand(command: Command)
+
+    override fun removeCommand(command: Command)
         //nullable = true from not(false or (false and false)) = true
 {
 var command = command
 }
 
 
-open fun removeAllCommands()
+    open fun removeAllCommands()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun setCommandListener(l: CommandListener)
+
+    override fun setCommandListener(l: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var l = l
 }
 
 
-open fun getCustomCommandListener()
+    open fun getCustomCommandListener()
         //nullable = true from not(false or (false and true)) = true
 : CommandListener{
 
@@ -100,7 +104,7 @@ open fun getCustomCommandListener()
 }
 
 
-open fun isPaused()
+    open fun isPaused()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -110,19 +114,19 @@ open fun isPaused()
 }
 
 
-open fun removePauseCommand()
+    open fun removePauseCommand()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun pause()
+    open fun pause()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun unPause()
+    open fun unPause()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -130,25 +134,26 @@ open fun unPause()
 
                 @Throws(Exception::class)
             
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 }
 
 
-open fun destroy()
+    open fun destroy()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun setPaused(isPaused: Boolean)
+    open fun setPaused(isPaused: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var isPaused = isPaused
@@ -158,21 +163,24 @@ var isPaused = isPaused
                             throw RuntimeException()
 }
 
-override fun pointerDragged(x: Int, y: Int)
+
+    override fun pointerDragged(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
 var y = y
 }
 
-override fun pointerPressed(x: Int, y: Int)
+
+    override fun pointerPressed(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
 var y = y
 }
 
-override fun pointerReleased(x: Int, y: Int)
+
+    override fun pointerReleased(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x

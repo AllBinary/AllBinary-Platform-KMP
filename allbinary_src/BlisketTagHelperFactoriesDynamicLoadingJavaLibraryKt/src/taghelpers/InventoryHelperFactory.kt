@@ -34,8 +34,7 @@ open public class InventoryHelperFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val CLASSNAME: String = "taghelpers.InventoryHelper"
 
@@ -43,7 +42,7 @@ open public class InventoryHelperFactory
 
                 @Throws(LicensingException::class)
             
-open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
+    open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
 : Any{
 var hashMap = hashMap
@@ -57,7 +56,7 @@ var pageContext = pageContext
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

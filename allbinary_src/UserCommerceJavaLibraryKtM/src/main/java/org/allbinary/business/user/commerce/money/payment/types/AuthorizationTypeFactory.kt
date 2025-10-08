@@ -30,12 +30,11 @@ open public class AuthorizationTypeFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AuthorizationTypeFactory = AuthorizationTypeFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AuthorizationTypeFactory{
 

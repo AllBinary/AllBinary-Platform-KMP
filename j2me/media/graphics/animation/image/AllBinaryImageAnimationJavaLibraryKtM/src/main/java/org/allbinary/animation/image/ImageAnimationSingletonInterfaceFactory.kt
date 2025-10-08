@@ -33,7 +33,7 @@ import org.allbinary.image.AnimationFrameToImageUtil
 
 open public class ImageAnimationSingletonInterfaceFactory : SingletonAnimationInterfaceFactory {
         
-private constructor        (animationInterface: Animation)                        
+private constructor (animationInterface: Animation)                        
 
                             : super(animationInterface){
 var animationInterface = animationInterface
@@ -43,7 +43,7 @@ var animationInterface = animationInterface
                     
 }
 
-public constructor        (image: Image)                        
+public constructor (image: Image)                        
 
                             : super(ImageAnimation(image, AnimationBehavior.getInstance())){
 var image = image
@@ -53,7 +53,7 @@ var image = image
                     
 }
 
-public constructor        (animationInterface: Animation, width: Int, height: Int)                        
+public constructor (animationInterface: Animation, width: Int, height: Int)                        
 
                             : this(ImageAnimation(AnimationFrameToImageUtil.getInstance()!!.getInstance(width, height, animationInterface), AnimationBehavior.getInstance())){
 var animationInterface = animationInterface

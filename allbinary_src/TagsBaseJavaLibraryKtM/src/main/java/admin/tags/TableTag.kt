@@ -56,7 +56,7 @@ open public class TableTag : PropertiesTag {
     private var current: Integer
 
     private var total: Integer
-public constructor        (){
+public constructor (){
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
@@ -69,7 +69,7 @@ public constructor        (){
 }
 
 
-open fun setIsSelected(enabled: String)
+    open fun setIsSelected(enabled: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var enabled = enabled
@@ -79,7 +79,7 @@ this.enabled= enabled
 
                 @Throws(Exception::class)
             
-open fun isEnabled()
+    open fun isEnabled()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -111,7 +111,7 @@ open fun isEnabled()
 }
 
 
-open fun setTagHelperFactory(tagHelperFactoryInterface: TagHelperFactoryInterface)
+    open fun setTagHelperFactory(tagHelperFactoryInterface: TagHelperFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var tagHelperFactoryInterface = tagHelperFactoryInterface
@@ -119,7 +119,7 @@ this.tagHelperFactoryInterface= tagHelperFactoryInterface
 }
 
 
-open fun getTagHelperFactoryInterface()
+    open fun getTagHelperFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
 : TagHelperFactoryInterface{
 
@@ -130,7 +130,7 @@ open fun getTagHelperFactoryInterface()
 }
 
 
-open fun setTagRequestHelperFactory(tagHelperFactoryInterface: TagHelperFactoryInterface)
+    open fun setTagRequestHelperFactory(tagHelperFactoryInterface: TagHelperFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var tagHelperFactoryInterface = tagHelperFactoryInterface
@@ -138,7 +138,7 @@ this.tagRequestHelperFactoryInterface= tagHelperFactoryInterface
 }
 
 
-open fun getTagRequestHelperFactoryInterface()
+    open fun getTagRequestHelperFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
 : TagHelperFactoryInterface{
 
@@ -149,7 +149,7 @@ open fun getTagRequestHelperFactoryInterface()
 }
 
 
-open fun setCurrent(current: Integer)
+    open fun setCurrent(current: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var current = current
@@ -157,7 +157,7 @@ this.current= current
 }
 
 
-open fun getCurrent()
+    open fun getCurrent()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -168,7 +168,7 @@ open fun getCurrent()
 }
 
 
-open fun setTotal(total: Integer)
+    open fun setTotal(total: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
 var total = total
@@ -176,7 +176,7 @@ this.total= total
 }
 
 
-open fun getTotal()
+    open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -189,7 +189,7 @@ open fun getTotal()
 
                 @Throws(LicensingException::class)
             
-open fun drop()
+    open fun drop()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -239,7 +239,7 @@ open fun drop()
 
                 @Throws(LicensingException::class)
             
-open fun create()
+    open fun create()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -289,7 +289,7 @@ open fun create()
 
                 @Throws(LicensingException::class)
             
-open fun restore()
+    open fun restore()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -339,7 +339,7 @@ open fun restore()
 
                 @Throws(LicensingException::class)
             
-open fun backup()
+    open fun backup()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -389,7 +389,7 @@ open fun backup()
 
                 @Throws(LicensingException::class)
             
-open fun insert()
+    open fun insert()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -436,7 +436,7 @@ open fun insert()
 
                 @Throws(LicensingException::class)
             
-open fun delete()
+    open fun delete()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -483,7 +483,7 @@ open fun delete()
 
                 @Throws(LicensingException::class)
             
-open fun update()
+    open fun update()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -530,7 +530,7 @@ open fun update()
 
                 @Throws(JspTagException::class)
             
-open fun doStartTag()
+    open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

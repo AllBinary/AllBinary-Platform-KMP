@@ -30,12 +30,11 @@ open public class RemoteHighScoresData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: RemoteHighScoresData = RemoteHighScoresData()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : RemoteHighScoresData{
 

@@ -25,24 +25,25 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface SoundsFactoryInterface {
         
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 
 
                 @Throws(Exception::class)
             
-open fun getSoundInterfaceArray()
+    open fun getSoundInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<Sound?>
 
-open fun setInitialized(initialized: Boolean)
+    open fun setInitialized(initialized: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun isInitialized()
+    open fun isInitialized()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 

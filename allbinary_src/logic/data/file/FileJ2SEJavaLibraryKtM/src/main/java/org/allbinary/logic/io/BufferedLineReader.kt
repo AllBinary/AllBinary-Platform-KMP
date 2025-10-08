@@ -36,7 +36,7 @@ open public class BufferedLineReader
         
 
     private val tmpIn: BufferedReader
-public constructor        (file: AbFile)
+public constructor (file: AbFile)
             : super()
         {
 var file = file
@@ -44,7 +44,7 @@ this.tmpIn= BufferedReader(FileReader(AbFileNativeUtil.get(file)))
 }
 
 
-open fun readUpToLines(readAheadIndex: Long)
+    open fun readUpToLines(readAheadIndex: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var readAheadIndex = readAheadIndex
@@ -53,7 +53,7 @@ var readAheadIndex = readAheadIndex
 
                 @Throws(Exception::class)
             
-open fun readLine()
+    open fun readLine()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -64,7 +64,7 @@ open fun readLine()
 }
 
 
-open fun getSize()
+    open fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -75,7 +75,7 @@ open fun getSize()
 }
 
 
-open fun getCurrent()
+    open fun getCurrent()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

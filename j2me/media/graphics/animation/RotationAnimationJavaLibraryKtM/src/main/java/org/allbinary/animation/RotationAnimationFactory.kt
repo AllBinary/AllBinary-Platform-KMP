@@ -40,14 +40,14 @@ open public class RotationAnimationFactory
     private var totalAngle: Short
 
     private var angleIncrement: Short
-public constructor        ()
+public constructor ()
             : super()
         {
 this.totalAngle= AngleFactory.getInstance()!!.TOTAL_ANGLE
 this.angleIncrement= (totalAngle /GameConfigurationCentral.getInstance()!!.getGameControlFidelity()).toShort()
 }
 
-public constructor        (totalAngle: Short, angleIncrement: Short)
+public constructor (totalAngle: Short, angleIncrement: Short)
             : super()
         {
 var totalAngle = totalAngle
@@ -58,7 +58,8 @@ this.angleIncrement= angleIncrement
 
 
                 @Throws(Exception::class)
-            override fun getInstance(instanceId: Int)
+            
+    override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var instanceId = instanceId
@@ -71,7 +72,8 @@ this.angleIncrement= angleIncrement
 
 
                 @Throws(Exception::class)
-            override fun getInstance(animationInterface: Animation)
+            
+    override fun getInstance(animationInterface: Animation)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
 var animationInterface = animationInterface
@@ -82,7 +84,8 @@ var animationInterface = animationInterface
                         return NullRotationAnimation(AngleInfo.getInstance(this.angleIncrement), this.totalAngle, AnimationBehavior.getInstance())
 }
 
-override fun setInitialScale(scaleProperties: ScaleProperties)
+
+    override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
 {
     //var scaleProperties = scaleProperties

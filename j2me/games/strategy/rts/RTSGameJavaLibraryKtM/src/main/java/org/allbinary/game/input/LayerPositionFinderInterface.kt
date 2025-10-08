@@ -27,10 +27,11 @@
         
 import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
+
 interface LayerPositionFinderInterface {
         
 
-open fun getLayerInterface(geographicMapCellPosition: GeographicMapCellPosition)
+    open fun getLayerInterface(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : AllBinaryLayer
 

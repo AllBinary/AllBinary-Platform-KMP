@@ -30,98 +30,99 @@ import org.allbinary.business.advertisement.product.AdvertisementProductInterfac
 import org.allbinary.business.advertisement.thumbnail.AdvertisementThumbnailInterface
 import org.allbinary.business.user.commerce.money.Money
 import org.allbinary.logic.control.contraints.display.browser.DisplayInBrowserContraintsInterface
+
 interface AdvertisementInterface {
         
 
-open fun getArtist()
+    open fun getArtist()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getArtistLink()
+    open fun getArtistLink()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getTitle()
+    open fun getTitle()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getDateAdded()
+    open fun getDateAdded()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getDirectory()
+    open fun getDirectory()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getFramedLink()
+    open fun getFramedLink()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getListPrice()
+    open fun getListPrice()
         //nullable = true from not(false or (false and true)) = true
 : Money
 
-open fun getOurPrice()
+    open fun getOurPrice()
         //nullable = true from not(false or (false and true)) = true
 : Money
 
-open fun getRank()
+    open fun getRank()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getImage()
+    open fun getImage()
         //nullable = true from not(false or (false and true)) = true
 : AdvertisementImageInterface
 
-open fun getProduct()
+    open fun getProduct()
         //nullable = true from not(false or (false and true)) = true
 : AdvertisementProductInterface
 
-open fun getThumbnail()
+    open fun getThumbnail()
         //nullable = true from not(false or (false and true)) = true
 : AdvertisementThumbnailInterface
 
-open fun getDisplayInBrowserContraintsInterface()
+    open fun getDisplayInBrowserContraintsInterface()
         //nullable = true from not(false or (false and true)) = true
 : DisplayInBrowserContraintsInterface
 
-open fun setArtist(artist: String)
+    open fun setArtist(artist: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setArtistLink(artistLink: String)
+    open fun setArtistLink(artistLink: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setTitle(title: String)
+    open fun setTitle(title: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setDateAdded(dateAdded: String)
+    open fun setDateAdded(dateAdded: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setDirectory(directory: String)
+    open fun setDirectory(directory: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setFramedLink(framedLink: String)
+    open fun setFramedLink(framedLink: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setRank(rank: Int)
+    open fun setRank(rank: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setImage(AdvertisementImageInterface: AdvertisementImageInterface)
+    open fun setImage(AdvertisementImageInterface: AdvertisementImageInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setProduct(AdvertisementProductInterface: AdvertisementProductInterface)
+    open fun setProduct(AdvertisementProductInterface: AdvertisementProductInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setThumbnail(AdvertisementThumbnailInterface: AdvertisementThumbnailInterface)
+    open fun setThumbnail(AdvertisementThumbnailInterface: AdvertisementThumbnailInterface)
         //nullable = true from not(false or (false and false)) = true
 
 

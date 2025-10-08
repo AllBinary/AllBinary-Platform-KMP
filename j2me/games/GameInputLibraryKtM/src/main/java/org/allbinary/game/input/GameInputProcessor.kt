@@ -34,12 +34,11 @@ open public class GameInputProcessor
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GameInputProcessor = GameInputProcessor()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameInputProcessor{
 
@@ -51,7 +50,7 @@ open fun getInstance()
 
 
         }
-            protected constructor        ()
+            protected constructor ()
             : super()
         {
 }
@@ -59,7 +58,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+    open fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allbinaryLayerManager = allbinaryLayerManager
@@ -69,7 +68,7 @@ open fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: Gam
 
                 @Throws(Exception::class)
             
-open fun processReleased(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+    open fun processReleased(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allbinaryLayerManager = allbinaryLayerManager
@@ -79,7 +78,7 @@ open fun processReleased(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEv
 
                 @Throws(Exception::class)
             
-open fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent, analogValue: Int)
+    open fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent, analogValue: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allbinaryLayerManager = allbinaryLayerManager
@@ -90,7 +89,7 @@ open fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: Gam
 
                 @Throws(Exception::class)
             
-open fun process(allbinaryLayerManager: AllBinaryLayerManager, keyAsInteger: Integer)
+    open fun process(allbinaryLayerManager: AllBinaryLayerManager, keyAsInteger: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allbinaryLayerManager = allbinaryLayerManager
@@ -100,7 +99,7 @@ open fun process(allbinaryLayerManager: AllBinaryLayerManager, keyAsInteger: Int
 
                 @Throws(Exception::class)
             
-open fun processReleased(allbinaryLayerManager: AllBinaryLayerManager, keyAsInteger: Integer)
+    open fun processReleased(allbinaryLayerManager: AllBinaryLayerManager, keyAsInteger: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allbinaryLayerManager = allbinaryLayerManager

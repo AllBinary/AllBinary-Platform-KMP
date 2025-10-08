@@ -42,7 +42,7 @@ open public class ScoreComparator
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val isHighestBest: Boolean
-public constructor        (isHighestBest: Boolean)
+public constructor (isHighestBest: Boolean)
             : super()
         {
     //var isHighestBest = isHighestBest
@@ -50,7 +50,7 @@ this.isHighestBest= isHighestBest
 }
 
 
-open fun getBestScore()
+    open fun getBestScore()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -67,7 +67,8 @@ open fun getBestScore()
     
 }
 
-override fun compare(recordOne: ByteArray, recordTwo: ByteArray)
+
+    override fun compare(recordOne: ByteArray, recordTwo: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var recordOne = recordOne
@@ -143,7 +144,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "compare", e)
 }
 
 
-open fun getHighTooLow(scoreOne: Long, scoreTwo: Long)
+    open fun getHighTooLow(scoreOne: Long, scoreTwo: Long)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var scoreOne = scoreOne
@@ -186,7 +187,7 @@ open fun getHighTooLow(scoreOne: Long, scoreTwo: Long)
 }
 
 
-open fun getLowTooHigh(scoreOne: Long, scoreTwo: Long)
+    open fun getLowTooHigh(scoreOne: Long, scoreTwo: Long)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var scoreOne = scoreOne

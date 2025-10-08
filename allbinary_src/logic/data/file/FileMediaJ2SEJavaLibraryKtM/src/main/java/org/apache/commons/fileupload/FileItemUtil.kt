@@ -23,12 +23,11 @@ open public class FileItemUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: FileItemUtil = FileItemUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : FileItemUtil{
 
@@ -52,7 +51,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun getString(byteArray: ByteArray)
+    open fun getString(byteArray: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var byteArray = byteArray
@@ -66,7 +65,7 @@ var byteArray = byteArray
 
                 @Throws(Exception::class)
             
-open fun getString(fileItem: FileItemStream)
+    open fun getString(fileItem: FileItemStream)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var fileItem = fileItem
@@ -80,7 +79,7 @@ var fileItem = fileItem
 
                 @Throws(Exception::class)
             
-open fun getBytes(fileItem: FileItemStream)
+    open fun getBytes(fileItem: FileItemStream)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
 var fileItem = fileItem
@@ -140,7 +139,7 @@ streamUtil!!.close(inputStream)
 
                 @Throws(Exception::class)
             
-open fun write(fileItem: FileItem, file: AbFile)
+    open fun write(fileItem: FileItem, file: AbFile)
         //nullable = true from not(false or (false and false)) = true
 {
 var fileItem = fileItem

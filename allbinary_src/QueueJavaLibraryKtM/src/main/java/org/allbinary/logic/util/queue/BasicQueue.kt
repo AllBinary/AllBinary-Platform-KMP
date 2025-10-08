@@ -33,7 +33,7 @@ open public class BasicQueue
         
 
     val queueVector: Vector = Vector()
-protected constructor        ()
+protected constructor ()
             : super()
         {
 }
@@ -42,7 +42,7 @@ protected constructor        ()
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun offer(anyType: Any)
+    open fun offer(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var anyType = anyType
@@ -56,7 +56,7 @@ this.queueVector!!.add(anyType)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun remove(anyType: Any)
+    open fun remove(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var anyType = anyType
@@ -65,7 +65,7 @@ this.queueVector!!.remove(anyType)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun removeLast()
+    open fun removeLast()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 

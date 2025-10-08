@@ -26,14 +26,15 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.util.BasicArrayList
+
 interface LayerPlacementInterfaceBasicArrayListFactoryInterface {
         
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BasicArrayList
 
-open fun getOnDemandResources()
+    open fun getOnDemandResources()
         //nullable = true from not(false or (false and true)) = true
 : IntArray
 

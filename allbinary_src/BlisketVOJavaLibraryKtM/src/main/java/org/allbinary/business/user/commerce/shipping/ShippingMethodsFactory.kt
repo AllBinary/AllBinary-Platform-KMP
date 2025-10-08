@@ -51,8 +51,7 @@ open public class ShippingMethodsFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SHIPPINGMETHODSFILEPATHSTRING: String
 
@@ -80,7 +79,7 @@ SHIPPINGMETHODSFILEPATHSTRING= stringBuffer!!.toString()
     private var document: Document
 
     private var shippingVector: Vector
-public constructor        (abeClientInformation: AbeClientInformationInterface, storeFrontInterface: StoreFrontInterface)
+public constructor (abeClientInformation: AbeClientInformationInterface, storeFrontInterface: StoreFrontInterface)
             : super()
         {
     //var abeClientInformation = abeClientInformation
@@ -164,7 +163,7 @@ shippingVector!!.add(NoShippingModuleView())
 
                 @Throws(Exception::class)
             
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : Vector{
 
@@ -175,7 +174,7 @@ open fun getInstance()
 }
 
 
-open fun getDefaultInstance()
+    open fun getDefaultInstance()
         //nullable = true from not(false or (false and true)) = true
 : ShippingInterface{
 

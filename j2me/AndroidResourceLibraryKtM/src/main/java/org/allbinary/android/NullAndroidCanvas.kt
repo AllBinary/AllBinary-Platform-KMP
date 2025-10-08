@@ -32,8 +32,7 @@ open public class NullAndroidCanvas
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NULL_CANVAS: Canvas = Canvas()
 

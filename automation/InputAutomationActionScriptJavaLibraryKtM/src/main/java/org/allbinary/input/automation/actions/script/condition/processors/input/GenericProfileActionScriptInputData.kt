@@ -30,8 +30,7 @@ open public class GenericProfileActionScriptInputData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var NAME: String = "GENERIC_CONFIGURATION_PROFILE_ACTION_INPUT_NAME"
 
@@ -40,7 +39,7 @@ open public class GenericProfileActionScriptInputData
     var DELAY: String = "GENERIC_CONFIGURATION_PROFILE_ACTION_INPUT_DELAY"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

@@ -26,22 +26,23 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.data.tables.TableMappingInterface
+
 interface ThemeInterface : TableMappingInterface {
         
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getPath()
+    open fun getPath()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getPreviewImageName()
+    open fun getPreviewImageName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getPreviewImagePath()
+    open fun getPreviewImagePath()
         //nullable = true from not(false or (false and true)) = true
 : String
 

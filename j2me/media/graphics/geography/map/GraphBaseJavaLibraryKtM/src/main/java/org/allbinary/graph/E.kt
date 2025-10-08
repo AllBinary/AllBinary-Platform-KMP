@@ -16,8 +16,7 @@ open public class E
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val e: E = E()
 
@@ -28,7 +27,7 @@ open public class E
             {
             }            
         
-open fun newInstance()
+    open fun newInstance()
         //nullable = true from not(false or (false and true)) = true
 : E{
 

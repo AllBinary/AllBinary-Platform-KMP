@@ -25,10 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface PositionInterface {
         
 
-open fun setPosition(x: Int, y: Int, z: Int)
+    open fun setPosition(x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 
 

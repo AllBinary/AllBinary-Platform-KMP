@@ -42,7 +42,7 @@ open public class BasicEmailInfo
     private var textBody: String
 
     var emailServerConfigurationInterface: EmailServerConfigurationInterface
-public constructor        (subject: String, textBody: String)
+public constructor (subject: String, textBody: String)
             : super()
         {
 var subject = subject
@@ -64,7 +64,7 @@ this.textBody= textBody
 }
 
 
-open fun getSubject()
+    open fun getSubject()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -75,7 +75,7 @@ open fun getSubject()
 }
 
 
-open fun getTextBody()
+    open fun getTextBody()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -86,7 +86,7 @@ open fun getTextBody()
 }
 
 
-open fun getEmailServerConfigurationInterface()
+    open fun getEmailServerConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
 : EmailServerConfigurationInterface{
 
@@ -97,14 +97,15 @@ open fun getEmailServerConfigurationInterface()
 }
 
 
-open fun setEmailServerConfigurationInterface(emailServerConfigurationInterface: EmailServerConfigurationInterface)
+    open fun setEmailServerConfigurationInterface(emailServerConfigurationInterface: EmailServerConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var emailServerConfigurationInterface = emailServerConfigurationInterface
 this.emailServerConfigurationInterface= emailServerConfigurationInterface
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -126,7 +127,7 @@ stringBuffer!!.append(this.getTextBody())
 
                 @Throws(Exception::class)
             
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 

@@ -32,12 +32,11 @@ open public class CompleteMotionGestureInputToGameMotionGestureInput
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: CompleteMotionGestureInputToGameMotionGestureInput = CompleteMotionGestureInputToGameMotionGestureInput()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CompleteMotionGestureInputToGameMotionGestureInput{
 
@@ -57,7 +56,7 @@ open fun getInstance()
         
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 PreLogUtil.put("No Touch Button = No Compound Motion Gestures", this, this.commonStrings!!.INIT)

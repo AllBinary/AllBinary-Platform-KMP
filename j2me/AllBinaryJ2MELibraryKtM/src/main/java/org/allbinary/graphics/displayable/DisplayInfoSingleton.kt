@@ -45,12 +45,11 @@ open public class DisplayInfoSingleton
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: DisplayInfoSingleton = DisplayInfoSingleton()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DisplayInfoSingleton{
 
@@ -102,7 +101,7 @@ open fun getInstance()
     private var displayRatio: Float= 0.0f
 
     private var ratio: Float = 1.0f
-private constructor        ()
+private constructor ()
             : super()
         {
 
@@ -122,7 +121,7 @@ private constructor        ()
 }
 
 
-open fun getLastHalf()
+    open fun getLastHalf()
         //nullable = true from not(false or (false and true)) = true
 : IntArray{
 
@@ -133,7 +132,7 @@ open fun getLastHalf()
 }
 
 
-open fun getLast()
+    open fun getLast()
         //nullable = true from not(false or (false and true)) = true
 : IntArray{
 
@@ -144,7 +143,7 @@ open fun getLast()
 }
 
 
-open fun getFull()
+    open fun getFull()
         //nullable = true from not(false or (false and true)) = true
 : IntArray{
 
@@ -155,7 +154,7 @@ open fun getFull()
 }
 
 
-open fun getScaleLargestTo()
+    open fun getScaleLargestTo()
         //nullable = true from not(false or (false and true)) = true
 : Float{
 
@@ -166,7 +165,7 @@ open fun getScaleLargestTo()
 }
 
 
-open fun setScaleLargestTo(scaleLargestTo: Int)
+    open fun setScaleLargestTo(scaleLargestTo: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var scaleLargestTo = scaleLargestTo
@@ -184,7 +183,7 @@ this.scaleLargestTo= scaleLargestTo.toFloat()
 
     private val LAST_HEIGHT: String = " LastHeight: "
 
-open fun setLastSize(aLastWidth: Int, aLastHeight: Int, reason: String)
+    open fun setLastSize(aLastWidth: Int, aLastHeight: Int, reason: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var aLastWidth = aLastWidth
@@ -202,7 +201,7 @@ open fun setLastSize(aLastWidth: Int, aLastHeight: Int, reason: String)
 }
 
 
-open fun setLastSizeForce(aLastWidth: Int, aLastHeight: Int, reason: String)
+    open fun setLastSizeForce(aLastWidth: Int, aLastHeight: Int, reason: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var aLastWidth = aLastWidth
@@ -311,7 +310,7 @@ this.add(SET_LAST_SIZE_METHOD_NAME)
 }
 
 
-open fun isPortrait(lastWidth: Int, lastHeight: Int)
+    open fun isPortrait(lastWidth: Int, lastHeight: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var lastWidth = lastWidth
@@ -341,7 +340,7 @@ var lastHeight = lastHeight
 }
 
 
-open fun isPortrait()
+    open fun isPortrait()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -362,7 +361,7 @@ open fun isPortrait()
 
     private val list: BasicArrayList = BasicArrayList()
 
-open fun add(reason: String)
+    open fun add(reason: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var reason = reason
@@ -376,7 +375,7 @@ list.add(reason)
 }
 
 
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -399,7 +398,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, FIRE_METHOD_NAME, e)
 }
 
 
-open fun processForced()
+    open fun processForced()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -419,7 +418,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, FIRE_METHOD_NAME, e)
 }
 
 
-open fun update(displayable: Displayable, reason: String)
+    open fun update(displayable: Displayable, reason: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var displayable = displayable
@@ -562,7 +561,8 @@ this.add(commonStrings!!.UPDATE)
     private val LAST: String = "last"
 
     private val LAST_HALF: String = "lastHalf"
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -576,7 +576,7 @@ override fun toString()
 }
 
 
-open fun toString(stringBuffer: StringMaker)
+    open fun toString(stringBuffer: StringMaker)
         //nullable = true from not(false or (true and false)) = true
 : String{
     //var stringBuffer = stringBuffer
@@ -612,7 +612,7 @@ stringBuffer!!.append(lastHalf[HEIGHT]!!)
 }
 
 
-open fun getTop()
+    open fun getTop()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -623,7 +623,7 @@ open fun getTop()
 }
 
 
-open fun getLeft()
+    open fun getLeft()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -634,7 +634,7 @@ open fun getLeft()
 }
 
 
-open fun getLastWidth()
+    open fun getLastWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -645,7 +645,7 @@ open fun getLastWidth()
 }
 
 
-open fun getLastHeight()
+    open fun getLastHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -656,7 +656,7 @@ open fun getLastHeight()
 }
 
 
-open fun getLastHalfWidth()
+    open fun getLastHalfWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -667,7 +667,7 @@ open fun getLastHalfWidth()
 }
 
 
-open fun getLastHalfHeight()
+    open fun getLastHalfHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -678,7 +678,7 @@ open fun getLastHalfHeight()
 }
 
 
-open fun setScalableListener(scalableListener: BaseScalable)
+    open fun setScalableListener(scalableListener: BaseScalable)
         //nullable = true from not(false or (false and false)) = true
 {
 var scalableListener = scalableListener
@@ -686,7 +686,7 @@ this.scalableListener= scalableListener
 }
 
 
-open fun getScalableListener()
+    open fun getScalableListener()
         //nullable = true from not(false or (false and true)) = true
 : ScalableListener{
 
@@ -697,7 +697,7 @@ open fun getScalableListener()
 }
 
 
-open fun getRatio()
+    open fun getRatio()
         //nullable = true from not(false or (false and true)) = true
 : Float{
 
@@ -708,7 +708,7 @@ open fun getRatio()
 }
 
 
-open fun getDisplayRatio()
+    open fun getDisplayRatio()
         //nullable = true from not(false or (false and true)) = true
 : Float{
 
@@ -719,7 +719,7 @@ open fun getDisplayRatio()
 }
 
 
-open fun setOffset(left: Int, top: Int)
+    open fun setOffset(left: Int, top: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var left = left
@@ -728,7 +728,7 @@ this.left= left
 }
 
 
-open fun getxOffset()
+    open fun getxOffset()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -739,7 +739,7 @@ open fun getxOffset()
 }
 
 
-open fun getyOffset()
+    open fun getyOffset()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

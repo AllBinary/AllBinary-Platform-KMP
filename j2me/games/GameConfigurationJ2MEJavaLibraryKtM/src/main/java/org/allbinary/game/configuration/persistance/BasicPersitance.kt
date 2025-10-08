@@ -54,7 +54,7 @@ open public class BasicPersitance
     val valueList: BasicArrayList = BasicArrayList()
 
     val idList: BasicArrayList = BasicArrayList()
-protected constructor        (recordId: String)
+protected constructor (recordId: String)
             : super()
         {
     //var recordId = recordId
@@ -64,7 +64,7 @@ this.recordId= recordId
 
                 @Throws(Exception::class)
             
-open fun deleteRecoreStore(abeClientInformation: AbeClientInformationInterface)
+    open fun deleteRecoreStore(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -74,7 +74,7 @@ RecordStore.deleteRecordStore(this.getRecordId(abeClientInformation))
 
                 @Throws(Exception::class)
             
-open fun deleteAll(abeClientInformation: AbeClientInformationInterface)
+    open fun deleteAll(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -100,7 +100,7 @@ this.clear()
 
                 @Throws(Exception::class)
             
-open fun delete(abeClientInformation: AbeClientInformationInterface, deleteId: Int)
+    open fun delete(abeClientInformation: AbeClientInformationInterface, deleteId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
@@ -141,7 +141,7 @@ recordStore!!.closeRecordStore()
 }
 
 
-open fun getRecordId(abeClientInformation: AbeClientInformationInterface)
+    open fun getRecordId(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var abeClientInformation = abeClientInformation
@@ -153,7 +153,7 @@ open fun getRecordId(abeClientInformation: AbeClientInformationInterface)
 }
 
 
-open fun getList()
+    open fun getList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -164,7 +164,7 @@ open fun getList()
 }
 
 
-open fun getIds()
+    open fun getIds()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -175,7 +175,7 @@ open fun getIds()
 }
 
 
-open fun clear()
+    open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 this.valueList!!.clear()

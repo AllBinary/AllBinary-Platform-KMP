@@ -50,7 +50,7 @@ open public class NumberOnOwnGroupSequenceAIFactory
 
                 @Throws(Exception::class)
             
-open fun getInstance(hashtable: Hashtable<Any, Any>, artificialIntelligenceInterface: Array<ArtificialIntelligenceInterface?>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)
+    open fun getInstance(hashtable: Hashtable<Any, Any>, artificialIntelligenceInterface: Array<ArtificialIntelligenceInterface?>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)
         //nullable =  from not(true or (false and false)) = 
 : ArtificialIntelligenceInterface{
     //var hashtable = hashtable

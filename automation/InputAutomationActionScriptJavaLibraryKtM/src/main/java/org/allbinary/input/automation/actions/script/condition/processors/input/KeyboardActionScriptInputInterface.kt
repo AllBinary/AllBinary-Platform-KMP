@@ -27,50 +27,51 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface KeyboardActionScriptInputInterface : ProfileActionScriptInputInterface {
         
 
-open fun getDelayBetweenKeys()
+    open fun getDelayBetweenKeys()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun getKeyArray()
+    open fun getKeyArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<Integer?>
 
-open fun isPress()
+    open fun isPress()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun isRelease()
+    open fun isRelease()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun isNormal()
+    open fun isNormal()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun setPress(press: Boolean)
+    open fun setPress(press: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setRelease(release: Boolean)
+    open fun setRelease(release: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setNormal()
+    open fun setNormal()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun getText()
+    open fun getText()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun setText(text: String)
+    open fun setText(text: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 
 

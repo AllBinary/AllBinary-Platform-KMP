@@ -30,12 +30,11 @@ open public class TouchFeatureFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: TouchFeatureFactory = TouchFeatureFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TouchFeatureFactory{
 
@@ -47,7 +46,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

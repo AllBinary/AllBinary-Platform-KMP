@@ -30,12 +30,11 @@ open public class MainFeatureFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: MainFeatureFactory = MainFeatureFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : MainFeatureFactory{
 

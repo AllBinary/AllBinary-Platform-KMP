@@ -31,12 +31,11 @@ open public class BasicColorSetUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: BasicColorSetUtil = BasicColorSetUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BasicColorSetUtil{
 
@@ -48,13 +47,13 @@ open fun getInstance()
 
 
         }
-            protected constructor        ()
+            protected constructor ()
             : super()
         {
 }
 
 
-open fun setBasicColorP(graphics: Graphics, basicColor: BasicColor)
+    open fun setBasicColorP(graphics: Graphics, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -63,7 +62,7 @@ graphics.setColor(basicColor!!.toInt())
 }
 
 
-open fun setBasicColorP(graphics: Graphics, basicColor: BasicColor, value: Int)
+    open fun setBasicColorP(graphics: Graphics, basicColor: BasicColor, value: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

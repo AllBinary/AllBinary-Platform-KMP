@@ -37,7 +37,7 @@ open public class ImageAnimation : IndexedAnimation {
         
 
     private val image: Image
-public constructor        (image: Image, animationBehavior: AnimationBehavior)                        
+public constructor (image: Image, animationBehavior: AnimationBehavior)                        
 
                             : super(animationBehavior){
     //var image = image
@@ -51,7 +51,8 @@ this.image= image
 
 
                 @Throws(Exception::class)
-            override fun getAnimationSize()
+            
+    override fun getAnimationSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -61,23 +62,27 @@ this.image= image
                         return this.getSize()
 }
 
-override fun nextFrame()
+
+    override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun previousFrame()
+
+    override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun setFrame(index: Int)
+
+    override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var index = index
 }
 
-override fun getFrame()
+
+    override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -87,7 +92,8 @@ override fun getFrame()
                         return 0
 }
 
-override fun getSize()
+
+    override fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -97,13 +103,15 @@ override fun getSize()
                         return 1
 }
 
-override fun setSequence(sequence: IntArray)
+
+    override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
 {
 var sequence = sequence
 }
 
-override fun getSequence()
+
+    override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
 : IntArray{
 
@@ -115,7 +123,8 @@ override fun getSequence()
 
 
     private var anchor: Int = Anchor.TOP_LEFT
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -125,7 +134,7 @@ graphics.drawImage(this.image, x, y, anchor)
 }
 
 
-open fun getImage()
+    open fun getImage()
         //nullable = true from not(false or (false and true)) = true
 : Image{
 
@@ -136,7 +145,7 @@ open fun getImage()
 }
 
 
-open fun close()
+    open fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 DisposalUtil.getInstance()!!.dispose(this.image)
@@ -144,7 +153,8 @@ DisposalUtil.getInstance()!!.dispose(this.image)
 
 
                 @Throws(Throwable::class)
-            override fun finalize()
+            
+    override fun finalize()
         //nullable = true from not(false or (false and true)) = true
 {
 DisposalUtil.getInstance()!!.dispose(this.image)

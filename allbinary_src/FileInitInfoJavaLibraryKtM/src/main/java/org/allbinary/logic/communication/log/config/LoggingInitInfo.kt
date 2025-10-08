@@ -42,8 +42,7 @@ open public class LoggingInitInfo
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val INITFILENAME: String = "logConfig.xml"
 
@@ -58,7 +57,7 @@ open public class LoggingInitInfo
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun getDoc()
+    open fun getDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -84,7 +83,7 @@ open fun getDoc()
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun write()
+    open fun write()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -104,7 +103,7 @@ open fun write()
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun read()
+    open fun read()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -153,7 +152,7 @@ LoggingInitInfo.logConfigInfoList!!.add(logConfigInfo)
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun setHasRead(value: Boolean)
+    open fun setHasRead(value: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -164,7 +163,7 @@ LoggingInitInfo.hasRead= value
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun updateIfNeeded()
+    open fun updateIfNeeded()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -195,7 +194,7 @@ hasRead= true
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun set(logConfigInfoVector: BasicArrayList)
+    open fun set(logConfigInfoVector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var logConfigInfoVector = logConfigInfoVector
@@ -205,7 +204,7 @@ LoggingInitInfo.logConfigInfoList= logConfigInfoVector
 
                 @Throws(Exception::class)
             
-open fun get()
+    open fun get()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 LoggingInitInfo.updateIfNeeded()
@@ -219,7 +218,7 @@ LoggingInitInfo.updateIfNeeded()
 
                 @Throws(Exception::class)
             
-open fun getTypeNameList()
+    open fun getTypeNameList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 LoggingInitInfo.updateIfNeeded()
@@ -263,7 +262,7 @@ LoggingInitInfo.updateIfNeeded()
 
                 @Throws(Exception::class)
             
-open fun getTypeList()
+    open fun getTypeList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 LoggingInitInfo.updateIfNeeded()
@@ -306,13 +305,13 @@ LoggingInitInfo.updateIfNeeded()
 
 
         }
-            public constructor        ()
+            public constructor ()
             : super()
         {
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -336,7 +335,7 @@ open fun isValid()
 
                 @Throws(Exception::class)
             
-open fun getNumberOfLogConfigs()
+    open fun getNumberOfLogConfigs()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -346,7 +345,8 @@ open fun getNumberOfLogConfigs()
                         return LoggingInitInfo.logConfigInfoList!!.size()
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

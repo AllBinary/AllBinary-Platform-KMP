@@ -60,7 +60,7 @@ open public class DbInitInfo : DbConnectionInfo {
     private var initFileName: String
 
     private var hasRead: Boolean = false
-public constructor        (initFileName: String, read: Boolean)                        
+public constructor (initFileName: String, read: Boolean)                        
 
                             : super(){
 var initFileName = initFileName
@@ -87,7 +87,7 @@ this.initFileName= initFileName
 }
 
 
-open fun getUrl()
+    open fun getUrl()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -112,7 +112,7 @@ open fun getUrl()
 
                 @Throws(Exception::class)
             
-open fun write()
+    open fun write()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -193,7 +193,7 @@ hasRead= false
 
                 @Throws(Exception::class)
             
-open fun load()
+    open fun load()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -294,7 +294,7 @@ this.setPort(WeakCrypt(7).
 }
 
 
-open fun setHasRead(value: Boolean)
+    open fun setHasRead(value: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -302,7 +302,7 @@ this.hasRead= value
 }
 
 
-open fun updateIfNeeded()
+    open fun updateIfNeeded()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -333,7 +333,7 @@ this.load()
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 this.updateIfNeeded()
@@ -354,7 +354,7 @@ this.updateIfNeeded()
 }
 
 
-open fun getUserName()
+    open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 this.updateIfNeeded()
@@ -375,7 +375,7 @@ this.updateIfNeeded()
 }
 
 
-open fun getPassword()
+    open fun getPassword()
         //nullable = true from not(false or (false and true)) = true
 : String{
 this.updateIfNeeded()
@@ -387,7 +387,7 @@ this.updateIfNeeded()
 }
 
 
-open fun getSchema()
+    open fun getSchema()
         //nullable = true from not(false or (false and true)) = true
 : String{
 this.updateIfNeeded()
@@ -399,7 +399,7 @@ this.updateIfNeeded()
 }
 
 
-open fun getServer()
+    open fun getServer()
         //nullable = true from not(false or (false and true)) = true
 : String{
 this.updateIfNeeded()
@@ -411,7 +411,7 @@ this.updateIfNeeded()
 }
 
 
-open fun getPort()
+    open fun getPort()
         //nullable = true from not(false or (false and true)) = true
 : String{
 this.updateIfNeeded()

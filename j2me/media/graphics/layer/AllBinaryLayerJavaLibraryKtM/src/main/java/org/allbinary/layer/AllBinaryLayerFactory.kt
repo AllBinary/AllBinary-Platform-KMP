@@ -35,14 +35,15 @@ open public class AllBinaryLayerFactory
         
 
     private val rectangle: Rectangle
-public constructor        (rectangle: Rectangle)
+public constructor (rectangle: Rectangle)
             : super()
         {
 var rectangle = rectangle
 this.rectangle= rectangle
 }
 
-override fun getInstance()
+
+    override fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AllBinaryLayer{
 

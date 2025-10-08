@@ -37,12 +37,11 @@ open public class InventoryItemViewParentTagHelper
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: InventoryItemViewParentTagHelper = InventoryItemViewParentTagHelper()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : InventoryItemViewParentTagHelper{
 
@@ -62,7 +61,7 @@ open fun getInstance()
         
                 @Throws(Exception::class)
             
-open fun getInventoryItemView(inventoryTag: HelperTag)
+    open fun getInventoryItemView(inventoryTag: HelperTag)
         //nullable = true from not(false or (false and false)) = true
 : InventoryItemView{
 var inventoryTag = inventoryTag
@@ -119,7 +118,7 @@ stringBuffer!!.append(inventoryTag!!.getHelper()!!.::class.toString()!!)
 
                 @Throws(Exception::class)
             
-open fun getDownloadableInventoryItemView(inventoryTag: HelperTag)
+    open fun getDownloadableInventoryItemView(inventoryTag: HelperTag)
         //nullable = true from not(false or (false and false)) = true
 : DownloadableInventoryItemView{
 var inventoryTag = inventoryTag
@@ -176,7 +175,7 @@ stringBuffer!!.append(inventoryTag!!.getHelper()!!.::class.toString()!!)
 
                 @Throws(Exception::class)
             
-open fun getRequestMapInterface(inventoryTag: HelperTag)
+    open fun getRequestMapInterface(inventoryTag: HelperTag)
         //nullable = true from not(false or (false and false)) = true
 : RequestMapInterface{
 var inventoryTag = inventoryTag
@@ -233,7 +232,7 @@ stringBuffer!!.append(inventoryTag!!.getHelper()!!.::class.toString()!!)
 
                 @Throws(Exception::class)
             
-open fun checkForValidationViewHelper(helperObject: Any)
+    open fun checkForValidationViewHelper(helperObject: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var helperObject = helperObject

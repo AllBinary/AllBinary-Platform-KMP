@@ -31,7 +31,7 @@ open public class UnitGameInputProcessor : GameInputProcessor {
         
 
     val unitLayer: UnitLayer
-public constructor        (unitLayer: UnitLayer){
+public constructor (unitLayer: UnitLayer){
 var unitLayer = unitLayer
 this.unitLayer= unitLayer
 }

@@ -17,12 +17,11 @@ open public class CacheTypeFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: CacheTypeFactory = CacheTypeFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CacheTypeFactory{
 

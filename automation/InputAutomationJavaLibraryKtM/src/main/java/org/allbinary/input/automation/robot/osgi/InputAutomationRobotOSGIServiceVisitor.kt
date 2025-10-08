@@ -42,13 +42,13 @@ open public class InputAutomationRobotOSGIServiceVisitor
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun visit(anyType: Any)
+    open fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{
     //var anyType = anyType
@@ -60,7 +60,7 @@ open fun visit(anyType: Any)
 }
 
 
-open fun visit(osgiServiceInterface: OSGIServiceInterface)
+    open fun visit(osgiServiceInterface: OSGIServiceInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var osgiServiceInterface = osgiServiceInterface

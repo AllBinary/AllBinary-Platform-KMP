@@ -42,12 +42,11 @@ open public class StylesValidationFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: StylesValidationFactory = StylesValidationFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : StylesValidationFactory{
 
@@ -60,7 +59,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun getInstance(hashMap: HashMap<Any, Any>)
+    open fun getInstance(hashMap: HashMap<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
 : Vector{
 var hashMap = hashMap
@@ -78,7 +77,7 @@ var hashMap = hashMap
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -86,7 +85,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getInstance(document: Document)
+    open fun getInstance(document: Document)
         //nullable =  from not(true or (false and false)) = 
 : Vector{
 var document = document

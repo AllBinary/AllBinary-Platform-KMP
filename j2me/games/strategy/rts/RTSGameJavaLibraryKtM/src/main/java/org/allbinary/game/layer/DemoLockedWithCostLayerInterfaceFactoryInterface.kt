@@ -25,10 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface DemoLockedWithCostLayerInterfaceFactoryInterface : CostLayerInterfaceFactoryInterface {
         
 
-open fun isDemoLocked()
+    open fun isDemoLocked()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 

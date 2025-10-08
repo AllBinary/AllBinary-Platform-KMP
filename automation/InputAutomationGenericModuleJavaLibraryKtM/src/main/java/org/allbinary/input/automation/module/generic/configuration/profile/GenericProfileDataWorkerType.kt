@@ -37,8 +37,7 @@ open public class GenericProfileDataWorkerType
         
                 , GenericProfileDataWorkerTypeInterface {
         
-
-        companion object {
+companion object {
             
     private var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -50,7 +49,7 @@ open public class GenericProfileDataWorkerType
 
     var MOTION: GenericProfileDataWorkerType = GenericProfileDataWorkerType(InputImageType.MOTION.getName())
 
-open fun getInstance(node: Node)
+    open fun getInstance(node: Node)
         //nullable =  from not(true or (false and false)) = 
 : GenericProfileDataWorkerType{
 var node = node
@@ -68,7 +67,7 @@ var node = node
         }
             
     private var name: String
-public constructor        (name: String)
+public constructor (name: String)
             : super()
         {
 var name = name
@@ -77,7 +76,7 @@ hashMap!!.put(this.getName(), this)
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -88,7 +87,7 @@ open fun getName()
 }
 
 
-open fun setName(name: String)
+    open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name
@@ -98,7 +97,7 @@ this.name= name
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -112,7 +111,8 @@ var document = document
                         return node
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

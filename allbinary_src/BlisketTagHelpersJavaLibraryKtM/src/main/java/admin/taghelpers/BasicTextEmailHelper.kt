@@ -44,7 +44,7 @@ open public class BasicTextEmailHelper : TagHelper {
     private var hashMap: HashMap<Any, Any>
 
     private var pageContext: PageContext
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 var hashMap = hashMap
 var pageContext = pageContext
 this.pageContext= pageContext
@@ -54,7 +54,7 @@ this.hashMap= hashMap
 
                 @Throws(Exception::class)
             
-open fun send()
+    open fun send()
         //nullable = true from not(false or (false and true)) = true
 {
 

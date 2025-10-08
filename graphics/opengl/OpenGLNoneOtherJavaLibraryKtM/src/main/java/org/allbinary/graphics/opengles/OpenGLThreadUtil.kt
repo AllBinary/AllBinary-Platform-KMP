@@ -16,12 +16,11 @@ open public class OpenGLThreadUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OpenGLThreadUtil = OpenGLThreadUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OpenGLThreadUtil{
 
@@ -39,20 +38,20 @@ open fun getInstance()
             {
             }            
         
-open fun set(glSurfaceView: Any)
+    open fun set(glSurfaceView: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var glSurfaceView = glSurfaceView
 }
 
 
-open fun onPause()
+    open fun onPause()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun onResume()
+    open fun onResume()
         //nullable = true from not(false or (false and true)) = true
 {
 }

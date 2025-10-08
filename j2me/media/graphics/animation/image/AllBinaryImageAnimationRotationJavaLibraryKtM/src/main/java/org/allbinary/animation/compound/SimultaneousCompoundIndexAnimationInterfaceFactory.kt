@@ -40,7 +40,7 @@ open public class SimultaneousCompoundIndexAnimationInterfaceFactory
     private val basicAnimationInterfaceFactoryInterfaceArray: Array<AnimationInterfaceFactoryInterface?>
 
     private val animationBehaviorFactory: AnimationBehaviorFactory
-public constructor        (basicAnimationInterfaceFactoryInterfaceArray: Array<AnimationInterfaceFactoryInterface?>, animationBehaviorFactory: AnimationBehaviorFactory)
+public constructor (basicAnimationInterfaceFactoryInterfaceArray: Array<AnimationInterfaceFactoryInterface?>, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
         {
     //var basicAnimationInterfaceFactoryInterfaceArray = basicAnimationInterfaceFactoryInterfaceArray
@@ -52,7 +52,7 @@ this.animationBehaviorFactory= animationBehaviorFactory
 
                 @Throws(Exception::class)
             
-open fun getInstance(instanceId: Int)
+    open fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var instanceId = instanceId
@@ -81,7 +81,7 @@ animationInterfaceArray[index]= this.basicAnimationInterfaceFactoryInterfaceArra
 }
 
 
-open fun getInstance(animationInterfaceArray: Array<IndexedAnimation?>)
+    open fun getInstance(animationInterfaceArray: Array<IndexedAnimation?>)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var animationInterfaceArray = animationInterfaceArray
@@ -93,7 +93,7 @@ open fun getInstance(animationInterfaceArray: Array<IndexedAnimation?>)
 }
 
 
-open fun getBasicAnimationInterfaceFactoryInterfaceArray()
+    open fun getBasicAnimationInterfaceFactoryInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<AnimationInterfaceFactoryInterface?>{
 
@@ -104,7 +104,7 @@ open fun getBasicAnimationInterfaceFactoryInterfaceArray()
 }
 
 
-open fun setInitialScale(scaleProperties: ScaleProperties)
+    open fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
 {
     //var scaleProperties = scaleProperties

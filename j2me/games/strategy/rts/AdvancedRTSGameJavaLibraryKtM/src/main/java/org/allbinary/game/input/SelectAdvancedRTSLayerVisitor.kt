@@ -37,13 +37,13 @@ open public class SelectAdvancedRTSLayerVisitor : Visitor {
         
 
     private val selectedRTSLayersPlayerGameInput: SelectedRTSLayersPlayerGameInput
-public constructor        (selectedRTSLayersPlayerGameInput: SelectedRTSLayersPlayerGameInput){
+public constructor (selectedRTSLayersPlayerGameInput: SelectedRTSLayersPlayerGameInput){
 var selectedRTSLayersPlayerGameInput = selectedRTSLayersPlayerGameInput
 this.selectedRTSLayersPlayerGameInput= selectedRTSLayersPlayerGameInput
 }
 
 
-open fun visit(anyType: Any)
+    open fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var anyType = anyType

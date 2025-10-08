@@ -30,13 +30,12 @@ open public class UserEmailEventsConfigurationData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NAME: String = "EMAIL_EVENTS_CONFIGURATION_NAME"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

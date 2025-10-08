@@ -25,14 +25,15 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface RestGameObjectInterface {
         
 
-open fun isRestNeeded()
+    open fun isRestNeeded()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun isAGoodTimeToRest()
+    open fun isAGoodTimeToRest()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 

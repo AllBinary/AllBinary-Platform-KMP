@@ -32,8 +32,7 @@ open public class NullRecordComparator
         
                 , RecordComparator {
         
-
-        companion object {
+companion object {
             
     val NULL_RECORD_COMPARATOR: NullRecordComparator = NullRecordComparator()
 
@@ -43,7 +42,8 @@ open public class NullRecordComparator
             public constructor() : super()
             {
             }            
-        override fun compare(rec1: ByteArray, rec2: ByteArray)
+        
+    override fun compare(rec1: ByteArray, rec2: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var rec1 = rec1

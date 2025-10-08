@@ -105,14 +105,14 @@ open public class User
     private var permissions: String
 
     private var userConfigurationInterface: UserConfigurationInterface
-public constructor        ()
+public constructor ()
             : super()
         {
 this.userConfigurationInterface= UserConfigurationInterfaceFactory.getInstance()
 this.password= Password(StringUtil.getInstance()!!.EMPTY_STRING)
 }
 
-public constructor        (request: HttpServletRequest)
+public constructor (request: HttpServletRequest)
             : super()
         {
     //var request = request
@@ -121,7 +121,7 @@ this.getFormData(RequestParams(request).
 this.userConfigurationInterface= UserConfigurationInterfaceFactory.getInstance(this.getRole())
 }
 
-public constructor        (userHashMap: HashMap<Any, Any>)
+public constructor (userHashMap: HashMap<Any, Any>)
             : super()
         {
     //var userHashMap = userHashMap
@@ -132,7 +132,7 @@ this.userConfigurationInterface= UserConfigurationInterfaceFactory.getInstance(t
 
                 @Throws(Exception::class)
             
-open fun getFormData(userHashMap: HashMap<Any, Any>)
+    open fun getFormData(userHashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var userHashMap = userHashMap
@@ -200,7 +200,7 @@ this.enable= stringUtil!!.getInstance(userHashMap!!.get(EntryData.getInstance()!
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -285,7 +285,7 @@ logUtil!!.put("Failed to validate form", this, commonStrings!!.IS_VALID, e)
 }
 
 
-open fun validationInfo()
+    open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -351,7 +351,7 @@ stringBuffer!!.append(this.password.getValidationInfo())
 }
 
 
-open fun setUserName(value: String)
+    open fun setUserName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -359,7 +359,7 @@ this.userName= value
 }
 
 
-open fun setPrefixName(value: String)
+    open fun setPrefixName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -367,7 +367,7 @@ this.prefixName= value
 }
 
 
-open fun setFirstName(value: String)
+    open fun setFirstName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -375,7 +375,7 @@ this.firstName= value
 }
 
 
-open fun setLastName(value: String)
+    open fun setLastName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -383,7 +383,7 @@ this.lastName= value
 }
 
 
-open fun setMiddleName(value: String)
+    open fun setMiddleName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -391,7 +391,7 @@ this.middleName= value
 }
 
 
-open fun setSuffixName(value: String)
+    open fun setSuffixName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -399,7 +399,7 @@ this.suffixName= value
 }
 
 
-open fun setCompany(value: String)
+    open fun setCompany(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -407,7 +407,7 @@ this.company= value
 }
 
 
-open fun setPositionAtCompany(value: String)
+    open fun setPositionAtCompany(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -415,7 +415,7 @@ this.positionAtCompany= value
 }
 
 
-open fun setMainEmail(value: String)
+    open fun setMainEmail(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -423,7 +423,7 @@ this.mainEmail= value
 }
 
 
-open fun setSecondaryEmail(value: String)
+    open fun setSecondaryEmail(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -431,7 +431,7 @@ this.secondaryEmail= value
 }
 
 
-open fun setHomePhone(value: String)
+    open fun setHomePhone(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -439,7 +439,7 @@ this.homePhone= value
 }
 
 
-open fun setCellPhone(value: String)
+    open fun setCellPhone(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -447,7 +447,7 @@ this.cellPhone= value
 }
 
 
-open fun setWorkPhone(value: String)
+    open fun setWorkPhone(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -455,7 +455,7 @@ this.workPhone= value
 }
 
 
-open fun setOtherContact(value: String)
+    open fun setOtherContact(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -463,7 +463,7 @@ this.otherContact= value
 }
 
 
-open fun setElectronicContact(value: String)
+    open fun setElectronicContact(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -471,7 +471,7 @@ this.electronicDevice= value
 }
 
 
-open fun setFax(value: String)
+    open fun setFax(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -479,7 +479,7 @@ this.fax= value
 }
 
 
-open fun setRole(role: UserRole)
+    open fun setRole(role: UserRole)
         //nullable = true from not(false or (false and false)) = true
 {
 var role = role
@@ -487,7 +487,7 @@ this.role= role
 }
 
 
-open fun setPermissions(value: String)
+    open fun setPermissions(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -495,7 +495,7 @@ this.permissions= value
 }
 
 
-open fun setEncryption(value: String)
+    open fun setEncryption(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -503,7 +503,7 @@ this.encryption= value
 }
 
 
-open fun setSecret(value: String)
+    open fun setSecret(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -511,7 +511,7 @@ this.secret= value
 }
 
 
-open fun setPassword(value: String)
+    open fun setPassword(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -519,21 +519,21 @@ this.password.set(value)
 }
 
 
-open fun enable()
+    open fun enable()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setEnable("Yes")
 }
 
 
-open fun disable()
+    open fun disable()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setEnable("No")
 }
 
 
-open fun setEnable(enable: String)
+    open fun setEnable(enable: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var enable = enable
@@ -541,7 +541,7 @@ this.enable= enable
 }
 
 
-open fun getUserName()
+    open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -552,7 +552,7 @@ open fun getUserName()
 }
 
 
-open fun getPrefixName()
+    open fun getPrefixName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -563,7 +563,7 @@ open fun getPrefixName()
 }
 
 
-open fun getFirstName()
+    open fun getFirstName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -574,7 +574,7 @@ open fun getFirstName()
 }
 
 
-open fun getLastName()
+    open fun getLastName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -585,7 +585,7 @@ open fun getLastName()
 }
 
 
-open fun getMiddleName()
+    open fun getMiddleName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -596,7 +596,7 @@ open fun getMiddleName()
 }
 
 
-open fun getSuffixName()
+    open fun getSuffixName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -607,7 +607,7 @@ open fun getSuffixName()
 }
 
 
-open fun getCompany()
+    open fun getCompany()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -618,7 +618,7 @@ open fun getCompany()
 }
 
 
-open fun getPositionAtCompany()
+    open fun getPositionAtCompany()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -629,7 +629,7 @@ open fun getPositionAtCompany()
 }
 
 
-open fun getMainEmail()
+    open fun getMainEmail()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -640,7 +640,7 @@ open fun getMainEmail()
 }
 
 
-open fun getSecondaryEmail()
+    open fun getSecondaryEmail()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -651,7 +651,7 @@ open fun getSecondaryEmail()
 }
 
 
-open fun getHomePhone()
+    open fun getHomePhone()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -662,7 +662,7 @@ open fun getHomePhone()
 }
 
 
-open fun getCellPhone()
+    open fun getCellPhone()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -673,7 +673,7 @@ open fun getCellPhone()
 }
 
 
-open fun getWorkPhone()
+    open fun getWorkPhone()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -684,7 +684,7 @@ open fun getWorkPhone()
 }
 
 
-open fun getOtherContact()
+    open fun getOtherContact()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -695,7 +695,7 @@ open fun getOtherContact()
 }
 
 
-open fun getElectronicContact()
+    open fun getElectronicContact()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -706,7 +706,7 @@ open fun getElectronicContact()
 }
 
 
-open fun getFax()
+    open fun getFax()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -717,7 +717,7 @@ open fun getFax()
 }
 
 
-open fun getRole()
+    open fun getRole()
         //nullable = true from not(false or (false and true)) = true
 : UserRole{
 
@@ -728,7 +728,7 @@ open fun getRole()
 }
 
 
-open fun getPermissions()
+    open fun getPermissions()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -739,7 +739,7 @@ open fun getPermissions()
 }
 
 
-open fun getEncryption()
+    open fun getEncryption()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -750,7 +750,7 @@ open fun getEncryption()
 }
 
 
-open fun getSecret()
+    open fun getSecret()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -761,7 +761,7 @@ open fun getSecret()
 }
 
 
-open fun getPassword()
+    open fun getPassword()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -774,7 +774,7 @@ open fun getPassword()
 
                 @Throws(Exception::class)
             
-open fun toVector()
+    open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -824,7 +824,7 @@ values.add(time)
 
                 @Throws(Exception::class)
             
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -881,7 +881,7 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 }
 
 
-open fun toPasswordHashMap()
+    open fun toPasswordHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -892,7 +892,7 @@ open fun toPasswordHashMap()
 }
 
 
-open fun validateSession(weblisketSession: WeblisketSessionInterface)
+    open fun validateSession(weblisketSession: WeblisketSessionInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var weblisketSession = weblisketSession
@@ -902,14 +902,14 @@ weblisketSession!!.setUserName(this.getUserName())
 }
 
 
-open fun updateSession(weblisketSession: WeblisketSessionInterface)
+    open fun updateSession(weblisketSession: WeblisketSessionInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var weblisketSession = weblisketSession
 }
 
 
-open fun isSessionValid()
+    open fun isSessionValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -922,7 +922,7 @@ open fun isSessionValid()
 
                 @Throws(Exception::class)
             
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -933,7 +933,7 @@ open fun getKey()
 }
 
 
-open fun toValidationInfoDoc()
+    open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
 
@@ -944,7 +944,7 @@ open fun toValidationInfoDoc()
 }
 
 
-open fun toValidationInfoNode(document: Document)
+    open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -956,7 +956,7 @@ var document = document
 }
 
 
-open fun getUserConfigurationInterface()
+    open fun getUserConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
 : UserConfigurationInterface{
 
@@ -967,7 +967,7 @@ open fun getUserConfigurationInterface()
 }
 
 
-open fun setUserConfigurationInterface(userConfigurationInterface: UserConfigurationInterface)
+    open fun setUserConfigurationInterface(userConfigurationInterface: UserConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var userConfigurationInterface = userConfigurationInterface

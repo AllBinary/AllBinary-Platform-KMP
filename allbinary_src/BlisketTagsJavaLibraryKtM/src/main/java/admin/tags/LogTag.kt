@@ -29,7 +29,7 @@ import admin.taghelpers.LogHelperFactory
 
 open public class LogTag : TableTag {
         
-public constructor        (){
+public constructor (){
 this.setTagHelperFactory(LogHelperFactory())
 this.setTagRequestHelperFactory(LogHelperFactory())
 }

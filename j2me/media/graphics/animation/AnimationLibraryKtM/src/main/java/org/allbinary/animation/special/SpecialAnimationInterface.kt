@@ -26,14 +26,15 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.animation.IndexedAnimationInterface
+
 interface SpecialAnimationInterface : IndexedAnimationInterface {
         
 
-open fun setLastFrame()
+    open fun setLastFrame()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun isComplete()
+    open fun isComplete()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 

@@ -32,12 +32,11 @@ open public class PlatformAssetManager
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: PlatformAssetManager = PlatformAssetManager()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PlatformAssetManager{
 
@@ -57,7 +56,7 @@ open fun getInstance()
         
                 @Throws(Exception::class)
             
-open fun getResourceAsStream(resource: String)
+    open fun getResourceAsStream(resource: String)
         //nullable = true from not(false or (false and false)) = true
 : InputStream{
     //var resource = resource

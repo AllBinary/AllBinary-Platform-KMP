@@ -30,13 +30,12 @@ open public class GeneratorTransformInfoData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val NAME: String = "GENERATOR_TRANSFORM_INFO_NAME"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

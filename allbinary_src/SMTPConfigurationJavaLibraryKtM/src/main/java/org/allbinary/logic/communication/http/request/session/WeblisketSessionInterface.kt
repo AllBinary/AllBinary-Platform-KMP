@@ -29,106 +29,107 @@
         
 import org.allbinary.business.user.commerce.inventory.order.OrderInterface
 import org.allbinary.business.user.role.UserRole
+
 interface WeblisketSessionInterface {
         
 
-open fun clear()
+    open fun clear()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun getAttempts()
+    open fun getAttempts()
         //nullable = true from not(false or (false and true)) = true
 : Integer
 
-open fun getAuthentication()
+    open fun getAuthentication()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getCreationTime()
+    open fun getCreationTime()
         //nullable = true from not(false or (false and true)) = true
 : Long
 
-open fun getId()
+    open fun getId()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getLastAccessedTime()
+    open fun getLastAccessedTime()
         //nullable = true from not(false or (false and true)) = true
 : Long
 
                 @Throws(Exception::class)
             
-open fun getOrder()
+    open fun getOrder()
         //nullable = true from not(false or (false and true)) = true
 : OrderInterface
 
-open fun getPassword()
+    open fun getPassword()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getPaymentMethod()
+    open fun getPaymentMethod()
         //nullable = true from not(false or (false and true)) = true
 : String
 
                 @Throws(Exception::class)
             
-open fun getRole()
+    open fun getRole()
         //nullable = true from not(false or (false and true)) = true
 : UserRole
 
-open fun getStoreName()
+    open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getTimeout()
+    open fun getTimeout()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getUserName()
+    open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getWebAppPath()
+    open fun getWebAppPath()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun removeBasket()
+    open fun removeBasket()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun setAttempts(value: Integer)
+    open fun setAttempts(value: Integer)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setAuthenticated()
+    open fun setAuthenticated()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun setAuthenticated(value: Boolean)
+    open fun setAuthenticated(value: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setPassword(password: String)
+    open fun setPassword(password: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setPaymentMethod(value: String)
+    open fun setPaymentMethod(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setRole(aRole: UserRole)
+    open fun setRole(aRole: UserRole)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setStoreName(value: String)
+    open fun setStoreName(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setTimeout(value: String)
+    open fun setTimeout(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setUserName(userName: String)
+    open fun setUserName(userName: String)
         //nullable = true from not(false or (false and false)) = true
 
 

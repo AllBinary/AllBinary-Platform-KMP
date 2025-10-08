@@ -28,12 +28,11 @@
 
 open public class PostLoadPlatformImage : PlatformImage {
         
-
-        companion object {
+companion object {
             
     private val instance: PostLoadPlatformImage = PostLoadPlatformImage()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PostLoadPlatformImage{
 

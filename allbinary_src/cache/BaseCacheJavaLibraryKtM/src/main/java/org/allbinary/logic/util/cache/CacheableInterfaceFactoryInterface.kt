@@ -25,12 +25,13 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface CacheableInterfaceFactoryInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getInstance(key: Any)
+    open fun getInstance(key: Any)
         //nullable =  from not(true or (false and false)) = 
 : CacheableInterface
 

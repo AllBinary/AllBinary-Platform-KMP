@@ -30,12 +30,11 @@ open public class ResizableListenerHandler
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ResizableListenerHandler = ResizableListenerHandler()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ResizableListenerHandler{
 
@@ -53,14 +52,14 @@ open fun getInstance()
             {
             }            
         
-open fun setListener(resizableListenerInterface: ResizableListenerInterface)
+    open fun setListener(resizableListenerInterface: ResizableListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var resizableListenerInterface = resizableListenerInterface
 }
 
 
-open fun fire(isFullScreen: Boolean)
+    open fun fire(isFullScreen: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var isFullScreen = isFullScreen
@@ -70,7 +69,7 @@ var isFullScreen = isFullScreen
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun fireEvent(value: Boolean)
+    open fun fireEvent(value: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value

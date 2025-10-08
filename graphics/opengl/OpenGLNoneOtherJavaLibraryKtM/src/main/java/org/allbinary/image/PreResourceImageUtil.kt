@@ -33,12 +33,11 @@ open public class PreResourceImageUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: PreResourceImageUtil = PreResourceImageUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PreResourceImageUtil{
 
@@ -56,7 +55,7 @@ open fun getInstance()
             {
             }            
         
-open fun encapsulate(image: Image)
+    open fun encapsulate(image: Image)
         //nullable = true from not(false or (false and false)) = true
 : Image{
 var image = image
@@ -68,7 +67,7 @@ var image = image
 }
 
 
-open fun update(gl: GL, image: Image)
+    open fun update(gl: GL, image: Image)
         //nullable = true from not(false or (false and false)) = true
 {
 var gl = gl
@@ -76,7 +75,7 @@ var image = image
 }
 
 
-open fun update(graphics: Graphics, image: Image)
+    open fun update(graphics: Graphics, image: Image)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

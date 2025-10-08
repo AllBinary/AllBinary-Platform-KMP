@@ -16,20 +16,19 @@ open public class SuperCrypt
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var KEYMAX: Int = 0
 
         }
-            public constructor        (key: Int)
+            public constructor (key: Int)
             : super()
         {
 var key = key
 }
 
 
-open fun encrypt(value: String)
+    open fun encrypt(value: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var value = value
@@ -41,7 +40,7 @@ var value = value
 }
 
 
-open fun decrypt(value: String)
+    open fun decrypt(value: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var value = value

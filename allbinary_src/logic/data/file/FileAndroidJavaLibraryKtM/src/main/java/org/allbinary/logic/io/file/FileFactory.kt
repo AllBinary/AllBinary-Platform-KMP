@@ -34,12 +34,11 @@ open public class FileFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: FileFactory = FileFactory(ResourceUtil.getInstance()!!.getContext())
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : FileFactory{
 
@@ -53,7 +52,7 @@ open fun getInstance()
         }
             
     private var context: Context
-private constructor        (context: Context)
+private constructor (context: Context)
             : super()
         {
 var context = context
@@ -63,7 +62,7 @@ this.context= context
 
                 @Throws(Exception::class)
             
-open fun isFile(path: String)
+    open fun isFile(path: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var path = path
@@ -87,7 +86,7 @@ var path = path
 }
 
 
-open fun getContext()
+    open fun getContext()
         //nullable = true from not(false or (false and true)) = true
 : Context{
 
@@ -100,7 +99,7 @@ open fun getContext()
 
                 @Throws(Exception::class)
             
-open fun getFile(filePath: String)
+    open fun getFile(filePath: String)
         //nullable = true from not(false or (false and false)) = true
 : AbFile{
 var filePath = filePath
@@ -114,7 +113,7 @@ var filePath = filePath
 
                 @Throws(Exception::class)
             
-open fun getInstance(file: AbFile, childFilePath: String)
+    open fun getInstance(file: AbFile, childFilePath: String)
         //nullable =  from not(true or (false and false)) = 
 : AbFile{
 var file = file

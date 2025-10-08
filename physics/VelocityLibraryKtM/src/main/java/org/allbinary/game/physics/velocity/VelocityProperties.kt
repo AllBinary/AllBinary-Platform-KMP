@@ -33,14 +33,15 @@ open public class VelocityProperties : BasicVelocityProperties
     private var maxForwardVelocity: Int= 0
 
     private var maxReverseVelocity: Int= 0
-public constructor        (maxForwardVelocity: Int, maxReverseVelocity: Int){
+public constructor (maxForwardVelocity: Int, maxReverseVelocity: Int){
 var maxForwardVelocity = maxForwardVelocity
 var maxReverseVelocity = maxReverseVelocity
 this.setMaxForwardVelocity(maxForwardVelocity)
 this.setMaxReverseVelocity(maxReverseVelocity)
 }
 
-override fun getMaxForwardVelocity()
+
+    override fun getMaxForwardVelocity()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -50,14 +51,16 @@ override fun getMaxForwardVelocity()
                         return maxForwardVelocity
 }
 
-override fun setMaxForwardVelocity(maxForwardVelocity: Int)
+
+    override fun setMaxForwardVelocity(maxForwardVelocity: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var maxForwardVelocity = maxForwardVelocity
 this.maxForwardVelocity= maxForwardVelocity
 }
 
-override fun getMaxReverseVelocity()
+
+    override fun getMaxReverseVelocity()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -67,55 +70,58 @@ override fun getMaxReverseVelocity()
                         return maxReverseVelocity
 }
 
-override fun setMaxReverseVelocity(maxReverseVelocity: Int)
+
+    override fun setMaxReverseVelocity(maxReverseVelocity: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var maxReverseVelocity = maxReverseVelocity
 this.maxReverseVelocity= maxReverseVelocity
 }
 
-override fun limitMaxXYForwardVelocity()
+
+    override fun limitMaxXYForwardVelocity()
         //nullable = true from not(false or (false and true)) = true
 {
 this.limitMaxXYVelocity(this.getMaxForwardVelocity())
 }
 
-override fun limitMaxXYReverseVelocity()
+
+    override fun limitMaxXYReverseVelocity()
         //nullable = true from not(false or (false and true)) = true
 {
 this.limitMaxXYVelocity(this.getMaxReverseVelocity())
 }
 
 
-open fun limitMaxYForwardVelocity()
+    open fun limitMaxYForwardVelocity()
         //nullable = true from not(false or (false and true)) = true
 {
 this.limitMaxYVelocity(this.getMaxForwardVelocity())
 }
 
 
-open fun limitMaxYReverseVelocity()
+    open fun limitMaxYReverseVelocity()
         //nullable = true from not(false or (false and true)) = true
 {
 this.limitMaxYVelocity(this.getMaxReverseVelocity())
 }
 
 
-open fun limitMaxXForwardVelocity()
+    open fun limitMaxXForwardVelocity()
         //nullable = true from not(false or (false and true)) = true
 {
 this.limitMaxXVelocity(this.getMaxForwardVelocity())
 }
 
 
-open fun limitMaxXReverseVelocity()
+    open fun limitMaxXReverseVelocity()
         //nullable = true from not(false or (false and true)) = true
 {
 this.limitMaxXVelocity(this.getMaxReverseVelocity())
 }
 
 
-open fun isOverXYMaxForwardVelocity()
+    open fun isOverXYMaxForwardVelocity()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -126,7 +132,7 @@ open fun isOverXYMaxForwardVelocity()
 }
 
 
-open fun isOverXYMaxReverseVelocity()
+    open fun isOverXYMaxReverseVelocity()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -136,14 +142,16 @@ open fun isOverXYMaxReverseVelocity()
                         return this.isOverXYMaxVelocity(this.getMaxReverseVelocity())
 }
 
-override fun limitXYToForwardAndReverseMaxVelocity()
+
+    override fun limitXYToForwardAndReverseMaxVelocity()
         //nullable = true from not(false or (false and true)) = true
 {
 this.limitMaxXYForwardVelocity()
 this.limitMaxXYReverseVelocity()
 }
 
-override fun limitMaxXYVelocity(maxVelocity: Int)
+
+    override fun limitMaxXYVelocity(maxVelocity: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var maxVelocity = maxVelocity
@@ -152,7 +160,7 @@ this.limitMaxYVelocity(maxVelocity)
 }
 
 
-open fun limitMaxPositiveYVelocity(maxVelocity: Int)
+    open fun limitMaxPositiveYVelocity(maxVelocity: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var maxVelocity = maxVelocity
@@ -168,7 +176,7 @@ var maxVelocity = maxVelocity
 }
 
 
-open fun limitMaxNegativeYVelocity(maxVelocity: Int)
+    open fun limitMaxNegativeYVelocity(maxVelocity: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var maxVelocity = maxVelocity
@@ -184,7 +192,7 @@ var maxVelocity = maxVelocity
 }
 
 
-open fun limitMaxYVelocity(maxVelocity: Int)
+    open fun limitMaxYVelocity(maxVelocity: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var maxVelocity = maxVelocity
@@ -193,7 +201,7 @@ this.limitMaxNegativeYVelocity(maxVelocity)
 }
 
 
-open fun limitMaxXVelocity(maxVelocity: Int)
+    open fun limitMaxXVelocity(maxVelocity: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var maxVelocity = maxVelocity
@@ -218,7 +226,7 @@ var maxVelocity = maxVelocity
 }
 
 
-open fun isOverXYMaxVelocity(maxVelocity: Int)
+    open fun isOverXYMaxVelocity(maxVelocity: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var maxVelocity = maxVelocity
@@ -281,7 +289,8 @@ var maxVelocity = maxVelocity
                         return false
 }
 
-override fun setVelocity(magnitude: Long, angle: Int, otherAngle: Int)
+
+    override fun setVelocity(magnitude: Long, angle: Int, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var magnitude = magnitude
@@ -291,7 +300,8 @@ super.setVelocity(magnitude, angle, otherAngle)
 this.limitXYToForwardAndReverseMaxVelocity()
 }
 
-override fun addVelocity(magnitude: Long, angle: Int, otherAngle: Int)
+
+    override fun addVelocity(magnitude: Long, angle: Int, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var magnitude = magnitude

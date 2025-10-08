@@ -30,12 +30,11 @@ open public class HtmlInputData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: HtmlInputData = HtmlInputData()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : HtmlInputData{
 

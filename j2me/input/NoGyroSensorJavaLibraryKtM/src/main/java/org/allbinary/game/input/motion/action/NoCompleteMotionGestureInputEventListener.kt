@@ -36,12 +36,11 @@ open public class NoCompleteMotionGestureInputEventListener
         
                 , CompleteMotionGestureInputEventListenerInterface {
         
-
-        companion object {
+companion object {
             
     private val instance: NoCompleteMotionGestureInputEventListener = NoCompleteMotionGestureInputEventListener()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : NoCompleteMotionGestureInputEventListener{
 
@@ -53,19 +52,21 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }
 
-override fun onEvent(eventObject: AllBinaryEventObject)
+
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
-override fun onCompleteMotionGestureInputEvent(completeMotionGestureInputEvent: CompleteMotionGestureInputEvent)
+
+    override fun onCompleteMotionGestureInputEvent(completeMotionGestureInputEvent: CompleteMotionGestureInputEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var completeMotionGestureInputEvent = completeMotionGestureInputEvent

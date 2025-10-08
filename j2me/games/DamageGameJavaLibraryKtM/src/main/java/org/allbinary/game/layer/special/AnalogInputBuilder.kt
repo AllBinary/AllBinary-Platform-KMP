@@ -32,12 +32,11 @@ open public class AnalogInputBuilder
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AnalogInputBuilder = AnalogInputBuilder()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AnalogInputBuilder{
 
@@ -55,7 +54,7 @@ open fun getInstance()
             {
             }            
         
-open fun disable(inputProcessorArray: Array<GameInputProcessor?>, collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer)
+    open fun disable(inputProcessorArray: Array<GameInputProcessor?>, collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var inputProcessorArray = inputProcessorArray
@@ -69,7 +68,7 @@ inputProcessorArray[Canvas.KEY_NUM5]= Special3GameInputProcessor(collidableDestr
 }
 
 
-open fun enable(inputProcessorArray: Array<GameInputProcessor?>, collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer)
+    open fun enable(inputProcessorArray: Array<GameInputProcessor?>, collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var inputProcessorArray = inputProcessorArray

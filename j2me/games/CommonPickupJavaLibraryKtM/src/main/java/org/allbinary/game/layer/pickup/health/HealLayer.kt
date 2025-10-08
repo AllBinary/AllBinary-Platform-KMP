@@ -37,7 +37,7 @@ import org.allbinary.view.ViewPosition
 open public class HealLayer : AllBinaryLayer
                 , HealthVisitorInterface {
         
-public constructor        ()                        
+public constructor ()                        
 
                             : super(Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 0, 0), ViewPosition()){
 
@@ -46,13 +46,15 @@ public constructor        ()
                     
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 }
 
-override fun visit(healthInterface: HealthInterface)
+
+    override fun visit(healthInterface: HealthInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var healthInterface = healthInterface

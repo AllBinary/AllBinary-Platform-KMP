@@ -38,7 +38,7 @@ open public class DestroyedEvent : AllBinaryEventObject {
     private var allBinaryGameCanvas: AllBinaryGameCanvas = NullGameCanvas.getInstance()!!
 
     private var allBinaryLayerInterface: AllBinaryLayer = AllBinaryLayer.NULL_ALLBINARY_LAYER
-public constructor        (combatGameCanvas: AllBinaryGameCanvas)                        
+public constructor (combatGameCanvas: AllBinaryGameCanvas)                        
 
                             : super(DestroyedEventHandler.getInstance()){
 var combatGameCanvas = combatGameCanvas
@@ -50,7 +50,7 @@ this.setAllBinaryGameCanvas(combatGameCanvas)
 }
 
 
-open fun getAllBinaryGameCanvas()
+    open fun getAllBinaryGameCanvas()
         //nullable = true from not(false or (false and true)) = true
 : AllBinaryGameCanvas{
 
@@ -61,7 +61,7 @@ open fun getAllBinaryGameCanvas()
 }
 
 
-open fun getLayerInterface()
+    open fun getLayerInterface()
         //nullable = true from not(false or (false and true)) = true
 : AllBinaryLayer{
 
@@ -72,7 +72,7 @@ open fun getLayerInterface()
 }
 
 
-open fun setAllBinaryGameCanvas(allBinaryGameCanvas: AllBinaryGameCanvas)
+    open fun setAllBinaryGameCanvas(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryGameCanvas = allBinaryGameCanvas
@@ -80,14 +80,15 @@ this.allBinaryGameCanvas= allBinaryGameCanvas
 }
 
 
-open fun setLayerInterfaceForCircularStaticPool(allBinaryLayerInterface: AllBinaryLayer)
+    open fun setLayerInterfaceForCircularStaticPool(allBinaryLayerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerInterface = allBinaryLayerInterface
 this.allBinaryLayerInterface= allBinaryLayerInterface
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

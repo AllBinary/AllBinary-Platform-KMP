@@ -37,7 +37,7 @@ open public class Tokenizer
     private var sep: String
 
     private var endSep: String = StringUtil.getInstance()!!.EMPTY_STRING
-public constructor        (sep: String)
+public constructor (sep: String)
             : super()
         {
 var sep = sep
@@ -59,7 +59,7 @@ this.sep= sep
 }
 
 
-open fun setSep(sep: String)
+    open fun setSep(sep: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var sep = sep
@@ -67,7 +67,7 @@ this.sep= sep
 }
 
 
-open fun setEndSep(endSep: String)
+    open fun setEndSep(endSep: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var endSep = endSep
@@ -75,7 +75,7 @@ this.endSep= endSep
 }
 
 
-open fun getInsideSep(string: String)
+    open fun getInsideSep(string: String)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var string = string
@@ -134,7 +134,7 @@ index= end +endSep!!.length
 }
 
 
-open fun getTokens(string: String, tokenVector: BasicArrayList)
+    open fun getTokens(string: String, tokenVector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var string = string
@@ -177,7 +177,7 @@ break;
 }
 
 
-open fun getTokens(stringVector: BasicArrayList)
+    open fun getTokens(stringVector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : Hashtable<Any, Any>{
 var stringVector = stringVector

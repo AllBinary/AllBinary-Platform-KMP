@@ -25,30 +25,31 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface SecuredNativeLibraryInterface {
         
 
                 @Throws(Exception::class)
             
-open fun load()
+    open fun load()
         //nullable = true from not(false or (false and true)) = true
 
 
                 @Throws(Exception::class)
             
-open fun unload()
+    open fun unload()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun unlock(key: String)
+    open fun unlock(key: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
-open fun getLibraryName()
+    open fun getLibraryName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String
 

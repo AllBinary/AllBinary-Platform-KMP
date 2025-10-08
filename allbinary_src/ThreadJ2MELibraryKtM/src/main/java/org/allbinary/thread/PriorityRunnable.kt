@@ -27,18 +27,19 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface PriorityRunnable : Runnable {
         
 
-open fun getPriority()
+    open fun getPriority()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun isDone()
+    open fun isDone()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun reset()
+    open fun reset()
         //nullable = true from not(false or (false and true)) = true
 
 

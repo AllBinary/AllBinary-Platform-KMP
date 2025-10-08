@@ -27,12 +27,13 @@
         
 import org.w3c.dom.Document
 import org.w3c.dom.Node
+
 interface DomNodeInterface {
         
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node
 

@@ -39,7 +39,7 @@ open public class FileTableMapping
         
 
     private var file: AbFile
-public constructor        (file: AbFile)
+public constructor (file: AbFile)
             : super()
         {
 var file = file
@@ -49,7 +49,7 @@ this.file= file
 
                 @Throws(Exception::class)
             
-open fun getKey()
+    open fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -62,7 +62,7 @@ open fun getKey()
 
                 @Throws(Exception::class)
             
-open fun toVector()
+    open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -83,7 +83,7 @@ filePropertyVector!!.add(file.getPath())
 
                 @Throws(Exception::class)
             
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 

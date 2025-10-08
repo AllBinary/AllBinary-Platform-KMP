@@ -35,7 +35,7 @@ open public class SingletonAnimationInterfaceFactory
         
 
     private val animationInterface: Animation
-public constructor        (animationInterface: Animation)
+public constructor (animationInterface: Animation)
             : super()
         {
     //var animationInterface = animationInterface
@@ -44,7 +44,8 @@ this.animationInterface= animationInterface
 
 
                 @Throws(Exception::class)
-            override fun getInstance(instanceId: Int)
+            
+    override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var instanceId = instanceId
@@ -57,7 +58,8 @@ this.animationInterface= animationInterface
 
 
                 @Throws(Exception::class)
-            override fun getInstance(animationInterface: Animation)
+            
+    override fun getInstance(animationInterface: Animation)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var animationInterface = animationInterface
@@ -68,7 +70,8 @@ this.animationInterface= animationInterface
                         return this.animationInterface
 }
 
-override fun setInitialScale(scaleProperties: ScaleProperties)
+
+    override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
 {
     //var scaleProperties = scaleProperties

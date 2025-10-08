@@ -26,14 +26,15 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.business.category.CategoryInterface
+
 interface CategoryModifierTreeInterface {
         
 
-open fun insert(parentCategoryInterface: CategoryInterface, newChildCategoryInterface: CategoryInterface)
+    open fun insert(parentCategoryInterface: CategoryInterface, newChildCategoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun delete(parentCategoryInterface: CategoryInterface, newChildCategoryInterface: CategoryInterface)
+    open fun delete(parentCategoryInterface: CategoryInterface, newChildCategoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 
 

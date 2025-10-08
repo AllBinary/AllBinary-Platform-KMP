@@ -25,54 +25,55 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface ThirdPartyInApplicationPurchaseInterface {
         
 
-open fun isPurchased(lockableFeature: LockableFeature)
+    open fun isPurchased(lockableFeature: LockableFeature)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
-open fun onCreate(anyType: Any, stateObject: Any)
+    open fun onCreate(anyType: Any, stateObject: Any)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun onDestroy()
+    open fun onDestroy()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun onStart()
+    open fun onStart()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun onActivityResult(requestCode: Int, resultCode: Int, dataObject: Any)
+    open fun onActivityResult(requestCode: Int, resultCode: Int, dataObject: Any)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun onSaveInstanceState(anyType: Any)
+    open fun onSaveInstanceState(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun onStop()
+    open fun onStop()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun requestPurchase(lockableFeature: LockableFeature)
+    open fun requestPurchase(lockableFeature: LockableFeature)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun requestReceipts()
+    open fun requestReceipts()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun add(lockableFeature: LockableFeature)
+    open fun add(lockableFeature: LockableFeature)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getUserName()
+    open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun isEnabled()
+    open fun isEnabled()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 

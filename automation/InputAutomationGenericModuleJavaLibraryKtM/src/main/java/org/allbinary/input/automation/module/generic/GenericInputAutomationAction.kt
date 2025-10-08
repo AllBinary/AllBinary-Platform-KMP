@@ -33,7 +33,7 @@ open public class GenericInputAutomationAction
         
                 , InputAutomationActionInterface {
         
-public constructor        ()
+public constructor ()
             : super()
         {
 }
@@ -41,13 +41,13 @@ public constructor        ()
 
                 @Throws(Exception::class)
             
-open fun test()
+    open fun test()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun getInputRobotInterfaceArray()
+    open fun getInputRobotInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<InputRobotInterface?>{
 

@@ -32,12 +32,11 @@ open public class ApplicationConfiguration
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ApplicationConfiguration = ApplicationConfiguration()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ApplicationConfiguration{
 
@@ -59,7 +58,7 @@ open fun getInstance()
     private var progressBarView: Boolean = false
 
     private val FILE: String = "ReloadConfiguration.dat"
-private constructor        ()
+private constructor ()
             : super()
         {
 
@@ -91,7 +90,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 
                 @Throws(Exception::class)
             
-open fun read()
+    open fun read()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -196,7 +195,7 @@ logUtil!!.put("Read Configuration: " +this.toString(), this, "read")
 
                 @Throws(Exception::class)
             
-open fun write()
+    open fun write()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -276,7 +275,7 @@ dataOutputStream!!.flush()
 
                 @Throws(Exception::class)
             
-open fun update(gameFeature: Feature)
+    open fun update(gameFeature: Feature)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameFeature = gameFeature
@@ -326,7 +325,7 @@ this.write()
 }
 
 
-open fun setFullscreen(fullscreen: Boolean)
+    open fun setFullscreen(fullscreen: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var fullscreen = fullscreen
@@ -334,7 +333,7 @@ this.fullscreen= fullscreen
 }
 
 
-open fun isFullscreen()
+    open fun isFullscreen()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -345,7 +344,7 @@ open fun isFullscreen()
 }
 
 
-open fun setShowTitleBar(showTitleBar: Boolean)
+    open fun setShowTitleBar(showTitleBar: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var showTitleBar = showTitleBar
@@ -353,7 +352,7 @@ this.showTitleBar= showTitleBar
 }
 
 
-open fun isShowTitleBar()
+    open fun isShowTitleBar()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -364,7 +363,7 @@ open fun isShowTitleBar()
 }
 
 
-open fun setProgressBarView(progressBarView: Boolean)
+    open fun setProgressBarView(progressBarView: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var progressBarView = progressBarView
@@ -372,7 +371,7 @@ this.progressBarView= progressBarView
 }
 
 
-open fun isProgressBarView()
+    open fun isProgressBarView()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -382,7 +381,8 @@ open fun isProgressBarView()
                         return progressBarView
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

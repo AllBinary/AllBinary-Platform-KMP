@@ -20,7 +20,7 @@ open public class ObjectPermutationVisitor : Visitor {
         
 
     val data: Array<Any?>
-public constructor        (data: Array<Any?>){
+public constructor (data: Array<Any?>){
 var data = data
 this.data= data
 }
@@ -28,7 +28,7 @@ this.data= data
 
     private var stringBuilder: StringBuilder = StringBuilder()
 
-open fun visit(anyType: Any)
+    open fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var anyType = anyType
@@ -42,7 +42,7 @@ this.print(data, stringBuilder)
 }
 
 
-open fun print(data: Array<Any?>)
+    open fun print(data: Array<Any?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var data = data
@@ -53,7 +53,7 @@ this.print(data, stringBuilder)
 }
 
 
-open fun print(data: Array<Any?>, stringBuilder: StringBuilder)
+    open fun print(data: Array<Any?>, stringBuilder: StringBuilder)
         //nullable = true from not(false or (false and false)) = true
 {
 var data = data

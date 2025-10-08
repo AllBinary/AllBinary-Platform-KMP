@@ -54,14 +54,13 @@ import org.allbinary.graphics.paint.NullPaintable
 import org.allbinary.graphics.paint.Paintable
 import org.allbinary.graphics.paint.SimpleTextPaintable
 import org.allbinary.logic.string.StringMaker
-import org.allbinary.thread.NullRunnable
+import org.allbinary.thread.ARunnable
 import org.allbinary.thread.SecondaryThreadPool
 
 open public class HighScoresCanvas : GameCommandCanvas
                 , HighScoresResultsListener {
         
-
-        companion object {
+companion object {
             
     val NAME: String = "HighScoresCanvas"
 
@@ -86,7 +85,7 @@ open public class HighScoresCanvas : GameCommandCanvas
     private val highScoresCanvasInputProcessor: HighScoresCanvasInputProcessor
 
     private var currentCommand: Command = highScoreCommandsFactory!!.HIGH_SCORE_COMMANDS[0]!!
-public constructor        (commandListener: CommandListener, allBinaryGameLayerManager: AllBinaryGameLayerManager, paintable: HighScoresPaintable, highScoresFactoryInterface: HighScoresFactoryInterface)                        
+public constructor (commandListener: CommandListener, allBinaryGameLayerManager: AllBinaryGameLayerManager, paintable: HighScoresPaintable, highScoresFactoryInterface: HighScoresFactoryInterface)                        
 
                             : this(commandListener, allBinaryGameLayerManager, allBinaryGameLayerManager!!.getGameInfo(), paintable, highScoresFactoryInterface, HighScoresCanvasNoInputProcessorFactory()){
     //var commandListener = commandListener
@@ -99,7 +98,7 @@ public constructor        (commandListener: CommandListener, allBinaryGameLayerM
                     
 }
 
-public constructor        (commandListener: CommandListener, allBinaryGameLayerManager: AllBinaryGameLayerManager, gameInfo: GameInfo, paintable: HighScoresPaintable, highScoresFactoryInterface: HighScoresFactoryInterface, highScoresCanvasInputProcessorFactoryInterface: HighScoresCanvasInputProcessorFactoryInterface)                        
+public constructor (commandListener: CommandListener, allBinaryGameLayerManager: AllBinaryGameLayerManager, gameInfo: GameInfo, paintable: HighScoresPaintable, highScoresFactoryInterface: HighScoresFactoryInterface, highScoresCanvasInputProcessorFactoryInterface: HighScoresCanvasInputProcessorFactoryInterface)                        
 
                             : super(commandListener, HighScoresCanvas.NAME, allBinaryGameLayerManager!!.getBackgroundBasicColor(), allBinaryGameLayerManager!!.getForegroundBasicColor()){
     //var commandListener = commandListener
@@ -142,9 +141,10 @@ this.setPaintable(this.getHighScoresPaintable())
 
     var isHTML: Boolean = features.isDefault(HTMLFeatureFactory.getInstance()!!.HTML)!!
 
-SecondaryThreadPool.getInstance()!!.runTask(object: NullRunnable()
+SecondaryThreadPool.getInstance()!!.runTask(object: ARunnable()
                                 {
-                                override fun run()
+                                
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -195,7 +195,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
                             )
 }
 
-override fun initCommands(cmdListener: CommandListener)
+
+    override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var cmdListener = cmdListener
@@ -204,14 +205,16 @@ this.addCommand(GameCommandsFactory.getInstance()!!.CLOSE_AND_SHOW_GAME_CANVAS)
 this.setCommandListener(cmdListener)
 }
 
-override fun open()
+
+    override fun open()
         //nullable = true from not(false or (false and true)) = true
 {
 super.open()
 this.highScoresCanvasInputProcessor!!.open()
 }
 
-override fun close()
+
+    override fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 super.close()
@@ -220,7 +223,8 @@ this.highScoresCanvasInputProcessor!!.close()
 
 
     var hasPainted: Boolean = false
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -240,7 +244,7 @@ hasPainted= true
 }
 
 
-open fun executeUpdate()
+    open fun executeUpdate()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -254,7 +258,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
 }
 
 
-open fun getHighScoresPaintable()
+    open fun getHighScoresPaintable()
         //nullable = true from not(false or (false and true)) = true
 : HighScoresPaintable{
 
@@ -264,7 +268,8 @@ open fun getHighScoresPaintable()
                         return highScoresPaintable
 }
 
-override fun setHighScoresArray(highScoresArray: Array<HighScores?>)
+
+    override fun setHighScoresArray(highScoresArray: Array<HighScores?>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var highScoresArray = highScoresArray
@@ -300,7 +305,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
 
                 @Throws(Exception::class)
             
-open fun updateCommand(command: Command)
+    open fun updateCommand(command: Command)
         //nullable = true from not(false or (false and false)) = true
 {
 var command = command
@@ -368,7 +373,7 @@ this.repaintBehavior!!.onChangeRepaint(this)
 }
 
 
-open fun getGameInfo()
+    open fun getGameInfo()
         //nullable = true from not(false or (false and true)) = true
 : GameInfo{
 
@@ -379,7 +384,7 @@ open fun getGameInfo()
 }
 
 
-open fun setPaintable(paintable: Paintable)
+    open fun setPaintable(paintable: Paintable)
         //nullable = true from not(false or (false and false)) = true
 {
 var paintable = paintable

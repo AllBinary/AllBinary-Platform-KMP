@@ -27,48 +27,49 @@
         
 import org.allbinary.business.user.commerce.inventory.order.OrderHistory
 import org.allbinary.business.user.commerce.money.payment.types.TenderType
+
 interface PaymentTransactionInterfaceFactoryInterface {
         
 
                 @Throws(Exception::class)
             
-open fun getInstance(orderHistory: OrderHistory)
+    open fun getInstance(orderHistory: OrderHistory)
         //nullable =  from not(true or (false and false)) = 
 : PaymentTransactionInterface
 
                 @Throws(Exception::class)
             
-open fun getSaleTransaction(tenderType: TenderType)
+    open fun getSaleTransaction(tenderType: TenderType)
         //nullable = true from not(false or (false and false)) = true
 : PaymentTransactionInterface
 
                 @Throws(Exception::class)
             
-open fun getCreditTransaction(tenderType: TenderType)
+    open fun getCreditTransaction(tenderType: TenderType)
         //nullable = true from not(false or (false and false)) = true
 : PaymentTransactionInterface
 
                 @Throws(Exception::class)
             
-open fun getAuthorizationTransaction(tenderType: TenderType)
+    open fun getAuthorizationTransaction(tenderType: TenderType)
         //nullable = true from not(false or (false and false)) = true
 : PaymentTransactionInterface
 
                 @Throws(Exception::class)
             
-open fun getCaptureDelayedTransaction(tenderType: TenderType)
+    open fun getCaptureDelayedTransaction(tenderType: TenderType)
         //nullable = true from not(false or (false and false)) = true
 : PaymentTransactionInterface
 
                 @Throws(Exception::class)
             
-open fun getVoidTransaction(tenderType: TenderType)
+    open fun getVoidTransaction(tenderType: TenderType)
         //nullable = true from not(false or (false and false)) = true
 : PaymentTransactionInterface
 
                 @Throws(Exception::class)
             
-open fun getInquiryTransaction(tenderType: TenderType)
+    open fun getInquiryTransaction(tenderType: TenderType)
         //nullable = true from not(false or (false and false)) = true
 : PaymentTransactionInterface
 

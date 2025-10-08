@@ -30,12 +30,11 @@ open public class CommonSeps
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: CommonSeps = CommonSeps()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CommonSeps{
 

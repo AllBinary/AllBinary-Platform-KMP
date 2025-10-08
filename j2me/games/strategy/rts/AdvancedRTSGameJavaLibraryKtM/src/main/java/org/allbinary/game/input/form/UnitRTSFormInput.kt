@@ -39,7 +39,6 @@ import org.allbinary.game.layer.unit.UnitLayer
 import org.allbinary.game.layer.waypoint.WorkWaypoint
 import org.allbinary.graphics.form.item.CustomItem
 import org.allbinary.media.audio.BuildingSound
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.game.identification.Group
@@ -58,8 +57,7 @@ import org.allbinary.media.graphics.geography.map.GeographicMapCompositeInterfac
 
 open public class UnitRTSFormInput : RTSFormInput {
         
-
-        companion object {
+companion object {
             
     val DECAL_ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(23)!!
 
@@ -70,7 +68,7 @@ open public class UnitRTSFormInput : RTSFormInput {
     val noMoneyGameNotificationEvent: GameNotificationEvent
 
     val newUnitGameNotificationEvent: GameNotificationEvent
-public constructor        (groupInterface: Array<Group?>)                        
+public constructor (groupInterface: Array<Group?>)                        
 
                             : super(groupInterface){
     //var groupInterface = groupInterface
@@ -92,7 +90,7 @@ this.getHashtable()!!.put(WorkWaypoint.ID, smallIntegerSingletonFactory!!.getIns
 
                 @Throws(Exception::class)
             
-open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
+    open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -110,7 +108,7 @@ this.newUnitGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.getF
 
                 @Throws(Exception::class)
             
-open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, itemIndex: Int)
+    open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, itemIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedRtsLayer = associatedRtsLayer
@@ -164,7 +162,7 @@ this.attemptBuild(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, thi
 
                 @Throws(Exception::class)
             
-open fun attemptBuild(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, layerInterface: RTSLayer, itemIndex: Int)
+    open fun attemptBuild(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, layerInterface: RTSLayer, itemIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedRtsLayer = associatedRtsLayer

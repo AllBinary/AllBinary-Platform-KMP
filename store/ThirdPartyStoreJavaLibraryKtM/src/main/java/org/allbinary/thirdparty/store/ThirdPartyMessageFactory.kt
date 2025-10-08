@@ -30,12 +30,11 @@ open public class ThirdPartyMessageFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: ThirdPartyMessageFactory = ThirdPartyMessageFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ThirdPartyMessageFactory{
 

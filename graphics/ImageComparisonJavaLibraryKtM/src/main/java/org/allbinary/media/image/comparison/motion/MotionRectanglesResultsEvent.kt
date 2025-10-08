@@ -33,7 +33,7 @@ open public class MotionRectanglesResultsEvent : AllBinaryEventObject {
     private val frame: Long
 
     private var motionRectangles: MotionRectangles
-public constructor        (anyType: Any, frame: Long, motionRectangles: MotionRectangles)                        
+public constructor (anyType: Any, frame: Long, motionRectangles: MotionRectangles)                        
 
                             : super(anyType){
 var anyType = anyType
@@ -48,7 +48,7 @@ this.setMotionRectangles(motionRectangles)
 }
 
 
-open fun getMotionRectangles()
+    open fun getMotionRectangles()
         //nullable = true from not(false or (false and true)) = true
 : MotionRectangles{
 
@@ -59,7 +59,7 @@ open fun getMotionRectangles()
 }
 
 
-open fun setMotionRectangles(motionRectangles: MotionRectangles)
+    open fun setMotionRectangles(motionRectangles: MotionRectangles)
         //nullable = true from not(false or (false and false)) = true
 {
 var motionRectangles = motionRectangles
@@ -67,7 +67,7 @@ this.motionRectangles= motionRectangles
 }
 
 
-open fun getFrame()
+    open fun getFrame()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 

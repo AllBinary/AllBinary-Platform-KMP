@@ -34,10 +34,9 @@ import org.allbinary.graphics.paint.Paintable
 
 open public class FullScreenPaintable : Paintable {
         
-
-        companion object {
+companion object {
             
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : FullScreenPaintable{
 
@@ -51,13 +50,13 @@ open fun getInstance()
         }
             
     private val FULLSCREEN_TEXT: String = "F11 - Toggle Fullscreen"
-private constructor        (){
+private constructor (){
 }
 
 
     private var anchor: Int = Anchor.TOP_LEFT
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

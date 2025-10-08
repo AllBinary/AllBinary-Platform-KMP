@@ -43,8 +43,7 @@ import org.w3c.dom.NodeList
 open public class GenericProfileActionScript : DefaultMutableTreeNode
                 , ProfileActionScriptNodeInterface {
         
-
-        companion object {
+companion object {
             
     private val NAME: String = "Root"
 
@@ -57,7 +56,7 @@ open public class GenericProfileActionScript : DefaultMutableTreeNode
     private var genericProfileActionJPanel: GenericProfileActionJPanel
 
     private var profileActionConditionInterfaceVector: Vector
-public constructor        (genericProfileActionJPanel: GenericProfileActionJPanel, node: Node)                        
+public constructor (genericProfileActionJPanel: GenericProfileActionJPanel, node: Node)                        
 
                             : super(NAME){
 var genericProfileActionJPanel = genericProfileActionJPanel
@@ -115,14 +114,14 @@ this.setProfileActionConditionInterfaceVector(Vector())
                             
 }
 
-public constructor        (genericProfileActionJPanel: GenericProfileActionJPanel){
+public constructor (genericProfileActionJPanel: GenericProfileActionJPanel){
 var genericProfileActionJPanel = genericProfileActionJPanel
 this.genericProfileActionJPanel= genericProfileActionJPanel
 this.setProfileActionConditionInterfaceVector(Vector())
 }
 
 
-open fun addCondition(profileActionScriptNodeInterface: ProfileActionScriptNodeInterface)
+    open fun addCondition(profileActionScriptNodeInterface: ProfileActionScriptNodeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var profileActionScriptNodeInterface = profileActionScriptNodeInterface
@@ -132,7 +131,7 @@ this.add(profileActionScriptNodeInterface)
 }
 
 
-open fun removeCondition(profileActionScriptNodeInterface: ProfileActionScriptNodeInterface)
+    open fun removeCondition(profileActionScriptNodeInterface: ProfileActionScriptNodeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var profileActionScriptNodeInterface = profileActionScriptNodeInterface
@@ -142,7 +141,7 @@ this.remove(profileActionScriptNodeInterface)
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -157,7 +156,7 @@ logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 }
 
 
-open fun getProfileActionConditionInterfaceVector()
+    open fun getProfileActionConditionInterfaceVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -168,7 +167,7 @@ open fun getProfileActionConditionInterfaceVector()
 }
 
 
-open fun setProfileActionConditionInterfaceVector(profileActionConditionInterfaceVector: Vector)
+    open fun setProfileActionConditionInterfaceVector(profileActionConditionInterfaceVector: Vector)
         //nullable = true from not(false or (false and false)) = true
 {
 var profileActionConditionInterfaceVector = profileActionConditionInterfaceVector
@@ -178,7 +177,7 @@ this.profileActionConditionInterfaceVector= profileActionConditionInterfaceVecto
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

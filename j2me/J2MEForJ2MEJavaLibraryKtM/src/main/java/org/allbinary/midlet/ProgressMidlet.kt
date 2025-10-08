@@ -38,20 +38,20 @@ open public class ProgressMidlet : AllBinaryMidlet {
         
 
     val abeClientInformation: AbeClientInformationInterface
-public constructor        (clientInformationFactory: ClientInformationFactory){
+public constructor (clientInformationFactory: ClientInformationFactory){
     //var clientInformationFactory = clientInformationFactory
 this.preInit()
 this.abeClientInformation= clientInformationFactory!!.getInstance()
 }
 
 
-open fun preInit()
+    open fun preInit()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun exit(isProgress: Boolean)
+    open fun exit(isProgress: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var isProgress = isProgress

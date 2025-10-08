@@ -38,8 +38,7 @@ import org.w3c.dom.NodeList
 open public class ImageActionScriptOutput : BasicProfileActionScriptOutput
                 , ImageActionScriptOutputInterface {
         
-
-        companion object {
+companion object {
             
     private val NAME: String = "Captures"
 
@@ -54,7 +53,7 @@ open public class ImageActionScriptOutput : BasicProfileActionScriptOutput
     private var imageTypes: ImageTypes
 
     private var actionScriptOutputJPanel: ImageActionScriptOutputJPanel
-public constructor        (node: Node)                        
+public constructor (node: Node)                        
 
                             : super(NAME, node){
 var node = node
@@ -146,7 +145,7 @@ this.setAllowsChildren(false)
 this.actionScriptOutputJPanel= ImageActionScriptOutputJPanel(this)
 }
 
-public constructor        ()                        
+public constructor ()                        
 
                             : super(NAME){
 
@@ -159,7 +158,7 @@ this.actionScriptOutputJPanel= ImageActionScriptOutputJPanel(this)
 }
 
 
-open fun getActionScriptOutputJPanel()
+    open fun getActionScriptOutputJPanel()
         //nullable = true from not(false or (false and true)) = true
 : ImageActionScriptOutputJPanel{
 
@@ -170,7 +169,7 @@ open fun getActionScriptOutputJPanel()
 }
 
 
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -189,7 +188,7 @@ logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document
@@ -211,7 +210,7 @@ node.appendChild(newNode)
 
                 @Throws(Exception::class)
             
-open fun process(frame: Long)
+    open fun process(frame: Long)
         //nullable = true from not(false or (false and false)) = true
 {
 var frame = frame
@@ -219,14 +218,14 @@ ImageActionScriptOutputProcessor.process(this, frame)
 }
 
 
-open fun showDialog()
+    open fun showDialog()
         //nullable = true from not(false or (false and true)) = true
 {
 this.actionScriptOutputJPanel!!.getCapturedImageActionJDialog()!!.setVisible(true)
 }
 
 
-open fun isSaved()
+    open fun isSaved()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -237,7 +236,7 @@ open fun isSaved()
 }
 
 
-open fun setSaved(saved: Boolean)
+    open fun setSaved(saved: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var saved = saved
@@ -245,7 +244,7 @@ this.saved= saved
 }
 
 
-open fun isDisplay()
+    open fun isDisplay()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -256,7 +255,7 @@ open fun isDisplay()
 }
 
 
-open fun setDisplay(display: Boolean)
+    open fun setDisplay(display: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var display = display
@@ -264,7 +263,7 @@ this.display= display
 }
 
 
-open fun future_toString()
+    open fun future_toString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -284,14 +283,14 @@ stringBuffer!!.append(this.getImageTypes()!!.toString())
 }
 
 
-open fun log()
+    open fun log()
         //nullable = true from not(false or (false and true)) = true
 {
 logUtil!!.put(this.future_toString(), this, "log")
 }
 
 
-open fun getImageTypes()
+    open fun getImageTypes()
         //nullable = true from not(false or (false and true)) = true
 : ImageTypes{
 
@@ -302,7 +301,7 @@ open fun getImageTypes()
 }
 
 
-open fun setImageTypes(imageTypes: ImageTypes)
+    open fun setImageTypes(imageTypes: ImageTypes)
         //nullable = true from not(false or (false and false)) = true
 {
 var imageTypes = imageTypes

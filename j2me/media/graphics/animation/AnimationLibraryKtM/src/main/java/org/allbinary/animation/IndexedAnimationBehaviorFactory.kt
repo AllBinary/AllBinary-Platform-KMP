@@ -32,14 +32,15 @@ open public class IndexedAnimationBehaviorFactory : AnimationBehaviorFactory {
     var frameDelayTime: Long
 
     var loopTotal: Int
-public constructor        (loopTotal: Int, frameDelayTime: Long){
+public constructor (loopTotal: Int, frameDelayTime: Long){
     //var loopTotal = loopTotal
     //var frameDelayTime = frameDelayTime
 this.loopTotal= loopTotal
 this.frameDelayTime= frameDelayTime
 }
 
-override fun getOrCreateInstance()
+
+    override fun getOrCreateInstance()
         //nullable = true from not(false or (false and true)) = true
 : AnimationBehavior{
 

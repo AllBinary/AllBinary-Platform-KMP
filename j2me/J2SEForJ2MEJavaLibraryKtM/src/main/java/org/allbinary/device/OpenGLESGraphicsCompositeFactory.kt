@@ -30,12 +30,11 @@ open public class OpenGLESGraphicsCompositeFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OpenGLESGraphicsCompositeFactory = OpenGLESGraphicsCompositeFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OpenGLESGraphicsCompositeFactory{
 
@@ -55,7 +54,7 @@ open fun getInstance()
         
     private var openGLESGraphicsFactory: OpenGLESGraphicsFactory = OpenGLESGraphicsFactory()
 
-open fun set(openGLESGraphicsFactory: OpenGLESGraphicsFactory)
+    open fun set(openGLESGraphicsFactory: OpenGLESGraphicsFactory)
         //nullable = true from not(false or (false and false)) = true
 {
 var openGLESGraphicsFactory = openGLESGraphicsFactory
@@ -63,7 +62,7 @@ this.openGLESGraphicsFactory= openGLESGraphicsFactory
 }
 
 
-open fun get()
+    open fun get()
         //nullable = true from not(false or (false and true)) = true
 : OpenGLESGraphicsFactory{
 

@@ -52,7 +52,7 @@ open public class PaymentGatewayEntity : AbSqlBean
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val tableName: String = "paymentgateways"
-public constructor        ()                        
+public constructor ()                        
 
                             : super(UserDbInitInfo()){
 
@@ -72,7 +72,7 @@ this.setTableName(tableName)
 }
 
 
-open fun add(paymentGatewayInterface: PaymentGatewayInterface)
+    open fun add(paymentGatewayInterface: PaymentGatewayInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var paymentGatewayInterface = paymentGatewayInterface
@@ -130,7 +130,7 @@ super.insert(vector)
 }
 
 
-open fun update(paymentGatewayInterface: PaymentGatewayInterface)
+    open fun update(paymentGatewayInterface: PaymentGatewayInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var paymentGatewayInterface = paymentGatewayInterface
@@ -194,7 +194,7 @@ super.updateWhere(whereKeyValuePairs, updateHashMap)
 }
 
 
-open fun getPaymentGatewayInterface(storeName: String, paymentType: BasicPaymentType)
+    open fun getPaymentGatewayInterface(storeName: String, paymentType: BasicPaymentType)
         //nullable = true from not(false or (false and false)) = true
 : PaymentGatewayInterface{
 var storeName = storeName
@@ -316,7 +316,7 @@ paymentGatewayHashMap!!.put(PaymentGatewayData.SPECIAL9.toString(), superCrypt!!
 }
 
 
-open fun findPaymentTypeVectorByStore(storeName: String)
+    open fun findPaymentTypeVectorByStore(storeName: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var storeName = storeName
@@ -402,7 +402,7 @@ paymentGatewayVector!!.add(paymentType)
 }
 
 
-open fun remove(storeName: String, paymentType: BasicPaymentType)
+    open fun remove(storeName: String, paymentType: BasicPaymentType)
         //nullable = true from not(false or (false and false)) = true
 {
 var storeName = storeName
@@ -440,7 +440,7 @@ super.deleteWhere(whereHashMap)
 }
 
 
-open fun createTableStatement()
+    open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -530,7 +530,7 @@ stringBuffer!!.append(this.sqlStrings!!.END)
 }
 
 
-open fun createTable()
+    open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -541,7 +541,7 @@ open fun createTable()
 }
 
 
-open fun dropTable()
+    open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

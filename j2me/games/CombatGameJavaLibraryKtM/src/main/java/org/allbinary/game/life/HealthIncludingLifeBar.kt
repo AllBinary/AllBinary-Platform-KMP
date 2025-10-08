@@ -45,7 +45,7 @@ open public class HealthIncludingLifeBar : Paintable
     private val healthInterface: HealthInterface
 
     val allbinaryLayer: AllBinaryLayer
-public constructor        (layerInterface: AllBinaryLayer, life: Life, healthInterface: Health, animationInterface: HealthBarAnimation, direction: Int){
+public constructor (layerInterface: AllBinaryLayer, life: Life, healthInterface: Health, animationInterface: HealthBarAnimation, direction: Int){
 var layerInterface = layerInterface
 var life = life
 var healthInterface = healthInterface
@@ -59,7 +59,7 @@ this.healthInterface!!.addListener(this)
 this.onHealthChange()
 }
 
-public constructor        (layerInterface: AllBinaryLayer, life: Life, healthInterface: Health, location: Int, direction: Int)                        
+public constructor (layerInterface: AllBinaryLayer, life: Life, healthInterface: Health, location: Int, direction: Int)                        
 
                             : this(layerInterface, life, healthInterface, HealthBarTwodAnimation(layerInterface, location), direction){
 var layerInterface = layerInterface
@@ -73,20 +73,23 @@ var direction = direction
                     
 }
 
-override fun onHealthChange()
+
+    override fun onHealthChange()
         //nullable = true from not(false or (false and true)) = true
 {
 this.animationInterface!!.onHealthChange(((this.healthInterface!!.getHealth() +(this.healthInterface!!.getMaxHealth() *this.life.get())) *this.allbinaryLayer!!.getWidth()) /(this.healthInterface!!.getMaxHealth() +(this.healthInterface!!.getMaxHealth() *this.life.getStartLives())))
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 this.animationInterface!!.paint(graphics, 0, 0)
 }
 
-override fun paintThreed(graphics: Graphics)
+
+    override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

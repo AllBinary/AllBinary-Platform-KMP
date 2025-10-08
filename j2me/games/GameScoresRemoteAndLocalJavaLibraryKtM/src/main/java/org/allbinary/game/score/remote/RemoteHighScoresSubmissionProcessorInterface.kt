@@ -27,10 +27,11 @@
         
 import org.allbinary.game.score.HighScore
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
+
 interface RemoteHighScoresSubmissionProcessorInterface {
         
 
-open fun process(remoteHighScores: RemoteHighScores, abeClientInformation: AbeClientInformationInterface, highScore: HighScore)
+    open fun process(remoteHighScores: RemoteHighScores, abeClientInformation: AbeClientInformationInterface, highScore: HighScore)
         //nullable = true from not(false or (false and false)) = true
 
 

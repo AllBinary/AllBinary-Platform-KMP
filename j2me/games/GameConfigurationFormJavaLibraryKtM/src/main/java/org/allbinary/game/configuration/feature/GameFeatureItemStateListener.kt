@@ -42,12 +42,11 @@ open public class GameFeatureItemStateListener
         
                 , ItemStateListener {
         
-
-        companion object {
+companion object {
             
     private var toggleList: BasicArrayList = BasicArrayList()
 
-open fun add(gameFeature: GameFeature)
+    open fun add(gameFeature: GameFeature)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameFeature = gameFeature
@@ -68,7 +67,7 @@ var gameFeature = gameFeature
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var gameOptionsForm: GameOptionsForm
-public constructor        (gameOptionsForm: GameOptionsForm)
+public constructor (gameOptionsForm: GameOptionsForm)
             : super()
         {
 var gameOptionsForm = gameOptionsForm
@@ -86,7 +85,8 @@ GameFeatureItemStateListener.add(gameFeatureFactory!!.SOUND)
 GameFeatureItemStateListener.add(gameFeatureFactory!!.TICKABLE_LAYER_PROCESSOR)
 }
 
-override fun itemStateChanged(item: Item)
+
+    override fun itemStateChanged(item: Item)
         //nullable = true from not(false or (false and false)) = true
 {
 var item = item

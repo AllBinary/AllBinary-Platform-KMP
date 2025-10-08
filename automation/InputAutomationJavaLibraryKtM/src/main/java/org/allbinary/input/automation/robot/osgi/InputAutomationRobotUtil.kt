@@ -31,12 +31,11 @@ open public class InputAutomationRobotUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun getChangeEvent(inputRobotInterface: InputRobotInterface)
+    open fun getChangeEvent(inputRobotInterface: InputRobotInterface)
         //nullable = true from not(false or (false and false)) = true
 : InputAutomationRobotChangeEvent{
 var inputRobotInterface = inputRobotInterface
@@ -55,7 +54,7 @@ var inputRobotInterface = inputRobotInterface
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

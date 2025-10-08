@@ -16,12 +16,11 @@ open public class PoolTypeFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: PoolTypeFactory = PoolTypeFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PoolTypeFactory{
 

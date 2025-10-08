@@ -33,7 +33,7 @@ import org.allbinary.logic.io.file.AbFileNativeUtil
 
 open public class AbFileInputStream : FileInputStream {
         
-public constructor        (name: String)                        
+public constructor (name: String)                        
 
                             : super(name){
 var name = name
@@ -43,7 +43,7 @@ var name = name
                     
 }
 
-public constructor        (file: AbFile)                        
+public constructor (file: AbFile)                        
 
                             : super(AbFileNativeUtil.get(file)){
 var file = file
@@ -53,7 +53,7 @@ var file = file
                     
 }
 
-protected constructor        (file: File)                        
+protected constructor (file: File)                        
 
                             : super(file){
 var file = file

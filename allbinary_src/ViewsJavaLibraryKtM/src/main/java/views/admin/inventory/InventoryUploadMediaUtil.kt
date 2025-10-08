@@ -71,7 +71,7 @@ open public class InventoryUploadMediaUtil
     private var storeFrontInterface: StoreFrontInterface
 
     private var itemInterface: ItemInterface
-public constructor        (storeFrontInterface: StoreFrontInterface, itemInterface: ItemInterface)
+public constructor (storeFrontInterface: StoreFrontInterface, itemInterface: ItemInterface)
             : super()
         {
 var storeFrontInterface = storeFrontInterface
@@ -83,7 +83,7 @@ this.itemInterface= itemInterface
 
                 @Throws(Exception::class)
             
-open fun saveFiles(byteArray: ByteArray, fileName: String, mediaData: MediaData)
+    open fun saveFiles(byteArray: ByteArray, fileName: String, mediaData: MediaData)
         //nullable = true from not(false or (false and false)) = true
 : ItemInterface{
 var byteArray = byteArray
@@ -309,7 +309,7 @@ logUtil!!.put(commonStrings!!.END, this, "saveFiles()")
 }
 
 
-open fun setFileNames(fileName: String)
+    open fun setFileNames(fileName: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var fileName = fileName

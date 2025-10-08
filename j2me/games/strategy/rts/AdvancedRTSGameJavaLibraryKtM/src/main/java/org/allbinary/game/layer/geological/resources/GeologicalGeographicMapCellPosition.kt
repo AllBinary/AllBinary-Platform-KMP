@@ -31,7 +31,7 @@ open public class GeologicalGeographicMapCellPosition : GeographicMapCellPositio
         
 
     private val geologicalResource: GeologicalResource
-public constructor        (column: Int, row: Int, columns: Int, rows: Int, width: Int, height: Int, geologicalResource: GeologicalResource)                        
+public constructor (column: Int, row: Int, columns: Int, rows: Int, width: Int, height: Int, geologicalResource: GeologicalResource)                        
 
                             : super(column, row, columns, rows, width, height){
     //var column = column
@@ -49,7 +49,7 @@ this.geologicalResource= geologicalResource
 }
 
 
-open fun getGeologicalResource()
+    open fun getGeologicalResource()
         //nullable = true from not(false or (false and true)) = true
 : GeologicalResource{
 

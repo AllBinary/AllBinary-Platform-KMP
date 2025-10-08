@@ -38,8 +38,7 @@ open public class Layer
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(0)!!
 
@@ -58,7 +57,7 @@ open public class Layer
     private var height: Int= 0
 
     private var visible: Boolean = true
-public constructor        (width: Int, height: Int)
+public constructor (width: Int, height: Int)
             : super()
         {
 var width = width
@@ -68,7 +67,7 @@ setLayerHeight(height)
 }
 
 
-open fun setPosition(x: Int, y: Int, z: Int)
+    open fun setPosition(x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var x = x
@@ -80,7 +79,7 @@ this.z= z
 }
 
 
-open fun move(dx: Int, dy: Int)
+    open fun move(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var dx = dx
@@ -90,7 +89,7 @@ this.y += dy
 }
 
 
-open fun move(dx: Int, dy: Int, dz: Int)
+    open fun move(dx: Int, dy: Int, dz: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var dx = dx
@@ -102,7 +101,7 @@ this.z += dz
 }
 
 
-open fun getXP()
+    open fun getXP()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -113,7 +112,7 @@ open fun getXP()
 }
 
 
-open fun getYP()
+    open fun getYP()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -124,7 +123,7 @@ open fun getYP()
 }
 
 
-open fun getZP()
+    open fun getZP()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -135,7 +134,7 @@ open fun getZP()
 }
 
 
-open fun getWidth()
+    open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -146,7 +145,7 @@ open fun getWidth()
 }
 
 
-open fun getHeight()
+    open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -157,7 +156,7 @@ open fun getHeight()
 }
 
 
-open fun getDepth()
+    open fun getDepth()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -168,7 +167,7 @@ open fun getDepth()
 }
 
 
-open fun setVisible(visible: Boolean)
+    open fun setVisible(visible: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var visible = visible
@@ -176,7 +175,7 @@ this.visible= visible
 }
 
 
-open fun isVisible()
+    open fun isVisible()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -187,7 +186,7 @@ open fun isVisible()
 }
 
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -201,7 +200,7 @@ logUtil!!.put(commonStrings!!.NOT_IMPLEMENTED, this, canvasStrings!!.PAINT)
 }
 
 
-open fun setLayerWidth(width: Int)
+    open fun setLayerWidth(width: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var width = width
@@ -221,7 +220,7 @@ this.width= width
 }
 
 
-open fun setLayerHeight(height: Int)
+    open fun setLayerHeight(height: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var height = height
@@ -241,7 +240,7 @@ this.height= height
 }
 
 
-open fun toString(stringBuffer: StringMaker)
+    open fun toString(stringBuffer: StringMaker)
         //nullable = true from not(false or (true and false)) = true
 {
     //var stringBuffer = stringBuffer

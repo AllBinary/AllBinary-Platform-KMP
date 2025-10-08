@@ -30,10 +30,9 @@ open public class GameInputProcessorUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun init(inputProcessorArray: Array<GameInputProcessor?>)
+    open fun init(inputProcessorArray: Array<GameInputProcessor?>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var inputProcessorArray = inputProcessorArray

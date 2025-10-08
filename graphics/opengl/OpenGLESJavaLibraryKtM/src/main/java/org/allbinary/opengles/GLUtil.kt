@@ -37,12 +37,11 @@ open public class GLUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: GLUtil = GLUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GLUtil{
 
@@ -62,7 +61,7 @@ open fun getInstance()
         
     private val BYTES_PER_FLOAT: Int = 4
 
-open fun makeFloatBuffer3(p_a: Float, p_b: Float, p_c: Float)
+    open fun makeFloatBuffer3(p_a: Float, p_b: Float, p_c: Float)
         //nullable = true from not(false or (false and false)) = true
 : FloatBuffer{
 var p_a = p_a
@@ -87,7 +86,7 @@ this.position(buffer, 0)
 }
 
 
-open fun makeFloatBuffer4(p_a: Float, p_b: Float, p_c: Float, p_d: Float)
+    open fun makeFloatBuffer4(p_a: Float, p_b: Float, p_c: Float, p_d: Float)
         //nullable = true from not(false or (false and false)) = true
 : FloatBuffer{
 var p_a = p_a
@@ -114,7 +113,7 @@ this.position(buffer, 0)
 }
 
 
-open fun makeFloatBuffer(byteBuffer: ByteBuffer)
+    open fun makeFloatBuffer(byteBuffer: ByteBuffer)
         //nullable = true from not(false or (false and false)) = true
 : FloatBuffer{
     //var byteBuffer = byteBuffer
@@ -148,7 +147,7 @@ this.position(buffer, 0)
 }
 
 
-open fun position(buffer: Buffer, newPosition: Int)
+    open fun position(buffer: Buffer, newPosition: Int)
         //nullable = true from not(false or (false and false)) = true
 : Buffer{
     //var buffer = buffer
@@ -161,7 +160,7 @@ open fun position(buffer: Buffer, newPosition: Int)
 }
 
 
-open fun rotateUVs(uvs: FloatArray, angleDegrees: Float, pivotU: Float, pivotV: Float)
+    open fun rotateUVs(uvs: FloatArray, angleDegrees: Float, pivotU: Float, pivotV: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var uvs = uvs

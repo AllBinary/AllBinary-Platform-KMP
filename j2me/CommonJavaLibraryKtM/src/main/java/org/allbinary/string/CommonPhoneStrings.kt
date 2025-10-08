@@ -30,12 +30,11 @@ open public class CommonPhoneStrings
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val SINGLETON: CommonPhoneStrings = CommonPhoneStrings()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CommonPhoneStrings{
 

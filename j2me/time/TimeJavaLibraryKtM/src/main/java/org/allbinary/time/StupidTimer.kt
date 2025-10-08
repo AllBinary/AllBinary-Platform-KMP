@@ -38,7 +38,7 @@ open public class StupidTimer
 
     private val threadObjectUtil: ThreadObjectUtil = ThreadObjectUtil.getInstance()!!
 
-open fun visitBool(visitorInterface: Visitor)
+    open fun visitBool(visitorInterface: Visitor)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var visitorInterface = visitorInterface
@@ -58,7 +58,7 @@ open fun visitBool(visitorInterface: Visitor)
 
                 @Throws(Exception::class)
             
-open fun visit(visitorInterface: Visitor, timeDelayHelper: TimeDelayHelper)
+    open fun visit(visitorInterface: Visitor, timeDelayHelper: TimeDelayHelper)
         //nullable = true from not(false or (false and false)) = true
 {
     //var visitorInterface = visitorInterface
@@ -132,7 +132,7 @@ break;
 
                 @Throws(Exception::class)
             
-open fun stopWaiting()
+    open fun stopWaiting()
         //nullable = true from not(false or (false and true)) = true
 {
 

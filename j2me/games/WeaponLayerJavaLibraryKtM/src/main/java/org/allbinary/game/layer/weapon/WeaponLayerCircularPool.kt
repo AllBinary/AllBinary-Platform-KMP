@@ -32,13 +32,13 @@ import org.allbinary.layer.AllBinaryLayerCircularPool
 
 open public class WeaponLayerCircularPool : AllBinaryLayerCircularPool {
         
-public constructor        (){
+public constructor (){
 }
 
 
                 @Throws(Exception::class)
             
-open fun getInstance(sourceLayerInterface: AllBinaryLayer, x: Int, y: Int, z: Int, angle: Int, otherAngle: Int, weaponProperties: WeaponProperties, scoreable: ScoreableInterface)
+    open fun getInstance(sourceLayerInterface: AllBinaryLayer, x: Int, y: Int, z: Int, angle: Int, otherAngle: Int, weaponProperties: WeaponProperties, scoreable: ScoreableInterface)
         //nullable =  from not(true or (false and false)) = 
 : WeaponLayer{
 var sourceLayerInterface = sourceLayerInterface

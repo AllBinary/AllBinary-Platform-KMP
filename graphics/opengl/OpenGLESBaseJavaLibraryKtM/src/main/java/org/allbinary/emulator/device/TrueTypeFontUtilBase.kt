@@ -70,7 +70,7 @@ open public class TrueTypeFontUtilBase
     val textureSize: Int
 
     val actualCellsPerRow: Int
-public constructor        (scale: Int)
+public constructor (scale: Int)
             : super()
         {
     //var scale = scale
@@ -112,7 +112,7 @@ this.actualCellsPerRow= textureSize /cellSize
 }
 
 
-open fun getAsTextureSize(textureSize: Int)
+    open fun getAsTextureSize(textureSize: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var textureSize = textureSize
@@ -169,7 +169,7 @@ var textureSize = textureSize
 }
 
 
-open fun getCellSize(cellSize: Int)
+    open fun getCellSize(cellSize: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var cellSize = cellSize
@@ -226,7 +226,7 @@ var cellSize = cellSize
 }
 
 
-open fun getYOffset()
+    open fun getYOffset()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

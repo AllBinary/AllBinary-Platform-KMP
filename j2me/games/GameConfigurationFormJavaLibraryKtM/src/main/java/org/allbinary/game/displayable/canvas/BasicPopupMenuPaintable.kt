@@ -47,8 +47,7 @@ import org.allbinary.graphics.paint.Paintable
 
 open public class BasicPopupMenuPaintable : Paintable {
         
-
-        companion object {
+companion object {
             
     private val NAME: String = "MENU"
 
@@ -67,7 +66,7 @@ open public class BasicPopupMenuPaintable : Paintable {
     private var offset: Int= 0
 
     private var animationInterface: Animation
-public constructor        (rectangle: Rectangle, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor){
+public constructor (rectangle: Rectangle, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor){
     //var rectangle = rectangle
     //var backgroundBasicColor = backgroundBasicColor
     //var foregroundBasicColor = foregroundBasicColor
@@ -130,7 +129,7 @@ this.init(rectangle)
 
                 @Throws(Exception::class)
             
-open fun init(rectangle: Rectangle)
+    open fun init(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
 {
     //var rectangle = rectangle
@@ -192,7 +191,8 @@ rectangleFilledAnimation!!.setHeight(height)
 
 
     private val drawStringUtil: DrawStringUtil = DrawStringUtil.getInstance()!!
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics

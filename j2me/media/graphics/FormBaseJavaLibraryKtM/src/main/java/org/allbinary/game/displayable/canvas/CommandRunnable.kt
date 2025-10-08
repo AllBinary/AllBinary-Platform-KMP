@@ -46,7 +46,7 @@ open public class CommandRunnable
     private val commandFormInputProcessor: CommandFormInputProcessor
 
     private val command: Command
-public constructor        (commandFormInputProcessor: CommandFormInputProcessor, command: Command)
+public constructor (commandFormInputProcessor: CommandFormInputProcessor, command: Command)
             : super()
         {
 var commandFormInputProcessor = commandFormInputProcessor
@@ -55,7 +55,8 @@ this.commandFormInputProcessor= commandFormInputProcessor
 this.command= command
 }
 
-override fun run()
+
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 

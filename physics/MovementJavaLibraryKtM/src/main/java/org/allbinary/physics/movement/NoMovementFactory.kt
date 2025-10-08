@@ -30,12 +30,11 @@ open public class NoMovementFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: NoMovementFactory = NoMovementFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : NoMovementFactory{
 
@@ -55,7 +54,7 @@ open fun getInstance()
         
     private val movement: Movement = Movement()
 
-open fun getMovmentInstance()
+    open fun getMovmentInstance()
         //nullable = true from not(false or (false and true)) = true
 : Movement{
 

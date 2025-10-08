@@ -33,12 +33,11 @@ open public class CloudStreamUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: CloudStreamUtil = CloudStreamUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CloudStreamUtil{
 
@@ -60,7 +59,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun getFile(file: AbFile)
+    open fun getFile(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : InputStream{
 var file = file
@@ -97,7 +96,7 @@ var file = file
 
                 @Throws(Exception::class)
             
-open fun getFileAnyWhere(file: AbFile)
+    open fun getFileAnyWhere(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : InputStream{
 var file = file
@@ -157,7 +156,7 @@ available= inputStream!!.available()
 
                 @Throws(Exception::class)
             
-open fun getFileLocal(file: AbFile)
+    open fun getFileLocal(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : InputStream{
 var file = file

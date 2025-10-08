@@ -36,7 +36,7 @@ open public class BasicPlatormGeographicMapCellType
         
 
     private val types: IntArray
-public constructor        (type: Int)
+public constructor (type: Int)
             : super()
         {
     //var type = type
@@ -47,7 +47,7 @@ this.types= IntArray(1)
 this.types[0]= type
 }
 
-public constructor        (types: IntArray)
+public constructor (types: IntArray)
             : super()
         {
     //var types = types
@@ -70,7 +70,7 @@ public constructor        (types: IntArray)
 this.types= types
 }
 
-public constructor        (types: BasicArrayList)
+public constructor (types: BasicArrayList)
             : super()
         {
     //var types = types
@@ -103,7 +103,7 @@ this.types= typeArray
 }
 
 
-open fun isType(type: GeographicMapCellType)
+    open fun isType(type: GeographicMapCellType)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var type = type
@@ -115,7 +115,7 @@ open fun isType(type: GeographicMapCellType)
 }
 
 
-open fun isType(type: Int)
+    open fun isType(type: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var type = type

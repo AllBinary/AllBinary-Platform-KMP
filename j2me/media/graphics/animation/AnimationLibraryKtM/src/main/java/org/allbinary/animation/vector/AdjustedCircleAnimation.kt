@@ -36,7 +36,7 @@ open public class AdjustedCircleAnimation : CircleAnimation {
     private var xAdjustment: Int
 
     private var yAdjustment: Int
-public constructor        (width: Int, height: Int, xAdjustment: Int, yAdjustment: Int, basicColor: BasicColor)                        
+public constructor (width: Int, height: Int, xAdjustment: Int, yAdjustment: Int, basicColor: BasicColor)                        
 
                             : super(width, height, basicColor){
 var width = width
@@ -52,7 +52,7 @@ this.xAdjustment= xAdjustment
 this.yAdjustment= yAdjustment
 }
 
-public constructor        (width: Int, height: Int, innerWidth: Int, basicColor: BasicColor)                        
+public constructor (width: Int, height: Int, innerWidth: Int, basicColor: BasicColor)                        
 
                             : super(width, height, basicColor){
 var width = width
@@ -84,7 +84,8 @@ this.yAdjustment= this.xAdjustment
                             
 }
 
-override fun paint(graphics: Graphics, x: Int, y: Int)
+
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

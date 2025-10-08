@@ -25,48 +25,49 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface MotionGestureEventListener : BaseMotionGestureEventListener {
         
 
-open fun onPressedMotionGestureEvent(ev: MotionGestureEvent)
+    open fun onPressedMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun onUpMotionGestureEvent(ev: MotionGestureEvent)
+    open fun onUpMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun onDownMotionGestureEvent(ev: MotionGestureEvent)
+    open fun onDownMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun onLeftMotionGestureEvent(ev: MotionGestureEvent)
+    open fun onLeftMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun onRightMotionGestureEvent(ev: MotionGestureEvent)
+    open fun onRightMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun onDiagonalDownRightMotionGestureEvent(ev: MotionGestureEvent)
+    open fun onDiagonalDownRightMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun onDiagonalDownLeftMotionGestureEvent(ev: MotionGestureEvent)
+    open fun onDiagonalDownLeftMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun onDiagonalUpRightMotionGestureEvent(ev: MotionGestureEvent)
+    open fun onDiagonalUpRightMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun onDiagonalUpLeftMotionGestureEvent(ev: MotionGestureEvent)
+    open fun onDiagonalUpLeftMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun released(ev: MotionGestureEvent)
+    open fun released(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

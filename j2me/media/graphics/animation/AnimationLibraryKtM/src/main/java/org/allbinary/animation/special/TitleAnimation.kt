@@ -67,7 +67,7 @@ open public class TitleAnimation : SpecialAnimation {
     private var lastFrameStartTime: Long
 
     private val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-public constructor        (animationInterfaceArray: Array<IndexedAnimation?>, basicColorArray: Array<BasicColor?>, dxArray: IntArray, dyArray: IntArray)                        
+public constructor (animationInterfaceArray: Array<IndexedAnimation?>, basicColorArray: Array<BasicColor?>, dxArray: IntArray, dyArray: IntArray)                        
 
                             : this(animationInterfaceArray, basicColorArray, dxArray, dyArray, 0, Integer.MIN_VALUE, IndexedAnimationBehavior(1, 250)){
     //var animationInterfaceArray = animationInterfaceArray
@@ -80,7 +80,7 @@ public constructor        (animationInterfaceArray: Array<IndexedAnimation?>, ba
                     
 }
 
-public constructor        (animationInterfaceArray: Array<IndexedAnimation?>, basicColorArray: Array<BasicColor?>, dxArray: IntArray, dyArray: IntArray, y: Int, width: Int)                        
+public constructor (animationInterfaceArray: Array<IndexedAnimation?>, basicColorArray: Array<BasicColor?>, dxArray: IntArray, dyArray: IntArray, y: Int, width: Int)                        
 
                             : this(animationInterfaceArray, basicColorArray, dxArray, dyArray, y, width, IndexedAnimationBehavior(1, 250)){
     //var animationInterfaceArray = animationInterfaceArray
@@ -95,7 +95,7 @@ public constructor        (animationInterfaceArray: Array<IndexedAnimation?>, ba
                     
 }
 
-public constructor        (animationInterfaceArray: Array<IndexedAnimation?>, basicColorArray: Array<BasicColor?>, dxArray: IntArray, dyArray: IntArray, y: Int, width: Int, animationBehavior: AnimationBehavior)                        
+public constructor (animationInterfaceArray: Array<IndexedAnimation?>, basicColorArray: Array<BasicColor?>, dxArray: IntArray, dyArray: IntArray, y: Int, width: Int, animationBehavior: AnimationBehavior)                        
 
                             : super(animationBehavior){
     //var animationInterfaceArray = animationInterfaceArray
@@ -120,7 +120,8 @@ this.widthP= width
 this.reset()
 }
 
-override fun nextFrame()
+
+    override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -153,7 +154,8 @@ this.lastFrameStartTime= currentTime
                                 
 }
 
-override fun isComplete()
+
+    override fun isComplete()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -183,13 +185,15 @@ override fun isComplete()
                             
 }
 
-override fun setSequence(sequence: IntArray)
+
+    override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
 {
     //var sequence = sequence
 }
 
-override fun getSequence()
+
+    override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
 : IntArray{
 
@@ -199,7 +203,8 @@ override fun getSequence()
                         return PrimitiveIntUtil.getArrayInstance()
 }
 
-override fun getSize()
+
+    override fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -209,7 +214,8 @@ override fun getSize()
                         return this.animationInterfaceArray[0]!!.getSize()
 }
 
-override fun getFrame()
+
+    override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -219,7 +225,8 @@ override fun getFrame()
                         return this.animationInterfaceArray[0]!!.getFrame()
 }
 
-override fun setFrame(frame: Int)
+
+    override fun setFrame(frame: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var frame = frame
@@ -235,13 +242,15 @@ this.animationInterfaceArray[index]!!.setFrame(frame)
 
 }
 
-override fun setLastFrame()
+
+    override fun setLastFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setFrame(this.getSize() -1)
 }
 
-override fun reset()
+
+    override fun reset()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setLastFrame()
@@ -251,7 +260,8 @@ this.setLastFrame()
 indexedAnimationBehavior!!.reset()
 }
 
-override fun previousFrame()
+
+    override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -267,7 +277,7 @@ this.animationInterfaceArray[index]!!.previousFrame()
 }
 
 
-open fun paint(graphics: Graphics, frame: Int, x: Int, y: Int)
+    open fun paint(graphics: Graphics, frame: Int, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -280,7 +290,8 @@ this.paint(graphics, x, y)
 
 
     val CLEAR_COLOR: BasicColor = BasicColorFactory.getInstance()!!.CLEAR_COLOR
-override fun paint(graphics: Graphics, ax: Int, ay: Int)
+
+    override fun paint(graphics: Graphics, ax: Int, ay: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics

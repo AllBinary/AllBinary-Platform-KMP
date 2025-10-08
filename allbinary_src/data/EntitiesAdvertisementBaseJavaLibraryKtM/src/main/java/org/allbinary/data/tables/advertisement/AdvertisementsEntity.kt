@@ -46,7 +46,7 @@ open public class AdvertisementsEntity : AbSqlBean
     val tableName: String = "advertisements"
 
     private val _INDEX: String = "_index"
-public constructor        ()                        
+public constructor ()                        
 
                             : super(UserDbInitInfo()){
 
@@ -57,7 +57,7 @@ this.setTableName(tableName)
 }
 
 
-open fun delete(value: String)
+    open fun delete(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -89,7 +89,7 @@ var value = value
 }
 
 
-open fun get(storeName: String)
+    open fun get(storeName: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var storeName = storeName
@@ -126,7 +126,7 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
 }
 
 
-open fun get(storeName: String, advertismentName: String)
+    open fun get(storeName: String, advertismentName: String)
         //nullable = true from not(false or (false and false)) = true
 : AdvertisementInterface{
 var storeName = storeName
@@ -147,7 +147,7 @@ keysAndValues!!.put(AdvertisementData.getInstance()!!.NAME, advertismentName)
 }
 
 
-open fun createTableStatement()
+    open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -167,7 +167,7 @@ stringBuffer!!.append(DynamicObjectData.NAME)!!.append(this.sqlTypeStrings!!.MAX
 }
 
 
-open fun createTable()
+    open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -181,7 +181,7 @@ open fun createTable()
 }
 
 
-open fun update(updatedValues: HashMap<Any, Any>)
+    open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var updatedValues = updatedValues
@@ -189,7 +189,7 @@ super.updateWhere(EntryData.getInstance()!!.ID, updatedValues!!.get(EntryData.ge
 }
 
 
-open fun dropTable()
+    open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

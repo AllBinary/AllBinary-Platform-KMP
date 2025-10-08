@@ -30,8 +30,7 @@ open public class BasketData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val BASKET: String = "BASKET"
 
@@ -56,7 +55,7 @@ open public class BasketData
     val ADJUST: String = "BASKET_ADJUST"
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

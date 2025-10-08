@@ -46,7 +46,7 @@ open public class AdvertisementArea
     private var advertisementAreaConstraintsInterface: AdvertisementAreaConstraintsInterface
 
     private var campaign: String
-public constructor        (hashMap: HashMap<Any, Any>)
+public constructor (hashMap: HashMap<Any, Any>)
             : super()
         {
 var hashMap = hashMap
@@ -64,7 +64,7 @@ this.campaign= hashMap!!.get(AdvertisementCampaignData.getInstance()!!.NAME) as 
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -75,7 +75,7 @@ open fun getName()
 }
 
 
-open fun getStoreName()
+    open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -86,7 +86,7 @@ open fun getStoreName()
 }
 
 
-open fun getDescription()
+    open fun getDescription()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -97,7 +97,7 @@ open fun getDescription()
 }
 
 
-open fun getConstraints()
+    open fun getConstraints()
         //nullable = true from not(false or (false and true)) = true
 : AdvertisementAreaConstraintsInterface{
 
@@ -108,7 +108,7 @@ open fun getConstraints()
 }
 
 
-open fun getCampaign()
+    open fun getCampaign()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -119,7 +119,7 @@ open fun getCampaign()
 }
 
 
-open fun setName(name: String)
+    open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name
@@ -127,7 +127,7 @@ this.name= name
 }
 
 
-open fun setStoreName(storeName: String)
+    open fun setStoreName(storeName: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var storeName = storeName
@@ -135,7 +135,7 @@ this.storeName= storeName
 }
 
 
-open fun setDescription(description: String)
+    open fun setDescription(description: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var description = description
@@ -143,7 +143,7 @@ this.description= description
 }
 
 
-open fun setConstraints(advertisementConstraintsInterface: AdvertisementAreaConstraintsInterface)
+    open fun setConstraints(advertisementConstraintsInterface: AdvertisementAreaConstraintsInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var advertisementConstraintsInterface = advertisementConstraintsInterface
@@ -151,7 +151,7 @@ this.advertisementAreaConstraintsInterface= advertisementAreaConstraintsInterfac
 }
 
 
-open fun setCampaign(campaign: String)
+    open fun setCampaign(campaign: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var campaign = campaign

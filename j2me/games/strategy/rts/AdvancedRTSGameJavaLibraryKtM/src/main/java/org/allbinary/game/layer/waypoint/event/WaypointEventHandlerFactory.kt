@@ -31,12 +31,11 @@ open public class WaypointEventHandlerFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val eventHandlerArray: Array<WaypointEventHandler?> = arrayOf(WaypointEventHandler(),WaypointEventHandler(),WaypointEventHandler(),WaypointEventHandler(),WaypointEventHandler(),WaypointEventHandler(),WaypointEventHandler(),WaypointEventHandler(),WaypointEventHandler(),WaypointEventHandler())
 
-open fun getInstance(groupInterface: Group)
+    open fun getInstance(groupInterface: Group)
         //nullable =  from not(true or (false and false)) = 
 : WaypointEventHandler{
 var groupInterface = groupInterface
@@ -48,7 +47,7 @@ var groupInterface = groupInterface
 }
 
 
-open fun removeAll()
+    open fun removeAll()
         //nullable = true from not(false or (false and true)) = true
 {
 

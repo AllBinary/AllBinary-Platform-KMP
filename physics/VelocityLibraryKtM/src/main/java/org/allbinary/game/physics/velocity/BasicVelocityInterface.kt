@@ -28,54 +28,55 @@
 import org.allbinary.direction.Direction
 import org.allbinary.logic.math.BasicDecimal
 import org.allbinary.math.Angle
+
 interface BasicVelocityInterface {
         
 
-open fun getVelocityXBasicDecimalP()
+    open fun getVelocityXBasicDecimalP()
         //nullable = true from not(false or (false and true)) = true
 : BasicDecimal
 
-open fun getVelocityYBasicDecimalP()
+    open fun getVelocityYBasicDecimalP()
         //nullable = true from not(false or (false and true)) = true
 : BasicDecimal
 
-open fun zero()
+    open fun zero()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun setVelocity(magnitudeBasicDecimal: BasicDecimal, direction: Direction, otherDirection: Direction)
+    open fun setVelocity(magnitudeBasicDecimal: BasicDecimal, direction: Direction, otherDirection: Direction)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun addVelocity(magnitudeBasicDecimal: BasicDecimal, direction: Direction, otherDirection: Direction)
+    open fun addVelocity(magnitudeBasicDecimal: BasicDecimal, direction: Direction, otherDirection: Direction)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setVelocity(magnitude: Long, direction: Direction, otherDirection: Direction)
+    open fun setVelocity(magnitude: Long, direction: Direction, otherDirection: Direction)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun addVelocity(magnitude: Long, direction: Direction, otherDirection: Direction)
+    open fun addVelocity(magnitude: Long, direction: Direction, otherDirection: Direction)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setVelocity(magnitudeBasicDecimal: BasicDecimal, angle: Angle, otherAngle: Angle)
+    open fun setVelocity(magnitudeBasicDecimal: BasicDecimal, angle: Angle, otherAngle: Angle)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun addVelocity(magnitudeBasicDecimal: BasicDecimal, angle: Angle, otherAngle: Angle)
+    open fun addVelocity(magnitudeBasicDecimal: BasicDecimal, angle: Angle, otherAngle: Angle)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setVelocity(magnitude: Long, angle: Angle, otherAngle: Angle)
+    open fun setVelocity(magnitude: Long, angle: Angle, otherAngle: Angle)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun addVelocity(magnitude: Long, angle: Angle, otherAngle: Angle)
+    open fun addVelocity(magnitude: Long, angle: Angle, otherAngle: Angle)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun addVelocity(magnitude: Long, angle: Int, otherAngle: Int)
+    open fun addVelocity(magnitude: Long, angle: Int, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 
 

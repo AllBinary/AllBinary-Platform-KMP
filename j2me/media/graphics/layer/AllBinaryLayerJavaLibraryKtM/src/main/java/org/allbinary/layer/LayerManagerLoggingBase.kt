@@ -38,14 +38,14 @@ open public class LayerManagerLoggingBase
         
                 @Throws(Exception::class)
             
-open fun append(layerInterface: AllBinaryLayer)
+    open fun append(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerInterface = layerInterface
 }
 
 
-open fun append(layerInterface: AllBinaryLayer, index: Int)
+    open fun append(layerInterface: AllBinaryLayer, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerInterface = layerInterface
@@ -53,14 +53,14 @@ open fun append(layerInterface: AllBinaryLayer, index: Int)
 }
 
 
-open fun remove(layerInterface: AllBinaryLayer)
+    open fun remove(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerInterface = layerInterface
 }
 
 
-open fun remove(layerManager: LayerManager, layerInterface: AllBinaryLayer, result: Boolean)
+    open fun remove(layerManager: LayerManager, layerInterface: AllBinaryLayer, result: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerManager = layerManager
@@ -69,7 +69,7 @@ open fun remove(layerManager: LayerManager, layerInterface: AllBinaryLayer, resu
 }
 
 
-open fun clear()
+    open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 }

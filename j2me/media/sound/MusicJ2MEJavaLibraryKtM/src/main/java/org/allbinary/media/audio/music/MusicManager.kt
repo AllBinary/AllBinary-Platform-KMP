@@ -13,6 +13,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.thread.ARunnable
 import javax.microedition.media.Player
 import javax.microedition.media.PlayerListener
 import org.allbinary.AvianUtil
@@ -50,7 +51,7 @@ open public class MusicManager
     private val playerListener: PlayerListener = object: PlayerListener()
                                 {
                                 
-open override fun playerUpdate(player: Player, event: String, eventData: Any)
+    open override fun playerUpdate(player: Player, event: String, eventData: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var player = player
@@ -98,7 +99,7 @@ PreLogUtil.put(event, this, commonStrings!!.PROCESS)
     private var noDuration: Boolean= false
 
     private var stopped: Boolean = true
-public constructor        (musicServiceClass: KClass<*>, songList: BasicArrayList)
+public constructor (musicServiceClass: KClass<*>, songList: BasicArrayList)
             : super()
         {
     //var musicServiceClass = musicServiceClass
@@ -107,7 +108,7 @@ this.songList= songList
 }
 
 
-open fun startNewSong()
+    open fun startNewSong()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -126,7 +127,7 @@ this.process()
 }
 
 
-open fun nextSong(nextSongSound: Sound, leftVolume: Int, rightVolume: Int)
+    open fun nextSong(nextSongSound: Sound, leftVolume: Int, rightVolume: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var nextSongSound = nextSongSound
@@ -140,14 +141,14 @@ this.stopped= false
 }
 
 
-open fun reset()
+    open fun reset()
         //nullable = true from not(false or (false and true)) = true
 {
 this.reset= true
 }
 
 
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -315,7 +316,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION_LABEL +resource, this, commonStrings!!.
 
                 @Throws(Exception::class)
             
-open fun waitForStateChange(endingCurrentSongSound: Sound, startingCurrentSongSound: Sound)
+    open fun waitForStateChange(endingCurrentSongSound: Sound, startingCurrentSongSound: Sound)
         //nullable = true from not(false or (false and false)) = true
 {
     //var endingCurrentSongSound = endingCurrentSongSound
@@ -335,7 +336,7 @@ startingCurrentSongSound!!.getPlayerP()!!.start()
 
                 @Throws(Exception::class)
             
-open fun stop()
+    open fun stop()
         //nullable = true from not(false or (false and true)) = true
 {
 

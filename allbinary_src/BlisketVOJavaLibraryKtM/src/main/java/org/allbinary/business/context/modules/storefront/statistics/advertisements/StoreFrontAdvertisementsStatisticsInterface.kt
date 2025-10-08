@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.data.tables.TableMappingInterface
+
 interface StoreFrontAdvertisementsStatisticsInterface : TableMappingInterface {
         
 

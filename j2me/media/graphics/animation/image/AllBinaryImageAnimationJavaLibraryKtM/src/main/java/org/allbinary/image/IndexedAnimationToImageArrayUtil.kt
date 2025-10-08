@@ -32,12 +32,11 @@ open public class IndexedAnimationToImageArrayUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun getInstance(width: Int, height: Int, sequentialAnimationInterface: IndexedAnimation)
+    open fun getInstance(width: Int, height: Int, sequentialAnimationInterface: IndexedAnimation)
         //nullable =  from not(true or (false and false)) = 
 : Array<Image?>{
 var width = width

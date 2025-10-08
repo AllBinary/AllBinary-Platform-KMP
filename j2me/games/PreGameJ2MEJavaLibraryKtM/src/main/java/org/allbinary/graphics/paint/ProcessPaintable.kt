@@ -34,7 +34,7 @@ open public class ProcessPaintable : Paintable {
             {
             }            
         
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 }

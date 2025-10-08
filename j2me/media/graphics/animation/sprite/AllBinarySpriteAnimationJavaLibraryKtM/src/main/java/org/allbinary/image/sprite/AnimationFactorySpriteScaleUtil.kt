@@ -39,12 +39,11 @@ open public class AnimationFactorySpriteScaleUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AnimationFactorySpriteScaleUtil = AnimationFactorySpriteScaleUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AnimationFactorySpriteScaleUtil{
 
@@ -74,7 +73,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun createImage(image: Image, width: Int, height: Int, scaleWidth: Int, scaleHeight: Int)
+    open fun createImage(image: Image, width: Int, height: Int, scaleWidth: Int, scaleHeight: Int)
         //nullable = true from not(false or (false and false)) = true
 : Sprite{
     //var image = image

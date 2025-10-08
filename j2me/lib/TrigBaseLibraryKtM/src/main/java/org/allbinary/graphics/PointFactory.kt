@@ -30,12 +30,11 @@ open public class PointFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: PointFactory = PointFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PointFactory{
 
@@ -50,18 +49,18 @@ open fun getInstance()
             
     var ZERO_ZERO: GPoint = this.getInstance(0, 0, 0)!!
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getInstance(x: Int, y: Int)
+    open fun getInstance(x: Int, y: Int)
         //nullable =  from not(true or (false and false)) = 
 : GPoint{
 var x = x
@@ -74,7 +73,7 @@ var y = y
 }
 
 
-open fun getInstance(x: Int, y: Int, z: Int)
+    open fun getInstance(x: Int, y: Int, z: Int)
         //nullable =  from not(true or (false and false)) = 
 : GPoint{
 var x = x

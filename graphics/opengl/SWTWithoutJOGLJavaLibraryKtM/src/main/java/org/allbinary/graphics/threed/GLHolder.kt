@@ -32,20 +32,20 @@ open public class GLHolder
         
 
     var isCreated: Boolean = true
-public constructor        ()
+public constructor ()
             : super()
         {
 }
 
 
-open fun runOnSurfaceCreated(renderer: Any)
+    open fun runOnSurfaceCreated(renderer: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var renderer = renderer
 }
 
 
-open fun runOnSurfaceChanged(renderer: Any, width: Int, height: Int)
+    open fun runOnSurfaceChanged(renderer: Any, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var renderer = renderer
@@ -54,7 +54,7 @@ open fun runOnSurfaceChanged(renderer: Any, width: Int, height: Int)
 }
 
 
-open fun run(renderer: Any)
+    open fun run(renderer: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var renderer = renderer

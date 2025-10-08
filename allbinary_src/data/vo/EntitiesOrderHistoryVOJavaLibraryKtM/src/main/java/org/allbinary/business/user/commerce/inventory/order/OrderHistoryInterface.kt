@@ -28,114 +28,115 @@
 import org.allbinary.business.user.address.StreetAddress
 import org.allbinary.business.user.commerce.money.Money
 import org.allbinary.business.user.commerce.money.payment.Payment
+
 interface OrderHistoryInterface {
         
 
-open fun setUserName(value: String)
+    open fun setUserName(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setDefaultShippingAddress(shippingAddress: StreetAddress)
+    open fun setDefaultShippingAddress(shippingAddress: StreetAddress)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setBillingAddress(billingAddress: StreetAddress)
+    open fun setBillingAddress(billingAddress: StreetAddress)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setPaymentInfo(payment: Payment)
+    open fun setPaymentInfo(payment: Payment)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setShipDate(value: String)
+    open fun setShipDate(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setOrderDate(value: String)
+    open fun setOrderDate(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setTransDate(value: String)
+    open fun setTransDate(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setCancelDate(value: String)
+    open fun setCancelDate(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setStatus(value: String)
+    open fun setStatus(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setSubTotal(value: Money)
+    open fun setSubTotal(value: Money)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setShippingCost(value: Money)
+    open fun setShippingCost(value: Money)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setTaxes(value: Money)
+    open fun setTaxes(value: Money)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setTotal(value: Money)
+    open fun setTotal(value: Money)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getUserName()
+    open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getShippingAddress()
+    open fun getShippingAddress()
         //nullable = true from not(false or (false and true)) = true
 : StreetAddress
 
-open fun getBillingAddress()
+    open fun getBillingAddress()
         //nullable = true from not(false or (false and true)) = true
 : StreetAddress
 
-open fun getPaymentInfo()
+    open fun getPaymentInfo()
         //nullable = true from not(false or (false and true)) = true
 : Payment
 
-open fun getShipDate()
+    open fun getShipDate()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getOrderDate()
+    open fun getOrderDate()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getTransDate()
+    open fun getTransDate()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getCancelDate()
+    open fun getCancelDate()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getStatus()
+    open fun getStatus()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getSubTotal()
+    open fun getSubTotal()
         //nullable = true from not(false or (false and true)) = true
 : Money
 
-open fun getShippingCost()
+    open fun getShippingCost()
         //nullable = true from not(false or (false and true)) = true
 : Money
 
-open fun getTaxes()
+    open fun getTaxes()
         //nullable = true from not(false or (false and true)) = true
 : Money
 
-open fun getTotal()
+    open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
 : Money
 
-open fun getPaymentMethod()
+    open fun getPaymentMethod()
         //nullable = true from not(false or (false and true)) = true
 : String
 

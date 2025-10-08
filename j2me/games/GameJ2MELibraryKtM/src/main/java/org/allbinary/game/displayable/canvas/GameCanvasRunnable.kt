@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.graphics.displayable.GameTickDisplayInfoSingleton
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.time.GameTickTimeDelayHelper
@@ -35,20 +36,24 @@ open public class GameCanvasRunnable : GameRunnable {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
+    private val gameTickDisplayInfoSingleton: GameTickDisplayInfoSingleton = GameTickDisplayInfoSingleton.getInstance()!!
+
     private val allBinaryGameCanvas: AllBinaryGameCanvas
-public constructor        (allBinaryGameCanvas: AllBinaryGameCanvas){
+public constructor (allBinaryGameCanvas: AllBinaryGameCanvas){
 var allBinaryGameCanvas = allBinaryGameCanvas
 this.allBinaryGameCanvas= allBinaryGameCanvas
 }
 
 
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
-override fun run()
+
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 
         try {
             allBinaryGameCanvas!!.getLoopTimeHelperP()!!.setStartTime(gameTickTimeDelayHelper!!.setStartTime())
+gameTickDisplayInfoSingleton!!.update()
 allBinaryGameCanvas!!.processGame()
 } catch(e: Exception)
             {
@@ -62,7 +67,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 
 
                 @Throws(Exception::class)
-            override fun processLoopSleep()
+            
+    override fun processLoopSleep()
         //nullable = true from not(false or (false and true)) = true
 {
 allBinaryGameCanvas!!.processLoopSleep()

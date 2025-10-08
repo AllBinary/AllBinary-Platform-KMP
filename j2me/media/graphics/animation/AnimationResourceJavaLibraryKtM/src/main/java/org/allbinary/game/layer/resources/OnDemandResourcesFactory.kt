@@ -36,7 +36,7 @@ open public class OnDemandResourcesFactory
             {
             }            
         
-open fun size()
+    open fun size()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -47,7 +47,7 @@ open fun size()
 }
 
 
-open fun remove(layerId: Int)
+    open fun remove(layerId: Int)
         //nullable = true from not(false or (false and false)) = true
 : OnDemandResources{
 var layerId = layerId

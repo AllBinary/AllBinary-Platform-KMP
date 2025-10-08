@@ -18,12 +18,11 @@ open public class BufferedImageUtil2
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: BufferedImageUtil2 = BufferedImageUtil2()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BufferedImageUtil2{
 
@@ -43,7 +42,7 @@ open fun getInstance()
         
     private val imageUtil: ImageUtil = ImageUtil.getInstance()!!
 
-open fun createSpriteImage(bufferedImageArray: Array<BufferedImage?>)
+    open fun createSpriteImage(bufferedImageArray: Array<BufferedImage?>)
         //nullable = true from not(false or (false and false)) = true
 : BufferedImage{
     //var bufferedImageArray = bufferedImageArray

@@ -66,7 +66,7 @@ open public class SimpleStateTaxModule
     private val STATETAXFILE: String = "stateTaxation.xml"
 
     private var document: Document
-public constructor        ()
+public constructor ()
             : super()
         {
 }
@@ -74,7 +74,7 @@ public constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getTaxRate(streetAddress: StreetAddress, storeFrontInterface: StoreFrontInterface)
+    open fun getTaxRate(streetAddress: StreetAddress, storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
 : Float{
 var streetAddress = streetAddress
@@ -175,7 +175,7 @@ state= state.uppercase()
 }
 
 
-open fun isValid(streetAddress: StreetAddress, storeFrontInterface: StoreFrontInterface)
+    open fun isValid(streetAddress: StreetAddress, storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var streetAddress = streetAddress

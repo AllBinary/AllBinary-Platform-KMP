@@ -57,7 +57,7 @@ open public class AllBinaryNoFlickerAndroidImageRotationAnimation : ImageBaseRot
     private var imageToShow: Image
 
     private var bufferedImageIndex: Int= 0
-protected constructor        (originalImage: Image, image: Image, angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
+protected constructor (originalImage: Image, image: Image, angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
 
                             : super(image, angleInfo, totalAngle, animationBehavior){
     //var originalImage = originalImage
@@ -79,7 +79,7 @@ this.twoImages[1]= ImageCopyUtil.getInstance()!!.createImage(image)
 }
 
 
-open fun setBasicColorP(basicColor: BasicColor)
+    open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var basicColor = basicColor
@@ -93,7 +93,8 @@ open fun setBasicColorP(basicColor: BasicColor)
                                  || this.getBasicColorP()!!.toInt() != basicColor!!.toInt())
                         
                                     {
-                                    changed= true
+                                    imageModifierUtil!!.setColor(this.originalImage, this.imageToShow, 0, basicColor)
+changed= true
 
                                     }
                                 
@@ -111,7 +112,15 @@ this.updateImage()
 }
 
 
-open fun setAlpha(alpha: Int)
+    override fun changeBasicColor(basicColor: BasicColor)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var basicColor = basicColor
+this.setBasicColorP(basicColor)
+}
+
+
+    open fun setAlpha(alpha: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var alpha = alpha
@@ -142,7 +151,7 @@ this.updateImage()
 }
 
 
-open fun nextRotation()
+    open fun nextRotation()
         //nullable = true from not(false or (false and true)) = true
 {
 super.nextRotation()
@@ -151,7 +160,7 @@ this.updateImage()
 }
 
 
-open fun previousRotation()
+    open fun previousRotation()
         //nullable = true from not(false or (false and true)) = true
 {
 super.previousRotation()
@@ -160,7 +169,7 @@ this.updateImage()
 }
 
 
-open fun updateImage()
+    open fun updateImage()
         //nullable = true from not(false or (false and true)) = true
 {
 androidImageUtil!!.rotate(this.twoImages[this.bufferedImageIndex]!!, originalImage, matrix, imageModifierUtil!!.paint)
@@ -168,7 +177,7 @@ this.swap()
 }
 
 
-open fun setFrame(index: Int)
+    open fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var index = index
@@ -185,7 +194,7 @@ this.updateImage()
 }
 
 
-open fun swap()
+    open fun swap()
         //nullable = true from not(false or (false and true)) = true
 {
 this.imageToShow= this.twoImages[this.bufferedImageIndex]!!
@@ -206,7 +215,7 @@ this.imageToShow= this.twoImages[this.bufferedImageIndex]!!
 }
 
 
-open fun paint(graphics: Graphics, x: Int, y: Int)
+    open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

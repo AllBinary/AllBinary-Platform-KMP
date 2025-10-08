@@ -41,19 +41,17 @@ import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.string.tokens.Tokenizer
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.game.configuration.feature.Features
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 
 open public class OpenGLCapabilities
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OpenGLCapabilities = OpenGLCapabilities()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OpenGLCapabilities{
 
@@ -119,13 +117,13 @@ open fun getInstance()
     private var glExtensionGPUShader4: Boolean= false
 
     private var vertexBufferObjectSupport: Boolean= false
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun initCapabilities(gl: GL10)
+    open fun initCapabilities(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
 {
 var gl = gl
@@ -403,7 +401,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
 }
 
 
-open fun isExtension(gameFeature: OpenGLFeature)
+    open fun isExtension(gameFeature: OpenGLFeature)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var gameFeature = gameFeature
@@ -434,7 +432,8 @@ var gameFeature = gameFeature
                             
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -500,7 +499,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.TOSTRING, e)
 }
 
 
-open fun isGlExtensionDrawTexture()
+    open fun isGlExtensionDrawTexture()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -511,7 +510,7 @@ open fun isGlExtensionDrawTexture()
 }
 
 
-open fun isGlExtensionGPUShader4()
+    open fun isGlExtensionGPUShader4()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -522,7 +521,7 @@ open fun isGlExtensionGPUShader4()
 }
 
 
-open fun getGlVersion()
+    open fun getGlVersion()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -533,7 +532,7 @@ open fun getGlVersion()
 }
 
 
-open fun getGlVersionString()
+    open fun getGlVersionString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -544,7 +543,7 @@ open fun getGlVersionString()
 }
 
 
-open fun getGlShaderVersion()
+    open fun getGlShaderVersion()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -555,7 +554,7 @@ open fun getGlShaderVersion()
 }
 
 
-open fun isGlThreedDrawTexture()
+    open fun isGlThreedDrawTexture()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -566,7 +565,7 @@ open fun isGlThreedDrawTexture()
 }
 
 
-open fun getGlRenderer()
+    open fun getGlRenderer()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -577,7 +576,7 @@ open fun getGlRenderer()
 }
 
 
-open fun isVertexBufferObjectSupport()
+    open fun isVertexBufferObjectSupport()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -588,7 +587,7 @@ open fun isVertexBufferObjectSupport()
 }
 
 
-open fun isTextureSizeValid(widthAndHeight: Int)
+    open fun isTextureSizeValid(widthAndHeight: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var widthAndHeight = widthAndHeight

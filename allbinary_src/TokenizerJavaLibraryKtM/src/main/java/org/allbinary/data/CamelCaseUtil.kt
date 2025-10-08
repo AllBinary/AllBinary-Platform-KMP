@@ -36,12 +36,11 @@ open public class CamelCaseUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: CamelCaseUtil = CamelCaseUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CamelCaseUtil{
 
@@ -63,7 +62,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun getAsCamelCase(string: String, stringBuilder: StringMaker)
+    open fun getAsCamelCase(string: String, stringBuilder: StringMaker)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var string = string

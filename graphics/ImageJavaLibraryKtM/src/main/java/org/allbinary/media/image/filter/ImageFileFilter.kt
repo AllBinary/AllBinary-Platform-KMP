@@ -36,7 +36,7 @@ open public class ImageFileFilter : FileFilter {
             {
             }            
         
-open fun accept(f: File)
+    open fun accept(f: File)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var f = f
@@ -86,7 +86,7 @@ var f = f
 }
 
 
-open fun getDescription()
+    open fun getDescription()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

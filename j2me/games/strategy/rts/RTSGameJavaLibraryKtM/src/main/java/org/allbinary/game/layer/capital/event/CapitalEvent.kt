@@ -31,7 +31,7 @@ open public class CapitalEvent : AllBinaryEventObject {
         
 
     private var value: Int= 0
-public constructor        (anyType: Any)                        
+public constructor (anyType: Any)                        
 
                             : super(anyType){
 var anyType = anyType
@@ -41,7 +41,8 @@ var anyType = anyType
                     
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -57,7 +58,7 @@ stringBuffer!!.append(this.getValue())
 }
 
 
-open fun getValue()
+    open fun getValue()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -68,7 +69,7 @@ open fun getValue()
 }
 
 
-open fun setValue(value: Int)
+    open fun setValue(value: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value

@@ -42,7 +42,8 @@ open public class OpenGLESDeviceImageTranslate : OpenGLESImageTranslate {
     var translateX2: Float = 0.0f
 
     var translateY2: Float = 0.0f
-override fun translate(gl: GL10, openGLESImage: OpenGLESImage, x: Float, y: Float)
+
+    override fun translate(gl: GL10, openGLESImage: OpenGLESImage, x: Float, y: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl
@@ -52,7 +53,8 @@ override fun translate(gl: GL10, openGLESImage: OpenGLESImage, x: Float, y: Floa
 openGLESImage!!.imageProcessor!!.translate(gl, translateX +(openGLESImage!!.openGLESImageProperties!!.scaleX *x), translateY +(openGLESImage!!.openGLESImageProperties!!.scaleY *y))
 }
 
-override fun translate2(gl: GL10, openGLESImage: OpenGLESImage)
+
+    override fun translate2(gl: GL10, openGLESImage: OpenGLESImage)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl

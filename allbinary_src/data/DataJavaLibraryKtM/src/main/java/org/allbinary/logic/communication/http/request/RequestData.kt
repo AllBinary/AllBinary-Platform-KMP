@@ -30,8 +30,7 @@ open public class RequestData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val REQUEST: String = "REQUESTDATA_REQUEST"
 
@@ -42,7 +41,7 @@ open public class RequestData
     val VISITORS: String = "REQUESTDATA_VISITORS"
 
         }
-            public constructor        ()
+            public constructor ()
             : super()
         {
 }

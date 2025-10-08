@@ -31,12 +31,11 @@ open public class ImageTypeUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private var SINGLETON: ImageTypeUtil = ImageTypeUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ImageTypeUtil{
 
@@ -56,7 +55,7 @@ open fun getInstance()
     val GIF: String = "gif"
 
     private val list: BasicArrayList = BasicArrayList()
-private constructor        ()
+private constructor ()
             : super()
         {
 list.add(JPG)
@@ -65,7 +64,7 @@ list.add(PNG)
 }
 
 
-open fun isSupported(mediaFileType: String)
+    open fun isSupported(mediaFileType: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var mediaFileType = mediaFileType

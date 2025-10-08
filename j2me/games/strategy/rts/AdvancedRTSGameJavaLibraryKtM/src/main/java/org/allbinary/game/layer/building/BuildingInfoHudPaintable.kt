@@ -29,7 +29,6 @@ import javax.microedition.lcdui.Graphics
 import org.allbinary.game.layer.RTSLayer
 import org.allbinary.game.layer.SelectionHudPaintable
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.game.graphics.hud.BasicHudFactory
 import org.allbinary.game.layer.hud.basic.NumberStringHud
@@ -39,12 +38,11 @@ import org.allbinary.logic.math.MathUtil
 
 open public class BuildingInfoHudPaintable : SelectionHudPaintable {
         
-
-        companion object {
+companion object {
             
     private val instance: BuildingInfoHudPaintable = BuildingInfoHudPaintable()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BuildingInfoHudPaintable{
 
@@ -72,7 +70,7 @@ open fun getInstance()
     private val HEALTH: String = "Health:"
 
     private var rtsLayer: RTSLayer
-private constructor        (){
+private constructor (){
 
         try {
             
@@ -104,7 +102,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
 
-open fun setBasicColorP(basicColor: BasicColor)
+    open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
 var basicColor = basicColor
@@ -116,7 +114,7 @@ this.maxHealthHud!!.setBasicColorP(basicColor)
 }
 
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -129,7 +127,7 @@ this.getAnimationInterface()!!.paint(graphics, this.imageX, y)
 }
 
 
-open fun updateSelectionInfo()
+    open fun updateSelectionInfo()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setName(this.getRtsLayer()!!.getName())
@@ -151,7 +149,7 @@ this.maxHealthHud!!.set(buildingLayer!!.getHealthInterface()!!.getMaxHealth())
 }
 
 
-open fun setRtsLayer(rtsLayer: RTSLayer)
+    open fun setRtsLayer(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var rtsLayer = rtsLayer
@@ -159,7 +157,7 @@ this.rtsLayer= rtsLayer
 }
 
 
-open fun getRtsLayer()
+    open fun getRtsLayer()
         //nullable = true from not(false or (false and true)) = true
 : RTSLayer{
 

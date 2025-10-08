@@ -40,14 +40,14 @@ open public class CustomLoaderHelper
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
+public constructor (hashMap: HashMap<Any, Any>, pageContext: PageContext)
             : super()
         {
 var hashMap = hashMap
 var pageContext = pageContext
 }
 
-public constructor        ()
+public constructor ()
             : super()
         {
 }
@@ -55,7 +55,7 @@ public constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getWebappPath()
+    open fun getWebappPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -79,7 +79,7 @@ open fun getWebappPath()
 
                 @Throws(Exception::class)
             
-open fun setWebappPath(path: String)
+    open fun setWebappPath(path: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var path = path

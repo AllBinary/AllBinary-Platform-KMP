@@ -42,8 +42,7 @@ import org.allbinary.string.CommonSeps
 
 open public class ScrollSelectionForm : PaintableForm {
         
-
-        companion object {
+companion object {
             
     val NULL_SCROLL_SELECTION_FORM: ScrollSelectionForm = ScrollSelectionForm(StringUtil.getInstance()!!.EMPTY_STRING, arrayOfNulls(0), RectangleFactory.SINGLETON, FormTypeFactory.getInstance()!!.NULL_FORM_TYPE, 0, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)
 
@@ -64,7 +63,7 @@ open public class ScrollSelectionForm : PaintableForm {
     private var buttonBasicColor: BasicColor
 
     var paintable: ItemPaintable = ItemPaintableFactory.getInstance()!!
-public constructor        (title: String, items: Array<CustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (title: String, items: Array<CustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : this(title, items, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor){
     //var title = title
@@ -82,7 +81,7 @@ public constructor        (title: String, items: Array<CustomItem?>, formPaintab
 this.paintable= formPaintableFactory!!.getInstance(this)
 }
 
-public constructor        (title: String, items: Array<CustomItem?>, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+public constructor (title: String, items: Array<CustomItem?>, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(title, items, rectangle, formType, backgroundBasicColor, foregroundBasicColor){
     //var title = title
@@ -101,7 +100,8 @@ this.border= border
 this.halfBorder= (border shr 1)
 }
 
-override fun append(item: CustomItem)
+
+    override fun append(item: CustomItem)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var item = item
@@ -115,7 +115,7 @@ override fun append(item: CustomItem)
 
                 @Throws(Exception::class)
             
-open fun getSelectedItem(point: GPoint)
+    open fun getSelectedItem(point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 : CustomItem{
     //var point = point
@@ -149,7 +149,7 @@ open fun getSelectedItem(point: GPoint)
 
                 @Throws(Exception::class)
             
-open fun getItemIndex(item: CustomItem)
+    open fun getItemIndex(item: CustomItem)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var item = item
@@ -189,7 +189,7 @@ open fun getItemIndex(item: CustomItem)
 }
 
 
-open fun getStartIndex()
+    open fun getStartIndex()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -202,7 +202,7 @@ open fun getStartIndex()
 
                 @Throws(Exception::class)
             
-open fun getSelectedIndex(point: GPoint)
+    open fun getSelectedIndex(point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var point = point
@@ -361,7 +361,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, GET_SELECTED_INDEX)
 
                 @Throws(Exception::class)
             
-open fun processInput(gameKeyCode: Int)
+    open fun processInput(gameKeyCode: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var gameKeyCode = gameKeyCode
@@ -478,7 +478,7 @@ open fun processInput(gameKeyCode: Int)
 }
 
 
-open fun isInForm(point: GPoint)
+    open fun isInForm(point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var point = point
@@ -507,7 +507,7 @@ open fun isInForm(point: GPoint)
 
                 @Throws(Exception::class)
             
-open fun paintItem(graphics: Graphics, index: Int, item: CustomItemInterface, x: Int, y: Int)
+    open fun paintItem(graphics: Graphics, index: Int, item: CustomItemInterface, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var graphics = graphics
@@ -582,7 +582,7 @@ graphics.drawRect(x -halfBorder -adjustedBorder, y -halfBorder -adjustedBorder, 
 
                 @Throws(Exception::class)
             
-open fun paintUnselectedItem(graphics: Graphics, index: Int, item: CustomItemInterface, x: Int, y: Int)
+    open fun paintUnselectedItem(graphics: Graphics, index: Int, item: CustomItemInterface, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var graphics = graphics
@@ -651,7 +651,7 @@ item.paintUnselected(graphics, x, y)
 }
 
 
-open fun getDiffX(item: CustomItemInterface)
+    open fun getDiffX(item: CustomItemInterface)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var item = item
@@ -663,7 +663,7 @@ open fun getDiffX(item: CustomItemInterface)
 }
 
 
-open fun getDx()
+    open fun getDx()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -674,7 +674,7 @@ open fun getDx()
 }
 
 
-open fun getDy()
+    open fun getDy()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -685,7 +685,7 @@ open fun getDy()
 }
 
 
-open fun setButtonBasicColor(buttonBasicColor: BasicColor)
+    open fun setButtonBasicColor(buttonBasicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var buttonBasicColor = buttonBasicColor
@@ -693,7 +693,7 @@ this.buttonBasicColor= buttonBasicColor
 }
 
 
-open fun getButtonBasicColor()
+    open fun getButtonBasicColor()
         //nullable = true from not(false or (false and true)) = true
 : BasicColor{
 

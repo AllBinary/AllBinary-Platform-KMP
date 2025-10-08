@@ -36,7 +36,7 @@ open public class ImageMiniMapLayer : MiniMapLayer {
         
 
     private var image: Image
-public constructor        (geographicMapInterface: BasicGeographicMap, viewPosition: ViewPosition)                        
+public constructor (geographicMapInterface: BasicGeographicMap, viewPosition: ViewPosition)                        
 
                             : super(geographicMapInterface, viewPosition){
 var geographicMapInterface = geographicMapInterface
@@ -50,7 +50,7 @@ var viewPosition = viewPosition
 
                 @Throws(Exception::class)
             
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -65,7 +65,7 @@ this.image= PaintableToImageUtil.getImage(allBinaryTiledLayer, aWidth, aHeight)
 
     private var anchor: Int = Anchor.TOP_LEFT
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

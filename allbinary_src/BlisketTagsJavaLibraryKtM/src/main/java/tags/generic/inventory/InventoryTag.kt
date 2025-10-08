@@ -37,7 +37,7 @@ open public class InventoryTag : StoreValidationTransformTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        ()                        
+public constructor ()                        
 
                             : super(){
 
@@ -49,7 +49,7 @@ public constructor        ()
 
                 @Throws(LicensingException::class)
             
-open fun search()
+    open fun search()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -115,7 +115,7 @@ pageContext!!.getOut()!!.print("Exception: " +e +"<br>")
 
                 @Throws(LicensingException::class)
             
-open fun viewSummary()
+    open fun viewSummary()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -181,7 +181,7 @@ pageContext!!.getOut()!!.print("Exception: " +e +"<br>")
 
                 @Throws(JspTagException::class)
             
-open fun doStartTag()
+    open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

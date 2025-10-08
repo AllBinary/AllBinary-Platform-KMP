@@ -35,12 +35,11 @@ import org.allbinary.util.BasicArrayListUtil
 
 open public class FeaturedResourceRelativeRelationshipFactory : FeaturedResourceFactory {
         
-
-        companion object {
+companion object {
             
     private var INSTANCE: FeaturedResourceRelativeRelationshipFactory = FeaturedResourceRelativeRelationshipFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : FeaturedResourceRelativeRelationshipFactory{
 
@@ -52,13 +51,13 @@ open fun getInstance()
 
 
         }
-            private constructor        (){
+            private constructor (){
 }
 
 
                 @Throws(Exception::class)
             
-open fun getRelativeRelationshipList(resource: String, layer: AllBinaryLayer)
+    open fun getRelativeRelationshipList(resource: String, layer: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var resource = resource
@@ -117,7 +116,7 @@ var layer = layer
 
                 @Throws(Exception::class)
             
-open fun duplicate(list: BasicArrayList, layer: AllBinaryLayer)
+    open fun duplicate(list: BasicArrayList, layer: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var list = list

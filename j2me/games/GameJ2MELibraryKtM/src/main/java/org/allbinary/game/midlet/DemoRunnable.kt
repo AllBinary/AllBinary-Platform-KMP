@@ -47,7 +47,7 @@ open public class DemoRunnable
     private val demoGameMidlet: DemoGameMidlet
 
     private val startDemoGameMidletEvent: DemoGameMidletEvent
-public constructor        (demoGameMidlet: DemoGameMidlet)
+public constructor (demoGameMidlet: DemoGameMidlet)
             : super()
         {
 var demoGameMidlet = demoGameMidlet
@@ -55,7 +55,8 @@ this.demoGameMidlet= demoGameMidlet
 this.startDemoGameMidletEvent= DemoGameMidletEvent(this.demoGameMidlet, DemoGameMidletStateFactory.getInstance()!!.START_DEMO)
 }
 
-override fun run()
+
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 

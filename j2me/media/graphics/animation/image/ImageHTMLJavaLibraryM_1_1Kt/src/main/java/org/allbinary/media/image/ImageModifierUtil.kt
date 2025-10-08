@@ -30,7 +30,6 @@ import javax.microedition.lcdui.Image
 import org.allbinary.graphics.Anchor
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.microemu.device.playn.PlaynImage
@@ -43,10 +42,9 @@ open public class ImageModifierUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getInstanceOrCreate()
+    open fun getInstanceOrCreate()
         //nullable = true from not(false or (false and true)) = true
 : ImageModifierUtil{
 
@@ -72,7 +70,7 @@ open fun getInstanceOrCreate()
 
     private var alphaArray: BooleanArray
 
-open fun setColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, basicColor: BasicColor)
+    open fun setColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var unusedOriginalImage = unusedOriginalImage
@@ -82,7 +80,7 @@ open fun setColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, bas
 }
 
 
-open fun changeColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, basicColor: BasicColor)
+    open fun changeColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var unusedOriginalImage = unusedOriginalImage
@@ -92,7 +90,7 @@ open fun changeColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, 
 }
 
 
-open fun setAlpha(originalImage: Image, image: Image, imageIndex: Int, alpha: Int)
+    open fun setAlpha(originalImage: Image, image: Image, imageIndex: Int, alpha: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var originalImage = originalImage
@@ -109,7 +107,7 @@ this.setAlpha(originalImage, image, imageIndex, alphaFloat)
 }
 
 
-open fun setAlpha(originalImage: Image, image: Image, imageIndex: Int, alpha: Float)
+    open fun setAlpha(originalImage: Image, image: Image, imageIndex: Int, alpha: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var originalImage = originalImage
@@ -129,7 +127,7 @@ this.setAlpha2(originalImage, image, imageIndex, alpha)
 }
 
 
-open fun setAlpha2(originalImage: Image, image: Image, imageIndex: Int, alpha: Float)
+    open fun setAlpha2(originalImage: Image, image: Image, imageIndex: Int, alpha: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var originalImage = originalImage
@@ -155,7 +153,7 @@ canvas.drawImage(originalPlaynImage, 0, 0)
 }
 
 
-open fun setAlpha3(image: Image, alpha: Float)
+    open fun setAlpha3(image: Image, alpha: Float)
         //nullable = true from not(false or (false and false)) = true
 {
     //var image = image
@@ -179,7 +177,7 @@ canvas.setAlpha(alphaFloat)
 }
 
 
-open fun getImageArray(originalImageArray: Array<Image?>)
+    open fun getImageArray(originalImageArray: Array<Image?>)
         //nullable = true from not(false or (false and false)) = true
 : Array<Image?>{
     //var originalImageArray = originalImageArray
@@ -210,7 +208,7 @@ this.handleImage(imageArray, index, originalImageArray[index]!!)
 }
 
 
-open fun handleImage(imageArray: Array<Image?>, index: Int, image: Image)
+    open fun handleImage(imageArray: Array<Image?>, index: Int, image: Image)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageArray = imageArray
@@ -240,14 +238,16 @@ open fun handleImage(imageArray: Array<Image?>, index: Int, image: Image)
                             
     var callback: ResourceCallback = object: ResourceCallback()
                                 {
-                                override fun done(resource: Any)
+                                
+    override fun done(resource: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var resource = resource
 logUtil!!.put(resourceCallbackStrings!!.DONE +image.getName(), this, resourceCallbackStrings!!.HANDLE_IMAGE)
 copy(imageArray, index, image, image3)
 }
-override fun error(e: Throwable)
+
+    override fun error(e: Throwable)
         //nullable = true from not(false or (false and false)) = true
 {
 var e = e
@@ -273,7 +273,7 @@ image3.addCallback(callback)
 }
 
 
-open fun copy(imageArray: Array<Image?>, index: Int, image: Image, image3: playn.core.Image)
+    open fun copy(imageArray: Array<Image?>, index: Int, image: Image, image3: playn.core.Image)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageArray = imageArray
@@ -298,7 +298,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION_LABEL +resourceCallbackStrings!!.DONE, t
 }
 
 
-open fun reset()
+    open fun reset()
         //nullable = true from not(false or (false and true)) = true
 {
 

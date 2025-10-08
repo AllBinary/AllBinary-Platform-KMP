@@ -25,20 +25,21 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface GameFeatureControlledInterface {
         
 
                 @Throws(Exception::class)
             
-open fun init(level: Int)
+    open fun init(level: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun isFeature()
+    open fun isFeature()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun isLoadingLevel(level: Int)
+    open fun isLoadingLevel(level: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 

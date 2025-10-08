@@ -26,12 +26,13 @@
         import kotlin.reflect.KClass
         
 import java.util.HashMap
+
 interface HashMapJDialogListenerInterface {
         
 
                 @Throws(Exception::class)
             
-open fun onHashMap(hashMap: HashMap<Any, Any>)
+    open fun onHashMap(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 
 

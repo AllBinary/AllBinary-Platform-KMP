@@ -11,14 +11,15 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface JTreeInterface {
         
 
-open fun updateJTree()
+    open fun updateJTree()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun getActionScriptJTree()
+    open fun getActionScriptJTree()
         //nullable = true from not(false or (false and true)) = true
 : javax.swing.JTree
 

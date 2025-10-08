@@ -31,12 +31,11 @@ open public class PrimaryWaypointHelper
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: PrimaryWaypointHelper = PrimaryWaypointHelper()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PrimaryWaypointHelper{
 
@@ -50,13 +49,13 @@ open fun getInstance()
         }
             
     private var waypointLayer: WaypointLayer
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getWaypointLayer()
+    open fun getWaypointLayer()
         //nullable = true from not(false or (false and true)) = true
 : WaypointLayer{
 
@@ -67,7 +66,7 @@ open fun getWaypointLayer()
 }
 
 
-open fun setWaypointLayer(waypointLayer: WaypointLayer)
+    open fun setWaypointLayer(waypointLayer: WaypointLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var waypointLayer = waypointLayer

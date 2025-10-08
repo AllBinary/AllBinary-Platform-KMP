@@ -25,18 +25,19 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface ScoreableInterface {
         
 
-open fun getPoints()
+    open fun getPoints()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun addPoints(points: Int)
+    open fun addPoints(points: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun removePoints(points: Int)
+    open fun removePoints(points: Int)
         //nullable = true from not(false or (false and false)) = true
 
 

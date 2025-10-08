@@ -27,7 +27,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.logic.communication.log.LogFactory
+import org.allbinary.thread.ARunnable
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
@@ -48,10 +48,10 @@ open public class MultipassWaypointPathRunnable : WaypointPathRunnableBase {
 
     private val multipassState: MultipassState = MultipassState()
 
-    private val FIRST_RUNNABLE: Runnable = object: Runnable()
+    private val FIRST_RUNNABLE: Runnable = object: ARunnable()
                                 {
                                 
-open fun run()
+    open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -108,10 +108,10 @@ finish()
                                 }
                             
 
-    private val SECOND_RUNNABLE: Runnable = object: Runnable()
+    private val SECOND_RUNNABLE: Runnable = object: ARunnable()
                                 {
                                 
-open fun run()
+    open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -146,10 +146,10 @@ finish()
                                 }
                             
 
-    private val END_RUNNABLE: Runnable = object: Runnable()
+    private val END_RUNNABLE: Runnable = object: ARunnable()
                                 {
                                 
-open fun run()
+    open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -174,10 +174,10 @@ finish()
                                 }
                             
 
-    private val ALREADY_ENDED_RUNNABLE: Runnable = object: Runnable()
+    private val ALREADY_ENDED_RUNNABLE: Runnable = object: ARunnable()
                                 {
                                 
-open fun run()
+    open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -190,11 +190,11 @@ open fun run()
                             
 
     private var currentPassRunnable: Runnable = FIRST_RUNNABLE
-public constructor        (){
+public constructor (){
 }
 
 
-open fun setRunning(isRunning: Boolean)
+    open fun setRunning(isRunning: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var isRunning = isRunning
@@ -212,7 +212,7 @@ this.done= false
 }
 
 
-open fun run()
+    open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -230,7 +230,7 @@ this.setRunning(false)
 }
 
 
-open fun reset2()
+    open fun reset2()
         //nullable = true from not(false or (false and true)) = true
 {
 multipassState!!.step= 0
@@ -242,7 +242,7 @@ pathFindingInfo=
 }
 
 
-open fun finish()
+    open fun finish()
         //nullable = true from not(false or (false and true)) = true
 {
 this.reset2()
@@ -251,7 +251,7 @@ done= true
 }
 
 
-open fun isDone()
+    open fun isDone()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -262,7 +262,7 @@ open fun isDone()
 }
 
 
-open fun reset()
+    open fun reset()
         //nullable = true from not(false or (false and true)) = true
 {
 this.reset2()

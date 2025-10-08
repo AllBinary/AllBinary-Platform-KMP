@@ -29,7 +29,6 @@
         
 import org.allbinary.util.BasicArrayList
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.math.SmallIntegerSingletonFactory
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
@@ -49,7 +48,7 @@ open public class DynamicRaceTracksPathPrinter : RaceTracksPathPrinter {
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-open fun printAllPaths(raceTrackGeographicMapInterfaceFactoryInterface: RaceTrackGeographicMapInterfaceFactoryInterface, pathFindingInfo: PathFindingInfo, size: Int)
+    open fun printAllPaths(raceTrackGeographicMapInterfaceFactoryInterface: RaceTrackGeographicMapInterfaceFactoryInterface, pathFindingInfo: PathFindingInfo, size: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var raceTrackGeographicMapInterfaceFactoryInterface = raceTrackGeographicMapInterfaceFactoryInterface

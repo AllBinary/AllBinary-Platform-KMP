@@ -37,7 +37,8 @@ open public class NoAccelerometerSensor : AllBinaryOrientationSensor {
             }            
         
                 @Throws(Exception::class)
-            override fun getOrientation()
+            
+    override fun getOrientation()
         //nullable = true from not(false or (false and true)) = true
 : Orientation{
 
@@ -47,7 +48,8 @@ open public class NoAccelerometerSensor : AllBinaryOrientationSensor {
                         return Orientation.NONE
 }
 
-override fun onSensorChange()
+
+    override fun onSensorChange()
         //nullable = true from not(false or (false and true)) = true
 {
 }

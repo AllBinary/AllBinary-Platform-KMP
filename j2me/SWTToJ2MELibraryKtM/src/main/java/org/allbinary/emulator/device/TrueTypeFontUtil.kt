@@ -42,7 +42,6 @@ import org.allbinary.graphics.displayable.CanvasStrings
 import org.allbinary.graphics.opengles.OpenGLCapabilities
 import org.allbinary.image.PreResourceImageUtil
 import org.allbinary.image.opengles.OpenGLESImage
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.string.StringMaker
@@ -51,12 +50,11 @@ import org.allbinary.string.CommonStrings
 
 open public class TrueTypeFontUtil : TrueTypeFontUtilBase {
         
-
-        companion object {
+companion object {
             
     private val instance: TrueTypeFontUtil = TrueTypeFontUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : TrueTypeFontUtil{
 
@@ -73,10 +71,10 @@ open fun getInstance()
 
     private val widthFloatArray: FloatArray
 
-    var fontImage: OpenGLESImage
+    var fontImage: OpenGLESImage = OpenGLESImage.NULL_OPENGL_IMAGE
 
     private val widthScale: Float
-private constructor        ()                        
+private constructor ()                        
 
                             : super(2){
 
@@ -112,7 +110,7 @@ this.widthScale= if((this.scale == 2)) {
 }
 
 
-open fun getFontBitmap(gl: GL10, filename: String, cellSize: Int, basicColor: BasicColor)
+    open fun getFontBitmap(gl: GL10, filename: String, cellSize: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var gl = gl
@@ -123,9 +121,7 @@ open fun getFontBitmap(gl: GL10, filename: String, cellSize: Int, basicColor: Ba
         try {
             
     
-                        if(this.fontImage == 
-                                    null
-                                )
+                        if(this.fontImage == OpenGLESImage.NULL_OPENGL_IMAGE)
                         
                                     {
                                     
@@ -210,7 +206,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.EXCEPTION, e)
 }
 
 
-open fun saveFontAtlasAsFile()
+    open fun saveFontAtlasAsFile()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -231,7 +227,7 @@ imageLoader!!.save(CommonSeps.getInstance()!!.PERIOD +CanvasStrings.getInstance(
 }
 
 
-open fun getFontBitmap2(filename: String, cellSize: Int, basicColor: BasicColor)
+    open fun getFontBitmap2(filename: String, cellSize: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 : Image{
     //var filename = filename
@@ -332,7 +328,7 @@ graphics.drawChar(characterArray[0]!!, x, y, 0)
 }
 
 
-open fun getFontWidths(filename: String, fontSize: Int)
+    open fun getFontWidths(filename: String, fontSize: Int)
         //nullable = true from not(false or (false and false)) = true
 : IntArray{
 var filename = filename

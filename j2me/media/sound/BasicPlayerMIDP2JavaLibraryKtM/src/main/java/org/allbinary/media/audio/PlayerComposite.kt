@@ -51,7 +51,7 @@ open public class PlayerComposite
     private val player: Player
 
     private val timeElapsedHelper: TimeDelayHelper = TimeDelayHelper(0)
-public constructor        (player: Player)
+public constructor (player: Player)
             : super()
         {
 var player = player
@@ -59,7 +59,7 @@ this.player= player
 this.timeElapsedHelper!!.delay= 570
 }
 
-public constructor        (player: Player, repeatTime: Int)
+public constructor (player: Player, repeatTime: Int)
             : super()
         {
 var player = player
@@ -70,7 +70,7 @@ this.timeElapsedHelper!!.delay= repeatTime
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun addPlayerListener(playerListener: PlayerListener)
+    open fun addPlayerListener(playerListener: PlayerListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var playerListener = playerListener
@@ -78,7 +78,7 @@ this.player.addPlayerListener(playerListener)
 }
 
 
-open fun removePlayerListener(playerListener: PlayerListener)
+    open fun removePlayerListener(playerListener: PlayerListener)
         //nullable = true from not(false or (false and false)) = true
 {
 var playerListener = playerListener
@@ -86,21 +86,21 @@ this.player.removePlayerListener(playerListener)
 }
 
 
-open fun close()
+    open fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 this.player.close()
 }
 
 
-open fun deallocate()
+    open fun deallocate()
         //nullable = true from not(false or (false and true)) = true
 {
 this.player.deallocate()
 }
 
 
-open fun getContentType()
+    open fun getContentType()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -111,7 +111,7 @@ open fun getContentType()
 }
 
 
-open fun getDuration()
+    open fun getDuration()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -122,7 +122,7 @@ open fun getDuration()
 }
 
 
-open fun getMediaTime()
+    open fun getMediaTime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -133,7 +133,7 @@ open fun getMediaTime()
 }
 
 
-open fun getTimeBase()
+    open fun getTimeBase()
         //nullable = true from not(false or (false and true)) = true
 : TimeBase{
 
@@ -148,7 +148,7 @@ open fun getTimeBase()
                 @Throws(MediaException::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun setTimeBase(timeBase: TimeBase)
+    open fun setTimeBase(timeBase: TimeBase)
         //nullable = true from not(false or (false and false)) = true
 {
 var timeBase = timeBase
@@ -158,7 +158,7 @@ player.
 }
 
 
-open fun prefetch()
+    open fun prefetch()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -172,7 +172,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "prefetch", e)
 }
 
 
-open fun realize()
+    open fun realize()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -186,7 +186,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "realize", e)
 }
 
 
-open fun getState()
+    open fun getState()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -197,7 +197,7 @@ open fun getState()
 }
 
 
-open fun setLoopCount(count: Int)
+    open fun setLoopCount(count: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var count = count
@@ -205,7 +205,7 @@ this.player.setLoopCount(count)
 }
 
 
-open fun setMediaTime(now: Long)
+    open fun setMediaTime(now: Long)
         //nullable = true from not(false or (false and false)) = true
 : Long{
 var now = now
@@ -231,7 +231,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "setMediaTime", e)
 
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
 
-open fun start()
+    open fun start()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -253,7 +253,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME
 }
 
 
-open fun stop()
+    open fun stop()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -267,7 +267,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "stop", e)
 }
 
 
-open fun getControl(controlType: String)
+    open fun getControl(controlType: String)
         //nullable = true from not(false or (false and false)) = true
 : Control{
 var controlType = controlType
@@ -279,7 +279,7 @@ var controlType = controlType
 }
 
 
-open fun getControls()
+    open fun getControls()
         //nullable = true from not(false or (false and true)) = true
 : Array<Control?>{
 
@@ -290,7 +290,7 @@ open fun getControls()
 }
 
 
-open fun setVolume(leftVolume: Int, rightVolume: Int)
+    open fun setVolume(leftVolume: Int, rightVolume: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var leftVolume = leftVolume
@@ -301,7 +301,7 @@ player.
 }
 
 
-open fun getPlayerP()
+    open fun getPlayerP()
         //nullable = true from not(false or (false and true)) = true
 : Player{
 

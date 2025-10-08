@@ -30,14 +30,13 @@ open public class TestRemoteHighScoresNotFinished
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val PATH: String = "G:\\mnt\\bc\\mydev\\work\\allbinary_src\\licensing\\data\\"
 
                 @Throws(Exception::class)
             
-open fun main(args: Array<String?>)
+    open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var args = args
@@ -48,7 +47,7 @@ var args = args
 
 
         }
-            public constructor        ()
+            public constructor ()
             : super()
         {
 }

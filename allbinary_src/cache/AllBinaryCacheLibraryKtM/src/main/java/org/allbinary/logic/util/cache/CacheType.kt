@@ -35,7 +35,7 @@ open public class CacheType
     private var vendor: String
 
     private var type: String
-public constructor        (vendor: String, type: String)
+public constructor (vendor: String, type: String)
             : super()
         {
 var vendor = vendor
@@ -45,7 +45,7 @@ this.setType(type)
 }
 
 
-open fun getVendor()
+    open fun getVendor()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -56,7 +56,7 @@ open fun getVendor()
 }
 
 
-open fun setVendor(vendor: String)
+    open fun setVendor(vendor: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var vendor = vendor
@@ -64,7 +64,7 @@ this.vendor= vendor
 }
 
 
-open fun getType()
+    open fun getType()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -75,14 +75,15 @@ open fun getType()
 }
 
 
-open fun setType(type: String)
+    open fun setType(type: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var type = type
 this.type= type
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

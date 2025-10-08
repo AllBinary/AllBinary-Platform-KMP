@@ -34,12 +34,11 @@ open public class BasicCryptUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: BasicCryptUtil = BasicCryptUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BasicCryptUtil{
 
@@ -63,7 +62,7 @@ open fun getInstance()
 
                 @Throws(Exception::class)
             
-open fun getDecryptedInputStream(inputStream: InputStream, cryptInterface: CryptInterface)
+    open fun getDecryptedInputStream(inputStream: InputStream, cryptInterface: CryptInterface)
         //nullable = true from not(false or (false and false)) = true
 : InputStream{
 var inputStream = inputStream

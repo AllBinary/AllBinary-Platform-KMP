@@ -38,7 +38,7 @@ open public class VectorInfo
     private var points: Array<IntArray?>
 
     private var totalFrames: Int
-public constructor        (width: Int, height: Int, points: Array<IntArray?>, totalFrames: Int)
+public constructor (width: Int, height: Int, points: Array<IntArray?>, totalFrames: Int)
             : super()
         {
 var width = width
@@ -52,7 +52,7 @@ this.totalFrames= totalFrames
 }
 
 
-open fun getWidth()
+    open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -63,7 +63,7 @@ open fun getWidth()
 }
 
 
-open fun setWidth(width: Int)
+    open fun setWidth(width: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var width = width
@@ -71,7 +71,7 @@ this.width= width
 }
 
 
-open fun getHeight()
+    open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -82,7 +82,7 @@ open fun getHeight()
 }
 
 
-open fun setHeight(height: Int)
+    open fun setHeight(height: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var height = height
@@ -90,7 +90,7 @@ this.height= height
 }
 
 
-open fun getPoints()
+    open fun getPoints()
         //nullable = true from not(false or (false and true)) = true
 : Array<IntArray?>{
 
@@ -101,7 +101,7 @@ open fun getPoints()
 }
 
 
-open fun setPoints(points: Array<IntArray?>)
+    open fun setPoints(points: Array<IntArray?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var points = points
@@ -109,7 +109,7 @@ this.points= points
 }
 
 
-open fun getTotalFrames()
+    open fun getTotalFrames()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -120,7 +120,7 @@ open fun getTotalFrames()
 }
 
 
-open fun setTotalFrames(totalFrames: Int)
+    open fun setTotalFrames(totalFrames: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var totalFrames = totalFrames

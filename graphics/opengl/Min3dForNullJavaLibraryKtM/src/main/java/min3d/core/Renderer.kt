@@ -27,18 +27,19 @@
         
 import javax.microedition.khronos.egl.EGLConfig
 import javax.microedition.khronos.opengles.GL10
+
 interface Renderer {
         
 
-open fun onSurfaceCreated(gl: GL10, config: EGLConfig)
+    open fun onSurfaceCreated(gl: GL10, config: EGLConfig)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun onSurfaceChanged(gl: GL10, width: Int, height: Int)
+    open fun onSurfaceChanged(gl: GL10, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun onDrawFrame(gl: GL10)
+    open fun onDrawFrame(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
 
 

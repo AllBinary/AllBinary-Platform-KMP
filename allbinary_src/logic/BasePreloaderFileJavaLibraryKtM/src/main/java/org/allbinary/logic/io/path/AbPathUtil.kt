@@ -30,12 +30,11 @@ open public class AbPathUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: AbPathUtil = AbPathUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AbPathUtil{
 

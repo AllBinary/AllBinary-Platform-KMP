@@ -32,12 +32,11 @@ open public class PathFindingNodeCostInfoData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: PathFindingNodeCostInfoData = PathFindingNodeCostInfoData()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PathFindingNodeCostInfoData{
 
@@ -49,7 +48,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

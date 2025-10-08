@@ -26,20 +26,21 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.business.context.configuration.ContextConfigurationInterface
+
 interface AdminConfigurationInterface {
         
 
                 @Throws(Exception::class)
             
-open fun write()
+    open fun write()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun getContextConfigurationInterface()
+    open fun getContextConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
 : ContextConfigurationInterface
 
-open fun setContextConfigurationInterface(contextConfigurationInterface: ContextConfigurationInterface)
+    open fun setContextConfigurationInterface(contextConfigurationInterface: ContextConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
 
 

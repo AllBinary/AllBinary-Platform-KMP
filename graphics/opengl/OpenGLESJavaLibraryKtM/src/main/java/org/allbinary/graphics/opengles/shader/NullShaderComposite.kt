@@ -32,15 +32,14 @@ import org.allbinary.graphics.opengles.OpenGLProcessor
 
 open public class NullShaderComposite : ShaderComposite {
         
-
-        companion object {
+companion object {
             
     private val instance: NullShaderComposite = object: NullShaderComposite(OpenGLCapabilities.getInstance()!!.VERSION_2_0, arrayOf(Shader(),Shader()), CompositeShaderUpdater.getInstance(), ShaderInitializer.getInstance(), ModelViewProjection.getInstance(), 
                             null, 
                             null, NullOpenGLProcessorFactory.getInstance())
                                 {
                                 
-open override fun init(gl: GL10)
+    open override fun init(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
 {
 var gl = gl
@@ -49,7 +48,7 @@ var gl = gl
                                 }
                             
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ShaderComposite{
 
@@ -61,7 +60,7 @@ open fun getInstance()
 
 
         }
-            public constructor        (requiresOpenGLVersion: String, shaderArray: Array<Shader?>, compositeShaderUpdater: CompositeShaderUpdater, shaderInitializer: ShaderInitializer, modelViewProjection: ModelViewProjection, colorOpenGLProcessor: OpenGLProcessor, vertexOpenGLProcessor: OpenGLProcessor, disableProgramShaderOpenGLProcessor: OpenGLProcessor)                        
+            public constructor (requiresOpenGLVersion: String, shaderArray: Array<Shader?>, compositeShaderUpdater: CompositeShaderUpdater, shaderInitializer: ShaderInitializer, modelViewProjection: ModelViewProjection, colorOpenGLProcessor: OpenGLProcessor, vertexOpenGLProcessor: OpenGLProcessor, disableProgramShaderOpenGLProcessor: OpenGLProcessor)                        
 
                             : super(requiresOpenGLVersion, shaderArray, compositeShaderUpdater, shaderInitializer, modelViewProjection, colorOpenGLProcessor, vertexOpenGLProcessor, disableProgramShaderOpenGLProcessor){
     //var requiresOpenGLVersion = requiresOpenGLVersion

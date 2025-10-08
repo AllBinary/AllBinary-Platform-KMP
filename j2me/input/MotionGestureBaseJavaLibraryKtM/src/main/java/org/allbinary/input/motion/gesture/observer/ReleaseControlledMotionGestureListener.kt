@@ -52,7 +52,7 @@ open public class ReleaseControlledMotionGestureListener
     private var motionGestureCollection: BasicArrayList = BasicArrayList()
 
     private var signed: CompleteMotionGestureListenerInterface
-public constructor        (signed: CompleteMotionGestureListenerInterface)
+public constructor (signed: CompleteMotionGestureListenerInterface)
             : super()
         {
 var signed = signed
@@ -60,70 +60,80 @@ logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 this.signed= signed
 }
 
-override fun onEvent(eventObject: AllBinaryEventObject)
+
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
 ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, this)
 }
 
-override fun onUpMotionGestureEvent(ev: MotionGestureEvent)
+
+    override fun onUpMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var ev = ev
 onMotionGestureEvent(ev)
 }
 
-override fun onDownMotionGestureEvent(ev: MotionGestureEvent)
+
+    override fun onDownMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var ev = ev
 onMotionGestureEvent(ev)
 }
 
-override fun onLeftMotionGestureEvent(ev: MotionGestureEvent)
+
+    override fun onLeftMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var ev = ev
 onMotionGestureEvent(ev)
 }
 
-override fun onRightMotionGestureEvent(ev: MotionGestureEvent)
+
+    override fun onRightMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var ev = ev
 onMotionGestureEvent(ev)
 }
 
-override fun onDiagonalDownRightMotionGestureEvent(ev: MotionGestureEvent)
+
+    override fun onDiagonalDownRightMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var ev = ev
 onMotionGestureEvent(ev)
 }
 
-override fun onDiagonalDownLeftMotionGestureEvent(ev: MotionGestureEvent)
+
+    override fun onDiagonalDownLeftMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var ev = ev
 onMotionGestureEvent(ev)
 }
 
-override fun onDiagonalUpRightMotionGestureEvent(ev: MotionGestureEvent)
+
+    override fun onDiagonalUpRightMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var ev = ev
 onMotionGestureEvent(ev)
 }
 
-override fun onDiagonalUpLeftMotionGestureEvent(ev: MotionGestureEvent)
+
+    override fun onDiagonalUpLeftMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var ev = ev
 onMotionGestureEvent(ev)
 }
 
-override fun onPressedMotionGestureEvent(ev: MotionGestureEvent)
+
+    override fun onPressedMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var ev = ev
@@ -132,7 +142,8 @@ currentMotionGesture= TouchMotionGestureFactory.getInstance()!!.NO_MOTION
 this.onMotionGestureEvent(ev)
 }
 
-override fun released(ev: MotionGestureEvent)
+
+    override fun released(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var ev = ev
@@ -157,7 +168,8 @@ logUtil!!.put(StringMaker().
 
 }
 
-override fun onMotionGestureEvent(ev: MotionGestureEvent)
+
+    override fun onMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var ev = ev

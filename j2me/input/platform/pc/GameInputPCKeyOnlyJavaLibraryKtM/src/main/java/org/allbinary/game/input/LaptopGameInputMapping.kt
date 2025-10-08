@@ -34,7 +34,8 @@ open public class LaptopGameInputMapping : PCGameInputMapping {
             public constructor() : super()
             {
             }            
-        override fun getDefault()
+        
+    override fun getDefault()
         //nullable = true from not(false or (false and true)) = true
 : InputToGameKeyMapping{
 

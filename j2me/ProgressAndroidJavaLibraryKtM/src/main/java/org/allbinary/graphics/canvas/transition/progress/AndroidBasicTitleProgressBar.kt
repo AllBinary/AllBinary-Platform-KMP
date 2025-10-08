@@ -51,13 +51,13 @@ import org.allbinary.animation.AnimationBehavior
 import org.allbinary.animation.image.ImageAnimation
 import org.allbinary.data.resource.ResourceUtil
 import org.allbinary.logic.util.event.EventStrings
+import org.allbinary.thread.ARunnable
 import org.allbinary.thread.NullRunnable
 
 open public class AndroidBasicTitleProgressBar : ProgressCanvas
                 , DisplayChangeEventListener {
         
-
-        companion object {
+companion object {
             
     val RESOURCE: String = "ProgressImage"
 
@@ -65,7 +65,7 @@ open public class AndroidBasicTitleProgressBar : ProgressCanvas
 
     private var background: Int= 0
 
-open fun setBackground(background: Int)
+    open fun setBackground(background: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var background = background
@@ -75,13 +75,13 @@ AndroidBasicTitleProgressBar.background= background
 
         }
             
-    private var showTitleProgressBarRunnable: NullRunnable = NullRunnable.getInstance()!!
+    private var showTitleProgressBarRunnable: ARunnable = NullRunnable.getInstance()!!
 
-    private var dismissTitleProgressBarRunnable: NullRunnable = NullRunnable.getInstance()!!
+    private var dismissTitleProgressBarRunnable: ARunnable = NullRunnable.getInstance()!!
 
-    private var titleProgressDialogPortionSetProgressRunnable: NullRunnable = NullRunnable.getInstance()!!
+    private var titleProgressDialogPortionSetProgressRunnable: ARunnable = NullRunnable.getInstance()!!
 
-    private var titleProgressDialogSetProgressRunnable: NullRunnable = NullRunnable.getInstance()!!
+    private var titleProgressDialogSetProgressRunnable: ARunnable = NullRunnable.getInstance()!!
 
     private var midletActivity: Activity = NULL_ACTIVITY
 
@@ -92,7 +92,7 @@ AndroidBasicTitleProgressBar.background= background
     private var image: Image = NullCanvas.NULL_IMAGE
 
     private var animation: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
- constructor        (title: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+ constructor (title: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(title, backgroundBasicColor, foregroundBasicColor){
 var title = title
@@ -121,7 +121,7 @@ IMAGE[index]= NullCanvas.NULL_IMAGE
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -145,7 +145,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }
 
 
-open fun init(activity: Activity)
+    open fun init(activity: Activity)
         //nullable = true from not(false or (false and false)) = true
 {
 var activity = activity
@@ -174,7 +174,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }
 
 
-open fun updateCurrent()
+    open fun updateCurrent()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -239,14 +239,16 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
 
 }
 
-override fun onEvent(eventObject: AllBinaryEventObject)
+
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
-override fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
+
+    override fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var displayChangeEvent = displayChangeEvent
@@ -263,7 +265,7 @@ this.animation= NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
 }
 
 
-open fun loadProgressImages()
+    open fun loadProgressImages()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -305,7 +307,7 @@ this.animation= NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
 }
 
 
-open fun isInitialized()
+    open fun isInitialized()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -332,7 +334,8 @@ open fun isInitialized()
                             
 }
 
-override fun start()
+
+    override fun start()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -347,7 +350,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME
 
 }
 
-override fun end()
+
+    override fun end()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -362,7 +366,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.END_METHOD_NAME, 
 
 }
 
-override fun addEarlyPortion(value: Int, text: String, index: Int)
+
+    override fun addEarlyPortion(value: Int, text: String, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -388,7 +393,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
 
 }
 
-override fun addPortion(value: Int, text: String, index: Int)
+
+    override fun addPortion(value: Int, text: String, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -406,7 +412,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
 
 }
 
-override fun addPortion(value: Int, text: String)
+
+    override fun addPortion(value: Int, text: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -423,7 +430,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
 
 }
 
-override fun setValue(value: Int)
+
+    override fun setValue(value: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -439,7 +447,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "setValue", e)
 }
 
 
-open fun waitUntilDisplayed()
+    open fun waitUntilDisplayed()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -447,7 +455,7 @@ open fun waitUntilDisplayed()
 
                 @Throws(Exception::class)
             
-open fun setImages(index: Int, lastWidth: Int, lastHeight: Int)
+    open fun setImages(index: Int, lastWidth: Int, lastHeight: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var index = index
@@ -502,7 +510,7 @@ var lastHeight = lastHeight
 
                 @Throws(Exception::class)
             
-open fun initOpenGL(graphics: Graphics)
+    open fun initOpenGL(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -538,7 +546,8 @@ this.updateCurrent()
 
 
                 @Throws(Exception::class)
-            override fun update(graphics: Graphics)
+            
+    override fun update(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -575,7 +584,7 @@ this.image= GameFeatureImageCacheFactory.getInstance()!!.get(RESOURCE)
 
                 @Throws(Exception::class)
             
-open fun getImage(index: Int)
+    open fun getImage(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : Image{
 var index = index
@@ -603,7 +612,8 @@ var index = index
                         return image
 }
 
-override fun paint2(graphics: Graphics)
+
+    override fun paint2(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -618,7 +628,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, canvasStrings!!.PAINT, e)
 
 }
 
-override fun setBackground(background: Boolean)
+
+    override fun setBackground(background: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var background = background
@@ -627,7 +638,7 @@ this.updateCurrent()
 }
 
 
-open fun setPortion(portion: Int)
+    open fun setPortion(portion: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var portion = portion
@@ -635,7 +646,7 @@ this.portion= portion
 }
 
 
-open fun getPortion()
+    open fun getPortion()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

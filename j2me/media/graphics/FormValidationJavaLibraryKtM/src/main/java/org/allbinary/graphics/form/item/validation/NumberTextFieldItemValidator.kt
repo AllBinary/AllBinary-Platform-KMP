@@ -45,7 +45,7 @@ open public class NumberTextFieldItemValidator : ValidatorBase {
     private val max: Int
 
     private val maxChars: Int
-public constructor        (textFieldItem: TextFieldItem, maxChars: Int, min: Int, max: Int){
+public constructor (textFieldItem: TextFieldItem, maxChars: Int, min: Int, max: Int){
 var textFieldItem = textFieldItem
 var maxChars = maxChars
 var min = min
@@ -57,7 +57,7 @@ this.maxChars= maxChars
 }
 
 
-open fun isNumberValid(value: Integer)
+    open fun isNumberValid(value: Integer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var value = value
@@ -69,7 +69,7 @@ var value = value
 }
 
 
-open fun toNumberVector(value: Integer)
+    open fun toNumberVector(value: Integer)
         //nullable = true from not(false or (false and false)) = true
 : Vector<Any>{
 var value = value
@@ -80,7 +80,8 @@ var value = value
                         return Vector<Any>()
 }
 
-override fun isValid()
+
+    override fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -137,7 +138,8 @@ result= BooleanFactory.getInstance()!!.FALSE
                         return result
 }
 
-override fun toList()
+
+    override fun toList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 

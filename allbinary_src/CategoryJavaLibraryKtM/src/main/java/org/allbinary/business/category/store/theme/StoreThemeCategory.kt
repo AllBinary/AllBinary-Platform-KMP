@@ -45,7 +45,7 @@ open public class StoreThemeCategory : Category
     private var transformInfoInterface: TransformInfoInterface
 
     private var themeVector: Vector
-public constructor        (transformInfoInterface: TransformInfoInterface, categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface, level: Int)                        
+public constructor (transformInfoInterface: TransformInfoInterface, categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface, level: Int)                        
 
                             : super(categoryPropertiesFactoryInterface, level){
 var transformInfoInterface = transformInfoInterface
@@ -59,7 +59,7 @@ this.transformInfoInterface= transformInfoInterface
 this.themeVector= Vector()
 }
 
-public constructor        (transformInfoInterface: TransformInfoInterface, rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface)                        
+public constructor (transformInfoInterface: TransformInfoInterface, rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface)                        
 
                             : super(rootCategoryInterface, parentCategoryInterface, categoryPropertiesFactoryInterface){
 var transformInfoInterface = transformInfoInterface
@@ -74,7 +74,7 @@ this.transformInfoInterface= transformInfoInterface
 this.themeVector= Vector()
 }
 
-public constructor        (transformInfoInterface: TransformInfoInterface, node: Node, categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface, level: Int)                        
+public constructor (transformInfoInterface: TransformInfoInterface, node: Node, categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface, level: Int)                        
 
                             : super(categoryPropertiesFactoryInterface, level){
 var transformInfoInterface = transformInfoInterface
@@ -90,7 +90,7 @@ this.themeVector= Vector()
 this.addThemes(node)
 }
 
-public constructor        (transformInfoInterface: TransformInfoInterface, node: Node, rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface)                        
+public constructor (transformInfoInterface: TransformInfoInterface, node: Node, rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface)                        
 
                             : super(rootCategoryInterface, parentCategoryInterface, categoryPropertiesFactoryInterface){
 var transformInfoInterface = transformInfoInterface
@@ -108,7 +108,7 @@ this.addThemes(node)
 }
 
 
-open fun getTransformInfoInterface()
+    open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
 : TransformInfoInterface{
 
@@ -121,7 +121,7 @@ open fun getTransformInfoInterface()
 
                 @Throws(Exception::class)
             
-open fun addThemes(node: Node)
+    open fun addThemes(node: Node)
         //nullable = true from not(false or (false and false)) = true
 {
 var node = node
@@ -155,7 +155,7 @@ var node = node
 }
 
 
-open fun addTheme(themeValidation: ThemeValidation)
+    open fun addTheme(themeValidation: ThemeValidation)
         //nullable = true from not(false or (false and false)) = true
 {
 var themeValidation = themeValidation
@@ -163,7 +163,7 @@ this.themeVector!!.add(themeValidation)
 }
 
 
-open fun getThemes()
+    open fun getThemes()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 
@@ -176,7 +176,7 @@ open fun getThemes()
 
                 @Throws(Exception::class)
             
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -202,7 +202,7 @@ open fun isValid()
 
                 @Throws(Exception::class)
             
-open fun toHashMap()
+    open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 
@@ -219,7 +219,7 @@ categoryHashMap!!.put(ThemesData.getInstance()!!.NAME, this.themeVector)
 
                 @Throws(Exception::class)
             
-open fun toVector()
+    open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
 

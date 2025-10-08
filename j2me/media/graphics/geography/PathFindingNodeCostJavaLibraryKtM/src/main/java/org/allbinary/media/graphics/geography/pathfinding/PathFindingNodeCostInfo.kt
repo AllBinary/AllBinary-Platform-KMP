@@ -41,7 +41,7 @@ open public class PathFindingNodeCostInfo
     var costToEnd: Long
 
     var totalCost: Long= 0
-public constructor        (costFromStart: Long, costToGoal: Long)
+public constructor (costFromStart: Long, costToGoal: Long)
             : super()
         {
     //var costFromStart = costFromStart
@@ -52,7 +52,7 @@ this.setTotalCost()
 }
 
 
-open fun setCostToEnd(costToEnd: Long)
+    open fun setCostToEnd(costToEnd: Long)
         //nullable = true from not(false or (false and false)) = true
 {
     //var costToEnd = costToEnd
@@ -60,7 +60,7 @@ this.costToEnd= costToEnd
 }
 
 
-open fun setTotalCost(totalCost: Long)
+    open fun setTotalCost(totalCost: Long)
         //nullable = true from not(false or (false and false)) = true
 {
     //var totalCost = totalCost
@@ -70,7 +70,7 @@ this.totalCost= totalCost
 
                 @Throws(Exception::class)
             
-open fun setTotalCost()
+    open fun setTotalCost()
         //nullable = true from not(false or (false and true)) = true
 {
 this.totalCost= costFromStart +costToEnd
@@ -89,7 +89,7 @@ this.totalCost= costFromStart +costToEnd
 }
 
 
-open fun setCostFromStart(cost: Long)
+    open fun setCostFromStart(cost: Long)
         //nullable = true from not(false or (false and false)) = true
 {
     //var cost = cost
@@ -97,14 +97,15 @@ this.costFromStart= cost
 }
 
 
-open fun addCostFromStart(cost: Long)
+    open fun addCostFromStart(cost: Long)
         //nullable = true from not(false or (false and false)) = true
 {
     //var cost = cost
 this.costFromStart += cost
 }
 
-override fun compareTo(pathFindingNodeCostInfo: PathFindingNodeCostInfo)
+
+    override fun compareTo(pathFindingNodeCostInfo: PathFindingNodeCostInfo)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var pathFindingNodeCostInfo = pathFindingNodeCostInfo
@@ -115,7 +116,8 @@ var pathFindingNodeCostInfo = pathFindingNodeCostInfo
                         return Long.compare(this.totalCost, pathFindingNodeCostInfo!!.totalCost)
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

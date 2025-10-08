@@ -38,7 +38,7 @@ open public class LayerInterfaceFactoryImageItem : CustomImageItem {
     private val animationArray: Array<Animation?>
 
     private val layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface
-public constructor        (label: String, img: Image, layout: Int, altText: String, basicColor: BasicColor, animationArray: Array<Animation?>, layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface)                        
+public constructor (label: String, img: Image, layout: Int, altText: String, basicColor: BasicColor, animationArray: Array<Animation?>, layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface)                        
 
                             : super(label, img, layout, altText, basicColor){
 var label = label
@@ -57,7 +57,7 @@ this.layerInterfaceFactoryInterface= layerInterfaceFactoryInterface
 }
 
 
-open fun getLayerInterfaceFactoryInterface()
+    open fun getLayerInterfaceFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
 : LayerInterfaceFactoryInterface{
 
@@ -68,7 +68,7 @@ open fun getLayerInterfaceFactoryInterface()
 }
 
 
-open fun paint(graphics: Graphics, x: Int, y: Int)
+    open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

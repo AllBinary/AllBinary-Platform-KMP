@@ -36,8 +36,7 @@ import org.allbinary.string.CommonLabels
 
 open public class MotionGestureEvent : AllBinaryEventObject {
         
-
-        companion object {
+companion object {
             
     private val CURRENT: String = CommonLabels.getInstance()!!.CURRENT
 
@@ -54,7 +53,7 @@ open public class MotionGestureEvent : AllBinaryEventObject {
     private var previousPoint: GPoint = PointFactory.getInstance()!!.ZERO_ZERO
 
     private var currentPoint: GPoint = PointFactory.getInstance()!!.ZERO_ZERO
-public constructor        (source: Any, id: Int, motionGesture: MotionGestureInput)                        
+public constructor (source: Any, id: Int, motionGesture: MotionGestureInput)                        
 
                             : super(source){
 var source = source
@@ -69,7 +68,7 @@ this.setMotionGesture(motionGesture)
 }
 
 
-open fun getMotionGesture()
+    open fun getMotionGesture()
         //nullable = true from not(false or (false and true)) = true
 : MotionGestureInput{
 
@@ -80,7 +79,7 @@ open fun getMotionGesture()
 }
 
 
-open fun setMotionGesture(motionGesture: MotionGestureInput)
+    open fun setMotionGesture(motionGesture: MotionGestureInput)
         //nullable = true from not(false or (false and false)) = true
 {
 var motionGesture = motionGesture
@@ -88,7 +87,7 @@ this.motionGesture= motionGesture
 }
 
 
-open fun getPreviousPoint()
+    open fun getPreviousPoint()
         //nullable = true from not(false or (false and true)) = true
 : GPoint{
 
@@ -99,7 +98,7 @@ open fun getPreviousPoint()
 }
 
 
-open fun setPreviousPoint(previousPoint: GPoint)
+    open fun setPreviousPoint(previousPoint: GPoint)
         //nullable = true from not(false or (false and false)) = true
 {
 var previousPoint = previousPoint
@@ -107,7 +106,7 @@ this.previousPoint= previousPoint
 }
 
 
-open fun getCurrentPoint()
+    open fun getCurrentPoint()
         //nullable = true from not(false or (false and true)) = true
 : GPoint{
 
@@ -118,14 +117,15 @@ open fun getCurrentPoint()
 }
 
 
-open fun setCurrentPoint(currentPoint: GPoint)
+    open fun setCurrentPoint(currentPoint: GPoint)
         //nullable = true from not(false or (false and false)) = true
 {
 var currentPoint = currentPoint
 this.currentPoint= currentPoint
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -149,7 +149,7 @@ stringBuffer!!.append(this.hashCode())
 }
 
 
-open fun getId()
+    open fun getId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

@@ -36,7 +36,7 @@ open public class ImageHealthGraphic : HealthGraphic {
         
 
     private var image: Array<Image?>
-public constructor        (animationInterface: AnimationInterface, healthInterface: HealthInterface, location: Int, direction: Int)                        
+public constructor (animationInterface: AnimationInterface, healthInterface: HealthInterface, location: Int, direction: Int)                        
 
                             : super(animationInterface, healthInterface, location, direction){
 var animationInterface = animationInterface
@@ -83,7 +83,7 @@ this.animationInterface!!.paint(image[numOfHealth]!!.getGraphics(), numOfHealth 
 }
 
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

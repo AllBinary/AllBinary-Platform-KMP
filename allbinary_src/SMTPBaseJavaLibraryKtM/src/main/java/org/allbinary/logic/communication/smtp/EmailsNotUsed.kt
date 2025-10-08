@@ -44,7 +44,7 @@ open public class EmailsNotUsed
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     var emailInfoVector: Vector
-public constructor        ()
+public constructor ()
             : super()
         {
 this.emailInfoVector= Vector()
@@ -53,7 +53,7 @@ this.emailInfoVector= Vector()
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

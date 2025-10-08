@@ -26,7 +26,6 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import android.app.Activity
 
@@ -34,7 +33,7 @@ open public class TitleProgressBarSetProgressRunnable : ProgressRunnable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (midletActivity: Activity, progressCanvas: ProgressCanvas)                        
+public constructor (midletActivity: Activity, progressCanvas: ProgressCanvas)                        
 
                             : super(midletActivity, progressCanvas){
 var midletActivity = midletActivity
@@ -45,7 +44,8 @@ var progressCanvas = progressCanvas
                     
 }
 
-override fun run()
+
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 

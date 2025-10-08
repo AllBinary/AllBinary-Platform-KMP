@@ -36,7 +36,7 @@ open public class MineLayerFactory
         
 
     private var viewPositionFactoryInterface: ViewPositionFactoryInterface
-public constructor        (viewPositionFactoryInterface: ViewPositionFactoryInterface)
+public constructor (viewPositionFactoryInterface: ViewPositionFactoryInterface)
             : super()
         {
 var viewPositionFactoryInterface = viewPositionFactoryInterface
@@ -45,7 +45,8 @@ this.viewPositionFactoryInterface= viewPositionFactoryInterface
 
 
                 @Throws(Exception::class)
-            override fun getInstance()
+            
+    override fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AllBinaryLayer{
 

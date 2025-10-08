@@ -33,13 +33,12 @@ open public class ImageOutputData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     val SAVE_PATH: String = System.getProperty("user.dir") +File.separator +"saves" +File.separator
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

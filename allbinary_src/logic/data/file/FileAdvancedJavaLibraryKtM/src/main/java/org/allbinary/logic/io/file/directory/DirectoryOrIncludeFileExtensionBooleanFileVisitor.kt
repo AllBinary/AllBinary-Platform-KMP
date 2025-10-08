@@ -33,7 +33,7 @@ open public class DirectoryOrIncludeFileExtensionBooleanFileVisitor : IncludeFil
         
 
     private val includesString: String
-public constructor        (filterStringBasicArrayList: BasicArrayList)                        
+public constructor (filterStringBasicArrayList: BasicArrayList)                        
 
                             : super(filterStringBasicArrayList){
     //var filterStringBasicArrayList = filterStringBasicArrayList
@@ -46,7 +46,7 @@ this.includesString=
                                     
 }
 
-public constructor        (filterStringBasicArrayList: BasicArrayList, includesString: String)                        
+public constructor (filterStringBasicArrayList: BasicArrayList, includesString: String)                        
 
                             : super(filterStringBasicArrayList){
     //var filterStringBasicArrayList = filterStringBasicArrayList
@@ -59,7 +59,7 @@ this.includesString= includesString
 }
 
 
-open fun visit(file: AbFile)
+    open fun visit(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var file = file

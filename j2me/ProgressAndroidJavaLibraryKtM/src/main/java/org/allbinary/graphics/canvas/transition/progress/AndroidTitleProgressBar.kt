@@ -47,7 +47,7 @@ open public class AndroidTitleProgressBar : ProgressCanvas {
     private var progressActivity: ProgressActivityInterface = NullProgressActivity.NULL_PROGRESS_ACTIVITY
 
     private var portion: Int = 0
-protected constructor        (title: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+protected constructor (title: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(title, backgroundBasicColor, foregroundBasicColor){
 var title = title
@@ -60,14 +60,14 @@ var foregroundBasicColor = foregroundBasicColor
 }
 
 
-open fun init(activity: SimpleProgressActivityInterface)
+    open fun init(activity: SimpleProgressActivityInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var activity = activity
 }
 
 
-open fun init(activity: ProgressActivityInterface)
+    open fun init(activity: ProgressActivityInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var activity = activity
@@ -75,7 +75,7 @@ this.progressActivity= activity
 }
 
 
-open fun isInitialized()
+    open fun isInitialized()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -102,7 +102,8 @@ open fun isInitialized()
                             
 }
 
-override fun start()
+
+    override fun start()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -117,7 +118,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME
 
 }
 
-override fun end()
+
+    override fun end()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -132,7 +134,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.END_METHOD_NAME, 
 
 }
 
-override fun addPortion(value: Int, text: String, index: Int)
+
+    override fun addPortion(value: Int, text: String, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -150,7 +153,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
 
 }
 
-override fun addPortion(value: Int, text: String)
+
+    override fun addPortion(value: Int, text: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -167,7 +171,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
 
 }
 
-override fun setValue(value: Int)
+
+    override fun setValue(value: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -183,12 +188,13 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "setValue", e)
 }
 
 
-open fun waitUntilDisplayed()
+    open fun waitUntilDisplayed()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -205,7 +211,8 @@ open public inner class TitleProgressBarSetProgressRunnable
             public constructor() : super()
             {
             }            
-        override fun run()
+        
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -235,7 +242,8 @@ open public inner class TitleProgressBarPortionSetProgressRunnable
             public constructor() : super()
             {
             }            
-        override fun run()
+        
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -265,7 +273,8 @@ open public inner class ShowTitleProgressBarRunnable
             public constructor() : super()
             {
             }            
-        override fun run()
+        
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -295,7 +304,8 @@ open public inner class DismissTitleProgressBarRunnable
             public constructor() : super()
             {
             }            
-        override fun run()
+        
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 

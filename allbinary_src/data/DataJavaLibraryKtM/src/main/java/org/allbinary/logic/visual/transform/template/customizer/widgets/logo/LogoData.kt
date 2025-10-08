@@ -30,12 +30,11 @@ open public class LogoData
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: LogoData = LogoData()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : LogoData{
 
@@ -47,7 +46,7 @@ open fun getInstance()
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

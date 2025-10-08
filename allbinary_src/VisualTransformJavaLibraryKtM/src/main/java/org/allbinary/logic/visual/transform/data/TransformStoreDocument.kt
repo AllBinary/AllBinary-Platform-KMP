@@ -37,7 +37,7 @@ open public class TransformStoreDocument : TransformHttpRequestDocument {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (pageContext: PageContext, weblisketSession: WeblisketSession)                        
+public constructor (pageContext: PageContext, weblisketSession: WeblisketSession)                        
 
                             : super(pageContext, weblisketSession){
 var pageContext = pageContext
@@ -82,7 +82,7 @@ this.getBaseNode()!!.appendChild(RequestParams(pageContext!!.getRequest() as Htt
 
 }
 
-public constructor        (searchRequest: SearchRequest)                        
+public constructor (searchRequest: SearchRequest)                        
 
                             : super(searchRequest){
 var searchRequest = searchRequest

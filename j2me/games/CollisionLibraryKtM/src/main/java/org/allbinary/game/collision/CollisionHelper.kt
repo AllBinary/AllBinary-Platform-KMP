@@ -34,7 +34,7 @@ open public class CollisionHelper
         
 
     var sourceLayerInterface: AllBinaryLayer
-public constructor        (sourceLayerInterface: AllBinaryLayer)
+public constructor (sourceLayerInterface: AllBinaryLayer)
             : super()
         {
 var sourceLayerInterface = sourceLayerInterface
@@ -42,7 +42,7 @@ this.sourceLayerInterface= sourceLayerInterface
 }
 
 
-open fun isCollidable(layerInterface: CollidableCompositeLayer)
+    open fun isCollidable(layerInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var layerInterface = layerInterface
@@ -54,7 +54,7 @@ var layerInterface = layerInterface
 }
 
 
-open fun getOwnerLayerInterface()
+    open fun getOwnerLayerInterface()
         //nullable = true from not(false or (false and true)) = true
 : AllBinaryLayer{
 
@@ -65,7 +65,7 @@ open fun getOwnerLayerInterface()
 }
 
 
-open fun setOwnerLayerInterface(sourceLayerInterface: AllBinaryLayer)
+    open fun setOwnerLayerInterface(sourceLayerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var sourceLayerInterface = sourceLayerInterface

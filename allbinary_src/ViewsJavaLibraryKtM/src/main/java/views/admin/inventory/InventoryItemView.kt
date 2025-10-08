@@ -52,8 +52,7 @@ import views.business.context.modules.storefront.HttpStoreComponentView
 open public class InventoryItemView : HttpStoreComponentView
                 , RequestMapInterface {
         
-
-        companion object {
+companion object {
             
     var TYPE_ID: Int = 10
 
@@ -72,7 +71,7 @@ open public class InventoryItemView : HttpStoreComponentView
     var downloadableItemVector: Vector
 
     private var requestHashMap: HashMap<Any, Any>
-public constructor        (transformInfoInterface: TransformInfoInterface)                        
+public constructor (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
@@ -84,7 +83,7 @@ this.request= this.getPageContext()!!.getRequest() as HttpServletRequest
 this.getFormData()
 }
 
-public constructor        (transformInfoInterface: TransformInfoInterface, empty: String)                        
+public constructor (transformInfoInterface: TransformInfoInterface, empty: String)                        
 
                             : super(transformInfoInterface){
 var transformInfoInterface = transformInfoInterface
@@ -97,7 +96,7 @@ this.request= this.getPageContext()!!.getRequest() as HttpServletRequest
 }
 
 
-open fun getTypeId()
+    open fun getTypeId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -110,7 +109,7 @@ open fun getTypeId()
 
                 @Throws(Exception::class)
             
-open fun getFormData()
+    open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setRequestHashMap(MultipartRequestParams(request).
@@ -165,7 +164,7 @@ this.itemInterface= BasicItem(this.getRequestHashMap()) as ItemInterface
 }
 
 
-open fun addDomNodeInterfaces()
+    open fun addDomNodeInterfaces()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -192,7 +191,7 @@ this.addDomNodeInterface(BasicItemView(itemInterface, vector))
 }
 
 
-open fun getItemInterface()
+    open fun getItemInterface()
         //nullable = true from not(false or (false and true)) = true
 : ItemInterface{
 
@@ -205,7 +204,7 @@ open fun getItemInterface()
 
                 @Throws(Exception::class)
             
-open fun view()
+    open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -238,7 +237,7 @@ open fun view()
 
                 @Throws(Exception::class)
             
-open fun processImageFiles()
+    open fun processImageFiles()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -284,7 +283,7 @@ this.itemInterface= inventoryUploadMediaUtil!!.saveFiles(fileItem!!.get(), this.
 }
 
 
-open fun setRequestHashMap(requestHashMap: HashMap<Any, Any>)
+    open fun setRequestHashMap(requestHashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
 var requestHashMap = requestHashMap
@@ -292,7 +291,7 @@ this.requestHashMap= requestHashMap
 }
 
 
-open fun getRequestHashMap()
+    open fun getRequestHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
 

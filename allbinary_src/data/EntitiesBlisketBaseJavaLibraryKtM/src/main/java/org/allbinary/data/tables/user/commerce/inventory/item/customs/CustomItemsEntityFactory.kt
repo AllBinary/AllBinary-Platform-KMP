@@ -32,12 +32,11 @@ open public class CustomItemsEntityFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: CustomItemsEntityFactory = CustomItemsEntityFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CustomItemsEntityFactory{
 
@@ -51,13 +50,13 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
 
 
-open fun getCustomItemsEntityInstance()
+    open fun getCustomItemsEntityInstance()
         //nullable = true from not(false or (false and true)) = true
 : CustomItemsEntity{
 

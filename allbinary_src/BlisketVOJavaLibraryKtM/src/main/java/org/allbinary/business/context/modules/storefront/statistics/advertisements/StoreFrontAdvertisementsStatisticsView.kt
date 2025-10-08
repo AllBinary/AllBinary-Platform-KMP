@@ -38,7 +38,7 @@ open public class StoreFrontAdvertisementsStatisticsView
         
 
     private var storeFrontAdvertisementsStatisticsInterface: StoreFrontAdvertisementsStatisticsInterface
-public constructor        (storeFrontAdvertisementsStatisticsInterface: StoreFrontAdvertisementsStatisticsInterface)
+public constructor (storeFrontAdvertisementsStatisticsInterface: StoreFrontAdvertisementsStatisticsInterface)
             : super()
         {
 var storeFrontAdvertisementsStatisticsInterface = storeFrontAdvertisementsStatisticsInterface
@@ -48,7 +48,7 @@ this.storeFrontAdvertisementsStatisticsInterface= storeFrontAdvertisementsStatis
 
                 @Throws(Exception::class)
             
-open fun toXmlNode(document: Document)
+    open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 var document = document

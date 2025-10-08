@@ -32,8 +32,7 @@ open public class LogConfigType
             : Object
          {
         
-
-        companion object {
+companion object {
             
     var availableLogConfigTypes: BasicArrayList = BasicArrayList()
 
@@ -44,7 +43,7 @@ open public class LogConfigType
     private var name: String
 
     private var description: String
-public constructor        (name: String, description: String)
+public constructor (name: String, description: String)
             : super()
         {
 var name = name
@@ -55,7 +54,7 @@ availableLogConfigTypes!!.add(this)
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -66,7 +65,7 @@ open fun getName()
 }
 
 
-open fun getDescription()
+    open fun getDescription()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -77,7 +76,7 @@ open fun getDescription()
 }
 
 
-open fun setName(value: String)
+    open fun setName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value
@@ -85,7 +84,7 @@ this.name= value
 }
 
 
-open fun setDescription(value: String)
+    open fun setDescription(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var value = value

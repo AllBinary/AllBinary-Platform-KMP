@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.input.automation.actions.script.condition.processors.ProfileActionScriptProcessorInterface
+
 interface ProfileActionScriptOutputInterface : ProfileActionScriptProcessorInterface {
         
 

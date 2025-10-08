@@ -20,12 +20,11 @@ open public class OpenGLGLUUtils
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: OpenGLGLUUtils = OpenGLGLUUtils()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OpenGLGLUUtils{
 
@@ -43,7 +42,7 @@ open fun getInstance()
             {
             }            
         
-open fun makeByteBuffer(bmp: OpenGLBitmap, flip: Boolean)
+    open fun makeByteBuffer(bmp: OpenGLBitmap, flip: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : ByteBuffer{
     //var bmp = bmp
@@ -55,7 +54,7 @@ open fun makeByteBuffer(bmp: OpenGLBitmap, flip: Boolean)
 }
 
 
-open fun texImage2D(gl: GL10, glVersion: String, target: Int, level: Int, generateMipMap: Boolean, openGLESImage: OpenGLESImage, border: Int, flip: Boolean)
+    open fun texImage2D(gl: GL10, glVersion: String, target: Int, level: Int, generateMipMap: Boolean, openGLESImage: OpenGLESImage, border: Int, flip: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl
@@ -73,7 +72,7 @@ open fun texImage2D(gl: GL10, glVersion: String, target: Int, level: Int, genera
 }
 
 
-open fun texImage2D(gl: GL10, glVersion: String, target: Int, level: Int, generateMipMap: Boolean, bitmap: OpenGLBitmap, border: Int, flip: Boolean)
+    open fun texImage2D(gl: GL10, glVersion: String, target: Int, level: Int, generateMipMap: Boolean, bitmap: OpenGLBitmap, border: Int, flip: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl

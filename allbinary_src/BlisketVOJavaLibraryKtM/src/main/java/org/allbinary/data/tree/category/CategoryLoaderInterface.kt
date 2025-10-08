@@ -27,18 +27,19 @@
         
 import org.allbinary.business.category.CategoryInterface
 import org.w3c.dom.Document
+
 interface CategoryLoaderInterface : CategoryModifierTreeInterface {
         
 
-open fun getDoc(categoryInterface: CategoryInterface)
+    open fun getDoc(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 : Document
 
-open fun get(categoryInterface: CategoryInterface)
+    open fun get(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 : CategoryInterface
 
-open fun getAll(categoryInterface: CategoryInterface)
+    open fun getAll(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 : CategoryInterface
 

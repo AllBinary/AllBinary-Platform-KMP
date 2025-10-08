@@ -41,7 +41,7 @@ open public class TextFieldItemValidator : ValidatorBase {
     private var max: Int
 
     private var allowOnEmpty: Boolean
-public constructor        (textFieldItem: TextFieldItem, min: Int, max: Int, allowOnEmpty: Boolean){
+public constructor (textFieldItem: TextFieldItem, min: Int, max: Int, allowOnEmpty: Boolean){
 var textFieldItem = textFieldItem
 var min = min
 var max = max
@@ -52,7 +52,8 @@ this.max= max
 this.allowOnEmpty= allowOnEmpty
 }
 
-override fun isValid()
+
+    override fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -104,7 +105,8 @@ override fun isValid()
                         return result
 }
 
-override fun toList()
+
+    override fun toList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 

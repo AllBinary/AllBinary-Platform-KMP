@@ -28,62 +28,63 @@
 import java.util.Hashtable
 import org.allbinary.logic.system.os.GenericOperatingSystem
 import org.allbinary.util.BasicArrayList
+
 interface AbeClientInformationInterface {
         
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun getOperatingSystemInterface()
+    open fun getOperatingSystemInterface()
         //nullable = true from not(false or (false and true)) = true
 : GenericOperatingSystem
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getSpecialName()
+    open fun getSpecialName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getVersion()
+    open fun getVersion()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getLicenseId()
+    open fun getLicenseId()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getLicenseServers()
+    open fun getLicenseServers()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList
 
-open fun getLicenseServer(index: Int)
+    open fun getLicenseServer(index: Int)
         //nullable = true from not(false or (false and false)) = true
 : String
 
-open fun getNumberOfLicenseServers()
+    open fun getNumberOfLicenseServers()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
-open fun toHashtable()
+    open fun toHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>
 
-open fun isSameId(alicenseId: String)
+    open fun isSameId(alicenseId: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
-open fun isLargerOrDifferentServerList(vector: BasicArrayList)
+    open fun isLargerOrDifferentServerList(vector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
-open fun isHardSale()
+    open fun isHardSale()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun toShortString()
+    open fun toShortString()
         //nullable = true from not(false or (false and true)) = true
 : String
 

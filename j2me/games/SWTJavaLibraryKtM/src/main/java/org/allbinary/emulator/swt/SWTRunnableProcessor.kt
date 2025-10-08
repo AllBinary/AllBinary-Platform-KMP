@@ -29,12 +29,11 @@ import org.eclipse.swt.widgets.Display
 
 open public class SWTRunnableProcessor : SWTProcessor {
         
-
-        companion object {
+companion object {
             
     private val instance: SWTRunnableProcessor = SWTRunnableProcessor()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : SWTRunnableProcessor{
 
@@ -46,11 +45,11 @@ open fun getInstance()
 
 
         }
-            private constructor        (){
+            private constructor (){
 }
 
 
-open fun process(display: Display)
+    open fun process(display: Display)
         //nullable = true from not(false or (false and false)) = true
 {
     //var display = display

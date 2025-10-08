@@ -50,7 +50,7 @@ open public class GameConfiguration
     private var maxValue: Integer = defaultValue
 
     private var modifiable: Boolean = BooleanFactory.getInstance()!!.TRUE
-public constructor        (name: String, defaultValue: Integer, minValue: Integer, maxValue: Integer)
+public constructor (name: String, defaultValue: Integer, minValue: Integer, maxValue: Integer)
             : super()
         {
     //var name = name
@@ -68,7 +68,7 @@ GameConfigurationSingleton.getInstance()!!.getHashtable()!!.put(this.getName(), 
 
                 @Throws(Exception::class)
             
-open fun setValue(value: Integer)
+    open fun setValue(value: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var value = value
@@ -89,7 +89,7 @@ GameFeatureEventHandler.getInstance()!!.fireEvent(GameFeatureEvent(this, StringM
 }
 
 
-open fun getValue()
+    open fun getValue()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -100,7 +100,7 @@ open fun getValue()
 }
 
 
-open fun setMaxValue(maxValue: Integer)
+    open fun setMaxValue(maxValue: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var maxValue = maxValue
@@ -108,7 +108,7 @@ this.maxValue= maxValue
 }
 
 
-open fun getMaxValue()
+    open fun getMaxValue()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -119,7 +119,7 @@ open fun getMaxValue()
 }
 
 
-open fun setMinValue(minValue: Integer)
+    open fun setMinValue(minValue: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var minValue = minValue
@@ -127,7 +127,7 @@ this.minValue= minValue
 }
 
 
-open fun getMinValue()
+    open fun getMinValue()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -138,7 +138,7 @@ open fun getMinValue()
 }
 
 
-open fun setName(name: String)
+    open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var name = name
@@ -146,7 +146,7 @@ this.name= name
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -157,7 +157,7 @@ open fun getName()
 }
 
 
-open fun setDefaultValue(defaultValue: Integer)
+    open fun setDefaultValue(defaultValue: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var defaultValue = defaultValue
@@ -165,7 +165,7 @@ this.defaultValue= defaultValue
 }
 
 
-open fun getDefaultValue()
+    open fun getDefaultValue()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
 
@@ -178,13 +178,14 @@ open fun getDefaultValue()
 
                 @Throws(Exception::class)
             
-open fun setDefault()
+    open fun setDefault()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setValue(this.getDefaultValue())
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 
@@ -210,7 +211,7 @@ stringBuffer!!.append(this.isModifiable())
 }
 
 
-open fun setModifiable(modifiable: Boolean)
+    open fun setModifiable(modifiable: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var modifiable = modifiable
@@ -218,7 +219,7 @@ this.modifiable= modifiable
 }
 
 
-open fun isModifiable()
+    open fun isModifiable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

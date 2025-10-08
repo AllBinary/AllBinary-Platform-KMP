@@ -25,14 +25,15 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface ImageProcessorInputCompositeInterface {
         
 
-open fun getImageProcessorInput()
+    open fun getImageProcessorInput()
         //nullable = true from not(false or (false and true)) = true
 : ImageProcessorInput
 
-open fun setImageProcessorInput(imageProcessorInput: ImageProcessorInput)
+    open fun setImageProcessorInput(imageProcessorInput: ImageProcessorInput)
         //nullable = true from not(false or (false and false)) = true
 
 

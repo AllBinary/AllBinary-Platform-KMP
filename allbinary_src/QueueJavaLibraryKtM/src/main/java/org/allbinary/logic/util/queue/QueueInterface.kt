@@ -25,24 +25,25 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface QueueInterface {
         
 
                 @Throws(Exception::class)
             
-open fun offer(anyType: Any)
+    open fun offer(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
                 @Throws(Exception::class)
             
-open fun remove(anyType: Any)
+    open fun remove(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun remove()
+    open fun remove()
         //nullable = true from not(false or (false and true)) = true
 : Any
 

@@ -33,10 +33,9 @@ open public class OrderHistoryFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
-open fun getInstance(id: String)
+    open fun getInstance(id: String)
         //nullable =  from not(true or (false and false)) = 
 : OrderHistory{
 var id = id
@@ -80,7 +79,7 @@ var id = id
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }

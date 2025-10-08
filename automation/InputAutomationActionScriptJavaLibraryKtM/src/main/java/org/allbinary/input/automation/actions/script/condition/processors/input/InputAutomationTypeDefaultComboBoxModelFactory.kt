@@ -33,12 +33,11 @@ open public class InputAutomationTypeDefaultComboBoxModelFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DefaultComboBoxModel{
 
@@ -73,7 +72,7 @@ defaultComboBoxModel!!.addElement(nameArray[index]!! as String)
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

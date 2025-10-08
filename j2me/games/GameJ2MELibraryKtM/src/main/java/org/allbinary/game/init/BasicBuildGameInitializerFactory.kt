@@ -31,8 +31,7 @@ open public class BasicBuildGameInitializerFactory
         
                 , GameInitializationInterfaceFactoryInterface {
         
-
-        companion object {
+companion object {
             
     var NULL_BASE_BUILD_GMAE_INITIALIZER_FACTORY: BasicBuildGameInitializerFactory = BasicBuildGameInitializerFactory()
 
@@ -42,7 +41,8 @@ open public class BasicBuildGameInitializerFactory
             public constructor() : super()
             {
             }            
-        override fun getInstance()
+        
+    override fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GameInitializationInterface{
 

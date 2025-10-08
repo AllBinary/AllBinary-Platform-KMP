@@ -35,7 +35,7 @@ open public class LapInfo
     private var numberOfLaps: Int
 
     private var totalLaps: Int
-public constructor        (totalLaps: Int)
+public constructor (totalLaps: Int)
             : super()
         {
 var totalLaps = totalLaps
@@ -44,14 +44,14 @@ this.numberOfLaps= 1
 }
 
 
-open fun add()
+    open fun add()
         //nullable = true from not(false or (false and true)) = true
 {
 this.numberOfLaps++
 }
 
 
-open fun getCurrentLap()
+    open fun getCurrentLap()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -62,7 +62,7 @@ open fun getCurrentLap()
 }
 
 
-open fun getTotalLaps()
+    open fun getTotalLaps()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -73,7 +73,7 @@ open fun getTotalLaps()
 }
 
 
-open fun isDone()
+    open fun isDone()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -96,7 +96,8 @@ open fun isDone()
                         return false
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
 

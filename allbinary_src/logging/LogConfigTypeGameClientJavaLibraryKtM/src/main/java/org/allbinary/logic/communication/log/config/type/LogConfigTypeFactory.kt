@@ -30,12 +30,11 @@ open public class LogConfigTypeFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: LogConfigTypeFactory = LogConfigTypeFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : LogConfigTypeFactory{
 
@@ -53,7 +52,7 @@ open fun getInstance()
     val OS: LogConfigType = LogConfigType("Operating System", NO_DESCRIPTION)
 
     val FACTORYERROR: LogConfigType = LogConfigType("Factory Error", NO_DESCRIPTION)
-private constructor        ()
+private constructor ()
             : super()
         {
 LogConfigTypes.LOGGING.add(OS)

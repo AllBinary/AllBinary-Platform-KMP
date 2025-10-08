@@ -42,12 +42,11 @@ open public class CustomizerUtil
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: CustomizerUtil = CustomizerUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CustomizerUtil{
 
@@ -61,7 +60,7 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        ()
+private constructor ()
             : super()
         {
 }
@@ -69,7 +68,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getTransformInfoInterfaceToCustomize(customizerTransformInfoInterface: TransformInfoInterface, transformInfoInterface: TransformInfoInterface)
+    open fun getTransformInfoInterfaceToCustomize(customizerTransformInfoInterface: TransformInfoInterface, transformInfoInterface: TransformInfoInterface)
         //nullable = true from not(false or (false and false)) = true
 : TransformInfoInterface{
 var customizerTransformInfoInterface = customizerTransformInfoInterface
@@ -105,7 +104,7 @@ var transformInfoInterface = transformInfoInterface
 
                 @Throws(Exception::class)
             
-open fun getTransformInfoObjectConfigComponentNodesToCustomize(customizerTransformInfoInterface: Object, transformInfoInterface: Object)
+    open fun getTransformInfoObjectConfigComponentNodesToCustomize(customizerTransformInfoInterface: Object, transformInfoInterface: Object)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var customizerTransformInfoInterface = customizerTransformInfoInterface
@@ -141,7 +140,7 @@ var transformInfoInterface = transformInfoInterface
 
                 @Throws(Exception::class)
             
-open fun getTransformInfoObjectConfigComponentNodes(transformInfoInterface: Object)
+    open fun getTransformInfoObjectConfigComponentNodes(transformInfoInterface: Object)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var transformInfoInterface = transformInfoInterface
@@ -167,7 +166,7 @@ var transformInfoInterface = transformInfoInterface
 
                 @Throws(Exception::class)
             
-open fun getTransformInfoObjectConfigGroupComponentNodes(transformInfoInterface: Object)
+    open fun getTransformInfoObjectConfigGroupComponentNodes(transformInfoInterface: Object)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 var transformInfoInterface = transformInfoInterface
@@ -193,7 +192,7 @@ var transformInfoInterface = transformInfoInterface
 
                 @Throws(Exception::class)
             
-open fun insert(transformInfoInterface: TransformInfoInterface, domNodeInterface: DomNodeInterface)
+    open fun insert(transformInfoInterface: TransformInfoInterface, domNodeInterface: DomNodeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var transformInfoInterface = transformInfoInterface
@@ -332,7 +331,7 @@ this.write(specifiedTransformInfoInterface, documentString)
 
                 @Throws(Exception::class)
             
-open fun write(specifiedTransformInfoInterface: TransformInfoInterface, documentString: String)
+    open fun write(specifiedTransformInfoInterface: TransformInfoInterface, documentString: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var specifiedTransformInfoInterface = specifiedTransformInfoInterface
@@ -356,7 +355,7 @@ transformInfoEntityInterface!!.update(specifiedTransformInfoInterface!!.toHashMa
 
                 @Throws(Exception::class)
             
-open fun getViewDataForComponentsInObjectConfig(transformInfoInterface: Object)
+    open fun getViewDataForComponentsInObjectConfig(transformInfoInterface: Object)
         //nullable = true from not(false or (false and false)) = true
 : Document{
 var transformInfoInterface = transformInfoInterface

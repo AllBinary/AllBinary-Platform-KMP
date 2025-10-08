@@ -33,7 +33,7 @@ open public class JListSwingWorker : SwingWorker {
     private var jList: JList
 
     private var listModel: ListModel
-public constructor        (jList: JList, listModel: ListModel){
+public constructor (jList: JList, listModel: ListModel){
 var jList = jList
 var listModel = listModel
 this.setJList(jList)
@@ -41,7 +41,7 @@ this.setListModel(listModel)
 }
 
 
-open fun doInBackground()
+    open fun doInBackground()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
@@ -52,14 +52,14 @@ open fun doInBackground()
 }
 
 
-open fun done()
+    open fun done()
         //nullable = true from not(false or (false and true)) = true
 {
 this.getJList()!!.setModel(this.getListModel())
 }
 
 
-open fun getJList()
+    open fun getJList()
         //nullable = true from not(false or (false and true)) = true
 : JList{
 
@@ -70,7 +70,7 @@ open fun getJList()
 }
 
 
-open fun setJList(jList: JList)
+    open fun setJList(jList: JList)
         //nullable = true from not(false or (false and false)) = true
 {
 var jList = jList
@@ -78,7 +78,7 @@ this.jList= jList
 }
 
 
-open fun getListModel()
+    open fun getListModel()
         //nullable = true from not(false or (false and true)) = true
 : ListModel{
 
@@ -89,7 +89,7 @@ open fun getListModel()
 }
 
 
-open fun setListModel(listModel: ListModel)
+    open fun setListModel(listModel: ListModel)
         //nullable = true from not(false or (false and false)) = true
 {
 var listModel = listModel

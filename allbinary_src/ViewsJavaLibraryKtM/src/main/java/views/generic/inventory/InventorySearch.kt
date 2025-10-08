@@ -55,7 +55,7 @@ open public class InventorySearch
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private val searchRequest: SearchRequest
-public constructor        (searchRequest: SearchRequest)                        
+public constructor (searchRequest: SearchRequest)                        
 
                             : super(){
 var searchRequest = searchRequest
@@ -69,7 +69,7 @@ this.searchRequest= searchRequest
 
                 @Throws(Exception::class)
             
-open fun searchSingleStaticPage()
+    open fun searchSingleStaticPage()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -146,7 +146,7 @@ stringBuffer!!.append(InputOutputTypeData.getInstance()!!.DEFAULT)
 
                 @Throws(Exception::class)
             
-open fun searchSingleDynamicPage()
+    open fun searchSingleDynamicPage()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -181,7 +181,7 @@ open fun searchSingleDynamicPage()
 
                 @Throws(Exception::class)
             
-open fun search()
+    open fun search()
         //nullable = true from not(false or (false and true)) = true
 : Array<String?>{
 
@@ -203,7 +203,7 @@ open fun search()
 
                 @Throws(Exception::class)
             
-open fun getProduct(product: String)
+    open fun getProduct(product: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
 var product = product

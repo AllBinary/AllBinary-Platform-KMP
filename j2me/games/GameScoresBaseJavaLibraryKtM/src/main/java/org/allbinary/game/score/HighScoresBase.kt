@@ -35,12 +35,13 @@ open public class HighScoresBase
         
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-protected constructor        ()
+protected constructor ()
             : super()
         {
 }
 
-override fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener)
+
+    override fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameInfo = gameInfo
@@ -51,7 +52,8 @@ override fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: High
                             throw RuntimeException()
 }
 
-override fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener, preload: Boolean)
+
+    override fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener, preload: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameInfo = gameInfo
@@ -63,7 +65,8 @@ override fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: High
                             throw RuntimeException()
 }
 
-override fun createHighScoresHelper()
+
+    override fun createHighScoresHelper()
         //nullable = true from not(false or (false and true)) = true
 : HighScoresHelperBase{
 

@@ -34,12 +34,11 @@ open public class HardwareFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
                 @Throws(Exception::class)
             
-open fun getInstance(os: GenericOperatingSystem)
+    open fun getInstance(os: GenericOperatingSystem)
         //nullable =  from not(true or (false and false)) = 
 : HardwareInterface{
 var os = os
@@ -90,7 +89,7 @@ var os = os
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
         {
 }

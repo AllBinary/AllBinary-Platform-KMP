@@ -32,12 +32,11 @@ import org.allbinary.animation.IndexedAnimationBehavior
 open public class SpecialAnimation : IndexedAnimation
                 , SpecialAnimationInterface {
         
-
-        companion object {
+companion object {
             
     private val NULL_SPECIAL_ANIMATION: SpecialAnimation = SpecialAnimation(IndexedAnimationBehavior(1, 250))
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : SpecialAnimation{
 
@@ -49,7 +48,7 @@ open fun getInstance()
 
 
         }
-            public constructor        (animationBehavior: AnimationBehavior)                        
+            public constructor (animationBehavior: AnimationBehavior)                        
 
                             : super(animationBehavior){
     //var animationBehavior = animationBehavior
@@ -59,7 +58,8 @@ open fun getInstance()
                     
 }
 
-override fun nextFrame()
+
+    override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -68,12 +68,14 @@ override fun nextFrame()
 indexedAnimationBehavior!!.loopIndex++
 }
 
-override fun setLastFrame()
+
+    override fun setLastFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
-override fun isComplete()
+
+    override fun isComplete()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -84,19 +86,19 @@ override fun isComplete()
 }
 
 
-open fun open()
+    open fun open()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun close()
+    open fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-open fun process()
+    open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 }

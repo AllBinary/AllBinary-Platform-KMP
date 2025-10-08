@@ -43,14 +43,14 @@ open public class TouchButtonsMappingPaintable : Paintable {
                                                             
 
     private var touchButtonLocationHelper: TouchButtonLocationHelper = TouchButtonLocationHelper()
-public constructor        (basicColor: BasicColor){
+public constructor (basicColor: BasicColor){
 var basicColor = basicColor
 this.foregroundColor= basicColor!!.toInt()
 this.init()
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -69,7 +69,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "updateRectangle", e)
 
                 @Throws(Exception::class)
             
-open fun createPaintableTable()
+    open fun createPaintableTable()
         //nullable = true from not(false or (false and true)) = true
 : Array<Array<Paintable?>?>{
 
@@ -114,7 +114,8 @@ paintableTable[index]!![rowIndex]= TouchButton(BasicTouchInputFactory.getInstanc
                         return paintableTable
 }
 
-override fun paint(graphics: Graphics)
+
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

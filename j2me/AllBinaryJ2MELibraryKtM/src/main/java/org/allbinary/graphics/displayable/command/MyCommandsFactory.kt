@@ -32,12 +32,11 @@ open public class MyCommandsFactory
             : Object
          {
         
-
-        companion object {
+companion object {
             
     private val instance: MyCommandsFactory = MyCommandsFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : MyCommandsFactory{
 
@@ -59,7 +58,7 @@ open fun getInstance()
     val PAUSE_COMMAND: Command = Command("Pause", Command.SCREEN, 0)
 
     val RESUME_COMMAND: Command = Command("Resume", Command.SCREEN, 0)
-protected constructor        ()
+protected constructor ()
             : super()
         {
 }

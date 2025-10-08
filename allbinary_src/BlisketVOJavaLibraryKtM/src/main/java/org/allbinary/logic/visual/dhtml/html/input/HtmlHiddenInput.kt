@@ -30,7 +30,7 @@ open public class HtmlHiddenInput
             : Object
          {
         
-public constructor        ()
+public constructor ()
             : super()
         {
 }
