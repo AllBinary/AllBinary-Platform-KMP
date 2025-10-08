@@ -12,6 +12,7 @@
         import kotlin.reflect.KClass
         
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import org.allbinary.android.AndroidServicesUtil
 import org.allbinary.data.resource.ResourceUtil
@@ -33,37 +34,37 @@ open public class MusicManager
         
 companion object {
             
-    open fun pause(activity: Activity, clazz: KClass<*>)
+    open fun pause(activity: Activity, musicServiceClass: KClass<*>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var activity = activity
-var clazz = clazz
+var musicServiceClass = musicServiceClass
 
     var commonStateStrings: CommonStateStrings = CommonStateStrings.getInstance()!!
 
 
-    var musicPauseIntent: Intent = Intent(activity, clazz)
+    var musicPauseIntent: Intent = Intent(activity as Context, musicServiceClass::class.java)
 
 musicPauseIntent!!.putExtra(commonStateStrings!!.ON_START_COMMAND, 1)
 activity.startService(musicPauseIntent)
 }
 
 
-    open fun resume(activity: Activity, clazz: KClass<*>)
+    open fun resume(activity: Activity, musicServiceClass: KClass<*>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var activity = activity
-var clazz = clazz
+var musicServiceClass = musicServiceClass
 
     
-                        if(AndroidServicesUtil.getInstance()!!.isServiceRunning(clazz.toString()!!))
+                        if(AndroidServicesUtil.getInstance()!!.isServiceRunning(musicServiceClass!!.toString()!!))
                         
                                     {
                                     
     var commonStateStrings: CommonStateStrings = CommonStateStrings.getInstance()!!
 
 
-    var musicResumeIntent: Intent = Intent(activity, clazz)
+    var musicResumeIntent: Intent = Intent(activity, musicServiceClass::class.java)
 
 musicResumeIntent!!.putExtra(commonStateStrings!!.ON_START_COMMAND, 2)
 activity.startService(musicResumeIntent)
