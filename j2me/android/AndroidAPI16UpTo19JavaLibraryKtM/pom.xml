@@ -2,13 +2,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.allbinary</groupId>
-    <artifactId>AndroidAPI5AndUpJavaLibraryKt</artifactId>
+    <artifactId>AndroidAPI16UpTo19JavaLibraryKt</artifactId>
     <packaging>jar</packaging>
     <!-- AllBinary Platform Version Start -->
     <version>1.0.0-SNAPSHOT</version>
     <!-- AllBinary Platform Version End -->
 
-    <name>AndroidAPI5AndUpJavaLibraryKt</name>
+    <name>AndroidAPI16UpTo19JavaLibraryKt</name>
     <url>http://www.allbinary.com/</url>
     <distributionManagement>
         <snapshotRepository>
@@ -74,34 +74,29 @@
 
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>AndroidThroughAPI4JavaLibraryKt</artifactId>
+            <artifactId>AndroidAPI5AndUpJavaLibraryKt</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
 
         </dependency>
 
+        <!-- API 11 Android 3.0 -->
+        <!-- API 16 Android 4.1.x -->
         <dependency>
             <groupId>com.google.android</groupId>
             <artifactId>android</artifactId>
-            <version>11.0</version>
+            <version>4.3.1_r3</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.google.android</groupId>
             <artifactId>android</artifactId>
-            <version>11.0</version>
+            <version>4.3.1_r3</version>
             <scope>provided</scope>
             <classifier>sources</classifier>
         </dependency>
         
-        <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-stdlib</artifactId>
-            <version>2.2.10</version>
-            <scope>provided</scope>
-        </dependency>
-
     </dependencies>
 
     <build>
@@ -145,7 +140,6 @@
                 </configuration>
             </plugin>
 
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
@@ -165,4 +159,3 @@
     </build>
 
 </project>
-

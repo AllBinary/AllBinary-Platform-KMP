@@ -2,13 +2,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.allbinary</groupId>
-    <artifactId>AndroidAPI5AndUpJavaLibraryKt</artifactId>
+    <artifactId>AndroidAPI30JavaLibraryKt</artifactId>
     <packaging>jar</packaging>
     <!-- AllBinary Platform Version Start -->
     <version>1.0.0-SNAPSHOT</version>
     <!-- AllBinary Platform Version End -->
 
-    <name>AndroidAPI5AndUpJavaLibraryKt</name>
+    <name>AndroidAPI30JavaLibraryKt</name>
     <url>http://www.allbinary.com/</url>
     <distributionManagement>
         <snapshotRepository>
@@ -74,13 +74,14 @@
 
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>AndroidThroughAPI4JavaLibraryKt</artifactId>
+            <artifactId>AndroidAPI19UpTo29JavaLibraryKt</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->
 
         </dependency>
 
+        <!-- API 30 Android 11 -->
         <dependency>
             <groupId>com.google.android</groupId>
             <artifactId>android</artifactId>
@@ -94,14 +95,15 @@
             <scope>provided</scope>
             <classifier>sources</classifier>
         </dependency>
-        
+
         <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-stdlib</artifactId>
-            <version>2.2.10</version>
+            <groupId>androidx.core</groupId>
+            <artifactId>core</artifactId>
+            <version>1.17.0</version>
+            <type>jar</type>
             <scope>provided</scope>
         </dependency>
-
+        
     </dependencies>
 
     <build>
@@ -145,7 +147,6 @@
                 </configuration>
             </plugin>
 
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
@@ -165,4 +166,3 @@
     </build>
 
 </project>
-
