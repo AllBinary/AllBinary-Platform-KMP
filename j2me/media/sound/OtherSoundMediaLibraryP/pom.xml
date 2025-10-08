@@ -33,6 +33,7 @@
         Already in Game POM
         <module>../../sound/NotDeviceSpecificNoMediaMIDP1LibraryKtM</module>
         
+        <module>../../sound/NullMusicAndroidJavaLibraryKtM</module>
         <module>../../sound/MusicAndroidJavaLibraryKtM</module>
         <module>../../sound/J2SEMediaMIDPJorbisJavaLibraryKtM</module>        
         -->
