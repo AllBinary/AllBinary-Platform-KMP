@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.KotlinUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
 
@@ -46,7 +47,7 @@ public constructor (name: String, version: String, shortName: String)
     //var shortName = shortName
 this.name= name
 this.version= version
-this.shortName= shortName
+this.shortName= shortName +KotlinUtil.getShortName()
 }
 
 
