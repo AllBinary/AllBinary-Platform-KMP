@@ -118,13 +118,13 @@ pointBasicArrayList!!.add(pointFactory!!.getInstance(points[index]!![0]!!, point
 }
 
 
+    var index: Int = 0
 
 
-
-                        for (index in 0 until totalAngle)
-
+        while(index < totalAngle)
         {
 pointsBasicArrayList!!.add(getInstance(width, height, pointBasicArrayList, this.angleFactory!!.getInstance(index)))
+index += angleIncrement
 }
 
 
