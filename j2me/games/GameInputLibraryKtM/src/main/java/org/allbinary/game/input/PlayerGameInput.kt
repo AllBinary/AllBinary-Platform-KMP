@@ -75,7 +75,7 @@ this.playerInputId= playerInputId
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameKeyEvent = gameKeyEvent
-super.add(gameKeyEvent)
+this.add(gameKeyEvent)
 this.addForRemoval(gameKeyEvent)
 }
 
@@ -85,7 +85,7 @@ this.addForRemoval(gameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameKeyEvent = gameKeyEvent
-super.add(gameKeyEvent)
+this.add(gameKeyEvent)
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
@@ -94,7 +94,7 @@ super.add(gameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameKeyEvent = gameKeyEvent
-super.add(gameKeyEvent)
+this.add(gameKeyEvent)
 this.addForRemoval(gameKeyEvent)
 }
 

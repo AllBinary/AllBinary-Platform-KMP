@@ -103,6 +103,23 @@ var obj = obj
 }
 
 
+    open fun glFrustumf(gl: GL10, lt: Float, rt: Float, btm: Float, top: Float, zNear: Float, zFar: Float)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var gl = gl
+    //var lt = lt
+    //var rt = rt
+    //var btm = btm
+    //var top = top
+    //var zNear = zNear
+    //var zFar = zFar
+
+
+
+                            throw RuntimeException()
+}
+
+
 }
                 
             

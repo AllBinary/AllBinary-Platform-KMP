@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.khronos.opengles.GL
 import javax.microedition.lcdui.Graphics
 import org.allbinary.graphics.Rectangle
 import org.allbinary.graphics.color.BasicColor
@@ -32,6 +33,7 @@ import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.color.BasicColorSetUtil
 import org.allbinary.graphics.paint.NullPaintable
 import org.allbinary.graphics.paint.Paintable
+import org.allbinary.image.opengles.OpenGLSurfaceChangedInterface
 import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.logic.communication.log.ForcedLogUtil
@@ -44,7 +46,8 @@ import org.allbinary.view.event.ViewPositionEvent
 import org.allbinary.view.event.ViewPositionEventListenerInterface
 
 open public class AllBinaryGameLayer : AllBinaryLayer
-                , ViewPositionEventListenerInterface {
+                , ViewPositionEventListenerInterface
+                , OpenGLSurfaceChangedInterface {
         
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -107,6 +110,19 @@ public constructor (name: String, layerInfo: Rectangle, viewPosition: ViewPositi
 
                             //For kotlin this is before the body of the constructor.
                     
+}
+
+
+                @Throws(Exception::class)
+            
+    override fun set(gl: GL)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var gl = gl
+
+
+
+                            throw Exception(commonStrings!!.NOT_IMPLEMENTED)
 }
 
 

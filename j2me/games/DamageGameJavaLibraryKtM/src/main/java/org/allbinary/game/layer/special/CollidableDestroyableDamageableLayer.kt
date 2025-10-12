@@ -53,8 +53,7 @@ open public class CollidableDestroyableDamageableLayer : CollidableCompositeLaye
                 , DestroyableInterface
                 , DamageableInterface
                 , PickupCompositeInterface
-                , SpecialGameInputInterface
-                , OpenGLSurfaceChangedInterface {
+                , SpecialGameInputInterface {
         
 companion object {
             
@@ -510,19 +509,6 @@ this.partInterfaceArrayP= partInterfaceArray
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return partInterfaceArrayP
-}
-
-
-                @Throws(Exception::class)
-            
-    override fun set(gl: GL)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var gl = gl
-
-
-
-                            throw Exception(commonStrings!!.NOT_IMPLEMENTED)
 }
 
 
