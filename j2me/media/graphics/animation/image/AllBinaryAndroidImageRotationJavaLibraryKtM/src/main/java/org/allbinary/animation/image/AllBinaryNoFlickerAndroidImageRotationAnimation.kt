@@ -79,7 +79,7 @@ this.twoImages[1]= ImageCopyUtil.getInstance()!!.createImage(image)
 }
 
 
-    open fun setBasicColorP(basicColor: BasicColor)
+    override fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var basicColor = basicColor
@@ -104,7 +104,7 @@ super.setBasicColorP(basicColor)
                         if(changed)
                         
                                     {
-                                    matrix.setRotate(0, this.halfWidth, this.halfHeight)
+                                    matrix.setRotate(0.0f, this.halfWidth.toFloat(), this.halfHeight.toFloat())
 this.updateImage()
 
                                     }
@@ -120,7 +120,7 @@ this.setBasicColorP(basicColor)
 }
 
 
-    open fun setAlpha(alpha: Int)
+    override fun setAlpha(alpha: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var alpha = alpha
@@ -143,7 +143,7 @@ imageModifierUtil!!.setAlpha(this.originalImage, this.imageToShow, 0, this.alpha
                         if(changed)
                         
                                     {
-                                    matrix.setRotate(0, this.halfWidth, this.halfHeight)
+                                    matrix.setRotate(0.0f, this.halfWidth.toFloat(), this.halfHeight.toFloat())
 this.updateImage()
 
                                     }
@@ -151,20 +151,20 @@ this.updateImage()
 }
 
 
-    open fun nextRotation()
+    override fun nextRotation()
         //nullable = true from not(false or (false and true)) = true
 {
 super.nextRotation()
-matrix.setRotate(this.increment, this.halfWidth, this.halfHeight)
+matrix.setRotate(this.increment.toFloat(), this.halfWidth.toFloat(), this.halfHeight.toFloat())
 this.updateImage()
 }
 
 
-    open fun previousRotation()
+    override fun previousRotation()
         //nullable = true from not(false or (false and true)) = true
 {
 super.previousRotation()
-matrix.setRotate( -this.increment, this.halfWidth, this.halfHeight)
+matrix.setRotate( -this.increment.toFloat(), this.halfWidth.toFloat(), this.halfHeight.toFloat())
 this.updateImage()
 }
 
@@ -177,7 +177,7 @@ this.swap()
 }
 
 
-    open fun setFrame(index: Int)
+    override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var index = index
@@ -189,7 +189,7 @@ this.circularIndexUtil!!.setIndex(index)
     var newFrame: Int = this.circularIndexUtil!!.getIndex()!!
 
 this.angleInfo!!.adjustAngle(newFrame)
-matrix.setRotate((newFrame -currentFrame) *increment, this.halfWidth, this.halfHeight)
+matrix.setRotate((newFrame -currentFrame).toFloat() *increment, this.halfWidth.toFloat(), this.halfHeight.toFloat())
 this.updateImage()
 }
 
@@ -215,7 +215,7 @@ this.imageToShow= this.twoImages[this.bufferedImageIndex]!!
 }
 
 
-    open fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

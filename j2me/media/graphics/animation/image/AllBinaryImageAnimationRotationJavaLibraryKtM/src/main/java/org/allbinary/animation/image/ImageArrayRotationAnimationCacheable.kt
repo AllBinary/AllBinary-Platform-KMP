@@ -26,6 +26,8 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.animation.AnimationBehavior
+import org.allbinary.logic.NullUtil
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.util.cache.CacheableInterface
 
 open public class ImageArrayRotationAnimationCacheable : AdjustedImageArrayRotationAnimation
@@ -43,14 +45,14 @@ public constructor (anyType: Any, animationBehavior: AnimationBehavior)
 }
 
 
-    open fun getKey()
+    override fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return NullUtil.getInstance()!!.NULL_OBJECT
 }
 
 
@@ -61,7 +63,7 @@ public constructor (anyType: Any, animationBehavior: AnimationBehavior)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return StringUtil.getInstance()!!.EMPTY_STRING
 }
 
 

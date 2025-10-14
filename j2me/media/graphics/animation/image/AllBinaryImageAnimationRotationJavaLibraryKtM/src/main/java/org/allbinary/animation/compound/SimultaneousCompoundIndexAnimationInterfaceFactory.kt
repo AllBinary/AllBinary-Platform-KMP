@@ -52,7 +52,7 @@ this.animationBehaviorFactory= animationBehaviorFactory
 
                 @Throws(Exception::class)
             
-    open fun getInstance(instanceId: Int)
+    override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var instanceId = instanceId
@@ -104,7 +104,7 @@ animationInterfaceArray[index]= this.basicAnimationInterfaceFactoryInterfaceArra
 }
 
 
-    open fun setInitialScale(scaleProperties: ScaleProperties)
+    override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
 {
     //var scaleProperties = scaleProperties

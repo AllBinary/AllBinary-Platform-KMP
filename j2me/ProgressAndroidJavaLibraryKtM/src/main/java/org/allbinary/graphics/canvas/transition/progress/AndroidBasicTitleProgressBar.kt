@@ -31,6 +31,7 @@ import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Image
 import javax.microedition.lcdui.NullCanvas
 import android.app.Activity
+import org.allbinary.AndroidUtil
 import org.allbinary.image.GameFeatureImageCacheFactory
 import org.allbinary.image.PreResourceImageUtil
 import org.allbinary.logic.communication.log.ForcedLogUtil
@@ -61,8 +62,6 @@ companion object {
             
     val RESOURCE: String = "ProgressImage"
 
-    private val NULL_ACTIVITY: Activity = Activity()
-
     private var background: Int= 0
 
     open fun setBackground(background: Int)
@@ -83,7 +82,7 @@ AndroidBasicTitleProgressBar.background= background
 
     private var titleProgressDialogSetProgressRunnable: ARunnable = NullRunnable.getInstance()!!
 
-    private var midletActivity: Activity = NULL_ACTIVITY
+    private var midletActivity: Activity = AndroidUtil.NULL_ACTIVITY
 
     private var portion: Int = 0
 
@@ -312,7 +311,7 @@ this.animation= NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
 : Boolean{
 
     
-                        if(this.midletActivity != AndroidBasicTitleProgressBar.NULL_ACTIVITY)
+                        if(this.midletActivity != AndroidUtil.NULL_ACTIVITY)
                         
                                     {
                                     
@@ -379,7 +378,7 @@ var index = index
 super.addEarlyPortion(value, text, index)
 
     
-                        if(this.midletActivity != AndroidBasicTitleProgressBar.NULL_ACTIVITY)
+                        if(this.midletActivity != AndroidUtil.NULL_ACTIVITY)
                         
                                     {
                                     this.midletActivity!!.runOnUiThread(titleProgressDialogPortionSetProgressRunnable)

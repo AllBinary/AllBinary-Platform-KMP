@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Image
+import javax.microedition.lcdui.NullCanvas
 import org.allbinary.image.GameFeatureImageCacheFactory
 import org.allbinary.animation.Animation
 import org.allbinary.animation.AnimationBehaviorFactory
@@ -35,7 +36,7 @@ import org.allbinary.media.image.ImageScaleUtil
 open public class AllBinaryScreenRelationalImageAnimationInterfaceFactory : BaseImageAnimationFactory {
         
 
-    private var lastImage: Image
+    private var lastImage: Image = NullCanvas.NULL_IMAGE
 public constructor (image: Image)                        
 
                             : this(image, AnimationBehaviorFactory.getInstance()){
@@ -57,9 +58,7 @@ public constructor (image: Image, animationBehaviorFactory: AnimationBehaviorFac
                     
 
     
-                        if(lastImage != 
-                                    null
-                                )
+                        if(lastImage != NullCanvas.NULL_IMAGE)
                         
                                     {
                                     lastImage!!.getBitmap()!!.recycle()

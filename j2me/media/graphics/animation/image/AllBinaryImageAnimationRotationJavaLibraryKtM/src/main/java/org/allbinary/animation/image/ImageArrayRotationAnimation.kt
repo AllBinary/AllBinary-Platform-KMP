@@ -67,7 +67,7 @@ this.init(imageArray, angleInfo, totalAngle)
 
 public constructor (imageArray: Array<Image?>, animationBehavior: AnimationBehavior)                        
 
-                            : this(imageArray, AngleInfo.getInstance(10.toShort()), AngleFactory.getInstance()!!.TOTAL_ANGLE, animationBehavior){
+                            : this(imageArray, AngleInfo.getInstance(10.toShort()), AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt(), animationBehavior){
     //var imageArray = imageArray
     //var animationBehavior = animationBehavior
 
@@ -78,7 +78,7 @@ public constructor (imageArray: Array<Image?>, animationBehavior: AnimationBehav
 
 public constructor (imageArray: Array<Image?>, angleInfo: AngleInfo, animationBehavior: AnimationBehavior)                        
 
-                            : this(imageArray, angleInfo, AngleFactory.getInstance()!!.TOTAL_ANGLE, animationBehavior){
+                            : this(imageArray, angleInfo, AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt(), animationBehavior){
     //var imageArray = imageArray
     //var angleInfo = angleInfo
     //var animationBehavior = animationBehavior
@@ -114,7 +114,7 @@ this.angleInfo!!.adjustAngle(0)
 }
 
 
-    open fun setImageArray(imageArray: Array<Image?>)
+    override fun setImageArray(imageArray: Array<Image?>)
         //nullable = true from not(false or (false and false)) = true
 {
     //var imageArray = imageArray

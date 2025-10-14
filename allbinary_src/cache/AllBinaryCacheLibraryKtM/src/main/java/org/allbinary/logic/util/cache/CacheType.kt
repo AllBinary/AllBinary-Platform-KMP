@@ -32,16 +32,16 @@ open public class CacheType
          {
         
 
-    private var vendor: String
+    private val vendor: String
 
-    private var type: String
+    private val type: String
 public constructor (vendor: String, type: String)
             : super()
         {
 var vendor = vendor
 var type = type
-this.setVendor(vendor)
-this.setType(type)
+this.vendor= vendor
+this.type= type
 }
 
 
@@ -56,14 +56,6 @@ this.setType(type)
 }
 
 
-    open fun setVendor(vendor: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-var vendor = vendor
-this.vendor= vendor
-}
-
-
     open fun getType()
         //nullable = true from not(false or (false and true)) = true
 : String{
@@ -72,14 +64,6 @@ this.vendor= vendor
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return type
-}
-
-
-    open fun setType(type: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-var type = type
-this.type= type
 }
 
 

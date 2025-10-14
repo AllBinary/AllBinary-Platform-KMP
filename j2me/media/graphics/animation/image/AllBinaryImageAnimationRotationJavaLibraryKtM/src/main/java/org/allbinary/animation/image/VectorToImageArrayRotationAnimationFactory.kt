@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Image
+import javax.microedition.lcdui.NullCanvas
 import org.allbinary.animation.Animation
 import org.allbinary.animation.AnimationBehaviorFactory
 import org.allbinary.animation.VectorAnimation
@@ -41,7 +42,7 @@ import org.allbinary.vector.VectorInfo
 open public class VectorToImageArrayRotationAnimationFactory : BaseImageAnimationFactory {
         
 
-    private var imageArray: Array<Image?>
+    private var imageArray: Array<Image?> = NullCanvas.NULL_IMAGE_ARRAY
 
     private var angleIncrement: Int= 0
 public constructor (vectorInfo: VectorInfo, basicColor: BasicColor, dx: Int, dy: Int)                        
@@ -107,13 +108,13 @@ this.init()
     var angleFactory: AngleFactory = AngleFactory.getInstance()!!
 
 this.angleIncrement= angleFactory!!.TOTAL_ANGLE /GameConfigurationCentral.getInstance()!!.getGameControlFidelity()
-this.imageArray= ImageToRotationImageArrayUtil.getInstance()!!.generate(this.getImage(), this.getAngleIncrement(), angleFactory!!.TOTAL_ANGLE)
+this.imageArray= ImageToRotationImageArrayUtil.getInstance()!!.generate(this.getImage(), this.getAngleIncrement(), angleFactory!!.TOTAL_ANGLE.toInt())
 }
 
 
                 @Throws(Exception::class)
             
-    open fun getInstance(instanceId: Int)
+    override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var instanceId = instanceId
@@ -126,7 +127,7 @@ this.imageArray= ImageToRotationImageArrayUtil.getInstance()!!.generate(this.get
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AdjustedImageArrayRotationAnimation(this.imageArray, AngleInfo.getInstance(this.getAngleIncrement().toShort()), AngleFactory.getInstance()!!.TOTAL_ANGLE, this.animationFactoryInitializationVisitor!!.dx, this.animationFactoryInitializationVisitor!!.dy, this.animationBehaviorFactory!!.getOrCreateInstance())
+                        return AdjustedImageArrayRotationAnimation(this.imageArray, AngleInfo.getInstance(this.getAngleIncrement().toShort()), AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt(), this.animationFactoryInitializationVisitor!!.dx, this.animationFactoryInitializationVisitor!!.dy, this.animationBehaviorFactory!!.getOrCreateInstance())
 
                                     }
                                 
@@ -135,7 +136,7 @@ this.imageArray= ImageToRotationImageArrayUtil.getInstance()!!.generate(this.get
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AdjustedImageArrayRotationAnimation(this.imageArray, AngleInfo.getInstance(this.angleIncrement.toShort()), AngleFactory.getInstance()!!.TOTAL_ANGLE, this.animationBehaviorFactory!!.getOrCreateInstance())
+                        return AdjustedImageArrayRotationAnimation(this.imageArray, AngleInfo.getInstance(this.angleIncrement.toShort()), AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt(), this.animationBehaviorFactory!!.getOrCreateInstance())
 
                         }
                             
@@ -153,7 +154,7 @@ this.imageArray= ImageToRotationImageArrayUtil.getInstance()!!.generate(this.get
 }
 
 
-    open fun setInitialScale(scaleProperties: ScaleProperties)
+    override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
 {
     //var scaleProperties = scaleProperties

@@ -31,12 +31,12 @@ open public class PoolType
          {
         
 
-    private var cacheType: CacheType
+    private val cacheType: CacheType
 public constructor (cacheType: CacheType)
             : super()
         {
 var cacheType = cacheType
-this.setCacheType(cacheType)
+this.cacheType= cacheType
 }
 
 
@@ -48,14 +48,6 @@ this.setCacheType(cacheType)
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return cacheType
-}
-
-
-    open fun setCacheType(cacheType: CacheType)
-        //nullable = true from not(false or (false and false)) = true
-{
-var cacheType = cacheType
-this.cacheType= cacheType
 }
 
 

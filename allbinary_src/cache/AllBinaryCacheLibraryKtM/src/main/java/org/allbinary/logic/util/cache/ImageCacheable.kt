@@ -25,13 +25,14 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.string.StringUtil
 
 open public class ImageCacheable
             : Object
          {
         
 
-    private var name: String
+    private var name: String = StringUtil.getInstance()!!.EMPTY_STRING
 public constructor (name: String, anyType: Any)
             : super()
         {
@@ -58,7 +59,7 @@ var anyType = anyType
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return name
 }
 
 

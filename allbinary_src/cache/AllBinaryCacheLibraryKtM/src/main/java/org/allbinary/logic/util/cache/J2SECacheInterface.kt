@@ -32,7 +32,7 @@ interface J2SECacheInterface : AutomaticCacheInterface {
 
     open fun keySet()
         //nullable = true from not(false or (false and true)) = true
-: Set
+: Set<Any>
 
 }
                 

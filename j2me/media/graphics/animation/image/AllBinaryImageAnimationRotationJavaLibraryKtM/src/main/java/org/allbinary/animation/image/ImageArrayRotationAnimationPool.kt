@@ -61,7 +61,7 @@ var cacheableInterfaceFactoryInterface = cacheableInterfaceFactoryInterface
 
                 @Throws(Exception::class)
             
-    open fun remove(key: Any)
+    override fun remove(key: Any)
         //nullable = true from not(false or (false and false)) = true
 : CacheableInterface{
 var key = key
@@ -71,9 +71,10 @@ var key = key
 
     var allBinaryImageRotationAnimationInfo: ImageArrayRotationAnimationInfo = key as ImageArrayRotationAnimationInfo
 
-cacheableInterface = cacheableInterfacecacheableInterface as ImageArrayRotationAnimationCacheable
-cacheableInterface.
-                    setImageArray(allBinaryImageRotationAnimationInfo!!.getImageArray())
+
+    var imageArrayRotationAnimationCacheable: ImageArrayRotationAnimationCacheable = (cacheableInterface as ImageArrayRotationAnimationCacheable)
+
+imageArrayRotationAnimationCacheable!!.setImageArray(allBinaryImageRotationAnimationInfo!!.getImageArray())
 
 
 

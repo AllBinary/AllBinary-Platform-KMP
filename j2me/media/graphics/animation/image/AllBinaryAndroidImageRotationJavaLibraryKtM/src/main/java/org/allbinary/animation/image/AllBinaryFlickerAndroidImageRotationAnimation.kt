@@ -26,7 +26,6 @@
         import kotlin.reflect.KClass
         
 import android.graphics.Matrix
-import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Image
 import org.allbinary.animation.AnimationBehavior
 import org.allbinary.graphics.color.BasicColor
@@ -50,7 +49,7 @@ open public class AllBinaryFlickerAndroidImageRotationAnimation : ImageBaseRotat
     private val increment: Short
 
     private val originalImage: Image
-protected constructor (originalImage: Image, image: Image, angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
+public constructor (originalImage: Image, image: Image, angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
 
                             : super(image, angleInfo, totalAngle, animationBehavior){
     //var originalImage = originalImage
@@ -69,7 +68,7 @@ this.increment= (this.angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement())
 }
 
 
-    open fun setBasicColorP(basicColor: BasicColor)
+    override fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
     //var basicColor = basicColor
@@ -94,7 +93,7 @@ super.setBasicColorP(basicColor)
                         if(changed)
                         
                                     {
-                                    matrix.setRotate(0, this.halfWidth, this.halfHeight)
+                                    matrix.setRotate(0.0f, this.halfWidth.toFloat(), this.halfHeight.toFloat())
 this.updateImage()
 
                                     }
@@ -110,7 +109,7 @@ this.setBasicColorP(basicColor)
 }
 
 
-    open fun setAlpha(alpha: Int)
+    override fun setAlpha(alpha: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var alpha = alpha
@@ -133,7 +132,7 @@ imageModifierUtil!!.setAlpha(this.originalImage, this.getImage(), 0, this.alphaP
                         if(changed)
                         
                                     {
-                                    matrix.setRotate(0, this.halfWidth, this.halfHeight)
+                                    matrix.setRotate(0.0f, this.halfWidth.toFloat(), this.halfHeight.toFloat())
 this.updateImage()
 
                                     }
@@ -141,20 +140,20 @@ this.updateImage()
 }
 
 
-    open fun nextRotation()
+    override fun nextRotation()
         //nullable = true from not(false or (false and true)) = true
 {
 super.nextRotation()
-matrix.setRotate(this.increment, this.halfWidth, this.halfHeight)
+matrix.setRotate(this.increment.toFloat(), this.halfWidth.toFloat(), this.halfHeight.toFloat())
 this.updateImage()
 }
 
 
-    open fun previousRotation()
+    override fun previousRotation()
         //nullable = true from not(false or (false and true)) = true
 {
 super.previousRotation()
-matrix.setRotate( -this.increment, this.halfWidth, this.halfHeight)
+matrix.setRotate( -this.increment.toFloat(), this.halfWidth.toFloat(), this.halfHeight.toFloat())
 this.updateImage()
 }
 
@@ -166,7 +165,7 @@ androidImageUtil!!.rotate(this.getImage(), originalImage, matrix, imageModifierU
 }
 
 
-    open fun setFrame(index: Int)
+    override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var index = index
@@ -178,7 +177,7 @@ this.circularIndexUtil!!.setIndex(index)
     var newFrame: Int = this.circularIndexUtil!!.getIndex()!!
 
 this.angleInfo!!.adjustAngle(newFrame)
-matrix.setRotate((newFrame -currentFrame) *increment, this.halfWidth, this.halfHeight)
+matrix.setRotate((newFrame -currentFrame).toFloat() *increment, this.halfWidth.toFloat(), this.halfHeight.toFloat())
 this.updateImage()
 }
 

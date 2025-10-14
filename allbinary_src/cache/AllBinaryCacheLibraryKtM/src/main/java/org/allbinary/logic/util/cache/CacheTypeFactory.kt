@@ -39,14 +39,13 @@ companion object {
             {
             }            
         
-    var CACHE: CacheType = CacheType(
-                            null, StringUtil.getInstance()!!.EMPTY_STRING)
+    var NO_CACHE: CacheType = CacheType(StringUtil.getInstance()!!.EMPTY_STRING, StringUtil.getInstance()!!.EMPTY_STRING)
 
-    var SET: CacheType = CacheType(
-                            null, "Set")
+    var CACHE: CacheType = CacheType(StringUtil.getInstance()!!.EMPTY_STRING, StringUtil.getInstance()!!.EMPTY_STRING)
 
-    var CACHE_VECTOR: CacheType = CacheType(
-                            null, StringUtil.getInstance()!!.EMPTY_STRING)
+    var SET: CacheType = CacheType(StringUtil.getInstance()!!.EMPTY_STRING, "Set")
+
+    var CACHE_VECTOR: CacheType = CacheType(StringUtil.getInstance()!!.EMPTY_STRING, StringUtil.getInstance()!!.EMPTY_STRING)
 
 }
                 

@@ -49,7 +49,7 @@ this.cacheableInterfaceFactoryInterface= cacheableInterfaceFactoryInterface
 
                 @Throws(Exception::class)
             
-    open fun clear()
+    override fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -61,7 +61,7 @@ this.cacheableInterfaceFactoryInterface= cacheableInterfaceFactoryInterface
 
                 @Throws(Exception::class)
             
-    open fun remove(key: Any)
+    override fun remove(key: Any)
         //nullable = true from not(false or (false and false)) = true
 : CacheableInterface{
 var key = key
@@ -74,7 +74,7 @@ var key = key
 
                 @Throws(Exception::class)
             
-    open fun add(cacheableInterface: CacheableInterface)
+    override fun add(cacheableInterface: CacheableInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var cacheableInterface = cacheableInterface
@@ -84,7 +84,7 @@ buffers.add(cacheableInterface)
 
                 @Throws(Exception::class)
             
-    open fun add(cacheableInterfaces: Array<CacheableInterface?>)
+    override fun add(cacheableInterfaces: Array<CacheableInterface?>)
         //nullable = true from not(false or (false and false)) = true
 {
 var cacheableInterfaces = cacheableInterfaces

@@ -30,6 +30,7 @@ import org.allbinary.animation.Animation
 import org.allbinary.animation.AnimationBehaviorFactory
 import org.allbinary.animation.AnimationInterfaceFactoryInterface
 import org.allbinary.game.configuration.GameConfigurationCentral
+import org.allbinary.logic.NullUtil
 import org.allbinary.math.AngleFactory
 import org.allbinary.media.ScaleProperties
 import org.allbinary.media.image.ImageToRotationImageArrayUtil
@@ -40,7 +41,7 @@ open public class PooledImageArrayRotationAnimationFactory
                 , AnimationInterfaceFactoryInterface {
         
 
-    private var allBinaryImageRotationAnimationInfo: ImageArrayRotationAnimationInfo
+    private var allBinaryImageRotationAnimationInfo: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     private val animationBehaviorFactory: AnimationBehaviorFactory
 public constructor (image: Image, animationBehaviorFactory: AnimationBehaviorFactory)
@@ -76,7 +77,7 @@ this.animationBehaviorFactory= animationBehaviorFactory
 this.init(image, width, height, dx, dy)
 }
 
-public constructor (image: Image, width: Int, height: Int, dx: Int, dy: Int, angleIncrement: Short, animationBehaviorFactory: AnimationBehaviorFactory)
+public constructor (image: Image, width: Int, height: Int, dx: Int, dy: Int, angleIncrement: Int, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
         {
     //var image = image
@@ -102,10 +103,10 @@ this.init(image, width, height, dx, dy, angleIncrement)
     //var dx = dx
     //var dy = dy
 
-    var totalAngle: Int = AngleFactory.getInstance()!!.TOTAL_ANGLE
+    var totalAngle: Int = AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt()
 
 
-    var angleIncrement: Short = (totalAngle /GameConfigurationCentral.getInstance()!!.getGameControlFidelity()).toShort()
+    var angleIncrement: Int = (totalAngle /GameConfigurationCentral.getInstance()!!.getGameControlFidelity())
 
 this.init(image, width, height, dx, dy, angleIncrement)
 }
@@ -113,7 +114,7 @@ this.init(image, width, height, dx, dy, angleIncrement)
 
                 @Throws(Exception::class)
             
-    open fun init(image: Image, width: Int, height: Int, dx: Int, dy: Int, angleIncrement: Short)
+    open fun init(image: Image, width: Int, height: Int, dx: Int, dy: Int, angleIncrement: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var image = image
@@ -123,7 +124,7 @@ this.init(image, width, height, dx, dy, angleIncrement)
     //var dy = dy
     //var angleIncrement = angleIncrement
 
-    var totalAngle: Int = AngleFactory.getInstance()!!.TOTAL_ANGLE
+    var totalAngle: Int = AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt()
 
 
     var imageArray: Array<Image?> = ImageToRotationImageArrayUtil.getInstance()!!.generate(image, angleIncrement, totalAngle)!!
@@ -134,7 +135,7 @@ allBinaryImageRotationAnimationInfo= ImageArrayRotationAnimationInfo(imageArray,
 
                 @Throws(Exception::class)
             
-    open fun getInstance(instanceId: Int)
+    override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var instanceId = instanceId
@@ -146,7 +147,7 @@ allBinaryImageRotationAnimationInfo= ImageArrayRotationAnimationInfo(imageArray,
 }
 
 
-    open fun setInitialScale(scaleProperties: ScaleProperties)
+    override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
 {
     //var scaleProperties = scaleProperties

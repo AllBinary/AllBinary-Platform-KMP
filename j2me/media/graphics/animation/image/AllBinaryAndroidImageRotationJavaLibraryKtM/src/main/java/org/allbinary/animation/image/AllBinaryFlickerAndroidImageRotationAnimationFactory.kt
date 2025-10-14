@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Image
+import javax.microedition.lcdui.NullCanvas
 import org.allbinary.animation.Animation
 import org.allbinary.animation.AnimationBehaviorFactory
 import org.allbinary.animation.AnimationInterfaceFactoryInterface
@@ -41,7 +42,7 @@ open public class AllBinaryFlickerAndroidImageRotationAnimationFactory
                 , AnimationInterfaceFactoryInterface {
         
 
-    private var image: Image
+    private var image: Image = NullCanvas.NULL_IMAGE
 
     private val angleIncrement: Short
 
@@ -145,7 +146,7 @@ this.image= image
 }
 
 
-    open fun setInitialScale(scaleProperties: ScaleProperties)
+    override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
 {
     //var scaleProperties = scaleProperties

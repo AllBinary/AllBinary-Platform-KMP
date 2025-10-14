@@ -29,9 +29,9 @@ import java.io.InputStream
 import javax.microedition.khronos.opengles.GL10
 import javax.microedition.lcdui.Image
 import javax.microedition.lcdui.NullCanvas
+import org.allbinary.device.NullGL10
 import org.allbinary.graphics.opengles.renderer.AllBinaryRendererBase3
 import org.allbinary.util.BasicArrayList
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.image.ImageCache
 import org.allbinary.image.ImageCacheFactory
 import org.allbinary.image.PreResourceImageUtil
@@ -40,24 +40,22 @@ import org.allbinary.thread.SynchObject
 open public class OpenGLImageCache : ImageCache {
         
 
-    val logUtil: LogUtil = LogUtil.getInstance()!!
-
     private val imageCache: ImageCache = ImageCacheFactory.getInstance()!!
 
     private val preResourceImageUtil: PreResourceImageUtil = PreResourceImageUtil.getInstance()!!
 
-    private var gl: GL10
+    private var gl: GL10 = NullGL10.NULL_GL10
 
     private val lock: SynchObject = SynchObject()
 
     private val list: BasicArrayList = BasicArrayList()
 
     private var renderer: AllBinaryRendererBase3 = AllBinaryRendererBase3()
-protected constructor (){
+public constructor (){
 }
 
 
-    open fun addListener(renderer: Any)
+    override fun addListener(renderer: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var renderer = renderer
@@ -215,7 +213,7 @@ height= textureSize
 }
 
 
-    open fun init(image: Image)
+    override fun init(image: Image)
         //nullable = true from not(false or (false and false)) = true
 {
     //var image = image

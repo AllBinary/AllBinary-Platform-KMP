@@ -38,8 +38,7 @@ companion object {
             {
             }            
         
-    var VECTOR_POOL: PoolType = PoolType(
-                            null)
+    var VECTOR_POOL: PoolType = PoolType(CacheTypeFactory.getInstance()!!.NO_CACHE)
 
 }
                 

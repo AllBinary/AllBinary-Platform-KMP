@@ -48,7 +48,7 @@ this.animationInterfaceArray= animationInterfaceArray
 }
 
 
-    open fun setFrame(frameIndex: Int)
+    override fun setFrame(frameIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var frameIndex = frameIndex
@@ -65,7 +65,7 @@ this.animationInterfaceArray[index]!!.setFrame(frameIndex)
 }
 
 
-    open fun getFrame()
+    override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -78,7 +78,7 @@ this.animationInterfaceArray[index]!!.setFrame(frameIndex)
 
                 @Throws(Exception::class)
             
-    open fun getAnimationSize()
+    override fun getAnimationSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -89,7 +89,7 @@ this.animationInterfaceArray[index]!!.setFrame(frameIndex)
 }
 
 
-    open fun getSize()
+    override fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -100,7 +100,7 @@ this.animationInterfaceArray[index]!!.setFrame(frameIndex)
 }
 
 
-    open fun previousFrame()
+    override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -118,7 +118,7 @@ this.animationInterfaceArray[index]!!.previousFrame()
 
                 @Throws(Exception::class)
             
-    open fun nextFrame()
+    override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -134,14 +134,14 @@ this.animationInterfaceArray[index]!!.nextFrame()
 }
 
 
-    open fun setSequence(sequence: IntArray)
+    override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
 {
     //var sequence = sequence
 }
 
 
-    open fun getSequence()
+    override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
 : IntArray{
 
@@ -152,7 +152,7 @@ this.animationInterfaceArray[index]!!.nextFrame()
 }
 
 
-    open fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -171,7 +171,7 @@ this.animationInterfaceArray[index]!!.paint(graphics, x, y)
 }
 
 
-    open fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
+    override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -193,7 +193,7 @@ this.animationInterfaceArray[index]!!.paintThreed(graphics, x, y, z)
 
                 @Throws(Exception::class)
             
-    open fun set(gl: GL)
+    override fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
 {
     //var gl = gl

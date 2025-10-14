@@ -57,7 +57,7 @@ open public class ImageCacheBase
     var volume: Int = 0
 
     var nextIndex: Int = 0
-protected constructor ()
+public constructor ()
             : super()
         {
 

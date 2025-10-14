@@ -37,7 +37,7 @@ open public class BasicArrayListCacheable : BasicArrayList
             {
             }            
         
-    open fun getKey()
+    override fun getKey()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 

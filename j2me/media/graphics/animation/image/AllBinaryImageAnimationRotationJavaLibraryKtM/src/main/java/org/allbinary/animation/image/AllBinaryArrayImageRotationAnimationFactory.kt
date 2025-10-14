@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Image
+import javax.microedition.lcdui.NullCanvas
 import org.allbinary.animation.Animation
 import org.allbinary.animation.AnimationBehaviorFactory
 import org.allbinary.game.configuration.GameConfigurationCentral
@@ -36,7 +37,7 @@ import org.allbinary.media.image.ImageToRotationImageArrayUtil
 open public class AllBinaryArrayImageRotationAnimationFactory : BaseImageAnimationFactory {
         
 
-    private var imageArray: Array<Image?>
+    private var imageArray: Array<Image?> = NullCanvas.NULL_IMAGE_ARRAY
 
     private var angleIncrement: Int
 public constructor (image: Image, dx: Int, dy: Int)                        
@@ -198,13 +199,13 @@ this.init()
     open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
-this.setImageArray(ImageToRotationImageArrayUtil.getInstance()!!.generate(this.getImage(), this.getAngleIncrement(), AngleFactory.getInstance()!!.TOTAL_ANGLE))
+this.setImageArray(ImageToRotationImageArrayUtil.getInstance()!!.generate(this.getImage(), this.getAngleIncrement(), AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt()))
 }
 
 
                 @Throws(Exception::class)
             
-    open fun getInstance(instanceId: Int)
+    override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var instanceId = instanceId
@@ -238,7 +239,7 @@ scaledImageArray[index]= animationFactoryImageScaleUtil!!.createImage(image, ima
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AdjustedImageArrayRotationAnimation(scaledImageArray, AngleInfo.getInstance(this.getAngleIncrement().toShort()), AngleFactory.getInstance()!!.TOTAL_ANGLE, this.animationFactoryInitializationVisitor!!.dx, this.animationFactoryInitializationVisitor!!.dy, this.animationBehaviorFactory!!.getOrCreateInstance())
+                        return AdjustedImageArrayRotationAnimation(scaledImageArray, AngleInfo.getInstance(this.getAngleIncrement().toShort()), AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt(), this.animationFactoryInitializationVisitor!!.dx, this.animationFactoryInitializationVisitor!!.dy, this.animationBehaviorFactory!!.getOrCreateInstance())
 
                                     }
                                 
@@ -247,7 +248,7 @@ scaledImageArray[index]= animationFactoryImageScaleUtil!!.createImage(image, ima
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return ImageArrayRotationAnimation(scaledImageArray, AngleInfo.getInstance(this.angleIncrement.toShort()), AngleFactory.getInstance()!!.TOTAL_ANGLE, this.animationBehaviorFactory!!.getOrCreateInstance())
+                        return ImageArrayRotationAnimation(scaledImageArray, AngleInfo.getInstance(this.angleIncrement.toShort()), AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt(), this.animationBehaviorFactory!!.getOrCreateInstance())
 
                         }
                             
