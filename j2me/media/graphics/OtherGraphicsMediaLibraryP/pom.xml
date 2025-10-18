@@ -76,7 +76,7 @@
         -->
 
         <!-- Not used in Platform Libraries -->
-<!--        <module>../../graphics/GraphicsBasicImageJavaLibraryKtM</module>-->
+        <module>../../graphics/GraphicsBasicImageJavaLibraryKtM</module>
         <!--
         -->
 <!--        <module>../../graphics/animation/image/AllBinaryImageAnimationRotationJavaLibraryKtM</module>-->
