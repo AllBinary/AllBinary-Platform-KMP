@@ -29,7 +29,12 @@
 open public class VelocityProperties : BasicVelocityProperties
                 , VelocityInterface {
         
+companion object {
+            
+    val NULL_VELOCITY_PROPERTIES: VelocityProperties = VelocityProperties(0, 0)
 
+        }
+            
     private var maxForwardVelocity: Int= 0
 
     private var maxReverseVelocity: Int= 0
