@@ -33,7 +33,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.thread.ARunnable
 import java.util.Hashtable
 import java.util.Vector
 import javax.microedition.lcdui.ChoiceGroup
@@ -446,7 +445,10 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, this.canvasStrings!!.ON_DISPLAY_C
 {
     //var displayChangeEvent = displayChangeEvent
 
-    var popupMenuRectangle: Rectangle = FormUtil.getInstance()!!.createPopupMenuRectangle()!!
+    var formUtil: FormUtil = FormUtil.getInstance()!!
+
+
+    var popupMenuRectangle: Rectangle = formUtil!!.createPopupMenuRectangle()!!
 
 
     var basicPopupMenuPaintable: BasicPopupMenuPaintable = (this.getOpenMenuPaintable() as BasicPopupMenuPaintable)
@@ -464,9 +466,6 @@ popupMenuInputProcessor!!.init(popupMenuRectangle)
 
                                     }
                                 
-
-    var formUtil: FormUtil = FormUtil.getInstance()!!
-
 
     var formType: FormType = FormTypeFactory.getInstance()!!.getFormType()!!
 

@@ -53,7 +53,7 @@ this.tiledLayer= tiledLayer
 }
 
 
-    open fun setOwner(owner: Screen)
+    override fun setOwner(owner: Screen)
         //nullable = true from not(false or (false and false)) = true
 {
 var owner = owner

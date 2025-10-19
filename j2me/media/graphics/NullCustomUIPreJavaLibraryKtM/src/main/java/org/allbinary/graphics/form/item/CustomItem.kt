@@ -12,6 +12,7 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Graphics
+import javax.microedition.lcdui.Screen
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.logic.string.StringUtil
@@ -31,6 +32,13 @@ companion object {
 var label = label
 var backgroundBasicColor = backgroundBasicColor
 var foregroundBasicColor = foregroundBasicColor
+}
+
+
+    open fun setOwner(owner: Screen)
+        //nullable = true from not(false or (false and false)) = true
+{
+var owner = owner
 }
 
 
