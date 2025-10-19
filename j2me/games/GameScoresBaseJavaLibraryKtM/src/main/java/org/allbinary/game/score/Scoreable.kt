@@ -36,8 +36,6 @@ open public class Scoreable
         
 companion object {
             
-    val NULL_SCOREABLE: Scoreable = Scoreable( -1)
-
     var ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(3)!!
 
         }

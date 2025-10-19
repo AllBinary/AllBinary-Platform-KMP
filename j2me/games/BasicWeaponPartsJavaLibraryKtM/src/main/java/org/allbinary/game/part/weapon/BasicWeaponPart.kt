@@ -30,7 +30,7 @@ import org.allbinary.animation.Animation
 import org.allbinary.animation.NullAnimationFactory
 import org.allbinary.game.combat.weapon.WeaponProperties
 import org.allbinary.game.part.PartInterface
-import org.allbinary.game.score.Scoreable
+import org.allbinary.game.score.NoScoreable
 import org.allbinary.game.score.ScoreableInterface
 import org.allbinary.graphics.RelativeRelationship
 import org.allbinary.layer.AllBinaryLayer
@@ -56,7 +56,7 @@ companion object {
 
     private var weaponProperties: WeaponProperties = WeaponProperties.NULL_WEAPON_PROPERTIES
 
-    private var scoreableInterface: ScoreableInterface = Scoreable.NULL_SCOREABLE
+    private var scoreableInterface: ScoreableInterface = NoScoreable.getInstance()!!
 
     var relativeRelationship: RelativeRelationship = RelativeRelationship.NULL_RELATIVE_RELATIONSHIP
 public constructor (animationInterface: Animation)
