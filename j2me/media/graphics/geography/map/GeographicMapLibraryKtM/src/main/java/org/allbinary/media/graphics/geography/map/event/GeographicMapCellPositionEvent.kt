@@ -25,6 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.graphics.CellPosition
+import org.allbinary.graphics.CellPositionFactory
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.util.event.AllBinaryEventObject
@@ -33,17 +35,17 @@ import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 open public class GeographicMapCellPositionEvent : AllBinaryEventObject {
         
 
-    private var geographicMapCellPosition: GeographicMapCellPosition
-public constructor (anyType: Any, geographicMapCellPosition: GeographicMapCellPosition)                        
+    private var geographicMapCellPosition: CellPosition = CellPositionFactory.getInstance()!!.NONE
+public constructor (anyType: Any, geographicMapCellPosition: CellPosition)                        
 
                             : super(anyType){
-var anyType = anyType
-var geographicMapCellPosition = geographicMapCellPosition
+    //var anyType = anyType
+    //var geographicMapCellPosition = geographicMapCellPosition
 
 
                             //For kotlin this is before the body of the constructor.
                     
-this.setGeographicMapCellPosition(geographicMapCellPosition)
+this.geographicMapCellPosition= geographicMapCellPosition
 }
 
 public constructor (anyType: Any, key: Int)                        
@@ -81,7 +83,7 @@ this.geographicMapCellPosition= geographicMapCellPosition
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return geographicMapCellPosition
+                        return geographicMapCellPosition as GeographicMapCellPosition
 }
 
 

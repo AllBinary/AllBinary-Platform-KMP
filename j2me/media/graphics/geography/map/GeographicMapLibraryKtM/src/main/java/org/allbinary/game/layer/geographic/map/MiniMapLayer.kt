@@ -10,7 +10,7 @@
                 *  You may obtain the AllBinary Open License Version 1 legal agreement from
                 *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
                 *  
-                *  Created By: Travis Berthelot  
+                *  Created By: Travis Berthelot   
         */
         
         /* Generated Code Do Not Modify */
@@ -91,10 +91,10 @@ allBinaryTiledLayer!!.setPosition(this.x, this.y, this.z)
 }
 
 
-    open fun onEvent(eventObject: AllBinaryEventObject)
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
-var eventObject = eventObject
+    //var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
@@ -102,10 +102,10 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-    open fun onRemoveGeographicMapCellPositionEvent(geographicMapCellPositionEvent: GeographicMapCellPositionEvent)
+    override fun onRemoveGeographicMapCellPositionEvent(geographicMapCellPositionEvent: GeographicMapCellPositionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-var geographicMapCellPositionEvent = geographicMapCellPositionEvent
+    //var geographicMapCellPositionEvent = geographicMapCellPositionEvent
 
     var colorCompositeInterface: ColorCompositeInterface = geographicMapCellPositionEvent!!.getSource() as ColorCompositeInterface
 
@@ -129,10 +129,10 @@ this.positionList!!.remove(index)
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-    open fun onGeographicMapCellPositionEvent(geographicMapCellPositionEvent: GeographicMapCellPositionEvent)
+    override fun onGeographicMapCellPositionEvent(geographicMapCellPositionEvent: GeographicMapCellPositionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-var geographicMapCellPositionEvent = geographicMapCellPositionEvent
+    //var geographicMapCellPositionEvent = geographicMapCellPositionEvent
 
     var colorCompositeInterface: ColorCompositeInterface = geographicMapCellPositionEvent!!.getSource() as ColorCompositeInterface
 
@@ -143,15 +143,16 @@ var geographicMapCellPositionEvent = geographicMapCellPositionEvent
     var size: Int = list.size()!!
 
 
+    var nextColorCompositeInterface: ColorCompositeInterface
+
+
 
 
 
                         for (index in 0 until size)
 
         {
-
-    var nextColorCompositeInterface: ColorCompositeInterface = list.get(index) as ColorCompositeInterface
-
+nextColorCompositeInterface= list.get(index) as ColorCompositeInterface
 
     
                         if(nextColorCompositeInterface == colorCompositeInterface)
@@ -231,10 +232,10 @@ this.animationInterface!!.paint(graphics, point.getX() +this.x, point.getY() +th
 }
 
 
-    open fun paint(graphics: Graphics)
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
-var graphics = graphics
+    //var graphics = graphics
 allBinaryTiledLayer!!.paint(graphics)
 this.paintDots(graphics)
 }

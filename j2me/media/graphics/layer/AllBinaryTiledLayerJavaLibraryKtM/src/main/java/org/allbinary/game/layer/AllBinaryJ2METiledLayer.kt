@@ -36,7 +36,7 @@ import org.allbinary.logic.string.StringMaker
 open public class AllBinaryJ2METiledLayer : AllBinaryTiledLayer {
         
 
-    val tiledLayer: TiledLayer
+    val tiledLayerP: TiledLayer
 
     val debugColor: Int
 public constructor (dataId: Integer, tiledLayer: TiledLayer, mapTwoDArray: Array<IntArray?>, debugColor: Int)                        
@@ -50,17 +50,17 @@ public constructor (dataId: Integer, tiledLayer: TiledLayer, mapTwoDArray: Array
 
                             //For kotlin this is before the body of the constructor.
                     
-this.tiledLayer= tiledLayer
+this.tiledLayerP= tiledLayer
 this.debugColor= debugColor
 this.setCells(mapTwoDArray)
 }
 
 
-    open fun paint(graphics: Graphics)
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
-this.tiledLayer!!.paint(graphics)
+this.tiledLayerP!!.paint(graphics)
 }
 
 
@@ -76,10 +76,10 @@ this.tiledLayer!!.paint(graphics)
 graphics.setFont(font2)
 graphics.setColor(debugColor)
 
-    var x: Int = this.tiledLayer!!.getX()!!
+    var x: Int = this.tiledLayerP!!.getX()!!
 
 
-    var y: Int = this.tiledLayer!!.getY()!!
+    var y: Int = this.tiledLayerP!!.getY()!!
 
 
     var firstColumn: Int = 0
@@ -88,10 +88,10 @@ graphics.setColor(debugColor)
     var firstRow: Int = 0
 
 
-    var totalColumns: Int = this.tiledLayer!!.getColumns()!!
+    var totalColumns: Int = this.tiledLayerP!!.getColumns()!!
 
 
-    var totalRows: Int = this.tiledLayer!!.getRows()!!
+    var totalRows: Int = this.tiledLayerP!!.getRows()!!
 
 
     var x0: Int = x
@@ -100,10 +100,10 @@ graphics.setColor(debugColor)
     var tile: Int = 0
 
 
-    var tileHeight: Int = this.tiledLayer!!.getCellHeight()!!
+    var tileHeight: Int = this.tiledLayerP!!.getCellHeight()!!
 
 
-    var tileWidth: Int = this.tiledLayer!!.getCellWidth()!!
+    var tileWidth: Int = this.tiledLayerP!!.getCellWidth()!!
 
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
@@ -126,13 +126,13 @@ x= x0
                         for (columnIndex in firstColumn until totalColumns)
 
         {
-tile= this.tiledLayer!!.getCell(columnIndex, rowIndex)
+tile= this.tiledLayerP!!.getCell(columnIndex, rowIndex)
 
     
                         if(tile < 0)
                         
                                     {
-                                    tile= this.tiledLayer!!.getAnimatedTile(tile)
+                                    tile= this.tiledLayerP!!.getAnimatedTile(tile)
 
                                     }
                                 
@@ -159,23 +159,23 @@ graphics.setFont(font)
 }
 
 
-    open fun move(dx: Int, dy: Int)
+    override fun move(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var dx = dx
     //var dy = dy
-this.tiledLayer!!.move(dx, dy)
+this.tiledLayerP!!.move(dx, dy)
 super.move( -dx,  -dy)
 }
 
 
-    open fun setPosition(x: Int, y: Int, z: Int)
+    override fun setPosition(x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var x = x
     //var y = y
     //var z = z
-this.tiledLayer!!.setPosition(x, y)
+this.tiledLayerP!!.setPosition(x, y)
 super.setPosition( -x,  -y, z)
 }
 
@@ -187,33 +187,33 @@ super.setPosition( -x,  -y, z)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return tiledLayer
+                        return tiledLayerP
 }
 
 
-    open fun getCellWidth()
+    override fun getCellWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.tiledLayer!!.getCellWidth()
+                        return this.tiledLayerP!!.getCellWidth()
 }
 
 
-    open fun getCellHeight()
+    override fun getCellHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.tiledLayer!!.getCellHeight()
+                        return this.tiledLayerP!!.getCellHeight()
 }
 
 
-    open fun getCell(col: Int, row: Int)
+    override fun getCell(col: Int, row: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var col = col
@@ -222,43 +222,43 @@ super.setPosition( -x,  -y, z)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.tiledLayer!!.getCell(col, row)
+                        return this.tiledLayerP!!.getCell(col, row)
 }
 
 
-    open fun getColumns()
+    override fun getColumns()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.tiledLayer!!.getColumns()
+                        return this.tiledLayerP!!.getColumns()
 }
 
 
-    open fun getRows()
+    override fun getRows()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.tiledLayer!!.getRows()
+                        return this.tiledLayerP!!.getRows()
 }
 
 
-    open fun setCell(col: Int, row: Int, index: Int)
+    override fun setCell(col: Int, row: Int, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var col = col
     //var row = row
     //var index = index
-this.tiledLayer!!.setCell(col, row, index)
+this.tiledLayerP!!.setCell(col, row, index)
 }
 
 
-    open fun getAnimatedTile(animationTileIndex: Int)
+    override fun getAnimatedTile(animationTileIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var animationTileIndex = animationTileIndex
@@ -266,7 +266,7 @@ this.tiledLayer!!.setCell(col, row, index)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.tiledLayer!!.getAnimatedTile(animationTileIndex)
+                        return this.tiledLayerP!!.getAnimatedTile(animationTileIndex)
 }
 
 

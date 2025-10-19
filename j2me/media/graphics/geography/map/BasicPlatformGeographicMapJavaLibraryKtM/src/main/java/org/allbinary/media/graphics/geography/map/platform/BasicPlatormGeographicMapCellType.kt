@@ -40,9 +40,7 @@ public constructor (type: Int)
             : super()
         {
     //var type = type
-
-                        //Otherwise - ExpressionStmt - expression - ObjectCreationExpr
-
+GeographicMapCellType(type)
 this.types= IntArray(1)
 this.types[0]= type
 }
@@ -62,9 +60,7 @@ public constructor (types: IntArray)
                         for (index in 0 until size)
 
         {
-
-                        //Otherwise - ExpressionStmt - expression - ObjectCreationExpr
-
+GeographicMapCellType(types[index]!!)
 }
 
 this.types= types
@@ -81,6 +77,9 @@ public constructor (types: BasicArrayList)
     var typeArray: IntArray = IntArray(size)
 
 
+    var typeAsInteger: Integer
+
+
     var type: Int= 0
 
 
@@ -90,12 +89,9 @@ public constructor (types: BasicArrayList)
                         for (index in 0 until size)
 
         {
-type= get = types.get(index)get as Integer
-get.
-                    toInt()
-
-                        //Otherwise - ExpressionStmt - expression - ObjectCreationExpr
-
+typeAsInteger= (types.get(index) as Integer)
+type= typeAsInteger!!.toInt()
+GeographicMapCellType(type)
 typeArray[index]= type
 }
 

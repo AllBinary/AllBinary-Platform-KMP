@@ -29,6 +29,7 @@
         
 import org.allbinary.game.layer.AllBinaryTiledLayer
 import org.allbinary.graphics.color.BasicColor
+import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.string.CommonStrings
 
 open public class SimpleGeographicMap
@@ -46,9 +47,9 @@ open public class SimpleGeographicMap
 
     private val tiledLayer: AllBinaryTiledLayer
 
-    private var foregroundBasicColor: BasicColor
+    private var foregroundBasicColor: BasicColor = BasicColorFactory.getInstance()!!.NULL_COLOR
 
-    private var backgroundBasicColor: BasicColor
+    private var backgroundBasicColor: BasicColor = BasicColorFactory.getInstance()!!.NULL_COLOR
 public constructor (id: Integer, name: String, cellTypeIdToGeographicMapCellType: IntArray, tiledLayer: AllBinaryTiledLayer, foregroundBasicColor: BasicColor, backgroundBasicColor: BasicColor)
             : super()
         {

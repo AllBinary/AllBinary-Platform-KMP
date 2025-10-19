@@ -42,12 +42,12 @@ open public class BasicGeographicMapCellPositionFactory
 
     val geographicMapCellPositionFactoryInterface: GeographicMapCellPositionFactoryInterface
 
-    val columns: Int
+    private val columns: Int
 
-    val rows: Int
+    private val rows: Int
 
     private val tiledLayer: AllBinaryTiledLayer
-protected constructor (geographicMapInterface: BasicGeographicMap)
+public constructor (geographicMapInterface: BasicGeographicMap)
             : super()
         {
     //var geographicMapInterface = geographicMapInterface

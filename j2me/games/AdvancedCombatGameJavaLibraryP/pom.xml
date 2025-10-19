@@ -67,11 +67,14 @@
         <module>../../ProgressAndroidJavaLibraryKtM</module>
         <module>../../media/graphics/animation/image/AllBinaryAndroidImageRotationJavaLibraryKtM</module>
 
-<!--        <module>../CommonPickupJavaLibraryKtM</module>
+<!--        
+        <module>../CommonPickupJavaLibraryKtM</module>
+-->
         <module>../../../physics/FrictionJavaLibraryKtM</module>
-
+<!--
         <module>../Resources/images/GameImageLowResourcesJavaLibraryKtM</module>
-        <module>../Resources/images/GameImageMediumResourcesJavaLibraryKtM</module>-->
+        <module>../Resources/images/GameImageMediumResourcesJavaLibraryKtM</module>
+-->
 
     </modules>
 

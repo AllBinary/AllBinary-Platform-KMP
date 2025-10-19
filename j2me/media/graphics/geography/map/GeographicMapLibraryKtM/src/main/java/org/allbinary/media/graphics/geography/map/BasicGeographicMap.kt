@@ -28,6 +28,8 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.game.layer.AllBinaryTiledLayer
+import org.allbinary.graphics.CellPosition
+import org.allbinary.graphics.CellPositionFactory
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.layer.Layer
 import org.allbinary.logic.math.MathUtil
@@ -140,7 +142,7 @@ else -> {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return GeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
                         }
                             
@@ -163,7 +165,7 @@ else -> {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return GeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
                         }
                             
@@ -186,7 +188,7 @@ else -> {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return GeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
                         }
                             
@@ -209,7 +211,7 @@ else -> {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return GeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
                         }
                             
@@ -218,7 +220,7 @@ else -> {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return GeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 }
 
         }       
@@ -266,7 +268,7 @@ else -> {
 
                 @Throws(Exception::class)
             
-    open fun getCellPositionAt(x: Int, y: Int)
+    override fun getCellPositionAt(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellPosition{
     //var x = x
@@ -290,7 +292,7 @@ else -> {
 
                 @Throws(Exception::class)
             
-    open fun getCellPositionAtNoThrow(x: Int, y: Int)
+    override fun getCellPositionAtNoThrow(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellPosition{
     //var x = x
@@ -322,7 +324,7 @@ else -> {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return GeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
                         }
                             
@@ -432,7 +434,7 @@ geographicMapCellPositionList!!.clear()
 
                 @Throws(Exception::class)
             
-    open fun getCellPositionsAt(layer: Layer, currentCellPositionArray: Array<Array<GeographicMapCellPosition?>?>, cellPositionArray: Array<Array<GeographicMapCellPosition?>?>)
+    override fun getCellPositionsAt(layer: Layer, currentCellPositionArray: Array<Array<GeographicMapCellPosition?>?>, cellPositionArray: Array<Array<GeographicMapCellPosition?>?>)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var layer = layer
@@ -499,7 +501,7 @@ cellPositionArray[index]!![index2]= this.getCellPositionAt(x, y)
 
                 @Throws(Exception::class)
             
-    open fun getCellTypeAt(x: Int, y: Int)
+    override fun getCellTypeAt(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellType{
 var x = x
@@ -515,7 +517,7 @@ var y = y
 }
 
 
-    open fun getGeographicMapCellPositionFactory()
+    override fun getGeographicMapCellPositionFactory()
         //nullable = true from not(false or (false and true)) = true
 : BasicGeographicMapCellPositionFactory{
 
@@ -526,7 +528,7 @@ var y = y
 }
 
 
-    open fun getGeographicMapCellPositionFactoryInterface()
+    override fun getGeographicMapCellPositionFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPositionFactoryInterface{
 

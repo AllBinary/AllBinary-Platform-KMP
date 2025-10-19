@@ -36,8 +36,6 @@ import org.allbinary.util.BasicArrayList
 open public class BasicPlatormGeographicMapCellTypeFactory : GeographicMapCellTypeFactory {
         
 
-    val logUtil: LogUtil = LogUtil.getInstance()!!
-
     val BLOCK_CELL_TYPE: BasicPlatormGeographicMapCellType
 
     val JUMP_THRU_CELL_TYPE: BasicPlatormGeographicMapCellType
@@ -53,9 +51,7 @@ public constructor (tileTypeToTileIdsMap: Hashtable<Any, Any>, maxTileId: Int){
 
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.INIT)
 this.maxTileId= maxTileId
-
-                        //Otherwise - ExpressionStmt - expression - ObjectCreationExpr
-
+GeographicMapCellType(0)
 
     var BLOCK_CELL_TYPE: BasicPlatormGeographicMapCellType = BasicPlatormGeographicMapCellType(1)
 
@@ -125,16 +121,12 @@ basicPlatormGeographicMapCellType= BasicPlatormGeographicMapCellType(idsWithType
 this.BLOCK_CELL_TYPE= BLOCK_CELL_TYPE
 this.JUMP_THRU_CELL_TYPE= JUMP_THRU_CELL_TYPE
 this.LADDER_CELL_TYPE= LADDER_CELL_TYPE
-
-                        //Otherwise - ExpressionStmt - expression - ObjectCreationExpr
-
-
-                        //Otherwise - ExpressionStmt - expression - ObjectCreationExpr
-
+GeographicMapCellType(this.maxTileId -1)
+GeographicMapCellType(this.maxTileId -2)
 }
 
 
-    open fun getStartType()
+    override fun getStartType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -145,7 +137,7 @@ this.LADDER_CELL_TYPE= LADDER_CELL_TYPE
 }
 
 
-    open fun getEndType()
+    override fun getEndType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -156,7 +148,7 @@ this.LADDER_CELL_TYPE= LADDER_CELL_TYPE
 }
 
 
-    open fun getEmptyType()
+    override fun getEmptyType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -167,7 +159,7 @@ this.LADDER_CELL_TYPE= LADDER_CELL_TYPE
 }
 
 
-    open fun isPath(cellType: GeographicMapCellType)
+    override fun isPath(cellType: GeographicMapCellType)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var cellType = cellType

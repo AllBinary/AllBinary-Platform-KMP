@@ -43,7 +43,12 @@ open public class GeographicMapCellHistory
             : Object
          {
         
+companion object {
+            
+    val NULL_GEOGRPAHIC_MAP_HISTORY: Array<GeographicMapCellHistory?> = arrayOfNulls(0)
 
+        }
+            
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val booleanFactory: BooleanFactory = BooleanFactory.getInstance()!!

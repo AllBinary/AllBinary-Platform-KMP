@@ -30,6 +30,7 @@ import org.allbinary.game.layer.AllBinaryGameLayerManager
 import org.allbinary.game.layer.AllBinaryTiledLayer
 import org.allbinary.game.rand.MyRandomFactory
 import org.allbinary.layer.AllBinaryLayerManager
+import org.allbinary.logic.NullUtil
 import org.allbinary.media.graphics.geography.map.BasicGeographicMapCellPositionFactory
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
@@ -44,15 +45,15 @@ open public class AnyRandomDropCellPositionGenerator : BaseDropCellPositionGener
         
     val list: BasicArrayList = BasicArrayList()
 
-    var geographicMapInterface: BasicGeographicMap
+    var geographicMapInterface: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
                 @Throws(Exception::class)
             
-    open fun update(allBinaryGameLayerManager: AllBinaryGameLayerManager, geographicMapInterface: BasicGeographicMap)
+    override fun update(allBinaryGameLayerManager: AllBinaryGameLayerManager, geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
 {
-var allBinaryGameLayerManager = allBinaryGameLayerManager
-var geographicMapInterface = geographicMapInterface
+    //var allBinaryGameLayerManager = allBinaryGameLayerManager
+    //var geographicMapInterface = geographicMapInterface
 this.geographicMapInterface= geographicMapInterface
 
     var basicGeographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
@@ -101,7 +102,7 @@ geographicMapCellPosition= basicGeographicMapCellPositionFactory!!.getInstance(r
 
                 @Throws(Exception::class)
             
-    open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
+    override fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager

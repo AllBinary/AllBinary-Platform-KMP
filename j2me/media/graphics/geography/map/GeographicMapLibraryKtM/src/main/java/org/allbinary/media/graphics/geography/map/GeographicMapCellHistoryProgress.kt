@@ -25,15 +25,16 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.NullUtil
 
 open public class GeographicMapCellHistoryProgress
             : Object
          {
         
 
-    private var totalVisitedArray: IntArray
+    private var totalVisitedArray: IntArray = NullUtil.getInstance()!!.NULL_INT_ARRAY
 
-    private var geographicMapCellHistoryArray: Array<GeographicMapCellHistory?>
+    private var geographicMapCellHistoryArray: Array<GeographicMapCellHistory?> = GeographicMapCellHistory.NULL_GEOGRPAHIC_MAP_HISTORY
 public constructor (geographicMapCellHistoryArray: Array<GeographicMapCellHistory?>)
             : super()
         {

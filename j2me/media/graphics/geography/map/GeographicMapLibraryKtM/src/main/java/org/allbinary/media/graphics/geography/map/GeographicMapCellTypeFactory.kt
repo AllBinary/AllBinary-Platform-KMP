@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.string.CommonStrings
 import org.allbinary.logic.communication.log.LogUtil
 
 open public class GeographicMapCellTypeFactory
@@ -55,6 +54,8 @@ companion object {
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
+
+    val NULL_GEOGRAPHIC_MAP_CELL_TYPE: GeographicMapCellType = GeographicMapCellType( -1)
 
     private val geographicMapCellTypeArray: Array<GeographicMapCellType?> = arrayOfNulls(512)
 

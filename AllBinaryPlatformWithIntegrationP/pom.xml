@@ -52,8 +52,10 @@
 <!--
         <module>../j2me/media/graphics/animation/image/ImageSwtJ2SEJavaLibraryKtM</module>
 
-        <module>../j2me/media/graphics/layer/AllBinaryTiledLayerJavaLibraryKtM</module>        
+-->             
+        <module>../j2me/media/graphics/layer/AllBinaryTiledLayerJavaLibraryKtM</module>
         <module>../j2me/media/graphics/geography/map/GeographicMapLibraryKtM</module>
+<!--
         <module>../j2me/media/graphics/geography/GeographicPathFindingLibraryKtM</module>
         <module>../j2me/media/graphics/geography/map/RaceTrackGeographicMapLibraryKtM</module>
         <module>../j2me/media/graphics/geography/map/BasicTopViewGeographicMapJavaLibraryKtM</module>

@@ -27,15 +27,17 @@
         
 import org.allbinary.game.layer.AllBinaryTiledLayer
 import org.allbinary.layer.AllBinaryLayer
+import org.allbinary.layer.Layer
+import org.allbinary.layer.NullLayer
 import org.allbinary.view.ViewPosition
 
 open public class StaticTileLayerIntoPositionViewPosition : ViewPosition {
         
 companion object {
             
-    private var tiledLayer: AllBinaryTiledLayer
+    private var tiledLayer: Layer = NullLayer.getInstance()!!
 
-    var layer: AllBinaryLayer
+    var layer: AllBinaryLayer = AllBinaryLayer.NULL_ALLBINARY_LAYER
 
     open fun setTiledLayer(tiledLayer: AllBinaryTiledLayer)
         //nullable = true from not(false or (false and false)) = true
@@ -50,7 +52,7 @@ StaticTileLayerIntoPositionViewPosition.tiledLayer= tiledLayer
 }
 
 
-    open fun getX()
+    override fun getX()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -61,7 +63,7 @@ StaticTileLayerIntoPositionViewPosition.tiledLayer= tiledLayer
 }
 
 
-    open fun getY()
+    override fun getY()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -72,7 +74,7 @@ StaticTileLayerIntoPositionViewPosition.tiledLayer= tiledLayer
 }
 
 
-    open fun getZ()
+    override fun getZ()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

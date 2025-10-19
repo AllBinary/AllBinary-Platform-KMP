@@ -49,9 +49,7 @@ open public class MultiGeographicMapBehavior
                 
 
 
-    var cellType: GeographicMapCellType = 
-                null
-            
+    var cellType: GeographicMapCellType = GeographicMapCellTypeFactory.getInstance()!!.NULL_GEOGRAPHIC_MAP_CELL_TYPE
 
 
 

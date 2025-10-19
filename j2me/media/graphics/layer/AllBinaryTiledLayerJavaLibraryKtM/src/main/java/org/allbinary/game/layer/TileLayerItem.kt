@@ -60,7 +60,7 @@ var owner = owner
 }
 
 
-    open fun getMinimumWidth()
+    override fun getMinimumWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -71,7 +71,7 @@ var owner = owner
 }
 
 
-    open fun getMinimumHeight()
+    override fun getMinimumHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -128,7 +128,7 @@ var height = height
 }
 
 
-    open fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -139,7 +139,7 @@ this.tiledLayer!!.paint(graphics)
 }
 
 
-    open fun paintUnselected(graphics: Graphics, x: Int, y: Int)
+    override fun paintUnselected(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

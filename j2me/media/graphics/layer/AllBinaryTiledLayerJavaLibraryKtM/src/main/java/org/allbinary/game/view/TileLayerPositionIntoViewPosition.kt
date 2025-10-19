@@ -33,14 +33,12 @@ import org.allbinary.view.ViewPosition
 open public class TileLayerPositionIntoViewPosition : ViewPosition {
         
 
-    private var tiledLayer: Layer = 
-                null
-            
+    private var tiledLayer: Layer = NullLayer.getInstance()!!
 public constructor (){
 }
 
 
-    open fun getX()
+    override fun getX()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -51,7 +49,7 @@ public constructor (){
 }
 
 
-    open fun getY()
+    override fun getY()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -62,7 +60,7 @@ public constructor (){
 }
 
 
-    open fun getZ()
+    override fun getZ()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

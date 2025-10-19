@@ -26,10 +26,8 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.game.layer.AllBinaryGameLayer
-import org.allbinary.string.CommonStrings
 import org.allbinary.logic.util.event.EventListenerInterface
 import org.allbinary.logic.util.event.handler.BasicEventHandler
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.util.event.EventStrings
 import org.allbinary.util.BasicArrayList
 
@@ -52,8 +50,6 @@ companion object {
 
         }
             
-    val logUtil: LogUtil = LogUtil.getInstance()!!
-
     private val list: BasicArrayList = BasicArrayList()
 private constructor (){
 }
@@ -75,7 +71,7 @@ var gameLayer = gameLayer
 }
 
 
-    open fun removeAllListeners()
+    override fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
 {
 this.list.clear()
@@ -83,7 +79,7 @@ super.removeAllListeners()
 }
 
 
-    open fun removeListener(eventListenerInterface: EventListenerInterface)
+    override fun removeListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventListenerInterface = eventListenerInterface

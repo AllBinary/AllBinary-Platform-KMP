@@ -27,6 +27,7 @@
         
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Image
+import javax.microedition.lcdui.NullCanvas
 import org.allbinary.graphics.Anchor
 import org.allbinary.image.PaintableToImageUtil
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
@@ -35,7 +36,7 @@ import org.allbinary.view.ViewPosition
 open public class ImageMiniMapLayer : MiniMapLayer {
         
 
-    private var image: Image
+    private var image: Image = NullCanvas.NULL_IMAGE
 public constructor (geographicMapInterface: BasicGeographicMap, viewPosition: ViewPosition)                        
 
                             : super(geographicMapInterface, viewPosition){
@@ -50,7 +51,7 @@ var viewPosition = viewPosition
 
                 @Throws(Exception::class)
             
-    open fun init()
+    override fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -65,7 +66,7 @@ this.image= PaintableToImageUtil.getImage(allBinaryTiledLayer, aWidth, aHeight)
 
     private var anchor: Int = Anchor.TOP_LEFT
 
-    open fun paint(graphics: Graphics)
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

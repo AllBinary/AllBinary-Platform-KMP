@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.graphics.CellPositionFactory
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPositionTracking
 
 open public class GeographicMapCellPositionEventUtil
@@ -39,8 +40,7 @@ public constructor (anyType: Any)
             : super()
         {
 var anyType = anyType
-geographicMapCellPositionEvent= GeographicMapCellPositionEvent(anyType, 
-                            null)
+geographicMapCellPositionEvent= GeographicMapCellPositionEvent(anyType, CellPositionFactory.getInstance()!!.NONE)
 }
 
 

@@ -27,6 +27,7 @@
         
 import org.allbinary.util.BasicArrayList
 import org.allbinary.graphics.CellPosition
+import org.allbinary.graphics.CellPositionFactory
 import org.allbinary.layer.AllBinaryLayer
 
 open public class DropCellPositionHistory
@@ -55,6 +56,8 @@ companion object {
             {
             }            
         
+    private val cellPositionFactory: CellPositionFactory = CellPositionFactory.getInstance()!!
+
     private var positionList: BasicArrayList = BasicArrayList()
 
     private var layerList: BasicArrayList = BasicArrayList()
@@ -220,7 +223,7 @@ var list = list
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return this.cellPositionFactory!!.NONE
 }
 
 
@@ -249,7 +252,7 @@ var cellPosition = cellPosition
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return AllBinaryLayer.NULL_ALLBINARY_LAYER
 
                         }
                             

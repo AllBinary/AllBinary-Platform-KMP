@@ -173,7 +173,8 @@ reusableList!!.clear()
 }
 
 
-    private val surroundArray: Array<IntArray?> = arrayOf(arrayOf( -1, -1),intArrayOf(0, -1)
+    private val surroundArray: Array<IntArray?> = arrayOf(intArrayOf( -1, -1)
+,intArrayOf(0, -1)
 ,intArrayOf(1, -1)
 ,intArrayOf( -1,1)
 ,intArrayOf(0,1)

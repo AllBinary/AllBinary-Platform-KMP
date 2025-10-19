@@ -26,27 +26,37 @@
         import kotlin.reflect.KClass
         
 
-open public class GeographicMapCellPositionBaseFactory
+open public class GeographicMapCellPositionFactory
             : Object
-         {
         
+                , GeographicMapCellPositionFactoryInterface {
+        
+companion object {
+            
+    val NULL_GEOGRAPHIC_MAP_CELL_POSITION: GeographicMapCellPosition = GeographicMapCellPosition( -1,  -1,  -1,  -1,  -1,  -1)
 
+        }
+            
             //Auto Generated
             public constructor() : super()
             {
             }            
         
-                @Throws(Exception::class)
-            
-    open fun getInstance(geographicMapInterface: BasicGeographicMap)
+    override fun getInstance(geographicMapInterface: BasicGeographicMap, i_column: Int, i_row: Int, columns: Int, rows: Int, width: Int, height: Int)
         //nullable =  from not(true or (false and false)) = 
-: BasicGeographicMapCellPositionFactory{
+: GeographicMapCellPosition{
     //var geographicMapInterface = geographicMapInterface
+    //var i_column = i_column
+    //var i_row = i_row
+    //var columns = columns
+    //var rows = rows
+    //var width = width
+    //var height = height
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return BasicGeographicMapCellPositionFactory(geographicMapInterface)
+                        return GeographicMapCellPosition(i_column, i_row, columns, rows, width, height)
 }
 
 

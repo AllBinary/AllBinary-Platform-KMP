@@ -40,8 +40,6 @@ open public class AllBinaryTiledLayer : Layer
                 , PaintableInterface {
         
 
-    val logUtil: LogUtil = LogUtil.getInstance()!!
-
     private var cellWidth: Int
 
     private var cellHeight: Int
@@ -90,7 +88,7 @@ this.halfCellHeight= (cellHeight shr 1)
 stringBuffer!!.append("Start: r: ")
 stringBuffer!!.append(mapTwoDArray!!.size)
 stringBuffer!!.append(" c: ")
-stringBuffer!!.append(mapTwoDArray[0]!!.length)
+stringBuffer!!.append(mapTwoDArray[0]!!.size)
 stringBuffer!!.append(" rows: ")
 stringBuffer!!.append(this.getRows())
 stringBuffer!!.append(" columns: ")
@@ -167,7 +165,7 @@ this.setCell(col, row, mapTwoDArray[row]!![col]!!)
 }
 
 
-    open fun getName()
+    override fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -178,14 +176,14 @@ this.setCell(col, row, mapTwoDArray[row]!![col]!!)
 }
 
 
-    open fun paint(graphics: Graphics)
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
 }
 
 
-    open fun paintThreed(graphics: Graphics)
+    override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
