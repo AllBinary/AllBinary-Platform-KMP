@@ -28,6 +28,7 @@
 import java.util.Hashtable
 import org.allbinary.graphics.RelativeRelationship
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListUtil
 
 open public class ResourceRelativeRelationshipFactory
             : Object
@@ -40,6 +41,8 @@ open public class ResourceRelativeRelationshipFactory
             {
             }            
         
+    private val basicArrayListUtil: BasicArrayListUtil = BasicArrayListUtil.getInstance()!!
+
     private val hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
     private var initialized: Boolean= false
@@ -61,10 +64,28 @@ this.setInitialized(true)
 : BasicArrayList{
 var resource = resource
 
+    var listCanBeNull: Any? = this.hashtable.get(resource as Object)
+
+
+    
+                        if(listCanBeNull == 
+                                    null
+                                )
+                        
+                                    {
+                                    
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.hashtable.get(resource as Object) as BasicArrayList
+                        return this.basicArrayListUtil!!.getImmutableInstance()
+
+                                    }
+                                
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return listCanBeNull as BasicArrayList
 }
 
 
@@ -80,9 +101,7 @@ var hardPoint = hardPoint
 
 
     
-                        if(list == 
-                                    null
-                                )
+                        if(list == this.basicArrayListUtil!!.getImmutableInstance())
                         
                                     {
                                     list= BasicArrayList()

@@ -55,8 +55,6 @@ companion object {
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    val NULL_GEOGRAPHIC_MAP_CELL_TYPE: GeographicMapCellType = GeographicMapCellType( -1)
-
     private val geographicMapCellTypeArray: Array<GeographicMapCellType?> = arrayOfNulls(512)
 
     open fun getInstance(type: Int)

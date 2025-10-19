@@ -142,7 +142,7 @@ else -> {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return GeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+                        return SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
                         }
                             
@@ -165,7 +165,7 @@ else -> {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return GeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+                        return SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
                         }
                             
@@ -188,7 +188,7 @@ else -> {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return GeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+                        return SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
                         }
                             
@@ -211,7 +211,7 @@ else -> {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return GeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+                        return SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
                         }
                             
@@ -220,7 +220,7 @@ else -> {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return GeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+                        return SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 }
 
         }       
@@ -324,7 +324,7 @@ else -> {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return GeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+                        return SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
                         }
                             

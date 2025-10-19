@@ -34,7 +34,12 @@ open public class GeographicMapCellType
             : Object
          {
         
+companion object {
+            
+    val NULL_GEOGRAPHIC_MAP_CELL_TYPE: GeographicMapCellType = GeographicMapCellType(Integer.MIN_VALUE)
 
+        }
+            
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val type: Int

@@ -55,6 +55,8 @@ companion object {
 }
 
 
+    private val basicArrayListUtil: BasicArrayListUtil = BasicArrayListUtil.getInstance()!!
+
                 @Throws(Exception::class)
             
     open fun getRelativeRelationshipList(resource: String, layer: AllBinaryLayer)
@@ -88,9 +90,7 @@ var layer = layer
 
 
     
-                        if(list != 
-                                    null
-                                )
+                        if(list != basicArrayListUtil!!.getImmutableInstance())
                         
                                     {
                                     

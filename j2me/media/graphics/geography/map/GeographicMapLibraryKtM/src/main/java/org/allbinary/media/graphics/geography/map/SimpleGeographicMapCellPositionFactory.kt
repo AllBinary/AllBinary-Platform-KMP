@@ -31,14 +31,17 @@ open public class SimpleGeographicMapCellPositionFactory
         
                 , GeographicMapCellPositionFactoryInterface {
         
+companion object {
+            
+    val NULL_GEOGRAPHIC_MAP_CELL_POSITION: GeographicMapCellPosition = GeographicMapCellPosition( -1,  -1,  -1,  -1,  -1,  -1)
 
+        }
+            
             //Auto Generated
             public constructor() : super()
             {
             }            
         
-                @Throws(Exception::class)
-            
     override fun getInstance(geographicMapInterface: BasicGeographicMap, i_column: Int, i_row: Int, columns: Int, rows: Int, width: Int, height: Int)
         //nullable =  from not(true or (false and false)) = 
 : GeographicMapCellPosition{

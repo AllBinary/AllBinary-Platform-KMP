@@ -33,13 +33,13 @@ open public class GeographicMapCellPositionTracking
          {
         
 
-    private var currentGeographicMapCellPosition: GeographicMapCellPosition = GeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+    private var currentGeographicMapCellPosition: GeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
-    private var previousGeographicMapCellPosition: GeographicMapCellPosition = GeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+    private var previousGeographicMapCellPosition: GeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
-    private var newGeographicMapCellPosition: GeographicMapCellPosition = GeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+    private var newGeographicMapCellPosition: GeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
-    private var currentCellType: GeographicMapCellType = GeographicMapCellTypeFactory.getInstance()!!.NULL_GEOGRAPHIC_MAP_CELL_TYPE
+    private var currentCellType: GeographicMapCellType = GeographicMapCellType.NULL_GEOGRAPHIC_MAP_CELL_TYPE
 public constructor ()
             : super()
         {

@@ -196,17 +196,17 @@ logUtil!!.put(StringMaker().
     //var width = width
     //var height = height
 
-    var cellPosition: GeographicMapCellPosition = geographicMapCellPositionArray[i_row]!![i_column]!!
+    var cellPositionCanBeNull: Any? = geographicMapCellPositionArray[i_row]!![i_column]
 
 
     
-                        if(cellPosition == 
+                        if(cellPositionCanBeNull == 
                                     null
                                 )
                         
                                     {
-                                    cellPosition= this.geographicMapCellPositionFactoryInterface!!.getInstance(this.geographicMapInterface, i_column, i_row, columns, rows, width, height)
-geographicMapCellPositionArray[i_row]!![i_column]= cellPosition
+                                    cellPositionCanBeNull= this.geographicMapCellPositionFactoryInterface!!.getInstance(this.geographicMapInterface, i_column, i_row, columns, rows, width, height)
+geographicMapCellPositionArray[i_row]!![i_column]= cellPositionCanBeNull as GeographicMapCellPosition
 
                                     }
                                 
@@ -214,7 +214,7 @@ geographicMapCellPositionArray[i_row]!![i_column]= cellPosition
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return cellPosition
+                        return cellPositionCanBeNull as GeographicMapCellPosition
 }
 
 
