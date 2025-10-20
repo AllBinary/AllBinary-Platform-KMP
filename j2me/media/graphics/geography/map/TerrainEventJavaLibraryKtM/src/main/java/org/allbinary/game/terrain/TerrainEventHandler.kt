@@ -49,19 +49,19 @@ TerrainEventHandler.hashtable= Hashtable<Any, Any>()
     open fun getInstance(anyType: Any)
         //nullable =  from not(true or (false and false)) = 
 : TerrainEventHandler{
-var anyType = anyType
+    //var anyType = anyType
 
-    var eventHandler: TerrainEventHandler = TerrainEventHandler.hashtable.get(anyType as Object) as TerrainEventHandler
+    var eventHandlerCanBeNull: Any? = TerrainEventHandler.hashtable.get(anyType as Object)
 
 
     
-                        if(eventHandler == 
+                        if(eventHandlerCanBeNull == 
                                     null
                                 )
                         
                                     {
-                                    eventHandler= TerrainEventHandler()
-TerrainEventHandler.hashtable.put(anyType, eventHandler)
+                                    eventHandlerCanBeNull= TerrainEventHandler()
+TerrainEventHandler.hashtable.put(anyType, eventHandlerCanBeNull)
 
                                     }
                                 
@@ -69,7 +69,7 @@ TerrainEventHandler.hashtable.put(anyType, eventHandler)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return eventHandler
+                        return eventHandlerCanBeNull as TerrainEventHandler
 }
 
 
@@ -83,7 +83,7 @@ private constructor (){
     open fun addListener(terrainEventListener: TerrainEventListener)
         //nullable = true from not(false or (false and false)) = true
 {
-var terrainEventListener = terrainEventListener
+    //var terrainEventListener = terrainEventListener
 
     
                         if(!list.contains(terrainEventListener))
@@ -107,7 +107,7 @@ super.removeAllListeners()
     override fun removeListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
-var eventListenerInterface = eventListenerInterface
+    //var eventListenerInterface = eventListenerInterface
 this.list.remove(eventListenerInterface)
 super.removeListener(eventListenerInterface)
 }
@@ -118,7 +118,7 @@ super.removeListener(eventListenerInterface)
     override fun fireEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
-var eventObject = eventObject
+    //var eventObject = eventObject
 
 
 
@@ -148,8 +148,8 @@ super.fireEvent(eventObject)
     override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
-var eventObject = eventObject
-var eventListenerInterface = eventListenerInterface
+    //var eventObject = eventObject
+    //var eventListenerInterface = eventListenerInterface
 
     var terrainEventListenerInterface: TerrainEventListenerInterface = eventListenerInterface as TerrainEventListenerInterface
 
