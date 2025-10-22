@@ -194,7 +194,7 @@ this.visibleCellPositions= temp
 
 
 
-                        for (index2 in this.visibleCellPositions[0]!!.length -1 downTo 0)
+                        for (index2 in this.visibleCellPositions[0]!!.size -1 downTo 0)
 
         {
 this.visibleCellPositions[index]!![index2]= this.stationaryVisibleCellPositions[index]!![index2]!!

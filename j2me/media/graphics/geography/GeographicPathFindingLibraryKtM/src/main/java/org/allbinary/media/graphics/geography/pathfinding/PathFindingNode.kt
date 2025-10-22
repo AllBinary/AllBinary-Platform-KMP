@@ -10,7 +10,7 @@
                 *  You may obtain the AllBinary Open License Version 1 legal agreement from
                 *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
                 *  
-                *  Created By: Travis Berthelot  
+                *  Created By: Travis Berthelot   
         */
         
         /* Generated Code Do Not Modify */
@@ -25,9 +25,11 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.NullUtil
 import org.allbinary.string.CommonSeps
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
+import org.allbinary.media.graphics.geography.map.SimpleGeographicMapCellPositionFactory
 import org.allbinary.string.CommonLabels
 
 open public class PathFindingNode
@@ -35,16 +37,16 @@ open public class PathFindingNode
          {
         
 
-    var parent: PathFindingNode
+    var parent: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
-    var geographicMapCellPosition: GeographicMapCellPosition
-public constructor (parent: PathFindingNode, geographicMapCellPosition: GeographicMapCellPosition)
+    var geographicMapCellPosition: GeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+public constructor (parent: Any, geographicMapCellPosition: GeographicMapCellPosition)
             : super()
         {
-var parent = parent
-var geographicMapCellPosition = geographicMapCellPosition
-this.setParent(parent)
-this.setGeographicMapCellPosition(geographicMapCellPosition)
+    //var parent = parent
+    //var geographicMapCellPosition = geographicMapCellPosition
+this.parent= parent
+this.setGeographicMapCellPositionP(geographicMapCellPosition)
 
     
                         if(this.geographicMapCellPosition == 
@@ -62,18 +64,21 @@ this.setGeographicMapCellPosition(geographicMapCellPosition)
 }
 
 
-    open fun setParent(parent: PathFindingNode)
-        //nullable = true from not(false or (false and false)) = true
-{
-var parent = parent
-this.parent= parent
+    open fun getParentP()
+        //nullable = true from not(false or (false and true)) = true
+: PathFindingNode{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return parent as PathFindingNode
 }
 
 
-    open fun setGeographicMapCellPosition(geographicMapCellPosition: GeographicMapCellPosition)
+    open fun setGeographicMapCellPositionP(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
-var geographicMapCellPosition = geographicMapCellPosition
+    //var geographicMapCellPosition = geographicMapCellPosition
 this.geographicMapCellPosition= geographicMapCellPosition
 }
 
@@ -89,7 +94,7 @@ stringBuffer!!.append(CommonLabels.getInstance()!!.COLON_SEP)
 stringBuffer!!.append(" Path: ")
 stringBuffer!!.append(this.geographicMapCellPosition!!.toString())
 
-    var pathFindingNode: PathFindingNode = this.parent
+    var pathFindingNode: PathFindingNode = this.getParentP()!!
 
 
         while(pathFindingNode != 
@@ -98,7 +103,7 @@ stringBuffer!!.append(this.geographicMapCellPosition!!.toString())
         {
 stringBuffer!!.append(pathFindingNode!!.geographicMapCellPosition!!.toString())
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
-pathFindingNode= pathFindingNode!!.parent
+pathFindingNode= pathFindingNode!!.getParentP()
 }
 
 

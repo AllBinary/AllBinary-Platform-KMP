@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.logic.string.StringMaker
 import java.util.Hashtable
 import org.allbinary.util.BasicArrayList
 import org.allbinary.direction.Direction
@@ -40,8 +39,10 @@ import org.allbinary.media.graphics.geography.map.BasicGeographicMapCellPosition
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.media.graphics.geography.map.GeographicMapCellType
 import org.allbinary.media.graphics.geography.map.GeographicMapDirectionUtil
+import org.allbinary.media.graphics.geography.map.SimpleGeographicMapCellPositionFactory
 import org.allbinary.media.graphics.geography.map.drop.DropCellPositionGeneratorInterface
 import org.allbinary.media.graphics.geography.map.drop.DropCellPositionHistory
+import org.allbinary.media.graphics.geography.map.racetrack.BaseRaceTrackGeographicMap
 import org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicMapCellType
 import org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicMapCellTypeFactory
 
@@ -79,9 +80,7 @@ private constructor (){
     //var column = column
     //var row = row
 
-    var nonRoadGeographicMapCellPosition: GeographicMapCellPosition = 
-                null
-            
+    var nonRoadGeographicMapCellPosition: GeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
 
     var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = this.raceTrackGeographicMap!!.getGeographicMapCellPositionFactory()!!
@@ -91,7 +90,10 @@ surroundingCellPositions[1]= geographicMapCellPositionFactory!!.getInstance(colu
 surroundingCellPositions[2]= geographicMapCellPositionFactory!!.getInstance(column -1, row)
 surroundingCellPositions[3]= geographicMapCellPositionFactory!!.getInstance(column +1, row)
 
-    var raceTrackGeographicMapCellTypeFactory: RaceTrackGeographicMapCellTypeFactory = this.raceTrackGeographicMap!!.getGeographicMapCellTypeFactory() as RaceTrackGeographicMapCellTypeFactory
+    var baseRaceTrackGeographicMap: BaseRaceTrackGeographicMap = this.raceTrackGeographicMap as BaseRaceTrackGeographicMap
+
+
+    var raceTrackGeographicMapCellTypeFactory: RaceTrackGeographicMapCellTypeFactory = baseRaceTrackGeographicMap!!.getGeographicMapCellTypeFactory() as RaceTrackGeographicMapCellTypeFactory
 
 
     var geographicMapCellPosition: GeographicMapCellPosition
@@ -134,7 +136,7 @@ break;
 
                 @Throws(Exception::class)
             
-    open fun update(allBinaryGameLayerManager: AllBinaryGameLayerManager, geographicMapInterface: BasicGeographicMap)
+    override fun update(allBinaryGameLayerManager: AllBinaryGameLayerManager, geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -148,7 +150,7 @@ super.update(allBinaryGameLayerManager, geographicMapInterface)
 
                 @Throws(Exception::class)
             
-    open fun drop(allBinaryLayerManager: AllBinaryLayerManager, index: Int)
+    override fun drop(allBinaryLayerManager: AllBinaryLayerManager, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryLayerManager = allBinaryLayerManager
@@ -202,7 +204,10 @@ hashtable.put(DirectionFactory.getInstance()!!.NAME, direction)
     var layerInterface: AllBinaryLayer = RaceTrackAdjacentDropLayerFactory.getInstance()!!.getRandomInstance()!!.getInstance(hashtable, x, y, z)!!
 
 
-    var list: BasicArrayList = layerCoveringCellPositionsUtil!!.getAll(this.raceTrackGeographicMap, randomGeographicMapCellPosition, layerInterface, BasicArrayList())!!
+    var baseRaceTrackGeographicMap: BaseRaceTrackGeographicMap = this.raceTrackGeographicMap as BaseRaceTrackGeographicMap
+
+
+    var list: BasicArrayList = layerCoveringCellPositionsUtil!!.getAll(baseRaceTrackGeographicMap, randomGeographicMapCellPosition, layerInterface, BasicArrayList())!!
 
 
     

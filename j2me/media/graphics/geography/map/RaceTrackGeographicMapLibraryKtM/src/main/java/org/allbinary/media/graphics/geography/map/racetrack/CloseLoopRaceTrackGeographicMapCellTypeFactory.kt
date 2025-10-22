@@ -25,9 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.logic.math.SmallIntegerSingletonFactory
-import org.allbinary.string.CommonStrings
-import org.allbinary.media.graphics.geography.pathfinding.PathFindingNodeCostInfoData
 
 open public class CloseLoopRaceTrackGeographicMapCellTypeFactory : RaceTrackGeographicMapCellTypeFactory {
         

@@ -46,19 +46,36 @@ open public class BasicAIProcessor
 
     private var geographicMapCellPositionBasicArrayList: BasicArrayList
 
-    private var geographicMapCellPathHistoryInfo: GeographicMapCellPathHistoryInfo = 
-                null
-            
+    private var geographicMapCellPathHistoryInfo: GeographicMapCellPathHistoryInfo
 
     private var basicAI: BasicDirectionAIHelper
-public constructor (name: String, geographicMapCellHistory: GeographicMapCellHistory, chosenPathList: BasicArrayList, angleInfo: AngleInfo, seed: Int)
+public constructor (name: String, geographicMapCellHistory: GeographicMapCellHistory, chosenPathList: BasicArrayList, angleInfo: AngleInfo, seed: Int)                        
+
+                            : this(name, geographicMapCellHistory, GeographicMapCellPathHistoryInfo(), chosenPathList, angleInfo, seed){
+    //var name = name
+    //var geographicMapCellHistory = geographicMapCellHistory
+    //var chosenPathList = chosenPathList
+    //var angleInfo = angleInfo
+    //var seed = seed
+
+
+                            //For kotlin this is before the body of the constructor.
+                    
+}
+
+public constructor (name: String, geographicMapCellHistory: GeographicMapCellHistory, geographicMapCellPathHistoryInfo: GeographicMapCellPathHistoryInfo, chosenPathList: BasicArrayList, angleInfo: AngleInfo, seed: Int)
             : super()
         {
-var name = name
-var geographicMapCellHistory = geographicMapCellHistory
-var chosenPathList = chosenPathList
-var angleInfo = angleInfo
-var seed = seed
+    //var name = name
+    //var geographicMapCellHistory = geographicMapCellHistory
+    //var geographicMapCellPathHistoryInfo = geographicMapCellPathHistoryInfo
+    //var chosenPathList = chosenPathList
+    //var angleInfo = angleInfo
+    //var seed = seed
+this.name= name
+this.geographicMapCellHistory= geographicMapCellHistory
+this.geographicMapCellPositionBasicArrayList= chosenPathList
+this.geographicMapCellPathHistoryInfo= geographicMapCellPathHistoryInfo
 this.setName(name)
 this.setNewPath(geographicMapCellHistory, chosenPathList)
 this.basicAI= BasicDirectionAIHelper(this.getName(), angleInfo)

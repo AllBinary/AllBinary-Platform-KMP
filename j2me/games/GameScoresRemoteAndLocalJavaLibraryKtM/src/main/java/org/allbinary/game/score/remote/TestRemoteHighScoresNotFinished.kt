@@ -40,9 +40,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 {
 var args = args
-
-                        //Otherwise - ExpressionStmt - expression - ObjectCreationExpr
-
+TestRemoteHighScoresNotFinished()
 }
 
 

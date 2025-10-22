@@ -27,6 +27,7 @@
         
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.game.layer.AllBinaryTiledLayer
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
@@ -78,7 +79,7 @@ this.finishLineId= raceTrackGeographicMapCellTypeFactory!!.getEndType()
 
                 @Throws(Exception::class)
             
-    open fun visit(tiledLayer: AllBinaryTiledLayer, cellPosition: GeographicMapCellPosition)
+    override fun visit(tiledLayer: AllBinaryTiledLayer, cellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
     //var tiledLayer = tiledLayer
@@ -150,7 +151,7 @@ this.finishLineId= raceTrackGeographicMapCellTypeFactory!!.getEndType()
 } catch(e: Exception)
             {
 logUtil!!.put(StringMaker().
-                            append("[")!!.append(row)!!.append("][")!!.append(column)!!.append("] in [")!!.append(mapArray!!.size)!!.append("][")!!.append(mapArray[0]!!.length)!!.append("]")!!.toString(), this, "visit", e)
+                            append("[")!!.append(row)!!.append("][")!!.append(column)!!.append("] in [")!!.append(mapArray!!.size)!!.append("][")!!.append(mapArray[0]!!.size)!!.append("]")!!.toString(), this, "visit", e)
 
 
 
@@ -174,8 +175,7 @@ geographicMapInterface!!.getGeographicMapCellPositionFactory()!!.visit(RaceTrack
 {
     //var pathFindingInfo = pathFindingInfo
     //var startGeographicMapCellPosition = startGeographicMapCellPosition
-pathFindingInfo!!.addStartPathFindingNode(PathFindingNode(
-                            null, startGeographicMapCellPosition))
+pathFindingInfo!!.addStartPathFindingNode(PathFindingNode(NullUtil.getInstance()!!.NULL_OBJECT, startGeographicMapCellPosition))
 }
 
 
@@ -186,8 +186,7 @@ pathFindingInfo!!.addStartPathFindingNode(PathFindingNode(
 {
     //var pathFindingInfo = pathFindingInfo
     //var endGeographicMapCellPosition = endGeographicMapCellPosition
-pathFindingInfo!!.addEndPathFindingNode(PathFindingNode(
-                            null, endGeographicMapCellPosition))
+pathFindingInfo!!.addEndPathFindingNode(PathFindingNode(NullUtil.getInstance()!!.NULL_OBJECT, endGeographicMapCellPosition))
 }
 
 

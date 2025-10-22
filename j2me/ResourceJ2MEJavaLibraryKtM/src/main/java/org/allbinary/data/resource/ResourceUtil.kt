@@ -67,7 +67,7 @@ private constructor ()
 : InputStream{
 var resource = resource
 
-    var inputStream: InputStream = resource::class.getResourceAsStream(resource)!!
+    var inputStream: InputStream = resource.javaClass.getResourceAsStream(resource)!!
 
 
     
@@ -101,7 +101,7 @@ var resource = resource
 
     var resourcePath: String = resource.substring(index +1)!!
 
-inputStream= resource::class.getResourceAsStream(resourcePath)
+inputStream= resource.javaClass.getResourceAsStream(resourcePath)
 
     
                         if(inputStream == 
@@ -110,7 +110,7 @@ inputStream= resource::class.getResourceAsStream(resourcePath)
                         
                                     {
                                     resourcePath= resource.substring(index)
-inputStream= resource::class.getResourceAsStream(resourcePath)
+inputStream= resource.javaClass.getResourceAsStream(resourcePath)
 
     
                         if(inputStream == 
@@ -122,7 +122,7 @@ inputStream= resource::class.getResourceAsStream(resourcePath)
     var RES: String = "res"
 
 resourcePath= stringMaker!!.append(RES)!!.append(resource.substring(index))!!.toString()
-inputStream= resource::class.getResourceAsStream(resourcePath)
+inputStream= resource.javaClass.getResourceAsStream(resourcePath)
 
     
                         if(inputStream == 
@@ -132,7 +132,7 @@ inputStream= resource::class.getResourceAsStream(resourcePath)
                                     {
                                     stringMaker!!.delete(0, stringMaker!!.length())
 resourcePath= stringMaker!!.append("/")!!.append(RES)!!.append(resource.substring(index))!!.toString()
-inputStream= resource::class.getResourceAsStream(resourcePath)
+inputStream= resource.javaClass.getResourceAsStream(resourcePath)
 
     var COLON: String = CommonSeps.getInstance()!!.COLON
 
@@ -145,7 +145,7 @@ inputStream= resource::class.getResourceAsStream(resourcePath)
                                     {
                                     stringMaker!!.delete(0, stringMaker!!.length())
 resourcePath= stringMaker!!.append(RES)!!.append(COLON)!!.append(resource.substring(index))!!.toString()
-inputStream= resource::class.getResourceAsStream(resourcePath)
+inputStream= resource.javaClass.getResourceAsStream(resourcePath)
 
     
                         if(inputStream == 
@@ -155,7 +155,7 @@ inputStream= resource::class.getResourceAsStream(resourcePath)
                                     {
                                     stringMaker!!.delete(0, stringMaker!!.length())
 resourcePath= stringMaker!!.append(RES)!!.append(COLON)!!.append(resource.substring(index +1))!!.toString()
-inputStream= resource::class.getResourceAsStream(resourcePath)
+inputStream= resource.javaClass.getResourceAsStream(resourcePath)
 
     
                         if(inputStream == 
@@ -168,7 +168,7 @@ inputStream= resource::class.getResourceAsStream(resourcePath)
 
 stringMaker!!.delete(0, stringMaker!!.length())
 resourcePath= stringMaker!!.append(RESOURCE_STRING)!!.append(COLON)!!.append(resource.substring(index))!!.toString()
-inputStream= resource::class.getResourceAsStream(resourcePath)
+inputStream= resource.javaClass.getResourceAsStream(resourcePath)
 
     
                         if(inputStream == 
@@ -178,7 +178,7 @@ inputStream= resource::class.getResourceAsStream(resourcePath)
                                     {
                                     stringMaker!!.delete(0, stringMaker!!.length())
 resourcePath= stringMaker!!.append(RESOURCE_STRING)!!.append(COLON)!!.append(resource.substring(index +1))!!.toString()
-inputStream= resource::class.getResourceAsStream(resourcePath)
+inputStream= resource.javaClass.getResourceAsStream(resourcePath)
 
     
                         if(inputStream == 
@@ -249,7 +249,7 @@ var startIndex = startIndex
     var resourcePath: String = resource.substring(index +startIndex)!!
 
 
-    var inputStream: InputStream = resource::class.getResourceAsStream(resourcePath)!!
+    var inputStream: InputStream = resource.javaClass.getResourceAsStream(resourcePath)!!
 
 
     

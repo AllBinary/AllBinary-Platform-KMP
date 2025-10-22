@@ -60,9 +60,7 @@ this.maxTileId= 9
 
     var basicTopViewGeographicMapStrings: BasicTopViewGeographicMapStrings = BasicTopViewGeographicMapStrings.getInstance()!!
 
-
-                        //Otherwise - ExpressionStmt - expression - ObjectCreationExpr
-
+RaceTrackGeographicMapCellType(0, 999)
 
     var BLOCK_CELL_TYPE: BasicTopViewGeographicMapCellType = BasicTopViewGeographicMapCellType(basicTopViewGeographicMapStrings!!.DEFAULT, 1, 1)
 
@@ -120,9 +118,7 @@ this.maxTileId= maxTileId
                                 )
                         
                                     {
-                                    
-                        //Otherwise - ExpressionStmt - expression - ObjectCreationExpr
-
+                                    RaceTrackGeographicMapCellType(type, 999)
 
                                     }
                                 
@@ -263,9 +259,7 @@ type= this.maxTileId -1
                                 )
                         
                                     {
-                                    
-                        //Otherwise - ExpressionStmt - expression - ObjectCreationExpr
-
+                                    RaceTrackGeographicMapCellType(commonStrings!!.START, type, 1)
 
                                     }
                                 
@@ -281,9 +275,7 @@ type= this.maxTileId -2
                                 )
                         
                                     {
-                                    
-                        //Otherwise - ExpressionStmt - expression - ObjectCreationExpr
-
+                                    RaceTrackGeographicMapCellType(commonStrings!!.START, type, 1)
 
                                     }
                                 

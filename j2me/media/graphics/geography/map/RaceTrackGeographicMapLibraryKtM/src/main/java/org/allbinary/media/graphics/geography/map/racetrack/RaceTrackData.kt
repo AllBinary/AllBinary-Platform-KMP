@@ -28,28 +28,30 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Image
+import javax.microedition.lcdui.NullCanvas
 import org.allbinary.graphics.CellPosition
+import org.allbinary.logic.NullUtil
 
 open public class RaceTrackData
             : Object
          {
         
 
-    private var tileSetImage: Image
+    private var tileSetImage: Image = NullCanvas.NULL_IMAGE
 
-    private var miniTileSetImage: Image
+    private var miniTileSetImage: Image = NullCanvas.NULL_IMAGE
 
-    private var cellWidth: Int
+    private var cellWidth: Int = 0
 
-    private var cellHeight: Int
+    private var cellHeight: Int = 0
 
-    private var miniCellWidth: Int
+    private var miniCellWidth: Int = 0
 
-    private var miniCellHeight: Int
+    private var miniCellHeight: Int = 0
 
-    private var mapArray: Array<IntArray?>
+    private var mapArray: Array<IntArray?> = NullUtil.getInstance()!!.NULL_INT_ARRAY_ARRAY
 
-    private var cellTypeIdToGeographicMapCellTypeArray: IntArray
+    private var cellTypeIdToGeographicMapCellTypeArray: IntArray = NullUtil.getInstance()!!.NULL_INT_ARRAY
 
     private var NO_OVER_PASSES_ARRAY: Array<CellPosition?> = arrayOfNulls(0)
 
@@ -58,9 +60,7 @@ open public class RaceTrackData
     private var id: Integer
 public constructor (id: Integer, cellWidth: Int, cellHeight: Int, miniCellWidth: Int, miniCellHeight: Int)                        
 
-                            : this(id, cellWidth, cellHeight, miniCellWidth, miniCellHeight, 
-                            null, 
-                            null){
+                            : this(id, cellWidth, cellHeight, miniCellWidth, miniCellHeight, NullUtil.getInstance()!!.NULL_INT_ARRAY, NullUtil.getInstance()!!.NULL_INT_ARRAY_ARRAY){
     //var id = id
     //var cellWidth = cellWidth
     //var cellHeight = cellHeight

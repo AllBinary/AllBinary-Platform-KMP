@@ -29,7 +29,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.logic.string.StringMaker
 import java.util.Hashtable
 import javax.microedition.lcdui.Canvas
 import javax.microedition.lcdui.Graphics
@@ -53,7 +52,6 @@ import org.allbinary.game.layer.building.event.BuildingEventListenerInterface
 import org.allbinary.game.layer.waypoint.event.WaypointEventHandlerFactory
 import org.allbinary.media.audio.AttackSound
 import org.allbinary.util.BasicArrayList
-import org.allbinary.string.CommonStrings
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.animation.Animation
 import org.allbinary.animation.AnimationInterfaceFactoryInterface
@@ -133,6 +131,7 @@ import org.allbinary.view.ViewPosition
 import org.allbinary.weapon.media.audio.ExplosionBasicSound
 import org.allbinary.game.multiplayer.layer.RemoteInfo
 import org.allbinary.game.view.TileLayerPositionIntoViewPosition
+import org.allbinary.graphics.CellPositionFactory
 import org.allbinary.math.NamedAngle
 import org.allbinary.media.graphics.geography.map.GeographicMapCompositeInterface
 import org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicMap
@@ -183,6 +182,8 @@ companion object {
     private val layerDistanceUtil: LayerDistanceUtil = LayerDistanceUtil.getInstance()!!
 
     private val angleFactory: AngleFactory = AngleFactory.getInstance()!!
+
+    private val cellPositionFactory: CellPositionFactory = CellPositionFactory.getInstance()!!
 
     private val maxResourceLoad: Short
 
@@ -1543,9 +1544,7 @@ layerPartialCellPositionsUtil!!.getAll(geographicMapInterface, this, velocityXSc
 
 
     
-                        if(cellPosition == 
-                                    null
-                                )
+                        if(cellPosition == cellPositionFactory!!.NONE)
                         
                                     {
                                     

@@ -29,6 +29,7 @@
         
 import java.util.Hashtable
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListUtil
 
 open public class PathCacheFactory
             : Object
@@ -51,6 +52,8 @@ companion object {
 
         }
             
+    private val basicArrayListUtil: BasicArrayListUtil = BasicArrayListUtil.getInstance()!!
+
     private var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 private constructor ()
             : super()
@@ -72,8 +75,8 @@ private constructor ()
     open fun add(pathId: Integer, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
-var pathId = pathId
-var list = list
+    //var pathId = pathId
+    //var list = list
 this.hashtable.put(pathId, list)
 }
 
@@ -81,7 +84,7 @@ this.hashtable.put(pathId, list)
     open fun remove(pathId: Integer)
         //nullable = true from not(false or (false and false)) = true
 {
-var pathId = pathId
+    //var pathId = pathId
 this.hashtable.remove(pathId)
 }
 
@@ -112,12 +115,26 @@ this.hashtable.clear()
     open fun getInstance(pathIdInteger: Integer)
         //nullable =  from not(true or (false and false)) = 
 : BasicArrayList{
-var pathIdInteger = pathIdInteger
+    //var pathIdInteger = pathIdInteger
+
+    var listCanBeNull: Any? = this.hashtable.get(pathIdInteger as Object)
+
+
+    
+                        if(listCanBeNull == 
+                                    null
+                                )
+                        
+                                    {
+                                    listCanBeNull= basicArrayListUtil!!.getImmutableInstance()
+
+                                    }
+                                
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.hashtable.get(pathIdInteger as Object) as BasicArrayList
+                        return listCanBeNull as BasicArrayList
 }
 
 

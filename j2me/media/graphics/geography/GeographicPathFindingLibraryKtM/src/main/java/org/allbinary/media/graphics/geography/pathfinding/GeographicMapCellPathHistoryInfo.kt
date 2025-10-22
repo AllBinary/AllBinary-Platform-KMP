@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
+import org.allbinary.media.graphics.geography.map.SimpleGeographicMapCellPositionFactory
 
 open public class GeographicMapCellPathHistoryInfo
             : Object
@@ -37,15 +38,15 @@ open public class GeographicMapCellPathHistoryInfo
             {
             }            
         
-    private var previousGeographicMapCellPosition: GeographicMapCellPosition
+    private var previousGeographicMapCellPosition: GeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
-    private var previousOnPathGeographicMapCellPosition: GeographicMapCellPosition
+    private var previousOnPathGeographicMapCellPosition: GeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
-    private var nextUnvisitedOnPathGeographicMapCellPosition: GeographicMapCellPosition
+    private var nextUnvisitedOnPathGeographicMapCellPosition: GeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
-    private var nextOnPathGeographicMapCellPosition: GeographicMapCellPosition
+    private var nextOnPathGeographicMapCellPosition: GeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
-    private var nextChosenOnPathGeographicMapCellPosition: GeographicMapCellPosition
+    private var nextChosenOnPathGeographicMapCellPosition: GeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
     open fun getPreviousGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true

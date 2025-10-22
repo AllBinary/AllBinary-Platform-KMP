@@ -28,8 +28,6 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.game.layer.AllBinaryTiledLayer
-import org.allbinary.graphics.CellPosition
-import org.allbinary.graphics.CellPositionFactory
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.layer.Layer
 import org.allbinary.logic.math.MathUtil
@@ -38,7 +36,12 @@ import org.allbinary.util.BasicArrayList
 open public class BasicGeographicMap : SimpleGeographicMap
                 , GeographicMapInterface {
         
+companion object {
+            
+    val NULL_BASIC_GEOGRAPHIC_MAP_ARRAY: Array<BasicGeographicMap?> = arrayOfNulls(0)
 
+        }
+            
     private val mathUtil: MathUtil = MathUtil.getInstance()!!
 
     private val geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory

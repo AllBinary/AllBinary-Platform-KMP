@@ -27,17 +27,18 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.math.SmallIntegerSingletonFactory
 
 open public class Aggression
             : Object
          {
         
 
-    private var ram: Integer
+    private var ram: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(0)!!
 
-    private var projectile: Integer
+    private var projectile: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(0)!!
 
-    private var drops: Integer
+    private var drops: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(0)!!
 public constructor (ram: Integer, projectile: Integer, drops: Integer)
             : super()
         {

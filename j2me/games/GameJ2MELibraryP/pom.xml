@@ -48,8 +48,9 @@
         <module>../../../replace_these_stub_projects/allbinary_src/J2MEOnlyJavaLibraryKtM</module>
 <!--        <module>../../../replace_these_stub_projects/allbinary_src/J2MECompatibilityJavaLibraryKtM</module>-->
 
-        <module>../../DebugJavaLibraryKtM</module>  
-<!--        <module>../../ResourceLibraryKtM</module>
+        <module>../../DebugJavaLibraryKtM</module>
+        <module>../../ResourceLibraryKtM</module>
+<!--
         <module>../../ResourceJ2MEJavaLibraryKtM</module>-->
         <module>../../AndroidResourceLibraryKtM</module>
         

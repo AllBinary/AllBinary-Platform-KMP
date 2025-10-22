@@ -27,15 +27,16 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.math.SmallIntegerSingletonFactory
 
 open public class Driver
             : Object
          {
         
 
-    private var turnSpeed: Integer
+    private var turnSpeed: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(0)!!
 
-    private var trackPathSelectionSkill: Integer
+    private var trackPathSelectionSkill: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(0)!!
 
     private var aggression: Aggression
 public constructor (turnSpeed: Integer, trackPathSelectionSkill: Integer, aggression: Aggression)
@@ -46,7 +47,7 @@ var trackPathSelectionSkill = trackPathSelectionSkill
 var aggression = aggression
 this.setTurnSpeed(turnSpeed)
 this.setTrackPathSelectionSkill(trackPathSelectionSkill)
-this.setAggression(aggression)
+this.aggression= aggression
 }
 
 

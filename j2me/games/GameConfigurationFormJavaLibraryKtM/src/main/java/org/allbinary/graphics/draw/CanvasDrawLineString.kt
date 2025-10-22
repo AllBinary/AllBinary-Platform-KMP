@@ -10,7 +10,7 @@
                 *  You may obtain the AllBinary Open License Version 1 legal agreement from
                 *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
                 *  
-                *  Created By: Travis Berthelot  
+                *  Created By: Travis Berthelot   
         */
         
         /* Generated Code Do Not Modify */
@@ -32,7 +32,12 @@ open public class CanvasDrawLineString
             : Object
          {
         
+companion object {
+            
+    val NULL_CANVAS_DRAW_LINE_STRING: CanvasDrawLineString = CanvasDrawLineString(0, 0)
 
+        }
+            
     private var x: Int
 
     private var y: Int

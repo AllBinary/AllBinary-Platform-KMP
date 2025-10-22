@@ -41,7 +41,7 @@ public constructor (velocityProperties: VelocityProperties, vehicleFrictionPrope
 var velocityProperties = velocityProperties
 var vehicleFrictionProperties = vehicleFrictionProperties
 this.velocityProperties= velocityProperties
-this.setVehicleFrictionProperties(vehicleFrictionProperties)
+this.vehicleFrictionProperties= vehicleFrictionProperties
 }
 
 

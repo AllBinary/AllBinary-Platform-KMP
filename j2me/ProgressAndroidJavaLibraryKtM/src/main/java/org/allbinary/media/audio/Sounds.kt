@@ -92,11 +92,11 @@ soundsFactoryInterface!!.init()
 
         {
 
-    var soundInterface: Sound = soundInterfaceArray[i]!!
+    var soundInterfaceCanBeNull: Sound? = soundInterfaceArray[i]
 
 
     
-                        if(soundInterface != 
+                        if(soundInterfaceCanBeNull != 
                                     null
                                 )
                         
@@ -107,9 +107,9 @@ stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(commonLabels!!.INDEX_LABEL)
 stringBuffer!!.append(indexString)
 stringBuffer!!.append(this.soundStrings!!.SOUND)
-stringBuffer!!.append(soundInterface!!::class.toString()!!)
+stringBuffer!!.append(soundInterfaceCanBeNull!!::class.toString()!!)
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
-soundInterface!!.init()
+soundInterfaceCanBeNull!!.init()
 progressCanvas!!.addPortion(100, StringMaker().
                             append(this.soundStrings!!.INIT_SOUND)!!.append(indexString)!!.toString())
 

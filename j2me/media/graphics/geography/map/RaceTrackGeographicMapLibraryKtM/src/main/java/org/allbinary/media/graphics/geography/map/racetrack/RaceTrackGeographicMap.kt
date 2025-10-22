@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPositionBaseFactory
@@ -34,8 +33,6 @@ import org.allbinary.media.graphics.geography.map.GeographicMapCellTypeFactory
 
 open public class RaceTrackGeographicMap : BaseRaceTrackGeographicMap {
         
-
-    val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val customMapGenerator: CustomMapGeneratorBase
 public constructor (raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrackData, tiledLayerFactoryInterface: AllBinaryTiledLayerFactoryInterface, geographicMapCellPositionFactoryInterface: GeographicMapCellPositionFactoryInterface, geographicMapCellPositionBaseFactory: GeographicMapCellPositionBaseFactory, geographicMapCellTypeFactory: GeographicMapCellTypeFactory, customMapGeneratorBaseFactory: CustomMapGeneratorBaseFactory)                        
@@ -90,8 +87,11 @@ public constructor (raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrackData, 
 : Boolean{
     //var geographicMapCellPosition = geographicMapCellPosition
 
+    var customMapArray: Array<IntArray?> = this.customMapGenerator!!.getCustomMapArray()!!
+
+
     
-                        if(geographicMapCellPosition!!.getColumn() >= this.customMapGenerator!!.getCustomMapArray()[0]!!.length)
+                        if(geographicMapCellPosition!!.getColumn() >= customMapArray[0]!!.size)
                         
                                     {
                                     
@@ -100,11 +100,11 @@ public constructor (raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrackData, 
 stringBuffer!!.append("Column: ")
 stringBuffer!!.append(geographicMapCellPosition!!.getColumn())
 stringBuffer!!.append(" not in: ")
-stringBuffer!!.append(this.customMapGenerator!!.getCustomMapArray()[0]!!.length)
+stringBuffer!!.append(customMapArray[0]!!.size)
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 
     
-                        if(geographicMapCellPosition!!.getColumn() == this.customMapGenerator!!.getCustomMapArray()[0]!!.length)
+                        if(geographicMapCellPosition!!.getColumn() == customMapArray[0]!!.size)
                         
                                     {
                                     
@@ -129,7 +129,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
                                 
                              else 
     
-                        if(geographicMapCellPosition!!.getRow() > this.customMapGenerator!!.getCustomMapArray()!!.length)
+                        if(geographicMapCellPosition!!.getRow() > customMapArray!!.size)
                         
                                     {
                                     
@@ -138,11 +138,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 stringBuffer!!.append("Row: ")
 stringBuffer!!.append(geographicMapCellPosition!!.getRow())
 stringBuffer!!.append(" not in: ")
-stringBuffer!!.append(this.customMapGenerator!!.getCustomMapArray()!!.length)
+stringBuffer!!.append(customMapArray!!.size)
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 
     
-                        if(geographicMapCellPosition!!.getRow() == this.customMapGenerator!!.getCustomMapArray()!!.length)
+                        if(geographicMapCellPosition!!.getRow() == customMapArray!!.size)
                         
                                     {
                                     

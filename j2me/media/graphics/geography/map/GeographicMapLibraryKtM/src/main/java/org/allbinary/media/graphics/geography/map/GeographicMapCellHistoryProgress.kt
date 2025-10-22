@@ -10,7 +10,7 @@
                 *  You may obtain the AllBinary Open License Version 1 legal agreement from
                 *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
                 *  
-                *  Created By: Travis Berthelot  
+                *  Created By: Travis Berthelot   
         */
         
         /* Generated Code Do Not Modify */
@@ -27,31 +27,27 @@
         
 import org.allbinary.logic.NullUtil
 
-open public class GeographicMapCellHistoryProgress
-            : Object
-         {
+open public class GeographicMapCellHistoryProgress : GeographicMapCellHistoryProgressBase {
         
 
     private var totalVisitedArray: IntArray = NullUtil.getInstance()!!.NULL_INT_ARRAY
 
-    private var geographicMapCellHistoryArray: Array<GeographicMapCellHistory?> = GeographicMapCellHistory.NULL_GEOGRPAHIC_MAP_HISTORY
-public constructor (geographicMapCellHistoryArray: Array<GeographicMapCellHistory?>)
-            : super()
-        {
-var geographicMapCellHistoryArray = geographicMapCellHistoryArray
+    private var geographicMapCellHistoryArray: Array<GeographicMapCellHistory?> = GeographicMapCellHistory.NULL_GEOGRPAHIC_MAP_HISTORY_ARRAY
+public constructor (geographicMapCellHistoryArray: Array<GeographicMapCellHistory?>){
+    //var geographicMapCellHistoryArray = geographicMapCellHistoryArray
 this.geographicMapCellHistoryArray= geographicMapCellHistoryArray
 this.init()
 }
 
 
-    open fun init()
+    override fun init()
         //nullable = true from not(false or (false and true)) = true
 {
 this.totalVisitedArray= IntArray(this.geographicMapCellHistoryArray!!.size)
 }
 
 
-    open fun isAnyProgress()
+    override fun isAnyProgress()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

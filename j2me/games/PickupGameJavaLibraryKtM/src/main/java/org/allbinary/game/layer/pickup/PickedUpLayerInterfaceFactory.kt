@@ -28,10 +28,7 @@
 import org.allbinary.animation.Animation
 import org.allbinary.layer.AllBinaryLayer
 
-open public class PickedUpLayerInterfaceFactory
-            : Object
-        
-                , PickedUpLayerInterfaceFactoryInterface {
+open public class PickedUpLayerInterfaceFactory : PickedUpLayerInterfaceFactoryBase {
         
 
     private val pickedUpLayerType: PickedUpLayerType
@@ -39,9 +36,7 @@ open public class PickedUpLayerInterfaceFactory
     private val iconLayer: IconLayer
 
     private val animationInterface: Animation
-protected constructor (pickeUpLayerType: PickedUpLayerType, iconLayer: IconLayer, animationInterface: Animation)
-            : super()
-        {
+protected constructor (pickeUpLayerType: PickedUpLayerType, iconLayer: IconLayer, animationInterface: Animation){
 var pickeUpLayerType = pickeUpLayerType
 var iconLayer = iconLayer
 var animationInterface = animationInterface

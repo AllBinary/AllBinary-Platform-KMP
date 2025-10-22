@@ -32,6 +32,7 @@
         import kotlin.reflect.KClass
         
 import java.io.InputStream
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
@@ -42,7 +43,7 @@ open public class ResourceUtil
         
 companion object {
             
-    private var classLoader: ClassLoader
+    private var classLoader: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     private val instance: ResourceUtil = ResourceUtil()
 
@@ -127,9 +128,6 @@ ResourceUtil.classLoader= classLoader
     //var resource = resource
     //var startIndex = startIndex
 
-    var stringMaker: StringMaker = StringMaker()
-
-
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
 
@@ -139,7 +137,7 @@ ResourceUtil.classLoader= classLoader
     var resourcePath: String = resource.substring(index +startIndex)!!
 
 
-    var inputStream: InputStream = resource::class.getResourceAsStream(resourcePath)!!
+    var inputStream: InputStream = resource.javaClass.getResourceAsStream(resourcePath)!!
 
 
     
@@ -156,7 +154,10 @@ ResourceUtil.classLoader= classLoader
 
                                     }
                                 
-inputStream= ResourceUtil.classLoader!!.getResourceAsStream(resourcePath)
+
+    var classLoader: ClassLoader = ResourceUtil.classLoader as ClassLoader
+
+inputStream= classLoader!!.getResourceAsStream(resourcePath)
 
     
                         if(inputStream != 

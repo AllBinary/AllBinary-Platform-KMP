@@ -56,18 +56,6 @@ companion object {
             {
             }            
         
-    var glHolder: GLHolder = object: GLHolder()
-                                {
-                                
-    override fun run(renderer: Any)
-        //nullable = true from not(false or (false and false)) = true
-{
-var renderer = renderer
-}
-
-                                }
-                            
-
     open fun init(display: Any, comp: Any)
         //nullable = true from not(false or (false and false)) = true
 {

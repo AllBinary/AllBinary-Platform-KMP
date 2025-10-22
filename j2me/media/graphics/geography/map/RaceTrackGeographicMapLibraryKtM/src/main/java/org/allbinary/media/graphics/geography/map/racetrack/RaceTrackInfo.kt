@@ -44,30 +44,30 @@ open public class RaceTrackInfo
 
     private var backgroundBasicColor: BasicColor
 
-    private var qualifyTime: Int= 0
+    private var qualifyTime: Int
 
-    private var worstContinuePosition: Int= 0
+    private var worstContinuePosition: Int
 
-    private var totalLaps: Int= 0
+    private var totalLaps: Int
 public constructor (id: Integer, name: String, raceTrackFrictionProperties: RaceTrackFrictionProperties, foregroundBasicColor: BasicColor, backgroundBasicColor: BasicColor, qualifyTime: Int, worstContinuePosition: Int, totalLaps: Int)
             : super()
         {
-var id = id
-var name = name
-var raceTrackFrictionProperties = raceTrackFrictionProperties
-var foregroundBasicColor = foregroundBasicColor
-var backgroundBasicColor = backgroundBasicColor
-var qualifyTime = qualifyTime
-var worstContinuePosition = worstContinuePosition
-var totalLaps = totalLaps
-this.setId(id)
-this.setName(name)
-this.setRaceTrackFrictionProperties(raceTrackFrictionProperties)
-this.setBackgroundBasicColor(backgroundBasicColor)
-this.setForegroundBasicColor(foregroundBasicColor)
-this.setQualifyTime(qualifyTime)
-this.setWorstContinuePosition(worstContinuePosition)
-this.setTotalLaps(totalLaps)
+    //var id = id
+    //var name = name
+    //var raceTrackFrictionProperties = raceTrackFrictionProperties
+    //var foregroundBasicColor = foregroundBasicColor
+    //var backgroundBasicColor = backgroundBasicColor
+    //var qualifyTime = qualifyTime
+    //var worstContinuePosition = worstContinuePosition
+    //var totalLaps = totalLaps
+this.id= id
+this.name= name
+this.raceTrackFrictionProperties= raceTrackFrictionProperties
+this.backgroundBasicColor= backgroundBasicColor
+this.foregroundBasicColor= foregroundBasicColor
+this.qualifyTime= qualifyTime
+this.worstContinuePosition= worstContinuePosition
+this.totalLaps= totalLaps
 }
 
 

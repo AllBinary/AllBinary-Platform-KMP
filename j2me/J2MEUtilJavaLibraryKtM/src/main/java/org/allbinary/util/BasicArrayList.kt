@@ -677,7 +677,7 @@ System.arraycopy(this.objectArray, 0, objectArray, 0, currentIndex)
 }
 
 
-    override fun clone()
+    public override fun clone()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 

@@ -86,13 +86,13 @@ stringBuffer!!.append("{")
 
 
 
-                        for (index2 in 0 until array[index]!!.length)
+                        for (index2 in 0 until array[index]!!.size)
 
         {
 stringBuffer!!.append(array[index]!![index2]!!)
 
     
-                        if(index2 < array[index]!!.length -1)
+                        if(index2 < array[index]!!.size -1)
                         
                                     {
                                     stringBuffer!!.append(", ")
@@ -140,7 +140,7 @@ stringBuffer!!.append("{")
 
 
 
-                        for (index2 in 0 until array[index]!!.length)
+                        for (index2 in 0 until array[index]!!.size)
 
         {
 stringBuffer!!.append("{")
@@ -166,7 +166,7 @@ stringBuffer!!.append(array[index]!![index2]!![index3]!!)
 stringBuffer!!.append("}")
 
     
-                        if(index2 < array[index]!!.length -1)
+                        if(index2 < array[index]!!.size -1)
                         
                                     {
                                     stringBuffer!!.append(", ")

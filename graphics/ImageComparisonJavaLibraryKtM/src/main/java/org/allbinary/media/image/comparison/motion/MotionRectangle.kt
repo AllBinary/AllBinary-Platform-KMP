@@ -86,7 +86,7 @@ this.pixelDeltaVector= pixelDeltaVector
 }
 
 
-    override fun clone()
+    public override fun clone()
         //nullable = true from not(false or (false and true)) = true
 : Any{
 

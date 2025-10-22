@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.game.layer.CollidableCompositeLayer
 import org.allbinary.game.layer.pickup.PickedUpLayerInterface
 import org.allbinary.logic.communication.log.ForcedLogUtil
 import org.allbinary.game.collision.CollidableInterfaceCompositeInterface
@@ -41,8 +40,8 @@ open public class CollidableVehicleBehavior : CollidableDestroyableDamageableBeh
 public constructor (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
 
                             : super(ownerLayer, collidable){
-var ownerLayer = ownerLayer
-var collidable = collidable
+    //var ownerLayer = ownerLayer
+    //var collidable = collidable
 
 
                             //For kotlin this is before the body of the constructor.
@@ -52,10 +51,10 @@ var collidable = collidable
 
                 @Throws(Exception::class)
             
-    open fun collide(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
+    override fun collide(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 {
-var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
+    //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
     var collisionTypeFactory: CollisionTypeFactory = CollisionTypeFactory.getInstance()!!
 
@@ -67,9 +66,10 @@ var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterfac
                         if(collisionType == collisionTypeFactory!!.PICKUP)
                         
                                     {
-                                    ownerLayer = this.ownerLayerownerLayer as CollidableDestroyableDamageableLayer
-ownerLayer.
-                    getPickupBehavior()!!.doPickup(collidableInterfaceCompositeInterface as PickedUpLayerInterface)
+                                    
+    var collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer = (this.ownerLayer as CollidableDestroyableDamageableLayer)
+
+collidableDestroyableDamageableLayer!!.getPickupBehavior()!!.doPickup(collidableInterfaceCompositeInterface as PickedUpLayerInterface)
 
                                     }
                                 
@@ -90,10 +90,10 @@ ownerLayer.
 }
 
 
-    open fun collide(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
+    override fun collide(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
-var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
+    //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 ForcedLogUtil.log("Don't Use Interface Version It Is Slower", this)
 }
 
@@ -105,7 +105,7 @@ ForcedLogUtil.log("Don't Use Interface Version It Is Slower", this)
     open fun collide(vehiclePropertiesCompositeInterface: VehiclePropertiesCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
-var vehiclePropertiesCompositeInterface = vehiclePropertiesCompositeInterface
+    //var vehiclePropertiesCompositeInterface = vehiclePropertiesCompositeInterface
 
     var ownerVehicleLayerInterface: VehiclePropertiesCompositeInterface = (this.ownerLayer as VehiclePropertiesCompositeInterface)
 
@@ -123,7 +123,7 @@ var vehiclePropertiesCompositeInterface = vehiclePropertiesCompositeInterface
 
 
     
-                        if(impactVelocityX != 0)
+                        if(impactVelocityX != 0L)
                         
                                     {
                                     halfImpactVelocityX= (impactVelocityX shr 1)
@@ -138,7 +138,7 @@ vehicleProperties!!.getVelocityProperties()!!.getVelocityXBasicDecimalP()!!.add(
                             
 
     
-                        if(impactVelocityY != 0)
+                        if(impactVelocityY != 0L)
                         
                                     {
                                     halfImpactVelocityY= (impactVelocityY shr 1)
@@ -160,7 +160,7 @@ totalImpactVelocity= impactVelocityX +impactVelocityY
     open fun collideFriction(vehiclePropertiesCompositeInterface: VehiclePropertiesCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
-var vehiclePropertiesCompositeInterface = vehiclePropertiesCompositeInterface
+    //var vehiclePropertiesCompositeInterface = vehiclePropertiesCompositeInterface
 
     var vehicleFrictionProperties: VehicleFrictionProperties = vehiclePropertiesCompositeInterface!!.getVehicleProperties()!!.getVehicleFrictionProperties()!!
 

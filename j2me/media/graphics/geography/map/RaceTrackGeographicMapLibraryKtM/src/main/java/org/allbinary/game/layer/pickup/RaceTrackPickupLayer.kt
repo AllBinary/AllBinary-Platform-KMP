@@ -61,7 +61,7 @@ viewPositionEventHandler!!.addListener(this as AllBinaryLayer)
 }
 
 
-    open fun setDestroyed(destroyed: Boolean)
+    override fun setDestroyed(destroyed: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var destroyed = destroyed

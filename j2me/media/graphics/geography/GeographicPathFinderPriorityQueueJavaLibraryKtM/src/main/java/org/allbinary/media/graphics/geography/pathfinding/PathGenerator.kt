@@ -57,7 +57,7 @@ companion object {
 
                 @Throws(Exception::class)
             
-    open fun init(geographicMapInterface: BasicGeographicMap, totalPaths: Int)
+    open fun init(geographicMapInterface: Any, totalPaths: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapInterface = geographicMapInterface

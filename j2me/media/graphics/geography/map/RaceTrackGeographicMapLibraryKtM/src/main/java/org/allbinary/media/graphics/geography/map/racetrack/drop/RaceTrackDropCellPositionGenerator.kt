@@ -33,10 +33,13 @@ import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.GeographicMapCellHistory
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
+import org.allbinary.media.graphics.geography.map.GeographicMapCellTypeFactory
 import org.allbinary.media.graphics.geography.map.drop.BaseDropCellPositionGenerator
 import org.allbinary.media.graphics.geography.map.racetrack.BaseRaceTrackGeographicMap
+import org.allbinary.media.graphics.geography.map.racetrack.NullRaceTrackGeographicMap
 import org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicMapCellType
 import org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicMapCellTypeFactory
+import org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicMapInterface
 import org.allbinary.media.graphics.geography.map.racetrack.RaceTrackRoadsGeographicMapCellHistoryFactory
 import org.allbinary.time.GameTickTimeDelayHelperFactory
 import org.allbinary.time.TimeDelayHelper
@@ -50,9 +53,9 @@ open public class RaceTrackDropCellPositionGenerator : BaseDropCellPositionGener
 
     private val STRAIGHTAWAY: Int = 4
 
-    var raceTrackGeographicMap: BaseRaceTrackGeographicMap
+    var raceTrackGeographicMap: RaceTrackGeographicMapInterface = NullRaceTrackGeographicMap.NULL_RACE_TRACK_GEOGRAPHIC_MAP
 
-    var raceTrackGeographicMapCellTypeFactory: RaceTrackGeographicMapCellTypeFactory
+    var raceTrackGeographicMapCellTypeFactory: GeographicMapCellTypeFactory = GeographicMapCellTypeFactory.getInstance()!!
 protected constructor (){
 timeDelayHelper= TimeDelayHelper(10000)
 }
@@ -67,12 +70,15 @@ this.list.clear()
 
                 @Throws(Exception::class)
             
-    open fun isDropAllowedAt(geographicMapCellPosition: GeographicMapCellPosition)
+    override fun isDropAllowedAt(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var geographicMapCellPosition = geographicMapCellPosition
 
     var raceTrackGeographicMapCellType: RaceTrackGeographicMapCellType = raceTrackGeographicMap!!.getCellTypeAt(geographicMapCellPosition) as RaceTrackGeographicMapCellType
+
+
+    var raceTrackGeographicMapCellTypeFactory: RaceTrackGeographicMapCellTypeFactory = this.raceTrackGeographicMapCellTypeFactory as RaceTrackGeographicMapCellTypeFactory
 
 
     
@@ -97,14 +103,17 @@ this.list.clear()
 
                 @Throws(Exception::class)
             
-    open fun update(allBinaryGameLayerManager: AllBinaryGameLayerManager, geographicMapInterface: BasicGeographicMap)
+    override fun update(allBinaryGameLayerManager: AllBinaryGameLayerManager, geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
     //var geographicMapInterface = geographicMapInterface
 this.init()
-this.raceTrackGeographicMap= geographicMapInterface as BaseRaceTrackGeographicMap
-this.raceTrackGeographicMapCellTypeFactory= this.raceTrackGeographicMap!!.getGeographicMapCellTypeFactory() as RaceTrackGeographicMapCellTypeFactory
+
+    var baseRaceTrackGeographicMap: BaseRaceTrackGeographicMap = geographicMapInterface as BaseRaceTrackGeographicMap
+
+this.raceTrackGeographicMap= baseRaceTrackGeographicMap
+this.raceTrackGeographicMapCellTypeFactory= baseRaceTrackGeographicMap!!.getGeographicMapCellTypeFactory() as RaceTrackGeographicMapCellTypeFactory
 
     var roadGeographicMapCellHistory: GeographicMapCellHistory = RaceTrackRoadsGeographicMapCellHistoryFactory.getInstance()!!
 
@@ -185,10 +194,10 @@ this.drop(allBinaryGameLayerManager, index)
 
                 @Throws(Exception::class)
             
-    open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
+    override fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
-var allBinaryLayerManager = allBinaryLayerManager
+    //var allBinaryLayerManager = allBinaryLayerManager
 
     
                         if(timeDelayHelper!!.isTime(GameTickTimeDelayHelperFactory.getInstance()!!.startTime))
@@ -209,8 +218,8 @@ this.drop(allBinaryLayerManager, index)
     open fun drop(allBinaryLayerManager: AllBinaryLayerManager, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-var allBinaryLayerManager = allBinaryLayerManager
-var index = index
+    //var allBinaryLayerManager = allBinaryLayerManager
+    //var index = index
 
 
 

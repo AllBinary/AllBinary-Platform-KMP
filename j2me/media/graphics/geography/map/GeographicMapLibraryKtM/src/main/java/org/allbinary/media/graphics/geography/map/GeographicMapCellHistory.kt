@@ -45,7 +45,7 @@ open public class GeographicMapCellHistory
         
 companion object {
             
-    val NULL_GEOGRPAHIC_MAP_HISTORY: Array<GeographicMapCellHistory?> = arrayOfNulls(0)
+    val NULL_GEOGRPAHIC_MAP_HISTORY_ARRAY: Array<GeographicMapCellHistory?> = arrayOfNulls(0)
 
         }
             

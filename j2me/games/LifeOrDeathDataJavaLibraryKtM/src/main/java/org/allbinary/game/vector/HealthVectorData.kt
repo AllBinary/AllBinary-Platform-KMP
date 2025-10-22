@@ -32,7 +32,7 @@ open public class HealthVectorData
         
 companion object {
             
-    var points: Array<Array<IntArray?>?> = arrayOf(arrayOf(intArrayOf(2,1)
+    var points: Array<Array<IntArray?>?> = arrayOf(arrayOf<IntArray?>(intArrayOf(2,1)
 ,intArrayOf(3,2)
 ,intArrayOf(3,2)
 ,intArrayOf(4,1)

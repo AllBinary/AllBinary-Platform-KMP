@@ -41,7 +41,7 @@ open public class PathFindingNodeCostInfoFactoryBase
         
                 @Throws(Exception::class)
             
-    open fun create(geographicMapInterface: BasicGeographicMap, comingFromGeographicMapCellPosition: GeographicMapCellPosition, geographicMapCellPosition: GeographicMapCellPosition, costFromStart: Long, costToEnd: Long)
+    override fun create(geographicMapInterface: BasicGeographicMap, comingFromGeographicMapCellPosition: GeographicMapCellPosition, geographicMapCellPosition: GeographicMapCellPosition, costFromStart: Long, costToEnd: Long)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapInterface = geographicMapInterface
@@ -49,12 +49,16 @@ open public class PathFindingNodeCostInfoFactoryBase
     //var geographicMapCellPosition = geographicMapCellPosition
     //var costFromStart = costFromStart
     //var costToEnd = costToEnd
+
+
+
+                            throw RuntimeException()
 }
 
 
                 @Throws(Exception::class)
             
-    open fun getTotalCost(geographicMapInterface: BasicGeographicMap, comingFromGeographicMapCellPosition: GeographicMapCellPosition, geographicMapCellPosition: GeographicMapCellPosition)
+    override fun getTotalCost(geographicMapInterface: BasicGeographicMap, comingFromGeographicMapCellPosition: GeographicMapCellPosition, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : Long{
     //var geographicMapInterface = geographicMapInterface

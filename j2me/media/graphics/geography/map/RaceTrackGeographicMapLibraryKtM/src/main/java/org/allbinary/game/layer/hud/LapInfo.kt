@@ -31,7 +31,12 @@ open public class LapInfo
             : Object
          {
         
+companion object {
+            
+    var NULL_LAP_INFO: LapInfo = LapInfo( -1)
 
+        }
+            
     private var numberOfLaps: Int
 
     private var totalLaps: Int

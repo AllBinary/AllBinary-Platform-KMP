@@ -36,6 +36,8 @@ open public class GeographicMapCellType
         
 companion object {
             
+    val NULL_GEOGRAPHIC_MAP_CELL_TYPE_ARRAY: Array<GeographicMapCellType?> = arrayOfNulls(0)
+
     val NULL_GEOGRAPHIC_MAP_CELL_TYPE: GeographicMapCellType = GeographicMapCellType(Integer.MIN_VALUE)
 
         }

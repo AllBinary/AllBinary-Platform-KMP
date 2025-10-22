@@ -2,7 +2,7 @@
         /*
                 *  
                 *  AllBinary Open License Version 1 
-                *  Copyright (c) 2022 AllBinary 
+                *  Copyright (c) 2025 AllBinary 
                 *   
                 *  By agreeing to this license you and any business entity you represent are 
                 *  legally bound to the AllBinary Open License Version 1 legal agreement. 
@@ -14,7 +14,7 @@
         */
         
         /* Generated Code Do Not Modify */
-        package org.allbinary.media.graphics.geography.map.racetrack
+        package org.allbinary.game.layer.pickup
 
 
 
@@ -25,50 +25,52 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.logic.NullUtil
+import org.allbinary.animation.Animation
+import org.allbinary.layer.AllBinaryLayer
 
-open public class CustomMapGeneratorBase
+open public class PickedUpLayerInterfaceFactoryBase
             : Object
-         {
         
+                , PickedUpLayerInterfaceFactoryInterface {
+        
+companion object {
+            
+    val NULL_PICKED_UP_LAYER_FACTORY_BASE: PickedUpLayerInterfaceFactoryBase = PickedUpLayerInterfaceFactoryBase()
 
+        }
+            
             //Auto Generated
             public constructor() : super()
             {
             }            
         
-                @Throws(Exception::class)
-            
-    open fun copyMapIntoCustomMap()
+    override fun getIconLayer()
         //nullable = true from not(false or (false and true)) = true
-{
+: AllBinaryLayer{
+
+
+
+                            throw RuntimeException()
 }
 
 
-    open fun getCustomMapArray()
+    override fun getAnimationInterface()
         //nullable = true from not(false or (false and true)) = true
-: Array<IntArray?>{
+: Animation{
 
 
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return NullUtil.getInstance()!!.NULL_INT_ARRAY_ARRAY
+                            throw RuntimeException()
 }
 
 
-                @Throws(Exception::class)
-            
-    open fun getCustomType(column: Int, row: Int, currentType: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Int{
-    //var column = column
-    //var row = row
-    //var currentType = currentType
+    override fun getPickedUpLayerType()
+        //nullable = true from not(false or (false and true)) = true
+: PickedUpLayerType{
 
 
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return  -1
+                            throw RuntimeException()
 }
 
 

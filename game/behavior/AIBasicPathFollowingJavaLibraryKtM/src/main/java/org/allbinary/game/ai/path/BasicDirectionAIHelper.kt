@@ -46,10 +46,10 @@ open public class BasicDirectionAIHelper
 public constructor (name: String, angleInfo: AngleInfo)
             : super()
         {
-var name = name
-var angleInfo = angleInfo
-this.setName(name)
-this.setAngleInfo(angleInfo)
+    //var name = name
+    //var angleInfo = angleInfo
+this.name= name
+this.angleInfo= angleInfo
 }
 
 
@@ -128,10 +128,13 @@ var frame = frame
     open fun getAIKeyPressed(frame: Integer)
         //nullable = true from not(false or (false and false)) = true
 : Int{
-var frame = frame
+    //var frame = frame
+
+    var angle: Short = this.angleInfo!!.getAngleIncrementInfo()!!.getFrameAngle(frame.toInt()).toShort()
+
 
     
-                        if(this.angleInfo!!.getAngle() != this.angleInfo!!.getAngleIncrementInfo()!!.getFrameAngle(frame.toInt()))
+                        if(this.angleInfo!!.getAngle() != angle)
                         
                                     {
                                     
@@ -157,7 +160,7 @@ var frame = frame
     open fun getAIKeyPressedFromDirection(geographicMapDirectionData: Direction)
         //nullable = true from not(false or (false and false)) = true
 : Int{
-var geographicMapDirectionData = geographicMapDirectionData
+    //var geographicMapDirectionData = geographicMapDirectionData
 
     var keyDirection: Int =  -1
 
@@ -222,14 +225,6 @@ var geographicMapDirectionData = geographicMapDirectionData
 }
 
 
-    open fun setAngleInfo(angleInfo: AngleInfo)
-        //nullable = true from not(false or (false and false)) = true
-{
-var angleInfo = angleInfo
-this.angleInfo= angleInfo
-}
-
-
     open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
@@ -238,14 +233,6 @@ this.angleInfo= angleInfo
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return name
-}
-
-
-    open fun setName(name: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-var name = name
-this.name= name
 }
 
 

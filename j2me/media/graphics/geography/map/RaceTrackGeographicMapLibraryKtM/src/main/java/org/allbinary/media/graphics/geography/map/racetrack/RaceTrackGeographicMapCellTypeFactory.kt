@@ -47,9 +47,9 @@ companion object {
 
         }
             
-    var EMPTY_CELL_TYPE: GeographicMapCellType
+    var EMPTY_CELL_TYPE: GeographicMapCellType = GeographicMapCellType.NULL_GEOGRAPHIC_MAP_CELL_TYPE
 
-    var EASY_CELL_TYPE: GeographicMapCellType
+    var EASY_CELL_TYPE: GeographicMapCellType = GeographicMapCellType.NULL_GEOGRAPHIC_MAP_CELL_TYPE
 
     val BOTTOM_LEFT_TURN_ROAD_CELL_TYPE: RaceTrackGeographicMapCellType
 
@@ -67,7 +67,7 @@ companion object {
 
     val DEFAULT_FINISH_LINE_ROAD_CELL_TYPE: RaceTrackGeographicMapCellType
 
-    var FINISH_LINE_ROAD_CELL_TYPE: RaceTrackGeographicMapCellType
+    var FINISH_LINE_ROAD_CELL_TYPE: GeographicMapCellType = GeographicMapCellType.NULL_GEOGRAPHIC_MAP_CELL_TYPE
 public constructor (){
 
     var raceTrackGeographicMapCellTypes: RaceTrackGeographicMapCellTypes = RaceTrackGeographicMapCellTypes.getInstance()!!
@@ -83,7 +83,7 @@ DEFAULT_FINISH_LINE_ROAD_CELL_TYPE= raceTrackGeographicMapCellTypes!!.DEFAULT_FI
 }
 
 
-    open fun getStartType()
+    override fun getStartType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -94,7 +94,7 @@ DEFAULT_FINISH_LINE_ROAD_CELL_TYPE= raceTrackGeographicMapCellTypes!!.DEFAULT_FI
 }
 
 
-    open fun getEndType()
+    override fun getEndType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -105,7 +105,7 @@ DEFAULT_FINISH_LINE_ROAD_CELL_TYPE= raceTrackGeographicMapCellTypes!!.DEFAULT_FI
 }
 
 
-    open fun getEmptyType()
+    override fun getEmptyType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -116,7 +116,7 @@ DEFAULT_FINISH_LINE_ROAD_CELL_TYPE= raceTrackGeographicMapCellTypes!!.DEFAULT_FI
 }
 
 
-    open fun isPath(cellType: GeographicMapCellType)
+    override fun isPath(cellType: GeographicMapCellType)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var cellType = cellType

@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.media.graphics.geography.map.GeographicMapCellType
 
 open public class RaceTrackGeographicMapCellTypes
             : Object

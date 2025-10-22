@@ -28,6 +28,7 @@
 import org.allbinary.game.layer.AdvancedRTSGameLayer
 import org.allbinary.game.layer.waypoint.WaypointLayer
 import org.allbinary.graphics.CellPosition
+import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.media.graphics.geography.map.BasicGeographicMapCellPositionFactory
 import org.allbinary.media.graphics.geography.map.GeographicMapCellTypeFactory
 import org.allbinary.media.graphics.geography.map.drop.DropCellPositionHistory
@@ -50,7 +51,7 @@ this.geographicMapCellTypeFactory= this.raceTrackGeographicMap!!.getGeographicMa
 this.customMapArray= Array(mapArray!!.size) { IntArray(mapArray[0]!!.length) }
 
     
-                        if(mapArray!!.size != this.customMapArray!!.size || mapArray[0]!!.length != this.customMapArray[0]!!.length)
+                        if(mapArray!!.size != this.customMapArray!!.size || mapArray[0]!!.size != this.customMapArray[0]!!.size)
                         
                                     {
                                     
@@ -72,7 +73,7 @@ this.customMapArray= Array(mapArray!!.size) { IntArray(mapArray[0]!!.length) }
     var mapArray: Array<IntArray?> = raceTrackGeographicMap!!.getRaceTrackData()!!.getMapArray()!!
 
 
-    var startIndex2: Int = mapArray[0]!!.length -1
+    var startIndex2: Int = mapArray[0]!!.size -1
 
 
 
@@ -121,7 +122,23 @@ this.customMapArray[index]!![index2]= this.getCustomType(index2, index, mapArray
                         
                                     {
                                     
-    var rtsLayer: AdvancedRTSGameLayer = dropCellPositionHistory!!.getLayerInterface(cellPosition) as AdvancedRTSGameLayer
+    var layer: AllBinaryLayer = dropCellPositionHistory!!.getLayerInterface(cellPosition)!!
+
+
+    
+                        if(layer == AllBinaryLayer.NULL_ALLBINARY_LAYER)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return emptyType
+
+                                    }
+                                
+
+    var rtsLayer: AdvancedRTSGameLayer = layer as AdvancedRTSGameLayer
 
 
     

@@ -76,11 +76,11 @@ companion object {
 
     val ADJUSTING_FOR_SCALING_IN_LANDSCAPE: String = "Adjusting for Scaling in landscape display ratio: "
 
-    private var last: IntArray = IntArray(2)
+    private var last: IntArray = IntArray(4)
 
-    private var lastHalf: IntArray = IntArray(2)
+    private var lastHalf: IntArray = IntArray(4)
 
-    private var full: IntArray = IntArray(2)
+    private var full: IntArray = IntArray(4)
 
     private var top: Int= 0
 
@@ -95,6 +95,10 @@ companion object {
     val WIDTH: Int = 0
 
     val HEIGHT: Int = 1
+
+    val CUSTOM_WIDTH: Int = 2
+
+    val CUSTOM_HEIGHT: Int = 3
 
     private var scalableListener: BaseScalable = BaseScalable()
 
@@ -306,6 +310,7 @@ last[WIDTH]= aLastWidth
 lastHalf[WIDTH]= (last[WIDTH] shr 1)
 last[HEIGHT]= aLastHeight
 lastHalf[HEIGHT]= (last[HEIGHT] shr 1)
+SWTJOGLProcessor.getInstance()!!.setCustom(aLastWidth, aLastHeight, this.ratio)
 this.add(SET_LAST_SIZE_METHOD_NAME)
 }
 
@@ -539,6 +544,7 @@ last[WIDTH]= aLastWidth
 lastHalf[WIDTH]= (last[WIDTH] shr 1)
 last[HEIGHT]= aLastHeight
 lastHalf[HEIGHT]= (last[HEIGHT] shr 1)
+SWTJOGLProcessor.getInstance()!!.setCustom(aLastWidth, aLastHeight, this.ratio)
 this.add(commonStrings!!.UPDATE)
 
 
@@ -675,6 +681,62 @@ stringBuffer!!.append(lastHalf[HEIGHT]!!)
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.lastHalf[HEIGHT]!!
+}
+
+
+    open fun getCustomLastWidth()
+        //nullable = true from not(false or (false and true)) = true
+: Int{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.last[CUSTOM_WIDTH]!!
+}
+
+
+    open fun getCustomLastHeight()
+        //nullable = true from not(false or (false and true)) = true
+: Int{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.last[CUSTOM_HEIGHT]!!
+}
+
+
+    open fun getRawLastWidth()
+        //nullable = true from not(false or (false and true)) = true
+: Int{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.last[WIDTH]!!
+}
+
+
+    open fun getRawLastHeight()
+        //nullable = true from not(false or (false and true)) = true
+: Int{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.last[HEIGHT]!!
+}
+
+
+    open fun setCustom(width: Int, height: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var width = width
+    //var height = height
+this.last[CUSTOM_WIDTH]= width
+this.lastHalf[CUSTOM_WIDTH]= (last[CUSTOM_WIDTH] shr 1)
+this.last[CUSTOM_HEIGHT]= height
+this.lastHalf[CUSTOM_HEIGHT]= (last[CUSTOM_HEIGHT] shr 1)
 }
 
 

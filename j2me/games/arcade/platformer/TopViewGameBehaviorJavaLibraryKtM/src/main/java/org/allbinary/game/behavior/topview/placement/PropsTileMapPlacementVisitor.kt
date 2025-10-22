@@ -327,7 +327,7 @@ index3--
 
 
     
-                        if(x >= 0 && y >= 0 && x < mapData!!.size && y < mapData[0]!!.length)
+                        if(x >= 0 && y >= 0 && x < mapData!!.size && y < mapData[0]!!.size)
                         
                                     {
                                     

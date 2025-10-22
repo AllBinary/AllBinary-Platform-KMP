@@ -33,7 +33,7 @@ open public class PathFindingInfo
                 , PathFindingInfoInterface {
         
 
-    private var pathFinder: GeographicPathFinderBase
+    private var pathFinder: GeographicPathFinderBase = GeographicPathFinderBase.NULL_GEOGRAPHIC_PATH_FINDER_BASE
 
     private val startPathFindingNodeList: BasicArrayList
 
@@ -50,7 +50,7 @@ this.endPathFindingNodeList= BasicArrayList(1)
 }
 
 
-    open fun getStartPathFindingNodeList()
+    override fun getStartPathFindingNodeList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -61,7 +61,7 @@ this.endPathFindingNodeList= BasicArrayList(1)
 }
 
 
-    open fun getEndPathFindingNodeList()
+    override fun getEndPathFindingNodeList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -72,7 +72,7 @@ this.endPathFindingNodeList= BasicArrayList(1)
 }
 
 
-    open fun getPathFinder()
+    override fun getPathFinder()
         //nullable = true from not(false or (false and true)) = true
 : GeographicPathFinderBase{
 

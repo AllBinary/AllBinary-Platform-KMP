@@ -59,49 +59,46 @@ companion object {
 
                 @Throws(Exception::class)
             
-    open fun getInstance(geographicMapInterface: BasicGeographicMap)
+    override fun getInstance(geographicMapInterface: BasicGeographicMap)
         //nullable =  from not(true or (false and false)) = 
 : BasicGeographicMapCellPositionFactory{
     //var geographicMapInterface = geographicMapInterface
 
+    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+
     var allBinaryTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
 
 
-    var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = hashtable.get(allBinaryTiledLayer!!.getDataId()) as BasicGeographicMapCellPositionFactory
+    var geographicMapCellPositionFactoryCanBeNull: Any? = hashtable.get(allBinaryTiledLayer!!.getDataId())
 
 
     
-                        if(geographicMapCellPositionFactory != 
+                        if(geographicMapCellPositionFactoryCanBeNull == 
                                     null
                                 )
                         
                                     {
-                                    
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-
-logUtil!!.put(StringMaker().
-                            append("Reusing GeographicMapCellPositionFactory for TileLayer: ")!!.append(allBinaryTiledLayer!!.getDataId())!!.toString(), this, commonStrings!!.GET_INSTANCE)
+                                    logUtil!!.put(StringMaker().
+                            append("Creating GeographicMapCellPositionFactory for TileLayer: ")!!.append(allBinaryTiledLayer!!.getDataId()!!.toInt())!!.toString(), this, commonStrings!!.GET_INSTANCE)
+geographicMapCellPositionFactoryCanBeNull= BasicGeographicMapCellPositionFactory(geographicMapInterface)
+hashtable.put(allBinaryTiledLayer!!.getDataId(), geographicMapCellPositionFactoryCanBeNull)
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return geographicMapCellPositionFactory
+                        return geographicMapCellPositionFactoryCanBeNull as BasicGeographicMapCellPositionFactory
 
                                     }
                                 
                         else {
-                            
-    var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-
-logUtil!!.put(StringMaker().
-                            append("Creating GeographicMapCellPositionFactory for TileLayer: ")!!.append(allBinaryTiledLayer!!.getDataId())!!.toString(), this, commonStrings!!.GET_INSTANCE)
-geographicMapCellPositionFactory= BasicGeographicMapCellPositionFactory(geographicMapInterface)
-hashtable.put(allBinaryTiledLayer!!.getDataId(), geographicMapCellPositionFactory)
+                            logUtil!!.put(StringMaker().
+                            append("Reusing GeographicMapCellPositionFactory for TileLayer: ")!!.append(allBinaryTiledLayer!!.getDataId()!!.toInt())!!.toString(), this, commonStrings!!.GET_INSTANCE)
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return geographicMapCellPositionFactory
+                        return geographicMapCellPositionFactoryCanBeNull as BasicGeographicMapCellPositionFactory
 
                         }
                             

@@ -31,6 +31,7 @@ import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.racetrack.BasePathFindingInfoFactory
 import org.allbinary.media.graphics.geography.map.racetrack.RaceTrackRoadsGeographicMapCellHistoryFactory
 import org.allbinary.media.graphics.geography.pathfinding.PathFindingInfo
+import org.allbinary.media.graphics.geography.pathfinding.PathFindingNodeCostInfoFactoryBase
 
 open public class PathFindingInfoFactory : BasePathFindingInfoFactory {
         
@@ -66,8 +67,7 @@ companion object {
 
 PreLogUtil.put(commonStrings!!.START, this, commonStrings!!.GET_INSTANCE)
 
-    var pathFindingInfo: PathFindingInfo = PathFindingInfo(
-                            null)
+    var pathFindingInfo: PathFindingInfo = PathFindingInfo(PathFindingNodeCostInfoFactoryBase())
 
 RaceTrackRoadsGeographicMapCellHistoryFactory.getInstance()!!.init()
 this.init(geographicMapInterface, pathFindingInfo, graphArray)

@@ -42,10 +42,13 @@ open public class TiledLayerFactory
 : TiledLayer{
 var raceTrackData = raceTrackData
 
+    var mapArray: Array<IntArray?> = raceTrackData!!.getMapArray()!!
+
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return TiledLayer(raceTrackData!!.getMapArray()[0]!!.length, raceTrackData!!.getMapArray()!!.length, raceTrackData!!.getTileSetImage(), raceTrackData!!.getCellWidth(), raceTrackData!!.getCellHeight())
+                        return TiledLayer(mapArray[0]!!.size, mapArray!!.size, raceTrackData!!.getTileSetImage(), raceTrackData!!.getCellWidth(), raceTrackData!!.getCellHeight())
 }
 
 
@@ -54,10 +57,13 @@ var raceTrackData = raceTrackData
 : TiledLayer{
 var raceTrackData = raceTrackData
 
+    var mapArray: Array<IntArray?> = raceTrackData!!.getMapArray()!!
+
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return TiledLayer(raceTrackData!!.getMapArray()[0]!!.length, raceTrackData!!.getMapArray()!!.length, raceTrackData!!.getMiniTileSetImage(), raceTrackData!!.getMiniCellWidth(), raceTrackData!!.getMiniCellHeight())
+                        return TiledLayer(mapArray[0]!!.size, mapArray!!.size, raceTrackData!!.getMiniTileSetImage(), raceTrackData!!.getMiniCellWidth(), raceTrackData!!.getMiniCellHeight())
 }
 
 

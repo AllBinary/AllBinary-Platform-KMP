@@ -61,9 +61,7 @@ public constructor (name: String, type: Int, cost: Int)
                                 )
                         
                                     {
-                                    
-                        //Otherwise - ExpressionStmt - expression - ObjectCreationExpr
-
+                                    RaceTrackGeographicMapCellType(name, type, cost)
 
                                     }
                                 
@@ -105,9 +103,7 @@ type= types[index]!!
                                 )
                         
                                     {
-                                    
-                        //Otherwise - ExpressionStmt - expression - ObjectCreationExpr
-
+                                    RaceTrackGeographicMapCellType(name, type, cost)
 
                                     }
                                 
@@ -154,9 +150,7 @@ get.
                                 )
                         
                                     {
-                                    
-                        //Otherwise - ExpressionStmt - expression - ObjectCreationExpr
-
+                                    RaceTrackGeographicMapCellType(name, type, cost)
 
                                     }
                                 

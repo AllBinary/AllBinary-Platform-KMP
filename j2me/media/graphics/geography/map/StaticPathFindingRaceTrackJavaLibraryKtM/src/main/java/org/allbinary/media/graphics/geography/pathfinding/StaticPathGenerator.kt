@@ -10,7 +10,7 @@
                 *  You may obtain the AllBinary Open License Version 1 legal agreement from
                 *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
                 *  
-                *  Created By: Travis Berthelot  
+                *  Created By: Travis Berthelot   
         */
         
         /* Generated Code Do Not Modify */
@@ -40,6 +40,7 @@ import org.allbinary.media.graphics.geography.map.BasicGeographicMapCellPosition
 import org.allbinary.media.graphics.geography.map.GeographicMapCellHistory
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.media.graphics.geography.map.PathData
+import org.allbinary.util.BasicArrayListUtil
 
 open public class StaticPathGenerator
             : Object
@@ -48,19 +49,21 @@ open public class StaticPathGenerator
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-                @Throws(Exception::class)
-            
-    open fun init(geographicMapInterface: BasicGeographicMap, totalPaths: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-var geographicMapInterface = geographicMapInterface
-var totalPaths = totalPaths
-}
-
+    private val basicArrayListUtil: BasicArrayListUtil = BasicArrayListUtil.getInstance()!!
 protected constructor ()
             : super()
         {
 PreLogUtil.put("Using Static Path Finding", this, CommonStrings.getInstance()!!.CONSTRUCTOR)
+}
+
+
+                @Throws(Exception::class)
+            
+    open fun init(geographicMapInterface: Any, totalPaths: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var geographicMapInterface = geographicMapInterface
+    //var totalPaths = totalPaths
 }
 
 
@@ -128,9 +131,7 @@ list.add(geographicMapCellPosition)
 
 
     
-                        if(list == 
-                                    null
-                                )
+                        if(list == basicArrayListUtil!!.getImmutableInstance())
                         
                                     {
                                     list= BasicArrayList()

@@ -59,8 +59,8 @@ public constructor (raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrackData, 
 
                             //For kotlin this is before the body of the constructor.
                     
-this.setRaceTrackInfo(raceTrackInfo)
-this.setRaceTrackData(raceTrackData)
+this.raceTrackInfo= raceTrackInfo
+this.raceTrackData= raceTrackData
 this.miniGeographicMap= miniGeographicMap
 
     var miniTiledLayer: AllBinaryTiledLayer = this.miniGeographicMap!!.getAllBinaryTiledLayer()!!
@@ -107,7 +107,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR)
 }
 
 
-    open fun getRaceTrackInfo()
+    override fun getRaceTrackInfo()
         //nullable = true from not(false or (false and true)) = true
 : RaceTrackInfo{
 
@@ -118,7 +118,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR)
 }
 
 
-    open fun setRaceTrackInfo(aRaceTrackInfo: RaceTrackInfo)
+    override fun setRaceTrackInfo(aRaceTrackInfo: RaceTrackInfo)
         //nullable = true from not(false or (false and false)) = true
 {
 var aRaceTrackInfo = aRaceTrackInfo
@@ -145,7 +145,7 @@ this.miniGeographicMap= miniBasicGeographicMap
 }
 
 
-    open fun getRaceTrackData()
+    override fun getRaceTrackData()
         //nullable = true from not(false or (false and true)) = true
 : RaceTrackData{
 
@@ -156,7 +156,7 @@ this.miniGeographicMap= miniBasicGeographicMap
 }
 
 
-    open fun setRaceTrackData(raceTrackData: RaceTrackData)
+    override fun setRaceTrackData(raceTrackData: RaceTrackData)
         //nullable = true from not(false or (false and false)) = true
 {
 var raceTrackData = raceTrackData

@@ -75,7 +75,7 @@ private constructor (){
 
                 @Throws(Exception::class)
             
-    open fun update(allBinaryGameLayerManager: AllBinaryGameLayerManager, geographicMapInterface: BasicGeographicMap)
+    override fun update(allBinaryGameLayerManager: AllBinaryGameLayerManager, geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -91,7 +91,7 @@ this.cellHeight= tiledLayer!!.getCellHeight() /this.cellsPerRowOrColumn
 
                 @Throws(Exception::class)
             
-    open fun drop(allBinaryLayerManager: AllBinaryLayerManager, index: Int)
+    override fun drop(allBinaryLayerManager: AllBinaryLayerManager, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager

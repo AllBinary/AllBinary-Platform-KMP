@@ -25,6 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import java.util.Hashtable
+import org.allbinary.graphics.CellPosition
 
 open public class CachingGeographicMapCellPositionFactory : BasicGeographicMapCellPositionFactory {
         
@@ -41,29 +43,32 @@ var geographicMapInterface = geographicMapInterface
 
                 @Throws(Exception::class)
             
-    open fun createInstance(i_column: Int, i_row: Int, width: Int, height: Int)
+    override fun createInstance(i_column: Int, i_row: Int, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellPosition{
-var i_column = i_column
-var i_row = i_row
-var width = width
-var height = height
+    //var i_column = i_column
+    //var i_row = i_row
+    //var width = width
+    //var height = height
 
-    var cellPositionKey: String = GeographicMapCellPosition.toString(i_column, i_row)!!
+    var hashtable: Hashtable<Any, Any> = GeographicMapCellPositionFactory.getHashtable()!!
 
 
-    var cellPosition: GeographicMapCellPosition = GeographicMapCellPositionFactory.getHashtable()!!.get(cellPositionKey as Object) as GeographicMapCellPosition
+    var cellPositionKey: String = CellPosition.toString(i_column, i_row)!!
+
+
+    var cellPositionCanBeNull: Any? = hashtable.get(cellPositionKey as Object)
 
 
     
-                        if(cellPosition == 
+                        if(cellPositionCanBeNull == 
                                     null
                                 )
                         
                                     {
-                                    cellPosition= this.geographicMapCellPositionFactoryInterface!!.getInstance(this.geographicMapInterface, i_column, i_row, columns, rows, width, height)
-geographicMapCellPositionArray[i_row]!![i_column]= cellPosition
-GeographicMapCellPositionFactory.getHashtable()!!.put(cellPositionKey, cellPosition)
+                                    cellPositionCanBeNull= this.geographicMapCellPositionFactoryInterface!!.getInstance(this.geographicMapInterface, i_column, i_row, this.getColumns(), this.getRows(), width, height)
+geographicMapCellPositionArray[i_row]!![i_column]= cellPositionCanBeNull as GeographicMapCellPosition
+hashtable.put(cellPositionKey, cellPositionCanBeNull)
 
                                     }
                                 
@@ -71,7 +76,7 @@ GeographicMapCellPositionFactory.getHashtable()!!.put(cellPositionKey, cellPosit
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return cellPosition
+                        return cellPositionCanBeNull as GeographicMapCellPosition
 }
 
 

@@ -32,7 +32,12 @@ open public class GeographicPathFinderBase
             : Object
          {
         
+companion object {
+            
+    val NULL_GEOGRAPHIC_PATH_FINDER_BASE: GeographicPathFinderBase = GeographicPathFinderBase()
 
+        }
+            
             //Auto Generated
             public constructor() : super()
             {

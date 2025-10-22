@@ -32,7 +32,7 @@ open public class MineVectorData
         
 companion object {
             
-    var points: Array<Array<IntArray?>?> = arrayOf(arrayOf(intArrayOf(10,5)
+    var points: Array<Array<IntArray?>?> = arrayOf(arrayOf<IntArray?>(intArrayOf(10,5)
 ,intArrayOf(2,6)
 ,intArrayOf(1000,1000)
 ,intArrayOf(2,2)
