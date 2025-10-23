@@ -30,7 +30,6 @@
 import org.allbinary.game.input.event.GameKeyEvent
 import org.allbinary.game.input.event.GameKeyEventListenerInterface
 import org.allbinary.logic.communication.log.ForcedLogUtil
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.util.event.AllBinaryEventObject

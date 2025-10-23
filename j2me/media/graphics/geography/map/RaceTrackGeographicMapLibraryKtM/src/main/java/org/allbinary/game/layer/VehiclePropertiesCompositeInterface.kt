@@ -33,10 +33,6 @@ interface VehiclePropertiesCompositeInterface {
         //nullable = true from not(false or (false and true)) = true
 : VehicleProperties
 
-    open fun setVehicleProperties(vehicleProperties: VehicleProperties)
-        //nullable = true from not(false or (false and false)) = true
-
-
 }
                 
             

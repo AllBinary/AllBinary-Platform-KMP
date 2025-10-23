@@ -2,7 +2,7 @@
         /*
                 *  
                 *  AllBinary Open License Version 1 
-                *  Copyright (c) 2003 AllBinary 
+                *  Copyright (c) 2025 AllBinary 
                 *   
                 *  By agreeing to this license you and any business entity you represent are 
                 *  legally bound to the AllBinary Open License Version 1 legal agreement. 
@@ -14,7 +14,7 @@
         */
         
         /* Generated Code Do Not Modify */
-        package org.allbinary.game.input
+        package org.allbinary.game.layer
 
 
 
@@ -25,31 +25,29 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.game.input.event.GameKeyEvent
-import org.allbinary.layer.AllBinaryLayerManager
+import org.allbinary.media.graphics.geography.map.BasicGeographicMap
+import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
+import org.allbinary.util.BasicArrayList
 
-open public class RTSPlayerLeftGameInputProcessor : RTSPlayerGameInputProcessor {
+interface GeographicMapCellPositionAreaInterface {
         
-public constructor (rtsPlayerGameInput: RTSPlayerGameInput)                        
 
-                            : super(rtsPlayerGameInput){
-var rtsPlayerGameInput = rtsPlayerGameInput
+    open fun getNextSurroundingGeographicMapCellPosition()
+        //nullable = true from not(false or (false and true)) = true
+: GeographicMapCellPosition
 
+    open fun getOccupyingGeographicMapCellPositionList()
+        //nullable = true from not(false or (false and true)) = true
+: BasicArrayList
 
-                            //For kotlin this is before the body of the constructor.
-                    
-}
-
+    open fun getSurroundingGeographicMapCellPositionList()
+        //nullable = true from not(false or (false and true)) = true
+: BasicArrayList
 
                 @Throws(Exception::class)
             
-    override fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+    open fun update(geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
-{
-var allbinaryLayerManager = allbinaryLayerManager
-var gameKeyEvent = gameKeyEvent
-rtsPlayerGameInput!!.left()
-}
 
 
 }

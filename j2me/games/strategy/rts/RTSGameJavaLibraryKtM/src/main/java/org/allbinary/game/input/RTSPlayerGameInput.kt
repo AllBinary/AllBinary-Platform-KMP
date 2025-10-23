@@ -36,13 +36,18 @@ import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.configuration.feature.InputFeatureFactory
 import org.allbinary.game.displayable.canvas.AllBinaryGameCanvas
 import org.allbinary.game.input.event.GameKeyEvent
+import org.allbinary.game.input.form.NullRTSFormInputFactory
 import org.allbinary.game.layer.AllBinaryGameLayerManager
 import org.allbinary.game.layer.AllBinaryTiledLayer
+import org.allbinary.game.layer.NullRTSLayer
+import org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer
 import org.allbinary.graphics.GPoint
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.displayable.event.DisplayChangeEvent
 import org.allbinary.input.motion.gesture.observer.MotionGestureEvent
+import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.layer.AllBinaryLayerManager
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.media.audio.SecondaryPlayerQueueFactory
@@ -75,7 +80,7 @@ open public class RTSPlayerGameInput : PlayerGameInput {
 
     private val rtsPlayerLayerInterface: RTSPlayerLayerInterface
 
-    private var selectedRtsFormInput: RTSFormInput
+    private var selectedRtsFormInput: RTSFormInput = NullRTSFormInputFactory.getInstance()!!
 
     private val layerPositionFinderInterface: LayerPositionFinderInterface
 public constructor (gameCanvas: AllBinaryGameCanvas, inputList: BasicArrayList, playerInputId: Int, towerInfoPaintable: RTSLayerInfoPaintable, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerPositionFinderInterface: LayerPositionFinderInterface, selectRTSLayerVisitorFactoryInterface: SelectRTSLayerVisitorFactoryInterface)                        
@@ -100,9 +105,7 @@ this.rtsPlayerLayerInterface= rtsPlayerLayerInterface
 this.selectedRTSLayerPlayerGameInput= SelectedRTSLayersPlayerGameInput(this.getRTSLayerInfoPaintable(), this.getRtsPlayerLayerInterface(), this.inputList, playerInputId, selectRTSLayerVisitorFactoryInterface)
 
     
-                        if(this.rtsPlayerLayerInterface != 
-                                    null
-                                )
+                        if(this.rtsPlayerLayerInterface != NullRTSLayer.NULL_RTS_LAYER)
                         
                                     {
                                     this.setSelectedRtsFormInput(this.rtsPlayerLayerInterface!!.getRTSFormInput())
@@ -129,9 +132,7 @@ this.layerPositionFinderInterface= layerPositionFinderInterface
 this.selectedRTSLayerPlayerGameInput!!.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 
     
-                        if(this.selectedRtsFormInput != 
-                                    null
-                                )
+                        if(this.selectedRtsFormInput != NullRTSFormInputFactory.getInstance())
                         
                                     {
                                     this.selectedRtsFormInput!!.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
@@ -293,23 +294,25 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.PROCESS_INPUT,
                                     {
                                     SecondaryPlayerQueueFactory.getInstance()!!.add(SelectSound.getInstance())
 
-    var foundRTSLayer: RTSLayer = this.layerPositionFinderInterface!!.getLayerInterface(geographicMapCellPosition) as RTSLayer
+    var layer: AllBinaryLayer = this.layerPositionFinderInterface!!.getLayerInterface(geographicMapCellPosition)!!
 
 
     
-                        if(foundRTSLayer == 
-                                    null
-                                )
+                        if(layer == AllBinaryLayer.NULL_ALLBINARY_LAYER)
                         
                                     {
-                                    
+                                    layer= CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER
+
                                     }
                                 
                         else {
-                            geographicMapCellPosition= geographicMapInterface!!.getCellPositionAt(foundRTSLayer!!.getXP(), foundRTSLayer!!.getYP())
+                            geographicMapCellPosition= geographicMapInterface!!.getCellPositionAt(layer.getXP(), layer.getYP())
 
                         }
                             
+
+    var foundRTSLayer: CollidableDestroyableDamageableLayer = layer as CollidableDestroyableDamageableLayer
+
 this.setSelectedRTSLayer(foundRTSLayer, geographicMapCellPosition)
 
                                     }
@@ -328,7 +331,7 @@ logUtil!!.put(StringMaker().
 
                 @Throws(Exception::class)
             
-    open fun setSelectedRTSLayer(rtsLayer: RTSLayer, geographicMapCellPosition: GeographicMapCellPosition)
+    open fun setSelectedRTSLayer(rtsLayer: CollidableDestroyableDamageableLayer, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
 var rtsLayer = rtsLayer
@@ -429,7 +432,7 @@ graphics.drawRect(point.getX() -allBinaryTiledLayer!!.getXP(), point.getY() -all
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return selectedRtsFormInput
+                        return this.selectedRtsFormInput
 }
 
 

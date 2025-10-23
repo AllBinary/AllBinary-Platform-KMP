@@ -45,7 +45,7 @@ var upgradableRTSLayerHudPaintable = upgradableRTSLayerHudPaintable
 }
 
 
-    open fun update(rtsLayer: RTSLayer)
+    override fun update(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var rtsLayer = rtsLayer
@@ -55,7 +55,7 @@ this.setCost(StringMaker().
 }
 
 
-    open fun paint(graphics: Graphics)
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

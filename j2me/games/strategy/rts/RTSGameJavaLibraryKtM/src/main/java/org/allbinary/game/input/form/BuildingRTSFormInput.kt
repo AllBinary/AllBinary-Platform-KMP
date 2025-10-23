@@ -27,7 +27,7 @@
         
 import org.allbinary.game.input.RTSPlayerGameInput
 import org.allbinary.game.layer.DemoLockedWithCostLayerInterfaceFactoryInterface
-import org.allbinary.game.layer.GeographicMapCellPositionArea
+import org.allbinary.game.layer.GeographicMapCellPositionAreaBase
 import org.allbinary.game.layer.RTSGameStrings
 import org.allbinary.game.layer.RTSLayer
 import org.allbinary.game.layer.RTSPlayerLayerInterface
@@ -46,6 +46,7 @@ import org.allbinary.game.identification.Group
 import org.allbinary.game.layer.AllBinaryGameLayerManager
 import org.allbinary.game.layer.hud.event.GameNotificationEvent
 import org.allbinary.game.layer.hud.event.GameNotificationEventHandler
+import org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer
 import org.allbinary.graphics.GPoint
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.layer.AllBinaryLayerManager
@@ -61,8 +62,6 @@ import org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicM
 
 open public class BuildingRTSFormInput : RTSFormInput {
         
-
-    val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var isUnitProducer: Boolean
 
@@ -115,7 +114,7 @@ this.mapEdgeGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.ge
 
                 @Throws(Exception::class)
             
-    open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
+    override fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -140,7 +139,7 @@ this.mapEdgeGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.getF
 
                 @Throws(Exception::class)
             
-    open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, itemIndex: Int)
+    override fun process(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, itemIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedRtsLayer = associatedRtsLayer
@@ -275,9 +274,7 @@ LockedFeatureNotificationUtil.getInstance()!!.fire(geographicMapInterface!!.getF
                                     {
                                     
     
-                        if(this.newUnconstructedRTSLayerInterfaceArray[itemIndex] == 
-                                    null
-                                )
+                        if(this.newUnconstructedRTSLayerInterfaceArray[itemIndex] == CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER)
                         
                                     {
                                     this.newUnconstructedRTSLayerInterfaceArray[itemIndex]= this.getInstance(layerManager, item, geographicMapCellPosition)
@@ -286,14 +283,20 @@ LockedFeatureNotificationUtil.getInstance()!!.fire(geographicMapInterface!!.getF
                                 
                         else {
                             
+    var rtsLayer: RTSLayer = this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!! as RTSLayer
+
+
     var cellPoint: GPoint = geographicMapCellPosition!!.getPoint()!!
 
-this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!!.setPosition(cellPoint!!.getX(), cellPoint!!.getY(), cellPoint!!.getZ())
-this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!!.geographicMapCellPositionArea!!.update(geographicMapInterface)
+rtsLayer!!.setPosition(cellPoint!!.getX(), cellPoint!!.getY(), cellPoint!!.getZ())
+rtsLayer!!.geographicMapCellPositionAreaBase!!.update(geographicMapInterface)
 
                         }
                             
-this.attemptBuild(rtsPlayerLayerInterface, layerManager, this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!!, itemIndex)
+
+    var rtsLayer: RTSLayer = this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!! as RTSLayer
+
+this.attemptBuild(rtsPlayerLayerInterface, layerManager, rtsLayer, itemIndex)
 
                                     }
                                 
@@ -360,7 +363,7 @@ this.attemptBuild(rtsPlayerLayerInterface, layerManager, this.newUnconstructedRT
 logUtil!!.put(StringMaker().
                             append("Layer: ")!!.append(StringUtil.getInstance()!!.toString(layerInterface))!!.toString(), this, "attemptBuild")
 
-    var geographicMapCellPositionArea: GeographicMapCellPositionArea = layerInterface!!.geographicMapCellPositionArea
+    var geographicMapCellPositionArea: GeographicMapCellPositionAreaBase = layerInterface!!.geographicMapCellPositionAreaBase
 
 
     var occupyList: BasicArrayList = geographicMapCellPositionArea!!.getOccupyingGeographicMapCellPositionList()!!
@@ -445,9 +448,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "attemptBuild")
                         
                                     {
                                     layerInterface!!.construct(rtsPlayerLayerInterface)
-newUnconstructedRTSLayerInterfaceArray[itemIndex]= 
-                                        null
-                                    
+newUnconstructedRTSLayerInterfaceArray[itemIndex]= CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER
 capital.removeMoney(cost)
 this.add(rtsPlayerLayerInterface, layerManager, layerInterface)
 
@@ -488,7 +489,7 @@ this.add(rtsPlayerLayerInterface, layerManager, layerInterface)
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
     //var layerInterface = layerInterface
 
-    var geographicMapCellPositionArea: GeographicMapCellPositionArea = layerInterface!!.geographicMapCellPositionArea
+    var geographicMapCellPositionArea: GeographicMapCellPositionAreaBase = layerInterface!!.geographicMapCellPositionAreaBase
 
 
     var occupyList: BasicArrayList = geographicMapCellPositionArea!!.getOccupyingGeographicMapCellPositionList()!!
@@ -583,7 +584,7 @@ this.add(rtsPlayerLayerInterface, layerManager, layerInterface)
     //var layerManager = layerManager
     //var layerInterface = layerInterface
 
-    var geographicMapCellPositionArea: GeographicMapCellPositionArea = layerInterface!!.geographicMapCellPositionArea
+    var geographicMapCellPositionArea: GeographicMapCellPositionAreaBase = layerInterface!!.geographicMapCellPositionAreaBase
 
 
     var occupyList: BasicArrayList = geographicMapCellPositionArea!!.getOccupyingGeographicMapCellPositionList()!!
@@ -612,7 +613,7 @@ rtsPlayerLayerInterface!!.add(BuildingSound.getInstance())
 : Boolean{
 var layerInterface = layerInterface
 
-    var geographicMapCellPositionArea: GeographicMapCellPositionArea = layerInterface!!.geographicMapCellPositionArea
+    var geographicMapCellPositionArea: GeographicMapCellPositionAreaBase = layerInterface!!.geographicMapCellPositionAreaBase
 
 
     var occupyList: BasicArrayList = geographicMapCellPositionArea!!.getOccupyingGeographicMapCellPositionList()!!

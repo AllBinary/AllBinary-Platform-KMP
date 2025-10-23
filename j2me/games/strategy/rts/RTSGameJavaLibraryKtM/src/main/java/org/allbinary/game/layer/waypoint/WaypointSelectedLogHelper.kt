@@ -66,7 +66,7 @@ companion object {
 
     private val stringUtil: StringUtil = StringUtil.getInstance()!!
 
-    open fun onWaypointEvent(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, advancedRTSGameLayer: PathFindingLayerInterface)
+    override fun onWaypointEvent(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, advancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -93,7 +93,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "onWaypointEvent")
 }
 
 
-    open fun addWaypointFromBuilding(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, advancedRTSGameLayer: PathFindingLayerInterface)
+    override fun addWaypointFromBuilding(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, advancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -120,7 +120,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: onWaypointEvent")
 }
 
 
-    open fun addWaypointFromBuilding(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, advancedRTSGameLayer: PathFindingLayerInterface, list: BasicArrayList)
+    override fun addWaypointFromBuilding(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, advancedRTSGameLayer: PathFindingLayerInterface, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -136,7 +136,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: onWaypointEvent")
 }
 
 
-    open fun insertWaypoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, index: Int, rtsLayer: CollidableDestroyableDamageableLayer, waypointName: String)
+    override fun insertWaypoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, index: Int, rtsLayer: CollidableDestroyableDamageableLayer, waypointName: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -156,7 +156,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: insertWaypoint")
 }
 
 
-    open fun insertWaypoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, index: Int, rtsLayer: CollidableDestroyableDamageableLayer, waypointName: String, list: BasicArrayList)
+    override fun insertWaypoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, index: Int, rtsLayer: CollidableDestroyableDamageableLayer, waypointName: String, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -178,7 +178,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: insertWaypoint")
 }
 
 
-    open fun setRandomGeographicMapCellHistory(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, pathsList: BasicArrayList)
+    override fun setRandomGeographicMapCellHistory(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, pathsList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -199,7 +199,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: setRandomGeographicMap
 }
 
 
-    open fun moveAwayFromBuilding(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
+    override fun moveAwayFromBuilding(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -208,7 +208,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-    open fun needToMove(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior: WaypointBehaviorBase)
+    override fun needToMove(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior: WaypointBehaviorBase)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -218,7 +218,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-    open fun setRandomGeographicMapCellHistory(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
+    override fun setRandomGeographicMapCellHistory(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -227,7 +227,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-    open fun setCurrentPathGeographicMapCellPosition(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, existingCurrentPathGeographicMapCellPosition: GeographicMapCellPosition, currentPathGeographicMapCellPosition: GeographicMapCellPosition)
+    override fun setCurrentPathGeographicMapCellPosition(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, existingCurrentPathGeographicMapCellPosition: GeographicMapCellPosition, currentPathGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -243,7 +243,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-    open fun setNextUnvisitedPathGeographicMapCellPosition(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, existingNextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition, nextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition)
+    override fun setNextUnvisitedPathGeographicMapCellPosition(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, existingNextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition, nextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer

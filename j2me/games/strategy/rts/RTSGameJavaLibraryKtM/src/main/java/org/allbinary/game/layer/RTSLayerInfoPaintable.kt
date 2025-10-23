@@ -37,14 +37,14 @@ public constructor (){
 }
 
 
-    open fun update()
+    override fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 this.initUpdatePaintable!!.update()
 }
 
 
-    open fun paint(graphics: Graphics)
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

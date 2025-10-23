@@ -27,6 +27,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.NullUtil
 import org.allbinary.thread.ARunnable
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
@@ -34,24 +35,27 @@ import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.media.graphics.geography.pathfinding.MultipassState
 import org.allbinary.media.graphics.geography.pathfinding.PathFindingInfo
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListUtil
 
 open public class MultipassWaypointPathRunnable : WaypointPathRunnableBase {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var done: Boolean = false
-
-    private var list: BasicArrayList
-
-    private var pathFindingInfo: PathFindingInfo
+    private val basicArrayListUtil: BasicArrayListUtil = BasicArrayListUtil.getInstance()!!
 
     private val multipassState: MultipassState = MultipassState()
+
+    private var done: Boolean = false
+
+    private var list: BasicArrayList = basicArrayListUtil!!.getImmutableInstance()!!
+
+    private var pathFindingInfo: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     private val FIRST_RUNNABLE: Runnable = object: ARunnable()
                                 {
                                 
-    open fun run()
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -75,13 +79,14 @@ reset2()
 
                                     }
                                 
-pathFindingInfo= targetLayer!!.getWaypointBehavior()!!.getWaypoint()!!.getPathFindingInfo(geographicMapCellPosition)
-list= targetLayer!!.getWaypointBehavior()!!.getWaypoint()!!.getPathsList(geographicMapCellPosition, pathFindingInfo, multipassState)
+pathFindingInfo= targetPathFindingLayer!!.getWaypointBehavior()!!.getWaypoint()!!.getPathFindingInfo(geographicMapCellPosition)
+
+    var localPathFindingInfo: PathFindingInfo = pathFindingInfo as PathFindingInfo
+
+list= targetPathFindingLayer!!.getWaypointBehavior()!!.getWaypoint()!!.getPathsList(geographicMapCellPosition, localPathFindingInfo, multipassState)
 
     
-                        if(list != 
-                                    null
-                                )
+                        if(list != basicArrayListUtil!!.getImmutableInstance())
                         
                                     {
                                     END_RUNNABLE.run()
@@ -111,7 +116,7 @@ finish()
     private val SECOND_RUNNABLE: Runnable = object: ARunnable()
                                 {
                                 
-    open fun run()
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -119,12 +124,13 @@ finish()
             
     var geographicMapCellPosition: GeographicMapCellPosition = pathFindingLayer!!.getCurrentGeographicMapCellPosition()!!
 
-list= targetLayer!!.getWaypointBehavior()!!.getWaypoint()!!.getPathsList(geographicMapCellPosition, pathFindingInfo, multipassState)
+
+    var localPathFindingInfo: PathFindingInfo = pathFindingInfo as PathFindingInfo
+
+list= targetPathFindingLayer!!.getWaypointBehavior()!!.getWaypoint()!!.getPathsList(geographicMapCellPosition, localPathFindingInfo, multipassState)
 
     
-                        if(list != 
-                                    null
-                                )
+                        if(list != basicArrayListUtil!!.getImmutableInstance())
                         
                                     {
                                     END_RUNNABLE.run()
@@ -149,7 +155,7 @@ finish()
     private val END_RUNNABLE: Runnable = object: ARunnable()
                                 {
                                 
-    open fun run()
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -177,7 +183,7 @@ finish()
     private val ALREADY_ENDED_RUNNABLE: Runnable = object: ARunnable()
                                 {
                                 
-    open fun run()
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -194,14 +200,14 @@ public constructor (){
 }
 
 
-    open fun setRunning(isRunning: Boolean)
+    override fun setRunning(isRunning: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var isRunning = isRunning
-this.running= isRunning
+this.runningP= isRunning
 
     
-                        if(this.running)
+                        if(this.runningP)
                         
                                     {
                                     this.reset()
@@ -212,7 +218,7 @@ this.done= false
 }
 
 
-    open fun run()
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -236,9 +242,7 @@ this.setRunning(false)
 multipassState!!.step= 0
 multipassState!!.iteration= 0
 multipassState!!.iteration2= 0
-pathFindingInfo= 
-                                        null
-                                    
+pathFindingInfo= NullUtil.getInstance()!!.NULL_OBJECT
 }
 
 
@@ -251,7 +255,7 @@ done= true
 }
 
 
-    open fun isDone()
+    override fun isDone()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -262,7 +266,7 @@ done= true
 }
 
 
-    open fun reset()
+    override fun reset()
         //nullable = true from not(false or (false and true)) = true
 {
 this.reset2()

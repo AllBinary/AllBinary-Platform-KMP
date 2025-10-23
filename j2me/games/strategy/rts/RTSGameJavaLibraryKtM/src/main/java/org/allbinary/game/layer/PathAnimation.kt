@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.logic.string.StringMaker
 import javax.microedition.lcdui.Graphics
 import org.allbinary.animation.Animation
 import org.allbinary.graphics.GPoint
@@ -36,6 +35,7 @@ import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.GeographicMapCellHistory
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.media.graphics.geography.map.GeographicMapCompositeInterface
+import org.allbinary.media.graphics.geography.map.SimpleGeographicMapCellPositionFactory
 import org.allbinary.util.BasicArrayList
 
 open public class PathAnimation : Animation {
@@ -47,7 +47,7 @@ open public class PathAnimation : Animation {
 
     private val pathFindingLayer: PathFindingLayerInterface
 
-    var allBinaryGameLayerManager: AllBinaryGameLayerManager
+    var allBinaryGameLayerManagerP: AllBinaryGameLayerManager = AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER
 public constructor (pathFindingLayer: PathFindingLayerInterface, linePathAnimation: LinePathAnimation){
     //var pathFindingLayer = pathFindingLayer
     //var linePathAnimation = linePathAnimation
@@ -62,13 +62,13 @@ this.linePathAnimation= linePathAnimation
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
-this.allBinaryGameLayerManager= allBinaryGameLayerManager
+this.allBinaryGameLayerManagerP= allBinaryGameLayerManager
 }
 
 
                 @Throws(Exception::class)
             
-    open fun nextFrame()
+    override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
 }
@@ -80,7 +80,7 @@ this.allBinaryGameLayerManager= allBinaryGameLayerManager
 
     private val endColor: BasicColor = BasicColorFactory.getInstance()!!.GREEN
 
-    open fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -113,7 +113,7 @@ this.allBinaryGameLayerManager= allBinaryGameLayerManager
                         
                                     {
                                     
-    var geographicMapCompositeInterface: GeographicMapCompositeInterface = this.allBinaryGameLayerManager as GeographicMapCompositeInterface
+    var geographicMapCompositeInterface: GeographicMapCompositeInterface = this.allBinaryGameLayerManagerP as GeographicMapCompositeInterface
 
 
     var geographicMapInterface: BasicGeographicMap = geographicMapCompositeInterface!!.getGeographicMapInterface()[0]!!
@@ -122,9 +122,7 @@ this.allBinaryGameLayerManager= allBinaryGameLayerManager
     var tiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
 
 
-    var geographicMapCellPosition: GeographicMapCellPosition = 
-                null
-            
+    var geographicMapCellPosition: GeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
 
     var nextPoint: GPoint

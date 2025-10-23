@@ -43,11 +43,13 @@
         <module>./j2me/games/platform/AllBinaryOnAllPlaformsJavaLibraryP</module>
         
         
-        <!--        <module>./j2me/media/graphics/animation/image/AllBinaryHTMLImageAnimationRotationJavaLibraryKtM</module>
+        <!--        <module>./j2me/media/graphics/animation/image/AllBinaryHTMLImageAnimationRotationJavaLibraryKtM</module>-->
         
         <module>./j2me/media/graphics/animation/image/AllBinaryJ2SEImageAnimationRotationJavaLibraryKtM</module>
+<!--
         <module>./j2me/games/Resources/sounds/release/GameSoundsJ2SEOggResourcesJavaLibraryKtM</module>
-        <module>./graphics/opengl/AllBinaryJOGLResourcesJavaLibraryKtM</module>-->
+        <module>./graphics/opengl/AllBinaryJOGLResourcesJavaLibraryKtM</module>
+-->
 
     </modules>
 

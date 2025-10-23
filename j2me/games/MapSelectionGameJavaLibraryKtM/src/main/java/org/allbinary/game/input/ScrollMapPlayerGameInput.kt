@@ -28,11 +28,10 @@
 import javax.microedition.lcdui.Canvas
 import javax.microedition.lcdui.Graphics
 import org.allbinary.util.BasicArrayList
-import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.configuration.feature.InputFeatureFactory
 import org.allbinary.game.input.event.GameKeyEvent
+import org.allbinary.game.layer.AllBinaryGameLayerManager
 import org.allbinary.game.layer.AllBinaryTiledLayer
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
 import org.allbinary.layer.AllBinaryLayerManager
@@ -42,8 +41,6 @@ import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 
 open public class ScrollMapPlayerGameInput : PlayerGameInput {
         
-
-    val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val inputProcessorArray: Array<GameInputProcessor?> = arrayOfNulls(InputFactory.getInstance()!!.MAX)
 
@@ -291,8 +288,7 @@ GameInputProcessorUtil.init(this.inputProcessorArray)
         //nullable = true from not(false or (false and false)) = true
 {
 var key = key
-inputProcessorArray[key]!!.process(
-                            null, null as GameKeyEvent)
+inputProcessorArray[key]!!.process(AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER, GameKeyEvent.NONE)
 }
 
 

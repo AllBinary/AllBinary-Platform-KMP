@@ -36,14 +36,15 @@ public constructor (){
 
                 @Throws(Exception::class)
             
-    open fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
+    override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
 var eventListenerInterface = eventListenerInterface
-eventListenerInterface = eventListenerInterfaceeventListenerInterface as CapitalEventListenerInterface
-eventListenerInterface.
-                    onCapitalChangeEvent(eventObject as CapitalEvent)
+
+    var capitalEventListenerInterface: CapitalEventListenerInterface = (eventListenerInterface as CapitalEventListenerInterface)
+
+capitalEventListenerInterface!!.onCapitalChangeEvent(eventObject as CapitalEvent)
 }
 
 

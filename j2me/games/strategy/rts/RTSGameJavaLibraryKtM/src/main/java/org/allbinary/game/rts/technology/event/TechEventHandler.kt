@@ -52,14 +52,15 @@ companion object {
 
                 @Throws(Exception::class)
             
-    open fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
+    override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
 var eventListenerInterface = eventListenerInterface
-eventListenerInterface = eventListenerInterfaceeventListenerInterface as TechEventListenerInterface
-eventListenerInterface.
-                    onTechEvent(eventObject)
+
+    var techEventListenerInterface: TechEventListenerInterface = (eventListenerInterface as TechEventListenerInterface)
+
+techEventListenerInterface!!.onTechEvent(eventObject)
 }
 
 

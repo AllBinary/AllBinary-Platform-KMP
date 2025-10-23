@@ -34,6 +34,7 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.direction.DirectionFactory
 import org.allbinary.game.identification.Group
 import org.allbinary.game.layer.AllBinaryGameLayerManager
+import org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer
 import org.allbinary.graphics.GPoint
 import org.allbinary.graphics.form.ScrollSelectionForm
 import org.allbinary.layer.AllBinaryLayerManager
@@ -41,6 +42,7 @@ import org.allbinary.layer.LayerInterfaceFactoryInterface
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
+import org.allbinary.media.graphics.geography.map.SimpleGeographicMapCellPositionFactory
 
 open public class RTSFormInput
             : Object
@@ -51,21 +53,35 @@ open public class RTSFormInput
 
     private val hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
-    val newUnconstructedRTSLayerInterfaceArray: Array<RTSLayer?> = arrayOfNulls(7)
+    val newUnconstructedRTSLayerInterfaceArray: Array<CollidableDestroyableDamageableLayer?> = arrayOfNulls(7)
 
     val groupInterfaceArray: Array<Group?>
 
-    private var selectedGeographicCellPosition: GeographicMapCellPosition
+    private var selectedGeographicCellPosition: GeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 
     private var stickyItemSelected: Boolean= false
 
     private var selectedStickyItemIndex: Int= 0
 
-    private var selectedStickyItem: CustomItem
+    private var selectedStickyItem: CustomItem = CustomItem.NULL_CUSTOM_ITEM
 public constructor (groupInterfaceArray: Array<Group?>)
             : super()
         {
     //var groupInterfaceArray = groupInterfaceArray
+
+    var size: Int = newUnconstructedRTSLayerInterfaceArray!!.size
+                
+
+
+
+
+
+                        for (index in 0 until size)
+
+        {
+newUnconstructedRTSLayerInterfaceArray[index]= CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER
+}
+
 this.groupInterfaceArray= groupInterfaceArray
 this.hashtable.put(DirectionFactory.getInstance()!!.NAME, DirectionFactory.getInstance()!!.DOWN)
 
@@ -93,7 +109,7 @@ this.hashtable.put(DirectionFactory.getInstance()!!.NAME, DirectionFactory.getIn
 
                 @Throws(Exception::class)
             
-    open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, point: GPoint)
+    open fun process(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedRtsLayer = associatedRtsLayer
@@ -153,7 +169,7 @@ this.setAllBinaryGameLayerManager(layerManager as AllBinaryGameLayerManager)
 
                 @Throws(Exception::class)
             
-    open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
+    open fun process(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedRtsLayer = associatedRtsLayer
@@ -166,7 +182,7 @@ this.setAllBinaryGameLayerManager(layerManager as AllBinaryGameLayerManager)
 
                 @Throws(Exception::class)
             
-    open fun processSticky(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, point: GPoint)
+    open fun processSticky(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var associatedRtsLayer = associatedRtsLayer
@@ -221,7 +237,7 @@ this.processSticky(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, it
 
                 @Throws(Exception::class)
             
-    open fun processSticky(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
+    open fun processSticky(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var associatedRtsLayer = associatedRtsLayer
@@ -276,7 +292,7 @@ logUtil!!.put(StringMaker().
             
     open fun getInstance(layerManager: AllBinaryLayerManager, aItem: CustomItem, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable =  from not(true or (false and false)) = 
-: RTSLayer{
+: CollidableDestroyableDamageableLayer{
     //var layerManager = layerManager
     //var aItem = aItem
     //var geographicMapCellPosition = geographicMapCellPosition
@@ -309,7 +325,7 @@ logUtil!!.put(StringMaker().
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER
 }
 
 

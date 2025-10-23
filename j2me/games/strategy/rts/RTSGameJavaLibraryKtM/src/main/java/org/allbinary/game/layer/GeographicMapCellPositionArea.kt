@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.logic.string.StringMaker
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.CircularIndexUtil
 import org.allbinary.game.layer.geographic.map.LayerCoveringCellPositionsUtil
@@ -35,9 +34,7 @@ import org.allbinary.media.graphics.geography.map.CellPositionsUtil
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.util.BasicArrayListUtil
 
-open public class GeographicMapCellPositionArea
-            : Object
-         {
+open public class GeographicMapCellPositionArea : GeographicMapCellPositionAreaBase {
         
 
     private val cellPositionsUtil: CellPositionsUtil = CellPositionsUtil.getInstance()!!
@@ -57,9 +54,7 @@ open public class GeographicMapCellPositionArea
     private var occupyingGeographicMapCellPositionList: BasicArrayList = LIST
 
     private var surroundingGeographicMapCellPositionList: BasicArrayList = LIST
-public constructor (layerInterface: AllBinaryLayer)
-            : super()
-        {
+public constructor (layerInterface: AllBinaryLayer){
     //var layerInterface = layerInterface
 this.layerInterface= layerInterface
 }
@@ -67,7 +62,7 @@ this.layerInterface= layerInterface
 
                 @Throws(Exception::class)
             
-    open fun update(geographicMapInterface: BasicGeographicMap)
+    override fun update(geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapInterface = geographicMapInterface
@@ -77,7 +72,7 @@ this.surroundingCircularIndexUtil!!.setSize(this.surroundingGeographicMapCellPos
 }
 
 
-    open fun getOccupyingGeographicMapCellPositionList()
+    override fun getOccupyingGeographicMapCellPositionList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -88,7 +83,7 @@ this.surroundingCircularIndexUtil!!.setSize(this.surroundingGeographicMapCellPos
 }
 
 
-    open fun getSurroundingGeographicMapCellPositionList()
+    override fun getSurroundingGeographicMapCellPositionList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -99,7 +94,7 @@ this.surroundingCircularIndexUtil!!.setSize(this.surroundingGeographicMapCellPos
 }
 
 
-    open fun getNextSurroundingGeographicMapCellPosition()
+    override fun getNextSurroundingGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPosition{
 

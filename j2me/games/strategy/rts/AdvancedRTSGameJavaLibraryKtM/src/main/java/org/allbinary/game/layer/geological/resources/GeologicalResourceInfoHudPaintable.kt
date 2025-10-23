@@ -50,7 +50,7 @@ keyvalueDrawString= KeyValueDrawCharArray(RESOURCES, this.textX)
 {
 super.updateSelectionInfo()
 
-    var list: BasicArrayList = this.getRtsLayer()!!.geographicMapCellPositionArea!!.getOccupyingGeographicMapCellPositionList()!!
+    var list: BasicArrayList = this.getRtsLayer()!!.geographicMapCellPositionAreaBase!!.getOccupyingGeographicMapCellPositionList()!!
 
 
     var total: Int = 0

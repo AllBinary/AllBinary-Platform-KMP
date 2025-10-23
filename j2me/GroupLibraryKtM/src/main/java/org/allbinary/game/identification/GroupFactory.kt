@@ -58,6 +58,8 @@ companion object {
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
+    val NULL_GROUP_ARRAY: Array<Group?> = arrayOfNulls(0)
+
     private val list: BasicArrayList = BasicArrayList()
 
     private var index: Int = 0

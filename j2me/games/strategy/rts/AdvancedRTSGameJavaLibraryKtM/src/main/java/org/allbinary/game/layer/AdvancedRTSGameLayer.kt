@@ -30,7 +30,6 @@ import org.allbinary.animation.transition.shake.ShakeAnimationListener
 import org.allbinary.animation.transition.shake.ShakeAnimationListenerFactory
 import org.allbinary.game.input.form.RTSFormInput
 import org.allbinary.game.layer.building.event.BuildingEventHandler
-import org.allbinary.string.CommonStrings
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.animation.AnimationInterfaceFactoryInterface
 import org.allbinary.animation.ProceduralAnimationInterfaceFactoryInterface
@@ -273,7 +272,7 @@ this.waypointBehaviorBase= unitWaypointHelper
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.waypointLogHelper
+                        return this.waypointLogHelperP
 }
 
 
@@ -284,7 +283,7 @@ this.waypointBehaviorBase= unitWaypointHelper
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.waypoint2LogHelper
+                        return this.waypoint2LogHelperP
 }
 
 
@@ -295,7 +294,7 @@ this.waypointBehaviorBase= unitWaypointHelper
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.waypointRunnableLogHelper
+                        return this.waypointRunnableLogHelperP
 }
 
 
@@ -603,12 +602,12 @@ this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstance(this, Canvas.
 
     var geographicMapInterface: BasicGeographicMap = geographicMapCompositeInterface!!.getGeographicMapInterface()[0]!!
 
-geographicMapCellPositionArea!!.update(geographicMapInterface)
+this.geographicMapCellPositionAreaBase!!.update(geographicMapInterface)
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return geographicMapCellPositionArea!!.getSurroundingGeographicMapCellPositionList()
+                        return this.geographicMapCellPositionAreaBase!!.getSurroundingGeographicMapCellPositionList()
 }
 
 
@@ -627,16 +626,16 @@ super.setSelected(selected)
                         if(selected)
                         
                                     {
-                                    this.waypointLogHelper= WaypointSelectedLogHelper.getInstance()
-this.waypoint2LogHelper= Waypoint2SelectedLogHelper.getInstance()
-this.waypointRunnableLogHelper= WaypointRunnableSelectedLogHelper.getInstance()
+                                    this.waypointLogHelperP= WaypointSelectedLogHelper.getInstance()
+this.waypoint2LogHelperP= Waypoint2SelectedLogHelper.getInstance()
+this.waypointRunnableLogHelperP= WaypointRunnableSelectedLogHelper.getInstance()
 
                                     }
                                 
                         else {
-                            this.waypointLogHelper= WaypointLogHelper.getInstance()
-this.waypoint2LogHelper= Waypoint2LogHelper.getInstance()
-this.waypointRunnableLogHelper= WaypointRunnableLogHelper.getInstance()
+                            this.waypointLogHelperP= WaypointLogHelper.getInstance()
+this.waypoint2LogHelperP= Waypoint2LogHelper.getInstance()
+this.waypointRunnableLogHelperP= WaypointRunnableLogHelper.getInstance()
 
                         }
                             

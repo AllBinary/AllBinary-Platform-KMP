@@ -35,7 +35,6 @@ import org.allbinary.media.audio.DowngradeSound
 import org.allbinary.media.audio.UpgradeSound
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListUtil
-import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.java.bool.BooleanFactory
@@ -45,6 +44,7 @@ import org.allbinary.game.input.event.GameKeyEvent
 import org.allbinary.game.layer.AllBinaryGameLayerManager
 import org.allbinary.game.layer.hud.event.GameNotificationEvent
 import org.allbinary.game.layer.hud.event.GameNotificationEventHandler
+import org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.logic.util.visitor.Visitor
@@ -55,8 +55,6 @@ import org.allbinary.media.graphics.geography.map.GeographicMapCompositeInterfac
 
 open public class SelectedRTSLayersPlayerGameInput : PlayerGameInput {
         
-
-    val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val inputProcessorArray: Array<GameInputProcessor?> = arrayOfNulls(InputFactory.getInstance()!!.MAX)
 
@@ -131,7 +129,7 @@ this.downgradeGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.ge
 var rtsLayer = rtsLayer
 
     
-                        if(this.getSelectedBasicArrayList()!!.contains(rtsLayer))
+                        if(this.selectedRTSLayersList!!.contains(rtsLayer))
                         
                                     {
                                     
@@ -166,11 +164,11 @@ var rtsLayer = rtsLayer
 
 
 
-                        for (index in this.getSelectedBasicArrayList()!!.size() -1 downTo 0)
+                        for (index in this.selectedRTSLayersList!!.size() -1 downTo 0)
 
         {
 
-    var rtsLayer: RTSLayer = this.getSelectedBasicArrayList()!!.get(index) as RTSLayer
+    var rtsLayer: RTSLayer = this.selectedRTSLayersList!!.get(index) as RTSLayer
 
 
     
@@ -228,9 +226,10 @@ capital.removeMoney(upgradeCost)
                         if(anyChanged)
                         
                                     {
-                                    getPlayerGameInput = this.rtsPlayerLayerInterface!!.getPlayerGameInput()getPlayerGameInput as RTSPlayerGameInput
-getPlayerGameInput.
-                    updatePaintable()
+                                    
+    var rtsPlayerGameInput: RTSPlayerGameInput = (this.rtsPlayerLayerInterface!!.getPlayerGameInput() as RTSPlayerGameInput)
+
+rtsPlayerGameInput!!.updatePaintable()
 
                                     }
                                 
@@ -249,11 +248,11 @@ getPlayerGameInput.
 
 
 
-                        for (index in this.getSelectedBasicArrayList()!!.size()!!  - 1  downTo 0)
+                        for (index in this.selectedRTSLayersList!!.size()!!  - 1  downTo 0)
 
         {
 
-    var rtsLayer: RTSLayer = this.getSelectedBasicArrayList()!!.get(index) as RTSLayer
+    var rtsLayer: RTSLayer = this.selectedRTSLayersList!!.get(index) as RTSLayer
 
 
     
@@ -289,9 +288,10 @@ capital.addMoney(downgradeCost)
                         if(anyChanged)
                         
                                     {
-                                    getPlayerGameInput = this.rtsPlayerLayerInterface!!.getPlayerGameInput()getPlayerGameInput as RTSPlayerGameInput
-getPlayerGameInput.
-                    updatePaintable()
+                                    
+    var rtsPlayerGameInput: RTSPlayerGameInput = (this.rtsPlayerLayerInterface!!.getPlayerGameInput() as RTSPlayerGameInput)
+
+rtsPlayerGameInput!!.updatePaintable()
 
                                     }
                                 
@@ -315,13 +315,12 @@ GameInputProcessorUtil.init(this.inputProcessorArray)
 var key = key
 
     
-                        if(this.getSelectedBasicArrayList() != 
+                        if(this.selectedRTSLayersList != 
                                     null
                                 )
                         
                                     {
-                                    this.inputProcessorArray[key]!!.process(
-                            null, null as GameKeyEvent)
+                                    this.inputProcessorArray[key]!!.process(AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER, GameKeyEvent.NONE)
 
                                     }
                                 
@@ -396,9 +395,7 @@ var selectedLayer = selectedLayer
 this.paintSelectedRTSLayersList= BasicArrayListUtil.getInstance()!!.getImmutableInstance()
 
     
-                        if(selectedLayer == 
-                                    null
-                                )
+                        if(selectedLayer == CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER)
                         
                                     {
                                     this.deselectAll()
@@ -423,7 +420,7 @@ this.paintSelectedRTSLayersList= this.selectedRTSLayersList
 }
 
 
-    open fun setSelectedRTSLayer(selectedLayer: RTSLayer)
+    open fun setSelectedRTSLayer(selectedLayer: CollidableDestroyableDamageableLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var selectedLayer = selectedLayer
@@ -464,9 +461,7 @@ logUtil!!.put(StringMaker().
                                 
 
     
-                        if(selectedLayer != 
-                                    null
-                                )
+                        if(selectedLayer != CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER)
                         
                                     {
                                     this.selectedRTSLayersList!!.add(selectedLayer)
@@ -479,7 +474,7 @@ this.paintSelectedRTSLayersList= this.selectedRTSLayersList
 
     open fun getLastSelectedRtsLayer()
         //nullable = true from not(false or (false and true)) = true
-: RTSLayer{
+: CollidableDestroyableDamageableLayer{
 
     
                         if(this.isAnyRTSLayerSelected())
@@ -489,7 +484,7 @@ this.paintSelectedRTSLayersList= this.selectedRTSLayersList
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.getSelectedBasicArrayList()!!.get(this.selectedRTSLayersList!!.size() -1) as RTSLayer
+                        return this.selectedRTSLayersList!!.get(this.selectedRTSLayersList!!.size() -1) as RTSLayer
 
                                     }
                                 
@@ -498,7 +493,7 @@ this.paintSelectedRTSLayersList= this.selectedRTSLayersList
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER
 
                         }
                             
@@ -563,11 +558,11 @@ this.preSelectedRTSLayersList!!.clear()
 
 
 
-                        for (index in this.getSelectedBasicArrayList()!!.size() -1 downTo 0)
+                        for (index in this.selectedRTSLayersList!!.size() -1 downTo 0)
 
         {
 
-    var rtsLayer: RTSLayer = this.getSelectedBasicArrayList()!!.get(index) as RTSLayer
+    var rtsLayer: RTSLayer = this.selectedRTSLayersList!!.get(index) as RTSLayer
 
 rtsLayer!!.deselect()
 }
@@ -580,7 +575,7 @@ rtsLayer!!.deselect()
 : Boolean{
 
     
-                        if(this.getSelectedBasicArrayList()!!.size() == 0)
+                        if(this.selectedRTSLayersList!!.size() == 0)
                         
                                     {
                                     

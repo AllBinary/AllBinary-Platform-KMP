@@ -32,13 +32,14 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.font.MyFont
+import org.allbinary.logic.NullUtil
 
 open public class MultiSelectPaintable : SelectionHudPaintable {
         
 
-    private var totalCharArray: CharArray
-
     private val rootNameList: BasicArrayList = BasicArrayList()
+
+    private var totalCharArray: CharArray = NullUtil.getInstance()!!.NULL_CHAR_ARRAY
 
     private var rootNamesString: String = StringUtil.getInstance()!!.EMPTY_STRING
 public constructor (){
@@ -55,18 +56,15 @@ this.clear()
 
 this.totalCharArray= this.getPrimitiveLongUtil()!!.getCharArray(size)
 
-    var rtsLayer: RTSLayer = 
-                null
-            
-
-
 
 
 
                         for (index in list.size() -1 downTo 0)
 
         {
-rtsLayer= list.get(index) as RTSLayer
+
+    var rtsLayer: RTSLayer = list.get(index) as RTSLayer
+
 
     
                         if(!this.rootNameList!!.contains(rtsLayer!!.getRootName()))
@@ -123,7 +121,7 @@ this.rootNameList!!.clear()
 
     private val backgroundColor: Int = BasicColorFactory.getInstance()!!.GREY.toInt()!!
 
-    open fun paint(graphics: Graphics)
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

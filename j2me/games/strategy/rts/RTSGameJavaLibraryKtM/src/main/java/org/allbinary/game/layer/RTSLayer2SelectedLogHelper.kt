@@ -58,7 +58,7 @@ companion object {
 
     private val BUILDING_CHASE: String = "buildingChase"
 
-    open fun steeringUp(pathFindingLayerInterface: PathFindingLayerInterface)
+    override fun steeringUp(pathFindingLayerInterface: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface
@@ -67,7 +67,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-    open fun steeringFireOrStop(pathFindingLayerInterface: PathFindingLayerInterface)
+    override fun steeringFireOrStop(pathFindingLayerInterface: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface
@@ -76,7 +76,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-    open fun buildingAbove(pathFindingLayerInterface: PathFindingLayerInterface)
+    override fun buildingAbove(pathFindingLayerInterface: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface
@@ -85,7 +85,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-    open fun buildingChaseLeft(pathFindingLayerInterface: PathFindingLayerInterface, angle: Int)
+    override fun buildingChaseLeft(pathFindingLayerInterface: PathFindingLayerInterface, angle: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface
@@ -95,7 +95,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-    open fun buildingChaseRight(pathFindingLayerInterface: PathFindingLayerInterface, angle: Int)
+    override fun buildingChaseRight(pathFindingLayerInterface: PathFindingLayerInterface, angle: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface
@@ -105,7 +105,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-    open fun buildingDown(pathFindingLayerInterface: PathFindingLayerInterface)
+    override fun buildingDown(pathFindingLayerInterface: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface
@@ -114,7 +114,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-    open fun buildingChaseDown(pathFindingLayerInterface: PathFindingLayerInterface, angle: Int)
+    override fun buildingChaseDown(pathFindingLayerInterface: PathFindingLayerInterface, angle: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface
@@ -124,7 +124,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-    open fun buildingChaseUp(pathFindingLayerInterface: PathFindingLayerInterface, angle: Int)
+    override fun buildingChaseUp(pathFindingLayerInterface: PathFindingLayerInterface, angle: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface

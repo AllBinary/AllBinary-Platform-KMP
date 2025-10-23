@@ -26,11 +26,13 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Graphics
+import org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer
 import org.allbinary.logic.java.character.CharArrayFactory
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
 import org.allbinary.graphics.font.MyFont
+import org.allbinary.graphics.paint.NullPaintable
+import org.allbinary.graphics.paint.Paintable
 import org.allbinary.input.motion.button.CommonButtons
-import org.allbinary.input.motion.button.TouchButtonInput
 
 open public class UpgradableRTSLayerHudPaintable : SelectionHudPaintable {
         
@@ -53,7 +55,7 @@ companion object {
             
     private val PERCENT: String = "%"
 
-    private var rtsLayer: RTSLayer
+    private var rtsLayer: CollidableDestroyableDamageableLayer = CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER
 
     var costY: Int= 0
 
@@ -61,12 +63,12 @@ companion object {
 
     private var percentCompleteX2: Int= 0
 
-    private var rtsLayerCompositePaintable: RTSLayerCompositePaintable
+    private lateinit var rtsLayerCompositePaintableLateInit: RTSLayerCompositePaintable
 private constructor (){
 }
 
 
-    open fun update()
+    override fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 super.update()
@@ -87,24 +89,27 @@ this.percentCompleteX2= this.imageX +CommonButtons.getInstance()!!.STANDARD_BUTT
                         if(displayInfoSingleton!!.getLastWidth() > 320)
                         
                                     {
-                                    this.rtsLayerCompositePaintable= UpgradableWideRTSLayerPaintable(this)
+                                    this.rtsLayerCompositePaintableLateInit= UpgradableWideRTSLayerPaintable(this)
 
                                     }
                                 
                         else {
-                            this.rtsLayerCompositePaintable= RTSLayerCompositePaintable(this)
+                            this.rtsLayerCompositePaintableLateInit= RTSLayerCompositePaintable(this)
 
                         }
                             
 }
 
 
-    open fun updateSelectionInfo()
+    override fun updateSelectionInfo()
         //nullable = true from not(false or (false and true)) = true
 {
-this.rtsLayerCompositePaintable!!.update(this.getRtsLayer())
-this.setAnimationInterface(this.getRtsLayer()!!.getVerticleBuildAnimationInterface())
-this.setName(this.getRtsLayer()!!.getName())
+
+    var rtsLayer: RTSLayer = this.getRtsLayer() as RTSLayer
+
+this.rtsLayerCompositePaintableLateInit!!.update(rtsLayer)
+this.setAnimationInterface(rtsLayer!!.getVerticleBuildAnimationInterface())
+this.setName(rtsLayer!!.getName())
 }
 
 
@@ -116,10 +121,13 @@ this.setName(this.getRtsLayer()!!.getName())
 
     private var currentTotalDigits: Int= 0
 
-    open fun updateInfo()
+    override fun updateInfo()
         //nullable = true from not(false or (false and true)) = true
 {
-this.percentComplete= this.getRtsLayer()!!.getPercentComplete()
+
+    var rtsLayer: RTSLayer = this.getRtsLayer() as RTSLayer
+
+this.percentComplete= rtsLayer!!.getPercentComplete()
 
     
                         if(percentComplete < 10)
@@ -148,12 +156,12 @@ this.currentTotalDigits= this.getPrimitiveLongUtil()!!.getCurrentTotalDigits()
 }
 
 
-    open fun paint(graphics: Graphics)
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
 super.paint(graphics)
-this.rtsLayerCompositePaintable!!.paint(graphics)
+this.rtsLayerCompositePaintableLateInit!!.paint(graphics)
 graphics.drawChars(percentCompleteArray, 0, this.currentTotalDigits, this.imageX +this.percentCompleteX, costY, 0)
 graphics.drawString(this.PERCENT, this.percentCompleteX2, costY, 0)
 this.getAnimationInterface()!!.paint(graphics, this.imageX, y)
@@ -170,7 +178,7 @@ this.rtsLayer= rtsLayer
 
     open fun getRtsLayer()
         //nullable = true from not(false or (false and true)) = true
-: RTSLayer{
+: CollidableDestroyableDamageableLayer{
 
 
 

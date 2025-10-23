@@ -27,6 +27,7 @@
         
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Image
+import javax.microedition.lcdui.NullCanvas
 import org.allbinary.DisposalUtil
 import org.allbinary.animation.AnimationBehavior
 import org.allbinary.graphics.color.BasicColor
@@ -71,7 +72,7 @@ open public class AllBinaryJ2SEImageRotationAnimation : ImageBaseRotationAnimati
     private var changeColorProcessor: ModifierBaseProcessor = ModifierBaseProcessor.getInstance()!!
 
     private var scaleProcessor: ScaleBaseProcessor = ScaleProcessor.getInstance()!!
-protected constructor (originalImage: Image, image: Image, angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
+public constructor (originalImage: Image, image: Image, angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
 
                             : super(image, angleInfo, totalAngle, animationBehavior){
     //var originalImage = originalImage
@@ -219,7 +220,7 @@ this.updateImage()
 }
 
 
-    open fun nextRotation()
+    override fun nextRotation()
         //nullable = true from not(false or (false and true)) = true
 {
 super.nextRotation()
@@ -227,7 +228,7 @@ this.updateImage()
 }
 
 
-    open fun previousRotation()
+    override fun previousRotation()
         //nullable = true from not(false or (false and true)) = true
 {
 super.previousRotation()
@@ -239,17 +240,14 @@ this.updateImage()
         //nullable = true from not(false or (false and true)) = true
 {
 this.imageRotationUtil!!.rotateImage(this.originalImageArray[0]!!, this.twoImages[this.bufferedImageIndex]!!, this.angleInfo!!.getAngle() +90)
-this.alphaProcessor!!.update(imageModifierUtil, 
-                            null, this.twoImages[this.bufferedImageIndex]!!, 0, this.alphaP)
-this.setColorProcessor!!.update(imageModifierUtil, 
-                            null, this.twoImages[this.bufferedImageIndex]!!, 0, this.basicColor)
-this.changeColorProcessor!!.update(imageModifierUtil, 
-                            null, this.twoImages[this.bufferedImageIndex]!!, 0, this.changeBasicColorP)
+this.alphaProcessor!!.update(imageModifierUtil, NullCanvas.NULL_IMAGE, this.twoImages[this.bufferedImageIndex]!!, 0, this.alphaP)
+this.setColorProcessor!!.update(imageModifierUtil, NullCanvas.NULL_IMAGE, this.twoImages[this.bufferedImageIndex]!!, 0, this.basicColor)
+this.changeColorProcessor!!.update(imageModifierUtil, NullCanvas.NULL_IMAGE, this.twoImages[this.bufferedImageIndex]!!, 0, this.changeBasicColorP)
 this.swap()
 }
 
 
-    open fun setFrame(index: Int)
+    override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var index = index
@@ -279,7 +277,7 @@ this.imageToShow= this.twoImages[this.bufferedImageIndex]!!
 }
 
 
-    open fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics
@@ -289,7 +287,7 @@ graphics.drawImage(this.imageToShow, x, y, anchor)
 }
 
 
-    open fun close()
+    override fun close()
         //nullable = true from not(false or (false and true)) = true
 {
 super.close()
@@ -331,7 +329,7 @@ disposalUtil!!.dispose(this.imageToShow)
 
                 @Throws(Throwable::class)
             
-    open fun finalize()
+    override fun finalize()
         //nullable = true from not(false or (false and true)) = true
 {
 super.finalize()

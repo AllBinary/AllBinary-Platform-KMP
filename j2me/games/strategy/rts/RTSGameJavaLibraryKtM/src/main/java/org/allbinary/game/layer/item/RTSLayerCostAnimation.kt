@@ -34,6 +34,7 @@ import org.allbinary.logic.communication.log.ForcedLogUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.animation.Animation
 import org.allbinary.graphics.font.MyFont
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.math.PrimitiveLongUtil
 import org.allbinary.logic.util.event.EventStrings
@@ -50,7 +51,7 @@ open public class RTSLayerCostAnimation : Animation
 
     private val image: Image
 
-    private var costString: CharArray
+    private var costString: CharArray = NullUtil.getInstance()!!.NULL_CHAR_ARRAY
 
     private var len: Int= 0
 
@@ -68,7 +69,7 @@ this.update()
 }
 
 
-    open fun onEvent(event: AllBinaryEventObject)
+    override fun onEvent(event: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var event = event
@@ -76,7 +77,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
 
-    open fun onTechEvent(event: AllBinaryEventObject)
+    override fun onTechEvent(event: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var event = event
@@ -105,7 +106,7 @@ this.len= this.primitiveLongUtil!!.getCurrentTotalDigits()
 }
 
 
-    open fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -113,7 +114,7 @@ var x = x
 var y = y
 super.paint(graphics, x, y)
 
-    var adjustedCostY: Int = image.getHeight() -()
+    var adjustedCostY: Int = image.getHeight() -myFont!!.DEFAULT_CHAR_HEIGHT
 
 
     var xa: Int = x +2

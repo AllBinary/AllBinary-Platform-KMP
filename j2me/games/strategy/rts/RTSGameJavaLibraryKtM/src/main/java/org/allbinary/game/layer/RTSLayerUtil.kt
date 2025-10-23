@@ -31,9 +31,11 @@ import java.util.Hashtable
 import org.allbinary.util.BasicArrayList
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.direction.DirectionFactory
+import org.allbinary.game.GameInfo
 import org.allbinary.game.combat.weapon.WeaponProperties
 import org.allbinary.game.identification.BasicGroupFactory
 import org.allbinary.game.identification.Group
+import org.allbinary.game.part.PartInterface
 import org.allbinary.game.part.weapon.BasicWeaponPart
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
@@ -95,7 +97,7 @@ companion object {
                                     }
                                 
 
-    var newWeaponProperties: WeaponProperties = WeaponProperties(reloadTime, weaponProperties!!.getTargetingTime(), weaponProperties!!.getSpeed()!!.getUnscaled().toInt(), weaponProperties!!.getDamage() /lastLevel *currentLevel, weaponProperties!!.getDissipation())
+    var newWeaponProperties: WeaponProperties = WeaponProperties(reloadTime, weaponProperties!!.getTargetingTime(), weaponProperties!!.getSpeed()!!.getUnscaled(), weaponProperties!!.getDamage() /lastLevel *currentLevel, weaponProperties!!.getDissipation())
 
 
 
@@ -111,16 +113,23 @@ companion object {
     //var rtsLayer = rtsLayer
 rtsLayer!!.setLevel(rtsLayer!!.getLevel() -1)
 
+    var partInterfaceArray: Array<PartInterface?> = rtsLayer!!.getPartInterfaceArray()!!
+
+
+    var size: Int = partInterfaceArray!!.size
+                
+
+
     var partInterface: BasicWeaponPart
 
 
 
 
 
-                        for (index in rtsLayer!!.getPartInterfaceArray()!!.length  - 1  downTo 0)
+                        for (index in size  - 1  downTo 0)
 
         {
-partInterface= rtsLayer!!.getPartInterfaceArray()[index]!! as BasicWeaponPart
+partInterface= partInterfaceArray[index]!! as BasicWeaponPart
 partInterface!!.setWeaponProperties(this.createWeaponProperties(partInterface!!.getWeaponProperties(), rtsLayer!!.getLevel(), rtsLayer!!.getLevel() +1))
 }
 
@@ -134,16 +143,23 @@ rtsLayer!!.select()
     //var rtsLayer = rtsLayer
 rtsLayer!!.setLevel(rtsLayer!!.getLevel() +1)
 
+    var partInterfaceArray: Array<PartInterface?> = rtsLayer!!.getPartInterfaceArray()!!
+
+
+    var size: Int = partInterfaceArray!!.size
+                
+
+
     var partInterface: BasicWeaponPart
 
 
 
 
 
-                        for (index in rtsLayer!!.getPartInterfaceArray()!!.length  - 1  downTo 0)
+                        for (index in size  - 1  downTo 0)
 
         {
-partInterface= rtsLayer!!.getPartInterfaceArray()[index]!! as BasicWeaponPart
+partInterface= partInterfaceArray[index]!! as BasicWeaponPart
 partInterface!!.setWeaponProperties(this.createWeaponProperties(partInterface!!.getWeaponProperties(), rtsLayer!!.getLevel(), rtsLayer!!.getLevel() -1))
 }
 
@@ -151,17 +167,17 @@ rtsLayer!!.select()
 }
 
 
-    private val MAX_RELOAD_TIME: Long = Integer.MAX_VALUE /100000
+    private val MAX_RELOAD_TIME: Long = Integer.MAX_VALUE.toLong() /100000
 
     open fun getCostExponential(cost: Long)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Long{
     //var cost = cost
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return ((cost *cost *cost) /(cost *1000)).toInt()
+                        return ((cost *cost *cost) /(cost *1000))
 }
 
 
@@ -170,14 +186,14 @@ rtsLayer!!.select()
 : Int{
     //var weaponProperties = weaponProperties
 
-    var cost: Int = (weaponProperties!!.getDamage() +weaponProperties!!.getRange() +((MAX_RELOAD_TIME /weaponProperties!!.getReloadTime()) shr 1)).toInt()
+    var cost: Long = (weaponProperties!!.getDamage() +weaponProperties!!.getRange() +((MAX_RELOAD_TIME /weaponProperties!!.getReloadTime()) shr 1))
 
 cost= this.getCostExponential(cost)
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return cost
+                        return cost.toInt()
 }
 
 
@@ -189,6 +205,13 @@ var rtsLayer = rtsLayer
     var total: Int = 0
 
 
+    var partInterfaceArray: Array<PartInterface?> = rtsLayer!!.getPartInterfaceArray()!!
+
+
+    var size: Int = partInterfaceArray!!.size
+                
+
+
     var partInterface: BasicWeaponPart
 
 
@@ -198,10 +221,10 @@ var rtsLayer = rtsLayer
 
 
 
-                        for (index in rtsLayer!!.getPartInterfaceArray()!!.length -1 downTo 0)
+                        for (index in size -1 downTo 0)
 
         {
-partInterface= rtsLayer!!.getPartInterfaceArray()[index]!! as BasicWeaponPart
+partInterface= partInterfaceArray[index]!! as BasicWeaponPart
 weaponProperties= partInterface!!.getWeaponProperties()
 total += this.getWeaponPropertiesCost(weaponProperties)
 }
@@ -218,6 +241,13 @@ total += this.getWeaponPropertiesCost(weaponProperties)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var rtsLayer = rtsLayer
+
+    var partInterfaceArray: Array<PartInterface?> = rtsLayer!!.getPartInterfaceArray()!!
+
+
+    var size: Int = partInterfaceArray!!.size
+                
+
 
     var downgradeCost: Int = 0
 
@@ -237,10 +267,10 @@ total += this.getWeaponPropertiesCost(weaponProperties)
 
 
 
-                        for (index in rtsLayer!!.getPartInterfaceArray()!!.length -1 downTo 0)
+                        for (index in size -1 downTo 0)
 
         {
-partInterface= rtsLayer!!.getPartInterfaceArray()[index]!! as BasicWeaponPart
+partInterface= partInterfaceArray[index]!! as BasicWeaponPart
 weaponProperties= partInterface!!.getWeaponProperties()
 downgradeWeaponCost= this.getWeaponPropertiesCost(this.createWeaponProperties(weaponProperties, rtsLayer!!.getLevel() -1, rtsLayer!!.getLevel()))
 currentWeaponCost= this.getWeaponPropertiesCost(weaponProperties)
@@ -266,6 +296,13 @@ logUtil!!.put(StringMaker().
     var upgradeCost: Int = 0
 
 
+    var partInterfaceArray: Array<PartInterface?> = rtsLayer!!.getPartInterfaceArray()!!
+
+
+    var size: Int = partInterfaceArray!!.size
+                
+
+
     var partInterface: BasicWeaponPart
 
 
@@ -281,10 +318,10 @@ logUtil!!.put(StringMaker().
 
 
 
-                        for (index in rtsLayer!!.getPartInterfaceArray()!!.length -1 downTo 0)
+                        for (index in size -1 downTo 0)
 
         {
-partInterface= rtsLayer!!.getPartInterfaceArray()[index]!! as BasicWeaponPart
+partInterface= partInterfaceArray[index]!! as BasicWeaponPart
 weaponProperties= partInterface!!.getWeaponProperties()
 upgradedWeaponCost= this.getWeaponPropertiesCost(this.createWeaponProperties(weaponProperties, rtsLayer!!.getLevel() +1, rtsLayer!!.getLevel()))
 currentWeaponCost= this.getWeaponPropertiesCost(weaponProperties)
@@ -333,8 +370,7 @@ list.clear()
     var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
 
-    var layerManager: FakeLayerManager = FakeLayerManager(
-                            null)
+    var layerManager: FakeLayerManager = FakeLayerManager(GameInfo.NONE)
 
 layerManager!!.setGeographicMapInterface(arrayOf(baseRaceTrackGeographicMap))
 hashtable.put(AllBinaryGameLayerManager.ID, layerManager)

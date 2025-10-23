@@ -28,8 +28,8 @@
 import javax.microedition.lcdui.Graphics
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.AndroidUtil
+import org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer
 import org.allbinary.game.part.weapon.BasicWeaponPart
-import org.allbinary.graphics.font.MyFont
 
 open public class RTSLayerHudPaintable : SelectionHudPaintable {
         
@@ -50,11 +50,9 @@ companion object {
 
         }
             
-    private val myFont: MyFont = MyFont.getInstance()!!
-
     private var weaponProperties: Array<String?> = StringUtil.getInstance()!!.getArrayInstance()!!
 
-    private var rtsLayer: RTSLayer
+    private var rtsLayer: CollidableDestroyableDamageableLayer = CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER
 
     var costY: Int= 0
 
@@ -63,7 +61,7 @@ private constructor (){
 }
 
 
-    open fun updateSelectionInfo()
+    override fun updateSelectionInfo()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -92,7 +90,7 @@ this.costY1= (y +((weaponProperties!!.size +1) *charHeight))
 }
 
 
-    open fun paint(graphics: Graphics)
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -127,7 +125,7 @@ this.rtsLayer= rtsLayer
 
     open fun getRtsLayer()
         //nullable = true from not(false or (false and true)) = true
-: RTSLayer{
+: CollidableDestroyableDamageableLayer{
 
 
 

@@ -89,7 +89,7 @@
 
         <dependency>
             <groupId>org.allbinary.media.image</groupId>
-            <artifactId>ImageJ2SEJavaLibraryKt</artifactId>
+            <artifactId>ImageJ2SEJavaLibrary</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->

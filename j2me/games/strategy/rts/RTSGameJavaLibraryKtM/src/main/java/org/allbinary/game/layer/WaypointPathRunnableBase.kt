@@ -29,7 +29,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.logic.string.StringMaker
 import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.math.LayerDistanceUtil
 import org.allbinary.thread.PriorityRunnable
@@ -49,36 +48,36 @@ open public class WaypointPathRunnableBase
         
     private val layerDistanceUtil: LayerDistanceUtil = LayerDistanceUtil.getInstance()!!
 
-    var pathFindingLayer: PathFindingLayerInterface
+    var pathFindingLayer: PathFindingLayerInterface = NullPathFindingLayer.NULL_PATH_FINDING_LAYER
 
-    var targetLayer: PathFindingLayerInterface
+    var targetPathFindingLayer: PathFindingLayerInterface = NullPathFindingLayer.NULL_PATH_FINDING_LAYER
 
-    var priority: Int = Integer.MAX_VALUE
+    var priorityP: Int = Integer.MAX_VALUE
 
-    var running: Boolean= false
+    var runningP: Boolean= false
 
-    open fun isRunning()
+    override fun isRunning()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.running
+                        return this.runningP
 }
 
 
-    open fun setRunning(isRunning: Boolean)
+    override fun setRunning(isRunning: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var isRunning = isRunning
-this.running= isRunning
+this.runningP= isRunning
 }
 
 
                 @Throws(Exception::class)
             
-    open fun setThread(thread: Thread)
+    override fun setThread(thread: Thread)
         //nullable = true from not(false or (false and false)) = true
 {
     //var thread = thread
@@ -89,7 +88,7 @@ this.running= isRunning
         //nullable = true from not(false or (false and false)) = true
 {
     //var waypointLayer = waypointLayer
-this.targetLayer= waypointLayer
+this.targetPathFindingLayer= waypointLayer
 this.setPriority()
 }
 
@@ -101,7 +100,7 @@ this.setPriority()
     var pathFindingLayer: AllBinaryLayer = this.pathFindingLayer as AllBinaryLayer
 
 
-    var targetLayer: AllBinaryLayer = this.targetLayer as AllBinaryLayer
+    var targetLayer: AllBinaryLayer = this.targetPathFindingLayer as AllBinaryLayer
 
 
     
@@ -116,7 +115,7 @@ this.setPriority()
 
     var distanceCategory: Int = distance /70
 
-this.priority= distanceCategory
+this.priorityP= distanceCategory
 
                                     }
                                 
@@ -130,7 +129,7 @@ this.priority= distanceCategory
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return targetLayer
+                        return targetPathFindingLayer
 }
 
 
@@ -142,18 +141,18 @@ this.pathFindingLayer= unitLayer
 }
 
 
-    open fun getPriority()
+    override fun getPriority()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.priority
+                        return this.priorityP
 }
 
 
-    open fun isDone()
+    override fun isDone()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -164,13 +163,13 @@ this.pathFindingLayer= unitLayer
 }
 
 
-    open fun run()
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-    open fun reset()
+    override fun reset()
         //nullable = true from not(false or (false and true)) = true
 {
 }

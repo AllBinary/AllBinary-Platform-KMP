@@ -69,7 +69,7 @@ companion object {
 
     private val TRACKTO_TURNTO: String = "trackTo:turnTo"
 
-    open fun setClosestGeographicMapCellHistory(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, pathsList: BasicArrayList)
+    override fun setClosestGeographicMapCellHistory(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, pathsList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -87,7 +87,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: setClosestGeographicMa
 }
 
 
-    open fun trackTo(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, nextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition, dx: Int, dy: Int, reason: String)
+    override fun trackTo(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, nextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition, dx: Int, dy: Int, reason: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -112,7 +112,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: trackTo")
 }
 
 
-    open fun turnTo(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, dx: Int, dy: Int, angleInfo: AngleInfo, angle: Int, movementAngle: NamedAngle, evading: Boolean, targetAngle: Int)
+    override fun turnTo(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, dx: Int, dy: Int, angleInfo: AngleInfo, angle: Int, movementAngle: NamedAngle, evading: Boolean, targetAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -147,7 +147,7 @@ stringBuffer!!.append(movementAngle!!.getValue())
                         
                                     {
                                     
-    var angleIncrement: Int = angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()!!
+    var angleIncrement: Short = angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()!!
 
 stringBuffer!!.append(" angleIncrement: ")
 stringBuffer!!.append(angleIncrement)
@@ -160,7 +160,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, TRACKTO_TURNTO)
 }
 
 
-    open fun doneMoving(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
+    override fun doneMoving(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -169,7 +169,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-    open fun closeEnough(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
+    override fun closeEnough(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -178,7 +178,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-    open fun movingLeft(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
+    override fun movingLeft(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -187,7 +187,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-    open fun movingRight(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
+    override fun movingRight(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -196,7 +196,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-    open fun movingUp(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
+    override fun movingUp(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -205,7 +205,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-    open fun movingDown(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
+    override fun movingDown(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -214,7 +214,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-    open fun currentMoveEnded(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
+    override fun currentMoveEnded(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -223,7 +223,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-    open fun evade(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
+    override fun evade(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -232,7 +232,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-    open fun rotateLeft(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
+    override fun rotateLeft(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -241,7 +241,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-    open fun rotateRight(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
+    override fun rotateRight(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -250,7 +250,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-    open fun handle(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, movementAngle: NamedAngle)
+    override fun handle(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, movementAngle: NamedAngle)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -260,7 +260,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-    open fun noRotation(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
+    override fun noRotation(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
@@ -269,7 +269,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-    open fun notOnPath(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, geographicMapCellHistory: GeographicMapCellHistory, currentGeographicMapCellPosition: GeographicMapCellPosition, pathList: BasicArrayList)
+    override fun notOnPath(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, geographicMapCellHistory: GeographicMapCellHistory, currentGeographicMapCellPosition: GeographicMapCellPosition, pathList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer

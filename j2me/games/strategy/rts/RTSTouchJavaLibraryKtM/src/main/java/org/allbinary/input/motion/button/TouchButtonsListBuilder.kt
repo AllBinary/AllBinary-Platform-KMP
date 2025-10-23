@@ -40,9 +40,12 @@ open public class TouchButtonsListBuilder : BaseTouchInput {
     open fun add(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
-var list = list
+    //var list = list
 
     var size: Int = baseTouchInputList!!.size()!!
+
+
+    var baseTouchInput: BaseTouchInput
 
 
 
@@ -51,8 +54,8 @@ var list = list
                         for (index in 0 until size)
 
         {
-list.addAll(
-                                    (get as BaseTouchInput).getList())
+baseTouchInput= baseTouchInputList!!.get(index) as BaseTouchInput
+list.addAll(baseTouchInput!!.getList())
 }
 
 }

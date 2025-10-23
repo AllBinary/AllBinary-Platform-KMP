@@ -58,7 +58,7 @@ companion object {
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    open fun start(pathFindingLayerInterface: PathFindingLayerInterface)
+    override fun start(pathFindingLayerInterface: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface
@@ -67,7 +67,7 @@ logUtil!!.put(StringMaker().
 }
 
 
-    open fun end(pathFindingLayerInterface: PathFindingLayerInterface)
+    override fun end(pathFindingLayerInterface: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface

@@ -32,13 +32,11 @@ import org.allbinary.game.input.form.VisibleCellPositionsSingleton
 import org.allbinary.game.layer.AdvancedRTSGameLayer
 import org.allbinary.game.layer.AdvancedRTSPlayerLayerInterface
 import org.allbinary.game.layer.CollidableRTSBehavior
-import org.allbinary.game.layer.GeographicMapCellPositionArea
 import org.allbinary.game.layer.RTSLayerUtil
 import org.allbinary.game.layer.RTSPlayerLayerInterface
 import org.allbinary.game.layer.SelectionHudPaintable
 import org.allbinary.game.layer.waypoint.Waypoint
 import org.allbinary.util.BasicArrayList
-import org.allbinary.string.CommonStrings
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.animation.AnimationInterfaceFactoryInterface
 import org.allbinary.animation.ProceduralAnimationInterfaceFactoryInterface
@@ -54,6 +52,7 @@ import org.allbinary.game.health.Health
 import org.allbinary.game.health.HealthBar
 import org.allbinary.game.health.HealthBarTwodAnimation
 import org.allbinary.game.identification.Group
+import org.allbinary.game.layer.GeographicMapCellPositionAreaBase
 import org.allbinary.game.tracking.TrackingEvent
 import org.allbinary.game.tracking.TrackingEventHandler
 import org.allbinary.game.tracking.TrackingEventListenerInterface
@@ -360,13 +359,13 @@ this.indexedButShouldBeRotationAnimationInterface!!.nextFrame()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-    var total: Int = RTSLayerUtil.getInstance()!!.getCostExponential(this.getLevel() *this.getBuildingLevelCost())!!
+    var total: Long = RTSLayerUtil.getInstance()!!.getCostExponential(this.getLevel() *this.getBuildingLevelCost())!!
 
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return total
+                        return total.toInt()
 }
 
 
@@ -374,14 +373,14 @@ this.indexedButShouldBeRotationAnimationInterface!!.nextFrame()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-    var downgradeCost: Int = RTSLayerUtil.getInstance()!!.getCostExponential((this.getLevel() -1) *getBuildingLevelCost())!!
+    var downgradeCost: Long = RTSLayerUtil.getInstance()!!.getCostExponential((this.getLevel() -1) *getBuildingLevelCost())!!
 
 logUtil!!.put("Cost: " +downgradeCost, this, "getDowngradeCost")
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return downgradeCost *9 /10
+                        return downgradeCost.toInt() *9 /10
 }
 
 
@@ -389,13 +388,13 @@ logUtil!!.put("Cost: " +downgradeCost, this, "getDowngradeCost")
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-    var upgradeCost: Int = RTSLayerUtil.getInstance()!!.getCostExponential((this.getLevel() +1) *getBuildingLevelCost())!!
+    var upgradeCost: Long = RTSLayerUtil.getInstance()!!.getCostExponential((this.getLevel() +1) *getBuildingLevelCost())!!
 
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return upgradeCost
+                        return upgradeCost.toInt()
 }
 
 
@@ -482,10 +481,10 @@ this.efficiency= efficiency
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var occupyList: BasicArrayList = this.geographicMapCellPositionArea!!.getOccupyingGeographicMapCellPositionList()!!
+    var occupyList: BasicArrayList = this.geographicMapCellPositionAreaBase!!.getOccupyingGeographicMapCellPositionList()!!
 
 
-    var surroundList: BasicArrayList = this.geographicMapCellPositionArea!!.getSurroundingGeographicMapCellPositionList()!!
+    var surroundList: BasicArrayList = this.geographicMapCellPositionAreaBase!!.getSurroundingGeographicMapCellPositionList()!!
 
 
     var NO_DIRECTION: Direction = DirectionFactory.getInstance()!!.NO_DIRECTION
@@ -563,7 +562,7 @@ this.pathsHashtable!!.put(occupyGeographicMapCellPosition, pathsList)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.geographicMapCellPositionArea!!.getSurroundingGeographicMapCellPositionList()
+                        return this.geographicMapCellPositionAreaBase!!.getSurroundingGeographicMapCellPositionList()
 }
 
 
@@ -630,7 +629,7 @@ var damageType = damageType
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var geographicMapCellPositionArea: GeographicMapCellPositionArea = this.geographicMapCellPositionArea
+    var geographicMapCellPositionArea: GeographicMapCellPositionAreaBase = this.geographicMapCellPositionAreaBase
 
 
     var occupyList: BasicArrayList = geographicMapCellPositionArea!!.getOccupyingGeographicMapCellPositionList()!!
@@ -647,11 +646,11 @@ VisibleCellPositionsSingleton.getInstance()!!.addStationaryCellPositions(surroun
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var occupyList: BasicArrayList = this.geographicMapCellPositionArea!!.getOccupyingGeographicMapCellPositionList()!!
+    var occupyList: BasicArrayList = this.geographicMapCellPositionAreaBase!!.getOccupyingGeographicMapCellPositionList()!!
 
 VisibleCellPositionsSingleton.getInstance()!!.removeStationaryCellPositions(occupyList)
 
-    var surroundList: BasicArrayList = this.geographicMapCellPositionArea!!.getSurroundingGeographicMapCellPositionList()!!
+    var surroundList: BasicArrayList = this.geographicMapCellPositionAreaBase!!.getSurroundingGeographicMapCellPositionList()!!
 
 VisibleCellPositionsSingleton.getInstance()!!.removeStationaryCellPositions(surroundList)
 }

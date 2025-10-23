@@ -53,7 +53,7 @@ companion object {
             {
             }            
         
-    open fun paint(graphics: Graphics, point: GPoint, nextPoint: GPoint, tiledLayer: Layer)
+    override fun paint(graphics: Graphics, point: GPoint, nextPoint: GPoint, tiledLayer: Layer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics

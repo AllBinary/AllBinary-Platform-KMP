@@ -43,7 +43,7 @@ open public class WaypointBehaviorBase
 
     var waypointOverridesAttacking: Boolean = true
 
-    private var waypoint: WaypointBase
+    private var waypoint: WaypointBase = WaypointBase.NULL_WAYPOINT_BASE
 public constructor ()
             : super()
         {
@@ -51,7 +51,7 @@ this.ownedWaypointList= BasicArrayList(1)
 }
 
 
-    open fun getName()
+    override fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -75,7 +75,7 @@ this.ownedWaypointList= BasicArrayList(1)
 
                 @Throws(Exception::class)
             
-    open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
+    override fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryLayerManager = allBinaryLayerManager

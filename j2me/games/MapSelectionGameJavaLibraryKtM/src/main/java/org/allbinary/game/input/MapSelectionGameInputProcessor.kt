@@ -68,7 +68,7 @@ open public class MapSelectionGameInputProcessor : Processor
     private val abRunnable: ABRunnable = object: ABRunnable()
                                 {
                                 
-    open fun run()
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -113,7 +113,7 @@ this.lockedIndex= lockedIndex
 
                 @Throws(Exception::class)
             
-    open fun process()
+    override fun process()
         //nullable = true from not(false or (false and true)) = true
 {
 this.getPlayerGameInput()!!.update()
@@ -122,7 +122,7 @@ this.getPlayerGameInput()!!.update()
 
                 @Throws(Exception::class)
             
-    open fun onInput(list: BasicArrayList)
+    override fun onInput(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var list = list
@@ -211,20 +211,20 @@ list.clear()
 
                 @Throws(Exception::class)
             
-    open fun processInput(layerManager: AllBinaryLayerManager)
+    override fun processInput(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var layerManager = layerManager
 }
 
 
-    open fun initInputProcessors()
+    override fun initInputProcessors()
         //nullable = true from not(false or (false and true)) = true
 {
 }
 
 
-    open fun getName()
+    override fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -235,7 +235,7 @@ var layerManager = layerManager
 }
 
 
-    open fun getPlayerGameInput()
+    override fun getPlayerGameInput()
         //nullable = true from not(false or (false and true)) = true
 : PlayerGameInput{
 

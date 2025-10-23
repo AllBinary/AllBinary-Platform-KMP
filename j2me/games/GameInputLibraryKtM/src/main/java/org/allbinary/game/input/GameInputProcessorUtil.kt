@@ -37,9 +37,6 @@ companion object {
 {
     //var inputProcessorArray = inputProcessorArray
 
-                    //Otherwise - statement - EmptyStmt
-
-
     var noInputProcessor: GameInputProcessor = GameInputProcessor.getInstance()!!
 
 

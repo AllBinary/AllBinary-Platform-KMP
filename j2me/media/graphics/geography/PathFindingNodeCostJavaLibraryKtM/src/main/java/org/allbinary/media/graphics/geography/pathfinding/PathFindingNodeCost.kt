@@ -122,7 +122,7 @@ stringBuffer!!.append(this.getPathFindingNodeCostInfo()!!.toString())
 stringBuffer!!.append(" Path: ")
 stringBuffer!!.append(this.geographicMapCellPosition!!.toString())
 
-    var pathFindingNode: PathFindingNode = this.parent
+    var pathFindingNode: PathFindingNode = this.parent as PathFindingNode
 
 
         while(pathFindingNode != 
@@ -131,7 +131,7 @@ stringBuffer!!.append(this.geographicMapCellPosition!!.toString())
         {
 stringBuffer!!.append(pathFindingNode!!.geographicMapCellPosition!!.toString())
 stringBuffer!!.append(commonSeps!!.SPACE)
-pathFindingNode= pathFindingNode!!.parent
+pathFindingNode= pathFindingNode!!.parent as PathFindingNode
 }
 
 

@@ -71,6 +71,8 @@ public constructor (title: String, items: Array<CustomItem?>, rectangle: Rectang
 }
 
 
+    private var logged: Boolean = false
+
     override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -126,8 +128,21 @@ item= this.get(index) as CustomItemInterface
                         if(dx >= this.rectangle.getMaxX())
                         
                                     {
-                                    PreLogUtil.put(StringMaker().
+                                    
+    
+                        if(logged)
+                        
+                                    {
+                                    
+                                    }
+                                
+                        else {
+                            logged= true
+PreLogUtil.put(StringMaker().
                             append("painting beyond maxx: ")!!.append(this.rectangle.getMaxX())!!.toString(), this, canvasStrings!!.PAINT)
+
+                        }
+                            
 
                                     }
                                 

@@ -31,6 +31,7 @@ import org.allbinary.logic.communication.log.ForcedLogUtil
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.util.event.EventListenerInterface
 import org.allbinary.logic.util.event.EventStrings
+import org.allbinary.media.audio.NoSound
 import org.allbinary.media.audio.Sound
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.media.graphics.geography.pathfinding.MultipassState
@@ -42,10 +43,17 @@ open public class WaypointBase
         
                 , EventListenerInterface {
         
+companion object {
+            
+    var NULL_WAYPOINT_BASE: WaypointBase = WaypointBase(NoSound.getInstance())
 
+        }
+            
     private val connectedWaypointList: BasicArrayList = BasicArrayList()
 
     private val sound: Sound
+
+    var allBinaryGameLayerManagerP: AllBinaryGameLayerManager = AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER
 public constructor (sound: Sound)
             : super()
         {
@@ -65,15 +73,13 @@ this.sound= sound
 }
 
 
-    var allBinaryGameLayerManager: AllBinaryGameLayerManager
-
                 @Throws(Exception::class)
             
     open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
-this.allBinaryGameLayerManager= allBinaryGameLayerManager
+this.allBinaryGameLayerManagerP= allBinaryGameLayerManager
 }
 
 
@@ -88,7 +94,7 @@ this.allBinaryGameLayerManager= allBinaryGameLayerManager
 }
 
 
-    open fun onEvent(eventObject: AllBinaryEventObject)
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject
@@ -105,8 +111,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
 
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                            throw RuntimeException()
 }
 
 
@@ -121,8 +126,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
 
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                            throw RuntimeException()
 }
 
 
@@ -135,8 +139,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
 
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                            throw RuntimeException()
 }
 
 
@@ -149,8 +152,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
 
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                            throw RuntimeException()
 }
 
 

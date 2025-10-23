@@ -63,15 +63,14 @@ open public class SelectionHudPaintable : InitUpdatePaintable {
 
     private var name: String = StringUtil.getInstance()!!.EMPTY_STRING
 
-    private var animationInterface: Animation
+    private var animationInterface: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
 protected constructor (){
 this.update()
-this.setAnimationInterface(NullAnimationFactory.getFactoryInstance()!!.getInstance(0))
 this.primitiveLongUtil= PrimitiveLongUtil(10000)
 }
 
 
-    open fun update()
+    override fun update()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -102,7 +101,7 @@ this.setHeight(CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE +myFont!!.DEFA
 
     private val backgroundColor: Int = BasicColorFactory.getInstance()!!.GREY.toInt()!!
 
-    open fun paint(graphics: Graphics)
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -162,7 +161,7 @@ this.name= name
 }
 
 
-    open fun setBasicColorP(basicColor: BasicColor)
+    override fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
 var basicColor = basicColor

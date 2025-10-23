@@ -66,7 +66,7 @@ this.dy= dy
 }
 
 
-    open fun setDx(dx: Int)
+    override fun setDx(dx: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var dx = dx
@@ -74,7 +74,7 @@ this.dx= dx
 }
 
 
-    open fun getDx()
+    override fun getDx()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -85,7 +85,7 @@ this.dx= dx
 }
 
 
-    open fun setDy(dy: Int)
+    override fun setDy(dy: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var dy = dy
@@ -93,7 +93,7 @@ this.dy= dy
 }
 
 
-    open fun getDy()
+    override fun getDy()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -104,7 +104,7 @@ this.dy= dy
 }
 
 
-    open fun paint(graphics: Graphics, x: Int, y: Int)
+    override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graphics = graphics

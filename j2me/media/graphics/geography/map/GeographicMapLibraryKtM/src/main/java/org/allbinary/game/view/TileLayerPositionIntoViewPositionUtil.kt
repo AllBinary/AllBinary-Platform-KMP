@@ -49,9 +49,6 @@ companion object {
     var geographicMapInterface: BasicGeographicMap = geographicMapCompositeInterface!!.getGeographicMapInterface()[0]!!
 
 
-                    //Otherwise - statement - EmptyStmt
-
-
     var tiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
 
 viewPosition!!.setTiledLayer(tiledLayer)

@@ -39,7 +39,7 @@ public constructor (){
 }
 
 
-    open fun run()
+    override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -65,9 +65,9 @@ public constructor (){
 
                                     }
                                 
-waypointBehavior!!.setWaypointPathsList(this.targetLayer!!.getWaypointBehavior()!!.getWaypoint()!!.getPathsList(geographicMapCellPosition))
+waypointBehavior!!.setWaypointPathsList(this.targetPathFindingLayer!!.getWaypointBehavior()!!.getWaypoint()!!.getPathsList(geographicMapCellPosition))
 pathFindingLayer!!.getWaypointRunnableLogHelper()!!.end(pathFindingLayer)
-Thread.sleep(15 +(this.priority *2))
+Thread.sleep(15.toLong() +(this.priorityP *2))
 } catch(e: Exception)
             {
 
@@ -80,7 +80,7 @@ this.setRunning(false)
 }
 
 
-    open fun isDone()
+    override fun isDone()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

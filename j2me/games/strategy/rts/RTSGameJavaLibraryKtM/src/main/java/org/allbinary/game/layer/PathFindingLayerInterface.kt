@@ -46,7 +46,7 @@ interface PathFindingLayerInterface : WaypointLayerInterface, GameKeyEventSource
 
     open fun getGeographicMapCellPositionArea()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPositionArea
+: GeographicMapCellPositionAreaBase
 
     open fun getHudPaintable()
         //nullable = true from not(false or (false and true)) = true

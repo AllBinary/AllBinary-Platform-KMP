@@ -32,7 +32,6 @@ import org.allbinary.game.configuration.GameConfigurationCentral
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.graphics.opengles.OpenGLFeatureFactory
 import org.allbinary.graphics.opengles.OpenGLUtil
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.math.AngleFactory
 import org.allbinary.math.AngleInfo
 import org.allbinary.media.image.ImageCopyUtil
@@ -40,7 +39,7 @@ import org.allbinary.media.image.ImageCopyUtil
 open public class AllBinaryJ2SEImageRotationAnimationFactory : BaseImageAnimationFactory {
         
 
-    val angleIncrement: Short
+    val angleIncrementP: Short
 
     private val resizeCanvasForRotation: Boolean
 public constructor (image: Image, dx: Int, dy: Int)                        
@@ -219,7 +218,7 @@ public constructor (image: Image, width: Int, height: Int, animationBehaviorFact
 
                             //For kotlin this is before the body of the constructor.
                     
-this.angleIncrement= (AngleFactory.getInstance()!!.TOTAL_ANGLE /GameConfigurationCentral.getInstance()!!.getGameControlFidelity()).toShort()
+this.angleIncrementP= (AngleFactory.getInstance()!!.TOTAL_ANGLE /GameConfigurationCentral.getInstance()!!.getGameControlFidelity()).toShort()
 this.resizeCanvasForRotation= false
 }
 
@@ -235,7 +234,7 @@ public constructor (image: Image, width: Int, height: Int, angleIncrement: Short
 
                             //For kotlin this is before the body of the constructor.
                     
-this.angleIncrement= angleIncrement
+this.angleIncrementP= angleIncrement
 this.resizeCanvasForRotation= false
 }
 
@@ -252,7 +251,7 @@ public constructor (image: Image, width: Int, height: Int, angleIncrement: Short
 
                             //For kotlin this is before the body of the constructor.
                     
-this.angleIncrement= angleIncrement
+this.angleIncrementP= angleIncrement
 this.resizeCanvasForRotation= resizeCanvasForRotation
 }
 
@@ -290,11 +289,9 @@ this.resizeCanvasForRotation= resizeCanvasForRotation
 }
 
 
-    val logUtil: LogUtil = LogUtil.getInstance()!!
-
                 @Throws(Exception::class)
             
-    open fun getInstance(instanceId: Int)
+    override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
     //var instanceId = instanceId
@@ -324,7 +321,7 @@ scaledImage= openGLUtil!!.add(scaledImage)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AllBinaryAdjustedJ2SEImageRotationAnimation(scaledImage, copyOfScaledImage, AngleInfo.getInstance(this.angleIncrement), AngleFactory.getInstance()!!.TOTAL_ANGLE, this.animationFactoryInitializationVisitor!!.dx, this.animationFactoryInitializationVisitor!!.dy, this.animationBehaviorFactory!!.getOrCreateInstance())
+                        return AllBinaryAdjustedJ2SEImageRotationAnimation(scaledImage, copyOfScaledImage, AngleInfo.getInstance(this.angleIncrementP), AngleFactory.getInstance()!!.TOTAL_ANGLE, this.animationFactoryInitializationVisitor!!.dx, this.animationFactoryInitializationVisitor!!.dy, this.animationBehaviorFactory!!.getOrCreateInstance())
 
                                     }
                                 
@@ -333,7 +330,7 @@ scaledImage= openGLUtil!!.add(scaledImage)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AllBinaryJ2SEImageRotationAnimation(scaledImage, copyOfScaledImage, AngleInfo.getInstance(this.angleIncrement), AngleFactory.getInstance()!!.TOTAL_ANGLE, this.animationBehaviorFactory!!.getOrCreateInstance())
+                        return AllBinaryJ2SEImageRotationAnimation(scaledImage, copyOfScaledImage, AngleInfo.getInstance(this.angleIncrementP), AngleFactory.getInstance()!!.TOTAL_ANGLE, this.animationBehaviorFactory!!.getOrCreateInstance())
 
                         }
                             
@@ -347,7 +344,7 @@ scaledImage= openGLUtil!!.add(scaledImage)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return angleIncrement
+                        return angleIncrementP
 }
 
 

@@ -85,7 +85,7 @@ this.setAnimationInterface(this.indexedButShouldBeRotationAnimationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var rtsPlayerLayerInterface = rtsPlayerLayerInterface
-this.percentComplete= 100
+this.percentCompleteP= 100
 this.initVisibility(rtsPlayerLayerInterface)
 }
 

@@ -130,7 +130,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
     var advancedRTSGameLayer: AdvancedRTSGameLayer = event.getRtsLayer() as AdvancedRTSGameLayer
 
-this.associatedAdvancedRTSGameLayer!!.waypointLogHelper!!.onWaypointEvent(this.associatedAdvancedRTSGameLayer, advancedRTSGameLayer)
+this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.onWaypointEvent(this.associatedAdvancedRTSGameLayer, advancedRTSGameLayer)
 
     
                         if(this.associatedAdvancedRTSGameLayer!!.isSelected())
@@ -177,7 +177,7 @@ this.associatedAdvancedRTSGameLayer!!.waypointLogHelper!!.onWaypointEvent(this.a
                         if(!this.targetList!!.contains(advancedRTSGameLayer))
                         
                                     {
-                                    this.associatedAdvancedRTSGameLayer!!.waypointLogHelper!!.addWaypointFromBuilding(this.associatedAdvancedRTSGameLayer, advancedRTSGameLayer)
+                                    this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.addWaypointFromBuilding(this.associatedAdvancedRTSGameLayer, advancedRTSGameLayer)
 
     
                         if(advancedRTSGameLayer!!.isDestroyed())
@@ -191,7 +191,7 @@ this.associatedAdvancedRTSGameLayer!!.waypointLogHelper!!.onWaypointEvent(this.a
                                     }
                                 
 this.targetList!!.add(advancedRTSGameLayer)
-this.associatedAdvancedRTSGameLayer!!.waypointLogHelper!!.addWaypointFromBuilding(this.associatedAdvancedRTSGameLayer, advancedRTSGameLayer, this.targetList)
+this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.addWaypointFromBuilding(this.associatedAdvancedRTSGameLayer, advancedRTSGameLayer, this.targetList)
 
                                     }
                                 
@@ -224,7 +224,7 @@ this.associatedAdvancedRTSGameLayer!!.waypointLogHelper!!.addWaypointFromBuildin
                         if(this.canInsertWaypoint(index, rtsLayer))
                         
                                     {
-                                    this.associatedAdvancedRTSGameLayer!!.waypointLogHelper!!.insertWaypoint(this.associatedAdvancedRTSGameLayer, index, rtsLayer, this.getName())
+                                    this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.insertWaypoint(this.associatedAdvancedRTSGameLayer, index, rtsLayer, this.getName())
 
     
                         if(rtsLayer!!.isDestroyed())
@@ -238,7 +238,7 @@ this.associatedAdvancedRTSGameLayer!!.waypointLogHelper!!.addWaypointFromBuildin
                                     }
                                 
 this.targetList!!.add(index, rtsLayer)
-this.associatedAdvancedRTSGameLayer!!.waypointLogHelper!!.insertWaypoint(this.associatedAdvancedRTSGameLayer, index, rtsLayer, this.getName(), this.targetList)
+this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.insertWaypoint(this.associatedAdvancedRTSGameLayer, index, rtsLayer, this.getName(), this.targetList)
 
 
 
@@ -285,7 +285,7 @@ this.setMoving(false)
 
     var size: Int = pathsList!!.size()!!
 
-this.associatedAdvancedRTSGameLayer!!.waypointLogHelper!!.setRandomGeographicMapCellHistory(this.associatedAdvancedRTSGameLayer, pathsList)
+this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.setRandomGeographicMapCellHistory(this.associatedAdvancedRTSGameLayer, pathsList)
 
     
                         if(size > 0)
@@ -384,7 +384,7 @@ this.getCompleteTimeDelayHelper()!!.setStartTime()
     var geographicMapCellPosition: GeographicMapCellPosition = this.associatedAdvancedRTSGameLayer!!.getCurrentGeographicMapCellPosition()!!
 
 
-    var list: BasicArrayList = buildingLayer!!.geographicMapCellPositionArea!!.getOccupyingGeographicMapCellPositionList()!!
+    var list: BasicArrayList = buildingLayer!!.geographicMapCellPositionAreaBase!!.getOccupyingGeographicMapCellPositionList()!!
 
 
     
@@ -396,7 +396,7 @@ this.getCompleteTimeDelayHelper()!!.setStartTime()
                         if(this.insertWaypoint(0, this.FAKE_WAYPOINT_LAYER))
                         
                                     {
-                                    this.associatedAdvancedRTSGameLayer!!.waypointLogHelper!!.moveAwayFromBuilding(this.associatedAdvancedRTSGameLayer)
+                                    this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.moveAwayFromBuilding(this.associatedAdvancedRTSGameLayer)
 this.setCurrentTargetLayerInterface(this.FAKE_WAYPOINT_LAYER as CollidableDestroyableDamageableLayer)
 
     var pathsList: BasicArrayList = buildingLayer!!.getMoveOutOfBuildAreaPath(geographicMapCellPosition)!!
@@ -416,7 +416,7 @@ this.associatedAdvancedRTSGameLayer!!.setClosestGeographicMapCellHistory(pathsLi
     open fun needToMove()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-this.associatedAdvancedRTSGameLayer!!.waypointLogHelper!!.needToMove(this.associatedAdvancedRTSGameLayer, this)
+this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.needToMove(this.associatedAdvancedRTSGameLayer, this)
 
     
                         if(this.isTrackingWaypoint() || this.sensorAction == SensorActionFactory.getInstance()!!.EVADE || (this.currentTargetLayerInterface != 

@@ -37,7 +37,7 @@ this.capitalGraphic= moneyGraphic
 }
 
 
-    open fun removeMoney(points: Int)
+    override fun removeMoney(points: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var points = points
@@ -46,7 +46,7 @@ this.capitalGraphic!!.reduce(points)
 }
 
 
-    open fun getTotalMoney()
+    override fun getTotalMoney()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -57,7 +57,7 @@ this.capitalGraphic!!.reduce(points)
 }
 
 
-    open fun addMoney(points: Int)
+    override fun addMoney(points: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var points = points

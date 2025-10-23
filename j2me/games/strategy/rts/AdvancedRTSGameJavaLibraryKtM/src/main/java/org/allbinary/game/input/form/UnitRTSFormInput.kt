@@ -30,7 +30,6 @@ import org.allbinary.logic.string.StringMaker
 import org.allbinary.game.layer.AdvancedPlayerOwnedRTSLayers
 import org.allbinary.game.layer.AdvancedRTSGameLayer
 import org.allbinary.game.layer.AdvancedRTSPlayerLayerInterface
-import org.allbinary.game.layer.GeographicMapCellPositionArea
 import org.allbinary.game.layer.RTSGameStrings
 import org.allbinary.game.layer.RTSLayer
 import org.allbinary.game.layer.RTSPlayerLayerInterface
@@ -43,8 +42,10 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.game.identification.Group
 import org.allbinary.game.layer.AllBinaryGameLayerManager
+import org.allbinary.game.layer.GeographicMapCellPositionAreaBase
 import org.allbinary.game.layer.hud.event.GameNotificationEvent
 import org.allbinary.game.layer.hud.event.GameNotificationEventHandler
+import org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer
 import org.allbinary.graphics.GPoint
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.layer.AllBinaryLayerManager
@@ -118,7 +119,7 @@ this.newUnitGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.getF
     //var itemIndex = itemIndex
 super.process(layerManager)
 
-    var geographicMapCellPositionArea: GeographicMapCellPositionArea = associatedRtsLayer!!.geographicMapCellPositionArea
+    var geographicMapCellPositionArea: GeographicMapCellPositionAreaBase = associatedRtsLayer!!.geographicMapCellPositionAreaBase
 
 
     var geographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionArea!!.getNextSurroundingGeographicMapCellPosition()!!
@@ -128,9 +129,7 @@ this.getHashtable()!!.put(UnitRTSFormInput.DECAL_ID,
                                     (rtsPlayerLayerInterface as AdvancedRTSPlayerLayerInterface).getDecalBasicColor())
 
     
-                        if(this.newUnconstructedRTSLayerInterfaceArray[itemIndex] == 
-                                    null
-                                )
+                        if(this.newUnconstructedRTSLayerInterfaceArray[itemIndex] == CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER)
                         
                                     {
                                     this.newUnconstructedRTSLayerInterfaceArray[itemIndex]= this.getInstance(layerManager, item, geographicMapCellPosition)
@@ -141,22 +140,28 @@ this.getHashtable()!!.put(UnitRTSFormInput.DECAL_ID,
                             
     var cellPoint: GPoint = geographicMapCellPosition!!.getPoint()!!
 
-this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!!.setPosition(cellPoint!!.getX(), cellPoint!!.getY(), this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!!.getZP())
 
-    var geographicMapCompositeInterface: GeographicMapCompositeInterface = this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!!.allBinaryGameLayerManagerP as GeographicMapCompositeInterface
+    var rtsLayer: RTSLayer = this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!! as RTSLayer
+
+rtsLayer!!.setPosition(cellPoint!!.getX(), cellPoint!!.getY(), rtsLayer!!.getZP())
+
+    var geographicMapCompositeInterface: GeographicMapCompositeInterface = rtsLayer!!.allBinaryGameLayerManagerP as GeographicMapCompositeInterface
 
 
     var geographicMapInterface: BasicGeographicMap = geographicMapCompositeInterface!!.getGeographicMapInterface()[0]!!
 
-this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!!.geographicMapCellPositionArea!!.update(geographicMapInterface)
+rtsLayer!!.geographicMapCellPositionAreaBase!!.update(geographicMapInterface)
 
                         }
                             
 
     var cellPoint: GPoint = geographicMapCellPosition!!.getMidPoint()!!
 
-this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!!.setPosition(cellPoint!!.getX() -this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!!.getHalfWidth(), cellPoint!!.getY() -this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!!.getHalfHeight(), this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!!.getZP())
-this.attemptBuild(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!!, itemIndex)
+
+    var rtsLayer: RTSLayer = this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!! as RTSLayer
+
+rtsLayer!!.setPosition(cellPoint!!.getX() -rtsLayer!!.getHalfWidth(), cellPoint!!.getY() -rtsLayer!!.getHalfHeight(), rtsLayer!!.getZP())
+this.attemptBuild(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, rtsLayer as RTSLayer, itemIndex)
 }
 
 
@@ -192,9 +197,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "attemptBuild")
                         
                                     {
                                     layerInterface!!.construct(rtsPlayerLayerInterface)
-this.newUnconstructedRTSLayerInterfaceArray[itemIndex]= 
-                                        null
-                                    
+this.newUnconstructedRTSLayerInterfaceArray[itemIndex]= CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER
 rtsPlayerLayerInterface!!.add(BuildingSound.getInstance())
 capital.removeMoney(cost)
 AssignWaypointsUtil.getInstance()!!.set(layerInterface as UnitLayer, associatedRtsLayer as AdvancedRTSGameLayer)

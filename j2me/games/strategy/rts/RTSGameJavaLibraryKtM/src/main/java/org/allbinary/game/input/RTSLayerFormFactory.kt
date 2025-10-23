@@ -39,15 +39,14 @@ open public class RTSLayerFormFactory
             {
             }            
         
-    open fun getInstance(rtsLayer: RTSLayer)
+    override fun getInstance(rtsLayer: RTSLayer)
         //nullable =  from not(true or (false and false)) = 
 : ScrollSelectionForm{
 var rtsLayer = rtsLayer
 
 
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                            throw RuntimeException()
 }
 
 

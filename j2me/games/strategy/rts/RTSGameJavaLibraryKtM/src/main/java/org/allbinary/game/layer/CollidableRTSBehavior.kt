@@ -43,7 +43,7 @@ public constructor (ownerLayer: CollidableCompositeLayer, collidable: Boolean)
 }
 
 
-    open fun isCollision(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
+    override fun isCollision(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
@@ -110,7 +110,7 @@ public constructor (ownerLayer: CollidableCompositeLayer, collidable: Boolean)
 
                 @Throws(Exception::class)
             
-    open fun collide(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
+    override fun collide(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
