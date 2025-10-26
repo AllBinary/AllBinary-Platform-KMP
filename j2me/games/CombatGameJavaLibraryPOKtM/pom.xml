@@ -93,7 +93,9 @@
 
         <module>../../media/graphics/geography/map/TerrainEventJavaLibraryKtM</module>
 
+<!--        
         <module>../../media/graphics/geography/map/BasicPlatformGeographicMapJavaLibraryKtM</module>        
+        -->
 
         <!--
         <module>../../media/graphics/geography/map/RaceTrackP</module>
