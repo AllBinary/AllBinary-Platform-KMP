@@ -33,7 +33,12 @@ open public class PathFindingNodeCostInfoFactoryBase
         
                 , PathFindingNodeCostInfoFactoryBaseInterface {
         
+companion object {
+            
+    val NULL_PATH_FINDING_NODE_COST_INFO_FACTORY_BASE: PathFindingNodeCostInfoFactoryBase = PathFindingNodeCostInfoFactoryBase()
 
+        }
+            
             //Auto Generated
             public constructor() : super()
             {

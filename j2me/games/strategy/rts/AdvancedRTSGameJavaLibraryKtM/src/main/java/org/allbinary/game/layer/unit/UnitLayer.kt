@@ -115,6 +115,7 @@ import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.layer.Layer
 import org.allbinary.layer.LayerInterfaceFactoryInterface
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.math.BasicDecimal
 import org.allbinary.logic.math.SmallIntegerSingletonFactory
 import org.allbinary.math.AngleFactory
@@ -216,13 +217,13 @@ companion object {
 
     private val waypointLayerInterfaceFactoryInterface: LayerInterfaceFactoryInterface
 
-    private var resourceLoad: Short = 0
+    private var resourceLoad: Int = 0
 
     private var weaponRange: Int= 0
 
     var rtsLogHelper: RTSLayerLogHelper = RTSLayerLogHelper.getInstance()!!
 
-    var rotationAnimationInterface: RotationAnimation
+    var rotationAnimationInterfaceP: RotationAnimation
 
     private var movementAngle: NamedAngle = this.angleFactory!!.NOT_ANGLE
 
@@ -391,8 +392,8 @@ this.decalAnimation= decalAnimationInterfaceFactoryInterface!!.getInstance(0) as
 this.initResourceAnimation= resourceAnimationInterfaceFactoryInterface!!.getInstance(0) as RotationAnimation
 this.initResourceAnimation!!.setFrame(direction)
 this.decalAnimation!!.setFrame(direction)
-this.rotationAnimationInterface= this.indexedButShouldBeRotationAnimationInterface as RotationAnimation
-this.rotationAnimationInterface!!.setFrame(direction)
+this.rotationAnimationInterfaceP= this.indexedButShouldBeRotationAnimationInterface as RotationAnimation
+this.rotationAnimationInterfaceP!!.setFrame(direction)
 this.setMaxLevel(12)
 this.vehicleProperties= vehicleProperties
 this.trackingEvent= TrackingEvent(this)
@@ -941,7 +942,7 @@ this.setPosition(point.getX() -this.getHalfWidth(), point.getY() -this.getHalfHe
 {
 this.initResourceAnimation!!.previousRotation()
 this.decalAnimation!!.previousRotation()
-this.rotationAnimationInterface!!.previousRotation()
+this.rotationAnimationInterfaceP!!.previousRotation()
 }
 
 
@@ -952,7 +953,7 @@ this.rotationAnimationInterface!!.previousRotation()
 {
 this.initResourceAnimation!!.nextRotation()
 this.decalAnimation!!.nextRotation()
-this.rotationAnimationInterface!!.nextRotation()
+this.rotationAnimationInterfaceP!!.nextRotation()
 }
 
 
@@ -1030,7 +1031,7 @@ var layerManager = layerManager
 
     var key: Int = GameKeyEventUtil.getKey(anyType)!!
 
-this.inputProcessorArray[key]!!.process(layerManager, null as GameKeyEvent)
+this.inputProcessorArray[key]!!.process(layerManager, GameKeyEvent.NONE)
 }
 
 list.clear()
@@ -1043,7 +1044,7 @@ this.move()
         //nullable = true from not(false or (false and false)) = true
 {
     //var accelerate = accelerate
-this.getVehicleProperties()!!.getVelocityProperties()!!.addVelocity(accelerate.getUnscaled(), this.rotationAnimationInterface!!.getAngleInfoP()!!.getAngle(), 90.toShort())
+this.getVehicleProperties()!!.getVelocityProperties()!!.addVelocity(accelerate.getUnscaled(), this.rotationAnimationInterfaceP!!.getAngleInfoP()!!.getAngle().toInt(), 90)
 }
 
 
@@ -1054,15 +1055,16 @@ this.getVehicleProperties()!!.getVelocityProperties()!!.addVelocity(accelerate.g
 {
     //var layerManager = layerManager
 
-    var angleInfo: AngleInfo = this.rotationAnimationInterface!!.getAngleInfoP()!!
+    var angleInfo: AngleInfo = this.rotationAnimationInterfaceP!!.getAngleInfoP()!!
 
 
-    var angle: Short = (angleInfo!!.getAngle() +this.slightAngle).toShort()
+    var angle: Int = (angleInfo!!.getAngle() +this.slightAngle).toInt()
 
-hashtable.put(SmallIntegerSingletonFactory.getInstance()!!.getInstance(1), SmallIntegerSingletonFactory.getInstance()!!.getInstance(AngleFactory.getInstance()!!.getInstance(angle)!!.getValue()))
- = this.getPartInterfaceArray()[0]!! as SalvoInterface
-.
-                    process(layerManager, angle, 90.toShort())
+hashtable.put(SmallIntegerSingletonFactory.getInstance()!!.getInstance(1), SmallIntegerSingletonFactory.getInstance()!!.getInstance(AngleFactory.getInstance()!!.getInstance(angle)!!.getValue().toInt()))
+
+    var salvoInterface: SalvoInterface = this.getPartInterfaceArray()[0]!! as SalvoInterface
+
+salvoInterface!!.process(layerManager, angle.toShort(), 90.toShort())
 }
 
 
@@ -1168,7 +1170,7 @@ targetAngle += 180
                                     }
                                 
 
-    var angleInfo: AngleInfo = this.rotationAnimationInterface!!.getAngleInfoP()!!
+    var angleInfo: AngleInfo = this.rotationAnimationInterfaceP!!.getAngleInfoP()!!
 
 
     var angle: Int = FrameUtil.getInstance()!!.adjustAngleToFrameAngle(angleInfo!!.getAngle() -270)!!
@@ -1193,7 +1195,7 @@ this.rtsLogHelper!!.turnTo(this, dx, dy, angleInfo, angle, movementAngle, evadin
                                 
                              else 
     
-                        if(this.movementAngle!!.getValue() == angle)
+                        if((this.movementAngle!!.getValue().toInt()) == angle)
                         
                                     {
                                     
@@ -1450,8 +1452,7 @@ this.rtsLogHelper!!.handle(this, this.movementAngle)
     var steeringVisitor: SteeringVisitor = list.get(index) as SteeringVisitor
 
 
-    var anyType: Any = steeringVisitor!!.visit(
-                            null)!!
+    var anyType: Any = steeringVisitor!!.visit(NullUtil.getInstance()!!.NULL_OBJECT)!!
 
 
     
@@ -1530,15 +1531,15 @@ TrackingEventHandler.getInstance()!!.fireEvent(this.getTrackingEvent())
     var velocityProperties: VelocityProperties = this.getVehicleProperties()!!.getVelocityProperties()!!
 
 
-    var velocityXScaled: Long = velocityProperties!!.getVelocityXBasicDecimalP()!!.getScaled()!!
+    var velocityXScaled: Long = velocityProperties!!.getVelocityXBasicDecimalP()!!.getScaled().toLong()
 
 
-    var velocityYScaled: Long = velocityProperties!!.getVelocityYBasicDecimalP()!!.getScaled()!!
+    var velocityYScaled: Long = velocityProperties!!.getVelocityYBasicDecimalP()!!.getScaled().toLong()
 
 this.getUnitWaypointBehavior()!!.move()
 
     
-                        if(velocityXScaled != 0 || velocityYScaled != 0)
+                        if(velocityXScaled != 0L || velocityYScaled != 0L)
                         
                                     {
                                     this.getUnitWaypointBehavior()!!.setMoving(true)
@@ -1815,7 +1816,7 @@ this.resourceAnimation= NullIndexedAnimationFactory.getFactoryInstance()!!.getIn
 
                 @Throws(Exception::class)
             
-    override fun setLoad(resource: Short)
+    override fun setLoad(resource: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var resource = resource
@@ -1860,7 +1861,7 @@ var ownerLayer = ownerLayer
                                     {
                                     CAPITAL_EVENT.setValue(this.getLoad())
 CapitalEventHandlerFactory.getInstance(ownerLayer!!.getGroupInterface()[0]!!)!!.fireEvent(CAPITAL_EVENT)
-this.setLoad(0.toShort())
+this.setLoad(0)
 
                                     }
                                 

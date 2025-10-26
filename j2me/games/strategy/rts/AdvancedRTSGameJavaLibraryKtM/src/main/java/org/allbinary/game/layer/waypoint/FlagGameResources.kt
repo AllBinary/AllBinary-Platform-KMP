@@ -27,6 +27,7 @@
         
 import org.allbinary.game.layer.resources.BasicGameResources
 import org.allbinary.game.layer.resources.GameGraphicsResourceUtil
+import org.allbinary.logic.string.StringUtil
 
 open public class FlagGameResources : BasicGameResources {
         
@@ -42,13 +43,13 @@ companion object {
 
         }
             
-    var NAME: String
+    var NAME: String = StringUtil.getInstance()!!.EMPTY_STRING
 
-    var RESOURCE_ICON_ANIMATION: String
+    var RESOURCE_ICON_ANIMATION: String = StringUtil.getInstance()!!.EMPTY_STRING
 
-    var RESOURCE_ICON_BUILD: String
+    var RESOURCE_ICON_BUILD: String = StringUtil.getInstance()!!.EMPTY_STRING
 
-    var RESOURCE_ICON: String
+    var RESOURCE_ICON: String = StringUtil.getInstance()!!.EMPTY_STRING
 protected constructor (){
 }
 

@@ -109,8 +109,11 @@ geologicalResource= geologicalGeographicMapCellPosition!!.getGeologicalResource(
                         
                                     {
                                     outOfResources= false
-geologicalResource!!.remove(unitLayer!!.getMaxResourceLoad())
-unitLayer!!.setLoad(unitLayer!!.getMaxResourceLoad())
+
+    var maxResourceLoad: Int = unitLayer!!.getMaxResourceLoad().toInt()
+
+geologicalResource!!.remove(maxResourceLoad)
+unitLayer!!.setLoad(maxResourceLoad)
 
                                     }
                                 

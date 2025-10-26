@@ -38,12 +38,12 @@ companion object {
     open fun getInstance(groupInterface: Group)
         //nullable =  from not(true or (false and false)) = 
 : WaypointEventHandler{
-var groupInterface = groupInterface
+    //var groupInterface = groupInterface
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return eventHandlerArray[groupInterface!!.getGroupId()]!!
+                        return eventHandlerArray[groupInterface!!.getGroupId().toInt()]!!
 }
 
 

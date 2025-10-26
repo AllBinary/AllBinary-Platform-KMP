@@ -26,13 +26,19 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.util.BasicArrayList
+import org.allbinary.util.BasicArrayListUtil
 
 open public class PathFindingInfo
             : Object
         
                 , PathFindingInfoInterface {
         
+companion object {
+            
+    val NULL_PATH_FINDING_INFO: PathFindingInfo = PathFindingInfo(PathFindingNodeCostInfoFactoryBase.NULL_PATH_FINDING_NODE_COST_INFO_FACTORY_BASE, BasicArrayListUtil.getInstance()!!.getImmutableInstance(), BasicArrayListUtil.getInstance()!!.getImmutableInstance())
 
+        }
+            
     private var pathFinder: GeographicPathFinderBase = GeographicPathFinderBase.NULL_GEOGRAPHIC_PATH_FINDER_BASE
 
     private val startPathFindingNodeList: BasicArrayList
@@ -40,6 +46,17 @@ open public class PathFindingInfo
     private val endPathFindingNodeList: BasicArrayList
 
     private val pathFindingNodeCostInfoFactoryInterface: PathFindingNodeCostInfoFactoryBase
+public constructor (pathFindingNodeCostInfoFactoryInterface: PathFindingNodeCostInfoFactoryBase, startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList)
+            : super()
+        {
+    //var pathFindingNodeCostInfoFactoryInterface = pathFindingNodeCostInfoFactoryInterface
+    //var startPathFindingNodeList = startPathFindingNodeList
+    //var endPathFindingNodeList = endPathFindingNodeList
+this.pathFindingNodeCostInfoFactoryInterface= pathFindingNodeCostInfoFactoryInterface
+this.startPathFindingNodeList= startPathFindingNodeList
+this.endPathFindingNodeList= endPathFindingNodeList
+}
+
 public constructor (pathFindingNodeCostInfoFactoryInterface: PathFindingNodeCostInfoFactoryBase)
             : super()
         {

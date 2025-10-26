@@ -58,9 +58,9 @@ open public class Waypoint : WaypointBase
 
     val ownerLayer: PathFindingLayerInterface
 
-    private var endList: BasicArrayList
+    private var endList: BasicArrayList = BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
 
-    private var paths: Array<Array<BasicArrayList?>?>
+    private var paths: Array<Array<BasicArrayList?>?> = BasicArrayListUtil.getInstance()!!.NULL_ARRAY_OF_ARRAY
 public constructor (ownerLayer: PathFindingLayerInterface, sound: Sound)                        
 
                             : super(sound){

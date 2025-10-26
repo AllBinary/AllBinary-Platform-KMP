@@ -82,6 +82,9 @@ System.out.println(list)
             {
             }            
         
+    val NULL_ARRAY_OF_ARRAY: Array<Array<BasicArrayList?>?> = Array(0) { arrayOfNulls<BasicArrayList?>(0) }
+                                                            
+
     private val myRandomFactory: MyRandomFactory = MyRandomFactory.getInstance()!!
 
     private val immutableInstance: BasicArrayList = ImmutableBasicArrayList(0)

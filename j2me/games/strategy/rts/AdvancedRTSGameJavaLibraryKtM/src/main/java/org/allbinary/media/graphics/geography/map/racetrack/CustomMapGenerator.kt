@@ -48,7 +48,11 @@ this.geographicMapCellTypeFactory= this.raceTrackGeographicMap!!.getGeographicMa
 
     var mapArray: Array<IntArray?> = raceTrackGeographicMap!!.getRaceTrackData()!!.getMapArray()!!
 
-this.customMapArray= Array(mapArray!!.size) { IntArray(mapArray[0]!!.length) }
+
+    var size2: Int = mapArray[0]!!.size
+                
+
+this.customMapArray= Array(mapArray!!.size) { IntArray(size2) }
 
     
                         if(mapArray!!.size != this.customMapArray!!.size || mapArray[0]!!.size != this.customMapArray[0]!!.size)

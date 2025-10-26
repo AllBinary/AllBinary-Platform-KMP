@@ -109,7 +109,7 @@ super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return PathFindingInfo.NULL_PATH_FINDING_INFO
 
                                     }
                                 
@@ -127,7 +127,7 @@ super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return PathFindingInfo.NULL_PATH_FINDING_INFO
 
                                     }
                                 

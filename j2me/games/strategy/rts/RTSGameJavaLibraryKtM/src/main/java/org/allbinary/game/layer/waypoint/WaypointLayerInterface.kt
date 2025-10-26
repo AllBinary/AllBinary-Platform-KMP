@@ -58,7 +58,7 @@ interface WaypointLayerInterface {
 
                 @Throws(Exception::class)
             
-    open fun setLoad(resource: Short)
+    open fun setLoad(resource: Int)
         //nullable = true from not(false or (false and false)) = true
 
 

@@ -48,8 +48,10 @@ import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.logic.NullUtil
+import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.math.LayerDistanceUtil
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
+import org.allbinary.media.graphics.geography.map.SimpleGeographicMapCellPositionFactory
 import org.allbinary.thread.PathFindingThreadPool
 import org.allbinary.thread.ThreadPool
 import org.allbinary.time.TimeDelayHelper
@@ -58,32 +60,6 @@ open public class UnitWaypointBehavior2 : UnitWaypointBehavior {
         
 companion object {
             
-    private val WANDERING: String = "Order?"
-
-    private val THINKING: String = "Thinking"
-
-    private val THINKING_ABOUT_TARGET: String = "Hmmm"
-
-    private val TARGET: String = "Target"
-
-    private val KILL: String = "Kill!"
-
-    private val STOP: String = "Stop"
-
-    private val WAYPOINT_DESTROYED_SHORT: String = "Uh Oh"
-
-    private val WAYPOINT_DESTROYED: String = "Waypoint Destroyed"
-
-    private val ALL_VISITED_SHORT: String = "Arrived"
-
-    private val ALL_VISITED: String = "All Visited"
-
-    private val ALREADY_THERE_SHORT: String = "Again?"
-
-    private val ALREADY_THERE: String = "Already There"
-
-    private val NEXT_PATH_NODE: String = "Next Path Node"
-
     private val runningWaypointPathList: BasicArrayList = BasicArrayList()
 
     private val TARGET_DISTANCE: String = "Target Distance"
@@ -94,32 +70,34 @@ companion object {
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
+    private val unitWaypointStrings: UnitWaypointStrings = UnitWaypointStrings.getInstance()!!
+
     private val basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
 
     private val layerDistanceUtil: LayerDistanceUtil = LayerDistanceUtil.getInstance()!!
 
     private val pathFindingThreadPool: ThreadPool = PathFindingThreadPool.getInstance()!!
 
-    private var sensorRange: Int = 0
-
-    private var closeRange: Int = 0
-
     private val progressTimeDelayHelper: TimeDelayHelper
-
-    var nextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition
-
-    private var afterNextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition
 
     private val wanderPathsList: BasicArrayList
 
     private val waypointPathRunnable: WaypointPathRunnableBase
 
+    private var sensorRange: Int = 0
+
+    private var closeRange: Int = 0
+
+    private var nextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+
+    private var afterNextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+
     private var waitingOnTargetPath: Boolean= false
 
     private var waitingOnWaypointPath: Boolean= false
 
-    private var targetWithoutCachedPathLayerInterface: CollidableDestroyableDamageableLayer
-protected constructor (ownerAdvancedRTSGameLayer: UnitLayer, fakeWaypoint: AdvancedRTSGameLayer)                        
+    private var targetWithoutCachedPathLayerInterface: CollidableDestroyableDamageableLayer = CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER
+public constructor (ownerAdvancedRTSGameLayer: UnitLayer, fakeWaypoint: AdvancedRTSGameLayer)                        
 
                             : super(ownerAdvancedRTSGameLayer, fakeWaypoint){
 var ownerAdvancedRTSGameLayer = ownerAdvancedRTSGameLayer
@@ -210,7 +188,7 @@ var allBinaryLayerManager = allBinaryLayerManager
                                     {
                                     
     
-                        if(waypointPathsList != runningWaypointPathList)
+                        if(waypointPathsListP != runningWaypointPathList)
                         
                                     {
                                     this.waypointPathRunnable!!.setRunning(false)
@@ -324,7 +302,7 @@ var layerInterface = layerInterface
 
 
     
-                        if(layerInterface == this.currentTargetLayerInterface)
+                        if(layerInterface == this.currentTargetLayerInterfaceP)
                         
                                     {
                                     this.setCurrentTargetDistance(anotherTargetDistance)
@@ -350,9 +328,9 @@ var layerInterface = layerInterface
     var isShorterThanCurrentTargetDistance: Boolean = this.getCurrentTargetDistance() > anotherTargetDistance
 
 
-    var isCurrentTargetDestroyed: Boolean = this.currentTargetLayerInterface != 
+    var isCurrentTargetDestroyed: Boolean = this.currentTargetLayerInterfaceP != 
                                     null
-                                 && this.currentTargetLayerInterface!!.isDestroyed()
+                                 && this.currentTargetLayerInterfaceP!!.isDestroyed()
 
 this.associatedAdvancedRTSGameLayer!!.waypoint2LogHelperP!!.processPossibleTarget(this.associatedAdvancedRTSGameLayer, this, layerInterface, anotherTargetDistance, isShorterThanCurrentTargetDistance, isCurrentTargetDestroyed)
 
@@ -405,7 +383,7 @@ this.setTarget(layerInterface, anotherTargetDistance)
                         
                                     {
                                     
-    var geographicMapCellPosition: GeographicMapCellPosition = this.currentGeographicMapCellHistory!!.getTracked()!!.get(this.currentGeographicMapCellHistory!!.getSize() -1) as GeographicMapCellPosition
+    var geographicMapCellPosition: GeographicMapCellPosition = this.currentGeographicMapCellHistoryP!!.getTracked()!!.get(this.currentGeographicMapCellHistoryP!!.getSize() -1) as GeographicMapCellPosition
 
 this.associatedAdvancedRTSGameLayer!!.teleportTo(geographicMapCellPosition)
 
@@ -425,24 +403,25 @@ this.associatedAdvancedRTSGameLayer!!.teleportTo(geographicMapCellPosition)
     //var layerInterface = layerInterface
     //var anotherTargetDistance = anotherTargetDistance
 this.associatedAdvancedRTSGameLayer!!.waypoint2LogHelperP!!.setTarget(this.associatedAdvancedRTSGameLayer, this, layerInterface, anotherTargetDistance)
-this.associatedAdvancedRTSGameLayer!!.getCaptionAnimationHelper()!!.update(TARGET, BasicColorFactory.getInstance()!!.GREEN)
-this.associatedAdvancedRTSGameLayer!!.setLoad(0.toShort())
+this.associatedAdvancedRTSGameLayer!!.getCaptionAnimationHelper()!!.update(this.unitWaypointStrings!!.TARGET, BasicColorFactory.getInstance()!!.GREEN)
+this.associatedAdvancedRTSGameLayer!!.setLoad(0)
 this.setCurrentTargetDistance(anotherTargetDistance)
 this.setCurrentTargetLayerInterface(layerInterface)
 this.setTrackingWaypoint(false)
 this.targetList!!.clear()
 
     
-                        if(!this.isCloseRange(layerInterface, anotherTargetDistance) && this.canInsertWaypoint(0, this.currentTargetLayerInterface))
+                        if(!this.isCloseRange(layerInterface, anotherTargetDistance) && this.canInsertWaypoint(0, this.currentTargetLayerInterfaceP))
                         
                                     {
                                     
     var geographicMapCellPosition: GeographicMapCellPosition = associatedAdvancedRTSGameLayer!!.getCurrentGeographicMapCellPosition()!!
 
 
-    var waypoint: WaypointBase = currentTargetLayerInterface = this.currentTargetLayerInterfacecurrentTargetLayerInterface as PathFindingLayerInterface
-currentTargetLayerInterface.
-                    getWaypointBehavior()!!.getWaypoint()!!
+    var pathFindingLayerInterface: PathFindingLayerInterface = (this.currentTargetLayerInterfaceP as PathFindingLayerInterface)
+
+
+    var waypoint: WaypointBase = pathFindingLayerInterface!!.getWaypointBehavior()!!.getWaypoint()!!
 
 
     var list: BasicArrayList = waypoint.getPathsListFromCacheOnly(geographicMapCellPosition)!!
@@ -450,18 +429,18 @@ currentTargetLayerInterface.
 this.setWaypointPathsList(list)
 
     
-                        if(this.waypointPathsList == 
+                        if(this.waypointPathsListP == 
                                     null
                                 )
                         
                                     {
-                                    this.targetWithoutCachedPathLayerInterface= this.currentTargetLayerInterface
+                                    this.targetWithoutCachedPathLayerInterface= this.currentTargetLayerInterfaceP
 
                                     }
                                 
                              else 
     
-                        if(this.waypointPathsList!!.size() != 0)
+                        if(this.waypointPathsListP!!.size() != 0)
                         
                                     {
                                     this.setTargetPath()
@@ -481,18 +460,18 @@ this.setWaypointPathsList(list)
 {
 
     
-                        if(this.currentTargetLayerInterface != 
+                        if(this.currentTargetLayerInterfaceP != 
                                     null
                                 )
                         
                                     {
                                     
     
-                        if(this.currentTargetLayerInterface!!.isDestroyed())
+                        if(this.currentTargetLayerInterfaceP!!.isDestroyed())
                         
                                     {
                                     this.associatedAdvancedRTSGameLayer!!.waypoint2LogHelperP!!.setTargetPath(this.associatedAdvancedRTSGameLayer)
-this.associatedAdvancedRTSGameLayer!!.getCaptionAnimationHelper()!!.update(KILL, this.basicColorFactory!!.ORANGE)
+this.associatedAdvancedRTSGameLayer!!.getCaptionAnimationHelper()!!.update(this.unitWaypointStrings!!.KILL, this.basicColorFactory!!.ORANGE)
 this.clearTarget()
 
 
@@ -504,12 +483,12 @@ this.clearTarget()
                                 
 
     
-                        if(this.currentTargetLayerInterface == this.waypointPathRunnable!!.getTargetLayer())
+                        if(this.currentTargetLayerInterfaceP == this.waypointPathRunnable!!.getTargetLayer())
                         
                                     {
                                     this.associatedAdvancedRTSGameLayer!!.waypoint2LogHelperP!!.setTargetPath(this.associatedAdvancedRTSGameLayer, this)
-this.insertWaypoint(0, this.currentTargetLayerInterface)
-this.setRandomGeographicMapCellHistory(this.waypointPathsList)
+this.insertWaypoint(0, this.currentTargetLayerInterfaceP)
+this.setRandomGeographicMapCellHistory(this.waypointPathsListP)
 
                                     }
                                 
@@ -525,11 +504,8 @@ this.setRandomGeographicMapCellHistory(this.waypointPathsList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapCellPositionBasicArrayList = geographicMapCellPositionBasicArrayList
-this.setCurrentPathGeographicMapCellPosition(
-                            null)
-this.nextUnvisitedPathGeographicMapCellPosition= 
-                                        null
-                                    
+this.setCurrentPathGeographicMapCellPosition(SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION)
+this.nextUnvisitedPathGeographicMapCellPosition= SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 super.setGeographicMapCellHistoryPath(geographicMapCellPositionBasicArrayList)
 }
 
@@ -556,8 +532,8 @@ this.associatedAdvancedRTSGameLayer!!.waypoint2LogHelperP!!.processWaypoint(this
                         if(targetLayer!!.isDestroyed())
                         
                                     {
-                                    this.associatedAdvancedRTSGameLayer!!.getCaptionAnimationHelper()!!.update(WAYPOINT_DESTROYED_SHORT, this.basicColorFactory!!.YELLOW)
-this.removeWaypoint(targetLayer, WAYPOINT_DESTROYED)
+                                    this.associatedAdvancedRTSGameLayer!!.getCaptionAnimationHelper()!!.update(this.unitWaypointStrings!!.WAYPOINT_DESTROYED_SHORT, this.basicColorFactory!!.YELLOW)
+this.removeWaypoint(targetLayer, this.unitWaypointStrings!!.WAYPOINT_DESTROYED)
 
                                     }
                                 
@@ -582,17 +558,17 @@ this.removeWaypoint(targetLayer, WAYPOINT_DESTROYED)
                                 
 
     
-                        if(this.currentGeographicMapCellHistory!!.isAllVisited2() && this.currentTargetLayerInterface != 
+                        if(this.currentGeographicMapCellHistoryP!!.isAllVisited2() && this.currentTargetLayerInterfaceP != 
                                     null
                                 )
                         
                                     {
                                     
-    var oldWaypointLayer: AdvancedRTSGameLayer = this.currentTargetLayerInterface as AdvancedRTSGameLayer
+    var oldWaypointLayer: AdvancedRTSGameLayer = this.currentTargetLayerInterfaceP as AdvancedRTSGameLayer
 
 oldWaypointLayer!!.getWaypointBehavior()!!.getWaypoint()!!.visit(this.associatedAdvancedRTSGameLayer)
-this.associatedAdvancedRTSGameLayer!!.getCaptionAnimationHelper()!!.update(ALL_VISITED_SHORT, this.basicColorFactory!!.GREEN)
-this.removeWaypoint(this.currentTargetLayerInterface as AdvancedRTSGameLayer, ALL_VISITED)
+this.associatedAdvancedRTSGameLayer!!.getCaptionAnimationHelper()!!.update(this.unitWaypointStrings!!.ALL_VISITED_SHORT, this.basicColorFactory!!.GREEN)
+this.removeWaypoint(this.currentTargetLayerInterfaceP as AdvancedRTSGameLayer, this.unitWaypointStrings!!.ALL_VISITED)
 
                                     }
                                 
@@ -601,7 +577,7 @@ this.removeWaypoint(this.currentTargetLayerInterface as AdvancedRTSGameLayer, AL
                                 
                              else 
     
-                        if(this.currentTargetLayerInterface == 
+                        if(this.currentTargetLayerInterfaceP == 
                                     null
                                  || this.waypointOverridesAttacking)
                         
@@ -612,13 +588,13 @@ this.removeWaypoint(this.currentTargetLayerInterface as AdvancedRTSGameLayer, AL
 this.setWaypointPathsList(list)
 
     
-                        if(this.waypointPathsList == 
+                        if(this.waypointPathsListP == 
                                     null
                                 )
                         
                                     {
                                     this.waitingOnWaypointPath= true
-this.associatedAdvancedRTSGameLayer!!.getCaptionAnimationHelper()!!.update(THINKING, this.basicColorFactory!!.GREEN)
+this.associatedAdvancedRTSGameLayer!!.getCaptionAnimationHelper()!!.update(this.unitWaypointStrings!!.THINKING, this.basicColorFactory!!.GREEN)
 this.runWaypointPathTask(targetLayer)
 
 
@@ -648,11 +624,11 @@ this.setWaypointPath(targetLayer)
 {
 
     
-                        if(this.currentGeographicMapCellHistory!!.isAllVisited2())
+                        if(this.currentGeographicMapCellHistoryP!!.isAllVisited2())
                         
                                     {
                                     this.associatedAdvancedRTSGameLayer!!.waypoint2LogHelperP!!.wander(this.associatedAdvancedRTSGameLayer)
-this.associatedAdvancedRTSGameLayer!!.getCaptionAnimationHelper()!!.update(WANDERING, this.basicColorFactory!!.RED)
+this.associatedAdvancedRTSGameLayer!!.getCaptionAnimationHelper()!!.update(this.unitWaypointStrings!!.WANDERING, this.basicColorFactory!!.RED)
 wanderPathsList!!.clear()
 wanderPathsList!!.add(this.associatedAdvancedRTSGameLayer!!.getSurroundingGeographicMapCellPositionList())
 this.setRandomGeographicMapCellHistory(wanderPathsList)
@@ -661,7 +637,7 @@ this.setRandomGeographicMapCellHistory(wanderPathsList)
                                 
 this.visitIfAtMidPoint(this.getCurrentPathGeographicMapCellPosition())
 this.updateCurrentPathGeographicMapCellPosition()
-this.associatedAdvancedRTSGameLayer!!.trackTo(NEXT_PATH_NODE)
+this.associatedAdvancedRTSGameLayer!!.trackTo(this.unitWaypointStrings!!.NEXT_PATH_NODE)
 }
 
 
@@ -773,7 +749,7 @@ this.associatedAdvancedRTSGameLayer!!.trackTo(NEXT_PATH_NODE)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.currentGeographicMapCellHistory!!.visit(geographicMapCellPosition)
+                        return this.currentGeographicMapCellHistoryP!!.visit(geographicMapCellPosition)
 
                                     }
                                 
@@ -793,9 +769,7 @@ this.associatedAdvancedRTSGameLayer!!.trackTo(NEXT_PATH_NODE)
     open fun processTargetList()
         //nullable = true from not(false or (false and true)) = true
 {
-this.targetWithoutCachedPathLayerInterface= 
-                                        null
-                                    
+this.targetWithoutCachedPathLayerInterface= CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER
 
 
 
@@ -830,8 +804,8 @@ this.targetWithoutCachedPathLayerInterface=
                         
                                     {
                                     this.waitingOnTargetPath= true
-this.associatedAdvancedRTSGameLayer!!.getCaptionAnimationHelper()!!.update(THINKING_ABOUT_TARGET, this.basicColorFactory!!.GREEN)
-this.runWaypointPathTask(this.currentTargetLayerInterface as AdvancedRTSGameLayer)
+this.associatedAdvancedRTSGameLayer!!.getCaptionAnimationHelper()!!.update(this.unitWaypointStrings!!.THINKING_ABOUT_TARGET, this.basicColorFactory!!.GREEN)
+this.runWaypointPathTask(this.currentTargetLayerInterfaceP as AdvancedRTSGameLayer)
 
                                     }
                                 
@@ -846,18 +820,18 @@ this.getPossibleTargetList()!!.clear()
 {
 
     
-                        if(this.currentTargetLayerInterface != 
+                        if(this.currentTargetLayerInterfaceP != 
                                     null
-                                 && (this.isInSensorRange(this.currentTargetLayerInterface, this.getCurrentTargetDistance()) || this.isTrackingWaypoint()))
+                                 && (this.isInSensorRange(this.currentTargetLayerInterfaceP, this.getCurrentTargetDistance()) || this.isTrackingWaypoint()))
                         
                                     {
                                     
     
-                        if(this.currentTargetLayerInterface!!.isDestroyed())
+                        if(this.currentTargetLayerInterfaceP!!.isDestroyed())
                         
                                     {
                                     this.associatedAdvancedRTSGameLayer!!.waypoint2LogHelperP!!.targetDestroyed(this.associatedAdvancedRTSGameLayer)
-this.associatedAdvancedRTSGameLayer!!.getCaptionAnimationHelper()!!.update(KILL, this.basicColorFactory!!.ORANGE)
+this.associatedAdvancedRTSGameLayer!!.getCaptionAnimationHelper()!!.update(this.unitWaypointStrings!!.KILL, this.basicColorFactory!!.ORANGE)
 this.clearTarget()
 
 
@@ -890,8 +864,8 @@ this.associatedAdvancedRTSGameLayer!!.waypoint2LogHelperP!!.processTargeting(thi
                                 
                         else {
                             this.associatedAdvancedRTSGameLayer!!.waypoint2LogHelperP!!.processTargetingNonWayPoint(this.associatedAdvancedRTSGameLayer, dx, dy)
-dx= (this.associatedAdvancedRTSGameLayer!!.getXP() +this.associatedAdvancedRTSGameLayer!!.getHalfWidth()) -(this.currentTargetLayerInterface!!.getXP() +this.currentTargetLayerInterface!!.getHalfWidth())
-dy= (this.associatedAdvancedRTSGameLayer!!.getYP() +this.associatedAdvancedRTSGameLayer!!.getHalfHeight()) -(this.currentTargetLayerInterface!!.getYP() +this.currentTargetLayerInterface!!.getHalfHeight())
+dx= (this.associatedAdvancedRTSGameLayer!!.getXP() +this.associatedAdvancedRTSGameLayer!!.getHalfWidth()) -(this.currentTargetLayerInterfaceP!!.getXP() +this.currentTargetLayerInterfaceP!!.getHalfWidth())
+dy= (this.associatedAdvancedRTSGameLayer!!.getYP() +this.associatedAdvancedRTSGameLayer!!.getHalfHeight()) -(this.currentTargetLayerInterfaceP!!.getYP() +this.currentTargetLayerInterfaceP!!.getHalfHeight())
 
                         }
                             
@@ -915,7 +889,7 @@ this.associatedAdvancedRTSGameLayer!!.trackTo(dx, dy)
                         if(this.associatedAdvancedRTSGameLayer!!.showMoreCaptionStates)
                         
                                     {
-                                    this.associatedAdvancedRTSGameLayer!!.getCaptionAnimationHelper()!!.update(STOP, this.basicColorFactory!!.YELLOW)
+                                    this.associatedAdvancedRTSGameLayer!!.getCaptionAnimationHelper()!!.update(this.unitWaypointStrings!!.STOP, this.basicColorFactory!!.YELLOW)
 
                                     }
                                 
@@ -934,8 +908,8 @@ this.associatedAdvancedRTSGameLayer!!.allStop()
 {
 this.setLastPathGeographicMapCellPosition(this.getCurrentPathGeographicMapCellPosition())
 this.setCurrentPathGeographicMapCellPosition(this.nextUnvisitedPathGeographicMapCellPosition)
-this.nextUnvisitedPathGeographicMapCellPosition= this.currentGeographicMapCellHistory!!.getFirstUnvisited()
-this.afterNextUnvisitedPathGeographicMapCellPosition= this.currentGeographicMapCellHistory!!.getAfterIfNotLast(this.nextUnvisitedPathGeographicMapCellPosition)
+this.nextUnvisitedPathGeographicMapCellPosition= this.currentGeographicMapCellHistoryP!!.getFirstUnvisited()
+this.afterNextUnvisitedPathGeographicMapCellPosition= this.currentGeographicMapCellHistoryP!!.getAfterIfNotLast(this.nextUnvisitedPathGeographicMapCellPosition)
 
     
                         if(this.getCurrentPathGeographicMapCellPosition() != this.nextUnvisitedPathGeographicMapCellPosition)
@@ -956,19 +930,22 @@ this.afterNextUnvisitedPathGeographicMapCellPosition= this.currentGeographicMapC
     //var waypointLayer = waypointLayer
 
     
-                        if(waypointPathsList!!.size() != 0)
+                        if(waypointPathsListP!!.size() != 0)
                         
                                     {
                                     this.setCurrentTargetLayerInterface(waypointLayer)
-this.setCurrentTargetDistance(.MAX_VALUE())
-this.setRandomGeographicMapCellHistory(waypointPathsList)
+
+    var MAX: Int = Integer.MAX_VALUE
+
+this.setCurrentTargetDistance(MAX)
+this.setRandomGeographicMapCellHistory(waypointPathsListP)
 
                                     }
                                 
                         else {
                             waypointLayer!!.getWaypointBehavior()!!.getWaypoint()!!.visit(this.associatedAdvancedRTSGameLayer)
-this.associatedAdvancedRTSGameLayer!!.getCaptionAnimationHelper()!!.update(ALREADY_THERE_SHORT, this.basicColorFactory!!.YELLOW)
-this.removeWaypoint(waypointLayer, ALREADY_THERE)
+this.associatedAdvancedRTSGameLayer!!.getCaptionAnimationHelper()!!.update(this.unitWaypointStrings!!.ALREADY_THERE_SHORT, this.basicColorFactory!!.YELLOW)
+this.removeWaypoint(waypointLayer, this.unitWaypointStrings!!.ALREADY_THERE)
 
                         }
                             
@@ -1013,7 +990,7 @@ this.targetList!!.remove(waypointLayer)
 this.associatedAdvancedRTSGameLayer!!.waypoint2LogHelperP!!.removeWaypoint(this.associatedAdvancedRTSGameLayer, this, this.targetList)
 
     
-                        if(this.currentTargetLayerInterface == waypointLayer)
+                        if(this.currentTargetLayerInterfaceP == waypointLayer)
                         
                                     {
                                     this.associatedAdvancedRTSGameLayer!!.waypoint2LogHelperP!!.removeWaypointClear(this.associatedAdvancedRTSGameLayer)
@@ -1030,10 +1007,12 @@ this.clearTarget()
         //nullable = true from not(false or (false and true)) = true
 {
 this.associatedAdvancedRTSGameLayer!!.waypoint2LogHelperP!!.clearTarget(this.associatedAdvancedRTSGameLayer)
-this.setCurrentTargetLayerInterface(
-                            null)
+this.setCurrentTargetLayerInterface(CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER)
 this.setTrackingWaypoint(false)
-this.setCurrentTargetDistance(.MAX_VALUE())
+
+    var MAX: Int = Integer.MAX_VALUE
+
+this.setCurrentTargetDistance(MAX)
 TrackingEventHandler.getInstance()!!.fireEvent(this.associatedAdvancedRTSGameLayer!!.getTrackingEvent())
 }
 
@@ -1124,14 +1103,14 @@ TrackingEventHandler.getInstance()!!.fireEvent(this.associatedAdvancedRTSGameLay
 
 
     
-                        if(this.currentTargetLayerInterface != 
+                        if(this.currentTargetLayerInterfaceP != 
                                     null
                                 )
                         
                                     {
                                     stringBuffer!!.append(TARGET_LAYER)
 stringBuffer!!.append(commonSeps!!.SPACE)
-stringBuffer!!.append(this.currentTargetLayerInterface!!.getName())
+stringBuffer!!.append(this.currentTargetLayerInterfaceP!!.getName())
 stringBuffer!!.append(" with ")
 stringBuffer!!.append(TARGET_DISTANCE)
 stringBuffer!!.append(commonSeps!!.SPACE)
@@ -1226,7 +1205,7 @@ this.positionList!!.clear()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.FALSE
+                        return BooleanFactory.getInstance()!!.FALSE
 
                                     }
                                 

@@ -1062,7 +1062,7 @@ var ownerLayer = ownerLayer
 
                 @Throws(Exception::class)
             
-    override fun setLoad(resource: Short)
+    override fun setLoad(resource: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var resource = resource

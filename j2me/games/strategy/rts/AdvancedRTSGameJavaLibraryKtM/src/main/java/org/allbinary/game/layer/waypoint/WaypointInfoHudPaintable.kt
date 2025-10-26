@@ -26,6 +26,8 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Graphics
+import org.allbinary.game.layer.NullPathFindingLayer
+import org.allbinary.game.layer.PathFindingLayerInterface
 import org.allbinary.game.layer.RTSLayer
 import org.allbinary.game.layer.SelectionHudPaintable
 import org.allbinary.graphics.draw.KeyValueDrawString
@@ -35,8 +37,8 @@ open public class WaypointInfoHudPaintable : SelectionHudPaintable {
 
     private val keyvalueDrawString: KeyValueDrawString
 
-    private var rtsLayer: RTSLayer
-protected constructor (){
+    var rtsLayerP: PathFindingLayerInterface = NullPathFindingLayer.NULL_PATH_FINDING_LAYER
+public constructor (){
 keyvalueDrawString= KeyValueDrawString("Owner: ", this.textX)
 }
 
@@ -44,11 +46,12 @@ keyvalueDrawString= KeyValueDrawString("Owner: ", this.textX)
     override fun updateSelectionInfo()
         //nullable = true from not(false or (false and true)) = true
 {
-this.setName(this.getRtsLayer()!!.getName())
-this.setAnimationInterface(this.getRtsLayer()!!.getVerticleBuildAnimationInterface())
-this.keyvalueDrawString!!.update(getRtsLayer = this.getRtsLayer()getRtsLayer as WaypointLayer
-getRtsLayer.
-                    getParentLayer()!!.getName())
+
+    var rtsLayer: RTSLayer = this.rtsLayerP as RTSLayer
+
+this.setName(rtsLayer!!.getName())
+this.setAnimationInterface(rtsLayer!!.getVerticleBuildAnimationInterface())
+this.keyvalueDrawString!!.update(rtsLayer!!.getParentLayer()!!.getName())
 }
 
 
@@ -69,18 +72,18 @@ this.getAnimationInterface()!!.paint(graphics, this.imageX, y)
         //nullable = true from not(false or (false and false)) = true
 {
 var rtsLayer = rtsLayer
-this.rtsLayer= rtsLayer
+this.rtsLayerP= rtsLayer
 }
 
 
     open fun getRtsLayer()
         //nullable = true from not(false or (false and true)) = true
-: RTSLayer{
+: PathFindingLayerInterface{
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return rtsLayer
+                        return rtsLayerP
 }
 
 

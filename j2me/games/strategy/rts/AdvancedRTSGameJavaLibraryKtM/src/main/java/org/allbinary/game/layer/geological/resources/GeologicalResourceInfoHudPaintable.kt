@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Graphics
+import org.allbinary.game.layer.RTSLayer
 import org.allbinary.game.layer.waypoint.WaypointInfoHudPaintable
 import org.allbinary.util.BasicArrayList
 import org.allbinary.graphics.draw.KeyValueDrawCharArray
@@ -50,7 +51,10 @@ keyvalueDrawString= KeyValueDrawCharArray(RESOURCES, this.textX)
 {
 super.updateSelectionInfo()
 
-    var list: BasicArrayList = this.getRtsLayer()!!.geographicMapCellPositionAreaBase!!.getOccupyingGeographicMapCellPositionList()!!
+    var rtsLayer: RTSLayer = this.rtsLayerP as RTSLayer
+
+
+    var list: BasicArrayList = rtsLayer!!.geographicMapCellPositionAreaBase!!.getOccupyingGeographicMapCellPositionList()!!
 
 
     var total: Int = 0
