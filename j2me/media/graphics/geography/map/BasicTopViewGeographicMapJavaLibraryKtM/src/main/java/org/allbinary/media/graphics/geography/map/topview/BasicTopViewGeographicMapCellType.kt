@@ -28,12 +28,11 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.communication.log.LogUtil
-import org.allbinary.string.CommonSeps
-import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.media.graphics.geography.map.GeographicMapCellType
 import org.allbinary.media.graphics.geography.map.GeographicMapCellTypeFactory
 import org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicMapCellType
+import org.allbinary.string.CommonSeps
 import org.allbinary.util.BasicArrayList
 
 open public class BasicTopViewGeographicMapCellType
@@ -131,6 +130,9 @@ public constructor (name: String, types: BasicArrayList, cost: Int)
     var typeArray: IntArray = IntArray(size)
 
 
+    var typeAsInteger: Integer
+
+
     var type: Int= 0
 
 
@@ -140,9 +142,8 @@ public constructor (name: String, types: BasicArrayList, cost: Int)
                         for (index in 0 until size)
 
         {
-type= get = types.get(index)get as Integer
-get.
-                    toInt()
+typeAsInteger= (types.get(index) as Integer)
+type= typeAsInteger!!.toInt()
 
     
                         if(GeographicMapCellTypeFactory.getInstance()!!.getGeographicMapCellTypeArray()[type] == 

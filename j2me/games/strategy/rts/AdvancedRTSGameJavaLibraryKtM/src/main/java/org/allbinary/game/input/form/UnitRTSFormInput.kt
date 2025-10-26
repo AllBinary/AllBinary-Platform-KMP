@@ -64,8 +64,6 @@ companion object {
 
         }
             
-    val logUtil: LogUtil = LogUtil.getInstance()!!
-
     val noMoneyGameNotificationEvent: GameNotificationEvent
 
     val newUnitGameNotificationEvent: GameNotificationEvent
@@ -91,7 +89,7 @@ this.getHashtable()!!.put(WorkWaypoint.ID, smallIntegerSingletonFactory!!.getIns
 
                 @Throws(Exception::class)
             
-    open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
+    override fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager

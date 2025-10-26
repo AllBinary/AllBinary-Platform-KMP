@@ -41,7 +41,7 @@ keyvalueDrawString= KeyValueDrawString("Owner: ", this.textX)
 }
 
 
-    open fun updateSelectionInfo()
+    override fun updateSelectionInfo()
         //nullable = true from not(false or (false and true)) = true
 {
 this.setName(this.getRtsLayer()!!.getName())
@@ -52,7 +52,7 @@ getRtsLayer.
 }
 
 
-    open fun paint(graphics: Graphics)
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

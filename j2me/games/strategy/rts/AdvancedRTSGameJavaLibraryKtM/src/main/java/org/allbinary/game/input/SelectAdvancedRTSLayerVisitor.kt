@@ -30,6 +30,7 @@ import org.allbinary.game.layer.AdvancedRTSGameLayer
 import org.allbinary.game.layer.RTSLayer
 import org.allbinary.game.layer.building.BuildingLayer
 import org.allbinary.game.layer.unit.UnitLayer
+import org.allbinary.logic.NullUtil
 import org.allbinary.util.BasicArrayList
 import org.allbinary.logic.util.visitor.Visitor
 
@@ -38,12 +39,12 @@ open public class SelectAdvancedRTSLayerVisitor : Visitor {
 
     private val selectedRTSLayersPlayerGameInput: SelectedRTSLayersPlayerGameInput
 public constructor (selectedRTSLayersPlayerGameInput: SelectedRTSLayersPlayerGameInput){
-var selectedRTSLayersPlayerGameInput = selectedRTSLayersPlayerGameInput
+    //var selectedRTSLayersPlayerGameInput = selectedRTSLayersPlayerGameInput
 this.selectedRTSLayersPlayerGameInput= selectedRTSLayersPlayerGameInput
 }
 
 
-    open fun visit(anyType: Any)
+    override fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var anyType = anyType
@@ -58,7 +59,16 @@ var anyType = anyType
                         
                                     {
                                     
+    var assignWaypointsUtil: AssignWaypointsUtil = AssignWaypointsUtil.getInstance()!!
+
+
     var list: BasicArrayList = selectedRTSLayersPlayerGameInput!!.getSelectedBasicArrayList()!!
+
+
+    var currentRTSLayer: RTSLayer
+
+
+    var unitLayer: UnitLayer
 
 
 
@@ -67,19 +77,15 @@ var anyType = anyType
                         for (index in list.size() -1 downTo 0)
 
         {
-
-    var currentRTSLayer: RTSLayer = list.get(index) as RTSLayer
-
+currentRTSLayer= list.get(index) as RTSLayer
 
     
                         if(currentRTSLayer!!.getType() == UnitLayer.getStaticType())
                         
                                     {
-                                    
-    var unitLayer: UnitLayer = currentRTSLayer as UnitLayer
-
+                                    unitLayer= currentRTSLayer as UnitLayer
 unitLayer!!.setParentLayer(selectedLayer)
-AssignWaypointsUtil.getInstance()!!.set(unitLayer, selectedLayer)
+assignWaypointsUtil!!.set(unitLayer, selectedLayer)
 
                                     }
                                 
@@ -92,7 +98,7 @@ AssignWaypointsUtil.getInstance()!!.set(unitLayer, selectedLayer)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return NullUtil.getInstance()!!.NULL_OBJECT
 }
 
 

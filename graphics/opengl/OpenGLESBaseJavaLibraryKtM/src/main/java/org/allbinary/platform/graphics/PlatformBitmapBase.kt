@@ -49,6 +49,28 @@ companion object {
 
     var basicColor: BasicColor = BasicColorFactory.getInstance()!!.NULL_COLOR
 
+    open fun getWidth()
+        //nullable = true from not(false or (false and true)) = true
+: Int{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 0
+}
+
+
+    open fun getHeight()
+        //nullable = true from not(false or (false and true)) = true
+: Int{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 0
+}
+
+
     open fun getImage()
         //nullable = true from not(false or (false and true)) = true
 : Image{

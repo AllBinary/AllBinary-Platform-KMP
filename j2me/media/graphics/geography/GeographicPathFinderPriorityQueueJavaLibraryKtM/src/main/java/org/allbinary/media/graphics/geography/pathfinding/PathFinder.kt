@@ -29,10 +29,10 @@ import java.util.HashSet
 import java.util.PriorityQueue
 import java.util.Set
 import org.allbinary.game.layer.AllBinaryTiledLayer
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.math.MathUtil
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.string.StringMaker
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.BasicGeographicMapCellPositionFactory
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
@@ -55,13 +55,13 @@ open public class PathFinder : GeographicPathFinderBase {
 
     private val mathUtil: MathUtil = MathUtil.getInstance()!!
 
-    private val openPriorityQueue: PriorityQueue<PathFindingNodeCost> = PriorityQueue<>()
+    private val openPriorityQueue: PriorityQueue<PathFindingNodeCost> = PriorityQueue<PathFindingNodeCost>()
 
-    private val closedSet: Set<PathFindingNodeCost> = HashSet<>()
+    private val closedSet: HashSet<PathFindingNodeCost> = HashSet<PathFindingNodeCost>()
 
-    private var geographicMapInterface: BasicGeographicMap
+    private var geographicMapInterface: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
-    private var costArray: Array<Array<PathFindingNodeCost?>?>
+    private var costArray: Array<Array<PathFindingNodeCost?>?> = PathFindingNodeCost.NULL_PATH_FINDING_NODE_COST_ARRAY_ARRAY
 
                 @Throws(Exception::class)
             
@@ -71,7 +71,7 @@ open public class PathFinder : GeographicPathFinderBase {
     //var geographicMapInterface = geographicMapInterface
 this.geographicMapInterface= geographicMapInterface
 
-    var tiledLayer: AllBinaryTiledLayer = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!
+    var tiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
 
 this.costArray= Array(tiledLayer!!.getColumns()) { arrayOfNulls<PathFindingNodeCost?>(tiledLayer!!.getRows()) }
                                                             
@@ -104,13 +104,12 @@ this.costArray= Array(tiledLayer!!.getColumns()) { arrayOfNulls<PathFindingNodeC
 
         {
 
-    var geographicMapCellType: GeographicMapCellType = this.geographicMapInterface!!.getCellTypeAt(basicGeographicMapCellPositionFactory!!.getInstance(column, row))!!
+    var geographicMapCellType: GeographicMapCellType = geographicMapInterface!!.getCellTypeAt(basicGeographicMapCellPositionFactory!!.getInstance(column, row))!!
 
 
     var raceTrackGeographicMapCellType: RaceTrackGeographicMapCellType = geographicMapCellType as RaceTrackGeographicMapCellType
 
-node= PathFindingNodeCost(
-                            null, basicGeographicMapCellPositionFactory!!.getInstance(column, row), PathFindingNodeCostInfo(raceTrackGeographicMapCellType!!.getTravelCost(),  -1))
+node= PathFindingNodeCost(NullUtil.getInstance()!!.NULL_OBJECT, basicGeographicMapCellPositionFactory!!.getInstance(column, row), PathFindingNodeCostInfo(raceTrackGeographicMapCellType!!.getTravelCost().toLong(),  -1.toLong()))
 costArray[column]!![row]= node
 }
 
@@ -119,7 +118,7 @@ costArray[column]!![row]= node
 }
 
 
-    open fun search(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, totalPaths: Int)
+    override fun search(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, totalPaths: Int)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var startPathFindingNodeList = startPathFindingNodeList
@@ -142,7 +141,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "search", e)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return basicArrayListUtil!!.getImmutableInstance()
 }
 
 }
@@ -150,7 +149,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "search", e)
 
                 @Throws(Exception::class)
             
-    open fun searchN(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, totalPaths: Int, multipassState: MultipassState)
+    override fun searchN(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, totalPaths: Int, multipassState: MultipassState)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
 var startPathFindingNodeList = startPathFindingNodeList
@@ -192,7 +191,7 @@ var totalPaths = totalPaths
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return basicArrayListUtil!!.getImmutableInstance()
 }
 
 
@@ -252,7 +251,7 @@ this.findPathStart(startPathFindingNode!!.geographicMapCellPosition, endPathFind
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return basicArrayListUtil!!.getImmutableInstance()
 
                                     }
                                 
@@ -280,7 +279,7 @@ multipassState!!.step= 0
 this.openPriorityQueue!!.clear()
 this.closedSet!!.clear()
 
-    var discoveryCalculation: Int= 0
+    var discoveryCalculation: Long= 0
 
 
     var node: PathFindingNodeCost
@@ -313,10 +312,10 @@ this.closedSet!!.clear()
                         for (row in 0 until sizeY)
 
         {
-discoveryCalculation= mathUtil!!.abs(column -targetColumn) +mathUtil!!.abs(row -targetRow)
+discoveryCalculation= mathUtil!!.abs(column -targetColumn).toLong() +mathUtil!!.abs(row -targetRow)
 node= costArray[column]!![row]!!
-node.pathFindingNodeCostInfo!!.totalCost= 0
-node.pathFindingNodeCostInfo!!.costToEnd= discoveryCalculation
+node.pathFindingNodeCostInfoP!!.totalCostP= 0
+node.pathFindingNodeCostInfoP!!.costToEndP= discoveryCalculation
 }
 
 }
@@ -326,10 +325,13 @@ node.pathFindingNodeCostInfo!!.costToEnd= discoveryCalculation
 
 openPriorityQueue!!.add(startNode)
 
+    var geographicMapInterface: BasicGeographicMap = this.geographicMapInterface as BasicGeographicMap
+
+
     var basicGeographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
 
 
-    var allBinaryTiledLayer: AllBinaryTiledLayer = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!
+    var allBinaryTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
 
 
     var targetNode: PathFindingNodeCost = costArray[target.getColumn()]!![target.getRow()]!!
@@ -380,7 +382,7 @@ closedSet!!.add(current)
         {
 
     
-                        if(column > 0 && row > 0 && column < allBinaryTiledLayer!!.getColumns() && row < allBinaryTiledLayer!!.getRows() && this.geographicMapInterface!!.isOnMap(basicGeographicMapCellPositionFactory!!.getInstance(column, row)))
+                        if(column > 0 && row > 0 && column < allBinaryTiledLayer!!.getColumns() && row < allBinaryTiledLayer!!.getRows() && geographicMapInterface!!.isOnMap(basicGeographicMapCellPositionFactory!!.getInstance(column, row)))
                         
                                     {
                                     neighbor= costArray[column]!![row]!!
@@ -396,14 +398,14 @@ closedSet!!.add(current)
 
                                     }
                                 
-neighborInfo= neighbor.pathFindingNodeCostInfo
-calculatedCost= neighborInfo!!.costToEnd +neighborInfo!!.costFromStart +current.pathFindingNodeCostInfo!!.totalCost
+neighborInfo= neighbor.pathFindingNodeCostInfoP
+calculatedCost= neighborInfo!!.costToEndP +neighborInfo!!.costFromStartP +current.pathFindingNodeCostInfoP!!.totalCostP
 
     
-                        if(calculatedCost < neighborInfo!!.totalCost || !openPriorityQueue!!.contains(neighbor))
+                        if(calculatedCost < neighborInfo!!.totalCostP || !openPriorityQueue!!.contains(neighbor))
                         
                                     {
-                                    neighborInfo!!.totalCost= calculatedCost
+                                    neighborInfo!!.totalCostP= calculatedCost
 neighbor.parent= current
 
     
@@ -412,7 +414,7 @@ neighbor.parent= current
                                     {
                                     
     
-                        if(this.geographicMapInterface!!.isOfFourDirections(current.geographicMapCellPosition, neighbor.geographicMapCellPosition))
+                        if(geographicMapInterface!!.isOfFourDirections(current.geographicMapCellPosition, neighbor.geographicMapCellPosition))
                         
                                     {
                                     openPriorityQueue!!.add(neighbor)
@@ -454,7 +456,7 @@ neighbor.parent= current
 this.openPriorityQueue!!.clear()
 this.closedSet!!.clear()
 
-    var discoveryCalculation: Int= 0
+    var discoveryCalculation: Long= 0
 
 
     var node: PathFindingNodeCost
@@ -487,10 +489,10 @@ this.closedSet!!.clear()
                         for (row in 0 until sizeY)
 
         {
-discoveryCalculation= mathUtil!!.abs(column -targetColumn) +mathUtil!!.abs(row -targetRow)
+discoveryCalculation= mathUtil!!.abs(column -targetColumn).toLong() +mathUtil!!.abs(row -targetRow)
 node= costArray[column]!![row]!!
-node.pathFindingNodeCostInfo!!.totalCost= 0
-node.pathFindingNodeCostInfo!!.costToEnd= discoveryCalculation
+node.pathFindingNodeCostInfoP!!.totalCostP= 0
+node.pathFindingNodeCostInfoP!!.costToEndP= discoveryCalculation
 }
 
 }
@@ -512,10 +514,13 @@ multipassState!!.step++
     //var target = target
     //var multipassState = multipassState
 
+    var geographicMapInterface: BasicGeographicMap = this.geographicMapInterface as BasicGeographicMap
+
+
     var basicGeographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
 
 
-    var allBinaryTiledLayer: AllBinaryTiledLayer = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!
+    var allBinaryTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
 
 
     var targetNode: PathFindingNodeCost = costArray[target.getColumn()]!![target.getRow()]!!
@@ -569,7 +574,7 @@ closedSet!!.add(current)
         {
 
     
-                        if(column > 0 && row > 0 && column < allBinaryTiledLayer!!.getColumns() && row < allBinaryTiledLayer!!.getRows() && this.geographicMapInterface!!.isOnMap(basicGeographicMapCellPositionFactory!!.getInstance(column, row)))
+                        if(column > 0 && row > 0 && column < allBinaryTiledLayer!!.getColumns() && row < allBinaryTiledLayer!!.getRows() && geographicMapInterface!!.isOnMap(basicGeographicMapCellPositionFactory!!.getInstance(column, row)))
                         
                                     {
                                     neighbor= costArray[column]!![row]!!
@@ -585,14 +590,14 @@ closedSet!!.add(current)
 
                                     }
                                 
-neighborInfo= neighbor.pathFindingNodeCostInfo
-calculatedCost= neighborInfo!!.costToEnd +neighborInfo!!.costFromStart +current.pathFindingNodeCostInfo!!.totalCost
+neighborInfo= neighbor.pathFindingNodeCostInfoP
+calculatedCost= neighborInfo!!.costToEndP +neighborInfo!!.costFromStartP +current.pathFindingNodeCostInfoP!!.totalCostP
 
     
-                        if(calculatedCost < neighborInfo!!.totalCost || !openPriorityQueue!!.contains(neighbor))
+                        if(calculatedCost < neighborInfo!!.totalCostP || !openPriorityQueue!!.contains(neighbor))
                         
                                     {
-                                    neighborInfo!!.totalCost= calculatedCost
+                                    neighborInfo!!.totalCostP= calculatedCost
 neighbor.parent= current
 
     
@@ -601,7 +606,7 @@ neighbor.parent= current
                                     {
                                     
     
-                        if(this.geographicMapInterface!!.isOfFourDirections(current.geographicMapCellPosition, neighbor.geographicMapCellPosition))
+                        if(geographicMapInterface!!.isOfFourDirections(current.geographicMapCellPosition, neighbor.geographicMapCellPosition))
                         
                                     {
                                     openPriorityQueue!!.add(neighbor)
@@ -631,7 +636,7 @@ total++
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return basicArrayListUtil!!.getImmutableInstance()
 
                                     }
                                 

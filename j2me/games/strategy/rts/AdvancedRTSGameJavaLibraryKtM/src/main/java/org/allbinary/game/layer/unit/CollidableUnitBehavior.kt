@@ -25,19 +25,18 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.game.layer.SteeringVisitor
 import javax.microedition.lcdui.Canvas
+import org.allbinary.game.layer.SteeringVisitor
 import org.allbinary.game.layer.AdvancedRTSGameLayer
 import org.allbinary.game.layer.CollidableCompositeLayer
 import org.allbinary.game.layer.CollidableRTSBehavior
 import org.allbinary.util.BasicArrayList
-import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.game.input.event.GameKeyEventFactory
 import org.allbinary.game.layer.AllBinaryTiledLayer
 import org.allbinary.game.layer.TiledLayerUtil
 import org.allbinary.game.layer.geographic.map.LayerPartialCellPositionsUtil
-import org.allbinary.game.rand.MyRandomFactory
+import org.allbinary.logic.NullUtil
+import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.math.AngleInfo
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.GeographicMapCompositeInterface
@@ -45,8 +44,6 @@ import org.allbinary.media.graphics.geography.map.drop.DropCellPositionHistory
 
 open public class CollidableUnitBehavior : CollidableRTSBehavior {
         
-
-    val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val layerPartialCellPositionsUtil: LayerPartialCellPositionsUtil = LayerPartialCellPositionsUtil.getInstance()!!
 public constructor (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
@@ -63,7 +60,7 @@ public constructor (ownerLayer: CollidableCompositeLayer, collidable: Boolean)
 
                 @Throws(Exception::class)
             
-    open fun collideNone(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
+    override fun collideNone(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
@@ -91,7 +88,7 @@ open public inner class SimpleSteeringVisitor : SteeringVisitor {
             {
             }            
         
-    open fun visit(anyType: Any)
+    override fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{
     //var anyType = anyType
@@ -118,7 +115,7 @@ open public inner class SimpleSteeringVisitor : SteeringVisitor {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return NullUtil.getInstance()!!.NULL_OBJECT
 
                                     }
                                 
@@ -126,7 +123,7 @@ open public inner class SimpleSteeringVisitor : SteeringVisitor {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Boolean.TRUE
+                        return BooleanFactory.getInstance()!!.TRUE
 
                                     }
                                 
@@ -134,7 +131,7 @@ open public inner class SimpleSteeringVisitor : SteeringVisitor {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return NullUtil.getInstance()!!.NULL_OBJECT
 } catch(e: Exception)
             {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "visit", e)
@@ -142,7 +139,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "visit", e)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return NullUtil.getInstance()!!.NULL_OBJECT
 }
 
 }
@@ -262,7 +259,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "visit", e)
     var ownerUnitLayer: UnitLayer = this.ownerLayer as UnitLayer
 
 
-    var partialPositionList: BasicArrayList = ownerUnitLayer!!.getPartialpositionlist()!!
+    var partialPositionList: BasicArrayList = UnitLayer.getPartialpositionlist()!!
 
 
     var geographicMapCompositeInterface: GeographicMapCompositeInterface = ownerUnitLayer!!.allBinaryGameLayerManagerP as GeographicMapCompositeInterface

@@ -58,9 +58,7 @@ var developers = developers
 
     private val developers: Array<String?>
 
-    private val paintableArray: Array<Paintable?> = arrayOf(
-                                //Otherwise - values - ThisExpr
-)
+    private val paintableArray: Array<Paintable?> = arrayOf(this)
 private constructor (info: Array<String?>, developers: Array<String?>){
 var info = info
 var developers = developers

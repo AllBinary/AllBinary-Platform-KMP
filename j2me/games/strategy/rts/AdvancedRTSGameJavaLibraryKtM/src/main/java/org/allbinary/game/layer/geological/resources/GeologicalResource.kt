@@ -57,11 +57,14 @@ this.setTotal(this.initTotal)
 {
 var value = value
 
+    var max: Int = Integer.MAX_VALUE
+
+
     
-                        if(this.getTotal() +value > Integer.MAX_VALUE)
+                        if(this.getTotal() +value > max)
                         
                                     {
-                                    this.setTotal(.MAX_VALUE())
+                                    this.setTotal(max)
 
                                     }
                                 

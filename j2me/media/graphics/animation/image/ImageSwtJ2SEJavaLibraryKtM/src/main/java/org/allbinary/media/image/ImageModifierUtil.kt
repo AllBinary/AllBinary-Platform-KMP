@@ -163,9 +163,9 @@ bx= (imageData!!.data[index3 +2] and 0xFF)
                         if(rx != 0 || gx != 0 || bx != 0)
                         
                                     {
-                                    imageData!!.data[index3]= r as Byte
-imageData!!.data[index3 +1]= g as Byte
-imageData!!.data[index3 +2]= b as Byte
+                                    imageData!!.data[index3]= r.toByte()
+imageData!!.data[index3 +1]= g.toByte()
+imageData!!.data[index3 +2]= b.toByte()
 
                                     }
                                 
@@ -296,9 +296,9 @@ bx= (imageData!!.data[index3 +2] and 0xFF)
 rx *= r
 gx *= g
 bx *= b
-imageData!!.data[index3]= rx as Byte
-imageData!!.data[index3 +1]= gx as Byte
-imageData!!.data[index3 +2]= bx as Byte
+imageData!!.data[index3]= rx.toByte()
+imageData!!.data[index3 +1]= gx.toByte()
+imageData!!.data[index3 +2]= bx.toByte()
 }
 
 }
@@ -352,7 +352,7 @@ this.setAlpha(image, alphaInt)
     //var image = image
     //var alphaInt = alphaInt
 
-    var alpha: Byte = alphaInt as Byte
+    var alpha: Byte = alphaInt.toByte()
 
 
     var newBufferedImage: org.eclipse.swt.graphics.Image

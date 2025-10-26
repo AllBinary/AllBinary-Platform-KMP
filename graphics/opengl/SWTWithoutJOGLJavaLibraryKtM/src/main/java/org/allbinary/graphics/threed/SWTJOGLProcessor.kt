@@ -76,6 +76,17 @@ var renderer = renderer
 }
 
 
+    open fun isHolderCreated()
+        //nullable = true from not(false or (false and true)) = true
+: Boolean{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return glHolder!!.isCreated
+}
+
+
     open fun setRenderer(renderer: Any)
         //nullable = true from not(false or (false and false)) = true
 {

@@ -38,8 +38,6 @@ import org.allbinary.util.HashtableUtil
 open public class BasicTopViewGeographicMapCellTypeFactory : GeographicMapCellTypeFactory {
         
 
-    val logUtil: LogUtil = LogUtil.getInstance()!!
-
     val BLOCK_CELL_TYPE: BasicTopViewGeographicMapCellType
 
     val OFF_MAP_CELL_TYPE: BasicTopViewGeographicMapCellType
@@ -286,7 +284,7 @@ type= this.maxTileId -2
 }
 
 
-    open fun getStartType()
+    override fun getStartType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -297,7 +295,7 @@ type= this.maxTileId -2
 }
 
 
-    open fun getEndType()
+    override fun getEndType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -308,7 +306,7 @@ type= this.maxTileId -2
 }
 
 
-    open fun getEmptyType()
+    override fun getEmptyType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -319,7 +317,7 @@ type= this.maxTileId -2
 }
 
 
-    open fun isPath(cellType: GeographicMapCellType)
+    override fun isPath(cellType: GeographicMapCellType)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var cellType = cellType

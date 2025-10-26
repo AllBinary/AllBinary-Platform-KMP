@@ -55,7 +55,7 @@ this.maxPathWeight= maxPathWeight
 
                 @Throws(Exception::class)
             
-    open fun visit(graph: Any, startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList)
+    override fun visit(graph: Any, startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var graph = graph
@@ -66,7 +66,7 @@ this.maxPathWeight= maxPathWeight
 
                 @Throws(Exception::class)
             
-    open fun fixPath(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, pathList: BasicArrayList)
+    override fun fixPath(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, pathList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var startPathFindingNodeList = startPathFindingNodeList
@@ -90,7 +90,7 @@ pathList!!.add(0, startPathFindingNode!!.geographicMapCellPosition)
 }
 
 
-    open fun isValid(graphPath: Any)
+    override fun isValid(graphPath: Any)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var graphPath = graphPath
@@ -102,7 +102,7 @@ pathList!!.add(0, startPathFindingNode!!.geographicMapCellPosition)
 }
 
 
-    open fun getInvalidReason(graphPath: Any)
+    override fun getInvalidReason(graphPath: Any)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var graphPath = graphPath

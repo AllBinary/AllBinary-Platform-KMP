@@ -36,18 +36,18 @@ open public class PathFindingNodeCostInfo
 
     private val pathFindingNodeCostInfoData: PathFindingNodeCostInfoData = PathFindingNodeCostInfoData.getInstance()!!
 
-    var costFromStart: Long
+    var costFromStartP: Long
 
-    var costToEnd: Long
+    var costToEndP: Long
 
-    var totalCost: Long= 0
+    var totalCostP: Long= 0
 public constructor (costFromStart: Long, costToGoal: Long)
             : super()
         {
     //var costFromStart = costFromStart
     //var costToGoal = costToGoal
-this.costFromStart= costFromStart
-this.costToEnd= costToGoal
+this.costFromStartP= costFromStart
+this.costToEndP= costToGoal
 this.setTotalCost()
 }
 
@@ -56,7 +56,7 @@ this.setTotalCost()
         //nullable = true from not(false or (false and false)) = true
 {
     //var costToEnd = costToEnd
-this.costToEnd= costToEnd
+this.costToEndP= costToEnd
 }
 
 
@@ -64,7 +64,7 @@ this.costToEnd= costToEnd
         //nullable = true from not(false or (false and false)) = true
 {
     //var totalCost = totalCost
-this.totalCost= totalCost
+this.totalCostP= totalCost
 }
 
 
@@ -73,10 +73,10 @@ this.totalCost= totalCost
     open fun setTotalCost()
         //nullable = true from not(false or (false and true)) = true
 {
-this.totalCost= costFromStart +costToEnd
+this.totalCostP= costFromStartP +costToEndP
 
     
-                        if(this.totalCost > pathFindingNodeCostInfoData!!.MAX_NODE_COST)
+                        if(this.totalCostP > pathFindingNodeCostInfoData!!.MAX_NODE_COST)
                         
                                     {
                                     
@@ -93,7 +93,7 @@ this.totalCost= costFromStart +costToEnd
         //nullable = true from not(false or (false and false)) = true
 {
     //var cost = cost
-this.costFromStart= cost
+this.costFromStartP= cost
 }
 
 
@@ -101,7 +101,7 @@ this.costFromStart= cost
         //nullable = true from not(false or (false and false)) = true
 {
     //var cost = cost
-this.costFromStart += cost
+this.costFromStartP += cost
 }
 
 
@@ -113,7 +113,7 @@ var pathFindingNodeCostInfo = pathFindingNodeCostInfo
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Long.compare(this.totalCost, pathFindingNodeCostInfo!!.totalCost)
+                        return java.lang.Long.compare(this.totalCostP, pathFindingNodeCostInfo!!.totalCostP)
 }
 
 
@@ -126,11 +126,11 @@ var pathFindingNodeCostInfo = pathFindingNodeCostInfo
 stringBuffer!!.append(this::class.toString()!!)
 stringBuffer!!.append(CommonLabels.getInstance()!!.COLON_SEP)
 stringBuffer!!.append("CostFromStart: ")
-stringBuffer!!.append(this.costFromStart)
+stringBuffer!!.append(this.costFromStartP)
 stringBuffer!!.append(" CostToEnd: ")
-stringBuffer!!.append(this.costToEnd)
+stringBuffer!!.append(this.costToEndP)
 stringBuffer!!.append(" TotalCost: ")
-stringBuffer!!.append(this.totalCost)
+stringBuffer!!.append(this.totalCostP)
 
 
 

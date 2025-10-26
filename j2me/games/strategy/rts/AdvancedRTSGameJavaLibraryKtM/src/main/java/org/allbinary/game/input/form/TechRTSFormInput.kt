@@ -35,7 +35,6 @@ import org.allbinary.game.rts.technology.event.TechEventHandler
 import org.allbinary.graphics.form.item.CustomItem
 import org.allbinary.media.audio.BuildingSound
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.game.identification.Group
 import org.allbinary.game.layer.AllBinaryGameLayerManager
@@ -45,14 +44,13 @@ import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.math.SmallIntegerSingletonFactory
+import org.allbinary.logic.string.StringMaker
 import org.allbinary.media.audio.ErrorSound
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.GeographicMapCompositeInterface
 
 open public class TechRTSFormInput : RTSFormInput {
         
-
-    val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val EVENT: AllBinaryEventObject = AllBinaryEventObject(this)
 
@@ -74,7 +72,7 @@ this.noMoneyGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.ge
 
                 @Throws(Exception::class)
             
-    open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
+    override fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -94,14 +92,17 @@ this.noMoneyGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.getF
     open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, itemIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-var associatedRtsLayer = associatedRtsLayer
-var rtsPlayerLayerInterface = rtsPlayerLayerInterface
-var layerManager = layerManager
-var item = item
-var itemIndex = itemIndex
+    //var associatedRtsLayer = associatedRtsLayer
+    //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+    //var layerManager = layerManager
+    //var item = item
+    //var itemIndex = itemIndex
 super.process(layerManager)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+
+    var stringMaker: StringMaker = StringMaker()
 
 
     var technologyRTSInterfaceImageItem: TechnologyRTSInterfaceImageItem = item as TechnologyRTSInterfaceImageItem
@@ -109,7 +110,7 @@ super.process(layerManager)
 
     var rtsInterface: RTSInterface = technologyRTSInterfaceImageItem!!.getRtsInterface()!!
 
-logUtil!!.put("isUpgradeable: " +rtsInterface!!.isUpgradeable(), this, commonStrings!!.PROCESS)
+logUtil!!.put(stringMaker!!.append("isUpgradeable: ")!!.append(rtsInterface!!.isUpgradeable())!!.toString(), this, commonStrings!!.PROCESS)
 
     
                         if(rtsInterface!!.isUpgradeable())
@@ -121,7 +122,8 @@ logUtil!!.put("isUpgradeable: " +rtsInterface!!.isUpgradeable(), this, commonStr
 
     var capital: Capital = rtsPlayerLayerInterface!!.getCapital()!!
 
-logUtil!!.put(cost +"<=" +capital.getTotalMoney(), this, commonStrings!!.PROCESS)
+stringMaker!!.delete(0, stringMaker!!.length())
+logUtil!!.put(stringMaker!!.append(cost)!!.append("<=")!!.append(capital.getTotalMoney())!!.toString(), this, commonStrings!!.PROCESS)
 
     
                         if(cost <= capital.getTotalMoney())

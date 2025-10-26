@@ -40,12 +40,12 @@ companion object {
         }
             
     private val keyvalueDrawString: KeyValueDrawCharArray
-protected constructor (){
+public constructor (){
 keyvalueDrawString= KeyValueDrawCharArray(RESOURCES, this.textX)
 }
 
 
-    open fun updateSelectionInfo()
+    override fun updateSelectionInfo()
         //nullable = true from not(false or (false and true)) = true
 {
 super.updateSelectionInfo()
@@ -72,7 +72,7 @@ this.keyvalueDrawString!!.update(this.getPrimitiveLongUtil()!!.getCharArray(tota
 }
 
 
-    open fun paint(graphics: Graphics)
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics

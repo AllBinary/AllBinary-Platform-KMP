@@ -27,7 +27,6 @@
         
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.util.BasicArrayList
-import org.allbinary.game.layer.AllBinaryGameLayer
 
 open public class AdvancedPlayerOwnedRTSLayers : PlayerOwnedRTSLayers {
         

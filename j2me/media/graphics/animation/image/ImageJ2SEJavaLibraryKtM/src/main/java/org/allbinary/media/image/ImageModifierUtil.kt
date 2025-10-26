@@ -239,7 +239,7 @@ newBufferedImage!!.setRGB(index, index2, (ax shl 24) or (rx shl 16) or (gx shl 8
     //var imageIndex = imageIndex
     //var alphaInt = alphaInt
 
-    var alpha: Byte = alphaInt as Byte
+    var alpha: Byte = alphaInt.toByte()
 
 
     var newBufferedImage: BufferedImage = this.imageUtil!!.getBufferedImage(image)!!

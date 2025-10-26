@@ -42,14 +42,15 @@ open public class GeologicalGeographicMapCellPositionFactoryInitVisitor
         
                 @Throws(Exception::class)
             
-    open fun visit(tiledLayer: AllBinaryTiledLayer, cellPosition: GeographicMapCellPosition)
+    override fun visit(tiledLayer: AllBinaryTiledLayer, cellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
 var tiledLayer = tiledLayer
 var cellPosition = cellPosition
-cellPosition = cellPositioncellPosition as GeologicalGeographicMapCellPosition
-cellPosition.
-                    getGeologicalResource()!!.init()
+
+    var geologicalGeographicMapCellPosition: GeologicalGeographicMapCellPosition = (cellPosition as GeologicalGeographicMapCellPosition)
+
+geologicalGeographicMapCellPosition!!.getGeologicalResource()!!.init()
 }
 
 

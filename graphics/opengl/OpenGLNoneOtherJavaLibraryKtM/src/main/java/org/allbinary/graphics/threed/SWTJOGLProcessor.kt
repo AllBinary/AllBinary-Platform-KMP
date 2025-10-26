@@ -56,11 +56,34 @@ companion object {
             {
             }            
         
+    var glHolder: Any = object: Any()
+                                {
+                                
+    open fun run(renderer: Any)
+        //nullable = true from not(false or (false and false)) = true
+{
+var renderer = renderer
+}
+
+                                }
+                            
+
     open fun init(display: Any, comp: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var display = display
     //var comp = comp
+}
+
+
+    open fun isHolderCreated()
+        //nullable = true from not(false or (false and true)) = true
+: Boolean{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return true
 }
 
 

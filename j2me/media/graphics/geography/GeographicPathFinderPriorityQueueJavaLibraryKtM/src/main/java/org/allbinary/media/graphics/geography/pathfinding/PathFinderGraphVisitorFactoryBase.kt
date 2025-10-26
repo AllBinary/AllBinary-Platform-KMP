@@ -26,7 +26,6 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
-import org.allbinary.media.graphics.geography.pathfinding.PathFinderGraphVisitorBase
 
 open public class PathFinderGraphVisitorFactoryBase
             : Object

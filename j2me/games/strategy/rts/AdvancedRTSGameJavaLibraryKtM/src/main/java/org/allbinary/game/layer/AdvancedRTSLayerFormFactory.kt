@@ -37,16 +37,19 @@ open public class AdvancedRTSLayerFormFactory : RTSLayerFormFactory {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var scrollSelectionForm: ScrollSelectionForm
+    private val scrollSelectionForm: ScrollSelectionForm
 protected constructor (label: String, itemArrayFactoryInterface: ItemArraySingletonFactoryInterface){
-var label = label
-var itemArrayFactoryInterface = itemArrayFactoryInterface
+    //var label = label
+    //var itemArrayFactoryInterface = itemArrayFactoryInterface
+
+    var scrollSelectionForm: ScrollSelectionForm = ScrollSelectionForm.NULL_SCROLL_SELECTION_FORM
+
 
         try {
             
     var items: Array<CustomItem?> = itemArrayFactoryInterface!!.getItems()!!
 
-this.scrollSelectionForm= RTSScrollSelectionFormFactory.getInstance(label, items)
+scrollSelectionForm= RTSScrollSelectionFormFactory.getInstance(label, items)
 } catch(e: Exception)
             {
 
@@ -55,13 +58,14 @@ this.scrollSelectionForm= RTSScrollSelectionFormFactory.getInstance(label, items
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
+this.scrollSelectionForm= scrollSelectionForm
 }
 
 
-    open fun getInstance(rtsLayer: RTSLayer)
+    override fun getInstance(rtsLayer: RTSLayer)
         //nullable =  from not(true or (false and false)) = 
 : ScrollSelectionForm{
-var rtsLayer = rtsLayer
+    //var rtsLayer = rtsLayer
 
 
 

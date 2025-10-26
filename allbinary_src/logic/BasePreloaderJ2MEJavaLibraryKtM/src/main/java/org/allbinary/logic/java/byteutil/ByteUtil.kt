@@ -78,7 +78,7 @@ companion object {
         while(index < size)
         {
 currentByte= array[index]!!
-bytes[index]= (currentByte xor mask) as Byte
+bytes[index]= (currentByte xor mask).toByte()
 index++
 }
 
@@ -107,7 +107,7 @@ index++
 
         while(index < size)
         {
-bytes[index]= array[index].inv() as Byte
+bytes[index]= array[index].inv().toByte()
 index++
 }
 

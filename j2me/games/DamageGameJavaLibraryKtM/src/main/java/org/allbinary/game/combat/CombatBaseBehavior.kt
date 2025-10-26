@@ -32,7 +32,12 @@ open public class CombatBaseBehavior
             : Object
          {
         
+companion object {
+            
+    val NULL_COMBAT_BEHAVIOR: CombatBaseBehavior = CombatBaseBehavior(DamageableBaseBehavior.getInstance(), DestroyableBaseBehavior.getInstance())
 
+        }
+            
     private val damageableBaseBehavior: DamageableBaseBehavior
 
     private val destroyableBaseBehavior: DestroyableBaseBehavior

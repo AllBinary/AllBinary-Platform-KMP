@@ -47,6 +47,7 @@ import org.allbinary.graphics.GPoint
 import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.layer.AllBinaryLayerManager
+import org.allbinary.logic.NullUtil
 import org.allbinary.math.LayerDistanceUtil
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.thread.PathFindingThreadPool
@@ -140,15 +141,13 @@ this.waypointPathRunnable= if(isHTML) {
                             MultipassWaypointPathRunnable()
                         
                             } else {
-                            
-                                        //Otherwise - expression - elseExpr - ObjectCreationExpr
-
+                            WaypointPathRunnable()
                             }
     
 }
 
 
-    open fun initRange(weaponRange: Int)
+    override fun initRange(weaponRange: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var weaponRange = weaponRange
@@ -159,7 +158,7 @@ this.associatedAdvancedRTSGameLayer!!.waypoint2LogHelperP!!.initRange(this.assoc
 }
 
 
-    open fun getNextUnvisitedPathGeographicMapCellPosition()
+    override fun getNextUnvisitedPathGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPosition{
 
@@ -170,7 +169,7 @@ this.associatedAdvancedRTSGameLayer!!.waypoint2LogHelperP!!.initRange(this.assoc
 }
 
 
-    open fun isRunning()
+    override fun isRunning()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -200,7 +199,7 @@ this.associatedAdvancedRTSGameLayer!!.waypoint2LogHelperP!!.initRange(this.assoc
 
                 @Throws(Exception::class)
             
-    open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
+    override fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager
@@ -522,7 +521,7 @@ this.setRandomGeographicMapCellHistory(this.waypointPathsList)
 
                 @Throws(Exception::class)
             
-    open fun setGeographicMapCellHistoryPath(geographicMapCellPositionBasicArrayList: BasicArrayList)
+    override fun setGeographicMapCellHistoryPath(geographicMapCellPositionBasicArrayList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapCellPositionBasicArrayList = geographicMapCellPositionBasicArrayList
@@ -1027,7 +1026,7 @@ this.clearTarget()
 
                 @Throws(Exception::class)
             
-    open fun clearTarget()
+    override fun clearTarget()
         //nullable = true from not(false or (false and true)) = true
 {
 this.associatedAdvancedRTSGameLayer!!.waypoint2LogHelperP!!.clearTarget(this.associatedAdvancedRTSGameLayer)
@@ -1039,7 +1038,7 @@ TrackingEventHandler.getInstance()!!.fireEvent(this.associatedAdvancedRTSGameLay
 }
 
 
-    open fun isWaypointListEmptyOrOnlyTargets()
+    override fun isWaypointListEmptyOrOnlyTargets()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -1104,7 +1103,7 @@ TrackingEventHandler.getInstance()!!.fireEvent(this.associatedAdvancedRTSGameLay
 }
 
 
-    open fun isInSensorRange(layerInterface: CollidableDestroyableDamageableLayer, targetDistance: Int)
+    override fun isInSensorRange(layerInterface: CollidableDestroyableDamageableLayer, targetDistance: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var layerInterface = layerInterface
@@ -1117,7 +1116,7 @@ TrackingEventHandler.getInstance()!!.fireEvent(this.associatedAdvancedRTSGameLay
 }
 
 
-    open fun getCurrentTargetingStateString()
+    override fun getCurrentTargetingStateString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -1150,7 +1149,7 @@ stringBuffer!!.append(getCurrentTargetDistance())
 
                 @Throws(Exception::class)
             
-    open fun addWaypointFromUser(advancedRTSGameLayer: AdvancedRTSGameLayer)
+    override fun addWaypointFromUser(advancedRTSGameLayer: AdvancedRTSGameLayer)
         //nullable = true from not(false or (false and false)) = true
 {
     //var advancedRTSGameLayer = advancedRTSGameLayer
@@ -1188,7 +1187,7 @@ open public inner class BuildingSteeringVisitor : SteeringVisitor {
         
     private val positionList: BasicArrayList = BasicArrayList()
 
-    open fun visit(anyType: Any)
+    override fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 var anyType = anyType
@@ -1219,7 +1218,7 @@ this.positionList!!.clear()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return NullUtil.getInstance()!!.NULL_OBJECT
 
                                     }
                                 
@@ -1235,7 +1234,7 @@ this.positionList!!.clear()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return NullUtil.getInstance()!!.NULL_OBJECT
 } catch(e: Exception)
             {
 
@@ -1246,7 +1245,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "visit", e)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return NullUtil.getInstance()!!.NULL_OBJECT
 }
 
 }
@@ -1270,7 +1269,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "visit", e)
 
                 @Throws(Exception::class)
             
-    open fun addBuildingChase(allbinaryLayer: AllBinaryLayer, cellPosition: GeographicMapCellPosition)
+    override fun addBuildingChase(allbinaryLayer: AllBinaryLayer, cellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allbinaryLayer = allbinaryLayer

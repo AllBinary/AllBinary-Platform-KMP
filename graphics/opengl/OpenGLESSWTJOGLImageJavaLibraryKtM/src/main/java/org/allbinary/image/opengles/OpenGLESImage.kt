@@ -88,13 +88,10 @@ this.platformImage= OpenGLESPostLoadPlatformImage.getInstance()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-    var openGLBitmap: OpenGLBitmap = (this.openGLBitmap as OpenGLBitmap)
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return (openGLBitmap!!.getHeight() *this.openGLESImageProperties!!.scaleY2).toInt()
+                        return (this.openGLBitmap!!.getHeight() *this.openGLESImageProperties!!.scaleY2).toInt()
 }
 
 
@@ -102,13 +99,10 @@ this.platformImage= OpenGLESPostLoadPlatformImage.getInstance()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
-    var openGLBitmap: OpenGLBitmap = (this.openGLBitmap as OpenGLBitmap)
-
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return (openGLBitmap!!.getWidth() *this.openGLESImageProperties!!.scaleX2).toInt()
+                        return (this.openGLBitmap!!.getWidth() *this.openGLESImageProperties!!.scaleX2).toInt()
 }
 
 

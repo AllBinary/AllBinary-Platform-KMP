@@ -36,6 +36,7 @@ import org.allbinary.graphics.CellPosition
 import org.allbinary.layer.event.ScrollMapEvent
 import org.allbinary.layer.event.ScrollMapEventHandler
 import org.allbinary.layer.event.ScrollMapEventListenerInterface
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.util.event.EventStrings
 
@@ -62,11 +63,11 @@ companion object {
 
         }
             
-    private var stationaryVisibleCellPositions: Array<ShortArray?>
+    private var stationaryVisibleCellPositions: Array<ShortArray?> = NullUtil.getInstance()!!.NULL_SHORT_ARRAY_ARRAY
 
-    private var visibleCellPositions: Array<ShortArray?>
+    private var visibleCellPositions: Array<ShortArray?> = NullUtil.getInstance()!!.NULL_SHORT_ARRAY_ARRAY
 
-    private var currentlyVisibleCellPositions: Array<ShortArray?> = Array(0) { ShortArray(0) }
+    private var currentlyVisibleCellPositions: Array<ShortArray?> = NullUtil.getInstance()!!.NULL_SHORT_ARRAY_ARRAY
 
     val ALL_VISIBLE_TILEDLAYER: SimpleTiledLayer = SimpleTiledLayer(0, 0, 0, 0)
 
@@ -102,7 +103,7 @@ this.setSimpleTiledLayer(simpleTiledLayer)
 }
 
 
-    open fun onEvent(eventObject: AllBinaryEventObject)
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventObject = eventObject
@@ -112,7 +113,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
                 @Throws(Exception::class)
             
-    open fun onBuildingEvent(event: RTSLayerEvent)
+    override fun onBuildingEvent(event: RTSLayerEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var event = event
@@ -122,7 +123,7 @@ this.paintSimpleTiledLayer= this.simpleTiledLayer
 
                 @Throws(Exception::class)
             
-    open fun onMoveEvent(scrollMapEvent: ScrollMapEvent)
+    override fun onMoveEvent(scrollMapEvent: ScrollMapEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var scrollMapEvent = scrollMapEvent

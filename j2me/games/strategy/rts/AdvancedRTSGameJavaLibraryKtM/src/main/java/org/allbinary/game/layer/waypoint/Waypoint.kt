@@ -76,7 +76,7 @@ this.ownerLayer= ownerLayer
 
                 @Throws(Exception::class)
             
-    open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
+    override fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -348,7 +348,7 @@ customMapArray[endGeographicMapCellPosition!!.getRow()]!![endGeographicMapCellPo
 }
 
 
-    open fun onEvent(eventObject: AllBinaryEventObject)
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject
@@ -358,7 +358,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
                 @Throws(Exception::class)
             
-    open fun onBuildingEvent(event: RTSLayerEvent)
+    override fun onBuildingEvent(event: RTSLayerEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var event = event
@@ -386,7 +386,7 @@ this.paths[columnIndex]!![rowIndex]=
 }
 
 
-    open fun reset()
+    override fun reset()
         //nullable = true from not(false or (false and true)) = true
 {
 this.getConnectedWaypointList()!!.clear()
@@ -396,7 +396,7 @@ this.releaseCachedPaths()
 
                 @Throws(Exception::class)
             
-    open fun visit(unitLayer: PathFindingLayerInterface)
+    override fun visit(unitLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var unitLayer = unitLayer

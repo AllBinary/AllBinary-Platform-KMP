@@ -42,8 +42,6 @@ import org.allbinary.string.CommonLabels
 open public class CompositeRTSFormInput : RTSFormInput {
         
 
-    val logUtil: LogUtil = LogUtil.getInstance()!!
-
     private val rtsFormInputArray: Array<RTSFormInput?>
 
     private val itemIndex: IntArray
@@ -80,7 +78,7 @@ this.rtsFormInputArray[1]= UnitRTSFormInput(this.groupInterfaceArray)
 
                 @Throws(Exception::class)
             
-    open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
+    override fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -230,7 +228,7 @@ this.rtsFormInputArray[0]!!.processSticky(associatedRtsLayer, rtsPlayerLayerInte
 }
 
 
-    open fun getSelectedStickyItemIndex()
+    override fun getSelectedStickyItemIndex()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -241,7 +239,7 @@ this.rtsFormInputArray[0]!!.processSticky(associatedRtsLayer, rtsPlayerLayerInte
 }
 
 
-    open fun isStickyItemSelected()
+    override fun isStickyItemSelected()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -252,7 +250,7 @@ this.rtsFormInputArray[0]!!.processSticky(associatedRtsLayer, rtsPlayerLayerInte
 }
 
 
-    open fun setStickyItemSelected(stickyItemSelected: Boolean)
+    override fun setStickyItemSelected(stickyItemSelected: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var stickyItemSelected = stickyItemSelected
@@ -260,7 +258,7 @@ this.rtsFormInputArray[0]!!.setStickyItemSelected(stickyItemSelected)
 }
 
 
-    open fun getSelectedStickyItem()
+    override fun getSelectedStickyItem()
         //nullable = true from not(false or (false and true)) = true
 : CustomItem{
 
@@ -271,7 +269,7 @@ this.rtsFormInputArray[0]!!.setStickyItemSelected(stickyItemSelected)
 }
 
 
-    open fun setSelectedStickyItem(selectedStickyItem: CustomItem)
+    override fun setSelectedStickyItem(selectedStickyItem: CustomItem)
         //nullable = true from not(false or (false and false)) = true
 {
 var selectedStickyItem = selectedStickyItem

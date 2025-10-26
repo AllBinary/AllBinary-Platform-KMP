@@ -47,9 +47,9 @@ companion object {
 
         }
             
-    var EMPTY_CELL_TYPE: GeographicMapCellType = GeographicMapCellType.NULL_GEOGRAPHIC_MAP_CELL_TYPE
+    var EMPTY_CELL_TYPE: GeographicMapCellType = GeographicMapCellType(0)
 
-    var EASY_CELL_TYPE: GeographicMapCellType = GeographicMapCellType.NULL_GEOGRAPHIC_MAP_CELL_TYPE
+    var EASY_CELL_TYPE: GeographicMapCellType = EMPTY_CELL_TYPE
 
     val BOTTOM_LEFT_TURN_ROAD_CELL_TYPE: RaceTrackGeographicMapCellType
 

@@ -32,7 +32,6 @@ import org.allbinary.animation.AnimationInterfaceFactoryInterface
 import org.allbinary.animation.ProceduralAnimationInterfaceFactoryInterface
 import org.allbinary.game.identification.Group
 import org.allbinary.graphics.Rectangle
-import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.game.multiplayer.layer.RemoteInfo
 
 open public class ResourceWaypointLayer : WaypointLayer {
@@ -57,7 +56,7 @@ public constructor (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, g
 }
 
 
-    open fun createHudPaintable()
+    override fun createHudPaintable()
         //nullable = true from not(false or (false and true)) = true
 : SelectionHudPaintable{
 
@@ -73,7 +72,7 @@ rtsLayerHudPaintable!!.setRtsLayer(this)
 }
 
 
-    open fun getHudPaintable()
+    override fun getHudPaintable()
         //nullable = true from not(false or (false and true)) = true
 : SelectionHudPaintable{
 

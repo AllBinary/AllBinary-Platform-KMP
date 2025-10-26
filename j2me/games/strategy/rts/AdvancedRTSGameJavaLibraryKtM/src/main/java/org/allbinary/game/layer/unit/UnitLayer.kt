@@ -32,27 +32,6 @@
 import java.util.Hashtable
 import javax.microedition.lcdui.Canvas
 import javax.microedition.lcdui.Graphics
-import org.allbinary.game.layer.PathAnimation
-import org.allbinary.game.layer.SteeringVisitor
-import org.allbinary.game.layer.RTSLayer2SelectedLogHelper
-import org.allbinary.game.layer.RTSLayerSelectedLogHelper
-import org.allbinary.game.layer.RTSLayerLogHelper
-import org.allbinary.game.input.form.VisibleCellPositionsSingleton
-import org.allbinary.game.input.form.WaypointRTSFormInput
-import org.allbinary.game.layer.AdvancedRTSGameLayer
-import org.allbinary.game.layer.CaptionResources
-import org.allbinary.game.layer.RTSLayerEvent
-import org.allbinary.game.layer.RTSLayerHudPaintable
-import org.allbinary.game.layer.RTSPlayerLayerInterface
-import org.allbinary.game.layer.SelectionHudPaintable
-import org.allbinary.game.layer.SensorActionFactory
-import org.allbinary.game.layer.building.BuildingLayer
-import org.allbinary.game.layer.building.event.BuildingEventHandler
-import org.allbinary.game.layer.building.event.BuildingEventListenerInterface
-import org.allbinary.game.layer.waypoint.event.WaypointEventHandlerFactory
-import org.allbinary.media.audio.AttackSound
-import org.allbinary.util.BasicArrayList
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.animation.Animation
 import org.allbinary.animation.AnimationInterfaceFactoryInterface
 import org.allbinary.animation.FeaturedAnimationInterfaceFactoryInterfaceFactory
@@ -80,14 +59,32 @@ import org.allbinary.game.identification.Group
 import org.allbinary.game.input.event.GameKeyEvent
 import org.allbinary.game.input.event.GameKeyEventFactory
 import org.allbinary.game.input.event.GameKeyEventUtil
+import org.allbinary.game.input.form.VisibleCellPositionsSingleton
+import org.allbinary.game.input.form.WaypointRTSFormInput
+import org.allbinary.game.layer.AdvancedRTSGameLayer
 import org.allbinary.game.layer.AllBinaryGameLayerManager
 import org.allbinary.game.layer.AllBinaryTiledLayer
+import org.allbinary.game.layer.CaptionResources
 import org.allbinary.game.layer.LinePathRelativeAnimation
+import org.allbinary.game.layer.PathAnimation
 import org.allbinary.game.layer.PathFindingLayerInterface
 import org.allbinary.game.layer.RTSLayer2LogHelper
+import org.allbinary.game.layer.RTSLayer2SelectedLogHelper
+import org.allbinary.game.layer.RTSLayerEvent
+import org.allbinary.game.layer.RTSLayerHudPaintable
+import org.allbinary.game.layer.RTSLayerLogHelper
+import org.allbinary.game.layer.RTSLayerSelectedLogHelper
+import org.allbinary.game.layer.RTSPlayerLayerInterface
+import org.allbinary.game.layer.SelectionHudPaintable
+import org.allbinary.game.layer.SensorActionFactory
+import org.allbinary.game.layer.SteeringVisitor
 import org.allbinary.game.layer.TiledLayerUtil
 import org.allbinary.game.layer.VehicleFrictionProperties
 import org.allbinary.game.layer.VehicleProperties
+import org.allbinary.game.layer.WaypointBehaviorBase
+import org.allbinary.game.layer.building.BuildingLayer
+import org.allbinary.game.layer.building.event.BuildingEventHandler
+import org.allbinary.game.layer.building.event.BuildingEventListenerInterface
 import org.allbinary.game.layer.capital.event.CapitalEvent
 import org.allbinary.game.layer.capital.event.CapitalEventHandlerFactory
 import org.allbinary.game.layer.geographic.map.LayerPartialCellPositionsUtil
@@ -99,12 +96,16 @@ import org.allbinary.game.layer.special.SpecialUpGameInputProcessor
 import org.allbinary.game.layer.waypoint.MultipassNoCacheWaypoint
 import org.allbinary.game.layer.waypoint.NoCacheWaypoint
 import org.allbinary.game.layer.waypoint.WaypointBase
+import org.allbinary.game.layer.waypoint.event.WaypointEventHandlerFactory
+import org.allbinary.game.multiplayer.layer.RemoteInfo
 import org.allbinary.game.part.weapon.BasicWeaponPart
 import org.allbinary.game.part.weapon.SalvoInterface
 import org.allbinary.game.physics.velocity.VelocityProperties
 import org.allbinary.game.tracking.TrackingEvent
 import org.allbinary.game.tracking.TrackingEventHandler
 import org.allbinary.game.tracking.TrackingEventListenerInterface
+import org.allbinary.game.view.TileLayerPositionIntoViewPosition
+import org.allbinary.graphics.CellPositionFactory
 import org.allbinary.graphics.GPoint
 import org.allbinary.graphics.Rectangle
 import org.allbinary.graphics.color.BasicColorFactory
@@ -120,22 +121,22 @@ import org.allbinary.math.AngleFactory
 import org.allbinary.math.AngleInfo
 import org.allbinary.math.FrameUtil
 import org.allbinary.math.LayerDistanceUtil
+import org.allbinary.math.NamedAngle
+import org.allbinary.media.audio.AttackSound
 import org.allbinary.media.audio.SecondaryPlayerQueueFactory
 import org.allbinary.media.audio.Sound
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.BasicGeographicMapCellPositionFactory
 import org.allbinary.media.graphics.geography.map.GeographicMapCellHistory
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
-import org.allbinary.media.graphics.geography.map.drop.DropCellPositionHistory
-import org.allbinary.view.ViewPosition
-import org.allbinary.weapon.media.audio.ExplosionBasicSound
-import org.allbinary.game.multiplayer.layer.RemoteInfo
-import org.allbinary.game.view.TileLayerPositionIntoViewPosition
-import org.allbinary.graphics.CellPositionFactory
-import org.allbinary.math.NamedAngle
 import org.allbinary.media.graphics.geography.map.GeographicMapCompositeInterface
+import org.allbinary.media.graphics.geography.map.SimpleGeographicMapCellPositionFactory
+import org.allbinary.media.graphics.geography.map.drop.DropCellPositionHistory
 import org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicMap
 import org.allbinary.string.CommonPhoneStrings
+import org.allbinary.util.BasicArrayList
+import org.allbinary.view.ViewPosition
+import org.allbinary.weapon.media.audio.ExplosionBasicSound
 
 open public class UnitLayer : AdvancedRTSGameLayer
                 , BuildingEventListenerInterface
@@ -173,8 +174,6 @@ companion object {
 
         }
             
-    val logUtil: LogUtil = LogUtil.getInstance()!!
-
     private val basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
 
     private val layerPartialCellPositionsUtil: LayerPartialCellPositionsUtil = LayerPartialCellPositionsUtil.getInstance()!!
@@ -227,7 +226,7 @@ companion object {
 
     private var movementAngle: NamedAngle = this.angleFactory!!.NOT_ANGLE
 
-    private var steeringInsideGeographicMapCellPosition: GeographicMapCellPosition
+    private var steeringInsideGeographicMapCellPosition: GeographicMapCellPosition = SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
 protected constructor (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, vehicleProperties: VehicleProperties, healthInterface: Health, maxLoad: Integer, moveSoundInterface: Sound, waypointLayerInterfaceFactoryInterface: LayerInterfaceFactoryInterface, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, decalAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, direction: Direction, x: Int, y: Int, z: Int)                        
 
                             : this(remoteInfo, parentLayer, groupInterface, rootName, name, vehicleProperties, healthInterface, maxLoad, moveSoundInterface, waypointLayerInterfaceFactoryInterface, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, decalAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, direction, x, y, z, TileLayerPositionIntoViewPosition()){
@@ -356,14 +355,15 @@ protected constructor (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer
                     
 this.setCollidableInferface(CollidableUnitBehavior(this, true))
 this.waypointLayerInterfaceFactoryInterface= waypointLayerInterfaceFactoryInterface
-this.maxResourceLoad= maxResourceLoad!!.shortValue()
+this.maxResourceLoad= maxResourceLoad!!.toShort()
 this.moveSoundInterface= moveSoundInterface
 
     
                         if(Features.getInstance()!!.isFeature(GameFeatureFactory.getInstance()!!.DAMAGE_FLOATERS))
                         
                                     {
-                                    this.damageFloatersPaintableInterface= this.damageFloaters= PtsDamageFloaters(this)
+                                    this.damageFloaters= PtsDamageFloaters(this)
+this.damageFloatersPaintableInterface= this.damageFloaters
 
                                     }
                                 
@@ -402,7 +402,7 @@ this.initPathAnimation= PathAnimation(this, LinePathRelativeAnimation.getInstanc
 
                 @Throws(Exception::class)
             
-    open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
+    override fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -413,7 +413,7 @@ this.initPathAnimation!!.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 
                 @Throws(Exception::class)
             
-    open fun updateWaypointBehavior(geographicMapInterface: BasicGeographicMap)
+    override fun updateWaypointBehavior(geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapInterface = geographicMapInterface
@@ -436,9 +436,7 @@ this.setWaypointBehavior(UnitWaypointBehavior2(this, waypointLayerInterfaceFacto
                             MultipassNoCacheWaypoint(this, AttackSound.getInstance())
                         
                             } else {
-                            
-                                        //Otherwise - expression - elseExpr - ObjectCreationExpr
-
+                            NoCacheWaypoint(this, AttackSound.getInstance())
                             }
     
 
@@ -450,7 +448,7 @@ this.initRangeHack()
 
                 @Throws(Exception::class)
             
-    open fun construct(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
+    override fun construct(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var rtsPlayerLayerInterface = rtsPlayerLayerInterface
@@ -600,7 +598,7 @@ this.sensorGeographicMapCellPositionList!!.add(currentGeographicMapCellPosition)
 }
 
 
-    open fun select()
+    override fun select()
         //nullable = true from not(false or (false and true)) = true
 {
 this.pathAnimation= this.initPathAnimation
@@ -608,7 +606,7 @@ super.select()
 }
 
 
-    open fun deselect()
+    override fun deselect()
         //nullable = true from not(false or (false and true)) = true
 {
 this.pathAnimation= NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
@@ -658,7 +656,7 @@ this.rtsLayer2LogHelper= RTSLayer2LogHelper.getInstance()
 
                 @Throws(Exception::class)
             
-    open fun setClosestGeographicMapCellHistory(pathsList: BasicArrayList)
+    override fun setClosestGeographicMapCellHistory(pathsList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var pathsList = pathsList
@@ -718,7 +716,7 @@ this.teleportTo(geographicMapCellPosition)
 
                 @Throws(Exception::class)
             
-    open fun init(geographicMapCellHistory: GeographicMapCellHistory, geographicMapCellPositionBasicArrayList: BasicArrayList)
+    override fun init(geographicMapCellHistory: GeographicMapCellHistory, geographicMapCellPositionBasicArrayList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapCellHistory = geographicMapCellHistory
@@ -727,7 +725,7 @@ geographicMapCellHistory!!.track(geographicMapCellPositionBasicArrayList)
 }
 
 
-    open fun onMovement(trackingEvent: TrackingEvent)
+    override fun onMovement(trackingEvent: TrackingEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var trackingEvent = trackingEvent
@@ -756,7 +754,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "onMovement", e)
 
                 @Throws(Exception::class)
             
-    open fun onMovementFound(trackingEvent: TrackingEvent)
+    override fun onMovementFound(trackingEvent: TrackingEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var trackingEvent = trackingEvent
@@ -797,7 +795,7 @@ this.fireTimeHelper!!.delay= (weaponProperties!!.getReloadTime().toInt())
 
                 @Throws(Exception::class)
             
-    open fun processBuiltTick(allBinaryLayerManager: AllBinaryLayerManager)
+    override fun processBuiltTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryLayerManager = allBinaryLayerManager
@@ -864,7 +862,7 @@ this.getUnitWaypointBehavior()!!.processTick(allBinaryLayerManager)
 }
 
 
-    open fun teleportTo(geographicMapCellPosition: GeographicMapCellPosition)
+    override fun teleportTo(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapCellPosition = geographicMapCellPosition
@@ -877,7 +875,7 @@ this.setPosition(point.getX() -this.getHalfWidth(), point.getY() -this.getHalfHe
 
                 @Throws(Exception::class)
             
-    open fun getCurrentGeographicMapCellPosition()
+    override fun getCurrentGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPosition{
 
@@ -914,7 +912,7 @@ this.setPosition(point.getX() -this.getHalfWidth(), point.getY() -this.getHalfHe
 
                 @Throws(Exception::class)
             
-    open fun fire(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
+    override fun fire(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var layerManager = layerManager
@@ -938,7 +936,7 @@ this.setPosition(point.getX() -this.getHalfWidth(), point.getY() -this.getHalfHe
 
                 @Throws(Exception::class)
             
-    open fun left()
+    override fun left()
         //nullable = true from not(false or (false and true)) = true
 {
 this.initResourceAnimation!!.previousRotation()
@@ -949,7 +947,7 @@ this.rotationAnimationInterface!!.previousRotation()
 
                 @Throws(Exception::class)
             
-    open fun right()
+    override fun right()
         //nullable = true from not(false or (false and true)) = true
 {
 this.initResourceAnimation!!.nextRotation()
@@ -958,7 +956,7 @@ this.rotationAnimationInterface!!.nextRotation()
 }
 
 
-    open fun down()
+    override fun down()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -976,7 +974,7 @@ this.rotationAnimationInterface!!.nextRotation()
 }
 
 
-    open fun up()
+    override fun up()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -994,7 +992,7 @@ this.rotationAnimationInterface!!.nextRotation()
 }
 
 
-    open fun initInputProcessors()
+    override fun initInputProcessors()
         //nullable = true from not(false or (false and true)) = true
 {
 this.inputProcessorArray[Canvas.RIGHT]= SpecialRightGameInputProcessor(this)
@@ -1009,7 +1007,7 @@ super.initInputProcessors()
 
                 @Throws(Exception::class)
             
-    open fun processInput(layerManager: AllBinaryLayerManager)
+    override fun processInput(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var layerManager = layerManager
@@ -1068,7 +1066,7 @@ hashtable.put(SmallIntegerSingletonFactory.getInstance()!!.getInstance(1), Small
 }
 
 
-    open fun downgrade()
+    override fun downgrade()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -1083,7 +1081,7 @@ hashtable.put(SmallIntegerSingletonFactory.getInstance()!!.getInstance(1), Small
 }
 
 
-    open fun upgrade()
+    override fun upgrade()
         //nullable = true from not(false or (false and true)) = true
 {
 super.upgrade()
@@ -1108,7 +1106,10 @@ this.getVehicleProperties()!!.getVehicleFrictionProperties()!!.friction(this.get
 {
     //var reason = reason
 
-    var nextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition = this.waypointBehaviorBase!!.getNextUnvisitedPathGeographicMapCellPosition()!!
+    var waypointBehaviorBase: WaypointBehaviorBase = this.waypointBehaviorBase as WaypointBehaviorBase
+
+
+    var nextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition = waypointBehaviorBase!!.getNextUnvisitedPathGeographicMapCellPosition()!!
 
 
     var point: GPoint = nextUnvisitedPathGeographicMapCellPosition!!.getMidPoint()!!
@@ -1147,7 +1148,10 @@ this.trackTo(dx, dy, angleOfTarget)
     //var dy = dy
 var targetAngle = targetAngle
 
-    var nextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition = this.waypointBehaviorBase!!.getNextUnvisitedPathGeographicMapCellPosition()!!
+    var waypointBehaviorBase: WaypointBehaviorBase = this.waypointBehaviorBase as WaypointBehaviorBase
+
+
+    var nextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition = waypointBehaviorBase!!.getNextUnvisitedPathGeographicMapCellPosition()!!
 
 
     var evading: Boolean = false
@@ -1363,7 +1367,10 @@ this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstance(this, Canvas.
     //var dx = dx
     //var dy = dy
 
-    var nextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition = this.waypointBehaviorBase!!.getNextUnvisitedPathGeographicMapCellPosition()!!
+    var waypointBehaviorBase: WaypointBehaviorBase = this.waypointBehaviorBase as WaypointBehaviorBase
+
+
+    var nextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition = waypointBehaviorBase!!.getNextUnvisitedPathGeographicMapCellPosition()!!
 
 
     
@@ -1391,7 +1398,10 @@ this.rtsLogHelper!!.handle(this, this.movementAngle)
     //var dx = dx
     //var dy = dy
 
-    var nextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition = this.waypointBehaviorBase!!.getNextUnvisitedPathGeographicMapCellPosition()!!
+    var waypointBehaviorBase: WaypointBehaviorBase = this.waypointBehaviorBase as WaypointBehaviorBase
+
+
+    var nextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition = waypointBehaviorBase!!.getNextUnvisitedPathGeographicMapCellPosition()!!
 
 
     
@@ -1511,7 +1521,7 @@ TrackingEventHandler.getInstance()!!.fireEvent(this.getTrackingEvent())
 }
 
 
-    open fun move()
+    override fun move()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -1608,7 +1618,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "move", e)
 }
 
 
-    open fun allStop()
+    override fun allStop()
         //nullable = true from not(false or (false and true)) = true
 {
 
@@ -1619,7 +1629,7 @@ velocityProperties!!.getVelocityYBasicDecimalP()!!.set(0)
 }
 
 
-    open fun paint(graphics: Graphics)
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -1654,7 +1664,7 @@ this.resourceAnimation!!.paint(graphics, viewX, viewY)
 
                 @Throws(Exception::class)
             
-    open fun onBuildingEvent(event: RTSLayerEvent)
+    override fun onBuildingEvent(event: RTSLayerEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var event = event
@@ -1678,7 +1688,7 @@ this.getUnitWaypointBehavior()!!.moveAwayFromBuilding(buildingLayer)
 
                 @Throws(Exception::class)
             
-    open fun damage(damage: Int, damageType: Int)
+    override fun damage(damage: Int, damageType: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var damage = damage
@@ -1699,7 +1709,7 @@ this.damageFloaters!!.add(damage)
 
                 @Throws(Exception::class)
             
-    open fun getDamage(damageType: Int)
+    override fun getDamage(damageType: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
     //var damageType = damageType
@@ -1713,7 +1723,7 @@ this.damageFloaters!!.add(damage)
 
                 @Throws(Exception::class)
             
-    open fun setDestroyed(destroyed: Boolean)
+    override fun setDestroyed(destroyed: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
     //var destroyed = destroyed
@@ -1805,7 +1815,7 @@ this.resourceAnimation= NullIndexedAnimationFactory.getFactoryInstance()!!.getIn
 
                 @Throws(Exception::class)
             
-    open fun setLoad(resource: Short)
+    override fun setLoad(resource: Short)
         //nullable = true from not(false or (false and false)) = true
 {
 var resource = resource
@@ -1839,7 +1849,7 @@ this.resourceLoad += resource
 
                 @Throws(Exception::class)
             
-    open fun handleCost(ownerLayer: PathFindingLayerInterface)
+    override fun handleCost(ownerLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var ownerLayer = ownerLayer
@@ -1857,7 +1867,7 @@ this.setLoad(0.toShort())
 }
 
 
-    open fun createHudPaintable()
+    override fun createHudPaintable()
         //nullable = true from not(false or (false and true)) = true
 : SelectionHudPaintable{
 
@@ -1873,7 +1883,7 @@ rtsLayerHudPaintable!!.setRtsLayer(this)
 }
 
 
-    open fun getHudPaintable()
+    override fun getHudPaintable()
         //nullable = true from not(false or (false and true)) = true
 : SelectionHudPaintable{
 
@@ -1887,7 +1897,7 @@ rtsLayerHudPaintable!!.setRtsLayer(this)
 }
 
 
-    open fun getType()
+    override fun getType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -1909,7 +1919,7 @@ rtsLayerHudPaintable!!.setRtsLayer(this)
 }
 
 
-    open fun getTrackingEvent()
+    override fun getTrackingEvent()
         //nullable = true from not(false or (false and true)) = true
 : TrackingEvent{
 
@@ -1920,7 +1930,7 @@ rtsLayerHudPaintable!!.setRtsLayer(this)
 }
 
 
-    open fun getCaptionAnimationHelper()
+    override fun getCaptionAnimationHelper()
         //nullable = true from not(false or (false and true)) = true
 : CaptionAnimationHelperBase{
 
@@ -1931,7 +1941,7 @@ rtsLayerHudPaintable!!.setRtsLayer(this)
 }
 
 
-    open fun isSelfUpgradeable()
+    override fun isSelfUpgradeable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

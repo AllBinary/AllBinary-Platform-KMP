@@ -28,7 +28,12 @@
 
 open public class AllBinaryNoVibration : AllBinaryVibrationME {
         
+companion object {
+            
+    var NO_VIBRATION: AllBinaryVibrationME = AllBinaryNoVibration()
 
+        }
+            
             //Auto Generated
             public constructor() : super()
             {

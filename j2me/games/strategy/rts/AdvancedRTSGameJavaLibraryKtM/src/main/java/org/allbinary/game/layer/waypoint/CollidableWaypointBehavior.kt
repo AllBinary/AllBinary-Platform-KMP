@@ -43,7 +43,7 @@ var collidable = collidable
 }
 
 
-    open fun isCollision(collisionLayer: CollidableCompositeLayer)
+    override fun isCollision(collisionLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var collisionLayer = collisionLayer
@@ -57,14 +57,14 @@ var collisionLayer = collisionLayer
 
                 @Throws(Exception::class)
             
-    open fun collide(collisionLayer: CollidableCompositeLayer)
+    override fun collide(collisionLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var collisionLayer = collisionLayer
 }
 
 
-    open fun isCollision(collidableInterface: CollidableInterfaceCompositeInterface)
+    override fun isCollision(collidableInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var collidableInterface = collidableInterface
@@ -78,7 +78,7 @@ var collidableInterface = collidableInterface
 
                 @Throws(Exception::class)
             
-    open fun collide(collidableInterface: CollidableInterfaceCompositeInterface)
+    override fun collide(collidableInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var collidableInterface = collidableInterface

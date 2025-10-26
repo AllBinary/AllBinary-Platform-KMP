@@ -45,7 +45,6 @@ import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.displayable.command.MyCommandsFactory
 import org.allbinary.graphics.displayable.screen.CommandForm
 import org.allbinary.input.gyro.OrientationData
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.system.security.licensing.AbeClientInformationInterface
 import org.allbinary.util.BasicArrayList
@@ -56,10 +55,10 @@ open public class GameOptionsForm : CommandForm {
 public constructor (commandListener: CommandListener, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(commandListener, title, backgrounBasicColor, foregroundBasicColor){
-var commandListener = commandListener
-var title = title
-var backgrounBasicColor = backgrounBasicColor
-var foregroundBasicColor = foregroundBasicColor
+    //var commandListener = commandListener
+    //var title = title
+    //var backgrounBasicColor = backgrounBasicColor
+    //var foregroundBasicColor = foregroundBasicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -103,16 +102,27 @@ this.save(abeClientInformation)
                         
                                     {
                                     
-    var list: BasicArrayList = hashtable.get(key as Object) as BasicArrayList
+    var listCanBeNull: Any? = hashtable.get(key as Object)
 
 
     
-                        if(list != 
+                        if(listCanBeNull != 
                                     null
-                                 && list.contains(SensorFeatureFactory.getInstance()!!.SIMULATED_ORIENTATION_SENSORS))
+                                )
+                        
+                                    {
+                                    
+    var list: BasicArrayList = listCanBeNull as BasicArrayList
+
+
+    
+                        if(list.contains(SensorFeatureFactory.getInstance()!!.SIMULATED_ORIENTATION_SENSORS))
                         
                                     {
                                     this.addTextFields()
+
+                                    }
+                                
 
                                     }
                                 
@@ -135,18 +145,20 @@ this.save(abeClientInformation)
     var objectArray: Array<Any?> = HashtableUtil.getInstance()!!.getKeysAsArray(hashtable)!!
 
 
+    var gameConfigurationTextInput: GameConfigurationTextInput
+
+
+    var textField: TextField
+
+
 
 
 
                         for (index in 0 until size)
 
         {
-
-    var gameConfigurationTextInput: GameConfigurationTextInput = hashtable.get(objectArray[index]!! as Object) as GameConfigurationTextInput
-
-
-    var textField: TextField = TextField(gameConfigurationTextInput!!.getLabel(), gameConfigurationTextInput!!.getText(), 30, TextField.ANY)
-
+gameConfigurationTextInput= hashtable.get(objectArray[index]!! as Object) as GameConfigurationTextInput
+textField= TextField(gameConfigurationTextInput!!.getLabel(), gameConfigurationTextInput!!.getText(), 30, TextField.ANY)
 this.append(textField)
 }
 
@@ -169,7 +181,16 @@ this.append(textField)
     var GAUGE_CHANGE: Command = MyCommandsFactory.getInstance()!!.GAUGE_CHANGE
 
 
+    var stringMaker: StringMaker = StringMaker()
+
+
     var size: Int = list.size()!!
+
+
+    var gameConfiguration: GameConfiguration
+
+
+    var gauge: GameConfigurationGauge
 
 
 
@@ -178,14 +199,10 @@ this.append(textField)
                         for (index in 0 until size)
 
         {
-
-    var gameConfiguration: GameConfiguration = list.objectArray[index]!! as GameConfiguration
-
-logUtil!!.put(StringMaker().
-                            append(NAME)!!.append(gameConfiguration!!.toString())!!.toString(), this, METHOD_NAME)
-
-    var gauge: GameConfigurationGauge = GameConfigurationGauge(gameConfiguration)
-
+gameConfiguration= list.objectArray[index]!! as GameConfiguration
+stringMaker!!.delete(0, stringMaker!!.length())
+logUtil!!.put(stringMaker!!.append(NAME)!!.append(gameConfiguration!!.toString())!!.toString(), this, METHOD_NAME)
+gauge= GameConfigurationGauge(gameConfiguration)
 gauge.setDefaultCommand(GAUGE_CHANGE)
 gauge.setItemCommandListener(GameFeatureItemCommandListener(this))
 this.append(gauge)
@@ -197,7 +214,7 @@ this.append(gauge)
     override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 {
-var cmdListener = cmdListener
+    //var cmdListener = cmdListener
 
     var gameCommandsFactory: GameCommandsFactory = GameCommandsFactory.getInstance()!!
 
@@ -218,15 +235,16 @@ this.setCommandListener(cmdListener)
     var size: Int = this.size()!!
 
 
+    var item: Item
+
+
 
 
 
                         for (index in 0 until size)
 
         {
-
-    var item: Item = this.get(index)!!
-
+item= this.get(index)
 
     
                         if(item is GameConfigurationGauge)
@@ -268,15 +286,16 @@ keyValuePersistance!!.save(abeClientInformation, hashtable)
     var size2: Int = list.size()!!
 
 
+    var integer: Integer
+
+
 
 
 
                         for (index in 0 until size2)
 
         {
-
-    var integer: Integer = list.objectArray[index]!! as Integer
-
+integer= list.objectArray[index]!! as Integer
 keyValuePersistance!!.delete(abeClientInformation, integer.toInt())
 }
 

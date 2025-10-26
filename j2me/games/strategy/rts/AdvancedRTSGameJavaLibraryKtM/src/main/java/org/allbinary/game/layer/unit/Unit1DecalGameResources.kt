@@ -76,7 +76,7 @@ super.init(ROOT, SIZE)
 
                 @Throws(Exception::class)
             
-    open fun init(ROOT: String, sizeString: String)
+    override fun init(ROOT: String, sizeString: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var ROOT = ROOT
@@ -87,7 +87,7 @@ super.init(ROOT, sizeString)
 
                 @Throws(Exception::class)
             
-    open fun getString()
+    override fun getString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

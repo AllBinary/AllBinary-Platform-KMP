@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.game.displayable.canvas.AllBinaryGameCanvas
+import org.allbinary.game.displayable.canvas.AllBinaryGameCanvasInterface
 import org.allbinary.layer.AllBinaryLayer
 
 open public class GeographicMapCellPositionTracking
@@ -74,7 +75,7 @@ public constructor ()
 
                 @Throws(Exception::class)
             
-    open fun updateStart(gameCanvasInterface: AllBinaryGameCanvas, layer: AllBinaryLayer)
+    open fun updateStart(gameCanvasInterface: AllBinaryGameCanvasInterface, layer: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var gameCanvasInterface = gameCanvasInterface

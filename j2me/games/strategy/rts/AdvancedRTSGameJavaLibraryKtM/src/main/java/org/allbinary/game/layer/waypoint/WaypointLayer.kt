@@ -26,8 +26,6 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Graphics
-import org.allbinary.string.CommonStrings
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.animation.AnimationInterfaceFactoryInterface
 import org.allbinary.animation.ProceduralAnimationInterfaceFactoryInterface
 import org.allbinary.game.health.Health
@@ -56,9 +54,7 @@ companion object {
 
 
         }
-            
-    val logUtil: LogUtil = LogUtil.getInstance()!!
-protected constructor (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
+            protected constructor (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
 
                             : super(remoteInfo, parentLayer, groupInterface, rootName, name, Health(1000), NullRTSFormInputFactory.getInstance(), animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y){
     //var remoteInfo = remoteInfo
@@ -81,7 +77,7 @@ this.setAnimationInterface(this.indexedButShouldBeRotationAnimationInterface)
 }
 
 
-    open fun construct(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
+    override fun construct(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var rtsPlayerLayerInterface = rtsPlayerLayerInterface
@@ -90,7 +86,7 @@ this.initVisibility(rtsPlayerLayerInterface)
 }
 
 
-    open fun paint(graphics: Graphics)
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -106,7 +102,7 @@ var graphics = graphics
 }
 
 
-    open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
+    override fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 var allBinaryLayerManager = allBinaryLayerManager
@@ -121,7 +117,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "processTick", e)
 }
 
 
-    open fun damage(damage: Int, damageType: Int)
+    override fun damage(damage: Int, damageType: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 var damage = damage
@@ -131,7 +127,7 @@ var damageType = damageType
 
                 @Throws(Exception::class)
             
-    open fun getDamage(damageType: Int)
+    override fun getDamage(damageType: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 var damageType = damageType
@@ -145,7 +141,7 @@ var damageType = damageType
 
                 @Throws(Exception::class)
             
-    open fun setDestroyed(destroyed: Boolean)
+    override fun setDestroyed(destroyed: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var destroyed = destroyed
@@ -162,7 +158,7 @@ super.setDestroyed(destroyed)
 }
 
 
-    open fun getType()
+    override fun getType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -173,7 +169,7 @@ super.setDestroyed(destroyed)
 }
 
 
-    open fun isSelfUpgradeable()
+    override fun isSelfUpgradeable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

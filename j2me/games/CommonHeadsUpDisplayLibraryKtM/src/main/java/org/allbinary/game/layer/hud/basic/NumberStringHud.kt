@@ -29,15 +29,22 @@ import javax.microedition.lcdui.Graphics
 import org.allbinary.game.graphics.hud.BasicHud
 import org.allbinary.game.graphics.hud.BasicHudFactory
 import org.allbinary.graphics.color.BasicColor
+import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.font.MyFont
 import org.allbinary.graphics.paint.PaintableInterface
 import org.allbinary.logic.math.PrimitiveLongSingleton
 import org.allbinary.logic.math.PrimitiveLongUtil
+import org.allbinary.logic.string.StringUtil
 
 open public class NumberStringHud : BasicHud
                 , PaintableInterface {
         
+companion object {
+            
+    val NULL_NUMBER_STRING_HUD: NumberStringHud = NumberStringHud(StringUtil.getInstance()!!.EMPTY_STRING, 0, BasicHudFactory.getInstance()!!.ABSOLUTE, 0, 0, 0, BasicColorFactory.getInstance()!!.NULL_COLOR)
 
+        }
+            
     private val PREPEND_STRING: CharArray
 
     private var value: Int
@@ -51,6 +58,31 @@ open public class NumberStringHud : BasicHud
     private var valueTotalDigits: Int= 0
 
     private val primitiveLongUtil: PrimitiveLongUtil
+public constructor (prependString: String, max: Int, location: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int, basicColor: BasicColor)                        
+
+                            : super(location, 1, maxHeight, maxWidth, bufferZone, basicColor){
+var prependString = prependString
+var max = max
+var location = location
+var maxHeight = maxHeight
+var maxWidth = maxWidth
+var bufferZone = bufferZone
+var basicColor = basicColor
+
+
+                            //For kotlin this is before the body of the constructor.
+                    
+this.PREPEND_STRING= prependString!!.toCharArray()
+
+    var myFont: MyFont = MyFont.getInstance()!!
+
+this.offset= myFont!!.stringWidth(prependString) +myFont!!.charWidth()
+this.valueString= PrimitiveLongSingleton.getInstance()!!.NUMBER_CHAR_ARRAYS[0]!!
+this.primitiveLongUtil= PrimitiveLongUtil(max +1)
+this.max= max
+this.value= 0
+}
+
 public constructor (prependString: String, max: Int, location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int, basicColor: BasicColor)                        
 
                             : super(location, direction, maxHeight, maxWidth, bufferZone, basicColor){

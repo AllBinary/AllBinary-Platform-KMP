@@ -57,7 +57,7 @@ protected constructor (){
 
                 @Throws(Exception::class)
             
-    open fun init(ROOT: String, sizeString: String)
+    override fun init(ROOT: String, sizeString: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var ROOT = ROOT

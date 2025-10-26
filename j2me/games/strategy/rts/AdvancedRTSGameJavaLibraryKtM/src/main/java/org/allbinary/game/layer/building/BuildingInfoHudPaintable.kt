@@ -31,6 +31,8 @@ import org.allbinary.game.layer.SelectionHudPaintable
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.game.graphics.hud.BasicHudFactory
+import org.allbinary.game.layer.NullPathFindingLayer
+import org.allbinary.game.layer.PathFindingLayerInterface
 import org.allbinary.game.layer.hud.basic.NumberStringHud
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.font.MyFont
@@ -57,20 +59,30 @@ companion object {
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private val myFont: MyFont = MyFont.getInstance()!!
-
-    private var productivityHud: NumberStringHud
-
-    private var efficiencyHud: NumberStringHud
-
-    private var healthHud: NumberStringHud
-
-    private var maxHealthHud: NumberStringHud
-
     private val HEALTH: String = "Health:"
 
-    private var rtsLayer: RTSLayer
+    private val productivityHud: NumberStringHud
+
+    private val efficiencyHud: NumberStringHud
+
+    private val healthHud: NumberStringHud
+
+    private val maxHealthHud: NumberStringHud
+
+    private var rtsLayer: PathFindingLayerInterface = NullPathFindingLayer.NULL_PATH_FINDING_LAYER
 private constructor (){
+
+    var productivityHud: NumberStringHud = NumberStringHud.NULL_NUMBER_STRING_HUD
+
+
+    var efficiencyHud: NumberStringHud = NumberStringHud.NULL_NUMBER_STRING_HUD
+
+
+    var healthHud: NumberStringHud = NumberStringHud.NULL_NUMBER_STRING_HUD
+
+
+    var maxHealthHud: NumberStringHud = NumberStringHud.NULL_NUMBER_STRING_HUD
+
 
         try {
             
@@ -82,15 +94,15 @@ private constructor (){
 
     var DEFAULT_CHAR_HEIGHT: Int = myFont!!.DEFAULT_CHAR_HEIGHT
 
-this.productivityHud= NumberStringHud("Productivity:", 999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, this.textX, y +((index +1) *DEFAULT_CHAR_HEIGHT), 0, this.getBasicColorP())
+productivityHud= NumberStringHud("Productivity:", 999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, this.textX, y +((index +1) *DEFAULT_CHAR_HEIGHT), 0, this.getBasicColorP())
 index++
-this.efficiencyHud= NumberStringHud("Efficiency:", 999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, this.textX, y +((index +1) *DEFAULT_CHAR_HEIGHT), 0, this.getBasicColorP())
+efficiencyHud= NumberStringHud("Efficiency:", 999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, this.textX, y +((index +1) *DEFAULT_CHAR_HEIGHT), 0, this.getBasicColorP())
 index++
 
     var totalLength: Int = HEALTH.length +1
 
-this.healthHud= NumberStringHud(HEALTH, 99999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, this.textX, y +((index +1) *DEFAULT_CHAR_HEIGHT), 0, this.getBasicColorP())
-this.maxHealthHud= NumberStringHud("/ ", 99999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, this.textX +(totalLength *DEFAULT_CHAR_HEIGHT), y +((index +1) *DEFAULT_CHAR_HEIGHT), 0, this.getBasicColorP())
+healthHud= NumberStringHud(HEALTH, 99999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, this.textX, y +((index +1) *DEFAULT_CHAR_HEIGHT), 0, this.getBasicColorP())
+maxHealthHud= NumberStringHud("/ ", 99999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, this.textX +(totalLength *DEFAULT_CHAR_HEIGHT), y +((index +1) *DEFAULT_CHAR_HEIGHT), 0, this.getBasicColorP())
 } catch(e: Exception)
             {
 
@@ -99,10 +111,14 @@ this.maxHealthHud= NumberStringHud("/ ", 99999, basicHudFactory!!.ABSOLUTE, basi
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
+this.productivityHud= productivityHud
+this.efficiencyHud= efficiencyHud
+this.healthHud= healthHud
+this.maxHealthHud= maxHealthHud
 }
 
 
-    open fun setBasicColorP(basicColor: BasicColor)
+    override fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
 {
 var basicColor = basicColor
@@ -114,7 +130,7 @@ this.maxHealthHud!!.setBasicColorP(basicColor)
 }
 
 
-    open fun paint(graphics: Graphics)
+    override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
@@ -127,14 +143,14 @@ this.getAnimationInterface()!!.paint(graphics, this.imageX, y)
 }
 
 
-    open fun updateSelectionInfo()
+    override fun updateSelectionInfo()
         //nullable = true from not(false or (false and true)) = true
 {
-this.setName(this.getRtsLayer()!!.getName())
-this.setAnimationInterface(this.getRtsLayer()!!.getVerticleBuildAnimationInterface())
 
-    var buildingLayer: BuildingLayer = this.getRtsLayer() as BuildingLayer
+    var buildingLayer: BuildingLayer = this.rtsLayer as BuildingLayer
 
+this.setName(buildingLayer!!.getName())
+this.setAnimationInterface(buildingLayer!!.getVerticleBuildAnimationInterface())
 this.productivityHud!!.set(buildingLayer!!.getProductivity())
 this.efficiencyHud!!.set(buildingLayer!!.getEfficiency() /100)
 
@@ -149,22 +165,11 @@ this.maxHealthHud!!.set(buildingLayer!!.getHealthInterface()!!.getMaxHealth())
 }
 
 
-    open fun setRtsLayer(rtsLayer: RTSLayer)
+    open fun setRtsLayer(rtsLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var rtsLayer = rtsLayer
 this.rtsLayer= rtsLayer
-}
-
-
-    open fun getRtsLayer()
-        //nullable = true from not(false or (false and true)) = true
-: RTSLayer{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return rtsLayer
 }
 
 

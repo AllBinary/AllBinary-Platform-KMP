@@ -30,7 +30,7 @@ import org.allbinary.logic.util.event.AllBinaryEventObject
 open public class RTSLayerEvent : AllBinaryEventObject {
         
 
-    private var rtsLayer: PathFindingLayerInterface
+    private var rtsLayer: PathFindingLayerInterface = NullPathFindingLayer.NULL_PATH_FINDING_LAYER
 public constructor (rtsLayer: PathFindingLayerInterface)                        
 
                             : super(rtsLayer){

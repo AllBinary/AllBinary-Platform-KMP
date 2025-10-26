@@ -299,9 +299,7 @@ node.appendChild(ModDomHelper.createNodeWithValueNodes(document, ColorAtActionSc
 var frame = frame
 
     var capturedBufferedImageCacheable: BufferedImageFrameCacheable = 
-                                    (getInstance as AutomaticCacheInterface).get(frame.concatToString()
-
-                                    ) as BufferedImageFrameCacheable
+                                    (getInstance as AutomaticCacheInterface).get((frame).toLong()) as BufferedImageFrameCacheable
 
 
     var bufferedImage: BufferedImage = capturedBufferedImageCacheable!!.getBufferedImage()!!

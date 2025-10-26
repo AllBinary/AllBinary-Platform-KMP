@@ -53,14 +53,15 @@ companion object {
 
                 @Throws(Exception::class)
             
-    open fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
+    override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
-var eventObject = eventObject
-var eventListenerInterface = eventListenerInterface
-eventListenerInterface = eventListenerInterfaceeventListenerInterface as BuildingEventListenerInterface
-eventListenerInterface.
-                    onBuildingEvent(eventObject as RTSLayerEvent)
+    //var eventObject = eventObject
+    //var eventListenerInterface = eventListenerInterface
+
+    var buildingEventListenerInterface: BuildingEventListenerInterface = (eventListenerInterface as BuildingEventListenerInterface)
+
+buildingEventListenerInterface!!.onBuildingEvent(eventObject as RTSLayerEvent)
 }
 
 

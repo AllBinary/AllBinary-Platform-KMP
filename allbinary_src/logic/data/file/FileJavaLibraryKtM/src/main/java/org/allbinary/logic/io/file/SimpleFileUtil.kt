@@ -355,7 +355,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
         {
 startIndex= index
 
-        while(index < size -1 && byteArray[index] != '\n'.code as Byte)
+        while(index < size -1 && byteArray[index] != '\n'.code.toByte())
         {
 index++
 }
@@ -367,7 +367,7 @@ index++
                                     {
                                     
     
-                        if(index > 0 && byteArray[index -1] == '\r'.code as Byte)
+                        if(index > 0 && byteArray[index -1] == '\r'.code.toByte())
                         
                                     {
                                     returnLine= 1

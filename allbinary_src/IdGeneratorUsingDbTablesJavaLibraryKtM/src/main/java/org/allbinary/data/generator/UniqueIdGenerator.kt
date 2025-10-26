@@ -110,9 +110,7 @@ this.name= name
     var idLong: Long = this.idGeneratorEntity!!.get(name)!!
 
 
-    var newValue: Long = .concatToString()
-
-                                    !!
+    var newValue: Long = (idLong!!.longValue() +1).toLong()!!
 
 this.idGeneratorEntity!!.update(name, newValue)
 

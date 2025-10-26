@@ -26,6 +26,9 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.game.layer.AdvancedRTSGameLayer
+import org.allbinary.game.layer.NullPathFindingLayer
+import org.allbinary.game.layer.NullRTSLayer
+import org.allbinary.game.layer.PathFindingLayerInterface
 import org.allbinary.game.layer.RTSLayer
 import org.allbinary.game.layer.RTSLayerEvent
 import org.allbinary.game.layer.unit.UnitLayer
@@ -62,8 +65,7 @@ companion object {
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private val WAYPOINT_EVENT: RTSLayerEvent = RTSLayerEvent(
-                            null)
+    private val WAYPOINT_EVENT: RTSLayerEvent = RTSLayerEvent(NullPathFindingLayer.NULL_PATH_FINDING_LAYER)
 
     open fun set(unitLayer: UnitLayer, ownerAdvancedRTSGameLayer: AdvancedRTSGameLayer)
         //nullable = true from not(false or (false and false)) = true
@@ -93,13 +95,11 @@ unitWaypointBehavior!!.onWaypointEvent(WAYPOINT_EVENT)
 }
 
 
-    var waypointLayer: RTSLayer = PrimaryWaypointHelper.getInstance()!!.getWaypointLayer()!!
+    var waypointLayer: PathFindingLayerInterface = PrimaryWaypointHelper.getInstance()!!.getWaypointLayer()!!
 
 
     
-                        if(waypointLayer != 
-                                    null
-                                )
+                        if(waypointLayer != NullPathFindingLayer.NULL_PATH_FINDING_LAYER)
                         
                                     {
                                     WAYPOINT_EVENT.setRtsLayer(waypointLayer)

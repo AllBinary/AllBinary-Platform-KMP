@@ -83,12 +83,8 @@ this.version= EMPTY_STRING
 this.changes= EMPTY_STRING
 this.licenseFile= EMPTY_STRING
 this.file= EMPTY_STRING
-this.size= .concatToString()
-
-                                    
-this.validTime= .concatToString()
-
-                                    
+this.size= (0).toLong()
+this.validTime= (0).toLong()
 this.retries= EMPTY_STRING
 }
 
@@ -114,9 +110,7 @@ this.file= hashMap!!.get(DownloadItemData.FILE) as String
                         if(!StringValidationUtil.getInstance()!!.isEmpty(value))
                         
                                     {
-                                    this.size= value.concatToString()
-
-                                    
+                                    this.size= (value).toLong()
 
                                     }
                                 
@@ -133,9 +127,7 @@ this.file= hashMap!!.get(DownloadItemData.FILE) as String
                         if(!StringValidationUtil.getInstance()!!.isEmpty(validTime))
                         
                                     {
-                                    this.validTime= validTime.concatToString()
-
-                                    
+                                    this.validTime= (validTime).toLong()
 
                                     }
                                 

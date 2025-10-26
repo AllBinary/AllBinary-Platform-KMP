@@ -171,7 +171,7 @@ break;
 }
 
 
-    open fun getType()
+    override fun getType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

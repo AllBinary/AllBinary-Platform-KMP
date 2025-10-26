@@ -41,7 +41,7 @@ this.pathFindingNodeCostInfoAdjacencyList= Array(max) { arrayOfNulls<PathFinding
 
                 @Throws(Exception::class)
             
-    open fun create(geographicMapInterface: BasicGeographicMap, goingToGeographicMapCellPosition: GeographicMapCellPosition, geographicMapCellPosition: GeographicMapCellPosition, costFromStart: Long, costToEnd: Long)
+    override fun create(geographicMapInterface: BasicGeographicMap, goingToGeographicMapCellPosition: GeographicMapCellPosition, geographicMapCellPosition: GeographicMapCellPosition, costFromStart: Long, costToEnd: Long)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapInterface = geographicMapInterface
@@ -106,7 +106,7 @@ pathFindingNodeCostInfo!!.setTotalCost()
 }
 
 
-    open fun getTotalCost(geographicMapInterface: BasicGeographicMap, comingFromGeographicMapCellPosition: GeographicMapCellPosition, geographicMapCellPosition: GeographicMapCellPosition)
+    override fun getTotalCost(geographicMapInterface: BasicGeographicMap, comingFromGeographicMapCellPosition: GeographicMapCellPosition, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : Long{
     //var geographicMapInterface = geographicMapInterface
@@ -116,7 +116,7 @@ pathFindingNodeCostInfo!!.setTotalCost()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.getInstance(comingFromGeographicMapCellPosition, geographicMapCellPosition)!!.totalCost
+                        return this.getInstance(comingFromGeographicMapCellPosition, geographicMapCellPosition)!!.totalCostP
 }
 
 

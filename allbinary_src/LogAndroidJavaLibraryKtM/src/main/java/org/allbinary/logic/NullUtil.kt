@@ -68,6 +68,8 @@ import java.util.Vector
                                                         CharArray(0)
                                                     
 
+    /*actual*/ val NULL_SHORT_ARRAY_ARRAY: Array<ShortArray?> = Array(0) { ShortArray(0) }
+
     /*actual*/ val NULL_INT_ARRAY: IntArray = IntArray(0)
 
     /*actual*/ val NULL_INT_ARRAY_ARRAY: Array<IntArray?> = Array(0) { IntArray(0) }

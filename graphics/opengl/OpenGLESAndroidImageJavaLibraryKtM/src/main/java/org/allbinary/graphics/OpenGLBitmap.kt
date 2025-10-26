@@ -52,7 +52,7 @@ this.bitmap.setPixels(pixels, offset, stride, x, y, width, height)
 }
 
 
-    open fun getWidth()
+    override fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -63,7 +63,7 @@ this.bitmap.setPixels(pixels, offset, stride, x, y, width, height)
 }
 
 
-    open fun getHeight()
+    override fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

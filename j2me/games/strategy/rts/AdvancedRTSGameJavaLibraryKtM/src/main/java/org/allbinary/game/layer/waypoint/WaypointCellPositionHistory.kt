@@ -212,7 +212,7 @@ var cellPosition = cellPosition
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return AllBinaryLayer.NULL_ALLBINARY_LAYER
 
                         }
                             

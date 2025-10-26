@@ -40,12 +40,14 @@ import org.allbinary.game.layer.waypoint.WaypointLayer
 import org.allbinary.game.layer.waypoint.event.WaypointEventHandlerFactory
 import org.allbinary.graphics.form.item.CustomItem
 import org.allbinary.util.BasicArrayList
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.game.identification.Group
 import org.allbinary.game.layer.AllBinaryGameLayerManager
 import org.allbinary.game.layer.AllBinaryTiledLayer
 import org.allbinary.game.layer.GeographicMapCellPositionAreaBase
+import org.allbinary.game.layer.NullPathFindingLayer
+import org.allbinary.game.layer.NullRTSLayer
+import org.allbinary.game.layer.PathFindingLayerInterface
 import org.allbinary.game.layer.hud.event.GameNotificationEvent
 import org.allbinary.game.layer.hud.event.GameNotificationEventHandler
 import org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer
@@ -65,9 +67,7 @@ import org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicM
 open public class WaypointRTSFormInput : RTSFormInput {
         
 
-    val logUtil: LogUtil = LogUtil.getInstance()!!
-
-    private var isPrimaryWaypointCreator: Boolean
+    private val WAYPOINT_EVENT: RTSLayerEvent = RTSLayerEvent(NullRTSLayer.NULL_RTS_LAYER)
 
     val dragToSpotGameNotificationEvent: GameNotificationEvent
 
@@ -80,6 +80,10 @@ open public class WaypointRTSFormInput : RTSFormInput {
     val newWaypointGameNotificationEvent: GameNotificationEvent
 
     val noMoneyGameNotificationEvent: GameNotificationEvent
+
+    private var isPrimaryWaypointCreator: Boolean
+
+    private var stickyAssociatedRtsLayer: PathFindingLayerInterface = NullPathFindingLayer.NULL_PATH_FINDING_LAYER
 public constructor (groupInterface: Array<Group?>, isPrimaryWaypointCreator: Boolean)                        
 
                             : super(groupInterface){
@@ -107,7 +111,7 @@ this.noMoneyGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.ge
 
                 @Throws(Exception::class)
             
-    open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
+    override fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -246,8 +250,6 @@ rtsLayer!!.geographicMapCellPositionAreaBase!!.update(geographicMapInterface)
 this.attemptBuild(rtsPlayerLayerInterface, layerManager, this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!! as RTSLayer, itemIndex)
 }
 
-
-    private var stickyAssociatedRtsLayer: RTSLayer
 
                 @Throws(Exception::class)
             
@@ -409,9 +411,10 @@ rtsPlayerGameInput!!.setSelectedRTSLayer(layerInterface, geographicMapCellPositi
 
 advancedRTSPlayerLayerInterface!!.getAdvancedPlayerOwnedRTSLayers()!!.addWaypoint(layerInterface)
 layerManager!!.append(layerInterface)
-rtsPlayerLayerInterface!!.add(waypointLayer = waypointLayerwaypointLayer as AdvancedRTSGameLayer
-waypointLayer.
-                    getWaypointBehavior()!!.getWaypoint()!!.getSound())
+
+    var waypointAvancedRTSGameLayer: AdvancedRTSGameLayer = waypointLayer as AdvancedRTSGameLayer
+
+rtsPlayerLayerInterface!!.add(waypointAvancedRTSGameLayer!!.getWaypointBehavior()!!.getWaypoint()!!.getSound())
 
     
                         if(!rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
@@ -451,9 +454,6 @@ waypointLayer.
 }
 
 
-    private val WAYPOINT_EVENT: RTSLayerEvent = RTSLayerEvent(
-                            null)
-
                 @Throws(Exception::class)
             
     open fun addWayPoint(layerInterface: WaypointLayer)
@@ -461,9 +461,10 @@ waypointLayer.
 {
     //var layerInterface = layerInterface
 
-    var list: BasicArrayList = stickyAssociatedRtsLayer = stickyAssociatedRtsLayerstickyAssociatedRtsLayer as AdvancedRTSGameLayer
-stickyAssociatedRtsLayer.
-                    getWaypointBehavior()!!.getOwnedWaypointList()!!
+    var stickyAssociatedAdvandedRtsLayer: AdvancedRTSGameLayer = stickyAssociatedRtsLayer as AdvancedRTSGameLayer
+
+
+    var list: BasicArrayList = stickyAssociatedAdvandedRtsLayer!!.getWaypointBehavior()!!.getOwnedWaypointList()!!
 
 RTSLayerUtil.getInstance()!!.destroyAndClear(list)
 list.add(layerInterface)

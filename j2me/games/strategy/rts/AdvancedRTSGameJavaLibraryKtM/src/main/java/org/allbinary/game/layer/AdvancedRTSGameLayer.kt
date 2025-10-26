@@ -26,13 +26,11 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Canvas
-import org.allbinary.animation.transition.shake.ShakeAnimationListener
-import org.allbinary.animation.transition.shake.ShakeAnimationListenerFactory
-import org.allbinary.game.input.form.RTSFormInput
-import org.allbinary.game.layer.building.event.BuildingEventHandler
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.animation.AnimationInterfaceFactoryInterface
 import org.allbinary.animation.ProceduralAnimationInterfaceFactoryInterface
+import org.allbinary.animation.transition.shake.NoShakeAnimationListener
+import org.allbinary.animation.transition.shake.ShakeAnimationListener
+import org.allbinary.animation.transition.shake.ShakeAnimationListenerFactory
 import org.allbinary.direction.Direction
 import org.allbinary.direction.DirectionFactory
 import org.allbinary.game.GameTypeFactory
@@ -43,6 +41,8 @@ import org.allbinary.game.configuration.GameConfigurationCentral
 import org.allbinary.game.health.Health
 import org.allbinary.game.identification.Group
 import org.allbinary.game.input.event.GameKeyEventFactory
+import org.allbinary.game.input.form.RTSFormInput
+import org.allbinary.game.layer.building.event.BuildingEventHandler
 import org.allbinary.game.layer.unit.UnitLayer
 import org.allbinary.game.layer.waypoint.Waypoint2LogHelper
 import org.allbinary.game.layer.waypoint.Waypoint2SelectedLogHelper
@@ -51,15 +51,18 @@ import org.allbinary.game.layer.waypoint.WaypointLogHelper
 import org.allbinary.game.layer.waypoint.WaypointRunnableLogHelper
 import org.allbinary.game.layer.waypoint.WaypointRunnableSelectedLogHelper
 import org.allbinary.game.layer.waypoint.WaypointSelectedLogHelper
+import org.allbinary.game.multiplayer.layer.RemoteInfo
+import org.allbinary.game.tick.NullTickable
+import org.allbinary.game.tick.TickableInterface
+import org.allbinary.game.view.TileLayerPositionIntoViewPosition
 import org.allbinary.graphics.Rectangle
 import org.allbinary.layer.AllBinaryLayer
+import org.allbinary.math.AngleInfo
+import org.allbinary.math.FrameUtil
+import org.allbinary.media.AllBinaryNoVibration
 import org.allbinary.media.AllBinaryVibration
 import org.allbinary.media.AllBinaryVibrationME
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
-import org.allbinary.game.multiplayer.layer.RemoteInfo
-import org.allbinary.game.view.TileLayerPositionIntoViewPosition
-import org.allbinary.math.AngleInfo
-import org.allbinary.math.FrameUtil
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.media.graphics.geography.map.GeographicMapCompositeInterface
 import org.allbinary.media.graphics.geography.map.GeographicMapDirectionUtil
@@ -70,18 +73,16 @@ open public class AdvancedRTSGameLayer : RTSLayer
                 , DestroyedEventListenerInterface {
         
 
-    val logUtil: LogUtil = LogUtil.getInstance()!!
-
     val shakeListener: ShakeAnimationListener
 
     val vibration: AllBinaryVibrationME
 
     val duration: Int
 
-    private var parentLayer: AdvancedRTSGameLayer
+    private var parentLayer: PathFindingLayerInterface = NullPathFindingLayer.NULL_PATH_FINDING_LAYER
 
-    var waypointBehaviorBase: WaypointBehaviorBase
-public constructor (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, healthInterface: Health, rtsFormInput: RTSFormInput, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
+    var waypointBehaviorBase: TickableInterface = NullTickable.getInstance()!!
+public constructor (remoteInfo: RemoteInfo, parentLayer: PathFindingLayerInterface, groupInterface: Array<Group?>, rootName: String, name: String, healthInterface: Health, rtsFormInput: RTSFormInput, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
 
                             : this(remoteInfo, parentLayer, groupInterface, rootName, name, healthInterface, rtsFormInput, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y, TileLayerPositionIntoViewPosition()){
     //var remoteInfo = remoteInfo
@@ -106,7 +107,7 @@ public constructor (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, g
                     
 }
 
-public constructor (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, healthInterface: Health, rtsFormInput: RTSFormInput, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int, viewPosition: ViewPosition)                        
+public constructor (remoteInfo: RemoteInfo, parentLayer: PathFindingLayerInterface, groupInterface: Array<Group?>, rootName: String, name: String, healthInterface: Health, rtsFormInput: RTSFormInput, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int, viewPosition: ViewPosition)                        
 
                             : super(remoteInfo, groupInterface, rootName, name, healthInterface, rtsFormInput, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y, viewPosition){
     //var remoteInfo = remoteInfo
@@ -146,21 +147,16 @@ public constructor ()
                             //For kotlin this is before the body of the constructor.
                     
 this.setWaypointBehavior(WaypointBehaviorBase())
-this.shakeListener= 
-                                        null
-                                    
-this.vibration= 
-                                        null
-                                    
+this.shakeListener= NoShakeAnimationListener.NO_SHAKE_ANIMATION_LISTENER
+this.vibration= AllBinaryNoVibration.NO_VIBRATION
 this.duration= 0
-this.setParentLayer(
-                            null)
+this.setParentLayer(NullPathFindingLayer.NULL_PATH_FINDING_LAYER)
 }
 
 
                 @Throws(Exception::class)
             
-    open fun updateWaypointBehavior(geographicMapInterface: BasicGeographicMap)
+    override fun updateWaypointBehavior(geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
 {
     //var geographicMapInterface = geographicMapInterface
@@ -195,7 +191,7 @@ var rtsPlayerLayerInterface = rtsPlayerLayerInterface
 
                 @Throws(Exception::class)
             
-    open fun construct(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
+    override fun construct(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var rtsPlayerLayerInterface = rtsPlayerLayerInterface
@@ -207,7 +203,7 @@ BuildingEventHandler.getInstance()!!.addListener(this.getWaypointBehavior()!!.ge
 
                 @Throws(Exception::class)
             
-    open fun setDestroyed(destroyed: Boolean)
+    override fun setDestroyed(destroyed: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 var destroyed = destroyed
@@ -227,9 +223,9 @@ RTSLayerUtil.getInstance()!!.destroyAndClear(this.getWaypointBehavior()!!.getOwn
 }
 
 
-    open fun getParentLayer()
+    override fun getParentLayer()
         //nullable = true from not(false or (false and true)) = true
-: RTSLayer{
+: PathFindingLayerInterface{
 
 
 
@@ -238,7 +234,7 @@ RTSLayerUtil.getInstance()!!.destroyAndClear(this.getWaypointBehavior()!!.getOwn
 }
 
 
-    open fun setParentLayer(parentLayer: AdvancedRTSGameLayer)
+    open fun setParentLayer(parentLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var parentLayer = parentLayer
@@ -246,14 +242,14 @@ this.parentLayer= parentLayer
 }
 
 
-    open fun getWaypointBehavior()
+    override fun getWaypointBehavior()
         //nullable = true from not(false or (false and true)) = true
 : WaypointBehaviorBase{
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.waypointBehaviorBase
+                        return this.waypointBehaviorBase as WaypointBehaviorBase
 }
 
 
@@ -265,7 +261,7 @@ this.waypointBehaviorBase= unitWaypointHelper
 }
 
 
-    open fun getWaypointLogHelper()
+    override fun getWaypointLogHelper()
         //nullable = true from not(false or (false and true)) = true
 : WaypointLogHelper{
 
@@ -276,7 +272,7 @@ this.waypointBehaviorBase= unitWaypointHelper
 }
 
 
-    open fun getWaypoint2LogHelper()
+    override fun getWaypoint2LogHelper()
         //nullable = true from not(false or (false and true)) = true
 : Waypoint2LogHelper{
 
@@ -287,7 +283,7 @@ this.waypointBehaviorBase= unitWaypointHelper
 }
 
 
-    open fun getWaypointRunnableLogHelper()
+    override fun getWaypointRunnableLogHelper()
         //nullable = true from not(false or (false and true)) = true
 : WaypointRunnableLogHelper{
 
@@ -298,14 +294,20 @@ this.waypointBehaviorBase= unitWaypointHelper
 }
 
 
-    open fun shouldAddWaypointFromBuilding()
+    override fun shouldAddWaypointFromBuilding()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
     
-                        if(this.parentLayer != 
-                                    null
-                                 && this.parentLayer!!.getType() != UnitLayer.getStaticType())
+                        if(this.parentLayer != NullPathFindingLayer.NULL_PATH_FINDING_LAYER)
+                        
+                                    {
+                                    
+    var parentAdvancedRTSGameLayer: AdvancedRTSGameLayer = this.parentLayer as AdvancedRTSGameLayer
+
+
+    
+                        if(parentAdvancedRTSGameLayer!!.getType() != UnitLayer.getStaticType())
                         
                                     {
                                     
@@ -317,6 +319,9 @@ this.waypointBehaviorBase= unitWaypointHelper
                                     }
                                 
 
+                                    }
+                                
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -324,7 +329,7 @@ this.waypointBehaviorBase= unitWaypointHelper
 }
 
 
-    open fun isWaypointListEmptyOrOnlyTargets()
+    override fun isWaypointListEmptyOrOnlyTargets()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -350,7 +355,7 @@ this.waypointBehaviorBase= unitWaypointHelper
 
                 @Throws(Exception::class)
             
-    open fun buildingChase(allbinaryLayer: AllBinaryLayer, cellPosition: GeographicMapCellPosition)
+    override fun buildingChase(allbinaryLayer: AllBinaryLayer, cellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var allbinaryLayer = allbinaryLayer
@@ -593,7 +598,7 @@ this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstance(this, Canvas.
 
                 @Throws(Exception::class)
             
-    open fun getSurroundingGeographicMapCellPositionList()
+    override fun getSurroundingGeographicMapCellPositionList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -645,7 +650,7 @@ this.waypointRunnableLogHelperP= WaypointRunnableLogHelper.getInstance()
 }
 
 
-    open fun onDestroyed(destroyedEvent: DestroyedEvent)
+    override fun onDestroyed(destroyedEvent: DestroyedEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 var destroyedEvent = destroyedEvent

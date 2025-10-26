@@ -33,7 +33,6 @@ import org.allbinary.graphics.displayable.DisplayInfoSingleton
 import org.allbinary.graphics.form.FormTypeFactory
 import org.allbinary.graphics.form.MultipleScrollSelectionHorizontalForm
 import org.allbinary.input.motion.button.CommonButtons
-import org.allbinary.input.motion.button.TouchButtonInput
 import org.allbinary.input.motion.button.TouchButtonLocationHelper
 
 open public class RTSScrollSelectionFormFactory

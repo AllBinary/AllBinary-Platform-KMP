@@ -35,6 +35,8 @@ import org.allbinary.game.layer.waypoint.WaypointCellPositionHistory
 import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.game.identification.Group
 import org.allbinary.game.layer.AllBinaryGameLayerManager
+import org.allbinary.game.layer.NullPathFindingLayer
+import org.allbinary.game.layer.NullRTSLayer
 import org.allbinary.game.layer.hud.event.GameNotificationEvent
 import org.allbinary.game.layer.hud.event.GameNotificationEventHandler
 import org.allbinary.graphics.color.BasicColorFactory
@@ -67,7 +69,7 @@ this.atLeastOneHouseGameNotificationEvent= GameNotificationEvent(this, "Build At
 
                 @Throws(Exception::class)
             
-    open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
+    override fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
     //var allBinaryGameLayerManager = allBinaryGameLayerManager
@@ -82,7 +84,7 @@ this.atLeastOneHouseGameNotificationEvent!!.setBasicColorP(geographicMapInterfac
 }
 
 
-    open fun isPositionBlocked()
+    override fun isPositionBlocked()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -112,7 +114,7 @@ this.atLeastOneHouseGameNotificationEvent!!.setBasicColorP(geographicMapInterfac
 
                 @Throws(Exception::class)
             
-    open fun isBuildAttemptValid(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerInterface: RTSLayer)
+    override fun isBuildAttemptValid(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerInterface: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var rtsPlayerLayerInterface = rtsPlayerLayerInterface
@@ -157,12 +159,11 @@ var layerInterface = layerInterface
 }
 
 
-    private val BUILD_BUILDING_RTS_LAYER_EVENT: RTSLayerEvent = RTSLayerEvent(
-                            null)
+    private val BUILD_BUILDING_RTS_LAYER_EVENT: RTSLayerEvent = RTSLayerEvent(NullPathFindingLayer.NULL_PATH_FINDING_LAYER)
 
                 @Throws(Exception::class)
             
-    open fun add(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, layerInterface: RTSLayer)
+    override fun add(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, layerInterface: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 var rtsPlayerLayerInterface = rtsPlayerLayerInterface

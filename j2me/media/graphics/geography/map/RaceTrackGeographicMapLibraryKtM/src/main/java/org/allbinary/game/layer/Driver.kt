@@ -33,7 +33,12 @@ open public class Driver
             : Object
          {
         
+companion object {
+            
+    val NULL_DRIVER: Driver = Driver(SmallIntegerSingletonFactory.getInstance()!!.getInstance(0), SmallIntegerSingletonFactory.getInstance()!!.getInstance(0), Aggression(SmallIntegerSingletonFactory.getInstance()!!.getInstance(0), SmallIntegerSingletonFactory.getInstance()!!.getInstance(0), SmallIntegerSingletonFactory.getInstance()!!.getInstance(0)))
 
+        }
+            
     private var turnSpeed: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(0)!!
 
     private var trackPathSelectionSkill: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(0)!!

@@ -25,6 +25,9 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.game.layer.NullPathFindingLayer
+import org.allbinary.game.layer.NullRTSLayer
+import org.allbinary.game.layer.PathFindingLayerInterface
 import org.allbinary.game.layer.waypoint.WaypointLayer
 
 open public class PrimaryWaypointHelper
@@ -48,7 +51,7 @@ companion object {
 
         }
             
-    private var waypointLayer: WaypointLayer
+    private var waypointLayer: PathFindingLayerInterface = NullPathFindingLayer.NULL_PATH_FINDING_LAYER
 private constructor ()
             : super()
         {
@@ -57,7 +60,7 @@ private constructor ()
 
     open fun getWaypointLayer()
         //nullable = true from not(false or (false and true)) = true
-: WaypointLayer{
+: PathFindingLayerInterface{
 
 
 

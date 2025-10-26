@@ -46,6 +46,7 @@ companion object {
     val NULL_OBJECT_ARRAY: Array<Any?>
     val NULL_CHAR_ARRAY: CharArray
     val NULL_BYTE_ARRAY: ByteArray
+    val NULL_SHORT_ARRAY_ARRAY: Array<ShortArray?>
     val NULL_INT_ARRAY: IntArray
     val NULL_INT_ARRAY_ARRAY: Array<IntArray?>
     val NULL_INT_ARRAY_ARRAY_ARRAY: Array<Array<IntArray?>?>

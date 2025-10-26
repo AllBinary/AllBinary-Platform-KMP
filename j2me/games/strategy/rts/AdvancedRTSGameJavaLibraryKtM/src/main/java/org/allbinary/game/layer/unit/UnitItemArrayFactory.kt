@@ -72,8 +72,8 @@ this.resources= resources
     open fun createFlagItem(flagResources: FlagGameResources, layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
 : CustomItem{
-var flagResources = flagResources
-var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
+    //var flagResources = flagResources
+    //var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
 
     var name: String = flagResources!!.NAME
 
@@ -102,9 +102,9 @@ var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
     open fun createFlagItem(flagResources: FlagGameResources, name: String, layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
 : CustomItem{
-var flagResources = flagResources
-var name = name
-var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
+    //var flagResources = flagResources
+    //var name = name
+    //var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
 
     var IMAGE_CACHE: ImageCache = GameFeatureImageCacheFactory.getInstance()!!
 
@@ -124,7 +124,7 @@ var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
 
                 @Throws(Exception::class)
             
-    open fun getItems()
+    override fun getItems()
         //nullable = true from not(false or (false and true)) = true
 : Array<CustomItem?>{
 
@@ -135,26 +135,15 @@ var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
 }
 
 
-    open fun getResources()
-        //nullable = true from not(false or (false and true)) = true
-: Array<BasicGameResources?>{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return resources
-}
-
-
     open fun indexOf(basicGameResources: BasicGameResources)
         //nullable = true from not(false or (false and false)) = true
 : Int{
-var basicGameResources = basicGameResources
+    //var basicGameResources = basicGameResources
 
 
 
 
-                        for (index in this.getResources()!!.length -1 downTo 0)
+                        for (index in this.resources.size -1 downTo 0)
 
         {
 

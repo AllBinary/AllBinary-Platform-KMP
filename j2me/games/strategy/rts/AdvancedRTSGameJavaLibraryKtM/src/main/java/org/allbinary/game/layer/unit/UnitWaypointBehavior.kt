@@ -113,7 +113,7 @@ this.longWeaponRange= weaponRange /2
 }
 
 
-    open fun onEvent(eventObject: AllBinaryEventObject)
+    override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
     //var eventObject = eventObject
@@ -123,7 +123,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
                 @Throws(Exception::class)
             
-    open fun onWaypointEvent(event: RTSLayerEvent)
+    override fun onWaypointEvent(event: RTSLayerEvent)
         //nullable = true from not(false or (false and false)) = true
 {
     //var event = event
@@ -201,7 +201,7 @@ this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.addWaypointFromBuildi
 }
 
 
-    open fun isWaypointListEmptyOrOnlyTargets()
+    override fun isWaypointListEmptyOrOnlyTargets()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -413,7 +413,7 @@ this.associatedAdvancedRTSGameLayer!!.setClosestGeographicMapCellHistory(pathsLi
 
     private val repeatedToLong: TimeDelayHelper = TimeDelayHelper(22000)
 
-    open fun needToMove()
+    override fun needToMove()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 this.associatedAdvancedRTSGameLayer!!.waypointLogHelperP!!.needToMove(this.associatedAdvancedRTSGameLayer, this)
@@ -453,7 +453,7 @@ ForcedLogUtil.log(message, this.associatedAdvancedRTSGameLayer)
 }
 
 
-    open fun getMovementLogicAsString()
+    override fun getMovementLogicAsString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -506,7 +506,7 @@ this.movingFromStopped= movingFromStopped
 }
 
 
-    open fun setWaypointPathsList(waypointPathsList: BasicArrayList)
+    override fun setWaypointPathsList(waypointPathsList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
 var waypointPathsList = waypointPathsList
@@ -514,7 +514,7 @@ this.waypointPathsList= waypointPathsList
 }
 
 
-    open fun getWaypointPathsList()
+    override fun getWaypointPathsList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
 
@@ -544,7 +544,7 @@ this.moving= moving
 }
 
 
-    open fun isTrackingWaypoint()
+    override fun isTrackingWaypoint()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -593,7 +593,7 @@ this.currentPathGeographicMapCellPosition= currentPathGeographicMapCellPosition
 }
 
 
-    open fun getCurrentPathGeographicMapCellPosition()
+    override fun getCurrentPathGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPosition{
 
@@ -642,7 +642,7 @@ this.currentTargetLayerInterface= currentTargetLayerInterface
 }
 
 
-    open fun getCurrentTargetLayerInterface()
+    override fun getCurrentTargetLayerInterface()
         //nullable = true from not(false or (false and true)) = true
 : CollidableDestroyableDamageableLayer{
 
@@ -691,7 +691,7 @@ this.currentGeographicMapCellHistory= currentGeographicMapCellHistory
 }
 
 
-    open fun getCurrentGeographicMapCellHistory()
+    override fun getCurrentGeographicMapCellHistory()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellHistory{
 

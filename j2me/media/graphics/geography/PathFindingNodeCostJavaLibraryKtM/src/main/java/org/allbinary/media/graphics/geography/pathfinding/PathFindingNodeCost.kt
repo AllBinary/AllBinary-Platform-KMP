@@ -33,11 +33,17 @@ import org.allbinary.string.CommonLabels
 open public class PathFindingNodeCost : PathFindingNode
                 , Comparable<PathFindingNodeCost> {
         
+companion object {
+            
+    val NULL_PATH_FINDING_NODE_COST_ARRAY_ARRAY: Array<Array<PathFindingNodeCost?>?> = Array(0) { arrayOfNulls<PathFindingNodeCost?>(0) }
+                                                            
 
+        }
+            
     private val commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
-    var pathFindingNodeCostInfo: PathFindingNodeCostInfo
-public constructor (parent: PathFindingNodeCost, geographicMapCellPosition: GeographicMapCellPosition, pathFindingNodeCostInfo: PathFindingNodeCostInfo)                        
+    var pathFindingNodeCostInfoP: PathFindingNodeCostInfo
+public constructor (parent: Any, geographicMapCellPosition: GeographicMapCellPosition, pathFindingNodeCostInfo: PathFindingNodeCostInfo)                        
 
                             : super(parent, geographicMapCellPosition){
     //var parent = parent
@@ -47,7 +53,7 @@ public constructor (parent: PathFindingNodeCost, geographicMapCellPosition: Geog
 
                             //For kotlin this is before the body of the constructor.
                     
-this.pathFindingNodeCostInfo= pathFindingNodeCostInfo
+this.pathFindingNodeCostInfoP= pathFindingNodeCostInfo
 
     
                         if(this.geographicMapCellPosition == 
@@ -86,7 +92,7 @@ this.pathFindingNodeCostInfo= pathFindingNodeCostInfo
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return pathFindingNodeCostInfo
+                        return pathFindingNodeCostInfoP
 }
 
 
@@ -94,7 +100,7 @@ this.pathFindingNodeCostInfo= pathFindingNodeCostInfo
         //nullable = true from not(false or (false and false)) = true
 {
 var pathFindingNodeCostInfo = pathFindingNodeCostInfo
-this.pathFindingNodeCostInfo= pathFindingNodeCostInfo
+this.pathFindingNodeCostInfoP= pathFindingNodeCostInfo
 }
 
 
@@ -106,7 +112,7 @@ var pathFindingNodeCost = pathFindingNodeCost
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.pathFindingNodeCostInfo!!.compareTo(pathFindingNodeCost!!.pathFindingNodeCostInfo)
+                        return this.pathFindingNodeCostInfoP!!.compareTo(pathFindingNodeCost!!.pathFindingNodeCostInfoP)
 }
 
 

@@ -29,6 +29,7 @@ import org.allbinary.game.layer.resources.BasicGameResources
 import org.allbinary.game.layer.resources.GameGraphicsResourceUtil
 import org.allbinary.AndroidUtil
 import org.allbinary.game.configuration.feature.GraphicsFeatureFactory
+import org.allbinary.logic.string.StringUtil
 
 open public class UnitGameResources : BasicGameResources {
         
@@ -44,13 +45,13 @@ companion object {
 
         }
             
-    var NAME: String
+    var NAME: String = StringUtil.getInstance()!!.EMPTY_STRING
 
-    var RESOURCE_ICON_ANIMATION: String
+    var RESOURCE_ICON_ANIMATION: String = StringUtil.getInstance()!!.EMPTY_STRING
 
-    var RESOURCE_ICON_BUILD: String
+    var RESOURCE_ICON_BUILD: String = StringUtil.getInstance()!!.EMPTY_STRING
 
-    var RESOURCE_ICON: String
+    var RESOURCE_ICON: String = StringUtil.getInstance()!!.EMPTY_STRING
 protected constructor (){
 }
 
@@ -59,7 +60,7 @@ protected constructor (){
 
                 @Throws(Exception::class)
             
-    open fun init(ROOT: String, sizeString: String)
+    override fun init(ROOT: String, sizeString: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var ROOT = ROOT
@@ -95,7 +96,7 @@ this.RESOURCE_ICON_BUILD= stringBuffer!!.toString()
 
                 @Throws(Exception::class)
             
-    open fun getString()
+    override fun getString()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
