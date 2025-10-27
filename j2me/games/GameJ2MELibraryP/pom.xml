@@ -120,7 +120,7 @@
 
         <module>../../media/motion/AllBinaryVibrationJavaLibraryKtM</module>
         <module>../../media/motion/NoVibrateJavaLibraryKtM</module>
-<!--        <module>../../media/motion/VibrateAndroidJavaLibraryKtM</module>-->
+        <module>../../media/motion/VibrateAndroidJavaLibraryKtM</module>
 
         <module>../../media/graphics/NullCustomUIJavaLibraryKtM</module>
         <module>../../media/graphics/NullCustomUIBaseJavaLibraryKtM</module>
