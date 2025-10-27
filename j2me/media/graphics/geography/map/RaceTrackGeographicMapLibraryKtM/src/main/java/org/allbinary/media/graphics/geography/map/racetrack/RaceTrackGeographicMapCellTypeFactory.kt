@@ -47,7 +47,7 @@ companion object {
 
         }
             
-    var EMPTY_CELL_TYPE: GeographicMapCellType = GeographicMapCellType(0)
+    var EMPTY_CELL_TYPE: GeographicMapCellType = GeographicMapCellType(0,  -1)
 
     var EASY_CELL_TYPE: GeographicMapCellType = EMPTY_CELL_TYPE
 

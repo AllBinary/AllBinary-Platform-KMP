@@ -64,6 +64,21 @@ this.name= name
 this.travelCost= travelCost
 }
 
+public constructor (name: String, type: Int, travelCost: Int, reset: Int)                        
+
+                            : super(type, reset){
+    //var name = name
+    //var type = type
+    //var travelCost = travelCost
+    //var reset = reset
+
+
+                            //For kotlin this is before the body of the constructor.
+                    
+this.name= name
+this.travelCost= travelCost
+}
+
 
     open fun getTravelCost()
         //nullable = true from not(false or (false and true)) = true

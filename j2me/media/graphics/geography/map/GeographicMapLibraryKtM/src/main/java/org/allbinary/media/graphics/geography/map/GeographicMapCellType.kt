@@ -46,10 +46,21 @@ companion object {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val type: Int
-public constructor (type: Int)
+public constructor (type: Int)                        
+
+                            : this(type, 0){
+    //var type = type
+
+
+                            //For kotlin this is before the body of the constructor.
+                    
+}
+
+public constructor (type: Int, reset: Int)
             : super()
         {
     //var type = type
+    //var reset = reset
 this.type= type
 
     
@@ -66,7 +77,7 @@ this.type= type
     
                         if(geographicMapCellTypeArray[type] == 
                                     null
-                                )
+                                 || reset == 1)
                         
                                     {
                                     geographicMapCellTypeArray[type]= this
@@ -75,9 +86,17 @@ this.type= type
                                 
                         else {
                             
+    
+                        if(reset !=  -1)
+                        
+                                    {
+                                    
 
 
                             throw RuntimeException()
+
+                                    }
+                                
 
                         }
                             
