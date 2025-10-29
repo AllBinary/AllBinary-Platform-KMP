@@ -56,11 +56,13 @@ open public class Waypoint : WaypointBase
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
+    val basicArrayListUtil: BasicArrayListUtil = BasicArrayListUtil.getInstance()!!
+
     val ownerLayer: PathFindingLayerInterface
 
-    private var endList: BasicArrayList = BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
+    private var endList: BasicArrayList = basicArrayListUtil!!.getImmutableInstance()!!
 
-    private var paths: Array<Array<BasicArrayList?>?> = BasicArrayListUtil.getInstance()!!.NULL_ARRAY_OF_ARRAY
+    private var paths: Array<Array<BasicArrayList?>?> = basicArrayListUtil!!.NULL_ARRAY_OF_ARRAY
 public constructor (ownerLayer: PathFindingLayerInterface, sound: Sound)                        
 
                             : super(sound){
@@ -92,9 +94,7 @@ super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 
 
     
-                        if(paths != 
-                                    null
-                                )
+                        if(paths != basicArrayListUtil!!.NULL_ARRAY_OF_ARRAY)
                         
                                     {
                                     
@@ -132,9 +132,7 @@ this.paths= Array(tiledLayer!!.getColumns()) { arrayOfNulls<BasicArrayList?>(til
 
 
     
-                        if(pathsList != 
-                                    null
-                                )
+                        if(pathsList != basicArrayListUtil!!.getImmutableInstance())
                         
                                     {
                                     BasicGeographicMapExtractedPathsCacheFactory.getInstance()!!.release(pathsList)
@@ -173,9 +171,7 @@ this.paths= Array(tiledLayer!!.getColumns()) { arrayOfNulls<BasicArrayList?>(til
 
 
     
-                        if(pathsList == 
-                                    null
-                                )
+                        if(pathsList == basicArrayListUtil!!.getImmutableInstance())
                         
                                     {
                                     pathsList= this.createPaths(geographicMapCellPosition)
@@ -196,7 +192,7 @@ this.paths[geographicMapCellPosition!!.getColumn()]!![geographicMapCellPosition!
 : GeographicMapCellPosition{
     //var startGeographicMapCellPosition = startGeographicMapCellPosition
 
-    var endGeographicMapCellPosition: GeographicMapCellPosition = BasicArrayListUtil.getInstance()!!.getRandom(this.endList) as GeographicMapCellPosition
+    var endGeographicMapCellPosition: GeographicMapCellPosition = basicArrayListUtil!!.getRandom(this.endList) as GeographicMapCellPosition
 
 
     
@@ -250,7 +246,7 @@ endGeographicMapCellPosition= this.endList!!.get(index) as GeographicMapCellPosi
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return BasicArrayListUtil.getInstance()!!.getImmutableInstance()
+                        return basicArrayListUtil!!.getImmutableInstance()
 
                                     }
                                 
@@ -268,7 +264,7 @@ endGeographicMapCellPosition= this.endList!!.get(index) as GeographicMapCellPosi
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return BasicArrayListUtil.getInstance()!!.getImmutableInstance()
+                        return basicArrayListUtil!!.getImmutableInstance()
 
                                     }
                                 
@@ -286,7 +282,7 @@ endGeographicMapCellPosition= this.endList!!.get(index) as GeographicMapCellPosi
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return BasicArrayListUtil.getInstance()!!.getImmutableInstance()
+                        return basicArrayListUtil!!.getImmutableInstance()
 
                                     }
                                 
@@ -376,9 +372,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
                         for (rowIndex in paths.size  - 1  downTo 0)
 
         {
-this.paths[columnIndex]!![rowIndex]= 
-                                        null
-                                    
+this.paths[columnIndex]!![rowIndex]= basicArrayListUtil!!.getImmutableInstance()
 }
 
 }

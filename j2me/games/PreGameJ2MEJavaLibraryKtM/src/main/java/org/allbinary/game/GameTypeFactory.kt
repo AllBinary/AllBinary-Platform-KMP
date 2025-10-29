@@ -53,6 +53,8 @@ companion object {
             {
             }            
         
+    var NULL_GAME_TYPE_ARRAY: Array<GameType?> = arrayOfNulls(0)
+
     var NONE: GameType = GameType(StringUtil.getInstance()!!.NULL_STRING)
 
     var SINGLE_PLAYER: GameType = GameType("Single Player")

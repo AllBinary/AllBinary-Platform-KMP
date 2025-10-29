@@ -36,7 +36,6 @@ import org.allbinary.media.audio.UpgradeSound
 import org.allbinary.util.BasicArrayList
 import org.allbinary.util.BasicArrayListUtil
 import org.allbinary.logic.string.StringMaker
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.configuration.feature.InputFeatureFactory
@@ -484,7 +483,7 @@ this.paintSelectedRTSLayersList= this.selectedRTSLayersList
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.selectedRTSLayersList!!.get(this.selectedRTSLayersList!!.size() -1) as RTSLayer
+                        return this.selectedRTSLayersList!!.get(this.selectedRTSLayersList!!.size() -1) as CollidableDestroyableDamageableLayer
 
                                     }
                                 

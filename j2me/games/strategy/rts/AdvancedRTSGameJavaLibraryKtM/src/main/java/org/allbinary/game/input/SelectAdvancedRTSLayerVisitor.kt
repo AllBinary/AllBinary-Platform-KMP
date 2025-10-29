@@ -29,6 +29,7 @@ import org.allbinary.game.input.form.AssignWaypointsUtil
 import org.allbinary.game.layer.AdvancedRTSGameLayer
 import org.allbinary.game.layer.RTSLayer
 import org.allbinary.game.layer.building.BuildingLayer
+import org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer
 import org.allbinary.game.layer.unit.UnitLayer
 import org.allbinary.logic.NullUtil
 import org.allbinary.util.BasicArrayList
@@ -49,7 +50,7 @@ this.selectedRTSLayersPlayerGameInput= selectedRTSLayersPlayerGameInput
 : Any{
 var anyType = anyType
 
-    var selectedLayer: AdvancedRTSGameLayer = anyType as AdvancedRTSGameLayer
+    var selectedLayer: CollidableDestroyableDamageableLayer = anyType as CollidableDestroyableDamageableLayer
 
 
     
@@ -59,6 +60,9 @@ var anyType = anyType
                         
                                     {
                                     
+    var rtsGameLayer: AdvancedRTSGameLayer = selectedLayer as AdvancedRTSGameLayer
+
+
     var assignWaypointsUtil: AssignWaypointsUtil = AssignWaypointsUtil.getInstance()!!
 
 
@@ -84,8 +88,8 @@ currentRTSLayer= list.get(index) as RTSLayer
                         
                                     {
                                     unitLayer= currentRTSLayer as UnitLayer
-unitLayer!!.setParentLayer(selectedLayer)
-assignWaypointsUtil!!.set(unitLayer, selectedLayer)
+unitLayer!!.setParentLayer(rtsGameLayer)
+assignWaypointsUtil!!.set(unitLayer, rtsGameLayer)
 
                                     }
                                 
