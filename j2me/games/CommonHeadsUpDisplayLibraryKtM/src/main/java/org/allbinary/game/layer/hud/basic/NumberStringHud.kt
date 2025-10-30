@@ -41,7 +41,7 @@ open public class NumberStringHud : BasicHud
         
 companion object {
             
-    val NULL_NUMBER_STRING_HUD: NumberStringHud = NumberStringHud(StringUtil.getInstance()!!.EMPTY_STRING, 0, BasicHudFactory.getInstance()!!.ABSOLUTE, 0, 0, 0, BasicColorFactory.getInstance()!!.NULL_COLOR)
+    val NULL_NUMBER_STRING_HUD: NumberStringHud = NumberStringHud(StringUtil.getInstance()!!.EMPTY_STRING, 9, BasicHudFactory.getInstance()!!.ABSOLUTE, 0, 0, 0, BasicColorFactory.getInstance()!!.NULL_COLOR)
 
         }
             

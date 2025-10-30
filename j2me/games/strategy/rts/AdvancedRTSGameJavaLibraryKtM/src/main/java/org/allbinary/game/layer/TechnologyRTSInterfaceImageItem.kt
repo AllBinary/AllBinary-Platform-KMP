@@ -27,6 +27,7 @@
         
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Image
+import javax.microedition.lcdui.NullCanvas
 import org.allbinary.graphics.form.item.CustomImageItem
 import org.allbinary.logic.java.character.CharArrayFactory
 import org.allbinary.graphics.color.BasicColor
@@ -90,9 +91,7 @@ this.rtsInterface= rtsInterface
 
 
     
-                        if(image != 
-                                    null
-                                )
+                        if(image != NullCanvas.NULL_IMAGE)
                         
                                     {
                                     imageHeight= image.getHeight()

@@ -57,6 +57,7 @@ import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.media.graphics.geography.map.GeographicMapCellType
 import org.allbinary.media.graphics.geography.map.GeographicMapCompositeInterface
+import org.allbinary.media.graphics.geography.map.SimpleGeographicMapCellPositionFactory
 import org.allbinary.media.graphics.geography.map.drop.DropCellPositionHistory
 import org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicMapCellTypeFactory
 
@@ -251,9 +252,7 @@ LockedFeatureNotificationUtil.getInstance()!!.fire(geographicMapInterface!!.getF
 
 
     
-                        if(geographicMapCellPosition != 
-                                    null
-                                )
+                        if(geographicMapCellPosition != SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION)
                         
                                     {
                                     

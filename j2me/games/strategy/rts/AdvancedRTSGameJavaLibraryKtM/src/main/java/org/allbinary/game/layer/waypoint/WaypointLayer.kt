@@ -32,6 +32,7 @@ import org.allbinary.game.health.Health
 import org.allbinary.game.identification.Group
 import org.allbinary.game.input.form.NullRTSFormInputFactory
 import org.allbinary.game.layer.AdvancedRTSGameLayer
+import org.allbinary.game.layer.PathFindingLayerInterface
 import org.allbinary.graphics.Rectangle
 import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.game.layer.RTSPlayerLayerInterface
@@ -54,7 +55,7 @@ companion object {
 
 
         }
-            protected constructor (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
+            protected constructor (remoteInfo: RemoteInfo, parentLayer: PathFindingLayerInterface, groupInterface: Array<Group?>, rootName: String, name: String, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
 
                             : super(remoteInfo, parentLayer, groupInterface, rootName, name, Health(1000), NullRTSFormInputFactory.getInstance(), animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y){
     //var remoteInfo = remoteInfo

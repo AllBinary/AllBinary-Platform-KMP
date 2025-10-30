@@ -47,7 +47,6 @@ import org.allbinary.graphics.displayable.event.DisplayChangeEvent
 import org.allbinary.input.motion.gesture.observer.MotionGestureEvent
 import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.layer.AllBinaryLayerManager
-import org.allbinary.logic.NullUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.media.audio.SecondaryPlayerQueueFactory
@@ -55,6 +54,7 @@ import org.allbinary.media.audio.SelectSound
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.media.graphics.geography.map.GeographicMapCompositeInterface
+import org.allbinary.media.graphics.geography.map.SimpleGeographicMapCellPositionFactory
 import org.allbinary.string.CommonLabels
 
 open public class RTSPlayerGameInput : PlayerGameInput {
@@ -80,9 +80,9 @@ open public class RTSPlayerGameInput : PlayerGameInput {
 
     private val rtsPlayerLayerInterface: RTSPlayerLayerInterface
 
-    private var selectedRtsFormInput: RTSFormInput = NullRTSFormInputFactory.getInstance()!!
-
     private val layerPositionFinderInterface: LayerPositionFinderInterface
+
+    private var selectedRtsFormInput: RTSFormInput = NullRTSFormInputFactory.getInstance()!!
 public constructor (gameCanvas: AllBinaryGameCanvas, inputList: BasicArrayList, playerInputId: Int, towerInfoPaintable: RTSLayerInfoPaintable, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerPositionFinderInterface: LayerPositionFinderInterface, selectRTSLayerVisitorFactoryInterface: SelectRTSLayerVisitorFactoryInterface)                        
 
                             : super(inputList, playerInputId){
@@ -287,9 +287,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.PROCESS_INPUT,
 
 
     
-                        if(geographicMapCellPosition != 
-                                    null
-                                )
+                        if(geographicMapCellPosition != SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION)
                         
                                     {
                                     SecondaryPlayerQueueFactory.getInstance()!!.add(SelectSound.getInstance())
@@ -391,9 +389,7 @@ graphics.drawRect(rtsLayer!!.getXP() -allBinaryTiledLayer!!.getXP(), rtsLayer!!.
                                 
                              else 
     
-                        if(geographicMapCellPosition != 
-                                    null
-                                )
+                        if(geographicMapCellPosition != SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION)
                         
                                     {
                                     

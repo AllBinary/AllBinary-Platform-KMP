@@ -25,18 +25,18 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.game.layer.AdvancedRTSGameLayer
 import org.allbinary.game.layer.SelectionHudPaintable
 import org.allbinary.game.layer.waypoint.WaypointLayer
 import org.allbinary.animation.AnimationInterfaceFactoryInterface
 import org.allbinary.animation.ProceduralAnimationInterfaceFactoryInterface
 import org.allbinary.game.identification.Group
+import org.allbinary.game.layer.PathFindingLayerInterface
 import org.allbinary.graphics.Rectangle
 import org.allbinary.game.multiplayer.layer.RemoteInfo
 
 open public class ResourceWaypointLayer : WaypointLayer {
         
-public constructor (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
+public constructor (remoteInfo: RemoteInfo, parentLayer: PathFindingLayerInterface, groupInterface: Array<Group?>, rootName: String, name: String, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
 
                             : super(remoteInfo, parentLayer, groupInterface, rootName, name, animationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y){
     //var remoteInfo = remoteInfo

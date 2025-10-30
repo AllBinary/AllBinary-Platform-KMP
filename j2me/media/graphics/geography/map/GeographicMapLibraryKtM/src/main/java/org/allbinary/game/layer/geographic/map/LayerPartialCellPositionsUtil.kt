@@ -29,6 +29,7 @@ import org.allbinary.util.BasicArrayList
 import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
+import org.allbinary.media.graphics.geography.map.SimpleGeographicMapCellPositionFactory
 
 open public class LayerPartialCellPositionsUtil
             : Object
@@ -79,9 +80,7 @@ reusableList!!.clear()
 
 
     
-                        if(topLeftGeographicMapCellPosition != 
-                                    null
-                                )
+                        if(topLeftGeographicMapCellPosition != SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION)
                         
                                     {
                                     reusableList!!.add(topLeftGeographicMapCellPosition)
@@ -90,9 +89,7 @@ reusableList!!.clear()
                                 
 
     
-                        if(topRightGeographicMapCellPosition != 
-                                    null
-                                 && topLeftGeographicMapCellPosition != topRightGeographicMapCellPosition)
+                        if(topRightGeographicMapCellPosition != SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION && topLeftGeographicMapCellPosition != topRightGeographicMapCellPosition)
                         
                                     {
                                     reusableList!!.add(topRightGeographicMapCellPosition)
@@ -101,9 +98,7 @@ reusableList!!.clear()
                                 
 
     
-                        if(bottomLeftGeographicMapCellPosition != 
-                                    null
-                                 && !reusableList!!.contains(bottomLeftGeographicMapCellPosition))
+                        if(bottomLeftGeographicMapCellPosition != SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION && !reusableList!!.contains(bottomLeftGeographicMapCellPosition))
                         
                                     {
                                     reusableList!!.add(bottomLeftGeographicMapCellPosition)
@@ -112,9 +107,7 @@ reusableList!!.clear()
                                 
 
     
-                        if(bottomRightGeographicMapCellPosition != 
-                                    null
-                                 && !reusableList!!.contains(bottomRightGeographicMapCellPosition))
+                        if(bottomRightGeographicMapCellPosition != SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION && !reusableList!!.contains(bottomRightGeographicMapCellPosition))
                         
                                     {
                                     reusableList!!.add(bottomRightGeographicMapCellPosition)
@@ -154,9 +147,7 @@ reusableList!!.clear()
 
 
     
-                        if(topLeftGeographicMapCellPosition != 
-                                    null
-                                )
+                        if(topLeftGeographicMapCellPosition != SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION)
                         
                                     {
                                     reusableList!!.add(topLeftGeographicMapCellPosition)
@@ -165,9 +156,7 @@ reusableList!!.clear()
                                 
 
     
-                        if(topRightGeographicMapCellPosition != 
-                                    null
-                                 && topLeftGeographicMapCellPosition != topRightGeographicMapCellPosition)
+                        if(topRightGeographicMapCellPosition != SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION && topLeftGeographicMapCellPosition != topRightGeographicMapCellPosition)
                         
                                     {
                                     reusableList!!.add(topRightGeographicMapCellPosition)
@@ -176,9 +165,7 @@ reusableList!!.clear()
                                 
 
     
-                        if(bottomLeftGeographicMapCellPosition != 
-                                    null
-                                 && !reusableList!!.contains(bottomLeftGeographicMapCellPosition))
+                        if(bottomLeftGeographicMapCellPosition != SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION && !reusableList!!.contains(bottomLeftGeographicMapCellPosition))
                         
                                     {
                                     reusableList!!.add(bottomLeftGeographicMapCellPosition)
@@ -187,9 +174,7 @@ reusableList!!.clear()
                                 
 
     
-                        if(bottomRightGeographicMapCellPosition != 
-                                    null
-                                 && !reusableList!!.contains(bottomRightGeographicMapCellPosition))
+                        if(bottomRightGeographicMapCellPosition != SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION && !reusableList!!.contains(bottomRightGeographicMapCellPosition))
                         
                                     {
                                     reusableList!!.add(bottomRightGeographicMapCellPosition)

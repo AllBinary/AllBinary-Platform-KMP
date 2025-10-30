@@ -107,7 +107,7 @@ this.newUnitGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.getF
 
                 @Throws(Exception::class)
             
-    open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, itemIndex: Int)
+    override fun process(associatedRtsLayer: CollidableDestroyableDamageableLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, itemIndex: Int)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedRtsLayer = associatedRtsLayer
@@ -117,7 +117,10 @@ this.newUnitGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.getF
     //var itemIndex = itemIndex
 super.process(layerManager)
 
-    var geographicMapCellPositionArea: GeographicMapCellPositionAreaBase = associatedRtsLayer!!.geographicMapCellPositionAreaBase
+    var associatedRtsLayer2: RTSLayer = associatedRtsLayer as RTSLayer
+
+
+    var geographicMapCellPositionArea: GeographicMapCellPositionAreaBase = associatedRtsLayer2!!.geographicMapCellPositionAreaBase
 
 
     var geographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionArea!!.getNextSurroundingGeographicMapCellPosition()!!
@@ -159,7 +162,7 @@ rtsLayer!!.geographicMapCellPositionAreaBase!!.update(geographicMapInterface)
     var rtsLayer: RTSLayer = this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!! as RTSLayer
 
 rtsLayer!!.setPosition(cellPoint!!.getX() -rtsLayer!!.getHalfWidth(), cellPoint!!.getY() -rtsLayer!!.getHalfHeight(), rtsLayer!!.getZP())
-this.attemptBuild(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, rtsLayer as RTSLayer, itemIndex)
+this.attemptBuild(associatedRtsLayer2, rtsPlayerLayerInterface, layerManager, rtsLayer as RTSLayer, itemIndex)
 }
 
 

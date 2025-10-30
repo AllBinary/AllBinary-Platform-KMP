@@ -29,7 +29,6 @@
         
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.math.SmallIntegerSingletonFactory
-import org.allbinary.string.CommonStrings
 
 open public class GeographicMapCellType
             : Object

@@ -82,9 +82,7 @@ public constructor ()
     //var layer = layer
 
     
-                        if(gameCanvasInterface != 
-                                    null
-                                )
+                        if(gameCanvasInterface != SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION)
                         
                                     {
                                     
