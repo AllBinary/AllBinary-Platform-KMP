@@ -85,6 +85,18 @@ this.circularIndexUtil= CircularIndexUtil.getInstance(4)
 }
 
 
+    open fun nextRotationX()
+        //nullable = true from not(false or (false and true)) = true
+{
+}
+
+
+    open fun previousRotationX()
+        //nullable = true from not(false or (false and true)) = true
+{
+}
+
+
     override fun nextRotation()
         //nullable = true from not(false or (false and true)) = true
 {

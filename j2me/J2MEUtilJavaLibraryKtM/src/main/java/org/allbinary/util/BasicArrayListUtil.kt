@@ -87,7 +87,7 @@ System.out.println(list)
 
     private val myRandomFactory: MyRandomFactory = MyRandomFactory.getInstance()!!
 
-    private val immutableInstance: BasicArrayList = ImmutableBasicArrayList(0)
+    private val immutableInstance: BasicArrayList = ImmutableBasicArrayList("Immutable", 0)
 
     open fun getRandom(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true

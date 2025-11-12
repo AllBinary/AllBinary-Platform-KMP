@@ -88,6 +88,55 @@ System.out.println("Error: " +e +"\nMsg: " +e.message)
 }
 
 
+    open fun getFiles(path: String, includeExtensions: Array<String?>)
+        //nullable = true from not(false or (false and false)) = true
+: BasicArrayList{
+    //var path = path
+    //var includeExtensions = includeExtensions
+
+        try {
+            
+    var includeExtensionBasicArrayList: BasicArrayList = BasicArrayList()
+
+
+    var size: Int = includeExtensions!!.size
+                
+
+
+
+
+
+                        for (index in 0 until size)
+
+        {
+includeExtensionBasicArrayList!!.add(includeExtensions[index]!!)
+}
+
+
+    var visitorFileFilter: VisitorFileFilter = VisitorFileFilter(DirectoryOrIncludeFileExtensionBooleanFileVisitor(includeExtensionBasicArrayList))
+
+
+    var files: BasicArrayList = subDirectory!!.search(visitorFileFilter, AbFile(path))!!
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return files
+} catch(e: Exception)
+            {
+e.printStackTrace()
+System.out.println("Error: " +e +"\nMsg: " +e.message)
+}
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+
     open fun getFiles(path: String, includeExtension: String)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{

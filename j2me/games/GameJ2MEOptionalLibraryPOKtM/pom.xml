@@ -41,6 +41,7 @@
 <!--        <module>../../media/graphics/ImageCacheJ2MEJavaLibraryKtM</module>
         <module>../../media/graphics/ImageCacheLazyJ2MEJavaLibraryKtM</module>-->
         <!--        <module>../../media/graphics/ImageCacheOpenGLESJavaLibraryKtM</module>-->
+        <module>../../media/graphics/GameResourceNoneJavaLibraryKtM</module>
         <module>../../media/graphics/LazyGameResourceNoneJavaLibraryKtM</module>
 
         <!--

@@ -83,5 +83,5 @@ AND WILL NOT BE RESPONSIBLE AND/OR LIABLE FOR ANY LOSSES
 WHETHER IT BE MONETARY OR OTHER FOR ALL POSSIBLE CASES IN 
 THE PAST, PRESENT, OR FUTURE.
 
-Third-Party and Third-Party Integration projects for the AllBinary Platform is 
-in the AllBinary Platform Integration repository with different licensing.
+Third-Party and Third-Party Integration projects for the "AllBinary Platform" is 
+in the "AllBinary Platform Integration" repository with different licensing.

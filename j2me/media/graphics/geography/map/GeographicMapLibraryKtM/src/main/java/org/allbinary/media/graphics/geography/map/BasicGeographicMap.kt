@@ -293,8 +293,6 @@ else -> {
 }
 
 
-                @Throws(Exception::class)
-            
     override fun getCellPositionAtNoThrow(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : GeographicMapCellPosition{
@@ -315,10 +313,21 @@ else -> {
                         
                                     {
                                     
+        try {
+            
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return geographicMapCellPositionFactory!!.getInstance(i_column, i_row)
+} catch(e: Exception)
+            {
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION
+}
+
 
                                     }
                                 

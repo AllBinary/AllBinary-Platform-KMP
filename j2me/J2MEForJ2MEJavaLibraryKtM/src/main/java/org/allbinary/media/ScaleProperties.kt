@@ -43,9 +43,9 @@ companion object {
             {
             }            
         
-    var scaleX: Int = 1
+    var scaleX: Float = 1.0f
 
-    var scaleY: Int = 1
+    var scaleY: Float = 1.0f
 
     var scaleWidth: Int= 0
 

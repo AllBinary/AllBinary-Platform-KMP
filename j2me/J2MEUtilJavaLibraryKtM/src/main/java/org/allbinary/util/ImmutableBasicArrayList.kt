@@ -30,15 +30,17 @@ import org.allbinary.logic.communication.log.ForcedLogUtil
 open public class ImmutableBasicArrayList : BasicArrayList {
         
 
-    private val IMMUTABLE: String = "Immutable"
-public constructor (size: Int)                        
+    private val name: String
+public constructor (name: String, size: Int)                        
 
                             : super(size){
-var size = size
+    //var name = name
+    //var size = size
 
 
                             //For kotlin this is before the body of the constructor.
                     
+this.name= name
 }
 
 
@@ -46,7 +48,7 @@ var size = size
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var e = e
-ForcedLogUtil.log(IMMUTABLE, this)
+ForcedLogUtil.log(this.name, this)
 
 
 
@@ -60,7 +62,18 @@ ForcedLogUtil.log(IMMUTABLE, this)
 {
 var index = index
 var element = element
-ForcedLogUtil.log(IMMUTABLE, this)
+ForcedLogUtil.log(this.name, this)
+}
+
+
+    override fun toString()
+        //nullable =  from not(false or (true and true)) = 
+: String{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.name
 }
 
 

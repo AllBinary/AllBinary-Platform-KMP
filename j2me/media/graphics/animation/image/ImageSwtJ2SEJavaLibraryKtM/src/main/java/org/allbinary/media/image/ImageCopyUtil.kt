@@ -393,19 +393,19 @@ image= openGLUtil!!.add(image)
                         
                                     {
                                     
-    var width2: Int = originalImage!!.getWidth()!!
-
-
-    var height2: Int = originalImage!!.getHeight()!!
-
-
     var openGLESImage: OpenGLESImage = (originalImage as OpenGLESImage)
 
 
     var openGLESImageProperties: OpenGLESImageProperties = openGLESImage!!.openGLESImageProperties
 
-openGLESImageProperties!!.scaleX= openGLESImageProperties!!.scaleX2= ((width.toFloat()) /openGLESImage!!.getWidth()).toFloat()
-openGLESImageProperties!!.scaleY= openGLESImageProperties!!.scaleY2= ((height.toFloat()) /openGLESImage!!.getHeight()).toFloat()
+
+    var openGLWidth: Int = openGLESImage!!.openGLBitmap!!.getWidth()!!
+
+
+    var openGLHeight: Int = openGLESImage!!.openGLBitmap!!.getHeight()!!
+
+openGLESImageProperties!!.scaleX= openGLESImageProperties!!.scaleX2= ((width.toFloat()) /openGLWidth)
+openGLESImageProperties!!.scaleY= openGLESImageProperties!!.scaleY2= ((height.toFloat()) /openGLHeight)
 openGLESImageProperties!!.scaleX= openGLESImageProperties!!.scaleX *0.75f
 openGLESImageProperties!!.scaleY= openGLESImageProperties!!.scaleY *0.75f
 
@@ -413,8 +413,8 @@ openGLESImageProperties!!.scaleY= openGLESImageProperties!!.scaleY *0.75f
                         if(originalImage!!.getHeight() % 2 != 0)
                         
                                     {
-                                    openGLESImageProperties!!.scaleX2 += 1 /(width2.toFloat())
-openGLESImageProperties!!.scaleY2 += 1 /(height2.toFloat())
+                                    openGLESImageProperties!!.scaleX2 += 1.0f /openGLWidth
+openGLESImageProperties!!.scaleY2 += 1.0f /openGLHeight
 
                                     }
                                 

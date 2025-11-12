@@ -80,9 +80,7 @@ logUtil!!.put(commonStrings!!.START, this, commonStateStrings!!.CREATE)
 logUtil!!.put(commonStrings!!.START, this, commonStateStrings!!.DESTROY)
 
     
-                        if(player != 
-                                    null
-                                )
+                        if(player != NullAndroidCanvas.NULL_MEDIA_PLAYER)
                         
                                     {
                                     logUtil!!.put(commonStrings!!.START, this, commonStateStrings!!.PAUSE)
@@ -100,9 +98,7 @@ player.release()
 {
 
     
-                        if(player != 
-                                    null
-                                )
+                        if(player != NullAndroidCanvas.NULL_MEDIA_PLAYER)
                         
                                     {
                                     logUtil!!.put(commonStrings!!.START, this, commonStateStrings!!.PAUSE)
@@ -118,9 +114,7 @@ player.pause()
 {
 
     
-                        if(player != 
-                                    null
-                                 && !player.isPlaying())
+                        if(player != NullAndroidCanvas.NULL_MEDIA_PLAYER && !player.isPlaying())
                         
                                     {
                                     logUtil!!.put(commonStrings!!.START, this, commonStateStrings!!.RESUME)
@@ -239,9 +233,7 @@ this.rightVolume= intent.getIntExtra(musicStrings!!.RIGHT_VOLUME,  -1)
                                     System.gc()
 
     
-                        if(player != 
-                                    null
-                                 && player.isPlaying())
+                        if(player != NullAndroidCanvas.NULL_MEDIA_PLAYER && player.isPlaying())
                         
                                     {
                                     

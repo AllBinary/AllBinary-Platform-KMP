@@ -870,23 +870,8 @@ this.setGameInputProcessor(Processor.getInstance())
 
     var features: Features = Features.getInstance()!!
 
-
-    
-                        if(features.isFeature(GameFeatureFactory.getInstance()!!.CHEATING))
-                        
-                                    {
-                                    this.isCheating= true
 this.cheatProcessor= CheatGameInputProcessor(this)
 this.gameKeyEventHandler!!.addListener(this.cheatProcessor)
-
-                                    }
-                                
-                        else {
-                            this.isCheating= false
-this.cheatProcessor= NoPlayerGameInput.getInstance()
-
-                        }
-                            
 this.realEndGameProcessor= EndGameProcessor(this)
 this.setEndGameProcessor(Processor.getInstance())
 this.realStartIntermissionProcessor= StartIntermissionProcessor(this)

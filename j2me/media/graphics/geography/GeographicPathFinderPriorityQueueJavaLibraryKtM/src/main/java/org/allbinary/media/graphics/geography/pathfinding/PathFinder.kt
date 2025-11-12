@@ -27,7 +27,6 @@
         
 import java.util.HashSet
 import java.util.PriorityQueue
-import java.util.Set
 import org.allbinary.game.layer.AllBinaryTiledLayer
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
@@ -660,9 +659,7 @@ var current = current
     var path: BasicArrayList = BasicArrayList()
 
 
-        while(current.parent != 
-                                    null
-                                )
+        while(current.parent != NullUtil.getInstance()!!.NULL_OBJECT)
         {
 path.add(current.geographicMapCellPosition)
 current= current.parent as PathFindingNodeCost
