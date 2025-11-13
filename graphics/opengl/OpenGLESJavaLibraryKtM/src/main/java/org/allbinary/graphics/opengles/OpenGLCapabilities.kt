@@ -70,6 +70,8 @@ companion object {
 
     private val stringUtil: StringUtil = StringUtil.getInstance()!!
 
+    private var initialized: Boolean = false
+
     private var glVersionString: String = stringUtil!!.EMPTY_STRING
 
     private var glShaderVersionString: String = stringUtil!!.EMPTY_STRING
@@ -120,6 +122,23 @@ companion object {
 private constructor ()
             : super()
         {
+}
+
+
+    open fun isInitialized()
+        //nullable = true from not(false or (false and true)) = true
+: Boolean{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return initialized
+}
+
+
+    open fun requireInitialization()
+        //nullable = true from not(false or (false and true)) = true
+{
 }
 
 
@@ -358,7 +377,7 @@ this.glVersion= this.VERSION_UNK
                                     {
                                     
     
-                        if(this.isVertexBufferObjectSupport())
+                        if(this.vertexBufferObjectSupport)
                         
                                     {
                                     openGLImageSpecificFactory!!.setImageFactory(OpenGLESGL11VBOImageFactory())
@@ -390,6 +409,7 @@ openGLImageSpecificFactory!!.setImageFactory(OpenGLESGL10ImageFactory())
 
 gl.glGetIntegerv(GL10.GL_MAX_TEXTURE_SIZE, maxTextureSizeArray, 0)
 this.maxTextureSize= maxTextureSizeArray[0]!!
+initialized= true
 } catch(e: Exception)
             {
 
@@ -430,6 +450,128 @@ var gameFeature = gameFeature
 
                         }
                             
+}
+
+
+    open fun isGlExtensionDrawTexture()
+        //nullable = true from not(false or (false and true)) = true
+: Boolean{
+this.requireInitialization()
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return glExtensionDrawTexture
+}
+
+
+    open fun isGlExtensionGPUShader4()
+        //nullable = true from not(false or (false and true)) = true
+: Boolean{
+this.requireInitialization()
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return glExtensionGPUShader4
+}
+
+
+    open fun getGlVersion()
+        //nullable = true from not(false or (false and true)) = true
+: String{
+this.requireInitialization()
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return glVersion
+}
+
+
+    open fun getGlVersionString()
+        //nullable = true from not(false or (false and true)) = true
+: String{
+this.requireInitialization()
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return glVersionString
+}
+
+
+    open fun getGlShaderVersion()
+        //nullable = true from not(false or (false and true)) = true
+: String{
+this.requireInitialization()
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return glShaderVersionString
+}
+
+
+    open fun isGlThreedDrawTexture()
+        //nullable = true from not(false or (false and true)) = true
+: Boolean{
+this.requireInitialization()
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return glThreedDrawTexture
+}
+
+
+    open fun getGlRenderer()
+        //nullable = true from not(false or (false and true)) = true
+: String{
+this.requireInitialization()
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return glRenderer
+}
+
+
+    open fun isVertexBufferObjectSupport()
+        //nullable = true from not(false or (false and true)) = true
+: Boolean{
+this.requireInitialization()
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return vertexBufferObjectSupport
+}
+
+
+    open fun isTextureSizeValid(widthAndHeight: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Boolean{
+    //var widthAndHeight = widthAndHeight
+this.requireInitialization()
+
+    
+                        if(this.maxTextureSize >= widthAndHeight)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return true
+
+                                    }
+                                
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return false
 }
 
 
@@ -496,119 +638,6 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.TOSTRING, e)
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
-}
-
-
-    open fun isGlExtensionDrawTexture()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return glExtensionDrawTexture
-}
-
-
-    open fun isGlExtensionGPUShader4()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return glExtensionGPUShader4
-}
-
-
-    open fun getGlVersion()
-        //nullable = true from not(false or (false and true)) = true
-: String{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return glVersion
-}
-
-
-    open fun getGlVersionString()
-        //nullable = true from not(false or (false and true)) = true
-: String{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return glVersionString
-}
-
-
-    open fun getGlShaderVersion()
-        //nullable = true from not(false or (false and true)) = true
-: String{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return glShaderVersionString
-}
-
-
-    open fun isGlThreedDrawTexture()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return glThreedDrawTexture
-}
-
-
-    open fun getGlRenderer()
-        //nullable = true from not(false or (false and true)) = true
-: String{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return glRenderer
-}
-
-
-    open fun isVertexBufferObjectSupport()
-        //nullable = true from not(false or (false and true)) = true
-: Boolean{
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return vertexBufferObjectSupport
-}
-
-
-    open fun isTextureSizeValid(widthAndHeight: Int)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean{
-    //var widthAndHeight = widthAndHeight
-
-    
-                        if(this.maxTextureSize >= widthAndHeight)
-                        
-                                    {
-                                    
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return true
-
-                                    }
-                                
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return false
 }
 
 

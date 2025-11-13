@@ -18,6 +18,7 @@ import android.graphics.BitmapFactory
 import java.io.IOException
 import org.allbinary.platform.graphics.PlatformBitmapBaseFactory
 import org.allbinary.platform.graphics.PlatformBitmapBase
+import org.microemu.android.device.AndroidImageInterface
 
 open public class OpenGLBitmapFactory : PlatformBitmapBaseFactory {
         
@@ -103,7 +104,8 @@ var inputStream = inputStream
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return OpenGLBitmap(image.getBitmap())
+                        return OpenGLBitmap(
+                                    (image as AndroidImageInterface).getBitmap())
 }
 
 
