@@ -49,9 +49,7 @@ this.parent= parent
 this.setGeographicMapCellPositionP(geographicMapCellPosition)
 
     
-                        if(this.geographicMapCellPosition == 
-                                    null
-                                )
+                        if(this.geographicMapCellPosition == SimpleGeographicMapCellPositionFactory.NULL_GEOGRAPHIC_MAP_CELL_POSITION)
                         
                                     {
                                     

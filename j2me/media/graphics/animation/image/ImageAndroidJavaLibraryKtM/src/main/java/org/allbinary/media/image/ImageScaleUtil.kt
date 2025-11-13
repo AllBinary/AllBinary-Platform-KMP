@@ -35,6 +35,7 @@ import org.allbinary.image.ImageCache
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
+import org.microemu.android.device.AndroidImageInterface
 
 open public class ImageScaleUtil
             : Object
@@ -134,7 +135,10 @@ private constructor ()
     //var scaleY = scaleY
     //var cached = cached
 
-    var originalBitmap: Bitmap = originalImage!!.getBitmap()!!
+    var originalAndroidImage: AndroidImageInterface = originalImage as AndroidImageInterface
+
+
+    var originalBitmap: Bitmap = originalAndroidImage!!.getBitmap()!!
 
 
     var width: Int = (originalBitmap!!.getWidth() *scaleX).toInt()
@@ -276,7 +280,8 @@ image.getGraphics()!!.drawImage(originalImage, 0, 0, anchor)
     //var scaleY = scaleY
 matrix.setScale(scaleX, scaleY)
 
-    var canvas: Canvas = image.getCanvas()!!
+    var canvas: Canvas = 
+                                    (image as AndroidImageInterface).getCanvas()!!
 
 canvas.concat(matrix)
 }

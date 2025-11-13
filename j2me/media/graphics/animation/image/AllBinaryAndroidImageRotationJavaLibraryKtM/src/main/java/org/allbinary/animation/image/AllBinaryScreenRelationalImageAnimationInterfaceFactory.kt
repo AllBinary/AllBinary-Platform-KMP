@@ -32,6 +32,7 @@ import org.allbinary.animation.Animation
 import org.allbinary.animation.AnimationBehaviorFactory
 import org.allbinary.graphics.displayable.ScreenRelationalUtil
 import org.allbinary.media.image.ImageScaleUtil
+import org.microemu.android.device.AndroidImageInterface
 
 open public class AllBinaryScreenRelationalImageAnimationInterfaceFactory : BaseImageAnimationFactory {
         
@@ -61,7 +62,10 @@ public constructor (image: Image, animationBehaviorFactory: AnimationBehaviorFac
                         if(lastImage != NullCanvas.NULL_IMAGE)
                         
                                     {
-                                    lastImage!!.getBitmap()!!.recycle()
+                                    
+    var androidImageInterface: AndroidImageInterface = lastImage as AndroidImageInterface
+
+androidImageInterface!!.getBitmap()!!.recycle()
 
                                     }
                                 

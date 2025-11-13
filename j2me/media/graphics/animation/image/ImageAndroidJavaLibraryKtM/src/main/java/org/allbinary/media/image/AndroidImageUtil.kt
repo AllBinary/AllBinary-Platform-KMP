@@ -31,6 +31,7 @@ import android.graphics.Color
 import android.graphics.Matrix
 import android.graphics.Paint
 import javax.microedition.lcdui.Image
+import org.microemu.android.device.AndroidImageInterface
 
 open public class AndroidImageUtil
             : Object
@@ -79,11 +80,17 @@ canvas.drawBitmap(originalBitmap, 0.0f, 0.0f, paint)
     //var image = image
     //var originalImage = originalImage
     //var paint = paint
-image.getBitmap()!!.eraseColor(Color.TRANSPARENT)
 
-    var canvas: Canvas = image.getCanvas()!!
+    var androidImage: AndroidImageInterface = image as AndroidImageInterface
 
-canvas.drawBitmap(originalImage!!.getBitmap(), 0.0f, 0.0f, paint)
+androidImage!!.getBitmap()!!.eraseColor(Color.TRANSPARENT)
+
+    var canvas: Canvas = androidImage!!.getCanvas()!!
+
+
+    var originalAndroidImage: AndroidImageInterface = originalImage as AndroidImageInterface
+
+canvas.drawBitmap(originalAndroidImage!!.getBitmap(), 0.0f, 0.0f, paint)
 }
 
 
@@ -94,12 +101,18 @@ canvas.drawBitmap(originalImage!!.getBitmap(), 0.0f, 0.0f, paint)
     //var originalImage = originalImage
     //var matrix = matrix
     //var paint = paint
-image.getBitmap()!!.eraseColor(Color.TRANSPARENT)
 
-    var canvas: Canvas = image.getCanvas()!!
+    var androidImage: AndroidImageInterface = image as AndroidImageInterface
+
+androidImage!!.getBitmap()!!.eraseColor(Color.TRANSPARENT)
+
+    var canvas: Canvas = androidImage!!.getCanvas()!!
 
 canvas.concat(matrix)
-canvas.drawBitmap(originalImage!!.getBitmap(), 0.0f, 0.0f, paint)
+
+    var originalAndroidImage: AndroidImageInterface = originalImage as AndroidImageInterface
+
+canvas.drawBitmap(originalAndroidImage!!.getBitmap(), 0.0f, 0.0f, paint)
 }
 
 

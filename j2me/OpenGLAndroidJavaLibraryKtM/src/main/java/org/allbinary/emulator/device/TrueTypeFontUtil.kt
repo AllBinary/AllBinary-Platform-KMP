@@ -42,6 +42,8 @@ import org.allbinary.image.opengles.OpenGLESImage
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.string.CommonStrings
+import org.microemu.android.device.AndroidImageInterface
+import org.microemu.android.device.AndroidImmutableImage
 
 open public class TrueTypeFontUtil : TrueTypeFontUtilBase {
         
@@ -98,7 +100,8 @@ logUtil!!.put(path, this, commonStrings!!.CONSTRUCTOR)
     var fos: FileOutputStream = FileOutputStream(path)
 
 
-    var bitmap: Bitmap = this.fontImage!!.openGLBitmap!!.getImage()!!.getBitmap()!!
+    var bitmap: Bitmap = 
+                                    (getImage as AndroidImageInterface).getBitmap()!!
 
 bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos)
 } catch(e: Exception)
@@ -266,7 +269,7 @@ canvas.drawText(characterArray, 0, 1, x.toFloat() -3, y.toFloat() -6, paint)
 
 canvas.save()
 
-    var image: Image = Image(bitmap)
+    var image: Image = AndroidImmutableImage.create(bitmap)!!
 
 this.fontImage= this.preResourceImageUtil!!.encapsulate(image) as OpenGLESImage
 

@@ -30,6 +30,7 @@ import org.allbinary.graphics.Anchor
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Matrix
+import org.microemu.android.device.AndroidImageInterface
 
 open public class ImageRotationUtil
             : Object
@@ -77,7 +78,8 @@ var rotationInDegrees = rotationInDegrees
                         
                                     {
                                     
-    var bitmap: Bitmap = image.getBitmap()!!
+    var bitmap: Bitmap = 
+                                    (image as AndroidImageInterface).getBitmap()!!
 
 
     var width: Int = bitmap.getWidth()!!
@@ -87,7 +89,8 @@ var rotationInDegrees = rotationInDegrees
 
 matrix.setRotate(rotationInDegrees.toFloat(), (width shr 1).toFloat(), (height shr 1).toFloat())
 
-    var canvas: Canvas = image.getCanvas()!!
+    var canvas: Canvas = 
+                                    (image as AndroidImageInterface).getCanvas()!!
 
 canvas.concat(matrix)
 image.getGraphics()!!.drawImage(originalImage, 0, 0, anchor)
