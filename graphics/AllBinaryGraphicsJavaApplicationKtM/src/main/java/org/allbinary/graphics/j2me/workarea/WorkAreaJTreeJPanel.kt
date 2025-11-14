@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -42,23 +40,20 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 
-open public class WorkAreaJTreeJPanel : swing.JPanel {
+open public class WorkAreaJTreeJPanel : javax.swing.JPanel {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var rootTreeNode: DefaultMutableTreeNode
 
     private var workAreaJTree: JTree
 
     private var highlightedBasicArrayList: BasicArrayList
-public constructor        (workAreaName: String){
-
-                    var workAreaName = workAreaName
+public constructor (workAreaName: String){
+var workAreaName = workAreaName
 initComponents()
 this.rootTreeNode= DefaultMutableTreeNode(workAreaName)
 this.workAreaPropertiesJPanel!!.removeAll()
@@ -67,26 +62,25 @@ this.highlightedBasicArrayList= BasicArrayList()
 }
 
 
-open fun add(treeNode: MutableTreeNode)
+    open fun add(treeNode: MutableTreeNode)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var treeNode = treeNode
+var treeNode = treeNode
 this.rootTreeNode!!.add(treeNode)
 }
 
 
-open fun updateTree()
+    open fun updateTree()
         //nullable = true from not(false or (false and true)) = true
-{this.workAreaJTree= JTree(rootTreeNode)
-this.workAreaJTree!!.addMouseListener(object: MouseAdapter()
+{
+this.workAreaJTree= JTree(rootTreeNode)
+this.workAreaJTree!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
-open override fun mousePressed(evt: MouseEvent)
+    open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 workAreaJTreeMousePressed(evt)
 }
 
@@ -97,11 +91,10 @@ this.workAreaPropertiesJPanel!!.add(this.workAreaJTree)
 }
 
 
-open fun getNode(treePathArray: Array<TreePath?>)
+    open fun getNode(treePathArray: Array<TreePath?>)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
-
-                    var treePathArray = treePathArray
+var treePathArray = treePathArray
 
     var basicArrayList: BasicArrayList = BasicArrayList()
 
@@ -118,8 +111,8 @@ open fun getNode(treePathArray: Array<TreePath?>)
 
                         for (index in 0 until treePathArray!!.size)
 
-
-        {basicArrayList!!.add(this.getNode(treePathArray[index]!!))
+        {
+basicArrayList!!.add(this.getNode(treePathArray[index]!!))
 }
 
 
@@ -133,11 +126,10 @@ open fun getNode(treePathArray: Array<TreePath?>)
 }
 
 
-open fun getNode(treePath: TreePath)
+    open fun getNode(treePath: TreePath)
         //nullable = true from not(false or (false and false)) = true
 : DefaultMutableTreeNode{
-
-                    var treePath = treePath
+var treePath = treePath
 
     
                         if(treePath != 
@@ -147,7 +139,6 @@ open fun getNode(treePath: TreePath)
                                     {
                                     
     var obj: Array<Any?> = treePath!!.getPath()!!
-            
 
 
     
@@ -157,7 +148,7 @@ open fun getNode(treePath: TreePath)
                         
                                     {
                                     
-    var node: DefaultMutableTreeNode = obj[obj!!.size -1]!! as DefaultMutableTreeNode
+    var node: DefaultMutableTreeNode = obj[obj.size -1]!! as DefaultMutableTreeNode
 
 
 
@@ -180,22 +171,21 @@ open fun getNode(treePath: TreePath)
 
                 @Throws(Exception::class)
             
-open fun deselectAll()
+    open fun deselectAll()
         //nullable = true from not(false or (false and true)) = true
 {
-    var size: Int = highlightedBasicArrayList!!.size()!!
-            
 
-logUtil!!.put("size: " +size, this, 
-                            "deselectAll")
+    var size: Int = highlightedBasicArrayList!!.size()!!
+
+logUtil!!.put("size: " +size, this, "deselectAll")
 
 
 
 
                         for (index in 0 until size)
 
-
         {
+
     var node: DefaultMutableTreeNode = highlightedBasicArrayList!!.get(index) as DefaultMutableTreeNode
 
 MyGraphicItemEventService.fire(MyGraphicItemEvent(MyGraphicItemEventSource(MyGraphicItemEventService.DESELECT, node) as Object))
@@ -207,11 +197,10 @@ this.highlightedBasicArrayList!!.clear()
 
                 @Throws(Exception::class)
             
-open fun selectGraphicItem(node: DefaultMutableTreeNode)
+    open fun selectGraphicItem(node: DefaultMutableTreeNode)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var node = node
+var node = node
 highlightedBasicArrayList!!.add(node)
 MyGraphicItemEventService.fire(MyGraphicItemEvent(MyGraphicItemEventSource(MyGraphicItemEventService.SELECT, node) as Object))
 }
@@ -219,36 +208,32 @@ MyGraphicItemEventService.fire(MyGraphicItemEvent(MyGraphicItemEventSource(MyGra
 
                 @Throws(Exception::class)
             
-open fun removeGraphicItem(node: DefaultMutableTreeNode)
+    open fun removeGraphicItem(node: DefaultMutableTreeNode)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var node = node
+var node = node
 MyGraphicItemEventService.fire(MyGraphicItemEvent(MyGraphicItemEventSource(MyGraphicItemEventService.DELETE, node) as Object))
 }
 
 
                 @Throws(Exception::class)
             
-open fun removeCanvas(node: DefaultMutableTreeNode)
+    open fun removeCanvas(node: DefaultMutableTreeNode)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var node = node
+var node = node
 MyCanvasEventService.fire(MyCanvasEvent(MyCanvasEventSource(MyCanvasEventService.DELETE, node) as Object))
 }
 
 
                 @Throws(Exception::class)
             
-open fun remove(treePath: TreePath)
+    open fun remove(treePath: TreePath)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var treePath = treePath
+var treePath = treePath
 
     var node: DefaultMutableTreeNode = this.getNode(treePath)!!
-            
 
 
     
@@ -259,7 +244,7 @@ open fun remove(treePath: TreePath)
                                     {
                                     
     
-                        if(node!!.getUserObject() is CanvasTreeLabel)
+                        if(node.getUserObject() is CanvasTreeLabel)
                         
                                     {
                                     this.removeCanvas(node)
@@ -275,19 +260,19 @@ open fun remove(treePath: TreePath)
                                     }
                                 
 
-    var parent: DefaultMutableTreeNode = node!!.getParent() as DefaultMutableTreeNode
+    var parent: DefaultMutableTreeNode = node.getParent() as DefaultMutableTreeNode
 
-parent!!.remove(node)
+parent.remove(node)
 }
 
 
                 @Throws(Exception::class)
             
-open fun copy()
+    open fun copy()
         //nullable = true from not(false or (false and true)) = true
 {
+
     var treePath: TreePath = this.workAreaJTree!!.getSelectionPath()!!
-            
 
 this.copy(treePath)
 this.updateTree()
@@ -298,14 +283,12 @@ this.repaint()
 
                 @Throws(Exception::class)
             
-open fun copy(treePath: TreePath)
+    open fun copy(treePath: TreePath)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var treePath = treePath
+var treePath = treePath
 
     var node: DefaultMutableTreeNode = this.getNode(treePath)!!
-            
 
 
     
@@ -316,7 +299,7 @@ open fun copy(treePath: TreePath)
                                     {
                                     
     
-                        if(node!!.getUserObject() is CanvasTreeLabel)
+                        if(node.getUserObject() is CanvasTreeLabel)
                         
                                     {
                                     MyCanvasEventService.fire(MyCanvasEvent(MyCanvasEventSource(MyCanvasEventService.DUPLICATE, node) as Object))
@@ -336,17 +319,13 @@ open fun copy(treePath: TreePath)
 
                 @Throws(Exception::class)
             
-open fun rotate(treePath: TreePath, angle: Double)
+    open fun rotate(treePath: TreePath, angle: Double)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var treePath = treePath
-
-
-                    var angle = angle
+var treePath = treePath
+var angle = angle
 
     var node: DefaultMutableTreeNode = this.getNode(treePath)!!
-            
 
 
     
@@ -357,7 +336,7 @@ open fun rotate(treePath: TreePath, angle: Double)
                                     {
                                     
     
-                        if(node!!.getUserObject() is CanvasTreeLabel)
+                        if(node.getUserObject() is CanvasTreeLabel)
                         
                                     {
                                     MyCanvasEventService.fire(MyCanvasEvent(MyCanvasEventSource(MyCanvasEventService.ROTATE, angle, node) as Object))
@@ -375,9 +354,10 @@ open fun rotate(treePath: TreePath, angle: Double)
 }
 
 
-open fun getRootTreeNode()
+    open fun getRootTreeNode()
         //nullable = true from not(false or (false and true)) = true
 : MutableTreeNode{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -385,172 +365,158 @@ open fun getRootTreeNode()
 }
 
 
-open fun expand()
+    open fun expand()
         //nullable = true from not(false or (false and true)) = true
-{this.workAreaJTree!!.expandRow(0)
+{
+this.workAreaJTree!!.expandRow(0)
 this.workAreaJTree!!.expandRow(1)
 }
 
 
-open fun expand(treePath: TreePath)
+    open fun expand(treePath: TreePath)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var treePath = treePath
+var treePath = treePath
 this.workAreaJTree!!.expandPath(treePath)
 }
 
 
-open fun initComponents()
+    open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
-{itemJPopupMenu= JPopupMenu()
-deleteJMenuItem= JMenuItem()
-copyJMenuItem= JMenuItem()
-rotateJMenuItem= JMenuItem()
-itemJScrollPane1= JScrollPane()
-workAreaPropertiesJPanel= JPanel()
-itemJPopupMenu!!.addPopupMenuListener(object: PopupMenuListener()
+{
+itemJPopupMenu= javax.swing.JPopupMenu()
+deleteJMenuItem= javax.swing.JMenuItem()
+copyJMenuItem= javax.swing.JMenuItem()
+rotateJMenuItem= javax.swing.JMenuItem()
+itemJScrollPane1= javax.swing.JScrollPane()
+workAreaPropertiesJPanel= javax.swing.JPanel()
+itemJPopupMenu!!.addPopupMenuListener(object: javax.swing.event.PopupMenuListener()
                                 {
                                 
-open override fun popupMenuCanceled(evt: PopupMenuEvent)
+    open override fun popupMenuCanceled(evt: javax.swing.event.PopupMenuEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 }
 
-open override fun popupMenuWillBecomeInvisible(evt: PopupMenuEvent)
+    open override fun popupMenuWillBecomeInvisible(evt: javax.swing.event.PopupMenuEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 itemJPopupMenuPopupMenuWillBecomeInvisible(evt)
 }
 
-open override fun popupMenuWillBecomeVisible(evt: PopupMenuEvent)
+    open override fun popupMenuWillBecomeVisible(evt: javax.swing.event.PopupMenuEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 itemJPopupMenuPopupMenuWillBecomeVisible(evt)
 }
 
                                 }
                             )
-deleteJMenuItem!!.setText(
-                            "Delete")
-deleteJMenuItem!!.addMouseListener(object: MouseAdapter()
+deleteJMenuItem!!.setText("Delete")
+deleteJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
-open override fun mousePressed(evt: MouseEvent)
+    open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 deleteJMenuItemMousePressed(evt)
 }
 
                                 }
                             )
 itemJPopupMenu!!.add(deleteJMenuItem)
-copyJMenuItem!!.setText(
-                            "Copy")
-copyJMenuItem!!.addMouseListener(object: MouseAdapter()
+copyJMenuItem!!.setText("Copy")
+copyJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
-open override fun mousePressed(evt: MouseEvent)
+    open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 copyJMenuItemMousePressed(evt)
 }
 
                                 }
                             )
 itemJPopupMenu!!.add(copyJMenuItem)
-rotateJMenuItem!!.setText(
-                            "Rotate 45*")
-rotateJMenuItem!!.addMouseListener(object: MouseAdapter()
+rotateJMenuItem!!.setText("Rotate 45*")
+rotateJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
-open override fun mousePressed(evt: MouseEvent)
+    open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 rotateJMenuItemMousePressed(evt)
 }
 
                                 }
                             )
 itemJPopupMenu!!.add(rotateJMenuItem)
-setLayout(GridLayout(1, 1))
-workAreaPropertiesJPanel!!.addMouseListener(object: MouseAdapter()
+setLayout(java.awt.GridLayout(1, 1))
+workAreaPropertiesJPanel!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
-open override fun mousePressed(evt: MouseEvent)
+    open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 workAreaPropertiesJPanelMousePressed(evt)
 }
 
                                 }
                             )
-workAreaPropertiesJPanel!!.setLayout(GridLayout(1, 0))
+workAreaPropertiesJPanel!!.setLayout(java.awt.GridLayout(1, 0))
 itemJScrollPane1!!.setViewportView(workAreaPropertiesJPanel)
 add(itemJScrollPane1)
 }
 
 
-open fun rotateJMenuItemMousePressed(evt: MouseEvent)
+    open fun rotateJMenuItemMousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
         try {
             
     var treePath: TreePath = this.workAreaJTree!!.getSelectionPath()!!
-            
 
 this.rotate(treePath, 45)
 this.updateTree()
 this.expand()
 this.repaint()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "rotateJMenuItemMousePressed", e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "rotateJMenuItemMousePressed", e)
 }
 
 }
 
 
-open fun workAreaJTreeMousePressed(evt: MouseEvent)
+    open fun workAreaJTreeMousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
         try {
             
     var selectedTreePathArray: Array<TreePath?> = this.workAreaJTree!!.getSelectionPaths()!!
-            
 
 
     var list: BasicArrayList = this.getNode(selectedTreePathArray)!!
-            
 
 
     
-                        if(list!!.size() > 0)
+                        if(list.size() > 0)
                         
                                     {
                                     
     
-                        if((evt!!.getModifiers() and evt!!.BUTTON3_MASK) == evt!!.BUTTON3_MASK)
+                        if((evt.getModifiers() and evt.BUTTON3_MASK) == evt.BUTTON3_MASK)
                         
                                     {
                                     
@@ -559,21 +525,21 @@ open fun workAreaJTreeMousePressed(evt: MouseEvent)
 
                         for (index in 0 until selectedTreePathArray!!.size)
 
-
         {
-    var defaultMutableTreeNode: DefaultMutableTreeNode = list!!.get(index) as DefaultMutableTreeNode
+
+    var defaultMutableTreeNode: DefaultMutableTreeNode = list.get(index) as DefaultMutableTreeNode
 
 
     
                         if(defaultMutableTreeNode!!.getUserObject() is CanvasTreeLabel)
                         
                                     {
-                                    this.itemJPopupMenu!!.show(this, evt!!.getX(), evt!!.getY())
+                                    this.itemJPopupMenu!!.show(this, evt.getX(), evt.getY())
 
                                     }
                                 
                         else {
-                            this.itemJPopupMenu!!.show(this, evt!!.getX(), evt!!.getY())
+                            this.itemJPopupMenu!!.show(this, evt.getX(), evt.getY())
 
                         }
                             
@@ -584,7 +550,7 @@ open fun workAreaJTreeMousePressed(evt: MouseEvent)
                                 
 
     
-                        if((evt!!.getModifiers() and evt!!.BUTTON1_MASK) == evt!!.BUTTON1_MASK)
+                        if((evt.getModifiers() and evt.BUTTON1_MASK) == evt.BUTTON1_MASK)
                         
                                     {
                                     this.deselectAll()
@@ -594,9 +560,9 @@ open fun workAreaJTreeMousePressed(evt: MouseEvent)
 
                         for (index in 0 until selectedTreePathArray!!.size)
 
-
         {
-    var defaultMutableTreeNode: DefaultMutableTreeNode = list!!.get(index) as DefaultMutableTreeNode
+
+    var defaultMutableTreeNode: DefaultMutableTreeNode = list.get(index) as DefaultMutableTreeNode
 
 
     
@@ -621,55 +587,50 @@ open fun workAreaJTreeMousePressed(evt: MouseEvent)
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "workAreaJTreeMousePressed", e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "workAreaJTreeMousePressed", e)
 }
 
 }
 
 
-open fun itemJPopupMenuPopupMenuWillBecomeInvisible(evt: PopupMenuEvent)
+    open fun itemJPopupMenuPopupMenuWillBecomeInvisible(evt: javax.swing.event.PopupMenuEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 }
 
 
-open fun itemJPopupMenuPopupMenuWillBecomeVisible(evt: PopupMenuEvent)
+    open fun itemJPopupMenuPopupMenuWillBecomeVisible(evt: javax.swing.event.PopupMenuEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 }
 
 
-open fun copyJMenuItemMousePressed(evt: MouseEvent)
+    open fun copyJMenuItemMousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
         try {
             this.copy()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "copyJMenuItemMousePressed", e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "copyJMenuItemMousePressed", e)
 }
 
 }
 
 
-open fun deleteJMenuItemMousePressed(evt: MouseEvent)
+    open fun deleteJMenuItemMousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
         try {
             
     var selectedTreePathArray: Array<TreePath?> = this.workAreaJTree!!.getSelectionPaths()!!
-            
 
 
 
@@ -677,8 +638,8 @@ open fun deleteJMenuItemMousePressed(evt: MouseEvent)
 
                         for (index in 0 until selectedTreePathArray!!.size)
 
-
         {
+
     var treePath: TreePath = selectedTreePathArray[index]!!
 
 this.remove(treePath)
@@ -688,32 +649,31 @@ this.repaint()
 }
 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "deleteJMenuItemMousePressed", e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "deleteJMenuItemMousePressed", e)
 }
 
 }
 
 
-open fun workAreaPropertiesJPanelMousePressed(evt: MouseEvent)
+    open fun workAreaPropertiesJPanelMousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 }
 
 
-    private var copyJMenuItem: JMenuItem
+    private var copyJMenuItem: javax.swing.JMenuItem
 
-    private var deleteJMenuItem: JMenuItem
+    private var deleteJMenuItem: javax.swing.JMenuItem
 
-    private var itemJPopupMenu: JPopupMenu
+    private var itemJPopupMenu: javax.swing.JPopupMenu
 
-    private var itemJScrollPane1: JScrollPane
+    private var itemJScrollPane1: javax.swing.JScrollPane
 
-    private var rotateJMenuItem: JMenuItem
+    private var rotateJMenuItem: javax.swing.JMenuItem
 
-    private var workAreaPropertiesJPanel: JPanel
+    private var workAreaPropertiesJPanel: javax.swing.JPanel
 
 }
                 

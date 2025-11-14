@@ -18,9 +18,11 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
+        
         import java.lang.System
         
         import java.lang.Runnable
@@ -56,15 +58,13 @@ import org.allbinary.math.AngleFactory
 import org.allbinary.string.CommonStrings
 import org.w3c.dom.Document
 
-open public class MyFrame : swing.JFrame
+open public class MyFrame : javax.swing.JFrame
                 , FileJDialogListenerInterface
                 , HashMapJDialogListenerInterface
-                , KeyListener {
+                , java.awt.event.KeyListener {
         
-
-        companion object {
-
-
+companion object {
+            
     private val MAXWORKAREAS: Int = 10
 
     private var numberOfWorkAreas: Int = 0
@@ -75,11 +75,10 @@ open public class MyFrame : swing.JFrame
 
     private val TEMPLATE_EXPORT_PATH: String = PATH +"/templates/export"
 
-open fun main(args: Array<String?>)
+    open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var args = args
+var args = args
 
         try {
             AngleFactory.getInstance()
@@ -88,33 +87,27 @@ MyFrame().
                             show()
 } catch(e: Exception)
             {
+
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 logUtil!!.put(CommonStrings.getInstance()!!.EXCEPTION, 
-                            null, 
-                            "main", e)
+                            null, "main", e)
 }
 
 }
 
 
-    var statusJLabel: JLabel
-
+    var statusJLabel: javax.swing.JLabel
 
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val guiLog: GuiLog = GuiLog.getInstance()!!
-            
 
     private val xslHelper: XslHelper = XslHelper.getInstance()!!
-            
 
     private val JAVA_TEMPLATE: String = "svgExport.xsl"
 
@@ -125,7 +118,8 @@ logUtil!!.put(CommonStrings.getInstance()!!.EXCEPTION,
     private var fileJDialog: FileJDialog
 
     private var rotateJDialog: RotateJDialog
-public constructor        (){initComponents()
+public constructor (){
+initComponents()
 this.setSize(Dimension(550, 400))
 this.mainJPanel!!.setSize(Dimension(550, 400))
 this.jTabbedPane!!.setSize(Dimension(550, 400))
@@ -135,191 +129,173 @@ this.rotateJDialog= RotateJDialog(this, false)
 }
 
 
-open fun initComponents()
+    open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
-{jToolBar1= JToolBar()
-jButton2= JButton()
-saveJButton= JButton()
-jButton1= JButton()
-openJButton= JButton()
-jButton3= JButton()
-jButton4= JButton()
-jButton41= JButton()
-jButton5= JButton()
-animateJButton= JButton()
-playJButton= JButton()
-stopJjButton= JButton()
-jPanel1= JPanel()
-mainJPanel= JPanel()
-jTabbedPane= JTabbedPane()
-statusJPanel= JPanel()
-statusJLabel= JLabel()
-menuJMenuBar= JMenuBar()
-fileJMenu= JMenu()
-newJMenuItem= JMenuItem()
-openJMenuItem= JMenuItem()
-saveJMenuItem= JMenuItem()
-saveAsJMenuItem= JMenuItem()
-exportJMenuItem1= JMenuItem()
-exitJMenuItem= JMenuItem()
-viewJMenu= JMenu()
-zoomInJMenuItem= JMenuItem()
-zoomOutJMenuItem= JMenuItem()
-objectJMenu= JMenu()
-explodeAllJMenuItem= JMenuItem()
-frameJMenu= JMenu()
-previousFrameJMenuItem= JMenuItem()
-nextFrameJMenuItem= JMenuItem()
-removeJMenuItem= JMenuItem()
-copyJMenuItem1= JMenuItem()
-insertAfterJMenuItem= JMenuItem()
-insertBeforeJMenuItem= JMenuItem()
-generateJMenu= JMenu()
-centerJMenuItem= JMenuItem()
-autoDamageJMenuItem= JMenuItem()
-autoExplodeJMenuItem= JMenuItem()
-autoGrowJMenuItem= JMenuItem()
-jMenuItem1= JMenuItem()
-autoRotateGenerationJMenuItem= JMenuItem()
-autoSheildMenuItem= JMenuItem()
-autoShrinkJMenuItem= JMenuItem()
-jMenu1= JMenu()
-addWindowListener(object: WindowAdapter()
+{
+jToolBar1= javax.swing.JToolBar()
+jButton2= javax.swing.JButton()
+saveJButton= javax.swing.JButton()
+jButton1= javax.swing.JButton()
+openJButton= javax.swing.JButton()
+jButton3= javax.swing.JButton()
+jButton4= javax.swing.JButton()
+jButton41= javax.swing.JButton()
+jButton5= javax.swing.JButton()
+animateJButton= javax.swing.JButton()
+playJButton= javax.swing.JButton()
+stopJjButton= javax.swing.JButton()
+jPanel1= javax.swing.JPanel()
+mainJPanel= javax.swing.JPanel()
+jTabbedPane= javax.swing.JTabbedPane()
+statusJPanel= javax.swing.JPanel()
+statusJLabel= javax.swing.JLabel()
+menuJMenuBar= javax.swing.JMenuBar()
+fileJMenu= javax.swing.JMenu()
+newJMenuItem= javax.swing.JMenuItem()
+openJMenuItem= javax.swing.JMenuItem()
+saveJMenuItem= javax.swing.JMenuItem()
+saveAsJMenuItem= javax.swing.JMenuItem()
+exportJMenuItem1= javax.swing.JMenuItem()
+exitJMenuItem= javax.swing.JMenuItem()
+viewJMenu= javax.swing.JMenu()
+zoomInJMenuItem= javax.swing.JMenuItem()
+zoomOutJMenuItem= javax.swing.JMenuItem()
+objectJMenu= javax.swing.JMenu()
+explodeAllJMenuItem= javax.swing.JMenuItem()
+frameJMenu= javax.swing.JMenu()
+previousFrameJMenuItem= javax.swing.JMenuItem()
+nextFrameJMenuItem= javax.swing.JMenuItem()
+removeJMenuItem= javax.swing.JMenuItem()
+copyJMenuItem1= javax.swing.JMenuItem()
+insertAfterJMenuItem= javax.swing.JMenuItem()
+insertBeforeJMenuItem= javax.swing.JMenuItem()
+generateJMenu= javax.swing.JMenu()
+centerJMenuItem= javax.swing.JMenuItem()
+autoDamageJMenuItem= javax.swing.JMenuItem()
+autoExplodeJMenuItem= javax.swing.JMenuItem()
+autoGrowJMenuItem= javax.swing.JMenuItem()
+jMenuItem1= javax.swing.JMenuItem()
+autoRotateGenerationJMenuItem= javax.swing.JMenuItem()
+autoSheildMenuItem= javax.swing.JMenuItem()
+autoShrinkJMenuItem= javax.swing.JMenuItem()
+jMenu1= javax.swing.JMenu()
+addWindowListener(object: java.awt.event.WindowAdapter()
                                 {
                                 
-open override fun windowClosing(evt: WindowEvent)
+    open override fun windowClosing(evt: java.awt.event.WindowEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 exitForm(evt)
 }
 
                                 }
                             )
-jButton2!!.setText(
-                            "New")
-jButton2!!.addActionListener(object: ActionListener()
+jButton2!!.setText("New")
+jButton2!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 jButton2ActionPerformed(evt)
 }
 
                                 }
                             )
 jToolBar1!!.add(jButton2)
-saveJButton!!.setText(
-                            "Save")
-saveJButton!!.addActionListener(object: ActionListener()
+saveJButton!!.setText("Save")
+saveJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 saveJButtonActionPerformed(evt)
 }
 
                                 }
                             )
 jToolBar1!!.add(saveJButton)
-jButton1!!.setText(
-                            "Export")
-jButton1!!.addActionListener(object: ActionListener()
+jButton1!!.setText("Export")
+jButton1!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 jButton1ActionPerformed(evt)
 }
 
                                 }
                             )
 jToolBar1!!.add(jButton1)
-openJButton!!.setText(
-                            "Open")
-openJButton!!.addActionListener(object: ActionListener()
+openJButton!!.setText("Open")
+openJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 openJButtonActionPerformed(evt)
 }
 
                                 }
                             )
 jToolBar1!!.add(openJButton)
-jButton3!!.setText(
-                            "Copy")
+jButton3!!.setText("Copy")
 jToolBar1!!.add(jButton3)
-jButton4!!.setText(
-                            "Insert Before")
+jButton4!!.setText("Insert Before")
 jToolBar1!!.add(jButton4)
-jButton41!!.setText(
-                            "Insert After")
+jButton41!!.setText("Insert After")
 jToolBar1!!.add(jButton41)
-jButton5!!.setText(
-                            "Delete")
+jButton5!!.setText("Delete")
 jToolBar1!!.add(jButton5)
-animateJButton!!.setText(
-                            "AnimateEdit")
+animateJButton!!.setText("AnimateEdit")
 jToolBar1!!.add(animateJButton)
-playJButton!!.setText(
-                            "Play")
-playJButton!!.addMouseListener(object: MouseAdapter()
+playJButton!!.setText("Play")
+playJButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
-open override fun mousePressed(evt: MouseEvent)
+    open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 playJButtonMousePressed(evt)
 }
 
                                 }
                             )
 jToolBar1!!.add(playJButton)
-stopJjButton!!.setText(
-                            "Stop")
-stopJjButton!!.addMouseListener(object: MouseAdapter()
+stopJjButton!!.setText("Stop")
+stopJjButton!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
-open override fun mousePressed(evt: MouseEvent)
+    open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 stopJjButtonMousePressed(evt)
 }
 
                                 }
                             )
 jToolBar1!!.add(stopJjButton)
-getContentPane()!!.add(jToolBar1, java!!.awt!!.BorderLayout.NORTH)
-jPanel1!!.setLayout(GridLayout(1, 0))
-mainJPanel!!.setLayout(GridLayout(1, 0))
-jTabbedPane!!.setMinimumSize(Dimension(550, 400))
-jTabbedPane!!.addChangeListener(object: ChangeListener()
+getContentPane()!!.add(jToolBar1, java.awt.BorderLayout.NORTH)
+jPanel1!!.setLayout(java.awt.GridLayout(1, 0))
+mainJPanel!!.setLayout(java.awt.GridLayout(1, 0))
+jTabbedPane!!.setMinimumSize(java.awt.Dimension(550, 400))
+jTabbedPane!!.addChangeListener(object: javax.swing.event.ChangeListener()
                                 {
                                 
-open override fun stateChanged(evt: ChangeEvent)
+    open override fun stateChanged(evt: javax.swing.event.ChangeEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 jTabbedPaneStateChanged(evt)
 }
 
@@ -327,104 +303,90 @@ jTabbedPaneStateChanged(evt)
                             )
 mainJPanel!!.add(jTabbedPane)
 jPanel1!!.add(mainJPanel)
-getContentPane()!!.add(jPanel1, java!!.awt!!.BorderLayout.CENTER)
-statusJPanel!!.setLayout(GridLayout(1, 0))
-statusJLabel!!.setText(
-                            "Status Bar")
+getContentPane()!!.add(jPanel1, java.awt.BorderLayout.CENTER)
+statusJPanel!!.setLayout(java.awt.GridLayout(1, 0))
+statusJLabel!!.setText("Status Bar")
 statusJPanel!!.add(statusJLabel)
-getContentPane()!!.add(statusJPanel, java!!.awt!!.BorderLayout.SOUTH)
-fileJMenu!!.setText(
-                            "File")
-fileJMenu!!.addActionListener(object: ActionListener()
+getContentPane()!!.add(statusJPanel, java.awt.BorderLayout.SOUTH)
+fileJMenu!!.setText("File")
+fileJMenu!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 fileJMenuActionPerformed(evt)
 }
 
                                 }
                             )
-newJMenuItem!!.setText(
-                            "New")
-newJMenuItem!!.addActionListener(object: ActionListener()
+newJMenuItem!!.setText("New")
+newJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 newJMenuItemActionPerformed(evt)
 }
 
                                 }
                             )
 fileJMenu!!.add(newJMenuItem)
-openJMenuItem!!.setText(
-                            "Open")
-openJMenuItem!!.addActionListener(object: ActionListener()
+openJMenuItem!!.setText("Open")
+openJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 openJMenuItemActionPerformed(evt)
 }
 
                                 }
                             )
 fileJMenu!!.add(openJMenuItem)
-saveJMenuItem!!.setText(
-                            "Save")
-saveJMenuItem!!.addMouseListener(object: MouseAdapter()
+saveJMenuItem!!.setText("Save")
+saveJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
-open override fun mousePressed(evt: MouseEvent)
+    open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 saveJMenuItemMousePressed(evt)
 }
 
                                 }
                             )
 fileJMenu!!.add(saveJMenuItem)
-saveAsJMenuItem!!.setText(
-                            "SaveAs")
+saveAsJMenuItem!!.setText("SaveAs")
 fileJMenu!!.add(saveAsJMenuItem)
-exportJMenuItem1!!.setText(
-                            "Export")
-exportJMenuItem1!!.addActionListener(object: ActionListener()
+exportJMenuItem1!!.setText("Export")
+exportJMenuItem1!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 exportJMenuItem1ActionPerformed(evt)
 }
 
                                 }
                             )
 fileJMenu!!.add(exportJMenuItem1)
-exitJMenuItem!!.setText(
-                            "Exit")
-exitJMenuItem!!.addActionListener(object: ActionListener()
+exitJMenuItem!!.setText("Exit")
+exitJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 exitJMenuItemActionPerformed(evt)
 }
 
@@ -432,34 +394,29 @@ exitJMenuItemActionPerformed(evt)
                             )
 fileJMenu!!.add(exitJMenuItem)
 menuJMenuBar!!.add(fileJMenu)
-viewJMenu!!.setText(
-                            "View")
-zoomInJMenuItem!!.setText(
-                            "Zoom In")
-zoomInJMenuItem!!.addMouseListener(object: MouseAdapter()
+viewJMenu!!.setText("View")
+zoomInJMenuItem!!.setText("Zoom In")
+zoomInJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
-open override fun mousePressed(evt: MouseEvent)
+    open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 zoomInJMenuItemMousePressed(evt)
 }
 
                                 }
                             )
 viewJMenu!!.add(zoomInJMenuItem)
-zoomOutJMenuItem!!.setText(
-                            "Zoom Out")
-zoomOutJMenuItem!!.addMouseListener(object: MouseAdapter()
+zoomOutJMenuItem!!.setText("Zoom Out")
+zoomOutJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
-open override fun mousePressed(evt: MouseEvent)
+    open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 zoomOutJMenuItemMousePressed(evt)
 }
 
@@ -467,18 +424,15 @@ zoomOutJMenuItemMousePressed(evt)
                             )
 viewJMenu!!.add(zoomOutJMenuItem)
 menuJMenuBar!!.add(viewJMenu)
-objectJMenu!!.setText(
-                            "Objects")
-explodeAllJMenuItem!!.setText(
-                            "Explode All")
-explodeAllJMenuItem!!.addMouseListener(object: MouseAdapter()
+objectJMenu!!.setText("Objects")
+explodeAllJMenuItem!!.setText("Explode All")
+explodeAllJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
-open override fun mousePressed(evt: MouseEvent)
+    open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 explodeAllJMenuItemMousePressed(evt)
 }
 
@@ -486,373 +440,326 @@ explodeAllJMenuItemMousePressed(evt)
                             )
 objectJMenu!!.add(explodeAllJMenuItem)
 menuJMenuBar!!.add(objectJMenu)
-frameJMenu!!.setText(
-                            "Frame")
-frameJMenu!!.addActionListener(object: ActionListener()
+frameJMenu!!.setText("Frame")
+frameJMenu!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 frameJMenuActionPerformed(evt)
 }
 
                                 }
                             )
-previousFrameJMenuItem!!.setText(
-                            "Previous")
+previousFrameJMenuItem!!.setText("Previous")
 frameJMenu!!.add(previousFrameJMenuItem)
-nextFrameJMenuItem!!.setText(
-                            "Next")
+nextFrameJMenuItem!!.setText("Next")
 frameJMenu!!.add(nextFrameJMenuItem)
-removeJMenuItem!!.setText(
-                            "Remove")
+removeJMenuItem!!.setText("Remove")
 frameJMenu!!.add(removeJMenuItem)
-copyJMenuItem1!!.setText(
-                            "Copy")
+copyJMenuItem1!!.setText("Copy")
 frameJMenu!!.add(copyJMenuItem1)
-insertAfterJMenuItem!!.setText(
-                            "Ins After")
+insertAfterJMenuItem!!.setText("Ins After")
 frameJMenu!!.add(insertAfterJMenuItem)
-insertBeforeJMenuItem!!.setText(
-                            "Ins Before")
+insertBeforeJMenuItem!!.setText("Ins Before")
 frameJMenu!!.add(insertBeforeJMenuItem)
 menuJMenuBar!!.add(frameJMenu)
-generateJMenu!!.setText(
-                            "Generate")
-centerJMenuItem!!.setText(
-                            "Center")
-centerJMenuItem!!.addActionListener(object: ActionListener()
+generateJMenu!!.setText("Generate")
+centerJMenuItem!!.setText("Center")
+centerJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 centerJMenuItemActionPerformed(evt)
 }
 
                                 }
                             )
 generateJMenu!!.add(centerJMenuItem)
-autoDamageJMenuItem!!.setText(
-                            "Damage")
+autoDamageJMenuItem!!.setText("Damage")
 generateJMenu!!.add(autoDamageJMenuItem)
-autoExplodeJMenuItem!!.setText(
-                            "Explode")
-autoExplodeJMenuItem!!.addMouseListener(object: MouseAdapter()
+autoExplodeJMenuItem!!.setText("Explode")
+autoExplodeJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
-open override fun mousePressed(evt: MouseEvent)
+    open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 autoExplodeJMenuItemMousePressed(evt)
 }
 
                                 }
                             )
 generateJMenu!!.add(autoExplodeJMenuItem)
-autoGrowJMenuItem!!.setText(
-                            "Grow")
+autoGrowJMenuItem!!.setText("Grow")
 generateJMenu!!.add(autoGrowJMenuItem)
-jMenuItem1!!.setText(
-                            "Mirror")
-jMenuItem1!!.addActionListener(object: ActionListener()
+jMenuItem1!!.setText("Mirror")
+jMenuItem1!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 jMenuItem1ActionPerformed(evt)
 }
 
                                 }
                             )
 generateJMenu!!.add(jMenuItem1)
-autoRotateGenerationJMenuItem!!.setText(
-                            "Rotate")
-autoRotateGenerationJMenuItem!!.addMouseListener(object: MouseAdapter()
+autoRotateGenerationJMenuItem!!.setText("Rotate")
+autoRotateGenerationJMenuItem!!.addMouseListener(object: java.awt.event.MouseAdapter()
                                 {
                                 
-open override fun mousePressed(evt: MouseEvent)
+    open override fun mousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 autoRotateGenerationJMenuItemMousePressed(evt)
 }
 
                                 }
                             )
 generateJMenu!!.add(autoRotateGenerationJMenuItem)
-autoSheildMenuItem!!.setText(
-                            "Shield")
+autoSheildMenuItem!!.setText("Shield")
 generateJMenu!!.add(autoSheildMenuItem)
-autoShrinkJMenuItem!!.setText(
-                            "Shrink")
+autoShrinkJMenuItem!!.setText("Shrink")
 generateJMenu!!.add(autoShrinkJMenuItem)
 menuJMenuBar!!.add(generateJMenu)
-jMenu1!!.setText(
-                            "Help")
+jMenu1!!.setText("Help")
 menuJMenuBar!!.add(jMenu1)
 setJMenuBar(menuJMenuBar)
 pack()
 }
 
 
-open fun explodeAllJMenuItemMousePressed(evt: MouseEvent)
+    open fun explodeAllJMenuItemMousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
         try {
             MyCanvasEventService.fire(MyCanvasEvent(MyCanvasEventSource(MyCanvasEventService.EXPLODE, 
                             null) as Object))
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "explodeAllJMenuItemMousePressed", e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "explodeAllJMenuItemMousePressed", e)
 }
 
 }
 
 
-open fun autoExplodeJMenuItemMousePressed(evt: MouseEvent)
+    open fun autoExplodeJMenuItemMousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
         try {
             MyCanvasEventService.fire(MyCanvasEvent(MyCanvasEventSource(MyCanvasEventService.AUTOEXPLODE, 
                             null) as Object))
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "autoExplodeJMenuItemMousePressed", e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "autoExplodeJMenuItemMousePressed", e)
 }
 
 }
 
 
-open fun stopJjButtonMousePressed(evt: MouseEvent)
+    open fun stopJjButtonMousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 this.getSelectedWorkArea()!!.stop()
 }
 
 
-open fun playJButtonMousePressed(evt: MouseEvent)
+    open fun playJButtonMousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 this.getSelectedWorkArea()!!.play()
 }
 
 
-open fun autoRotateGenerationJMenuItemMousePressed(evt: MouseEvent)
+    open fun autoRotateGenerationJMenuItemMousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 this.rotateJDialog!!.setVisible(true)
 }
 
 
-open fun zoomOutJMenuItemMousePressed(evt: MouseEvent)
+    open fun zoomOutJMenuItemMousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 getSelectedWorkArea()!!.changeZoom( -1)
 }
 
 
-open fun zoomInJMenuItemMousePressed(evt: MouseEvent)
+    open fun zoomInJMenuItemMousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 getSelectedWorkArea()!!.changeZoom(1)
 }
 
 
-open fun openJMenuItemActionPerformed(evt: ActionEvent)
+    open fun openJMenuItemActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 this.openGraphics()
 }
 
 
-open fun exportJMenuItem1ActionPerformed(evt: ActionEvent)
+    open fun exportJMenuItem1ActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 this.export()
 }
 
 
-open fun saveJMenuItemMousePressed(evt: MouseEvent)
+    open fun saveJMenuItemMousePressed(evt: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 this.save()
 }
 
 
-open fun jTabbedPaneStateChanged(evt: ChangeEvent)
+    open fun jTabbedPaneStateChanged(evt: javax.swing.event.ChangeEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 this.updateSelectedWorkArea()
 }
 
 
-open fun frameJMenuActionPerformed(evt: ActionEvent)
+    open fun frameJMenuActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 }
 
 
-open fun exitJMenuItemActionPerformed(evt: ActionEvent)
+    open fun exitJMenuItemActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 System.exit(0)
 }
 
 
-open fun newJMenuItemActionPerformed(evt: ActionEvent)
+    open fun newJMenuItemActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 this.newGraphics()
 }
 
 
-open fun fileJMenuActionPerformed(evt: ActionEvent)
+    open fun fileJMenuActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 }
 
 
-open fun exitForm(evt: WindowEvent)
+    open fun exitForm(evt: java.awt.event.WindowEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 System.exit(0)
 }
 
 
-open fun openJButtonActionPerformed(evt: ActionEvent)
+    open fun openJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 this.openGraphics()
 }
 
 
-open fun jButton2ActionPerformed(evt: ActionEvent)
+    open fun jButton2ActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 this.newGraphics()
 }
 
 
-open fun centerJMenuItemActionPerformed(evt: ActionEvent)
+    open fun centerJMenuItemActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
         try {
             MyCanvasEventService.fire(MyCanvasEvent(MyCanvasEventSource(MyCanvasEventService.CENTER, 
                             null) as Object))
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "centerJMenuItemActionPerformed", e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "centerJMenuItemActionPerformed", e)
 }
 
 }
 
 
-open fun saveJButtonActionPerformed(evt: ActionEvent)
+    open fun saveJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 this.save()
 }
 
 
-open fun jButton1ActionPerformed(evt: ActionEvent)
+    open fun jButton1ActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 this.export()
 }
 
 
-open fun jMenuItem1ActionPerformed(evt: ActionEvent)
+    open fun jMenuItem1ActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
         try {
             this.getSelectedWorkArea()!!.autoMirror()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "centerJMenuItemActionPerformed", e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "centerJMenuItemActionPerformed", e)
 }
 
 }
 
 
-open fun onFiles(files: Array<File?>)
+    open fun onFiles(files: Array<File?>)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var files = files
+var files = files
 
         try {
-            logUtil!!.put("Reading: " +files, this, 
-                            "onFiles")
+            logUtil!!.put("Reading: " +files, this, "onFiles")
 
 
 
 
-                        for (index in 0 until files!!.size)
-
+                        for (index in 0 until files.size)
 
         {
+
     var document: Document = DomHelper.getInstance()!!.createDocument(files[index]!!)!!
-            
 
 
     var workAreaJPanel: WorkAreaJPanel = WorkAreaJPanel(WorkAreaDom(document), this.getSize())
@@ -863,35 +770,35 @@ this.add(workAreaJPanel as WorkAreaJPanelInterface)
 
 this.fileJDialog!!.setVisible(false)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "onFiles", e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "onFiles", e)
 }
 
 }
 
 
-open fun newGraphics()
+    open fun newGraphics()
         //nullable = true from not(false or (false and true)) = true
 {
+
         try {
             
     var newName: String = "graphic" +this.numberOfWorkAreas
 
 
     var dim: Dimension = this.getSize()!!
-            
 
 
     var newDialog: NewWorkAreaJDialog = NewWorkAreaJDialog(this, false, dim, newName)
 
 } catch(e: Exception)
             {
+
     
                         if(LOGGING.contains(LOGGING.MENUEVENT))
                         
                                     {
-                                    guiLog!!.put(commonStrings!!.EXCEPTION, this, 
-                            "newJMenuItemActionPerformed", e)
+                                    guiLog!!.put(commonStrings!!.EXCEPTION, this, "newJMenuItemActionPerformed", e)
 
                                     }
                                 
@@ -900,22 +807,21 @@ open fun newGraphics()
 }
 
 
-open fun openGraphics()
+    open fun openGraphics()
         //nullable = true from not(false or (false and true)) = true
 {
+
         try {
-            logUtil!!.put(
-                            "Starting", this, 
-                            "openImageJMenuItemActionPerformed")
+            logUtil!!.put("Starting", this, "openImageJMenuItemActionPerformed")
 fileJDialog!!.setVisible(true)
 } catch(e: Exception)
             {
+
     
                         if(LOGGING.contains(LOGGING.MENUEVENT))
                         
                                     {
-                                    guiLog!!.put(commonStrings!!.EXCEPTION, this, 
-                            "open", e)
+                                    guiLog!!.put(commonStrings!!.EXCEPTION, this, "open", e)
 
                                     }
                                 
@@ -924,9 +830,10 @@ fileJDialog!!.setVisible(true)
 }
 
 
-open fun export()
+    open fun export()
         //nullable = true from not(false or (false and true)) = true
 {
+
         try {
             
     var workAreaJPanel: WorkAreaJPanelInterface = this.jTabbedPane!!.getSelectedComponent() as WorkAreaJPanelInterface
@@ -936,19 +843,17 @@ open fun export()
 
 
     var document: Document = workAreaJPanel!!.toDocument()!!
-            
 
-logUtil!!.put("Export: " +DomHelper.getInstance()!!.toString(document), this, 
-                            "exportJMenuItem1ActionPerformed")
+logUtil!!.put("Export: " +DomHelper.getInstance()!!.toString(document), this, "exportJMenuItem1ActionPerformed")
 xslHelper!!.export(file, this.TEMPLATE_EXPORT_PATH +"/" +this.JAVA_TEMPLATE, document)
 } catch(e: Exception)
             {
+
     
                         if(LOGGING.contains(LOGGING.MENUEVENT))
                         
                                     {
-                                    guiLog!!.put(commonStrings!!.EXCEPTION, this, 
-                            "export", e)
+                                    guiLog!!.put(commonStrings!!.EXCEPTION, this, "export", e)
 
                                     }
                                 
@@ -957,9 +862,10 @@ xslHelper!!.export(file, this.TEMPLATE_EXPORT_PATH +"/" +this.JAVA_TEMPLATE, doc
 }
 
 
-open fun save()
+    open fun save()
         //nullable = true from not(false or (false and true)) = true
 {
+
         try {
             
     var workAreaJPanel: WorkAreaJPanelInterface = this.jTabbedPane!!.getSelectedComponent() as WorkAreaJPanelInterface
@@ -967,6 +873,7 @@ open fun save()
 DomHelper.getInstance()!!.save(File(this.SAVE_PATH +"/" +workAreaJPanel!!.getName() +SAVEEXTENSION), workAreaJPanel!!.toDocument())
 } catch(e: Exception)
             {
+
     
                         if(LOGGING.contains(LOGGING.MENUEVENT))
                         
@@ -982,24 +889,24 @@ DomHelper.getInstance()!!.save(File(this.SAVE_PATH +"/" +workAreaJPanel!!.getNam
 
                 @Throws(Exception::class)
             
-open fun onHashMap(hashMap: HashMap<Any, Any>)
+    open fun onHashMap(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
+var hashMap = hashMap
 
-                    var hashMap = hashMap
-
-    var angleIncrementInteger: Integer = hashMap!!.get(Integer.valueOf(0)) as Integer
+    var angleIncrementInteger: Integer = hashMap!!.get(Integer(Integer.valueOf(0))) as Integer
 
 
-    var totalRotationInteger: Integer = hashMap!!.get(Integer.valueOf(1)) as Integer
+    var totalRotationInteger: Integer = hashMap!!.get(Integer(Integer.valueOf(1))) as Integer
 
-this.getSelectedWorkArea()!!.autoRotate(angleIncrementInteger!!.toInt()totalRotationInteger!!.toInt())
+this.getSelectedWorkArea()!!.autoRotate(angleIncrementInteger!!.toInt(), totalRotationInteger!!.toInt())
 }
 
 
-open fun getSelectedWorkArea()
+    open fun getSelectedWorkArea()
         //nullable = true from not(false or (false and true)) = true
 : WorkAreaJPanelInterface{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1007,11 +914,11 @@ open fun getSelectedWorkArea()
 }
 
 
-open fun updateSelectedWorkArea()
+    open fun updateSelectedWorkArea()
         //nullable = true from not(false or (false and true)) = true
 {
+
     var numberOfTabs: Int = this.jTabbedPane!!.getTabCount()!!
-            
 
 
 
@@ -1019,8 +926,8 @@ open fun updateSelectedWorkArea()
 
                         for (index in 0 until numberOfTabs)
 
-
         {
+
     var workAreaJPanel: WorkAreaJPanelInterface = this.jTabbedPane!!.getComponentAt(index) as WorkAreaJPanelInterface
 
 workAreaJPanel!!.deselect()
@@ -1045,11 +952,10 @@ workAreaJPanel!!.deselect()
 
                 @Throws(Exception::class)
             
-open fun add(newCanvasInterface: WorkAreaJPanelInterface)
+    open fun add(newCanvasInterface: WorkAreaJPanelInterface)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var newCanvasInterface = newCanvasInterface
+var newCanvasInterface = newCanvasInterface
 
         try {
             this.numberOfWorkAreas++
@@ -1074,12 +980,12 @@ animationThread!!.start()
 this.updateSelectedWorkArea()
 } catch(e: Exception)
             {
+
     
                         if(LOGGING.contains(LOGGING.GRAPHICSCREATION))
                         
                                     {
-                                    guiLog!!.put(commonStrings!!.EXCEPTION, this, 
-                            "addNewCanvas", e)
+                                    guiLog!!.put(commonStrings!!.EXCEPTION, this, "addNewCanvas", e)
 
                                     }
                                 
@@ -1088,122 +994,119 @@ this.updateSelectedWorkArea()
 }
 
 
-open fun keyPressed(keyEvent: KeyEvent)
+    open fun keyPressed(keyEvent: java.awt.event.KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var keyEvent = keyEvent
+var keyEvent = keyEvent
 this.getSelectedWorkArea()!!.keyPressed(keyEvent)
 }
 
 
-open fun keyReleased(keyEvent: KeyEvent)
+    open fun keyReleased(keyEvent: java.awt.event.KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var keyEvent = keyEvent
+var keyEvent = keyEvent
 }
 
 
-open fun keyTyped(keyEvent: KeyEvent)
+    open fun keyTyped(keyEvent: java.awt.event.KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var keyEvent = keyEvent
+var keyEvent = keyEvent
 }
 
 
-    private var animateJButton: JButton
+    private var animateJButton: javax.swing.JButton
 
-    private var autoDamageJMenuItem: JMenuItem
+    private var autoDamageJMenuItem: javax.swing.JMenuItem
 
-    private var autoExplodeJMenuItem: JMenuItem
+    private var autoExplodeJMenuItem: javax.swing.JMenuItem
 
-    private var autoGrowJMenuItem: JMenuItem
+    private var autoGrowJMenuItem: javax.swing.JMenuItem
 
-    private var autoRotateGenerationJMenuItem: JMenuItem
+    private var autoRotateGenerationJMenuItem: javax.swing.JMenuItem
 
-    private var autoSheildMenuItem: JMenuItem
+    private var autoSheildMenuItem: javax.swing.JMenuItem
 
-    private var autoShrinkJMenuItem: JMenuItem
+    private var autoShrinkJMenuItem: javax.swing.JMenuItem
 
-    private var centerJMenuItem: JMenuItem
+    private var centerJMenuItem: javax.swing.JMenuItem
 
-    private var copyJMenuItem1: JMenuItem
+    private var copyJMenuItem1: javax.swing.JMenuItem
 
-    private var exitJMenuItem: JMenuItem
+    private var exitJMenuItem: javax.swing.JMenuItem
 
-    private var explodeAllJMenuItem: JMenuItem
+    private var explodeAllJMenuItem: javax.swing.JMenuItem
 
-    private var exportJMenuItem1: JMenuItem
+    private var exportJMenuItem1: javax.swing.JMenuItem
 
-    private var fileJMenu: JMenu
+    private var fileJMenu: javax.swing.JMenu
 
-    private var frameJMenu: JMenu
+    private var frameJMenu: javax.swing.JMenu
 
-    private var generateJMenu: JMenu
+    private var generateJMenu: javax.swing.JMenu
 
-    private var insertAfterJMenuItem: JMenuItem
+    private var insertAfterJMenuItem: javax.swing.JMenuItem
 
-    private var insertBeforeJMenuItem: JMenuItem
+    private var insertBeforeJMenuItem: javax.swing.JMenuItem
 
-    private var jButton1: JButton
+    private var jButton1: javax.swing.JButton
 
-    private var jButton2: JButton
+    private var jButton2: javax.swing.JButton
 
-    private var jButton3: JButton
+    private var jButton3: javax.swing.JButton
 
-    private var jButton4: JButton
+    private var jButton4: javax.swing.JButton
 
-    private var jButton41: JButton
+    private var jButton41: javax.swing.JButton
 
-    private var jButton5: JButton
+    private var jButton5: javax.swing.JButton
 
-    private var jMenu1: JMenu
+    private var jMenu1: javax.swing.JMenu
 
-    private var jMenuItem1: JMenuItem
+    private var jMenuItem1: javax.swing.JMenuItem
 
-    private var jPanel1: JPanel
+    private var jPanel1: javax.swing.JPanel
 
-    private var jTabbedPane: JTabbedPane
+    private var jTabbedPane: javax.swing.JTabbedPane
 
-    private var jToolBar1: JToolBar
+    private var jToolBar1: javax.swing.JToolBar
 
-    private var mainJPanel: JPanel
+    private var mainJPanel: javax.swing.JPanel
 
-    private var menuJMenuBar: JMenuBar
+    private var menuJMenuBar: javax.swing.JMenuBar
 
-    private var newJMenuItem: JMenuItem
+    private var newJMenuItem: javax.swing.JMenuItem
 
-    private var nextFrameJMenuItem: JMenuItem
+    private var nextFrameJMenuItem: javax.swing.JMenuItem
 
-    private var objectJMenu: JMenu
+    private var objectJMenu: javax.swing.JMenu
 
-    private var openJButton: JButton
+    private var openJButton: javax.swing.JButton
 
-    private var openJMenuItem: JMenuItem
+    private var openJMenuItem: javax.swing.JMenuItem
 
-    private var playJButton: JButton
+    private var playJButton: javax.swing.JButton
 
-    private var previousFrameJMenuItem: JMenuItem
+    private var previousFrameJMenuItem: javax.swing.JMenuItem
 
-    private var removeJMenuItem: JMenuItem
+    private var removeJMenuItem: javax.swing.JMenuItem
 
-    private var saveAsJMenuItem: JMenuItem
+    private var saveAsJMenuItem: javax.swing.JMenuItem
 
-    private var saveJButton: JButton
+    private var saveJButton: javax.swing.JButton
 
-    private var saveJMenuItem: JMenuItem
+    private var saveJMenuItem: javax.swing.JMenuItem
 
-    private var statusJPanel: JPanel
+    private var statusJPanel: javax.swing.JPanel
 
-    private var stopJjButton: JButton
+    private var stopJjButton: javax.swing.JButton
 
-    private var viewJMenu: JMenu
+    private var viewJMenu: javax.swing.JMenu
 
-    private var zoomInJMenuItem: JMenuItem
+    private var zoomInJMenuItem: javax.swing.JMenuItem
 
-    private var zoomOutJMenuItem: JMenuItem
+    private var zoomOutJMenuItem: javax.swing.JMenuItem
 
 }
                 

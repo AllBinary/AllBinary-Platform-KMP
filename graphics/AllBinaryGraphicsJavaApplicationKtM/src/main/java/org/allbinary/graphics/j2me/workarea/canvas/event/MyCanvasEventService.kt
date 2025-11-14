@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -32,11 +30,9 @@ open public class MyCanvasEventService
             : Object
          {
         
-
-        companion object {
-
-
-    private var listenerList: EventListenerList = EventListenerList()
+companion object {
+            
+    private var listenerList: javax.swing.event.EventListenerList = javax.swing.event.EventListenerList()
 
     var DELETE: String = "delete"
 
@@ -51,122 +47,121 @@ open public class MyCanvasEventService
     var AUTOEXPLODE: String = "autoExplode"
 
     var CENTER: String = "center"
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun addListener(listener: MyCanvasEventListener)
+    open fun addListener(listener: MyCanvasEventListener)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var listener = listener
-listenerList!!.add(listener!!::class as Class, listener as EventListener)
+var listener = listener
+listenerList!!.add(listener::class as Class<*>, listener as java.util.EventListener)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun removeListener(listener: MyCanvasEventListener)
+    open fun removeListener(listener: MyCanvasEventListener)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var listener = listener
-listenerList!!.remove(listener!!::class as Class, listener as EventListener)
+var listener = listener
+listenerList!!.remove(listener::class as Class<*>, listener as java.util.EventListener)
 }
 
 
                 @Throws(Exception::class)
-            
-open fun fire(evt: MyCanvasEvent)
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
+    open fun fire(evt: MyCanvasEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
     var listeners: Array<Any?> = listenerList!!.getListenerList()!!
-            
 
 
 
 
 
-                        for (i in 0 until listeners!!.size)
-
+                        for (i in 0 until listeners.size)
 
         {
+
     
                         if(listeners[i] == listeners[i +1]!!.::class)
                         
                                     {
                                     
     
-                        if(evt!!.getCommand()!!.compareTo(DELETE) == 0)
+                        if(evt.getCommand()!!.compareTo(DELETE) == 0)
                         
                                     {
                                      = listeners[i +1]!! as MyCanvasEventListener
 .
-                                delete(evt)
+                    delete(evt)
 
                                     }
                                 
                              else 
     
-                        if(evt!!.getCommand()!!.compareTo(DUPLICATE) == 0)
+                        if(evt.getCommand()!!.compareTo(DUPLICATE) == 0)
                         
                                     {
                                      = listeners[i +1]!! as MyCanvasEventListener
 .
-                                duplicate(evt)
+                    duplicate(evt)
 
                                     }
                                 
                              else 
     
-                        if(evt!!.getCommand()!!.compareTo(SELECT) == 0)
+                        if(evt.getCommand()!!.compareTo(SELECT) == 0)
                         
                                     {
                                      = listeners[i +1]!! as MyCanvasEventListener
 .
-                                select(evt)
+                    select(evt)
 
                                     }
                                 
                              else 
     
-                        if(evt!!.getCommand()!!.compareTo(ROTATE) == 0)
+                        if(evt.getCommand()!!.compareTo(ROTATE) == 0)
                         
                                     {
                                      = listeners[i +1]!! as MyCanvasEventListener
 .
-                                rotate(evt)
+                    rotate(evt)
 
                                     }
                                 
                              else 
     
-                        if(evt!!.getCommand()!!.compareTo(EXPLODE) == 0)
+                        if(evt.getCommand()!!.compareTo(EXPLODE) == 0)
                         
                                     {
                                      = listeners[i +1]!! as MyCanvasEventListener
 .
-                                explode(evt)
+                    explode(evt)
 
                                     }
                                 
                              else 
     
-                        if(evt!!.getCommand()!!.compareTo(AUTOEXPLODE) == 0)
+                        if(evt.getCommand()!!.compareTo(AUTOEXPLODE) == 0)
                         
                                     {
                                      = listeners[i +1]!! as MyCanvasEventListener
 .
-                                autoExplode(evt)
+                    autoExplode(evt)
 
                                     }
                                 
                              else 
     
-                        if(evt!!.getCommand()!!.compareTo(CENTER) == 0)
+                        if(evt.getCommand()!!.compareTo(CENTER) == 0)
                         
                                     {
                                      = listeners[i +1]!! as MyCanvasEventListener
 .
-                                center(evt)
+                    center(evt)
 
                                     }
                                 
@@ -176,13 +171,13 @@ open fun fire(evt: MyCanvasEvent)
 }
 
 }
-
 
 
         }
-            private constructor        ()
+            private constructor ()
             : super()
-        {}
+        {
+}
 
 
 }

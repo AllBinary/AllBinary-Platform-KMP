@@ -18,12 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
-        
-        import java.lang.Runnable
+
+        import java.lang.Object        
         
         import java.lang.Thread
         
@@ -31,6 +27,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.thread.ARunnable
 import java.awt
 import java.net.URI
 import java.net.URL
@@ -63,20 +60,19 @@ import org.allbinary.logic.system.security.licensing.InputAutomationClientInform
 import org.allbinary.string.CommonStrings
 import org.allbinary.thread.RunnableInterface
 
-open public class InputAutomationJFrame : swing.JFrame
+open public class InputAutomationJFrame : javax.swing.JFrame
                 , InputAutomationConfigurationModuleChangeListener
                 , InputAutomationRobotChangeListener
                 , HelpSetListener {
         
-
-        companion object {
-
-
+companion object {
+            
     private var INPUTAUTOMATION_JFRAME: InputAutomationJFrame
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : InputAutomationJFrame{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -84,42 +80,39 @@ open fun getInstance()
 }
 
 
-open fun destroy()
+    open fun destroy()
         //nullable = true from not(false or (false and true)) = true
-{INPUTAUTOMATION_JFRAME.setVisible(false)
+{
+INPUTAUTOMATION_JFRAME.setVisible(false)
 }
 
 
-open fun create(inputAutomationBundleActivatorListenerInterface: InputAutomationBundleActivatorListenerInterface)
+    open fun create(inputAutomationBundleActivatorListenerInterface: InputAutomationBundleActivatorListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var inputAutomationBundleActivatorListenerInterface = inputAutomationBundleActivatorListenerInterface
+    //var inputAutomationBundleActivatorListenerInterface = inputAutomationBundleActivatorListenerInterface
 LogConfigTypeFactory.getInstance()
 
     var appUrlGlobals: AppUrlGlobals = AppUrlGlobals()
 
-appUrlGlobals!!.setWebappPath(
-                            "G:/mnt/bc/mydev/work_automation/automation/run/")
+appUrlGlobals!!.setWebappPath("G:/mnt/bc/mydev/work_automation/automation/run/")
 URLGLOBALS.init(appUrlGlobals)
-WebappClassLoaderInfo.setLoader(appUrlGlobals!!::class.getClassLoader())
-java!!.awt!!.EventQueue.invokeLater(object: Runnable()
+WebappClassLoaderInfo.setLoader(appUrlGlobals!!::class.java.classLoader)
+java.awt.EventQueue.invokeLater(object: ARunnable()
                                 {
                                 
-open fun run()
+    open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
+
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
         try {
-            logUtil!!.put(
-                            "Running", this, commonStrings!!.RUN)
+            logUtil!!.put("Running", this, commonStrings!!.RUN)
 INPUTAUTOMATION_JFRAME= InputAutomationJFrame()
 InputRobotFactory.getInstance()!!.addListener(InputAutomationJFrame.getInstance())
 
@@ -136,7 +129,8 @@ inputAutomationBundleActivatorListenerInterface!!.useServices()
                                 
 INPUTAUTOMATION_JFRAME.setVisible(true)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
 
 }
@@ -148,24 +142,20 @@ INPUTAUTOMATION_JFRAME.setVisible(true)
 
                 @Throws(Exception::class)
             
-open fun main(args: Array<String?>)
+    open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var args = args
+var args = args
 InputAutomationJFrame.create(
                             null)
 }
 
 
-
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var inputAutomationModuleFactory: InputAutomationModuleFactoryFactory
 
@@ -177,18 +167,15 @@ InputAutomationJFrame.create(
 
     private var helpSet: HelpSet
 
-    private val uri: URI = URI(
-                            "http://geocities.com/allbinary/")
-public constructor        (){initComponents()
+    private val uri: URI = URI("http://geocities.com/allbinary/")
+public constructor (){
+initComponents()
 
-    var url: URL = this::class.getResource(
-                            "/help/Help.hs")!!
-            
+    var url: URL = this::class.getResource("/help/Help.hs")!!
 
 logUtil!!.put("URL: " +url, this, this.commonStrings!!.CONSTRUCTOR)
 helpSet= JavaHelpUtil.getInstance()!!.getHelpSet(url)
-url= this::class.getResource(
-                            "/resources/allbinaryicon8bit.jpg")
+url= this::class.getResource("/resources/allbinaryicon8bit.jpg")
 
     var imageIcon: ImageIcon = ImageIcon(url)
 
@@ -197,123 +184,117 @@ this.init()
 }
 
 
-open fun helpSetAdded(helpSetEvent: HelpSetEvent)
+    open fun helpSetAdded(helpSetEvent: HelpSetEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var helpSetEvent = helpSetEvent
+    //var helpSetEvent = helpSetEvent
 this.helpSet!!.add(helpSetEvent!!.getHelpSet())
 }
 
 
-open fun helpSetRemoved(helpSetEvent: HelpSetEvent)
+    open fun helpSetRemoved(helpSetEvent: HelpSetEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var helpSetEvent = helpSetEvent
+    //var helpSetEvent = helpSetEvent
 this.helpSet!!.remove(helpSetEvent!!.getHelpSet())
 }
 
 
                 @Throws(Exception::class)
             
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
-{InputAutomationConfigurationFactory.init(InputAutomationClientInformationFactory.getInstance())
+{
+InputAutomationConfigurationFactory.init(InputAutomationClientInformationFactory.getInstance())
 this.inputAutomationModuleFactory= InputAutomationModuleFactoryFactory(this)
  = 
 .
-                                execute()
+                    execute()
 this.gameRobotJTabbedPane!!.setEnabledAt(1, false)
 this.gameRobotJTabbedPane!!.setSelectedIndex(0)
 }
 
 
-open fun initComponents()
+    open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
-{noModuleSelectedJDialog= JDialog()
-noModuleSelectedJLabel= JLabel()
-gameRobotJTabbedPane= JTabbedPane()
-inputAutomationModuleJPanel= JPanel()
-jScrollPane1= JScrollPane()
-inputAutomationModuleJList= JList()
-automationModuleConfigurationJPanel= JPanel()
-mainJMenuBar= JMenuBar()
-processingJMenu= JMenu()
-startJMenuItem= JMenuItem()
-stopJMenuItem= JMenuItem()
-optionsJMenu= JMenu()
-stopOnFocusJCheckBoxMenuItem= JCheckBoxMenuItem()
-toolsJMenu= JMenu()
-helpJMenuItem= JMenuItem()
-updatesJMenuItem= JMenuItem()
-subscriptionJMenuItem= JMenuItem()
-modulesJMenuItem= JMenuItem()
-aboutJMenuItem= JMenuItem()
-noModuleSelectedJDialog!!.setMinimumSize(Dimension(200, 100))
-noModuleSelectedJLabel!!.setText(
-                            "Please Select A Module")
+{
+noModuleSelectedJDialog= javax.swing.JDialog()
+noModuleSelectedJLabel= javax.swing.JLabel()
+gameRobotJTabbedPane= javax.swing.JTabbedPane()
+inputAutomationModuleJPanel= javax.swing.JPanel()
+jScrollPane1= javax.swing.JScrollPane()
+inputAutomationModuleJList= javax.swing.JList()
+automationModuleConfigurationJPanel= javax.swing.JPanel()
+mainJMenuBar= javax.swing.JMenuBar()
+processingJMenu= javax.swing.JMenu()
+startJMenuItem= javax.swing.JMenuItem()
+stopJMenuItem= javax.swing.JMenuItem()
+optionsJMenu= javax.swing.JMenu()
+stopOnFocusJCheckBoxMenuItem= javax.swing.JCheckBoxMenuItem()
+toolsJMenu= javax.swing.JMenu()
+helpJMenuItem= javax.swing.JMenuItem()
+updatesJMenuItem= javax.swing.JMenuItem()
+subscriptionJMenuItem= javax.swing.JMenuItem()
+modulesJMenuItem= javax.swing.JMenuItem()
+aboutJMenuItem= javax.swing.JMenuItem()
+noModuleSelectedJDialog!!.setMinimumSize(java.awt.Dimension(200, 100))
+noModuleSelectedJLabel!!.setText("Please Select A Module")
 
-    var noModuleSelectedJDialogLayout: GroupLayout = GroupLayout(noModuleSelectedJDialog!!.getContentPane())
+    var noModuleSelectedJDialogLayout: javax.swing.GroupLayout = javax.swing.GroupLayout(noModuleSelectedJDialog!!.getContentPane())
 
 noModuleSelectedJDialog!!.getContentPane()!!.setLayout(noModuleSelectedJDialogLayout)
-noModuleSelectedJDialogLayout!!.setHorizontalGroup(noModuleSelectedJDialogLayout!!.createParallelGroup(javax!!.swing!!.GroupLayout.Alignment.LEADING)!!.addGroup(noModuleSelectedJDialogLayout!!.createSequentialGroup()!!.addContainerGap()!!.addComponent(noModuleSelectedJLabel)!!.addContainerGap(javax!!.swing!!.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-noModuleSelectedJDialogLayout!!.setVerticalGroup(noModuleSelectedJDialogLayout!!.createParallelGroup(javax!!.swing!!.GroupLayout.Alignment.LEADING)!!.addComponent(noModuleSelectedJLabel, javax!!.swing!!.GroupLayout.Alignment.TRAILING, javax!!.swing!!.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE))
-setDefaultCloseOperation(javax!!.swing!!.WindowConstants.EXIT_ON_CLOSE)
-setMinimumSize(Dimension(325, 215))
+noModuleSelectedJDialogLayout!!.setHorizontalGroup(noModuleSelectedJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(noModuleSelectedJDialogLayout!!.createSequentialGroup()!!.addContainerGap()!!.addComponent(noModuleSelectedJLabel)!!.addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+noModuleSelectedJDialogLayout!!.setVerticalGroup(noModuleSelectedJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addComponent(noModuleSelectedJLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE))
+setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE)
+setMinimumSize(java.awt.Dimension(325, 215))
 setResizable(false)
-addWindowFocusListener(object: WindowFocusListener()
+addWindowFocusListener(object: java.awt.event.WindowFocusListener()
                                 {
                                 
-open override fun windowGainedFocus(evt: WindowEvent)
+    open override fun windowGainedFocus(evt: java.awt.event.WindowEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 formWindowGainedFocus(evt)
 }
 
-open override fun windowLostFocus(evt: WindowEvent)
+    open override fun windowLostFocus(evt: java.awt.event.WindowEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 formWindowLostFocus(evt)
 }
 
                                 }
                             )
-addFocusListener(object: FocusAdapter()
+addFocusListener(object: java.awt.event.FocusAdapter()
                                 {
                                 
-open override fun focusGained(evt: FocusEvent)
+    open override fun focusGained(evt: java.awt.event.FocusEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 formFocusGained(evt)
 }
 
-open override fun focusLost(evt: FocusEvent)
+    open override fun focusLost(evt: java.awt.event.FocusEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 formFocusLost(evt)
 }
 
                                 }
                             )
-gameRobotJTabbedPane!!.setMinimumSize(Dimension(320, 200))
-inputAutomationModuleJList!!.setMinimumSize(Dimension(200, 0))
-inputAutomationModuleJList!!.addListSelectionListener(object: ListSelectionListener()
+gameRobotJTabbedPane!!.setMinimumSize(java.awt.Dimension(320, 200))
+inputAutomationModuleJList!!.setMinimumSize(java.awt.Dimension(200, 0))
+inputAutomationModuleJList!!.addListSelectionListener(object: javax.swing.event.ListSelectionListener()
                                 {
                                 
-open override fun valueChanged(evt: ListSelectionEvent)
+    open override fun valueChanged(evt: javax.swing.event.ListSelectionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 inputAutomationModuleJListValueChanged(evt)
 }
 
@@ -321,50 +302,43 @@ inputAutomationModuleJListValueChanged(evt)
                             )
 jScrollPane1!!.setViewportView(inputAutomationModuleJList)
 
-    var inputAutomationModuleJPanelLayout: GroupLayout = GroupLayout(inputAutomationModuleJPanel)
+    var inputAutomationModuleJPanelLayout: javax.swing.GroupLayout = javax.swing.GroupLayout(inputAutomationModuleJPanel)
 
 inputAutomationModuleJPanel!!.setLayout(inputAutomationModuleJPanelLayout)
-inputAutomationModuleJPanelLayout!!.setHorizontalGroup(inputAutomationModuleJPanelLayout!!.createParallelGroup(javax!!.swing!!.GroupLayout.Alignment.LEADING)!!.addGroup(inputAutomationModuleJPanelLayout!!.createSequentialGroup()!!.addComponent(jScrollPane1, javax!!.swing!!.GroupLayout.PREFERRED_SIZE, 199, javax!!.swing!!.GroupLayout.PREFERRED_SIZE)!!.addContainerGap(367, Short.MAX_VALUE)))
-inputAutomationModuleJPanelLayout!!.setVerticalGroup(inputAutomationModuleJPanelLayout!!.createParallelGroup(javax!!.swing!!.GroupLayout.Alignment.LEADING)!!.addGroup(inputAutomationModuleJPanelLayout!!.createSequentialGroup()!!.addComponent(jScrollPane1, javax!!.swing!!.GroupLayout.PREFERRED_SIZE, 330, javax!!.swing!!.GroupLayout.PREFERRED_SIZE)!!.addContainerGap(javax!!.swing!!.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-gameRobotJTabbedPane!!.addTab(
-                            "Modules", inputAutomationModuleJPanel)
+inputAutomationModuleJPanelLayout!!.setHorizontalGroup(inputAutomationModuleJPanelLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(inputAutomationModuleJPanelLayout!!.createSequentialGroup()!!.addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addContainerGap(367, Short.MAX_VALUE)))
+inputAutomationModuleJPanelLayout!!.setVerticalGroup(inputAutomationModuleJPanelLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(inputAutomationModuleJPanelLayout!!.createSequentialGroup()!!.addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+gameRobotJTabbedPane!!.addTab("Modules", inputAutomationModuleJPanel)
 
-    var automationModuleConfigurationJPanelLayout: GroupLayout = GroupLayout(automationModuleConfigurationJPanel)
+    var automationModuleConfigurationJPanelLayout: javax.swing.GroupLayout = javax.swing.GroupLayout(automationModuleConfigurationJPanel)
 
 automationModuleConfigurationJPanel!!.setLayout(automationModuleConfigurationJPanelLayout)
-automationModuleConfigurationJPanelLayout!!.setHorizontalGroup(automationModuleConfigurationJPanelLayout!!.createParallelGroup(javax!!.swing!!.GroupLayout.Alignment.LEADING)!!.addGap(0, 566, Short.MAX_VALUE))
-automationModuleConfigurationJPanelLayout!!.setVerticalGroup(automationModuleConfigurationJPanelLayout!!.createParallelGroup(javax!!.swing!!.GroupLayout.Alignment.LEADING)!!.addGap(0, 334, Short.MAX_VALUE))
-gameRobotJTabbedPane!!.addTab(
-                            "Configuration", automationModuleConfigurationJPanel)
-processingJMenu!!.setText(
-                            "Processing")
-processingJMenu!!.setToolTipText(
-                            "Set module processing state")
+automationModuleConfigurationJPanelLayout!!.setHorizontalGroup(automationModuleConfigurationJPanelLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 566, Short.MAX_VALUE))
+automationModuleConfigurationJPanelLayout!!.setVerticalGroup(automationModuleConfigurationJPanelLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 334, Short.MAX_VALUE))
+gameRobotJTabbedPane!!.addTab("Configuration", automationModuleConfigurationJPanel)
+processingJMenu!!.setText("Processing")
+processingJMenu!!.setToolTipText("Set module processing state")
 startJMenuItem!!.setText(this.commonStrings!!.START)
-startJMenuItem!!.addActionListener(object: ActionListener()
+startJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 startJMenuItemActionPerformed(evt)
 }
 
                                 }
                             )
 processingJMenu!!.add(startJMenuItem)
-stopJMenuItem!!.setText(
-                            "Stop")
-stopJMenuItem!!.addActionListener(object: ActionListener()
+stopJMenuItem!!.setText("Stop")
+stopJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 stopJMenuItemActionPerformed(evt)
 }
 
@@ -372,16 +346,14 @@ stopJMenuItemActionPerformed(evt)
                             )
 processingJMenu!!.add(stopJMenuItem)
 mainJMenuBar!!.add(processingJMenu)
-optionsJMenu!!.setText(
-                            "Options")
-optionsJMenu!!.addActionListener(object: ActionListener()
+optionsJMenu!!.setText("Options")
+optionsJMenu!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 optionsJMenuActionPerformed(evt)
 }
 
@@ -389,16 +361,14 @@ optionsJMenuActionPerformed(evt)
                             )
 stopOnFocusJCheckBoxMenuItem!!.setSelected(true)
 stopOnFocusJCheckBoxMenuItem!!.setEnabled(false)
-stopOnFocusJCheckBoxMenuItem!!.setLabel(
-                            "Stop Module On Focus")
-stopOnFocusJCheckBoxMenuItem!!.addActionListener(object: ActionListener()
+stopOnFocusJCheckBoxMenuItem!!.setLabel("Stop Module On Focus")
+stopOnFocusJCheckBoxMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 stopOnFocusJCheckBoxMenuItemActionPerformed(evt)
 }
 
@@ -406,82 +376,71 @@ stopOnFocusJCheckBoxMenuItemActionPerformed(evt)
                             )
 optionsJMenu!!.add(stopOnFocusJCheckBoxMenuItem)
 mainJMenuBar!!.add(optionsJMenu)
-toolsJMenu!!.setText(
-                            "Help")
-helpJMenuItem!!.setText(
-                            "Help")
-helpJMenuItem!!.addActionListener(object: ActionListener()
+toolsJMenu!!.setText("Help")
+helpJMenuItem!!.setText("Help")
+helpJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 helpJMenuItemActionPerformed(evt)
 }
 
                                 }
                             )
 toolsJMenu!!.add(helpJMenuItem)
-updatesJMenuItem!!.setText(
-                            "Updates")
-updatesJMenuItem!!.addActionListener(object: ActionListener()
+updatesJMenuItem!!.setText("Updates")
+updatesJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 updatesJMenuItemActionPerformed(evt)
 }
 
                                 }
                             )
 toolsJMenu!!.add(updatesJMenuItem)
-subscriptionJMenuItem!!.setText(
-                            "Subscription")
-subscriptionJMenuItem!!.addActionListener(object: ActionListener()
+subscriptionJMenuItem!!.setText("Subscription")
+subscriptionJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 subscriptionJMenuItemActionPerformed(evt)
 }
 
                                 }
                             )
 toolsJMenu!!.add(subscriptionJMenuItem)
-modulesJMenuItem!!.setText(
-                            "Module Manager")
-modulesJMenuItem!!.addActionListener(object: ActionListener()
+modulesJMenuItem!!.setText("Module Manager")
+modulesJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 modulesJMenuItemActionPerformed(evt)
 }
 
                                 }
                             )
 toolsJMenu!!.add(modulesJMenuItem)
-aboutJMenuItem!!.setText(
-                            "About")
-aboutJMenuItem!!.addActionListener(object: ActionListener()
+aboutJMenuItem!!.setText("About")
+aboutJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 aboutJMenuItemActionPerformed(evt)
 }
 
@@ -491,127 +450,113 @@ toolsJMenu!!.add(aboutJMenuItem)
 mainJMenuBar!!.add(toolsJMenu)
 setJMenuBar(mainJMenuBar)
 
-    var layout: GroupLayout = GroupLayout(getContentPane())
+    var layout: javax.swing.GroupLayout = javax.swing.GroupLayout(getContentPane())
 
 getContentPane()!!.setLayout(layout)
-layout!!.setHorizontalGroup(layout!!.createParallelGroup(javax!!.swing!!.GroupLayout.Alignment.LEADING)!!.addComponent(gameRobotJTabbedPane, javax!!.swing!!.GroupLayout.Alignment.TRAILING, javax!!.swing!!.GroupLayout.DEFAULT_SIZE, 571, Short.MAX_VALUE))
-layout!!.setVerticalGroup(layout!!.createParallelGroup(javax!!.swing!!.GroupLayout.Alignment.LEADING)!!.addComponent(gameRobotJTabbedPane, javax!!.swing!!.GroupLayout.Alignment.TRAILING, javax!!.swing!!.GroupLayout.DEFAULT_SIZE, 359, Short.MAX_VALUE))
+layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addComponent(gameRobotJTabbedPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 571, Short.MAX_VALUE))
+layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addComponent(gameRobotJTabbedPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 359, Short.MAX_VALUE))
 pack()
 }
 
 
-open fun subscriptionJMenuItemActionPerformed(evt: ActionEvent)
+    open fun subscriptionJMenuItemActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
         try {
             Desktop.getDesktop()!!.browse(uri)
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "subscriptionJMenuItemActionPerformed", e)
+            {
+logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "subscriptionJMenuItemActionPerformed", e)
 }
 
 }
 
 
-open fun updatesJMenuItemActionPerformed(evt: ActionEvent)
+    open fun updatesJMenuItemActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
         try {
             Desktop.getDesktop()!!.browse(uri)
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "updatesJMenuItemActionPerformed", e)
+            {
+logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "updatesJMenuItemActionPerformed", e)
 }
 
 }
 
 
-open fun aboutJMenuItemActionPerformed(evt: ActionEvent)
+    open fun aboutJMenuItemActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
+var evt = evt
 
-                    var evt = evt
-
-    var textJDialog: JDialog = BasicTextJDialog(
-                            "Copyright (c) 2002-2007 AllBinary")
+    var textJDialog: JDialog = BasicTextJDialog("Copyright (c) 2002-2007 AllBinary")
 
 textJDialog!!.setVisible(true)
 textJDialog!!.setLocationRelativeTo(this)
 }
 
 
-open fun modulesJMenuItemActionPerformed(evt: ActionEvent)
+    open fun modulesJMenuItemActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
         try {
             DesktopBundle().
                             start()
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "modulesJMenuItemActionPerformed", e)
+            {
+logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "modulesJMenuItemActionPerformed", e)
 }
 
 }
 
 
-open fun helpJMenuItemActionPerformed(evt: ActionEvent)
+    open fun helpJMenuItemActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 JavaHelpUtil.getInstance()!!.show(helpSet)
 }
 
 
-open fun stopOnFocusJCheckBoxMenuItemActionPerformed(evt: ActionEvent)
+    open fun stopOnFocusJCheckBoxMenuItemActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 }
 
 
-open fun optionsJMenuActionPerformed(evt: ActionEvent)
+    open fun optionsJMenuActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 }
 
 
-open fun formWindowLostFocus(evt: WindowEvent)
+    open fun formWindowLostFocus(evt: java.awt.event.WindowEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
-logUtil!!.put(
-                            "Nothing", this, 
-                            "focusLost")
+var evt = evt
+logUtil!!.put("Nothing", this, "focusLost")
 }
 
 
-open fun formWindowGainedFocus(evt: WindowEvent)
+    open fun formWindowGainedFocus(evt: java.awt.event.WindowEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
     
                         if(this.stopOnFocusJCheckBoxMenuItem!!.isSelected())
                         
                                     {
-                                    logUtil!!.put(
-                            "Stopping", this, 
-                            "focusGained")
+                                    logUtil!!.put("Stopping", this, "focusGained")
 
     
                         if(this.runnableInterface != 
@@ -629,27 +574,24 @@ open fun formWindowGainedFocus(evt: WindowEvent)
 }
 
 
-open fun formFocusLost(evt: FocusEvent)
+    open fun formFocusLost(evt: java.awt.event.FocusEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 }
 
 
-open fun formFocusGained(evt: FocusEvent)
+    open fun formFocusGained(evt: java.awt.event.FocusEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 }
 
 
-open fun inputAutomationModuleJListValueChanged(evt: ListSelectionEvent)
+    open fun inputAutomationModuleJListValueChanged(evt: javax.swing.event.ListSelectionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
         try {
             
@@ -665,37 +607,33 @@ open fun inputAutomationModuleJListValueChanged(evt: ListSelectionEvent)
                                     this.inputAutomationModuleInterface= this.inputAutomationModuleFactory!!.getInstance(gameAutomationRobotModuleNameString)
 this.getAutomationModuleConfigurationJPanel()!!.removeAll()
 
-    var layout: GroupLayout = this.getAutomationModuleConfigurationJPanel()!!.getLayout() as GroupLayout
+    var layout: javax.swing.GroupLayout = this.getAutomationModuleConfigurationJPanel()!!.getLayout() as javax.swing.GroupLayout
 
-layout!!.setHorizontalGroup(layout!!.createParallelGroup(javax!!.swing!!.GroupLayout.Alignment.LEADING)!!.addGap(0, 395, Short.MAX_VALUE)!!.addComponent(inputAutomationModuleInterface!!.getConfigurationJPanel(), javax!!.swing!!.GroupLayout.PREFERRED_SIZE, javax!!.swing!!.GroupLayout.DEFAULT_SIZE, javax!!.swing!!.GroupLayout.PREFERRED_SIZE))
-layout!!.setVerticalGroup(layout!!.createParallelGroup(javax!!.swing!!.GroupLayout.Alignment.LEADING)!!.addGap(0, 256, Short.MAX_VALUE)!!.addComponent(inputAutomationModuleInterface!!.getConfigurationJPanel(), javax!!.swing!!.GroupLayout.PREFERRED_SIZE, javax!!.swing!!.GroupLayout.DEFAULT_SIZE, javax!!.swing!!.GroupLayout.PREFERRED_SIZE))
+layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 395, Short.MAX_VALUE)!!.addComponent(inputAutomationModuleInterface!!.getConfigurationJPanel(), javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 256, Short.MAX_VALUE)!!.addComponent(inputAutomationModuleInterface!!.getConfigurationJPanel(), javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
 this.gameRobotJTabbedPane!!.setEnabledAt(1, true)
-logUtil!!.put("Setting Module: " +gameAutomationRobotModuleNameString +" and Configuration JPanel", this, 
-                            "gameAutomationRobotModuleJListValueChanged")
+logUtil!!.put("Setting Module: " +gameAutomationRobotModuleNameString +" and Configuration JPanel", this, "gameAutomationRobotModuleJListValueChanged")
 
                                     }
                                 
                         else {
-                            logUtil!!.put(
-                            "Module name was null", this, 
-                            "gameAutomationRobotModuleJListValueChanged")
+                            logUtil!!.put("Module name was null", this, "gameAutomationRobotModuleJListValueChanged")
 this.gameRobotJTabbedPane!!.setEnabledAt(1, false)
 
                         }
                             
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "gameAutomationRobotModuleJListValueChanged", e)
+            {
+logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "gameAutomationRobotModuleJListValueChanged", e)
 }
 
 }
 
 
-open fun stopJMenuItemActionPerformed(evt: ActionEvent)
+    open fun stopJMenuItemActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
     
                         if(this.runnableInterface != 
@@ -716,16 +654,13 @@ this.noModuleSelectedJDialog!!.setLocationRelativeTo(this)
 }
 
 
-open fun startJMenuItemActionPerformed(evt: ActionEvent)
+    open fun startJMenuItemActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
         try {
-            logUtil!!.put(
-                            "Starting", this, 
-                            "startJMenuItemActionPerformed")
+            logUtil!!.put("Starting", this, "startJMenuItemActionPerformed")
 
     
                         if(inputAutomationModuleInterface != 
@@ -742,15 +677,13 @@ open fun startJMenuItemActionPerformed(evt: ActionEvent)
                         
                                     {
                                     this.thread= Thread(this.runnableInterface)
-thread!!.setPriority(Thread.MIN_PRIORITY +1)
-thread!!.start()
+thread.setPriority(Thread.MIN_PRIORITY +1)
+thread.start()
 
                                     }
                                 
                         else {
-                            logUtil!!.put(
-                            "Runnnable was null", this, 
-                            "startJMenuItemActionPerformed")
+                            logUtil!!.put("Runnnable was null", this, "startJMenuItemActionPerformed")
 this.noModuleSelectedJDialog!!.setVisible(true)
 this.noModuleSelectedJDialog!!.setLocationRelativeTo(this)
 
@@ -760,25 +693,24 @@ this.noModuleSelectedJDialog!!.setLocationRelativeTo(this)
                                     }
                                 
                         else {
-                            logUtil!!.put(
-                            "InputAutomationModuleInterface was null", this, 
-                            "startJMenuItemActionPerformed")
+                            logUtil!!.put("InputAutomationModuleInterface was null", this, "startJMenuItemActionPerformed")
 this.noModuleSelectedJDialog!!.setVisible(true)
 this.noModuleSelectedJDialog!!.setLocationRelativeTo(this)
 
                         }
                             
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "startJMenuItemActionPerformed", e)
+            {
+logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "startJMenuItemActionPerformed", e)
 }
 
 }
 
 
-open fun getAutomationModuleConfigurationJPanel()
+    open fun getAutomationModuleConfigurationJPanel()
         //nullable = true from not(false or (false and true)) = true
-: JPanel{
+: javax.swing.JPanel{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -786,86 +718,75 @@ open fun getAutomationModuleConfigurationJPanel()
 }
 
 
-open fun setAutomationModuleConfigurationJPanel(automationModuleConfigurationJPanel: JPanel)
+    open fun setAutomationModuleConfigurationJPanel(automationModuleConfigurationJPanel: javax.swing.JPanel)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var automationModuleConfigurationJPanel = automationModuleConfigurationJPanel
+var automationModuleConfigurationJPanel = automationModuleConfigurationJPanel
 this.automationModuleConfigurationJPanel= automationModuleConfigurationJPanel
 }
 
 
-open fun onAdd(inputAutomationRobotChangeEvent: InputAutomationRobotChangeEvent)
+    open fun onAdd(inputAutomationRobotChangeEvent: InputAutomationRobotChangeEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var inputAutomationRobotChangeEvent = inputAutomationRobotChangeEvent
+var inputAutomationRobotChangeEvent = inputAutomationRobotChangeEvent
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, 
-                            "onAdd")
+            logUtil!!.put(this.commonStrings!!.START, this, "onAdd")
 InputRobotFactory.getInstance()!!.add(inputAutomationRobotChangeEvent!!.getInputAutomationRobotInterfaceWrapper()!!.getInputRobotInterface())
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "onAdd", e)
+            {
+logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onAdd", e)
 }
 
 }
 
 
-open fun onRemove(inputAutomationRobotChangeEvent: InputAutomationRobotChangeEvent)
+    open fun onRemove(inputAutomationRobotChangeEvent: InputAutomationRobotChangeEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var inputAutomationRobotChangeEvent = inputAutomationRobotChangeEvent
+var inputAutomationRobotChangeEvent = inputAutomationRobotChangeEvent
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, 
-                            "onRemove")
+            logUtil!!.put(this.commonStrings!!.START, this, "onRemove")
 InputRobotFactory.getInstance()!!.add(inputAutomationRobotChangeEvent!!.getInputAutomationRobotInterfaceWrapper()!!.getInputRobotInterface())
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "onRemove", e)
+            {
+logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onRemove", e)
 }
 
 }
 
 
-open fun onAdd(inputAutomationConfigurationChangeEvent: InputAutomationConfigurationModuleChangeEvent)
+    open fun onAdd(inputAutomationConfigurationChangeEvent: InputAutomationConfigurationModuleChangeEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var inputAutomationConfigurationChangeEvent = inputAutomationConfigurationChangeEvent
+    //var inputAutomationConfigurationChangeEvent = inputAutomationConfigurationChangeEvent
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, 
-                            "onAdd")
+            logUtil!!.put(this.commonStrings!!.START, this, "onAdd")
 
     var inputAutomationModuleConfigurations: InputAutomationModuleConfigurations = InputAutomationModuleConfigurationsSingletonFactory.getInstance()!!
-            
 
 inputAutomationModuleConfigurations!!.add(inputAutomationConfigurationChangeEvent!!.getInputAutomationModuleConfiguration())
 this.init()
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "onAdd", e)
+            {
+logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onAdd", e)
 }
 
 }
 
 
-open fun onRemove(inputAutomationConfigurationChangeEvent: InputAutomationConfigurationModuleChangeEvent)
+    open fun onRemove(inputAutomationConfigurationChangeEvent: InputAutomationConfigurationModuleChangeEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var inputAutomationConfigurationChangeEvent = inputAutomationConfigurationChangeEvent
+var inputAutomationConfigurationChangeEvent = inputAutomationConfigurationChangeEvent
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, 
-                            "onRemove")
+            logUtil!!.put(this.commonStrings!!.START, this, "onRemove")
 
     var inputAutomationConfiguration: InputAutomationConfiguration = InputAutomationConfigurationFactory.getInstance()!!
-            
 
 
     var inputAutomationModuleConfigurations: InputAutomationModuleConfigurations = InputAutomationModuleConfigurations(inputAutomationConfiguration!!.getInputAutomationModuleConfigurationList())
@@ -873,50 +794,50 @@ open fun onRemove(inputAutomationConfigurationChangeEvent: InputAutomationConfig
 inputAutomationModuleConfigurations!!.remove(inputAutomationConfigurationChangeEvent!!.getInputAutomationModuleConfiguration())
 this.init()
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "onRemove", e)
+            {
+logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onRemove", e)
 }
 
 }
 
 
-    private var aboutJMenuItem: JMenuItem
+    private var aboutJMenuItem: javax.swing.JMenuItem
 
-    private var automationModuleConfigurationJPanel: JPanel
+    private var automationModuleConfigurationJPanel: javax.swing.JPanel
 
-    private var gameRobotJTabbedPane: JTabbedPane
+    private var gameRobotJTabbedPane: javax.swing.JTabbedPane
 
-    private var helpJMenuItem: JMenuItem
+    private var helpJMenuItem: javax.swing.JMenuItem
 
-    private var inputAutomationModuleJList: JList
+    private var inputAutomationModuleJList: javax.swing.JList
 
-    private var inputAutomationModuleJPanel: JPanel
+    private var inputAutomationModuleJPanel: javax.swing.JPanel
 
-    private var jScrollPane1: JScrollPane
+    private var jScrollPane1: javax.swing.JScrollPane
 
-    private var mainJMenuBar: JMenuBar
+    private var mainJMenuBar: javax.swing.JMenuBar
 
-    private var modulesJMenuItem: JMenuItem
+    private var modulesJMenuItem: javax.swing.JMenuItem
 
-    private var noModuleSelectedJDialog: JDialog
+    private var noModuleSelectedJDialog: javax.swing.JDialog
 
-    private var noModuleSelectedJLabel: JLabel
+    private var noModuleSelectedJLabel: javax.swing.JLabel
 
-    private var optionsJMenu: JMenu
+    private var optionsJMenu: javax.swing.JMenu
 
-    private var processingJMenu: JMenu
+    private var processingJMenu: javax.swing.JMenu
 
-    private var startJMenuItem: JMenuItem
+    private var startJMenuItem: javax.swing.JMenuItem
 
-    private var stopJMenuItem: JMenuItem
+    private var stopJMenuItem: javax.swing.JMenuItem
 
-    private var stopOnFocusJCheckBoxMenuItem: JCheckBoxMenuItem
+    private var stopOnFocusJCheckBoxMenuItem: javax.swing.JCheckBoxMenuItem
 
-    private var subscriptionJMenuItem: JMenuItem
+    private var subscriptionJMenuItem: javax.swing.JMenuItem
 
-    private var toolsJMenu: JMenu
+    private var toolsJMenu: javax.swing.JMenu
 
-    private var updatesJMenuItem: JMenuItem
+    private var updatesJMenuItem: javax.swing.JMenuItem
 
 }
                 

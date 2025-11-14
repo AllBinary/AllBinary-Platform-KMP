@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -35,21 +33,19 @@ open public class ToolFactory
             : Object
          {
         
-
-        companion object {
-
-
+companion object {
+            
     private val instance: ToolFactory = ToolFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ToolFactory{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }
@@ -60,10 +56,8 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var selectedTool: GraphicsItemInterfaceFactoryInterface = 
                 null
@@ -75,26 +69,26 @@ open fun getInstance()
 
     private val SELECTED_LABEL: String = "Selected: "
 
-open fun setSelectedTool(tool: String)
+    open fun setSelectedTool(tool: String)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var tool = tool
+var tool = tool
 
         try {
             StatusFactory.getInstance()!!.setStatus(SELECTED_LABEL +tool)
 this.tool= tool
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "setSelectionTool", e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "setSelectionTool", e)
 }
 
 }
 
 
-open fun getSelectedToolFactory()
+    open fun getSelectedToolFactory()
         //nullable = true from not(false or (false and true)) = true
-: GraphicsItemInterfaceFactoryInterface{StatusFactory.getInstance()!!.setStatus("Tool In Use: " +tool)
+: GraphicsItemInterfaceFactoryInterface{
+StatusFactory.getInstance()!!.setStatus("Tool In Use: " +tool)
 
     
                         if(tool != 
@@ -103,8 +97,7 @@ open fun getSelectedToolFactory()
                         
                                     {
                                     this.selectedTool= GraphicItemFactory.getInstance()!!.getInstance(tool)
-logUtil!!.put("New Tool: " +this.selectedTool, this, 
-                            "getSelectedToolFactory")
+logUtil!!.put("New Tool: " +this.selectedTool, this, "getSelectedToolFactory")
 
 
 

@@ -18,31 +18,31 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
         import kotlin.reflect.KClass
         
 
-open public class ColorChooser : swing.JPanel {
+open public class ColorChooser : javax.swing.JPanel {
         
-public constructor        (){initComponents()
+public constructor (){
+initComponents()
 }
 
 
-open fun initComponents()
+    open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
-{jColorChooser1= JColorChooser()
-setLayout(BorderLayout())
-add(jColorChooser1, java!!.awt!!.BorderLayout.CENTER)
+{
+jColorChooser1= javax.swing.JColorChooser()
+setLayout(java.awt.BorderLayout())
+add(jColorChooser1, java.awt.BorderLayout.CENTER)
 }
 
 
-    private var jColorChooser1: JColorChooser
+    private var jColorChooser1: javax.swing.JColorChooser
 
 }
                 

@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -36,27 +36,23 @@ import org.allbinary.graphics.j2me.MyFrame
 import org.allbinary.graphics.j2me.workarea.WorkAreaJPanel
 import org.allbinary.graphics.j2me.workarea.WorkAreaJPanelInterface
 
-open public class NewWorkAreaJDialog : swing.JDialog {
+open public class NewWorkAreaJDialog : javax.swing.JDialog {
         
-
-        companion object {
-
-
-open fun main(args: Array<String?>)
+companion object {
+            
+    open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var args = args
+var args = args
 
         try {
-            NewWorkAreaJDialog(MyFrame(), true, Dimension(100, 100), 
-                            "testing").
+            NewWorkAreaJDialog(MyFrame(), true, Dimension(100, 100), "testing").
                             show()
 } catch(e: Exception)
-            {}
-
+            {
 }
 
+}
 
 
         }
@@ -70,20 +66,13 @@ open fun main(args: Array<String?>)
     private var ySizeJTextField: JTextField
 
     private var nameJTextField: JTextField
-public constructor        (parent: MyFrame, modal: Boolean, dimension: Dimension, newName: String)                        
+public constructor (parent: MyFrame, modal: Boolean, dimension: Dimension, newName: String)                        
 
-                            : super(parent as Frame, modal){
-
-                    var parent = parent
-
-
-                    var modal = modal
-
-
-                    var dimension = dimension
-
-
-                    var newName = newName
+                            : super(parent as java.awt.Frame, modal){
+var parent = parent
+var modal = modal
+var dimension = dimension
+var newName = newName
 
 
                             //For kotlin this is before the body of the constructor.
@@ -92,29 +81,26 @@ public constructor        (parent: MyFrame, modal: Boolean, dimension: Dimension
         try {
             initComponents()
 this.parent= parent
-this.xSizeJTextField= JTextField(
-                            "12")
-this.ySizeJTextField= JTextField(
-                            "12")
+this.xSizeJTextField= JTextField("12")
+this.ySizeJTextField= JTextField("12")
 this.nameJTextField= JTextField(newName)
 this.dimension= dimension
 
-    var submitButton: JButton = JButton(
-                            "Ok")
+    var submitButton: JButton = JButton("Ok")
 
 submitButton!!.addActionListener(object: ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
         try {
             disposeNewDialog()
 } catch(e: Exception)
-            {}
+            {
+}
 
 }
 
@@ -122,23 +108,19 @@ open override fun actionPerformed(evt: ActionEvent)
                             )
 this.setSize(150, 100)
 this.getContentPane()!!.setLayout(GridLayout(5, 2))
-this.getContentPane()!!.add(JLabel(
-                            "Please enter"))
-this.getContentPane()!!.add(JLabel(
-                            " the size."))
-this.getContentPane()!!.add(JLabel(
-                            "Name:"))
+this.getContentPane()!!.add(JLabel("Please enter"))
+this.getContentPane()!!.add(JLabel(" the size."))
+this.getContentPane()!!.add(JLabel("Name:"))
 this.getContentPane()!!.add(nameJTextField)
-this.getContentPane()!!.add(JLabel(
-                            "X: "))
+this.getContentPane()!!.add(JLabel("X: "))
 this.getContentPane()!!.add(xSizeJTextField)
-this.getContentPane()!!.add(JLabel(
-                            "Y: "))
+this.getContentPane()!!.add(JLabel("Y: "))
 this.getContentPane()!!.add(ySizeJTextField)
 this.getContentPane()!!.add(submitButton)
 this.show()
 } catch(e: Exception)
             {
+
 
 
                             throw e
@@ -149,9 +131,10 @@ this.show()
 
                 @Throws(Exception::class)
             
-open fun disposeNewDialog()
+    open fun disposeNewDialog()
         //nullable = true from not(false or (false and true)) = true
 {
+
         try {
             
     var canvasWidth: Integer = Integer(xSizeJTextField!!.getText())
@@ -161,7 +144,6 @@ open fun disposeNewDialog()
 
 
     var newName: String = this.nameJTextField!!.getText()!!
-            
 
 
     
@@ -169,17 +151,16 @@ open fun disposeNewDialog()
                                     null
                                 )
                         
-                                    throw GraphicsException(
-                            "No Name", this, 
-                            "disposeNewDialog")
+                                    throw GraphicsException("No Name", this, "disposeNewDialog")
 
-    var workAreaJPanel: WorkAreaJPanel = WorkAreaJPanel(newName, this.dimension, canvasWidth!!.toInt()canvasHeight!!.toInt())
+    var workAreaJPanel: WorkAreaJPanel = WorkAreaJPanel(newName, this.dimension, canvasWidth!!.toInt(), canvasHeight!!.toInt())
 
 workAreaJPanel!!.setLayout(GridLayout(1, 1))
-parent!!.add(workAreaJPanel as WorkAreaJPanelInterface)
+parent.add(workAreaJPanel as WorkAreaJPanelInterface)
 this.dispose()
 } catch(e: Exception)
             {
+
 
 
                             throw e
@@ -188,16 +169,16 @@ this.dispose()
 }
 
 
-open fun initComponents()
+    open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
-{addWindowListener(object: WindowAdapter()
+{
+addWindowListener(object: java.awt.event.WindowAdapter()
                                 {
                                 
-open override fun windowClosing(evt: WindowEvent)
+    open override fun windowClosing(evt: java.awt.event.WindowEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 closeDialog(evt)
 }
 
@@ -207,11 +188,10 @@ pack()
 }
 
 
-open fun closeDialog(evt: WindowEvent)
+    open fun closeDialog(evt: java.awt.event.WindowEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 setVisible(false)
 dispose()
 }

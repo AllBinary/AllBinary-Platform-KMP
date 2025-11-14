@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -30,25 +28,18 @@
 import org.allbinary.logic.communication.log.GuiLog
 import org.allbinary.logic.communication.log.LogUtil
 
-open public class GraphicsException : lang.Exception {
+open public class GraphicsException : java.lang.Exception {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val guiLog: GuiLog = GuiLog.getInstance()!!
-            
-public constructor        (msg: String, obj: Any, method: String)                        
+public constructor (msg: String, obj: Any, method: String)                        
 
                             : super(msg){
-
-                    var msg = msg
-
-
-                    var obj = obj
-
-
-                    var method = method
+var msg = msg
+var obj = obj
+var method = method
 
 
                             //For kotlin this is before the body of the constructor.
@@ -58,21 +49,17 @@ public constructor        (msg: String, obj: Any, method: String)
             guiLog!!.showDialog(msg)
 logUtil!!.put(msg, obj, method, this)
 } catch(e: Exception)
-            {}
+            {
+}
 
 }
 
-public constructor        (msg: String, className: String, method: String)                        
+public constructor (msg: String, className: String, method: String)                        
 
                             : super(msg){
-
-                    var msg = msg
-
-
-                    var className = className
-
-
-                    var method = method
+var msg = msg
+var className = className
+var method = method
 
 
                             //For kotlin this is before the body of the constructor.
@@ -82,7 +69,8 @@ public constructor        (msg: String, className: String, method: String)
             guiLog!!.showDialog(msg)
 logUtil!!.put(msg, className, method, this)
 } catch(e: Exception)
-            {}
+            {
+}
 
 }
 

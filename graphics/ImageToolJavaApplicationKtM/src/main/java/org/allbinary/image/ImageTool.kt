@@ -18,17 +18,14 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
-        
-        import java.lang.Runnable
+
+        import java.lang.Object        
         
         
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.thread.ARunnable
 import org.allbinary.image.gui.ImageToolJFrame
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
@@ -37,27 +34,23 @@ open public class ImageTool
             : Object
          {
         
-
-        companion object {
-
-
-open fun main(args: Array<String?>)
+companion object {
+            
+    open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var args = args
-java!!.awt!!.EventQueue.invokeLater(object: Runnable()
+var args = args
+java.awt.EventQueue.invokeLater(object: ARunnable()
                                 {
                                 
-open fun run()
+    open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
+
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
         try {
@@ -65,7 +58,8 @@ open fun run()
 ImageToolJFrame().
                             setVisible(true)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
 
 }
@@ -75,14 +69,13 @@ ImageToolJFrame().
 }
 
 
-
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
-public constructor        ()
+public constructor ()
             : super()
-        {}
+        {
+}
 
 
 }

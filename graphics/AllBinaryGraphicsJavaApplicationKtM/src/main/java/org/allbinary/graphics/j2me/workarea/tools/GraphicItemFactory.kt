@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -36,15 +34,14 @@ open public class GraphicItemFactory
             : Object
          {
         
-
-        companion object {
-
-
+companion object {
+            
     private val instance: GraphicItemFactory = GraphicItemFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : GraphicItemFactory{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -52,24 +49,23 @@ open fun getInstance()
 }
 
 
-
         }
             
     private val graphicItems: HashMap<Any, Any>
 
     private val DEFAULT: GraphicsItemInterfaceFactoryInterface = SelectionToolFactory()
-private constructor        ()
+private constructor ()
             : super()
-        {graphicItems= HashMap<Any, Any>()
+        {
+graphicItems= HashMap<Any, Any>()
 graphicItems!!.put(LinesGraphicItem.getStaticName(), LinesGraphicItemFactory())
 }
 
 
-open fun getInstance(itemName: String)
+    open fun getInstance(itemName: String)
         //nullable =  from not(true or (false and false)) = 
 : GraphicsItemInterfaceFactoryInterface{
-
-                    var itemName = itemName
+var itemName = itemName
 
     var graphicsItemInterfaceFactoryInterface: GraphicsItemInterfaceFactoryInterface = graphicItems!!.get(itemName) as GraphicsItemInterfaceFactoryInterface
 
@@ -94,14 +90,12 @@ open fun getInstance(itemName: String)
 
                 @Throws(Exception::class)
             
-open fun getInstance(graphicItemNodeList: BasicArrayList)
+    open fun getInstance(graphicItemNodeList: BasicArrayList)
         //nullable =  from not(true or (false and false)) = 
 : HashMap<Any, Any>{
-
-                    var graphicItemNodeList = graphicItemNodeList
+var graphicItemNodeList = graphicItemNodeList
 
     var numberOfItems: Int = graphicItemNodeList!!.size()!!
-            
 
 
     var graphicItemHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
@@ -120,10 +114,9 @@ open fun getInstance(graphicItemNodeList: BasicArrayList)
 
                         for (index in 0 until numberOfItems)
 
-
         {
+
     var graphicItem: GraphicItemInterface = GraphicItemBuilder.getInstance(graphicItemNodeList!!.get(index) as Node)!!
-            
 
 graphicItemHashMap!!.put(graphicItem!!.getTreeNode(), graphicItem)
 }

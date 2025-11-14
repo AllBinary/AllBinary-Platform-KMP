@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -38,15 +36,12 @@ open public class ServiceReferenceMap
         
                 , Map {
         
-
-        companion object {
-
-
-open fun toString(map: Map)
+companion object {
+            
+    open fun toString(map: Map)
         //nullable = true from not(false or (true and false)) = true
 : String{
-
-                    var map = map
+var map = map
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -58,22 +53,21 @@ open fun toString(map: Map)
 }
 
 
-
         }
             
     private var serviceReference: ServiceReference
-public constructor        (serviceReference: ServiceReference)
+public constructor (serviceReference: ServiceReference)
             : super()
         {
-
-                    var serviceReference = serviceReference
+var serviceReference = serviceReference
 this.serviceReference= serviceReference
 }
 
 
-open fun size()
+    open fun size()
         //nullable = true from not(false or (false and true)) = true
 : Int{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -81,21 +75,21 @@ open fun size()
 }
 
 
-open fun isEmpty()
+    open fun isEmpty()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
 
+
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 }
 
 
-open fun containsKey(key: Any)
+    open fun containsKey(key: Any)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
-
-                    var key = key
+var key = key
 
 
 
@@ -104,11 +98,10 @@ open fun containsKey(key: Any)
 }
 
 
-open fun containsValue(value: Any)
+    open fun containsValue(value: Any)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
-
-                    var value = value
+var value = value
 
 
 
@@ -117,11 +110,10 @@ open fun containsValue(value: Any)
 }
 
 
-open fun get(key: Any)
+    open fun get(key: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{
-
-                    var key = key
+var key = key
 
 
 
@@ -130,14 +122,11 @@ open fun get(key: Any)
 }
 
 
-open fun put(key: Any, value: Any)
+    open fun put(key: Any, value: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{
-
-                    var key = key
-
-
-                    var value = value
+var key = key
+var value = value
 
 
 
@@ -146,11 +135,10 @@ open fun put(key: Any, value: Any)
 }
 
 
-open fun remove(key: Any)
+    open fun remove(key: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{
-
-                    var key = key
+var key = key
 
 
 
@@ -159,24 +147,24 @@ open fun remove(key: Any)
 }
 
 
-open fun putAll(m: Map)
+    open fun putAll(m: Map)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var m = m
+var m = m
 }
 
 
-open fun clear()
+    open fun clear()
         //nullable = true from not(false or (false and true)) = true
-{}
+{
+}
 
 
-open fun keySet()
+    open fun keySet()
         //nullable = true from not(false or (false and true)) = true
 : Set{
+
     var keyStringArray: Array<String?> = serviceReference!!.getPropertyKeys()!!
-            
 
 
 
@@ -186,19 +174,21 @@ open fun keySet()
 }
 
 
-open fun values()
+    open fun values()
         //nullable = true from not(false or (false and true)) = true
 : Collection<Any>{
 
 
+
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
 
 
-open fun entrySet()
+    open fun entrySet()
         //nullable = true from not(false or (false and true)) = true
 : Set{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

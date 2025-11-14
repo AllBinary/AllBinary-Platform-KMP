@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -36,21 +34,24 @@ open public class Points
         
 
     private val pointVector: BasicArrayList
-public constructor        ()
+public constructor ()
             : super()
-        {this.pointVector= BasicArrayList()
+        {
+this.pointVector= BasicArrayList()
 }
 
 
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
-{this.pointVector!!.clear()
+{
+this.pointVector!!.clear()
 }
 
 
-open fun getPoints()
+    open fun getPoints()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -58,18 +59,18 @@ open fun getPoints()
 }
 
 
-open fun addPoints(vector: BasicArrayList)
+    open fun addPoints(vector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var vector = vector
+var vector = vector
 this.pointVector!!.addAll2(vector)
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
+
     
                         if(this.pointVector!!.size() > 1)
                         
@@ -94,9 +95,10 @@ open fun isValid()
 }
 
 
-open fun getSize()
+    open fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

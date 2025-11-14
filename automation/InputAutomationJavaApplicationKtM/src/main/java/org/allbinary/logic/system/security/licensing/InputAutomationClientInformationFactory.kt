@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -32,21 +30,19 @@ open public class InputAutomationClientInformationFactory
             : Object
          {
         
-
-        companion object {
-
-
+companion object {
+            
     private val instance: InputAutomationClientInformation = InputAutomationClientInformation()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : InputAutomationClientInformation{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }

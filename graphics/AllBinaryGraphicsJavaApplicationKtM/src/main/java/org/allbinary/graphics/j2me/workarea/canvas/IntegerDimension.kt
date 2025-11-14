@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -36,22 +34,20 @@ open public class IntegerDimension
     private var width: Int= 0
 
     private var height: Int= 0
-public constructor        (width: Int, height: Int)
+public constructor (width: Int, height: Int)
             : super()
         {
-
-                    var width = width
-
-
-                    var height = height
+var width = width
+var height = height
 this.setWidth(width)
 this.setHeight(height)
 }
 
 
-open fun getWidth()
+    open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -59,18 +55,18 @@ open fun getWidth()
 }
 
 
-open fun setWidth(width: Int)
+    open fun setWidth(width: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var width = width
+var width = width
 this.width= width
 }
 
 
-open fun getHeight()
+    open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -78,11 +74,10 @@ open fun getHeight()
 }
 
 
-open fun setHeight(height: Int)
+    open fun setHeight(height: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var height = height
+var height = height
 this.height= height
 }
 

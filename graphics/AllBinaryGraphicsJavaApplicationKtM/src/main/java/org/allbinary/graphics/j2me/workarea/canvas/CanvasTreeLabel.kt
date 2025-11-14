@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -34,17 +32,18 @@ open public class CanvasTreeLabel
         
 
     private var label: String
-public constructor        (str: String)
+public constructor (str: String)
             : super()
         {
-
-                    var str = str
+var str = str
 this.label= str
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

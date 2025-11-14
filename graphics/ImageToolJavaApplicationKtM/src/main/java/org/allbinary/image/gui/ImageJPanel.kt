@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -33,24 +31,20 @@ import org.allbinary.graphics.displayable.CanvasStrings
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 
-open public class ImageJPanel : swing.JPanel {
+open public class ImageJPanel : javax.swing.JPanel {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val canvasStrings: CanvasStrings = CanvasStrings.getInstance()!!
-            
 
     private var isDrawn: Boolean = false
 
     private var bufferedImage: BufferedImage
-public constructor        (bufferedImage: BufferedImage){
-
-                    var bufferedImage = bufferedImage
+public constructor (bufferedImage: BufferedImage){
+var bufferedImage = bufferedImage
 initComponents()
 this.bufferedImage= bufferedImage
 this.setSize(this.bufferedImage!!.getWidth(
@@ -59,18 +53,17 @@ this.setSize(this.bufferedImage!!.getWidth(
 }
 
 
-open fun paint(graphics: Graphics)
+    open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var graphics = graphics
+var graphics = graphics
 
     
                         if(!isDrawn)
                         
                                     {
                                     logUtil!!.put(commonStrings!!.START, this, canvasStrings!!.PAINT)
-graphics!!.drawImage(bufferedImage, 0, 0, this.bufferedImage!!.getWidth(
+graphics.drawImage(bufferedImage, 0, 0, this.bufferedImage!!.getWidth(
                             null), this.bufferedImage!!.getHeight(
                             null), 
                             null)
@@ -81,14 +74,15 @@ isDrawn= true
 }
 
 
-open fun initComponents()
+    open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {
-    var layout: GroupLayout = GroupLayout(this)
+
+    var layout: javax.swing.GroupLayout = javax.swing.GroupLayout(this)
 
 this.setLayout(layout)
-layout!!.setHorizontalGroup(layout!!.createParallelGroup(javax!!.swing!!.GroupLayout.Alignment.LEADING)!!.addGap(0, 400, Short.MAX_VALUE))
-layout!!.setVerticalGroup(layout!!.createParallelGroup(javax!!.swing!!.GroupLayout.Alignment.LEADING)!!.addGap(0, 300, Short.MAX_VALUE))
+layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 400, Short.MAX_VALUE))
+layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 300, Short.MAX_VALUE))
 }
 
 

@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -44,39 +44,31 @@ import org.allbinary.media.image.analysis.ImageAnalysisResults
 import org.allbinary.string.CommonPhoneStrings
 import org.allbinary.string.CommonStrings
 
-open public class ImageToolJFrame : swing.JFrame
+open public class ImageToolJFrame : javax.swing.JFrame
                 , FileJDialogListenerInterface {
         
-
-        companion object {
-
-
+companion object {
+            
     private var imageProcessorInputCompositeInterface: ImageProcessorInputCompositeInterface
-
 
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var fileJDialog: FileJDialog
 
     private var imageProcessorInput: ImageProcessorInput
-public constructor        (){initComponents()
+public constructor (){
+initComponents()
 
     var commonPhoneStrings: CommonPhoneStrings = CommonPhoneStrings.getInstance()!!
-            
 
 this.setSize(640, 480)
-this.getMaxRedJTextField()!!.setText(
-                            "255")
-this.getMaxGreenJTextField()!!.setText(
-                            "255")
-this.getMaxBlueJTextField()!!.setText(
-                            "255")
+this.getMaxRedJTextField()!!.setText("255")
+this.getMaxGreenJTextField()!!.setText("255")
+this.getMaxBlueJTextField()!!.setText("255")
 this.getMinRedJTextField()!!.setText(commonPhoneStrings!!.ZERO)
 this.getMinGreenJTextField()!!.setText(commonPhoneStrings!!.ZERO)
 this.getMinBlueJTextField()!!.setText(commonPhoneStrings!!.ZERO)
@@ -85,102 +77,90 @@ fileJDialog!!.addFinishedListener(this)
 }
 
 
-open fun initComponents()
+    open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
-{analysisActionJDialog= JDialog()
-titleJLabel= JLabel()
-colorRangeJLabel= JLabel()
-redJLabel= JLabel()
-minJLabel= JLabel()
-maxJLabel= JLabel()
-greenJLabel= JLabel()
-blueJLabel= JLabel()
-minRedJTextField= JTextField()
-maxRedJTextField= JTextField()
-maxGreenJTextField= JTextField()
-minBlueJTextField= JTextField()
-maxBlueJTextField= JTextField()
-okJButton= JButton()
-minGreenJTextField= JTextField()
-jPanel1= JPanel()
-mainJMenuBar= JMenuBar()
-fileJMenu= JMenu()
-openImageJMenuItem= JMenuItem()
-processingJMenu= JMenu()
-analyzeJMenuItem= JMenuItem()
-generateSpriteSplitterMenuItem= JMenuItem()
-generateRotationMenuItem= JMenuItem()
-generateMirrorSpriteMenuItem= JMenuItem()
-generateRotationSpriteJMenuItem= JMenuItem()
-createStripImageJMenuItem= JMenuItem()
-mirrorJMenuItem= JMenuItem()
-scaleImagesJMenuItem= JMenuItem()
-canvasImagesJMenuItem= JMenuItem()
-analysisActionJDialog!!.setMinimumSize(Dimension(350, 250))
-titleJLabel!!.setText(
-                            "              Color At Action Options            ")
-colorRangeJLabel!!.setText(
-                            "Color Range")
-redJLabel!!.setText(
-                            "Red:")
-minJLabel!!.setText(
-                            "Minimum")
-maxJLabel!!.setText(
-                            "Maximum")
-greenJLabel!!.setText(
-                            "Green:")
-blueJLabel!!.setText(
-                            "Blue:")
-okJButton!!.setText(
-                            "OK")
-okJButton!!.addActionListener(object: ActionListener()
+{
+analysisActionJDialog= javax.swing.JDialog()
+titleJLabel= javax.swing.JLabel()
+colorRangeJLabel= javax.swing.JLabel()
+redJLabel= javax.swing.JLabel()
+minJLabel= javax.swing.JLabel()
+maxJLabel= javax.swing.JLabel()
+greenJLabel= javax.swing.JLabel()
+blueJLabel= javax.swing.JLabel()
+minRedJTextField= javax.swing.JTextField()
+maxRedJTextField= javax.swing.JTextField()
+maxGreenJTextField= javax.swing.JTextField()
+minBlueJTextField= javax.swing.JTextField()
+maxBlueJTextField= javax.swing.JTextField()
+okJButton= javax.swing.JButton()
+minGreenJTextField= javax.swing.JTextField()
+jPanel1= javax.swing.JPanel()
+mainJMenuBar= javax.swing.JMenuBar()
+fileJMenu= javax.swing.JMenu()
+openImageJMenuItem= javax.swing.JMenuItem()
+processingJMenu= javax.swing.JMenu()
+analyzeJMenuItem= javax.swing.JMenuItem()
+generateSpriteSplitterMenuItem= javax.swing.JMenuItem()
+generateRotationMenuItem= javax.swing.JMenuItem()
+generateMirrorSpriteMenuItem= javax.swing.JMenuItem()
+generateRotationSpriteJMenuItem= javax.swing.JMenuItem()
+createStripImageJMenuItem= javax.swing.JMenuItem()
+mirrorJMenuItem= javax.swing.JMenuItem()
+scaleImagesJMenuItem= javax.swing.JMenuItem()
+canvasImagesJMenuItem= javax.swing.JMenuItem()
+analysisActionJDialog!!.setMinimumSize(java.awt.Dimension(350, 250))
+titleJLabel!!.setText("              Color At Action Options            ")
+colorRangeJLabel!!.setText("Color Range")
+redJLabel!!.setText("Red:")
+minJLabel!!.setText("Minimum")
+maxJLabel!!.setText("Maximum")
+greenJLabel!!.setText("Green:")
+blueJLabel!!.setText("Blue:")
+okJButton!!.setText("OK")
+okJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 okJButtonActionPerformed(evt)
 }
 
                                 }
                             )
 
-    var analysisActionJDialogLayout: GroupLayout = GroupLayout(analysisActionJDialog!!.getContentPane())
+    var analysisActionJDialogLayout: org.jdesktop.layout.GroupLayout = org.jdesktop.layout.GroupLayout(analysisActionJDialog!!.getContentPane())
 
 analysisActionJDialog!!.getContentPane()!!.setLayout(analysisActionJDialogLayout)
-analysisActionJDialogLayout!!.setHorizontalGroup(analysisActionJDialogLayout!!.createParallelGroup(org!!.jdesktop!!.layout!!.GroupLayout.LEADING)!!.add(analysisActionJDialogLayout!!.createSequentialGroup()!!.addContainerGap()!!.add(analysisActionJDialogLayout!!.createParallelGroup(org!!.jdesktop!!.layout!!.GroupLayout.LEADING)!!.add(analysisActionJDialogLayout!!.createSequentialGroup()!!.add(analysisActionJDialogLayout!!.createParallelGroup(org!!.jdesktop!!.layout!!.GroupLayout.LEADING)!!.add(blueJLabel)!!.add(greenJLabel)!!.add(redJLabel)!!.add(colorRangeJLabel))!!.add(29, 29, 29)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org!!.jdesktop!!.layout!!.GroupLayout.LEADING)!!.add(org!!.jdesktop!!.layout!!.GroupLayout.TRAILING, minJLabel, org!!.jdesktop!!.layout!!.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org!!.jdesktop!!.layout!!.GroupLayout.TRAILING, false)!!.add(org!!.jdesktop!!.layout!!.GroupLayout.LEADING, minBlueJTextField)!!.add(org!!.jdesktop!!.layout!!.GroupLayout.LEADING, minGreenJTextField)!!.add(org!!.jdesktop!!.layout!!.GroupLayout.LEADING, minRedJTextField, org!!.jdesktop!!.layout!!.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)!!.add(org!!.jdesktop!!.layout!!.GroupLayout.LEADING, okJButton)))!!.addPreferredGap(org!!.jdesktop!!.layout!!.LayoutStyle.RELATED)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org!!.jdesktop!!.layout!!.GroupLayout.TRAILING)!!.add(org!!.jdesktop!!.layout!!.GroupLayout.LEADING, analysisActionJDialogLayout!!.createSequentialGroup()!!.add(analysisActionJDialogLayout!!.createParallelGroup(org!!.jdesktop!!.layout!!.GroupLayout.TRAILING, false)!!.add(org!!.jdesktop!!.layout!!.GroupLayout.LEADING, maxRedJTextField)!!.add(org!!.jdesktop!!.layout!!.GroupLayout.LEADING, analysisActionJDialogLayout!!.createSequentialGroup()!!.add(1, 1, 1)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org!!.jdesktop!!.layout!!.GroupLayout.LEADING)!!.add(maxBlueJTextField)!!.add(maxGreenJTextField, org!!.jdesktop!!.layout!!.GroupLayout.PREFERRED_SIZE, 43, org!!.jdesktop!!.layout!!.GroupLayout.PREFERRED_SIZE))))!!.addPreferredGap(org!!.jdesktop!!.layout!!.LayoutStyle.RELATED, 17, Short.MAX_VALUE))!!.add(org!!.jdesktop!!.layout!!.GroupLayout.LEADING, maxJLabel, org!!.jdesktop!!.layout!!.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE))!!.addContainerGap())!!.add(org!!.jdesktop!!.layout!!.GroupLayout.TRAILING, analysisActionJDialogLayout!!.createSequentialGroup()!!.add(titleJLabel)!!.add(25, 25, 25)))))
-analysisActionJDialogLayout!!.setVerticalGroup(analysisActionJDialogLayout!!.createParallelGroup(org!!.jdesktop!!.layout!!.GroupLayout.LEADING)!!.add(analysisActionJDialogLayout!!.createSequentialGroup()!!.add(titleJLabel)!!.addPreferredGap(org!!.jdesktop!!.layout!!.LayoutStyle.RELATED)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org!!.jdesktop!!.layout!!.GroupLayout.BASELINE)!!.add(minJLabel)!!.add(colorRangeJLabel)!!.add(maxJLabel))!!.addPreferredGap(org!!.jdesktop!!.layout!!.LayoutStyle.RELATED)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org!!.jdesktop!!.layout!!.GroupLayout.TRAILING)!!.add(redJLabel)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org!!.jdesktop!!.layout!!.GroupLayout.BASELINE)!!.add(minRedJTextField, org!!.jdesktop!!.layout!!.GroupLayout.PREFERRED_SIZE, org!!.jdesktop!!.layout!!.GroupLayout.DEFAULT_SIZE, org!!.jdesktop!!.layout!!.GroupLayout.PREFERRED_SIZE)!!.add(maxRedJTextField, org!!.jdesktop!!.layout!!.GroupLayout.PREFERRED_SIZE, org!!.jdesktop!!.layout!!.GroupLayout.DEFAULT_SIZE, org!!.jdesktop!!.layout!!.GroupLayout.PREFERRED_SIZE)))!!.addPreferredGap(org!!.jdesktop!!.layout!!.LayoutStyle.RELATED)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org!!.jdesktop!!.layout!!.GroupLayout.TRAILING)!!.add(greenJLabel)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org!!.jdesktop!!.layout!!.GroupLayout.BASELINE)!!.add(minGreenJTextField, org!!.jdesktop!!.layout!!.GroupLayout.PREFERRED_SIZE, org!!.jdesktop!!.layout!!.GroupLayout.DEFAULT_SIZE, org!!.jdesktop!!.layout!!.GroupLayout.PREFERRED_SIZE)!!.add(maxGreenJTextField, org!!.jdesktop!!.layout!!.GroupLayout.PREFERRED_SIZE, org!!.jdesktop!!.layout!!.GroupLayout.DEFAULT_SIZE, org!!.jdesktop!!.layout!!.GroupLayout.PREFERRED_SIZE)))!!.addPreferredGap(org!!.jdesktop!!.layout!!.LayoutStyle.RELATED)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org!!.jdesktop!!.layout!!.GroupLayout.TRAILING)!!.add(blueJLabel)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org!!.jdesktop!!.layout!!.GroupLayout.BASELINE)!!.add(minBlueJTextField, org!!.jdesktop!!.layout!!.GroupLayout.PREFERRED_SIZE, org!!.jdesktop!!.layout!!.GroupLayout.DEFAULT_SIZE, org!!.jdesktop!!.layout!!.GroupLayout.PREFERRED_SIZE)!!.add(maxBlueJTextField, org!!.jdesktop!!.layout!!.GroupLayout.PREFERRED_SIZE, org!!.jdesktop!!.layout!!.GroupLayout.DEFAULT_SIZE, org!!.jdesktop!!.layout!!.GroupLayout.PREFERRED_SIZE)))!!.add(16, 16, 16)!!.add(okJButton)!!.addContainerGap(org!!.jdesktop!!.layout!!.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-setDefaultCloseOperation(javax!!.swing!!.WindowConstants.EXIT_ON_CLOSE)
-getContentPane()!!.setLayout(GridLayout(1, 0))
-jPanel1!!.setLayout(GridLayout(1, 0))
+analysisActionJDialogLayout!!.setHorizontalGroup(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(analysisActionJDialogLayout!!.createSequentialGroup()!!.addContainerGap()!!.add(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(analysisActionJDialogLayout!!.createSequentialGroup()!!.add(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(blueJLabel)!!.add(greenJLabel)!!.add(redJLabel)!!.add(colorRangeJLabel))!!.add(29, 29, 29)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(org.jdesktop.layout.GroupLayout.TRAILING, minJLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)!!.add(org.jdesktop.layout.GroupLayout.LEADING, minBlueJTextField)!!.add(org.jdesktop.layout.GroupLayout.LEADING, minGreenJTextField)!!.add(org.jdesktop.layout.GroupLayout.LEADING, minRedJTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)!!.add(org.jdesktop.layout.GroupLayout.LEADING, okJButton)))!!.addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)!!.add(org.jdesktop.layout.GroupLayout.LEADING, analysisActionJDialogLayout!!.createSequentialGroup()!!.add(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)!!.add(org.jdesktop.layout.GroupLayout.LEADING, maxRedJTextField)!!.add(org.jdesktop.layout.GroupLayout.LEADING, analysisActionJDialogLayout!!.createSequentialGroup()!!.add(1, 1, 1)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(maxBlueJTextField)!!.add(maxGreenJTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 43, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))!!.addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 17, Short.MAX_VALUE))!!.add(org.jdesktop.layout.GroupLayout.LEADING, maxJLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE))!!.addContainerGap())!!.add(org.jdesktop.layout.GroupLayout.TRAILING, analysisActionJDialogLayout!!.createSequentialGroup()!!.add(titleJLabel)!!.add(25, 25, 25)))))
+analysisActionJDialogLayout!!.setVerticalGroup(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(analysisActionJDialogLayout!!.createSequentialGroup()!!.add(titleJLabel)!!.addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)!!.add(minJLabel)!!.add(colorRangeJLabel)!!.add(maxJLabel))!!.addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)!!.add(redJLabel)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)!!.add(minRedJTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)!!.add(maxRedJTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))!!.addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)!!.add(greenJLabel)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)!!.add(minGreenJTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)!!.add(maxGreenJTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))!!.addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)!!.add(blueJLabel)!!.add(analysisActionJDialogLayout!!.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)!!.add(minBlueJTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)!!.add(maxBlueJTextField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))!!.add(16, 16, 16)!!.add(okJButton)!!.addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE)
+getContentPane()!!.setLayout(java.awt.GridLayout(1, 0))
+jPanel1!!.setLayout(java.awt.GridLayout(1, 0))
 getContentPane()!!.add(jPanel1)
-fileJMenu!!.setText(
-                            "File")
-fileJMenu!!.addActionListener(object: ActionListener()
+fileJMenu!!.setText("File")
+fileJMenu!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 fileJMenuActionPerformed(evt)
 }
 
                                 }
                             )
-openImageJMenuItem!!.setText(
-                            "Open")
-openImageJMenuItem!!.addActionListener(object: ActionListener()
+openImageJMenuItem!!.setText("Open")
+openImageJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 openImageJMenuItemActionPerformed(evt)
 }
 
@@ -188,159 +168,139 @@ openImageJMenuItemActionPerformed(evt)
                             )
 fileJMenu!!.add(openImageJMenuItem)
 mainJMenuBar!!.add(fileJMenu)
-processingJMenu!!.setText(
-                            "Processing")
-processingJMenu!!.addActionListener(object: ActionListener()
+processingJMenu!!.setText("Processing")
+processingJMenu!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 processingJMenuActionPerformed(evt)
 }
 
                                 }
                             )
-analyzeJMenuItem!!.setText(
-                            "Image Analyze")
-analyzeJMenuItem!!.addActionListener(object: ActionListener()
+analyzeJMenuItem!!.setText("Image Analyze")
+analyzeJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 analyzeJMenuItemActionPerformed(evt)
 }
 
                                 }
                             )
 processingJMenu!!.add(analyzeJMenuItem)
-generateMirrorSpriteMenuItem!!.setText(
-                            "Mirror Sprite Generator")
-generateMirrorSpriteMenuItem!!.addActionListener(object: ActionListener()
+generateMirrorSpriteMenuItem!!.setText("Mirror Sprite Generator")
+generateMirrorSpriteMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 generateMirrorSpriteMenuItemActionPerformed(evt)
 }
 
                                 }
                             )
 processingJMenu!!.add(generateMirrorSpriteMenuItem)
-generateRotationSpriteJMenuItem!!.setText(
-                            "Rotation Sprite Generator")
-generateRotationSpriteJMenuItem!!.addActionListener(object: ActionListener()
+generateRotationSpriteJMenuItem!!.setText("Rotation Sprite Generator")
+generateRotationSpriteJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 generateRotationSpriteJMenuItemActionPerformed(evt)
 }
 
                                 }
                             )
 processingJMenu!!.add(generateRotationSpriteJMenuItem)
-generateSpriteSplitterMenuItem!!.setText(
-                            "Sprite Splitter Generator")
-generateSpriteSplitterMenuItem!!.addActionListener(object: ActionListener()
+generateSpriteSplitterMenuItem!!.setText("Sprite Splitter Generator")
+generateSpriteSplitterMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 generateSpriteSplitterMenuItemActionPerformed(evt)
 }
 
                                 }
                             )
 processingJMenu!!.add(generateSpriteSplitterMenuItem)
-generateRotationMenuItem!!.setText(
-                            "Rotate Image Generator")
-generateRotationMenuItem!!.addActionListener(object: ActionListener()
+generateRotationMenuItem!!.setText("Rotate Image Generator")
+generateRotationMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 generateRotationMenuItemActionPerformed(evt)
 }
 
                                 }
                             )
 processingJMenu!!.add(generateRotationMenuItem)
-createStripImageJMenuItem!!.setText(
-                            "Multi Image Unifier")
-createStripImageJMenuItem!!.addActionListener(object: ActionListener()
+createStripImageJMenuItem!!.setText("Multi Image Unifier")
+createStripImageJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 createStripImageJMenuItemActionPerformed(evt)
 }
 
                                 }
                             )
 processingJMenu!!.add(createStripImageJMenuItem)
-mirrorJMenuItem!!.setText(
-                            "Mirror Image(s)")
-mirrorJMenuItem!!.addActionListener(object: ActionListener()
+mirrorJMenuItem!!.setText("Mirror Image(s)")
+mirrorJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 mirrorJMenuItemActionPerformed(evt)
 }
 
                                 }
                             )
 processingJMenu!!.add(mirrorJMenuItem)
-scaleImagesJMenuItem!!.setText(
-                            "Scale Image(s)")
-scaleImagesJMenuItem!!.addActionListener(object: ActionListener()
+scaleImagesJMenuItem!!.setText("Scale Image(s)")
+scaleImagesJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 scaleImagesJMenuItemActionPerformed(evt)
 }
 
                                 }
                             )
 processingJMenu!!.add(scaleImagesJMenuItem)
-canvasImagesJMenuItem!!.setText(
-                            "Canvas Image(s)")
-canvasImagesJMenuItem!!.addActionListener(object: ActionListener()
+canvasImagesJMenuItem!!.setText("Canvas Image(s)")
+canvasImagesJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 canvasImagesJMenuItemActionPerformed(evt)
 }
 
@@ -353,11 +313,10 @@ pack()
 }
 
 
-open fun createStripImageJMenuItemActionPerformed(evt: ActionEvent)
+    open fun createStripImageJMenuItemActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
         try {
             
@@ -368,26 +327,22 @@ this.jPanel1!!.add(imageUnifierJPanel)
 this.jPanel1!!.updateUI()
 imageProcessorInputCompositeInterface= imageUnifierJPanel
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "createStripImageJMenuItemActionPerformed", e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "createStripImageJMenuItemActionPerformed", e)
 }
 
 }
 
 
-open fun okJButtonActionPerformed(evt: ActionEvent)
+    open fun okJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
         try {
-            logUtil!!.put(
-                            "Starting", this, 
-                            "okJButtonActionPerformed")
+            logUtil!!.put("Starting", this, "okJButtonActionPerformed")
 
     var imageAnalysisResultsArray: Array<ImageAnalysisResults?> = ImageAnalysis.getInstance()!!.process(imageProcessorInput!!.getBufferedImageArray(), this.getColorRangeInterface())!!
-            
 
 this.jPanel1!!.removeAll()
 this.jPanel1!!.add(ImageAnalysisResultsJPanel(imageAnalysisResultsArray))
@@ -397,66 +352,56 @@ imageProcessorInputCompositeInterface=
                                         null
                                     
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "okJButtonActionPerformed", e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "okJButtonActionPerformed", e)
 }
 
 }
 
 
-open fun processingJMenuActionPerformed(evt: ActionEvent)
+    open fun processingJMenuActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 }
 
 
-open fun openImageJMenuItemActionPerformed(evt: ActionEvent)
+    open fun openImageJMenuItemActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
         try {
-            logUtil!!.put(
-                            "Starting", this, 
-                            "openImageJMenuItemActionPerformed")
+            logUtil!!.put("Starting", this, "openImageJMenuItemActionPerformed")
 fileJDialog!!.setVisible(true)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "openImageJMenuItemActionPerformed", e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "openImageJMenuItemActionPerformed", e)
 }
 
 }
 
 
-open fun onFiles(files: Array<File?>)
+    open fun onFiles(files: Array<File?>)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var files = files
+var files = files
 
         try {
-            logUtil!!.put("Reading " +files!!.size +" files.", this, 
-                            "onFiles")
+            logUtil!!.put("Reading " +files.size +" files.", this, "onFiles")
 Arrays.sort(files, object: Comparator<File>()
                                 {
-                                override fun compare(file1: File, file2: File)
+                                
+    override fun compare(file1: File, file2: File)
         //nullable = true from not(false or (false and false)) = true
 : Int{
+    //var file1 = file1
+    //var file2 = file2
 
-                    var file1 = file1
-
-
-                    var file2 = file2
-
-    var fileNameIndexValue1: Int = extractIndexNumberIfAnyFromFileName(file1!!.getName())!!
-            
+    var fileNameIndexValue1: Int = extractIndexNumberIfAnyFromFileName(file1.getName())!!
 
 
-    var fileNameIndexValue2: Int = extractIndexNumberIfAnyFromFileName(file2!!.getName())!!
-            
+    var fileNameIndexValue2: Int = extractIndexNumberIfAnyFromFileName(file2.getName())!!
 
 
 
@@ -465,32 +410,28 @@ Arrays.sort(files, object: Comparator<File>()
                         return fileNameIndexValue1 -fileNameIndexValue2
 }
 
-open override fun extractIndexNumberIfAnyFromFileName(name: String)
+    open override fun extractIndexNumberIfAnyFromFileName(name: String)
         //nullable = true from not(false or (false and false)) = true
 : Int{
-
-                    var name = name
+    //var name = name
 
     var i: Int = 0
 
 
         try {
             
-    var start: Int = name!!.lastIndexOf(
-                            '_') +1
+    var start: Int = name.lastIndexOf('_') +1
 
 
-    var end: Int = name!!.lastIndexOf(
-                            '.')!!
-            
+    var end: Int = name.lastIndexOf('.')!!
 
 
-    var number: String = name!!.substring(start, end)!!
-            
+    var number: String = name.substring(start, end)!!
 
 i= Integer.parseInt(number)
 } catch(e: Exception)
-            {i= 0
+            {
+i= 0
 }
 
 
@@ -503,16 +444,16 @@ i= Integer.parseInt(number)
                                 }
                             )
 
-    var bufferedImageArray: Array<BufferedImage?> = arrayOfNulls(files!!.size)
+    var bufferedImageArray: Array<BufferedImage?> = arrayOfNulls(files.size)
 
 
 
 
 
-                        for (index in 0 until files!!.size)
+                        for (index in 0 until files.size)
 
-
-        {bufferedImageArray[index]= ImageIO.read(files[index]!!)
+        {
+bufferedImageArray[index]= ImageIO.read(files[index]!!)
 
     
                         if(bufferedImageArray[index] == 
@@ -543,50 +484,43 @@ this.fileJDialog!!.setVisible(false)
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "onFiles", e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "onFiles", e)
 }
 
 }
 
 
-open fun fileJMenuActionPerformed(evt: ActionEvent)
+    open fun fileJMenuActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 }
 
 
-open fun analyzeJMenuItemActionPerformed(evt: ActionEvent)
+    open fun analyzeJMenuItemActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
         try {
-            logUtil!!.put(
-                            "Starting", this, 
-                            "analyzeJMenuItemActionPerformed")
+            logUtil!!.put("Starting", this, "analyzeJMenuItemActionPerformed")
 this.analysisActionJDialog!!.setVisible(true)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "analyzeJMenuItemActionPerformed", e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "analyzeJMenuItemActionPerformed", e)
 }
 
 }
 
 
-open fun generateRotationSpriteJMenuItemActionPerformed(evt: ActionEvent)
+    open fun generateRotationSpriteJMenuItemActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
         try {
-            logUtil!!.put(
-                            "Starting", this, 
-                            "generateRotationSpriteJMenuItemActionPerformed")
+            logUtil!!.put("Starting", this, "generateRotationSpriteJMenuItemActionPerformed")
 
     var spriteImageJPanel: RotationSpriteImageJPanel = RotationSpriteImageJPanel(this.imageProcessorInput)
 
@@ -595,23 +529,20 @@ this.jPanel1!!.add(spriteImageJPanel)
 this.jPanel1!!.updateUI()
 imageProcessorInputCompositeInterface= spriteImageJPanel
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "generateRotationSpriteJMenuItemActionPerformed", e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "generateRotationSpriteJMenuItemActionPerformed", e)
 }
 
 }
 
 
-open fun generateSpriteSplitterMenuItemActionPerformed(evt: ActionEvent)
+    open fun generateSpriteSplitterMenuItemActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
         try {
-            logUtil!!.put(
-                            "Starting", this, 
-                            "generateRotationSpriteJMenuItemActionPerformed")
+            logUtil!!.put("Starting", this, "generateRotationSpriteJMenuItemActionPerformed")
 
     var imageJPanel: SpriteSplitterImageJPanel = SpriteSplitterImageJPanel(this.imageProcessorInput)
 
@@ -620,23 +551,20 @@ this.jPanel1!!.add(imageJPanel)
 this.jPanel1!!.updateUI()
 imageProcessorInputCompositeInterface= imageJPanel
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "generateRotationMenuItemActionPerformed", e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "generateRotationMenuItemActionPerformed", e)
 }
 
 }
 
 
-open fun generateRotationMenuItemActionPerformed(evt: ActionEvent)
+    open fun generateRotationMenuItemActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
         try {
-            logUtil!!.put(
-                            "Starting", this, 
-                            "generateRotationSpriteJMenuItemActionPerformed")
+            logUtil!!.put("Starting", this, "generateRotationSpriteJMenuItemActionPerformed")
 
     var rotationImageJPanel: RotationImageJPanel = RotationImageJPanel(this.imageProcessorInput)
 
@@ -645,22 +573,20 @@ this.jPanel1!!.add(rotationImageJPanel)
 this.jPanel1!!.updateUI()
 imageProcessorInputCompositeInterface= rotationImageJPanel
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "generateRotationMenuItemActionPerformed", e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "generateRotationMenuItemActionPerformed", e)
 }
 
 }
 
 
-open fun scaleImagesJMenuItemActionPerformed(evt: ActionEvent)
+    open fun scaleImagesJMenuItemActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, 
-                            "scaleImagesJMenuItemActionPerformed")
+            logUtil!!.put(this.commonStrings!!.START, this, "scaleImagesJMenuItemActionPerformed")
 
     var resizeImageJPanel: ResizeImageJPanel = ResizeImageJPanel(this.imageProcessorInput)
 
@@ -669,22 +595,20 @@ this.jPanel1!!.add(resizeImageJPanel)
 this.jPanel1!!.updateUI()
 imageProcessorInputCompositeInterface= resizeImageJPanel
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "scaleImagesJMenuItemActionPerformed", e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "scaleImagesJMenuItemActionPerformed", e)
 }
 
 }
 
 
-open fun canvasImagesJMenuItemActionPerformed(evt: ActionEvent)
+    open fun canvasImagesJMenuItemActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, 
-                            "canvasImagesJMenuItemActionPerformed")
+            logUtil!!.put(this.commonStrings!!.START, this, "canvasImagesJMenuItemActionPerformed")
 
     var resizeImageJPanel: CanvasImageJPanel = CanvasImageJPanel(this.imageProcessorInput)
 
@@ -693,23 +617,20 @@ this.jPanel1!!.add(resizeImageJPanel)
 this.jPanel1!!.updateUI()
 imageProcessorInputCompositeInterface= resizeImageJPanel
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "scaleImagesJMenuItemActionPerformed", e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "scaleImagesJMenuItemActionPerformed", e)
 }
 
 }
 
 
-open fun generateMirrorSpriteMenuItemActionPerformed(evt: ActionEvent)
+    open fun generateMirrorSpriteMenuItemActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
         try {
-            logUtil!!.put(
-                            "Starting", this, 
-                            "generateMirrorSpriteJMenuItemActionPerformed")
+            logUtil!!.put("Starting", this, "generateMirrorSpriteJMenuItemActionPerformed")
 
     var spriteImageJPanel: MirrorSpriteImageJPanel = MirrorSpriteImageJPanel(this.imageProcessorInput)
 
@@ -718,23 +639,20 @@ this.jPanel1!!.add(spriteImageJPanel)
 this.jPanel1!!.updateUI()
 imageProcessorInputCompositeInterface= spriteImageJPanel
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "generateMirrorSpriteJMenuItemActionPerformed", e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "generateMirrorSpriteJMenuItemActionPerformed", e)
 }
 
 }
 
 
-open fun mirrorJMenuItemActionPerformed(evt: ActionEvent)
+    open fun mirrorJMenuItemActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
         try {
-            logUtil!!.put(
-                            "Starting", this, 
-                            "generateMirrorJMenuItemActionPerformed")
+            logUtil!!.put("Starting", this, "generateMirrorJMenuItemActionPerformed")
 
     var mirrorImageJPanel: MirrorImageJPanel = MirrorImageJPanel(this.imageProcessorInput)
 
@@ -743,16 +661,17 @@ this.jPanel1!!.add(mirrorImageJPanel)
 this.jPanel1!!.updateUI()
 imageProcessorInputCompositeInterface= mirrorImageJPanel
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "generateMirrorJMenuItemActionPerformed", e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "generateMirrorJMenuItemActionPerformed", e)
 }
 
 }
 
 
-open fun getColorRangeInterface()
+    open fun getColorRangeInterface()
         //nullable = true from not(false or (false and true)) = true
 : ColorRangeInterface{
+
     var colorRangeInterface: ColorRangeInterface = ColorRange() as ColorRangeInterface
 
 colorRangeInterface!!.setMinRed(Integer(this.getMinRedJTextField()!!.getText()).
@@ -775,9 +694,10 @@ colorRangeInterface!!.setMaxBlue(Integer(this.getMaxBlueJTextField()!!.getText()
 }
 
 
-open fun getMaxBlueJTextField()
+    open fun getMaxBlueJTextField()
         //nullable = true from not(false or (false and true)) = true
-: JTextField{
+: javax.swing.JTextField{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -785,18 +705,18 @@ open fun getMaxBlueJTextField()
 }
 
 
-open fun setMaxBlueJTextField(maxBlueJTextField: JTextField)
+    open fun setMaxBlueJTextField(maxBlueJTextField: javax.swing.JTextField)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var maxBlueJTextField = maxBlueJTextField
+var maxBlueJTextField = maxBlueJTextField
 this.maxBlueJTextField= maxBlueJTextField
 }
 
 
-open fun getMaxGreenJTextField()
+    open fun getMaxGreenJTextField()
         //nullable = true from not(false or (false and true)) = true
-: JTextField{
+: javax.swing.JTextField{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -804,18 +724,18 @@ open fun getMaxGreenJTextField()
 }
 
 
-open fun setMaxGreenJTextField(maxGreenJTextField: JTextField)
+    open fun setMaxGreenJTextField(maxGreenJTextField: javax.swing.JTextField)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var maxGreenJTextField = maxGreenJTextField
+var maxGreenJTextField = maxGreenJTextField
 this.maxGreenJTextField= maxGreenJTextField
 }
 
 
-open fun getMaxRedJTextField()
+    open fun getMaxRedJTextField()
         //nullable = true from not(false or (false and true)) = true
-: JTextField{
+: javax.swing.JTextField{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -823,18 +743,18 @@ open fun getMaxRedJTextField()
 }
 
 
-open fun setMaxRedJTextField(maxRedJTextField: JTextField)
+    open fun setMaxRedJTextField(maxRedJTextField: javax.swing.JTextField)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var maxRedJTextField = maxRedJTextField
+var maxRedJTextField = maxRedJTextField
 this.maxRedJTextField= maxRedJTextField
 }
 
 
-open fun getMinBlueJTextField()
+    open fun getMinBlueJTextField()
         //nullable = true from not(false or (false and true)) = true
-: JTextField{
+: javax.swing.JTextField{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -842,18 +762,18 @@ open fun getMinBlueJTextField()
 }
 
 
-open fun setMinBlueJTextField(minBlueJTextField: JTextField)
+    open fun setMinBlueJTextField(minBlueJTextField: javax.swing.JTextField)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var minBlueJTextField = minBlueJTextField
+var minBlueJTextField = minBlueJTextField
 this.minBlueJTextField= minBlueJTextField
 }
 
 
-open fun getMinGreenJTextField()
+    open fun getMinGreenJTextField()
         //nullable = true from not(false or (false and true)) = true
-: JTextField{
+: javax.swing.JTextField{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -861,18 +781,18 @@ open fun getMinGreenJTextField()
 }
 
 
-open fun setMinGreenJTextField(minGreenJTextField: JTextField)
+    open fun setMinGreenJTextField(minGreenJTextField: javax.swing.JTextField)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var minGreenJTextField = minGreenJTextField
+var minGreenJTextField = minGreenJTextField
 this.minGreenJTextField= minGreenJTextField
 }
 
 
-open fun getMinRedJTextField()
+    open fun getMinRedJTextField()
         //nullable = true from not(false or (false and true)) = true
-: JTextField{
+: javax.swing.JTextField{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -880,72 +800,71 @@ open fun getMinRedJTextField()
 }
 
 
-open fun setMinRedJTextField(minRedJTextField: JTextField)
+    open fun setMinRedJTextField(minRedJTextField: javax.swing.JTextField)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var minRedJTextField = minRedJTextField
+var minRedJTextField = minRedJTextField
 this.minRedJTextField= minRedJTextField
 }
 
 
-    private var analysisActionJDialog: JDialog
+    private var analysisActionJDialog: javax.swing.JDialog
 
-    private var analyzeJMenuItem: JMenuItem
+    private var analyzeJMenuItem: javax.swing.JMenuItem
 
-    private var blueJLabel: JLabel
+    private var blueJLabel: javax.swing.JLabel
 
-    private var colorRangeJLabel: JLabel
+    private var colorRangeJLabel: javax.swing.JLabel
 
-    private var createStripImageJMenuItem: JMenuItem
+    private var createStripImageJMenuItem: javax.swing.JMenuItem
 
-    private var fileJMenu: JMenu
+    private var fileJMenu: javax.swing.JMenu
 
-    private var generateSpriteSplitterMenuItem: JMenuItem
+    private var generateSpriteSplitterMenuItem: javax.swing.JMenuItem
 
-    private var generateRotationMenuItem: JMenuItem
+    private var generateRotationMenuItem: javax.swing.JMenuItem
 
-    private var generateMirrorSpriteMenuItem: JMenuItem
+    private var generateMirrorSpriteMenuItem: javax.swing.JMenuItem
 
-    private var generateRotationSpriteJMenuItem: JMenuItem
+    private var generateRotationSpriteJMenuItem: javax.swing.JMenuItem
 
-    private var greenJLabel: JLabel
+    private var greenJLabel: javax.swing.JLabel
 
-    private var jPanel1: JPanel
+    private var jPanel1: javax.swing.JPanel
 
-    private var mainJMenuBar: JMenuBar
+    private var mainJMenuBar: javax.swing.JMenuBar
 
-    private var maxBlueJTextField: JTextField
+    private var maxBlueJTextField: javax.swing.JTextField
 
-    private var maxGreenJTextField: JTextField
+    private var maxGreenJTextField: javax.swing.JTextField
 
-    private var maxJLabel: JLabel
+    private var maxJLabel: javax.swing.JLabel
 
-    private var maxRedJTextField: JTextField
+    private var maxRedJTextField: javax.swing.JTextField
 
-    private var minBlueJTextField: JTextField
+    private var minBlueJTextField: javax.swing.JTextField
 
-    private var minGreenJTextField: JTextField
+    private var minGreenJTextField: javax.swing.JTextField
 
-    private var minJLabel: JLabel
+    private var minJLabel: javax.swing.JLabel
 
-    private var minRedJTextField: JTextField
+    private var minRedJTextField: javax.swing.JTextField
 
-    private var mirrorJMenuItem: JMenuItem
+    private var mirrorJMenuItem: javax.swing.JMenuItem
 
-    private var okJButton: JButton
+    private var okJButton: javax.swing.JButton
 
-    private var openImageJMenuItem: JMenuItem
+    private var openImageJMenuItem: javax.swing.JMenuItem
 
-    private var processingJMenu: JMenu
+    private var processingJMenu: javax.swing.JMenu
 
-    private var redJLabel: JLabel
+    private var redJLabel: javax.swing.JLabel
 
-    private var scaleImagesJMenuItem: JMenuItem
+    private var scaleImagesJMenuItem: javax.swing.JMenuItem
 
-    private var canvasImagesJMenuItem: JMenuItem
+    private var canvasImagesJMenuItem: javax.swing.JMenuItem
 
-    private var titleJLabel: JLabel
+    private var titleJLabel: javax.swing.JLabel
 
 }
                 

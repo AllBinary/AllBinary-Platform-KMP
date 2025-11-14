@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -29,18 +27,19 @@
         
 import java.util.Map
 import org.osgi.framework.BundleContext
+
 interface RemoteFramework {
         
 
-open fun connect(host: String)
+    open fun connect(host: String)
         //nullable = true from not(false or (false and false)) = true
 : BundleContext
 
-open fun disconnect(bc: BundleContext)
+    open fun disconnect(bc: BundleContext)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getSystemProperties(bc: BundleContext)
+    open fun getSystemProperties(bc: BundleContext)
         //nullable = true from not(false or (false and false)) = true
 : Map
 

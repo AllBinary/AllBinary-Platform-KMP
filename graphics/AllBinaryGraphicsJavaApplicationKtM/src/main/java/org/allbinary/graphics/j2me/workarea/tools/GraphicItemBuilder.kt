@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -33,20 +31,16 @@ open public class GraphicItemBuilder
             : Object
          {
         
-
-        companion object {
-
-
+companion object {
+            
                 @Throws(Exception::class)
             
-open fun getInstance(node: Node)
+    open fun getInstance(node: Node)
         //nullable =  from not(true or (false and false)) = 
 : GraphicItemInterface{
+var node = node
 
-                    var node = node
-
-    var graphicItemName: String = node!!.getNodeName()!!
-            
+    var graphicItemName: String = node.getNodeName()!!
 
 
     
@@ -72,11 +66,11 @@ open fun getInstance(node: Node)
 }
 
 
-
         }
-            private constructor        ()
+            private constructor ()
             : super()
-        {}
+        {
+}
 
 
 }

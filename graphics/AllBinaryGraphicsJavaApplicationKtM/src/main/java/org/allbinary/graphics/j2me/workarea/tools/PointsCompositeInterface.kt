@@ -18,19 +18,18 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface PointsCompositeInterface {
         
 
-open fun getPointsInterface()
+    open fun getPointsInterface()
         //nullable = true from not(false or (false and true)) = true
 : PointsInterface
 

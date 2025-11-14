@@ -18,24 +18,23 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
         import kotlin.reflect.KClass
         
 import org.allbinary.util.BasicArrayList
+
 interface PointsInterface {
         
 
-open fun getPoints()
+    open fun getPoints()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList
 
-open fun addPoints(vector: BasicArrayList)
+    open fun addPoints(vector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 
 

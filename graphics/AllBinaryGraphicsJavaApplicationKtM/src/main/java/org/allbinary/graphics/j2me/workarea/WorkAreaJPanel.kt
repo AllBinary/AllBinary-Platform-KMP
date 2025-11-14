@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         import java.lang.Runnable
         
@@ -58,15 +58,14 @@ open public class WorkAreaJPanel : JPanel
                 , EventListener
                 , Runnable {
         
+companion object {
+            
+    private var document: org.w3c.dom.Document
 
-        companion object {
-
-
-    private var document: Document
-
-open fun getDocument()
+    open fun getDocument()
         //nullable = true from not(false or (false and true)) = true
 : Document{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -74,11 +73,9 @@ open fun getDocument()
 }
 
 
-
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var canvasJPanelList: LinkedList
 
@@ -93,18 +90,11 @@ open fun getDocument()
     private var workAreaJTreeJPanel: WorkAreaJTreeJPanel
 
     private var isPlaying: Boolean = false
-public constructor        (name: String, dimension: Dimension, x: Int, y: Int){
-
-                    var name = name
-
-
-                    var dimension = dimension
-
-
-                    var x = x
-
-
-                    var y = y
+public constructor (name: String, dimension: Dimension, x: Int, y: Int){
+var name = name
+var dimension = dimension
+var x = x
+var y = y
 
         try {
             initComponents()
@@ -122,17 +112,15 @@ this.canvasHolderJPanel!!.add(canvasJPanel as Component)
             {
 
 
+
                             throw e
 }
 
 }
 
-public constructor        (workAreaDom: WorkAreaDom, dimension: Dimension){
-
-                    var workAreaDom = workAreaDom
-
-
-                    var dimension = dimension
+public constructor (workAreaDom: WorkAreaDom, dimension: Dimension){
+var workAreaDom = workAreaDom
+var dimension = dimension
 
         try {
             initComponents()
@@ -140,11 +128,9 @@ this.name= workAreaDom!!.getName()
 initMyComponents(dimension)
 
     var canvasNodeList: BasicArrayList = workAreaDom!!.getCanvasNodes()!!
-            
 
 
     var numberOfFrames: Int = canvasNodeList!!.size()!!
-            
 
 
 
@@ -152,8 +138,8 @@ initMyComponents(dimension)
 
                         for (index in 0 until numberOfFrames)
 
-
         {
+
     var node: Node = canvasNodeList!!.get(index) as Node
 
 
@@ -167,13 +153,12 @@ this.canvasHolderJPanel!!.add(this.getCurrentFrame() as Component)
 this.propertiesJPanel!!.set(this.workAreaJTreeJPanel)
 } catch(e: Exception)
             {
+
     
                         if(LOGGING.contains(LOGGING.LOADINGERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Constructor Error", this, 
-                            "WorkAreaJPanel", e)
+                                    logUtil!!.put("Constructor Error", this, "WorkAreaJPanel", e)
 
                                     }
                                 
@@ -186,11 +171,10 @@ this.propertiesJPanel!!.set(this.workAreaJTreeJPanel)
 }
 
 
-open fun initMyComponents(dimension: Dimension)
+    open fun initMyComponents(dimension: Dimension)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var dimension = dimension
+var dimension = dimension
 this.workAreaJTreeJPanel= WorkAreaJTreeJPanel(this.name)
 this.canvasHolderJPanel= JPanel()
 this.canvasHolderJPanel!!.setSize(dimension)
@@ -207,7 +191,7 @@ this.innerJPanel!!.setLayout(gridBagLayout)
 gridBagConstraints!!.gridx= 0
 gridBagConstraints!!.gridy= 0
 gridBagConstraints!!.gridwidth= 1
-gridBagConstraints!!.fill= java!!.awt!!.GridBagConstraints.BOTH
+gridBagConstraints!!.fill= java.awt.GridBagConstraints.BOTH
 gridBagConstraints!!.weightx= .05
 gridBagConstraints!!.weighty= .05
 
@@ -219,7 +203,7 @@ gridBagConstraints= GridBagConstraints()
 gridBagConstraints!!.gridx= 1
 gridBagConstraints!!.gridy= 0
 gridBagConstraints!!.gridwidth= 6
-gridBagConstraints!!.fill= java!!.awt!!.GridBagConstraints.BOTH
+gridBagConstraints!!.fill= java.awt.GridBagConstraints.BOTH
 gridBagConstraints!!.weightx= 1
 gridBagConstraints!!.weighty= 1
 gridBagLayout!!.setConstraints(canvasHolderJPanel, gridBagConstraints)
@@ -227,8 +211,8 @@ this.innerJPanel!!.add(canvasHolderJPanel)
 gridBagConstraints= GridBagConstraints()
 gridBagConstraints!!.gridx= 8
 gridBagConstraints!!.gridy= 0
-gridBagConstraints!!.gridwidth= java!!.awt!!.GridBagConstraints.REMAINDER
-gridBagConstraints!!.fill= java!!.awt!!.GridBagConstraints.BOTH
+gridBagConstraints!!.gridwidth= java.awt.GridBagConstraints.REMAINDER
+gridBagConstraints!!.fill= java.awt.GridBagConstraints.BOTH
 gridBagConstraints!!.weightx= .1
 gridBagConstraints!!.weighty= .1
 propertiesJPanel= PropertiesJPanel()
@@ -238,19 +222,23 @@ MyCanvasEventService.addListener(this as MyCanvasEventListener)
 }
 
 
-open fun getCanvasHashMap()
+    open fun getCanvasHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
+
     var canvasJPanelHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 
+    var size: Int = this.canvasJPanelList!!.size()!!
 
 
 
-                        for (index in 0 until this.canvasJPanelList!!.size()!!)
 
+
+                        for (index in 0 until size)
 
         {
+
     var canvasJPanel: CanvasJPanel = this.canvasJPanelList!!.get(index) as CanvasJPanel
 
 canvasJPanelHashMap!!.put(canvasJPanel!!.getTreeNode(), Integer(index))
@@ -263,22 +251,28 @@ canvasJPanelHashMap!!.put(canvasJPanel!!.getTreeNode(), Integer(index))
                         return canvasJPanelHashMap
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun play()
+    open fun play()
         //nullable = true from not(false or (false and true)) = true
-{isPlaying= true
+{
+isPlaying= true
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun stop()
+    open fun stop()
         //nullable = true from not(false or (false and true)) = true
-{isPlaying= false
+{
+isPlaying= false
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun isPlaying()
+    open fun isPlaying()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -286,9 +280,10 @@ open fun isPlaying()
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -296,36 +291,39 @@ open fun getName()
 }
 
 
-open fun setName(value: String)
+    open fun setName(value: String)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var value = value
+var value = value
 this.name= value
 }
 
 
-open fun disableCanvas()
+    open fun disableCanvas()
         //nullable = true from not(false or (false and true)) = true
-{this.canvasHolderJPanel!!.removeAll()
+{
+this.canvasHolderJPanel!!.removeAll()
 }
 
 
-open fun enableCanvas()
+    open fun enableCanvas()
         //nullable = true from not(false or (false and true)) = true
-{this.canvasHolderJPanel!!.add(this.getCurrentFrame() as Component)
+{
+this.canvasHolderJPanel!!.add(this.getCurrentFrame() as Component)
 }
 
 
-open fun deselect()
+    open fun deselect()
         //nullable = true from not(false or (false and true)) = true
-{super.setVisible(false)
+{
+super.setVisible(false)
 }
 
 
-open fun select()
+    open fun select()
         //nullable = true from not(false or (false and true)) = true
-{super.setVisible(true)
+{
+super.setVisible(true)
 
     
                         if(this.canvasHolderJPanel!!.getComponentCount() == 1)
@@ -333,7 +331,6 @@ open fun select()
                                     {
                                     
     var component: Component = this.canvasHolderJPanel!!.getComponent(0)!!
-            
 
 
     
@@ -342,7 +339,7 @@ open fun select()
                                 )
                         
                                     {
-                                    component!!.repaint()
+                                    component.repaint()
 
                                     }
                                 
@@ -352,14 +349,12 @@ open fun select()
 }
 
 
-open fun changeZoom(factor: Int)
+    open fun changeZoom(factor: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var factor = factor
+var factor = factor
 
     var size: Int = canvasJPanelList!!.size()!!
-            
 
 
 
@@ -367,8 +362,8 @@ open fun changeZoom(factor: Int)
 
                         for (index in 0 until size)
 
-
         {
+
     var canvasJPanel: CanvasJPanel = canvasJPanelList!!.get(index) as CanvasJPanel
 
 canvasJPanel!!.getGrid()!!.setZoom(canvasJPanel!!.getGrid()!!.getZoom() +factor)
@@ -377,9 +372,10 @@ canvasJPanel!!.getGrid()!!.setZoom(canvasJPanel!!.getGrid()!!.getZoom() +factor)
 }
 
 
-open fun getCurrentFrame()
+    open fun getCurrentFrame()
         //nullable = true from not(false or (false and true)) = true
 : CanvasJPanel{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -387,11 +383,10 @@ open fun getCurrentFrame()
 }
 
 
-open fun initDuplicate(newCanvasJPanel: CanvasJPanel)
+    open fun initDuplicate(newCanvasJPanel: CanvasJPanel)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var newCanvasJPanel = newCanvasJPanel
+var newCanvasJPanel = newCanvasJPanel
 
     
                         if(newCanvasJPanel != 
@@ -409,14 +404,12 @@ this.select(this.canvasJPanelList!!.size() -1)
 
                 @Throws(Exception::class)
             
-open fun duplicate(treeNode: MutableTreeNode)
+    open fun duplicate(treeNode: MutableTreeNode)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var treeNode = treeNode
+var treeNode = treeNode
 
     var canvasJPanelHashMap: HashMap<Any, Any> = this.getCanvasHashMap()!!
-            
 
 
     
@@ -424,7 +417,7 @@ open fun duplicate(treeNode: MutableTreeNode)
                         
                                     {
                                     
-    var frameInteger: Integer = canvasJPanelHashMap!!.get(treeNode as Object?) as Integer
+    var frameInteger: Integer = canvasJPanelHashMap!!.get(treeNode as Object) as Integer
 
 
     var canvasJPanel: CanvasJPanel = this.canvasJPanelList!!.get(frameInteger!!.toInt()) as CanvasJPanel
@@ -438,14 +431,11 @@ initDuplicate(canvasJPanel!!.duplicate())
 
                 @Throws(Exception::class)
             
-open fun autoRotate(increments: Int, totalAngle: Int)
+    open fun autoRotate(increments: Int, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var increments = increments
-
-
-                    var totalAngle = totalAngle
+var increments = increments
+var totalAngle = totalAngle
 
     var incrementAngle: Int = (totalAngle /increments).toInt()
 
@@ -455,13 +445,12 @@ open fun autoRotate(increments: Int, totalAngle: Int)
 
                         for (index in 1 until increments)
 
-
         {
+
     var canvasJPanel: CanvasJPanel = this.getCurrentFrame() as CanvasJPanel
 
 
     var newCanvasJPanel: CanvasJPanel = canvasJPanel!!.duplicate()!!
-            
 
 newCanvasJPanel!!.setAngle(incrementAngle *index)
 initDuplicate(newCanvasJPanel)
@@ -470,9 +459,10 @@ initDuplicate(newCanvasJPanel)
 }
 
 
-open fun explodeAll()
+    open fun explodeAll()
         //nullable = true from not(false or (false and true)) = true
 {
+
     var canvasJPanel: CanvasJPanel = this.getCurrentFrame() as CanvasJPanel
 
 canvasJPanel!!.explodeAll()
@@ -481,27 +471,23 @@ canvasJPanel!!.explodeAll()
 
                 @Throws(Exception::class)
             
-open fun autoExplode(numberOfFrames: Int, explodeType: Int)
+    open fun autoExplode(numberOfFrames: Int, explodeType: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var numberOfFrames = numberOfFrames
-
-
-                    var explodeType = explodeType
+var numberOfFrames = numberOfFrames
+var explodeType = explodeType
 
 
 
 
                         for (index in 1 until numberOfFrames)
 
-
         {
+
     var canvasJPanel: CanvasJPanel = this.getCurrentFrame() as CanvasJPanel
 
 
     var newCanvasJPanel: CanvasJPanel = canvasJPanel!!.duplicate()!!
-            
 
 newCanvasJPanel!!.explode(index +1, explodeType)
 initDuplicate(newCanvasJPanel)
@@ -512,25 +498,25 @@ initDuplicate(newCanvasJPanel)
 
                 @Throws(Exception::class)
             
-open fun autoMirror()
+    open fun autoMirror()
         //nullable = true from not(false or (false and true)) = true
 {
+
     var canvasJPanel: CanvasJPanel = this.getCurrentFrame() as CanvasJPanel
 
 
     var newCanvasJPanel: CanvasJPanel = canvasJPanel!!.duplicate()!!
-            
 
 newCanvasJPanel!!.mirror()
 initDuplicate(newCanvasJPanel)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun select(index: Int)
+    open fun select(index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var index = index
+var index = index
 
     
                         if(index < this.canvasJPanelList!!.size())
@@ -561,17 +547,15 @@ canvasJPanel!!.repaint()
 }
 
 
-open fun select(treeNode: MutableTreeNode)
+    open fun select(treeNode: MutableTreeNode)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var treeNode = treeNode
+var treeNode = treeNode
 
     var canvasJPanelHashMap: HashMap<Any, Any> = this.getCanvasHashMap()!!
-            
 
 
-    var frameInteger: Integer = canvasJPanelHashMap!!.get(treeNode as Object?) as Integer
+    var frameInteger: Integer = canvasJPanelHashMap!!.get(treeNode as Object) as Integer
 
 
     
@@ -589,29 +573,25 @@ open fun select(treeNode: MutableTreeNode)
 
                 @Throws(Exception::class)
             
-open fun toDocument()
+    open fun toDocument()
         //nullable = true from not(false or (false and true)) = true
-: Document{document= DomHelper.getInstance()!!.createDocument()
+: Document{
+document= DomHelper.getInstance()!!.createDocument()
 
-    var workAreaNode: Node = document!!.createElement(WorkAreaDom.WORKAREA)!!
-            
-
-
-    var nameNode: Node = document!!.createElement(WorkAreaDom.NAME)!!
-            
+    var workAreaNode: Node = document.createElement(WorkAreaDom.WORKAREA)!!
 
 
-    var nameTextNode: Node = document!!.createTextNode(this.name)!!
-            
+    var nameNode: Node = document.createElement(WorkAreaDom.NAME)!!
+
+
+    var nameTextNode: Node = document.createTextNode(this.name)!!
 
 nameNode!!.appendChild(nameTextNode)
 
-    var framesNode: Node = document!!.createElement(WorkAreaDom.FRAMES)!!
-            
+    var framesNode: Node = document.createElement(WorkAreaDom.FRAMES)!!
 
 
     var size: Int = canvasJPanelList!!.size()!!
-            
 
 
 
@@ -619,8 +599,8 @@ nameNode!!.appendChild(nameTextNode)
 
                         for (index in 0 until size)
 
-
         {
+
     var canvasJPanel: CanvasJPanel = canvasJPanelList!!.get(index) as CanvasJPanel
 
 framesNode!!.appendChild(canvasJPanel!!.toDom())
@@ -628,7 +608,7 @@ framesNode!!.appendChild(canvasJPanel!!.toDom())
 
 workAreaNode!!.appendChild(nameNode)
 workAreaNode!!.appendChild(framesNode)
-document!!.appendChild(workAreaNode)
+document.appendChild(workAreaNode)
 
 
 
@@ -637,34 +617,32 @@ document!!.appendChild(workAreaNode)
 }
 
 
-open fun initComponents()
+    open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
-{innerJPanel= JPanel()
-setLayout(GridLayout(1, 1))
-innerJPanel!!.addKeyListener(object: KeyAdapter()
+{
+innerJPanel= javax.swing.JPanel()
+setLayout(java.awt.GridLayout(1, 1))
+innerJPanel!!.addKeyListener(object: java.awt.event.KeyAdapter()
                                 {
                                 
-open override fun keyTyped(evt: KeyEvent)
+    open override fun keyTyped(evt: java.awt.event.KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 innerJPanelKeyTyped(evt)
 }
 
-open override fun keyPressed(evt: KeyEvent)
+    open override fun keyPressed(evt: java.awt.event.KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 innerJPanelKeyPressed(evt)
 }
 
-open override fun keyReleased(evt: KeyEvent)
+    open override fun keyReleased(evt: java.awt.event.KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 innerJPanelKeyReleased(evt)
 }
 
@@ -674,78 +652,67 @@ add(innerJPanel)
 }
 
 
-open fun innerJPanelKeyReleased(evt: KeyEvent)
+    open fun innerJPanelKeyReleased(evt: java.awt.event.KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
-StatusFactory.getInstance()!!.setStatus(
-                            "Key Pressed1")
+var evt = evt
+StatusFactory.getInstance()!!.setStatus("Key Pressed1")
 }
 
 
-open fun innerJPanelKeyPressed(evt: KeyEvent)
+    open fun innerJPanelKeyPressed(evt: java.awt.event.KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
-StatusFactory.getInstance()!!.setStatus(
-                            "Key Pressed2")
+var evt = evt
+StatusFactory.getInstance()!!.setStatus("Key Pressed2")
 }
 
 
-open fun innerJPanelKeyTyped(evt: KeyEvent)
+    open fun innerJPanelKeyTyped(evt: java.awt.event.KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
-StatusFactory.getInstance()!!.setStatus(
-                            "Key Pressed3")
+var evt = evt
+StatusFactory.getInstance()!!.setStatus("Key Pressed3")
 }
 
 
-open fun keyPressed(keyEvent: KeyEvent)
+    open fun keyPressed(keyEvent: java.awt.event.KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var keyEvent = keyEvent
+var keyEvent = keyEvent
 this.getCurrentFrame()!!.keyPressed(keyEvent)
 }
 
 
-open fun keyReleased(keyEvent: KeyEvent)
+    open fun keyReleased(keyEvent: java.awt.event.KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var keyEvent = keyEvent
+var keyEvent = keyEvent
 }
 
 
-open fun keyTyped(keyEvent: KeyEvent)
+    open fun keyTyped(keyEvent: java.awt.event.KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var keyEvent = keyEvent
+var keyEvent = keyEvent
 }
 
 
-open fun delete(evt: MyCanvasEvent)
+    open fun delete(evt: MyCanvasEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
     var canvasJPanelHashMap: HashMap<Any, Any> = this.getCanvasHashMap()!!
-            
 
 
     
-                        if(canvasJPanelHashMap!!.containsKey(evt!!.getTreeNode()))
+                        if(canvasJPanelHashMap!!.containsKey(evt.getTreeNode()))
                         
                                     {
                                     this.canvasHolderJPanel!!.removeAll()
 
-    var frameInt: Integer = canvasJPanelHashMap!!.get(evt!!.getTreeNode()) as Integer
+    var frameInt: Integer = canvasJPanelHashMap!!.get(evt.getTreeNode()) as Integer
 
 this.canvasJPanelList!!.remove(frameInt!!.toInt())
 this.select(frameInt!!.toInt())
@@ -757,41 +724,35 @@ this.select(frameInt!!.toInt())
 
                 @Throws(Exception::class)
             
-open fun duplicate(evt: MyCanvasEvent)
+    open fun duplicate(evt: MyCanvasEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
-this.duplicate(evt!!.getTreeNode())
+var evt = evt
+this.duplicate(evt.getTreeNode())
 }
 
 
-open fun select(evt: MyCanvasEvent)
+    open fun select(evt: MyCanvasEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
-this.select(evt!!.getTreeNode())
-StatusFactory.getInstance()!!.setStatus(
-                            "Frame Selected")
+var evt = evt
+this.select(evt.getTreeNode())
+StatusFactory.getInstance()!!.setStatus("Frame Selected")
 }
 
 
-open fun rotate(evt: MyCanvasEvent)
+    open fun rotate(evt: MyCanvasEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 
     var canvasJPanelHashMap: HashMap<Any, Any> = this.getCanvasHashMap()!!
-            
 
 
-    var treeNode: MutableTreeNode = evt!!.getTreeNode()!!
-            
+    var treeNode: MutableTreeNode = evt.getTreeNode()!!
 
 
-    var frameInt: Integer = canvasJPanelHashMap!!.get(evt!!.getTreeNode()) as Integer
+    var frameInt: Integer = canvasJPanelHashMap!!.get(evt.getTreeNode()) as Integer
 
 
     var canvasJPanel: CanvasJPanel = this.canvasJPanelList!!.get(frameInt!!.toInt()) as CanvasJPanel
@@ -803,41 +764,39 @@ open fun rotate(evt: MyCanvasEvent)
                                 )
                         
                                     {
-                                    canvasJPanel!!.addAngle(evt!!.getAngle())
+                                    canvasJPanel!!.addAngle(evt.getAngle())
 this.select(frameInt!!.toInt())
 
                                     }
                                 
-StatusFactory.getInstance()!!.setStatus(
-                            "Canvas Rotated")
+StatusFactory.getInstance()!!.setStatus("Canvas Rotated")
 }
 
 
-open fun explode(evt: MyCanvasEvent)
+    open fun explode(evt: MyCanvasEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 this.explodeAll()
 }
 
 
                 @Throws(Exception::class)
             
-open fun autoExplode(evt: MyCanvasEvent)
+    open fun autoExplode(evt: MyCanvasEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 this.autoExplode(10, 0)
 }
 
 
                 @Throws(Exception::class)
             
-open fun center()
+    open fun center()
         //nullable = true from not(false or (false and true)) = true
 {
+
     var canvasJPanel: CanvasJPanel = this.getCurrentFrame() as CanvasJPanel
 
 canvasJPanel!!.center()
@@ -846,35 +805,38 @@ canvasJPanel!!.center()
 
                 @Throws(Exception::class)
             
-open fun center(evt: MyCanvasEvent)
+    open fun center(evt: MyCanvasEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var evt = evt
+var evt = evt
 this.center()
 }
 
 
-open fun run()
+    open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
+
         try {
-            )
-
-
+            
+        while(true)
         {
+
     
                         if(this.isPlaying())
                         
                                     {
                                     
+    var size: Int = this.canvasJPanelList!!.size()!!
 
 
 
-                        for (index in 0 until this.canvasJPanelList!!.size()!!)
 
+
+                        for (index in 0 until size)
 
         {
+
     
                         if(!this.isPlaying())
                         
@@ -901,12 +863,13 @@ Thread.sleep(250)
 }
 
 } catch(e: Exception)
-            {}
+            {
+}
 
 }
 
 
-    private var innerJPanel: JPanel
+    private var innerJPanel: javax.swing.JPanel
 
 }
                 

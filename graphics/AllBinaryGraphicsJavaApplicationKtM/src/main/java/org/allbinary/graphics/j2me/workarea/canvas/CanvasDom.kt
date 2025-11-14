@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -43,10 +43,8 @@ open public class CanvasDom
             : Object
          {
         
-
-        companion object {
-
-
+companion object {
+            
     val FRAME: String = "frame"
 
     val ROTATE: String = "rotate"
@@ -73,7 +71,6 @@ open public class CanvasDom
 
     val HEIGHT: String = "height"
 
-
         }
             
     private var graphicItemHashMap: HashMap<Any, Any>
@@ -83,137 +80,110 @@ open public class CanvasDom
     private var dimension: IntegerDimension
 
     private val grid: Grid
-public constructor        (canvasNode: Node)
+public constructor (canvasNode: Node)
             : super()
         {
-
-                    var canvasNode = canvasNode
+var canvasNode = canvasNode
 this.grid= Grid()
-this.grid!!.grid= PointFactory.getInstance()!!.getInstance(0, 0)
+this.grid.grid= PointFactory.getInstance()!!.getInstance(0, 0)
 this.dimension= IntegerDimension(0, 0)
 
     var name: String = canvasNode!!.getNodeName()!!
-            
 
 
     
-                        if(name!!.compareTo(FRAME) == 0)
+                        if(name.compareTo(FRAME) == 0)
                         
                                     {
                                     this.graphicItemHashMap= HashMap<Any, Any>()
 
     var angleNode: Node = DomHelper.getInstance()!!.searchNodeList(this.ROTATE, canvasNode!!.getChildNodes())!!
-            
 
 
     var angleTextNode: Node = angleNode!!.getFirstChild()!!
-            
 
 
     var angle: Double = Double(angleTextNode!!.getNodeValue()).
                             doubleValue()!!
-            
 
 this.setAngle(angle)
 
     var sizeNode: Node = DomHelper.getInstance()!!.searchNodeList(this.SIZE, canvasNode!!.getChildNodes())!!
-            
 
 
     var xNode: Node = DomHelper.getInstance()!!.searchNodeList(this.X, sizeNode!!.getChildNodes())!!
-            
 
 
     var xTextNode: Node = xNode!!.getFirstChild()!!
-            
 
 
     var x: Int = Integer(xTextNode!!.getNodeValue()).
                             toInt()!!
-            
 
 
     var yNode: Node = DomHelper.getInstance()!!.searchNodeList(this.Y, sizeNode!!.getChildNodes())!!
-            
 
 
     var yTextNode: Node = yNode!!.getFirstChild()!!
-            
 
 
     var y: Int = Integer(yTextNode!!.getNodeValue()).
                             toInt()!!
-            
 
 this.setWorkArea(x, y)
 
     var zoomNode: Node = DomHelper.getInstance()!!.searchNodeList(this.ZOOM, canvasNode!!.getChildNodes())!!
-            
 
 
     var zoomTextNode: Node = zoomNode!!.getFirstChild()!!
-            
 
-this.grid!!.setZoom(Integer(zoomTextNode!!.getNodeValue()).
+this.grid.setZoom(Integer(zoomTextNode!!.getNodeValue()).
                             toInt())
 
     var gridNode: Node = DomHelper.getInstance()!!.searchNodeList(this.GRID, canvasNode!!.getChildNodes())!!
-            
 
 
     var gridSizeNode: Node = DomHelper.getInstance()!!.searchNodeList(this.SIZE, gridNode!!.getChildNodes())!!
-            
 
 
     var gridXNode: Node = DomHelper.getInstance()!!.searchNodeList(this.X, gridSizeNode!!.getChildNodes())!!
-            
 
 
     var gridXTextNode: Node = gridXNode!!.getFirstChild()!!
-            
 
 
     var gridX: Int = Integer(gridXTextNode!!.getNodeValue()).
                             toInt()!!
-            
 
 
     var gridYNode: Node = DomHelper.getInstance()!!.searchNodeList(this.Y, gridSizeNode!!.getChildNodes())!!
-            
 
 
     var gridYTextNode: Node = gridYNode!!.getFirstChild()!!
-            
 
 
     var gridY: Int = Integer(gridYTextNode!!.getNodeValue()).
                             toInt()!!
-            
 
 this.setGrid(gridX, gridY)
 
     var enableNode: Node = DomHelper.getInstance()!!.searchNodeList(this.ENABLED, gridNode!!.getChildNodes())!!
-            
 
 
     var enableTextNode: Node = enableNode!!.getFirstChild()!!
-            
 
-this.grid!!.showGrid(Boolean(enableTextNode!!.getNodeValue()).
+this.grid.showGrid(.
                             )
 
     var possibleNode: Node = DomHelper.getInstance()!!.searchNodeList(this.POSSIBLE, gridNode!!.getChildNodes())!!
-            
 
 
     var possibleTextNode: Node = possibleNode!!.getFirstChild()!!
-            
 
-this.grid!!.isGridPossible= Boolean(possibleTextNode!!.getNodeValue()).
+this.grid.isGridPossible= .
                             
 
     var graphicItemNodeList: BasicArrayList = DomHelper.getInstance()!!.getChildrenWithoutTextNodes(this.GRAPHICITEMS, canvasNode!!.getChildNodes())!!
-            
 
 
     
@@ -239,11 +209,10 @@ this.grid!!.isGridPossible= Boolean(possibleTextNode!!.getNodeValue()).
                             
 }
 
-public constructor        (canvasJPanel: CanvasJPanel)
+public constructor (canvasJPanel: CanvasJPanel)
             : super()
         {
-
-                    var canvasJPanel = canvasJPanel
+var canvasJPanel = canvasJPanel
 this.angle= canvasJPanel!!.getAngle()
 this.graphicItemHashMap= canvasJPanel!!.getGraphicItemHashMap()
 this.dimension= canvasJPanel!!.getCanvasDimension()
@@ -252,9 +221,10 @@ this.angle= canvasJPanel!!.getAngle()
 }
 
 
-open fun getAngle()
+    open fun getAngle()
         //nullable = true from not(false or (false and true)) = true
 : Double{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -262,9 +232,10 @@ open fun getAngle()
 }
 
 
-open fun getGraphicItemHashMap()
+    open fun getGraphicItemHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -272,70 +243,59 @@ open fun getGraphicItemHashMap()
 }
 
 
-open fun setAngle(angle: Double)
+    open fun setAngle(angle: Double)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var angle = angle
+var angle = angle
 this.angle= angle
 }
 
 
                 @Throws(Exception::class)
             
-open fun setWorkArea(x: Int, y: Int)
+    open fun setWorkArea(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var x = x
-
-
-                    var y = y
+var x = x
+var y = y
 this.setDimension(IntegerDimension(x, y))
 }
 
 
                 @Throws(Exception::class)
             
-open fun setGrid(gridX: Int, gridY: Int)
+    open fun setGrid(gridX: Int, gridY: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var gridX = gridX
-
-
-                    var gridY = gridY
-this.grid!!.grid= PointFactory.getInstance()!!.getInstance(gridX, gridY)
+var gridX = gridX
+var gridY = gridY
+this.grid.grid= PointFactory.getInstance()!!.getInstance(gridX, gridY)
 }
 
 
-open fun getPointNode(point: GPoint, pointName: String)
+    open fun getPointNode(point: GPoint, pointName: String)
         //nullable = true from not(false or (false and false)) = true
 : Node{
+var point = point
+var pointName = pointName
 
-                    var point = point
-
-
-                    var pointName = pointName
-
-    var document: Document = WorkAreaJPanel.getDocument()!!
-            
+    var document: org.w3c.dom.Document = WorkAreaJPanel.getDocument()!!
 
 
-    var pointNode: Node = document!!.createElement(pointName) as Node
+    var pointNode: Node = document.createElement(pointName) as Node
 
 
-    var xNode: Node = document!!.createElement(this.X) as Node
+    var xNode: Node = document.createElement(this.X) as Node
 
 
-    var xTextNode: Node = document!!.createTextNode(Integer.toString(point!!.getX())) as Node
+    var xTextNode: Node = document.createTextNode(Integer.toString(point.getX())) as Node
 
 xNode!!.appendChild(xTextNode)
 
-    var yNode: Node = document!!.createElement(this.Y) as Node
+    var yNode: Node = document.createElement(this.Y) as Node
 
 
-    var yTextNode: Node = document!!.createTextNode(Integer.toString(point!!.getY())) as Node
+    var yTextNode: Node = document.createTextNode(Integer.toString(point.getY())) as Node
 
 yNode!!.appendChild(yTextNode)
 pointNode!!.appendChild(xNode)
@@ -350,20 +310,20 @@ pointNode!!.appendChild(yNode)
 
                 @Throws(Exception::class)
             
-open fun toDom()
+    open fun toDom()
         //nullable = true from not(false or (false and true)) = true
 : Node{
-    var document: Document = WorkAreaJPanel.getDocument()!!
-            
+
+    var document: org.w3c.dom.Document = WorkAreaJPanel.getDocument()!!
 
 
-    var frameNode: Node = document!!.createElement(this.FRAME) as Node
+    var frameNode: Node = document.createElement(this.FRAME) as Node
 
 
-    var angleNode: Node = document!!.createElement(this.ROTATE) as Node
+    var angleNode: Node = document.createElement(this.ROTATE) as Node
 
 
-    var angleTextNode: Node = document!!.createTextNode(Double(this.getAngle()).
+    var angleTextNode: Node = document.createTextNode(Double(this.getAngle()).
                             toString()) as Node
 
 angleNode!!.appendChild(angleTextNode)
@@ -371,58 +331,58 @@ angleNode!!.appendChild(angleTextNode)
     var sizeNode: Node = this.getPointNode(PointFactory.getInstance()!!.getInstance(this.getDimension()!!.getWidth(), this.getDimension()!!.getHeight()), this.SIZE) as Node
 
 
-    var zoomNode: Node = document!!.createElement(this.ZOOM) as Node
+    var zoomNode: Node = document.createElement(this.ZOOM) as Node
 
 
-    var zoomTextNode: Node = document!!.createTextNode(Integer(this.getGrid()!!.getZoom()).
+    var zoomTextNode: Node = document.createTextNode(Integer(this.getGrid()!!.getZoom()).
                             toString()) as Node
 
 zoomNode!!.appendChild(zoomTextNode)
 
-    var gridNode: Node = document!!.createElement(this.GRID) as Node
+    var gridNode: Node = document.createElement(this.GRID) as Node
 
 
     var gridSizeNode: Node = this.getPointNode(this.getGrid()!!.grid, this.SIZE) as Node
 
 gridNode!!.appendChild(gridSizeNode)
 
-    var enableNode: Node = document!!.createElement(this.ENABLED) as Node
+    var enableNode: Node = document.createElement(this.ENABLED) as Node
 
 
-    var enableTextNode: Node = document!!.createTextNode(Boolean(this.getGrid()!!.isGridOn()).
+    var enableTextNode: Node = document.createTextNode(.
                             toString()) as Node
 
 enableNode!!.appendChild(enableTextNode)
 gridNode!!.appendChild(enableNode)
 
-    var possibleNode: Node = document!!.createElement(this.POSSIBLE) as Node
+    var possibleNode: Node = document.createElement(this.POSSIBLE) as Node
 
 
-    var possibleTextNode: Node = document!!.createTextNode(Boolean(this.getGrid()!!.isGridPossible()).
+    var possibleTextNode: Node = document.createTextNode(.
                             toString()) as Node
 
 possibleNode!!.appendChild(possibleTextNode)
 gridNode!!.appendChild(possibleNode)
 
-    var realSizeNode: Node = document!!.createElement(REAL_SIZE) as Node
+    var realSizeNode: Node = document.createElement(REAL_SIZE) as Node
 
 
     var vectorCenterGenerator: VectorCenterGenerator = VectorCenterGenerator()
 
 vectorCenterGenerator!!.calculate(this.getGraphicItemHashMap())
 
-    var widthNode: Node = document!!.createElement(WIDTH) as Node
+    var widthNode: Node = document.createElement(WIDTH) as Node
 
 
-    var widthTextNode: Node = document!!.createTextNode(Integer.toString(vectorCenterGenerator!!.getWidth())) as Node
+    var widthTextNode: Node = document.createTextNode(Integer.toString(vectorCenterGenerator!!.getWidth())) as Node
 
 widthNode!!.appendChild(widthTextNode)
 realSizeNode!!.appendChild(widthNode)
 
-    var heightNode: Node = document!!.createElement(HEIGHT) as Node
+    var heightNode: Node = document.createElement(HEIGHT) as Node
 
 
-    var heightTextNode: Node = document!!.createTextNode(Integer.toString(vectorCenterGenerator!!.getHeight())) as Node
+    var heightTextNode: Node = document.createTextNode(Integer.toString(vectorCenterGenerator!!.getHeight())) as Node
 
 heightNode!!.appendChild(heightTextNode)
 realSizeNode!!.appendChild(heightNode)
@@ -432,11 +392,10 @@ frameNode!!.appendChild(zoomNode)
 frameNode!!.appendChild(gridNode)
 frameNode!!.appendChild(realSizeNode)
 
-    var graphicItemNode: Node = document!!.createElement(this.GRAPHICITEMS) as Node
+    var graphicItemNode: Node = document.createElement(this.GRAPHICITEMS) as Node
 
 
-    var graphicItemArray: Array<Any?> = this.getGraphicItemHashMap()!!.keySet()!!.toArray()!!
-            
+    var graphicItemArray: Array<Any?> = this.getGraphicItemHashMap()!!.keys.toTypedArray()!!
 
 
     var size: Int = graphicItemArray!!.size
@@ -448,21 +407,21 @@ frameNode!!.appendChild(realSizeNode)
 
                         for (index in 0 until size)
 
-
         {
+
     var item: GraphicItemInterface = this.graphicItemHashMap!!.get(graphicItemArray[index]!!) as GraphicItemInterface
 
 
     
-                        if(item!!.getName() == LinesGraphicItem.getStaticName())
+                        if(item.getName() == LinesGraphicItem.getStaticName())
                         
                                     {
                                     
     
-                        if(item!!.isValid())
+                        if(item.isValid())
                         
                                     {
-                                    graphicItemNode!!.appendChild(item!!.toDom(this))
+                                    graphicItemNode!!.appendChild(item.toDom(this))
 
                                     }
                                 
@@ -480,9 +439,10 @@ frameNode!!.appendChild(graphicItemNode)
 }
 
 
-open fun getDimension()
+    open fun getDimension()
         //nullable = true from not(false or (false and true)) = true
 : IntegerDimension{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -490,18 +450,18 @@ open fun getDimension()
 }
 
 
-open fun setDimension(dimension: IntegerDimension)
+    open fun setDimension(dimension: IntegerDimension)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var dimension = dimension
+var dimension = dimension
 this.dimension= dimension
 }
 
 
-open fun getGrid()
+    open fun getGrid()
         //nullable = true from not(false or (false and true)) = true
 : Grid{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

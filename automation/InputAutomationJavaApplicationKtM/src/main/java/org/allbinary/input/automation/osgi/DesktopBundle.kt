@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -37,21 +35,18 @@ open public class DesktopBundle
             : Object
          {
         
-
-        companion object {
-
-
+companion object {
+            
     private val DESKTOP_SYMBOLIC_NAME: String = "org.knopflerfish.bundle.desktop"
-
 
         }
             
     private var bundle: Bundle
-public constructor        ()
+public constructor ()
             : super()
         {
+
     var bundleContext: BundleContext = InputAutomationBundleActivator.getBundleContext()!!
-            
 
 
     
@@ -62,7 +57,6 @@ public constructor        ()
                                     {
                                     
     var bundleArray: Array<Bundle?> = bundleContext!!.getBundles()!!
-            
 
 
 
@@ -70,13 +64,12 @@ public constructor        ()
 
                         for (index in 0 until bundleArray!!.size)
 
-
         {
+
     var bundle: Bundle = bundleArray[index]!!
 
 
-    var symbolicName: String = bundle!!.getSymbolicName()!!
-            
+    var symbolicName: String = bundle.getSymbolicName()!!
 
 
     
@@ -94,8 +87,7 @@ public constructor        ()
                                 
                         else {
                             
-    var textJDialog: JDialog = BasicTextJDialog(
-                            "BundlContext is Null")
+    var textJDialog: JDialog = BasicTextJDialog("BundlContext is Null")
 
 textJDialog!!.setVisible(true)
 
@@ -106,9 +98,10 @@ textJDialog!!.setVisible(true)
 
                 @Throws(Exception::class)
             
-open fun start()
+    open fun start()
         //nullable = true from not(false or (false and true)) = true
-{this.bundle!!.start()
+{
+this.bundle.start()
 }
 
 

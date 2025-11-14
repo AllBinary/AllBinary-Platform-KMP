@@ -18,72 +18,71 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
         import kotlin.reflect.KClass
         
 import org.w3c.dom.Document
-interface WorkAreaJPanelInterface : event.KeyListener {
+
+interface WorkAreaJPanelInterface : java.awt.event.KeyListener {
         
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun deselect()
+    open fun deselect()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun select()
+    open fun select()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun changeZoom(factor: Int)
+    open fun changeZoom(factor: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun explodeAll()
+    open fun explodeAll()
         //nullable = true from not(false or (false and true)) = true
 
 
                 @Throws(Exception::class)
             
-open fun autoRotate(increments: Int, totalAngle: Int)
+    open fun autoRotate(increments: Int, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun autoExplode(numberOfFrames: Int, explodeType: Int)
+    open fun autoExplode(numberOfFrames: Int, explodeType: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun autoMirror()
+    open fun autoMirror()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun play()
+    open fun play()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun stop()
+    open fun stop()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun isPlaying()
+    open fun isPlaying()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
                 @Throws(Exception::class)
             
-open fun toDocument()
+    open fun toDocument()
         //nullable = true from not(false or (false and true)) = true
 : Document
 

@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -43,20 +41,18 @@ open public class InputAutomationModuleOSGIServiceVisitor
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
-public constructor        ()
+public constructor ()
             : super()
-        {}
+        {
+}
 
 
-open fun visit(anyType: Any)
+    open fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{
-
-                    var anyType = anyType
+    //var anyType = anyType
 
 
 
@@ -65,11 +61,10 @@ open fun visit(anyType: Any)
 }
 
 
-open fun visit(osgiServiceInterface: OSGIServiceInterface)
+    open fun visit(osgiServiceInterface: OSGIServiceInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
-
-                    var osgiServiceInterface = osgiServiceInterface
+    //var osgiServiceInterface = osgiServiceInterface
 
         try {
             
@@ -77,7 +72,6 @@ open fun visit(osgiServiceInterface: OSGIServiceInterface)
 
 
     var inputAutomationModuleInterfaceArray: Array<InputAutomationModuleFactoryInterface?> = inputAutomationModuleService!!.getInputAutomationModuleInterfaceArray()!!
-            
 
 
 
@@ -85,8 +79,8 @@ open fun visit(osgiServiceInterface: OSGIServiceInterface)
 
                         for (index in 0 until inputAutomationModuleInterfaceArray!!.size)
 
-
-        {InputAutomationJFrame.getInstance()!!.onAdd(InputAutomationConfigurationUtil.getChangeEvent(inputAutomationModuleInterfaceArray[index]!!))
+        {
+InputAutomationJFrame.getInstance()!!.onAdd(InputAutomationConfigurationUtil.getChangeEvent(inputAutomationModuleInterfaceArray[index]!!))
 }
 
 
@@ -95,8 +89,8 @@ open fun visit(osgiServiceInterface: OSGIServiceInterface)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.TRUE
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "visit", e)
+            {
+logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "visit", e)
 
 
 

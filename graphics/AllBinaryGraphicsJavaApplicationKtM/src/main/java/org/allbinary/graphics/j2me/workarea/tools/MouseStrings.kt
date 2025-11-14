@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -33,21 +31,19 @@ open public class MouseStrings
             : Object
          {
         
-
-        companion object {
-
-
+companion object {
+            
     private val instance: MouseStrings = MouseStrings()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : MouseStrings{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }

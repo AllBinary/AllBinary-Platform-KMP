@@ -18,10 +18,12 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
+        
         import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -52,10 +54,8 @@ open public class LinesGraphicItem
         
                 , GraphicItemInterface {
         
-
-        companion object {
-
-
+companion object {
+            
     private val RECT: String = "rect"
 
     private val ARC: String = "arc"
@@ -70,9 +70,10 @@ open public class LinesGraphicItem
 
     private val NAME: String = "Line Tool"
 
-open fun getStaticName()
+    open fun getStaticName()
         //nullable = true from not(false or (false and true)) = true
 : String{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -80,17 +81,13 @@ open fun getStaticName()
 }
 
 
-
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val gameInputStrings: GameInputStrings = GameInputStrings.getInstance()!!
-            
 
     private var treeNode: DefaultMutableTreeNode
 
@@ -107,34 +104,33 @@ open fun getStaticName()
     private var color: Color = Color(BasicColorFactory.getInstance()!!.WHITE.toInt())
 
     private var points: Points
-public constructor        ()
+public constructor ()
             : super()
-        {this.points= Points()
+        {
+this.points= Points()
 
         try {
             init()
 this.active= true
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
 }
 
-public constructor        (linesNode: Node)
+public constructor (linesNode: Node)
             : super()
         {
-
-                    var linesNode = linesNode
+var linesNode = linesNode
 this.points= Points()
 init()
 this.active= false
 
     var lineNodes: BasicArrayList = DomHelper.getInstance()!!.getWithoutTextNodes(linesNode!!.getChildNodes())!!
-            
 
 
     var numberOfLines: Int = lineNodes!!.size()!!
-            
 
 
 
@@ -142,17 +138,15 @@ this.active= false
 
                         for (index in 0 until numberOfLines)
 
-
         {
+
     var lineNode: Node = lineNodes!!.get(index) as Node
 
 
     var pointNodes: BasicArrayList = DomHelper.getInstance()!!.getWithoutTextNodes(lineNode!!.getChildNodes())!!
-            
 
 
     var pointOneNode: Node = DomHelper.getInstance()!!.searchNodeList(PointsDomUtil.getInstance()!!.POINTONE, pointNodes)!!
-            
 
 this.addPoint(pointOneNode!!.getChildNodes())
 
@@ -162,7 +156,6 @@ this.addPoint(pointOneNode!!.getChildNodes())
                                     {
                                     
     var pointTwoNode: Node = DomHelper.getInstance()!!.searchNodeList(PointsDomUtil.getInstance()!!.POINTTWO, pointNodes)!!
-            
 
 this.addPoint(pointTwoNode!!.getChildNodes())
 
@@ -178,8 +171,7 @@ this.addPoint(pointTwoNode!!.getChildNodes())
                                     
 
 
-                            throw Exception(
-                            "Lines node does not contain a line")
+                            throw Exception("Lines node does not contain a line")
 
                                     }
                                 
@@ -188,11 +180,12 @@ this.addPoint(pointTwoNode!!.getChildNodes())
 
                 @Throws(Exception::class)
             
-open fun init()
+    open fun init()
         //nullable = true from not(false or (false and true)) = true
-{this.treeNode= DefaultMutableTreeNode(PointsDomUtil.getInstance()!!.LINES +item)
+{
+this.treeNode= DefaultMutableTreeNode(PointsDomUtil.getInstance()!!.LINES +item)
 item++
-this.points!!.init()
+this.points.init()
 this.pointTreeNodeVector= Vector()
 this.fulcrumPoint= PointFactory.getInstance()!!.getInstance(0, 0)
 }
@@ -200,73 +193,69 @@ this.fulcrumPoint= PointFactory.getInstance()!!.getInstance(0, 0)
 
                 @Throws(Exception::class)
             
-open fun translate(x: Int, y: Int)
+    open fun translate(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
+var x = x
+var y = y
+StatusFactory.getInstance()!!.setStatus("Translating: " +this.points.getPoints())
 
-                    var x = x
-
-
-                    var y = y
-StatusFactory.getInstance()!!.setStatus("Translating: " +this.points!!.getPoints())
-
-    var basicGraphicsPipeline: BasicGraphicsPipeline = BasicGraphicsPipeline(this.points!!.getPoints())
+    var basicGraphicsPipeline: BasicGraphicsPipeline = BasicGraphicsPipeline(this.points.getPoints())
 
 basicGraphicsPipeline!!.translate(x, y)
 this.points= Points()
-this.points!!.addPoints(basicGraphicsPipeline!!.getMatrix())
+this.points.addPoints(basicGraphicsPipeline!!.getMatrix())
 }
 
 
-open fun setRotate(theta: Double)
+    open fun setRotate(theta: Double)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var theta = theta
+var theta = theta
 
         while(theta > 2 *Math.PI)
-        {theta -= 2 *Math.PI
+        {
+theta -= 2 *Math.PI
 }
 
 
         while(theta < 0)
-        {theta += 2 *Math.PI
+        {
+theta += 2 *Math.PI
 }
 
 this.theta= theta
 }
 
 
-open fun addRotate(theta: Double)
+    open fun addRotate(theta: Double)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var theta = theta
+var theta = theta
 this.setRotate(this.theta +theta)
 }
 
 
-open fun setAngle(angle: Double)
+    open fun setAngle(angle: Double)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var angle = angle
+var angle = angle
 this.setRotate(Math.toRadians(angle))
 }
 
 
-open fun addAngle(angle: Double)
+    open fun addAngle(angle: Double)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var angle = angle
+var angle = angle
 this.setRotate(this.theta +Math.toRadians(angle))
 }
 
 
-open fun getTreeNode()
+    open fun getTreeNode()
         //nullable = true from not(false or (false and true)) = true
 : MutableTreeNode{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -274,9 +263,10 @@ open fun getTreeNode()
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -285,75 +275,70 @@ open fun getName()
 
 
                 @Throws(Exception::class)
-            
-open fun addPoint(pointNodes: NodeList)
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
+    open fun addPoint(pointNodes: NodeList)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var pointNodes = pointNodes
+var pointNodes = pointNodes
 
     var list: BasicArrayList = DomHelper.getInstance()!!.getWithoutTextNodes(pointNodes)!!
-            
 
 
     var xNode: Node = DomHelper.getInstance()!!.searchNodeList(PositionStrings.getInstance()!!.X, list)!!
-            
 
 
     var xTextNode: Node = xNode!!.getFirstChild()!!
-            
 
 
     var xInteger: Integer = Integer(xTextNode!!.getNodeValue())
 
 
     var yNode: Node = DomHelper.getInstance()!!.searchNodeList(PositionStrings.getInstance()!!.Y, list)!!
-            
 
 
     var yTextNode: Node = yNode!!.getFirstChild()!!
-            
 
 
     var yInteger: Integer = Integer(yTextNode!!.getNodeValue())
 
 
-    var point: GPoint = PointFactory.getInstance()!!.getInstance(xInteger!!.toInt()yInteger!!.toInt())!!
-            
+    var point: GPoint = PointFactory.getInstance()!!.getInstance(xInteger!!.toInt(), yInteger!!.toInt())!!
 
 this.addPoint(point)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun addPoint(point: GPoint)
+    open fun addPoint(point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var point = point
-this.points!!.getPoints()!!.add(point)
-logUtil!!.put(point!!.toString(), this, 
-                            "addPoint")
-this.pointTreeNodeVector!!.add(DefaultMutableTreeNode(point!!.toString()))
+var point = point
+this.points.getPoints()!!.add(point)
+logUtil!!.put(point.toString(), this, "addPoint")
+this.pointTreeNodeVector!!.add(DefaultMutableTreeNode(point.toString()))
 this.treeNode!!.add(this.pointTreeNodeVector!!.get(this.pointTreeNodeVector!!.size -1) as DefaultMutableTreeNode)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun removePoint()
+    open fun removePoint()
         //nullable = true from not(false or (false and true)) = true
 : GPoint{
+
     var point: GPoint = 
                 null
             
 
 
     
-                        if(this.points!!.getSize() > 0)
+                        if(this.points.getSize() > 0)
                         
                                     {
                                     
-    var lastPoint: Int = this.points!!.getSize() -1
+    var lastPoint: Int = this.points.getSize() -1
 
-point= this.points!!.getPoints()!!.remove(lastPoint) as GPoint
+point= this.points.getPoints()!!.remove(lastPoint) as GPoint
 
     var index: Int = this.pointTreeNodeVector!!.size -1
 
@@ -378,9 +363,10 @@ this.pointTreeNodeVector!!.remove(index)
 }
 
 
-open fun isActive()
+    open fun isActive()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -388,28 +374,28 @@ open fun isActive()
 }
 
 
-open fun deactivate()
+    open fun deactivate()
         //nullable = true from not(false or (false and true)) = true
-{this.active= false
+{
+this.active= false
 }
 
 
-open fun activate()
+    open fun activate()
         //nullable = true from not(false or (false and true)) = true
-{this.active= true
+{
+this.active= true
 }
 
 
                 @Throws(Exception::class)
             
-open fun duplicatePoints(list: BasicArrayList)
+    open fun duplicatePoints(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
+var list = list
 
-                    var list = list
-
-    var size: Int = list!!.size()!!
-            
+    var size: Int = list.size()!!
 
 
 
@@ -417,9 +403,9 @@ open fun duplicatePoints(list: BasicArrayList)
 
                         for (index in 0 until size)
 
-
         {
-    var point: GPoint = list!!.get(index) as GPoint
+
+    var point: GPoint = list.get(index) as GPoint
 
 
     
@@ -428,8 +414,8 @@ open fun duplicatePoints(list: BasicArrayList)
                                 )
                         
                                     {
-                                    this.points!!.getPoints()!!.add(PointFactory.getInstance()!!.getInstance(point!!.getX(), point!!.getY()))
-this.pointTreeNodeVector!!.add(DefaultMutableTreeNode(point!!.toString()))
+                                    this.points.getPoints()!!.add(PointFactory.getInstance()!!.getInstance(point.getX(), point.getY()))
+this.pointTreeNodeVector!!.add(DefaultMutableTreeNode(point.toString()))
 this.treeNode!!.add(this.pointTreeNodeVector!!.get(this.pointTreeNodeVector!!.size -1) as DefaultMutableTreeNode)
 
                                     }
@@ -441,12 +427,13 @@ this.treeNode!!.add(this.pointTreeNodeVector!!.get(this.pointTreeNodeVector!!.si
 
                 @Throws(Exception::class)
             
-open fun duplicate()
+    open fun duplicate()
         //nullable = true from not(false or (false and true)) = true
 : GraphicItemInterface{
+
     var linesGraphicItem: LinesGraphicItem = LinesGraphicItem()
 
-linesGraphicItem!!.duplicatePoints(this.points!!.getPoints())
+linesGraphicItem!!.duplicatePoints(this.points.getPoints())
 linesGraphicItem!!.deactivate()
 
 
@@ -456,9 +443,10 @@ linesGraphicItem!!.deactivate()
 }
 
 
-open fun getAngle()
+    open fun getAngle()
         //nullable = true from not(false or (false and true)) = true
 : Double{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -466,39 +454,29 @@ open fun getAngle()
 }
 
 
-open fun setFulcrumPoint(point: GPoint)
+    open fun setFulcrumPoint(point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var point = point
+var point = point
 this.fulcrumPoint= point
 }
 
 
-open fun paint(g: Graphics, canvasAngle: Double, dimension: IntegerDimension, x: Int, y: Int)
+    open fun paint(g: Graphics, canvasAngle: Double, dimension: IntegerDimension, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var g = g
-
-
-                    var canvasAngle = canvasAngle
-
-
-                    var dimension = dimension
-
-
-                    var x = x
-
-
-                    var y = y
+var g = g
+var canvasAngle = canvasAngle
+var dimension = dimension
+var x = x
+var y = y
 
         try {
             
     var graphics: Graphics2D = g as Graphics2D
 
-graphics!!.setColor(getColor())
-graphics!!.setStroke(BasicStroke(x))
+graphics.setColor(getColor())
+graphics.setStroke(BasicStroke(x))
 
     
                         if(this.isActive() && this.currentMousePoint != 
@@ -506,13 +484,12 @@ graphics!!.setStroke(BasicStroke(x))
                                 )
                         
                                     {
-                                    this.points!!.getPoints()!!.add(this.currentMousePoint)
+                                    this.points.getPoints()!!.add(this.currentMousePoint)
 
                                     }
                                 
 
-    var tempPointVector: BasicArrayList = PointsUtil.getInstance()!!.doTransforms(this.points!!.getPoints(), canvasAngle, PointFactory.getInstance()!!.getInstance(dimension!!.getWidth(), dimension!!.getHeight()))!!
-            
+    var tempPointVector: BasicArrayList = PointsUtil.getInstance()!!.doTransforms(this.points.getPoints(), canvasAngle, PointFactory.getInstance()!!.getInstance(dimension.getWidth(), dimension.getHeight()))!!
 
 
     
@@ -521,13 +498,12 @@ graphics!!.setStroke(BasicStroke(x))
                                 )
                         
                                     {
-                                    this.currentMousePoint= this.points!!.getPoints()!!.remove(this.points!!.getSize() -1) as GPoint
+                                    this.currentMousePoint= this.points.getPoints()!!.remove(this.points.getSize() -1) as GPoint
 
                                     }
                                 
 
     var size: Int = tempPointVector!!.size()!!
-            
 
 
     var firstPoint: GPoint = 
@@ -549,17 +525,17 @@ graphics!!.setStroke(BasicStroke(x))
 
                         for (index in 1 until size)
 
-
         {
+
     var secondPoint: GPoint = tempPointVector!!.get(index) as GPoint
 
-graphics!!.drawLine((firstPoint!!.getX() *x) -(x /4), (firstPoint!!.getY() *y) -(y /4), (secondPoint!!.getX() *x) -(x /4), (secondPoint!!.getY() *y) -(y /4))
+graphics.drawLine((firstPoint!!.getX() *x) -(x /4), (firstPoint!!.getY() *y) -(y /4), (secondPoint!!.getX() *x) -(x /4), (secondPoint!!.getY() *y) -(y /4))
 firstPoint= secondPoint
 }
 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "mouseMoved", e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "mouseMoved", e)
 }
 
 }
@@ -567,32 +543,33 @@ firstPoint= secondPoint
 
                 @Throws(Exception::class)
             
-open fun toDom(canvasDom: CanvasDom)
+    open fun toDom(canvasDom: CanvasDom)
         //nullable = true from not(false or (false and false)) = true
 : Node{
-
-                    var canvasDom = canvasDom
+var canvasDom = canvasDom
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return PointsDomUtil.getInstance()!!.toDom(canvasDom, this.points!!.getPoints())
+                        return PointsDomUtil.getInstance()!!.toDom(canvasDom, this.points.getPoints())
 }
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
 
+
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.points!!.isValid()
+                        return this.points.isValid()
 }
 
 
-open fun getPointsInterface()
+    open fun getPointsInterface()
         //nullable = true from not(false or (false and true)) = true
 : Points{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -600,18 +577,18 @@ open fun getPointsInterface()
 }
 
 
-open fun setPointsInterface(points: Points)
+    open fun setPointsInterface(points: Points)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var points = points
+var points = points
 this.points= points
 }
 
 
-open fun getColor()
+    open fun getColor()
         //nullable = true from not(false or (false and true)) = true
 : Color{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -619,31 +596,24 @@ open fun getColor()
 }
 
 
-open fun setColor(color: Color)
+    open fun setColor(color: Color)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var color = color
+var color = color
 this.color= color
 }
 
 
-open fun mouseClicked(mouseEvent: MouseEvent, x: Int, y: Int)
+    open fun mouseClicked(mouseEvent: java.awt.event.MouseEvent, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var mouseEvent = mouseEvent
-
-
-                    var x = x
-
-
-                    var y = y
+var mouseEvent = mouseEvent
+var x = x
+var y = y
 
         try {
             
     var mousePoint: GPoint = PointFactory.getInstance()!!.getInstance(mouseEvent!!.getPoint()!!.x, mouseEvent!!.getPoint()!!.y)!!
-            
 
 
     
@@ -652,9 +622,8 @@ open fun mouseClicked(mouseEvent: MouseEvent, x: Int, y: Int)
                                     {
                                     
     var point: GPoint = PointFactory.getInstance()!!.getInstance(mousePoint!!.getX() /x, mousePoint!!.getY() /y)!!
-            
 
-StatusFactory.getInstance()!!.setStatus("Line Point Added: " +point!!.toString())
+StatusFactory.getInstance()!!.setStatus("Line Point Added: " +point.toString())
 this.addPoint(point)
 
                                     }
@@ -664,127 +633,99 @@ this.addPoint(point)
                         if((mouseEvent!!.getModifiers() and mouseEvent!!.BUTTON3_MASK) == mouseEvent!!.BUTTON3_MASK)
                         
                                     {
-                                    StatusFactory.getInstance()!!.setStatus(
-                            "Line Point Removed")
+                                    StatusFactory.getInstance()!!.setStatus("Line Point Removed")
 this.removePoint()
 
                                     }
                                 
 this.currentMousePoint= mousePoint
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "mouseMoved", e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "mouseMoved", e)
 }
 
 }
 
 
-open fun mouseEntered(mouseEvent: MouseEvent)
+    open fun mouseEntered(mouseEvent: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var mouseEvent = mouseEvent
+var mouseEvent = mouseEvent
 }
 
 
-open fun mouseExited(mouseEvent: MouseEvent)
+    open fun mouseExited(mouseEvent: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var mouseEvent = mouseEvent
+var mouseEvent = mouseEvent
 }
 
 
-open fun mousePressed(mouseEvent: MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
+    open fun mousePressed(mouseEvent: java.awt.event.MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var mouseEvent = mouseEvent
-
-
-                    var xPixelsPerCell = xPixelsPerCell
-
-
-                    var yPixelsPerCell = yPixelsPerCell
+var mouseEvent = mouseEvent
+var xPixelsPerCell = xPixelsPerCell
+var yPixelsPerCell = yPixelsPerCell
 }
 
 
-open fun mouseReleased(mouseEvent: MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
+    open fun mouseReleased(mouseEvent: java.awt.event.MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var mouseEvent = mouseEvent
-
-
-                    var xPixelsPerCell = xPixelsPerCell
-
-
-                    var yPixelsPerCell = yPixelsPerCell
+var mouseEvent = mouseEvent
+var xPixelsPerCell = xPixelsPerCell
+var yPixelsPerCell = yPixelsPerCell
 }
 
 
-open fun mouseDragged(mouseEvent: MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
+    open fun mouseDragged(mouseEvent: java.awt.event.MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var mouseEvent = mouseEvent
-
-
-                    var xPixelsPerCell = xPixelsPerCell
-
-
-                    var yPixelsPerCell = yPixelsPerCell
+var mouseEvent = mouseEvent
+var xPixelsPerCell = xPixelsPerCell
+var yPixelsPerCell = yPixelsPerCell
 }
 
 
-open fun mouseMoved(mouseEvent: MouseEvent, x: Int, y: Int)
+    open fun mouseMoved(mouseEvent: java.awt.event.MouseEvent, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var mouseEvent = mouseEvent
-
-
-                    var x = x
-
-
-                    var y = y
+var mouseEvent = mouseEvent
+var x = x
+var y = y
 
         try {
             
     var mousePoint: GPoint = PointFactory.getInstance()!!.getInstance(mouseEvent!!.getPoint()!!.x, mouseEvent!!.getPoint()!!.y)!!
-            
 
 
     var point: GPoint = PointFactory.getInstance()!!.getInstance(mousePoint!!.getX() /x, mousePoint!!.getY() /y)!!
-            
 
 this.currentMousePoint= point
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "mouseMoved", e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "mouseMoved", e)
 }
 
 }
 
 
-open fun keyPressed(keyEvent: KeyEvent)
+    open fun keyPressed(keyEvent: java.awt.event.KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var keyEvent = keyEvent
+var keyEvent = keyEvent
 
         try {
             
     var keyCode: Int = keyEvent!!.getKeyCode()!!
-            
 
 
     
                         if(keyCode == keyEvent!!.VK_ESCAPE)
                         
                                     {
-                                    StatusFactory.getInstance()!!.setStatus(
-                            "Deactivated")
+                                    StatusFactory.getInstance()!!.setStatus("Deactivated")
 this.deactivate()
 
                                     }
@@ -826,25 +767,24 @@ this.deactivate()
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.KEY_PRESSED, e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.KEY_PRESSED, e)
 }
 
 }
 
 
-open fun keyReleased(keyEvent: KeyEvent)
+    open fun keyReleased(keyEvent: java.awt.event.KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var keyEvent = keyEvent
+var keyEvent = keyEvent
 }
 
 
-open fun keyTyped(keyEvent: KeyEvent)
+    open fun keyTyped(keyEvent: java.awt.event.KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var keyEvent = keyEvent
+var keyEvent = keyEvent
 }
 
 

@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -33,136 +31,137 @@ import org.allbinary.graphics.GPoint
 import org.allbinary.graphics.j2me.workarea.canvas.CanvasDom
 import org.allbinary.graphics.j2me.workarea.canvas.IntegerDimension
 import org.w3c.dom.Node
+
 interface GraphicItemInterface {
         
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun setColor(color: Color)
+    open fun setColor(color: Color)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getTreeNode()
+    open fun getTreeNode()
         //nullable = true from not(false or (false and true)) = true
 : MutableTreeNode
 
-open fun getPointsInterface()
+    open fun getPointsInterface()
         //nullable = true from not(false or (false and true)) = true
 : Points
 
-open fun setPointsInterface(points: Points)
+    open fun setPointsInterface(points: Points)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun isValid()
+    open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun isActive()
+    open fun isActive()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
-open fun deactivate()
+    open fun deactivate()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun activate()
+    open fun activate()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun setFulcrumPoint(point: GPoint)
+    open fun setFulcrumPoint(point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun translate(x: Int, y: Int)
+    open fun translate(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setRotate(theta: Double)
+    open fun setRotate(theta: Double)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun addRotate(theta: Double)
+    open fun addRotate(theta: Double)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setAngle(angle: Double)
+    open fun setAngle(angle: Double)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun addAngle(angle: Double)
+    open fun addAngle(angle: Double)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun getAngle()
+    open fun getAngle()
         //nullable = true from not(false or (false and true)) = true
 : Double
 
-open fun paint(g: Graphics, canvasAngle: Double, dimension: IntegerDimension, x: Int, y: Int)
+    open fun paint(g: Graphics, canvasAngle: Double, dimension: IntegerDimension, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun toDom(canvasDom: CanvasDom)
+    open fun toDom(canvasDom: CanvasDom)
         //nullable = true from not(false or (false and false)) = true
 : Node
 
-open fun removePoint()
+    open fun removePoint()
         //nullable = true from not(false or (false and true)) = true
 : GPoint
 
-open fun addPoint(point: GPoint)
+    open fun addPoint(point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun mouseClicked(mouseEvent: MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
+    open fun mouseClicked(mouseEvent: java.awt.event.MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun mouseEntered(mouseEvent: MouseEvent)
+    open fun mouseEntered(mouseEvent: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun mouseExited(mouseEvent: MouseEvent)
+    open fun mouseExited(mouseEvent: java.awt.event.MouseEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun mousePressed(mouseEvent: MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
+    open fun mousePressed(mouseEvent: java.awt.event.MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun mouseReleased(mouseEvent: MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
+    open fun mouseReleased(mouseEvent: java.awt.event.MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun mouseDragged(mouseEvent: MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
+    open fun mouseDragged(mouseEvent: java.awt.event.MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun mouseMoved(mouseEvent: MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
+    open fun mouseMoved(mouseEvent: java.awt.event.MouseEvent, xPixelsPerCell: Int, yPixelsPerCell: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun keyPressed(keyEvent: KeyEvent)
+    open fun keyPressed(keyEvent: java.awt.event.KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun keyReleased(keyEvent: KeyEvent)
+    open fun keyReleased(keyEvent: java.awt.event.KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun keyTyped(keyEvent: KeyEvent)
+    open fun keyTyped(keyEvent: java.awt.event.KeyEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun duplicate()
+    open fun duplicate()
         //nullable = true from not(false or (false and true)) = true
 : GraphicItemInterface
 

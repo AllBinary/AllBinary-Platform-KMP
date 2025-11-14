@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -34,14 +32,11 @@ open public class ImageIconUnique : ImageIcon {
         
 
     private var id: Int= 0
-public constructor        (bufferedImage: BufferedImage, index: Int)                        
+public constructor (bufferedImage: BufferedImage, index: Int)                        
 
                             : super(bufferedImage){
-
-                    var bufferedImage = bufferedImage
-
-
-                    var index = index
+var bufferedImage = bufferedImage
+var index = index
 
 
                             //For kotlin this is before the body of the constructor.
@@ -50,9 +45,10 @@ this.setId(index)
 }
 
 
-open fun getId()
+    open fun getId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -60,11 +56,10 @@ open fun getId()
 }
 
 
-open fun setId(id: Int)
+    open fun setId(id: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var id = id
+var id = id
 this.id= id
 }
 

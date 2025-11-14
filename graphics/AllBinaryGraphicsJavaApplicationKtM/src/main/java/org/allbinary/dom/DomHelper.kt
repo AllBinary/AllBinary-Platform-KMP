@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -45,15 +43,14 @@ open public class DomHelper
             : Object
          {
         
-
-        companion object {
-
-
+companion object {
+            
     private val instance: DomHelper = DomHelper()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DomHelper{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -61,31 +58,28 @@ open fun getInstance()
 }
 
 
-
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
-private constructor        ()
+private constructor ()
             : super()
-        {}
+        {
+}
 
 
-open fun createDocument()
+    open fun createDocument()
         //nullable = true from not(false or (false and true)) = true
 : Document{
+
         try {
             
     var factory: DocumentBuilderFactory = DocumentBuilderFactory.newInstance()!!
-            
 
 
-    var builder: DocumentBuilder = factory!!.newDocumentBuilder()!!
-            
+    var builder: DocumentBuilder = factory.newDocumentBuilder()!!
 
 
-    var document: Document = builder!!.newDocument()!!
-            
+    var document: Document = builder.newDocument()!!
 
 
 
@@ -94,6 +88,7 @@ open fun createDocument()
                         return document
 } catch(e: Exception)
             {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -105,24 +100,20 @@ open fun createDocument()
 
                 @Throws(Exception::class)
             
-open fun createDocument(xmlFile: File)
+    open fun createDocument(xmlFile: File)
         //nullable = true from not(false or (false and false)) = true
 : Document{
-
-                    var xmlFile = xmlFile
+var xmlFile = xmlFile
 
         try {
             
     var factory: DocumentBuilderFactory = DocumentBuilderFactory.newInstance()!!
-            
 
 
-    var builder: DocumentBuilder = factory!!.newDocumentBuilder()!!
-            
+    var builder: DocumentBuilder = factory.newDocumentBuilder()!!
 
 
-    var document: Document = builder!!.parse(xmlFile)!!
-            
+    var document: Document = builder.parse(xmlFile)!!
 
 
 
@@ -133,6 +124,7 @@ open fun createDocument(xmlFile: File)
             {
 
 
+
                             throw e
 }
 
@@ -141,11 +133,10 @@ open fun createDocument(xmlFile: File)
 
                 @Throws(Exception::class)
             
-open fun toString(document: Document)
+    open fun toString(document: Document)
         //nullable = true from not(false or (true and false)) = true
 : String{
-
-                    var document = document
+var document = document
 
         try {
             
@@ -159,11 +150,9 @@ open fun toString(document: Document)
 
 
     var copyTransformerFactory: TransformerFactory = TransformerFactory.newInstance()!!
-            
 
 
     var copyTransformer: Transformer = copyTransformerFactory!!.newTransformer()!!
-            
 
 copyTransformer!!.transform(domSource, streamResult)
 
@@ -175,6 +164,7 @@ copyTransformer!!.transform(domSource, streamResult)
             {
 
 
+
                             throw e
 }
 
@@ -183,28 +173,23 @@ copyTransformer!!.transform(domSource, streamResult)
 
                 @Throws(Exception::class)
             
-open fun save(file: File, document: Document)
+    open fun save(file: File, document: Document)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var file = file
-
-
-                    var document = document
+var file = file
+var document = document
 
         try {
             
     var copyTransformerFactory: TransformerFactory = TransformerFactory.newInstance()!!
-            
 
 
     var copyTransformer: Transformer = copyTransformerFactory!!.newTransformer()!!
-            
 
 
     var domSource: DOMSource = DOMSource(document)
 
-file!!.createNewFile()
+file.createNewFile()
 
     var streamResult: StreamResult = StreamResult(file)
 
@@ -213,6 +198,7 @@ copyTransformer!!.transform(domSource, streamResult)
             {
 
 
+
                             throw e
 }
 
@@ -221,17 +207,13 @@ copyTransformer!!.transform(domSource, streamResult)
 
                 @Throws(Exception::class)
             
-open fun getChildNodeList(nodeName: String, nodeList: NodeList)
+    open fun getChildNodeList(nodeName: String, nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
 : NodeList{
-
-                    var nodeName = nodeName
-
-
-                    var nodeList = nodeList
+var nodeName = nodeName
+var nodeList = nodeList
 
     var numberOfNodes: Int = nodeList!!.getLength()!!
-            
 
 
 
@@ -239,21 +221,20 @@ open fun getChildNodeList(nodeName: String, nodeList: NodeList)
 
                         for (index in 0 until numberOfNodes)
 
-
         {
+
     var node: Node = nodeList!!.item(index)!!
-            
 
 
     
-                        if(node!!.getNodeName()!!.compareTo(nodeName) == 0)
+                        if(node.getNodeName()!!.compareTo(nodeName) == 0)
                         
                                     {
                                     
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return node!!.getChildNodes()
+                        return node.getChildNodes()
 
                                     }
                                 
@@ -268,24 +249,19 @@ open fun getChildNodeList(nodeName: String, nodeList: NodeList)
 
                 @Throws(Exception::class)
             
-open fun getChildrenWithoutTextNodes(nodeName: String, nodeList: NodeList)
+    open fun getChildrenWithoutTextNodes(nodeName: String, nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
-
-                    var nodeName = nodeName
-
-
-                    var nodeList = nodeList
+var nodeName = nodeName
+var nodeList = nodeList
 
     var list: BasicArrayList = BasicArrayList()
 
 
     var childNodeList: NodeList = getChildNodeList(nodeName, nodeList)!!
-            
 
 
     var numberOfChildren: Int = childNodeList!!.getLength()!!
-            
 
 
 
@@ -293,17 +269,16 @@ open fun getChildrenWithoutTextNodes(nodeName: String, nodeList: NodeList)
 
                         for (index in 0 until numberOfChildren)
 
-
         {
+
     var node: Node = childNodeList!!.item(index)!!
-            
 
 
     
-                        if(node!!.getNodeType() != Node.TEXT_NODE)
+                        if(node.getNodeType() != Node.TEXT_NODE)
                         
                                     {
-                                    list!!.add(node)
+                                    list.add(node)
 
                                     }
                                 
@@ -319,17 +294,15 @@ open fun getChildrenWithoutTextNodes(nodeName: String, nodeList: NodeList)
 
                 @Throws(Exception::class)
             
-open fun getWithoutTextNodes(nodeList: NodeList)
+    open fun getWithoutTextNodes(nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
-
-                    var nodeList = nodeList
+var nodeList = nodeList
 
     var list: BasicArrayList = BasicArrayList()
 
 
     var numberOfChildren: Int = nodeList!!.getLength()!!
-            
 
 
 
@@ -337,17 +310,16 @@ open fun getWithoutTextNodes(nodeList: NodeList)
 
                         for (index in 0 until numberOfChildren)
 
-
         {
+
     var node: Node = nodeList!!.item(index)!!
-            
 
 
     
-                        if(node!!.getNodeType() != Node.TEXT_NODE)
+                        if(node.getNodeType() != Node.TEXT_NODE)
                         
                                     {
-                                    list!!.add(node)
+                                    list.add(node)
 
                                     }
                                 
@@ -363,17 +335,13 @@ open fun getWithoutTextNodes(nodeList: NodeList)
 
                 @Throws(Exception::class)
             
-open fun searchNodeList(nodeName: String, nodeList: NodeList)
+    open fun searchNodeList(nodeName: String, nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
 : Node{
-
-                    var nodeName = nodeName
-
-
-                    var nodeList = nodeList
+var nodeName = nodeName
+var nodeList = nodeList
 
     var numberOfNodes: Int = nodeList!!.getLength()!!
-            
 
 
 
@@ -381,16 +349,14 @@ open fun searchNodeList(nodeName: String, nodeList: NodeList)
 
                         for (index in 0 until numberOfNodes)
 
-
         {
-    var node: Node = nodeList!!.item(index)!!
-            
 
-logUtil!!.put("NodeName: " +node!!.getNodeName(), this, 
-                            "searchNodeList")
+    var node: Node = nodeList!!.item(index)!!
+
+logUtil!!.put("NodeName: " +node.getNodeName(), this, "searchNodeList")
 
     
-                        if(node!!.getNodeName()!!.compareTo(nodeName) == 0)
+                        if(node.getNodeName()!!.compareTo(nodeName) == 0)
                         
                                     {
                                     
@@ -412,17 +378,13 @@ logUtil!!.put("NodeName: " +node!!.getNodeName(), this,
 
                 @Throws(Exception::class)
             
-open fun searchNodeList(nodeName: String, nodeList: BasicArrayList)
+    open fun searchNodeList(nodeName: String, nodeList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : Node{
-
-                    var nodeName = nodeName
-
-
-                    var nodeList = nodeList
+var nodeName = nodeName
+var nodeList = nodeList
 
     var numberOfNodes: Int = nodeList!!.size()!!
-            
 
 
 
@@ -430,15 +392,14 @@ open fun searchNodeList(nodeName: String, nodeList: BasicArrayList)
 
                         for (index in 0 until numberOfNodes)
 
-
         {
+
     var node: Node = nodeList!!.get(index) as Node
 
-logUtil!!.put("NodeName: " +node!!.getNodeName(), this, 
-                            "searchNodeList")
+logUtil!!.put("NodeName: " +node.getNodeName(), this, "searchNodeList")
 
     
-                        if(node!!.getNodeName()!!.compareTo(nodeName) == 0)
+                        if(node.getNodeName()!!.compareTo(nodeName) == 0)
                         
                                     {
                                     

@@ -18,9 +18,9 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
+
+        import java.lang.Object        
+        
         import java.lang.System
         
         import java.lang.Thread
@@ -56,10 +56,8 @@ open public class InputAutomationNewBundleRunnable
         
                 , RunnableInterface {
         
-
-        companion object {
-
-
+companion object {
+            
     private val FILE: String = "file:"
 
     private val JAR_DIR_PROP: String = "org.knopflerfish.gosg.jars"
@@ -68,25 +66,21 @@ open public class InputAutomationNewBundleRunnable
 
     private val MODULES_START_LEVEL: Int = 8
 
-
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val inputAutomationBundleActivator: InputAutomationBundleActivator
 
     private var running: Boolean= false
 
     private var fileBasicArrayList: BasicArrayList
-public constructor        (inputAutomationBundleActivator: InputAutomationBundleActivator)
+public constructor (inputAutomationBundleActivator: InputAutomationBundleActivator)
             : super()
         {
-
-                    var inputAutomationBundleActivator = inputAutomationBundleActivator
+var inputAutomationBundleActivator = inputAutomationBundleActivator
 this.inputAutomationBundleActivator= inputAutomationBundleActivator
 this.fileBasicArrayList= BasicArrayList()
 }
@@ -94,46 +88,45 @@ this.fileBasicArrayList= BasicArrayList()
 
                 @Throws(Exception::class)
             
-open fun setThread(thread: Thread)
+    open fun setThread(thread: Thread)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var thread = thread
+var thread = thread
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun isRunning()
+    open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return running
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
-open fun setRunning(running: Boolean)
+    open fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var running = running
+var running = running
 this.running= running
 }
 
 
                 @Throws(Exception::class)
             
-open fun updateModules()
+    open fun updateModules()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(this.commonStrings!!.START, this, 
-                            "updateModules")
+{
+logUtil!!.put(this.commonStrings!!.START, this, "updateModules")
 
     var list: BasicArrayList = this.findNewModules()!!
-            
 
 
-    var size: Int = list!!.size()!!
-            
+    var size: Int = list.size()!!
 
 
     var bundle: Bundle
@@ -144,8 +137,8 @@ open fun updateModules()
 
                         for (index in 0 until size)
 
-
-        {bundle= this.install(list!!.get(index) as URL)
+        {
+bundle= this.install(list.get(index) as URL)
 
     
                         if(bundle != 
@@ -153,7 +146,7 @@ open fun updateModules()
                                 )
                         
                                     {
-                                    bundle!!.start(MODULES_START_LEVEL)
+                                    bundle.start(MODULES_START_LEVEL)
 
                                     }
                                 
@@ -164,22 +157,19 @@ open fun updateModules()
 
                 @Throws(Exception::class)
             
-open fun getAllJarSymbolicNameHashMap()
+    open fun getAllJarSymbolicNameHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{logUtil!!.put(this.commonStrings!!.START, this, 
-                            "getAllJarSymbolicNameHashMap")
+: HashMap<Any, Any>{
+logUtil!!.put(this.commonStrings!!.START, this, "getAllJarSymbolicNameHashMap")
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 
     var jarFileBasicArrayList: BasicArrayList = this.getJarModuleFileBasicArrayList()!!
-            
 
-logUtil!!.put("Jar Module Files: " +jarFileBasicArrayList, this, 
-                            "getAllJarSymbolicNameHashMap")
+logUtil!!.put("Jar Module Files: " +jarFileBasicArrayList, this, "getAllJarSymbolicNameHashMap")
 
     var size: Int = jarFileBasicArrayList!!.size()!!
-            
 
 
     var file: File
@@ -190,11 +180,11 @@ logUtil!!.put("Jar Module Files: " +jarFileBasicArrayList, this,
 
                         for (index in 0 until size)
 
-
-        {file= jarFileBasicArrayList!!.get(index) as File
+        {
+file= jarFileBasicArrayList!!.get(index) as File
 
     
-                        if(!file!!.isDirectory())
+                        if(!file.isDirectory())
                         
                                     {
                                     
@@ -205,7 +195,6 @@ logUtil!!.put("Jar Module Files: " +jarFileBasicArrayList, this,
 
 
     var manifest: Manifest = jarInputStream!!.getManifest()!!
-            
 
 
     
@@ -219,15 +208,14 @@ logUtil!!.put("Jar Module Files: " +jarFileBasicArrayList, this,
                                 
                         else {
                             
-    var symbolicName: String = manifest!!.getMainAttributes()!!.getValue(Constants.BUNDLE_SYMBOLICNAME)!!
-            
+    var symbolicName: String = manifest.getMainAttributes()!!.getValue(Constants.BUNDLE_SYMBOLICNAME)!!
 
 
     
                         if(symbolicName != 
                                     null
                                 )
-                        hashMap!!.put(symbolicName, URL(FILE +file!!.getAbsolutePath()))
+                        hashMap!!.put(symbolicName, URL(FILE +file.getAbsolutePath()))
 
                         }
                             
@@ -244,13 +232,12 @@ logUtil!!.put("Jar Module Files: " +jarFileBasicArrayList, this,
 }
 
 
-open fun getJarModuleFileBasicArrayList()
+    open fun getJarModuleFileBasicArrayList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{logUtil!!.put(this.commonStrings!!.START, this, 
-                            "getJarModuleFileBasicArrayList")
+: BasicArrayList{
+logUtil!!.put(this.commonStrings!!.START, this, "getJarModuleFileBasicArrayList")
 
     var baseJarPath: String = System.getProperty(JAR_DIR_PROP)!!
-            
 
 
     
@@ -262,20 +249,16 @@ open fun getJarModuleFileBasicArrayList()
                                     }
                                 
 
-    var jarFileFilter: FileFilter = BasicFileFilterUtil.getInstance(
-                            ".jar")!!
-            
+    var jarFileFilter: FileFilter = BasicFileFilterUtil.getInstance(".jar")!!
 
 
     var path: String = baseJarPath +INPUT_AUTMATION_MODULE_BUNDLE_JAR_PATH
 
-logUtil!!.put("Path: " +path, this, 
-                            "getJarModuleFileBasicArrayList")
+logUtil!!.put("Path: " +path, this, "getJarModuleFileBasicArrayList")
 
     var file: File = File(path)
 
-logUtil!!.put("File: " +file!!.getAbsolutePath() +" isDirectory: " +file!!.isDirectory(), this, 
-                            "getJarModuleFileBasicArrayList")
+logUtil!!.put("File: " +file.getAbsolutePath() +" isDirectory: " +file.isDirectory(), this, "getJarModuleFileBasicArrayList")
 
 
 
@@ -286,20 +269,18 @@ logUtil!!.put("File: " +file!!.getAbsolutePath() +" isDirectory: " +file!!.isDir
 
                 @Throws(Exception::class)
             
-open fun getInstalledJarSymbolicNameBasicArrayList()
+    open fun getInstalledJarSymbolicNameBasicArrayList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{logUtil!!.put(this.commonStrings!!.START, this, 
-                            "getInstalledJarSymbolicNameBasicArrayList")
+: BasicArrayList{
+logUtil!!.put(this.commonStrings!!.START, this, "getInstalledJarSymbolicNameBasicArrayList")
 
     var vector: BasicArrayList = BasicArrayList()
 
 
     var bundleContext: BundleContext = InputAutomationBundleActivator.getBundleContext()!!
-            
 
 
     var bundleArray: Array<Bundle?> = bundleContext!!.getBundles()!!
-            
 
 
     
@@ -308,19 +289,18 @@ open fun getInstalledJarSymbolicNameBasicArrayList()
                                 )
                         
                                     {
-                                    logUtil!!.put("bundleArray: " +bundleArray!!.size, this, 
-                            "getInputAutomationModuleServices")
+                                    logUtil!!.put("bundleArray: " +bundleArray!!.size, this, "getInputAutomationModuleServices")
 
 
 
 
                         for (index in 0 until bundleArray!!.size)
 
-
         {
+
     var bundle: Bundle = bundleArray[index]!!
 
-vector!!.add(bundle!!.getSymbolicName())
+vector.add(bundle.getSymbolicName())
 }
 
 
@@ -336,20 +316,16 @@ vector!!.add(bundle!!.getSymbolicName())
 
                 @Throws(Exception::class)
             
-open fun isInstalled(symbolicName: String)
+    open fun isInstalled(symbolicName: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
-
-                    var symbolicName = symbolicName
-logUtil!!.put(CommonLabels.getInstance()!!.START +symbolicName, this, 
-                            "isInstalled")
+var symbolicName = symbolicName
+logUtil!!.put(CommonLabels.getInstance()!!.START +symbolicName, this, "isInstalled")
 
     var list: BasicArrayList = this.getInstalledJarSymbolicNameBasicArrayList()!!
-            
 
 
-    var size: Int = list!!.size()!!
-            
+    var size: Int = list.size()!!
 
 
     var nextSymbolicName: String
@@ -360,8 +336,8 @@ logUtil!!.put(CommonLabels.getInstance()!!.START +symbolicName, this,
 
                         for (index in 0 until size)
 
-
-        {nextSymbolicName= list!!.get(index) as String
+        {
+nextSymbolicName= list.get(index) as String
 
     
                         if(nextSymbolicName!!.compareTo(symbolicName) == 0)
@@ -387,26 +363,22 @@ logUtil!!.put(CommonLabels.getInstance()!!.START +symbolicName, this,
 
                 @Throws(Exception::class)
             
-open fun findNewModules()
+    open fun findNewModules()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{logUtil!!.put(this.commonStrings!!.START, this, 
-                            "findNewModules")
+: BasicArrayList{
+logUtil!!.put(this.commonStrings!!.START, this, "findNewModules")
 
     var vector: BasicArrayList = BasicArrayList()
 
 
     var hashMap: HashMap<Any, Any> = this.getAllJarSymbolicNameHashMap()!!
-            
 
-logUtil!!.put("All: " +hashMap, this, 
-                            "findNewModules")
+logUtil!!.put("All: " +hashMap, this, "findNewModules")
 
-    var set: Set = hashMap!!.keySet()!!
-            
+    var set: Set = hashMap!!.keys!!
 
 
-    var symbolicNameArray: Array<Any?> = set!!.toArray()!!
-            
+    var symbolicNameArray: Array<Any?> = set.toArray()!!
 
 
     var size: Int = symbolicNameArray!!.size
@@ -418,8 +390,8 @@ logUtil!!.put("All: " +hashMap, this,
 
                         for (index in 0 until size)
 
-
         {
+
     var symbolicName: String = symbolicNameArray[index]!! as String
 
 
@@ -427,7 +399,7 @@ logUtil!!.put("All: " +hashMap, this,
                         if(!this.isInstalled(symbolicName))
                         
                                     {
-                                    vector!!.add(hashMap!!.get(symbolicName as Object?))
+                                    vector.add(hashMap!!.get(symbolicName as Object))
 
                                     }
                                 
@@ -443,28 +415,26 @@ logUtil!!.put("All: " +hashMap, this,
 
                 @Throws(Exception::class)
             
-open fun install(url: URL)
+    open fun install(url: URL)
         //nullable = true from not(false or (false and false)) = true
 : Bundle{
-
-                    var url = url
-logUtil!!.put(CommonLabels.getInstance()!!.START +url, this, 
-                            "install")
+var url = url
+logUtil!!.put(CommonLabels.getInstance()!!.START +url, this, "install")
 
     var bundleContext: BundleContext = InputAutomationBundleActivator.getBundleContext()!!
-            
 
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return bundleContext!!.installBundle(url!!.toString())
+                        return bundleContext!!.installBundle(url.toString())
 }
 
 
-open fun run()
+    open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
+
         try {
             logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.RUN)
 this.setRunning(true)
@@ -473,7 +443,8 @@ this.setRunning(true)
 
 
         while(this.isRunning())
-        {timeHelper!!.setStartTime()
+        {
+timeHelper!!.setStartTime()
 logUtil!!.put(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsed(), this, this.commonStrings!!.RUN)
 this.updateModules()
 break;
@@ -483,7 +454,8 @@ break;
 
 logUtil!!.put(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
+            {
+logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
 }
 
 }

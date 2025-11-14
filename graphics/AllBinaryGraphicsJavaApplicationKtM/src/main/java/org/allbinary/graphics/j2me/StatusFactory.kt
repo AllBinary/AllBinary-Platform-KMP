@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -33,21 +31,19 @@ open public class StatusFactory
             : Object
          {
         
-
-        companion object {
-
-
+companion object {
+            
     private val instance: StatusFactory = StatusFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : StatusFactory{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }
@@ -58,26 +54,23 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val SETSTATUS: String = "setStatus"
 
     private val STATUS_LABEL: String = "Status: "
 
-open fun setStatusNoLog(status: String)
+    open fun setStatusNoLog(status: String)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var status = status
+var status = status
 MyFrame.statusJLabel!!.setText(status)
 }
 
 
-open fun setStatus(status: String)
+    open fun setStatus(status: String)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var status = status
+var status = status
 setStatusNoLog(status)
 logUtil!!.put(STATUS_LABEL +status, this, SETSTATUS)
 }

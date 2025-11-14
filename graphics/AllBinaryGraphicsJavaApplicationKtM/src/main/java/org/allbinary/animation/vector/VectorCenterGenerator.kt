@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -44,23 +44,16 @@ open public class VectorCenterGenerator
             : Object
          {
         
-
-        companion object {
-
-
+companion object {
+            
                 @Throws(Exception::class)
             
-open fun translate(list: BasicArrayList, x: Int, y: Int)
+    open fun translate(list: BasicArrayList, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
-
-                    var list = list
-
-
-                    var x = x
-
-
-                    var y = y
+var list = list
+var x = x
+var y = y
 
     var graphicsPipe: BasicGraphicsPipeline = BasicGraphicsPipeline(list)
 
@@ -74,14 +67,11 @@ graphicsPipe!!.translate(x, y)
 }
 
 
-
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     var minX: Int = Integer.MAX_VALUE
 
@@ -98,21 +88,20 @@ graphicsPipe!!.translate(x, y)
     private var width: Int= 0
 
     private var height: Int= 0
-public constructor        ()
+public constructor ()
             : super()
-        {}
+        {
+}
 
 
                 @Throws(Exception::class)
             
-open fun calculate(hashMap: HashMap<Any, Any>)
+    open fun calculate(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
+var hashMap = hashMap
 
-                    var hashMap = hashMap
-
-    var graphicItemArray: Array<Any?> = hashMap!!.keySet()!!.toArray()!!
-            
+    var graphicItemArray: Array<Any?> = hashMap!!.keys.toTypedArray()!!
 
 
     var size: Int = graphicItemArray!!.size
@@ -124,16 +113,16 @@ open fun calculate(hashMap: HashMap<Any, Any>)
 
                         for (index in 0 until size)
 
-
         {
+
     var item: GraphicItemInterface = hashMap!!.get(graphicItemArray[index]!!) as GraphicItemInterface
 
 
     
-                        if(item!!.getName() == LinesGraphicItem.getStaticName())
+                        if(item.getName() == LinesGraphicItem.getStaticName())
                         
                                     {
-                                    this.getInstance(item!!.getPointsInterface()!!.getPoints())
+                                    this.getInstance(item.getPointsInterface()!!.getPoints())
 
                                     }
                                 
@@ -144,7 +133,6 @@ setWidth(maxX -minX)
 setHeight(maxY -minY)
 
     var max: Int = getWidth()!!
-            
 
 
     
@@ -160,14 +148,10 @@ setHeight(maxY -minY)
 
 
     var commonLabels: CommonLabels = CommonLabels.getInstance()!!
-            
 
 
     var s: String = StringMaker().
-                            append(commonLabels!!.WIDTH_LABEL)!!.append(getWidth())!!.append(commonLabels!!.HEIGHT_LABEL)!!.append(getHeight())!!.append(
-                            " max: ")!!.append(max)!!.append(
-                            " middle: ")!!.append(middle)!!.toString()!!
-            
+                            append(commonLabels!!.WIDTH_LABEL)!!.append(getWidth())!!.append(commonLabels!!.HEIGHT_LABEL)!!.append(getHeight())!!.append(" max: ")!!.append(max)!!.append(" middle: ")!!.append(middle)!!.toString()!!
 
 logUtil!!.put(s, this, commonStrings!!.GET_INSTANCE)
 
@@ -183,19 +167,15 @@ dy= middle -currentMiddleY
 
                 @Throws(Exception::class)
             
-open fun transform(hashMap: HashMap<Any, Any>)
+    open fun transform(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var hashMap = hashMap
+var hashMap = hashMap
 this.calculate(hashMap)
 logUtil!!.put(StringMaker().
-                            append(
-                            " dx: ")!!.append(dx)!!.append(
-                            " dy: ")!!.append(dy)!!.toString(), this, commonStrings!!.GET_INSTANCE)
+                            append(" dx: ")!!.append(dx)!!.append(" dy: ")!!.append(dy)!!.toString(), this, commonStrings!!.GET_INSTANCE)
 
-    var graphicItemArray: Array<Any?> = hashMap!!.keySet()!!.toArray()!!
-            
+    var graphicItemArray: Array<Any?> = hashMap!!.keys.toTypedArray()!!
 
 
     var size: Int = graphicItemArray!!.size
@@ -207,19 +187,18 @@ logUtil!!.put(StringMaker().
 
                         for (index in 0 until size)
 
-
         {
+
     var item: GraphicItemInterface = hashMap!!.get(graphicItemArray[index]!!) as GraphicItemInterface
 
 
-    var list: BasicArrayList = translate(item!!.getPointsInterface()!!.getPoints(), dx, dy)!!
-            
+    var list: BasicArrayList = translate(item.getPointsInterface()!!.getPoints(), dx, dy)!!
 
 
     var newPoints: Points = Points()
 
 newPoints!!.addPoints(list)
-item!!.setPointsInterface(newPoints)
+item.setPointsInterface(newPoints)
 }
 
 }
@@ -227,11 +206,10 @@ item!!.setPointsInterface(newPoints)
 
                 @Throws(Exception::class)
             
-open fun getInstance(pointVector: BasicArrayList)
+    open fun getInstance(pointVector: BasicArrayList)
         //nullable =  from not(true or (false and false)) = 
 {
-
-                    var pointVector = pointVector
+var pointVector = pointVector
 
         try {
             
@@ -239,7 +217,6 @@ open fun getInstance(pointVector: BasicArrayList)
 
 
     var size: Int = pointVector!!.size()!!
-            
 
 
 
@@ -247,50 +224,51 @@ open fun getInstance(pointVector: BasicArrayList)
 
                         for (index in 0 until size)
 
-
         {
+
     var point: GPoint = pointVector!!.get(index) as GPoint
 
 
     
-                        if(point!!.getX() < minX)
+                        if(point.getX() < minX)
                         
                                     {
-                                    minX= point!!.getX()
+                                    minX= point.getX()
 
                                     }
                                 
 
     
-                        if(point!!.getX() > maxX)
+                        if(point.getX() > maxX)
                         
                                     {
-                                    maxX= point!!.getX()
+                                    maxX= point.getX()
 
                                     }
                                 
 
     
-                        if(point!!.getY() < minY)
+                        if(point.getY() < minY)
                         
                                     {
-                                    minY= point!!.getY()
+                                    minY= point.getY()
 
                                     }
                                 
 
     
-                        if(point!!.getY() > maxY)
+                        if(point.getY() > maxY)
                         
                                     {
-                                    maxY= point!!.getY()
+                                    maxY= point.getY()
 
                                     }
                                 
 }
 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
 
 
 
@@ -300,9 +278,10 @@ open fun getInstance(pointVector: BasicArrayList)
 }
 
 
-open fun getWidth()
+    open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -310,18 +289,18 @@ open fun getWidth()
 }
 
 
-open fun setWidth(width: Int)
+    open fun setWidth(width: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var width = width
+var width = width
 this.width= width
 }
 
 
-open fun getHeight()
+    open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -329,11 +308,10 @@ open fun getHeight()
 }
 
 
-open fun setHeight(height: Int)
+    open fun setHeight(height: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var height = height
+var height = height
 this.height= height
 }
 

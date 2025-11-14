@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -39,38 +37,31 @@ open public class MyCanvasEventSource
     private var treeNode: MutableTreeNode
 
     private var angle: Double = 0
-public constructor        (command: String, treeNode: MutableTreeNode)
+public constructor (command: String, treeNode: MutableTreeNode)
             : super()
         {
-
-                    var command = command
-
-
-                    var treeNode = treeNode
+var command = command
+var treeNode = treeNode
 this.command= command
 this.treeNode= treeNode
 }
 
-public constructor        (command: String, angle: Double, treeNode: MutableTreeNode)
+public constructor (command: String, angle: Double, treeNode: MutableTreeNode)
             : super()
         {
-
-                    var command = command
-
-
-                    var angle = angle
-
-
-                    var treeNode = treeNode
+var command = command
+var angle = angle
+var treeNode = treeNode
 this.command= command
 this.treeNode= treeNode
 this.setAngle(angle)
 }
 
 
-open fun getCommand()
+    open fun getCommand()
         //nullable = true from not(false or (false and true)) = true
 : String{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -78,9 +69,10 @@ open fun getCommand()
 }
 
 
-open fun getTreeNode()
+    open fun getTreeNode()
         //nullable = true from not(false or (false and true)) = true
 : MutableTreeNode{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -88,9 +80,10 @@ open fun getTreeNode()
 }
 
 
-open fun getAngle()
+    open fun getAngle()
         //nullable = true from not(false or (false and true)) = true
 : Double{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -98,11 +91,10 @@ open fun getAngle()
 }
 
 
-open fun setAngle(angle: Double)
+    open fun setAngle(angle: Double)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var angle = angle
+var angle = angle
 this.angle= angle
 }
 

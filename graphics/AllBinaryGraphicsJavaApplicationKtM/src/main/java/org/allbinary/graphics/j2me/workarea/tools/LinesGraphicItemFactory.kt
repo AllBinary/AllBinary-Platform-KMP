@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -40,11 +38,10 @@ open public class LinesGraphicItemFactory
             {
             }            
         
-open fun getInstance(canvasJPanel: CanvasJPanel)
+    open fun getInstance(canvasJPanel: CanvasJPanel)
         //nullable =  from not(true or (false and false)) = 
 : GraphicItemInterface{
-
-                    var canvasJPanel = canvasJPanel
+var canvasJPanel = canvasJPanel
 
 
 

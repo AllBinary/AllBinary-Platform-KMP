@@ -18,20 +18,19 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
         import kotlin.reflect.KClass
         
 import org.allbinary.graphics.j2me.workarea.canvas.CanvasJPanel
+
 interface GraphicsItemInterfaceFactoryInterface {
         
 
-open fun getInstance(canvasJPanel: CanvasJPanel)
+    open fun getInstance(canvasJPanel: CanvasJPanel)
         //nullable =  from not(true or (false and false)) = 
 : GraphicItemInterface
 

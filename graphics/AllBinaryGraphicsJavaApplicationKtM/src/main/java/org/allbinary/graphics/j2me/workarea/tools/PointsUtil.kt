@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -36,21 +34,19 @@ open public class PointsUtil
             : Object
          {
         
-
-        companion object {
-
-
+companion object {
+            
     private val instance: PointsUtil = PointsUtil()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : PointsUtil{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }
@@ -62,22 +58,17 @@ open fun getInstance()
         
                 @Throws(Exception::class)
             
-open fun doTransforms(pointVector: BasicArrayList, angle: Double, fulcrumPoint: GPoint)
+    open fun doTransforms(pointVector: BasicArrayList, angle: Double, fulcrumPoint: GPoint)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList{
-
-                    var pointVector = pointVector
-
-
-                    var angle = angle
-
-
-                    var fulcrumPoint = fulcrumPoint
+var pointVector = pointVector
+var angle = angle
+var fulcrumPoint = fulcrumPoint
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return VectorRotationGenerator.getInstance()!!.getInstance(fulcrumPoint!!.getX(), fulcrumPoint!!.getY(), pointVector, AngleFactory.getInstance()!!.getInstance(angle!!.toInt()))
+                        return VectorRotationGenerator.getInstance()!!.getInstance(fulcrumPoint!!.getX(), fulcrumPoint!!.getY(), pointVector, AngleFactory.getInstance()!!.getInstance(angle.toInt()))
 }
 
 

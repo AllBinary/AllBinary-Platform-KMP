@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         import java.lang.Thread
         
@@ -48,23 +46,21 @@ open public class InputAutomationBundleActivator
                 , BundleActivator
                 , InputAutomationBundleActivatorListenerInterface {
         
-
-        companion object {
-
-
+companion object {
+            
     private var moduleManagementThread: Thread
 
     private var bundleContext: BundleContext
 
-open fun getBundleContext()
+    open fun getBundleContext()
         //nullable = true from not(false or (false and true)) = true
 : BundleContext{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return bundleContext
 }
-
 
 
         }
@@ -75,18 +71,15 @@ open fun getBundleContext()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
-open fun start(bundleContext: BundleContext)
+    open fun start(bundleContext: BundleContext)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var bundleContext = bundleContext
+    //var bundleContext = bundleContext
 
         try {
             logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.START)
@@ -95,7 +88,8 @@ moduleManagementThread= Thread(InputAutomationNewBundleRunnable(this))
 moduleManagementThread!!.start()
 InputAutomationJFrame.create(this)
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.START, e)
+            {
+logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.START, e)
 
 
 
@@ -107,22 +101,20 @@ InputAutomationJFrame.create(this)
 
                 @Throws(Exception::class)
             
-open fun registerAsService()
+    open fun registerAsService()
         //nullable = true from not(false or (false and true)) = true
-{OSGIActivatorUtil.registerAsService(this.getBundleContext(), InputAutomationServiceFactory.getInstance(), 
-                                //Otherwise - scopeIdentifier - ClassExpr
-getName())
-OSGIActivatorUtil.registerAsService(this.getBundleContext(), InputAutomationServiceFactory.getInstance(), 
-                                //Otherwise - scopeIdentifier - ClassExpr
-getName())
+{
+OSGIActivatorUtil.registerAsService(this.getBundleContext(), InputAutomationServiceFactory.getInstance(), InputAutomationConfigurationModuleChangeListener::class.toString()!!)
+OSGIActivatorUtil.registerAsService(this.getBundleContext(), InputAutomationServiceFactory.getInstance(), InputAutomationRobotChangeListener::class.toString()!!)
 }
 
 
                 @Throws(Exception::class)
             
-open fun useServices()
+    open fun useServices()
         //nullable = true from not(false or (false and true)) = true
-{InputAutomationRobotServiceConsumer(this.getBundleContext()).
+{
+InputAutomationRobotServiceConsumer(this.getBundleContext()).
                             process()
 InputAutomationModuleServiceConsumer(this.getBundleContext()).
                             process()
@@ -131,13 +123,11 @@ InputAutomationModuleServiceConsumer(this.getBundleContext()).
 
                 @Throws(Exception::class)
             
-open fun stop(context: BundleContext)
+    open fun stop(context: BundleContext)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var context = context
-logUtil!!.put(this.commonStrings!!.START, this, 
-                            "stop")
+    //var context = context
+logUtil!!.put(this.commonStrings!!.START, this, "stop")
 
     
                         if(InputAutomationJFrame.getInstance() != 
@@ -150,9 +140,7 @@ logUtil!!.put(this.commonStrings!!.START, this,
                                     }
                                 
                         else {
-                            logUtil!!.put(
-                            "Nothing to stop", this, 
-                            "stop")
+                            logUtil!!.put("Nothing to stop", this, "stop")
 
                         }
                             

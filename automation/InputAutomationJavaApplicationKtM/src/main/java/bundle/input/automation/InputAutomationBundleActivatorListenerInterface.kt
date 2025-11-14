@@ -18,27 +18,26 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface InputAutomationBundleActivatorListenerInterface {
         
 
                 @Throws(Exception::class)
             
-open fun registerAsService()
+    open fun registerAsService()
         //nullable = true from not(false or (false and true)) = true
 
 
                 @Throws(Exception::class)
             
-open fun useServices()
+    open fun useServices()
         //nullable = true from not(false or (false and true)) = true
 
 

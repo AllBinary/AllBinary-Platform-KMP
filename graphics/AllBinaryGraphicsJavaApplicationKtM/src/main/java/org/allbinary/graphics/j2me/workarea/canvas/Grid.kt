@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -43,25 +41,26 @@ open public class Grid
     private var zoom: Int = 3
 
     var isChanged: Boolean = true
-public constructor        ()
-            : super()
-        {}
-
-public constructor        (grid: Grid)
+public constructor ()
             : super()
         {
+}
 
-                    var grid = grid
-this.grid= grid!!.grid
-this.showGrid(grid!!.isGridOn)
-this.isGridPossible= grid!!.isGridPossible
-this.setZoom(grid!!.getZoom())
+public constructor (grid: Grid)
+            : super()
+        {
+var grid = grid
+this.grid= grid.grid
+this.showGrid(grid.isGridOn)
+this.isGridPossible= grid.isGridPossible
+this.setZoom(grid.getZoom())
 }
 
 
-open fun isGridOn()
+    open fun isGridOn()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -69,9 +68,10 @@ open fun isGridOn()
 }
 
 
-open fun isGridPossible()
+    open fun isGridPossible()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -79,9 +79,10 @@ open fun isGridPossible()
 }
 
 
-open fun getGrid()
+    open fun getGrid()
         //nullable = true from not(false or (false and true)) = true
 : GPoint{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -89,9 +90,10 @@ open fun getGrid()
 }
 
 
-open fun getZoom()
+    open fun getZoom()
         //nullable = true from not(false or (false and true)) = true
 : Int{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -99,20 +101,18 @@ open fun getZoom()
 }
 
 
-open fun showGrid(value: Boolean)
+    open fun showGrid(value: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var value = value
+var value = value
 this.isGridOn= value
 }
 
 
-open fun setZoom(zoom: Int)
+    open fun setZoom(zoom: Int)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var zoom = zoom
+var zoom = zoom
 this.zoom= zoom
 
     

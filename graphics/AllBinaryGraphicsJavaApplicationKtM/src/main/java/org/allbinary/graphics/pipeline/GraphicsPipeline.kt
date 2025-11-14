@@ -18,10 +18,10 @@
 
 
 
-        import java.lang.Integer
+
+        import java.lang.Object        
+        
         import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -33,11 +33,10 @@ import org.allbinary.util.BasicArrayList
 
 open public class GraphicsPipeline : BasicGraphicsPipeline {
         
-public constructor        (points: BasicArrayList)                        
+public constructor (points: BasicArrayList)                        
 
                             : super(points){
-
-                    var points = points
+var points = points
 
 
                             //For kotlin this is before the body of the constructor.
@@ -47,17 +46,15 @@ public constructor        (points: BasicArrayList)
 
                 @Throws(Exception::class)
             
-open fun rotateTheta(aTheta: Double)
+    open fun rotateTheta(aTheta: Double)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var aTheta = aTheta
+var aTheta = aTheta
 
     var newVector: BasicArrayList = BasicArrayList()
 
 
     var size: Int = this.pointBasicArrayList!!.size()!!
-            
 
 
 
@@ -65,8 +62,8 @@ open fun rotateTheta(aTheta: Double)
 
                         for (index in 0 until size)
 
-
         {
+
     var secondPoint: GPoint = pointBasicArrayList!!.get(index) as GPoint
 
 
@@ -77,7 +74,6 @@ open fun rotateTheta(aTheta: Double)
 
 
     var point: GPoint = PointFactory.getInstance()!!.getInstance((secondX.toInt()), (secondY.toInt()))!!
-            
 
 newVector!!.add(point)
 }

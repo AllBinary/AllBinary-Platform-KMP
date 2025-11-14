@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -30,13 +28,10 @@
 
 open public class InputAutomationClientInformation : AbeClientInformation {
         
-public constructor        ()                        
+public constructor ()                        
 
-                            : super(
-                            "InputAutomationTool", 
-                            "0.0.1", 
-                            "InputAutomationTool 0.0.1", 
-                            "IA"){
+                            : super("InputAutomationTool", "0.0.1", "InputAutomationTool 0.0.1", "IA"){
+
 
                             //For kotlin this is before the body of the constructor.
                     

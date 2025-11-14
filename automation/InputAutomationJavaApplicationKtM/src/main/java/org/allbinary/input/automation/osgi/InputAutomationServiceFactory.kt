@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -39,15 +37,14 @@ open public class InputAutomationServiceFactory
         
                 , ServiceFactory {
         
-
-        companion object {
-
-
+companion object {
+            
     private val inputAutomationServiceFactory: InputAutomationServiceFactory = InputAutomationServiceFactory()
 
-open fun getInstance()
+    open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : InputAutomationServiceFactory{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,29 +52,23 @@ open fun getInstance()
 }
 
 
-
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
-private constructor        ()
+private constructor ()
             : super()
-        {}
+        {
+}
 
 
-open fun getService(bundle: Bundle, registration: ServiceRegistration)
+    open fun getService(bundle: Bundle, registration: ServiceRegistration)
         //nullable = true from not(false or (false and false)) = true
 : Any{
-
-                    var bundle = bundle
-
-
-                    var registration = registration
-logUtil!!.put(this.commonStrings!!.START, this, 
-                            "getService")
+    //var bundle = bundle
+    //var registration = registration
+logUtil!!.put(this.commonStrings!!.START, this, "getService")
 
 
 
@@ -86,17 +77,12 @@ logUtil!!.put(this.commonStrings!!.START, this,
 }
 
 
-open fun ungetService(bundle: Bundle, registration: ServiceRegistration, service: Any)
+    open fun ungetService(bundle: Bundle, registration: ServiceRegistration, service: Any)
         //nullable = true from not(false or (false and false)) = true
 {
-
-                    var bundle = bundle
-
-
-                    var registration = registration
-
-
-                    var service = service
+    //var bundle = bundle
+    //var registration = registration
+    //var service = service
 }
 
 

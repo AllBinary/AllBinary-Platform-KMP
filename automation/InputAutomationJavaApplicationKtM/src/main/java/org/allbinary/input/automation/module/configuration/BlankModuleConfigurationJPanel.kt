@@ -18,37 +18,36 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
         import kotlin.reflect.KClass
         
 
-open public class BlankModuleConfigurationJPanel : swing.JPanel {
+open public class BlankModuleConfigurationJPanel : javax.swing.JPanel {
         
-public constructor        (){initComponents()
+public constructor (){
+initComponents()
 }
 
 
-open fun initComponents()
+    open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
-{jLabel1= JLabel()
-jLabel1!!.setText(
-                            "No Configuration Available")
+{
+jLabel1= javax.swing.JLabel()
+jLabel1!!.setText("No Configuration Available")
 
-    var layout: GroupLayout = GroupLayout(this)
+    var layout: javax.swing.GroupLayout = javax.swing.GroupLayout(this)
 
 this.setLayout(layout)
-layout!!.setHorizontalGroup(layout!!.createParallelGroup(javax!!.swing!!.GroupLayout.Alignment.LEADING)!!.addGroup(javax!!.swing!!.GroupLayout.Alignment.TRAILING, layout!!.createSequentialGroup()!!.addContainerGap(231, Short.MAX_VALUE)!!.addComponent(jLabel1)!!.addGap(225, 225, 225)))
-layout!!.setVerticalGroup(layout!!.createParallelGroup(javax!!.swing!!.GroupLayout.Alignment.LEADING)!!.addGroup(layout!!.createSequentialGroup()!!.addContainerGap()!!.addComponent(jLabel1)!!.addContainerGap(362, Short.MAX_VALUE)))
+layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()!!.addContainerGap(231, Short.MAX_VALUE)!!.addComponent(jLabel1)!!.addGap(225, 225, 225)))
+layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(layout.createSequentialGroup()!!.addContainerGap()!!.addComponent(jLabel1)!!.addContainerGap(362, Short.MAX_VALUE)))
 }
 
 
-    private var jLabel1: JLabel
+    private var jLabel1: javax.swing.JLabel
 
 }
                 

@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -33,13 +31,10 @@ import org.allbinary.osgi.service.InputAutomationServiceConsumer
 
 open public class InputAutomationModuleServiceConsumer : InputAutomationServiceConsumer {
         
-public constructor        (bundleContext: BundleContext)                        
+public constructor (bundleContext: BundleContext)                        
 
-                            : super(
-                                //Otherwise - scopeIdentifier - ClassExpr
-getName(), bundleContext, InputAutomationModuleOSGIServiceVisitor()){
-
-                    var bundleContext = bundleContext
+                            : super(InputAutomationModuleServiceInterface::class.toString()!!, bundleContext, InputAutomationModuleOSGIServiceVisitor()){
+var bundleContext = bundleContext
 
 
                             //For kotlin this is before the body of the constructor.

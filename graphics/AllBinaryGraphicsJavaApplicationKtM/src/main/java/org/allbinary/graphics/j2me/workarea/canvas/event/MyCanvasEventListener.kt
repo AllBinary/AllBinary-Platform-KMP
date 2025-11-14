@@ -18,49 +18,48 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
         import kotlin.reflect.KClass
         
+
 interface MyCanvasEventListener {
         
 
-open fun delete(evt: MyCanvasEvent)
+    open fun delete(evt: MyCanvasEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun duplicate(evt: MyCanvasEvent)
+    open fun duplicate(evt: MyCanvasEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun select(evt: MyCanvasEvent)
+    open fun select(evt: MyCanvasEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun rotate(evt: MyCanvasEvent)
+    open fun rotate(evt: MyCanvasEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun explode(evt: MyCanvasEvent)
-        //nullable = true from not(false or (false and false)) = true
-
-
-                @Throws(Exception::class)
-            
-open fun autoExplode(evt: MyCanvasEvent)
+    open fun explode(evt: MyCanvasEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
                 @Throws(Exception::class)
             
-open fun center(evt: MyCanvasEvent)
+    open fun autoExplode(evt: MyCanvasEvent)
+        //nullable = true from not(false or (false and false)) = true
+
+
+                @Throws(Exception::class)
+            
+    open fun center(evt: MyCanvasEvent)
         //nullable = true from not(false or (false and false)) = true
 
 

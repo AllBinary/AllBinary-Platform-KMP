@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -33,98 +31,76 @@ open public class LOGGING
             : Object
          {
         
-
-        companion object {
-
-
+companion object {
+            
     private var logging: Vector = Vector()
 
-open fun contains(logType: LOGGING)
+    open fun contains(logType: LOGGING)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
-
-                    var logType = logType
+var logType = logType
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return logging!!.contains(logType!!.toString())
+                        return logging.contains(logType!!.toString())
 }
 
 
-    val GRAPHICSPAINT: LOGGING = LOGGING(
-                            "Graphics Paint")
+    val GRAPHICSPAINT: LOGGING = LOGGING("Graphics Paint")
 
-    val GRAPHICSCREATION: LOGGING = LOGGING(
-                            "Graphics Creation")
+    val GRAPHICSCREATION: LOGGING = LOGGING("Graphics Creation")
 
-    val GRAPHICSDELETION: LOGGING = LOGGING(
-                            "Graphics Deletion")
+    val GRAPHICSDELETION: LOGGING = LOGGING("Graphics Deletion")
 
-    val LOADINGERROR: LOGGING = LOGGING(
-                            "Loading Error")
+    val LOADINGERROR: LOGGING = LOGGING("Loading Error")
 
-    val MENUEVENT: LOGGING = LOGGING(
-                            "Menu Action Event")
+    val MENUEVENT: LOGGING = LOGGING("Menu Action Event")
 
-    val MOUSEEVENT: LOGGING = LOGGING(
-                            "Mouse Action Event")
+    val MOUSEEVENT: LOGGING = LOGGING("Mouse Action Event")
 
-    val KEYEVENT: LOGGING = LOGGING(
-                            "Keyboard Action Event")
+    val KEYEVENT: LOGGING = LOGGING("Keyboard Action Event")
 
-    val ACTIONEVENT: LOGGING = LOGGING(
-                            "Action Event")
+    val ACTIONEVENT: LOGGING = LOGGING("Action Event")
 
-    val ADJUSTMENTEVENT: LOGGING = LOGGING(
-                            "Adjustment Action Event")
+    val ADJUSTMENTEVENT: LOGGING = LOGGING("Adjustment Action Event")
 
-    val COMPONENTEVENT: LOGGING = LOGGING(
-                            "Component Action Event")
+    val COMPONENTEVENT: LOGGING = LOGGING("Component Action Event")
 
-    val CONTAINEREVENT: LOGGING = LOGGING(
-                            "Container Action Event")
+    val CONTAINEREVENT: LOGGING = LOGGING("Container Action Event")
 
-    val FOCUSEVENT: LOGGING = LOGGING(
-                            "Focus Action Event")
+    val FOCUSEVENT: LOGGING = LOGGING("Focus Action Event")
 
-    val HIERARCHYEVENT: LOGGING = LOGGING(
-                            "Hierarchy Action Event")
+    val HIERARCHYEVENT: LOGGING = LOGGING("Hierarchy Action Event")
 
-    val INPUTEVENT: LOGGING = LOGGING(
-                            "Input Action Event")
+    val INPUTEVENT: LOGGING = LOGGING("Input Action Event")
 
-    val INVOCATIONEVENT: LOGGING = LOGGING(
-                            "Invocation Action Event")
+    val INVOCATIONEVENT: LOGGING = LOGGING("Invocation Action Event")
 
-    val ITEMEVENT: LOGGING = LOGGING(
-                            "Item Action Event")
+    val ITEMEVENT: LOGGING = LOGGING("Item Action Event")
 
-    val PAINTEVENT: LOGGING = LOGGING(
-                            "Paint Action Event")
+    val PAINTEVENT: LOGGING = LOGGING("Paint Action Event")
 
-    val TEXTEVENT: LOGGING = LOGGING(
-                            "Text Action Event")
+    val TEXTEVENT: LOGGING = LOGGING("Text Action Event")
 
-    val WINDOWEVENT: LOGGING = LOGGING(
-                            "Window Action Event")
-
+    val WINDOWEVENT: LOGGING = LOGGING("Window Action Event")
 
         }
             
     private var name: String
-private constructor        (value: String)
+private constructor (value: String)
             : super()
         {
-
-                    var value = value
+var value = value
 this.name= value
-logging!!.add(value)
+logging.add(value)
 }
 
-override fun toString()
+
+    override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

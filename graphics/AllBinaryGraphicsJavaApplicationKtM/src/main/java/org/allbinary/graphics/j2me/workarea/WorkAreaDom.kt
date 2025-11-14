@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -37,30 +35,25 @@ open public class WorkAreaDom
             : Object
          {
         
-
-        companion object {
-
-
+companion object {
+            
     val WORKAREA: String = "workArea"
 
     val NAME: String = "name"
 
     val FRAMES: String = "frames"
 
-
         }
             
     private var name: String
 
     private var canvasNodeList: BasicArrayList
-public constructor        (document: Document)
+public constructor (document: Document)
             : super()
         {
+var document = document
 
-                    var document = document
-
-    var workAreaNodeList: NodeList = document!!.getElementsByTagName(this.WORKAREA)!!
-            
+    var workAreaNodeList: NodeList = document.getElementsByTagName(this.WORKAREA)!!
 
 
     
@@ -71,7 +64,6 @@ public constructor        (document: Document)
                                     {
                                     
     var numberOfworkAreas: Int = workAreaNodeList!!.getLength()!!
-            
 
 
     
@@ -80,15 +72,12 @@ public constructor        (document: Document)
                                     {
                                     
     var numberOfNodes: Int = workAreaNodeList!!.getLength()!!
-            
 
 
     var nameNode: Node = DomHelper.getInstance()!!.searchNodeList(this.NAME, workAreaNodeList!!.item(0)!!.getChildNodes())!!
-            
 
 
     var nameTextNode: Node = nameNode!!.getFirstChild()!!
-            
 
 this.name= nameTextNode!!.getNodeValue()
 
@@ -110,17 +99,17 @@ this.canvasNodeList= DomHelper.getInstance()!!.getChildrenWithoutTextNodes(this.
                             
 
 
-                            throw Exception(
-                            "workArea Node Not Found")
+                            throw Exception("workArea Node Not Found")
 
                         }
                             
 }
 
 
-open fun getName()
+    open fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -128,9 +117,10 @@ open fun getName()
 }
 
 
-open fun getCanvasNodes()
+    open fun getCanvasNodes()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
