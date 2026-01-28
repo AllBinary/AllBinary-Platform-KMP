@@ -101,7 +101,7 @@ public constructor ()
 {
 var hashMap = hashMap
 
-    var graphicItemArray: Array<Any?> = hashMap!!.keys.toArray()!!
+    var graphicItemArray: Array<Any?> = hashMap!!.keys.toTypedArray()!!
 
 
     var size: Int = graphicItemArray!!.size
@@ -175,7 +175,7 @@ this.calculate(hashMap)
 logUtil!!.put(StringMaker().
                             append(" dx: ")!!.append(dx)!!.append(" dy: ")!!.append(dy)!!.toString(), this, commonStrings!!.GET_INSTANCE)
 
-    var graphicItemArray: Array<Any?> = hashMap!!.keys.toArray()!!
+    var graphicItemArray: Array<Any?> = hashMap!!.keys.toTypedArray()!!
 
 
     var size: Int = graphicItemArray!!.size

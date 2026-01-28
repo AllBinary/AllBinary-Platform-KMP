@@ -141,7 +141,7 @@ timeHelper!!.setStartTime()
     var robotHashtable: Hashtable<Any, Any> = InputRobotFactory.getInstance()!!.get()!!
 
 
-    var inputTypeNameArray: Array<Any?> = robotHashtable!!.keys.toArray()!!
+    var inputTypeNameArray: Array<Any?> = robotHashtable!!.keys.toTypedArray()!!
 
 
     var size: Int = inputTypeNameArray!!.size

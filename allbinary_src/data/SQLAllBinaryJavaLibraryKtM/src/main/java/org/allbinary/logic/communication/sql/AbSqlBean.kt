@@ -262,7 +262,7 @@ stringBuffer!!.append(sqlStrings!!.SELECT)
 
         try {
             
-    var keyArray: Array<Any?> = columnsAndValues!!.keySet()!!.toArray()!!
+    var keyArray: Array<Any?> = columnsAndValues!!.keySet()!!.toTypedArray()!!
 
 
     var size: Int = keyArray!!.size
@@ -304,7 +304,7 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
         while(rset.next())
         {
 
-    var keyArray2: Array<Any?> = columnsAndValues!!.keySet()!!.toArray()!!
+    var keyArray2: Array<Any?> = columnsAndValues!!.keySet()!!.toTypedArray()!!
 
 
     var size2: Int = keyArray2!!.size

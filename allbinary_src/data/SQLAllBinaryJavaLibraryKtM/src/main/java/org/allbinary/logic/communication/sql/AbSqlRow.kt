@@ -126,7 +126,7 @@ stringBuffer!!.append(this.sqlStrings!!.SET)
 
         try {
             
-    var keyArray: Array<Any?> = updatedKeyValuePairs!!.keySet()!!.toArray()!!
+    var keyArray: Array<Any?> = updatedKeyValuePairs!!.keySet()!!.toTypedArray()!!
 
 
     var size: Int = keyArray!!.size
@@ -229,7 +229,7 @@ stringBuffer!!.append(this.sqlStrings!!.SET)
 
         try {
             
-    var keyArray: Array<Any?> = updatedKeyValuePairs!!.keySet()!!.toArray()!!
+    var keyArray: Array<Any?> = updatedKeyValuePairs!!.keySet()!!.toTypedArray()!!
 
 
     var size: Int = keyArray!!.size

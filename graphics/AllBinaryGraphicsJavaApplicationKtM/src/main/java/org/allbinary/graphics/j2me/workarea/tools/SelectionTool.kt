@@ -225,7 +225,7 @@ var angle = angle
     var hashMap: HashMap<Any, Any> = this.canvasJPanel!!.getGraphicItemHashMap()!!
 
 
-    var graphicItemArray: Array<Any?> = hashMap!!.keys.toArray()!!
+    var graphicItemArray: Array<Any?> = hashMap!!.keys.toTypedArray()!!
 
 
     var size: Int = graphicItemArray!!.size

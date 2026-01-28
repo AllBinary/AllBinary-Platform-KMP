@@ -84,7 +84,7 @@ this.setGenericProfileActions(genericProfileActions)
                                     {
                                     logUtil!!.put(IMAGE_AVAILABLE_SO_PROCESSING, this, PROCESS_DATA_WORKER_RESULTS)
 
-    var anyType: Any = cacheInterface!!.keySet()!!.toArray()[0]!!
+    var anyType: Any = cacheInterface!!.keySet()!!.toTypedArray()[0]!!
 
 
     var hashMap: HashMap<Any, Any> = this.getGenericProfileActions()!!.getHashMap()!!

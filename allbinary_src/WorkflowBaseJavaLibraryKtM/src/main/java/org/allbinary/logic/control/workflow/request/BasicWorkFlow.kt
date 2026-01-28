@@ -202,7 +202,7 @@ var document = document
     var node: Node = document.createElement(WorkFlowData.getInstance()!!.WORKFLOW)!!
 
 
-    var nameArray: Array<Any?> = keySet!!.toArray()!!
+    var nameArray: Array<Any?> = keySet!!.toTypedArray()!!
 
 
     var size: Int = nameArray!!.size

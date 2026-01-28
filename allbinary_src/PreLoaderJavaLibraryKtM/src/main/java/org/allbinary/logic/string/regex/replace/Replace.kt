@@ -187,7 +187,7 @@ var total = total
     var values: Array<String?>
 
 
-    var keyArray: Array<Any?> = keySet!!.toArray()!!
+    var keyArray: Array<Any?> = keySet!!.toTypedArray()!!
 
 
     var size: Int = keyArray!!.size
@@ -338,7 +338,7 @@ var replace = replace
     var value: String
 
 
-    var keyArray: Array<Any?> = keySet!!.toArray()!!
+    var keyArray: Array<Any?> = keySet!!.toTypedArray()!!
 
 
     var size: Int = keyArray!!.size

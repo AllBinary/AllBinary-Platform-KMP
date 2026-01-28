@@ -395,7 +395,7 @@ frameNode!!.appendChild(realSizeNode)
     var graphicItemNode: Node = document.createElement(this.GRAPHICITEMS) as Node
 
 
-    var graphicItemArray: Array<Any?> = this.getGraphicItemHashMap()!!.keys.toArray()!!
+    var graphicItemArray: Array<Any?> = this.getGraphicItemHashMap()!!.keys.toTypedArray()!!
 
 
     var size: Int = graphicItemArray!!.size

@@ -134,7 +134,7 @@ hashMap!!.put(DownloadItemData.VALID_TIME_SECONDS, Integer(Integer.valueOf(secon
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
 
-    var nameArray: Array<Any?> = keySet!!.toArray()!!
+    var nameArray: Array<Any?> = keySet!!.toTypedArray()!!
 
 
     var size: Int = nameArray!!.size

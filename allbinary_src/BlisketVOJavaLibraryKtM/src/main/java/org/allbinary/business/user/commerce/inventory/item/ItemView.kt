@@ -75,7 +75,7 @@ node.appendChild(basicItemView!!.toXmlNode(document))
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
 
-    var nameArray: Array<Any?> = keySet!!.toArray()!!
+    var nameArray: Array<Any?> = keySet!!.toTypedArray()!!
 
 
     var size: Int = nameArray!!.size

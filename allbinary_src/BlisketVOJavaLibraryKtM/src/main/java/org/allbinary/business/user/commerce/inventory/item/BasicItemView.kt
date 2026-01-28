@@ -91,7 +91,7 @@ hashMap!!.put(BasicItemData.IMAGE, EMPTY_STRING)
     var node: Node = document.createElement(BasicItemData.ITEM)!!
 
 
-    var nameArray: Array<Any?> = keySet!!.toArray()!!
+    var nameArray: Array<Any?> = keySet!!.toTypedArray()!!
 
 
     var size2: Int = nameArray!!.size

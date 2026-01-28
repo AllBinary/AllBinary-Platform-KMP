@@ -122,7 +122,7 @@ this.waitForDataWorkers()
     var cacheInterface: J2SECacheInterface = CapturedBufferedImagesCacheSingleton.getInstance() as J2SECacheInterface
 
 
-    var keyArray: Array<Any?> = cacheInterface!!.keySet()!!.toArray()!!
+    var keyArray: Array<Any?> = cacheInterface!!.keySet()!!.toTypedArray()!!
 
 
     

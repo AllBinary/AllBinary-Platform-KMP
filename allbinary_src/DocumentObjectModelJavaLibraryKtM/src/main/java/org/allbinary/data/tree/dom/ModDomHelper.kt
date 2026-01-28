@@ -206,7 +206,7 @@ var hashMap = hashMap
     var keySet: Set = hashMap!!.keys!!
 
 
-    var keyArray: Array<Any?> = keySet!!.toArray()!!
+    var keyArray: Array<Any?> = keySet!!.toTypedArray()!!
 
 
     var size: Int = keyArray!!.size
@@ -393,7 +393,7 @@ var hashMap = hashMap
     var keySet: Set = hashMap!!.keys!!
 
 
-    var keyArray: Array<Any?> = keySet!!.toArray()!!
+    var keyArray: Array<Any?> = keySet!!.toTypedArray()!!
 
 
     var size: Int = keyArray!!.size

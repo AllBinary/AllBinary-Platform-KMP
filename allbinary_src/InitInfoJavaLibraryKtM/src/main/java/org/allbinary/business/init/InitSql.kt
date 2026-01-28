@@ -356,7 +356,7 @@ stringBuffer!!.append(this.sqlStrings!!.SET)
 
         try {
             
-    var columnArray: Array<Any?> = updatedKeyValuePairs!!.keySet()!!.toArray()!!
+    var columnArray: Array<Any?> = updatedKeyValuePairs!!.keySet()!!.toTypedArray()!!
 
 
     var size: Int = columnArray!!.size

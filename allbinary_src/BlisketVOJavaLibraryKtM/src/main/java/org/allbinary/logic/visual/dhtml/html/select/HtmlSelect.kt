@@ -198,7 +198,7 @@ result += ENDOPTION
     var result: String = stringUtil!!.EMPTY_STRING
 
 
-    var attributeKeys: Array<Any?> = otherAttributes!!.keySet()!!.toArray()!!
+    var attributeKeys: Array<Any?> = otherAttributes!!.keySet()!!.toTypedArray()!!
 
 
     var attributeSize: Int = attributeKeys!!.size
