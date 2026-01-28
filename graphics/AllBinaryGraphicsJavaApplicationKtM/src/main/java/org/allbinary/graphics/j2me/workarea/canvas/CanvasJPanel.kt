@@ -142,7 +142,7 @@ this.setSize(dimension)
 this.setCanvasSize(canvasDom!!.getDimension()!!.getWidth(), canvasDom!!.getDimension()!!.getHeight())
 this.graphicItemHashMap= canvasDom!!.getGraphicItemHashMap()
 
-    var graphicItemArray: Array<Any?> = graphicItemHashMap!!.keys.toTypedArray()!!
+    var graphicItemArray: Array<Any?> = graphicItemHashMap!!.keys.toArray()!!
 
 
     var size: Int = graphicItemArray!!.size
@@ -378,7 +378,7 @@ this.setAngle(this.angle +angle)
     var newPoints: Vector = Vector()
 
 
-    var graphicItemArray: Array<Any?> = this.getGraphicItemHashMap()!!.keys.toTypedArray()!!
+    var graphicItemArray: Array<Any?> = this.getGraphicItemHashMap()!!.keys.toArray()!!
 
 
     var size: Int = graphicItemArray!!.size
@@ -467,7 +467,7 @@ this.workAreaJTreeJPanel!!.repaint()
 var howMuch = howMuch
 var explosionType = explosionType
 
-    var graphicItemArray: Array<Any?> = this.getGraphicItemHashMap()!!.keys.toTypedArray()!!
+    var graphicItemArray: Array<Any?> = this.getGraphicItemHashMap()!!.keys.toArray()!!
 
 
     var size: Int = graphicItemArray!!.size
@@ -510,7 +510,7 @@ this.repaint()
     var width: Int = this.getCanvasDimension()!!.getWidth()!!
 
 
-    var graphicItemArray: Array<Any?> = this.getGraphicItemHashMap()!!.keys.toTypedArray()!!
+    var graphicItemArray: Array<Any?> = this.getGraphicItemHashMap()!!.keys.toArray()!!
 
 
     var size: Int = graphicItemArray!!.size
@@ -605,7 +605,7 @@ canvasTreeNode!!.add(graphicItemClone!!.getTreeNode())
 {
 var hashMap = hashMap
 
-    var mutableTreeNodeArray: Array<Any?> = hashMap!!.keys.toTypedArray()!!
+    var mutableTreeNodeArray: Array<Any?> = hashMap!!.keys.toArray()!!
 
 
     var size: Int = mutableTreeNodeArray!!.size
@@ -722,7 +722,7 @@ var graphics = graphics
     var angleDouble: Double = Double(this.angle)
 
 
-    var graphicItemArray: Array<Any?> = this.getGraphicItemHashMap()!!.keys.toTypedArray()!!
+    var graphicItemArray: Array<Any?> = this.getGraphicItemHashMap()!!.keys.toArray()!!
 
 
     var size: Int = graphicItemArray!!.size
@@ -1056,7 +1056,7 @@ StatusFactory.getInstance()!!.setStatus("Key Pressed")
 
         try {
             
-    var graphicItemArray: Array<Any?> = this.graphicItemHashMap!!.keys.toTypedArray()!!
+    var graphicItemArray: Array<Any?> = this.graphicItemHashMap!!.keys.toArray()!!
 
 
     var size: Int = graphicItemArray!!.size
