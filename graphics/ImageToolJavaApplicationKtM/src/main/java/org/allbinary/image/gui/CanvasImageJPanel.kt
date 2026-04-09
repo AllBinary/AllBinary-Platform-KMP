@@ -361,7 +361,7 @@ file= File(filePath)
     var isWritten: Boolean = ImageIO.write(this@CanvasImageJPanel.result as RenderedImage, imageStrings!!.PNG, file)!!
 
 logUtil!!.put(StringMaker().
-                            append("File: ")!!.append(StringUtil.getInstance()!!.toString(file))!!.append(" Wrote: ")!!.append(isWritten)!!.toString(), this, commonStrings!!.RUN)
+                            append("File: ")!!.append(StringUtil.getInstance()!!.toString(file))!!.append(" Wrote: ")!!.appendboolean(isWritten)!!.toString(), this, commonStrings!!.RUN)
 }
 
 

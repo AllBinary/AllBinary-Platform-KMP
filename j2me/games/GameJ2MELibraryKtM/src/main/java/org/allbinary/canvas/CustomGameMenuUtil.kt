@@ -26,9 +26,8 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.AppletUtil
+import org.allbinary.J2MEUtil
 import org.allbinary.game.commands.GameCommandsFactory
-import org.allbinary.game.configuration.feature.Features
-import org.allbinary.game.configuration.feature.HTMLFeatureFactory
 import org.allbinary.graphics.displayable.MyCanvas
 
 open public class CustomGameMenuUtil
@@ -54,7 +53,7 @@ companion object {
                                 
                              else 
     
-                        if(Features.getInstance()!!.isDefault(HTMLFeatureFactory.getInstance()!!.HTML))
+                        if(J2MEUtil.isHTML())
                         
                                     {
                                     

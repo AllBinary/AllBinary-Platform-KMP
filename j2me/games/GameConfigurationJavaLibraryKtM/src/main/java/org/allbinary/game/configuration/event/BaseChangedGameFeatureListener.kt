@@ -120,9 +120,9 @@ var gameFeature = gameFeature
 stringBuffer!!.append("GameFeature: ")
 stringBuffer!!.append(StringUtil.getInstance()!!.toString(gameFeature))
 stringBuffer!!.append(" isFeature: ")
-stringBuffer!!.append(Features.getInstance()!!.isFeature(gameFeature))
+stringBuffer!!.appendboolean(Features.getInstance()!!.isFeature(gameFeature))
 stringBuffer!!.append(" isChanged: ")
-stringBuffer!!.append(isChanged)
+stringBuffer!!.appendboolean(isChanged)
 logUtil!!.put(stringBuffer!!.toString(), this, "isChanged")
 
 

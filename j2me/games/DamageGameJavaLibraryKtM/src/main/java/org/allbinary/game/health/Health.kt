@@ -132,7 +132,7 @@ var ahealth = ahealth
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("******* Trying to heal when damaging. Damage: ")
-stringBuffer!!.append(ahealth)
+stringBuffer!!.appendint(ahealth)
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 stringBuffer!!.append(this.toString())
 ForcedLogUtil.log(stringBuffer!!.toString(), this)
@@ -265,9 +265,9 @@ this.healthListenerInterface= healthGraphic
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(Health.HEALTH_LABEL)
-stringBuffer!!.append(this.health)
+stringBuffer!!.appendint(this.health)
 stringBuffer!!.append(Health.MAX_HEALTH_LABEL)
-stringBuffer!!.append(this.maxHealth)
+stringBuffer!!.appendint(this.maxHealth)
 
 
 

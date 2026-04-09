@@ -31,11 +31,6 @@ import org.allbinary.game.configuration.feature.GameFeatureFactory
 import org.allbinary.image.ImageCache
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
-import org.eclipse.swt.SWT
-import org.eclipse.swt.graphics.GC
-import org.eclipse.swt.graphics.Transform
-import org.microemu.device.swt.SwtImmutableImage
-import org.microemu.device.swt.SwtMutableImage
 
 open public class ImageScaleUtil
             : Object
@@ -183,7 +178,7 @@ this.scale(originalImage, originalImageArray, ximageToShowArray, unused, scaleX,
     var height: Int = originalImage!!.getHeight()!!
 
 
-    var scaledImage: Image = this.imageCopyUtil!!.createImage(originalImage, (scaleX *width).toInt(), (scaleY *height).toInt(), mutable)!!
+    var scaledImage: Image = this.imageCopyUtil!!.createImage(originalImage, scaleX.toInt(), scaleY.toInt(), mutable)!!
 
 originalImageArray[0]= scaledImage
 }

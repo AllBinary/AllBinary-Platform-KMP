@@ -26,8 +26,7 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Graphics
-import org.allbinary.game.configuration.feature.Features
-import org.allbinary.game.configuration.feature.HTMLFeatureFactory
+import org.allbinary.J2MEUtil
 import org.allbinary.graphics.Anchor
 import org.allbinary.graphics.GPoint
 import org.allbinary.graphics.PointFactory
@@ -296,11 +295,8 @@ var y = y
 var bufferZone = bufferZone
 this.bufferZone= bufferZone
 
-    var features: Features = Features.getInstance()!!
-
-
     
-                        if(features.isDefault(HTMLFeatureFactory.getInstance()!!.HTML))
+                        if(J2MEUtil.isHTML())
                         
                                     {
                                     this.bufferZoneY= this.bufferZone

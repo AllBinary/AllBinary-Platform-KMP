@@ -164,9 +164,9 @@ this.body= hashMap!!.get(BodyData.getInstance()!!.NAME) as String
 
                             {
                             stringBuffer!!.append("Error: Data submitted is < ")
-stringBuffer!!.append(BodyData.getInstance()!!.MIN)
+stringBuffer!!.appendint(BodyData.getInstance()!!.MIN)
 stringBuffer!!.append(" or > ")
-stringBuffer!!.append(AbSqlData.MAXBLOB)
+stringBuffer!!.appendint(AbSqlData.MAXBLOB)
 
                             }
                     

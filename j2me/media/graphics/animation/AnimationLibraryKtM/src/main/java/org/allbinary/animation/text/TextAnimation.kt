@@ -39,7 +39,7 @@ open public class TextAnimation : IndexedAnimation {
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    var textArray: Array<String?> = StringUtil.getInstance()!!.ONE_EMPTY_STRING_ARRAY
+    var textArrayP: Array<String?> = StringUtil.getInstance()!!.ONE_EMPTY_STRING_ARRAY
 
     private var anchor: Int = Anchor.TOP_LEFT
 public constructor (animationBehavior: AnimationBehavior)                        
@@ -84,7 +84,7 @@ this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP(), this.ge
     var height: Int = this.getHeight()!!
 
 
-    var size: Int = textArray!!.size
+    var size: Int = textArrayP!!.size
                 
 
 
@@ -94,7 +94,7 @@ this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP(), this.ge
                         for (index in 0 until size)
 
         {
-graphics.drawString(textArray[index]!!, x, y +(index *height), anchor)
+graphics.drawString(textArrayP[index]!!, x, y +(index *height), anchor)
 }
 
 }
@@ -177,26 +177,26 @@ index++
 textArray[index]= list.get(index) as String
 }
 
-this.textArray= textArray
+this.textArrayP= textArray
 
                                     }
                                 
                         else {
-                            this.textArray= StringUtil.getInstance()!!.ONE_EMPTY_STRING_ARRAY
+                            this.textArrayP= StringUtil.getInstance()!!.ONE_EMPTY_STRING_ARRAY
 
                         }
                             
 }
 
 
-    open fun getText()
+    open fun getTextArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<String?>{
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return textArray
+                        return textArrayP
 }
 
 

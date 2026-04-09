@@ -34,6 +34,7 @@ import javax.microedition.lcdui.Command
 import javax.microedition.lcdui.CommandListener
 import javax.microedition.lcdui.Displayable
 import javax.microedition.lcdui.NullCanvas
+import org.allbinary.J2MEUtil
 import org.allbinary.business.advertisement.GameAdStateFactory
 import org.allbinary.canvas.FullScreenUtil
 import org.allbinary.canvas.GameStatisticsFactory
@@ -55,7 +56,6 @@ import org.allbinary.game.configuration.event.ChangedGameFeatureListener
 import org.allbinary.game.configuration.event.GameFeatureEventHandler
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.configuration.feature.GameFeatureFormUtil
-import org.allbinary.game.configuration.feature.HTMLFeatureFactory
 import org.allbinary.game.configuration.feature.MainFeatureFactory
 import org.allbinary.game.configuration.persistance.GamePersistanceSingleton
 import org.allbinary.game.configuration.persistance.KeyValuePersistance
@@ -119,8 +119,6 @@ open public class GameMidlet : ProgressMidlet
     val basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
 
     val features: Features = Features.getInstance()!!
-
-    val htmlFeatureFactory: HTMLFeatureFactory = HTMLFeatureFactory.getInstance()!!
 
     val midletStrings: MidletStrings = MidletStrings.getInstance()!!
 
@@ -813,7 +811,7 @@ this.commandAction(GameInputMappingCanvas.DISPLAY, NullCanvas.NULL_CANVAS)
                                     {
                                     
     
-                        if(features.isDefault(htmlFeatureFactory!!.HTML))
+                        if(J2MEUtil.isHTML())
                         
                                     {
                                     this.pauseAppBackground(false)
@@ -912,10 +910,10 @@ this.commandAction(gameCommandsFactory!!.CLOSE_AND_SHOW_GAME_CANVAS, displayable
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Close isFullScreen/change: ")
-stringBuffer!!.append(isFullScreen)
-stringBuffer!!.append(fullScreenUtil!!.isScreenChange(isFullScreen))
+stringBuffer!!.appendboolean(isFullScreen)
+stringBuffer!!.appendboolean(fullScreenUtil!!.isScreenChange(isFullScreen))
 stringBuffer!!.append(" isResized: ")
-stringBuffer!!.append(this.isResized())
+stringBuffer!!.appendboolean(this.isResized())
 PreLogUtil.put(stringBuffer!!.toString(), this, COMMAND_ACTION)
 
     
@@ -1239,7 +1237,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
 thread= threadFactoryUtil!!.getInstance(this.allbinaryGameCanvasRunnableInterface)
 logUtil!!.put(StringMaker().
-                            append("Thread Priority: ")!!.append(thread.getPriority())!!.toString(), this, "startGameCanvasRunnableInterface")
+                            append("Thread Priority: ")!!.appendint(thread.getPriority())!!.toString(), this, "startGameCanvasRunnableInterface")
 this.allbinaryGameCanvasRunnableInterface!!.setThread(thread)
 threadFactoryUtil!!.start(thread)
 }

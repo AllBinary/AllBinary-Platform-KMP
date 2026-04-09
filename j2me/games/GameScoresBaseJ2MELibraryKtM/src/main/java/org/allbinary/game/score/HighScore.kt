@@ -29,6 +29,7 @@ import java.io.ByteArrayOutputStream
 import java.io.DataOutputStream
 import org.allbinary.game.GameInfo
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.string.CommonSeps
 
 open public class HighScore
             : Object
@@ -147,11 +148,14 @@ this.name= name
         //nullable =  from not(false or (true and true)) = 
 : String{
 
+    var commonSeps: CommonSeps = CommonSeps.getInstance()!!
+
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
-                            append(name)!!.append(':')!!.append(this.score)!!.append('/')!!.append(this.scoreString)!!.toString()
+                            append(name)!!.append(commonSeps!!.COLON)!!.appendlong(this.score)!!.append(commonSeps!!.FORWARD_SLASH)!!.append(this.scoreString)!!.toString()
 }
 
 

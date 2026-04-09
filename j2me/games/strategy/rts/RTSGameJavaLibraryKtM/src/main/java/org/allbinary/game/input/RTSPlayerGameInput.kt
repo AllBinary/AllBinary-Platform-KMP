@@ -320,7 +320,7 @@ this.setSelectedRTSLayer(foundRTSLayer, geographicMapCellPosition)
     var commonLabels: CommonLabels = CommonLabels.getInstance()!!
 
 logUtil!!.put(StringMaker().
-                            append("Off Of Map -")!!.append(commonLabels!!.WIDTH_LABEL)!!.append(allBinaryTiledLayer!!.getWidth())!!.append(commonLabels!!.HEIGHT_LABEL)!!.append(allBinaryTiledLayer!!.getHeight())!!.toString(), this, "select")
+                            append("Off Of Map -")!!.append(commonLabels!!.WIDTH_LABEL)!!.appendint(allBinaryTiledLayer!!.getWidth())!!.append(commonLabels!!.HEIGHT_LABEL)!!.appendint(allBinaryTiledLayer!!.getHeight())!!.toString(), this, "select")
 
                         }
                             

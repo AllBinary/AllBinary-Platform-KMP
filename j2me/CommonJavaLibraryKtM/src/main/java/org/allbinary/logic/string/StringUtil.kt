@@ -41,7 +41,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return StringUtil.instance
 }
 
 
@@ -75,7 +75,7 @@ var string = string
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return EMPTY_STRING
+                        return this.EMPTY_STRING
 
                                     }
                                 
@@ -98,7 +98,7 @@ var string = string
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return stringArray
+                        return this.stringArray
 }
 
 

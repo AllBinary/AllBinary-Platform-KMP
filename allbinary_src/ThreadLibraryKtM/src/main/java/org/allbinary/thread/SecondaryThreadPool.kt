@@ -68,7 +68,7 @@ companion object {
 {
 var task = task
 logUtil!!.put(StringMaker().
-                            append(StringUtil.getInstance()!!.toString(task))!!.append(System.currentTimeMillis())!!.toString(), this, this.threadPoolStrings!!.ADD_TASK)
+                            append(StringUtil.getInstance()!!.toString(task))!!.appendlong(System.currentTimeMillis())!!.toString(), this, this.threadPoolStrings!!.ADD_TASK)
 super.runTask(task)
 }
 
@@ -78,7 +78,7 @@ super.runTask(task)
 {
 var task = task
 logUtil!!.put(StringMaker().
-                            append(this.threadPoolStrings!!.START_TASK)!!.append(StringUtil.getInstance()!!.toString(task))!!.append(System.currentTimeMillis())!!.toString(), this, this.commonStrings!!.RUN)
+                            append(this.threadPoolStrings!!.START_TASK)!!.append(StringUtil.getInstance()!!.toString(task))!!.appendlong(System.currentTimeMillis())!!.toString(), this, this.commonStrings!!.RUN)
 }
 
 
@@ -87,7 +87,7 @@ logUtil!!.put(StringMaker().
 {
 var task = task
 logUtil!!.put(StringMaker().
-                            append(this.threadPoolStrings!!.COMPLETE_TASK)!!.append(StringUtil.getInstance()!!.toString(task))!!.append(System.currentTimeMillis())!!.toString(), this, this.commonStrings!!.RUN)
+                            append(this.threadPoolStrings!!.COMPLETE_TASK)!!.append(StringUtil.getInstance()!!.toString(task))!!.appendlong(System.currentTimeMillis())!!.toString(), this, this.commonStrings!!.RUN)
 }
 
 

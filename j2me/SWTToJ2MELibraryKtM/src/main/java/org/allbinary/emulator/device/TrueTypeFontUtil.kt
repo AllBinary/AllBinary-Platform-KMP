@@ -42,7 +42,6 @@ import org.allbinary.graphics.displayable.CanvasStrings
 import org.allbinary.graphics.opengles.OpenGLCapabilities
 import org.allbinary.image.PreResourceImageUtil
 import org.allbinary.image.opengles.OpenGLESImage
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonSeps
@@ -363,6 +362,10 @@ characterArray[0]= pattern[index]
 _characterWidth[index]= w.toInt()
 
     
+                        if(characterArray[0] == '.' || characterArray[0] == '1')
+                        _characterWidth[index] += 4
+
+    
                         if(characterArray[0] >= 'a' && characterArray[0] < 'k')
                         _characterWidth[index] -= 2
 
@@ -373,6 +376,14 @@ _characterWidth[index]= w.toInt()
     
                         if(characterArray[0] >= 'v' && characterArray[0] < 'z')
                         _characterWidth[index] -= 8
+
+    
+                        if(characterArray[0] == 'D')
+                        _characterWidth[index] -= 4
+
+    
+                        if(characterArray[0] >= 'A' && characterArray[0] <= 'Z')
+                        _characterWidth[index] -= 2
 
                         }
                             

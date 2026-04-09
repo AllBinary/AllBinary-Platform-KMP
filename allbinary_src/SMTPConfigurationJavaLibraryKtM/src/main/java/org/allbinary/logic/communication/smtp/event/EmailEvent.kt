@@ -94,7 +94,7 @@ stringBuffer!!.append("Event Name: ")
 stringBuffer!!.append(this.userEmailEventNameData!!.toString())
 stringBuffer!!.append(this.getEmailInfo()!!.toString())
 stringBuffer!!.append("\nNumber of Attempts: ")
-stringBuffer!!.append(this.getAttempts())
+stringBuffer!!.appendint(this.getAttempts())
 
 
 

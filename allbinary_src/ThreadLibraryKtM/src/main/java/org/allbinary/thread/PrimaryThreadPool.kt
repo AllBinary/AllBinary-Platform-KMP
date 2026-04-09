@@ -68,7 +68,7 @@ companion object {
 {
 var task = task
 logUtil!!.put(StringMaker().
-                            append(StringUtil.getInstance()!!.toString(task))!!.append(System.currentTimeMillis())!!.toString(), this, this.threadPoolStrings!!.ADD_TASK)
+                            append(StringUtil.getInstance()!!.toString(task))!!.appendlong(System.currentTimeMillis())!!.toString(), this, this.threadPoolStrings!!.ADD_TASK)
 super.runTask(task)
 }
 

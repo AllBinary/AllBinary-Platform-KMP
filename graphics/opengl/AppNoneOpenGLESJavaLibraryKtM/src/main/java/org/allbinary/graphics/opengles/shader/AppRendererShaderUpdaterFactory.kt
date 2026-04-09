@@ -67,6 +67,13 @@ companion object {
 }
 
 
+    open fun setShaderComposite(object3d: Any)
+        //nullable = true from not(false or (false and false)) = true
+{
+    //var object3d = object3d
+}
+
+
 }
                 
             

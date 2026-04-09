@@ -35,6 +35,7 @@ import org.allbinary.media.graphics.geography.map.GeographicMapCellTypeFactory
 import org.allbinary.media.graphics.geography.pathfinding.PathFindingInfo
 import org.allbinary.media.graphics.geography.pathfinding.PathFindingNode
 import org.allbinary.media.graphics.geography.map.GeographicMapCellPositionFactoryInitVisitorInterface
+import org.allbinary.string.CommonSeps
 
 open public class BasePathFindingInfoFactory
             : Object
@@ -150,8 +151,11 @@ this.finishLineId= raceTrackGeographicMapCellTypeFactory!!.getEndType()
                             
 } catch(e: Exception)
             {
+
+    var commonSeps: CommonSeps = CommonSeps.getInstance()!!
+
 logUtil!!.put(StringMaker().
-                            append("[")!!.append(row)!!.append("][")!!.append(column)!!.append("] in [")!!.append(mapArray!!.size)!!.append("][")!!.append(mapArray[0]!!.size)!!.append("]")!!.toString(), this, "visit", e)
+                            append(commonSeps!!.BRACKET_OPEN)!!.appendint(row)!!.append(commonSeps!!.BRACKET_CLOSE)!!.append(commonSeps!!.BRACKET_OPEN)!!.appendint(column)!!.append("] in [")!!.appendint(mapArray!!.size)!!.append(commonSeps!!.BRACKET_CLOSE)!!.append(commonSeps!!.BRACKET_OPEN)!!.appendint(mapArray[0]!!.size)!!.append(commonSeps!!.BRACKET_CLOSE)!!.toString(), this, "visit", e)
 
 
 

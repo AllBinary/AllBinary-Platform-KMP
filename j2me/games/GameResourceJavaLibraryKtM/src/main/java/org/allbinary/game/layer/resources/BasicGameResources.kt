@@ -76,7 +76,7 @@ var SIZE = SIZE
 
 
                             throw Exception(StringMaker().
-                            append("Invalid Value: ")!!.append(scale)!!.toString())
+                            append("Invalid Value: ")!!.appendint(scale)!!.toString())
 
                         }
                             

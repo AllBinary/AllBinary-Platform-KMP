@@ -30,7 +30,7 @@ import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Image
 import org.allbinary.animation.AnimationBehavior
 import org.allbinary.animation.IndexedAnimation
-import org.allbinary.animation.NullIndexedAnimation
+import org.allbinary.animation.NullRotationAnimationFactory
 import org.allbinary.animation.RotationAnimation
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.image.ImageCache
@@ -84,20 +84,8 @@ this.animationInterfaceFactoryInterface= animationInterfaceFactoryInterface
 
 imageCache!!.add(this)
 this.scaleProperties= scaleProperties
-NULL_INDEX_ANIMATION= object: NullIndexedAnimation(animationBehavior)
-                                {
-                                
-    open override fun paint(graphics: Graphics, x: Int, y: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-    //var graphics = graphics
-    //var x = x
-    //var y = y
-}
-
-                                }
-                            
-animation= object: IndexedAnimation(animationBehavior)
+this.NULL_INDEX_ANIMATION= NullRotationAnimationFactory.getFactoryInstance()!!.getInstance(0) as IndexedAnimation
+this.animation= object: RotationAnimation(animationBehavior)
                                 {
                                 
     private var index: Int= 0
@@ -238,6 +226,60 @@ this.animation.setDy(dy)
     //var maxScaleX = maxScaleX
     //var maxScaleY = maxScaleY
 this.animation.setMaxScale(maxScaleX, maxScaleY)
+}
+
+
+    override fun nextRotation()
+        //nullable = true from not(false or (false and true)) = true
+{
+animation = this.animationanimation as RotationAnimation
+animation.
+                    nextRotation()
+}
+
+
+    override fun previousRotation()
+        //nullable = true from not(false or (false and true)) = true
+{
+animation = this.animationanimation as RotationAnimation
+animation.
+                    previousRotation()
+}
+
+
+    override fun nextRotationX()
+        //nullable = true from not(false or (false and true)) = true
+{
+animation = this.animationanimation as RotationAnimation
+animation.
+                    nextRotationX()
+}
+
+
+    override fun previousRotationX()
+        //nullable = true from not(false or (false and true)) = true
+{
+animation = this.animationanimation as RotationAnimation
+animation.
+                    previousRotationX()
+}
+
+
+    override fun nextRotationZ()
+        //nullable = true from not(false or (false and true)) = true
+{
+animation = this.animationanimation as RotationAnimation
+animation.
+                    nextRotationZ()
+}
+
+
+    override fun previousRotationZ()
+        //nullable = true from not(false or (false and true)) = true
+{
+animation = this.animationanimation as RotationAnimation
+animation.
+                    previousRotationZ()
 }
 
 
@@ -482,7 +524,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS, e)
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
-                            append(super.toString())!!.append(commonSeps!!.SPACE)!!.append(image.getName())!!.append(commonSeps!!.SPACE)!!.append(image.getWidth())!!.append(commonSeps!!.SPACE)!!.append(image.getHeight())!!.toString()
+                            append(super.toString())!!.append(commonSeps!!.SPACE)!!.append(image.getName())!!.append(commonSeps!!.SPACE)!!.appendint(image.getWidth())!!.append(commonSeps!!.SPACE)!!.appendint(image.getHeight())!!.toString()
 }
 
 

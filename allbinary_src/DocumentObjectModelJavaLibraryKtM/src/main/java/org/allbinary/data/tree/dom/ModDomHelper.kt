@@ -32,6 +32,7 @@ import java.util.Set
 import java.util.Vector
 import org.allbinary.logic.java.anyType.clazz.ClassUtil
 import org.allbinary.logic.string.StringUtil
+import org.allbinary.string.CommonSeps
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 
@@ -267,7 +268,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
                             
 
 
-                            throw Exception("HashMap value is the wrong instance and is: " +ClassUtil.viewAll(anyType, "\n"))
+                            throw Exception("HashMap value is the wrong instance and is: " +ClassUtil.viewAll(anyType, CommonSeps.getInstance()!!.NEW_LINE))
 
                         }
                             

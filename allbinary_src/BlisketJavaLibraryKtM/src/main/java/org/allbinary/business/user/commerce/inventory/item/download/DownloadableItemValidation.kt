@@ -302,7 +302,7 @@ this.downloadableItem= downloadableItem
                         
                                     {
                                     stringBuffer!!.append("Id is invalid. Must be number < ")
-stringBuffer!!.append(AbSqlData.MAXNUM)
+stringBuffer!!.appendint(AbSqlData.MAXNUM)
 stringBuffer!!.append(" and > 0 digits.<br/>")
 
                                     }
@@ -326,7 +326,7 @@ stringBuffer!!.append(" and > 0 digits.<br/>")
                         
                                     {
                                     stringBuffer!!.append("System value is invalid. Must be < ")
-stringBuffer!!.append(AbSqlData.MAXSTRING)
+stringBuffer!!.appendint(AbSqlData.MAXSTRING)
 stringBuffer!!.append(" and > 0 characters long.<br/>")
 
                                     }
@@ -339,7 +339,7 @@ stringBuffer!!.append(" and > 0 characters long.<br/>")
                         
                                     {
                                     stringBuffer!!.append("Platform value is invalid. Must be < ")
-stringBuffer!!.append(AbSqlData.MAXSTRING)
+stringBuffer!!.appendint(AbSqlData.MAXSTRING)
 stringBuffer!!.append(" and > 0 characters long.<br/>")
 
                                     }
@@ -352,7 +352,7 @@ stringBuffer!!.append(" and > 0 characters long.<br/>")
                         
                                     {
                                     stringBuffer!!.append("Special Name value is invalid. Must be < ")
-stringBuffer!!.append(AbSqlData.MAXSTRING)
+stringBuffer!!.appendint(AbSqlData.MAXSTRING)
 stringBuffer!!.append(" and > 0 characters long.<br/>")
 
                                     }
@@ -365,7 +365,7 @@ stringBuffer!!.append(" and > 0 characters long.<br/>")
                         
                                     {
                                     stringBuffer!!.append("Version value is invalid. Must be < ")
-stringBuffer!!.append(AbSqlData.MAXSTRING)
+stringBuffer!!.appendint(AbSqlData.MAXSTRING)
 stringBuffer!!.append(" and > 0 characters long.<br/>")
 
                                     }
@@ -378,7 +378,7 @@ stringBuffer!!.append(" and > 0 characters long.<br/>")
                         
                                     {
                                     stringBuffer!!.append("Changes value is invalid. Must be < ")
-stringBuffer!!.append(AbSqlData.MAXBLOB)
+stringBuffer!!.appendint(AbSqlData.MAXBLOB)
 stringBuffer!!.append(" and >= 0 characters long.<br/>")
 
                                     }
@@ -404,7 +404,7 @@ stringBuffer!!.append(" and >= 0 characters long.<br/>")
                         
                                     {
                                     stringBuffer!!.append("File Size is invalid. Must be number < ")
-stringBuffer!!.append(AbSqlData.MAXNUM)
+stringBuffer!!.appendint(AbSqlData.MAXNUM)
 stringBuffer!!.append(" and > 0 digits.<br/>")
 
                                     }
@@ -433,7 +433,7 @@ stringBuffer!!.append(" and > 0 digits.<br/>")
                         
                                     {
                                     stringBuffer!!.append("Valid Time is invalid. Must be number < ")
-stringBuffer!!.append(AbSqlData.MAXNUM)
+stringBuffer!!.appendint(AbSqlData.MAXNUM)
 stringBuffer!!.append(" and > 0 digits.<br/>")
 
                                     }
@@ -462,7 +462,7 @@ stringBuffer!!.append(" and > 0 digits.<br/>")
                         
                                     {
                                     stringBuffer!!.append("Retries is invalid. Must be number < ")
-stringBuffer!!.append(AbSqlData.MAXNUM)
+stringBuffer!!.appendint(AbSqlData.MAXNUM)
 stringBuffer!!.append(" and > 0 digits.<br/>")
 
                                     }

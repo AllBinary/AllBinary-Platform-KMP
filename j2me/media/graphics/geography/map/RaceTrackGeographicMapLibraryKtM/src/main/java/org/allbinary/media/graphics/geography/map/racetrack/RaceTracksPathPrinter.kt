@@ -81,7 +81,7 @@ var list = list
 
         {
 System.out.println(StringMaker().
-                            append(" Path ")!!.append(index)!!.append(CommonLabels.getInstance()!!.COLON_SEP)!!.toString())
+                            append(" Path ")!!.appendint(index)!!.append(CommonLabels.getInstance()!!.COLON_SEP)!!.toString())
 this.printPath(list.get(index) as BasicArrayList)
 }
 

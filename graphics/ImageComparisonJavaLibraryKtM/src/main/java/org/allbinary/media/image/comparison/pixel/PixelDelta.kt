@@ -48,7 +48,7 @@ var colorDelta = colorDelta
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
-                            append(point.hashCode())!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.append(colorDelta!!.getKey()!!.toString())!!.toString()
+                            appendint(point.hashCode())!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.append(colorDelta!!.getKey()!!.toString())!!.toString()
 }
 
 

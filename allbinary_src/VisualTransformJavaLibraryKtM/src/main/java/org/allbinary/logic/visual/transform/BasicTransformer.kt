@@ -286,7 +286,7 @@ stringBuffer!!.append(transformInfoTemplateData!!.ENCRYPTED_EXTENSION)
                                     {
                                     stringBuffer= StringMaker()
 stringBuffer!!.append("Encrypted Template File isFile=")
-stringBuffer!!.append(encFile!!.isFile())
+stringBuffer!!.appendboolean(encFile!!.isFile())
 stringBuffer!!.append("\nEncTemplateFilePath: ")
 stringBuffer!!.append(encFile!!.getPath())
 logUtil!!.put(stringBuffer!!.toString(), this, "setTemplateAsInputStream()")

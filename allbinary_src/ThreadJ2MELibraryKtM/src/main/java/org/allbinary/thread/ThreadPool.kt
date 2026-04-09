@@ -465,7 +465,7 @@ open public inner class PooledThread : Thread {
 public constructor ()                        
 
                             : super(StringMaker().
-                            append(poolName)!!.append(ROOT_NAME)!!.append(threadID++)!!.toString()){
+                            append(poolName)!!.append(ROOT_NAME)!!.appendint(threadID++)!!.toString()){
 
 
                             //For kotlin this is before the body of the constructor.

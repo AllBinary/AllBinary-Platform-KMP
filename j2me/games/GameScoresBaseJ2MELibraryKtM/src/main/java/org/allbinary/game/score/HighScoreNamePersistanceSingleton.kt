@@ -147,7 +147,7 @@ this.clear()
 
         try {
             logUtil!!.put(StringMaker().
-                            append("Deleting: ")!!.append(deleteId)!!.toString(), this, commonStrings!!.delete)
+                            append("Deleting: ")!!.appendint(deleteId)!!.toString(), this, commonStrings!!.delete)
 recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
 recordStore!!.deleteRecord(deleteId)
 } catch(e: Exception)
@@ -229,7 +229,7 @@ recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation),
     var id: Int = recordEnum!!.nextRecordId()!!
 
 logUtil!!.put(StringMaker().
-                            append(LOADING_ID)!!.append(id)!!.toString(), this, commonStrings!!.LOAD)
+                            append(LOADING_ID)!!.appendint(id)!!.toString(), this, commonStrings!!.LOAD)
 recordAsBytes= recordStore!!.getRecord(id)
 byteArrayInputStream= ByteArrayInputStream(recordAsBytes)
 inputStream= DataInputStream(byteArrayInputStream)

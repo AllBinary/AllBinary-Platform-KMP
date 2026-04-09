@@ -485,7 +485,7 @@ toFile!!.createNewFile()
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append("Newer by: ")
-stringBuffer!!.append(fromFile!!.lastModified() -toFile!!.lastModified())
+stringBuffer!!.appendlong(fromFile!!.lastModified() -toFile!!.lastModified())
 stringBuffer!!.append("ms ")
 stringBuffer!!.append("Copying File: ")
 stringBuffer!!.append(toFile!!.getPath())
@@ -581,7 +581,7 @@ var overwriteAll = overwriteAll
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Copying ")
-stringBuffer!!.append(fromFile!!.length())
+stringBuffer!!.appendlong(fromFile!!.length())
 stringBuffer!!.append(" bytes from File: ")
 stringBuffer!!.append(fromFile!!.getPath())
 stringBuffer!!.append(" to: ")
@@ -675,7 +675,7 @@ var total = total
 stringBuffer!!.append("Searched: ")
 stringBuffer!!.append(file.getPath())
 stringBuffer!!.append(" Total: ")
-stringBuffer!!.append(size)
+stringBuffer!!.appendint(size)
 
     var portion: Int = size /total +1
 
@@ -695,9 +695,9 @@ stringBuffer!!.append(size)
                                     }
                                 
 stringBuffer!!.append(" Section: ")
-stringBuffer!!.append(start)
+stringBuffer!!.appendint(start)
 stringBuffer!!.append(" - ")
-stringBuffer!!.append(end)
+stringBuffer!!.appendint(end)
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(logConfigTypeFactory!!.FILE))
@@ -817,7 +817,7 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyDirectory")
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Copying ")
-stringBuffer!!.append(size)
+stringBuffer!!.appendint(size)
 stringBuffer!!.append(" files from: ")
 stringBuffer!!.append(fromFile!!.getPath())
 stringBuffer!!.append(" to: ")

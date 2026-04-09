@@ -199,9 +199,9 @@ adminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.STORECREATE
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Intall StoreFront Successfully: ")
-stringBuffer!!.append(this.portion.getCurrent()!!.toInt())
+stringBuffer!!.appendint(this.portion.getCurrent()!!.toInt())
 stringBuffer!!.append(" of ")
-stringBuffer!!.append(this.portion.getTotal()!!.toInt())
+stringBuffer!!.appendint(this.portion.getTotal()!!.toInt())
 
     var success: String = stringBuffer!!.toString()!!
 

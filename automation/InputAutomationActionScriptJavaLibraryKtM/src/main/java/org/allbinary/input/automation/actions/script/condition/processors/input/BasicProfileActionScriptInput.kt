@@ -216,7 +216,7 @@ stringBuffer!!.append(" Input Type: ")
                         }
                             
 stringBuffer!!.append(" Time: ")
-stringBuffer!!.append(this.getTime())
+stringBuffer!!.appendlong(this.getTime())
 
 
 

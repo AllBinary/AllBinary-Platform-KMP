@@ -80,7 +80,7 @@ companion object {
 stringBuffer!!.append(associatedAdvancedRTSGameLayer!!.getName())
 stringBuffer!!.append(this.commonSeps!!.SPACE)
 stringBuffer!!.append(CommonLabels.getInstance()!!.START)
-stringBuffer!!.append(pathsList!!.size())
+stringBuffer!!.appendint(pathsList!!.size())
 stringBuffer!!.append(" -> ")
 stringBuffer!!.append(StringUtil.getInstance()!!.toString(pathsList))
 logUtil!!.put(stringBuffer!!.toString(), this, "selected: setClosestGeographicMapCellHistory")
@@ -102,10 +102,10 @@ stringBuffer!!.append(associatedAdvancedRTSGameLayer!!.getName())
 stringBuffer!!.append(this.commonSeps!!.SPACE)
 stringBuffer!!.append(StringUtil.getInstance()!!.toString(nextUnvisitedPathGeographicMapCellPosition))
 stringBuffer!!.append(positionStrings!!.DX_LABEL)
-stringBuffer!!.append(dx)
+stringBuffer!!.appendint(dx)
 stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(positionStrings!!.DY_LABEL)
-stringBuffer!!.append(dy)
+stringBuffer!!.appendint(dy)
 stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(reason)
 logUtil!!.put(stringBuffer!!.toString(), this, "selected: trackTo")
@@ -129,16 +129,16 @@ var targetAngle = targetAngle
 stringBuffer!!.append(associatedAdvancedRTSGameLayer!!.getName())
 stringBuffer!!.append(" steering - ")
 stringBuffer!!.append(positionStrings!!.DX_LABEL)
-stringBuffer!!.append(dx)
+stringBuffer!!.appendint(dx)
 stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(positionStrings!!.DY_LABEL)
-stringBuffer!!.append(dy)
+stringBuffer!!.appendint(dy)
 stringBuffer!!.append(" angle: ")
-stringBuffer!!.append(angle)
+stringBuffer!!.appendint(angle)
 stringBuffer!!.append(" movementAngle: ")
 stringBuffer!!.append(movementAngle!!.name)
 stringBuffer!!.append(commonSeps!!.FORWARD_SLASH)
-stringBuffer!!.append(movementAngle!!.getValue())
+stringBuffer!!.appendint(movementAngle!!.getValue())
 
     
                         if(angleInfo != 
@@ -150,12 +150,12 @@ stringBuffer!!.append(movementAngle!!.getValue())
     var angleIncrement: Short = angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()!!
 
 stringBuffer!!.append(" angleIncrement: ")
-stringBuffer!!.append(angleIncrement)
+stringBuffer!!.appendint(angleIncrement)
 
                                     }
                                 
 stringBuffer!!.append(" Evading: ")
-stringBuffer!!.append(evading)
+stringBuffer!!.appendboolean(evading)
 logUtil!!.put(stringBuffer!!.toString(), this, TRACKTO_TURNTO)
 }
 
@@ -256,7 +256,7 @@ logUtil!!.put(StringMaker().
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
     //var movementAngle = movementAngle
 logUtil!!.put(StringMaker().
-                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - movementAngle: ")!!.append(movementAngle!!.name)!!.append(commonSeps!!.FORWARD_SLASH)!!.append(movementAngle!!.getValue())!!.toString(), this, TRACKTO_TURNTO)
+                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - movementAngle: ")!!.append(movementAngle!!.name)!!.append(commonSeps!!.FORWARD_SLASH)!!.appendint(movementAngle!!.getValue())!!.toString(), this, TRACKTO_TURNTO)
 }
 
 
@@ -280,7 +280,7 @@ logUtil!!.put(StringMaker().
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
 logUtil!!.put(StringMaker().
-                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(' ')!!.append(geographicMapCellHistory!!.getTotalVisited())!!.append(' ')!!.append(stringUtil!!.toString(currentGeographicMapCellPosition))!!.append(" - trying to move but not on path: ")!!.append(stringUtil!!.toString(pathList))!!.toString(), this, "turnTo")
+                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(CommonSeps.getInstance()!!.SPACE)!!.appendint(geographicMapCellHistory!!.getTotalVisited())!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(stringUtil!!.toString(currentGeographicMapCellPosition))!!.append(" - trying to move but not on path: ")!!.append(stringUtil!!.toString(pathList))!!.toString(), this, "turnTo")
 }
 
 

@@ -310,7 +310,7 @@ ratioY= heightRatio
                                     }
                                 
 logUtil!!.put(StringMaker().
-                            append(width)!!.append(this.commonSeps!!.FORWARD_SLASH)!!.append(height)!!.append(this.commonSeps!!.COLON)!!.append(newWidth)!!.append(this.commonSeps!!.FORWARD_SLASH)!!.append(newHeight)!!.append(this.commonSeps!!.COLON)!!.append(widthRatio)!!.append(this.commonSeps!!.FORWARD_SLASH)!!.append(heightRatio)!!.toString(), this, CREATE_BUFFERED_IMAGE)
+                            appendfloat(width)!!.append(this.commonSeps!!.FORWARD_SLASH)!!.appendfloat(height)!!.append(this.commonSeps!!.COLON)!!.appendint(newWidth)!!.append(this.commonSeps!!.FORWARD_SLASH)!!.appendint(newHeight)!!.append(this.commonSeps!!.COLON)!!.appendfloat(widthRatio)!!.append(this.commonSeps!!.FORWARD_SLASH)!!.appendfloat(heightRatio)!!.toString(), this, CREATE_BUFFERED_IMAGE)
 
     var dx: Float = 0
 
@@ -325,7 +325,7 @@ logUtil!!.put(StringMaker().
                                     dx= (newWidth -width) /2
 dy= (newHeight -height) /2
 logUtil!!.put(StringMaker().
-                            append("Translate dx: ")!!.append(dx)!!.append(" dy: ")!!.append(dy)!!.toString(), this, CREATE_BUFFERED_IMAGE)
+                            append("Translate dx: ")!!.appendfloat(dx)!!.append(" dy: ")!!.appendfloat(dy)!!.toString(), this, CREATE_BUFFERED_IMAGE)
 
                                     }
                                 
@@ -409,11 +409,11 @@ var bufferedImage = bufferedImage
 
 stringBuffer!!.append(" org.eclipse.swt.graphics.Image: ")
 stringBuffer!!.append(commonLabels!!.WIDTH_LABEL)
-stringBuffer!!.append(imageData!!.width)
+stringBuffer!!.appendint(imageData!!.width)
 stringBuffer!!.append(commonLabels!!.HEIGHT_LABEL)
-stringBuffer!!.append(imageData!!.height)
+stringBuffer!!.appendint(imageData!!.height)
 stringBuffer!!.append(" Type: ")
-stringBuffer!!.append(imageData!!.type)
+stringBuffer!!.appendint(imageData!!.type)
 
 
 

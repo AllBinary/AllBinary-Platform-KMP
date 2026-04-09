@@ -694,7 +694,7 @@ valid= this.isNameValid()
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Name is invalid. Must be < ")
-stringBuffer!!.append(MAXCHAR)
+stringBuffer!!.appendint(MAXCHAR)
 stringBuffer!!.append(" and > 0 characters.<br>")
 
 
@@ -730,7 +730,7 @@ stringBuffer!!.append(this.nameValidationInfo())
                         
                                     {
                                     stringBuffer!!.append("Basket name is invalid. Must be < ")
-stringBuffer!!.append(MAXCHAR)
+stringBuffer!!.appendint(MAXCHAR)
 stringBuffer!!.append(" and > 0 characters.<br>")
 
                                     }
@@ -741,7 +741,7 @@ stringBuffer!!.append(" and > 0 characters.<br>")
                         
                                     {
                                     stringBuffer!!.append("Home host name is invalid. Must be < ")
-stringBuffer!!.append(MAXCHAR)
+stringBuffer!!.appendint(MAXCHAR)
 stringBuffer!!.append(" and > 0 characters.<br>")
 
                                     }
@@ -752,7 +752,7 @@ stringBuffer!!.append(" and > 0 characters.<br>")
                         
                                     {
                                     stringBuffer!!.append("Home host name path is invalid. Must be < ")
-stringBuffer!!.append(MAXCHAR)
+stringBuffer!!.appendint(MAXCHAR)
 stringBuffer!!.append(" and > 0 characters.<br>")
 
                                     }
@@ -763,7 +763,7 @@ stringBuffer!!.append(" and > 0 characters.<br>")
                         
                                     {
                                     stringBuffer!!.append("Host name is invalid. Must be < ")
-stringBuffer!!.append(MAXCHAR)
+stringBuffer!!.appendint(MAXCHAR)
 stringBuffer!!.append(" and > 0 characters.<br>")
 
                                     }
@@ -774,7 +774,7 @@ stringBuffer!!.append(" and > 0 characters.<br>")
                         
                                     {
                                     stringBuffer!!.append("Host name path is invalid. Must be < ")
-stringBuffer!!.append(MAXCHAR)
+stringBuffer!!.appendint(MAXCHAR)
 stringBuffer!!.append(" and > 0 characters.<br>")
 
                                     }
@@ -1889,7 +1889,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(URLGLOBALS.getMainPath())
 stringBuffer!!.append(this.getCurrentHomeHostNamePath())
-stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATORCHAR)
+stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 stringBuffer!!.append(this.getCategoryPath())
 
     var categoryAbPath: AbPath = AbPath(stringBuffer!!.toString())

@@ -56,7 +56,7 @@ var result = result
         try {
             this.result= result
 
-    var tokenizer: Tokenizer = Tokenizer(CommonSeps.getInstance()!!.AMP)
+    var tokenizer: Tokenizer = Tokenizer(CommonSeps.getInstance()!!.AMPERSAND)
 
 
     var tokens: BasicArrayList = tokenizer.getTokens(result, BasicArrayList())!!

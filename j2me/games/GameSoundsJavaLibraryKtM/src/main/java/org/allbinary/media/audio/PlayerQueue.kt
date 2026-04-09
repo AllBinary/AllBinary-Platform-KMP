@@ -163,7 +163,7 @@ this.list.clear()
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
-                            append(TOTAL)!!.append(this.list.size())!!.toString()
+                            append(TOTAL)!!.appendint(this.list.size())!!.toString()
 }
 
 

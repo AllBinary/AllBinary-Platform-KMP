@@ -186,7 +186,7 @@ constructor= myClass!!.getConstructor(classes)
 stringBuffer!!.append("Failure for: ")
 stringBuffer!!.append(className)
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
-stringBuffer!!.append(ConstructorUtil.view(constructor, "\n"))
+stringBuffer!!.append(ConstructorUtil.view(constructor, CommonSeps.getInstance()!!.NEW_LINE))
 logUtil!!.put(stringBuffer!!.toString(), this, "getInstance(className,params)", e)
 
                                     }
@@ -209,7 +209,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "getInstance(className,params)", 
 stringBuffer!!.append("Failure for: ")
 stringBuffer!!.append(className)
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
-stringBuffer!!.append(ConstructorUtil.view(constructor, "\n"))
+stringBuffer!!.append(ConstructorUtil.view(constructor, CommonSeps.getInstance()!!.NEW_LINE))
 logUtil!!.put(stringBuffer!!.toString(), this, "getInstance(className,params)", e)
 
                                     }

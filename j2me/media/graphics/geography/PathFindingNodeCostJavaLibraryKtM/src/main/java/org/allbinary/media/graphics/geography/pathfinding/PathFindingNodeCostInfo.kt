@@ -126,11 +126,11 @@ var pathFindingNodeCostInfo = pathFindingNodeCostInfo
 stringBuffer!!.append(this::class.toString()!!)
 stringBuffer!!.append(CommonLabels.getInstance()!!.COLON_SEP)
 stringBuffer!!.append("CostFromStart: ")
-stringBuffer!!.append(this.costFromStartP)
+stringBuffer!!.appendlong(this.costFromStartP)
 stringBuffer!!.append(" CostToEnd: ")
-stringBuffer!!.append(this.costToEndP)
+stringBuffer!!.appendlong(this.costToEndP)
 stringBuffer!!.append(" TotalCost: ")
-stringBuffer!!.append(this.totalCostP)
+stringBuffer!!.appendlong(this.totalCostP)
 
 
 

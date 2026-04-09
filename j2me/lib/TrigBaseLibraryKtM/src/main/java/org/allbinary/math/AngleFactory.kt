@@ -67,7 +67,7 @@ var args = args
                         for (index in 0 until 360)
 
         {
-stringMaker!!.append(index)!!.append(CommonSeps.getInstance()!!.FORWARD_SLASH)!!.append(angleFactory!!.getClosestDirection(index)!!.getValue())!!.append(CommonSeps.getInstance()!!.NEW_LINE)
+stringMaker!!.appendint(index)!!.append(CommonSeps.getInstance()!!.FORWARD_SLASH)!!.appendshort(angleFactory!!.getClosestDirection(index)!!.getValue())!!.append(CommonSeps.getInstance()!!.NEW_LINE)
 }
 
 LogUtil.getInstance()!!.put(stringMaker!!.toString(), "main", "main")

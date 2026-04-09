@@ -162,9 +162,9 @@ stringBuffer!!.append(stringUtil!!.toString(this.rectangle))
 stringBuffer!!.append(" CellPosition: ")
 stringBuffer!!.append(stringUtil!!.toString(this.cellPosition))
 stringBuffer!!.append(" xBorder: ")
-stringBuffer!!.append(this.xBorder)
+stringBuffer!!.appendint(this.xBorder)
 stringBuffer!!.append(" yBorder: ")
-stringBuffer!!.append(this.yBorder)
+stringBuffer!!.appendint(this.yBorder)
 
 
 

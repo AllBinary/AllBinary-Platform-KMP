@@ -70,13 +70,13 @@ open public class AnimationFactoryInitializationVisitor
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(PositionStrings.getInstance()!!.DX_LABEL)!!.append(this.dx.toFloat())
-stringBuffer!!.append(PositionStrings.getInstance()!!.DY_LABEL)!!.append(this.dy.toFloat())
+stringBuffer!!.append(PositionStrings.getInstance()!!.DX_LABEL)!!.appendfloat(this.dx.toFloat())
+stringBuffer!!.append(PositionStrings.getInstance()!!.DY_LABEL)!!.appendfloat(this.dy.toFloat())
 stringBuffer!!.append(commonLabels!!.WIDTH_LABEL)
-stringBuffer!!.append(width)
+stringBuffer!!.appendint(width)
 stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(commonLabels!!.HEIGHT_LABEL)
-stringBuffer!!.append(height)
+stringBuffer!!.appendint(height)
 
 
 

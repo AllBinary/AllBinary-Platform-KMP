@@ -96,7 +96,7 @@ var level = level
     var isFeature: Boolean = featureInterface!!.isFeature()!!
 
 logUtil!!.put(StringMaker().
-                            append(this.GAME_FEATURE_CONTROLLED)!!.append(featureInterface!!.toString())!!.append(this.IS_LOADING_LEVEL_LABEL)!!.append(ResourceLoadingLevelFactory.getInstance()!!.getLevelString(level))!!.append(CommonSeps.getInstance()!!.COLON_SEP)!!.append(isLoadingLevel)!!.append(this.IS_FEATURE)!!.append(isFeature)!!.toString(), this, commonStrings!!.INIT)
+                            append(this.GAME_FEATURE_CONTROLLED)!!.append(featureInterface!!.toString())!!.append(this.IS_LOADING_LEVEL_LABEL)!!.append(ResourceLoadingLevelFactory.getInstance()!!.getLevelString(level))!!.append(CommonSeps.getInstance()!!.COLON_SEP)!!.appendboolean(isLoadingLevel)!!.append(this.IS_FEATURE)!!.appendboolean(isFeature)!!.toString(), this, commonStrings!!.INIT)
 
     
                         if(isLoadingLevel && isFeature)
@@ -118,9 +118,9 @@ logUtil!!.put(StringMaker().
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(ANIMATION_FEATURES)
-stringBuffer!!.append(features.isFeature(graphicsFeatureFactory!!.VECTOR_GRAPHICS))
+stringBuffer!!.appendboolean(features.isFeature(graphicsFeatureFactory!!.VECTOR_GRAPHICS))
 stringBuffer!!.append(IMAGE_LABEL)
-stringBuffer!!.append(features.isFeature(graphicsFeatureFactory!!.IMAGE_GRAPHICS))
+stringBuffer!!.appendboolean(features.isFeature(graphicsFeatureFactory!!.IMAGE_GRAPHICS))
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 
     
@@ -129,13 +129,13 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(IMAGE_GRAPHICS_ARRAY)
-stringBuffer!!.append(features.isFeature(graphicsFeatureFactory!!.IMAGE_TO_ARRAY_GRAPHICS))
+stringBuffer!!.appendboolean(features.isFeature(graphicsFeatureFactory!!.IMAGE_TO_ARRAY_GRAPHICS))
 stringBuffer!!.append(IMAGE_GRAPHICS_ROTATION)
-stringBuffer!!.append(features.isFeature(graphicsFeatureFactory!!.IMAGE_TO_ARRAY_GRAPHICS))
+stringBuffer!!.appendboolean(features.isFeature(graphicsFeatureFactory!!.IMAGE_TO_ARRAY_GRAPHICS))
 stringBuffer!!.append(SPRITE_QUARTER)
-stringBuffer!!.append(features.isFeature(graphicsFeatureFactory!!.SPRITE_QUARTER_ROTATION_GRAPHICS))
+stringBuffer!!.appendboolean(features.isFeature(graphicsFeatureFactory!!.SPRITE_QUARTER_ROTATION_GRAPHICS))
 stringBuffer!!.append(SPRITE_FULL)
-stringBuffer!!.append(features.isFeature(graphicsFeatureFactory!!.SPRITE_FULL_GRAPHICS))
+stringBuffer!!.appendboolean(features.isFeature(graphicsFeatureFactory!!.SPRITE_FULL_GRAPHICS))
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 
                                     }

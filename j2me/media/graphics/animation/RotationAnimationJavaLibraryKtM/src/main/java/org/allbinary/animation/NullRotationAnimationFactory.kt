@@ -72,8 +72,6 @@ private constructor ()
 }
 
 
-                @Throws(Exception::class)
-            
     override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation{

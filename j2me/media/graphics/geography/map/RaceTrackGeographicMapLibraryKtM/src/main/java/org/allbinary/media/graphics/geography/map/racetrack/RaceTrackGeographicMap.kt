@@ -98,9 +98,9 @@ public constructor (raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrackData, 
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Column: ")
-stringBuffer!!.append(geographicMapCellPosition!!.getColumn())
+stringBuffer!!.appendint(geographicMapCellPosition!!.getColumn())
 stringBuffer!!.append(" not in: ")
-stringBuffer!!.append(customMapArray[0]!!.size)
+stringBuffer!!.appendint(customMapArray[0]!!.size)
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 
     
@@ -136,9 +136,9 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Row: ")
-stringBuffer!!.append(geographicMapCellPosition!!.getRow())
+stringBuffer!!.appendint(geographicMapCellPosition!!.getRow())
 stringBuffer!!.append(" not in: ")
-stringBuffer!!.append(customMapArray!!.size)
+stringBuffer!!.appendint(customMapArray!!.size)
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 
     

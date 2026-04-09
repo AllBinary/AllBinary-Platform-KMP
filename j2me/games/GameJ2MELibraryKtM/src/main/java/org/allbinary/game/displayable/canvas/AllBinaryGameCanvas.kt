@@ -41,6 +41,7 @@ import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Item
 import javax.microedition.lcdui.NullCommandListener
 import org.allbinary.AndroidUtil
+import org.allbinary.J2MEUtil
 import org.allbinary.business.advertisement.GameAdStateFactory
 import org.allbinary.canvas.BaseGameStatistics
 import org.allbinary.canvas.GameStatisticsFactory
@@ -65,7 +66,6 @@ import org.allbinary.game.configuration.event.GameInitializedEventHandler
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.configuration.feature.GameFeatureFactory
 import org.allbinary.game.configuration.feature.GameFeatureUtil
-import org.allbinary.game.configuration.feature.HTMLFeatureFactory
 import org.allbinary.game.configuration.feature.InputFeatureFactory
 import org.allbinary.game.configuration.feature.MainFeatureFactory
 import org.allbinary.game.configuration.feature.SensorFeatureFactory
@@ -93,6 +93,7 @@ import org.allbinary.game.score.NullHighScoresSingletonFactory
 import org.allbinary.game.score.displayable.HighScoreTextBox
 import org.allbinary.game.state.GameState
 import org.allbinary.game.state.GameStateFactory
+import org.allbinary.graphics.GraphicsStrings
 import org.allbinary.graphics.Rectangle
 import org.allbinary.graphics.ScreenCapture
 import org.allbinary.graphics.ScreenCaptureFactory
@@ -393,14 +394,8 @@ this.highScoresFactoryInterface= NoHighScoresFactory.getInstance()
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var features: Features = Features.getInstance()!!
-
-
-    var htmlFeatureFactory: HTMLFeatureFactory = HTMLFeatureFactory.getInstance()!!
-
-
     
-                        if(features.isDefault(htmlFeatureFactory!!.HTML))
+                        if(J2MEUtil.isHTML())
                         
                                     {
                                     super.setCurrentThreadFake()
@@ -870,8 +865,23 @@ this.setGameInputProcessor(Processor.getInstance())
 
     var features: Features = Features.getInstance()!!
 
+
+    
+                        if(features.isFeature(GameFeatureFactory.getInstance()!!.CHEATING))
+                        
+                                    {
+                                    this.isCheating= true
 this.cheatProcessor= CheatGameInputProcessor(this)
 this.gameKeyEventHandler!!.addListener(this.cheatProcessor)
+
+                                    }
+                                
+                        else {
+                            this.isCheating= false
+this.cheatProcessor= NoPlayerGameInput.getInstance()
+
+                        }
+                            
 this.realEndGameProcessor= EndGameProcessor(this)
 this.setEndGameProcessor(Processor.getInstance())
 this.realStartIntermissionProcessor= StartIntermissionProcessor(this)
@@ -954,7 +964,7 @@ GameInitializationUtil.getInstance()!!.initGame(abeClientInformation, this, game
     var features: Features = Features.getInstance()!!
 
 logUtil!!.put(StringMaker().
-                            append("Sound Changing To: ")!!.append(features.isFeature(gameFeatureFactory!!.SOUND))!!.toString(), this, "initConfigurable")
+                            append("Sound Changing To: ")!!.appendboolean(features.isFeature(gameFeatureFactory!!.SOUND))!!.toString(), this, "initConfigurable")
 this.mediaInit()
 changedGameFeatureListener!!.remove(gameFeatureFactory!!.SOUND)
 
@@ -1101,9 +1111,6 @@ this.setCommandListener(cmdListener)
     var myCommandsFactory: MyCommandsFactory = MyCommandsFactory.getInstance()!!
 
 
-    var htmlFeatureFactory: HTMLFeatureFactory = HTMLFeatureFactory.getInstance()!!
-
-
     
                         if(DebugFactory.getInstance() != NoDebug.getInstance())
                         
@@ -1123,7 +1130,7 @@ this.addCommand(gameCommandsFactory!!.QUIT_COMMAND)
 
 
     
-                        if(features.isDefault(htmlFeatureFactory!!.HTML))
+                        if(J2MEUtil.isHTML())
                         
                                     {
                                     
@@ -1340,7 +1347,7 @@ this.highScoreSubmitted= highScoreSubmitted
                                     }
                                 
 logUtil!!.put(StringMaker().
-                            append("isHighScoreSubmitted: ")!!.append(highScoreSubmitted)!!.toString(), this, "setHighScoreSubmitted")
+                            append("isHighScoreSubmitted: ")!!.appendboolean(highScoreSubmitted)!!.toString(), this, "setHighScoreSubmitted")
 }
 
 
@@ -1643,7 +1650,7 @@ this.gameBehavior!!.buildGame(this)
         //nullable = true from not(false or (false and true)) = true
 {
 PreLogUtil.put(StringMaker().
-                            append(this.gameInputStrings!!.ENABLE_PLAYER_GAME_INPUTS)!!.append(this.localPlayerGameInputList!!.size())!!.toString(), this, BUILD_GAME)
+                            append(this.gameInputStrings!!.ENABLE_PLAYER_GAME_INPUTS)!!.appendint(this.localPlayerGameInputList!!.size())!!.toString(), this, BUILD_GAME)
 
     var playerGameInput: PlayerGameInput
 
@@ -2111,11 +2118,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
     var features: Features = Features.getInstance()!!
 
 
-    var htmlFeatureFactory: HTMLFeatureFactory = HTMLFeatureFactory.getInstance()!!
-
-
     
-                        if(features.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD) || features.isDefault(htmlFeatureFactory!!.HTML))
+                        if(features.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD) || J2MEUtil.isHTML())
                         
                                     {
                                     
@@ -2129,10 +2133,10 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
                                 
 
     
-                        if(features.isDefault(htmlFeatureFactory!!.HTML))
+                        if(J2MEUtil.isHTML())
                         
                                     {
-                                    logUtil!!.put(htmlFeatureFactory!!.HTML.getName(), this, commonStrings!!.RUN)
+                                    logUtil!!.put(GraphicsStrings.getInstance()!!.HTML, this, commonStrings!!.RUN)
 
                                     }
                                 

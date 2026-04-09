@@ -121,7 +121,7 @@ public constructor (name: String)
     var id: Int = recordEnum!!.nextRecordId()!!
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
-logUtil!!.put(stringBuffer!!.append(this.persistanceStrings!!.LOADING_ID)!!.append(id)!!.toString(), this, this.persistanceStrings!!.LOAD_ALL)
+logUtil!!.put(stringBuffer!!.append(this.persistanceStrings!!.LOADING_ID)!!.appendint(id)!!.toString(), this, this.persistanceStrings!!.LOAD_ALL)
 recordAsBytes= recordStore!!.getRecord(id)
 
     
@@ -163,9 +163,9 @@ input= inputFactory!!.getInstance(inputId.toInt())
                         
                                     {
                                     stringBuffer!!.append(this.persistanceStrings!!.ERROR_LOADING_ID)
-stringBuffer!!.append(inputId)
+stringBuffer!!.appendlong(inputId)
 stringBuffer!!.append(this.persistanceStrings!!.GAME_ACTION_INPUT)
-stringBuffer!!.append(gameActionInputId)
+stringBuffer!!.appendlong(gameActionInputId)
 PreLogUtil.put(stringBuffer!!.toString(), this, this.persistanceStrings!!.LOAD_ALL)
 
                                     }
@@ -179,9 +179,9 @@ PreLogUtil.put(stringBuffer!!.toString(), this, this.persistanceStrings!!.LOAD_A
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(this.persistanceStrings!!.ERROR_LOADING)
-stringBuffer!!.append(gameActionInputId)
+stringBuffer!!.appendlong(gameActionInputId)
 stringBuffer!!.append(this.persistanceStrings!!.ID)
-stringBuffer!!.append(inputId)
+stringBuffer!!.appendlong(inputId)
 PreLogUtil.put(stringBuffer!!.toString(), this, this.persistanceStrings!!.LOAD_ALL)
 
                                     }

@@ -65,7 +65,7 @@ this.eventListenerInterfaceList= BasicArrayList()
     var LISTENER: String = " Listener: "
 
 stringBuffer!!.append("Total Listeners: ")
-stringBuffer!!.append(this.eventListenerInterfaceList!!.size())
+stringBuffer!!.appendint(this.eventListenerInterfaceList!!.size())
 
     var eventListenerInterface: EventListenerInterface
 

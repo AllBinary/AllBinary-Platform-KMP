@@ -110,7 +110,7 @@ super.nextFrame()
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
-                            append(super.toString())!!.append(" Worst: ")!!.append(worstFrameProcessingTime)!!.append(" Best: ")!!.append(bestFrameProcessingTime)!!.toString()
+                            append(super.toString())!!.append(" Worst: ")!!.appendint(worstFrameProcessingTime)!!.append(" Best: ")!!.appendint(bestFrameProcessingTime)!!.toString()
 }
 
 

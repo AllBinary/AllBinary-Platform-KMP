@@ -62,6 +62,8 @@ companion object {
 
     val OPACITY: String = "opacity"
 
+    val HTML: String = "HTML"
+
 }
                 
             

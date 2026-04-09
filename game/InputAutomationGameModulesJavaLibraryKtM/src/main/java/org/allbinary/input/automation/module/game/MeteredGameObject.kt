@@ -167,7 +167,10 @@ this.dropping= dropping
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
+
+    var commonSeps: CommonSeps = CommonSeps.getInstance()!!
+
+stringBuffer!!.append(commonSeps!!.NEW_LINE)
 stringBuffer!!.append(RATIOS_LABEL)
 
 
@@ -182,18 +185,18 @@ stringBuffer!!.append(this.getRatios()[index]!!.toString())
                         if(index < this.getRatios()!!.length -1)
                         
                                     {
-                                    stringBuffer!!.append(CommonSeps.getInstance()!!.COMMA_SEP)
+                                    stringBuffer!!.append(commonSeps!!.COMMA_SEP)
 
                                     }
                                 
 }
 
-stringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
+stringBuffer!!.append(commonSeps!!.NEW_LINE)
 stringBuffer!!.append(IS_GOOD_LABEL)
-stringBuffer!!.append(this.isGood())
-stringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
+stringBuffer!!.appendboolean(this.isGood())
+stringBuffer!!.append(commonSeps!!.NEW_LINE)
 stringBuffer!!.append(IS_DROPPPING_LABEL)
-stringBuffer!!.append(this.isDropping())
+stringBuffer!!.appendboolean(this.isDropping())
 
 
 

@@ -166,7 +166,7 @@ onDemandResources= onDemandResourcesFactory!!.remove(onDemandIndex)
     var onDemandArray: IntArray = layerPlacementInterfaceBasicArrayListFactoryInterface!!.getOnDemandResources()!!
 
 PreLogUtil.put(StringMaker().
-                            append(commonStrings!!.START)!!.append(onDemandArray!!.size)!!.toString(), this, "initLevel")
+                            append(commonStrings!!.START)!!.appendint(onDemandArray!!.size)!!.toString(), this, "initLevel")
 
     var onDemandResources: OnDemandResources
 

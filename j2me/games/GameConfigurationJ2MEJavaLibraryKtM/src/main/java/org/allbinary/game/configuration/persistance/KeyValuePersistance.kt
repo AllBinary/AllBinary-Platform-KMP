@@ -111,7 +111,7 @@ var size = size
     var id: Int = recordEnum!!.nextRecordId()!!
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
-logUtil!!.put(stringBuffer!!.append(this.persistanceStrings!!.LOADING_ID)!!.append(id)!!.toString(), this, this.persistanceStrings!!.LOAD_ALL)
+logUtil!!.put(stringBuffer!!.append(this.persistanceStrings!!.LOADING_ID)!!.appendint(id)!!.toString(), this, this.persistanceStrings!!.LOAD_ALL)
 recordAsBytes= recordStore!!.getRecord(id)
 
     

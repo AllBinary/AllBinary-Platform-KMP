@@ -32,6 +32,7 @@
 import java.io.InputStream
 import javax.microedition.lcdui.Image
 import javax.microedition.lcdui.NullCanvas
+import org.allbinary.J2MEUtil
 import org.allbinary.animation.image.LazyImageRotationAnimation
 import org.allbinary.canvas.GameGlobalsFactory
 import org.allbinary.canvas.Processor
@@ -40,8 +41,6 @@ import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.data.resource.ResourceUtil
 import org.allbinary.game.canvas.ABToGBUtil
-import org.allbinary.game.configuration.feature.Features
-import org.allbinary.game.configuration.feature.HTMLFeatureFactory
 import org.allbinary.game.displayable.canvas.AllBinaryGameCanvas
 import org.allbinary.game.gd.resource.GDLazyResources
 import org.allbinary.game.gd.resource.GDResources
@@ -90,6 +89,8 @@ companion object {
     private var firstTime: Boolean = true
 
     private var totalLoaded: Int = 0
+
+    var progressEnded: Boolean = false
 
     var hasAnyLazyAnimationFactories: Boolean = false
 
@@ -195,8 +196,6 @@ endProcessor= NotHTMLEndProcessor()
 }
                 
             
-    private var isHTML: Boolean= false
-
 open public inner class FirstProcessor : Processor {
         
 /*Static stuff is not allowed for Kotlin inner classescompanion object {
@@ -214,9 +213,8 @@ open public inner class FirstProcessor : Processor {
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var features: Features = Features.getInstance()!!
+    var isHTML: Boolean = J2MEUtil.isHTML()!!
 
-isHTML= features.isDefault(HTMLFeatureFactory.getInstance()!!.HTML)
 
     
                         if(isHTML)
@@ -278,7 +276,7 @@ var renderer = renderer
     var abCanvas: AllBinaryGameCanvas = abToGBUtil!!.abCanvas as AllBinaryGameCanvas
 
 
-        while(loadNowList!!.isEmpty() && (!abCanvas!!.isInitialized() || (abCanvas!!.isInitialized() && this.hasAnyLazyAnimationFactories)))
+        while(loadNowList!!.isEmpty() && (!abCanvas!!.isInitialized() || (abCanvas!!.isInitialized() && this.hasAnyLazyAnimationFactories)) && !this.progressEnded)
         {
 Thread.sleep(120)
 }
@@ -445,6 +443,9 @@ loadNowList!!.remove(lazyImageRotationAnimation)
                                 
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
+
+
+    var isHTML: Boolean = J2MEUtil.isHTML()!!
 
 
     
@@ -1086,6 +1087,13 @@ this.loadAfterList!!.remove(lazyImageRotationAnimation)
                         }
                             
 this.runTask()
+}
+
+
+    open fun progressEnded()
+        //nullable = true from not(false or (false and true)) = true
+{
+this.progressEnded= true
 }
 
 

@@ -27,6 +27,7 @@
         
 import java.io.DataInputStream
 import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
 
 open public class LineReader
@@ -80,7 +81,7 @@ logUtil!!.put("File: " +fileName, this, "LineReader", e)
 
         try {
             
-    var nextIndex: Int = string.indexOf("\n", index)!!
+    var nextIndex: Int = string.indexOf(CommonSeps.getInstance()!!.NEW_LINE, index)!!
 
 
     
@@ -127,7 +128,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "hasNext", e)
 
         try {
             
-    var nextIndex: Int = string.indexOf("\n", index)!!
+    var nextIndex: Int = string.indexOf(CommonSeps.getInstance()!!.NEW_LINE, index)!!
 
 
     

@@ -62,7 +62,7 @@ companion object {
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(OpenGLStrings.getInstance()!!.GL_ERROR_LABEL)
-stringBuffer!!.append(error)
+stringBuffer!!.appendint(error)
 
     
                         if(error == 1281)
@@ -73,7 +73,7 @@ stringBuffer!!.append(error)
     var maxTextureSize: IntArray = IntArray(1)
 
 gl.glGetIntegerv(GL10.GL_MAX_TEXTURE_SIZE, maxTextureSize, 0)
-stringBuffer!!.append(maxTextureSize[0]!!)
+stringBuffer!!.appendint(maxTextureSize[0]!!)
 
                                     }
                                 
@@ -118,7 +118,7 @@ stringBuffer!!.append(maxTextureSize[0]!!)
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(OpenGLStrings.getInstance()!!.GL_ERROR_LABEL)
-stringBuffer!!.append(error)
+stringBuffer!!.appendint(error)
 
     
                         if(error == 1281)
@@ -129,7 +129,7 @@ stringBuffer!!.append(error)
     var maxTextureSize: IntArray = IntArray(1)
 
 gl.glGetIntegerv(GL10.GL_MAX_TEXTURE_SIZE, maxTextureSize, 0)
-stringBuffer!!.append(maxTextureSize[0]!!)
+stringBuffer!!.appendint(maxTextureSize[0]!!)
 
                                     }
                                 

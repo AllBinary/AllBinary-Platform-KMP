@@ -31,7 +31,8 @@ import org.allbinary.animation.AnimationBehavior
 import org.allbinary.graphics.font.FontDebugFactory
 import org.allbinary.logic.string.StringUtil
 
-open public class CustomTextAnimation : TextAnimation {
+open public class CustomTextAnimation : TextAnimation
+                , GetTextInterface {
         
 
     val fontDebugFactory: FontDebugFactory = FontDebugFactory.getInstance()!!
@@ -113,6 +114,17 @@ super.setText(text)
 }
 
 
+    override fun getText()
+        //nullable = true from not(false or (false and true)) = true
+: String{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.lastText
+}
+
+
     private var textWidth: Int= 0
 
     override fun getWidth()
@@ -123,7 +135,7 @@ super.setText(text)
                         if(this.hasChanged)
                         
                                     {
-                                    this.textWidth= this.font.stringWidth(this.textArray[0]!!)
+                                    this.textWidth= this.font.stringWidth(this.textArrayP[0]!!)
 this.hasChanged= false
 
                                     }

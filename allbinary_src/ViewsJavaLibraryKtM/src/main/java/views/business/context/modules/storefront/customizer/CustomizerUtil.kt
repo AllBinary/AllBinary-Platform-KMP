@@ -228,7 +228,7 @@ document.appendChild(domNodeInterface!!.toXmlNode(document))
                         
                                     {
                                     stringBuffer!!.append("Total Views For Modification: ")
-stringBuffer!!.append(allViewsToBeModified!!.size)
+stringBuffer!!.appendint(allViewsToBeModified!!.size)
 stringBuffer!!.append(" New Xml/Data: ")
 stringBuffer!!.append(documentString)
 logUtil!!.put(stringBuffer!!.toString(), this, "insert()")

@@ -106,6 +106,8 @@ companion object {
 
     val VERSION_UNK: String = "Unk"
 
+    val GL_EXT_GPU_SHADER_100: String = "GL_ARB_shading_language_100"
+
     val GL_EXT_GPU_SHADER4: String = "GL_EXT_gpu_shader4"
 
     private var glVersion: String = this.glVersionString
@@ -117,6 +119,8 @@ companion object {
     private var glThreedDrawTexture: Boolean= false
 
     private var glExtensionGPUShader4: Boolean= false
+
+    private var glExtensionGPUShader100: Boolean= false
 
     private var vertexBufferObjectSupport: Boolean= false
 private constructor ()
@@ -163,19 +167,19 @@ var gl = gl
 
     var stringBuffer: StringMaker = StringMaker()
 
-glVersionString= gl.glGetString(GL10.GL_VERSION)
+this.glVersionString= gl.glGetString(GL10.GL_VERSION)
 
     var GL_SHADING_LANGUAGE_VERSION: Int = 0x8b8c
 
-glShaderVersionString= gl.glGetString(GL_SHADING_LANGUAGE_VERSION)
+this.glShaderVersionString= gl.glGetString(GL_SHADING_LANGUAGE_VERSION)
 
     
-                        if(glShaderVersionString == 
+                        if(this.glShaderVersionString == 
                                     null
                                 )
                         
                                     {
-                                    glShaderVersionString= stringUtil!!.EMPTY_STRING
+                                    this.glShaderVersionString= stringUtil!!.EMPTY_STRING
 
                                     }
                                 
@@ -183,24 +187,24 @@ glShaderVersionString= gl.glGetString(GL_SHADING_LANGUAGE_VERSION)
         try {
             
     
-                        if(glShaderVersionString != 
+                        if(this.glShaderVersionString != 
                                     null
-                                 && glShaderVersionString!!.indexOf('.') >= 0)
+                                 && this.glShaderVersionString!!.indexOf('.') >= 0)
                         
                                     {
                                     
-    var startIndex: Int = glShaderVersionString!!.lastIndexOf(' ')!!
+    var startIndex: Int = this.glShaderVersionString!!.lastIndexOf(' ')!!
 
 
     
                         if(startIndex >= 0)
                         
                                     {
-                                    glShaderVersionString= glShaderVersionString!!.substring(startIndex +1)
+                                    this.glShaderVersionString= this.glShaderVersionString!!.substring(startIndex +1)
 
                                     }
                                 
-shaderVersion= Integer.parseInt(glShaderVersionString!!.replace(CommonSeps.getInstance()!!.PERIOD, StringUtil.getInstance()!!.EMPTY_STRING))
+this.shaderVersion= Integer.parseInt(this.glShaderVersionString!!.replace(CommonSeps.getInstance()!!.PERIOD, StringUtil.getInstance()!!.EMPTY_STRING))
 
                                     }
                                 
@@ -212,50 +216,64 @@ shaderVersion= Integer.parseInt(glShaderVersionString!!.replace(CommonSeps.getIn
 logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
 }
 
-glRenderer= gl.glGetString(GL10.GL_RENDERER)
-glVendor= gl.glGetString(GL10.GL_VENDOR)
-glExtensions= gl.glGetString(GL10.GL_EXTENSIONS)
+this.glRenderer= gl.glGetString(GL10.GL_RENDERER)
+this.glVendor= gl.glGetString(GL10.GL_VENDOR)
+this.glExtensions= gl.glGetString(GL10.GL_EXTENSIONS)
 
     
-                        if(glExtensions!!.indexOf(this.GL_EXT_GPU_SHADER4) >= 0)
+                        if(this.glExtensions!!.indexOf(this.GL_EXT_GPU_SHADER_100) >= 0)
                         
                                     {
-                                    glExtensionGPUShader4= true
+                                    this.glExtensionGPUShader100= true
 
                                     }
                                 
                         else {
-                            glExtensionGPUShader4= false
+                            this.glExtensionGPUShader100= false
 
                         }
                             
 
     
-                        if(glRenderer == 
+                        if(this.glExtensions!!.indexOf(this.GL_EXT_GPU_SHADER4) >= 0)
+                        
+                                    {
+                                    this.glExtensionGPUShader4= true
+
+                                    }
+                                
+                        else {
+                            this.glExtensionGPUShader4= false
+
+                        }
+                            
+
+    
+                        if(this.glRenderer == 
                                     null
                                 )
                         
                                     {
-                                    glRenderer= stringUtil!!.EMPTY_STRING
+                                    this.glRenderer= stringUtil!!.EMPTY_STRING
 
                                     }
                                 
 
     
-                        if(glRenderer!!.lowercase()!!.indexOf("pixelflinger") >= 0)
+                        if(this.glRenderer!!.lowercase()!!.indexOf("pixelflinger") >= 0)
                         
                                     {
-                                    acceleratedString= "Probably Not for " +glRenderer
-possiblyAccelerated= false
+                                    this.acceleratedString= "Probably Not for " +this.glRenderer
+this.possiblyAccelerated= false
 
                                     }
                                 
                         else {
-                            acceleratedString= "Probably for " +glRenderer
+                            this.acceleratedString= "Probably for " +this.glRenderer
 
                     //Otherwise - statement - EmptyStmt
 
-possiblyAccelerated= true
+this.possiblyAccelerated= true
 
                         }
                             
@@ -315,33 +333,33 @@ this.glVersion= this.VERSION_UNK
                                 
 
     
-                        if(glVendor == 
+                        if(this.glVendor == 
                                     null
                                 )
                         
                                     {
-                                    glVendor= stringUtil!!.EMPTY_STRING
+                                    this.glVendor= stringUtil!!.EMPTY_STRING
 
                                     }
                                 
 
     
-                        if(glExtensions == 
+                        if(this.glExtensions == 
                                     null
                                 )
                         
                                     {
-                                    glExtensions= stringUtil!!.EMPTY_STRING
+                                    this.glExtensions= stringUtil!!.EMPTY_STRING
 
                                     }
                                 
 
     
-                        if(possiblyAccelerated)
+                        if(this.possiblyAccelerated)
                         
                                     {
                                     PreLogUtil.put(StringMaker().
-                            append("VBO:?")!!.append((this.glInstanceVersion == this.VERSION_1_1))!!.append("||")!!.append(this.isExtension(openGLFeatureFactory!!.OPENGL_VERTEX_BUFFER_OBJECT))!!.toString(), this, METHOD_NAME)
+                            append("VBO:?")!!.appendboolean((this.glInstanceVersion == this.VERSION_1_1))!!.append("||")!!.appendboolean(this.isExtension(openGLFeatureFactory!!.OPENGL_VERTEX_BUFFER_OBJECT))!!.toString(), this, METHOD_NAME)
 
     
                         if((this.glInstanceVersion == this.VERSION_1_1 || this.isExtension(openGLFeatureFactory!!.OPENGL_VERTEX_BUFFER_OBJECT)))
@@ -409,7 +427,7 @@ openGLImageSpecificFactory!!.setImageFactory(OpenGLESGL10ImageFactory())
 
 gl.glGetIntegerv(GL10.GL_MAX_TEXTURE_SIZE, maxTextureSizeArray, 0)
 this.maxTextureSize= maxTextureSizeArray[0]!!
-initialized= true
+this.initialized= true
 } catch(e: Exception)
             {
 
@@ -426,7 +444,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
 : Boolean{
 var gameFeature = gameFeature
 
-    var index: Int = glExtensions!!.indexOf(gameFeature!!.getName())!!
+    var index: Int = this.glExtensions!!.indexOf(gameFeature!!.getName())!!
 
 
     
@@ -461,7 +479,18 @@ this.requireInitialization()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return glExtensionDrawTexture
+                        return this.glExtensionDrawTexture
+}
+
+
+    open fun isGlExtensionGPUShader100()
+        //nullable = true from not(false or (false and true)) = true
+: Boolean{
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this.glExtensionGPUShader100
 }
 
 
@@ -473,7 +502,7 @@ this.requireInitialization()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return glExtensionGPUShader4
+                        return this.glExtensionGPUShader4
 }
 
 
@@ -485,7 +514,7 @@ this.requireInitialization()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return glVersion
+                        return this.glVersion
 }
 
 
@@ -497,7 +526,7 @@ this.requireInitialization()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return glVersionString
+                        return this.glVersionString
 }
 
 
@@ -509,7 +538,7 @@ this.requireInitialization()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return glShaderVersionString
+                        return this.glShaderVersionString
 }
 
 
@@ -521,7 +550,7 @@ this.requireInitialization()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return glThreedDrawTexture
+                        return this.glThreedDrawTexture
 }
 
 
@@ -533,7 +562,7 @@ this.requireInitialization()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return glRenderer
+                        return this.glRenderer
 }
 
 
@@ -545,7 +574,7 @@ this.requireInitialization()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return vertexBufferObjectSupport
+                        return this.vertexBufferObjectSupport
 }
 
 
@@ -585,22 +614,22 @@ this.requireInitialization()
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("GL_VERSION: ")
-stringBuffer!!.append(glVersionString)
+stringBuffer!!.append(this.glVersionString)
 stringBuffer!!.append(" GL_SHADING_LANGUAGE_VERSION: ")
 stringBuffer!!.append(this.glShaderVersionString)
 stringBuffer!!.append(" GL_RENDERER: ")
-stringBuffer!!.append(glRenderer)
+stringBuffer!!.append(this.glRenderer)
 stringBuffer!!.append(" GL_VENDOR: ")
-stringBuffer!!.append(glVendor)
+stringBuffer!!.append(this.glVendor)
 stringBuffer!!.append(commonSeps!!.NEW_LINE)
 stringBuffer!!.append(" Is Accelerated: ")
-stringBuffer!!.append(acceleratedString)
+stringBuffer!!.append(this.acceleratedString)
 stringBuffer!!.append(commonSeps!!.NEW_LINE)
 stringBuffer!!.append(" VBO Support: ")
-stringBuffer!!.append(this.isVertexBufferObjectSupport())
+stringBuffer!!.appendboolean(this.isVertexBufferObjectSupport())
 stringBuffer!!.append(commonSeps!!.NEW_LINE)
 stringBuffer!!.append(" Max Texture Size: ")
-stringBuffer!!.append(this.maxTextureSize)
+stringBuffer!!.appendint(this.maxTextureSize)
 stringBuffer!!.append(commonSeps!!.NEW_LINE)
 stringBuffer!!.append(" GL_EXTENSIONS: ")
 
@@ -609,7 +638,7 @@ stringBuffer!!.append(" GL_EXTENSIONS: ")
     var tokenizer: Tokenizer = Tokenizer(commonSeps!!.SPACE)
 
 
-    var list: BasicArrayList = tokenizer.getTokens(glExtensions, BasicArrayList())!!
+    var list: BasicArrayList = tokenizer.getTokens(this.glExtensions, BasicArrayList())!!
 
 
     var size: Int = list.size()!!

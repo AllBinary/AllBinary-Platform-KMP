@@ -30,10 +30,10 @@
 import javax.microedition.lcdui.Command
 import javax.microedition.lcdui.CommandListener
 import javax.microedition.lcdui.Graphics
+import org.allbinary.J2MEUtil
 import org.allbinary.game.GameInfo
 import org.allbinary.game.commands.GameCommandsFactory
 import org.allbinary.game.configuration.feature.Features
-import org.allbinary.game.configuration.feature.HTMLFeatureFactory
 import org.allbinary.game.displayable.canvas.GameCommandCanvas
 import org.allbinary.game.layer.AllBinaryGameLayerManager
 import org.allbinary.game.paint.ColorFillBasePaintable
@@ -135,12 +135,6 @@ this.setPaintable(this.getHighScoresPaintable())
 
                         }
                             
-
-    var features: Features = Features.getInstance()!!
-
-
-    var isHTML: Boolean = features.isDefault(HTMLFeatureFactory.getInstance()!!.HTML)!!
-
 SecondaryThreadPool.getInstance()!!.runTask(object: ARunnable()
                                 {
                                 
@@ -150,6 +144,9 @@ SecondaryThreadPool.getInstance()!!.runTask(object: ARunnable()
 
         try {
             
+    var isHTML: Boolean = J2MEUtil.isHTML()!!
+
+
     
                         if(!isHTML)
                         
@@ -166,7 +163,7 @@ hasPainted= false
 
     var stringMaker: StringMaker = StringMaker()
 
-logUtil!!.put(stringMaker!!.append("HighScoresCanvas - Request repaint to be sure: ")!!.append(System.currentTimeMillis())!!.toString(), this, commonStrings!!.RUN)
+logUtil!!.put(stringMaker!!.append("HighScoresCanvas - Request repaint to be sure: ")!!.appendlong(System.currentTimeMillis())!!.toString(), this, commonStrings!!.RUN)
 repaintBehavior!!.onChangeRepaint(this@HighScoresCanvas)
 
     
@@ -182,7 +179,7 @@ repaintBehavior!!.onChangeRepaint(this@HighScoresCanvas)
                                     }
                                 
 stringMaker!!.delete(0, stringMaker!!.length())
-logUtil!!.put(stringMaker!!.append("HighScoresCanvas - Now that the canvas has completed repaint go ahead and fetch the scores: ")!!.append(System.currentTimeMillis())!!.toString(), this, commonStrings!!.RUN)
+logUtil!!.put(stringMaker!!.append("HighScoresCanvas - Now that the canvas has completed repaint go ahead and fetch the scores: ")!!.appendlong(System.currentTimeMillis())!!.toString(), this, commonStrings!!.RUN)
 executeUpdate()
 } catch(e: Exception)
             {
@@ -283,7 +280,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
                         
                                     {
                                     logUtil!!.put(StringMaker().
-                            append(commonStrings!!.START)!!.append(highScoresArray!!.size)!!.toString(), this, "setHighScoresArray")
+                            append(commonStrings!!.START)!!.appendint(highScoresArray!!.size)!!.toString(), this, "setHighScoresArray")
 
                                     }
                                 

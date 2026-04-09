@@ -27,7 +27,7 @@ open public class StringMaker
 public constructor ()
             : super()
         {
-charArray= CharArray(20)
+this.charArray= CharArray(20)
 }
 
 
@@ -38,12 +38,10 @@ charArray= CharArray(20)
 
     var stringLength: Int = string.length!!
 
-ensureCapacity(currentLength +stringLength)
-string.toCharArray(charArray,
-                                    currentLength,
-                                    0,
+this.ensureCapacity(this.currentLength +stringLength)
+string.toCharArray(0,
                                     stringLength)
-currentLength += stringLength
+this.currentLength += stringLength
 
 
 
@@ -52,12 +50,12 @@ currentLength += stringLength
 }
 
 
-    open fun append(c: Char)
+    open fun appendchar(c: Char)
         //nullable = true from not(false or (false and false)) = true
 : StringMaker{
     //var c = c
-ensureCapacity(currentLength +1)
-charArray[currentLength++]= c
+this.ensureCapacity(this.currentLength +1)
+this.charArray[this.currentLength++]= c
 
 
 
@@ -66,7 +64,7 @@ charArray[currentLength++]= c
 }
 
 
-    open fun append(b: Byte)
+    open fun appendbyte(b: Byte)
         //nullable = true from not(false or (false and false)) = true
 : StringMaker{
     //var b = b
@@ -79,7 +77,7 @@ this.append(b.toString())
 }
 
 
-    open fun append(b: Short)
+    open fun appendshort(b: Short)
         //nullable = true from not(false or (false and false)) = true
 : StringMaker{
     //var b = b
@@ -92,7 +90,7 @@ this.append(b.toString())
 }
 
 
-    open fun append(i: Int)
+    open fun appendint(i: Int)
         //nullable = true from not(false or (false and false)) = true
 : StringMaker{
     //var i = i
@@ -105,7 +103,7 @@ this.append(i.toString())
 }
 
 
-    open fun append(l: Long)
+    open fun appendlong(l: Long)
         //nullable = true from not(false or (false and false)) = true
 : StringMaker{
     //var l = l
@@ -118,7 +116,7 @@ this.append(l.toString())
 }
 
 
-    open fun append(f: Float)
+    open fun appendfloat(f: Float)
         //nullable = true from not(false or (false and false)) = true
 : StringMaker{
 var f = f
@@ -131,7 +129,7 @@ this.append(f.toString())
 }
 
 
-    open fun append(bool: Boolean)
+    open fun appendboolean(bool: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : StringMaker{
     //var bool = bool
@@ -140,37 +138,37 @@ this.append(f.toString())
                         if(bool)
                         
                                     {
-                                    ensureCapacity(currentLength +4)
-charArray[currentLength++]= 
+                                    this.ensureCapacity(this.currentLength +4)
+this.charArray[this.currentLength++]= 
                                     't'
                                     
-charArray[currentLength++]= 
+this.charArray[this.currentLength++]= 
                                     'r'
                                     
-charArray[currentLength++]= 
+this.charArray[this.currentLength++]= 
                                     'u'
                                     
-charArray[currentLength++]= 
+this.charArray[this.currentLength++]= 
                                     'e'
                                     
 
                                     }
                                 
                         else {
-                            ensureCapacity(currentLength +5)
-charArray[currentLength++]= 
+                            this.ensureCapacity(this.currentLength +5)
+this.charArray[this.currentLength++]= 
                                     'f'
                                     
-charArray[currentLength++]= 
+this.charArray[this.currentLength++]= 
                                     'a'
                                     
-charArray[currentLength++]= 
+this.charArray[this.currentLength++]= 
                                     'l'
                                     
-charArray[currentLength++]= 
+this.charArray[this.currentLength++]= 
                                     's'
                                     
-charArray[currentLength++]= 
+this.charArray[this.currentLength++]= 
                                     'e'
                                     
 
@@ -189,7 +187,7 @@ charArray[currentLength++]=
 {
     //var minSize = minSize
 
-    var oldCapacity: Int = charArray!!.size
+    var oldCapacity: Int = this.charArray!!.size
                 
 
 
@@ -211,10 +209,10 @@ charArray[currentLength++]=
                                                     
 
 
-    var min: Int = min(charArray!!.size, newCapacity)!!
+    var min: Int = this.min(this.charArray!!.size, newCapacity)!!
 
-System.arraycopy(charArray, 0, copy, 0, min)
-charArray= copy
+System.arraycopy(this.charArray, 0, copy, 0, min)
+this.charArray= copy
 
                                     }
                                 
@@ -273,7 +271,7 @@ this.currentLength -= (end -start)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return charArray.concatToString(0, currentLength)
+                        return charArray.concatToString(0, this.currentLength)
 }
 
 

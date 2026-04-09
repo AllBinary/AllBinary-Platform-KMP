@@ -162,16 +162,19 @@ this.vector.add(gameSkillPropertyInterface)
         //nullable =  from not(false or (true and true)) = 
 : String{
 
+    var commonSeps: CommonSeps = CommonSeps.getInstance()!!
+
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(GAME_SKILL_LABEL)
 stringBuffer!!.append(this.getGameSkillType()!!.toString())
-stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
+stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(EXTRA_LABEL)
 stringBuffer!!.append(this.getExtra())
-stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
+stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(TIME_LABEL)
-stringBuffer!!.append(this.getTime())
+stringBuffer!!.appendlong(this.getTime())
 
 
 

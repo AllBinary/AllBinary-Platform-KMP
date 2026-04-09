@@ -42,9 +42,9 @@ import org.allbinary.logic.string.StringMaker
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Memory: Free: ")
-stringBuffer!!.append(Runtime.getRuntime()!!.freeMemory())
+stringBuffer!!.appendlong(Runtime.getRuntime()!!.freeMemory())
 stringBuffer!!.append(" Total: ")
-stringBuffer!!.append(Runtime.getRuntime()!!.totalMemory())
+stringBuffer!!.appendlong(Runtime.getRuntime()!!.totalMemory())
 
 
 

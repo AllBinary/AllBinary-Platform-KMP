@@ -47,7 +47,7 @@ open public class PlayerOwnedRTSLayers
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("All: ")
-stringBuffer!!.append(this.rtsLayerList!!.size())
+stringBuffer!!.appendint(this.rtsLayerList!!.size())
 
 
 

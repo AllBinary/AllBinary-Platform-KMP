@@ -91,7 +91,7 @@ var choiceGroup = choiceGroup
     var total: Int = choiceGroup!!.getSelectedFlags(selectedArray_return)!!
 
 stringBuffer!!.append("Multiple Total Choices: ")
-stringBuffer!!.append(total)
+stringBuffer!!.appendint(total)
 logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
 
     var features: Features = Features.getInstance()!!
@@ -108,9 +108,9 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(SELECTED_ARRAY_RETURN)
-stringBuffer!!.append(index)
+stringBuffer!!.appendint(index)
 stringBuffer!!.append(SELECTED_SEP)
-stringBuffer!!.append(isSelected)
+stringBuffer!!.appendboolean(isSelected)
 logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
 
     var selectedChoiceLabel: String = choiceGroup!!.getString(index)!!
@@ -164,7 +164,7 @@ var choiceGroup = choiceGroup
     var total: Int = choiceGroup!!.getSelectedFlags(selectedArray_return)!!
 
 stringBuffer!!.append("Multiple Total Choices: ")
-stringBuffer!!.append(total)
+stringBuffer!!.appendint(total)
 logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
 
     var features: Features = Features.getInstance()!!
@@ -181,9 +181,9 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(SELECTED_ARRAY_RETURN)
-stringBuffer!!.append(index)
+stringBuffer!!.appendint(index)
 stringBuffer!!.append(SELECTED_SEP)
-stringBuffer!!.append(isSelected)
+stringBuffer!!.appendboolean(isSelected)
 logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
 
     var selectedChoiceLabel: String = choiceGroup!!.getString(index)!!
@@ -239,7 +239,7 @@ var choiceGroup = choiceGroup
     var total: Int = choiceGroup!!.getSelectedFlags(selectedArray_return)!!
 
 stringBuffer!!.append("Exclusive Total Choices: 1==")
-stringBuffer!!.append(total)
+stringBuffer!!.appendint(total)
 logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
 
 
@@ -253,9 +253,9 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(SELECTED_ARRAY_RETURN)
-stringBuffer!!.append(index)
+stringBuffer!!.appendint(index)
 stringBuffer!!.append(SELECTED_SEP)
-stringBuffer!!.append(isSelected)
+stringBuffer!!.appendboolean(isSelected)
 logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
 
     

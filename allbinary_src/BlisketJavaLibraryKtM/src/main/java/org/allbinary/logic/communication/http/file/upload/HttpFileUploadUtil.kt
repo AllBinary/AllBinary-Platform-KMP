@@ -28,6 +28,7 @@
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.java.anyType.clazz.ClassUtil
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.string.CommonSeps
 import org.apache.commons.fileupload.FileItem
 import org.apache.commons.fileupload.FileItemStream
 
@@ -62,17 +63,20 @@ var fileItem = fileItem
 
     var stringBuffer: StringMaker = StringMaker()
 
+
+    var commonSeps: CommonSeps = CommonSeps.getInstance()!!
+
 stringBuffer!!.append("FileItem Log:")
-stringBuffer!!.append("\n")
+stringBuffer!!.append(commonSeps!!.NEW_LINE)
 stringBuffer!!.append("Content Type:")
 stringBuffer!!.append(fileItem!!.getContentType())
-stringBuffer!!.append("\n")
+stringBuffer!!.append(commonSeps!!.NEW_LINE)
 stringBuffer!!.append("Field Name:")
 stringBuffer!!.append(fileItem!!.getFieldName())
-stringBuffer!!.append("\n")
+stringBuffer!!.append(commonSeps!!.NEW_LINE)
 stringBuffer!!.append("Name:")
 stringBuffer!!.append(fileItem!!.getName())
-stringBuffer!!.append("\n")
+stringBuffer!!.append(commonSeps!!.NEW_LINE)
 stringBuffer!!.append("Size:")
 stringBuffer!!.append(" Not Calculated Yet")
 
@@ -97,19 +101,22 @@ var fileItem = fileItem
 
     var stringBuffer: StringMaker = StringMaker()
 
+
+    var commonSeps: CommonSeps = CommonSeps.getInstance()!!
+
 stringBuffer!!.append("FileItem Log:")
-stringBuffer!!.append("\n")
+stringBuffer!!.append(commonSeps!!.NEW_LINE)
 stringBuffer!!.append("Content Type:")
 stringBuffer!!.append(fileItem!!.getContentType())
-stringBuffer!!.append("\n")
+stringBuffer!!.append(commonSeps!!.NEW_LINE)
 stringBuffer!!.append("Field Name:")
 stringBuffer!!.append(fileItem!!.getFieldName())
-stringBuffer!!.append("\n")
+stringBuffer!!.append(commonSeps!!.NEW_LINE)
 stringBuffer!!.append("Name:")
 stringBuffer!!.append(fileItem!!.getName())
-stringBuffer!!.append("\n")
+stringBuffer!!.append(commonSeps!!.NEW_LINE)
 stringBuffer!!.append("Size:")
-stringBuffer!!.append(fileItem!!.getSize())
+stringBuffer!!.appendlong(fileItem!!.getSize())
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
@@ -161,7 +168,7 @@ var anyType = anyType
                             
 
 
-                            throw Exception("Object Not Instance Of FileItem but is: " +ClassUtil.viewAll(anyType, "\n"))
+                            throw Exception("Object Not Instance Of FileItem but is: " +ClassUtil.viewAll(anyType, CommonSeps.getInstance()!!.NEW_LINE))
 
                         }
                             

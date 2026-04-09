@@ -37,10 +37,12 @@ import org.allbinary.graphics.color.ColorCacheFactory
 import org.allbinary.graphics.color.ColorCacheable
 import org.allbinary.input.media.image.capture.CapturedBufferedImagesCacheSingleton
 import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.util.cache.AutomaticCacheInterface
 import org.allbinary.media.image.analysis.ColorRange
 import org.allbinary.media.image.analysis.ColorRangeInterface
 import org.allbinary.media.image.cache.BufferedImageFrameCacheable
+import org.allbinary.string.CommonSeps
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import org.w3c.dom.NodeList
@@ -341,7 +343,8 @@ var frame = frame
         //nullable = true from not(false or (false and true)) = true
 {
 
-    var message: String = "getPoint(): " +this.getPoint() +"\n" +this.getColorRangeInterface()!!.toString()
+    var message: String = StringMaker().
+                            append("getPoint(): ")!!.append(this.getPoint()!!.toString())!!.append(CommonSeps.getInstance()!!.NEW_LINE)!!.append(this.getColorRangeInterface()!!.toString())!!.toString()!!
 
 logUtil!!.put(message, this, "log")
 }

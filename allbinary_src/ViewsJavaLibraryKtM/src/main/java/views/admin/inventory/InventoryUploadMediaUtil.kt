@@ -171,7 +171,7 @@ fileUtil!!.write(ByteArrayInputStream(byteArray), originalImageFile)
 stringBuffer!!.append("Is Image Type: ")
 stringBuffer!!.append(mediaData!!.getName())
 stringBuffer!!.append(" supported: ")
-stringBuffer!!.append(isMediaSupported)
+stringBuffer!!.appendboolean(isMediaSupported)
 logUtil!!.put(stringBuffer!!.toString(), this, "saveFiles()")
 
                                     }
@@ -197,9 +197,9 @@ this.setFileNames(fileName)
 stringBuffer!!.append("Is ")
 stringBuffer!!.append(mediaData!!.toString())
 stringBuffer!!.append(" Image Resize Supported:")
-stringBuffer!!.append(uploadMedia!!.isSupported(mediaData!!.getName()))
+stringBuffer!!.appendboolean(uploadMedia!!.isSupported(mediaData!!.getName()))
 stringBuffer!!.append(" WriterMedia: ")
-stringBuffer!!.append(isMediaResizable)
+stringBuffer!!.appendboolean(isMediaResizable)
 logUtil!!.put(stringBuffer!!.toString(), this, "saveFiles()")
 
                                     }
@@ -239,7 +239,7 @@ stringBuffer!!.append(defaultMediaData!!.getName())
 stringBuffer!!.append(" into ")
 stringBuffer!!.append(mediaData!!.getName())
 stringBuffer!!.append(" if Convertable is it: ")
-stringBuffer!!.append(isConvertable)
+stringBuffer!!.appendboolean(isConvertable)
 logUtil!!.put(stringBuffer!!.toString(), this, "saveFiles()")
 
                                     }

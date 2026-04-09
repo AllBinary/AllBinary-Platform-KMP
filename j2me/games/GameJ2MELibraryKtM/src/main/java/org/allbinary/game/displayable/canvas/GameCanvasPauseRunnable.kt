@@ -25,6 +25,9 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.AndroidUtil
+import org.allbinary.game.configuration.feature.Features
+import org.allbinary.graphics.opengles.OpenGLFeatureFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 
@@ -52,8 +55,27 @@ this.allBinaryGameCanvas= allBinaryGameCanvas
         //nullable = true from not(false or (false and true)) = true
 {
 
+    
+                        if(AndroidUtil.isAndroid())
+                        
+                                    {
+                                    
         try {
-            allBinaryGameCanvas!!.processSleep()
+            
+    var features: Features = Features.getInstance()!!
+
+
+    var isOpenGL: Boolean = features.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL)!!
+
+
+    
+                        if(isOpenGL)
+                        
+                                    {
+                                    allBinaryGameCanvas!!.processSleep()
+
+                                    }
+                                
 } catch(e: Exception)
             {
 
@@ -62,6 +84,9 @@ this.allBinaryGameCanvas= allBinaryGameCanvas
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
 
+
+                                    }
+                                
 }
 
 

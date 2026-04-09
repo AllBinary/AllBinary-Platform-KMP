@@ -93,7 +93,7 @@ this.name= keyName
 stringBuffer!!.append("Name: ")
 stringBuffer!!.append(this.getName())
 stringBuffer!!.append(" Id: ")
-stringBuffer!!.append(this.getId())
+stringBuffer!!.appendint(this.getId())
 
 
 

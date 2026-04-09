@@ -490,9 +490,9 @@ var size = size
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("File Size To Large: ")
-stringBuffer!!.append(size)
+stringBuffer!!.appendlong(size)
 stringBuffer!!.append(">")
-stringBuffer!!.append(fileData!!.MAXIMAGEFILESIZE)
+stringBuffer!!.appendint(fileData!!.MAXIMAGEFILESIZE)
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 
                                     }
@@ -519,9 +519,9 @@ this.processImageFiles()
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("File Size To Small: ")
-stringBuffer!!.append(size)
+stringBuffer!!.appendlong(size)
 stringBuffer!!.append(">")
-stringBuffer!!.append(fileData!!.MINIMAGEFILESIZE)
+stringBuffer!!.appendint(fileData!!.MINIMAGEFILESIZE)
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 
                                     }
@@ -573,9 +573,9 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
                         
                                     {
                                     stringBuffer!!.append("FileName must be >")
-stringBuffer!!.append(fileData!!.MINLEN)
+stringBuffer!!.appendint(fileData!!.MINLEN)
 stringBuffer!!.append(" and <")
-stringBuffer!!.append(fileData!!.MAXLEN)
+stringBuffer!!.appendint(fileData!!.MAXLEN)
 stringBuffer!!.append("<br/>")
 
                                     }
@@ -609,9 +609,9 @@ stringBuffer!!.append(" not supported.<br />")
                                 
                         else {
                             stringBuffer!!.append("Image File Is To Large. ")
-stringBuffer!!.append(fileData!!.MINIMAGEFILESIZE)
+stringBuffer!!.appendint(fileData!!.MINIMAGEFILESIZE)
 stringBuffer!!.append(" < > ")
-stringBuffer!!.append(fileData!!.MAXIMAGEFILESIZE)
+stringBuffer!!.appendint(fileData!!.MAXIMAGEFILESIZE)
 stringBuffer!!.append("<br/>")
 
                         }
@@ -624,9 +624,9 @@ stringBuffer!!.append("<br/>")
                                 
                         else {
                             stringBuffer!!.append("Image File Is To Small. ")
-stringBuffer!!.append(fileData!!.MINIMAGEFILESIZE)
+stringBuffer!!.appendint(fileData!!.MINIMAGEFILESIZE)
 stringBuffer!!.append(" < > ")
-stringBuffer!!.append(fileData!!.MAXIMAGEFILESIZE)
+stringBuffer!!.appendint(fileData!!.MAXIMAGEFILESIZE)
 stringBuffer!!.append("<br/>")
 
                         }

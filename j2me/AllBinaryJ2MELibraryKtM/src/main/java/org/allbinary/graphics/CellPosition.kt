@@ -57,9 +57,9 @@ var i_row = i_row
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
 stringBuffer!!.append(commonSeps!!.PARENTHESIS_OPEN)
-stringBuffer!!.append(i_column)
+stringBuffer!!.appendint(i_column)
 stringBuffer!!.append(commonSeps!!.COMMA)
-stringBuffer!!.append(i_row)
+stringBuffer!!.appendint(i_row)
 stringBuffer!!.append(commonSeps!!.PARENTHESIS_CLOSE)
 
 

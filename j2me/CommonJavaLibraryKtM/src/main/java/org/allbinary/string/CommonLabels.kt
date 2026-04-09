@@ -41,7 +41,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return CommonLabels.instance
 }
 
 
@@ -68,7 +68,7 @@ companion object {
 
     val NAME_LABEL: String = "Name: "
 
-    val START: String = START_LABEL
+    val START: String = this.START_LABEL
 
     val ELAPSED: String = " Elapsed: "
 

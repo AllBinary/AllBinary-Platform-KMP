@@ -31,6 +31,7 @@ import org.allbinary.business.category.properties.CategoryPropertiesView
 import org.allbinary.data.tree.dom.DomNodeInterface
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.java.anyType.InterfaceUtil
+import org.allbinary.string.CommonSeps
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 
@@ -124,7 +125,7 @@ categoryPropertiesInterface= categoryInterface!!.getProperties()
                                 
                         else {
                             
-    var isImpl: String = InterfaceUtil.viewAll(anyType!!::class, "\n")!!
+    var isImpl: String = InterfaceUtil.viewAll(anyType!!::class, CommonSeps.getInstance()!!.NEW_LINE)!!
 
 
 

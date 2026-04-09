@@ -32,7 +32,6 @@ import org.allbinary.animation.Animation
 import org.allbinary.animation.NullAnimationFactory
 import org.allbinary.animation.vector.RectangleFilledAnimation
 import org.allbinary.game.configuration.feature.Features
-import org.allbinary.game.configuration.feature.HTMLFeatureFactory
 import org.allbinary.game.layer.SWTUtil
 import org.allbinary.graphics.GPoint
 import org.allbinary.graphics.Rectangle
@@ -77,9 +76,6 @@ this.rectangle= rectangle
     var features: Features = Features.getInstance()!!
 
 
-    var isHTML: Boolean = features.isDefault(HTMLFeatureFactory.getInstance()!!.HTML)!!
-
-
     var isOpenGL: Boolean = features.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL)!!
 
 
@@ -87,7 +83,7 @@ this.rectangle= rectangle
 
 
     
-                        if(isHTML || (AndroidUtil.isAndroid() && isOpenGL))
+                        if(J2MEUtil.isHTML() || (AndroidUtil.isAndroid() && isOpenGL))
                         
                                     {
                                     BORDER= MyFont.getInstance()!!.charWidth() /2

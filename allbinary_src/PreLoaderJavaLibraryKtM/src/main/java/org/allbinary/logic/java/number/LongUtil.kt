@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.string.CommonPhoneStrings
 
 open public class LongUtil
             : Object
@@ -36,7 +37,7 @@ companion object {
     open fun fillIn(end: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
-var end = end
+    //var end = end
 
     var frameStringBuffer: StringMaker = StringMaker()
 
@@ -46,6 +47,9 @@ var end = end
                         
                                     {
                                     
+    var commonPhoneStrings: CommonPhoneStrings = CommonPhoneStrings.getInstance()!!
+
+
     var size: Int = LongData.MAX_LONG_LENGTH -frameStringBuffer!!.length()
 
 
@@ -55,7 +59,7 @@ var end = end
                         for (index in 0 until size)
 
         {
-frameStringBuffer!!.append('0')
+frameStringBuffer!!.append(commonPhoneStrings!!.ZERO)
 }
 
 

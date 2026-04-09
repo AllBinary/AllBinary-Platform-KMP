@@ -241,6 +241,12 @@ this.hashtable.put(key, image)
 }
 
 
+    open fun progressEnded()
+        //nullable = true from not(false or (false and true)) = true
+{
+}
+
+
     open fun runTask()
         //nullable = true from not(false or (false and true)) = true
 {

@@ -382,9 +382,9 @@ geographicMapCellType= geographicMapInterface!!.getCellTypeAt(list.get(index) as
 stringBuffer!!.append("Trying to Build: ")
 stringBuffer!!.append(layerInterface!!.getName())
 stringBuffer!!.append(" for: $")
-stringBuffer!!.append(cost)
+stringBuffer!!.appendint(cost)
 stringBuffer!!.append(" with ")
-stringBuffer!!.append(capital.getTotalMoney())
+stringBuffer!!.appendint(capital.getTotalMoney())
 logUtil!!.put(stringBuffer!!.toString(), this, "attemptBuild")
 
     

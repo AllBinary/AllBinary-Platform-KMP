@@ -83,7 +83,7 @@ this.name= name
 stringBuffer!!.append(GROUP_NAME_LABEL)
 stringBuffer!!.append(this.name)
 stringBuffer!!.append(ID_LABEL)
-stringBuffer!!.append(this.teamId)
+stringBuffer!!.appendshort(this.teamId)
 this.string= stringBuffer!!.toString()
 }
 

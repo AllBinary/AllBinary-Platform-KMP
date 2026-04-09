@@ -246,7 +246,7 @@ this.types= typeArray
                         for (index in 0 until size)
 
         {
-stringMaker!!.append(types[index]!!)!!.append(CommonSeps.getInstance()!!.COMMA)
+stringMaker!!.appendint(types[index]!!)!!.append(CommonSeps.getInstance()!!.COMMA)
 }
 
 

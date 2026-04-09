@@ -82,7 +82,7 @@ GameConfigurationSingleton.getInstance()!!.getHashtable()!!.put(this.getName(), 
 
 this.value= value
 GameFeatureEventHandler.getInstance()!!.fireEvent(GameFeatureEvent(this, StringMaker().
-                            append(this.name)!!.append(" value: from: ")!!.append(oldValue!!.toInt())!!.append(" to ")!!.append(this.value.toInt())!!.toString()))
+                            append(this.name)!!.append(" value: from: ")!!.appendint(oldValue!!.toInt())!!.append(" to ")!!.appendint(this.value.toInt())!!.toString()))
 
                                     }
                                 
@@ -194,15 +194,15 @@ this.setValue(this.getDefaultValue())
 stringBuffer!!.append("Name: ")
 stringBuffer!!.append(this.name)
 stringBuffer!!.append(" Min: ")
-stringBuffer!!.append(this.getMinValue()!!.toInt())
+stringBuffer!!.appendint(this.getMinValue()!!.toInt())
 stringBuffer!!.append(" Max: ")
-stringBuffer!!.append(this.getMaxValue()!!.toInt())
+stringBuffer!!.appendint(this.getMaxValue()!!.toInt())
 stringBuffer!!.append(" Value: ")
-stringBuffer!!.append(this.getValue()!!.toInt())
+stringBuffer!!.appendint(this.getValue()!!.toInt())
 stringBuffer!!.append(" Default: ")
-stringBuffer!!.append(this.getDefaultValue()!!.toInt())
+stringBuffer!!.appendint(this.getDefaultValue()!!.toInt())
 stringBuffer!!.append(" Modifiable: ")
-stringBuffer!!.append(this.isModifiable())
+stringBuffer!!.appendboolean(this.isModifiable())
 
 
 

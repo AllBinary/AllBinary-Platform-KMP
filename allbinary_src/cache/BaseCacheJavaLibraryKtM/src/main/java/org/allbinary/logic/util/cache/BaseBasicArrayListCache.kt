@@ -47,7 +47,7 @@ open public class BaseBasicArrayListCache
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("S: ")
-stringBuffer!!.append(this.list.size())
+stringBuffer!!.appendint(this.list.size())
 
 
 

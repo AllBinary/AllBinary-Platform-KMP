@@ -437,9 +437,9 @@ geographicMapCellType= geographicMapInterface!!.getCellTypeAt(occupyList!!.get(i
 stringBuffer!!.append("Trying to Build: ")
 stringBuffer!!.append(layerInterface!!.getName())
 stringBuffer!!.append(" for: $")
-stringBuffer!!.append(cost)
+stringBuffer!!.appendint(cost)
 stringBuffer!!.append(" with ")
-stringBuffer!!.append(capital.getTotalMoney())
+stringBuffer!!.appendint(capital.getTotalMoney())
 logUtil!!.put(stringBuffer!!.toString(), this, "attemptBuild")
 
     
@@ -630,9 +630,9 @@ var layerInterface = layerInterface
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("occupySize: ")
-stringBuffer!!.append(occupySize)
+stringBuffer!!.appendint(occupySize)
 stringBuffer!!.append(" surroundSize: ")
-stringBuffer!!.append(surroundSize)
+stringBuffer!!.appendint(surroundSize)
 stringBuffer!!.append(" surroundList: ")
 stringBuffer!!.append(StringUtil.getInstance()!!.toString(surroundList))
 logUtil!!.put(stringBuffer!!.toString(), this, "isSurroundingCellsOffMap")

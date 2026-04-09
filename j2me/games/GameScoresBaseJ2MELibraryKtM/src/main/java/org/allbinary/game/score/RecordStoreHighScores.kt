@@ -155,7 +155,7 @@ this.load()
 
         try {
             logUtil!!.put(StringMaker().
-                            append("Adding HighScore: ")!!.append(newHighScore!!.getScore())!!.toString(), this, commonStrings!!.ADD)
+                            append("Adding HighScore: ")!!.appendlong(newHighScore!!.getScore())!!.toString(), this, commonStrings!!.ADD)
 
     
                         if(this.isTooManyHighScores())
@@ -285,7 +285,7 @@ inputStream= DataInputStream(byteArrayInputStream)
                         
                                     {
                                     logUtil!!.put(StringMaker().
-                            append("Removing Lowest HighScore: ")!!.append(bestHighScore!!.getScore())!!.toString(), this, commonStrings!!.LOAD)
+                            append("Removing Lowest HighScore: ")!!.appendlong(bestHighScore!!.getScore())!!.toString(), this, commonStrings!!.LOAD)
 recordStore!!.deleteRecord(bestHighScore!!.getId())
 
                                     }
@@ -485,7 +485,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.LOAD, e)
                                 
                         else {
                             logUtil!!.put(StringMaker().
-                            append("HighScores RecordStore Max Reached: ")!!.append(this.MAXHIGHSCORES)!!.toString(), this, "isTooManyHighScores")
+                            append("HighScores RecordStore Max Reached: ")!!.appendint(this.MAXHIGHSCORES)!!.toString(), this, "isTooManyHighScores")
 
 
 

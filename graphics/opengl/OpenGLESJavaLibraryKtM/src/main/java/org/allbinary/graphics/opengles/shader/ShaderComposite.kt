@@ -72,7 +72,13 @@ open public class ShaderComposite
 
     var textureDisableVertexAttribArrayOpenGLProcessor: OpenGLProcessor = NullOpenGLProcessorFactory.getInstance()!!
 
-    var uniformTextureUnitOpenGLProcessor: OpenGLTextureProcessor = NullOpenGLTextureProcessor.getInstance()!!
+    var uniformLightPositionOpenGLProcessor: OpenGLObject3dProcessor = NullOpenGLTextureProcessor.getInstance()!!
+
+    var uniformLightColorOpenGLProcessor: OpenGLObject3dProcessor = NullOpenGLTextureProcessor.getInstance()!!
+
+    var uniformCameraPositionOpenGLProcessor: OpenGLObject3dProcessor = NullOpenGLTextureProcessor.getInstance()!!
+
+    var uniformTextureUnitOpenGLProcessor: OpenGLObject3dProcessor = NullOpenGLTextureProcessor.getInstance()!!
 
     var programHandle: Int= 0
 public constructor (requiresOpenGLVersion: String, shaderArray: Array<Shader?>, compositeShaderUpdater: CompositeShaderUpdater, shaderInitializer: ShaderInitializer, modelViewProjection: ModelViewProjection, colorOpenGLProcessor: OpenGLProcessor, vertexOpenGLProcessor: OpenGLProcessor, disableProgramShaderOpenGLProcessor: OpenGLProcessor)

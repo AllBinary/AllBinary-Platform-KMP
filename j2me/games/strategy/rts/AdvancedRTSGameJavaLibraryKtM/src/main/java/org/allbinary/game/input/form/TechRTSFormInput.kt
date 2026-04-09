@@ -111,7 +111,7 @@ super.process(layerManager)
 
     var rtsInterface: RTSInterface = technologyRTSInterfaceImageItem!!.getRtsInterface()!!
 
-logUtil!!.put(stringMaker!!.append("isUpgradeable: ")!!.append(rtsInterface!!.isUpgradeable())!!.toString(), this, commonStrings!!.PROCESS)
+logUtil!!.put(stringMaker!!.append("isUpgradeable: ")!!.appendboolean(rtsInterface!!.isUpgradeable())!!.toString(), this, commonStrings!!.PROCESS)
 
     
                         if(rtsInterface!!.isUpgradeable())
@@ -124,7 +124,7 @@ logUtil!!.put(stringMaker!!.append("isUpgradeable: ")!!.append(rtsInterface!!.is
     var capital: Capital = rtsPlayerLayerInterface!!.getCapital()!!
 
 stringMaker!!.delete(0, stringMaker!!.length())
-logUtil!!.put(stringMaker!!.append(cost)!!.append("<=")!!.append(capital.getTotalMoney())!!.toString(), this, commonStrings!!.PROCESS)
+logUtil!!.put(stringMaker!!.appendint(cost)!!.append("<=")!!.appendint(capital.getTotalMoney())!!.toString(), this, commonStrings!!.PROCESS)
 
     
                         if(cost <= capital.getTotalMoney())

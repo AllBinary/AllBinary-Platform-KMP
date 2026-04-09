@@ -551,7 +551,7 @@ var frame = frame
 {
 var frame = frame
 logUtil!!.put(StringMaker().
-                            append("Start - Processing ")!!.append(this.getProfileActionProcessorInterfaceVector()!!.size())!!.append(" inputs")!!.toString(), this, commonStrings!!.PROCESS)
+                            append("Start - Processing ")!!.appendint(this.getProfileActionProcessorInterfaceVector()!!.size())!!.append(" inputs")!!.toString(), this, commonStrings!!.PROCESS)
 
     var profileActionProcessorInterfaceVector: Vector = this.getProfileActionProcessorInterfaceVector()!!
 

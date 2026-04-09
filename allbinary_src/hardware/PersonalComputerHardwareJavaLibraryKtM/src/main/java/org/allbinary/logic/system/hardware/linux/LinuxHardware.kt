@@ -51,6 +51,7 @@ import org.allbinary.logic.system.hardware.components.interfaces.MonitorInterfac
 import org.allbinary.logic.system.hardware.components.interfaces.UsbInterface
 import org.allbinary.logic.system.hardware.components.interfaces.VideoInterface
 import org.allbinary.logic.system.hardware.components.linux.Cpu
+import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 
@@ -300,7 +301,7 @@ nextLine= lineNumberReader!!.readLine()
                                     }
                                 
 componentData!!.append(nextLine)
-componentData!!.append("\n")
+componentData!!.append(CommonSeps.getInstance()!!.NEW_LINE)
 nextLine= lineNumberReader!!.readLine()
 
     var componentType: String = PCComponentFactory.getInstance()!!.java.componentType!!
@@ -311,7 +312,7 @@ nextLine= lineNumberReader!!.readLine()
                                 )
         {
 componentData!!.append(nextLine)
-componentData!!.append("\n")
+componentData!!.append(CommonSeps.getInstance()!!.NEW_LINE)
 nextLine= lineNumberReader!!.readLine()
 
     
@@ -539,10 +540,10 @@ var index = index
     var componentInterface: HardwareComponentInterface = componentInterfaceVector!!.get(index) as HardwareComponentInterface
 
 hardwareBuffer!!.append("Component ")
-hardwareBuffer!!.append(index)
+hardwareBuffer!!.appendint(index)
 hardwareBuffer!!.append(": \n")
 hardwareBuffer!!.append(componentInterface!!.toString())
-hardwareBuffer!!.append("\n")
+hardwareBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
 }
 
 

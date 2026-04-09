@@ -321,7 +321,7 @@ stringBuffer!!.append(commonSeps!!.BRACE_OPEN)
                         for (index2 in 0 until endIndex2)
 
         {
-stringBuffer!!.append(twoDimensionalIntArray[index]!![index2]!!)
+stringBuffer!!.appendint(twoDimensionalIntArray[index]!![index2]!!)
 stringBuffer!!.append(commonSeps!!.COMMA_SEP)
 }
 
@@ -383,7 +383,7 @@ stringBuffer!!.append(commonSeps!!.COMMA_SEP)
                         for (index in 0 until byteArray!!.size)
 
         {
-stringBuffer!!.append(byteArray[index]!!)
+stringBuffer!!.appendbyte(byteArray[index]!!)
 stringBuffer!!.append(commonSeps!!.COMMA_SEP)
 }
 

@@ -147,7 +147,7 @@ upGameKeyEventListenerInterface!!.onUpGameKeyEvent(eventObject as GameKeyEvent)
 
 stringBuffer!!.append(super.toString())
 stringBuffer!!.append(TOTAL_LISTENERS)
-stringBuffer!!.append(size)
+stringBuffer!!.appendint(size)
 
 
 

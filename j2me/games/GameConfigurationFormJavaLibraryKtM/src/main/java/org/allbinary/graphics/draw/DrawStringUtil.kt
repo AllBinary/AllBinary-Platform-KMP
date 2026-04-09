@@ -27,8 +27,8 @@
         
 import javax.microedition.lcdui.Graphics
 import org.allbinary.AndroidUtil
+import org.allbinary.J2MEUtil
 import org.allbinary.game.configuration.feature.Features
-import org.allbinary.game.configuration.feature.HTMLFeatureFactory
 import org.allbinary.graphics.Anchor
 import org.allbinary.graphics.font.MyFont
 import org.allbinary.graphics.opengles.OpenGLFeatureUtil
@@ -80,17 +80,11 @@ companion object {
     var charHeight: Int = myFont!!.DEFAULT_CHAR_HEIGHT
 
 
-    var features: Features = Features.getInstance()!!
-
-
-    var isHTML: Boolean = features.isDefault(HTMLFeatureFactory.getInstance()!!.HTML)!!
-
-
     var offsetY: Int = 0
 
 
     
-                        if(isHTML)
+                        if(J2MEUtil.isHTML())
                         
                                     {
                                     charHeight += 1
@@ -171,7 +165,7 @@ var y = y
 } catch(e: Exception)
             {
 PreLogUtil.put(StringMaker().
-                            append("Exception: stringLength: ")!!.append(string.length)!!.append(" offset: ")!!.append(offset)!!.append(" currentLength: ")!!.append(length)!!.toString(), this, "drawCenterString")
+                            append("Exception: stringLength: ")!!.appendint(string.length)!!.append(" offset: ")!!.appendint(offset)!!.append(" currentLength: ")!!.appendint(length)!!.toString(), this, "drawCenterString")
 }
 
 }

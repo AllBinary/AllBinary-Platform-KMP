@@ -32,6 +32,7 @@ import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.opengles.OpenGLFeatureFactory
 import org.allbinary.image.opengles.ModifierOpenGLESImageProcessor
 import org.allbinary.image.opengles.OpenGLESImage
+import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.eclipse.swt.graphics.ImageData
@@ -64,6 +65,8 @@ companion object {
             {
             }            
         
+    val logUtil: LogUtil = LogUtil.getInstance()!!
+
     private val imageCopyUtil: ImageCopyUtil = ImageCopyUtil.getInstance()!!
 
     private val features: Features = Features.getInstance()!!
@@ -250,12 +253,6 @@ newBufferedImage= swtImage!!.getImage() as org.eclipse.swt.graphics.Image
     var b: Float = (basicColor!!.blue.toFloat()) /MAX
 
 
-    var width: Int = image.getWidth()!!
-
-
-    var height: Int = image.getHeight()!!
-
-
     var rx: Int= 0
 
 
@@ -273,34 +270,24 @@ newBufferedImage= swtImage!!.getImage() as org.eclipse.swt.graphics.Image
                         
                                     {
                                     
-    var index3: Int= 0
+    var size: Int = imageData!!.data.length
 
 
 
 
 
-                        for (index in 0 until width)
-
-        {
-
-
-
-
-                        for (index2 in 0 until height)
+                        for (index in 0 until size)
 
         {
-index3= (index2 *imageData!!.bytesPerLine) +(index *4)
-rx= (imageData!!.data[index3] and 0xFF) shl 16
-gx= (imageData!!.data[index3 +1] and 0xFF) shl 8
-bx= (imageData!!.data[index3 +2] and 0xFF)
+rx= (imageData!!.data[index] and 0xFF) shl 16
+gx= (imageData!!.data[index +1] and 0xFF) shl 8
+bx= (imageData!!.data[index +2] and 0xFF)
 rx *= r
 gx *= g
 bx *= b
-imageData!!.data[index3]= rx.toByte()
-imageData!!.data[index3 +1]= gx.toByte()
-imageData!!.data[index3 +2]= bx.toByte()
-}
-
+imageData!!.data[index]= rx.toByte()
+imageData!!.data[index +1]= gx.toByte()
+imageData!!.data[index +2]= bx.toByte()
 }
 
 

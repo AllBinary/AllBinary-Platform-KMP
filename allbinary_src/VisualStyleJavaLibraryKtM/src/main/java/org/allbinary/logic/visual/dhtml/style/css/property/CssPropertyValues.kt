@@ -165,7 +165,7 @@ this.propertyValueVector!!.add(propertyValue)
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(cssPropertyValueData!!.NAME)
 stringBuffer!!.append(commonSeps!!.BRACKET_OPEN)
-stringBuffer!!.append(index)
+stringBuffer!!.appendint(index)
 stringBuffer!!.append(commonSeps!!.BRACKET_CLOSE)
 hashMap!!.put(stringBuffer!!.toString(), value)
 index++

@@ -82,9 +82,9 @@ this.rows= rows
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Init: columns: ")
-stringBuffer!!.append(columns)
+stringBuffer!!.appendint(columns)
 stringBuffer!!.append(" rows: ")
-stringBuffer!!.append(rows)
+stringBuffer!!.appendint(rows)
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 
 
@@ -126,7 +126,7 @@ var i_row = i_row
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(StringMaker().
-                            append("columns: ")!!.append(this.getColumns())!!.append(" rows: ")!!.append(this.getRows())!!.append(" col: ")!!.append(i_column)!!.append(" row: ")!!.append(i_row)!!.toString(), this, commonStrings!!.GET_INSTANCE, e)
+                            append("columns: ")!!.appendint(this.getColumns())!!.append(" rows: ")!!.appendint(this.getRows())!!.append(" col: ")!!.appendint(i_column)!!.append(" row: ")!!.appendint(i_row)!!.toString(), this, commonStrings!!.GET_INSTANCE, e)
 
 
 

@@ -222,7 +222,7 @@ logUtil!!.put(stringMaker!!.append(CommonLabels.getInstance()!!.START_LABEL)!!.a
     var aFullHeight: Int = aLastHeight
 
 stringMaker!!.delete(0, stringMaker!!.length())
-logUtil!!.put(stringMaker!!.append(FULL_WIDTH)!!.append(aFullWidth)!!.append(FULL_HEIGHT)!!.append(aFullHeight)!!.append(this.toString())!!.toString(), this, SET_LAST_SIZE_METHOD_NAME)
+logUtil!!.put(stringMaker!!.append(FULL_WIDTH)!!.appendint(aFullWidth)!!.append(FULL_HEIGHT)!!.appendint(aFullHeight)!!.append(this.toString())!!.toString(), this, SET_LAST_SIZE_METHOD_NAME)
 
     var operatingSystemInterface: GenericOperatingSystem = OperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()!!
 
@@ -254,7 +254,7 @@ aLastHeight= aLastHeight *operatingSystemInterface!!.getOverScanYPercent() /100
                                     this.displayRatio= scaleLargestTo /aLastHeight
 this.ratio= aLastHeight /scaleLargestTo
 stringMaker!!.delete(0, stringMaker!!.length())
-logUtil!!.put(stringMaker!!.append(this.ADJUSTING_FOR_SCALING_IN_PORTRAIT)!!.append(displayRatio)!!.toString(), this, SET_LAST_SIZE_METHOD_NAME)
+logUtil!!.put(stringMaker!!.append(this.ADJUSTING_FOR_SCALING_IN_PORTRAIT)!!.appendfloat(displayRatio)!!.toString(), this, SET_LAST_SIZE_METHOD_NAME)
 aLastWidth= (aLastWidth *displayRatio).toInt()
 aLastHeight= (aLastHeight *displayRatio).toInt()
 this.scalableListener!!.scale(ratio.toFloat())
@@ -279,7 +279,7 @@ this.scalableListener!!.scale(ratio.toFloat())
                                     this.displayRatio= scaleLargestTo /aLastWidth
 this.ratio= aLastWidth /scaleLargestTo
 stringMaker!!.delete(0, stringMaker!!.length())
-logUtil!!.put(stringMaker!!.append(this.ADJUSTING_FOR_SCALING_IN_LANDSCAPE)!!.append(displayRatio)!!.toString(), this, SET_LAST_SIZE_METHOD_NAME)
+logUtil!!.put(stringMaker!!.append(this.ADJUSTING_FOR_SCALING_IN_LANDSCAPE)!!.appendfloat(displayRatio)!!.toString(), this, SET_LAST_SIZE_METHOD_NAME)
 aLastWidth= (aLastWidth *displayRatio).toInt()
 aLastHeight= (aLastHeight *displayRatio).toInt()
 this.scalableListener!!.scale(ratio.toFloat())
@@ -299,7 +299,7 @@ this.scalableListener!!.scale(ratio.toFloat())
                                     }
                                 
 stringMaker!!.delete(0, stringMaker!!.length())
-logUtil!!.put(stringMaker!!.append(LAST_WIDTH)!!.append(aLastWidth)!!.append(LAST_HEIGHT)!!.append(aLastHeight)!!.toString(), this, SET_LAST_SIZE_METHOD_NAME)
+logUtil!!.put(stringMaker!!.append(LAST_WIDTH)!!.appendint(aLastWidth)!!.append(LAST_HEIGHT)!!.appendint(aLastHeight)!!.toString(), this, SET_LAST_SIZE_METHOD_NAME)
 this.xOffset= aFullWidth -aLastWidth
 this.yOffset= aFullHeight -aLastHeight
 this.left= this.scalableListener!!.getLeft(this.xOffset)
@@ -443,7 +443,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, FIRE_METHOD_NAME, e)
 
     var stringMaker: StringMaker = StringMaker()
 
-logUtil!!.put(stringMaker!!.append(CommonLabels.getInstance()!!.START_LABEL)!!.append(reason)!!.append(LAST_WIDTH)!!.append(aLastWidth)!!.append(LAST_HEIGHT)!!.append(aLastHeight)!!.append(commonSeps!!.SPACE)!!.append(this.toString())!!.toString(), this, commonStrings!!.UPDATE)
+logUtil!!.put(stringMaker!!.append(CommonLabels.getInstance()!!.START_LABEL)!!.append(reason)!!.append(LAST_WIDTH)!!.appendint(aLastWidth)!!.append(LAST_HEIGHT)!!.appendint(aLastHeight)!!.append(commonSeps!!.SPACE)!!.append(this.toString())!!.toString(), this, commonStrings!!.UPDATE)
 
     
                         if(aLastWidth > 0 && aLastHeight > 0)
@@ -487,7 +487,7 @@ aLastHeight= aLastHeight *operatingSystemInterface!!.getOverScanYPercent() /100
                                     this.displayRatio= scaleLargestTo /aLastHeight
 this.ratio= aLastHeight /scaleLargestTo
 stringMaker!!.delete(0, stringMaker!!.length())
-logUtil!!.put(stringMaker!!.append(this.ADJUSTING_FOR_SCALING_IN_PORTRAIT)!!.append(displayRatio)!!.toString(), this, commonStrings!!.UPDATE)
+logUtil!!.put(stringMaker!!.append(this.ADJUSTING_FOR_SCALING_IN_PORTRAIT)!!.appendfloat(displayRatio)!!.toString(), this, commonStrings!!.UPDATE)
 aLastWidth= (aLastWidth *displayRatio).toInt()
 aLastHeight= (aLastHeight *displayRatio).toInt()
 this.scalableListener!!.scale(ratio.toFloat())
@@ -513,7 +513,7 @@ this.scalableListener!!.scale(ratio.toFloat())
                                     this.displayRatio= scaleLargestTo /aLastWidth
 this.ratio= aLastWidth /scaleLargestTo
 stringMaker!!.delete(0, stringMaker!!.length())
-logUtil!!.put(stringMaker!!.append(this.ADJUSTING_FOR_SCALING_IN_LANDSCAPE)!!.append(displayRatio)!!.toString(), this, commonStrings!!.UPDATE)
+logUtil!!.put(stringMaker!!.append(this.ADJUSTING_FOR_SCALING_IN_LANDSCAPE)!!.appendfloat(displayRatio)!!.toString(), this, commonStrings!!.UPDATE)
 aLastWidth= (aLastWidth *displayRatio).toInt()
 aLastHeight= (aLastHeight *displayRatio).toInt()
 this.scalableListener!!.scale(ratio.toFloat())
@@ -533,7 +533,7 @@ this.scalableListener!!.scale(ratio.toFloat())
                                     }
                                 
 stringMaker!!.delete(0, stringMaker!!.length())
-logUtil!!.put(stringMaker!!.append(UPDATE_FROM_ORIENTATION_CHANGE)!!.append(LAST_WIDTH)!!.append(aLastWidth)!!.append(LAST_HEIGHT)!!.append(aLastHeight)!!.toString(), this, commonStrings!!.UPDATE)
+logUtil!!.put(stringMaker!!.append(UPDATE_FROM_ORIENTATION_CHANGE)!!.append(LAST_WIDTH)!!.appendint(aLastWidth)!!.append(LAST_HEIGHT)!!.appendint(aLastHeight)!!.toString(), this, commonStrings!!.UPDATE)
 this.xOffset= aFullWidth -aLastWidth
 this.yOffset= aFullHeight -aLastHeight
 this.left= this.scalableListener!!.getLeft(this.xOffset)
@@ -589,27 +589,27 @@ this.add(commonStrings!!.UPDATE)
 stringBuffer!!.append(DISPLAY_INFO)
 stringBuffer!!.append(FULL)
 stringBuffer!!.append(commonLabels!!.WIDTH_LABEL)
-stringBuffer!!.append(full[WIDTH]!!)
+stringBuffer!!.appendint(full[WIDTH]!!)
 stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(FULL)
 stringBuffer!!.append(commonLabels!!.HEIGHT_LABEL)
-stringBuffer!!.append(full[HEIGHT]!!)
+stringBuffer!!.appendint(full[HEIGHT]!!)
 stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(LAST)
 stringBuffer!!.append(commonLabels!!.WIDTH_LABEL)
-stringBuffer!!.append(last[WIDTH]!!)
+stringBuffer!!.appendint(last[WIDTH]!!)
 stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(LAST)
 stringBuffer!!.append(commonLabels!!.HEIGHT_LABEL)
-stringBuffer!!.append(last[HEIGHT]!!)
+stringBuffer!!.appendint(last[HEIGHT]!!)
 stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(LAST_HALF)
 stringBuffer!!.append(commonLabels!!.WIDTH_LABEL)
-stringBuffer!!.append(lastHalf[WIDTH]!!)
+stringBuffer!!.appendint(lastHalf[WIDTH]!!)
 stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(LAST_HALF)
 stringBuffer!!.append(commonLabels!!.HEIGHT_LABEL)
-stringBuffer!!.append(lastHalf[HEIGHT]!!)
+stringBuffer!!.appendint(lastHalf[HEIGHT]!!)
 
 
 

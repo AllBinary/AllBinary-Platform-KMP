@@ -95,7 +95,7 @@ downGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
                                 
                         else {
                             logUtil!!.put(StringMaker().
-                            append(this.gameInputStrings!!.NO_KEY)!!.append(keyCode)!!.toString(), this, this.gameInputStrings!!.ADD_KEY_EVENT)
+                            append(this.gameInputStrings!!.NO_KEY)!!.appendint(keyCode)!!.toString(), this, this.gameInputStrings!!.ADD_KEY_EVENT)
 
                         }
                             
@@ -149,7 +149,7 @@ upGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
                                 
                         else {
                             logUtil!!.put(StringMaker().
-                            append(this.gameInputStrings!!.NO_KEY)!!.append(keyCode)!!.toString(), this, this.gameInputStrings!!.REMOVE_KEY_EVENT)
+                            append(this.gameInputStrings!!.NO_KEY)!!.appendint(keyCode)!!.toString(), this, this.gameInputStrings!!.REMOVE_KEY_EVENT)
 
                         }
                             

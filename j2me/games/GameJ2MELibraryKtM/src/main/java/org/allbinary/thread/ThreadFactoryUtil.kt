@@ -29,9 +29,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.J2MEUtil
 import org.allbinary.canvas.RunnableCanvas
-import org.allbinary.game.configuration.feature.Features
-import org.allbinary.game.configuration.feature.HTMLFeatureFactory
 import org.allbinary.game.displayable.canvas.AllBinaryGameCanvas
 import org.allbinary.game.displayable.canvas.DemoCanvas
 import org.allbinary.game.displayable.canvas.GameCanvasRunnableInterface
@@ -103,11 +102,8 @@ companion object {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 
-    var features: Features = Features.getInstance()!!
-
-
     
-                        if(features.isDefault(HTMLFeatureFactory.getInstance()!!.HTML))
+                        if(J2MEUtil.isHTML())
                         
                                     {
                                     

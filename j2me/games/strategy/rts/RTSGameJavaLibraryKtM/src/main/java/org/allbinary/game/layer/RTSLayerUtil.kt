@@ -279,7 +279,7 @@ downgradeCost += (currentWeaponCost -downgradeWeaponCost)
 
 downgradeCost= downgradeCost *9 /10
 logUtil!!.put(StringMaker().
-                            append("Total Cost: ")!!.append(downgradeCost)!!.toString(), this, "getDowngradeCost")
+                            append("Total Cost: ")!!.appendint(downgradeCost)!!.toString(), this, "getDowngradeCost")
 
 
 
@@ -329,7 +329,7 @@ upgradeCost += (upgradedWeaponCost -currentWeaponCost)
 }
 
 logUtil!!.put(StringMaker().
-                            append("Total Cost: ")!!.append(upgradeCost)!!.toString(), this, "getUpgradeCost")
+                            append("Total Cost: ")!!.appendint(upgradeCost)!!.toString(), this, "getUpgradeCost")
 
 
 

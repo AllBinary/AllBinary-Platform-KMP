@@ -32,11 +32,11 @@ open public class NullOpenGLTextureProcessor
         
 companion object {
             
-    private val instance: OpenGLTextureProcessor = OpenGLTextureProcessor()
+    private val instance: OpenGLObject3dProcessor = OpenGLObject3dProcessor()
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLTextureProcessor{
+: OpenGLObject3dProcessor{
 
 
 

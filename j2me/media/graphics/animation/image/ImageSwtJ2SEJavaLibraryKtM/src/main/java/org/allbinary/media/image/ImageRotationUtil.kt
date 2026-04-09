@@ -88,18 +88,6 @@ private constructor ()
 
 openGLESImage!!.openGLESImageProperties!!.angle= totalAngle
 
-    
-                        if(originalImage != image)
-                        
-                                    {
-                                    
-
-
-                            throw RuntimeException()
-
-                                    }
-                                
-
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

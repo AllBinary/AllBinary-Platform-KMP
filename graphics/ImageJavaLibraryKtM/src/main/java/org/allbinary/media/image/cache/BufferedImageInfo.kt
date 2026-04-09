@@ -118,11 +118,11 @@ this.type= type
 
 stringBuffer!!.append("BufferedImageInfo -")
 stringBuffer!!.append(commonLabels!!.WIDTH_LABEL)
-stringBuffer!!.append(this.getWidth())
+stringBuffer!!.appendint(this.getWidth())
 stringBuffer!!.append(commonLabels!!.HEIGHT_LABEL)
-stringBuffer!!.append(this.getHeight())
+stringBuffer!!.appendint(this.getHeight())
 stringBuffer!!.append(" Type: ")
-stringBuffer!!.append(this.getType())
+stringBuffer!!.appendint(this.getType())
 
 
 

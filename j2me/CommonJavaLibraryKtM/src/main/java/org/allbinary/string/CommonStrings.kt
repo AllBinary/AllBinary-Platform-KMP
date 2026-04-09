@@ -41,7 +41,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return CommonStrings.instance
 }
 
 
@@ -112,7 +112,7 @@ companion object {
 
     val VISIT: String = "visit"
 
-    val START_METHOD_NAME: String = START
+    val START_METHOD_NAME: String = this.START
 
     val END_METHOD_NAME: String = "end"
 

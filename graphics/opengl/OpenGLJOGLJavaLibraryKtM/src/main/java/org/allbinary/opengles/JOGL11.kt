@@ -25,8 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import com.jogamp.opengl.GL2
 import com.jogamp.opengl.GL
+import com.jogamp.opengl.GL2
 
 open public class JOGL11 : JOGL10
                 , javax.microedition.khronos.opengles.GL11 {
@@ -35,8 +35,19 @@ open public class JOGL11 : JOGL10
     private val gl11: GL2
 public constructor (gl: GL)                        
 
-                            : super(gl){
-var gl = gl
+                            : this(gl, gl as com.jogamp.opengl.GL2){
+    //var gl = gl
+
+
+                            //For kotlin this is before the body of the constructor.
+                    
+}
+
+public constructor (gl: GL, gl2: com.jogamp.opengl.GL2)                        
+
+                            : super(gl, gl2){
+    //var gl = gl
+    //var gl2 = gl2
 
 
                             //For kotlin this is before the body of the constructor.

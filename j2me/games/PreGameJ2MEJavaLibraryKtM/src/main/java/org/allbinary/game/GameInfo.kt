@@ -161,7 +161,7 @@ this.highestLevel= highestLevel
     //var currentLevel = currentLevel
 this.currentLevel= currentLevel
 logUtil!!.put(StringMaker().
-                            append(NEW_LEVEL)!!.append(this.getCurrentLevel())!!.toString(), this, SET_CURRENT_LEVEL)
+                            append(NEW_LEVEL)!!.appendint(this.getCurrentLevel())!!.toString(), this, SET_CURRENT_LEVEL)
 }
 
 
@@ -182,7 +182,7 @@ logUtil!!.put(StringMaker().
                                     }
                                 
 logUtil!!.put(StringMaker().
-                            append(NEXT)!!.append(NEW_LEVEL)!!.append(this.getCurrentLevel())!!.toString(), this, NEXT_GAME_LEVEL)
+                            append(NEXT)!!.append(NEW_LEVEL)!!.appendint(this.getCurrentLevel())!!.toString(), this, NEXT_GAME_LEVEL)
 }
 
 
@@ -266,11 +266,11 @@ stringBuffer!!.append(StringUtil.getInstance()!!.toString(this.playerType))
 stringBuffer!!.append(commonSeps!!.COMMA_SEP)
 stringBuffer!!.append(this.gameInfoData!!.HIGHEST_LEVEL)
 stringBuffer!!.append(commonSeps!!.EQUALS)
-stringBuffer!!.append(this.getHighestLevel())
+stringBuffer!!.appendint(this.getHighestLevel())
 stringBuffer!!.append(commonSeps!!.COMMA_SEP)
 stringBuffer!!.append(this.gameInfoData!!.CURRENT_LEVEL)
 stringBuffer!!.append(commonSeps!!.EQUALS)
-stringBuffer!!.append(this.currentLevel)
+stringBuffer!!.appendint(this.currentLevel)
 
 
 

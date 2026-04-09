@@ -88,7 +88,7 @@ var node = node
 stringBuffer!!.append("Constructing Complete TransformInfo Node For: ")
 stringBuffer!!.append(name)
 stringBuffer!!.append(" with ")
-stringBuffer!!.append(nodeList!!.getLength())
+stringBuffer!!.appendint(nodeList!!.getLength())
 stringBuffer!!.append(" children")
 logUtil!!.put(stringBuffer!!.toString(), this, "TransformInfoObjectConfigComponent(Node node)")
 
@@ -134,7 +134,7 @@ this.transformInfoInterface= TransformInfo(name, objectFileName, objectConfigFil
 stringBuffer!!.append("Constructing Partial TransformInfo Node For: ")
 stringBuffer!!.append(name)
 stringBuffer!!.append(" with ")
-stringBuffer!!.append(nodeList!!.getLength())
+stringBuffer!!.appendint(nodeList!!.getLength())
 stringBuffer!!.append(" children")
 logUtil!!.put(stringBuffer!!.toString(), this, "TransformInfoObjectConfigComponent(Node node)")
 

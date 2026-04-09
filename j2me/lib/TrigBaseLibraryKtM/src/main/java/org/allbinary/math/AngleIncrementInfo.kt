@@ -100,7 +100,7 @@ var frame = frame
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
-                            append(INCREMENT)!!.append(this.angleIncrement)!!.toString()
+                            append(INCREMENT)!!.appendshort(this.angleIncrement)!!.toString()
 }
 
 

@@ -38,6 +38,7 @@ import org.allbinary.logic.util.event.AllBinaryEventObject
 import org.allbinary.logic.util.event.EventStrings
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonSeps
+import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 
 open public class GroupLayerManagerListener : LayerManagerEventListener {
@@ -199,7 +200,7 @@ groupList!!.clear()
                         
                                     {
                                     logUtil!!.put(StringMaker().
-                            append("Group Size: ")!!.append(groupSize)!!.toString(), this, "areAllOtherGroupsEmpty")
+                            append("Group Size: ")!!.appendint(groupSize)!!.toString(), this, "areAllOtherGroupsEmpty")
 
 
 
@@ -393,7 +394,7 @@ groupList= this.list.objectArray[id]!! as BasicArrayList
                         
                                     {
                                     logUtil!!.put(StringMaker().
-                            append("id: ")!!.append(id)!!.toString(), this, "onCreateLayerManagerEvent")
+                            append("id: ")!!.appendint(id)!!.toString(), this, "onCreateLayerManagerEvent")
 
                                     }
                                 
@@ -481,10 +482,10 @@ groupList!!.remove(layerInterface)
     var groupList: BasicArrayList = this.list.objectArray[index]!! as BasicArrayList
 
 stringBuffer!!.append(GROUP)
-stringBuffer!!.append(index)
+stringBuffer!!.appendint(index)
 stringBuffer!!.append(SPACE)
 stringBuffer!!.append(TOTAL_LABEL)
-stringBuffer!!.append(groupList!!.size())
+stringBuffer!!.appendint(groupList!!.size())
 stringBuffer!!.append(SPACE)
 }
 

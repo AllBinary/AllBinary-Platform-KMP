@@ -457,7 +457,7 @@ ForcedLogUtil.log(message, this.associatedAdvancedRTSGameLayer)
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("isTrackingWaypoint: ")
-stringBuffer!!.append(this.isTrackingWaypoint())
+stringBuffer!!.appendboolean(this.isTrackingWaypoint())
 stringBuffer!!.append(" sensorAction: ")
 stringBuffer!!.append(this.sensorAction!!.name)
 stringBuffer!!.append(" getCurrentTargetLayerInterface: ")
@@ -468,9 +468,9 @@ stringBuffer!!.append(StringUtil.getInstance()!!.toString(this.currentTargetLaye
                         
                                     {
                                     stringBuffer!!.append(" Target Range: ")
-stringBuffer!!.append(this.getCurrentTargetDistance())
+stringBuffer!!.appendint(this.getCurrentTargetDistance())
 stringBuffer!!.append(" >= ")
-stringBuffer!!.append(this.longWeaponRange +this.currentTargetLayerInterfaceP!!.getHalfHeight())
+stringBuffer!!.appendint(this.longWeaponRange +this.currentTargetLayerInterfaceP!!.getHalfHeight())
 
                                     }
                                 

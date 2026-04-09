@@ -78,9 +78,11 @@ open public class HumanRTSPlayerGameInput : RTSPlayerGameInput
 
     private val rectangleCollisionUtil: RectangleCollisionUtil = RectangleCollisionUtil.getInstance()!!
 
-    private val PRESSED: MotionGestureInput = TouchMotionGestureFactory.getInstance()!!.PRESSED
+    private val touchMotionGestureFactory: TouchMotionGestureFactory = TouchMotionGestureFactory.getInstance()!!
 
-    private val RELEASED: MotionGestureInput = TouchMotionGestureFactory.getInstance()!!.RELEASED
+    private val PRESSED: MotionGestureInput = touchMotionGestureFactory!!.PRESSED
+
+    private val RELEASED: MotionGestureInput = touchMotionGestureFactory!!.RELEASED
 
     private val touchButtonsBuilderFactory: TouchButtonsBuilderFactory
 
@@ -149,7 +151,7 @@ this.notYoursGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.get
     open fun processDraggingMotionInput(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
-var layerManager = layerManager
+    //var layerManager = layerManager
 
     var motionGestureEvent: MotionGestureEvent = this.getMotionGestureInputList()!!.get(this.getMotionGestureInputList()!!.size() -1) as MotionGestureEvent
 
@@ -291,13 +293,13 @@ rectY1= this.endPoint!!.getY()
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(AT)
-stringBuffer!!.append(rectX1)
+stringBuffer!!.appendint(rectX1)
 stringBuffer!!.append(SPACE)
-stringBuffer!!.append(rectY1)
+stringBuffer!!.appendint(rectY1)
 stringBuffer!!.append(SPACE)
-stringBuffer!!.append(rectX2)
+stringBuffer!!.appendint(rectX2)
 stringBuffer!!.append(SPACE)
-stringBuffer!!.append(rectY2)
+stringBuffer!!.appendint(rectY2)
 logUtil!!.put(stringBuffer!!.toString(), this, METHOD)
 
     var rtsLayer: RTSLayer
@@ -315,9 +317,9 @@ stringBuffer!!.append(POSSIBLE)
 stringBuffer!!.append(rtsLayer!!.getName())
 stringBuffer!!.append(SPACE)
 stringBuffer!!.append(AT)
-stringBuffer!!.append((rtsLayer!!.getViewPosition()!!.getX() +rtsLayer!!.getHalfWidth()))
+stringBuffer!!.appendint((rtsLayer!!.getViewPosition()!!.getX() +rtsLayer!!.getHalfWidth()))
 stringBuffer!!.append(SPACE)
-stringBuffer!!.append((rtsLayer!!.getViewPosition()!!.getY() +rtsLayer!!.getHalfHeight()))
+stringBuffer!!.appendint((rtsLayer!!.getViewPosition()!!.getY() +rtsLayer!!.getHalfHeight()))
 logUtil!!.put(stringBuffer!!.toString(), this, METHOD)
 
     
@@ -366,7 +368,7 @@ this.updatePaintable()
     open fun processSelectionBoxMotionInput(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
-var layerManager = layerManager
+    //var layerManager = layerManager
 
 
 
@@ -385,7 +387,7 @@ var layerManager = layerManager
 
 
     
-                        if(motionGestureInput == TouchMotionGestureFactory.getInstance()!!.PRESSED)
+                        if(motionGestureInput == touchMotionGestureFactory!!.PRESSED)
                         
                                     {
                                     this.startPoint= point
@@ -395,7 +397,7 @@ this.endPoint= point
                                 
                              else 
     
-                        if(motionGestureInput == TouchMotionGestureFactory.getInstance()!!.RELEASED)
+                        if(motionGestureInput == touchMotionGestureFactory!!.RELEASED)
                         
                                     {
                                     this.endPoint= point
@@ -420,7 +422,7 @@ this.endPoint= PointFactory.getInstance()!!.ZERO_ZERO
     override fun processMotionInput(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
-var layerManager = layerManager
+    //var layerManager = layerManager
 
     
                         if(this.getMotionGestureInputList()!!.size() > 0)
@@ -457,7 +459,7 @@ getMotionGestureInputList()!!.clear()
     override fun setSelectedRtsFormInput(selectedRtsFormInput: RTSFormInput)
         //nullable = true from not(false or (false and false)) = true
 {
-var selectedRtsFormInput = selectedRtsFormInput
+    //var selectedRtsFormInput = selectedRtsFormInput
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -471,7 +473,7 @@ this.setSelectedRtsLayer(CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DE
     open fun updateForm(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
 {
-var rtsLayer = rtsLayer
+    //var rtsLayer = rtsLayer
 
     var scrollSelectionForm: ScrollSelectionForm = rtsLayer!!.getScrollSelectionForm()!!
 
@@ -499,8 +501,8 @@ this.getSelectedBuildingPlayerGameInput()!!.setSelectedRTSLayer(CollidableDestro
     open fun updateForm(scrollSelectionForm: ScrollSelectionForm, rtfFormInput: RTSFormInput)
         //nullable = true from not(false or (false and false)) = true
 {
-var scrollSelectionForm = scrollSelectionForm
-var rtfFormInput = rtfFormInput
+    //var scrollSelectionForm = scrollSelectionForm
+    //var rtfFormInput = rtfFormInput
 this.getRtsPlayerLayerInterface()!!.setCurrentScrollSelectionForm(scrollSelectionForm)
 this.setSelectedRtsFormInput(rtfFormInput)
 }
@@ -726,7 +728,7 @@ graphics.drawRect(rectX1, rectY1, rectX2 -rectX1, rectY2 -rectY1)
     override fun onMotionGestureEvent(motionGestureEvent: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
 {
-var motionGestureEvent = motionGestureEvent
+    //var motionGestureEvent = motionGestureEvent
 getMotionGestureInputList()!!.add(motionGestureEvent)
 }
 
@@ -745,7 +747,7 @@ getMotionGestureInputList()!!.add(motionGestureEvent)
     open fun setSelectedRtsLayer(selectedRtsLayer: CollidableDestroyableDamageableLayer)
         //nullable = true from not(false or (false and false)) = true
 {
-var selectedRtsLayer = selectedRtsLayer
+    //var selectedRtsLayer = selectedRtsLayer
 this.selectedRtsLayer= selectedRtsLayer
 }
 

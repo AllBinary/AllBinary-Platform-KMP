@@ -124,7 +124,7 @@ this.viewName= requestHashMap!!.get(TransformInfoData.getInstance()!!.NAME) as S
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Pointing ")
-stringBuffer!!.append(componentVector!!.size)
+stringBuffer!!.appendint(componentVector!!.size)
 stringBuffer!!.append(" Components")
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 

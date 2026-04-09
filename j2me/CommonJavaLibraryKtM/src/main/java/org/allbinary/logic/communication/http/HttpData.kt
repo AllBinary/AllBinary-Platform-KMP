@@ -42,24 +42,30 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return HttpData.instance
 }
 
 
         }
-            private constructor ()
-            : super()
-        {
-}
+            
+    val EQUALS: String
 
+    val PARAM_SEP: String
 
-    val EQUALS: String = CommonSeps.getInstance()!!.EQUALS
-
-    val PARAM_SEP: String = CommonSeps.getInstance()!!.AMP
-
-    val URL_PARAM_SEP: String = CommonSeps.getInstance()!!.QUESTION
+    val URL_PARAM_SEP: String
 
     val URL_LABEL: String = "Url: "
+private constructor ()
+            : super()
+        {
+
+    var commonSeps: CommonSeps = CommonSeps.getInstance()!!
+
+this.EQUALS= commonSeps!!.EQUALS
+this.PARAM_SEP= commonSeps!!.AMPERSAND
+this.URL_PARAM_SEP= commonSeps!!.QUESTION
+}
+
 
 }
                 

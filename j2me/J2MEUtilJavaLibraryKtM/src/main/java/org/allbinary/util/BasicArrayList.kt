@@ -49,7 +49,7 @@ public constructor (size: Int)
 
 
                             throw IllegalArgumentException(StringMaker().
-                            append("Init Size Exception: ")!!.append(size)!!.toString())
+                            append("Init Size Exception: ")!!.appendint(size)!!.toString())
 
                                     }
                                 
@@ -87,9 +87,9 @@ public constructor ()
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(CommonLabels.getInstance()!!.INDEX_LABEL)
-stringBuffer!!.append(index)
+stringBuffer!!.appendint(index)
 stringBuffer!!.append(SIZE)
-stringBuffer!!.append(currentIndex)
+stringBuffer!!.appendint(currentIndex)
 
 
 
@@ -131,9 +131,9 @@ objectArray[currentIndex++]= anyType
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(CommonLabels.getInstance()!!.INDEX_LABEL)
-stringBuffer!!.append(index)
+stringBuffer!!.appendint(index)
 stringBuffer!!.append(SIZE)
-stringBuffer!!.append(currentIndex)
+stringBuffer!!.appendint(currentIndex)
 
 
 
@@ -193,7 +193,12 @@ objectArray[--currentIndex]=
 
     
                         if(numMoved > 0)
-                        System.arraycopy(objectArray, index +1, objectArray, index, numMoved)
+                        
+                                    {
+                                    System.arraycopy(objectArray, index +1, objectArray, index, numMoved)
+
+                                    }
+                                
 objectArray[--currentIndex]= 
                                         null
                                     
@@ -220,7 +225,7 @@ objectArray[--currentIndex]=
         {
 
     
-                        if(anyType!!.equals(objectArray[index]!!))
+                        if(anyType == objectArray[index] || anyType!!.equals(objectArray[index]!!))
                         
                                     {
                                     
@@ -229,7 +234,12 @@ objectArray[--currentIndex]=
 
     
                         if(numMoved > 0)
-                        System.arraycopy(objectArray, index +1, objectArray, index, numMoved)
+                        
+                                    {
+                                    System.arraycopy(objectArray, index +1, objectArray, index, numMoved)
+
+                                    }
+                                
 objectArray[--currentIndex]= 
                                         null
                                     
@@ -532,9 +542,9 @@ objectArray= arrayUtil!!.copyOf(objectArray, newCapacity)
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(CommonLabels.getInstance()!!.INDEX_LABEL)
-stringBuffer!!.append(index)
+stringBuffer!!.appendint(index)
 stringBuffer!!.append(SIZE)
-stringBuffer!!.append(currentIndex)
+stringBuffer!!.appendint(currentIndex)
 
 
 
@@ -564,9 +574,9 @@ stringBuffer!!.append(currentIndex)
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(CommonLabels.getInstance()!!.INDEX_LABEL)
-stringBuffer!!.append(index)
+stringBuffer!!.appendint(index)
 stringBuffer!!.append(SIZE)
-stringBuffer!!.append(currentIndex)
+stringBuffer!!.appendint(currentIndex)
 
 
 

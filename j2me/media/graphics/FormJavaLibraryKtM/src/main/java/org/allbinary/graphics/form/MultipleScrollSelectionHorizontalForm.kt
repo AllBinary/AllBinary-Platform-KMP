@@ -139,7 +139,7 @@ item= this.get(index) as CustomItemInterface
                         else {
                             logged= true
 PreLogUtil.put(StringMaker().
-                            append("painting beyond maxx: ")!!.append(this.rectangle.getMaxX())!!.toString(), this, canvasStrings!!.PAINT)
+                            append("painting beyond maxx: ")!!.appendint(this.rectangle.getMaxX())!!.toString(), this, canvasStrings!!.PAINT)
 
                         }
                             

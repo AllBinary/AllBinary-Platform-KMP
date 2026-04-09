@@ -151,7 +151,10 @@ list.add(secondSwapIndex +1, temp)
     open fun log(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : String{
-var list = list
+    //var list = list
+
+    var S_LABEL: String = " s: "
+
 
     var size: Int = list.size()!!
 
@@ -159,7 +162,7 @@ var list = list
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(CommonLabels.getInstance()!!.TOTAL_LABEL)
-stringBuffer!!.append(size)
+stringBuffer!!.appendint(size)
 
 
 
@@ -170,8 +173,8 @@ stringBuffer!!.append(size)
 
     var usedList: BasicArrayList = list.objectArray[index]!! as BasicArrayList
 
-stringBuffer!!.append(" s: ")
-stringBuffer!!.append(usedList!!.size())
+stringBuffer!!.append(S_LABEL)
+stringBuffer!!.appendint(usedList!!.size())
 }
 
 

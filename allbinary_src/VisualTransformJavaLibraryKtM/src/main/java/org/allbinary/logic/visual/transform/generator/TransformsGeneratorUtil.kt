@@ -131,7 +131,7 @@ var group = group
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Processing ")
-stringBuffer!!.append(transformInfoObjectConfigComponentVector!!.size)
+stringBuffer!!.appendint(transformInfoObjectConfigComponentVector!!.size)
 stringBuffer!!.append(" Components Group: ")
 stringBuffer!!.append(group)
 logUtil!!.put(stringBuffer!!.toString(), this, "generateComponentsFromObjectConfig()")

@@ -104,9 +104,9 @@ list.add(CountedLayerInterfaceFactoryPart(0, layerInterfaceFactoryInterface))
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Total Parts: ")
-stringBuffer!!.append(list.size())
+stringBuffer!!.appendint(list.size())
 stringBuffer!!.append(" Counted: ")
-stringBuffer!!.append(countedBasicArrayList!!.size())
+stringBuffer!!.appendint(countedBasicArrayList!!.size())
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

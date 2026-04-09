@@ -104,7 +104,7 @@ this.imageComparisonResult= imageComparisonResult
 
 stringBuffer!!.append(this::class.toString()!!)
 stringBuffer!!.append(" Frame: ")
-stringBuffer!!.append(this.getFrame())
+stringBuffer!!.appendlong(this.getFrame())
 
 
 

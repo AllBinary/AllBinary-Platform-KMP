@@ -715,7 +715,7 @@ this.type= type
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
 stringBuffer!!.append(" isOpenGL: ")
-stringBuffer!!.append(this.isOpenGL())
+stringBuffer!!.appendboolean(this.isOpenGL())
 stringBuffer!!.append(" VersionSelector: ")
 stringBuffer!!.append(stringUtil!!.toString(this.getVersionSelector()))
 stringBuffer!!.append(" Type: ")

@@ -140,7 +140,7 @@ stringBuffer!!.append(stringUtil!!.toString(this.currentPoint))
 stringBuffer!!.append(PREVIOUS)
 stringBuffer!!.append(stringUtil!!.toString(this.previousPoint))
 stringBuffer!!.append(HASHCODE)
-stringBuffer!!.append(this.hashCode())
+stringBuffer!!.appendint(this.hashCode())
 
 
 

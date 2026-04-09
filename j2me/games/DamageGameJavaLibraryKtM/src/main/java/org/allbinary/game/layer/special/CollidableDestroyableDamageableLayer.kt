@@ -82,6 +82,10 @@ companion object {
     private var pickupBehavior: PickupBehavior
 
     var allBinaryGameLayerManagerP: AllBinaryGameLayerManager = AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER
+
+    var isDraggable: Boolean = false
+
+    var isDragged: Boolean = false
 public constructor (groupInterface: Array<Group?>, layerInfo: Rectangle, viewPosition: ViewPosition)                        
 
                             : super(layerInfo, viewPosition){
@@ -559,16 +563,16 @@ stringBuffer!!.append(pickupBehavior!!.toString())
                                 
 stringBuffer!!.append(commonSeps!!.NEW_LINE)
 stringBuffer!!.append(READYFOREXPLOSION)
-stringBuffer!!.append(readyForExplosion)
+stringBuffer!!.appendboolean(readyForExplosion)
 stringBuffer!!.append(commonSeps!!.NEW_LINE)
 stringBuffer!!.append(commonStrings!!.INIT)
 stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(positionStrings!!.X_LABEL)
-stringBuffer!!.append(initX)
+stringBuffer!!.appendint(initX)
 stringBuffer!!.append(positionStrings!!.Y_LABEL)
-stringBuffer!!.append(initX)
+stringBuffer!!.appendint(initX)
 stringBuffer!!.append(positionStrings!!.Z_LABEL)
-stringBuffer!!.append(initZ)
+stringBuffer!!.appendint(initZ)
 }
 
 

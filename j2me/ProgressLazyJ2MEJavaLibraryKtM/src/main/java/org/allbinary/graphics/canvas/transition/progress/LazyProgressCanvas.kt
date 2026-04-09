@@ -65,6 +65,7 @@ this.hasPainted= false
 this.endActual()
 this.paintable= GAUGE_PAINTABLE
 ImageCacheFactory.getInstance()!!.runTask()
+ImageCacheFactory.getInstance()!!.progressEnded()
 } catch(e: Exception)
             {
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.END_METHOD_NAME)

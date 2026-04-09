@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Image
+import org.allbinary.util.BasicArrayList
 
 open public class OpenGLESImageExclusionUtil
             : Object
@@ -53,6 +54,8 @@ companion object {
             {
             }            
         
+    val list: BasicArrayList = BasicArrayList()
+
     open fun isCustomScaling(image: Image)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{

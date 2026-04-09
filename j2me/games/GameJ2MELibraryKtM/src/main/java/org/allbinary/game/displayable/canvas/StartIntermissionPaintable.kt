@@ -144,7 +144,7 @@ fontDebugFactory!!.setFont(existingFont, graphics)
     var level: Int = gameCanvas!!.getLayerManager()!!.getGameInfo()!!.getCurrentLevel()!!
 
 this.stringArray[0]= StringMaker().
-                            append(BEGIN_LEVEL)!!.append(level)!!.toString()
+                            append(BEGIN_LEVEL)!!.appendint(level)!!.toString()
 
 
 

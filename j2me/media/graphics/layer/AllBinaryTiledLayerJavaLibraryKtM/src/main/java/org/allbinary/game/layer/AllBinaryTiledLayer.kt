@@ -86,13 +86,13 @@ this.halfCellHeight= (cellHeight shr 1)
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Start: r: ")
-stringBuffer!!.append(mapTwoDArray!!.size)
+stringBuffer!!.appendint(mapTwoDArray!!.size)
 stringBuffer!!.append(" c: ")
-stringBuffer!!.append(mapTwoDArray[0]!!.size)
+stringBuffer!!.appendint(mapTwoDArray[0]!!.size)
 stringBuffer!!.append(" rows: ")
-stringBuffer!!.append(this.getRows())
+stringBuffer!!.appendint(this.getRows())
 stringBuffer!!.append(" columns: ")
-stringBuffer!!.append(this.getColumns())
+stringBuffer!!.appendint(this.getColumns())
 logUtil!!.put(stringBuffer!!.toString(), this, "setCells")
 
     var rows: Int = this.getRows()!!

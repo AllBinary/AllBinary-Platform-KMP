@@ -209,15 +209,15 @@ this.value= ((alphaValue shl 24) and ALPHA_MASK) +((redInt shl 16) and 0x00FF000
 
 stringBuffer!!.append("BasicColor: ")
 stringBuffer!!.append("Alpha: ")
-stringBuffer!!.append(this.alpha)
+stringBuffer!!.appendshort(this.alpha)
 stringBuffer!!.append(" Red: ")
-stringBuffer!!.append(this.red)
+stringBuffer!!.appendshort(this.red)
 stringBuffer!!.append(" Green: ")
-stringBuffer!!.append(this.green)
+stringBuffer!!.appendshort(this.green)
 stringBuffer!!.append(" Blue: ")
-stringBuffer!!.append(this.blue)
+stringBuffer!!.appendshort(this.blue)
 stringBuffer!!.append(" Value: ")
-stringBuffer!!.append(this.value)
+stringBuffer!!.appendint(this.value)
 
 
 

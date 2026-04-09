@@ -27,8 +27,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.J2MEUtil
 import org.allbinary.game.configuration.feature.Features
-import org.allbinary.game.configuration.feature.HTMLFeatureFactory
 import org.allbinary.game.layer.SteeringVisitor
 import org.allbinary.game.layer.AdvancedRTSGameLayer
 import org.allbinary.game.layer.MultipassWaypointPathRunnable
@@ -111,10 +111,7 @@ this.wanderPathsList= BasicArrayList()
 
     var features: Features = Features.getInstance()!!
 
-
-    var isHTML: Boolean = features.isDefault(HTMLFeatureFactory.getInstance()!!.HTML)!!
-
-this.waypointPathRunnable= if(isHTML) {
+this.waypointPathRunnable= if(J2MEUtil.isHTML()) {
                             
                             MultipassWaypointPathRunnable()
                         
@@ -1098,7 +1095,7 @@ stringBuffer!!.append(this.currentTargetLayerInterfaceP!!.getName())
 stringBuffer!!.append(" with ")
 stringBuffer!!.append(TARGET_DISTANCE)
 stringBuffer!!.append(commonSeps!!.SPACE)
-stringBuffer!!.append(getCurrentTargetDistance())
+stringBuffer!!.appendint(getCurrentTargetDistance())
 
                                     }
                                 

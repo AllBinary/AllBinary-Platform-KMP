@@ -322,11 +322,11 @@ this.weblisketSession!!.setPassword(newPassword)
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Session Is Old - Timeout: ")
-stringBuffer!!.append(sessionTimout)
+stringBuffer!!.appendlong(sessionTimout)
 stringBuffer!!.append(" Eval: ")
-stringBuffer!!.append(timeFirst)
+stringBuffer!!.appendlong(timeFirst)
 stringBuffer!!.append(" > ")
-stringBuffer!!.append(timeCreated)
+stringBuffer!!.appendlong(timeCreated)
 logUtil!!.put(stringBuffer!!.toString(), this, "isSessionOld()")
 
                                     }
@@ -415,11 +415,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, "isSessionOld()")
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Session Is Rarely Used - Timeout: ")
-stringBuffer!!.append(lastAccess)
+stringBuffer!!.appendlong(lastAccess)
 stringBuffer!!.append(" Eval: ")
-stringBuffer!!.append(timeFirst)
+stringBuffer!!.appendlong(timeFirst)
 stringBuffer!!.append(" > ")
-stringBuffer!!.append(timePassed)
+stringBuffer!!.appendlong(timePassed)
 logUtil!!.put(stringBuffer!!.toString(), this, "isRarelyUsedSession()")
 
                                     }

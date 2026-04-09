@@ -219,7 +219,7 @@ open public inner class MediaPlayerOnCompletionListener
     //var mediaPlayer = mediaPlayer
     //var i = i
 logUtil!!.put(StringMaker().
-                            append("Update buffer: ")!!.append(i)!!.append("%")!!.toString(), this, AndroidMediaPlayerWrapperListener.ON_BUFFERING_UPDATE)
+                            append("Update buffer: ")!!.appendint(i)!!.append("%")!!.toString(), this, AndroidMediaPlayerWrapperListener.ON_BUFFERING_UPDATE)
 this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(PlayerListener.DEVICE_UNAVAILABLE)
 }
 
@@ -250,7 +250,7 @@ this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(Player
     //var what = what
     //var extra = extra
 logUtil!!.put(StringMaker().
-                            append(CommonLabels.getInstance()!!.START_LABEL)!!.append("What: ")!!.append(what)!!.append(" Extra: ")!!.append(extra)!!.toString(), this, AndroidMediaPlayerWrapperListener.ON_ERROR)
+                            append(CommonLabels.getInstance()!!.START_LABEL)!!.append("What: ")!!.appendint(what)!!.append(" Extra: ")!!.appendint(extra)!!.toString(), this, AndroidMediaPlayerWrapperListener.ON_ERROR)
 this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(PlayerListener.ERROR)
 
 

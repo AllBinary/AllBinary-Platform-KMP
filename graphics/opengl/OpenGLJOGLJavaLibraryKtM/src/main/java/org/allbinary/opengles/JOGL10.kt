@@ -62,17 +62,15 @@ open public class JOGL10
     val GL_LINE: Int
 
     val GL_QUAD_STRIP: Int
-public constructor (gl: com.jogamp.opengl.GL)
+public constructor (gl: com.jogamp.opengl.GL, gl2: com.jogamp.opengl.GL2)
             : super()
         {
-var gl = gl
-
-    var gl2: com.jogamp.opengl.GL2 = gl as com.jogamp.opengl.GL2
-
+    //var gl = gl
+    //var gl2 = gl2
 this.gl10= gl2
 this.glu= GLU.createGLU(this.gl10)
-this.GL_LINE= this.gl10.GL_LINE
-this.GL_QUAD_STRIP= this.gl10.GL_QUAD_STRIP
+this.GL_LINE= com.jogamp.opengl.GL2.GL_LINE
+this.GL_QUAD_STRIP= com.jogamp.opengl.GL2.GL_QUAD_STRIP
 }
 
 

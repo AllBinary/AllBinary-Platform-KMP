@@ -81,7 +81,7 @@ serverUrl= serverUrl!!.substring(0, index +1) +page
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(TRYING)
-stringBuffer!!.append(this.getServer())
+stringBuffer!!.appendint(this.getServer())
 stringBuffer!!.append(SEP)
 stringBuffer!!.append(serverUrl)
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET)

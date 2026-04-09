@@ -28,6 +28,7 @@
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.game.layer.AllBinaryTiledLayer
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.string.CommonSeps
 
 open public class BasicGeographicMapCellPositionFactory
             : Object
@@ -146,8 +147,11 @@ geographicMapCelPositionFactoryInitVisitorInterface!!.visit(tiledLayer, cellPosi
 
 } catch(e: Exception)
             {
+
+    var commonSeps: CommonSeps = CommonSeps.getInstance()!!
+
 logUtil!!.put(StringMaker().
-                            append("[")!!.append(rows)!!.append("][")!!.append(columns)!!.append("]")!!.toString(), this, "visit", e)
+                            append(commonSeps!!.BRACKET_OPEN)!!.appendint(rows)!!.append(commonSeps!!.BRACKET_CLOSE)!!.append(commonSeps!!.BRACKET_OPEN)!!.appendint(columns)!!.append(commonSeps!!.BRACKET_CLOSE)!!.toString(), this, "visit", e)
 
 
 

@@ -32,6 +32,7 @@
 import java.util.Hashtable
 import javax.microedition.lcdui.Canvas
 import javax.microedition.lcdui.Graphics
+import org.allbinary.J2MEUtil
 import org.allbinary.animation.Animation
 import org.allbinary.animation.AnimationInterfaceFactoryInterface
 import org.allbinary.animation.FeaturedAnimationInterfaceFactoryInterfaceFactory
@@ -50,7 +51,6 @@ import org.allbinary.game.combat.damage.PtsDamageFloaters
 import org.allbinary.game.combat.weapon.WeaponProperties
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.configuration.feature.GameFeatureFactory
-import org.allbinary.game.configuration.feature.HTMLFeatureFactory
 import org.allbinary.game.graphics.hud.BasicHudFactory
 import org.allbinary.game.health.Health
 import org.allbinary.game.health.HealthBar
@@ -429,10 +429,7 @@ this.setWaypointBehavior(UnitWaypointBehavior2(this, waypointLayerInterfaceFacto
     var features: Features = Features.getInstance()!!
 
 
-    var isHTML: Boolean = features.isDefault(HTMLFeatureFactory.getInstance()!!.HTML)!!
-
-
-    var waypoint: WaypointBase = if(isHTML) {
+    var waypoint: WaypointBase = if(J2MEUtil.isHTML()) {
                             
                             MultipassNoCacheWaypoint(this, AttackSound.getInstance())
                         

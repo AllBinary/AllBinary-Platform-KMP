@@ -27,6 +27,7 @@
         
 import javax.microedition.lcdui.Font
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.string.CommonSeps
 
 open public class MyFont
             : Object
@@ -156,11 +157,14 @@ this.DEFAULT_CHAR_WIDTH= defaultFont!!.charWidth('C')
         //nullable =  from not(false or (true and true)) = 
 : String{
 
+    var commonSeps: CommonSeps = CommonSeps.getInstance()!!
+
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
-                            append(this::class.toString())!!.append(this.DEFAULT_CHAR_WIDTH)!!.append('/')!!.append(this.DEFAULT_CHAR_HEIGHT)!!.toString()
+                            append(this::class.toString())!!.appendint(this.DEFAULT_CHAR_WIDTH)!!.append(commonSeps!!.FORWARD_SLASH)!!.appendint(this.DEFAULT_CHAR_HEIGHT)!!.toString()
 }
 
 

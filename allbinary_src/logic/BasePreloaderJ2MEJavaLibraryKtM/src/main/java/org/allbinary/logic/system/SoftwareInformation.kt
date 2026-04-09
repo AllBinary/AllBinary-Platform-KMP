@@ -47,7 +47,8 @@ public constructor (name: String, version: String, shortName: String)
     //var shortName = shortName
 this.name= name
 this.version= version
-this.shortName= shortName +KotlinUtil.getShortName()
+this.shortName= StringMaker().
+                            append(shortName)!!.append(KotlinUtil.getShortName())!!.toString()
 }
 
 

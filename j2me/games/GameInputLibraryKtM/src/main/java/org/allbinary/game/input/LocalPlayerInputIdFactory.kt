@@ -160,7 +160,7 @@ index= totalDevicesMapped
                                 
                         else {
                             logUtil!!.put(StringMaker().
-                            append("Added DeviceId: ")!!.append(deviceId)!!.append(" beyond fast Id list")!!.toString(), this, "getPlayerForDevice")
+                            append("Added DeviceId: ")!!.appendint(deviceId)!!.append(" beyond fast Id list")!!.toString(), this, "getPlayerForDevice")
 
                         }
                             
@@ -168,7 +168,7 @@ this.playerIdToDeviceId[index]= deviceId
 AnalogLocationInputFactory.getInstance()!!.addPlayer(totalDevicesMapped)
 totalDevicesMapped++
 logUtil!!.put(StringMaker().
-                            append("Added DeviceId: ")!!.append(deviceId)!!.append(" at: ")!!.append(index)!!.append(" Total: ")!!.append(this.totalDevicesMapped)!!.toString(), this, "getPlayerForDevice")
+                            append("Added DeviceId: ")!!.appendint(deviceId)!!.append(" at: ")!!.appendint(index)!!.append(" Total: ")!!.appendint(this.totalDevicesMapped)!!.toString(), this, "getPlayerForDevice")
 
 
 
@@ -226,7 +226,7 @@ var playerInputId = playerInputId
 {
 var playerInputId = playerInputId
 logUtil!!.put(StringMaker().
-                            append("Setting PlayerInPlay with playerInputId: ")!!.append(playerInputId)!!.toString(), this, "setPlayerInPlay")
+                            append("Setting PlayerInPlay with playerInputId: ")!!.appendint(playerInputId)!!.toString(), this, "setPlayerInPlay")
 playersInPlay[playerInputId]= true
 }
 
@@ -236,7 +236,7 @@ playersInPlay[playerInputId]= true
 {
 var playerInputId = playerInputId
 logUtil!!.put(StringMaker().
-                            append("Setting PlayerOutOfPlay with playerInputId: ")!!.append(playerInputId)!!.toString(), this, "setPlayerOutOfPlay")
+                            append("Setting PlayerOutOfPlay with playerInputId: ")!!.appendint(playerInputId)!!.toString(), this, "setPlayerOutOfPlay")
 playersInPlay[playerInputId]= false
 }
 

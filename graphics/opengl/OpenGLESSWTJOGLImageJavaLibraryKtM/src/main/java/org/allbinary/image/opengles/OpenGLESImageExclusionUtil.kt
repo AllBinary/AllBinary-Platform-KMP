@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Image
+import org.allbinary.util.BasicArrayList
 
 open public class OpenGLESImageExclusionUtil
             : Object
@@ -48,22 +49,70 @@ companion object {
 
         }
             
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
     private val EXCLUSION: String = "font"
 
-    private val GREEN_BUTTON: String = "green_button"
+    val list: BasicArrayList = BasicArrayList()
+private constructor ()
+            : super()
+        {
+}
+
 
     open fun isCustomScaling(image: Image)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
     //var image = image
 
+    var imageName: String = image.getName()!!
+
+
+    var isNormalScaling: Boolean = list.size() == 0 || imageName!!.startsWith(EXCLUSION)
+
+
     
-                        if(image.getName()!!.startsWith(EXCLUSION) || image.getName()!!.startsWith(GREEN_BUTTON))
+                        if(isNormalScaling)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return false
+
+                                    }
+                                
+                        else {
+                            
+    var size: Int = list.size()!!
+
+
+    var name: String
+
+
+
+
+
+                        for (index in 0 until size)
+
+        {
+name= list.get(index) as String
+
+    
+                        if(imageName!!.startsWith(name))
+                        
+                                    {
+                                    isNormalScaling= true
+
+                                    }
+                                
+}
+
+
+                        }
+                            
+
+    
+                        if(isNormalScaling)
                         
                                     {
                                     

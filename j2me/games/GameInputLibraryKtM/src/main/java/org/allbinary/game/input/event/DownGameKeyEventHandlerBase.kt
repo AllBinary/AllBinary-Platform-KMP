@@ -144,7 +144,7 @@ downGameKeyEventListenerInterface!!.onDownGameKeyEvent(eventObject as GameKeyEve
 
 stringBuffer!!.append(super.toString())
 stringBuffer!!.append(TOTAL_LISTENERS)
-stringBuffer!!.append(this.list.size())
+stringBuffer!!.appendint(this.list.size())
 
     var eventListenerInterface: EventListenerInterface
 

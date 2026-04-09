@@ -31,6 +31,7 @@ import java.util.Vector
 import org.allbinary.input.automation.ImageOutputData
 import org.allbinary.logic.java.number.LongUtil
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.string.CommonSeps
 
 open public class FrameLog
             : Object
@@ -95,7 +96,7 @@ this.addAction(vectorOfStrings!!.get(index) as String)
 {
 var action = action
 this.actionsStringBuffer!!.append(action)
-this.actionsStringBuffer!!.append("\n")
+this.actionsStringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
 }
 
 

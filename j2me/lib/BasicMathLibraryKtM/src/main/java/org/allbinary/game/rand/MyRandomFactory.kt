@@ -32,6 +32,7 @@
 import java.util.Random
 import org.allbinary.logic.math.MathUtil
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.string.CommonSeps
 
 open public class MyRandomFactory
             : Object
@@ -60,6 +61,27 @@ companion object {
     var randomFactory: MyRandomFactory = MyRandomFactory.getInstance()!!
 
 
+    var stringBuilder: StringMaker = StringMaker()
+
+
+    var commonSeps: CommonSeps = CommonSeps.getInstance()!!
+
+
+    var size2: Int = 100
+
+
+
+
+
+                        for (index in 0 until size2)
+
+        {
+stringBuilder!!.appendint(randomFactory!!.getAbsoluteNextInt(3))!!.append(commonSeps!!.COMMA)
+}
+
+System.out.println(stringBuilder!!.toString())
+stringBuilder!!.delete(0, stringBuilder!!.length())
+
     var intArray: IntArray = IntArray(52)
 
 
@@ -82,16 +104,13 @@ intArray2[index]= index
 
 randomFactory!!.shuffle(intArray, intArray2)
 
-    var stringBuilder: StringMaker = StringMaker()
-
-
 
 
 
                         for (index in 0 until size)
 
         {
-stringBuilder!!.append(intArray[index]!!)!!.append(',')
+stringBuilder!!.appendint(intArray[index]!!)!!.append(commonSeps!!.COMMA)
 }
 
 System.out.println(stringBuilder!!.toString())
@@ -103,7 +122,7 @@ stringBuilder!!.delete(0, stringBuilder!!.length())
                         for (index in 0 until size)
 
         {
-stringBuilder!!.append(intArray2[index]!!)!!.append(',')
+stringBuilder!!.appendint(intArray2[index]!!)!!.append(commonSeps!!.COMMA)
 }
 
 System.out.println(stringBuilder!!.toString())

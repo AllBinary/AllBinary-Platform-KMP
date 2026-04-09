@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.string.CommonSeps
 
 open public class ColorAverage
             : Object
@@ -53,14 +54,14 @@ this.setAvgBlue(0)
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("getAvgRed(): ")
-stringBuffer!!.append(this.getAvgRed())
-stringBuffer!!.append("\n")
+stringBuffer!!.appendfloat(this.getAvgRed())
+stringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
 stringBuffer!!.append("getAvgRed(): ")
-stringBuffer!!.append(this.getAvgRed())
-stringBuffer!!.append("\n")
+stringBuffer!!.appendfloat(this.getAvgRed())
+stringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
 stringBuffer!!.append("getAvgGreen(): ")
-stringBuffer!!.append(this.getAvgGreen())
-stringBuffer!!.append("\n")
+stringBuffer!!.appendfloat(this.getAvgGreen())
+stringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
 
 
 

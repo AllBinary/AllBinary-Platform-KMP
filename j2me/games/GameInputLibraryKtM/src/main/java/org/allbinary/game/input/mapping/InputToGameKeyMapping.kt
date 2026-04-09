@@ -272,7 +272,7 @@ var gameKey = gameKey
                                 
                         else {
                             PreLogUtil.put(StringMaker().
-                            append(gameKey!!.toString())!!.append(CommonSeps.getInstance()!!.COLON_SEP)!!.append(key)!!.toString(), this, commonStrings!!.INIT, Exception())
+                            append(gameKey!!.toString())!!.append(CommonSeps.getInstance()!!.COLON_SEP)!!.appendint(key)!!.toString(), this, commonStrings!!.INIT, Exception())
 
                         }
                             

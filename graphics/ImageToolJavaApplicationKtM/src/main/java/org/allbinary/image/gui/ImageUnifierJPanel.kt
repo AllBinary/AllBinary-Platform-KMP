@@ -607,7 +607,7 @@ var evt = evt
     var extensionIndex: Int = filePath!!.indexOf(imageStrings!!.PNG_EXTENSION)!!
 
 filePath= StringMaker().
-                            append(filePath!!.substring(0, extensionIndex))!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.append(this.imageUnifierProperties!!.getColumns())!!.append("_By_")!!.append(this.imageUnifierProperties!!.getRows())!!.append("_Unified")!!.append(imageStrings!!.PNG_EXTENSION)!!.toString()
+                            append(filePath!!.substring(0, extensionIndex))!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.appendint(this.imageUnifierProperties!!.getColumns())!!.append("_By_")!!.appendint(this.imageUnifierProperties!!.getRows())!!.append("_Unified")!!.append(imageStrings!!.PNG_EXTENSION)!!.toString()
 logUtil!!.put("New File Path: " +filePath, this, StringUtil.getInstance()!!.EMPTY_STRING)
 
     var outputFile: File = File(filePath)

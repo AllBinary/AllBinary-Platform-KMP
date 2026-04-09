@@ -74,7 +74,7 @@ var dissipation = dissipation
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 PreLogUtil.put(StringMaker().
-                            append(MESSAGE)!!.append(speed)!!.toString(), this, commonStrings!!.CONSTRUCTOR)
+                            append(MESSAGE)!!.appendlong(speed)!!.toString(), this, commonStrings!!.CONSTRUCTOR)
 messageSent= true
 
                                     }
@@ -198,11 +198,11 @@ var range = range
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringArray[index++]= stringBuffer!!.append(DAMAGE)!!.append(this.getDamage())!!.toString()
+stringArray[index++]= stringBuffer!!.append(DAMAGE)!!.appendint(this.getDamage())!!.toString()
 stringBuffer!!.delete(0, stringBuffer!!.length())
-stringArray[index++]= stringBuffer!!.append(RANGE)!!.append(this.getRange())!!.toString()
+stringArray[index++]= stringBuffer!!.append(RANGE)!!.appendint(this.getRange())!!.toString()
 stringBuffer!!.delete(0, stringBuffer!!.length())
-stringArray[index++]= stringBuffer!!.append(RELOAD)!!.append(this.getReloadTime())!!.toString()
+stringArray[index++]= stringBuffer!!.append(RELOAD)!!.appendlong(this.getReloadTime())!!.toString()
 
 
 
@@ -217,11 +217,11 @@ stringArray[index++]= stringBuffer!!.append(RELOAD)!!.append(this.getReloadTime(
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(DAMAGE)!!.append(this.getDamage())
+stringBuffer!!.append(DAMAGE)!!.appendint(this.getDamage())
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
-stringBuffer!!.append(RANGE)!!.append(this.getRange())
+stringBuffer!!.append(RANGE)!!.appendint(this.getRange())
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
-stringBuffer!!.append(RELOAD)!!.append(this.getReloadTime())
+stringBuffer!!.append(RELOAD)!!.appendlong(this.getReloadTime())
 
 
 

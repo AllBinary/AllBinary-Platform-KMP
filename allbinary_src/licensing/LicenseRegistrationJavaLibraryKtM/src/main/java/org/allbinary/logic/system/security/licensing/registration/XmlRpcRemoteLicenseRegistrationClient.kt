@@ -73,7 +73,7 @@ this.setServer(0)
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(TRYING)
-stringBuffer!!.append(this.getServer())
+stringBuffer!!.appendint(this.getServer())
 stringBuffer!!.append(SEP)
 stringBuffer!!.append(server)
 logUtil!!.put(CommonLabels.getInstance()!!.START_LABEL +stringBuffer!!.toString(), this, commonStrings!!.GET)

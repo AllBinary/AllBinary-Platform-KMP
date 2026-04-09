@@ -135,7 +135,7 @@ cpuHashMap= HashMap<Any, Any>()
                         
                                     {
                                     logUtil!!.put(StringMaker().
-                            append("Cpu File Vector Size: ")!!.append(fileVector!!.size())!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
+                            append("Cpu File Vector Size: ")!!.appendint(fileVector!!.size())!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
 
                                     }
                                 

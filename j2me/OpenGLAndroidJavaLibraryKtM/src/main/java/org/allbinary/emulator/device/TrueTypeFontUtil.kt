@@ -334,7 +334,7 @@ paint.getTextBounds(characterArray, 0, 1, bounds)
                                 
                              else 
     
-                        if(characterArray[0] == 'J' || characterArray[0] == 'V' || characterArray[0] == '2' || characterArray[0] == '9' || characterArray[0] == 'H' || characterArray[0] == 'I' || characterArray[0] == 'N' || characterArray[0] == 'U')
+                        if(characterArray[0] == 'J' || characterArray[0] == 'V' || characterArray[0] == '2' || characterArray[0] == '9' || characterArray[0] == 'I' || characterArray[0] == 'N' || characterArray[0] == 'U')
                         
                                     {
                                     _characterWidth[index]= bounds.right +1
@@ -352,7 +352,7 @@ paint.getTextBounds(characterArray, 0, 1, bounds)
                                 
                              else 
     
-                        if(characterArray[0] == 'G' || characterArray[0] == 'T' || characterArray[0] == 'W')
+                        if(characterArray[0] == 'B' || characterArray[0] == 'D' || characterArray[0] == 'G' || characterArray[0] == 'H' || characterArray[0] == 'T' || characterArray[0] == 'W')
                         
                                     {
                                     _characterWidth[index]= bounds.right -3

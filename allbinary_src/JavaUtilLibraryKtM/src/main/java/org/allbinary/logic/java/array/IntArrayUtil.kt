@@ -47,7 +47,7 @@ var array = array
                         for (index in 0 until array.size)
 
         {
-stringBuffer!!.append(array[index]!!)
+stringBuffer!!.appendint(array[index]!!)
 
     
                         if(index < array.size)
@@ -89,7 +89,7 @@ stringBuffer!!.append("{")
                         for (index2 in 0 until array[index]!!.size)
 
         {
-stringBuffer!!.append(array[index]!![index2]!!)
+stringBuffer!!.appendint(array[index]!![index2]!!)
 
     
                         if(index2 < array[index]!!.size -1)
@@ -151,7 +151,7 @@ stringBuffer!!.append("{")
                         for (index3 in 0 until array[index]!![index2]!!.length)
 
         {
-stringBuffer!!.append(array[index]!![index2]!![index3]!!)
+stringBuffer!!.appendint(array[index]!![index2]!![index3]!!)
 
     
                         if(index3 < array[index]!![index2]!!.length -1)

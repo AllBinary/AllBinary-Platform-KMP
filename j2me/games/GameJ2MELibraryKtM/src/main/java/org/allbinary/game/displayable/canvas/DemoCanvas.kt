@@ -27,13 +27,13 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.thread.ARunnable
 import java.util.Hashtable
 import java.util.Vector
 import javax.microedition.lcdui.Command
 import javax.microedition.lcdui.CommandListener
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Item
+import org.allbinary.J2MEUtil
 import org.allbinary.animation.Animation
 import org.allbinary.animation.IndexedAnimationBehavior
 import org.allbinary.animation.special.SpecialAnimation
@@ -49,7 +49,6 @@ import org.allbinary.game.commands.GameCommandsFactory
 import org.allbinary.game.configuration.event.ChangedGameFeatureListener
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.configuration.feature.GameFeatureFactory
-import org.allbinary.game.configuration.feature.HTMLFeatureFactory
 import org.allbinary.game.configuration.feature.InputFeatureFactory
 import org.allbinary.game.configuration.feature.MainFeatureFactory
 import org.allbinary.game.init.BasicBuildGameInitializerFactory
@@ -206,7 +205,7 @@ companion object {
 
     private val inputToGameKeyMapping: InputToGameKeyMapping = PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()!!
 
-    private var gameRunnable: GameRunnable = NullWaitGameRunnable.getInstance()!!
+    var gameRunnable: GameRunnable = NullWaitGameRunnable.getInstance()!!
 public constructor (abeClientInformation: AbeClientInformationInterface, commandListener: CommandListener, highScoresFactoryInterface: HighScoresFactoryInterface, paintable: Paintable, overlayPaintable: InitUpdatePaintable, gameInitializationInterfaceFactoryInterface: BasicBuildGameInitializerFactory, isContinue: Boolean)                        
 
                             : super(commandListener, CurrentDisplayableFactory.getInstance()!!.DEFAULT_CHILD_NAME_LIST){
@@ -302,17 +301,11 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, this.canvasStrings!!.ON_DISPLAY_C
         //nullable = true from not(false or (false and true)) = true
 : Array<Any?>{
 
-    var features: Features = Features.getInstance()!!
-
-
     var gameCommandsFactory: GameCommandsFactory = GameCommandsFactory.getInstance()!!
 
 
-    var htmlFeatureFactory: HTMLFeatureFactory = HTMLFeatureFactory.getInstance()!!
-
-
     
-                        if(features.isDefault(htmlFeatureFactory!!.HTML))
+                        if(J2MEUtil.isHTML())
                         
                                     {
                                     
@@ -619,7 +612,7 @@ DownGameKeyEventHandler.getInstance()!!.fireEvent(gameKeyEvent)
                                     {
                                     lastKeyNotMapped= keyCode
 logUtil!!.put(StringMaker().
-                            append(this.gameInputStrings!!.NO_KEY)!!.append(keyCode)!!.toString(), this, this.gameInputStrings!!.ADD_KEY_EVENT)
+                            append(this.gameInputStrings!!.NO_KEY)!!.appendint(keyCode)!!.toString(), this, this.gameInputStrings!!.ADD_KEY_EVENT)
 
                                     }
                                 
@@ -658,7 +651,7 @@ UpGameKeyEventHandler.getInstance()!!.fireEvent(gameKeyEvent)
                                 
                         else {
                             logUtil!!.put(StringMaker().
-                            append(this.gameInputStrings!!.NO_KEY)!!.append(keyCode)!!.toString(), this, this.gameInputStrings!!.REMOVE_KEY_EVENT)
+                            append(this.gameInputStrings!!.NO_KEY)!!.appendint(keyCode)!!.toString(), this, this.gameInputStrings!!.REMOVE_KEY_EVENT)
 
                         }
                             
@@ -1143,15 +1136,9 @@ ThreadUtil.getInstance()!!.join(this.canvasThread)
 
     var METHOD_NAME: String = "showGamePaintable"
 
-
-    var features: Features = Features.getInstance()!!
-
-
-    var htmlFeatureFactory: HTMLFeatureFactory = HTMLFeatureFactory.getInstance()!!
-
 PreLogUtil.put(commonStrings!!.START, this, METHOD_NAME)
 
-    var isDefault: Boolean = features.isDefault(htmlFeatureFactory!!.HTML)!!
+    var isDefault: Boolean = J2MEUtil.isHTML()!!
 
 
     
@@ -1230,9 +1217,6 @@ logUtil!!.put(commonStrings!!.START_RUNNABLE, this, commonStrings!!.RUN)
     var features: Features = Features.getInstance()!!
 
 
-    var htmlFeatureFactory: HTMLFeatureFactory = HTMLFeatureFactory.getInstance()!!
-
-
     var openGLFeatureFactory: OpenGLFeatureFactory = OpenGLFeatureFactory.getInstance()!!
 
 progressCanvas!!.addPortion(50, "Demo Thread")
@@ -1283,7 +1267,7 @@ OpenGLThreadUtil.getInstance()!!.onResume()
                                 
 
     
-                        if(features.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD) || features.isDefault(htmlFeatureFactory!!.HTML))
+                        if(features.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD) || J2MEUtil.isHTML())
                         
                                     {
                                     
@@ -1339,9 +1323,6 @@ super.setRunning(running)
     var features: Features = Features.getInstance()!!
 
 
-    var htmlFeatureFactory: HTMLFeatureFactory = HTMLFeatureFactory.getInstance()!!
-
-
     var openGLFeatureFactory: OpenGLFeatureFactory = OpenGLFeatureFactory.getInstance()!!
 
 
@@ -1355,7 +1336,7 @@ super.setRunning(running)
                         else {
                             
     
-                        if((features.isDefault(openGLFeatureFactory!!.OPENGL) || features.isDefault(htmlFeatureFactory!!.HTML)) || SWTUtil.isSWT)
+                        if((features.isDefault(openGLFeatureFactory!!.OPENGL) || J2MEUtil.isHTML()) || SWTUtil.isSWT)
                         
                                     {
                                     

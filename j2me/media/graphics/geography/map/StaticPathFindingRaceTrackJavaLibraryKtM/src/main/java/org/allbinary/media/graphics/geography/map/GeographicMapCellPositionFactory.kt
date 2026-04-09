@@ -80,7 +80,7 @@ companion object {
                         
                                     {
                                     logUtil!!.put(StringMaker().
-                            append("Creating GeographicMapCellPositionFactory for TileLayer: ")!!.append(allBinaryTiledLayer!!.getDataId()!!.toInt())!!.toString(), this, commonStrings!!.GET_INSTANCE)
+                            append("Creating GeographicMapCellPositionFactory for TileLayer: ")!!.appendint(allBinaryTiledLayer!!.getDataId()!!.toInt())!!.toString(), this, commonStrings!!.GET_INSTANCE)
 geographicMapCellPositionFactoryCanBeNull= BasicGeographicMapCellPositionFactory(geographicMapInterface)
 hashtable.put(allBinaryTiledLayer!!.getDataId(), geographicMapCellPositionFactoryCanBeNull)
 
@@ -93,7 +93,7 @@ hashtable.put(allBinaryTiledLayer!!.getDataId(), geographicMapCellPositionFactor
                                 
                         else {
                             logUtil!!.put(StringMaker().
-                            append("Reusing GeographicMapCellPositionFactory for TileLayer: ")!!.append(allBinaryTiledLayer!!.getDataId()!!.toInt())!!.toString(), this, commonStrings!!.GET_INSTANCE)
+                            append("Reusing GeographicMapCellPositionFactory for TileLayer: ")!!.appendint(allBinaryTiledLayer!!.getDataId()!!.toInt())!!.toString(), this, commonStrings!!.GET_INSTANCE)
 
 
 

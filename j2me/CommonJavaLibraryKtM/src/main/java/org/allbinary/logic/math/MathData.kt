@@ -43,26 +43,35 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return MathData.instance
 }
 
 
         }
-            private constructor ()
+            
+    val EQUALS: String
+
+    val PLUS: String = "+"
+
+    val GREATER_THAN: String = ">"
+
+    val MINUS: String
+
+    val DIVIDE: String
+
+    val MULTIPLY: String
+private constructor ()
             : super()
         {
+
+    var commonSeps: CommonSeps = CommonSeps.getInstance()!!
+
+this.EQUALS= commonSeps!!.EQUALS
+this.MINUS= commonSeps!!.DASH
+this.DIVIDE= commonSeps!!.FORWARD_SLASH
+this.MULTIPLY= CommonPhoneStrings.getInstance()!!.STAR
 }
 
-
-    var EQUALS: String = CommonSeps.getInstance()!!.EQUALS
-
-    var PLUS: String = "+"
-
-    var MINUS: String = "-"
-
-    var DIVIDE: String = CommonSeps.getInstance()!!.FORWARD_SLASH
-
-    var MULTIPLY: String = CommonPhoneStrings.getInstance()!!.STAR
 
 }
                 

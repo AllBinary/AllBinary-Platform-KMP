@@ -76,7 +76,7 @@ this.allBinaryGameCanvas= allBinaryGameCanvas
 
         try {
             PreLogUtil.put(StringMaker().
-                            append(inputFactory!!.KEY_CODE_LABEL)!!.append(keyCode)!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(inputFactory!!.DEVICE_ID_LABEL)!!.append(deviceId)!!.toString(), this, this.gameInputStrings!!.KEY_PRESSED)
+                            append(inputFactory!!.KEY_CODE_LABEL)!!.appendint(keyCode)!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(inputFactory!!.DEVICE_ID_LABEL)!!.appendint(deviceId)!!.toString(), this, this.gameInputStrings!!.KEY_PRESSED)
 
     var input: Input = inputFactory!!.getInstance(keyCode)!!
 
@@ -109,7 +109,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, this.gameInputStrings!!.ADD_KEY_E
                         
                                     {
                                     PreLogUtil.put(StringMaker().
-                            append(inputFactory!!.KEY_CODE_LABEL)!!.append(keyCode)!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(inputFactory!!.DEVICE_ID_LABEL)!!.append(deviceId)!!.toString(), this, gameInputStrings!!.KEY_RELEASED)
+                            append(inputFactory!!.KEY_CODE_LABEL)!!.appendint(keyCode)!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(inputFactory!!.DEVICE_ID_LABEL)!!.appendint(deviceId)!!.toString(), this, gameInputStrings!!.KEY_RELEASED)
 
     var gameKey: GameKey = GameKeyFactory.getInstance()!!.KEY_NUM0
 

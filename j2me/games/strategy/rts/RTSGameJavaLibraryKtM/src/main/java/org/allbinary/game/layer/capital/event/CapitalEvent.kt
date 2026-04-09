@@ -49,7 +49,7 @@ var anyType = anyType
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("CapitalEvent: Value: \n")
-stringBuffer!!.append(this.getValue())
+stringBuffer!!.appendint(this.getValue())
 
 
 

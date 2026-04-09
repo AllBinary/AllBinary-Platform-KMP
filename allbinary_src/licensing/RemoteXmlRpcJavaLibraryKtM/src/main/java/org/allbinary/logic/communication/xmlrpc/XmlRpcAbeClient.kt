@@ -123,7 +123,7 @@ this.server= this.start
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(START_SERVER)
-stringBuffer!!.append(this.getServer())
+stringBuffer!!.appendint(this.getServer())
 stringBuffer!!.append(SEP)
 stringBuffer!!.append(clientInfo!!.getLicenseServer(this.getServer()))
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.CONSTRUCTOR)

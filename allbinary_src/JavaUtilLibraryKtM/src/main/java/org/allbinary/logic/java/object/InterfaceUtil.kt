@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.string.CommonSeps
 
 open public class InterfaceUtil
             : Object
@@ -208,7 +209,7 @@ stringBuffer!!.append(clazz.toString()!!)
 stringBuffer!!.append(" should be = ")
 stringBuffer!!.append(classes[index]!!.getName())
 stringBuffer!!.append(classes[index]!!.getName())
-stringBuffer!!.append("\n")
+stringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
 }
 
 

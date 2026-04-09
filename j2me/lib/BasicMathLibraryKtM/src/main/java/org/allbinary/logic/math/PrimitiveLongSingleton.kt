@@ -102,7 +102,7 @@ var numberAsChar = numberAsChar
 
 
                             throw Exception(StringMaker().
-                            append("numberAsChar was not in array: ")!!.append(numberAsChar)!!.toString())
+                            append("numberAsChar was not in array: ")!!.appendchar(numberAsChar)!!.toString())
 }
 
 

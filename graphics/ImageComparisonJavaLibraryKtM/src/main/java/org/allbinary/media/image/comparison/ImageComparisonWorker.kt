@@ -146,7 +146,7 @@ capturedImageWorkerResultsEvent[1]= this.bufferedImageVector!!.get(1) as Capture
 ImageComparisonResultCacheSingleton.getInstance()!!.add(imageComparisonResultFrameCacheable)
 this.fireEvent(ImageComparisonResultsEvent(this, imageComparisonResult))
 logUtil!!.put(StringMaker().
-                            append("Image Comparison Result: ")!!.append(imageComparisonResult!!.toString())!!.append(" for frame: ")!!.append(frame)!!.toString(), this, this.commonStrings!!.RUN)
+                            append("Image Comparison Result: ")!!.append(imageComparisonResult!!.toString())!!.append(" for frame: ")!!.appendlong(frame)!!.toString(), this, this.commonStrings!!.RUN)
 
                                     }
                                 
@@ -162,7 +162,7 @@ this.bufferedImageVector!!.remove(0)
 index2++
 
     var message: String = StringMaker().
-                            append("Frame: ")!!.append(index2)!!.append(CommonLabels.getInstance()!!.ELAPSED)!!.append(timeHelper!!.getElapsed())!!.toString()!!
+                            append("Frame: ")!!.appendint(index2)!!.append(CommonLabels.getInstance()!!.ELAPSED)!!.appendlong(timeHelper!!.getElapsed())!!.toString()!!
 
 logUtil!!.put(message, this, this.commonStrings!!.RUN)
 this.setRunning(false)

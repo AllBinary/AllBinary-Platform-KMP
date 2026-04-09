@@ -242,7 +242,7 @@ this.noDuration= true
                                     PreLogUtil.put(StringMaker().
                             append(ALREADY_PLAYING)!!.append(endingCurrentSongSound!!.getResource())!!.toString(), this, commonStrings!!.PROCESS)
 PreLogUtil.put(StringMaker().
-                            append(STOPPING)!!.append(endingCurrentSongSound!!.getResource())!!.append(SONG)!!.append(duration)!!.toString(), this, commonStrings!!.PROCESS)
+                            append(STOPPING)!!.append(endingCurrentSongSound!!.getResource())!!.append(SONG)!!.appendlong(duration)!!.toString(), this, commonStrings!!.PROCESS)
 endingCurrentSongSound!!.getPlayerP()!!.stop()
 this.waitForStateChange(endingCurrentSongSound, startingCurrentSongSound)
 
@@ -255,7 +255,7 @@ this.waitForStateChange(endingCurrentSongSound, startingCurrentSongSound)
                         
                                     {
                                     PreLogUtil.put(StringMaker().
-                            append(STOPPING)!!.append(endingCurrentSongSound!!.getResource())!!.append(SONG)!!.append(duration)!!.toString(), this, commonStrings!!.PROCESS)
+                            append(STOPPING)!!.append(endingCurrentSongSound!!.getResource())!!.append(SONG)!!.appendlong(duration)!!.toString(), this, commonStrings!!.PROCESS)
 endingCurrentSongSound!!.getPlayerP()!!.stop()
 this.waitForStateChange(endingCurrentSongSound, startingCurrentSongSound)
 
@@ -286,7 +286,7 @@ startingCurrentSongSound!!.getPlayerP()!!.start()
                                 
                         else {
                             PreLogUtil.put(StringMaker().
-                            append(PLAY)!!.append(this.currentSongSound!!.getResource())!!.append(SONG)!!.append(duration)!!.toString(), this, commonStrings!!.PROCESS)
+                            append(PLAY)!!.append(this.currentSongSound!!.getResource())!!.append(SONG)!!.appendlong(duration)!!.toString(), this, commonStrings!!.PROCESS)
 this.currentSongSound!!.getPlayerP()!!.start()
 
                         }

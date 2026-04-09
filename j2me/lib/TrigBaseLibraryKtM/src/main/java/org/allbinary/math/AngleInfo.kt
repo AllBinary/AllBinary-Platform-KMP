@@ -112,7 +112,7 @@ this.angle= angle
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(ANGLE)
-stringBuffer!!.append(this.angle)
+stringBuffer!!.appendshort(this.angle)
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 stringBuffer!!.append(StringUtil.getInstance()!!.toString(this.getAngleIncrementInfo()))
 

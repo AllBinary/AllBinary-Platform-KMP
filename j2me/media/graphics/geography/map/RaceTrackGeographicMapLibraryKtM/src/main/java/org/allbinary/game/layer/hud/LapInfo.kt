@@ -109,11 +109,11 @@ this.numberOfLaps++
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("isDone: ")
-stringBuffer!!.append(this.isDone())
+stringBuffer!!.appendboolean(this.isDone())
 stringBuffer!!.append(" CurrentLap: ")
-stringBuffer!!.append(this.getCurrentLap())
+stringBuffer!!.appendint(this.getCurrentLap())
 stringBuffer!!.append(" Total Laps: ")
-stringBuffer!!.append(this.getTotalLaps())
+stringBuffer!!.appendint(this.getTotalLaps())
 
 
 

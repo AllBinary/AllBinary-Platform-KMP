@@ -95,10 +95,6 @@ this.gameCanvas= gameCanvas
                         
                                     {
                                     inputProcessor!!.strafeLeft()
-gameLayerManager!!.getGameInfo()!!.previousGameLevel()
-logUtil!!.put(StringMaker().
-                            append("Down Level Cheat: ")!!.append(gameLayerManager!!.getGameInfo()!!.getCurrentLevel())!!.toString(), this, PROCESS_GAME)
-this.gameCanvas!!.buildGame(true)
 break;
 
                     
@@ -111,10 +107,6 @@ break;
                         
                                     {
                                     inputProcessor!!.strafeRight()
-gameLayerManager!!.getGameInfo()!!.nextGameLevel()
-logUtil!!.put(StringMaker().
-                            append("Up Level Cheat: ")!!.append(gameLayerManager!!.getGameInfo()!!.getCurrentLevel())!!.toString(), this, PROCESS_GAME)
-this.gameCanvas!!.buildGame(true)
 break;
 
                     

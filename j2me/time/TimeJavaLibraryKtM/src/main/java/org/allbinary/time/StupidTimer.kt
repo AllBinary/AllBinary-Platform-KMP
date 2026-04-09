@@ -83,7 +83,7 @@ PreLogUtil.put(StringMaker().
                         
                                     {
                                     PreLogUtil.put(StringMaker().
-                            append(WAITING_FOR)!!.append(index)!!.toString(), this, commonStrings!!.VISIT)
+                            append(WAITING_FOR)!!.appendint(index)!!.toString(), this, commonStrings!!.VISIT)
 
                                     }
                                 

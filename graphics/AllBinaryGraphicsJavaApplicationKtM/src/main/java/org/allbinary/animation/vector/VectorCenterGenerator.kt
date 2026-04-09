@@ -151,7 +151,7 @@ setHeight(maxY -minY)
 
 
     var s: String = StringMaker().
-                            append(commonLabels!!.WIDTH_LABEL)!!.append(getWidth())!!.append(commonLabels!!.HEIGHT_LABEL)!!.append(getHeight())!!.append(" max: ")!!.append(max)!!.append(" middle: ")!!.append(middle)!!.toString()!!
+                            append(commonLabels!!.WIDTH_LABEL)!!.appendint(getWidth())!!.append(commonLabels!!.HEIGHT_LABEL)!!.appendint(getHeight())!!.append(" max: ")!!.appendint(max)!!.append(" middle: ")!!.appendint(middle)!!.toString()!!
 
 logUtil!!.put(s, this, commonStrings!!.GET_INSTANCE)
 
@@ -173,7 +173,7 @@ dy= middle -currentMiddleY
 var hashMap = hashMap
 this.calculate(hashMap)
 logUtil!!.put(StringMaker().
-                            append(" dx: ")!!.append(dx)!!.append(" dy: ")!!.append(dy)!!.toString(), this, commonStrings!!.GET_INSTANCE)
+                            append(" dx: ")!!.appendint(dx)!!.append(" dy: ")!!.appendint(dy)!!.toString(), this, commonStrings!!.GET_INSTANCE)
 
     var graphicItemArray: Array<Any?> = hashMap!!.keys.toTypedArray()!!
 

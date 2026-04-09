@@ -331,7 +331,7 @@ this.keyRepeated(keyCode, 0)
     //var keyCode = keyCode
     //var deviceId = deviceId
 logUtil!!.put(StringMaker().
-                            append(CommonSeps.getInstance()!!.SPACE)!!.append(keyCode)!!.toString(), this, gameInputStrings!!.KEY_PRESSED)
+                            append(CommonSeps.getInstance()!!.SPACE)!!.appendint(keyCode)!!.toString(), this, gameInputStrings!!.KEY_PRESSED)
 this.addGameKeyEvent(keyCode, 0, false)
 }
 
@@ -388,7 +388,7 @@ downGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
                                 
                         else {
                             logUtil!!.put(StringMaker().
-                            append(this.gameInputStrings!!.NO_KEY)!!.append(keyCode)!!.toString(), this, this.gameInputStrings!!.ADD_KEY_EVENT)
+                            append(this.gameInputStrings!!.NO_KEY)!!.appendint(keyCode)!!.toString(), this, this.gameInputStrings!!.ADD_KEY_EVENT)
 
                         }
                             
@@ -426,7 +426,7 @@ upGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
                                 
                         else {
                             logUtil!!.put(StringMaker().
-                            append(this.gameInputStrings!!.NO_KEY)!!.append(keyCode)!!.toString(), this, this.gameInputStrings!!.REMOVE_KEY_EVENT)
+                            append(this.gameInputStrings!!.NO_KEY)!!.appendint(keyCode)!!.toString(), this, this.gameInputStrings!!.REMOVE_KEY_EVENT)
 
                         }
                             

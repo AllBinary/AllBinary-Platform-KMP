@@ -113,7 +113,10 @@ basicArrayList!!.clear()
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("S: ")
-stringBuffer!!.append(this.list.size())
+stringBuffer!!.appendint(this.list.size())
+
+    var S_LABEL: String = " s: "
+
 
     var basicArrayList: BasicArrayList
 
@@ -124,9 +127,9 @@ stringBuffer!!.append(this.list.size())
                         for (index in this.list.size() -1 downTo 0)
 
         {
-stringBuffer!!.append(" s: ")
+stringBuffer!!.append(S_LABEL)
 basicArrayList= (this.list.objectArray[index]!! as BasicArrayList)
-stringBuffer!!.append(basicArrayList!!.size())
+stringBuffer!!.appendint(basicArrayList!!.size())
 }
 
 

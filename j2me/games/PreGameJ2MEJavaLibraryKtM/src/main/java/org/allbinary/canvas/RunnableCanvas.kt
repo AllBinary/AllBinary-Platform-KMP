@@ -75,7 +75,7 @@ public constructor (commandListener: CommandListener, childNameList: BasicArrayL
                             //For kotlin this is before the body of the constructor.
                     
 logUtil!!.put(StringMaker().
-                            append("delay: ")!!.append(this.loopTimeHelper!!.delay)!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
+                            append("delay: ")!!.appendint(this.loopTimeHelper!!.delay)!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
 this.runnableCanvasRefreshHelper= RunnableCanvasRefreshHelper(this)
 
     
@@ -191,7 +191,7 @@ threadObjectUtil!!.notifyObject(this)
                                     }
                                 
 logUtil!!.put(StringMaker().
-                            append(IS_RUNNING)!!.append(this.running)!!.toString(), this, SET_RUNNING)
+                            append(IS_RUNNING)!!.appendboolean(this.running)!!.toString(), this, SET_RUNNING)
 }
 
 
@@ -280,7 +280,7 @@ var wait = wait
 loopTimeHelper!!.delay= wait
 this.pauseWait= wait.toLong() *3
 logUtil!!.put(StringMaker().
-                            append("setWait - delay: ")!!.append(this.loopTimeHelper!!.delay)!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
+                            append("setWait - delay: ")!!.appendint(this.loopTimeHelper!!.delay)!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
 }
 
 
@@ -429,7 +429,7 @@ this.runnableCanvasRefreshHelper!!.process()
                                     
     var stringMaker: StringMaker = StringMaker()
 
-logUtil!!.put(stringMaker!!.append(START_PAUSE)!!.append(System.currentTimeMillis())!!.append(PAUSE_SLEEP)!!.append(this.pauseWait)!!.toString(), this, PROCESS_LOOP_SLEEP)
+logUtil!!.put(stringMaker!!.append(START_PAUSE)!!.appendlong(System.currentTimeMillis())!!.append(PAUSE_SLEEP)!!.appendlong(this.pauseWait)!!.toString(), this, PROCESS_LOOP_SLEEP)
 
         while(this.isPaused() && this.isRunning() && !this.isSingleThread())
         {
@@ -440,7 +440,7 @@ this.processSleep()
                         
                                     {
                                     stringMaker!!.delete(0, stringMaker!!.length())
-logUtil!!.put(stringMaker!!.append(END_PAUSE)!!.append(System.currentTimeMillis())!!.toString(), this, PROCESS_LOOP_SLEEP)
+logUtil!!.put(stringMaker!!.append(END_PAUSE)!!.appendlong(System.currentTimeMillis())!!.toString(), this, PROCESS_LOOP_SLEEP)
 
 
 

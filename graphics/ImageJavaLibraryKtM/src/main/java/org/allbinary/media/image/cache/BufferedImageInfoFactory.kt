@@ -45,9 +45,9 @@ var type = type
 
     var stringbuffer: StringMaker = StringMaker()
 
-stringbuffer.append(width)
-stringbuffer.append(height)
-stringbuffer.append(type)
+stringbuffer.appendint(width)
+stringbuffer.appendint(height)
+stringbuffer.appendint(type)
 
     var key: String = stringbuffer.toString()!!
 

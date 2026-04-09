@@ -93,9 +93,9 @@ list.add(integerCanBeNull)
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Total AI Properties: ")
-stringBuffer!!.append(list.size())
+stringBuffer!!.appendint(list.size())
 stringBuffer!!.append(" == Total AI: ")
-stringBuffer!!.append(artificialIntelligenceInterface!!.size)
+stringBuffer!!.appendint(artificialIntelligenceInterface!!.size)
 stringBuffer!!.append(" + 1")
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!

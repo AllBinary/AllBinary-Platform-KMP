@@ -152,7 +152,7 @@ this.updateAll(this.list, inputToGameKeyMapping)
 var list = list
 var inputToGameKeyMapping = inputToGameKeyMapping
 logUtil!!.put(StringMaker().
-                            append(CommonLabels.getInstance()!!.START_LABEL)!!.append(list.size())!!.toString(), this, "updateAll")
+                            append(CommonLabels.getInstance()!!.START_LABEL)!!.appendint(list.size())!!.toString(), this, "updateAll")
 
     var touchButtonInput: TouchButtonInput
 

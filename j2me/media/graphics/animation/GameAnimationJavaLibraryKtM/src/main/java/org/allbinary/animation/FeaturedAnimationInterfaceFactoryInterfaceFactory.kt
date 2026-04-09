@@ -239,9 +239,9 @@ animationInterfaceFactoryInterface= featureInterface!!.getBasicAnimationInterfac
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(NO_ANIMATION_AVAILABLE_FROM)
-stringBuffer!!.append(resourceTypeAvailableList!!.size())
+stringBuffer!!.appendint(resourceTypeAvailableList!!.size())
 stringBuffer!!.append(CommonSeps.getInstance()!!.FORWARD_SLASH)
-stringBuffer!!.append(size)
+stringBuffer!!.appendint(size)
 stringBuffer!!.append(FOR_FACTORIES)
 
     var size2: Int = resourceTypeAvailableList!!.size()!!
@@ -275,7 +275,7 @@ featureInterface= list.objectArray[index]!! as FeatureResourceAnimationInterface
                                     {
                                     stringBuffer!!.append(StringUtil.getInstance()!!.toString(featureInterface))
 stringBuffer!!.append(HAS_KEY)
-stringBuffer!!.append(featureInterface!!.getHashtable()!!.size)
+stringBuffer!!.appendint(featureInterface!!.getHashtable()!!.size)
 stringBuffer!!.append(RESOURCES_LABEL)
 
                                     }

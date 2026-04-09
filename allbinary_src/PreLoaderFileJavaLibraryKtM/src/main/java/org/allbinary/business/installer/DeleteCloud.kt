@@ -81,7 +81,7 @@ stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append("Searched: ")
 stringBuffer!!.append(path.toFileSystemString())
 stringBuffer!!.append(" BasicArrayList: ")
-stringBuffer!!.append(size)
+stringBuffer!!.appendint(size)
 
     var portion: Int = size /total +1
 
@@ -101,9 +101,9 @@ stringBuffer!!.append(size)
                                     }
                                 
 stringBuffer!!.append(" Section: ")
-stringBuffer!!.append(start)
+stringBuffer!!.appendint(start)
 stringBuffer!!.append(" - ")
-stringBuffer!!.append(end)
+stringBuffer!!.appendint(end)
 logUtil!!.put(stringBuffer!!.toString(), this, "initialize()")
 
 

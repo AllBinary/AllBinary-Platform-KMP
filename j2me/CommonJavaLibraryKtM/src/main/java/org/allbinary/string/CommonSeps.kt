@@ -32,7 +32,7 @@ open public class CommonSeps
         
 companion object {
             
-    private val SINGLETON: CommonSeps = CommonSeps()
+    private val instance: CommonSeps = CommonSeps()
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
@@ -41,7 +41,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return SINGLETON
+                        return CommonSeps.instance
 }
 
 
@@ -68,9 +68,9 @@ companion object {
 
     val UNDERSCORE: String = "_"
 
-    val COLON_SEP: String = COLON +SPACE
+    val COLON_SEP: String = this.COLON +this.SPACE
 
-    val COMMA_SEP: String = COMMA +SPACE
+    val COMMA_SEP: String = this.COMMA +this.SPACE
 
     val PARENTHESIS_OPEN: String = "("
 
@@ -93,8 +93,6 @@ companion object {
     val FORWARD_SLASH: String = "/"
 
     val BACK_SLASH: String = "\\"
-
-    val AMP: String = "&"
 
     val QUESTION: String = "?"
 

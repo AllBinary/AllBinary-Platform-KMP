@@ -157,16 +157,19 @@ this.damaged= damaged
         //nullable =  from not(false or (true and true)) = 
 : String{
 
+    var commonSeps: CommonSeps = CommonSeps.getInstance()!!
+
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(HP_LABEL)
 stringBuffer!!.append(super.toString())
-stringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
+stringBuffer!!.append(commonSeps!!.NEW_LINE)
 stringBuffer!!.append(IS_DAMAGED_LABEL)
-stringBuffer!!.append(this.isDamaged())
-stringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
+stringBuffer!!.appendboolean(this.isDamaged())
+stringBuffer!!.append(commonSeps!!.NEW_LINE)
 stringBuffer!!.append(IS_CLOSE_DEATH_LABEL)
-stringBuffer!!.append(this.isCloseDeath())
+stringBuffer!!.appendboolean(this.isCloseDeath())
 
 
 

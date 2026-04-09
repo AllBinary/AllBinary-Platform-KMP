@@ -127,7 +127,7 @@ this.repeated= repeated
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("\nKey: ")
-stringBuffer!!.append(this.getKey())
+stringBuffer!!.appendint(this.getKey())
 
 
 

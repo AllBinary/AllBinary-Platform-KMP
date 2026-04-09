@@ -171,7 +171,7 @@ generatedBufferedImageArray[index2]!![index3]= bufferedImage!!.getSubimage(x +wi
                                     }
                                 
 nameEnding= StringMaker().
-                            append(index2)!!.append(commonSeps!!.UNDERSCORE)!!.append(index3)!!.toString()
+                            appendint(index2)!!.append(commonSeps!!.UNDERSCORE)!!.appendint(index3)!!.toString()
 visitor.visit(generatedBufferedImageArray[index2]!![index3]!!, nameEnding, index)
 }
 
@@ -207,7 +207,7 @@ y= cellHeight *index2
         {
 tempBufferedImageArray[index3]= generatedBufferedImageArray[index2]!![index3]!!
 nameEnding= StringMaker().
-                            append(index2)!!.append(commonSeps!!.UNDERSCORE)!!.append(1)!!.append(_ROW)!!.toString()
+                            appendint(index2)!!.append(commonSeps!!.UNDERSCORE)!!.appendint(1)!!.append(_ROW)!!.toString()
 }
 
 
@@ -288,7 +288,7 @@ generatedBufferedImageArray[index2]!![index3]= bufferedImage!!.getSubimage(x +wi
                                     }
                                 
 nameEnding= StringMaker().
-                            append(this.commonStrings!!.DIRECTION_NAME[index2]!!)!!.append(commonSeps!!.UNDERSCORE)!!.append(index3)!!.toString()
+                            append(this.commonStrings!!.DIRECTION_NAME[index2]!!)!!.append(commonSeps!!.UNDERSCORE)!!.appendint(index3)!!.toString()
 visitor.visit(generatedBufferedImageArray[index2]!![index3]!!, nameEnding, index)
 }
 
@@ -324,7 +324,7 @@ y= cellHeight *index2
         {
 tempBufferedImageArray[index3]= generatedBufferedImageArray[index2]!![index3]!!
 nameEnding= StringMaker().
-                            append(this.commonStrings!!.DIRECTION_NAME[index2]!!)!!.append(commonSeps!!.UNDERSCORE)!!.append(1)!!.append(_ROW)!!.toString()
+                            append(this.commonStrings!!.DIRECTION_NAME[index2]!!)!!.append(commonSeps!!.UNDERSCORE)!!.appendint(1)!!.append(_ROW)!!.toString()
 }
 
 

@@ -95,9 +95,9 @@ companion object {
 
 stringBuffer!!.append(associatedAdvancedRTSGameLayer!!.getName())
 stringBuffer!!.append(CLOSE_RANGE)
-stringBuffer!!.append(closeRange)
+stringBuffer!!.appendint(closeRange)
 stringBuffer!!.append(SENSOR_RANGE)
-stringBuffer!!.append(sensorRange)
+stringBuffer!!.appendint(sensorRange)
 logUtil!!.put(stringBuffer!!.toString(), this, "selected: initRange")
 }
 
@@ -121,13 +121,13 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: initRange")
 
 stringBuffer!!.append(associatedAdvancedRTSGameLayer!!.getName())
 stringBuffer!!.append(ONLY_TARGETS)
-stringBuffer!!.append(waypointBehaviorBase!!.isWaypointListEmptyOrOnlyTargets())
+stringBuffer!!.appendboolean(waypointBehaviorBase!!.isWaypointListEmptyOrOnlyTargets())
 stringBuffer!!.append(SHORTER_THAN_CURRENT_TARGET_DISTANCE)
-stringBuffer!!.append(isShorterThanCurrentTargetDistance)
+stringBuffer!!.appendboolean(isShorterThanCurrentTargetDistance)
 stringBuffer!!.append(CURRENT_TARGET_DESTROYED)
-stringBuffer!!.append(isCurrentTargetDestroyed)
+stringBuffer!!.appendboolean(isCurrentTargetDestroyed)
 stringBuffer!!.append(CURRENT_TARGET_NOT_AVAILABLE)
-stringBuffer!!.append((waypointBehaviorBase!!.getCurrentTargetLayerInterface() == 
+stringBuffer!!.appendboolean((waypointBehaviorBase!!.getCurrentTargetLayerInterface() == 
                                     null
                                 ))
 logUtil!!.put(stringBuffer!!.toString(), this, PROCESS_POSSIBLE_TARGET)
@@ -153,7 +153,7 @@ stringBuffer!!.append(waypointBehaviorBase!!.getCurrentTargetingStateString())
 stringBuffer!!.append(ENEMY_POSSIBLE_TARGET)
 stringBuffer!!.append(layerInterface!!.getName())
 stringBuffer!!.append(" anotherTargetDistance: ")
-stringBuffer!!.append(anotherTargetDistance)
+stringBuffer!!.appendint(anotherTargetDistance)
 logUtil!!.put(stringBuffer!!.toString(), this, "selected: processPossibleTarget2")
 }
 
@@ -174,7 +174,7 @@ stringBuffer!!.append(waypointBehaviorBase!!.getCurrentTargetingStateString())
 stringBuffer!!.append(ENEMY_POSSIBLE_TARGET)
 stringBuffer!!.append(layerInterface!!.getName())
 stringBuffer!!.append(" anotherTargetDistance: ")
-stringBuffer!!.append(anotherTargetDistance)
+stringBuffer!!.appendint(anotherTargetDistance)
 logUtil!!.put(stringBuffer!!.toString(), this, "selected: processPossibleTarget3")
 }
 
@@ -195,7 +195,7 @@ stringBuffer!!.append(waypointBehaviorBase!!.getName())
 stringBuffer!!.append(" targeting: ")
 stringBuffer!!.append(layerInterface!!.getName())
 stringBuffer!!.append(" at: ")
-stringBuffer!!.append(anotherTargetDistance)
+stringBuffer!!.appendint(anotherTargetDistance)
 stringBuffer!!.append(" instead of: ")
 stringBuffer!!.append(waypointBehaviorBase!!.getCurrentTargetingStateString())
 logUtil!!.put(stringBuffer!!.toString(), this, "selected: setTarget")
@@ -239,15 +239,15 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: setTargetPath")
 
 stringBuffer!!.append(associatedAdvancedRTSGameLayer!!.getName())
 stringBuffer!!.append(" Size: ")
-stringBuffer!!.append(size)
+stringBuffer!!.appendint(size)
 stringBuffer!!.append(" Waypoint: ")
 stringBuffer!!.append(targetLayer!!.getName())
 stringBuffer!!.append(" Target: ")
 stringBuffer!!.append(stringUtil!!.toString(waypointBehaviorBase!!.getCurrentTargetLayerInterface()))
 stringBuffer!!.append(" isTrackingWaypoint: ")
-stringBuffer!!.append(waypointBehaviorBase!!.isTrackingWaypoint())
+stringBuffer!!.appendboolean(waypointBehaviorBase!!.isTrackingWaypoint())
 stringBuffer!!.append(" WaypointOverridesAttacking: ")
-stringBuffer!!.append(waypointBehaviorBase!!.isWaypointOverridesAttacking())
+stringBuffer!!.appendboolean(waypointBehaviorBase!!.isWaypointOverridesAttacking())
 logUtil!!.put(stringBuffer!!.toString(), this, "selected: processWaypoint")
 }
 
@@ -325,10 +325,10 @@ logUtil!!.put(StringMaker().
 stringBuffer!!.append(associatedAdvancedRTSGameLayer!!.getName())
 stringBuffer!!.append(this.commonSeps!!.SPACE)
 stringBuffer!!.append(positionStrings!!.DX_LABEL)
-stringBuffer!!.append(dx)
+stringBuffer!!.appendint(dx)
 stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(positionStrings!!.DY_LABEL)
-stringBuffer!!.append(dy)
+stringBuffer!!.appendint(dy)
 logUtil!!.put(stringBuffer!!.toString(), this, "selected: processTargeting")
 }
 
@@ -345,10 +345,10 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: processTargeting")
 stringBuffer!!.append(associatedAdvancedRTSGameLayer!!.getName())
 stringBuffer!!.append(" Targeting Non Waypoint ")
 stringBuffer!!.append(positionStrings!!.DX_LABEL)
-stringBuffer!!.append(dx)
+stringBuffer!!.appendint(dx)
 stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(positionStrings!!.DY_LABEL)
-stringBuffer!!.append(dy)
+stringBuffer!!.appendint(dy)
 logUtil!!.put(stringBuffer!!.toString(), this, "selected: processTargeting")
 }
 

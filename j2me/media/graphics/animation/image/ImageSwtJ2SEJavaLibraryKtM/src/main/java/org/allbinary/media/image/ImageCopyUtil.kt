@@ -36,7 +36,6 @@ import org.allbinary.image.opengles.OpenGLESImage
 import org.allbinary.image.opengles.OpenGLESImageExclusionUtil
 import org.allbinary.image.opengles.OpenGLESImageProperties
 import org.allbinary.logic.communication.log.LogUtil
-import org.allbinary.logic.string.StringMaker
 import org.allbinary.string.CommonStrings
 import org.eclipse.swt.graphics.ImageData
 import org.microemu.app.ui.swt.SwtDeviceComponent
@@ -295,7 +294,10 @@ originalImage2= openGLESImage!!.openGLBitmap!!.getImage()
                         
                                     {
                                     
-    var imageData: ImageData = originalMutableImage!!.image.getImageData()!!.scaledTo(width, height)!!
+    var imageData2: ImageData = originalMutableImage!!.image.getImageData()!!
+
+
+    var imageData: ImageData = imageData2!!.scaledTo(width, height)!!
 
 image= SwtMutableImage(SwtDeviceComponent.createImage(imageData))
 
@@ -321,7 +323,10 @@ image= SwtMutableImage(SwtDeviceComponent.createImage(imageData))
                         
                                     {
                                     
-    var imageData: ImageData = originalImmutableImage!!.image.getImageData()!!.scaledTo(width, height)!!
+    var imageData2: ImageData = originalImmutableImage!!.image.getImageData()!!
+
+
+    var imageData: ImageData = imageData2!!.scaledTo(width, height)!!
 
 image= SwtImmutableImage(originalImage!!.getName(), SwtDeviceComponent.createImage(imageData))
 
@@ -505,7 +510,10 @@ image= openGLESImage
                         
                                     {
                                     
-    var imageData: ImageData = originalMutableImage!!.image.getImageData()!!.scaledTo(width, height)!!
+    var imageData2: ImageData = originalMutableImage!!.image.getImageData()!!
+
+
+    var imageData: ImageData = imageData2!!.scaledTo(width, height)!!
 
 image= SwtMutableImage(SwtDeviceComponent.createImage(imageData))
 
@@ -531,7 +539,10 @@ image= SwtMutableImage(SwtDeviceComponent.createImage(imageData))
                         
                                     {
                                     
-    var imageData: ImageData = originalImmutableImage!!.image.getImageData()!!.scaledTo(width, height)!!
+    var imageData2: ImageData = originalImmutableImage!!.image.getImageData()!!
+
+
+    var imageData: ImageData = imageData2!!.scaledTo(width, height)!!
 
 image= SwtImmutableImage(originalImage!!.getName(), SwtDeviceComponent.createImage(imageData))
 
@@ -686,9 +697,67 @@ getImage.
                                 
                         else {
                             
+    var originalImmutableImage: SwtImmutableImage = image as SwtImmutableImage
 
 
-                            throw Exception("Not Mutable")
+    var originalImageData: ImageData = 
+                                    (getImage as Image).getImageData()!!
+
+
+    var halfWidthDelta: Int = (newWidth -originalImage!!.getWidth()) /2
+
+
+    var halfHeightDelta: Int = (newHeight -originalImage!!.getHeight()) /2
+
+
+    var originalPixelArray: IntArray = IntArray(originalImage!!.getWidth() *originalImage!!.getHeight())
+
+
+    var newPixelArray: IntArray = IntArray(image.getWidth() *image.getHeight())
+
+
+    var width: Int = originalImage!!.getWidth()!!
+
+
+    var height: Int = originalImage!!.getHeight()!!
+
+
+
+
+
+                        for (i in 0 until height)
+
+        {
+originalImageData!!.getPixels(0, i, width, originalPixelArray, (i *width))
+}
+
+
+
+
+
+                        for (index in halfWidthDelta until width)
+
+        {
+
+
+
+
+                        for (index2 in halfHeightDelta until height)
+
+        {
+newPixelArray[index +(index2 *width)]= originalPixelArray[(index -halfWidthDelta) +((index2 -halfHeightDelta) *width)]!!
+}
+
+}
+
+getImage = originalImmutableImage!!.getImage()getImage as org.eclipse.swt.graphics.Image
+getImage.
+                    getImageData()!!.setPixels(0, 0, image.getWidth(), newPixelArray, 0)
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return image
 
                         }
                             

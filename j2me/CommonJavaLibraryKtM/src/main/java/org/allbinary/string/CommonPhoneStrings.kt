@@ -32,7 +32,7 @@ open public class CommonPhoneStrings
         
 companion object {
             
-    private val SINGLETON: CommonPhoneStrings = CommonPhoneStrings()
+    private val instance: CommonPhoneStrings = CommonPhoneStrings()
 
     open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
@@ -41,7 +41,7 @@ companion object {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return SINGLETON
+                        return CommonPhoneStrings.instance
 }
 
 

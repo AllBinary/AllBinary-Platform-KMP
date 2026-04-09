@@ -116,13 +116,16 @@ this.pageContext!!.forward(stringBuffer!!.toString())
         //nullable = true from not(false or (false and true)) = true
 : String{
 
-    var AMP: String = CommonSeps.getInstance()!!.AMP
+    var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
 
-    var QUESTION: String = CommonSeps.getInstance()!!.QUESTION
+    var AMP: String = commonSeps!!.AMPERSAND
 
 
-    var EQUALS: String = CommonSeps.getInstance()!!.EQUALS
+    var QUESTION: String = commonSeps!!.QUESTION
+
+
+    var EQUALS: String = commonSeps!!.EQUALS
 
 
     var hashMap: HashMap<Any, Any> = this.requestMapInterface!!.getRequestHashMap()!!

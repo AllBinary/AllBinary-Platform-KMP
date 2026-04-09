@@ -101,7 +101,7 @@ this.setTitle(label)
     //var deviceId = deviceId
     //var repeated = repeated
 logUtil!!.put(StringMaker().
-                            append(commonStrings!!.START)!!.append(keyCode)!!.toString(), this, "onEvent")
+                            append(commonStrings!!.START)!!.appendint(keyCode)!!.toString(), this, "onEvent")
 this.keyPressed(keyCode, deviceId)
 }
 
@@ -138,7 +138,7 @@ this.keyRepeated(keyCode, 0)
 
         try {
             logUtil!!.put(StringMaker().
-                            append(CommonSeps.getInstance()!!.SPACE)!!.append(keyCode)!!.toString(), this, gameInputStrings!!.KEY_PRESSED)
+                            append(CommonSeps.getInstance()!!.SPACE)!!.appendint(keyCode)!!.toString(), this, gameInputStrings!!.KEY_PRESSED)
 
     var platformKeyFactory: PlatformKeyFactory = PlatformKeyFactory.getInstance()!!
 

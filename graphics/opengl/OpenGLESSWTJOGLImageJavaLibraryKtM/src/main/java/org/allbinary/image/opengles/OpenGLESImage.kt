@@ -212,7 +212,7 @@ var z = z
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
-                            append(this.getName())!!.append(super.toString())!!.append(graphicsStrings!!.OPACITY)!!.append(this.openGLESImageProperties!!.alphaf)!!.toString()
+                            append(this.getName())!!.append(super.toString())!!.append(graphicsStrings!!.OPACITY)!!.appendfloat(this.openGLESImageProperties!!.alphaf)!!.toString()
 }
 
 

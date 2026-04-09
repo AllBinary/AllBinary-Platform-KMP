@@ -109,6 +109,7 @@ createStripImageJMenuItem= javax.swing.JMenuItem()
 mirrorJMenuItem= javax.swing.JMenuItem()
 scaleImagesJMenuItem= javax.swing.JMenuItem()
 canvasImagesJMenuItem= javax.swing.JMenuItem()
+createIconImagesJMenuItem= javax.swing.JMenuItem()
 analysisActionJDialog!!.setMinimumSize(java.awt.Dimension(350, 250))
 titleJLabel!!.setText("              Color At Action Options            ")
 colorRangeJLabel!!.setText("Color Range")
@@ -307,6 +308,20 @@ canvasImagesJMenuItemActionPerformed(evt)
                                 }
                             )
 processingJMenu!!.add(canvasImagesJMenuItem)
+createIconImagesJMenuItem!!.setText("Create Icon Image(s)")
+createIconImagesJMenuItem!!.addActionListener(object: java.awt.event.ActionListener()
+                                {
+                                
+    open override fun actionPerformed(evt: java.awt.event.ActionEvent)
+        //nullable = true from not(false or (false and false)) = true
+{
+var evt = evt
+createIconsJMenuItemActionPerformed(evt)
+}
+
+                                }
+                            )
+processingJMenu!!.add(createIconImagesJMenuItem)
 mainJMenuBar!!.add(processingJMenu)
 setJMenuBar(mainJMenuBar)
 pack()
@@ -602,6 +617,28 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "scaleImagesJMenuItemActionPerfor
 }
 
 
+    open fun createIconsJMenuItemActionPerformed(evt: java.awt.event.ActionEvent)
+        //nullable = true from not(false or (false and false)) = true
+{
+var evt = evt
+
+        try {
+            logUtil!!.put(this.commonStrings!!.START, this, "createIconsJMenuItemActionPerformed")
+
+    var createIconImagesJPanel: CreateIconImagesJPanel = CreateIconImagesJPanel(this.imageProcessorInput)
+
+this.jPanel1!!.removeAll()
+this.jPanel1!!.add(createIconImagesJPanel)
+this.jPanel1!!.updateUI()
+imageProcessorInputCompositeInterface= createIconImagesJPanel
+} catch(e: Exception)
+            {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "scaleImagesJMenuItemActionPerformed", e)
+}
+
+}
+
+
     open fun canvasImagesJMenuItemActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -863,6 +900,8 @@ this.minRedJTextField= minRedJTextField
     private var scaleImagesJMenuItem: javax.swing.JMenuItem
 
     private var canvasImagesJMenuItem: javax.swing.JMenuItem
+
+    private var createIconImagesJMenuItem: javax.swing.JMenuItem
 
     private var titleJLabel: javax.swing.JLabel
 

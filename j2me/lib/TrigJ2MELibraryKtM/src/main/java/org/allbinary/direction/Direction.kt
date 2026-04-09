@@ -139,7 +139,7 @@ stringBuffer!!.append(this.getName())
 stringBuffer!!.append(" Or: ")
 stringBuffer!!.append(this.getOtherName())
 stringBuffer!!.append(" Value: ")
-stringBuffer!!.append(this.value)
+stringBuffer!!.appendint(this.value)
 
 
 

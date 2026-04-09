@@ -169,7 +169,7 @@ this.sequenceArray= sequenceArray
 
 stringBuffer!!.append(super.toString())
 stringBuffer!!.append(commonLabels!!.HEIGHT_LABEL)
-stringBuffer!!.append(image.getHeight())
+stringBuffer!!.appendint(image.getHeight())
 stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(this.animationFactoryInitializationVisitor!!.toString())
 

@@ -112,7 +112,7 @@ var id = id
                         
                                     {
                                     logUtil!!.put(StringMaker().
-                            append("Warning id: ")!!.append(id)!!.toString(), this, commonStrings!!.GET_INSTANCE)
+                            append("Warning id: ")!!.appendint(id)!!.toString(), this, commonStrings!!.GET_INSTANCE)
 
 
 
