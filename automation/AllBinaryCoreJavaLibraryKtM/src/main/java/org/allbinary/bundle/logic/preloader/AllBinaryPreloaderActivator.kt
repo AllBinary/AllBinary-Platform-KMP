@@ -75,12 +75,12 @@ public constructor ()
 var context = context
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, "start")
+            this.logUtil!!.putF(this.commonStrings!!.START, this, "start")
 AllBinaryPreloaderActivator.context= context
 this.registerAsService()
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "start", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "start", e)
 
 
 
@@ -121,7 +121,7 @@ serviceReference= context.getServiceReference(CRYPT_REGISTRY_NAME)
         //nullable = true from not(false or (false and false)) = true
 {
 var context = context
-logUtil!!.put(this.commonStrings!!.START, this, "stop")
+this.logUtil!!.putF(this.commonStrings!!.START, this, "stop")
 }
 
 

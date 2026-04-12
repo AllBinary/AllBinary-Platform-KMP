@@ -320,7 +320,7 @@ streamUtil!!.close(inputStream)
 } catch(e: Exception)
             {
 streamUtil!!.close(inputStream)
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
 }
 
 

@@ -140,7 +140,7 @@ componentInterfaceVector!!.add(cpu)
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.OS))
                         
                                     {
-                                    logUtil!!.put("Hardware Data: " +this.toString(), this, this.commonStrings!!.CONSTRUCTOR)
+                                    this.logUtil!!.putF("Hardware Data: " +this.toString(), this, this.commonStrings!!.CONSTRUCTOR)
 
                                     }
                                 
@@ -168,7 +168,7 @@ var filePath = filePath
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.OS))
                         
                                     {
-                                    logUtil!!.put("Hardware Data: " +this.toString(), this, this.commonStrings!!.CONSTRUCTOR, e)
+                                    this.logUtil!!.put("Hardware Data: " +this.toString(), this, this.commonStrings!!.CONSTRUCTOR, e)
 
                                     }
                                 
@@ -257,7 +257,7 @@ lineNumberReader= LineNumberReader(FileReader(file.getPath()))
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.OS))
                         
                                     {
-                                    logUtil!!.put("PCI File Found", this, this.commonStrings!!.CONSTRUCTOR)
+                                    this.logUtil!!.putF("PCI File Found", this, this.commonStrings!!.CONSTRUCTOR)
 
                                     }
                                 
@@ -296,7 +296,7 @@ nextLine= lineNumberReader!!.readLine()
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.OS))
                         
                                     {
-                                    logUtil!!.put("Found Hardware Device: " +componentInterfaceVector!!.size, this, this.commonStrings!!.CONSTRUCTOR)
+                                    this.logUtil!!.putF("Found Hardware Device: " +componentInterfaceVector!!.size, this, this.commonStrings!!.CONSTRUCTOR)
 
                                     }
                                 
@@ -354,7 +354,7 @@ nextLine= lineNumberReader!!.readLine()
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.OS))
                         
                                     {
-                                    logUtil!!.put("Could not load PCI File", this, this.commonStrings!!.CONSTRUCTOR)
+                                    this.logUtil!!.putF("Could not load PCI File", this, this.commonStrings!!.CONSTRUCTOR)
 
                                     }
                                 

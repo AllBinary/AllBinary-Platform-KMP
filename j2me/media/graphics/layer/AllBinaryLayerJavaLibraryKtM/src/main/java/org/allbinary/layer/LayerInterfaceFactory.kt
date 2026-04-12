@@ -86,7 +86,7 @@ var z = z
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(HASHTABLE_LABEL)!!.append(StringUtil.getInstance()!!.toString(hashtable))!!.toString(), this, commonStrings!!.GET_INSTANCE)
 
     var typeInteger: Integer = hashtable.get(Layer.ID as Object) as Integer

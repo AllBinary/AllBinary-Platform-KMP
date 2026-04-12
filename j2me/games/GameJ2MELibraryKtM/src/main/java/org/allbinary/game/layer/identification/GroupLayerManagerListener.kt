@@ -199,7 +199,7 @@ groupList!!.clear()
                         if(groupSize != 0)
                         
                                     {
-                                    logUtil!!.put(StringMaker().
+                                    this.logUtil!!.putF(StringMaker().
                             append("Group Size: ")!!.appendint(groupSize)!!.toString(), this, "areAllOtherGroupsEmpty")
 
 
@@ -393,7 +393,7 @@ groupList= this.list.objectArray[id]!! as BasicArrayList
                                 )
                         
                                     {
-                                    logUtil!!.put(StringMaker().
+                                    this.logUtil!!.putF(StringMaker().
                             append("id: ")!!.appendint(id)!!.toString(), this, "onCreateLayerManagerEvent")
 
                                     }
@@ -489,7 +489,7 @@ stringBuffer!!.appendint(groupList!!.size())
 stringBuffer!!.append(SPACE)
 }
 
-logUtil!!.put(stringBuffer!!.toString(), this, "log")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "log")
 }
 
 

@@ -103,7 +103,7 @@ this.add(gameFeature)
                         if(!list.contains(gameFeature))
                         
                                     {
-                                    logUtil!!.put(StringMaker().
+                                    this.logUtil!!.putF(StringMaker().
                             append(CommonLabels.getInstance()!!.START_LABEL)!!.append(gameFeature!!.toString())!!.toString(), this, commonStrings!!.ADD)
 list.add(gameFeature)
 GameFeatureEventHandler.getInstance()!!.fireEvent(GameFeatureEvent(gameFeature, gameFeature!!.toString()))
@@ -119,7 +119,7 @@ GameFeatureEventHandler.getInstance()!!.fireEvent(GameFeatureEvent(gameFeature, 
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameFeature = gameFeature
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(CommonLabels.getInstance()!!.START_LABEL)!!.append(gameFeature!!.toString())!!.toString(), this, "removeDefault")
 this.remove(gameFeature)
 defaultList!!.remove(gameFeature)
@@ -137,7 +137,7 @@ defaultList!!.remove(gameFeature)
                         if(list.contains(gameFeature))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.START, this, commonStrings!!.REMOVE)
+                                    this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.REMOVE)
 list.remove(gameFeature)
 GameFeatureEventHandler.getInstance()!!.fireEvent(GameFeatureEvent(gameFeature, gameFeature!!.toString()))
 
@@ -195,7 +195,7 @@ this.addDefault(MainFeatureFactory.getInstance()!!.FULL_SCREEN)
 this.addDefault(MainFeatureFactory.getInstance()!!.LOAD_ONDEMAND)
 } catch(e: Exception)
             {
-PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
+PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }
 
 }

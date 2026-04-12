@@ -252,7 +252,7 @@ var evt = evt
                         if(this.savedCaptureJRadioButton!!.isSelected())
                         
                                     {
-                                    logUtil!!.put("Selected", this, "savedCaptureJRadioButtonActionPerformed")
+                                    this.logUtil!!.putF("Selected", this, "savedCaptureJRadioButtonActionPerformed")
 this.getSelectedGenericProfile()!!.add(GenericProfileDataWorkerType.SAVED_CAPTURE)
 this.getSelectedGenericProfile()!!.remove(GenericProfileDataWorkerType.SCREEN_CAPTURE)
 this.screenCaptureJRadioButton!!.setSelected(false)
@@ -262,7 +262,7 @@ this.getGenericProfiles()!!.save()
                                 
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "savedCaptureJRadioButtonActionPerformed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "savedCaptureJRadioButtonActionPerformed", e)
 }
 
 }
@@ -279,7 +279,7 @@ var evt = evt
                         if(this.screenCaptureJRadioButton!!.isSelected())
                         
                                     {
-                                    logUtil!!.put("Selected", this, "screenCaptureJRadioButtonActionPerformed")
+                                    this.logUtil!!.putF("Selected", this, "screenCaptureJRadioButtonActionPerformed")
 this.getSelectedGenericProfile()!!.add(GenericProfileDataWorkerType.SCREEN_CAPTURE)
 this.getSelectedGenericProfile()!!.remove(GenericProfileDataWorkerType.SAVED_CAPTURE)
 this.savedCaptureJRadioButton!!.setSelected(false)
@@ -289,7 +289,7 @@ this.getGenericProfiles()!!.save()
                                 
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "screenCaptureJRadioButtonActionPerformed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "screenCaptureJRadioButtonActionPerformed", e)
 }
 
 }
@@ -318,7 +318,7 @@ var evt = evt
 this.getGenericProfiles()!!.save()
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "captureComparisonJCheckBoxActionPerformed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "captureComparisonJCheckBoxActionPerformed", e)
 }
 
 }
@@ -347,7 +347,7 @@ var evt = evt
 this.getGenericProfiles()!!.save()
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "captureComparisonJCheckBoxActionPerformed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "captureComparisonJCheckBoxActionPerformed", e)
 }
 
 }
@@ -380,12 +380,12 @@ genericProfileActionsJPanel!!.selectFirstElement()
 layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 395, Short.MAX_VALUE)!!.addComponent(genericProfileActionsJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
 layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 256, Short.MAX_VALUE)!!.addComponent(genericProfileActionsJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
 this.updateProfileOptions()
-logUtil!!.put("Setting Configuration Profile JPanel", this, "updateProfileUI")
+this.logUtil!!.putF("Setting Configuration Profile JPanel", this, "updateProfileUI")
 
                                     }
                                 
                         else {
-                            logUtil!!.put("Null Configuration Profile", this, "updateProfileUI")
+                            this.logUtil!!.putF("Null Configuration Profile", this, "updateProfileUI")
 
                         }
                             
@@ -416,7 +416,7 @@ this.updateProfileUI(this.genericProfilesJList!!.getModel()!!.getElementAt(0) as
     open fun updateProfileOptions()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put(this.commonStrings!!.START, this, "updateProfileOptions")
+this.logUtil!!.putF(this.commonStrings!!.START, this, "updateProfileOptions")
 
     var genericProfile: GenericProfile = this.getSelectedGenericProfile()!!
 
@@ -440,13 +440,13 @@ this.captureMotionAnalysisJCheckBox!!.setSelected(false)
 
     var genericProfileDataWorkerType: GenericProfileDataWorkerType = vector.get(index) as GenericProfileDataWorkerType
 
-logUtil!!.put(genericProfile!!.getName() +" has GenericProfileDataWorkerType: " +genericProfileDataWorkerType!!.toString(), this, "updateProfileOptions")
+this.logUtil!!.putF(genericProfile!!.getName() +" has GenericProfileDataWorkerType: " +genericProfileDataWorkerType!!.toString(), this, "updateProfileOptions")
 
     
                         if(genericProfileDataWorkerType == GenericProfileDataWorkerType.SCREEN_CAPTURE)
                         
                                     {
-                                    logUtil!!.put("Screen Capture Selected", this, "updateProfileOptions")
+                                    this.logUtil!!.putF("Screen Capture Selected", this, "updateProfileOptions")
 this.screenCaptureJRadioButton!!.setSelected(true)
 
                                     }
@@ -456,7 +456,7 @@ this.screenCaptureJRadioButton!!.setSelected(true)
                         if(genericProfileDataWorkerType == GenericProfileDataWorkerType.SAVED_CAPTURE)
                         
                                     {
-                                    logUtil!!.put("Saved Capture Selected", this, "updateProfileOptions")
+                                    this.logUtil!!.putF("Saved Capture Selected", this, "updateProfileOptions")
 this.savedCaptureJRadioButton!!.setSelected(true)
 
                                     }
@@ -466,7 +466,7 @@ this.savedCaptureJRadioButton!!.setSelected(true)
                         if(genericProfileDataWorkerType == GenericProfileDataWorkerType.COMPARISON)
                         
                                     {
-                                    logUtil!!.put("Checking Comparison Box", this, "updateProfileOptions")
+                                    this.logUtil!!.putF("Checking Comparison Box", this, "updateProfileOptions")
 this.captureComparisonJCheckBox!!.setSelected(true)
 
                                     }
@@ -476,7 +476,7 @@ this.captureComparisonJCheckBox!!.setSelected(true)
                         if(genericProfileDataWorkerType == GenericProfileDataWorkerType.MOTION)
                         
                                     {
-                                    logUtil!!.put("Checking Motion Box", this, "updateProfileOptions")
+                                    this.logUtil!!.putF("Checking Motion Box", this, "updateProfileOptions")
 this.captureMotionAnalysisJCheckBox!!.setSelected(true)
 
                                     }
@@ -493,7 +493,7 @@ this.getSelectedGenericProfile()!!.add(GenericProfileDataWorkerType.SCREEN_CAPTU
 
                                     }
                                 
-logUtil!!.put(this.commonStrings!!.END, this, "updateProfileOptions")
+this.logUtil!!.putF(this.commonStrings!!.END, this, "updateProfileOptions")
 }
 
 
@@ -566,7 +566,7 @@ var evt = evt
 this.updateProfileUI(profileNameString)
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "genericProfilesJListValueChanged", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "genericProfilesJListValueChanged", e)
 }
 
 }
@@ -597,7 +597,7 @@ this.getGenericProfiles()!!.remove(nextSelectedValueString)
 this.selectFirstElement()
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "deleteProfileJButtonActionPerformed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "deleteProfileJButtonActionPerformed", e)
 }
 
 }
@@ -619,7 +619,7 @@ this.newProfileJDialog!!.setVisible(false)
 this.updateProfileUI(newProfileName)
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "okNewProfileJButtonActionPerformed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "okNewProfileJButtonActionPerformed", e)
 }
 
 }

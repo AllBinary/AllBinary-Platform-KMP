@@ -77,6 +77,9 @@ object: Thread()
         //nullable = true from not(false or (false and true)) = true
 {
 
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+
         try {
             
     var angleAsString: String = this@RotationImageJPanel.totalAngleJComboBox!!.getSelectedItem() as String
@@ -272,7 +275,7 @@ file= File(filePath)
 
     var isWritten: Boolean = ImageIO.write(this@RotationImageJPanel.result as RenderedImage, imageStrings!!.PNG, file)!!
 
-logUtil!!.put("File: " +file +" Wrote: " +isWritten, this, commonStrings!!.RUN)
+this.logUtil!!.putF("File: " +file +" Wrote: " +isWritten, this, commonStrings!!.RUN)
 }
 
 

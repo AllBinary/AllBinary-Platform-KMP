@@ -154,14 +154,14 @@ this.load()
 
 
         try {
-            logUtil!!.put(StringMaker().
+            this.logUtil!!.putF(StringMaker().
                             append("Adding HighScore: ")!!.appendlong(newHighScore!!.getScore())!!.toString(), this, commonStrings!!.ADD)
 
     
                         if(this.isTooManyHighScores())
                         
                                     {
-                                    logUtil!!.put("Removing Lowest Score", this, commonStrings!!.ADD)
+                                    this.logUtil!!.putF("Removing Lowest Score", this, commonStrings!!.ADD)
 this.removeLowestHighScore()
 
                                     }
@@ -176,15 +176,15 @@ recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation),
 this.load()
 } catch(e: RecordStoreException)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
 }
  catch(e: IOException)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
 }
  catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
 }
 
          finally {
@@ -204,7 +204,7 @@ recordStore!!.closeRecordStore()
                                 
 } catch(e: RecordStoreException)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
 }
 
 
@@ -284,7 +284,7 @@ inputStream= DataInputStream(byteArrayInputStream)
                         if(bestHighScore!!.getId() !=  -1)
                         
                                     {
-                                    logUtil!!.put(StringMaker().
+                                    this.logUtil!!.putF(StringMaker().
                             append("Removing Lowest HighScore: ")!!.appendlong(bestHighScore!!.getScore())!!.toString(), this, commonStrings!!.LOAD)
 recordStore!!.deleteRecord(bestHighScore!!.getId())
 
@@ -292,11 +292,11 @@ recordStore!!.deleteRecord(bestHighScore!!.getId())
                                 
 } catch(e: RecordStoreException)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "removeLowestHighScore", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "removeLowestHighScore", e)
 }
  catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "removeLowestHighScore", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "removeLowestHighScore", e)
 }
 
          finally {
@@ -316,7 +316,7 @@ recordStore!!.closeRecordStore()
                                 
 } catch(e: RecordStoreException)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "removeLowestHighScore", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "removeLowestHighScore", e)
 }
 
 
@@ -410,7 +410,7 @@ break;
 list.add(lastIndex, newHighScore)
 } catch(e: EOFException)
             {
-logUtil!!.put("EOF", this, commonStrings!!.LOAD, e)
+this.logUtil!!.put("EOF", this, commonStrings!!.LOAD, e)
 
 
 
@@ -424,19 +424,19 @@ logUtil!!.put("EOF", this, commonStrings!!.LOAD, e)
 
 } catch(e: RecordStoreNotFoundException)
             {
-logUtil!!.put("No High Scores", this, commonStrings!!.LOAD, e)
+this.logUtil!!.put("No High Scores", this, commonStrings!!.LOAD, e)
 }
  catch(e: RecordStoreException)
             {
-logUtil!!.put(commonStrings!!.UNKNOWN, this, commonStrings!!.LOAD, e)
+this.logUtil!!.put(commonStrings!!.UNKNOWN, this, commonStrings!!.LOAD, e)
 }
  catch(e: IOException)
             {
-logUtil!!.put(commonStrings!!.UNKNOWN, this, commonStrings!!.LOAD, e)
+this.logUtil!!.put(commonStrings!!.UNKNOWN, this, commonStrings!!.LOAD, e)
 }
  catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.UNKNOWN, this, commonStrings!!.LOAD, e)
+this.logUtil!!.put(commonStrings!!.UNKNOWN, this, commonStrings!!.LOAD, e)
 }
 
          finally {
@@ -456,7 +456,7 @@ recordStore!!.closeRecordStore()
                                 
 } catch(e: RecordStoreException)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.LOAD, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.LOAD, e)
 }
 
 
@@ -484,7 +484,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.LOAD, e)
                                     }
                                 
                         else {
-                            logUtil!!.put(StringMaker().
+                            this.logUtil!!.putF(StringMaker().
                             append("HighScores RecordStore Max Reached: ")!!.appendint(this.MAXHIGHSCORES)!!.toString(), this, "isTooManyHighScores")
 
 
@@ -511,7 +511,7 @@ var newHighScore = newHighScore
                         if(!this.isTooManyHighScores())
                         
                                     {
-                                    logUtil!!.put("Slot Available for a High Score", this, "isBestScore")
+                                    this.logUtil!!.putF("Slot Available for a High Score", this, "isBestScore")
 
 
 
@@ -542,7 +542,7 @@ var newHighScore = newHighScore
                         if(recordComparatorInterface!!.compare(newHighScore!!.getAsBytes(), highScore!!.getAsBytes()) == RecordComparator.FOLLOWS)
                         
                                     {
-                                    logUtil!!.put("Obtained a High Score", this, "isBestScore")
+                                    this.logUtil!!.putF("Obtained a High Score", this, "isBestScore")
 
 
 
@@ -556,7 +556,7 @@ var newHighScore = newHighScore
 
                         }
                             
-logUtil!!.put("Not a High Score", this, "isBestScore")
+this.logUtil!!.putF("Not a High Score", this, "isBestScore")
 
 
 
@@ -564,7 +564,7 @@ logUtil!!.put("Not a High Score", this, "isBestScore")
                         return false
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
 
 
 

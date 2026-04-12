@@ -72,7 +72,7 @@ var document = document
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Starting", this, "toXmlNode")
+                                    this.logUtil!!.putF("Starting", this, "toXmlNode")
 
                                     }
                                 
@@ -116,7 +116,7 @@ inventoryNode!!.appendChild(node)
                                     }
                                 
                         else {
-                            logUtil!!.put("Inventory", this, "toXmlNode")
+                            this.logUtil!!.putF("Inventory", this, "toXmlNode")
 
                         }
                             
@@ -134,7 +134,7 @@ inventoryNode!!.appendChild(node)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "toXmlNode", e)
+                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, "toXmlNode", e)
 
                                     }
                                 
@@ -175,7 +175,7 @@ this.addDomNodeInterface(this as DomNodeInterface)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "view()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "view()", e)
 
                                     }
                                 

@@ -108,7 +108,7 @@ shippingMethodNode!!.appendChild(ModDomHelper.createNameValueNodes(document, Shi
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "toXmlNode", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "toXmlNode", e)
 
                                     }
                                 

@@ -32,6 +32,7 @@ import org.allbinary.android.activity.NullProgressActivity
 import org.allbinary.android.activity.ProgressActivityInterface
 import org.allbinary.android.activity.SimpleProgressActivityInterface
 import org.allbinary.graphics.color.BasicColor
+import org.allbinary.logic.communication.log.LogUtil
 
 open public class AndroidTitleProgressBar : ProgressCanvas {
         
@@ -108,12 +109,12 @@ this.progressActivity= activity
 {
 
         try {
-            logUtil!!.put(commonStrings!!.START, this, commonStrings!!.START_METHOD_NAME)
+            this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.START_METHOD_NAME)
 super.start()
 this.progressActivity!!.runOnUiThread(showTitleProgressBarRunnable)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME, e)
 }
 
 }
@@ -124,12 +125,12 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME
 {
 
         try {
-            logUtil!!.put(commonStrings!!.START, this, commonStrings!!.END_METHOD_NAME)
+            this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.END_METHOD_NAME)
 this.progressActivity!!.runOnUiThread(dismissTitleProgressBarRunnable)
 super.end()
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.END_METHOD_NAME, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.END_METHOD_NAME, e)
 }
 
 }
@@ -148,7 +149,7 @@ this.portion= value
 this.progressActivity!!.runOnUiThread(progressDialogPortionSetProgressRunnable)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
 }
 
 }
@@ -166,7 +167,7 @@ this.portion= value
 this.progressActivity!!.runOnUiThread(progressDialogPortionSetProgressRunnable)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
 }
 
 }
@@ -182,7 +183,7 @@ var value = value
 this.progressActivity!!.runOnUiThread(progressDialogSetProgressRunnable)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "setValue", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "setValue", e)
 }
 
 }
@@ -216,6 +217,9 @@ open public inner class TitleProgressBarSetProgressRunnable
         //nullable = true from not(false or (false and true)) = true
 {
 
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+
         try {
             
     var value: Int = this@AndroidTitleProgressBar.getValue().toInt()
@@ -246,6 +250,9 @@ open public inner class TitleProgressBarPortionSetProgressRunnable
     override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
 
         try {
             
@@ -278,6 +285,9 @@ open public inner class ShowTitleProgressBarRunnable
         //nullable = true from not(false or (false and true)) = true
 {
 
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+
         try {
             
     var maxValue: Int = this@AndroidTitleProgressBar.getMaxValue().toInt()
@@ -308,6 +318,9 @@ open public inner class DismissTitleProgressBarRunnable
     override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
 
         try {
             this@AndroidTitleProgressBar.progressActivity!!.onDismissTitleProgressBar()

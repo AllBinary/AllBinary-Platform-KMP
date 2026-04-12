@@ -109,7 +109,7 @@ var keyData = keyData
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
+PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
 
 
 

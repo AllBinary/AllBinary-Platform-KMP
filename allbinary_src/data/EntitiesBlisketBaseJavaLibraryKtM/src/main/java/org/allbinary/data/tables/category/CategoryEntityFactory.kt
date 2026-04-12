@@ -76,7 +76,7 @@ private constructor ()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getCategoryEntityInstance()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "getCategoryEntityInstance()", e)
 
                                     }
                                 

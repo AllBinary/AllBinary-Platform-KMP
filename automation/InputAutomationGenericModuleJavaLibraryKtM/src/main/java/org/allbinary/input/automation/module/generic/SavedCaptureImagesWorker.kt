@@ -107,7 +107,7 @@ this.running= running
 {
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.RUN)
+            this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.RUN)
 this.setRunning(true)
 
     var timeHelper: TimeDelayHelper = TimeDelayHelper(1000)
@@ -128,7 +128,7 @@ filePathStringBuffer!!.append(MediaDataFactory.getInstance()!!.JPG.getExtension(
 
     var filePath: String = filePathStringBuffer!!.toString()!!
 
-logUtil!!.put("Loading Image File Path: " +filePath, this, this.commonStrings!!.RUN)
+this.logUtil!!.putF("Loading Image File Path: " +filePath, this, this.commonStrings!!.RUN)
 
     var file: File = File(filePath)
 
@@ -150,18 +150,18 @@ this.fireEvent(capturedImageEvent)
                                     }
                                 
                         else {
-                            logUtil!!.put("Could Not Load File: " +filePath, this, this.commonStrings!!.RUN)
+                            this.logUtil!!.putF("Could Not Load File: " +filePath, this, this.commonStrings!!.RUN)
 
                         }
                             
-logUtil!!.put(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsed(), this, this.commonStrings!!.RUN)
+this.logUtil!!.putF(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsed(), this, this.commonStrings!!.RUN)
 this.setRunning(false)
 }
 
-logUtil!!.put(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
+this.logUtil!!.putF(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
 }
 
 }

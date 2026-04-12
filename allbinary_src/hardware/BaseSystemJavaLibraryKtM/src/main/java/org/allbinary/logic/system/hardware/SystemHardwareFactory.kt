@@ -109,10 +109,10 @@ var operatingSystemInterface = operatingSystemInterface
 
                                     }
                                 
-logUtil!!.put("Found Hardware", this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF("Found Hardware", this, commonStrings!!.CONSTRUCTOR)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
 

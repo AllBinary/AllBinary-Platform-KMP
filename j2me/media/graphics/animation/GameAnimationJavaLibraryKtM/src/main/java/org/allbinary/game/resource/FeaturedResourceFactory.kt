@@ -95,7 +95,7 @@ var level = level
 
     var isFeature: Boolean = featureInterface!!.isFeature()!!
 
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(this.GAME_FEATURE_CONTROLLED)!!.append(featureInterface!!.toString())!!.append(this.IS_LOADING_LEVEL_LABEL)!!.append(ResourceLoadingLevelFactory.getInstance()!!.getLevelString(level))!!.append(CommonSeps.getInstance()!!.COLON_SEP)!!.appendboolean(isLoadingLevel)!!.append(this.IS_FEATURE)!!.appendboolean(isFeature)!!.toString(), this, commonStrings!!.INIT)
 
     
@@ -121,7 +121,7 @@ stringBuffer!!.append(ANIMATION_FEATURES)
 stringBuffer!!.appendboolean(features.isFeature(graphicsFeatureFactory!!.VECTOR_GRAPHICS))
 stringBuffer!!.append(IMAGE_LABEL)
 stringBuffer!!.appendboolean(features.isFeature(graphicsFeatureFactory!!.IMAGE_GRAPHICS))
-logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 
     
                         if(features.isFeature(graphicsFeatureFactory!!.IMAGE_GRAPHICS))
@@ -136,7 +136,7 @@ stringBuffer!!.append(SPRITE_QUARTER)
 stringBuffer!!.appendboolean(features.isFeature(graphicsFeatureFactory!!.SPRITE_QUARTER_ROTATION_GRAPHICS))
 stringBuffer!!.append(SPRITE_FULL)
 stringBuffer!!.appendboolean(features.isFeature(graphicsFeatureFactory!!.SPRITE_FULL_GRAPHICS))
-logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 
                                     }
                                 
@@ -154,7 +154,7 @@ this.list.clear()
         //nullable = true from not(false or (false and false)) = true
 {
 var featureInterface = featureInterface
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(CommonLabels.getInstance()!!.START_LABEL)!!.append(StringUtil.getInstance()!!.toString(featureInterface))!!.toString(), this, commonStrings!!.ADD)
 this.list.add(featureInterface)
 }

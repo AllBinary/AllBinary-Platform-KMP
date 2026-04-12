@@ -54,6 +54,8 @@ import org.allbinary.string.CommonSeps
             
     private val commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
+    private val logFormatUtil: LogFormatUtil = LogFormatUtil.getInstance()!!
+
     private val LABEL: String = "org.allbinary"
 private constructor ()
             : super()
@@ -61,7 +63,7 @@ private constructor ()
 }
 
 
-    /*actual*/ open fun put(log: Log)
+    /*actual*/ open fun putL(log: Log)
         //nullable = true from not(false or (false and false)) = true
 {
     //var log = log
@@ -81,7 +83,7 @@ this.put(specialMessage, anyType, functionName, exception)
 }
 
 
-    /*actual*/ open fun put(specialMessage: String, anyType: Any, functionName: String)
+    /*actual*/ open fun putF(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var specialMessage = specialMessage
@@ -105,7 +107,7 @@ className= StringMaker().
                             append(anyType!!::class.toString()!!)!!.append(commonSeps!!.COLON)!!.append(Integer.toHexString(anyType!!.hashCode()))!!.toString().toCharArray().concatToString()
                                 
 
-    var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
+    var message: String = logFormatUtil!!.get(className, functionName, specialMessage, exception)!!
 
 android.util.Log.i(LABEL, message)
 }

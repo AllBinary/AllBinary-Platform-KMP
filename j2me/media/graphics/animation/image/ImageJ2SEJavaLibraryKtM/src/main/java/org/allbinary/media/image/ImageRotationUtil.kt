@@ -106,7 +106,7 @@ imageJ2SERotationUtil!!.rotateImage(originalAwtImage, newBufferedImage, totalAng
                                     }
                                 
                         else {
-                            PreLogUtil.put("Not Mutable", this, "getRotatedImage", Exception())
+                            PreLogUtil.putOE("Not Mutable", this, "getRotatedImage", Exception())
 
                         }
                             

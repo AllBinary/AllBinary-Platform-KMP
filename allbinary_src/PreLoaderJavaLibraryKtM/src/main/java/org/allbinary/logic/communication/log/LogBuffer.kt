@@ -66,7 +66,7 @@ this.logEntryVector!!.add(log)
 
     var log: Log = this.logEntryVector!!.get(index) as Log
 
-logUtil!!.put(log)
+this.logUtil!!.putL(log)
 }
 
 }

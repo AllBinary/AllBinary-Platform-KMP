@@ -50,7 +50,7 @@ var mouseActionScriptInputInterface = mouseActionScriptInputInterface
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(StringMaker().
+logUtil!!.putF(StringMaker().
                             append("Start - Processing Mouse Input at: ")!!.append(mouseActionScriptInputInterface!!.getPoint()!!.toString())!!.append(" clicks: ")!!.appendint(mouseActionScriptInputInterface!!.getButtonClicks())!!.toString(), "MouseInputAutomationProcessor", commonStrings!!.PROCESS)
 
     var inputRobotInterface: InputRobotInterface = mouseActionScriptInputInterface!!.getInputRobotInterface()!!

@@ -105,7 +105,7 @@ var context = context
                                     }
                                 
                         else {
-                            logUtil!!.put("No ServiceReference: " +InputAutomationConfigurationModuleChangeListener::class.toString()!!, this, "addModules")
+                            this.logUtil!!.putF("No ServiceReference: " +InputAutomationConfigurationModuleChangeListener::class.toString()!!, this, "addModules")
 
 
 
@@ -123,7 +123,7 @@ var context = context
 var context = context
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, "addModules")
+            this.logUtil!!.putF(this.commonStrings!!.START, this, "addModules")
 
     var inputAutomationConfigurationModuleChangeListener: InputAutomationConfigurationModuleChangeListener = this.getInputAutomationConfigurationModuleChangeListener(context)!!
 
@@ -152,7 +152,7 @@ inputAutomationConfigurationModuleChangeListener!!.onAdd(inputAutomationConfigur
                                 
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "addModules")
+this.logUtil!!.putF(this.commonStrings!!.EXCEPTION, this, "addModules")
 }
 
 }
@@ -174,7 +174,7 @@ OSGIActivatorUtil.registerAsService(bundleContext, getServiceFactory(), InputAut
 var context = context
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, "removeModules")
+            this.logUtil!!.putF(this.commonStrings!!.START, this, "removeModules")
 
     var inputAutomationConfigurationModuleChangeListener: InputAutomationConfigurationModuleChangeListener = this.getInputAutomationConfigurationModuleChangeListener(context)!!
 
@@ -203,7 +203,7 @@ inputAutomationConfigurationModuleChangeListener!!.onRemove(inputAutomationConfi
                                 
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "removeModules")
+this.logUtil!!.putF(this.commonStrings!!.EXCEPTION, this, "removeModules")
 }
 
 }
@@ -215,7 +215,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "removeModules")
         //nullable = true from not(false or (false and false)) = true
 {
 var context = context
-logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.START)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.START)
 this.addModules(context)
 this.registerAsService(context)
 }
@@ -227,7 +227,7 @@ this.registerAsService(context)
         //nullable = true from not(false or (false and false)) = true
 {
 var context = context
-logUtil!!.put(this.commonStrings!!.START, this, "stop")
+this.logUtil!!.putF(this.commonStrings!!.START, this, "stop")
 this.removeModules(context)
 }
 

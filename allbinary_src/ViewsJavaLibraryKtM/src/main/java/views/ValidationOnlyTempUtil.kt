@@ -74,7 +74,7 @@ var validationComponentInterface = validationComponentInterface
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("View Name: " +validationComponentInterface!!.getTransformInfoInterface()!!.getName(), this, "view()")
+                                    this.logUtil!!.putF("View Name: " +validationComponentInterface!!.getTransformInfoInterface()!!.getName(), this, "view()")
 
                                     }
                                 
@@ -90,7 +90,7 @@ var validationComponentInterface = validationComponentInterface
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "view()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "view()", e)
 
                                     }
                                 

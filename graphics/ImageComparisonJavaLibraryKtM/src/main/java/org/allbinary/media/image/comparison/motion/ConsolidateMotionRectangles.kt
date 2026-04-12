@@ -75,7 +75,7 @@ consolidateMotionRectangles()
 
     var vector: Vector = this.getVector()!!
 
-logUtil!!.put("Start - Size Before: " +vector.size, this, "consolidateMotionRectangleConstraints")
+this.logUtil!!.putF("Start - Size Before: " +vector.size, this, "consolidateMotionRectangleConstraints")
 
     var removeVector: Vector = Vector()
 

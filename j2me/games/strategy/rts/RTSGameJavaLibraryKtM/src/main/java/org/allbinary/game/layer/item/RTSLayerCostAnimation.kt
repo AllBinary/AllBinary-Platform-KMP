@@ -89,7 +89,7 @@ var event = event
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "onTechEvent", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "onTechEvent", e)
 }
 
 }

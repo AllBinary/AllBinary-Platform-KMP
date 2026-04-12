@@ -88,7 +88,7 @@ public constructor (inputAutomationModuleInterface: InputAutomationModuleFactory
         {
 var inputAutomationModuleInterface = inputAutomationModuleInterface
 this.setInputAutomationModuleInterface(inputAutomationModuleInterface)
-this.setClassName(this.inputAutomationModuleInterface!!.::class.toString()!!)
+this.setClassName(this.inputAutomationModuleInterface!!::class.toString()!!)
 }
 
 
@@ -125,7 +125,7 @@ this.init(abeClientInformation)
                                     }
                                 
                         else {
-                            logUtil!!.put("Class Node Null", this, this.commonStrings!!.INIT)
+                            this.logUtil!!.putF("Class Node Null", this, this.commonStrings!!.INIT)
 
                         }
                             
@@ -133,7 +133,7 @@ this.init(abeClientInformation)
                                     }
                                 
                         else {
-                            logUtil!!.put(InputAutomationData.NAME +" Node Has No Children", this, "Contructor")
+                            this.logUtil!!.putF(InputAutomationData.NAME +" Node Has No Children", this, "Contructor")
 
                         }
                             
@@ -146,12 +146,12 @@ this.init(abeClientInformation)
     //var abeClientInformation = abeClientInformation
 
         try {
-            logUtil!!.put("Name: " +getName(), this, this.commonStrings!!.INIT)
-logUtil!!.put("ClassName: " +className, this, this.commonStrings!!.INIT)
+            this.logUtil!!.putF("Name: " +getName(), this, this.commonStrings!!.INIT)
+this.logUtil!!.putF("ClassName: " +className, this, this.commonStrings!!.INIT)
 this.setInputAutomationModuleInterface(AbeFactory.getInstance()!!.getInstance()!!.getInstance(abeClientInformation, getClassName()) as InputAutomationModuleFactoryInterface)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e)
 
 
 
@@ -197,7 +197,7 @@ node.appendChild(classNameNode)
         //nullable = true from not(false or (false and false)) = true
 {
 var name = name
-logUtil!!.put("Name: " +name, this, "setName")
+this.logUtil!!.putF("Name: " +name, this, "setName")
 this.name= name
 }
 
@@ -217,7 +217,7 @@ this.name= name
         //nullable = true from not(false or (false and false)) = true
 {
     //var className = className
-logUtil!!.put("ClassName : " +className, this, "setClassName")
+this.logUtil!!.putF("ClassName : " +className, this, "setClassName")
 this.className= className
 }
 
@@ -237,7 +237,7 @@ this.className= className
         //nullable = true from not(false or (false and false)) = true
 {
 var inputAutomationModuleInterface = inputAutomationModuleInterface
-logUtil!!.put("InputAutomationModuleFactoryInterface : " +inputAutomationModuleInterface, this, "setInputAutomationModuleInterface")
+this.logUtil!!.putF("InputAutomationModuleFactoryInterface : " +inputAutomationModuleInterface, this, "setInputAutomationModuleInterface")
 this.inputAutomationModuleInterface= inputAutomationModuleInterface
 this.setName(this.inputAutomationModuleInterface!!.getName())
 }

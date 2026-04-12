@@ -61,7 +61,7 @@ var node = node
 
                             //For kotlin this is before the body of the constructor.
                     
-logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 
     var actionNode: Node = DomSearchHelper.getNode(ImageActionScriptOutputData.NAME, node.getChildNodes())!!
 
@@ -177,7 +177,7 @@ this.actionScriptOutputJPanel= ImageActionScriptOutputJPanel(this)
 
 hashMap!!.put(ImageActionScriptOutputData.DISPLAY, Boolean.toString(this.isDisplay()))
 hashMap!!.put(ImageActionScriptOutputData.SAVE, Boolean.toString(this.isSaved()))
-logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
+this.logUtil!!.putF("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
 
 
@@ -286,7 +286,7 @@ stringBuffer!!.append(this.getImageTypes()!!.toString())
     open fun log()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put(this.future_toString(), this, "log")
+this.logUtil!!.putF(this.future_toString(), this, "log")
 }
 
 

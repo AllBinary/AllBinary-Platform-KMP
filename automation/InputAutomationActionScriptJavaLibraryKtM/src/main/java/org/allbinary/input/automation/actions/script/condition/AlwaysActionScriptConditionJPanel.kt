@@ -38,7 +38,7 @@ open public class AlwaysActionScriptConditionJPanel : javax.swing.JPanel {
     private var alwaysActionScriptConditionInterface: AlwaysActionScriptConditionInterface
 public constructor (alwaysActionScriptConditionInterface: AlwaysActionScriptConditionInterface){
 var alwaysActionScriptConditionInterface = alwaysActionScriptConditionInterface
-logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 initComponents()
 this.alwaysActionScriptConditionInterface= alwaysActionScriptConditionInterface
 this.set()

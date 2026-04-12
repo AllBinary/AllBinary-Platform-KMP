@@ -110,7 +110,7 @@ hasRead= false
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
                         
                                     {
-                                    logUtil!!.put("Failed", this, "write")
+                                    this.logUtil!!.putF("Failed", this, "write")
 
                                     }
                                 
@@ -167,7 +167,7 @@ this.setPassword(WeakCrypt(2).
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRELOADER))
                         
                                     {
-                                    logUtil!!.put("Not a File - Failed Loading: " +FILEABPATH.toString(), this, "read")
+                                    this.logUtil!!.putF("Not a File - Failed Loading: " +FILEABPATH.toString(), this, "read")
 
                                     }
                                 
@@ -181,7 +181,7 @@ this.setPassword(WeakCrypt(2).
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
                         
                                     {
-                                    logUtil!!.put("Failed", this, "read")
+                                    this.logUtil!!.putF("Failed", this, "read")
 
                                     }
                                 
@@ -233,7 +233,7 @@ this.read()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRELOADER))
                         
                                     {
-                                    logUtil!!.put("Failed", this, "updateIfNeeded")
+                                    this.logUtil!!.putF("Failed", this, "updateIfNeeded")
 
                                     }
                                 

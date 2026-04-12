@@ -98,7 +98,7 @@ stringBuffer!!.append(CLOSE_RANGE)
 stringBuffer!!.appendint(closeRange)
 stringBuffer!!.append(SENSOR_RANGE)
 stringBuffer!!.appendint(sensorRange)
-logUtil!!.put(stringBuffer!!.toString(), this, "selected: initRange")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "selected: initRange")
 }
 
 
@@ -130,7 +130,7 @@ stringBuffer!!.append(CURRENT_TARGET_NOT_AVAILABLE)
 stringBuffer!!.appendboolean((waypointBehaviorBase!!.getCurrentTargetLayerInterface() == 
                                     null
                                 ))
-logUtil!!.put(stringBuffer!!.toString(), this, PROCESS_POSSIBLE_TARGET)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, PROCESS_POSSIBLE_TARGET)
 
                                     }
                                 
@@ -154,7 +154,7 @@ stringBuffer!!.append(ENEMY_POSSIBLE_TARGET)
 stringBuffer!!.append(layerInterface!!.getName())
 stringBuffer!!.append(" anotherTargetDistance: ")
 stringBuffer!!.appendint(anotherTargetDistance)
-logUtil!!.put(stringBuffer!!.toString(), this, "selected: processPossibleTarget2")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "selected: processPossibleTarget2")
 }
 
 
@@ -175,7 +175,7 @@ stringBuffer!!.append(ENEMY_POSSIBLE_TARGET)
 stringBuffer!!.append(layerInterface!!.getName())
 stringBuffer!!.append(" anotherTargetDistance: ")
 stringBuffer!!.appendint(anotherTargetDistance)
-logUtil!!.put(stringBuffer!!.toString(), this, "selected: processPossibleTarget3")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "selected: processPossibleTarget3")
 }
 
 
@@ -198,7 +198,7 @@ stringBuffer!!.append(" at: ")
 stringBuffer!!.appendint(anotherTargetDistance)
 stringBuffer!!.append(" instead of: ")
 stringBuffer!!.append(waypointBehaviorBase!!.getCurrentTargetingStateString())
-logUtil!!.put(stringBuffer!!.toString(), this, "selected: setTarget")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "selected: setTarget")
 }
 
 
@@ -206,7 +206,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: setTarget")
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-logUtil!!.put("Target Destroyed", this, "selected: setTargetPath")
+this.logUtil!!.putF("Target Destroyed", this, "selected: setTargetPath")
 }
 
 
@@ -223,7 +223,7 @@ stringBuffer!!.append(" Set Path To Target: ")
 stringBuffer!!.append(waypointBehaviorBase!!.getCurrentTargetLayerInterface()!!.getName())
 stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(stringUtil!!.toString(waypointBehaviorBase!!.getCurrentTargetLayerInterface()))
-logUtil!!.put(stringBuffer!!.toString(), this, "selected: setTargetPath")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "selected: setTargetPath")
 }
 
 
@@ -248,7 +248,7 @@ stringBuffer!!.append(" isTrackingWaypoint: ")
 stringBuffer!!.appendboolean(waypointBehaviorBase!!.isTrackingWaypoint())
 stringBuffer!!.append(" WaypointOverridesAttacking: ")
 stringBuffer!!.appendboolean(waypointBehaviorBase!!.isWaypointOverridesAttacking())
-logUtil!!.put(stringBuffer!!.toString(), this, "selected: processWaypoint")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "selected: processWaypoint")
 }
 
 
@@ -267,7 +267,7 @@ stringBuffer!!.append(" nextUnvisitedPathGeographicMapCellPosition: ")
 stringBuffer!!.append(stringUtil!!.toString(waypointBehaviorBase!!.getNextUnvisitedPathGeographicMapCellPosition()))
 stringBuffer!!.append(" Tracked: ")
 stringBuffer!!.append(stringUtil!!.toString(waypointBehaviorBase!!.getCurrentGeographicMapCellHistory()!!.getTracked()))
-logUtil!!.put(stringBuffer!!.toString(), this, "selected: processWaypoint")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "selected: processWaypoint")
 }
 
 
@@ -282,7 +282,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: processWaypoint")
 stringBuffer!!.append(associatedAdvancedRTSGameLayer!!.getName())
 stringBuffer!!.append(" Visited: ")
 stringBuffer!!.append(stringUtil!!.toString(geographicMapCellPosition))
-logUtil!!.put(stringBuffer!!.toString(), this, "selected: processWaypoint")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "selected: processWaypoint")
 }
 
 
@@ -291,7 +291,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: processWaypoint")
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
     //var reason = reason
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(reason)!!.toString(), this, "turnTo")
 }
 
@@ -300,7 +300,7 @@ logUtil!!.put(StringMaker().
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-logUtil!!.put(associatedAdvancedRTSGameLayer!!.getName(), this, "wander")
+this.logUtil!!.putF(associatedAdvancedRTSGameLayer!!.getName(), this, "wander")
 }
 
 
@@ -308,7 +308,7 @@ logUtil!!.put(associatedAdvancedRTSGameLayer!!.getName(), this, "wander")
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" Target Destroyed")!!.toString(), this, "selected: processTargeting")
 }
 
@@ -329,7 +329,7 @@ stringBuffer!!.appendint(dx)
 stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(positionStrings!!.DY_LABEL)
 stringBuffer!!.appendint(dy)
-logUtil!!.put(stringBuffer!!.toString(), this, "selected: processTargeting")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "selected: processTargeting")
 }
 
 
@@ -349,7 +349,7 @@ stringBuffer!!.appendint(dx)
 stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(positionStrings!!.DY_LABEL)
 stringBuffer!!.appendint(dy)
-logUtil!!.put(stringBuffer!!.toString(), this, "selected: processTargeting")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "selected: processTargeting")
 }
 
 
@@ -370,7 +370,7 @@ stringBuffer!!.append(" remove: ")
 stringBuffer!!.append(waypointLayer!!.getName())
 stringBuffer!!.append(" because: ")
 stringBuffer!!.append(reason)
-logUtil!!.put(stringBuffer!!.toString(), this, "selected: removeWaypoint")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "selected: removeWaypoint")
 }
 
 
@@ -388,7 +388,7 @@ stringBuffer!!.append(this.commonSeps!!.SPACE)
 stringBuffer!!.append(unitWaypointBehavior2!!.getName())
 stringBuffer!!.append(" Waypoints: ")
 stringBuffer!!.append(stringUtil!!.toString(list))
-logUtil!!.put(stringBuffer!!.toString(), this, "selected: removeWaypoint")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "selected: removeWaypoint")
 }
 
 
@@ -396,7 +396,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: removeWaypoint")
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" Clearing removed waypoint")!!.toString(), this, "selected: removeWaypoint")
 }
 
@@ -405,7 +405,7 @@ logUtil!!.put(StringMaker().
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" Cleared Target")!!.toString(), this, "selected: clearTarget")
 }
 
@@ -433,7 +433,7 @@ stringBuffer!!.append(advancedRTSGameLayer!!.getParentLayer()!!.getName())
 
                                     }
                                 
-logUtil!!.put(stringBuffer!!.toString(), this, "selected: onWaypointEvent")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "selected: onWaypointEvent")
 }
 
 
@@ -441,7 +441,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: onWaypointEvent")
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" - target moved so retargeting")!!.toString(), this, "turnTo")
 }
 

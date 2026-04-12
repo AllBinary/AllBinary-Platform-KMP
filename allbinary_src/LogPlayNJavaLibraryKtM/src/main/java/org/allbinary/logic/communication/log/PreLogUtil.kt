@@ -60,7 +60,7 @@ import playn.core.PlayN
 className= StringMaker().
                             append(className)!!.append(CommonSeps.getInstance()!!.FORWARD_SLASH)!!.append(StringUtil.getInstance()!!.toString(anyType))!!.toString()
 
-    var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage)!!
+    var message: String = LogFormatUtil.getInstance()!!.getS(className, functionName, specialMessage)!!
 
 PlayN.log()!!.debug(LOG_SUCCESS +message)
 }
@@ -68,7 +68,7 @@ PlayN.log()!!.debug(LOG_SUCCESS +message)
 
     private val LOG_SUCCESS: String = "org.allbinary: "
 
-    /*actual*/ open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)
+    /*actual*/ open fun putOE(specialMessage: String, anyType: Any, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var specialMessage = specialMessage
@@ -98,20 +98,20 @@ PlayN.log()!!.error(LOG_SUCCESS +message, exception as Throwable)
 }
 
 
-    /*actual*/ open fun put(specialMessage: String, className: String, functionName: String)
+    /*actual*/ open fun putS(specialMessage: String, className: String, functionName: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var specialMessage = specialMessage
     //var className = className
     //var functionName = functionName
 
-    var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage)!!
+    var message: String = LogFormatUtil.getInstance()!!.getS(className, functionName, specialMessage)!!
 
 PlayN.log()!!.debug(LOG_SUCCESS +message)
 }
 
 
-    /*actual*/ open fun put(specialMessage: String, className: String, functionName: String, exception: Any)
+    /*actual*/ open fun putSE(specialMessage: String, className: String, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var specialMessage = specialMessage

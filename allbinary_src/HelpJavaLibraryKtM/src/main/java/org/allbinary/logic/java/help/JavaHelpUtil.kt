@@ -111,7 +111,7 @@ var filePath = filePath
                         return getHelpSet(helpSetURL)
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, getInstance(), "set", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, getInstance(), "set", e)
 
 
 
@@ -136,7 +136,7 @@ var url = url
                             null, url)
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, getInstance(), "set", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, getInstance(), "set", e)
 
 
 
@@ -160,10 +160,10 @@ helpBroker!!.setLocation(point)
 helpBroker!!.setSize(dimension)
 CSH.DisplayHelpFromSource(helpBroker).
                             actionPerformed(contextSensitiveHelpActionEvent)
-logUtil!!.put("CSH Action", getInstance(), "show")
+this.logUtil!!.putF("CSH Action", getInstance(), "show")
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, getInstance(), "show", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, getInstance(), "show", e)
 }
 
 }

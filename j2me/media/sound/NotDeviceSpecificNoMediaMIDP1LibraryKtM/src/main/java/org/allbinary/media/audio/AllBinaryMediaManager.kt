@@ -83,7 +83,7 @@ var soundsFactoryInterface = soundsFactoryInterface
 
     var commonString: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonString!!.START, THIS, commonString!!.INIT)
+logUtil!!.putF(commonString!!.START, THIS, commonString!!.INIT)
 ProgressCanvasFactory.getInstance()!!.addPortion(50, "Media Manager")
 Sounds(soundsFactoryInterface).
                             init()
@@ -115,7 +115,7 @@ var type = type
 
     var commonString: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonString!!.START, THIS, "creatPlayer(InputStream)")
+logUtil!!.putF(commonString!!.START, THIS, "creatPlayer(InputStream)")
 
 
 
@@ -134,7 +134,7 @@ var locator = locator
 
     var commonString: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonString!!.START, THIS, "creatPlayer(locator)")
+logUtil!!.putF(commonString!!.START, THIS, "creatPlayer(locator)")
 
 
 

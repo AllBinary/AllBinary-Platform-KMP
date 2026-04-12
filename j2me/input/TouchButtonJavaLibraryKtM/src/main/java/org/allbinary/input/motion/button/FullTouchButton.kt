@@ -86,7 +86,7 @@ this.animationY= point.getY() +yBorder
 this.hintAnimationY= animationY -this.rectangleP!!.getHeight() shr 1
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "updateRectangle", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "updateRectangle", e)
 }
 
 }

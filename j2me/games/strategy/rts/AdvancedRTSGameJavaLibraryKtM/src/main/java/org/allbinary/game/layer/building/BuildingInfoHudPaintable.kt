@@ -108,7 +108,7 @@ maxHealthHud= NumberStringHud("/ ", 99999, basicHudFactory!!.ABSOLUTE, basicHudF
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
 this.productivityHud= productivityHud

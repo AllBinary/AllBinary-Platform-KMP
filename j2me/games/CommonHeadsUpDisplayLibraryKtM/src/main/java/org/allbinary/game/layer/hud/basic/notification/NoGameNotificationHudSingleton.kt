@@ -68,7 +68,7 @@ this.gameNotificationHud= GameNotificationHud(basicHudFactory!!.TOPCENTER, basic
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
 }

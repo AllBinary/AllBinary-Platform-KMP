@@ -79,7 +79,7 @@ var tool = tool
 this.tool= tool
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "setSelectionTool", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "setSelectionTool", e)
 }
 
 }
@@ -97,7 +97,7 @@ StatusFactory.getInstance()!!.setStatus("Tool In Use: " +tool)
                         
                                     {
                                     this.selectedTool= GraphicItemFactory.getInstance()!!.getInstance(tool)
-logUtil!!.put("New Tool: " +this.selectedTool, this, "getSelectedToolFactory")
+this.logUtil!!.putF("New Tool: " +this.selectedTool, this, "getSelectedToolFactory")
 
 
 

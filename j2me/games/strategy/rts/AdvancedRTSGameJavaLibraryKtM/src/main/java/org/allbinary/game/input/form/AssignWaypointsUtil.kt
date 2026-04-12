@@ -112,7 +112,7 @@ unitWaypointBehavior!!.onWaypointEvent(WAYPOINT_EVENT)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "set", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "set", e)
 }
 
 }

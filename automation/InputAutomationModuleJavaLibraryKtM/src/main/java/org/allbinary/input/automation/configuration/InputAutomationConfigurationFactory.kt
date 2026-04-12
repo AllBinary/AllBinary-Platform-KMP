@@ -70,7 +70,7 @@ companion object {
                         if(file.isFile())
                         
                                     {
-                                    logUtil!!.put("LoadingConfiguration", INPUT_AUTOMATION_CONFIGURATION, commonStrings!!.INIT)
+                                    logUtil!!.putF("LoadingConfiguration", INPUT_AUTOMATION_CONFIGURATION, commonStrings!!.INIT)
 
     var jaxbContext: JAXBContext = JAXBContext.newInstance(InputAutomationConfiguration::class)!!
 
@@ -84,7 +84,7 @@ inputAutomationConfiguration= root.getValue() as InputAutomationConfiguration
 
     var inputAutomationModuleConfigurationList: List<InputAutomationModuleConfiguration> = inputAutomationConfiguration!!.getInputAutomationModuleConfigurationList()!!
 
-logUtil!!.put("isInstalled: " +inputAutomationConfiguration!!.isInstalled(), INPUT_AUTOMATION_CONFIGURATION, commonStrings!!.INIT)
+logUtil!!.putF("isInstalled: " +inputAutomationConfiguration!!.isInstalled(), INPUT_AUTOMATION_CONFIGURATION, commonStrings!!.INIT)
 
     var size: Int = inputAutomationModuleConfigurationList!!.size!!
 
@@ -102,12 +102,12 @@ inputAutomationModuleConfiguration= inputAutomationModuleConfigurationList!!.get
 inputAutomationModuleConfiguration!!.init(abeClientInformation)
 }
 
-logUtil!!.put("LoadedConfiguration", INPUT_AUTOMATION_CONFIGURATION, commonStrings!!.INIT)
+logUtil!!.putF("LoadedConfiguration", INPUT_AUTOMATION_CONFIGURATION, commonStrings!!.INIT)
 
                                     }
                                 
                         else {
-                            logUtil!!.put("New Configuration", INPUT_AUTOMATION_CONFIGURATION, commonStrings!!.INIT)
+                            logUtil!!.putF("New Configuration", INPUT_AUTOMATION_CONFIGURATION, commonStrings!!.INIT)
 inputAutomationConfiguration= InputAutomationConfiguration()
 
                         }

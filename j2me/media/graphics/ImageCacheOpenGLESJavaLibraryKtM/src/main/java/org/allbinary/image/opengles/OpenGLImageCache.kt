@@ -244,7 +244,7 @@ list.add(image)
 this.renderer.add(image)
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }
 
 }

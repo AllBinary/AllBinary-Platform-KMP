@@ -121,7 +121,7 @@ pack()
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
-logUtil!!.put("Starting Action Command: " +evt.getActionCommand(), this, "ActionPerformed")
+this.logUtil!!.putF("Starting Action Command: " +evt.getActionCommand(), this, "ActionPerformed")
 
     var files: Array<File?> = this.getJFileChooser1()!!.getSelectedFiles()!!
 

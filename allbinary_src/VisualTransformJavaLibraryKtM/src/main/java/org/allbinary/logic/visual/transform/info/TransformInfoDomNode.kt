@@ -53,7 +53,7 @@ var node = node
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Constructing TransformInfo From TransformInfoDomNode: " +node.getNodeName(), this, "TransformInfoDomNode(Node node)")
+                                    this.logUtil!!.putF("Constructing TransformInfo From TransformInfoDomNode: " +node.getNodeName(), this, "TransformInfoDomNode(Node node)")
 
                                     }
                                 
@@ -90,7 +90,7 @@ stringBuffer!!.append(name)
 stringBuffer!!.append(" with ")
 stringBuffer!!.appendint(nodeList!!.getLength())
 stringBuffer!!.append(" children")
-logUtil!!.put(stringBuffer!!.toString(), this, "TransformInfoObjectConfigComponent(Node node)")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "TransformInfoObjectConfigComponent(Node node)")
 
                                     }
                                 
@@ -136,7 +136,7 @@ stringBuffer!!.append(name)
 stringBuffer!!.append(" with ")
 stringBuffer!!.appendint(nodeList!!.getLength())
 stringBuffer!!.append(" children")
-logUtil!!.put(stringBuffer!!.toString(), this, "TransformInfoObjectConfigComponent(Node node)")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "TransformInfoObjectConfigComponent(Node node)")
 
                                     }
                                 
@@ -231,7 +231,7 @@ stringBuffer!!.append("\"/>")
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Component Key: " +key, this, "getReplaceKey()")
+                                    this.logUtil!!.putF("Component Key: " +key, this, "getReplaceKey()")
 
                                     }
                                 

@@ -57,7 +57,7 @@ var key = key
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-PreLogUtil.put(commonStrings!!.EXCEPTION, this, "SuperCrypt(key)", e)
+PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, "SuperCrypt(key)", e)
 }
 
 }
@@ -79,7 +79,7 @@ var value = value
                         return DatabaseEncoder.encode(crypted)
 } catch(e: Exception)
             {
-PreLogUtil.put("Encrypt Failed", this, "encrypt", e)
+PreLogUtil.putOE("Encrypt Failed", this, "encrypt", e)
 
 
 
@@ -106,7 +106,7 @@ var value = value
                         return decrypted.decodeToString()
 } catch(e: Exception)
             {
-PreLogUtil.put("decrypt Failed", this, "decrypt", e)
+PreLogUtil.putOE("decrypt Failed", this, "decrypt", e)
 
 
 

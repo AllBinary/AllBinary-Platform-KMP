@@ -80,7 +80,7 @@ var anyType = anyType
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "getStoreName()", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "getStoreName()", e)
 
                                     }
                                 

@@ -65,7 +65,7 @@ this.setTableName(tableName)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.CONSTRUCTOR, this, this.commonStrings!!.CONSTRUCTOR)
+                                    this.logUtil!!.putF(this.commonStrings!!.CONSTRUCTOR, this, this.commonStrings!!.CONSTRUCTOR)
 
                                     }
                                 
@@ -83,7 +83,7 @@ var paymentGatewayInterface = paymentGatewayInterface
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.START, this, "add")
+                                    this.logUtil!!.putF(this.commonStrings!!.START, this, "add")
 
                                     }
                                 
@@ -110,7 +110,7 @@ super.insert(vector)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.END, this, "add")
+                                    this.logUtil!!.putF(commonStrings!!.END, this, "add")
 
                                     }
                                 
@@ -121,7 +121,7 @@ super.insert(vector)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "add", e)
+                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, "add", e)
 
                                     }
                                 
@@ -174,7 +174,7 @@ super.updateWhere(whereKeyValuePairs, updateHashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.SUCCESS, this, "update")
+                                    this.logUtil!!.putF(this.commonStrings!!.SUCCESS, this, "update")
 
                                     }
                                 
@@ -185,7 +185,7 @@ super.updateWhere(whereKeyValuePairs, updateHashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "update", e)
+                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, "update", e)
 
                                     }
                                 
@@ -273,7 +273,7 @@ paymentGatewayHashMap!!.put(PaymentGatewayData.SPECIAL9.toString(), superCrypt!!
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.SUCCESS, this, "getPaymentGatewayInterface()")
+                                    this.logUtil!!.putF(this.commonStrings!!.SUCCESS, this, "getPaymentGatewayInterface()")
 
                                     }
                                 
@@ -302,7 +302,7 @@ paymentGatewayHashMap!!.put(PaymentGatewayData.SPECIAL9.toString(), superCrypt!!
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put("Command Failed for paymentType: " +paymentType!!.getName(), this, "getPaymentGatewayInterface", e)
+                                    this.logUtil!!.put("Command Failed for paymentType: " +paymentType!!.getName(), this, "getPaymentGatewayInterface", e)
 
                                     }
                                 
@@ -360,7 +360,7 @@ paymentGatewayVector!!.add(paymentType)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.SUCCESS, this, "findPaymentTypeVectorByStore()")
+                                    this.logUtil!!.putF(this.commonStrings!!.SUCCESS, this, "findPaymentTypeVectorByStore()")
 
                                     }
                                 
@@ -388,7 +388,7 @@ paymentGatewayVector!!.add(paymentType)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "findPaymentTypeVectorByStore", e)
+                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, "findPaymentTypeVectorByStore", e)
 
                                     }
                                 
@@ -420,7 +420,7 @@ super.deleteWhere(whereHashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.SUCCESS, this, "remove")
+                                    this.logUtil!!.putF(this.commonStrings!!.SUCCESS, this, "remove")
 
                                     }
                                 
@@ -431,7 +431,7 @@ super.deleteWhere(whereHashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "remove", e)
+                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, "remove", e)
 
                                     }
                                 

@@ -139,16 +139,16 @@ listOfList[foundIndex]!!.add(image)
 
 
         try {
-            logUtil!!.put(Memory.getInfo(), this, commonStrings!!.GET)
+            this.logUtil!!.putF(Memory.getInfo(), this, commonStrings!!.GET)
 image= this.createImage(key, inputStream)
 } catch(e: Exception)
             {
-logUtil!!.put("Exception: Trying Again After GC", this, commonStrings!!.GET, e)
-logUtil!!.put(StringMaker().
+this.logUtil!!.put("Exception: Trying Again After GC", this, commonStrings!!.GET, e)
+this.logUtil!!.putF(StringMaker().
                             append("InputStream: ")!!.append(inputStream!!.toString())!!.toString(), this, commonStrings!!.GET)
 System.gc()
 System.gc()
-logUtil!!.put(Memory.getInfo(), this, commonStrings!!.GET)
+this.logUtil!!.putF(Memory.getInfo(), this, commonStrings!!.GET)
 Thread.sleep(100)
 image= this.createImage(key, inputStream)
 }
@@ -201,7 +201,7 @@ this.hashtable.put(resourceId, image)
                                 
 }
 
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append("unable to find key: ")!!.append(StringUtil.getInstance()!!.toString(key))!!.toString(), this, commonStrings!!.RUN)
 
 

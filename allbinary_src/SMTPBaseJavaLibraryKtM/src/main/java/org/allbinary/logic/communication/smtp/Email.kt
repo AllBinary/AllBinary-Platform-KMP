@@ -166,7 +166,7 @@ init(server, null as Authenticator, arrayOf(InternetAddress(from)), arrayOf(Inte
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "emailConstructor", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "emailConstructor", e)
 
                                     }
                                 
@@ -209,7 +209,7 @@ this.properties.put(SMTP_HOST, server)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
                                     {
-                                    logUtil!!.put("Unable to get HostName so using fake", this, "init()")
+                                    this.logUtil!!.putF("Unable to get HostName so using fake", this, "init()")
 
                                     }
                                 
@@ -224,7 +224,7 @@ this.properties.put(SMTP_LOCAL_HOST, "FakeHostName")
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
                                     {
-                                    logUtil!!.put("Continuing on Exception: Unable to get HostName", this, "init()", e)
+                                    this.logUtil!!.put("Continuing on Exception: Unable to get HostName", this, "init()", e)
 
                                     }
                                 
@@ -470,7 +470,7 @@ hashMap!!.put(EmailData.CONTENT, content)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "toHashMap()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "toHashMap()", e)
 
                                     }
                                 

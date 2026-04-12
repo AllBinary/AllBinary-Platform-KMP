@@ -113,7 +113,7 @@ this.name= name
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 hashMap!!.put(GenericProfileActionData.NAME, this.name)
-logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
+this.logUtil!!.putF("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
 
 

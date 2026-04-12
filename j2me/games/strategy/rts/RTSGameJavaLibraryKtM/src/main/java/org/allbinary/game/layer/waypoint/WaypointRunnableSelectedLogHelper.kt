@@ -62,7 +62,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(pathFindingLayerInterface!!.getName())!!.append(commonStrings!!.START_RUNNABLE)!!.toString(), this, commonStrings!!.RUN)
 }
 
@@ -71,7 +71,7 @@ logUtil!!.put(StringMaker().
         //nullable = true from not(false or (false and false)) = true
 {
     //var pathFindingLayerInterface = pathFindingLayerInterface
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(pathFindingLayerInterface!!.getName())!!.append(commonStrings!!.END_RUNNABLE)!!.toString(), this, commonStrings!!.RUN)
 }
 

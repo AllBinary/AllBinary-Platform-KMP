@@ -47,8 +47,8 @@ companion object {
     open fun sendJspTagRedirect(pageContext: PageContext, e: Exception)
         //nullable = true from not(false or (false and false)) = true
 {
-var pageContext = pageContext
-var e = e
+    //var pageContext = pageContext
+    //var e = e
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -89,8 +89,8 @@ AbResponseHandler.sendRedirect(pageContext, FREEBLISKET_PATH_GLOBALS.getInstance
     open fun sendServletRedirect(pageContext: PageContext, e: Exception)
         //nullable = true from not(false or (false and false)) = true
 {
-var pageContext = pageContext
-var e = e
+    //var pageContext = pageContext
+    //var e = e
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -131,8 +131,8 @@ AbResponseHandler.sendRedirect(pageContext, FREEBLISKET_PATH_GLOBALS.getInstance
     open fun sendJspTagLicensingRedirect(pageContext: PageContext, e: Exception)
         //nullable = true from not(false or (false and false)) = true
 {
-var pageContext = pageContext
-var e = e
+    //var pageContext = pageContext
+    //var e = e
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -173,8 +173,8 @@ AbResponseHandler.sendRedirect(pageContext, FREEBLISKET_PATH_GLOBALS.getInstance
     open fun sendServletLicensingRedirect(pageContext: PageContext, e: Exception)
         //nullable = true from not(false or (false and false)) = true
 {
-var pageContext = pageContext
-var e = e
+    //var pageContext = pageContext
+    //var e = e
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -215,8 +215,8 @@ AbResponseHandler.sendRedirect(pageContext, FREEBLISKET_PATH_GLOBALS.getInstance
     open fun sendRedirect(pageContext: PageContext, page: String)
         //nullable = true from not(false or (false and false)) = true
 {
-var pageContext = pageContext
-var page = page
+    //var pageContext = pageContext
+    //var page = page
 
     var request: HttpServletRequest = pageContext!!.getRequest() as HttpServletRequest
 

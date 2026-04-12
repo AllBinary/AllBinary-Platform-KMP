@@ -34,7 +34,24 @@ import org.allbinary.logic.string.StringUtil
         
 /*actual*/ companion object {
             
-    val LOG: Log = Log(StringUtil.getInstance()!!.EMPTY_STRING, NullUtil.getInstance()!!.NULL_OBJECT, StringUtil.getInstance()!!.EMPTY_STRING)
+    val LOG: Log = Log(StringUtil.getInstance()!!.EMPTY_STRING, NullUtil.getInstance()!!.NULL_OBJECT, StringUtil.getInstance()!!.EMPTY_STRING, NullUtil.getInstance()!!.NULL_OBJECT)
+
+    /*actual*/ open fun getInstanceD()
+        //nullable = true from not(false or (false and true)) = true
+: Log{
+
+    var stringUtil: StringUtil = StringUtil.getInstance()!!
+
+
+    var nullUtil: NullUtil = NullUtil.getInstance()!!
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return Log(stringUtil!!.EMPTY_STRING, nullUtil!!.NULL_OBJECT, stringUtil!!.EMPTY_STRING, nullUtil!!.NULL_OBJECT)
+}
+
 
     /*actual*/ open fun getInstance(specialMessage: String, anyType: Any, functionName: String, exception: Any)
         //nullable =  from not(true or (false and false)) = 
@@ -51,8 +68,8 @@ var exception = exception
 }
 
 
-    /*actual*/ open fun getInstance(specialMessage: String, anyType: Any, functionName: String)
-        //nullable =  from not(true or (false and false)) = 
+    /*actual*/ open fun getInstanceF(specialMessage: String, anyType: Any, functionName: String)
+        //nullable = true from not(false or (false and false)) = true
 : Log{
 var specialMessage = specialMessage
 var anyType = anyType

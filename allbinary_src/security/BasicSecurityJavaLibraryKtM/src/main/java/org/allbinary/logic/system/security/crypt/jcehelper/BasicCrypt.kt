@@ -55,7 +55,7 @@ var keyAsString = keyAsString
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-PreLogUtil.put(commonStrings!!.EXCEPTION, this, "AbCrypt(alg,key)", e)
+PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, "AbCrypt(alg,key)", e)
 }
 
 this.key= key
@@ -75,7 +75,7 @@ this.key= key
                         return this.mutilate(array)
 } catch(e: Exception)
             {
-PreLogUtil.put("Encrypt Failed", this, "encrypt", e)
+PreLogUtil.putOE("Encrypt Failed", this, "encrypt", e)
 
 
 
@@ -99,7 +99,7 @@ PreLogUtil.put("Encrypt Failed", this, "encrypt", e)
                         return this.mutilate(array)
 } catch(e: Exception)
             {
-PreLogUtil.put("decrypt Failed", this, "decrypt", e)
+PreLogUtil.putOE("decrypt Failed", this, "decrypt", e)
 
 
 

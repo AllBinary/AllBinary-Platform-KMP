@@ -77,7 +77,7 @@ this.gameKeyEvent= this.gameKeyEventFactory!!.getInstance(this, gameKey)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
 }
 
 }

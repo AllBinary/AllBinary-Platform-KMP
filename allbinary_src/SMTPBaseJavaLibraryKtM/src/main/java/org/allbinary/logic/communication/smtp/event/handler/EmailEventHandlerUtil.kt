@@ -116,7 +116,7 @@ private constructor ()
 stringBuffer!!.append("Returning UserEmailEventHandler for ")
 stringBuffer!!.appendint(userVector!!.size)
 stringBuffer!!.append(" users.")
-logUtil!!.put(stringBuffer!!.toString(), this, "getEventHandler")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "getEventHandler")
 
                                     }
                                 

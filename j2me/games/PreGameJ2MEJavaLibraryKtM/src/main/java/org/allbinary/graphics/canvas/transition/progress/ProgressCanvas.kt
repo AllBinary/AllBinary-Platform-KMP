@@ -156,7 +156,7 @@ var cmdListener = cmdListener
     open fun start()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put(commonStrings!!.START, this, commonStrings!!.START_METHOD_NAME)
+this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.START_METHOD_NAME)
 this.setBackground(true)
 this.gauge.setHeight(30)
 this.gauge.setLabel(commonStrings!!.PLEASE_WAIT)
@@ -176,7 +176,7 @@ this.inProgress= true
         //nullable = true from not(false or (false and false)) = true
 {
 var background = background
-logUtil!!.put(commonStrings!!.START, this, START_BACKGROUND)
+this.logUtil!!.putF(commonStrings!!.START, this, START_BACKGROUND)
 
     var myFont: MyFont = MyFont.getInstance()!!
 
@@ -209,7 +209,7 @@ this.inGameProcessor= IN_GAME_PROCESSOR
     open fun end()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put(commonStrings!!.START, this, commonStrings!!.END_METHOD_NAME)
+this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.END_METHOD_NAME)
 this.gauge.setValue(this.getMaxValue())
 this.endActual()
 this.paintable= NullPaintable.getInstance()

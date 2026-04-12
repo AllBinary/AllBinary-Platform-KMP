@@ -170,7 +170,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
     //var displayChangeEvent = displayChangeEvent
 
         try {
-            logUtil!!.put(commonStrings!!.START, this, canvasStrings!!.ON_DISPLAY_CHANGE_EVENT)
+            this.logUtil!!.putF(commonStrings!!.START, this, canvasStrings!!.ON_DISPLAY_CHANGE_EVENT)
 
     var rectangle: Rectangle = this.createRectangle(this.menuForm!!.size())!!
 
@@ -178,7 +178,7 @@ this.menuForm!!.init(rectangle, FormTypeFactory.getInstance()!!.VERTICAL_CENTER_
 this.update()
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "onResize", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "onResize", e)
 }
 
 }
@@ -264,7 +264,7 @@ this.repaintBehavior!!.onChangeRepaint(this)
     override fun open()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put(commonStrings!!.START, this, "open")
+this.logUtil!!.putF(commonStrings!!.START, this, "open")
 BasicMotionGesturesHandler.getInstance()!!.addListener(this.getMenuInputProcessor())
 GameKeyEventHandler.getInstance()!!.addListener(this.getMenuInputProcessor())
 DisplayChangeEventHandler.getInstance()!!.addListener(this)
@@ -274,7 +274,7 @@ DisplayChangeEventHandler.getInstance()!!.addListener(this)
     override fun close()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CLOSE)
+this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.CLOSE)
 BasicMotionGesturesHandler.getInstance()!!.removeListener(this.getMenuInputProcessor())
 GameKeyEventHandler.getInstance()!!.removeListener(this.getMenuInputProcessor())
 DisplayChangeEventHandler.getInstance()!!.removeListener(this)
@@ -330,7 +330,7 @@ this.keyRepeated(keyCode, 0)
 {
     //var keyCode = keyCode
     //var deviceId = deviceId
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(CommonSeps.getInstance()!!.SPACE)!!.appendint(keyCode)!!.toString(), this, gameInputStrings!!.KEY_PRESSED)
 this.addGameKeyEvent(keyCode, 0, false)
 }
@@ -387,14 +387,14 @@ downGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
                                     }
                                 
                         else {
-                            logUtil!!.put(StringMaker().
+                            this.logUtil!!.putF(StringMaker().
                             append(this.gameInputStrings!!.NO_KEY)!!.appendint(keyCode)!!.toString(), this, this.gameInputStrings!!.ADD_KEY_EVENT)
 
                         }
                             
 } catch(e: Exception)
             {
-logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
+this.logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
 }
 
 }
@@ -425,14 +425,14 @@ upGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
                                     }
                                 
                         else {
-                            logUtil!!.put(StringMaker().
+                            this.logUtil!!.putF(StringMaker().
                             append(this.gameInputStrings!!.NO_KEY)!!.appendint(keyCode)!!.toString(), this, this.gameInputStrings!!.REMOVE_KEY_EVENT)
 
                         }
                             
 } catch(e: Exception)
             {
-logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.REMOVE_KEY_EVENT, e)
+this.logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.REMOVE_KEY_EVENT, e)
 }
 
 }

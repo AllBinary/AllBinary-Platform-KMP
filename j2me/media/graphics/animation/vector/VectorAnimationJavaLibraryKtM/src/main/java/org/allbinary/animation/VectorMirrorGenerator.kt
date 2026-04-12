@@ -134,7 +134,7 @@ pointsBasicArrayList!!.add(getInstance(pointsBasicArrayList!!.objectArray[index]
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
 
 
 

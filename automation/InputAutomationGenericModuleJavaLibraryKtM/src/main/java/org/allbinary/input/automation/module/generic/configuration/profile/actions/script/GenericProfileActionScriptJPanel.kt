@@ -47,7 +47,7 @@ open public class GenericProfileActionScriptJPanel : javax.swing.JPanel
 
     private var genericProfileActionScript: GenericProfileActionScript
 public constructor (){
-logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 initComponents()
 }
 
@@ -60,7 +60,7 @@ initComponents()
 
 this.getActionScriptJTree()!!.setModel(defaultTreeModel)
 this.repaint()
-logUtil!!.put("Updated UI", this, "updateJTree")
+this.logUtil!!.putF("Updated UI", this, "updateJTree")
 }
 
 

@@ -108,6 +108,9 @@ object: Thread()
         //nullable = true from not(false or (false and true)) = true
 {
 
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+
         try {
             
     var imageUtil: ImageUtil = ImageUtil.getInstance()!!
@@ -214,6 +217,9 @@ object: Thread()
         //nullable = true from not(false or (false and true)) = true
 {
 
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+
         try {
             
     var imageProcessorInput: ImageProcessorInput = this@ResizeImageJPanel.getImageProcessorInput()!!
@@ -263,6 +269,9 @@ object: Thread()
         //nullable = true from not(false or (false and true)) = true
 {
 
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+
         try {
             
     var imageProcessorInput: ImageProcessorInput = this@ResizeImageJPanel.getImageProcessorInput()!!
@@ -311,6 +320,9 @@ object: Thread()
     override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
 
         try {
             

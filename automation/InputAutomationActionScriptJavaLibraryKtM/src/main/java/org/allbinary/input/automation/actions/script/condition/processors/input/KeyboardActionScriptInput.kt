@@ -111,7 +111,7 @@ var node = node
 
                             //For kotlin this is before the body of the constructor.
                     
-logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 
     var actionNode: Node = DomSearchHelper.getNode(KeyboardActionScriptInputData.NAME, node.getChildNodes())!!
 
@@ -343,7 +343,7 @@ var keyArray = keyArray
                         if(keyArray != 
                                     null
                                 )
-                        logUtil!!.put(CommonLabels.getInstance()!!.START +keyArray!!.size, this, "setKeyArray")
+                        this.logUtil!!.putF(CommonLabels.getInstance()!!.START +keyArray!!.size, this, "setKeyArray")
 this.keyArray= keyArray
 }
 
@@ -370,7 +370,7 @@ this.keyboardActionScriptInputJPanel!!.getKeyActionJDialog()!!.setVisible(true)
         //nullable = true from not(false or (false and false)) = true
 {
 var text = text
-logUtil!!.put(CommonLabels.getInstance()!!.START +text, this, "setText")
+this.logUtil!!.putF(CommonLabels.getInstance()!!.START +text, this, "setText")
 
     var integerArray: Array<Integer?> = this.integerArrayValue(text)!!
 
@@ -382,7 +382,7 @@ this.setKeyArray(integerArray)
         //nullable = true from not(false or (false and false)) = true
 : Array<Integer?>{
 var text = text
-logUtil!!.put(CommonLabels.getInstance()!!.START +text, this, "integerArrayValue")
+this.logUtil!!.putF(CommonLabels.getInstance()!!.START +text, this, "integerArrayValue")
 
     var vector: Vector = Vector()
 
@@ -416,7 +416,7 @@ logUtil!!.put(CommonLabels.getInstance()!!.START +text, this, "integerArrayValue
                                     
     var nextCharString: String = text.substring(index +2, endIndex)!!
 
-logUtil!!.put("Next Char String: " +nextCharString, this, "integerArrayValue")
+this.logUtil!!.putF("Next Char String: " +nextCharString, this, "integerArrayValue")
 vector.add(substring.valueOf())
 index= index +nextCharString!!.length +3
 
@@ -468,7 +468,7 @@ hashMap!!.put(KeyboardActionScriptInputData.KEY +index, Integer.toString(this.ge
 hashMap!!.put(KeyboardActionScriptInputData.DELAY_BETWEEN_KEYS, Integer.toString(this.getDelayBetweenKeys()))
 hashMap!!.put(KeyboardActionScriptInputData.PRESS, Boolean.toString(this.isPress()))
 hashMap!!.put(KeyboardActionScriptInputData.RELEASE, Boolean.toString(this.isRelease()))
-logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
+this.logUtil!!.putF("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
 
 
@@ -508,7 +508,7 @@ KeyboardInputAutomationProcessor.process(this)
     open fun log()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put(this.toString(), this, "log")
+this.logUtil!!.putF(this.toString(), this, "log")
 }
 
 

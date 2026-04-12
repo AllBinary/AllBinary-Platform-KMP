@@ -129,7 +129,7 @@ this.point.setY(y)
                         
                                     {
                                     this.lastString= string
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(PERMANENT_GAME_NOTIFICATION)!!.append(string)!!.toString(), this, commonStrings!!.ADD)
 
                                     }

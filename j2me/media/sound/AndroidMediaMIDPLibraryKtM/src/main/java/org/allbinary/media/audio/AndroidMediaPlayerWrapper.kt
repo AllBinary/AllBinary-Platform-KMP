@@ -78,7 +78,7 @@ this.setMediaPlayer(mediaPlayer)
 this.mediaPlayer!!.setLooping(false)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION_LABEL +resource, this, commonStrings!!.CONSTRUCTOR, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION_LABEL +resource, this, commonStrings!!.CONSTRUCTOR, e)
 
 
 
@@ -173,7 +173,7 @@ super.removePlayerListener(playerListener)
 this.mediaPlayer= NullAndroidCanvas.NULL_MEDIA_PLAYER
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CLOSE, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CLOSE, e)
 }
 
 }
@@ -201,7 +201,7 @@ this.mediaPlayer!!.start()
 super.start()
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME, e)
 }
 
 }
@@ -220,7 +220,7 @@ this.mediaPlayer!!.prepare()
 super.stop()
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "stop", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "stop", e)
 }
 
 }
@@ -230,7 +230,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "stop", e)
         //nullable = true from not(false or (false and false)) = true
 {
 var event = event
-logUtil!!.put("LineEvent: " +event, this, commonStrings!!.UPDATE)
+this.logUtil!!.putF("LineEvent: " +event, this, commonStrings!!.UPDATE)
 
     var size: Int = this.listenersList!!.size()!!
 

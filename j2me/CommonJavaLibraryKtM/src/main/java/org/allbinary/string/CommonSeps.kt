@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.string.StringMaker
 
 open public class CommonSeps
             : Object
@@ -68,9 +69,11 @@ companion object {
 
     val UNDERSCORE: String = "_"
 
-    val COLON_SEP: String = this.COLON +this.SPACE
+    val COLON_SEP: String = StringMaker().
+                            append(this.COLON)!!.append(this.SPACE)!!.toString()!!
 
-    val COMMA_SEP: String = this.COMMA +this.SPACE
+    val COMMA_SEP: String = StringMaker().
+                            append(this.COMMA)!!.append(this.SPACE)!!.toString()!!
 
     val PARENTHESIS_OPEN: String = "("
 

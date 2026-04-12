@@ -61,7 +61,7 @@ XmlRpcRemoteLicenseRegistrationClient(abeClientInformation).
                             get(hashtable)
 } catch(e: Exception)
             {
-PreLogUtil.put("License Registration Exception", "LicenseRegistrationUtil", "License Registration", e)
+PreLogUtil.putOE("License Registration Exception", "LicenseRegistrationUtil", "License Registration", e)
 }
 
 }

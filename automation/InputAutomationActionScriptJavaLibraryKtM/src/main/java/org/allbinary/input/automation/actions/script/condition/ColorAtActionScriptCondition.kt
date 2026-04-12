@@ -266,7 +266,7 @@ hashMap!!.put(ColorAtActionScriptConditionData.MIN_GREEN, Integer.toString(this.
 hashMap!!.put(ColorAtActionScriptConditionData.MAX_GREEN, Integer.toString(this.getColorRangeInterface()!!.getMaxGreen()))
 hashMap!!.put(ColorAtActionScriptConditionData.MIN_BLUE, Integer.toString(this.getColorRangeInterface()!!.getMinBlue()))
 hashMap!!.put(ColorAtActionScriptConditionData.MAX_BLUE, Integer.toString(this.getColorRangeInterface()!!.getMaxBlue()))
-logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
+this.logUtil!!.putF("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
 
 
@@ -346,7 +346,7 @@ var frame = frame
     var message: String = StringMaker().
                             append("getPoint(): ")!!.append(this.getPoint()!!.toString())!!.append(CommonSeps.getInstance()!!.NEW_LINE)!!.append(this.getColorRangeInterface()!!.toString())!!.toString()!!
 
-logUtil!!.put(message, this, "log")
+this.logUtil!!.putF(message, this, "log")
 }
 
 

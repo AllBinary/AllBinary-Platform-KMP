@@ -29,6 +29,8 @@
 open public class CommandTag : CustomTagSupport {
         
 
+    val tagStrings: TagStrings = TagStrings.getInstance()!!
+
     private var command: String
 public constructor (){
 }

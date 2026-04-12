@@ -55,7 +55,7 @@ public constructor ()
             : super()
         {
 Globals.getInstance()!!.init(this::class.java.classLoader, "./")
-logUtil!!.put("Set Globals: " +URLGLOBALS.getWebappPath(), this, this.commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF("Set Globals: " +URLGLOBALS.getWebappPath(), this, this.commonStrings!!.CONSTRUCTOR)
 }
 
 
@@ -102,7 +102,7 @@ this.showLicenseDialog(abeClientInformation, e)
     //var e = e
 
         try {
-            logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e)
+            this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e)
 
     var basicTextJDialog: BasicTextJDialog = BasicTextJDialog(e.message)
 
@@ -130,14 +130,14 @@ this.showLicenseDialog(abeClientInformation, e)
                                 
 } catch(e2: LicensingException)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e2)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e2)
 }
 
 basicTextJDialog!!.addCloseListener(ExitCloseListener())
 basicTextJDialog!!.setVisible(true)
 } catch(e3: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e3)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e3)
 }
 
 }

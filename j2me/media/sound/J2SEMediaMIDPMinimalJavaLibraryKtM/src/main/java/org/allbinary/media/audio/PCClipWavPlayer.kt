@@ -73,7 +73,7 @@ clip= this.create(audioInputStream)
                                 )
                         
                                     {
-                                    logUtil!!.put("Clip was null", this, commonStrings!!.CONSTRUCTOR, Exception())
+                                    this.logUtil!!.put("Clip was null", this, commonStrings!!.CONSTRUCTOR, Exception())
 
 
 
@@ -83,7 +83,7 @@ clip= this.create(audioInputStream)
                                 
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
 this.audioInputStream= audioInputStream
@@ -105,7 +105,7 @@ MusicThreadPool.getInstance()!!.runTask(object: ARunnable()
             close2()
 } catch(e: Exception)
             {
-PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
+PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
 }
 
 }
@@ -154,7 +154,7 @@ MusicThreadPool.getInstance()!!.runTask(object: ARunnable()
             start2()
 } catch(e: Exception)
             {
-PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
+PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
 }
 
 }
@@ -212,7 +212,7 @@ MusicThreadPool.getInstance()!!.runTask(object: ARunnable()
             stop2()
 } catch(e: Exception)
             {
-PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
+PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
 }
 
 }

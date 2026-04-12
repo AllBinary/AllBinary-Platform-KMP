@@ -40,7 +40,7 @@ open public class TimeIntervalActionScriptConditionJPanel : javax.swing.JPanel {
     private var timeIntervalActionScriptConditionInterface: TimeIntervalActionScriptConditionInterface
 public constructor (timeIntervalActionScriptConditionInterface: TimeIntervalActionScriptConditionInterface){
 var timeIntervalActionScriptConditionInterface = timeIntervalActionScriptConditionInterface
-logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 initComponents()
 this.timeIntervalActionScriptConditionInterface= timeIntervalActionScriptConditionInterface
 this.set()

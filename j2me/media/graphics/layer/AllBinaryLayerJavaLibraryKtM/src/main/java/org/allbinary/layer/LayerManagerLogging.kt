@@ -85,7 +85,7 @@ companion object {
 {
     //var layerInterface = layerInterface
 stringBuilder!!.delete(0, stringBuilder!!.length())
-logUtil!!.put(stringBuilder!!.appendint(this.hashCode())!!.append(APPEND_)!!.append(layerInterface!!.getName())!!.toString(), this, APPEND)
+this.logUtil!!.putF(stringBuilder!!.appendint(this.hashCode())!!.append(APPEND_)!!.append(layerInterface!!.getName())!!.toString(), this, APPEND)
 }
 
 
@@ -95,7 +95,7 @@ logUtil!!.put(stringBuilder!!.appendint(this.hashCode())!!.append(APPEND_)!!.app
     //var layerInterface = layerInterface
     //var index = index
 stringBuilder!!.delete(0, stringBuilder!!.length())
-logUtil!!.put(stringBuilder!!.appendint(this.hashCode())!!.append(APPEND_)!!.append(layerInterface!!.getName())!!.append(_AT_)!!.appendint(index)!!.toString(), this, APPEND)
+this.logUtil!!.putF(stringBuilder!!.appendint(this.hashCode())!!.append(APPEND_)!!.append(layerInterface!!.getName())!!.append(_AT_)!!.appendint(index)!!.toString(), this, APPEND)
 }
 
 
@@ -111,13 +111,13 @@ logUtil!!.put(stringBuilder!!.appendint(this.hashCode())!!.append(APPEND_)!!.app
                         
                                     {
                                     stringBuilder!!.delete(0, stringBuilder!!.length())
-logUtil!!.put(stringBuilder!!.appendint(this.hashCode())!!.append(ATTEMPT_REMOVE_)!!.append(StringUtil.getInstance()!!.toString(layerInterface))!!.toString(), this, REMOVE)
+this.logUtil!!.putF(stringBuilder!!.appendint(this.hashCode())!!.append(ATTEMPT_REMOVE_)!!.append(StringUtil.getInstance()!!.toString(layerInterface))!!.toString(), this, REMOVE)
 
                                     }
                                 
                         else {
                             stringBuilder!!.delete(0, stringBuilder!!.length())
-logUtil!!.put(stringBuilder!!.appendint(this.hashCode())!!.append(ATTEMPT_REMOVE_)!!.append(layerInterface!!.getName())!!.toString(), this, REMOVE)
+this.logUtil!!.putF(stringBuilder!!.appendint(this.hashCode())!!.append(ATTEMPT_REMOVE_)!!.append(layerInterface!!.getName())!!.toString(), this, REMOVE)
 
                         }
                             
@@ -138,7 +138,7 @@ logUtil!!.put(stringBuilder!!.appendint(this.hashCode())!!.append(ATTEMPT_REMOVE
                         
                                     {
                                     stringBuilder!!.delete(0, stringBuilder!!.length())
-logUtil!!.put(stringBuilder!!.appendint(this.hashCode())!!.append(REMOVE_)!!.append(StringUtil.getInstance()!!.toString(layerInterface))!!.toString(), this, REMOVE)
+this.logUtil!!.putF(stringBuilder!!.appendint(this.hashCode())!!.append(REMOVE_)!!.append(StringUtil.getInstance()!!.toString(layerInterface))!!.toString(), this, REMOVE)
 
                                     }
                                 
@@ -153,7 +153,7 @@ logUtil!!.put(stringBuilder!!.appendint(this.hashCode())!!.append(REMOVE_)!!.app
                         
                                     {
                                     stringBuilder!!.delete(0, stringBuilder!!.length())
-logUtil!!.put(stringBuilder!!.appendint(this.hashCode())!!.append(REMOVE_)!!.append(layerInterface!!.getName())!!.toString(), this, REMOVE)
+this.logUtil!!.putF(stringBuilder!!.appendint(this.hashCode())!!.append(REMOVE_)!!.append(layerInterface!!.getName())!!.toString(), this, REMOVE)
 
                                     }
                                 
@@ -162,7 +162,7 @@ logUtil!!.put(stringBuilder!!.appendint(this.hashCode())!!.append(REMOVE_)!!.app
                                 
                         else {
                             stringBuilder!!.delete(0, stringBuilder!!.length())
-logUtil!!.put(stringBuilder!!.appendint(this.hashCode())!!.append(DID_NOT_REMOVE)!!.append(layerInterface!!.getName())!!.toString(), this, REMOVE)
+this.logUtil!!.putF(stringBuilder!!.appendint(this.hashCode())!!.append(DID_NOT_REMOVE)!!.append(layerInterface!!.getName())!!.toString(), this, REMOVE)
 LayerManagerLogging.removeFailed= true
 
                         }
@@ -197,7 +197,7 @@ allBinaryLayer= (layerManager!!.getLayerAt(index) as AllBinaryLayer)
 stringBuilder!!.append(allBinaryLayer!!.getName())!!.append(commonSeps!!.COMMA)
 }
 
-logUtil!!.put(stringBuilder!!.toString(), this, REMOVE)
+this.logUtil!!.putF(stringBuilder!!.toString(), this, REMOVE)
 }
 
 
@@ -205,7 +205,7 @@ logUtil!!.put(stringBuilder!!.toString(), this, REMOVE)
         //nullable = true from not(false or (false and true)) = true
 {
 stringBuilder!!.delete(0, stringBuilder!!.length())
-logUtil!!.put(stringBuilder!!.appendint(this.hashCode())!!.append(CLEAR)!!.toString(), this, CLEAR)
+this.logUtil!!.putF(stringBuilder!!.appendint(this.hashCode())!!.append(CLEAR)!!.toString(), this, CLEAR)
 }
 
 

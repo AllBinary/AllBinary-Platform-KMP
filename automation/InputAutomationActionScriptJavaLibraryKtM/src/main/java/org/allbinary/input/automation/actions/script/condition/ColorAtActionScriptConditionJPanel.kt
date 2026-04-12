@@ -42,7 +42,7 @@ open public class ColorAtActionScriptConditionJPanel : javax.swing.JPanel {
     private var colorAtActionScriptConditionInterface: ColorAtActionScriptConditionInterface
 public constructor (colorAtActionScriptConditionInterface: ColorAtActionScriptConditionInterface){
 var colorAtActionScriptConditionInterface = colorAtActionScriptConditionInterface
-logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 initComponents()
 this.colorAtActionScriptConditionInterface= colorAtActionScriptConditionInterface
 this.set()

@@ -90,7 +90,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
     //var completeMotionGestureInputEvent = completeMotionGestureInputEvent
 
         try {
-            logUtil!!.put(commonStrings!!.START, this, "onCompleteMotionGestureInputEvent")
+            this.logUtil!!.putF(commonStrings!!.START, this, "onCompleteMotionGestureInputEvent")
 
     var touchMotionGestureFactory: TouchMotionGestureFactory = TouchMotionGestureFactory.getInstance()!!
 
@@ -108,7 +108,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
                         if(motionGestureInput == touchMotionGestureFactory!!.RELEASED)
                         
                                     {
-                                    logUtil!!.put(RELEASE, this, METHOD_NAME)
+                                    this.logUtil!!.putF(RELEASE, this, METHOD_NAME)
 released= true
 
 
@@ -123,7 +123,7 @@ released= true
                         if(motionGestureInput == TouchMotionGestureFactory.getInstance()!!.NO_MOTION && !this.timeHelper!!.isTime())
                         
                                     {
-                                    logUtil!!.put(FAST_REPEAT, this, METHOD_NAME)
+                                    this.logUtil!!.putF(FAST_REPEAT, this, METHOD_NAME)
 
 
 
@@ -137,7 +137,7 @@ released= true
                         if(!released)
                         
                                     {
-                                    logUtil!!.put(IGNORE, this, METHOD_NAME)
+                                    this.logUtil!!.putF(IGNORE, this, METHOD_NAME)
 
 
 
@@ -147,12 +147,12 @@ released= true
                                     }
                                 
 released= false
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append("GameKey: ")!!.append(StringUtil.getInstance()!!.toString(gameKey))!!.append(" MotionGestureInput: ")!!.append(StringUtil.getInstance()!!.toString(motionGestureInput))!!.toString(), this, METHOD_NAME)
 this.inputMappingInterface!!.process(gameKey, motionGestureInput)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
 }
 
 }

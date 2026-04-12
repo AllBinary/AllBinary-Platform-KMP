@@ -144,7 +144,7 @@ this.executeSQLStatement(tableData)
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    PreLogUtil.put(this.commonStrings!!.EXCEPTION, INIT_SQL, "createTable()", e)
+                                    PreLogUtil.putOE(this.commonStrings!!.EXCEPTION, INIT_SQL, "createTable()", e)
 
                                     }
                                 
@@ -179,7 +179,7 @@ this.executeSQLStatement(tableData)
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    PreLogUtil.put(this.commonStrings!!.EXCEPTION, INIT_SQL, "dropTables()", e)
+                                    PreLogUtil.putOE(this.commonStrings!!.EXCEPTION, INIT_SQL, "dropTables()", e)
 
                                     }
                                 
@@ -326,7 +326,7 @@ result.put(columnName, field)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    PreLogUtil.put(this.FAILED_SQL_STATEMENT +stringBuffer, this.INIT_SQL, this.METHOD_GET_ROW, e)
+                                    PreLogUtil.putOE(this.FAILED_SQL_STATEMENT +stringBuffer, this.INIT_SQL, this.METHOD_GET_ROW, e)
 
                                     }
                                 
@@ -431,7 +431,7 @@ this.executeSQLStatement(sqlStatement)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    PreLogUtil.put(this.FAILED_SQL_STATEMENT +stringBuffer, this.INIT_SQL, METHOD_UPDATE_WHERE, e)
+                                    PreLogUtil.putOE(this.FAILED_SQL_STATEMENT +stringBuffer, this.INIT_SQL, METHOD_UPDATE_WHERE, e)
 
                                     }
                                 
@@ -494,7 +494,7 @@ this.executeSQLStatement(sqlStatement)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    PreLogUtil.put(this.FAILED_SQL_STATEMENT +stringBuffer!!.toString(), this.INIT_SQL, INSERT, e)
+                                    PreLogUtil.putOE(this.FAILED_SQL_STATEMENT +stringBuffer!!.toString(), this.INIT_SQL, INSERT, e)
 
                                     }
                                 
@@ -572,7 +572,7 @@ stmt.close()
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    PreLogUtil.put(this.commonStrings!!.EXCEPTION, INIT_SQL, "executeSQLStatement()", e)
+                                    PreLogUtil.putOE(this.commonStrings!!.EXCEPTION, INIT_SQL, "executeSQLStatement()", e)
 
                                     }
                                 
@@ -588,7 +588,7 @@ stmt.close()
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    PreLogUtil.put(this.commonStrings!!.EXCEPTION, INIT_SQL, "executeSQLStatement()", e)
+                                    PreLogUtil.putOE(this.commonStrings!!.EXCEPTION, INIT_SQL, "executeSQLStatement()", e)
 
                                     }
                                 
@@ -624,7 +624,7 @@ stmt.close()
                             
 } catch(se: SQLException)
             {
-PreLogUtil.put(this.commonStrings!!.EXCEPTION, INIT_SQL, "createConnection()", se)
+PreLogUtil.putOE(this.commonStrings!!.EXCEPTION, INIT_SQL, "createConnection()", se)
 
 
 
@@ -647,7 +647,7 @@ PreLogUtil.put(this.commonStrings!!.EXCEPTION, INIT_SQL, "createConnection()", s
     var jdbcDriver: String = this.databaseConnectionInfoInterface!!.getJdbcDriver()!!
 
 PreLogUtil.put(StringBuilder().
-                            append("Loading DbConnnectionInfo: ")!!.append(this.databaseConnectionInfoInterface!!.::class.toString()!!)!!.append(" Driver: ")!!.append(jdbcDriver)!!.toString(), INIT_SQL, "initialize()")
+                            append("Loading DbConnnectionInfo: ")!!.append(this.databaseConnectionInfoInterface!!::class.toString()!!)!!.append(" Driver: ")!!.append(jdbcDriver)!!.toString(), INIT_SQL, "initialize()")
 Class.forName(jdbcDriver)!!.newInstance()
 } catch(e: Exception)
             {
@@ -656,7 +656,7 @@ Class.forName(jdbcDriver)!!.newInstance()
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    PreLogUtil.put("LoadDriver Failed: " +this.databaseConnectionInfoInterface!!.getJdbcDriver(), INIT_SQL, "initialize()", e)
+                                    PreLogUtil.putOE("LoadDriver Failed: " +this.databaseConnectionInfoInterface!!.getJdbcDriver(), INIT_SQL, "initialize()", e)
 
                                     }
                                 
@@ -687,7 +687,7 @@ this.createConnection()
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    PreLogUtil.put(this.commonStrings!!.EXCEPTION, INIT_SQL, "initialize()", se)
+                                    PreLogUtil.putOE(this.commonStrings!!.EXCEPTION, INIT_SQL, "initialize()", se)
 
                                     }
                                 

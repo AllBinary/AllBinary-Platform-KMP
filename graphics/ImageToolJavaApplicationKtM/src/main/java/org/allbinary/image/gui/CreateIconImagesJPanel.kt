@@ -110,6 +110,9 @@ object: Thread()
         //nullable = true from not(false or (false and true)) = true
 {
 
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+
         try {
             
     var imageUtil: ImageUtil = ImageUtil.getInstance()!!

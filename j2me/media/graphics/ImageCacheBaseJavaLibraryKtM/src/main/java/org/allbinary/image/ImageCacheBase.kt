@@ -127,7 +127,7 @@ availableListOfList[index]!!.clear()
 availableListOfList[index]!!.addAll(listOfList[index]!!)
 }
 
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append("ImageCache: ")!!.append(this.toString())!!.toString(), this, "releaseAll")
 }
 

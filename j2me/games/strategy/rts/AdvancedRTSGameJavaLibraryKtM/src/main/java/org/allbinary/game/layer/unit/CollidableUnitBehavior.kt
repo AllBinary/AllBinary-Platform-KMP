@@ -36,6 +36,7 @@ import org.allbinary.game.layer.AllBinaryTiledLayer
 import org.allbinary.game.layer.TiledLayerUtil
 import org.allbinary.game.layer.geographic.map.LayerPartialCellPositionsUtil
 import org.allbinary.logic.NullUtil
+import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.java.bool.BooleanFactory
 import org.allbinary.math.AngleInfo
 import org.allbinary.media.graphics.geography.map.BasicGeographicMap
@@ -92,6 +93,9 @@ open public inner class SimpleSteeringVisitor : SteeringVisitor {
         //nullable = true from not(false or (false and false)) = true
 : Any{
     //var anyType = anyType
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
 
         try {
             

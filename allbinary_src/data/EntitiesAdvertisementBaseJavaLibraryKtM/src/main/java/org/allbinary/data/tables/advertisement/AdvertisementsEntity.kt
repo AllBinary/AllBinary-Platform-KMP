@@ -69,7 +69,7 @@ var value = value
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.SUCCESS, this, commonStrings!!.delete)
+                                    this.logUtil!!.putF(this.commonStrings!!.SUCCESS, this, commonStrings!!.delete)
 
                                     }
                                 
@@ -80,7 +80,7 @@ var value = value
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, commonStrings!!.delete, e)
+                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, commonStrings!!.delete, e)
 
                                     }
                                 

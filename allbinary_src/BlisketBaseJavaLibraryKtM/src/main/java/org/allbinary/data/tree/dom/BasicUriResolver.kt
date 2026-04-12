@@ -117,7 +117,7 @@ stringBuffer!!.append(FREEBLISKET_PATH_GLOBALS.getInstance()!!.XSLPATH)
 stringBuffer!!.append(URL_GLOBAL)
 stringBuffer!!.append(REQUIRED_EXTENSION)
 stringBuffer!!.append(extension)
-logUtil!!.put(stringBuffer!!.toString(), this, RESOLVE)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, RESOLVE)
 
                                     }
                                 

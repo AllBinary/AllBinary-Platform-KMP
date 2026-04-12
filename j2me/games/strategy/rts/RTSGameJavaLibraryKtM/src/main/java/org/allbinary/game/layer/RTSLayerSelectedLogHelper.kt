@@ -83,7 +83,7 @@ stringBuffer!!.append(CommonLabels.getInstance()!!.START)
 stringBuffer!!.appendint(pathsList!!.size())
 stringBuffer!!.append(" -> ")
 stringBuffer!!.append(StringUtil.getInstance()!!.toString(pathsList))
-logUtil!!.put(stringBuffer!!.toString(), this, "selected: setClosestGeographicMapCellHistory")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "selected: setClosestGeographicMapCellHistory")
 }
 
 
@@ -108,7 +108,7 @@ stringBuffer!!.append(positionStrings!!.DY_LABEL)
 stringBuffer!!.appendint(dy)
 stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(reason)
-logUtil!!.put(stringBuffer!!.toString(), this, "selected: trackTo")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "selected: trackTo")
 }
 
 
@@ -138,7 +138,7 @@ stringBuffer!!.appendint(angle)
 stringBuffer!!.append(" movementAngle: ")
 stringBuffer!!.append(movementAngle!!.name)
 stringBuffer!!.append(commonSeps!!.FORWARD_SLASH)
-stringBuffer!!.appendint(movementAngle!!.getValue())
+stringBuffer!!.appendshort(movementAngle!!.getValue())
 
     
                         if(angleInfo != 
@@ -150,13 +150,13 @@ stringBuffer!!.appendint(movementAngle!!.getValue())
     var angleIncrement: Short = angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()!!
 
 stringBuffer!!.append(" angleIncrement: ")
-stringBuffer!!.appendint(angleIncrement)
+stringBuffer!!.appendshort(angleIncrement)
 
                                     }
                                 
 stringBuffer!!.append(" Evading: ")
 stringBuffer!!.appendboolean(evading)
-logUtil!!.put(stringBuffer!!.toString(), this, TRACKTO_TURNTO)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, TRACKTO_TURNTO)
 }
 
 
@@ -164,7 +164,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, TRACKTO_TURNTO)
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - done moving 0,0")!!.toString(), this, TRACKTO_TURNTO)
 }
 
@@ -173,7 +173,7 @@ logUtil!!.put(StringMaker().
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - close enough")!!.toString(), this, TRACKTO_TURNTO)
 }
 
@@ -182,7 +182,7 @@ logUtil!!.put(StringMaker().
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - allow movingLeft")!!.toString(), this, TRACKTO_TURNTO)
 }
 
@@ -191,7 +191,7 @@ logUtil!!.put(StringMaker().
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - allow movingRight")!!.toString(), this, TRACKTO_TURNTO)
 }
 
@@ -200,7 +200,7 @@ logUtil!!.put(StringMaker().
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - allow movingUp")!!.toString(), this, TRACKTO_TURNTO)
 }
 
@@ -209,7 +209,7 @@ logUtil!!.put(StringMaker().
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - allow movingDown")!!.toString(), this, TRACKTO_TURNTO)
 }
 
@@ -218,7 +218,7 @@ logUtil!!.put(StringMaker().
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - correct angle, but movement not needed for current deltas so reseting movement angle")!!.toString(), this, TRACKTO_TURNTO)
 }
 
@@ -227,7 +227,7 @@ logUtil!!.put(StringMaker().
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - evade")!!.toString(), this, TRACKTO_TURNTO)
 }
 
@@ -236,7 +236,7 @@ logUtil!!.put(StringMaker().
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - rotating left")!!.toString(), this, TRACKTO_TURNTO)
 }
 
@@ -245,7 +245,7 @@ logUtil!!.put(StringMaker().
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - rotating right")!!.toString(), this, TRACKTO_TURNTO)
 }
 
@@ -255,8 +255,8 @@ logUtil!!.put(StringMaker().
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
     //var movementAngle = movementAngle
-logUtil!!.put(StringMaker().
-                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - movementAngle: ")!!.append(movementAngle!!.name)!!.append(commonSeps!!.FORWARD_SLASH)!!.appendint(movementAngle!!.getValue())!!.toString(), this, TRACKTO_TURNTO)
+this.logUtil!!.putF(StringMaker().
+                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - movementAngle: ")!!.append(movementAngle!!.name)!!.append(commonSeps!!.FORWARD_SLASH)!!.appendshort(movementAngle!!.getValue())!!.toString(), this, TRACKTO_TURNTO)
 }
 
 
@@ -264,7 +264,7 @@ logUtil!!.put(StringMaker().
         //nullable = true from not(false or (false and false)) = true
 {
     //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" steering - Do not rotate")!!.toString(), this, TRACKTO_TURNTO)
 }
 
@@ -279,7 +279,7 @@ logUtil!!.put(StringMaker().
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(CommonSeps.getInstance()!!.SPACE)!!.appendint(geographicMapCellHistory!!.getTotalVisited())!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(stringUtil!!.toString(currentGeographicMapCellPosition))!!.append(" - trying to move but not on path: ")!!.append(stringUtil!!.toString(pathList))!!.toString(), this, "turnTo")
 }
 

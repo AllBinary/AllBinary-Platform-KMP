@@ -182,7 +182,7 @@ var evt = evt
             this.getGenericProfileActions()!!.save()
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "saveJButtonActionPerformed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "saveJButtonActionPerformed", e)
 }
 
 }
@@ -211,7 +211,7 @@ this.getGenericProfileActionJPanel()!!.updateProfileActionUI()
 
 layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 395, Short.MAX_VALUE)!!.addComponent(this.getGenericProfileActionJPanel(), javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
 layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 256, Short.MAX_VALUE)!!.addComponent(this.getGenericProfileActionJPanel(), javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-logUtil!!.put("Setting Configuration Profile Actions JPanel", this, "genericProfileActionsJListValueChanged")
+this.logUtil!!.putF("Setting Configuration Profile Actions JPanel", this, "genericProfileActionsJListValueChanged")
 
                                     }
                                 
@@ -230,7 +230,7 @@ var evt = evt
 this.updateProfileActionUI(profileActionNameString)
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "genericProfileActionsJListValueChanged", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "genericProfileActionsJListValueChanged", e)
 }
 
 }
@@ -252,7 +252,7 @@ this.newProfileActionJDialog!!.setVisible(false)
 this.updateProfileActionUI(newActionName)
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "okNewProfileActionJButtonActionPerformed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "okNewProfileActionJButtonActionPerformed", e)
 }
 
 }
@@ -283,7 +283,7 @@ this.getGenericProfileActions()!!.remove(nextSelectedValueString)
 this.selectFirstElement()
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "deleteActionJButtonActionPerformed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "deleteActionJButtonActionPerformed", e)
 }
 
 }

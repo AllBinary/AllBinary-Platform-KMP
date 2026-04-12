@@ -44,7 +44,7 @@ open public class EndLevelTouchButtonsBuilder : TouchButtonsListBuilder {
 : BasicArrayList{
 
         try {
-            logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
+            this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 
     var list: BasicArrayList = BasicArrayList()
 
@@ -62,7 +62,7 @@ this.add(list)
                         return list
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 
 
 

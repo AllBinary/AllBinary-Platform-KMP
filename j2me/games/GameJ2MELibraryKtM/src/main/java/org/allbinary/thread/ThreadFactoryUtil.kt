@@ -139,7 +139,7 @@ primaryThreadPool!!.runTask(runnable)
 
     var thread: Thread = Thread(runnable, runnable.toString())
 
-logUtil!!.put(thread.toString(), this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(thread.toString(), this, commonStrings!!.CONSTRUCTOR)
 
 
 

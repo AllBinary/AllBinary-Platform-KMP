@@ -56,7 +56,7 @@ public constructor (signed: CompleteMotionGestureListenerInterface)
             : super()
         {
 var signed = signed
-logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 this.signed= signed
 }
 
@@ -162,7 +162,7 @@ signed.onMotionGestureCompleted(motionGestureCollection)
 motionGestureCollection!!.clear()
 } catch(e: Exception)
             {
-logUtil!!.put(StringMaker().
+this.logUtil!!.put(StringMaker().
                             append(commonStrings!!.EXCEPTION_LABEL)!!.append(StringUtil.getInstance()!!.toString(ev.getMotionGesture()))!!.toString(), this, "release", e)
 }
 

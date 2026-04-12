@@ -55,7 +55,7 @@ this.vector= Vector()
 
     var nodeList: NodeList = node.getChildNodes()!!
 
-logUtil!!.put("Name: " +this.getName() +" Child Nodes: " +nodeList!!.getLength(), this, "Contructor")
+this.logUtil!!.putF("Name: " +this.getName() +" Child Nodes: " +nodeList!!.getLength(), this, "Contructor")
 
 
 
@@ -74,7 +74,7 @@ logUtil!!.put("Name: " +this.getName() +" Child Nodes: " +nodeList!!.getLength()
                                     
     var genericProfileDataWorkerType: GenericProfileDataWorkerType = GenericProfileDataWorkerType.getInstance(profileNode)!!
 
-logUtil!!.put("Adding GenericProfileDataWorkerType: " +genericProfileDataWorkerType!!.toString(), this, "Contructor")
+this.logUtil!!.putF("Adding GenericProfileDataWorkerType: " +genericProfileDataWorkerType!!.toString(), this, "Contructor")
 this.vector.add(genericProfileDataWorkerType)
 
                                     }

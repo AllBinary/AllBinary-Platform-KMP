@@ -101,7 +101,7 @@ private constructor ()
                             
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
 }
@@ -370,15 +370,15 @@ dataOutputStream!!.flush()
                         if(!features.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL))
                         
                                     {
-                                    logUtil!!.put("Turning on OpenGL", this, commonStrings!!.INIT)
+                                    this.logUtil!!.putF("Turning on OpenGL", this, commonStrings!!.INIT)
 features.addDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL)
-logUtil!!.put("Using OpenGL Type Feature: " +this.getType(), this, commonStrings!!.INIT)
+this.logUtil!!.putF("Using OpenGL Type Feature: " +this.getType(), this, commonStrings!!.INIT)
 features.addDefault(this.getType())
-logUtil!!.put("Using OpenGL ImageColor Feature: " +this.getImageColor(), this, commonStrings!!.INIT)
+this.logUtil!!.putF("Using OpenGL ImageColor Feature: " +this.getImageColor(), this, commonStrings!!.INIT)
 features.addDefault(this.getImageColor())
-logUtil!!.put("Using OpenGL Color Feature: " +this.getColor(), this, commonStrings!!.INIT)
+this.logUtil!!.putF("Using OpenGL Color Feature: " +this.getColor(), this, commonStrings!!.INIT)
 features.addDefault(this.getColor())
-logUtil!!.put("Using OpenGL Version Selector Feature: " +this.getVersionSelector(), this, commonStrings!!.INIT)
+this.logUtil!!.putF("Using OpenGL Version Selector Feature: " +this.getVersionSelector(), this, commonStrings!!.INIT)
 features.addDefault(this.getVersionSelector())
 
                                     }
@@ -387,7 +387,7 @@ features.addDefault(this.getVersionSelector())
                                     }
                                 
                         else {
-                            logUtil!!.put("OpenGL is Off", this, commonStrings!!.INIT)
+                            this.logUtil!!.putF("OpenGL is Off", this, commonStrings!!.INIT)
 
                         }
                             

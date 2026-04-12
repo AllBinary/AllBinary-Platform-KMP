@@ -109,6 +109,9 @@ DisplayInfoSingleton.getInstance()!!.process()
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
 

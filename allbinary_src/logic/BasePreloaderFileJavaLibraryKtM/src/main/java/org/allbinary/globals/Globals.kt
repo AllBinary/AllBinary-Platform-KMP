@@ -83,7 +83,7 @@ stringBuffer!!.append("Setting Up AllBinary System Configuration Args: ")
 stringBuffer!!.append(pathString)
 stringBuffer!!.append(" ClassLoader: ")
 stringBuffer!!.append(classLoader!!::class.toString()!!)
-logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
 
@@ -99,14 +99,14 @@ stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 stringBuffer!!.append(CommonSeps.getInstance()!!.EQUALS)
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 stringBuffer!!.append(URLGLOBALS.getWebappPath())
-logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 
                                     }
                                 
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append("Webapp Path Set To: ")
 stringBuffer!!.append(URLGLOBALS.getWebappPath())
-logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 }
 
 

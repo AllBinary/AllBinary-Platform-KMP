@@ -64,7 +64,7 @@ var node = node
 
                             //For kotlin this is before the body of the constructor.
                     
-logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 this.point= Point()
 
     var actionNode: Node = DomSearchHelper.getNode(MouseActionScriptInputData.NAME, node.getChildNodes())!!
@@ -221,7 +221,7 @@ this.mouseActionScriptInputJPanel!!.getMouseActionJDialog()!!.setVisible(true)
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 hashMap!!.put(MouseActionScriptInputData.BUTTONS, Integer.toString(this.getButtonClicks()))
-logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
+this.logUtil!!.putF("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
 
 
@@ -321,7 +321,7 @@ buttonStringBuffer!!.append(" 3: ")
 
                         }
                             
-logUtil!!.put("Input Type: " +this.getInputRobotInterface()!!.getName() +" Point: " +this.getPoint() +" Buttons Clicked: " +buttonStringBuffer!!.toString(), this, "log")
+this.logUtil!!.putF("Input Type: " +this.getInputRobotInterface()!!.getName() +" Point: " +this.getPoint() +" Buttons Clicked: " +buttonStringBuffer!!.toString(), this, "log")
 }
 
 

@@ -25,16 +25,13 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.logic.NullUtil
-import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.LogFormatUtil
 
 open public class Log
             : Object
          {
         
-
-    private val nullUtil: NullUtil = NullUtil.getInstance()!!
 
     private val logFormatUtil: LogFormatUtil = LogFormatUtil.getInstance()!!
 
@@ -45,18 +42,6 @@ open public class Log
     private val functionName: String
 
     private val exception: Any
-public constructor ()
-            : super()
-        {
-
-    var stringUtil: StringUtil = StringUtil.getInstance()!!
-
-this.specialMessage= stringUtil!!.EMPTY_STRING
-this.anyType= nullUtil!!.NULL_OBJECT
-this.functionName= stringUtil!!.EMPTY_STRING
-this.exception= nullUtil!!.NULL_OBJECT
-}
-
 public constructor (specialMessage: String, anyType: Any, functionName: String, exception: Any)
             : super()
         {
@@ -70,18 +55,6 @@ this.functionName= functionName
 this.exception= exception
 }
 
-public constructor (specialMessage: String, anyType: Any, functionName: String)
-            : super()
-        {
-    //var specialMessage = specialMessage
-    //var anyType = anyType
-    //var functionName = functionName
-this.specialMessage= specialMessage
-this.anyType= anyType
-this.functionName= functionName
-this.exception= nullUtil!!.NULL_OBJECT
-}
-
 
     open fun getSpecialMessage()
         //nullable = true from not(false or (false and true)) = true
@@ -90,7 +63,7 @@ this.exception= nullUtil!!.NULL_OBJECT
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return specialMessage
+                        return this.specialMessage
 }
 
 
@@ -101,7 +74,7 @@ this.exception= nullUtil!!.NULL_OBJECT
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return anyType
+                        return this.anyType
 }
 
 
@@ -112,7 +85,7 @@ this.exception= nullUtil!!.NULL_OBJECT
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return functionName
+                        return this.functionName
 }
 
 
@@ -123,7 +96,7 @@ this.exception= nullUtil!!.NULL_OBJECT
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return exception
+                        return this.exception
 }
 
 
@@ -134,7 +107,7 @@ this.exception= nullUtil!!.NULL_OBJECT
     var className: String = CommonStrings.getInstance()!!.EMPTY
 
 
-    var clazz: KClass<*> = anyType!!::class!!
+    var clazz: KClass<*> = this.anyType!!::class!!
 
 
     
@@ -151,7 +124,7 @@ this.exception= nullUtil!!.NULL_OBJECT
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return logFormatUtil!!.get(className, this.functionName, this.specialMessage, this.exception)
+                        return this.logFormatUtil!!.get(className, this.functionName, this.specialMessage, this.exception)
 }
 
 

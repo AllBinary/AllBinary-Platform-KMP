@@ -213,7 +213,7 @@ this.shaderVersion= Integer.parseInt(this.glShaderVersionString!!.replace(Common
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
 }
 
 this.glRenderer= gl.glGetString(GL10.GL_RENDERER)
@@ -433,7 +433,7 @@ this.initialized= true
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
 }
 
 }
@@ -659,7 +659,7 @@ stringBuffer!!.append(stringUtil!!.toString(list.objectArray[index]!!))
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.TOSTRING, e)
+PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, commonStrings!!.TOSTRING, e)
 }
 
 

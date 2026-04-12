@@ -52,13 +52,15 @@ import org.allbinary.string.CommonStrings
         }
             
     private val logger: Logger = Logger.getLogger(LogUtil::class.toString()!!)!!
+
+    private val logFormatUtil: LogFormatUtil = LogFormatUtil.getInstance()!!
 private constructor ()
             : super()
         {
 }
 
 
-    /*actual*/ open fun put(log: Log)
+    /*actual*/ open fun putL(log: Log)
         //nullable = true from not(false or (false and false)) = true
 {
     //var log = log
@@ -78,7 +80,7 @@ this.put(specialMessage, anyType, functionName, exception)
 }
 
 
-    /*actual*/ open fun put(specialMessage: String, anyType: Any, functionName: String)
+    /*actual*/ open fun putF(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var specialMessage = specialMessage
@@ -115,7 +117,7 @@ this.put(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OB
                                     }
                                 
 
-    var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage)!!
+    var message: String = logFormatUtil!!.getS(className, functionName, specialMessage)!!
 
 
     

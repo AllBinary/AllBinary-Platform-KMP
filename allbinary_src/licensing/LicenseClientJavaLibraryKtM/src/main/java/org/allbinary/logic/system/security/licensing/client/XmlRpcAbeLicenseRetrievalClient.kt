@@ -74,7 +74,7 @@ stringBuffer!!.append(TRYING)
 stringBuffer!!.appendint(this.getServer())
 stringBuffer!!.append(SEP)
 stringBuffer!!.append(server)
-logUtil!!.put(CommonLabels.getInstance()!!.START_LABEL +stringBuffer!!.toString(), this, commonStrings!!.GET)
+this.logUtil!!.putF(CommonLabels.getInstance()!!.START_LABEL +stringBuffer!!.toString(), this, commonStrings!!.GET)
 
     var param: Vector = Vector()
 
@@ -88,12 +88,12 @@ xmlRpcClient!!.setBasicAuthentication(
 
     var hashtable: Hashtable<Any, Any> = this.getClientInfo()!!.toHashtable()!!
 
-logUtil!!.put(CLIENT_INFO +hashtable.toString(), this, commonStrings!!.GET)
+this.logUtil!!.putF(CLIENT_INFO +hashtable.toString(), this, commonStrings!!.GET)
 param.add(hashtable)
 
     var result: Any = xmlRpcClient!!.execute(this.getRemoteMethod(), param, cryptInterface)!!
 
-logUtil!!.put(RESULT +result.toString(), this, commonStrings!!.GET)
+this.logUtil!!.putF(RESULT +result.toString(), this, commonStrings!!.GET)
 
     var resultHashtable: Hashtable<Any, Any> = result as Hashtable<Any, Any>
 
@@ -102,7 +102,7 @@ logUtil!!.put(RESULT +result.toString(), this, commonStrings!!.GET)
                         if(!AbeClientLicense.hasRequiredKeys(resultHashtable))
                         
                                     {
-                                    logUtil!!.put(INVALID, this, commonStrings!!.GET)
+                                    this.logUtil!!.putF(INVALID, this, commonStrings!!.GET)
 
 
 
@@ -114,7 +114,7 @@ logUtil!!.put(RESULT +result.toString(), this, commonStrings!!.GET)
 
     var abeLicenseInterface: AbeLicenseInterface = AbeClientLicense(resultHashtable)
 
-logUtil!!.put(commonStrings!!.END +stringBuffer!!.toString(), this, commonStrings!!.GET)
+this.logUtil!!.putF(commonStrings!!.END +stringBuffer!!.toString(), this, commonStrings!!.GET)
 isOnline= true
 
 
@@ -123,8 +123,8 @@ isOnline= true
                         return abeLicenseInterface
 } catch(e: IOException)
             {
-logUtil!!.put(EXCEPTION_IN_CLIENT, this, commonStrings!!.GET, e)
-logUtil!!.put(TRYING_OTHER_SERVERS +ExceptionUtil.getInstance()!!.getStackTrace(e), this, commonStrings!!.GET)
+this.logUtil!!.put(EXCEPTION_IN_CLIENT, this, commonStrings!!.GET, e)
+this.logUtil!!.putF(TRYING_OTHER_SERVERS +ExceptionUtil.getInstance()!!.getStackTrace(e), this, commonStrings!!.GET)
 
     
                         if(!e.getMessage()!!.startsWith(HOST_NOT_RESOLVED))
@@ -150,7 +150,7 @@ logUtil!!.put(TRYING_OTHER_SERVERS +ExceptionUtil.getInstance()!!.getStackTrace(
 }
  catch(e: XmlRpcException)
             {
-logUtil!!.put(SERVER_REPORTED_ERROR, this, commonStrings!!.GET, e)
+this.logUtil!!.put(SERVER_REPORTED_ERROR, this, commonStrings!!.GET, e)
 
 
 
@@ -159,7 +159,7 @@ logUtil!!.put(SERVER_REPORTED_ERROR, this, commonStrings!!.GET, e)
 }
  catch(e: Exception)
             {
-logUtil!!.put(UNKNOWN_ERROR, this, commonStrings!!.GET, e)
+this.logUtil!!.put(UNKNOWN_ERROR, this, commonStrings!!.GET, e)
 
 
 

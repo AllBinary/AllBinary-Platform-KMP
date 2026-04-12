@@ -65,7 +65,7 @@ var y = y
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "pointerDragged", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "pointerDragged", e)
 }
 
 }
@@ -84,7 +84,7 @@ var y = y
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "pointerPressed", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "pointerPressed", e)
 }
 
 }
@@ -103,7 +103,7 @@ var y = y
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "pointerReleased", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "pointerReleased", e)
 }
 
 }

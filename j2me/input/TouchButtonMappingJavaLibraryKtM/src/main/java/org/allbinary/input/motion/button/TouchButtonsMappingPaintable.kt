@@ -61,7 +61,7 @@ this.init()
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "updateRectangle", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "updateRectangle", e)
 }
 
 }

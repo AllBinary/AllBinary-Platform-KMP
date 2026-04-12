@@ -47,8 +47,8 @@ var exception = exception
 }
 
 
-    /*actual*/ open fun getInstance(specialMessage: String, anyType: Any, functionName: String)
-        //nullable =  from not(true or (false and false)) = 
+    /*actual*/ open fun getInstanceF(specialMessage: String, anyType: Any, functionName: String)
+        //nullable = true from not(false or (false and false)) = true
 : Log{
 var specialMessage = specialMessage
 var anyType = anyType
@@ -61,8 +61,8 @@ var functionName = functionName
 }
 
 
-    /*actual*/ open fun getInstance(specialMessage: String, className: String, functionName: String, exception: Any)
-        //nullable =  from not(true or (false and false)) = 
+    /*actual*/ open fun getInstanceSE(specialMessage: String, className: String, functionName: String, exception: Any)
+        //nullable = true from not(false or (false and false)) = true
 : Log{
 var specialMessage = specialMessage
 var className = className
@@ -73,20 +73,6 @@ var exception = exception
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return LogFactory.getInstance(specialMessage, className, functionName, exception)
-}
-
-
-    /*actual*/ open fun getInstance(specialMessage: String, className: String, functionName: String)
-        //nullable =  from not(true or (false and false)) = 
-: Log{
-var specialMessage = specialMessage
-var className = className
-var functionName = functionName
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
 }
 
 

@@ -112,7 +112,7 @@ this.userName= hashMap!!.get(UserData.USERNAME) as String
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put("Failed to validate form", this, "isUserNameValid()", e)
+                                    this.logUtil!!.put("Failed to validate form", this, "isUserNameValid()", e)
 
                                     }
                                 
@@ -157,7 +157,7 @@ var aUserName = aUserName
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VALIDATION))
                         
                                     {
-                                    logUtil!!.put("UserName: " +aUserName, this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF("UserName: " +aUserName, this, commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -171,7 +171,7 @@ var aUserName = aUserName
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VALIDATION))
                         
                                     {
-                                    logUtil!!.put("UserName is invalid", this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF("UserName is invalid", this, commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -191,7 +191,7 @@ valid= booleanFactory!!.FALSE
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put("Failed to validate form", this, commonStrings!!.IS_VALID, e)
+                                    this.logUtil!!.put("Failed to validate form", this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 

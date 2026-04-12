@@ -44,7 +44,7 @@ var input = input
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Processing", this, commonStrings!!.PROCESS)
+                                    this.logUtil!!.putF("Processing", this, commonStrings!!.PROCESS)
 
                                     }
                                 

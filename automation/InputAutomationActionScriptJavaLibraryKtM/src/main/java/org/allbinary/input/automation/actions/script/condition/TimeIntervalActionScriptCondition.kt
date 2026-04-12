@@ -151,7 +151,7 @@ this.timeIntervalActionScriptConditionJPanel!!.getTimeIntervalActionJDialog()!!.
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 hashMap!!.put(TimeIntervalActionScriptConditionData.TIME, Integer.toString(this.timeHelper!!.delay))
-logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
+this.logUtil!!.putF("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
 
 
@@ -181,7 +181,7 @@ node.appendChild(ModDomHelper.createNodeWithValueNodes(document, TimeIntervalAct
     open fun log()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put("Time Interval: " +this.timeHelper!!.delay, this, "log")
+this.logUtil!!.putF("Time Interval: " +this.timeHelper!!.delay, this, "log")
 }
 
 

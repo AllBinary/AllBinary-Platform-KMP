@@ -66,7 +66,7 @@ var values = values
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.SUCCESS, this, INSERT)
+                                    this.logUtil!!.putF(this.commonStrings!!.SUCCESS, this, INSERT)
 
                                     }
                                 
@@ -77,7 +77,7 @@ var values = values
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, INSERT, e)
+                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, INSERT, e)
 
                                     }
                                 
@@ -98,7 +98,7 @@ var value = value
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.SUCCESS, this, commonStrings!!.delete)
+                                    this.logUtil!!.putF(this.commonStrings!!.SUCCESS, this, commonStrings!!.delete)
 
                                     }
                                 
@@ -109,7 +109,7 @@ var value = value
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, commonStrings!!.delete, e)
+                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, commonStrings!!.delete, e)
 
                                     }
                                 
@@ -161,7 +161,7 @@ returnVector!!.add(DownloadableItem(hashMap))
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put("Found: " +size, this, "getForItem")
+                                    this.logUtil!!.putF("Found: " +size, this, "getForItem")
 
                                     }
                                 
@@ -210,7 +210,7 @@ returnVector!!.add(DownloadableItem(hashMap))
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put("Found: " +size, this, "getForItem")
+                                    this.logUtil!!.putF("Found: " +size, this, "getForItem")
 
                                     }
                                 

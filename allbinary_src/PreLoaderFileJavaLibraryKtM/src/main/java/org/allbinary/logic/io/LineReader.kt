@@ -63,7 +63,7 @@ idFile!!.read(bytes)
 string= bytes.decodeToString()
 } catch(e: Exception)
             {
-logUtil!!.put("File: " +fileName, this, "LineReader", e)
+this.logUtil!!.put("File: " +fileName, this, "LineReader", e)
 
 
                             {
@@ -103,7 +103,7 @@ logUtil!!.put("File: " +fileName, this, "LineReader", e)
                         return true
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "hasNext", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "hasNext", e)
 
 
                             {
@@ -153,7 +153,7 @@ index= nextIndex +1
                         return temp
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "next", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "next", e)
 
 
                             {

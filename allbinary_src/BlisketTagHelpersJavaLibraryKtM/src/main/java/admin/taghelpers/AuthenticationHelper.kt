@@ -84,7 +84,7 @@ this.getFormData()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATION))
                         
                                     {
-                                    logUtil!!.put(this.outputSessionInfo(), this, this.commonStrings!!.CONSTRUCTOR)
+                                    this.logUtil!!.putF(this.outputSessionInfo(), this, this.commonStrings!!.CONSTRUCTOR)
 
                                     }
                                 
@@ -124,7 +124,7 @@ this.timeout= this.weblisketSession!!.getTimeout()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "invalidateSession()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "invalidateSession()", e)
 
                                     }
                                 
@@ -179,7 +179,7 @@ stringBuffer!!.append(" Eval: ")
 stringBuffer!!.appendlong(timeFirst)
 stringBuffer!!.append(" > ")
 stringBuffer!!.appendlong(timeCreated)
-logUtil!!.put(stringBuffer!!.toString(), this, "isSessionOld()")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "isSessionOld()")
 
                                     }
                                 
@@ -200,7 +200,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "isSessionOld()")
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATION))
                         
                                     {
-                                    logUtil!!.put("Role Is Not In Session", this, "isSessionOld()")
+                                    this.logUtil!!.putF("Role Is Not In Session", this, "isSessionOld()")
 
                                     }
                                 
@@ -254,7 +254,7 @@ stringBuffer!!.append(" Eval: ")
 stringBuffer!!.appendlong(timeFirst)
 stringBuffer!!.append(" > ")
 stringBuffer!!.appendlong(inactivityAllowed)
-logUtil!!.put(stringBuffer!!.toString(), this, "isRarelyUsedSession()")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "isRarelyUsedSession()")
 
                                     }
                                 
@@ -267,7 +267,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "isRarelyUsedSession()")
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATION))
                         
                                     {
-                                    logUtil!!.put("Role Is Not In Session", this, "isRarelyUsedSession()")
+                                    this.logUtil!!.putF("Role Is Not In Session", this, "isRarelyUsedSession()")
 
                                     }
                                 
@@ -306,7 +306,7 @@ stringBuffer!!.append("Trying New login<p/>")
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "validRole()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "validRole()", e)
 
                                     }
                                 
@@ -346,7 +346,7 @@ stringBuffer!!.append("Trying New login<p/>")
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "invalidRole()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "invalidRole()", e)
 
                                     }
                                 
@@ -497,7 +497,7 @@ var roles = roles
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATION))
                         
                                     {
-                                    logUtil!!.put("Role Is Not In Session", this, "isAuthenticationSessionValid()")
+                                    this.logUtil!!.putF("Role Is Not In Session", this, "isAuthenticationSessionValid()")
 
                                     }
                                 
@@ -516,7 +516,7 @@ var roles = roles
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "isAuthenticatedSessionValid()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "isAuthenticatedSessionValid()", e)
 
                                     }
                                 
@@ -564,7 +564,7 @@ var password = password
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
                         
                                     {
-                                    logUtil!!.put("Starting: " +userName, this, "processIfNewLogin()")
+                                    this.logUtil!!.putF("Starting: " +userName, this, "processIfNewLogin()")
 
                                     }
                                 
@@ -631,7 +631,7 @@ this.nextAttempt()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "processIfNewLogin()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "processIfNewLogin()", e)
 
                                     }
                                 
@@ -683,7 +683,7 @@ this.nextAttempt()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "processInvalidation()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "processInvalidation()", e)
 
                                     }
                                 

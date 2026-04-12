@@ -218,7 +218,7 @@ var value = value
         //nullable = true from not(false or (false and false)) = true
 {
     //var resources = resources
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append("Resource Loader: ")!!.append(resources::class.toString()!!)!!.toString(), this, "setResources")
 this.resources= resources
 }

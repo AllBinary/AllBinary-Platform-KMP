@@ -43,7 +43,7 @@ open public class J2MEGameInputMapping : PersistentInputMapping {
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
-logUtil!!.put(commonStrings!!.START, this, commonStrings!!.INIT)
+this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.INIT)
 J2MEKeyFactory.getInstance()!!.init()
 super.init(abeClientInformation)
 

@@ -21,6 +21,8 @@
 
         import java.lang.Object        
         
+        import java.lang.System
+        
         
         import kotlin.Array
         import kotlin.reflect.KClass
@@ -41,12 +43,18 @@
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return instance
+                        return SystemProperties.instance
 }
 
 
         }
-            private constructor ()
+            
+    private val OS_NAME: String = "os.name"
+
+    private val OS_ARCH: String = "os.arch"
+
+    private val OS_VERSION: String = "os.version"
+private constructor ()
             : super()
         {
 }
@@ -59,7 +67,7 @@
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return "os.name"
+                        return System.getProperty(OS_NAME)
 }
 
 
@@ -70,7 +78,7 @@
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return "os.arch"
+                        return System.getProperty(OS_ARCH)
 }
 
 
@@ -81,7 +89,7 @@
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return "os.version"
+                        return System.getProperty(OS_VERSION)
 }
 
 

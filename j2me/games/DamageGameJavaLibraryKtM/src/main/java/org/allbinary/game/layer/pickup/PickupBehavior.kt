@@ -83,7 +83,7 @@ this.countedIndex= countedIndex
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "doPickup", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "doPickup", e)
 }
 
 }
@@ -144,7 +144,7 @@ pickupLayerInterface!!.setPickedUp()
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-PreLogUtil.put(commonStrings!!.EXCEPTION, this, "doPickup", e)
+PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, "doPickup", e)
 }
 
 }

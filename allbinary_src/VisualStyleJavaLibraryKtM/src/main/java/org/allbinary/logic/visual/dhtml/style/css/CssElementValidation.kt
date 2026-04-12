@@ -69,7 +69,7 @@ var node = node
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("CssElementValidation", this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF("CssElementValidation", this, commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -78,7 +78,7 @@ var node = node
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("CssElementValidation: " +valid, this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF("CssElementValidation: " +valid, this, commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -94,7 +94,7 @@ var node = node
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put("Failed to validate data", this, commonStrings!!.IS_VALID, e)
+                                    this.logUtil!!.put("Failed to validate data", this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -130,7 +130,7 @@ stringBuffer!!.append(" Css Style is not valid.")
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put("Failed to generate validation info error", this, "validationInfo()", e)
+                                    this.logUtil!!.put("Failed to generate validation info error", this, "validationInfo()", e)
 
                                     }
                                 

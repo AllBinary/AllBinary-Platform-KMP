@@ -47,7 +47,7 @@ open public class KeyboardActionScriptInputJPanel : javax.swing.JPanel {
     private var keyActionScriptInputInterface: KeyboardActionScriptInputInterface
 public constructor (keyActionScriptInputInterface: KeyboardActionScriptInputInterface){
 var keyActionScriptInputInterface = keyActionScriptInputInterface
-logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 initComponents()
 this.keyActionScriptInputInterface= keyActionScriptInputInterface
 
@@ -471,7 +471,7 @@ var evt = evt
 this.getKeyActionJDialog()!!.setVisible(false)
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "okButtonActionPerformed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "okButtonActionPerformed", e)
 }
 
 }

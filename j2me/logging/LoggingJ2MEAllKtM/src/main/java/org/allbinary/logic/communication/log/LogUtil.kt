@@ -61,7 +61,9 @@ import org.allbinary.string.CommonStrings
 }
 
 
-    /*actual*/ open fun put(log: Log)
+    private val logFormatUtil: LogFormatUtil = LogFormatUtil.getInstance()!!
+
+    /*actual*/ open fun putL(log: Log)
         //nullable = true from not(false or (false and false)) = true
 {
 var log = log
@@ -81,7 +83,7 @@ this.put(specialMessage, anyType, functionName, exception)
 }
 
 
-    /*actual*/ open fun put(specialMessage: String, anyType: Any, functionName: String)
+    /*actual*/ open fun putF(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var specialMessage = specialMessage
@@ -104,7 +106,7 @@ this.put(specialMessage, anyType, functionName, exception)
                                     }
                                 
 
-    var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage)!!
+    var message: String = logFormatUtil!!.getS(className, functionName, specialMessage)!!
 
 System.out.print(LOG_SUCCESS)
 System.out.println(message)
@@ -135,7 +137,7 @@ System.out.println(message)
                                     }
                                 
 
-    var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
+    var message: String = logFormatUtil!!.get(className, functionName, specialMessage, exception)!!
 
 System.out.print(LOG_SUCCESS)
 System.out.println(message)

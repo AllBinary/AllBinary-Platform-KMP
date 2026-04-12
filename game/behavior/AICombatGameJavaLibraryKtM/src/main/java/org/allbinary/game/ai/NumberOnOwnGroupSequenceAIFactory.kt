@@ -100,7 +100,7 @@ stringBuffer!!.append(" + 1")
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE)
 
     
                         if(artificialIntelligenceInterface!!.size -1 > list.size())

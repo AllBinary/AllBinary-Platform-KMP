@@ -76,7 +76,7 @@ var categoryPropertiesFactoryInterface = categoryPropertiesFactoryInterface
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.CONSTRUCTOR, this, "Category(CategoryPropertiesFactoryInterface)")
+                                    this.logUtil!!.putF(this.commonStrings!!.CONSTRUCTOR, this, "Category(CategoryPropertiesFactoryInterface)")
 
                                     }
                                 
@@ -218,7 +218,7 @@ this.removeDuplicateChild(categoryInterface)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
-                                    logUtil!!.put("adding", this, "addChild")
+                                    this.logUtil!!.putF("adding", this, "addChild")
 
                                     }
                                 
@@ -681,7 +681,7 @@ stringBuffer!!.append("\nPath = ")
 stringBuffer!!.append(this.getPath()!!.toString())
 stringBuffer!!.append("\nFile Path: ")
 stringBuffer!!.append(this.getFilePath()!!.toString())
-logUtil!!.put(stringBuffer!!.toString(), this, "log()")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "log()")
 
                                     }
                                 

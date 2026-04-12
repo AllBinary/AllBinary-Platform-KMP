@@ -87,7 +87,7 @@ var node = node
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Next View Name: " +name, this, "toTransformInfoPropertiesHashMap()")
+                                    this.logUtil!!.putF("Next View Name: " +name, this, "toTransformInfoPropertiesHashMap()")
 
                                     }
                                 

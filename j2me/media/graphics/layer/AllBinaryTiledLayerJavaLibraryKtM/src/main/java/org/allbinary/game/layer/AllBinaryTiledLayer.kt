@@ -93,7 +93,7 @@ stringBuffer!!.append(" rows: ")
 stringBuffer!!.appendint(this.getRows())
 stringBuffer!!.append(" columns: ")
 stringBuffer!!.appendint(this.getColumns())
-logUtil!!.put(stringBuffer!!.toString(), this, "setCells")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "setCells")
 
     var rows: Int = this.getRows()!!
 

@@ -52,6 +52,8 @@ import org.allbinary.string.CommonStrings
         }
             
     private val logger: Logger = Logger.getLogger(LogUtil::class.toString()!!)!!
+
+    private val logFormatUtil: LogFormatUtil = LogFormatUtil.getInstance()!!
 private constructor ()
             : super()
         {
@@ -65,7 +67,7 @@ PreLogUtil.put("Loggin Initialized", "LogUtil", "init()")
 }
 
 
-    /*actual*/ open fun put(log: Log)
+    /*actual*/ open fun putL(log: Log)
         //nullable = true from not(false or (false and false)) = true
 {
 var log = log
@@ -108,7 +110,7 @@ var log = log
                                     }
                                 
 
-    var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
+    var message: String = logFormatUtil!!.get(className, functionName, specialMessage, exception)!!
 
 logger.log(Level.INFO, message)
 
@@ -148,7 +150,7 @@ logger.log(Level.INFO, message)
                                     }
                                 
 
-    var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage)!!
+    var message: String = logFormatUtil!!.getS(className, functionName, specialMessage)!!
 
 
     

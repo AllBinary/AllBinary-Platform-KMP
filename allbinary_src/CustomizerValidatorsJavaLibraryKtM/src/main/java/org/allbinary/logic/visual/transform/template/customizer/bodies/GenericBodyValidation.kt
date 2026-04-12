@@ -104,7 +104,7 @@ this.body= hashMap!!.get(BodyData.getInstance()!!.NAME) as String
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.START, this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF(this.commonStrings!!.START, this, commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -122,7 +122,7 @@ this.body= hashMap!!.get(BodyData.getInstance()!!.NAME) as String
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("BodyValidation: " +isValid, this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF("BodyValidation: " +isValid, this, commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -138,7 +138,7 @@ this.body= hashMap!!.get(BodyData.getInstance()!!.NAME) as String
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put("Failed to validate form", this, commonStrings!!.IS_VALID, e)
+                                    this.logUtil!!.put("Failed to validate form", this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -182,7 +182,7 @@ stringBuffer!!.appendint(AbSqlData.MAXBLOB)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
+                                    this.logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
 
                                     }
                                 

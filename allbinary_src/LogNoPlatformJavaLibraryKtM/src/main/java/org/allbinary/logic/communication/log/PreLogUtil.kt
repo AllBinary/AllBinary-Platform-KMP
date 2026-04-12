@@ -37,11 +37,11 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)
+    open fun putOE(specialMessage: String, anyType: Any, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun put(specialMessage: String, className: String, functionName: String, exception: Any)
+    open fun putSE(specialMessage: String, className: String, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
 
 

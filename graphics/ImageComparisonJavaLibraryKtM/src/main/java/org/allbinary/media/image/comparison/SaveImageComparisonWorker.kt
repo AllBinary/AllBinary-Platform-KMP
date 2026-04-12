@@ -94,7 +94,7 @@ this.running= running
 {
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.RUN)
+            this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.RUN)
 this.setRunning(true)
 
     var timeHelper: TimeDelayHelper = TimeDelayHelper(1000)
@@ -106,15 +106,15 @@ timeHelper!!.setStartTime()
 
     var imageComparisonInfo: ImageComparisonResult = imageComparisonResultsEvent!!.getImageComparisonResult()!!
 
-logUtil!!.put(imageComparisonInfo!!.toString(), this, this.commonStrings!!.RUN)
+this.logUtil!!.putF(imageComparisonInfo!!.toString(), this, this.commonStrings!!.RUN)
 ComparisonImageInputOutput().
                             save(imageComparisonInfo, imageComparisonInfo!!.getFrameTwo())
 this.imageComparisonInfoVector!!.remove(imageComparisonInfo)
-logUtil!!.put(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsed(), this, this.commonStrings!!.RUN)
-logUtil!!.put(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
+this.logUtil!!.putF(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsed(), this, this.commonStrings!!.RUN)
+this.logUtil!!.putF(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
 }
 
 }

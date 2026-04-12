@@ -67,7 +67,7 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 {
 var task = task
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(StringUtil.getInstance()!!.toString(task))!!.appendlong(System.currentTimeMillis())!!.toString(), this, this.threadPoolStrings!!.ADD_TASK)
 super.runTask(task)
 }
@@ -77,7 +77,7 @@ super.runTask(task)
         //nullable = true from not(false or (false and false)) = true
 {
 var task = task
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(this.threadPoolStrings!!.START_TASK)!!.append(StringUtil.getInstance()!!.toString(task))!!.toString(), this, this.commonStrings!!.RUN)
 }
 
@@ -86,7 +86,7 @@ logUtil!!.put(StringMaker().
         //nullable = true from not(false or (false and false)) = true
 {
 var task = task
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(this.threadPoolStrings!!.COMPLETE_TASK)!!.append(StringUtil.getInstance()!!.toString(task))!!.toString(), this, this.commonStrings!!.RUN)
 }
 

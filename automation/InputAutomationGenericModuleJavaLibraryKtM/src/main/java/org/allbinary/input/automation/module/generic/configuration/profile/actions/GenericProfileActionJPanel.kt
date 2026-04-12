@@ -62,7 +62,7 @@ this.getGenericProfileActionScriptJPanel()!!.updateJTree()
 
 layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 395, Short.MAX_VALUE)!!.addComponent(this.getGenericProfileActionScriptJPanel(), javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
 layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 256, Short.MAX_VALUE)!!.addComponent(this.getGenericProfileActionScriptJPanel(), javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-logUtil!!.put("Updated UI", this, "updateUI")
+this.logUtil!!.putF("Updated UI", this, "updateUI")
 }
 
 
@@ -177,7 +177,7 @@ layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Align
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
-logUtil!!.put("New Time Interval Action Condition", this, "newTimeIntervalJButtonActionPerformed")
+this.logUtil!!.putF("New Time Interval Action Condition", this, "newTimeIntervalJButtonActionPerformed")
 getGenericProfileAction()!!.getGenericProfileActionScript()!!.addCondition(TimeIntervalActionScriptCondition() as ProfileActionScriptConditionInterface)
 this.updateProfileActionUI()
 }
@@ -187,7 +187,7 @@ this.updateProfileActionUI()
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
-logUtil!!.put("New EveryTime Action Condition", this, "newEveryTimeJButtonActionPerformed")
+this.logUtil!!.putF("New EveryTime Action Condition", this, "newEveryTimeJButtonActionPerformed")
 getGenericProfileAction()!!.getGenericProfileActionScript()!!.addCondition(AlwaysActionScriptCondition() as ProfileActionScriptConditionInterface)
 this.updateProfileActionUI()
 }
@@ -197,7 +197,7 @@ this.updateProfileActionUI()
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
-logUtil!!.put("New Color At Action Condition", this, "newColorAtJButtonActionPerformed")
+this.logUtil!!.putF("New Color At Action Condition", this, "newColorAtJButtonActionPerformed")
 getGenericProfileAction()!!.getGenericProfileActionScript()!!.addCondition(ColorAtActionScriptCondition() as ProfileActionScriptConditionInterface)
 this.updateProfileActionUI()
 }

@@ -26,59 +26,26 @@
         import kotlin.reflect.KClass
         
 
-open public class LogFactory
+expect open public class LogFactory
             : Object
          {
         
 companion object {
             
-    open fun getInstance(specialMessage: String, anyType: Any, exception: Any)
-        //nullable =  from not(true or (false and false)) = 
-: Log{
-var specialMessage = specialMessage
-var anyType = anyType
-var exception = exception
-
-
-
-                            throw RuntimeException()
-}
-
+    open fun getInstanceNoF(specialMessage: String, anyType: Any, exception: Any)
+        //nullable = true from not(false or (false and false)) = true
+: Log
 
     open fun getInstance(specialMessage: String, anyType: Any, functionName: String, exception: Any)
         //nullable =  from not(true or (false and false)) = 
-: Log{
-var specialMessage = specialMessage
-var anyType = anyType
-var functionName = functionName
-var exception = exception
+: Log
 
-
-
-                            throw RuntimeException()
-}
-
-
-    open fun getInstance(specialMessage: String, anyType: Any, functionName: String)
-        //nullable =  from not(true or (false and false)) = 
-: Log{
-var specialMessage = specialMessage
-var anyType = anyType
-var functionName = functionName
-
-
-
-                            throw RuntimeException()
-}
-
+    open fun getInstanceF(specialMessage: String, anyType: Any, functionName: String)
+        //nullable = true from not(false or (false and false)) = true
+: Log
 
         }
             
-            //Auto Generated
-            public constructor() : super()
-            {
-            }            
-        
 }
                 
             

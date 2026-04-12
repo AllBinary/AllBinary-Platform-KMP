@@ -61,7 +61,7 @@ var imageProcessorInput = imageProcessorInput
 
                             //For kotlin this is before the body of the constructor.
                     
-logUtil!!.put("Starting", this, this.commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF("Starting", this, this.commonStrings!!.CONSTRUCTOR)
 initComponents()
 this.imageProcessorInput= imageProcessorInput
 }
@@ -76,6 +76,9 @@ object: Thread()
     open fun run()
         //nullable = true from not(false or (false and true)) = true
 {
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
 
         try {
             
@@ -112,7 +115,7 @@ this@MirrorSpriteImageJPanel.getParent()!!.repaint()
     var extensionIndex: Int = filePath!!.indexOf(imageStrings!!.PNG_EXTENSION)!!
 
 filePath= filePath!!.substring(0, extensionIndex) +"_mirror" +imageStrings!!.PNG_EXTENSION
-logUtil!!.put("Renamed File: " +filePath, this, commonStrings!!.RUN)
+logUtil!!.putF("Renamed File: " +filePath, this, commonStrings!!.RUN)
 file= File(filePath)
 
                                     }
@@ -120,7 +123,7 @@ file= File(filePath)
 
     var isWritten: Boolean = ImageIO.write(this@MirrorSpriteImageJPanel.result as RenderedImage, imageStrings!!.PNG, file)!!
 
-logUtil!!.put("File: " +file +" Wrote: " +isWritten, this, commonStrings!!.RUN)
+logUtil!!.putF("File: " +file +" Wrote: " +isWritten, this, commonStrings!!.RUN)
 }
 
 } catch(e: Exception)

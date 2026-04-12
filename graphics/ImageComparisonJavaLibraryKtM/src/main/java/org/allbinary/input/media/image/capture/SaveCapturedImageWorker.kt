@@ -92,7 +92,7 @@ onCaptureEvent(allBinaryEventObject as CapturedImageWorkerResultsEvent)
 {
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.RUN)
+            this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.RUN)
 setRunning(true)
 
     var timeHelper: TimeDelayHelper = TimeDelayHelper(1000)
@@ -107,12 +107,12 @@ timeHelper!!.setStartTime()
 CapturedImageInputOutput().
                             save(screenBufferedImage, capturedImageWorkerResultsEvent!!.getFrame())
 capturedImageWorkerResultsEventVector!!.remove(capturedImageWorkerResultsEvent)
-logUtil!!.put(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsed(), this, this.commonStrings!!.RUN)
+this.logUtil!!.putF(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsed(), this, this.commonStrings!!.RUN)
 setRunning(false)
-logUtil!!.put(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
+this.logUtil!!.putF(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
 }
 
 }

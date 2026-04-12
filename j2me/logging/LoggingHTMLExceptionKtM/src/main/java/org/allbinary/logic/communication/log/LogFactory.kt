@@ -47,8 +47,8 @@ var exception = exception
 }
 
 
-    /*actual*/ open fun getInstance(specialMessage: String, anyType: Any, functionName: String)
-        //nullable =  from not(true or (false and false)) = 
+    /*actual*/ open fun getInstanceF(specialMessage: String, anyType: Any, functionName: String)
+        //nullable = true from not(false or (false and false)) = true
 : Log{
 var specialMessage = specialMessage
 var anyType = anyType

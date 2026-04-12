@@ -135,7 +135,7 @@ var totalPaths = totalPaths
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "search", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "search", e)
 
 
 

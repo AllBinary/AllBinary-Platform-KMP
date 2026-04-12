@@ -255,7 +255,7 @@ TrackingEventHandler.getInstance()!!.addListener(this)
                                 
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "onMovement", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "onMovement", e)
 }
 
 }
@@ -372,7 +372,7 @@ this.indexedButShouldBeRotationAnimationInterface!!.nextFrame()
 
     var downgradeCost: Long = RTSLayerUtil.getInstance()!!.getCostExponential(((this.getLevel() -1) *getBuildingLevelCost()).toLong())!!
 
-logUtil!!.put("Cost: " +downgradeCost, this, "getDowngradeCost")
+this.logUtil!!.putF("Cost: " +downgradeCost, this, "getDowngradeCost")
 
 
 

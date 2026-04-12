@@ -150,7 +150,7 @@ var anchor = anchor
                         if(anchor == Graphics.TOP)
                         
                                     {
-                                    logUtil!!.put("Top", this, "scrollY")
+                                    this.logUtil!!.putF("Top", this, "scrollY")
 
                                     }
                                 
@@ -159,7 +159,7 @@ var anchor = anchor
                         if(anchor == Graphics.BOTTOM)
                         
                                     {
-                                    logUtil!!.put("Bottom", this, "scrollY")
+                                    this.logUtil!!.putF("Bottom", this, "scrollY")
 
     var diffY: Int = (terrainTiledLayer!!.getHeight() -displayInfo!!.getLastHeight())
 
@@ -172,7 +172,7 @@ this.move(0, diffY)
                         if(anchor == Graphics.VCENTER)
                         
                                     {
-                                    logUtil!!.put("Center", this, "scrollY")
+                                    this.logUtil!!.putF("Center", this, "scrollY")
 
     var diffY: Int = (terrainTiledLayer!!.getHeight() -displayInfo!!.getLastHeight()) /2
 
@@ -336,7 +336,7 @@ this.processInput(key)
                             
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.PROCESS_INPUT, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.PROCESS_INPUT, e)
 }
 
 }

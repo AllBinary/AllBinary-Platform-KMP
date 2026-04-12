@@ -229,7 +229,7 @@ pathStringBuffer!!.append(abPathData!!.SEPARATOR)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
-                                    logUtil!!.put("path = " +pathStringBuffer!!.toString(), this, "getPath")
+                                    this.logUtil!!.putF("path = " +pathStringBuffer!!.toString(), this, "getPath")
 
                                     }
                                 

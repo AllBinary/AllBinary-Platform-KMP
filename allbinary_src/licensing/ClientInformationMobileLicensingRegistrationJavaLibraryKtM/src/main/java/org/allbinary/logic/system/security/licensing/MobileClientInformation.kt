@@ -80,12 +80,12 @@ companion object {
                         if(this.isHardSale())
                         
                                     {
-                                    logUtil!!.put("Use Hard Coded Selling", this, commonStrings!!.CONSTRUCTOR)
+                                    this.logUtil!!.putF("Use Hard Coded Selling", this, commonStrings!!.CONSTRUCTOR)
 
                                     }
                                 
                         else {
-                            logUtil!!.put("Don't Use Hard Coded Selling", this, commonStrings!!.CONSTRUCTOR)
+                            this.logUtil!!.putF("Don't Use Hard Coded Selling", this, commonStrings!!.CONSTRUCTOR)
 
                         }
                             

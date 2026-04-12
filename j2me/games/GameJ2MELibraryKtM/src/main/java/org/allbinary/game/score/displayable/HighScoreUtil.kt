@@ -110,7 +110,7 @@ this.highScore!!.setName(name)
     open fun saveHighScore()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(commonStrings!!.START)!!.append(StringUtil.getInstance()!!.toString(this.highScore))!!.toString(), this, "saveHighScore")
 
     var size: Int = this.highScoresArray!!.size
@@ -121,7 +121,7 @@ logUtil!!.put(StringMaker().
                         if(firstTime && size == 0)
                         
                                     {
-                                    logUtil!!.put("Games canvas did not give us any HighScores", this, "saveHighScore")
+                                    this.logUtil!!.putF("Games canvas did not give us any HighScores", this, "saveHighScore")
 highScoresFactoryInterface!!.fetchHighScores(gameInfo, this)
 
 
@@ -147,7 +147,7 @@ highScoresFactoryInterface!!.fetchHighScores(gameInfo, this)
 highScores= highScoresArray[index]!!
 highScores!!.addHighScore(this.highScore)
 highScoresAsString= highScores!!.toString()
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append("Added/Adding Score: ")!!.append(highScoresAsString)!!.toString(), this, "saveHighScore")
 }
 

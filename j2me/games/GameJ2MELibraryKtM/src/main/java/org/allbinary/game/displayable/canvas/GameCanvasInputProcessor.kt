@@ -94,7 +94,7 @@ downGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
                                     }
                                 
                         else {
-                            logUtil!!.put(StringMaker().
+                            this.logUtil!!.putF(StringMaker().
                             append(this.gameInputStrings!!.NO_KEY)!!.appendint(keyCode)!!.toString(), this, this.gameInputStrings!!.ADD_KEY_EVENT)
 
                         }
@@ -106,7 +106,7 @@ downKeyEventHandler!!.fireEvent(keyCodeAsInteger)
 downKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(keyCodeAsInteger)
 } catch(e: Exception)
             {
-logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
+this.logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
 }
 
 }
@@ -148,14 +148,14 @@ upGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
                                     }
                                 
                         else {
-                            logUtil!!.put(StringMaker().
+                            this.logUtil!!.putF(StringMaker().
                             append(this.gameInputStrings!!.NO_KEY)!!.appendint(keyCode)!!.toString(), this, this.gameInputStrings!!.REMOVE_KEY_EVENT)
 
                         }
                             
 } catch(e: Exception)
             {
-logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.REMOVE_KEY_EVENT, e)
+this.logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.REMOVE_KEY_EVENT, e)
 }
 
 }

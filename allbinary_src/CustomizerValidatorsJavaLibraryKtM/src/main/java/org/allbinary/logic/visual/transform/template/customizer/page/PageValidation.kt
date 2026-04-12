@@ -83,7 +83,7 @@ this.title= TitleValidation(hashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("PageValidation", this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF("PageValidation", this, commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -101,7 +101,7 @@ this.title= TitleValidation(hashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("PageValidation: " +valid, this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF("PageValidation: " +valid, this, commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -117,7 +117,7 @@ this.title= TitleValidation(hashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put("Failed to validate form", this, commonStrings!!.IS_VALID, e)
+                                    this.logUtil!!.put("Failed to validate form", this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -160,7 +160,7 @@ this.title= TitleValidation(hashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
+                                    this.logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
 
                                     }
                                 

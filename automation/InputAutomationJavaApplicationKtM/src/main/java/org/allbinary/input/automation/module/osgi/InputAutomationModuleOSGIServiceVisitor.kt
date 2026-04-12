@@ -90,7 +90,7 @@ InputAutomationJFrame.getInstance()!!.onAdd(InputAutomationConfigurationUtil.get
                         return Boolean.TRUE
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "visit", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "visit", e)
 
 
 

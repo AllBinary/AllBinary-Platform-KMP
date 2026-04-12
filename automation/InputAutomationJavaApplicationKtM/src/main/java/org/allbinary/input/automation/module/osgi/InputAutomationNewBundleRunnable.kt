@@ -121,7 +121,7 @@ this.running= running
     open fun updateModules()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put(this.commonStrings!!.START, this, "updateModules")
+this.logUtil!!.putF(this.commonStrings!!.START, this, "updateModules")
 
     var list: BasicArrayList = this.findNewModules()!!
 
@@ -160,14 +160,14 @@ bundle= this.install(list.get(index) as URL)
     open fun getAllJarSymbolicNameHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
-logUtil!!.put(this.commonStrings!!.START, this, "getAllJarSymbolicNameHashMap")
+this.logUtil!!.putF(this.commonStrings!!.START, this, "getAllJarSymbolicNameHashMap")
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 
     var jarFileBasicArrayList: BasicArrayList = this.getJarModuleFileBasicArrayList()!!
 
-logUtil!!.put("Jar Module Files: " +jarFileBasicArrayList, this, "getAllJarSymbolicNameHashMap")
+this.logUtil!!.putF("Jar Module Files: " +jarFileBasicArrayList, this, "getAllJarSymbolicNameHashMap")
 
     var size: Int = jarFileBasicArrayList!!.size()!!
 
@@ -235,7 +235,7 @@ file= jarFileBasicArrayList!!.get(index) as File
     open fun getJarModuleFileBasicArrayList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
-logUtil!!.put(this.commonStrings!!.START, this, "getJarModuleFileBasicArrayList")
+this.logUtil!!.putF(this.commonStrings!!.START, this, "getJarModuleFileBasicArrayList")
 
     var baseJarPath: String = System.getProperty(JAR_DIR_PROP)!!
 
@@ -254,11 +254,11 @@ logUtil!!.put(this.commonStrings!!.START, this, "getJarModuleFileBasicArrayList"
 
     var path: String = baseJarPath +INPUT_AUTMATION_MODULE_BUNDLE_JAR_PATH
 
-logUtil!!.put("Path: " +path, this, "getJarModuleFileBasicArrayList")
+this.logUtil!!.putF("Path: " +path, this, "getJarModuleFileBasicArrayList")
 
     var file: File = File(path)
 
-logUtil!!.put("File: " +file.getAbsolutePath() +" isDirectory: " +file.isDirectory(), this, "getJarModuleFileBasicArrayList")
+this.logUtil!!.putF("File: " +file.getAbsolutePath() +" isDirectory: " +file.isDirectory(), this, "getJarModuleFileBasicArrayList")
 
 
 
@@ -272,7 +272,7 @@ logUtil!!.put("File: " +file.getAbsolutePath() +" isDirectory: " +file.isDirecto
     open fun getInstalledJarSymbolicNameBasicArrayList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
-logUtil!!.put(this.commonStrings!!.START, this, "getInstalledJarSymbolicNameBasicArrayList")
+this.logUtil!!.putF(this.commonStrings!!.START, this, "getInstalledJarSymbolicNameBasicArrayList")
 
     var vector: BasicArrayList = BasicArrayList()
 
@@ -289,7 +289,7 @@ logUtil!!.put(this.commonStrings!!.START, this, "getInstalledJarSymbolicNameBasi
                                 )
                         
                                     {
-                                    logUtil!!.put("bundleArray: " +bundleArray!!.size, this, "getInputAutomationModuleServices")
+                                    this.logUtil!!.putF("bundleArray: " +bundleArray!!.size, this, "getInputAutomationModuleServices")
 
 
 
@@ -320,7 +320,7 @@ vector.add(bundle.getSymbolicName())
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 var symbolicName = symbolicName
-logUtil!!.put(CommonLabels.getInstance()!!.START +symbolicName, this, "isInstalled")
+this.logUtil!!.putF(CommonLabels.getInstance()!!.START +symbolicName, this, "isInstalled")
 
     var list: BasicArrayList = this.getInstalledJarSymbolicNameBasicArrayList()!!
 
@@ -366,14 +366,14 @@ nextSymbolicName= list.get(index) as String
     open fun findNewModules()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
-logUtil!!.put(this.commonStrings!!.START, this, "findNewModules")
+this.logUtil!!.putF(this.commonStrings!!.START, this, "findNewModules")
 
     var vector: BasicArrayList = BasicArrayList()
 
 
     var hashMap: HashMap<Any, Any> = this.getAllJarSymbolicNameHashMap()!!
 
-logUtil!!.put("All: " +hashMap, this, "findNewModules")
+this.logUtil!!.putF("All: " +hashMap, this, "findNewModules")
 
     var set: Set = hashMap!!.keys!!
 
@@ -419,7 +419,7 @@ logUtil!!.put("All: " +hashMap, this, "findNewModules")
         //nullable = true from not(false or (false and false)) = true
 : Bundle{
 var url = url
-logUtil!!.put(CommonLabels.getInstance()!!.START +url, this, "install")
+this.logUtil!!.putF(CommonLabels.getInstance()!!.START +url, this, "install")
 
     var bundleContext: BundleContext = InputAutomationBundleActivator.getBundleContext()!!
 
@@ -436,7 +436,7 @@ logUtil!!.put(CommonLabels.getInstance()!!.START +url, this, "install")
 {
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.RUN)
+            this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.RUN)
 this.setRunning(true)
 
     var timeHelper: TimeDelayHelper = TimeDelayHelper(1000)
@@ -445,17 +445,17 @@ this.setRunning(true)
         while(this.isRunning())
         {
 timeHelper!!.setStartTime()
-logUtil!!.put(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsed(), this, this.commonStrings!!.RUN)
+this.logUtil!!.putF(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsed(), this, this.commonStrings!!.RUN)
 this.updateModules()
 break;
 
                     
 }
 
-logUtil!!.put(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
+this.logUtil!!.putF(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
 }
 
 }

@@ -243,7 +243,10 @@ this.handleImage(imageArray, index, originalImageArray[index]!!)
         //nullable = true from not(false or (false and false)) = true
 {
 var resource = resource
-logUtil!!.put(resourceCallbackStrings!!.DONE +image.getName(), this, resourceCallbackStrings!!.HANDLE_IMAGE)
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+logUtil!!.putF(resourceCallbackStrings!!.DONE +image.getName(), this, resourceCallbackStrings!!.HANDLE_IMAGE)
 copy(imageArray, index, image, image3)
 }
 
@@ -251,7 +254,10 @@ copy(imageArray, index, image, image3)
         //nullable = true from not(false or (false and false)) = true
 {
 var e = e
-logUtil!!.put(StringMaker().
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+logUtil!!.putF(StringMaker().
                             append(commonStrings!!.EXCEPTION_LABEL)!!.append(resourceCallbackStrings!!.ERROR)!!.append(image.getName())!!.toString(), this, resourceCallbackStrings!!.HANDLE_IMAGE)
 }
 
@@ -266,7 +272,7 @@ image3.addCallback(callback)
                                     }
                                 
                         else {
-                            logUtil!!.put(resourceCallbackStrings!!.NULL +image.isMutable(), this, resourceCallbackStrings!!.HANDLE_IMAGE)
+                            this.logUtil!!.putF(resourceCallbackStrings!!.NULL +image.isMutable(), this, resourceCallbackStrings!!.HANDLE_IMAGE)
 
                         }
                             
@@ -292,7 +298,7 @@ graphics.drawImage(image, 0, 0, Anchor.TOP_LEFT)
 imageArray[index]= image2
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION_LABEL +resourceCallbackStrings!!.DONE, this, resourceCallbackStrings!!.HANDLE_IMAGE)
+this.logUtil!!.putF(commonStrings!!.EXCEPTION_LABEL +resourceCallbackStrings!!.DONE, this, resourceCallbackStrings!!.HANDLE_IMAGE)
 }
 
 }

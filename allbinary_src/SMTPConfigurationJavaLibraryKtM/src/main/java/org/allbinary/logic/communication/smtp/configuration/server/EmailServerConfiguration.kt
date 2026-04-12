@@ -54,7 +54,7 @@ public constructor ()
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 
                                     }
                                 
@@ -73,7 +73,7 @@ var hashMap = hashMap
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.START, this, "EmailServerConfiguration(HashMap)")
+this.logUtil!!.putF(commonStrings!!.START, this, "EmailServerConfiguration(HashMap)")
 
                                     }
                                 
@@ -97,7 +97,7 @@ var server = server
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.START, this, "EmailServerConfiguration(HashMap)")
+this.logUtil!!.putF(commonStrings!!.START, this, "EmailServerConfiguration(HashMap)")
 
                                     }
                                 
@@ -173,7 +173,7 @@ this.password= password
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.toString(), this, "EmailServerConfiguration")
+                                    this.logUtil!!.putF(this.toString(), this, "EmailServerConfiguration")
 
                                     }
                                 

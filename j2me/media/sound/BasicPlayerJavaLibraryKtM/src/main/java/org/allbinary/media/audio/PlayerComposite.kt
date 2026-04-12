@@ -139,7 +139,7 @@ this.player.deallocate()
             this.player.prefetch()
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "prefetch", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "prefetch", e)
 }
 
 }
@@ -153,7 +153,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "prefetch", e)
             this.player.realize()
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "realize", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "realize", e)
 }
 
 }
@@ -191,7 +191,7 @@ var now = now
                         return this.player.setMediaTime(now)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "setMediaTime", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "setMediaTime", e)
 
 
 
@@ -220,7 +220,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "setMediaTime", e)
                                 
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME, e)
 }
 
 }
@@ -234,7 +234,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME
             this.player.stop()
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "stop", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "stop", e)
 }
 
 }

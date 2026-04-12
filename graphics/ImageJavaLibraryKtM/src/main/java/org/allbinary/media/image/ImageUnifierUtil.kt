@@ -88,7 +88,7 @@ var imageUnifierProperties = imageUnifierProperties
 
     var commonLabels: CommonLabels = CommonLabels.getInstance()!!
 
-logUtil!!.put("Setting Image - " +commonLabels!!.WIDTH_LABEL +newBufferedImage!!.getWidth() +commonLabels!!.HEIGHT_LABEL +newBufferedImage!!.getHeight(), this, "getImage")
+this.logUtil!!.putF("Setting Image - " +commonLabels!!.WIDTH_LABEL +newBufferedImage!!.getWidth() +commonLabels!!.HEIGHT_LABEL +newBufferedImage!!.getHeight(), this, "getImage")
 
     var g: Graphics2D = newBufferedImage!!.createGraphics()!!
 
@@ -111,7 +111,7 @@ logUtil!!.put("Setting Image - " +commonLabels!!.WIDTH_LABEL +newBufferedImage!!
 
     var y: Int = imageUnifierProperties!!.getImageUnifierCell()!!.getHeight()!!.toInt() *rowIndex
 
-logUtil!!.put("Adding Image: " +index +" x: " +x +" y: " +y, this, "getImage")
+this.logUtil!!.putF("Adding Image: " +index +" x: " +x +" y: " +y, this, "getImage")
 g.drawImage(bufferedImageArray[index]!!, x, y, imageUnifierProperties!!.getImageUnifierCell()!!.getWidth()!!.toInt(), imageUnifierProperties!!.getImageUnifierCell()!!.getHeight()!!.toInt(), 
                             null)
 

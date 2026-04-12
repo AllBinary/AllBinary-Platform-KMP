@@ -74,6 +74,9 @@ this.string= string
         //nullable = true from not(false or (false and true)) = true
 {
 
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+
         try {
             Toast.makeText(context, string, time)!!.show()
 } catch(e: Exception)

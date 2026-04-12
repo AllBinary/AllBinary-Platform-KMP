@@ -255,7 +255,7 @@ var index = index
 : CustomItem{
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
     //var point = point
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append("Point: ")!!.append(StringUtil.getInstance()!!.toString(point))!!.toString(), this, "getItemAt")
 
     var scrollSelectionForm: ScrollSelectionForm = rtsPlayerLayerInterface!!.getCurrentScrollSelectionForm()!!
@@ -275,7 +275,7 @@ logUtil!!.put(StringMaker().
 : Int{
     //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
     //var point = point
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append("Point: ")!!.append(StringUtil.getInstance()!!.toString(point))!!.toString(), this, "getItemAt")
 
     var scrollSelectionForm: ScrollSelectionForm = rtsPlayerLayerInterface!!.getCurrentScrollSelectionForm()!!
@@ -344,7 +344,7 @@ logUtil!!.put(StringMaker().
         //nullable = true from not(false or (false and false)) = true
 {
 var selectedGeographicCellPosition = selectedGeographicCellPosition
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append("Selected GeographicMapCellPosition: ")!!.append(selectedGeographicCellPosition!!.toString())!!.toString(), this, "setSelectedGeographicCellPosition")
 this.selectedGeographicCellPosition= selectedGeographicCellPosition
 }

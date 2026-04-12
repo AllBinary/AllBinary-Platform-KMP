@@ -64,21 +64,21 @@ this.processor= processor
 {
 
         try {
-            logUtil!!.put(commonStrings!!.START_RUNNABLE, this, commonStrings!!.RUN)
+            this.logUtil!!.putF(commonStrings!!.START_RUNNABLE, this, commonStrings!!.RUN)
 this.midlet.destroyApp(false, this.isProgress)
 this.midlet.setDisplay(NullCanvas.NULL_CANVAS)
 this.midlet.notifyDestroyed()
-logUtil!!.put(commonStrings!!.END_RUNNABLE, this, commonStrings!!.RUN)
+this.logUtil!!.putF(commonStrings!!.END_RUNNABLE, this, commonStrings!!.RUN)
 processor.process()
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 
         try {
             processor.process()
 } catch(e2: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
 
 }

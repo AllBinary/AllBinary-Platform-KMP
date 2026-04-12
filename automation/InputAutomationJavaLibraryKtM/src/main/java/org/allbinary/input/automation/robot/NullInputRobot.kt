@@ -94,7 +94,7 @@ public constructor ()
         //nullable = true from not(false or (false and false)) = true
 {
 var keycode = keycode
-logUtil!!.put("KeyCode: " +keycode, this, "keyPress")
+this.logUtil!!.putF("KeyCode: " +keycode, this, "keyPress")
 }
 
 
@@ -102,7 +102,7 @@ logUtil!!.put("KeyCode: " +keycode, this, "keyPress")
         //nullable = true from not(false or (false and false)) = true
 {
 var keycode = keycode
-logUtil!!.put("KeyCode: " +keycode, this, "keyRelease")
+this.logUtil!!.putF("KeyCode: " +keycode, this, "keyRelease")
 }
 
 
@@ -111,7 +111,7 @@ logUtil!!.put("KeyCode: " +keycode, this, "keyRelease")
 {
 var x = x
 var y = y
-logUtil!!.put("X: " +x +" Y: " +y, this, "mouseMove")
+this.logUtil!!.putF("X: " +x +" Y: " +y, this, "mouseMove")
 }
 
 
@@ -119,7 +119,7 @@ logUtil!!.put("X: " +x +" Y: " +y, this, "mouseMove")
         //nullable = true from not(false or (false and false)) = true
 {
 var buttons = buttons
-logUtil!!.put("Buttons: " +buttons, this, "mousePress")
+this.logUtil!!.putF("Buttons: " +buttons, this, "mousePress")
 }
 
 
@@ -127,7 +127,7 @@ logUtil!!.put("Buttons: " +buttons, this, "mousePress")
         //nullable = true from not(false or (false and false)) = true
 {
 var buttons = buttons
-logUtil!!.put("Buttons: " +buttons, this, "mouseRelease")
+this.logUtil!!.putF("Buttons: " +buttons, this, "mouseRelease")
 }
 
 

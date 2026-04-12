@@ -549,7 +549,7 @@ var evt = evt
                             null) as Object))
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "explodeAllJMenuItemMousePressed", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "explodeAllJMenuItemMousePressed", e)
 }
 
 }
@@ -565,7 +565,7 @@ var evt = evt
                             null) as Object))
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "autoExplodeJMenuItemMousePressed", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "autoExplodeJMenuItemMousePressed", e)
 }
 
 }
@@ -707,7 +707,7 @@ var evt = evt
                             null) as Object))
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "centerJMenuItemActionPerformed", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "centerJMenuItemActionPerformed", e)
 }
 
 }
@@ -738,7 +738,7 @@ var evt = evt
             this.getSelectedWorkArea()!!.autoMirror()
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "centerJMenuItemActionPerformed", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "centerJMenuItemActionPerformed", e)
 }
 
 }
@@ -750,7 +750,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "centerJMenuItemActionPerformed",
 var files = files
 
         try {
-            logUtil!!.put("Reading: " +files, this, "onFiles")
+            this.logUtil!!.putF("Reading: " +files, this, "onFiles")
 
 
 
@@ -771,7 +771,7 @@ this.add(workAreaJPanel as WorkAreaJPanelInterface)
 this.fileJDialog!!.setVisible(false)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "onFiles", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "onFiles", e)
 }
 
 }
@@ -812,7 +812,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "onFiles", e)
 {
 
         try {
-            logUtil!!.put("Starting", this, "openImageJMenuItemActionPerformed")
+            this.logUtil!!.putF("Starting", this, "openImageJMenuItemActionPerformed")
 fileJDialog!!.setVisible(true)
 } catch(e: Exception)
             {
@@ -844,7 +844,7 @@ fileJDialog!!.setVisible(true)
 
     var document: Document = workAreaJPanel!!.toDocument()!!
 
-logUtil!!.put("Export: " +DomHelper.getInstance()!!.toString(document), this, "exportJMenuItem1ActionPerformed")
+this.logUtil!!.putF("Export: " +DomHelper.getInstance()!!.toString(document), this, "exportJMenuItem1ActionPerformed")
 xslHelper!!.export(file, this.TEMPLATE_EXPORT_PATH +"/" +this.JAVA_TEMPLATE, document)
 } catch(e: Exception)
             {

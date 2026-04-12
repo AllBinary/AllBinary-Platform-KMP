@@ -120,7 +120,7 @@ serviceName= serviceComponent!!.toString()
                                 
 }
 
-logUtil!!.put(SERVICE_NOT_FOUND_RUNNING +name, this, IS_SERVICE_RUNNING)
+this.logUtil!!.putF(SERVICE_NOT_FOUND_RUNNING +name, this, IS_SERVICE_RUNNING)
 
 
 

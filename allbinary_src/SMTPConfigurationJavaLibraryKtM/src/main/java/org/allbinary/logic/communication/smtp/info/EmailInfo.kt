@@ -52,7 +52,7 @@ var basicEmailInfo = basicEmailInfo
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 
                                     }
                                 
@@ -75,7 +75,7 @@ var contentBase = contentBase
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 
                                     }
                                 

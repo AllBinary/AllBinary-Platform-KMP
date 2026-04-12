@@ -138,7 +138,7 @@ zipFile!!.createNewFile()
 stringBuffer!!.appendint(current)
 stringBuffer!!.append(" Creating Zip File Entry: ")
 stringBuffer!!.append(file.getPath())
-logUtil!!.put(stringBuffer!!.toString(), this, "create()")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "create()")
 
         try {
             fileInputStream= AbFileInputStream(file)
@@ -148,7 +148,7 @@ outputStream!!.closeEntry()
 streamUtil!!.close(fileInputStream)
 } catch(e: Exception)
             {
-logUtil!!.put("Skipping File (Probably Local): " +file.getPath(), this, "create()")
+this.logUtil!!.putF("Skipping File (Probably Local): " +file.getPath(), this, "create()")
 }
 
 
@@ -160,7 +160,7 @@ current++
 streamUtil!!.close(outputStream)
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "create", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "create", e)
 }
 
 }
@@ -223,7 +223,7 @@ stringBuffer!!.append(" isDirectory: ")
 stringBuffer!!.appendboolean(entryFile!!.isDirectory())
 stringBuffer!!.append(" getParent: ")
 stringBuffer!!.append(entryFile!!.getParent())
-logUtil!!.put(stringBuffer!!.toString(), this, "unzip")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "unzip")
 
     var dataOutputStream: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstance(entryFile)!!
 

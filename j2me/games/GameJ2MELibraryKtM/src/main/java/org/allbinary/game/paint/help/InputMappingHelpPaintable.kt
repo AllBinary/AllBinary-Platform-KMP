@@ -115,7 +115,7 @@ this.update(NONE, NONE)
 
     var stringMaker: StringMaker = StringMaker()
 
-logUtil!!.put(stringMaker!!.append(CommonLabels.getInstance()!!.START_LABEL)!!.append("selected GameKey: ")!!.append(this.stringUtil!!.toString(selectedGameKey))!!.append(" Input: ")!!.append(this.stringUtil!!.toString(selectedInput))!!.toString(), this, commonStrings!!.UPDATE)
+this.logUtil!!.putF(stringMaker!!.append(CommonLabels.getInstance()!!.START_LABEL)!!.append("selected GameKey: ")!!.append(this.stringUtil!!.toString(selectedGameKey))!!.append(" Input: ")!!.append(this.stringUtil!!.toString(selectedInput))!!.toString(), this, commonStrings!!.UPDATE)
 
     var gameKeyMapping: PersistentInputMapping = PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!
 
@@ -175,7 +175,7 @@ inputBasicColorArray[index]!![index2]= this.basicColor
                         
                                     {
                                     stringMaker!!.delete(0, stringMaker!!.length())
-logUtil!!.put(stringMaker!!.append("Found: selected GameKey: ")!!.append(this.stringUtil!!.toString(selectedGameKey))!!.toString(), this, commonStrings!!.UPDATE)
+this.logUtil!!.putF(stringMaker!!.append("Found: selected GameKey: ")!!.append(this.stringUtil!!.toString(selectedGameKey))!!.toString(), this, commonStrings!!.UPDATE)
 actionBasicColor[index]= this.selectedBasicColor
 
     var indexOfSelectedInput: Int = list.indexOf(selectedInput)!!
@@ -186,7 +186,7 @@ actionBasicColor[index]= this.selectedBasicColor
                         
                                     {
                                     stringMaker!!.delete(0, stringMaker!!.length())
-logUtil!!.put(stringMaker!!.append("Found: selected Input: ")!!.append(this.stringUtil!!.toString(selectedInput))!!.toString(), this, commonStrings!!.UPDATE)
+this.logUtil!!.putF(stringMaker!!.append("Found: selected Input: ")!!.append(this.stringUtil!!.toString(selectedInput))!!.toString(), this, commonStrings!!.UPDATE)
 inputBasicColorArray[index]!![indexOfSelectedInput]= this.selectedBasicColor
 
                                     }

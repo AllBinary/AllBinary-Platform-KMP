@@ -87,9 +87,9 @@ private constructor ()
     //var specialMessage = specialMessage
     //var exception = exception
 
-    var stringBuffer: StringMaker = get(className, functionName)!!
+    var stringBuffer: StringMaker = getF(className, functionName)!!
 
-stringBuffer!!.append(this.get(exception))
+stringBuffer!!.append(this.getO(exception))
 stringBuffer!!.append(SPECIAL_MESSAGE)
 stringBuffer!!.append(specialMessage)
 stringBuffer!!.append(this.commonSeps!!.NEW_LINE)
@@ -101,14 +101,14 @@ stringBuffer!!.append(this.commonSeps!!.NEW_LINE)
 }
 
 
-    /*actual*/ open fun get(className: String, functionName: String, specialMessage: String)
+    /*actual*/ open fun getS(className: String, functionName: String, specialMessage: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var className = className
     //var functionName = functionName
     //var specialMessage = specialMessage
 
-    var stringBuffer: StringMaker = get(className, functionName)!!
+    var stringBuffer: StringMaker = getF(className, functionName)!!
 
 stringBuffer!!.append(SPECIAL_MESSAGE)
 stringBuffer!!.append(specialMessage)
@@ -121,7 +121,7 @@ stringBuffer!!.append(this.commonSeps!!.NEW_LINE)
 }
 
 
-    open fun get(className: String, functionName: String)
+    open fun getF(className: String, functionName: String)
         //nullable = true from not(false or (false and false)) = true
 : StringMaker{
     //var className = className
@@ -160,7 +160,7 @@ stringBuffer!!.append(functionName)
 
     private val nullUtil: NullUtil = NullUtil.getInstance()!!
 
-    /*actual*/ open fun get(exception: Any)
+    /*actual*/ open fun getO(exception: Any)
         //nullable = true from not(false or (false and false)) = true
 : String{
     //var exception = exception

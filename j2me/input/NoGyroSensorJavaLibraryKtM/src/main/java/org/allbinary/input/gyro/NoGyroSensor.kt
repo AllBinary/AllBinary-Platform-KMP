@@ -33,7 +33,7 @@ open public class NoGyroSensor : AllBinaryOrientationSensor
                 , AllBinarySensorListener {
         
 public constructor (){
-logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 }
 
 

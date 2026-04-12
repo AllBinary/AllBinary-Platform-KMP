@@ -98,7 +98,7 @@ this.cellPositionP= cellPosition
 this.xBorder= xBorder
 this.yBorder= yBorder
 this.updateRectangle()
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append("Created: ")!!.append(this.toString())!!.toString(), this, commonStrings!!.CONSTRUCTOR)
 }
 
@@ -139,7 +139,7 @@ this.animationY= point.getY()
 this.hintAnimationY= animationY -32
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "updateRectangle", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "updateRectangle", e)
 }
 
 }

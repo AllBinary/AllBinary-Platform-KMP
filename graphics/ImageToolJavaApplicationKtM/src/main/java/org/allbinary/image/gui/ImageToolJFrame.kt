@@ -343,7 +343,7 @@ this.jPanel1!!.updateUI()
 imageProcessorInputCompositeInterface= imageUnifierJPanel
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "createStripImageJMenuItemActionPerformed", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "createStripImageJMenuItemActionPerformed", e)
 }
 
 }
@@ -355,7 +355,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "createStripImageJMenuItemActionP
 var evt = evt
 
         try {
-            logUtil!!.put("Starting", this, "okJButtonActionPerformed")
+            this.logUtil!!.putF("Starting", this, "okJButtonActionPerformed")
 
     var imageAnalysisResultsArray: Array<ImageAnalysisResults?> = ImageAnalysis.getInstance()!!.process(imageProcessorInput!!.getBufferedImageArray(), this.getColorRangeInterface())!!
 
@@ -368,7 +368,7 @@ imageProcessorInputCompositeInterface=
                                     
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "okJButtonActionPerformed", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "okJButtonActionPerformed", e)
 }
 
 }
@@ -387,11 +387,11 @@ var evt = evt
 var evt = evt
 
         try {
-            logUtil!!.put("Starting", this, "openImageJMenuItemActionPerformed")
+            this.logUtil!!.putF("Starting", this, "openImageJMenuItemActionPerformed")
 fileJDialog!!.setVisible(true)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "openImageJMenuItemActionPerformed", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "openImageJMenuItemActionPerformed", e)
 }
 
 }
@@ -403,7 +403,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "openImageJMenuItemActionPerforme
 var files = files
 
         try {
-            logUtil!!.put("Reading " +files.size +" files.", this, "onFiles")
+            this.logUtil!!.putF("Reading " +files.size +" files.", this, "onFiles")
 Arrays.sort(files, object: Comparator<File>()
                                 {
                                 
@@ -500,7 +500,7 @@ this.fileJDialog!!.setVisible(false)
                                 
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "onFiles", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "onFiles", e)
 }
 
 }
@@ -519,11 +519,11 @@ var evt = evt
 var evt = evt
 
         try {
-            logUtil!!.put("Starting", this, "analyzeJMenuItemActionPerformed")
+            this.logUtil!!.putF("Starting", this, "analyzeJMenuItemActionPerformed")
 this.analysisActionJDialog!!.setVisible(true)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "analyzeJMenuItemActionPerformed", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "analyzeJMenuItemActionPerformed", e)
 }
 
 }
@@ -535,7 +535,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "analyzeJMenuItemActionPerformed"
 var evt = evt
 
         try {
-            logUtil!!.put("Starting", this, "generateRotationSpriteJMenuItemActionPerformed")
+            this.logUtil!!.putF("Starting", this, "generateRotationSpriteJMenuItemActionPerformed")
 
     var spriteImageJPanel: RotationSpriteImageJPanel = RotationSpriteImageJPanel(this.imageProcessorInput)
 
@@ -545,7 +545,7 @@ this.jPanel1!!.updateUI()
 imageProcessorInputCompositeInterface= spriteImageJPanel
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "generateRotationSpriteJMenuItemActionPerformed", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "generateRotationSpriteJMenuItemActionPerformed", e)
 }
 
 }
@@ -557,7 +557,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "generateRotationSpriteJMenuItemA
 var evt = evt
 
         try {
-            logUtil!!.put("Starting", this, "generateRotationSpriteJMenuItemActionPerformed")
+            this.logUtil!!.putF("Starting", this, "generateRotationSpriteJMenuItemActionPerformed")
 
     var imageJPanel: SpriteSplitterImageJPanel = SpriteSplitterImageJPanel(this.imageProcessorInput)
 
@@ -567,7 +567,7 @@ this.jPanel1!!.updateUI()
 imageProcessorInputCompositeInterface= imageJPanel
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "generateRotationMenuItemActionPerformed", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "generateRotationMenuItemActionPerformed", e)
 }
 
 }
@@ -579,7 +579,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "generateRotationMenuItemActionPe
 var evt = evt
 
         try {
-            logUtil!!.put("Starting", this, "generateRotationSpriteJMenuItemActionPerformed")
+            this.logUtil!!.putF("Starting", this, "generateRotationSpriteJMenuItemActionPerformed")
 
     var rotationImageJPanel: RotationImageJPanel = RotationImageJPanel(this.imageProcessorInput)
 
@@ -589,7 +589,7 @@ this.jPanel1!!.updateUI()
 imageProcessorInputCompositeInterface= rotationImageJPanel
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "generateRotationMenuItemActionPerformed", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "generateRotationMenuItemActionPerformed", e)
 }
 
 }
@@ -601,7 +601,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "generateRotationMenuItemActionPe
 var evt = evt
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, "scaleImagesJMenuItemActionPerformed")
+            this.logUtil!!.putF(this.commonStrings!!.START, this, "scaleImagesJMenuItemActionPerformed")
 
     var resizeImageJPanel: ResizeImageJPanel = ResizeImageJPanel(this.imageProcessorInput)
 
@@ -611,7 +611,7 @@ this.jPanel1!!.updateUI()
 imageProcessorInputCompositeInterface= resizeImageJPanel
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "scaleImagesJMenuItemActionPerformed", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "scaleImagesJMenuItemActionPerformed", e)
 }
 
 }
@@ -623,7 +623,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "scaleImagesJMenuItemActionPerfor
 var evt = evt
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, "createIconsJMenuItemActionPerformed")
+            this.logUtil!!.putF(this.commonStrings!!.START, this, "createIconsJMenuItemActionPerformed")
 
     var createIconImagesJPanel: CreateIconImagesJPanel = CreateIconImagesJPanel(this.imageProcessorInput)
 
@@ -633,7 +633,7 @@ this.jPanel1!!.updateUI()
 imageProcessorInputCompositeInterface= createIconImagesJPanel
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "scaleImagesJMenuItemActionPerformed", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "scaleImagesJMenuItemActionPerformed", e)
 }
 
 }
@@ -645,7 +645,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "scaleImagesJMenuItemActionPerfor
 var evt = evt
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, "canvasImagesJMenuItemActionPerformed")
+            this.logUtil!!.putF(this.commonStrings!!.START, this, "canvasImagesJMenuItemActionPerformed")
 
     var resizeImageJPanel: CanvasImageJPanel = CanvasImageJPanel(this.imageProcessorInput)
 
@@ -655,7 +655,7 @@ this.jPanel1!!.updateUI()
 imageProcessorInputCompositeInterface= resizeImageJPanel
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "scaleImagesJMenuItemActionPerformed", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "scaleImagesJMenuItemActionPerformed", e)
 }
 
 }
@@ -667,7 +667,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "scaleImagesJMenuItemActionPerfor
 var evt = evt
 
         try {
-            logUtil!!.put("Starting", this, "generateMirrorSpriteJMenuItemActionPerformed")
+            this.logUtil!!.putF("Starting", this, "generateMirrorSpriteJMenuItemActionPerformed")
 
     var spriteImageJPanel: MirrorSpriteImageJPanel = MirrorSpriteImageJPanel(this.imageProcessorInput)
 
@@ -677,7 +677,7 @@ this.jPanel1!!.updateUI()
 imageProcessorInputCompositeInterface= spriteImageJPanel
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "generateMirrorSpriteJMenuItemActionPerformed", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "generateMirrorSpriteJMenuItemActionPerformed", e)
 }
 
 }
@@ -689,7 +689,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "generateMirrorSpriteJMenuItemAct
 var evt = evt
 
         try {
-            logUtil!!.put("Starting", this, "generateMirrorJMenuItemActionPerformed")
+            this.logUtil!!.putF("Starting", this, "generateMirrorJMenuItemActionPerformed")
 
     var mirrorImageJPanel: MirrorImageJPanel = MirrorImageJPanel(this.imageProcessorInput)
 
@@ -699,7 +699,7 @@ this.jPanel1!!.updateUI()
 imageProcessorInputCompositeInterface= mirrorImageJPanel
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "generateMirrorJMenuItemActionPerformed", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "generateMirrorJMenuItemActionPerformed", e)
 }
 
 }

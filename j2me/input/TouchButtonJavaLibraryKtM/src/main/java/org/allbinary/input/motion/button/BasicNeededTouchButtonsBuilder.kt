@@ -46,7 +46,7 @@ open public class BasicNeededTouchButtonsBuilder : BaseTouchInput {
 : BasicArrayList{
 
         try {
-            logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
+            this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 
     var list: BasicArrayList = BasicArrayList()
 
@@ -85,7 +85,7 @@ list.add(RIGHT)
                         return list
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_LIST, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_LIST, e)
 
 
 

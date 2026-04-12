@@ -191,7 +191,7 @@ customMapArray[endGeographicMapCellPosition!!.getRow()]!![endGeographicMapCellPo
                                 )
                         
                                     {
-                                    logUtil!!.put("pathFindingInfo: " +pathFindingInfo, this, "getPathsList")
+                                    this.logUtil!!.putF("pathFindingInfo: " +pathFindingInfo, this, "getPathsList")
 
 
 
@@ -246,7 +246,7 @@ customMapArray[endGeographicMapCellPosition!!.getRow()]!![endGeographicMapCellPo
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "getPathsList", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "getPathsList", e)
 
 
 

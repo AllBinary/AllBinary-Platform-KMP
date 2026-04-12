@@ -50,7 +50,7 @@ open public class RequestParams
 public constructor ()
             : super()
         {
-logUtil!!.put("New RequestParams Size: 0", this, this.commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF("New RequestParams Size: 0", this, this.commonStrings!!.CONSTRUCTOR)
 }
 
 public constructor (request: HttpServletRequest)
@@ -58,7 +58,7 @@ public constructor (request: HttpServletRequest)
         {
 var request = request
 map= request.getParameterMap()
-logUtil!!.put("RequestParams Size: " +this.getMap()!!.keySet()!!.size(), this, this.commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF("RequestParams Size: " +this.getMap()!!.keySet()!!.size(), this, this.commonStrings!!.CONSTRUCTOR)
 }
 
 public constructor (pageContext: PageContext)
@@ -66,7 +66,7 @@ public constructor (pageContext: PageContext)
         {
 var pageContext = pageContext
 map= pageContext!!.getRequest()!!.getParameterMap()
-logUtil!!.put("Request Params Size: " +this.getMap()!!.keySet()!!.size(), this, this.commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF("Request Params Size: " +this.getMap()!!.keySet()!!.size(), this, this.commonStrings!!.CONSTRUCTOR)
 }
 
 
@@ -133,7 +133,7 @@ stringBuffer!!.append(KEY)
 stringBuffer!!.append(key)
 stringBuffer!!.append(VALUE)
 stringBuffer!!.append(values[0]!!)
-logUtil!!.put(stringBuffer!!.toString(), this, "toXmlNode(document)")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "toXmlNode(document)")
 node.appendChild(ModDomHelper.createNameValueNodes(document, RequestData.PARAMETER, key.toCharArray().concatToString(), .toCharArray()))
 }
 
@@ -144,7 +144,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, RequestData.PARAMET
                         return node
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "toXmlNode(document)", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "toXmlNode(document)", e)
 
 
 
@@ -197,7 +197,7 @@ stringBuffer!!.append("RequestParams: ")
 stringBuffer!!.append(this.map.toString())
 stringBuffer!!.append("\ntoHashMap: ")
 stringBuffer!!.append(hashMap!!.toString())
-logUtil!!.put(stringBuffer!!.toString(), this, "toHashMap()")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "toHashMap()")
 
 
 

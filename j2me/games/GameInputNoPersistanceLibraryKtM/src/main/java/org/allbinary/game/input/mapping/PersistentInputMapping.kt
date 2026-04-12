@@ -159,13 +159,13 @@ inputMappingEvent!!.setInputToGameKeyMapping(this.getInputMapping())
         //nullable = true from not(false or (false and false)) = true
 {
     //var abeClientInformation = abeClientInformation
-logUtil!!.put(commonStrings!!.START, this, commonStrings!!.INIT)
+this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.INIT)
 
         try {
             inputPersistance!!.loadAll(abeClientInformation)
 } catch(e: Exception)
             {
-PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
+PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 inputPersistance!!.deleteRecoreStore(abeClientInformation)
 this.setDefault(abeClientInformation)
 inputPersistance!!.loadAll(abeClientInformation)
@@ -219,7 +219,7 @@ stringBuffer!!.append("End - Total Loaded Keys Mapped: ")
 stringBuffer!!.appendint(this.getTotalMapped())
 stringBuffer!!.append(" to: ")
 stringBuffer!!.appendint(totalMappedTo)
-logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 }
 
 

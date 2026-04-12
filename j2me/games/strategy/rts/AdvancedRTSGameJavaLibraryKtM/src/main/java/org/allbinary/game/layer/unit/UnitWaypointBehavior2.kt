@@ -1152,6 +1152,9 @@ open public inner class BuildingSteeringVisitor : SteeringVisitor {
 : Any{
 var anyType = anyType
 
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+
         try {
             
     

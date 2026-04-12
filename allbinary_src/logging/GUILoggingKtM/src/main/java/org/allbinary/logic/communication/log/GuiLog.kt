@@ -52,6 +52,8 @@ companion object {
 
         }
             
+    private val logFormatUtil: LogFormatUtil = LogFormatUtil.getInstance()!!
+
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 private constructor ()
             : super()
@@ -135,7 +137,7 @@ var exception = exception
 
         try {
             
-    var data: String = LogFormatUtil.getInstance()!!.get(specialMessage, anyType!!::class.toString()!!, functionName, exception)!!
+    var data: String = logFormatUtil!!.get(specialMessage, anyType!!::class.toString()!!, functionName, exception)!!
 
 this.showDialog(data)
 System.out.println(data)
@@ -146,7 +148,7 @@ System.out.println(data)
                         return data
 } catch(e: Exception)
             {
-PreLogUtil.put(commonStrings!!.EXCEPTION, this, "put", e)
+PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, "put", e)
 
 
 
@@ -184,7 +186,7 @@ var exception = exception
 
         try {
             
-    var data: String = LogFormatUtil.getInstance()!!.get(specialMessage, className, functionName, exception)!!
+    var data: String = logFormatUtil!!.get(specialMessage, className, functionName, exception)!!
 
 this.showDialog(data)
 System.out.println(data)
@@ -195,7 +197,7 @@ System.out.println(data)
                         return data
 } catch(e: Exception)
             {
-PreLogUtil.put(commonStrings!!.EXCEPTION, this, "put", e)
+PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, "put", e)
 
 
 

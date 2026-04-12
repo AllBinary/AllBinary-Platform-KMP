@@ -103,10 +103,10 @@ var values = values
 
         try {
             super.insert(values)
-logUtil!!.put(this.commonStrings!!.SUCCESS, this, INSERT)
+this.logUtil!!.putF(this.commonStrings!!.SUCCESS, this, INSERT)
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.FAILURE, this, INSERT, e)
+this.logUtil!!.put(this.commonStrings!!.FAILURE, this, INSERT, e)
 }
 
 }
@@ -119,10 +119,10 @@ var value = value
 
         try {
             super.deleteWhere(NAME, value)
-logUtil!!.put(this.commonStrings!!.SUCCESS, this, commonStrings!!.delete)
+this.logUtil!!.putF(this.commonStrings!!.SUCCESS, this, commonStrings!!.delete)
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.FAILURE, this, commonStrings!!.delete, e)
+this.logUtil!!.put(this.commonStrings!!.FAILURE, this, commonStrings!!.delete, e)
 }
 
 }

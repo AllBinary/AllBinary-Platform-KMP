@@ -167,7 +167,7 @@ this.alwaysActionScriptConditionJPanel!!.getAlwaysActionJDialog()!!.setVisible(t
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 hashMap!!.put(AlwaysActionScriptConditionData.IS_ON, Boolean.toString(this.isIsOn()))
-logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
+this.logUtil!!.putF("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
 
 
@@ -224,7 +224,7 @@ var frame = frame
     open fun log()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put("Is On: " +this.isIsOn(), this, "log")
+this.logUtil!!.putF("Is On: " +this.isIsOn(), this, "log")
 }
 
 

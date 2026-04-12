@@ -79,7 +79,7 @@ var file = file
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Cloud File Bytes: " +available, this, "processRequest()")
+                                    this.logUtil!!.putF("Cloud File Bytes: " +available, this, "processRequest()")
 
                                     }
                                 
@@ -116,7 +116,7 @@ var file = file
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Local File Bytes: " +available, this, "processRequest()")
+                                    this.logUtil!!.putF("Local File Bytes: " +available, this, "processRequest()")
 
                                     }
                                 
@@ -136,7 +136,7 @@ available= inputStream!!.available()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put("Cloud File Bytes: " +available, this, "processRequest()")
+                                    this.logUtil!!.putF("Cloud File Bytes: " +available, this, "processRequest()")
 
                                     }
                                 
@@ -176,7 +176,7 @@ var file = file
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Local File Bytes: " +available, this, "processRequest()")
+                                    this.logUtil!!.putF("Local File Bytes: " +available, this, "processRequest()")
 
                                     }
                                 

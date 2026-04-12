@@ -69,7 +69,7 @@ companion object {
 
     private var destroyed: Boolean= false
 public constructor (){
-logUtil!!.put(commonStrings!!.CONSTRUCTOR, this, "AllBinaryMidlet::AllBinaryMidlet")
+this.logUtil!!.putF(commonStrings!!.CONSTRUCTOR, this, "AllBinaryMidlet::AllBinaryMidlet")
 }
 
 
@@ -93,13 +93,13 @@ logUtil!!.put(commonStrings!!.CONSTRUCTOR, this, "AllBinaryMidlet::AllBinaryMidl
                                 )
                         
                                     {
-                                    logUtil!!.put(StringMaker().
+                                    this.logUtil!!.putF(StringMaker().
                             append(SETTING_)!!.append(title)!!.append(_DISPLAY_)!!.append(StringUtil.getInstance()!!.toString(newDisplay))!!.toString(), this, SET_DISPLAY)
 
                                     }
                                 
                         else {
-                            logUtil!!.put(StringMaker().
+                            this.logUtil!!.putF(StringMaker().
                             append(SETTING_NO_TITLE)!!.append(StringUtil.getInstance()!!.toString(newDisplay))!!.toString(), this, SET_DISPLAY)
 
                         }
@@ -188,12 +188,12 @@ var unconditional = unconditional
 
 
         try {
-            logUtil!!.put(commonStrings!!.START, this, METHOD_NAME)
+            this.logUtil!!.putF(commonStrings!!.START, this, METHOD_NAME)
 PreLogUtil.put(Memory.getInfo(), this, METHOD_NAME)
 this.setDestroyed(true)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
 }
 
 }
@@ -205,7 +205,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
         //nullable = true from not(false or (false and false)) = true
 {
 var hashtable = hashtable
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(CommonLabels.getInstance()!!.START_LABEL)!!.append(StringUtil.getInstance()!!.toString(hashtable))!!.toString(), this, "setStartStateHashtable")
 this.hashtable= hashtable
 }
@@ -216,7 +216,7 @@ this.hashtable= hashtable
     open fun getStartStateHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(CommonLabels.getInstance()!!.START_LABEL)!!.append(StringUtil.getInstance()!!.toString(hashtable))!!.toString(), this, "getStartStateHashtable")
 
 
@@ -231,7 +231,7 @@ logUtil!!.put(StringMaker().
     open fun getCurrentStateHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
-logUtil!!.put(commonStrings!!.START, this, "getStateHashtable")
+this.logUtil!!.putF(commonStrings!!.START, this, "getStateHashtable")
 
 
 

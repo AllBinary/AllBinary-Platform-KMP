@@ -262,7 +262,7 @@ this.insert(vector)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.SUCCESS, this, INSERT)
+                                    this.logUtil!!.putF(this.commonStrings!!.SUCCESS, this, INSERT)
 
                                     }
                                 
@@ -273,7 +273,7 @@ this.insert(vector)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put("Command Failed: " +vector, this, INSERT, e)
+                                    this.logUtil!!.put("Command Failed: " +vector, this, INSERT, e)
 
                                     }
                                 
@@ -294,7 +294,7 @@ var values = values
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.SUCCESS, this, INSERT)
+                                    this.logUtil!!.putF(this.commonStrings!!.SUCCESS, this, INSERT)
 
                                     }
                                 
@@ -305,7 +305,7 @@ var values = values
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, INSERT, e)
+                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, INSERT, e)
 
                                     }
                                 
@@ -359,7 +359,7 @@ super.updateWhere(OrderData.ID, orderId, updateHashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "setStatus", e)
+                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, "setStatus", e)
 
                                     }
                                 
@@ -396,7 +396,7 @@ super.updateWhere(OrderData.ID, orderId, updateHashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "setPaymentMethod", e)
+                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, "setPaymentMethod", e)
 
                                     }
                                 

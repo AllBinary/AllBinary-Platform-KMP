@@ -64,7 +64,7 @@ var item = item
             
     var itemLabel: String = item.getLabel()!!
 
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(CommonLabels.getInstance()!!.ITEM_LABEL)!!.append(itemLabel)!!.toString(), this, MidletStrings.getInstance()!!.COMMAND_ACTION)
 
     
@@ -80,7 +80,7 @@ logUtil!!.put(StringMaker().
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, MidletStrings.getInstance()!!.COMMAND_ACTION, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, MidletStrings.getInstance()!!.COMMAND_ACTION, e)
 }
 
 }

@@ -69,7 +69,7 @@ var collection = collection
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
-logUtil!!.put("Loading Libraries", "InputRobotFactory", "loadLibraries")
+logUtil!!.putF("Loading Libraries", "InputRobotFactory", "loadLibraries")
 
     var iterator: Iterator = collection.iterator()!!
 
@@ -96,7 +96,7 @@ loadLibrary(iterator.next() as InputRobotInterface)
                         if(InterfaceUtil.isImplemented(SecuredNativeLibraryInterface::class, inputRobotInterface))
                         
                                     {
-                                    logUtil!!.put("Loading Library: " +inputRobotInterface!!.getName(), "InputRobotFactory", "loadLibraries")
+                                    logUtil!!.putF("Loading Library: " +inputRobotInterface!!.getName(), "InputRobotFactory", "loadLibraries")
 
     var securedNativeLibraryInterface: SecuredNativeLibraryInterface = inputRobotInterface as SecuredNativeLibraryInterface
 
@@ -138,14 +138,14 @@ private constructor ()
 
         {
 inputRobotInterface= InputRobot(screens[i]!!) as InputRobotInterface
-logUtil!!.put("Adding Robot: " +inputRobotInterface!!.getName(), this, "getRobots")
+this.logUtil!!.putF("Adding Robot: " +inputRobotInterface!!.getName(), this, "getRobots")
 this.get()!!.put(inputRobotInterface!!.getName(), inputRobotInterface)
 }
 
-logUtil!!.put("Number Of Robots: " +this.hashtable.size, this, "getRobots")
+this.logUtil!!.putF("Number Of Robots: " +this.hashtable.size, this, "getRobots")
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR)
 }
 
 }
@@ -165,7 +165,7 @@ this.helpSetListenerInterface= helpSetListenerInterface
         //nullable = true from not(false or (false and false)) = true
 {
     //var inputRobotInterface = inputRobotInterface
-logUtil!!.put("Adding InputRobotInterface: " +inputRobotInterface!!.getName(), this, "add")
+this.logUtil!!.putF("Adding InputRobotInterface: " +inputRobotInterface!!.getName(), this, "add")
 this.get()!!.put(inputRobotInterface!!.getName(), inputRobotInterface)
 
     var helpSet: HelpSet = inputRobotInterface!!.getHelpSet()!!
@@ -200,7 +200,7 @@ this.helpSetListenerInterface!!.helpSetAdded(helpSetEvent)
                                     }
                                 
                         else {
-                            logUtil!!.put("Null HelpSet For: " +inputRobotInterface!!.getName(), this, "add")
+                            this.logUtil!!.putF("Null HelpSet For: " +inputRobotInterface!!.getName(), this, "add")
 
                         }
                             
@@ -208,7 +208,7 @@ this.helpSetListenerInterface!!.helpSetAdded(helpSetEvent)
                                     }
                                 
                         else {
-                            logUtil!!.put("No HelpSet Listener", this, "add")
+                            this.logUtil!!.putF("No HelpSet Listener", this, "add")
 
                         }
                             
@@ -223,7 +223,7 @@ this.helpSetListenerInterface!!.helpSetAdded(helpSetEvent)
 
     var set: Set = this.get()!!.keySet()!!
 
-logUtil!!.put("Loading Libraries", this, "loadLibraries")
+this.logUtil!!.putF("Loading Libraries", this, "loadLibraries")
 
     var nameArray: Array<Any?> = set.toArray()!!
 
@@ -252,7 +252,7 @@ loadLibrary(inputRobotInterface)
     open fun unloadLibraries()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put("Unloading Libraries", this, "unloadLibraries")
+this.logUtil!!.putF("Unloading Libraries", this, "unloadLibraries")
 
     var set: Set = this.get()!!.keySet()!!
 
@@ -279,7 +279,7 @@ inputRobotInterface= this.get(inputRobotArray[index]!! as String)
                         if(InterfaceUtil.isImplemented(SecuredNativeLibraryInterface::class, inputRobotInterface))
                         
                                     {
-                                    logUtil!!.put("Unloading Library: " +inputRobotInterface!!.getName(), this, "unloadLibraries")
+                                    this.logUtil!!.putF("Unloading Library: " +inputRobotInterface!!.getName(), this, "unloadLibraries")
 
     var securedNativeLibraryInterface: SecuredNativeLibraryInterface = inputRobotInterface as SecuredNativeLibraryInterface
 
@@ -309,7 +309,7 @@ securedNativeLibraryInterface!!.unload()
         //nullable = true from not(false or (false and false)) = true
 : InputRobotInterface{
     //var name = name
-logUtil!!.put("Getting Robot: " +name, this, "getRobots")
+this.logUtil!!.putF("Getting Robot: " +name, this, "getRobots")
 
 
 

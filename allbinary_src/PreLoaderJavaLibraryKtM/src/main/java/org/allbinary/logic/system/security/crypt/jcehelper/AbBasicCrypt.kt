@@ -63,7 +63,7 @@ this.init()
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-PreLogUtil.put(commonStrings!!.EXCEPTION, this, "AbCrypt(alg,key)", e)
+PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, "AbCrypt(alg,key)", e)
 }
 
 }
@@ -91,7 +91,7 @@ this.cipher= Cipher.getInstance(algorithm)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-PreLogUtil.put("init Failed", this, commonStrings!!.INIT, e)
+PreLogUtil.putOE("init Failed", this, commonStrings!!.INIT, e)
 }
 
 }
@@ -141,7 +141,7 @@ result[index +ivArray!!.size]= encrypted[index]!!
                         return result
 } catch(e: Exception)
             {
-PreLogUtil.put("Encrypt Failed", this, "encrypt", e)
+PreLogUtil.putOE("Encrypt Failed", this, "encrypt", e)
 
 
 
@@ -196,7 +196,7 @@ result[index -ivArray!!.size]= array[index]!!
                         return result
 } catch(e: Exception)
             {
-PreLogUtil.put("decrypt Failed", this, "decrypt", e)
+PreLogUtil.putOE("decrypt Failed", this, "decrypt", e)
 
 
 

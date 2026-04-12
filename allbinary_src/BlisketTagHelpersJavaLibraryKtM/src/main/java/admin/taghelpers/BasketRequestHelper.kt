@@ -138,7 +138,7 @@ basket.addItem(id, num)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put("Successfully added item to Basket", this, "addItemToBasket()")
+                                    this.logUtil!!.putF("Successfully added item to Basket", this, "addItemToBasket()")
 
                                     }
                                 
@@ -154,7 +154,7 @@ basket.addItem(id, num)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "addItemToBasket()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "addItemToBasket()", e)
 
                                     }
                                 
@@ -192,7 +192,7 @@ basket.removeItem(id)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put("Successfully removed item from Basket", this, "removeItemFromBasket()")
+                                    this.logUtil!!.putF("Successfully removed item from Basket", this, "removeItemFromBasket()")
 
                                     }
                                 
@@ -208,7 +208,7 @@ basket.removeItem(id)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "removeItemFromBasket()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "removeItemFromBasket()", e)
 
                                     }
                                 
@@ -243,7 +243,7 @@ basket.removeItem(id)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put("Successfull Adjusted Basket", this, "adjustBasket()")
+                                    this.logUtil!!.putF("Successfull Adjusted Basket", this, "adjustBasket()")
 
                                     }
                                 
@@ -259,7 +259,7 @@ basket.removeItem(id)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "adjustBasket()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "adjustBasket()", e)
 
                                     }
                                 

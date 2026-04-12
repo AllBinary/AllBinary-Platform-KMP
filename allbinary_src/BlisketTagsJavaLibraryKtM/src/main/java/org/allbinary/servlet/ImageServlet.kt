@@ -88,7 +88,7 @@ response.getOutputStream()!!.write(byteArray)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "processRequest()", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "processRequest()", e)
 
                                     }
                                 

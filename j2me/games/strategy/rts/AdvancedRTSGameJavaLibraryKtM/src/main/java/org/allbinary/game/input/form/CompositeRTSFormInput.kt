@@ -166,7 +166,7 @@ var index = index
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(CommonLabels.getInstance()!!.INDEX_LABEL +index +" > " +this.itemIndex[0], this, commonStrings!!.PROCESS)
+this.logUtil!!.putF(CommonLabels.getInstance()!!.INDEX_LABEL +index +" > " +this.itemIndex[0], this, commonStrings!!.PROCESS)
 
     
                         if(this.isStickyItemSelected() && associatedRtsLayer == 

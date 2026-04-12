@@ -47,6 +47,8 @@
 
         }
             
+    private val logFormatUtil: LogFormatUtil = LogFormatUtil.getInstance()!!
+
     private val LABEL: String = "org.allbinary"
 
     private val LOG_SUCCESS: String = "org.allbinary: "
@@ -56,7 +58,7 @@ private constructor ()
 }
 
 
-    /*actual*/ open fun put(log: Log)
+    /*actual*/ open fun putL(log: Log)
         //nullable = true from not(false or (false and false)) = true
 {
     //var log = log
@@ -86,7 +88,7 @@ private constructor ()
 }
 
 
-    /*actual*/ open fun put(specialMessage: String, anyType: Any, functionName: String)
+    /*actual*/ open fun putF(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var specialMessage = specialMessage
@@ -107,7 +109,7 @@ private constructor ()
 
 className= anyType!!::class.toString()!!
 
-    var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
+    var message: String = logFormatUtil!!.get(className, functionName, specialMessage, exception)!!
 
 android.util.Log.i(LABEL, LOG_SUCCESS +message)
 }

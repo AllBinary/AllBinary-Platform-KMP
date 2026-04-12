@@ -214,7 +214,7 @@ var aLastHeight = aLastHeight
 
     var stringMaker: StringMaker = StringMaker()
 
-logUtil!!.put(stringMaker!!.append(CommonLabels.getInstance()!!.START_LABEL)!!.append(reason)!!.toString(), this, SET_LAST_SIZE_METHOD_NAME)
+this.logUtil!!.putF(stringMaker!!.append(CommonLabels.getInstance()!!.START_LABEL)!!.append(reason)!!.toString(), this, SET_LAST_SIZE_METHOD_NAME)
 
     var aFullWidth: Int = aLastWidth
 
@@ -222,7 +222,7 @@ logUtil!!.put(stringMaker!!.append(CommonLabels.getInstance()!!.START_LABEL)!!.a
     var aFullHeight: Int = aLastHeight
 
 stringMaker!!.delete(0, stringMaker!!.length())
-logUtil!!.put(stringMaker!!.append(FULL_WIDTH)!!.appendint(aFullWidth)!!.append(FULL_HEIGHT)!!.appendint(aFullHeight)!!.append(this.toString())!!.toString(), this, SET_LAST_SIZE_METHOD_NAME)
+this.logUtil!!.putF(stringMaker!!.append(FULL_WIDTH)!!.appendint(aFullWidth)!!.append(FULL_HEIGHT)!!.appendint(aFullHeight)!!.append(this.toString())!!.toString(), this, SET_LAST_SIZE_METHOD_NAME)
 
     var operatingSystemInterface: GenericOperatingSystem = OperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()!!
 
@@ -254,7 +254,7 @@ aLastHeight= aLastHeight *operatingSystemInterface!!.getOverScanYPercent() /100
                                     this.displayRatio= scaleLargestTo /aLastHeight
 this.ratio= aLastHeight /scaleLargestTo
 stringMaker!!.delete(0, stringMaker!!.length())
-logUtil!!.put(stringMaker!!.append(this.ADJUSTING_FOR_SCALING_IN_PORTRAIT)!!.appendfloat(displayRatio)!!.toString(), this, SET_LAST_SIZE_METHOD_NAME)
+this.logUtil!!.putF(stringMaker!!.append(this.ADJUSTING_FOR_SCALING_IN_PORTRAIT)!!.appendfloat(displayRatio)!!.toString(), this, SET_LAST_SIZE_METHOD_NAME)
 aLastWidth= (aLastWidth *displayRatio).toInt()
 aLastHeight= (aLastHeight *displayRatio).toInt()
 this.scalableListener!!.scale(ratio.toFloat())
@@ -279,7 +279,7 @@ this.scalableListener!!.scale(ratio.toFloat())
                                     this.displayRatio= scaleLargestTo /aLastWidth
 this.ratio= aLastWidth /scaleLargestTo
 stringMaker!!.delete(0, stringMaker!!.length())
-logUtil!!.put(stringMaker!!.append(this.ADJUSTING_FOR_SCALING_IN_LANDSCAPE)!!.appendfloat(displayRatio)!!.toString(), this, SET_LAST_SIZE_METHOD_NAME)
+this.logUtil!!.putF(stringMaker!!.append(this.ADJUSTING_FOR_SCALING_IN_LANDSCAPE)!!.appendfloat(displayRatio)!!.toString(), this, SET_LAST_SIZE_METHOD_NAME)
 aLastWidth= (aLastWidth *displayRatio).toInt()
 aLastHeight= (aLastHeight *displayRatio).toInt()
 this.scalableListener!!.scale(ratio.toFloat())
@@ -299,7 +299,7 @@ this.scalableListener!!.scale(ratio.toFloat())
                                     }
                                 
 stringMaker!!.delete(0, stringMaker!!.length())
-logUtil!!.put(stringMaker!!.append(LAST_WIDTH)!!.appendint(aLastWidth)!!.append(LAST_HEIGHT)!!.appendint(aLastHeight)!!.toString(), this, SET_LAST_SIZE_METHOD_NAME)
+this.logUtil!!.putF(stringMaker!!.append(LAST_WIDTH)!!.appendint(aLastWidth)!!.append(LAST_HEIGHT)!!.appendint(aLastHeight)!!.toString(), this, SET_LAST_SIZE_METHOD_NAME)
 this.xOffset= aFullWidth -aLastWidth
 this.yOffset= aFullHeight -aLastHeight
 this.left= this.scalableListener!!.getLeft(this.xOffset)
@@ -373,9 +373,9 @@ var lastHeight = lastHeight
 
     var stringMaker: StringMaker = StringMaker()
 
-logUtil!!.put(stringMaker!!.append(REASON)!!.append(reason)!!.toString(), this, FIRE_METHOD_NAME)
+this.logUtil!!.putF(stringMaker!!.append(REASON)!!.append(reason)!!.toString(), this, FIRE_METHOD_NAME)
 stringMaker!!.delete(0, stringMaker!!.length())
-logUtil!!.put(this.toString(stringMaker), this, FIRE_METHOD_NAME)
+this.logUtil!!.putF(this.toString(stringMaker), this, FIRE_METHOD_NAME)
 list.add(reason)
 }
 
@@ -397,7 +397,7 @@ list.add(reason)
 list.clear()
 } catch(e: Exception)
             {
-PreLogUtil.put(commonStrings!!.EXCEPTION, this, FIRE_METHOD_NAME, e)
+PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, FIRE_METHOD_NAME, e)
 }
 
 }
@@ -417,7 +417,7 @@ LastDisplayChangeEventHandler.getInstance()!!.fireEvent(displayChangeEvent)
 swtJOGLProcessor!!.onSurfaceChanged()
 } catch(e: Exception)
             {
-PreLogUtil.put(commonStrings!!.EXCEPTION, this, FIRE_METHOD_NAME, e)
+PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, FIRE_METHOD_NAME, e)
 }
 
 }
@@ -443,7 +443,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, FIRE_METHOD_NAME, e)
 
     var stringMaker: StringMaker = StringMaker()
 
-logUtil!!.put(stringMaker!!.append(CommonLabels.getInstance()!!.START_LABEL)!!.append(reason)!!.append(LAST_WIDTH)!!.appendint(aLastWidth)!!.append(LAST_HEIGHT)!!.appendint(aLastHeight)!!.append(commonSeps!!.SPACE)!!.append(this.toString())!!.toString(), this, commonStrings!!.UPDATE)
+this.logUtil!!.putF(stringMaker!!.append(CommonLabels.getInstance()!!.START_LABEL)!!.append(reason)!!.append(LAST_WIDTH)!!.appendint(aLastWidth)!!.append(LAST_HEIGHT)!!.appendint(aLastHeight)!!.append(commonSeps!!.SPACE)!!.append(this.toString())!!.toString(), this, commonStrings!!.UPDATE)
 
     
                         if(aLastWidth > 0 && aLastHeight > 0)
@@ -455,7 +455,7 @@ logUtil!!.put(stringMaker!!.append(CommonLabels.getInstance()!!.START_LABEL)!!.a
                         
                                     {
                                     stringMaker!!.delete(0, stringMaker!!.length())
-logUtil!!.put(stringMaker!!.append(UPDATE_FROM_ORIENTATION_CHANGE)!!.toString(), this, commonStrings!!.UPDATE)
+this.logUtil!!.putF(stringMaker!!.append(UPDATE_FROM_ORIENTATION_CHANGE)!!.toString(), this, commonStrings!!.UPDATE)
 
     var operatingSystemInterface: GenericOperatingSystem = OperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()!!
 
@@ -487,7 +487,7 @@ aLastHeight= aLastHeight *operatingSystemInterface!!.getOverScanYPercent() /100
                                     this.displayRatio= scaleLargestTo /aLastHeight
 this.ratio= aLastHeight /scaleLargestTo
 stringMaker!!.delete(0, stringMaker!!.length())
-logUtil!!.put(stringMaker!!.append(this.ADJUSTING_FOR_SCALING_IN_PORTRAIT)!!.appendfloat(displayRatio)!!.toString(), this, commonStrings!!.UPDATE)
+this.logUtil!!.putF(stringMaker!!.append(this.ADJUSTING_FOR_SCALING_IN_PORTRAIT)!!.appendfloat(displayRatio)!!.toString(), this, commonStrings!!.UPDATE)
 aLastWidth= (aLastWidth *displayRatio).toInt()
 aLastHeight= (aLastHeight *displayRatio).toInt()
 this.scalableListener!!.scale(ratio.toFloat())
@@ -504,7 +504,7 @@ this.scalableListener!!.scale(ratio.toFloat())
                                     }
                                 
                         else {
-                            logUtil!!.put("Found Landscape Orientation", this, commonStrings!!.UPDATE)
+                            this.logUtil!!.putF("Found Landscape Orientation", this, commonStrings!!.UPDATE)
 
     
                         if(aLastWidth > scaleLargestTo)
@@ -513,7 +513,7 @@ this.scalableListener!!.scale(ratio.toFloat())
                                     this.displayRatio= scaleLargestTo /aLastWidth
 this.ratio= aLastWidth /scaleLargestTo
 stringMaker!!.delete(0, stringMaker!!.length())
-logUtil!!.put(stringMaker!!.append(this.ADJUSTING_FOR_SCALING_IN_LANDSCAPE)!!.appendfloat(displayRatio)!!.toString(), this, commonStrings!!.UPDATE)
+this.logUtil!!.putF(stringMaker!!.append(this.ADJUSTING_FOR_SCALING_IN_LANDSCAPE)!!.appendfloat(displayRatio)!!.toString(), this, commonStrings!!.UPDATE)
 aLastWidth= (aLastWidth *displayRatio).toInt()
 aLastHeight= (aLastHeight *displayRatio).toInt()
 this.scalableListener!!.scale(ratio.toFloat())
@@ -533,7 +533,7 @@ this.scalableListener!!.scale(ratio.toFloat())
                                     }
                                 
 stringMaker!!.delete(0, stringMaker!!.length())
-logUtil!!.put(stringMaker!!.append(UPDATE_FROM_ORIENTATION_CHANGE)!!.append(LAST_WIDTH)!!.appendint(aLastWidth)!!.append(LAST_HEIGHT)!!.appendint(aLastHeight)!!.toString(), this, commonStrings!!.UPDATE)
+this.logUtil!!.putF(stringMaker!!.append(UPDATE_FROM_ORIENTATION_CHANGE)!!.append(LAST_WIDTH)!!.appendint(aLastWidth)!!.append(LAST_HEIGHT)!!.appendint(aLastHeight)!!.toString(), this, commonStrings!!.UPDATE)
 this.xOffset= aFullWidth -aLastWidth
 this.yOffset= aFullHeight -aLastHeight
 this.left= this.scalableListener!!.getLeft(this.xOffset)

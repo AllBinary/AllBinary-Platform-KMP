@@ -152,7 +152,7 @@ var data = data
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STATICPAGEGENERATIONLOGGING))
                         
                                     {
-                                    logUtil!!.put("Creating File: " +file, this, "generateAll()")
+                                    this.logUtil!!.putF("Creating File: " +file, this, "generateAll()")
 
                                     }
                                 
@@ -185,7 +185,7 @@ StreamUtil.getInstance()!!.close(idOutData)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STATICPAGEGENERATIONLOGGING))
                         
                                     {
-                                    logUtil!!.put("Wrote Total Bytes: " +newFile!!.length(), this, "generateAll()")
+                                    this.logUtil!!.putF("Wrote Total Bytes: " +newFile!!.length(), this, "generateAll()")
 
                                     }
                                 
@@ -264,7 +264,7 @@ this.searchRequest!!.setFileBaseName(pageName)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STATICPAGEGENERATIONLOGGING))
                         
                                     {
-                                    logUtil!!.put("Saving Listing: " +index, this, "generateAll()")
+                                    this.logUtil!!.putF("Saving Listing: " +index, this, "generateAll()")
 
                                     }
                                 
@@ -374,7 +374,7 @@ stringBuffer!!.append(storeFront!!.getStaticPath())
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STATICPAGEGENERATIONLOGGING))
                         
                                     {
-                                    logUtil!!.put("Store Static Pages Path: " +staticPath, this, "generateAll()")
+                                    this.logUtil!!.putF("Store Static Pages Path: " +staticPath, this, "generateAll()")
 
                                     }
                                 

@@ -56,7 +56,7 @@ basicAI!!.processAI(Canvas.UP)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.VISIT, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.VISIT, e)
 }
 
 

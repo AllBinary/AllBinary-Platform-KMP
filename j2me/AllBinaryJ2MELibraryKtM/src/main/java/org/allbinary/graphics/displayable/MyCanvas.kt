@@ -74,7 +74,7 @@ public constructor ()
 public constructor (name: String, childNameList: BasicArrayList){
     //var name = name
     //var childNameList = childNameList
-logUtil!!.put(commonStrings!!.CONSTRUCTOR, this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(commonStrings!!.CONSTRUCTOR, this, commonStrings!!.CONSTRUCTOR)
 displayInfoSingleton!!.update(this, canvasStrings!!.CONSTRUCTOR)
 this.name= name
 this.childNameList= childNameList
@@ -217,7 +217,7 @@ this.removeCommand(MyCommandsFactory.getInstance()!!.PAUSE_COMMAND)
     open fun pause()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put(commonStrings!!.START, this, canvasStrings!!.PAUSE)
+this.logUtil!!.putF(commonStrings!!.START, this, canvasStrings!!.PAUSE)
 this.removePauseCommand()
 this.addCommand(MyCommandsFactory.getInstance()!!.RESUME_COMMAND)
 this.setPaused(true)
@@ -228,7 +228,7 @@ this.setPaused(true)
     open fun unPause()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put(commonStrings!!.START, this, canvasStrings!!.UN_PAUSE)
+this.logUtil!!.putF(commonStrings!!.START, this, canvasStrings!!.UN_PAUSE)
 this.removeCommand(MyCommandsFactory.getInstance()!!.RESUME_COMMAND)
 this.addCommand(MyCommandsFactory.getInstance()!!.PAUSE_COMMAND)
 this.setPaused(false)
@@ -273,7 +273,7 @@ var displayable = displayable
     open fun destroy()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put("Destroyed MyCanvas", this, "destroy")
+this.logUtil!!.putF("Destroyed MyCanvas", this, "destroy")
 }
 
 

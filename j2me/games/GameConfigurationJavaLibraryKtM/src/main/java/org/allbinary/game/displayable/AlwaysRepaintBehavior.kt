@@ -32,6 +32,7 @@ import javax.microedition.lcdui.Canvas
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.graphics.displayable.DisplayInfoSingleton
 import org.allbinary.graphics.opengles.OpenGLFeatureFactory
+import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.thread.NullRunnable
 
@@ -96,6 +97,9 @@ DisplayInfoSingleton.getInstance()!!.process()
             {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }

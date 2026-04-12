@@ -25,8 +25,9 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.NullUtil
 
-/*actual*/ open public class LogFactory
+open public class LogFactory
             : Object
          {
         
@@ -35,10 +36,10 @@
     /*actual*/ open fun getInstance(specialMessage: String, anyType: Any, functionName: String, exception: Any)
         //nullable =  from not(true or (false and false)) = 
 : Log{
-var specialMessage = specialMessage
-var anyType = anyType
-var functionName = functionName
-var exception = exception
+    //var specialMessage = specialMessage
+    //var anyType = anyType
+    //var functionName = functionName
+    //var exception = exception
 
 
 
@@ -47,17 +48,17 @@ var exception = exception
 }
 
 
-    /*actual*/ open fun getInstance(specialMessage: String, anyType: Any, functionName: String)
-        //nullable =  from not(true or (false and false)) = 
+    /*actual*/ open fun getInstanceF(specialMessage: String, anyType: Any, functionName: String)
+        //nullable = true from not(false or (false and false)) = true
 : Log{
-var specialMessage = specialMessage
-var anyType = anyType
-var functionName = functionName
+    //var specialMessage = specialMessage
+    //var anyType = anyType
+    //var functionName = functionName
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Log(specialMessage, anyType, functionName)
+                        return Log(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
 }
 
 

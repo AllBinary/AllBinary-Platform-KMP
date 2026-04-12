@@ -195,7 +195,7 @@ this.fontImage= this.preResourceImageUtil!!.encapsulate(image) as OpenGLESImage
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.EXCEPTION, e)
+PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, commonStrings!!.EXCEPTION, e)
 
 
 

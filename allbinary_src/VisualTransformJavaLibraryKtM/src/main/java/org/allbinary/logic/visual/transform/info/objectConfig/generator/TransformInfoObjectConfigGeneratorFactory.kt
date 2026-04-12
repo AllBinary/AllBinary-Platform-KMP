@@ -76,7 +76,7 @@ var transformInfoInterface = transformInfoInterface
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put("Generating Instance for type: " +type, this, commonStrings!!.GET_INSTANCE)
+this.logUtil!!.putF("Generating Instance for type: " +type, this, commonStrings!!.GET_INSTANCE)
 
                                     }
                                 

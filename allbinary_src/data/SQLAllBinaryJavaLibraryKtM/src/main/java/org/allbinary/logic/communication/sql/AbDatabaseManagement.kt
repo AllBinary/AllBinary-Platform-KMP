@@ -102,7 +102,7 @@ var connectionInfo = connectionInfo
                         return addr.getHostName()
 } catch(e: Exception)
             {
-logUtil!!.put(this.FAILED, this, GET_HOST_NAME, e)
+this.logUtil!!.put(this.FAILED, this, GET_HOST_NAME, e)
 
 
 
@@ -178,7 +178,7 @@ var password = password
                         return true
 } catch(e: Exception)
             {
-logUtil!!.put(this.UNABLE_TO_CREATE_USER +userName, this, this.METHOD_ADD_USER, e)
+this.logUtil!!.put(this.UNABLE_TO_CREATE_USER +userName, this, this.METHOD_ADD_USER, e)
 
 
 
@@ -208,7 +208,7 @@ super.executeSQLStatement(sqlStatement)
                         return Boolean.TRUE
 } catch(e: Exception)
             {
-logUtil!!.put(UNABLE_TO_CREATE_DATABASE +db, this, this.METHOD_ADD_DB, e)
+this.logUtil!!.put(UNABLE_TO_CREATE_DATABASE +db, this, this.METHOD_ADD_DB, e)
 
 
 

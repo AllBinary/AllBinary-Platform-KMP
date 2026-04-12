@@ -90,7 +90,7 @@ private constructor ()
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
 }
@@ -128,7 +128,7 @@ PreLogUtil.put(StringMaker().
 
 
         try {
-            logUtil!!.put(StringMaker().
+            this.logUtil!!.putF(StringMaker().
                             append("Write Configuration: ")!!.append(this.toString())!!.toString(), this, "write")
 
     var fileInputStreamFactory: FileStreamFactory = FileStreamFactory.getInstance()!!

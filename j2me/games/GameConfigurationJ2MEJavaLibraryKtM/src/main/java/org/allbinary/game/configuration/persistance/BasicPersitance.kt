@@ -110,7 +110,7 @@ this.clear()
 
 
         try {
-            logUtil!!.put(StringMaker().
+            this.logUtil!!.putF(StringMaker().
                             append(this.persistanceStrings!!.DELETING_WITH_ID)!!.appendint(deleteId)!!.toString(), this, this.commonStrings!!.delete)
 recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
 recordStore!!.deleteRecord(deleteId)

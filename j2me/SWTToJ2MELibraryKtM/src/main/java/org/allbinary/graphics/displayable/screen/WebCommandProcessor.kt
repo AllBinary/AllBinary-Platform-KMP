@@ -88,7 +88,7 @@ companion object {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "process", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "process", e)
 }
 
 }

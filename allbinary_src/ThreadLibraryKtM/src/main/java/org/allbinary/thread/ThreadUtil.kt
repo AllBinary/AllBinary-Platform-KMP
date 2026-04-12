@@ -101,7 +101,7 @@ var thread = thread
                         if(ThreadUtil.getInstance()!!.isRunning(thread))
                         
                                     {
-                                    logUtil!!.put("Waiting for Thread To Join/End", this, JOIN)
+                                    this.logUtil!!.putF("Waiting for Thread To Join/End", this, JOIN)
 thread.join()
 
                                     }

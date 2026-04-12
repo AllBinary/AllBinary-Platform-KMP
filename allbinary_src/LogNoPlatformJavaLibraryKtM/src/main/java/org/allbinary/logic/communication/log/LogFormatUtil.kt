@@ -51,15 +51,11 @@ companion object {
         //nullable = true from not(false or (false and false)) = true
 : String
 
-    open fun get(className: String, functionName: String, specialMessage: String)
+    open fun getS(className: String, functionName: String, specialMessage: String)
         //nullable = true from not(false or (false and false)) = true
 : String
 
-    open fun get(className: String, functionName: String)
-        //nullable = true from not(false or (false and false)) = true
-: StringMaker
-
-    open fun get(exception: Any)
+    open fun getO(exception: Any)
         //nullable = true from not(false or (false and false)) = true
 : String
 

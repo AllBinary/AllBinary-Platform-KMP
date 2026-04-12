@@ -112,7 +112,7 @@ java.awt.EventQueue.invokeLater(object: ARunnable()
 
 
         try {
-            logUtil!!.put("Running", this, commonStrings!!.RUN)
+            logUtil!!.putF("Running", this, commonStrings!!.RUN)
 INPUTAUTOMATION_JFRAME= InputAutomationJFrame()
 InputRobotFactory.getInstance()!!.addListener(InputAutomationJFrame.getInstance())
 
@@ -173,7 +173,7 @@ initComponents()
 
     var url: URL = this::class.getResource("/help/Help.hs")!!
 
-logUtil!!.put("URL: " +url, this, this.commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF("URL: " +url, this, this.commonStrings!!.CONSTRUCTOR)
 helpSet= JavaHelpUtil.getInstance()!!.getHelpSet(url)
 url= this::class.getResource("/resources/allbinaryicon8bit.jpg")
 
@@ -468,7 +468,7 @@ var evt = evt
             Desktop.getDesktop()!!.browse(uri)
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "subscriptionJMenuItemActionPerformed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "subscriptionJMenuItemActionPerformed", e)
 }
 
 }
@@ -483,7 +483,7 @@ var evt = evt
             Desktop.getDesktop()!!.browse(uri)
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "updatesJMenuItemActionPerformed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "updatesJMenuItemActionPerformed", e)
 }
 
 }
@@ -511,7 +511,7 @@ var evt = evt
                             start()
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "modulesJMenuItemActionPerformed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "modulesJMenuItemActionPerformed", e)
 }
 
 }
@@ -543,7 +543,7 @@ var evt = evt
         //nullable = true from not(false or (false and false)) = true
 {
 var evt = evt
-logUtil!!.put("Nothing", this, "focusLost")
+this.logUtil!!.putF("Nothing", this, "focusLost")
 }
 
 
@@ -556,7 +556,7 @@ var evt = evt
                         if(this.stopOnFocusJCheckBoxMenuItem!!.isSelected())
                         
                                     {
-                                    logUtil!!.put("Stopping", this, "focusGained")
+                                    this.logUtil!!.putF("Stopping", this, "focusGained")
 
     
                         if(this.runnableInterface != 
@@ -612,19 +612,19 @@ this.getAutomationModuleConfigurationJPanel()!!.removeAll()
 layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 395, Short.MAX_VALUE)!!.addComponent(inputAutomationModuleInterface!!.getConfigurationJPanel(), javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
 layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 256, Short.MAX_VALUE)!!.addComponent(inputAutomationModuleInterface!!.getConfigurationJPanel(), javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
 this.gameRobotJTabbedPane!!.setEnabledAt(1, true)
-logUtil!!.put("Setting Module: " +gameAutomationRobotModuleNameString +" and Configuration JPanel", this, "gameAutomationRobotModuleJListValueChanged")
+this.logUtil!!.putF("Setting Module: " +gameAutomationRobotModuleNameString +" and Configuration JPanel", this, "gameAutomationRobotModuleJListValueChanged")
 
                                     }
                                 
                         else {
-                            logUtil!!.put("Module name was null", this, "gameAutomationRobotModuleJListValueChanged")
+                            this.logUtil!!.putF("Module name was null", this, "gameAutomationRobotModuleJListValueChanged")
 this.gameRobotJTabbedPane!!.setEnabledAt(1, false)
 
                         }
                             
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "gameAutomationRobotModuleJListValueChanged", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "gameAutomationRobotModuleJListValueChanged", e)
 }
 
 }
@@ -660,7 +660,7 @@ this.noModuleSelectedJDialog!!.setLocationRelativeTo(this)
 var evt = evt
 
         try {
-            logUtil!!.put("Starting", this, "startJMenuItemActionPerformed")
+            this.logUtil!!.putF("Starting", this, "startJMenuItemActionPerformed")
 
     
                         if(inputAutomationModuleInterface != 
@@ -683,7 +683,7 @@ thread.start()
                                     }
                                 
                         else {
-                            logUtil!!.put("Runnnable was null", this, "startJMenuItemActionPerformed")
+                            this.logUtil!!.putF("Runnnable was null", this, "startJMenuItemActionPerformed")
 this.noModuleSelectedJDialog!!.setVisible(true)
 this.noModuleSelectedJDialog!!.setLocationRelativeTo(this)
 
@@ -693,7 +693,7 @@ this.noModuleSelectedJDialog!!.setLocationRelativeTo(this)
                                     }
                                 
                         else {
-                            logUtil!!.put("InputAutomationModuleInterface was null", this, "startJMenuItemActionPerformed")
+                            this.logUtil!!.putF("InputAutomationModuleInterface was null", this, "startJMenuItemActionPerformed")
 this.noModuleSelectedJDialog!!.setVisible(true)
 this.noModuleSelectedJDialog!!.setLocationRelativeTo(this)
 
@@ -701,7 +701,7 @@ this.noModuleSelectedJDialog!!.setLocationRelativeTo(this)
                             
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "startJMenuItemActionPerformed", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "startJMenuItemActionPerformed", e)
 }
 
 }
@@ -732,11 +732,11 @@ this.automationModuleConfigurationJPanel= automationModuleConfigurationJPanel
 var inputAutomationRobotChangeEvent = inputAutomationRobotChangeEvent
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, "onAdd")
+            this.logUtil!!.putF(this.commonStrings!!.START, this, "onAdd")
 InputRobotFactory.getInstance()!!.add(inputAutomationRobotChangeEvent!!.getInputAutomationRobotInterfaceWrapper()!!.getInputRobotInterface())
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onAdd", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onAdd", e)
 }
 
 }
@@ -748,11 +748,11 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onAdd", e)
 var inputAutomationRobotChangeEvent = inputAutomationRobotChangeEvent
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, "onRemove")
+            this.logUtil!!.putF(this.commonStrings!!.START, this, "onRemove")
 InputRobotFactory.getInstance()!!.add(inputAutomationRobotChangeEvent!!.getInputAutomationRobotInterfaceWrapper()!!.getInputRobotInterface())
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onRemove", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onRemove", e)
 }
 
 }
@@ -764,7 +764,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onRemove", e)
     //var inputAutomationConfigurationChangeEvent = inputAutomationConfigurationChangeEvent
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, "onAdd")
+            this.logUtil!!.putF(this.commonStrings!!.START, this, "onAdd")
 
     var inputAutomationModuleConfigurations: InputAutomationModuleConfigurations = InputAutomationModuleConfigurationsSingletonFactory.getInstance()!!
 
@@ -772,7 +772,7 @@ inputAutomationModuleConfigurations!!.add(inputAutomationConfigurationChangeEven
 this.init()
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onAdd", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onAdd", e)
 }
 
 }
@@ -784,7 +784,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onAdd", e)
 var inputAutomationConfigurationChangeEvent = inputAutomationConfigurationChangeEvent
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, "onRemove")
+            this.logUtil!!.putF(this.commonStrings!!.START, this, "onRemove")
 
     var inputAutomationConfiguration: InputAutomationConfiguration = InputAutomationConfigurationFactory.getInstance()!!
 
@@ -795,7 +795,7 @@ inputAutomationModuleConfigurations!!.remove(inputAutomationConfigurationChangeE
 this.init()
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onRemove", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "onRemove", e)
 }
 
 }

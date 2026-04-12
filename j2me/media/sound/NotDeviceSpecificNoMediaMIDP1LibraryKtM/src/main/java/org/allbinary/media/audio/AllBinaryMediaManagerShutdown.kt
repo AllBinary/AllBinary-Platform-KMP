@@ -48,7 +48,7 @@ var soundsFactoryInterface = soundsFactoryInterface
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.START, instance, "shutdown")
+logUtil!!.putF(commonStrings!!.START, instance, "shutdown")
 AllBinaryMediaManager.shutdown(soundsFactoryInterface)
 }
 

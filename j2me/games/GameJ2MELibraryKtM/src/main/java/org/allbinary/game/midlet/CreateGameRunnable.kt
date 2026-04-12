@@ -65,7 +65,7 @@ this.startGameMidletEvent= DemoGameMidletEvent(this, DemoGameMidletStateFactory.
 {
 
         try {
-            logUtil!!.put(commonStrings!!.START_RUNNABLE, this, commonStrings!!.RUN)
+            this.logUtil!!.putF(commonStrings!!.START_RUNNABLE, this, commonStrings!!.RUN)
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
@@ -75,10 +75,10 @@ this.demoGameMidlet!!.setGameCanvasRunnableInterface(this.demoGameMidlet!!.creat
 this.demoGameMidlet!!.getGameCanvasRunnableInterface()!!.setLoadStateHashtable(hashtable)
 this.demoGameMidlet!!.startGameCanvasRunnableInterface()
 DemoGameMidletEventHandler.getInstance()!!.fireEvent(this.startGameMidletEvent)
-logUtil!!.put(commonStrings!!.END_RUNNABLE, this, commonStrings!!.RUN)
+this.logUtil!!.putF(commonStrings!!.END_RUNNABLE, this, commonStrings!!.RUN)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
 
 }

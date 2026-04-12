@@ -143,7 +143,7 @@ allBinaryGameCanvas!!.setTouchPaintableP(NullPaintable.getInstance())
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(GameTypeFactory.getInstance()!!.BOT.toString(), this, commonStrings!!.RUN)
+this.logUtil!!.putF(GameTypeFactory.getInstance()!!.BOT.toString(), this, commonStrings!!.RUN)
 }
 
 

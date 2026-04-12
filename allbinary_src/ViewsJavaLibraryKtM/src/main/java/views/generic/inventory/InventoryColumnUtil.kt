@@ -66,7 +66,7 @@ companion object {
 var inventoryEntity = inventoryEntity
 var category = category
 var column = column
-logUtil!!.put("Start Category: " +category, this, "getKeywords")
+this.logUtil!!.putF("Start Category: " +category, this, "getKeywords")
 
     var keywords: Vector = Vector()
 

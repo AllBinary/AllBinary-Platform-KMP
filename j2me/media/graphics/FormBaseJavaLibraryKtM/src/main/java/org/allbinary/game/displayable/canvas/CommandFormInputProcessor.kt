@@ -137,7 +137,7 @@ this.form.processInput(key)
 
     var command: Command = commandCurrentSelectionForm!!.getSelectedCommand()!!
 
-logUtil!!.put(command.toString(), this, PROCESS_COMMAND)
+this.logUtil!!.putF(command.toString(), this, PROCESS_COMMAND)
 
     var features: Features = Features.getInstance()!!
 
@@ -261,7 +261,7 @@ this.clear()
                             
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, this.gameInputStrings!!.PROCESS_INPUT, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.gameInputStrings!!.PROCESS_INPUT, e)
 
 
 
@@ -377,7 +377,7 @@ motionGestureEventList!!.clear()
                         if(!this.doubleClickTimeHelper!!.isTime())
                         
                                     {
-                                    logUtil!!.put("Double Press", this, gameInputStrings!!.PROCESS_MOTION_INPUT)
+                                    this.logUtil!!.putF("Double Press", this, gameInputStrings!!.PROCESS_MOTION_INPUT)
 this.processCommand()
 
                                     }

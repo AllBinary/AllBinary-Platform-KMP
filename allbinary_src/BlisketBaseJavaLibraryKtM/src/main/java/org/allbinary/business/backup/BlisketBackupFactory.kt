@@ -98,7 +98,7 @@ var pathString = pathString
 {
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, "backup()")
+            this.logUtil!!.putF(this.commonStrings!!.START, this, "backup()")
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -116,7 +116,7 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
 this.backup(fileBasicArrayList, path.toFileSystemString() +"backup.zip")
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backup()", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backup()", e)
 }
 
 }
@@ -127,7 +127,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backup()", e)
 {
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, "backupViews()")
+            this.logUtil!!.putF(this.commonStrings!!.START, this, "backupViews()")
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -180,7 +180,7 @@ fileBasicArrayList!!.addAll(this.getFileBasicArrayList(viewsPath))
 this.backup(fileBasicArrayList, path.toFileSystemString() +"backupViews.zip")
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backupViews()", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backupViews()", e)
 }
 
 }
@@ -191,7 +191,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backupViews()", e)
 {
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, "backupResources()")
+            this.logUtil!!.putF(this.commonStrings!!.START, this, "backupResources()")
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -247,7 +247,7 @@ fileBasicArrayList!!.addAll(this.getFileBasicArrayList(resourcesPath))
 this.backup(fileBasicArrayList, path.toFileSystemString() +"backupResources.zip")
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backupResources()", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backupResources()", e)
 }
 
 }
@@ -258,7 +258,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backupResources()", e)
 {
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, "backupJsps()")
+            this.logUtil!!.putF(this.commonStrings!!.START, this, "backupJsps()")
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -302,7 +302,7 @@ fileBasicArrayList!!.addAll(this.getFileBasicArrayList(stringBuffer!!.toString()
 this.backup(fileBasicArrayList, path.toFileSystemString() +"backupJsps.zip")
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backupJsps()", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backupJsps()", e)
 }
 
 }
@@ -325,10 +325,10 @@ stringBuffer!!.append(" BasicArrayList: ")
 stringBuffer!!.appendint(fileBasicArrayList!!.size())
 PreLogUtil.put("Creating Backup Zip File: " +stringBuffer!!.toString(), this, "backup()")
 ZipFileUtil.getInstance()!!.create(zipFile, fileBasicArrayList)
-logUtil!!.put("Created Backup Zip File", this, "backup()")
+this.logUtil!!.putF("Created Backup Zip File", this, "backup()")
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backup()", e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backup()", e)
 }
 
 }

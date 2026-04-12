@@ -95,7 +95,7 @@ var request = request
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
-                                    logUtil!!.put("FileItem List Size: " +multipartRequestList!!.size, this, "processMultipartRequest()")
+                                    this.logUtil!!.putF("FileItem List Size: " +multipartRequestList!!.size, this, "processMultipartRequest()")
 
                                     }
                                 
@@ -140,7 +140,7 @@ var request = request
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
-                                    logUtil!!.put("Special Request Data: " +specialRequest!!.toString(), this, "processMultipartRequest()")
+                                    this.logUtil!!.putF("Special Request Data: " +specialRequest!!.toString(), this, "processMultipartRequest()")
 
                                     }
                                 
@@ -156,7 +156,7 @@ this.setMap(specialRequest)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
-                                    logUtil!!.put("Using Normal RequestParams", this, "processMultipartRequest()")
+                                    this.logUtil!!.putF("Using Normal RequestParams", this, "processMultipartRequest()")
 
                                     }
                                 
@@ -169,7 +169,7 @@ super.setMap(request.getParameterMap())
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUESTERROR))
                         
                                     {
-                                    logUtil!!.put("Should Not Occur", this, "processMultipartRequest()")
+                                    this.logUtil!!.putF("Should Not Occur", this, "processMultipartRequest()")
 
                                     }
                                 

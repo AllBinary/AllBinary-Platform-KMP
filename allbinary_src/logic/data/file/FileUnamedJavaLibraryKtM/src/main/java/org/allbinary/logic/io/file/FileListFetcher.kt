@@ -27,6 +27,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.io.file.directory.DirectoryBooleanFileVisitor
 import org.allbinary.logic.io.file.directory.DirectoryOrIncludeFileExtensionBooleanFileVisitor
 import org.allbinary.logic.io.file.directory.SubDirectory
 import org.allbinary.logic.io.file.filter.VisitorFileFilter
@@ -187,6 +188,37 @@ System.out.println("Error: " +e +"\nMsg: " +e.message)
 includeExtensionBasicArrayList!!.add(includeExtension)
 
     var visitorFileFilter: VisitorFileFilter = VisitorFileFilter(DirectoryOrIncludeFileExtensionBooleanFileVisitor(includeExtensionBasicArrayList, pathIncludes))
+
+
+    var files: BasicArrayList = subDirectory!!.search(visitorFileFilter, AbFile(path))!!
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return files
+} catch(e: Exception)
+            {
+e.printStackTrace()
+System.out.println("Error: " +e +"\nMsg: " +e.message)
+}
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+
+    open fun getDirectories(path: String)
+        //nullable = true from not(false or (false and false)) = true
+: BasicArrayList{
+    //var path = path
+
+        try {
+            
+    var visitorFileFilter: VisitorFileFilter = VisitorFileFilter(DirectoryBooleanFileVisitor())
 
 
     var files: BasicArrayList = subDirectory!!.search(visitorFileFilter, AbFile(path))!!

@@ -118,7 +118,7 @@ stringBuffer!!.append(sqlStrings!!.SQL_STATEMENT_LABEL)
 stringBuffer!!.append(sqlStatement)
 stringBuffer!!.append(LARGEST_INT_VALUE_IN_COLUMN)
 stringBuffer!!.append(largestAsString)
-logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET_LARGETS_INTEGER_IN_COLUMN)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_GET_LARGETS_INTEGER_IN_COLUMN)
 
                                     }
                                 
@@ -134,7 +134,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET_LARGETS_INTEGER_IN_COL
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    logUtil!!.put(this.FAILED_SQL_STATEMENT +sqlStatement, this, METHOD_GET_LARGETS_INTEGER_IN_COLUMN, e)
+                                    this.logUtil!!.put(this.FAILED_SQL_STATEMENT +sqlStatement, this, METHOD_GET_LARGETS_INTEGER_IN_COLUMN, e)
 
                                     }
                                 
@@ -189,7 +189,7 @@ stringBuffer!!.append(sqlStrings!!.SQL_STATEMENT_LABEL)
 stringBuffer!!.append(sqlStatement)
 stringBuffer!!.append(sqlStrings!!.COLUMN_VALUE)
 stringBuffer!!.append(column.toString())
-logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET_COLUMN)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_GET_COLUMN)
 
                                     }
                                 
@@ -205,7 +205,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET_COLUMN)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    logUtil!!.put(this.FAILED_SQL_STATEMENT +sqlStatement, this, METHOD_GET_COLUMN, e)
+                                    this.logUtil!!.put(this.FAILED_SQL_STATEMENT +sqlStatement, this, METHOD_GET_COLUMN, e)
 
                                     }
                                 
@@ -269,7 +269,7 @@ stringBuffer!!.append(sqlStrings!!.SQL_STATEMENT_LABEL)
 stringBuffer!!.append(sqlStatement)
 stringBuffer!!.append(sqlStrings!!.COLUMN_VALUE)
 stringBuffer!!.append(column.toString())
-logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET_COLUMN_WHERE)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_GET_COLUMN_WHERE)
 
                                     }
                                 
@@ -285,7 +285,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET_COLUMN_WHERE)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    logUtil!!.put(this.FAILED_SQL_STATEMENT +sqlStatement, this, this.METHOD_GET_COLUMN_WHERE, e)
+                                    this.logUtil!!.put(this.FAILED_SQL_STATEMENT +sqlStatement, this, this.METHOD_GET_COLUMN_WHERE, e)
 
                                     }
                                 

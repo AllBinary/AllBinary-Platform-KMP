@@ -61,14 +61,14 @@ this.hasPainted= false
 {
 
         try {
-            logUtil!!.put(commonStrings!!.START, this, commonStrings!!.END_METHOD_NAME)
+            this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.END_METHOD_NAME)
 this.endActual()
 this.paintable= GAUGE_PAINTABLE
 ImageCacheFactory.getInstance()!!.runTask()
 ImageCacheFactory.getInstance()!!.progressEnded()
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.END_METHOD_NAME)
+this.logUtil!!.putF(commonStrings!!.EXCEPTION, this, commonStrings!!.END_METHOD_NAME)
 }
 
 }

@@ -155,13 +155,13 @@ this.SCALE.setValue(smallIntegerSingletonFactory!!.getInstance(Integer.valueOf(v
                                     }
                                 
                         else {
-                            logUtil!!.put("No Game Configuration To Load", this, commonStrings!!.LOAD)
+                            this.logUtil!!.putF("No Game Configuration To Load", this, commonStrings!!.LOAD)
 
                         }
                             
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.LOAD, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.LOAD, e)
 }
 
 }

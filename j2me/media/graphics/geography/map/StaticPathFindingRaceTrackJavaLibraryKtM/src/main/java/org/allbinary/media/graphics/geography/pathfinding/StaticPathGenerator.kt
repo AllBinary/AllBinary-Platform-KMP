@@ -169,7 +169,7 @@ pathCacheFactory!!.remove(smallIntegerSingletonFactory!!.getInstance(id))
 
                                     }
                                 
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append("Using Cached Path(s): ")!!.append(StringUtil.getInstance()!!.toString(list))!!.toString(), this, commonStrings!!.GET_INSTANCE)
 
 
@@ -178,7 +178,7 @@ logUtil!!.put(StringMaker().
                         return list
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
 
 
 

@@ -80,11 +80,11 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
 
         try {
-            logUtil!!.put(commonStrings!!.START, this, ON_GAME_INITIALIZED)
+            this.logUtil!!.putF(commonStrings!!.START, this, ON_GAME_INITIALIZED)
 
         while(!swtJOGLProcessor!!.isHolderCreated())
         {
-logUtil!!.put(commonStrings!!.UPDATE, this, ON_GAME_INITIALIZED)
+this.logUtil!!.putF(commonStrings!!.UPDATE, this, ON_GAME_INITIALIZED)
 Thread.sleep(20)
 }
 
@@ -105,7 +105,7 @@ FeatureResourceInitializationUtil.getInstance()!!.init(gameInitializedEvent!!.ge
                             
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, ON_GAME_INITIALIZED, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, ON_GAME_INITIALIZED, e)
 }
 
 }

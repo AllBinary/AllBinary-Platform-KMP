@@ -182,7 +182,7 @@ this.clear()
                             
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, GameInputStrings.getInstance()!!.PROCESS_INPUT, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, GameInputStrings.getInstance()!!.PROCESS_INPUT, e)
 
 
 
@@ -235,7 +235,7 @@ motionGestureEventList!!.clear()
                                 )
                         
                                     {
-                                    logUtil!!.put("Exception: Bug", this, gameInputStrings!!.PROCESS_MOTION_INPUT)
+                                    this.logUtil!!.putF("Exception: Bug", this, gameInputStrings!!.PROCESS_MOTION_INPUT)
 
 
 

@@ -177,7 +177,7 @@ var treePath = treePath
 
     var size: Int = highlightedBasicArrayList!!.size()!!
 
-logUtil!!.put("size: " +size, this, "deselectAll")
+this.logUtil!!.putF("size: " +size, this, "deselectAll")
 
 
 
@@ -491,7 +491,7 @@ this.expand()
 this.repaint()
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "rotateJMenuItemMousePressed", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "rotateJMenuItemMousePressed", e)
 }
 
 }
@@ -588,7 +588,7 @@ var evt = evt
                                 
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "workAreaJTreeMousePressed", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "workAreaJTreeMousePressed", e)
 }
 
 }
@@ -617,7 +617,7 @@ var evt = evt
             this.copy()
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "copyJMenuItemMousePressed", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "copyJMenuItemMousePressed", e)
 }
 
 }
@@ -650,7 +650,7 @@ this.repaint()
 
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "deleteJMenuItemMousePressed", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "deleteJMenuItemMousePressed", e)
 }
 
 }

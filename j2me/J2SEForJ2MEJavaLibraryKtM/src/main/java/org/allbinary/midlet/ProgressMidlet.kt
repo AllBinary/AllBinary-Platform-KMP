@@ -69,13 +69,13 @@ var isProgress = isProgress
 primaryThreadPool!!.runTask(runnable)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "exit", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "exit", e)
 
         try {
             processor.process()
 } catch(e2: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "exit", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "exit", e)
 }
 
 }

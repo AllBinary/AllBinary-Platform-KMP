@@ -101,7 +101,7 @@ this.streetAddress= StreetAddress(request)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, commonStrings!!.DROP)
+                                    this.logUtil!!.putF(success, this, commonStrings!!.DROP)
 
                                     }
                                 
@@ -120,7 +120,7 @@ this.streetAddress= StreetAddress(request)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.DROP, e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.DROP, e)
 
                                     }
                                 
@@ -148,7 +148,7 @@ this.streetAddress= StreetAddress(request)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, "create()")
+                                    this.logUtil!!.putF(success, this, "create()")
 
                                     }
                                 
@@ -167,7 +167,7 @@ this.streetAddress= StreetAddress(request)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "create()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "create()", e)
 
                                     }
                                 
@@ -197,7 +197,7 @@ this.streetAddress= StreetAddress(request)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, "restore()")
+                                    this.logUtil!!.putF(success, this, "restore()")
 
                                     }
                                 
@@ -216,7 +216,7 @@ this.streetAddress= StreetAddress(request)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "restore()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "restore()", e)
 
                                     }
                                 
@@ -246,7 +246,7 @@ this.streetAddress= StreetAddress(request)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, "backup()")
+                                    this.logUtil!!.putF(success, this, "backup()")
 
                                     }
                                 
@@ -265,7 +265,7 @@ this.streetAddress= StreetAddress(request)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "backup()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "backup()", e)
 
                                     }
                                 
@@ -293,7 +293,7 @@ ShippingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, "insert")
+                                    this.logUtil!!.putF(success, this, "insert")
 
                                     }
                                 
@@ -312,7 +312,7 @@ ShippingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "insert", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "insert", e)
 
                                     }
                                 
@@ -340,7 +340,7 @@ ShippingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put("Successfull update of a Users Shipping Address table", this, "update()")
+                                    this.logUtil!!.putF("Successfull update of a Users Shipping Address table", this, "update()")
 
                                     }
                                 
@@ -359,7 +359,7 @@ ShippingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "update", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "update", e)
 
                                     }
                                 
@@ -416,7 +416,7 @@ ShippingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "setToBillingAddress()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "setToBillingAddress()", e)
 
                                     }
                                 
@@ -444,7 +444,7 @@ ShippingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, "remove()")
+                                    this.logUtil!!.putF(success, this, "remove()")
 
                                     }
                                 
@@ -463,7 +463,7 @@ ShippingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "remove()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "remove()", e)
 
                                     }
                                 
@@ -491,7 +491,7 @@ ShippingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, "set()")
+                                    this.logUtil!!.putF(success, this, "set()")
 
                                     }
                                 
@@ -510,7 +510,7 @@ ShippingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "set()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "set()", e)
 
                                     }
                                 

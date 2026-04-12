@@ -111,7 +111,7 @@ var eventObject = eventObject
 playerGameInput!!.onPressGameKeyEvent(eventObject as GameKeyEvent)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
 }
 
 }

@@ -55,7 +55,7 @@ scrollSelectionForm= RTSScrollSelectionFormFactory.getInstance(label, items)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
 this.scrollSelectionForm= scrollSelectionForm

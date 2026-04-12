@@ -73,7 +73,7 @@ keyValuePairs!!.putAll(hashtable)
 
     var exceptionMessage: String = "TransactionResult Constructor Failed"
 
-logUtil!!.put(exceptionMessage, this, this.commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(exceptionMessage, this, this.commonStrings!!.CONSTRUCTOR)
 }
 
 }

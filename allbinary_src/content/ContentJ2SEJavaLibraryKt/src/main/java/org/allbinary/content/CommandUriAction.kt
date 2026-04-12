@@ -77,7 +77,7 @@ var command = command
         try {
             } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
 }
 
 }

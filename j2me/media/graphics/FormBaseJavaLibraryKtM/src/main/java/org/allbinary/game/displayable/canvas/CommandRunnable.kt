@@ -61,7 +61,7 @@ this.command= command
 {
 
         try {
-            logUtil!!.put(commonStrings!!.START_RUNNABLE, this, commonStrings!!.RUN)
+            this.logUtil!!.putF(commonStrings!!.START_RUNNABLE, this, commonStrings!!.RUN)
 
     var canvas: MyCanvas = this.commandFormInputProcessor!!.getCanvas()!!
 
@@ -69,10 +69,10 @@ this.command= command
     var commandListener: CommandListener = canvas.getCustomCommandListener()!!
 
 commandListener!!.commandAction(command, canvas)
-logUtil!!.put(commonStrings!!.END_RUNNABLE, this, commonStrings!!.RUN)
+this.logUtil!!.putF(commonStrings!!.END_RUNNABLE, this, commonStrings!!.RUN)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
 
 }

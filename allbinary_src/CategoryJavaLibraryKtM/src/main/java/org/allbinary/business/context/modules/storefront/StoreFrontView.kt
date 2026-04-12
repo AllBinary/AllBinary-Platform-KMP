@@ -55,7 +55,7 @@ var storeFrontInterface = storeFrontInterface
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put("Constructing: StoreFrontView for: " +storeFrontInterface!!.getName(), this, commonStrings!!.GET_INSTANCE)
+this.logUtil!!.putF("Constructing: StoreFrontView for: " +storeFrontInterface!!.getName(), this, commonStrings!!.GET_INSTANCE)
 
                                     }
                                 

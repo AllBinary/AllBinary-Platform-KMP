@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.PreLogUtil
 
 open public class ForcedLogUtil
             : Object
@@ -46,7 +47,7 @@ var anyType = anyType
                             throw Exception(message)
 } catch(e: Exception)
             {
-PreLogUtil.put(CommonStrings.getInstance()!!.EXCEPTION, anyType, "log", e)
+PreLogUtil.putOE(CommonStrings.getInstance()!!.EXCEPTION, anyType, "log", e)
 }
 
 }

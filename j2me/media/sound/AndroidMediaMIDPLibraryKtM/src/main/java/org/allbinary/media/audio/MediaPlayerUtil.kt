@@ -76,7 +76,7 @@ var mediaPlayer = mediaPlayer
 
         while(mediaPlayer!!.isPlaying() && index < 50)
         {
-logUtil!!.put(MESSAGE, this, METHOD_NAME)
+this.logUtil!!.putF(MESSAGE, this, METHOD_NAME)
 Thread.sleep(100)
 index++
 }

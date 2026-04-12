@@ -79,7 +79,7 @@ this.webappPath= value
     var helperClass: KClass<*> = anyType!!::class!!
 
 
-    var methodParams: Array<KClass<*>?> = arrayOf(this.webappPath!!.::class)
+    var methodParams: Array<KClass<*>?> = arrayOf(this.webappPath!!::class)
 
 
     var methodArgs: Array<Any?> = arrayOf(this.webappPath)
@@ -102,7 +102,7 @@ setMethod!!.invoke(anyType, methodArgs)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "setCustomLoaderWebappPath()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "setCustomLoaderWebappPath()", e)
 
                                     }
                                 
@@ -123,7 +123,7 @@ setMethod!!.invoke(anyType, methodArgs)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.START, this, "doStartTag()")
+                                    this.logUtil!!.putF(this.commonStrings!!.START, this, tagStrings!!.DO_START_TAG)
 
                                     }
                                 

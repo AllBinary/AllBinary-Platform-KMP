@@ -256,7 +256,7 @@ scrollSelectionForm!!.init(rectangle, formType)
 this.overlayPaintable!!.init()
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT, e)
 }
 
 }
@@ -534,14 +534,14 @@ DownGameKeyEventHandler.getInstance()!!.fireEvent(gameKeyEvent)
                                     }
                                 
                         else {
-                            logUtil!!.put(StringMaker().
+                            this.logUtil!!.putF(StringMaker().
                             append(this.gameInputStrings!!.NO_KEY)!!.appendint(keyCode)!!.toString(), this, this.gameInputStrings!!.ADD_KEY_EVENT)
 
                         }
                             
 } catch(e: Exception)
             {
-logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
+this.logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
 }
 
 }
@@ -570,14 +570,14 @@ UpGameKeyEventHandler.getInstance()!!.fireEvent(gameKeyEvent)
                                     }
                                 
                         else {
-                            logUtil!!.put(StringMaker().
+                            this.logUtil!!.putF(StringMaker().
                             append(this.gameInputStrings!!.NO_KEY)!!.appendint(keyCode)!!.toString(), this, this.gameInputStrings!!.REMOVE_KEY_EVENT)
 
                         }
                             
 } catch(e: Exception)
             {
-logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.REMOVE_KEY_EVENT, e)
+this.logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.REMOVE_KEY_EVENT, e)
 }
 
 }
@@ -632,7 +632,7 @@ this.setPaused(false)
     override fun isGameOver()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(commonStrings!!.NOT_IMPLEMENTED)!!.append(" since not a game")!!.toString(), this, "isGameOver")
 
 
@@ -648,7 +648,7 @@ logUtil!!.put(StringMaker().
         //nullable = true from not(false or (false and false)) = true
 {
 var hashtable = hashtable
-logUtil!!.put("Trying to continue a demo lol - only continue a game canvas not the demo", this, "setLoadStateHashtable")
+this.logUtil!!.putF("Trying to continue a demo lol - only continue a game canvas not the demo", this, "setLoadStateHashtable")
 }
 
 
@@ -657,7 +657,7 @@ logUtil!!.put("Trying to continue a demo lol - only continue a game canvas not t
     override fun getLoadStateHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
-logUtil!!.put("Trying to continue a demo lol - only continue a game canvas not the demo", this, "getLoadStateHashtable")
+this.logUtil!!.putF("Trying to continue a demo lol - only continue a game canvas not the demo", this, "getLoadStateHashtable")
 
 
 
@@ -671,7 +671,7 @@ logUtil!!.put("Trying to continue a demo lol - only continue a game canvas not t
     override fun getCurrentStateHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
-logUtil!!.put("Trying to save the AI lol", this, "getCurrentStateHashtable")
+this.logUtil!!.putF("Trying to save the AI lol", this, "getCurrentStateHashtable")
 
 
 
@@ -713,7 +713,7 @@ this.paintedSpecialAnimationInterface!!.paintThreed(graphics, 0, 0, 0)
     override fun setGameOver()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put("Not Implemented since not a game", this, "setGameOver")
+this.logUtil!!.putF("Not Implemented since not a game", this, "setGameOver")
 }
 
 
@@ -938,7 +938,7 @@ this.process()
     override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put(commonStrings!!.START_RUNNABLE, this, commonStrings!!.RUN)
+this.logUtil!!.putF(commonStrings!!.START_RUNNABLE, this, commonStrings!!.RUN)
 
         try {
             
@@ -997,10 +997,10 @@ this.end()
                             
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
 
-logUtil!!.put(commonStrings!!.END_RUNNABLE, this, commonStrings!!.RUN)
+this.logUtil!!.putF(commonStrings!!.END_RUNNABLE, this, commonStrings!!.RUN)
 }
 
 
@@ -1026,7 +1026,7 @@ this.end()
                                 
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, SET_RUNNING, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, SET_RUNNING, e)
 }
 
 }
@@ -1054,7 +1054,7 @@ baseGameStatistics!!.init()
 
                                     }
                                 
-logUtil!!.put("Demo End", this, commonStrings!!.RUN)
+this.logUtil!!.putF("Demo End", this, commonStrings!!.RUN)
 this.close()
 DisplayChangeEventHandler.getInstance()!!.removeListener(this)
 }
@@ -1100,7 +1100,7 @@ this.state= state
     override fun isHighScoreSubmitted()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
-logUtil!!.put("Wow the AI got a high score!", this, "isHighScoreSubmitted")
+this.logUtil!!.putF("Wow the AI got a high score!", this, "isHighScoreSubmitted")
 
 
 

@@ -98,7 +98,7 @@ protected constructor ()
     open fun shutdown()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put(commonStrings!!.START, this, "shutdown")
+this.logUtil!!.putF(commonStrings!!.START, this, "shutdown")
 }
 
 

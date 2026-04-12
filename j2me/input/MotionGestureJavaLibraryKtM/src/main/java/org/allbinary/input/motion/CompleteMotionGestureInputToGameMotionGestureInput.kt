@@ -116,7 +116,7 @@ list.add(touchMotionGestureFactory!!.RELEASED)
 motionGestureConfiguration!!.addMotionGestureAction(list, ReleaseTouchInputToGameKeyEventAction.getInstance())
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }
 
 }

@@ -263,7 +263,7 @@ jMenu!!.add(jMenuItemImage)
         //nullable = true from not(false or (false and false)) = true
 {
 var profileActionProcessorInterface = profileActionProcessorInterface
-logUtil!!.put(this.commonStrings!!.START, this, "addInput")
+this.logUtil!!.putF(this.commonStrings!!.START, this, "addInput")
 this.getProfileActionProcessorInterfaceVector()!!.add(profileActionProcessorInterface)
 this.add(profileActionProcessorInterface)
 }
@@ -273,7 +273,7 @@ this.add(profileActionProcessorInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var profileActionProcessorInterface = profileActionProcessorInterface
-logUtil!!.put(this.commonStrings!!.START, this, "removeInput")
+this.logUtil!!.putF(this.commonStrings!!.START, this, "removeInput")
 this.getProfileActionProcessorInterfaceVector()!!.remove(profileActionProcessorInterface)
 this.remove(profileActionProcessorInterface)
 }
@@ -283,7 +283,7 @@ this.remove(profileActionProcessorInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var profileActionScriptNodeInterface = profileActionScriptNodeInterface
-logUtil!!.put(this.commonStrings!!.START, this, "removeCondition")
+this.logUtil!!.putF(this.commonStrings!!.START, this, "removeCondition")
 this.getProfileActionConditionInterfaceVector()!!.remove(profileActionScriptNodeInterface)
 this.remove(profileActionScriptNodeInterface)
 }
@@ -293,7 +293,7 @@ this.remove(profileActionScriptNodeInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var profileActionScriptNodeInterface = profileActionScriptNodeInterface
-logUtil!!.put(this.commonStrings!!.START, this, "addCondition")
+this.logUtil!!.putF(this.commonStrings!!.START, this, "addCondition")
 this.getProfileActionConditionInterfaceVector()!!.add(profileActionScriptNodeInterface)
 this.add(profileActionScriptNodeInterface)
 }
@@ -463,7 +463,7 @@ this.updateTree()
                                 
 } catch(e: Exception)
             {
-logUtil!!.put("Error", this, "actionPerformed", e)
+this.logUtil!!.put("Error", this, "actionPerformed", e)
 }
 
 }
@@ -550,7 +550,7 @@ var frame = frame
         //nullable = true from not(false or (false and false)) = true
 {
 var frame = frame
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append("Start - Processing ")!!.appendint(this.getProfileActionProcessorInterfaceVector()!!.size())!!.append(" inputs")!!.toString(), this, commonStrings!!.PROCESS)
 
     var profileActionProcessorInterfaceVector: Vector = this.getProfileActionProcessorInterfaceVector()!!

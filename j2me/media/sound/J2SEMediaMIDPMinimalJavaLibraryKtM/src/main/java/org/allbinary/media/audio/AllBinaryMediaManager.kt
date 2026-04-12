@@ -92,7 +92,7 @@ companion object {
 
     var commonString: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonString!!.START, THIS, commonString!!.INIT)
+logUtil!!.putF(commonString!!.START, THIS, commonString!!.INIT)
 ProgressCanvasFactory.getInstance()!!.addPortion(50, "Media Manager")
 Sounds(soundsFactoryInterface).
                             init()

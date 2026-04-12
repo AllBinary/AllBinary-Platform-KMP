@@ -109,7 +109,7 @@ this.robot.mouseMove(point.x +x, point.y +y)
     var message: String = StringMaker().
                             append("Moved Mouse To: x: ")!!.appendint(point.x)!!.append(" y: ")!!.appendint(point.y)!!.append(" in the middle of: ")!!.append(StringUtil.getInstance()!!.toString(rectangle))!!.toString()!!
 
-logUtil!!.put(message, this, "moveMouseToTarget")
+this.logUtil!!.putF(message, this, "moveMouseToTarget")
 }
 
 
@@ -131,7 +131,7 @@ this.robot.mouseMove(x, y)
     var message: String = StringMaker().
                             append("Moved Mouse To: x: ")!!.appendint(x)!!.append(" y: ")!!.appendint(y)!!.toString()!!
 
-logUtil!!.put(message, this, "moveMouse")
+this.logUtil!!.putF(message, this, "moveMouse")
 }
 
 

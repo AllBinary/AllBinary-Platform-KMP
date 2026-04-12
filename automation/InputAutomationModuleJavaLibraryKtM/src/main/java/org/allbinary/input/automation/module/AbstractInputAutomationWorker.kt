@@ -135,7 +135,7 @@ this.running= running
                         
                                     {
                                     captureThread= Thread(this.getCaptureWorker())
-logUtil!!.put("Starting CaptureWorkers - Need more images - Thread State: " +captureThread!!.getState()!!.toString(), this, "startCaptureWorkers")
+this.logUtil!!.putF("Starting CaptureWorkers - Need more images - Thread State: " +captureThread!!.getState()!!.toString(), this, "startCaptureWorkers")
 captureThread!!.start()
 
                                     }
@@ -152,7 +152,7 @@ captureThread!!.start()
 
         while(isAnyDataWorkerRunning())
         {
-logUtil!!.put("Waiting", this, this.commonStrings!!.RUN)
+this.logUtil!!.putF("Waiting", this, this.commonStrings!!.RUN)
 Thread.sleep(250)
 }
 
@@ -185,7 +185,7 @@ this.getCaptureWorker()!!.setRunning(false)
 {
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.RUN)
+            this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.RUN)
 this.setRunning(true)
 
     var timeHelper: TimeDelayHelper = TimeDelayHelper(1000)
@@ -196,15 +196,15 @@ this.setRunning(true)
 timeHelper!!.setStartTime()
 this.process()
 this.index++
-logUtil!!.put(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsed() +" Index: " +this.index, this, this.commonStrings!!.RUN)
+this.logUtil!!.putF(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsed() +" Index: " +this.index, this, this.commonStrings!!.RUN)
 }
 
 this.stopDataWorkers()
 this.waitForDataWorkers()
-logUtil!!.put(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
+this.logUtil!!.putF(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
 }
 
 }

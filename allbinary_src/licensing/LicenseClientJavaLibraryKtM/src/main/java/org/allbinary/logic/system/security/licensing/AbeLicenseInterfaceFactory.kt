@@ -110,7 +110,7 @@ private constructor ()
     //var abeClientInformation = abeClientInformation
 
         try {
-            logUtil!!.put("Getting Keys", this, commonStrings!!.GET)
+            this.logUtil!!.putF("Getting Keys", this, commonStrings!!.GET)
 abeLicenseInterface= AbeNoLicense.getInstance()
 
     var licenseClient: AbeLicenseClient = AbeLicenseClient()
@@ -123,7 +123,7 @@ abeLicenseInterface= licenseClient!!.get(abeClientInformation)
                                 )
                         
                                     {
-                                    logUtil!!.put("Default Key: " +abeLicenseInterface!!.getKey(AbeClientInformationData.getInstance()!!.KEY), this, commonStrings!!.GET)
+                                    this.logUtil!!.putF("Default Key: " +abeLicenseInterface!!.getKey(AbeClientInformationData.getInstance()!!.KEY), this, commonStrings!!.GET)
 
                                     }
                                 
@@ -134,7 +134,7 @@ abeLicenseInterface= licenseClient!!.get(abeClientInformation)
                         return abeLicenseInterface
 } catch(e: IOException)
             {
-logUtil!!.put("Licensing IO Error", this, commonStrings!!.GET, e)
+this.logUtil!!.put("Licensing IO Error", this, commonStrings!!.GET, e)
 
 
 
@@ -142,7 +142,7 @@ logUtil!!.put("Licensing IO Error", this, commonStrings!!.GET, e)
 }
  catch(e: Exception)
             {
-logUtil!!.put("Licensing Failure", this, commonStrings!!.GET, e)
+this.logUtil!!.put("Licensing Failure", this, commonStrings!!.GET, e)
 
 
 

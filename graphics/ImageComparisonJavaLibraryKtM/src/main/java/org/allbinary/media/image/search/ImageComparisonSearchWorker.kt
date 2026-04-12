@@ -102,7 +102,7 @@ this.running= running
 {
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.RUN)
+            this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.RUN)
 this.setRunning(true)
 
     var timeHelper: TimeDelayHelper = TimeDelayHelper(1000)
@@ -111,18 +111,18 @@ timeHelper!!.setStartTime()
 
     var imageComparisonInfo: ImageComparisonResult = this.imageComparisonInfoVector!!.get(0) as ImageComparisonResult
 
-logUtil!!.put(imageComparisonInfo!!.toString(), this, this.commonStrings!!.RUN)
+this.logUtil!!.putF(imageComparisonInfo!!.toString(), this, this.commonStrings!!.RUN)
 
     var latestBufferedImage: BufferedImage = imageComparisonInfo!!.getBufferedImages()[1]!!
 
 this.imageComparisonInfoVector!!.remove(imageComparisonInfo)
 this.index++
-logUtil!!.put(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsed(), this, this.commonStrings!!.RUN)
+this.logUtil!!.putF(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsed(), this, this.commonStrings!!.RUN)
 this.setRunning(false)
-logUtil!!.put(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
+this.logUtil!!.putF(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
 }
 
 }

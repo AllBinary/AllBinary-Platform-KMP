@@ -57,9 +57,9 @@ companion object {
 
 
         try {
-            logUtil!!.put(commonStrings!!.START, instance, STATIC_BLOCK)
+            logUtil!!.putF(commonStrings!!.START, instance, STATIC_BLOCK)
 poolInterface= PoolInterfaceFactory.getInstance(BufferedImageCacheableFactory(), PoolTypeFactory.getInstance()!!.VECTOR_POOL, CachePolicyFactory.getInstance()!!.MAX_TIME_THOUSAND_MAX)
-logUtil!!.put(commonStrings!!.END, instance, STATIC_BLOCK)
+logUtil!!.putF(commonStrings!!.END, instance, STATIC_BLOCK)
 } catch(e: Exception)
             {
 logUtil!!.put(commonStrings!!.EXCEPTION, instance, STATIC_BLOCK, e)

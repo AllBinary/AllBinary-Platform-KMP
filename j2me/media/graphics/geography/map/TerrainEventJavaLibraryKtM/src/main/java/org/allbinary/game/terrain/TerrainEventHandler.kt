@@ -134,7 +134,7 @@ super.removeListener(eventListenerInterface)
 terrainEventListener!!.onTerrainEvent(eventObject as TerrainEvent)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
 }
 
 }

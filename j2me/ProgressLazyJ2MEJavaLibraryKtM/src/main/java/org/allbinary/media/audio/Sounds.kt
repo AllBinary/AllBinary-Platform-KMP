@@ -61,7 +61,7 @@ this.soundsFactoryInterface= soundsFactoryInterface
     open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put(commonStrings!!.START, this, commonStrings!!.INIT)
+this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.INIT)
 
     var commonLabels: CommonLabels = CommonLabels.getInstance()!!
 
@@ -108,7 +108,7 @@ stringBuffer!!.append(commonLabels!!.INDEX_LABEL)
 stringBuffer!!.append(indexString)
 stringBuffer!!.append(this.soundStrings!!.SOUND)
 stringBuffer!!.append(soundInterface!!::class.toString()!!)
-logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 soundInterface!!.init()
 progressCanvas!!.addPortion(100, StringMaker().
                             append(this.soundStrings!!.INIT_SOUND)!!.append(indexString)!!.toString())
@@ -118,7 +118,7 @@ progressCanvas!!.addPortion(100, StringMaker().
 }
 
 soundsFactoryInterface!!.setInitialized(true)
-logUtil!!.put(commonStrings!!.END, this, commonStrings!!.INIT)
+this.logUtil!!.putF(commonStrings!!.END, this, commonStrings!!.INIT)
 }
 
 
@@ -127,7 +127,7 @@ logUtil!!.put(commonStrings!!.END, this, commonStrings!!.INIT)
     open fun stopAll()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put(commonStrings!!.START, this, this.soundStrings!!.STOP_ALL)
+this.logUtil!!.putF(commonStrings!!.START, this, this.soundStrings!!.STOP_ALL)
 
     var soundInterfaceArray: Array<Sound?> = soundsFactoryInterface!!.getSoundInterfaceArray()!!
 
@@ -177,7 +177,7 @@ progressCanvas!!.addPortion(100, this.soundStrings!!.STOPPING_SOUND, index)
     open fun closeAll()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put(commonStrings!!.START, this, this.soundStrings!!.CLOSE_ALL)
+this.logUtil!!.putF(commonStrings!!.START, this, this.soundStrings!!.CLOSE_ALL)
 
     var soundInterfaceArray: Array<Sound?> = soundsFactoryInterface!!.getSoundInterfaceArray()!!
 

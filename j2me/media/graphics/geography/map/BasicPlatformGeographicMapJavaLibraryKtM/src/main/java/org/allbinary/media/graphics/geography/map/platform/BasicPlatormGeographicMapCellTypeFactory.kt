@@ -49,7 +49,7 @@ public constructor (tileTypeToTileIdsMap: Hashtable<Any, Any>, maxTileId: Int){
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.START, this, commonStrings!!.INIT)
+this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.INIT)
 this.maxTileId= maxTileId
 GeographicMapCellType(0)
 
@@ -86,7 +86,7 @@ GeographicMapCellType(0)
         while(enumeration.hasMoreElements())
         {
 key= enumeration.nextElement()!! as String
-logUtil!!.put(key, this, commonStrings!!.INIT)
+this.logUtil!!.putF(key, this, commonStrings!!.INIT)
 idsWithTypeList= tileTypeToTileIdsMap!!.get(key) as BasicArrayList
 basicPlatormGeographicMapCellType= BasicPlatormGeographicMapCellType(idsWithTypeList)
 

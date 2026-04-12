@@ -60,7 +60,7 @@ this.setMotionRectangleConstraintsInterface(motionRectangleConstraintsInterface)
         //nullable = true from not(false or (false and false)) = true
 {
     //var motionRectangles = motionRectangles
-logUtil!!.put("Start - Size Before: " +motionRectangles!!.getVector()!!.size(), this, "applyMotionRectangleConstraints")
+this.logUtil!!.putF("Start - Size Before: " +motionRectangles!!.getVector()!!.size(), this, "applyMotionRectangleConstraints")
 
     var bufferedImageArray: Array<BufferedImage?> = motionRectangles!!.getImageComparisonResult()!!.getBufferedImages()!!
 

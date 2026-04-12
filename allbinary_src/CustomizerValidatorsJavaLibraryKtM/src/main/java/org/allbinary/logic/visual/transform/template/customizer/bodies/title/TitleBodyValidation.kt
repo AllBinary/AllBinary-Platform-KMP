@@ -59,7 +59,7 @@ public constructor (){
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
+                                    this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 
                                     }
                                 
@@ -77,7 +77,7 @@ var document = document
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.CONSTRUCTOR, this, "Constructor(document)")
+                                    this.logUtil!!.putF(this.commonStrings!!.CONSTRUCTOR, this, "Constructor(document)")
 
                                     }
                                 
@@ -112,7 +112,7 @@ this.titleValidation= TitleNotRequiredValidation(titleNode)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("To Many Body Nodes", this, this.commonStrings!!.CONSTRUCTOR)
+                                    this.logUtil!!.putF("To Many Body Nodes", this, this.commonStrings!!.CONSTRUCTOR)
 
                                     }
                                 
@@ -130,7 +130,7 @@ var hashMap = hashMap
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.START, this, "Constructor(hashmap)")
+                                    this.logUtil!!.putF(this.commonStrings!!.START, this, "Constructor(hashmap)")
 
                                     }
                                 
@@ -162,7 +162,7 @@ this.titleValidation= TitleNotRequiredValidation(hashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("TitleBodyValidation", this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF("TitleBodyValidation", this, commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -189,7 +189,7 @@ this.titleValidation= TitleNotRequiredValidation(hashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("TitleBodyValidation: " +isValid, this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF("TitleBodyValidation: " +isValid, this, commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -205,7 +205,7 @@ this.titleValidation= TitleNotRequiredValidation(hashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put("Failed to validate form", this, commonStrings!!.IS_VALID, e)
+                                    this.logUtil!!.put("Failed to validate form", this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -249,7 +249,7 @@ stringBuffer!!.appendint(AbSqlData.MAXBLOB)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
+                                    this.logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
 
                                     }
                                 
@@ -297,7 +297,7 @@ var document = document
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Title Body: " +this.body, this, "toXmlNode(document)")
+                                    this.logUtil!!.putF("Title Body: " +this.body, this, "toXmlNode(document)")
 
                                     }
                                 

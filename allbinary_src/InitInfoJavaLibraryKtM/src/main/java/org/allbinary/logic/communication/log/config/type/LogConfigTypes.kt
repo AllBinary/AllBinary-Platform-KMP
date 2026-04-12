@@ -66,7 +66,7 @@ LogConfigTypes.LOGGING.addAll(logConfigTypeVector)
 LogConfigTypes.LOGGING.add(LogConfigTypeFactory.getInstance()!!.NETBEANS_MODULE)
 } catch(e: Exception)
             {
-PreLogUtil.put("Unable to initialize LogConfigTypes", "LogConfigTypes", "init()", e)
+PreLogUtil.putSE("Unable to initialize LogConfigTypes", "LogConfigTypes", "init()", e)
 }
 
 }

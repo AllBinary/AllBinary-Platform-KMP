@@ -93,7 +93,7 @@ stringBuffer!!.append(FREEBLISKET_PATH_GLOBALS.getInstance()!!.XSLPATH)
 stringBuffer!!.append(" is a urlglobal")
 stringBuffer!!.append("\nRequired Extension: ")
 stringBuffer!!.append(this.basicURIResolver!!.getExtension())
-logUtil!!.put(stringBuffer!!.toString(), this, "resolve")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "resolve")
 
                                     }
                                 

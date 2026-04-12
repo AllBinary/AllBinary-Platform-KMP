@@ -58,7 +58,7 @@ open public class HighScoresHelperBase
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(commonStrings!!.START)!!.appendint(highScoresArrayP!!.size)!!.toString(), this, "setHighScoresArray")
 
                                     }
@@ -67,7 +67,7 @@ logUtil!!.put(StringMaker().
                             
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.START, this, "setHighScoresArray")
+this.logUtil!!.putF(commonStrings!!.START, this, "setHighScoresArray")
 
                         }
                             

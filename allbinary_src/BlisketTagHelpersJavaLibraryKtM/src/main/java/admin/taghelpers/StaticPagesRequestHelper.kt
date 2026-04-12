@@ -103,7 +103,7 @@ this.searchParams= SearchParams(this.request)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
-                                    logUtil!!.put("Generated Static Pages Notification Email", this, "email")
+                                    this.logUtil!!.putF("Generated Static Pages Notification Email", this, "email")
 
                                     }
                                 
@@ -143,7 +143,7 @@ adminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.STOREGENERA
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "email", e)
+                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, "email", e)
 
                                     }
                                 
@@ -173,7 +173,7 @@ this.email()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, "generateStaticPages()")
+                                    this.logUtil!!.putF(success, this, "generateStaticPages()")
 
                                     }
                                 
@@ -192,7 +192,7 @@ this.email()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "generateStaticPages()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "generateStaticPages()", e)
 
                                     }
                                 
@@ -229,7 +229,7 @@ FileUtil.getInstance()!!.copy(fromAbPath, toAbPath)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, "makePublic()")
+                                    this.logUtil!!.putF(success, this, "makePublic()")
 
                                     }
                                 
@@ -248,7 +248,7 @@ FileUtil.getInstance()!!.copy(fromAbPath, toAbPath)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "makePublic()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "makePublic()", e)
 
                                     }
                                 

@@ -38,6 +38,8 @@ open public class CustomTagSupport : TagSupport {
         
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
+    val tagStrings: TagStrings = TagStrings.getInstance()!!
+
 }
                 
             

@@ -55,7 +55,7 @@ var foregroundBasicColor = foregroundBasicColor
 
                             //For kotlin this is before the body of the constructor.
                     
-logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 this.update()
 this.initCommands(commandListener)
 }
@@ -152,7 +152,7 @@ var option = option
 
     var anyType: Any = list.objectArray[index]!!
 
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append("Adding Choice: ")!!.append(anyType!!.toString())!!.toString(), this, METHOD_NAME)
 choiceGroup!!.append(anyType!!.toString(), NullCanvas.NULL_IMAGE)
 }

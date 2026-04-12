@@ -87,7 +87,7 @@ SINGLETON= InGameOptionsForm(commandListener, title, backgrounBasicColor, foregr
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }
 
 }

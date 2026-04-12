@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.string.StringUtil
 
 /*actual*/ open public class LogFactory
@@ -33,8 +34,8 @@ import org.allbinary.logic.string.StringUtil
         
 /*actual*/ companion object {
             
-    /*actual*/ open fun getInstance(specialMessage: String, anyType: Any, exception: Any)
-        //nullable =  from not(true or (false and false)) = 
+    /*actual*/ open fun getInstanceNoF(specialMessage: String, anyType: Any, exception: Any)
+        //nullable = true from not(false or (false and false)) = true
 : Log{
 var specialMessage = specialMessage
 var anyType = anyType
@@ -62,8 +63,8 @@ var exception = exception
 }
 
 
-    /*actual*/ open fun getInstance(specialMessage: String, anyType: Any, functionName: String)
-        //nullable =  from not(true or (false and false)) = 
+    /*actual*/ open fun getInstanceF(specialMessage: String, anyType: Any, functionName: String)
+        //nullable = true from not(false or (false and false)) = true
 : Log{
 var specialMessage = specialMessage
 var anyType = anyType
@@ -72,7 +73,7 @@ var functionName = functionName
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Log(specialMessage, anyType, functionName)
+                        return Log(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
 }
 
 

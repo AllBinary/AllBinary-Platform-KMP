@@ -136,7 +136,7 @@ vector.addAll(this.getBasicPaymentType()!!.toVector())
                                 )
                         
                                     {
-                                    vector.add(this.paymentTransactionInterfaceFactoryInterface!!.::class.toString()!!)
+                                    vector.add(this.paymentTransactionInterfaceFactoryInterface!!::class.toString()!!)
 
                                     }
                                 
@@ -147,7 +147,7 @@ vector.addAll(this.getBasicPaymentType()!!.toVector())
                                 )
                         
                                     {
-                                    vector.add(this.paymentProcessorInterfaceFactoryInterface!!.::class.toString()!!)
+                                    vector.add(this.paymentProcessorInterfaceFactoryInterface!!::class.toString()!!)
 
                                     }
                                 
@@ -173,7 +173,7 @@ hashMap!!.putAll(this.getBasicPaymentType()!!.toHashMap())
                                 )
                         
                                     {
-                                    hashMap!!.put(PaymentGatewayData.PAYMENTTRANSACTIONINTERFACEFACTORYINTERFACE.toString(), this.paymentTransactionInterfaceFactoryInterface!!.::class.toString()!!)
+                                    hashMap!!.put(PaymentGatewayData.PAYMENTTRANSACTIONINTERFACEFACTORYINTERFACE.toString(), this.paymentTransactionInterfaceFactoryInterface!!::class.toString()!!)
 
                                     }
                                 
@@ -184,7 +184,7 @@ hashMap!!.putAll(this.getBasicPaymentType()!!.toHashMap())
                                 )
                         
                                     {
-                                    hashMap!!.put(PaymentGatewayData.PAYMENTPROCESSORINTERFACEFACTORYINTERFACE.toString(), this.paymentProcessorInterfaceFactoryInterface!!.::class.toString()!!)
+                                    hashMap!!.put(PaymentGatewayData.PAYMENTPROCESSORINTERFACEFACTORYINTERFACE.toString(), this.paymentProcessorInterfaceFactoryInterface!!::class.toString()!!)
 
                                     }
                                 

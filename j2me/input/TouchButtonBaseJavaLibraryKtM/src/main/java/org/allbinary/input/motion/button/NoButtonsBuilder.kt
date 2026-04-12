@@ -44,7 +44,7 @@ open public class NoButtonsBuilder : BaseTouchInput {
 : BasicArrayList{
 
         try {
-            logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
+            this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 
     var list: BasicArrayList = BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
 
@@ -55,7 +55,7 @@ open public class NoButtonsBuilder : BaseTouchInput {
                         return list
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_LIST, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_LIST, e)
 
 
 

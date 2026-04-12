@@ -40,11 +40,11 @@ companion object {
         }
             
 
-    open fun put(log: Log)
+    open fun putL(log: Log)
         //nullable = true from not(false or (false and false)) = true
 
 
-    open fun put(specialMessage: String, anyType: Any, functionName: String)
+    open fun putF(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
 
 

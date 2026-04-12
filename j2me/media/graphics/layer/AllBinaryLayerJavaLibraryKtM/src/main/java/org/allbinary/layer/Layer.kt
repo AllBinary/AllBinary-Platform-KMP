@@ -196,7 +196,7 @@ var graphics = graphics
 
     var canvasStrings: CanvasStrings = CanvasStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.NOT_IMPLEMENTED, this, canvasStrings!!.PAINT)
+this.logUtil!!.putF(commonStrings!!.NOT_IMPLEMENTED, this, canvasStrings!!.PAINT)
 }
 
 

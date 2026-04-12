@@ -100,7 +100,7 @@ this.name= name
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append("Available List of Animations: ")!!.append(hashtable.toString())!!.toString(), this, commonStrings!!.INIT)
 this.setInitialized(true)
 }

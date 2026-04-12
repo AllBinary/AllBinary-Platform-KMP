@@ -119,6 +119,9 @@ this.index= index
 animation= NULL_INDEX_ANIMATION
 } catch(e: Exception)
             {
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
 }
 
@@ -137,6 +140,9 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
 animation= NULL_INDEX_ANIMATION
 } catch(e: Exception)
             {
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
 }
 
@@ -160,7 +166,7 @@ this.animation= this.animationInterfaceFactoryInterface!!.getInstance(this.insta
 this.animation.setState(animation)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, SET_REAL_ANIMATION, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, SET_REAL_ANIMATION, e)
 }
 
 }
@@ -486,7 +492,7 @@ this.animation.setSequence(sequence)
             this.animation.paint(graphics, x, y)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS, e)
 }
 
 }
@@ -504,7 +510,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS, e)
             this.animation.paintThreed(graphics, x, y, z)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS, e)
 }
 
 }

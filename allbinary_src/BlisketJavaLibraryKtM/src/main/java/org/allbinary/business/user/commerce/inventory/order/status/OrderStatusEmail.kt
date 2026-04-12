@@ -96,7 +96,7 @@ this.notifyUser()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
-                                    logUtil!!.put("Order Email", this, "emailStoreAdmin")
+                                    this.logUtil!!.putF("Order Email", this, "emailStoreAdmin")
 
                                     }
                                 
@@ -136,7 +136,7 @@ adminUserEmailEventHandler!!.receiveEmailInfo(userEmailEventNameData, adminEmail
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "emailAdmin", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "emailAdmin", e)
 
                                     }
                                 
@@ -157,7 +157,7 @@ adminUserEmailEventHandler!!.receiveEmailInfo(userEmailEventNameData, adminEmail
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
-                                    logUtil!!.put("Email User", this, "notifyUser()")
+                                    this.logUtil!!.putF("Email User", this, "notifyUser()")
 
                                     }
                                 
@@ -187,7 +187,7 @@ userEmailEventHandler!!.receiveEmailInfo(userEmailEventNameData, emailInfo)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "notifyUser", e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "notifyUser", e)
 
                                     }
                                 

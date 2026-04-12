@@ -128,7 +128,7 @@ this.updateAll(this.getList(), inputToGameKeyMapping)
 {
 var list = list
 var inputToGameKeyMapping = inputToGameKeyMapping
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(CommonLabels.getInstance()!!.START)!!.appendint(list.size())!!.toString(), this, "updateAll")
 
 

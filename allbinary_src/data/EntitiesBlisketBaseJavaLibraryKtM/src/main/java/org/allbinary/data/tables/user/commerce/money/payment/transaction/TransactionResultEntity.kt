@@ -75,7 +75,7 @@ super.deleteWhere(whereHashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.SUCCESS, this, "remove")
+                                    this.logUtil!!.putF(this.commonStrings!!.SUCCESS, this, "remove")
 
                                     }
                                 
@@ -86,7 +86,7 @@ super.deleteWhere(whereHashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "remove", e)
+                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, "remove", e)
 
                                     }
                                 
@@ -124,7 +124,7 @@ super.insert(values)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.SUCCESS, this, "add")
+                                    this.logUtil!!.putF(this.commonStrings!!.SUCCESS, this, "add")
 
                                     }
                                 
@@ -135,7 +135,7 @@ super.insert(values)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "add", e)
+                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, "add", e)
 
                                     }
                                 
@@ -173,7 +173,7 @@ resultHashMap= super.getRow(updateKeyAndValue)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.SUCCESS, this, "getTransactionResultInterface")
+                                    this.logUtil!!.putF(this.commonStrings!!.SUCCESS, this, "getTransactionResultInterface")
 
                                     }
                                 
@@ -201,7 +201,7 @@ resultHashMap= super.getRow(updateKeyAndValue)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "getTransactionResultInterface", e)
+                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, "getTransactionResultInterface", e)
 
                                     }
                                 

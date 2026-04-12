@@ -110,7 +110,7 @@ var eventObject = eventObject
 playerGameInput!!.onAnalogControllerConfigurationEvent(eventObject as AnalogControllerConfigurationEvent)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
 }
 
 }

@@ -100,7 +100,7 @@ this.status= value
     var helperClass: KClass<*> = anyType!!::class!!
 
 
-    var methodParams: Array<KClass<*>?> = arrayOf(this.status.::class)
+    var methodParams: Array<KClass<*>?> = arrayOf(this.status::class)
 
 
     var method: Method = helperClass!!.getMethod("setOrderStatus", methodParams)!!
@@ -136,7 +136,7 @@ this.status= value
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "setOrderStatus()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "setOrderStatus()", e)
 
                                     }
                                 

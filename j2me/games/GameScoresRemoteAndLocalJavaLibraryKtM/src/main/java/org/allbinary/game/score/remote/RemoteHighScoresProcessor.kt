@@ -64,7 +64,7 @@ public constructor ()
     //var remoteHighScores = remoteHighScores
     //var abeClientInformation = abeClientInformation
     //var gameInfo = gameInfo
-logUtil!!.put("Begin Remote HighScores Retrieval", this, commonStrings!!.PROCESS)
+this.logUtil!!.putF("Begin Remote HighScores Retrieval", this, commonStrings!!.PROCESS)
 
     var gameInfoData: GameInfoData = GameInfoData.getInstance()!!
 

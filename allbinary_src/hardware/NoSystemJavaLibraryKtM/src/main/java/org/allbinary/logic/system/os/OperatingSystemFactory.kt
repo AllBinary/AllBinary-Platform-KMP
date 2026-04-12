@@ -75,10 +75,10 @@ private constructor ()
                             append("OperatingSystem Info: ")!!.append(genericOperatingSystem!!.toString())!!.toString()!!
 
 System.out.println(osString)
-logUtil!!.put(osString, this, commonStrings!!.GET_INSTANCE)
+this.logUtil!!.putF(osString, this, commonStrings!!.GET_INSTANCE)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
 }
 
 

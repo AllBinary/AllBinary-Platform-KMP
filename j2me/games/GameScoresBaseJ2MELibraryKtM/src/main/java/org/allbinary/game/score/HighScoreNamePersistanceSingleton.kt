@@ -146,7 +146,7 @@ this.clear()
 
 
         try {
-            logUtil!!.put(StringMaker().
+            this.logUtil!!.putF(StringMaker().
                             append("Deleting: ")!!.appendint(deleteId)!!.toString(), this, commonStrings!!.delete)
 recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
 recordStore!!.deleteRecord(deleteId)
@@ -228,7 +228,7 @@ recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation),
 
     var id: Int = recordEnum!!.nextRecordId()!!
 
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(LOADING_ID)!!.appendint(id)!!.toString(), this, commonStrings!!.LOAD)
 recordAsBytes= recordStore!!.getRecord(id)
 byteArrayInputStream= ByteArrayInputStream(recordAsBytes)
@@ -248,7 +248,7 @@ nameBasicArrayList!!.add(smallIntegerSingletonFactory!!.getInstance(id))
 } catch(e: Exception)
             {
 this.save(abeClientInformation, gameInfo, this.name)
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(commonStrings!!.EXCEPTION_LABEL)!!.append(ExceptionUtil.getInstance()!!.getStackTrace(e))!!.toString(), this, commonStrings!!.LOAD)
 }
 
@@ -269,7 +269,7 @@ recordStore!!.closeRecordStore()
                                 
 } catch(e: RecordStoreException)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.LOAD, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.LOAD, e)
 }
 
 
@@ -294,7 +294,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.LOAD, e)
 
 
         try {
-            logUtil!!.put(StringMaker().
+            this.logUtil!!.putF(StringMaker().
                             append("Saving: ")!!.append(name)!!.toString(), this, commonStrings!!.SAVE)
 recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
 
@@ -311,7 +311,7 @@ recordStore!!.addRecord(savedGameBytes, 0, savedGameBytes!!.size)
 this.name= name
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.SAVE, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.SAVE, e)
 }
 
          finally {
@@ -331,7 +331,7 @@ recordStore!!.closeRecordStore()
                                 
 } catch(e: RecordStoreException)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.SAVE, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.SAVE, e)
 }
 
 

@@ -73,7 +73,7 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, name)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.FACTORYERROR))
                         
                                     {
-                                    logUtil!!.put("StoreFront: " +storeHashMap!!.toString(), this, "getStore()")
+                                    this.logUtil!!.putF("StoreFront: " +storeHashMap!!.toString(), this, "getStore()")
 
                                     }
                                 

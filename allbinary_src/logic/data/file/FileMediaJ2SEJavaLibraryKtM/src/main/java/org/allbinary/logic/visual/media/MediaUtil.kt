@@ -141,7 +141,7 @@ var newHeight = newHeight
                                     
     var hashMap: HashMap<Any, Any> = this.getImageBufferPropertyHashMap(bufferedImage)!!
 
-logUtil!!.put("Image Properties: " +hashMap!!.toString(), this, "saveImageFile()")
+this.logUtil!!.putF("Image Properties: " +hashMap!!.toString(), this, "saveImageFile()")
 
                                     }
                                 
@@ -197,7 +197,7 @@ stringBuffer!!.append("\nFile Length: ")
 stringBuffer!!.appendlong(originalImageFile!!.length())
 stringBuffer!!.append("\nNew File Length: ")
 stringBuffer!!.appendlong(imageFile!!.length())
-logUtil!!.put(stringBuffer!!.toString(), this, "saveImageFile()")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "saveImageFile()")
 
                                     }
                                 

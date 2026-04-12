@@ -105,7 +105,7 @@ var url = url
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGPOOL))
                         
                                     {
-                                    logUtil!!.put(FIRST_NEW_CONNECTION_CREATED +url, this, METHOD_GET)
+                                    this.logUtil!!.putF(FIRST_NEW_CONNECTION_CREATED +url, this, METHOD_GET)
 
                                     }
                                 
@@ -141,7 +141,7 @@ stringBuffer!!.append(FIRST)
 stringBuffer!!.append(NEW_CONNECTION_FOR)
 stringBuffer!!.append(url)
 stringBuffer!!.append(CREATED)
-logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_GET)
 
                                     }
                                 
@@ -163,7 +163,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGPOOL))
                         
                                     {
-                                    logUtil!!.put(StringBuilder().
+                                    this.logUtil!!.putF(StringBuilder().
                             append(NEW_CONNECTION_FOR)!!.append(url)!!.append(CREATED)!!.toString(), this, METHOD_GET)
 
                                     }
@@ -210,8 +210,8 @@ stringBuffer!!.append(NUMBER_OF_SQL_CONNECTIONS_FOR)
 stringBuffer!!.append(url)
 stringBuffer!!.append(IS)
 stringBuffer!!.appendint(connectionVector!!.size)
-logUtil!!.put(NUMBER_OF_SQL_CONNECTION_VECTORS +this.connectionHashMap!!.size, this, METHOD_GET)
-logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET)
+this.logUtil!!.putF(NUMBER_OF_SQL_CONNECTION_VECTORS +this.connectionHashMap!!.size, this, METHOD_GET)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_GET)
 
                                     }
                                 
@@ -242,7 +242,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET)
 stringBuffer!!.append(NEW_CONNECTION_FOR)
 stringBuffer!!.append(url)
 stringBuffer!!.append(CREATED)
-logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_GET)
 
                                     }
                                 
@@ -313,8 +313,8 @@ stringBuffer!!.append(NUMBER_OF_SQL_CONNECTIONS_FOR)
 stringBuffer!!.append(url)
 stringBuffer!!.append(IS)
 stringBuffer!!.appendint(connectionVector!!.size)
-logUtil!!.put(NUMBER_OF_SQL_CONNECTION_VECTORS +this.connectionHashMap!!.size, this, METHOD_ADD)
-logUtil!!.put(stringBuffer!!.toString(), this, METHOD_ADD)
+this.logUtil!!.putF(NUMBER_OF_SQL_CONNECTION_VECTORS +this.connectionHashMap!!.size, this, METHOD_ADD)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_ADD)
 
                                     }
                                 
@@ -326,7 +326,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_ADD)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGPOOL))
                         
                                     {
-                                    logUtil!!.put(CONNECTION_ALLREADY_CLOSED, this, METHOD_ADD)
+                                    this.logUtil!!.putF(CONNECTION_ALLREADY_CLOSED, this, METHOD_ADD)
 
                                     }
                                 

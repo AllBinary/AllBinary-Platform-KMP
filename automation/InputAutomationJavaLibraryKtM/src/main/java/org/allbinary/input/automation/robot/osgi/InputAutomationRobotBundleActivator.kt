@@ -113,7 +113,7 @@ var context = context
                                     }
                                 
                         else {
-                            logUtil!!.put("No ServiceReference: " +InputAutomationRobotChangeListener::class.toString()!!, this, "getInputAutomationRobotChangeListener")
+                            this.logUtil!!.putF("No ServiceReference: " +InputAutomationRobotChangeListener::class.toString()!!, this, "getInputAutomationRobotChangeListener")
 
 
 
@@ -131,7 +131,7 @@ var context = context
 var context = context
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, "addRobots")
+            this.logUtil!!.putF(this.commonStrings!!.START, this, "addRobots")
 
     var inputAutomationRobotChangeListener: InputAutomationRobotChangeListener = this.getInputAutomationRobotChangeListener(context)!!
 
@@ -160,7 +160,7 @@ inputAutomationRobotChangeListener!!.onAdd(inputAutomationRobotChangeEvent)
                                 
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "addModules")
+this.logUtil!!.putF(this.commonStrings!!.EXCEPTION, this, "addModules")
 }
 
 }
@@ -172,7 +172,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "addModules")
 var context = context
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, "removeRobots")
+            this.logUtil!!.putF(this.commonStrings!!.START, this, "removeRobots")
 
     var inputAutomationRobotChangeListener: InputAutomationRobotChangeListener = this.getInputAutomationRobotChangeListener(context)!!
 
@@ -201,7 +201,7 @@ inputAutomationRobotChangeListener!!.onRemove(inputAutomationRobotChangeEvent)
                                 
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "removeRobots")
+this.logUtil!!.putF(this.commonStrings!!.EXCEPTION, this, "removeRobots")
 }
 
 }
@@ -213,7 +213,7 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "removeRobots")
         //nullable = true from not(false or (false and false)) = true
 {
 var context = context
-logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.START)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.START)
 this.addRobots(context)
 this.registerAsService(context)
 }
@@ -225,7 +225,7 @@ this.registerAsService(context)
         //nullable = true from not(false or (false and false)) = true
 {
 var context = context
-logUtil!!.put("Stop", this, this.commonStrings!!.START)
+this.logUtil!!.putF("Stop", this, this.commonStrings!!.START)
 this.removeRobots(context)
 }
 

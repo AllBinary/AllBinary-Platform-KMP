@@ -68,7 +68,7 @@ this.algorithm= algorithm
             Security.addProvider(BouncyCastleProvider())
 } catch(e: Exception)
             {
-PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
+PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }
 
 
@@ -89,7 +89,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 this.secretComposite= SecretComposite(secretKey, cipher, key)
 } catch(e: Exception)
             {
-PreLogUtil.put("init Failed", this, commonStrings!!.INIT, e)
+PreLogUtil.putOE("init Failed", this, commonStrings!!.INIT, e)
 }
 
 }
@@ -108,7 +108,7 @@ PreLogUtil.put("init Failed", this, commonStrings!!.INIT, e)
                         return this.secretComposite!!.encrypt(array)
 } catch(e: Exception)
             {
-PreLogUtil.put("Encrypt Failed", this, "encrypt", e)
+PreLogUtil.putOE("Encrypt Failed", this, "encrypt", e)
 
 
 
@@ -132,7 +132,7 @@ PreLogUtil.put("Encrypt Failed", this, "encrypt", e)
                         return this.secretComposite!!.decrypt(array)
 } catch(e: Exception)
             {
-PreLogUtil.put("decrypt Failed", this, "decrypt", e)
+PreLogUtil.putOE("decrypt Failed", this, "decrypt", e)
 
 
 

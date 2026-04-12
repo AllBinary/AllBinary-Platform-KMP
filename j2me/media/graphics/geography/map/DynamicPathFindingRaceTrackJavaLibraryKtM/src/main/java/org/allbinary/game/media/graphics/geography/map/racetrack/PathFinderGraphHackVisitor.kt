@@ -201,7 +201,7 @@ var graph = graph
 
     var overPassGeographicMapCellPosition: CellPosition = CellPositionArray[index]!!
 
-logUtil!!.put("Fixing Over Pass: " +overPassGeographicMapCellPosition!!.getColumn() +", " +overPassGeographicMapCellPosition!!.getRow(), this, "fixOverPassEdges")
+this.logUtil!!.putF("Fixing Over Pass: " +overPassGeographicMapCellPosition!!.getColumn() +", " +overPassGeographicMapCellPosition!!.getRow(), this, "fixOverPassEdges")
 
     var underPassGeographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getInstance(overPassGeographicMapCellPosition!!.getColumn(), overPassGeographicMapCellPosition!!.getRow())!!
 

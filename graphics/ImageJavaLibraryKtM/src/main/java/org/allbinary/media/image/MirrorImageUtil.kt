@@ -67,7 +67,7 @@ private constructor ()
 var bufferedImage = bufferedImage
 var verticle = verticle
 var horizontal = horizontal
-logUtil!!.put("Starting", this, "getImage")
+this.logUtil!!.putF("Starting", this, "getImage")
 
     var newBufferedImage: BufferedImage = this.imageUtil!!.create(bufferedImage!!.getWidth(
                             null), bufferedImage!!.getHeight(
@@ -157,7 +157,7 @@ var horizontal = horizontal
     
                         if(horizontal)
                         numberOfFrames *= 2
-logUtil!!.put("numberOfFramesPerOrientation: " +numberOfFramesPerOrientation +" numberOfFrames: " +numberOfFrames, this, "getImages")
+this.logUtil!!.putF("numberOfFramesPerOrientation: " +numberOfFramesPerOrientation +" numberOfFrames: " +numberOfFrames, this, "getImages")
 
     var bufferedImageArray: Array<BufferedImage?> = arrayOfNulls(numberOfFrames)
 

@@ -61,7 +61,7 @@ companion object {
 : BasicArrayList{
 
         try {
-            logUtil!!.put(commonStrings!!.START, this, commonStrings!!.GET_LIST)
+            this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.GET_LIST)
 
     var list: BasicArrayList = BasicArrayList()
 
@@ -72,7 +72,7 @@ companion object {
                         return list
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_LIST, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_LIST, e)
 
 
 

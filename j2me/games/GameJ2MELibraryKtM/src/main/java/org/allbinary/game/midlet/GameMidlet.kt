@@ -248,7 +248,7 @@ gameAdState!!.getAdvertisements()!!.stopAll()
         //nullable = true from not(false or (false and false)) = true
 {
     //var background = background
-logUtil!!.put(commonStrings!!.START, this, PAUSE_APP_BACKGROUND)
+this.logUtil!!.putF(commonStrings!!.START, this, PAUSE_APP_BACKGROUND)
 
     
                         if(allbinaryGameCanvasRunnableInterface != NullGameCanvasRunnable.NULL_GAME_CANVAS_RUNNABLE)
@@ -259,7 +259,7 @@ logUtil!!.put(commonStrings!!.START, this, PAUSE_APP_BACKGROUND)
                                     }
                                 
                         else {
-                            logUtil!!.put("<<<<<< Null", this, PAUSE_APP_BACKGROUND)
+                            this.logUtil!!.putF("<<<<<< Null", this, PAUSE_APP_BACKGROUND)
 
                         }
                             
@@ -282,7 +282,7 @@ gameAdState!!.getAdvertisements()!!.startAll()
         //nullable = true from not(false or (false and false)) = true
 {
 var background = background
-logUtil!!.put(commonStrings!!.START, this, UN_PAUSE_APP_BACKGROUND)
+this.logUtil!!.putF(commonStrings!!.START, this, UN_PAUSE_APP_BACKGROUND)
 AllBinarySensorManager.getInstance()!!.init()
 
     var gameCanvasRunnableInterface: GameCanvasRunnableInterface = this.allbinaryGameCanvasRunnableInterface
@@ -297,7 +297,7 @@ AllBinarySensorManager.getInstance()!!.init()
                                     }
                                 
                         else {
-                            logUtil!!.put("<<<<<< Null", this, UN_PAUSE_APP_BACKGROUND)
+                            this.logUtil!!.putF("<<<<<< Null", this, UN_PAUSE_APP_BACKGROUND)
 
                         }
                             
@@ -361,7 +361,7 @@ this.mediaShutdown()
                                     }
                                 
                         else {
-                            logUtil!!.put("Midlet Managment Error: Midlet Should Only Be Destroyed Once", this, METHOD_NAME)
+                            this.logUtil!!.putF("Midlet Managment Error: Midlet Should Only Be Destroyed Once", this, METHOD_NAME)
 
                         }
                             
@@ -369,10 +369,10 @@ super.destroyApp(true)
 PreLogUtil.put(commonStrings!!.END, this, METHOD_NAME)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
 }
 
-logUtil!!.put(commonStrings!!.END, this, METHOD_NAME)
+this.logUtil!!.putF(commonStrings!!.END, this, METHOD_NAME)
 }
 
 
@@ -388,7 +388,7 @@ gameAdState!!.getAdvertisements()!!.startAll()
 
     var START_APP: String = "startApp"
 
-logUtil!!.put(commonStrings!!.START, this, START_APP)
+this.logUtil!!.putF(commonStrings!!.START, this, START_APP)
 
     var gameCanvasRunnableInterface: GameCanvasRunnableInterface = this.allbinaryGameCanvasRunnableInterface
 
@@ -403,7 +403,7 @@ this.setDemo()
                                     }
                                 
                         else {
-                            logUtil!!.put("GameCanvasRunnableInterface is available", this, START_APP)
+                            this.logUtil!!.putF("GameCanvasRunnableInterface is available", this, START_APP)
 
     
                         if(gameCanvasRunnableInterface == this.getCurrentDisplayable())
@@ -414,7 +414,7 @@ this.setDemo()
                                     }
                                 
                         else {
-                            logUtil!!.put("GameCanvasRunnableInterface is not current displayable", this, START_APP)
+                            this.logUtil!!.putF("GameCanvasRunnableInterface is not current displayable", this, START_APP)
 
                         }
                             
@@ -423,7 +423,7 @@ this.setDemo()
                             
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "startApp", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "startApp", e)
 destroyApp(false)
 notifyDestroyed()
 }
@@ -551,7 +551,7 @@ GameMidletEventHandler.getInstance()!!.fireEvent(DemoGameMidletEvent(this, DemoG
                         if(command == gameCommandsFactory!!.START_COMMAND && this.isDemoLoading())
                         
                                     {
-                                    logUtil!!.put("Trying to Start Game Before Loading Complete", this, midletStrings!!.COMMAND_ACTION)
+                                    this.logUtil!!.putF("Trying to Start Game Before Loading Complete", this, midletStrings!!.COMMAND_ACTION)
 
                                     }
                                 
@@ -566,7 +566,7 @@ gameMidletStateFactory!!.setCurrentGameState(GameState.PLAYING_GAME_STATE)
                                     }
                                 
                         else {
-                            logUtil!!.put("Starting Game Too Often", this, midletStrings!!.COMMAND_ACTION)
+                            this.logUtil!!.putF("Starting Game Too Often", this, midletStrings!!.COMMAND_ACTION)
 
                         }
                             
@@ -574,7 +574,7 @@ gameMidletStateFactory!!.setCurrentGameState(GameState.PLAYING_GAME_STATE)
                                     }
                                 
                         else {
-                            logUtil!!.put("Already in playing state", this, COMMAND_ACTION)
+                            this.logUtil!!.putF("Already in playing state", this, COMMAND_ACTION)
 
                         }
                             
@@ -1035,7 +1035,7 @@ this.unPauseAppBackground(false)
                         if(command == HighScoreUtil.SUBMIT_TEXTBOX_COMMAND)
                         
                                     {
-                                    logUtil!!.put("Submitted Score", this, COMMAND_ACTION)
+                                    this.logUtil!!.putF("Submitted Score", this, COMMAND_ACTION)
 
     
                         if(displayable is HighScoreTextBox)
@@ -1114,7 +1114,7 @@ this.updateFullScreen()
                                 
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, midletStrings!!.COMMAND_ACTION, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, midletStrings!!.COMMAND_ACTION, e)
 
     
                         if(command != GameCommandsFactory.getInstance()!!.EXIT_COMMAND)
@@ -1236,7 +1236,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
     var threadFactoryUtil: ThreadFactoryUtil = ThreadFactoryUtil.getInstance()!!
 
 thread= threadFactoryUtil!!.getInstance(this.allbinaryGameCanvasRunnableInterface)
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append("Thread Priority: ")!!.appendint(thread.getPriority())!!.toString(), this, "startGameCanvasRunnableInterface")
 this.allbinaryGameCanvasRunnableInterface!!.setThread(thread)
 threadFactoryUtil!!.start(thread)
@@ -1248,7 +1248,7 @@ threadFactoryUtil!!.start(thread)
     open fun stopGameCanvasRunnableInterface()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put(commonStrings!!.START, this, gameStrings!!.STOP_GAME_CANVAS_RUNNABLE_INTERFACE)
+this.logUtil!!.putF(commonStrings!!.START, this, gameStrings!!.STOP_GAME_CANVAS_RUNNABLE_INTERFACE)
 GameNotificationEventHandler.getInstance()!!.removeAllListeners()
 ColorChangeEventHandler.getInstance()!!.removeAllListeners()
 GameEventHandlerUtil.removeAllListeners()
@@ -1260,13 +1260,13 @@ GameEventHandlerUtil.removeAllListeners()
                         if(gameCanvasRunnableInterface != NullGameCanvasRunnable.NULL_GAME_CANVAS_RUNNABLE)
                         
                                     {
-                                    logUtil!!.put("Set Running False", this, gameStrings!!.STOP_GAME_CANVAS_RUNNABLE_INTERFACE)
+                                    this.logUtil!!.putF("Set Running False", this, gameStrings!!.STOP_GAME_CANVAS_RUNNABLE_INTERFACE)
 gameCanvasRunnableInterface!!.setRunning(false)
 
                                     }
                                 
                         else {
-                            logUtil!!.put("StopGame - Could Not Stop", this, gameStrings!!.STOP_GAME_CANVAS_RUNNABLE_INTERFACE)
+                            this.logUtil!!.putF("StopGame - Could Not Stop", this, gameStrings!!.STOP_GAME_CANVAS_RUNNABLE_INTERFACE)
 
                         }
                             
@@ -1288,7 +1288,7 @@ ThreadUtil.getInstance()!!.join(this.thread)
 
                         }
                             
-logUtil!!.put(commonStrings!!.END, this, gameStrings!!.STOP_GAME_CANVAS_RUNNABLE_INTERFACE)
+this.logUtil!!.putF(commonStrings!!.END, this, gameStrings!!.STOP_GAME_CANVAS_RUNNABLE_INTERFACE)
 }
 
 
@@ -1344,7 +1344,7 @@ this.allbinaryGameCanvasRunnableInterface= gameCanvasRunnableInterface
     open fun save()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put(commonStrings!!.START, this, commonStrings!!.SAVE)
+this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.SAVE)
 
     var hashtable: Hashtable<Any, Any> = this.getCurrentStateHashtable()!!
 
@@ -1357,7 +1357,7 @@ GamePersistanceSingleton.getInstance()!!.save(abeClientInformation, hashtable)
     override fun getCurrentStateHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
-logUtil!!.put(commonStrings!!.START, this, "getCurrentStateHashtable")
+this.logUtil!!.putF(commonStrings!!.START, this, "getCurrentStateHashtable")
 
     var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 

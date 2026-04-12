@@ -74,7 +74,7 @@ public constructor (commandListener: CommandListener, childNameList: BasicArrayL
 
                             //For kotlin this is before the body of the constructor.
                     
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append("delay: ")!!.appendint(this.loopTimeHelper!!.delay)!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
 this.runnableCanvasRefreshHelper= RunnableCanvasRefreshHelper(this)
 
@@ -93,7 +93,7 @@ this.runnableCanvasRefreshHelper= RunnableCanvasRefreshHelper(this)
                         if(hasParam)
                         
                                     {
-                                    logUtil!!.put("commandListener was null", this, "initCommands")
+                                    this.logUtil!!.putF("commandListener was null", this, "initCommands")
 
                                     }
                                 
@@ -124,7 +124,7 @@ public constructor ()
         //nullable = true from not(false or (false and false)) = true
 {
 var cmdListener = cmdListener
-logUtil!!.put(commonStrings!!.NOT_IMPLEMENTED, this, "initCommands")
+this.logUtil!!.putF(commonStrings!!.NOT_IMPLEMENTED, this, "initCommands")
 }
 
 
@@ -190,7 +190,7 @@ threadObjectUtil!!.notifyObject(this)
 
                                     }
                                 
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(IS_RUNNING)!!.appendboolean(this.running)!!.toString(), this, SET_RUNNING)
 }
 
@@ -248,7 +248,7 @@ stringBuffer!!.append(NOT_EQUAL)
 
                                     }
                                 
-logUtil!!.put(stringBuffer!!.toString(), this, IS_RUNNING)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, IS_RUNNING)
 
 
 
@@ -279,7 +279,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, IS_RUNNING)
 var wait = wait
 loopTimeHelper!!.delay= wait
 this.pauseWait= wait.toLong() *3
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append("setWait - delay: ")!!.appendint(this.loopTimeHelper!!.delay)!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
 }
 
@@ -317,7 +317,7 @@ this.currentThread= thread
             this.stopWaiting()
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "showNotify", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "showNotify", e)
 }
 
 }
@@ -429,7 +429,7 @@ this.runnableCanvasRefreshHelper!!.process()
                                     
     var stringMaker: StringMaker = StringMaker()
 
-logUtil!!.put(stringMaker!!.append(START_PAUSE)!!.appendlong(System.currentTimeMillis())!!.append(PAUSE_SLEEP)!!.appendlong(this.pauseWait)!!.toString(), this, PROCESS_LOOP_SLEEP)
+this.logUtil!!.putF(stringMaker!!.append(START_PAUSE)!!.appendlong(System.currentTimeMillis())!!.append(PAUSE_SLEEP)!!.appendlong(this.pauseWait)!!.toString(), this, PROCESS_LOOP_SLEEP)
 
         while(this.isPaused() && this.isRunning() && !this.isSingleThread())
         {
@@ -440,7 +440,7 @@ this.processSleep()
                         
                                     {
                                     stringMaker!!.delete(0, stringMaker!!.length())
-logUtil!!.put(stringMaker!!.append(END_PAUSE)!!.appendlong(System.currentTimeMillis())!!.toString(), this, PROCESS_LOOP_SLEEP)
+this.logUtil!!.putF(stringMaker!!.append(END_PAUSE)!!.appendlong(System.currentTimeMillis())!!.toString(), this, PROCESS_LOOP_SLEEP)
 
 
 

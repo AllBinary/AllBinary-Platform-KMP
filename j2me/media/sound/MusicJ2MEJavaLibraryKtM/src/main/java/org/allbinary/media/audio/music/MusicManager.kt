@@ -308,7 +308,7 @@ this.currentSongSound!!.getPlayerP()!!.start()
 
                                     }
                                 
-PreLogUtil.put(commonStrings!!.EXCEPTION_LABEL +resource, this, commonStrings!!.PROCESS, e)
+PreLogUtil.putOE(commonStrings!!.EXCEPTION_LABEL +resource, this, commonStrings!!.PROCESS, e)
 }
 
 }
@@ -373,7 +373,7 @@ PreLogUtil.put(StringMaker().
 
                                     }
                                 
-PreLogUtil.put(commonStrings!!.EXCEPTION_LABEL +resource, this, commonStrings!!.END, e)
+PreLogUtil.putOE(commonStrings!!.EXCEPTION_LABEL +resource, this, commonStrings!!.END, e)
 }
 
 }

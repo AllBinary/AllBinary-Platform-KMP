@@ -29,6 +29,7 @@
         
 import org.allbinary.logic.NullUtil
 import org.allbinary.string.CommonStrings
+import org.allbinary.logic.communication.log.LogFormatUtil
 
 /*actual*/ open public class PreLogUtil
             : Object
@@ -42,13 +43,13 @@ import org.allbinary.string.CommonStrings
     //var specialMessage = specialMessage
     //var anyType = anyType
     //var functionName = functionName
-put(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
+PreLogUtil.putOE(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
 }
 
 
     private val LOG_SUCCESS: String = "org.allbinary: "
 
-    /*actual*/ open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)
+    /*actual*/ open fun putOE(specialMessage: String, anyType: Any, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var specialMessage = specialMessage
@@ -73,22 +74,22 @@ put(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
 
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
 
-System.out.print(LOG_SUCCESS)
+System.out.print(PreLogUtil.LOG_SUCCESS)
 System.out.println(message)
 }
 
 
-    /*actual*/ open fun put(specialMessage: String, className: String, functionName: String, exception: Any)
+    /*actual*/ open fun putSE(specialMessage: String, className: String, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
 {
-var specialMessage = specialMessage
-var className = className
-var functionName = functionName
-var exception = exception
+    //var specialMessage = specialMessage
+    //var className = className
+    //var functionName = functionName
+    //var exception = exception
 
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
 
-System.out.print(LOG_SUCCESS)
+System.out.print(PreLogUtil.LOG_SUCCESS)
 System.out.println(message)
 }
 

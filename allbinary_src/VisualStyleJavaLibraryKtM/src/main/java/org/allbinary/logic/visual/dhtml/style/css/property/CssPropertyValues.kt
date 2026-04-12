@@ -71,7 +71,7 @@ this.propertyValueVector= Vector()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STYLE))
                         
                                     {
-                                    logUtil!!.put("Number Of Properties: " +cssPropertyNodeVector!!.size, this, "CssProperties()")
+                                    this.logUtil!!.putF("Number Of Properties: " +cssPropertyNodeVector!!.size, this, "CssProperties()")
 
                                     }
                                 
@@ -99,7 +99,7 @@ this.propertyValueVector= Vector()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STYLE))
                         
                                     {
-                                    logUtil!!.put("Property Value: " +propertyValue, this, "CssProperties()")
+                                    this.logUtil!!.putF("Property Value: " +propertyValue, this, "CssProperties()")
 
                                     }
                                 
@@ -193,7 +193,7 @@ var document = document
                                     
     var hashMap: HashMap<Any, Any> = this.toHashMap()!!
 
-logUtil!!.put("CssPropertyValues HashMap: " +hashMap!!.toString(), this, "toXmlNode()")
+this.logUtil!!.putF("CssPropertyValues HashMap: " +hashMap!!.toString(), this, "toXmlNode()")
 
                                     }
                                 

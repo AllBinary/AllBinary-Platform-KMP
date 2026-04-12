@@ -91,7 +91,7 @@ var objectConfigDocument = objectConfigDocument
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Initial ObjectConfig: " +docString, this, "generate()")
+                                    this.logUtil!!.putF("Initial ObjectConfig: " +docString, this, "generate()")
 
                                     }
                                 
@@ -124,7 +124,7 @@ hashMap!!.put(VARKEY +TransformInfoData.getInstance()!!.PARTIAL, pageName)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Final ObjectConfig: " +DomDocumentHelper.toString(newObjectConfigDocument), this, "generate()")
+                                    this.logUtil!!.putF("Final ObjectConfig: " +DomDocumentHelper.toString(newObjectConfigDocument), this, "generate()")
 
                                     }
                                 

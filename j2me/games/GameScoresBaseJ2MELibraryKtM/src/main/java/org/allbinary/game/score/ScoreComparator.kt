@@ -102,21 +102,21 @@ scoreTwo= inputStreamTwo!!.readLong()
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "compare", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "compare", e)
 }
  catch(e: IOException)
             {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "compare", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "compare", e)
 }
  catch(e: Exception)
             {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "compare", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "compare", e)
 }
 
 

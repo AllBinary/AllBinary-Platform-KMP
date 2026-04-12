@@ -70,7 +70,7 @@ var args = args
 stringMaker!!.appendint(index)!!.append(CommonSeps.getInstance()!!.FORWARD_SLASH)!!.appendshort(angleFactory!!.getClosestDirection(index)!!.getValue())!!.append(CommonSeps.getInstance()!!.NEW_LINE)
 }
 
-LogUtil.getInstance()!!.put(stringMaker!!.toString(), "main", "main")
+LogUtil.getInstance()!!.putF(stringMaker!!.toString(), "main", "main")
 }
 
 

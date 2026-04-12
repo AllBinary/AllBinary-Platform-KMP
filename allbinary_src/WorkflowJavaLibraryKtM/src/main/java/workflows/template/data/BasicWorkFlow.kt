@@ -66,7 +66,7 @@ var pageContext = pageContext
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.WORKFLOW))
                         
                                     {
-                                    logUtil!!.put("Properties: " +propertiesHashMap!!.toString(), this, "BasicWorkFlow()")
+                                    this.logUtil!!.putF("Properties: " +propertiesHashMap!!.toString(), this, "BasicWorkFlow()")
 
                                     }
                                 
@@ -121,7 +121,7 @@ this.validationDomNodeInterface= TransformFactory.getInstance()!!.getInstance(ab
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.WORKFLOW))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.START, this, commonStrings!!.PROCESS)
+                                    this.logUtil!!.putF(this.commonStrings!!.START, this, commonStrings!!.PROCESS)
 
                                     }
                                 

@@ -80,6 +80,9 @@ object: Thread()
         //nullable = true from not(false or (false and true)) = true
 {
 
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+
         try {
             
     var generatedBufferedImageArray: Array<BufferedImage?>
@@ -122,7 +125,7 @@ this@RotationSpriteImageJPanel.getParent()!!.repaint()
 
 filePath= StringMaker().
                             append(filePath!!.substring(0, extensionIndex))!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.append("sprite")!!.append(imageStrings!!.PNG_EXTENSION)!!.toString()
-logUtil!!.put("New File Path: " +filePath, this, commonStrings!!.RUN)
+logUtil!!.putF("New File Path: " +filePath, this, commonStrings!!.RUN)
 file= File(filePath)
 
                                     }
@@ -130,7 +133,7 @@ file= File(filePath)
 
     var isWritten: Boolean = ImageIO.write(this@RotationSpriteImageJPanel.result as RenderedImage, imageStrings!!.PNG, file)!!
 
-logUtil!!.put("File: " +file +" Wrote: " +isWritten, this, commonStrings!!.RUN)
+logUtil!!.putF("File: " +file +" Wrote: " +isWritten, this, commonStrings!!.RUN)
 }
 
 } catch(e: Exception)

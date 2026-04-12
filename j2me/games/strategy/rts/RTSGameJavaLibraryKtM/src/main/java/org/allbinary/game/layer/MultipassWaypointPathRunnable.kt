@@ -59,6 +59,9 @@ open public class MultipassWaypointPathRunnable : WaypointPathRunnableBase {
         //nullable = true from not(false or (false and true)) = true
 {
 
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+
         try {
             pathFindingLayer!!.getWaypointRunnableLogHelper()!!.start(pathFindingLayer)
 reset2()
@@ -120,6 +123,9 @@ finish()
         //nullable = true from not(false or (false and true)) = true
 {
 
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+
         try {
             
     var geographicMapCellPosition: GeographicMapCellPosition = pathFindingLayer!!.getCurrentGeographicMapCellPosition()!!
@@ -158,6 +164,9 @@ finish()
     override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
 
         try {
             
@@ -221,6 +230,9 @@ this.done= false
     override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
 
         try {
             this.currentPassRunnable!!.run()

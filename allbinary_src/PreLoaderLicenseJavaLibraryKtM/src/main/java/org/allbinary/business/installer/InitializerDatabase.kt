@@ -108,7 +108,7 @@ stringBuffer!!.append("key: ")
 stringBuffer!!.append(key)
 stringBuffer!!.append(" Value: ")
 stringBuffer!!.append(values[0]!!)
-logUtil!!.put(stringBuffer!!.toString(), this, "getFormData()")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "getFormData()")
 }
 
 this.getFormData(abeClientInformation, hashMap)
@@ -155,7 +155,7 @@ dbConnectionInfo!!.setPort(getAdminPort())
 this.initDb= DynamicInitDb(abeClientInformation, dbConnectionInfo as DatabaseConnectionInfoInterface)
 } catch(e: Exception)
             {
-logUtil!!.put("Unable to get form data", this, "getFormData()", e)
+this.logUtil!!.put("Unable to get form data", this, "getFormData()", e)
 }
 
 }
@@ -183,7 +183,7 @@ var jdbcDriverClassPathString = jdbcDriverClassPathString
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -332,7 +332,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.getAdminJdbcDriver()
                         return true
 } catch(e: Exception)
             {
-logUtil!!.put("Unable to Create Users", this, "createUsers()", e)
+this.logUtil!!.put("Unable to Create Users", this, "createUsers()", e)
 
 
 
@@ -356,7 +356,7 @@ logUtil!!.put("Unable to Create Users", this, "createUsers()", e)
                         return true
 } catch(e: Exception)
             {
-logUtil!!.put("Unable to Create Databases", this, "createDatabases()", e)
+this.logUtil!!.put("Unable to Create Databases", this, "createDatabases()", e)
 
 
 
@@ -380,7 +380,7 @@ logUtil!!.put("Unable to Create Databases", this, "createDatabases()", e)
                         return true
 } catch(e: Exception)
             {
-logUtil!!.put("Unable to Create Tables", this, "createTables()", e)
+this.logUtil!!.put("Unable to Create Tables", this, "createTables()", e)
 
 
 

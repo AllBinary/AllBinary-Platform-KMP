@@ -128,7 +128,7 @@ var hashMap = hashMap
                                 
 }
 
-logUtil!!.put("minX: " +minX +" minY: " +minY +" maxX: " +maxX +" maxY: " +maxY, this, commonStrings!!.GET_INSTANCE)
+this.logUtil!!.putF("minX: " +minX +" minY: " +minY +" maxX: " +maxX +" maxY: " +maxY, this, commonStrings!!.GET_INSTANCE)
 setWidth(maxX -minX)
 setHeight(maxY -minY)
 
@@ -153,7 +153,7 @@ setHeight(maxY -minY)
     var s: String = StringMaker().
                             append(commonLabels!!.WIDTH_LABEL)!!.appendint(getWidth())!!.append(commonLabels!!.HEIGHT_LABEL)!!.appendint(getHeight())!!.append(" max: ")!!.appendint(max)!!.append(" middle: ")!!.appendint(middle)!!.toString()!!
 
-logUtil!!.put(s, this, commonStrings!!.GET_INSTANCE)
+this.logUtil!!.putF(s, this, commonStrings!!.GET_INSTANCE)
 
     var currentMiddleX: Int = minX +getWidth() /2
 
@@ -172,7 +172,7 @@ dy= middle -currentMiddleY
 {
 var hashMap = hashMap
 this.calculate(hashMap)
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(" dx: ")!!.appendint(dx)!!.append(" dy: ")!!.appendint(dy)!!.toString(), this, commonStrings!!.GET_INSTANCE)
 
     var graphicItemArray: Array<Any?> = hashMap!!.keys.toTypedArray()!!
@@ -268,7 +268,7 @@ var pointVector = pointVector
 
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
 
 
 

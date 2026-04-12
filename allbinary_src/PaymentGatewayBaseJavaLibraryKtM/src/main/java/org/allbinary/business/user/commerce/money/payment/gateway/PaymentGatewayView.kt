@@ -92,7 +92,7 @@ this.paymentGatewayInterface= paymentGatewayInterface
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.START, this, "toXmlNode")
+                                    this.logUtil!!.putF(this.commonStrings!!.START, this, "toXmlNode")
 
                                     }
                                 
@@ -116,7 +116,7 @@ hashMap!!.putAll(this.toHashMap())
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.XSLLOGGINGERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "toXmlNode", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "toXmlNode", e)
 
                                     }
                                 

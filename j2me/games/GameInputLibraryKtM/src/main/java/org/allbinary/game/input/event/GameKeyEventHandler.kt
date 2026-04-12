@@ -80,7 +80,7 @@ this.downGameKeyEventHandler!!.removeAllListeners()
 {
 var eventListenerInterface = eventListenerInterface
 var playerInputId = playerInputId
-logUtil!!.put(eventListenerInterface!!.toString(), this, commonStrings!!.ADD_LISTENER)
+this.logUtil!!.putF(eventListenerInterface!!.toString(), this, commonStrings!!.ADD_LISTENER)
 this.pressGameKeyEventHandler!!.addListenerSingleThreaded(eventListenerInterface)
 this.upGameKeyEventHandler!!.getInstanceForPlayer(playerInputId)!!.addListenerSingleThreaded(eventListenerInterface)
 this.downGameKeyEventHandler!!.getInstanceForPlayer(playerInputId)!!.addListenerSingleThreaded(eventListenerInterface)
@@ -91,7 +91,7 @@ this.downGameKeyEventHandler!!.getInstanceForPlayer(playerInputId)!!.addListener
         //nullable = true from not(false or (false and false)) = true
 {
 var eventListenerInterface = eventListenerInterface
-logUtil!!.put(eventListenerInterface!!.toString(), this, commonStrings!!.ADD_LISTENER)
+this.logUtil!!.putF(eventListenerInterface!!.toString(), this, commonStrings!!.ADD_LISTENER)
 this.pressGameKeyEventHandler!!.addListenerSingleThreaded(eventListenerInterface)
 this.upGameKeyEventHandler!!.addListenerSingleThreaded(eventListenerInterface)
 this.downGameKeyEventHandler!!.addListenerSingleThreaded(eventListenerInterface)
@@ -102,7 +102,7 @@ this.downGameKeyEventHandler!!.addListenerSingleThreaded(eventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 var eventListenerInterface = eventListenerInterface
-logUtil!!.put(eventListenerInterface!!.toString(), this, commonStrings!!.REMOVE_LISTENER)
+this.logUtil!!.putF(eventListenerInterface!!.toString(), this, commonStrings!!.REMOVE_LISTENER)
 this.pressGameKeyEventHandler!!.removeListenerSingleThreaded(eventListenerInterface)
 this.upGameKeyEventHandler!!.removeListenerSingleThreaded(eventListenerInterface)
 this.downGameKeyEventHandler!!.removeListenerSingleThreaded(eventListenerInterface)

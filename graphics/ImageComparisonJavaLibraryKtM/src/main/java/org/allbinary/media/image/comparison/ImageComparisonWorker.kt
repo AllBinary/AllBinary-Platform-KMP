@@ -113,7 +113,7 @@ this.onCaptureEvent(allBinaryEventObject as CapturedImageWorkerResultsEvent)
 {
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.RUN)
+            this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.RUN)
 this.setRunning(true)
 
     var timeHelper: TimeDelayHelper = TimeDelayHelper(1000)
@@ -145,13 +145,13 @@ capturedImageWorkerResultsEvent[1]= this.bufferedImageVector!!.get(1) as Capture
 
 ImageComparisonResultCacheSingleton.getInstance()!!.add(imageComparisonResultFrameCacheable)
 this.fireEvent(ImageComparisonResultsEvent(this, imageComparisonResult))
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append("Image Comparison Result: ")!!.append(imageComparisonResult!!.toString())!!.append(" for frame: ")!!.appendlong(frame)!!.toString(), this, this.commonStrings!!.RUN)
 
                                     }
                                 
                         else {
-                            logUtil!!.put("An Image Was Not Valid: Image Worker Event Processing terminated", this, this.commonStrings!!.RUN)
+                            this.logUtil!!.putF("An Image Was Not Valid: Image Worker Event Processing terminated", this, this.commonStrings!!.RUN)
 
                         }
                             
@@ -164,12 +164,12 @@ index2++
     var message: String = StringMaker().
                             append("Frame: ")!!.appendint(index2)!!.append(CommonLabels.getInstance()!!.ELAPSED)!!.appendlong(timeHelper!!.getElapsed())!!.toString()!!
 
-logUtil!!.put(message, this, this.commonStrings!!.RUN)
+this.logUtil!!.putF(message, this, this.commonStrings!!.RUN)
 this.setRunning(false)
-logUtil!!.put(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
+this.logUtil!!.putF(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
 } catch(e: Exception)
             {
-logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
+this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
 }
 
 }

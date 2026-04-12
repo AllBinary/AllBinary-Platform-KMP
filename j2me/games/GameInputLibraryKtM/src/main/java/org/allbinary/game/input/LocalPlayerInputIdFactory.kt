@@ -159,7 +159,7 @@ index= totalDevicesMapped
                                     }
                                 
                         else {
-                            logUtil!!.put(StringMaker().
+                            this.logUtil!!.putF(StringMaker().
                             append("Added DeviceId: ")!!.appendint(deviceId)!!.append(" beyond fast Id list")!!.toString(), this, "getPlayerForDevice")
 
                         }
@@ -167,7 +167,7 @@ index= totalDevicesMapped
 this.playerIdToDeviceId[index]= deviceId
 AnalogLocationInputFactory.getInstance()!!.addPlayer(totalDevicesMapped)
 totalDevicesMapped++
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append("Added DeviceId: ")!!.appendint(deviceId)!!.append(" at: ")!!.appendint(index)!!.append(" Total: ")!!.appendint(this.totalDevicesMapped)!!.toString(), this, "getPlayerForDevice")
 
 
@@ -225,7 +225,7 @@ var playerInputId = playerInputId
         //nullable = true from not(false or (false and false)) = true
 {
 var playerInputId = playerInputId
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append("Setting PlayerInPlay with playerInputId: ")!!.appendint(playerInputId)!!.toString(), this, "setPlayerInPlay")
 playersInPlay[playerInputId]= true
 }
@@ -235,7 +235,7 @@ playersInPlay[playerInputId]= true
         //nullable = true from not(false or (false and false)) = true
 {
 var playerInputId = playerInputId
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append("Setting PlayerOutOfPlay with playerInputId: ")!!.appendint(playerInputId)!!.toString(), this, "setPlayerOutOfPlay")
 playersInPlay[playerInputId]= false
 }

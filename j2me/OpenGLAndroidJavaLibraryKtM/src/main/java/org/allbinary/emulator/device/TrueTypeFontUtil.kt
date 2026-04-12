@@ -95,7 +95,7 @@ private constructor ()
 
     var path: String = file.getAbsolutePath() +CanvasStrings.getInstance()!!.FONT_ATLAS
 
-logUtil!!.put(path, this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(path, this, commonStrings!!.CONSTRUCTOR)
 
     var fos: FileOutputStream = FileOutputStream(path)
 
@@ -109,7 +109,7 @@ bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.EXCEPTION, e)
+PreLogUtil.putOE(commonStrings!!.EXCEPTION, this, commonStrings!!.EXCEPTION, e)
 }
 
 }

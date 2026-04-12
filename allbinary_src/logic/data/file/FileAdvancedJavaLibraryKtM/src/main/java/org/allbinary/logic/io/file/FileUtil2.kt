@@ -79,7 +79,7 @@ private constructor ()
             inputStream= AbFileInputStream(file)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
 }
 
 

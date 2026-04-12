@@ -114,7 +114,7 @@ this.points= Points()
 this.active= true
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
 }
@@ -315,7 +315,7 @@ this.addPoint(point)
 {
 var point = point
 this.points.getPoints()!!.add(point)
-logUtil!!.put(point.toString(), this, "addPoint")
+this.logUtil!!.putF(point.toString(), this, "addPoint")
 this.pointTreeNodeVector!!.add(DefaultMutableTreeNode(point.toString()))
 this.treeNode!!.add(this.pointTreeNodeVector!!.get(this.pointTreeNodeVector!!.size -1) as DefaultMutableTreeNode)
 }
@@ -535,7 +535,7 @@ firstPoint= secondPoint
 
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "mouseMoved", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "mouseMoved", e)
 }
 
 }
@@ -641,7 +641,7 @@ this.removePoint()
 this.currentMousePoint= mousePoint
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "mouseMoved", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "mouseMoved", e)
 }
 
 }
@@ -705,7 +705,7 @@ var y = y
 this.currentMousePoint= point
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "mouseMoved", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "mouseMoved", e)
 }
 
 }
@@ -768,7 +768,7 @@ this.deactivate()
                                 
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.KEY_PRESSED, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.KEY_PRESSED, e)
 }
 
 }

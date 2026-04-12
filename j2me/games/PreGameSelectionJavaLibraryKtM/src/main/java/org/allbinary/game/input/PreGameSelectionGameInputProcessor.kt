@@ -87,6 +87,9 @@ this.setRunning(false)
             {
 this.setRunning(false)
 
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)

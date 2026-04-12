@@ -49,7 +49,7 @@ var frame = frame
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.START, "CaptureWorkerUtil", "processProfileActionConditions")
+logUtil!!.putF(commonStrings!!.START, "CaptureWorkerUtil", "processProfileActionConditions")
 
     var size: Int = vector.size!!
 

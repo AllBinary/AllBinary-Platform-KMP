@@ -123,7 +123,7 @@ this.imageJList!!.setModel(defaultListModel)
 this.updateOnPropertiesChange()
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e)
 }
 
 }
@@ -197,7 +197,7 @@ this.fudgeItJButton!!.setEnabled(false)
 this.updateImage(tempBufferedImageArray)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "updateImage", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "updateImage", e)
 }
 
 }
@@ -242,7 +242,7 @@ tempBufferedImageArray[index]= bufferedImage
 this.updateImage(fudgedBufferedImageArray)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "updateImageWithFudgedImages", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "updateImageWithFudgedImages", e)
 }
 
 }
@@ -608,14 +608,14 @@ var evt = evt
 
 filePath= StringMaker().
                             append(filePath!!.substring(0, extensionIndex))!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.appendint(this.imageUnifierProperties!!.getColumns())!!.append("_By_")!!.appendint(this.imageUnifierProperties!!.getRows())!!.append("_Unified")!!.append(imageStrings!!.PNG_EXTENSION)!!.toString()
-logUtil!!.put("New File Path: " +filePath, this, StringUtil.getInstance()!!.EMPTY_STRING)
+this.logUtil!!.putF("New File Path: " +filePath, this, StringUtil.getInstance()!!.EMPTY_STRING)
 
     var outputFile: File = File(filePath)
 
 ImagePersistanceUtil.getInstance()!!.saveWithBatik(FileWrapperUtil.wrapFile(outputFile), this.result)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "jButton1ActionPerformed", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "jButton1ActionPerformed", e)
 }
 
 }

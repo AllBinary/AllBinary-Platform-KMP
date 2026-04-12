@@ -164,7 +164,7 @@ stringBuffer!!.append("key: ")
 stringBuffer!!.append(key)
 stringBuffer!!.append(" Value: ")
 stringBuffer!!.append(values[0]!!)
-logUtil!!.put(stringBuffer!!.toString(), this, "getFormData()")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "getFormData()")
 }
 
 this.getFormData(hashMap)
@@ -224,7 +224,7 @@ staticPagesServer= hashMap!!.get(initializerData!!.STATICPAGESSERVER) as String
 staticPagesPort= hashMap!!.get(initializerData!!.STATICPAGESPORT) as String
 } catch(e: Exception)
             {
-logUtil!!.put("Unable to get form data", this, "getFormData()", e)
+this.logUtil!!.put("Unable to get form data", this, "getFormData()", e)
 }
 
 }
@@ -252,7 +252,7 @@ var jdbcDriverClassPathString = jdbcDriverClassPathString
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -723,7 +723,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.staticPagesJdbcDrive
     open fun set()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put("Creating DB connection files", this, "set()")
+this.logUtil!!.putF("Creating DB connection files", this, "set()")
 
     var userDbInitInfo: UserDbInitInfo = UserDbInitInfo(false)
 
@@ -784,7 +784,7 @@ inventoryDbInitInfo!!.setServer(inventoryServer)
 inventoryDbInitInfo!!.setPort(inventoryPort)
 inventoryDbInitInfo!!.setHasRead(true)
 inventoryDbInitInfo!!.write()
-logUtil!!.put("Created DB connection files", this, "set()")
+this.logUtil!!.putF("Created DB connection files", this, "set()")
 }
 
 

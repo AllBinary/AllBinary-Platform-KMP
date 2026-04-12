@@ -53,6 +53,7 @@ import org.allbinary.graphics.color.BasicColorFactory
 import org.allbinary.graphics.paint.NullPaintable
 import org.allbinary.graphics.paint.Paintable
 import org.allbinary.graphics.paint.SimpleTextPaintable
+import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.thread.ARunnable
 import org.allbinary.thread.SecondaryThreadPool
@@ -111,7 +112,7 @@ public constructor (commandListener: CommandListener, allBinaryGameLayerManager:
 
                             //For kotlin this is before the body of the constructor.
                     
-logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 this.highScoresPaintable= paintable
 this.highScoresFactoryInterface= highScoresFactoryInterface
 this.highScoresCanvasInputProcessor= highScoresCanvasInputProcessorFactoryInterface!!.getInstance(this)
@@ -129,7 +130,7 @@ this.colorFillPaintable= ColorFillPaintableFactory.getInstance()!!.getInstance(a
                                     }
                                 
                         else {
-                            logUtil!!.put("Show HighScores that are already loaded", this, commonStrings!!.CONSTRUCTOR)
+                            this.logUtil!!.putF("Show HighScores that are already loaded", this, commonStrings!!.CONSTRUCTOR)
 this.updateCommand(this.currentCommand)
 this.setPaintable(this.getHighScoresPaintable())
 
@@ -141,6 +142,9 @@ SecondaryThreadPool.getInstance()!!.runTask(object: ARunnable()
     override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
 
         try {
             
@@ -163,7 +167,7 @@ hasPainted= false
 
     var stringMaker: StringMaker = StringMaker()
 
-logUtil!!.put(stringMaker!!.append("HighScoresCanvas - Request repaint to be sure: ")!!.appendlong(System.currentTimeMillis())!!.toString(), this, commonStrings!!.RUN)
+logUtil!!.putF(stringMaker!!.append("HighScoresCanvas - Request repaint to be sure: ")!!.appendlong(System.currentTimeMillis())!!.toString(), this, commonStrings!!.RUN)
 repaintBehavior!!.onChangeRepaint(this@HighScoresCanvas)
 
     
@@ -179,7 +183,7 @@ repaintBehavior!!.onChangeRepaint(this@HighScoresCanvas)
                                     }
                                 
 stringMaker!!.delete(0, stringMaker!!.length())
-logUtil!!.put(stringMaker!!.append("HighScoresCanvas - Now that the canvas has completed repaint go ahead and fetch the scores: ")!!.appendlong(System.currentTimeMillis())!!.toString(), this, commonStrings!!.RUN)
+logUtil!!.putF(stringMaker!!.append("HighScoresCanvas - Now that the canvas has completed repaint go ahead and fetch the scores: ")!!.appendlong(System.currentTimeMillis())!!.toString(), this, commonStrings!!.RUN)
 executeUpdate()
 } catch(e: Exception)
             {
@@ -249,7 +253,7 @@ hasPainted= true
             this.highScoresFactoryInterface!!.fetchHighScores(this.getGameInfo(), this)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
 }
 
 }
@@ -279,13 +283,13 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
                                 )
                         
                                     {
-                                    logUtil!!.put(StringMaker().
+                                    this.logUtil!!.putF(StringMaker().
                             append(commonStrings!!.START)!!.appendint(highScoresArray!!.size)!!.toString(), this, "setHighScoresArray")
 
                                     }
                                 
                         else {
-                            logUtil!!.put(commonStrings!!.START, this, "setHighScoresArray")
+                            this.logUtil!!.putF(commonStrings!!.START, this, "setHighScoresArray")
 
                         }
                             
@@ -294,7 +298,7 @@ this.updateCommand(this.currentCommand)
 this.setPaintable(this.getHighScoresPaintable())
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
 }
 
 }
@@ -306,7 +310,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
         //nullable = true from not(false or (false and false)) = true
 {
 var command = command
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(commonStrings!!.START)!!.append(this.stringUtil!!.toString(command))!!.toString(), this, commonStrings!!.UPDATE)
 
     var gameCommandsFactory: GameCommandsFactory = GameCommandsFactory.getInstance()!!

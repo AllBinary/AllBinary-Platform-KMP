@@ -64,7 +64,7 @@ var document = document
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENT))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.START, this, "toXmlNode")
+                                    this.logUtil!!.putF(this.commonStrings!!.START, this, "toXmlNode")
 
                                     }
                                 
@@ -105,7 +105,7 @@ var document = document
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENT))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.END, this, "toXmlNode()")
+                                    this.logUtil!!.putF(commonStrings!!.END, this, "toXmlNode()")
 
                                     }
                                 
@@ -121,7 +121,7 @@ var document = document
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "toXmlNode()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "toXmlNode()", e)
 
                                     }
                                 

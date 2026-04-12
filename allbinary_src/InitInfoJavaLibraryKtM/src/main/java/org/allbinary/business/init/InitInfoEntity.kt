@@ -138,7 +138,7 @@ keyAndValue!!.put(NOTHING, NOTHING)
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
                         
                                     {
-                                    PreLogUtil.put(this.commonStrings!!.EXCEPTION, this.NAME, this.METHOD_GET, e)
+                                    PreLogUtil.putOE(this.commonStrings!!.EXCEPTION, this.NAME, this.METHOD_GET, e)
 
                                     }
                                 
@@ -204,7 +204,7 @@ keyAndValue!!.put(NOTHING, NOTHING)
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
                         
                                     {
-                                    PreLogUtil.put(this.commonStrings!!.EXCEPTION, this.NAME, this.METHOD_IS, e)
+                                    PreLogUtil.putOE(this.commonStrings!!.EXCEPTION, this.NAME, this.METHOD_IS, e)
 
                                     }
                                 
@@ -245,7 +245,7 @@ insert(values)
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
                         
                                     {
-                                    PreLogUtil.put(this.commonStrings!!.EXCEPTION, this.NAME, this.METHOD_ADD, e)
+                                    PreLogUtil.putOE(this.commonStrings!!.EXCEPTION, this.NAME, this.METHOD_ADD, e)
 
                                     }
                                 

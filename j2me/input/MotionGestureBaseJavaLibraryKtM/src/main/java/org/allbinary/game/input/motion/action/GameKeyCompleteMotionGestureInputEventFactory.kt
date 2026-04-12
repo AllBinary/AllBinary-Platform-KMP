@@ -71,7 +71,7 @@ eventList!!.add(gameKeyCompleteMotionGestureInputEvent)
     open fun updateAll()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(CommonLabels.getInstance()!!.START_LABEL)!!.appendint(eventList!!.size())!!.toString(), this, "updateAll")
 
 

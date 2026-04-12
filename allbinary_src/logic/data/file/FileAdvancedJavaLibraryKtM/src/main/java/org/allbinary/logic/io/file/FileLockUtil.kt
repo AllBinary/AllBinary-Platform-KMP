@@ -93,7 +93,7 @@ var isReturnOnFailure = isReturnOnFailure
                                 )
                         
                                     {
-                                    logUtil!!.put("File Lock Obtained: " +file.getAbsolutePath(), this, "getAll")
+                                    this.logUtil!!.putF("File Lock Obtained: " +file.getAbsolutePath(), this, "getAll")
 fileLockVector!!.add(fileLock)
 
                                     }
@@ -103,7 +103,7 @@ fileLockVector!!.add(fileLock)
                         if(isReturnOnFailure)
                         
                                     {
-                                    logUtil!!.put("Total Locks Obtained: " +fileLockVector!!.size, this, "getAll")
+                                    this.logUtil!!.putF("Total Locks Obtained: " +fileLockVector!!.size, this, "getAll")
 
 
 
@@ -114,7 +114,7 @@ fileLockVector!!.add(fileLock)
                                 
 }
 
-logUtil!!.put("Total Locks Obtained: " +fileLockVector!!.size, this, "getAll")
+this.logUtil!!.putF("Total Locks Obtained: " +fileLockVector!!.size, this, "getAll")
 
 
 
@@ -186,7 +186,7 @@ var file = file
                         return getLock(AbFileOutputStream(file, true))
 } catch(e: Exception)
             {
-logUtil!!.put("Exception returns null", this, "getLock", e)
+this.logUtil!!.put("Exception returns null", this, "getLock", e)
 
 
 
@@ -219,7 +219,7 @@ var fileOutputStream = fileOutputStream
                         return fileLock
 } catch(e: Exception)
             {
-logUtil!!.put("Exception returns null", this, "getLock", e)
+this.logUtil!!.put("Exception returns null", this, "getLock", e)
 
 
 
@@ -228,7 +228,7 @@ logUtil!!.put("Exception returns null", this, "getLock", e)
 }
 
          finally {
-            logUtil!!.put("Finally - Closing FileOutputStream", this, "getLock")
+            this.logUtil!!.putF("Finally - Closing FileOutputStream", this, "getLock")
 StreamUtil.getInstance()!!.close(fileOutputStream)
 
          }
@@ -254,7 +254,7 @@ var fileChannel = fileChannel
                         return fileLock
 } catch(e: Exception)
             {
-logUtil!!.put("Exception returns null", this, "getLock", e)
+this.logUtil!!.put("Exception returns null", this, "getLock", e)
 
 
 
@@ -263,7 +263,7 @@ logUtil!!.put("Exception returns null", this, "getLock", e)
 }
 
          finally {
-            logUtil!!.put("Finally - Closing FileChannel", this, "getLock")
+            this.logUtil!!.putF("Finally - Closing FileChannel", this, "getLock")
 fileChannel!!.close()
 
          }

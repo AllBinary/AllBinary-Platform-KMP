@@ -122,7 +122,7 @@ stringBuffer!!.append("TransformInfo: ")
 
                         }
                             
-logUtil!!.put(stringBuffer!!.toString(), this, "generate()")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "generate()")
 
                                     }
                                 
@@ -196,7 +196,7 @@ hashMap!!.put(transformInfoObjectConfigData!!.VARKEY +TransformInfoData.getInsta
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("TemplateNameOverride: " +templateNameOverride, this, "generate()")
+                                    this.logUtil!!.putF("TemplateNameOverride: " +templateNameOverride, this, "generate()")
 
                                     }
                                 
@@ -251,7 +251,7 @@ var hashMap = hashMap
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Final ObjectConfig: " +DomDocumentHelper.toString(newObjectConfigDocument), this, "generate()")
+                                    this.logUtil!!.putF("Final ObjectConfig: " +DomDocumentHelper.toString(newObjectConfigDocument), this, "generate()")
 
                                     }
                                 

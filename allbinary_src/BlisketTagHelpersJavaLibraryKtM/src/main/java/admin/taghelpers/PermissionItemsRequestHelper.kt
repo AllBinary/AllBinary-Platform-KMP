@@ -35,6 +35,8 @@ import org.allbinary.business.user.commerce.inventory.item.BasicItemData
 import org.allbinary.business.user.commerce.inventory.item.permission.PermissionItemData
 import org.allbinary.data.tables.user.commerce.inventory.item.permissions.PermissionItemsEntityFactory
 import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.logic.string.StringMaker
+import org.allbinary.string.CommonSeps
 
 open public class PermissionItemsRequestHelper : ModifyTable {
         
@@ -162,7 +164,7 @@ PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, "insert()")
+                                    this.logUtil!!.putF(success, this, "insert()")
 
                                     }
                                 
@@ -181,7 +183,7 @@ PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "inserts()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "inserts()", e)
 
                                     }
                                 
@@ -209,7 +211,7 @@ PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, "delete()")
+                                    this.logUtil!!.putF(success, this, "delete()")
 
                                     }
                                 
@@ -228,7 +230,7 @@ PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "delete()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "delete()", e)
 
                                     }
                                 
@@ -259,7 +261,8 @@ PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(id +" " +success, this, "update()")
+                                    this.logUtil!!.putF(StringMaker().
+                            append(id)!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(success)!!.toString(), this, "update()")
 
                                     }
                                 
@@ -278,7 +281,7 @@ PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "update()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "update()", e)
 
                                     }
                                 

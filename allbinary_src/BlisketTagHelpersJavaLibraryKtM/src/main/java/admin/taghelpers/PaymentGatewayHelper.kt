@@ -63,7 +63,7 @@ this.portion= Portion(hashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENTERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR, e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR, e)
 
                                     }
                                 
@@ -95,7 +95,7 @@ PaymentGatewayEntityFactory.getInstance()!!.add(paymentGatewayInterface)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, "insert()")
+                                    this.logUtil!!.putF(success, this, "insert()")
 
                                     }
                                 
@@ -114,7 +114,7 @@ PaymentGatewayEntityFactory.getInstance()!!.add(paymentGatewayInterface)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "add()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "add()", e)
 
                                     }
                                 
@@ -150,7 +150,7 @@ stringBuffer!!.append("Gateway Name: ")
 stringBuffer!!.append(paymentGatewayInterface!!.getName())
 stringBuffer!!.append(" HashMap=")
 stringBuffer!!.append(paymentGatewayInterface!!.toHashMap(true)!!.toString())
-logUtil!!.put(stringBuffer!!.toString(), this, "update()")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "update()")
 
                                     }
                                 
@@ -163,7 +163,7 @@ PaymentGatewayEntityFactory.getInstance()!!.update(paymentGatewayInterface)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, "update()")
+                                    this.logUtil!!.putF(success, this, "update()")
 
                                     }
                                 
@@ -182,7 +182,7 @@ PaymentGatewayEntityFactory.getInstance()!!.update(paymentGatewayInterface)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "update()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "update()", e)
 
                                     }
                                 
@@ -228,7 +228,7 @@ stringBuffer!!.append(gatewayName)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, "delete()")
+                                    this.logUtil!!.putF(success, this, "delete()")
 
                                     }
                                 
@@ -247,7 +247,7 @@ stringBuffer!!.append(gatewayName)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "remove()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "remove()", e)
 
                                     }
                                 
@@ -274,7 +274,7 @@ stringBuffer!!.append(gatewayName)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, commonStrings!!.DROP)
+                                    this.logUtil!!.putF(success, this, commonStrings!!.DROP)
 
                                     }
                                 
@@ -293,7 +293,7 @@ stringBuffer!!.append(gatewayName)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.DROP, e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.DROP, e)
 
                                     }
                                 
@@ -320,7 +320,7 @@ stringBuffer!!.append(gatewayName)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, "create()")
+                                    this.logUtil!!.putF(success, this, "create()")
 
                                     }
                                 
@@ -339,7 +339,7 @@ stringBuffer!!.append(gatewayName)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "create()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "create()", e)
 
                                     }
                                 
@@ -369,7 +369,7 @@ stringBuffer!!.append(gatewayName)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, "restore()")
+                                    this.logUtil!!.putF(success, this, "restore()")
 
                                     }
                                 
@@ -388,7 +388,7 @@ stringBuffer!!.append(gatewayName)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "restore()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "restore()", e)
 
                                     }
                                 
@@ -418,7 +418,7 @@ stringBuffer!!.append(gatewayName)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, "backup()")
+                                    this.logUtil!!.putF(success, this, "backup()")
 
                                     }
                                 
@@ -437,7 +437,7 @@ stringBuffer!!.append(gatewayName)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "backup()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "backup()", e)
 
                                     }
                                 

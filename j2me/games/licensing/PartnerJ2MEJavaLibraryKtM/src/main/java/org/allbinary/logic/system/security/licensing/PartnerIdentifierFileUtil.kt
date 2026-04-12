@@ -110,7 +110,7 @@ inputStreamReader!!.close()
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET, e)
 
 
 

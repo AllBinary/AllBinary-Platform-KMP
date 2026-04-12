@@ -41,7 +41,7 @@ open public class ImageActionScriptOutputJPanel : javax.swing.JPanel {
     private var capturedImageActionScriptOutputInterface: ImageActionScriptOutputInterface
 public constructor (capturedImageActionScriptOutputInterface: ImageActionScriptOutputInterface){
 var capturedImageActionScriptOutputInterface = capturedImageActionScriptOutputInterface
-logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 initComponents()
 this.capturedImageActionScriptOutputInterface= capturedImageActionScriptOutputInterface
 this.set()

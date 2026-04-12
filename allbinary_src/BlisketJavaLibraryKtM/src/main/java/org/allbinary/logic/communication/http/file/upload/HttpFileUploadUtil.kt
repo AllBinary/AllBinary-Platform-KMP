@@ -84,7 +84,7 @@ stringBuffer!!.append(" Not Calculated Yet")
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTP))
                         
                                     {
-                                    logUtil!!.put(stringBuffer!!.toString(), getInstance(), "log()")
+                                    logUtil!!.putF(stringBuffer!!.toString(), getInstance(), "log()")
 
                                     }
                                 
@@ -122,7 +122,7 @@ stringBuffer!!.appendlong(fileItem!!.getSize())
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
-                                    logUtil!!.put(stringBuffer!!.toString(), getInstance(), "log()")
+                                    logUtil!!.putF(stringBuffer!!.toString(), getInstance(), "log()")
 
                                     }
                                 

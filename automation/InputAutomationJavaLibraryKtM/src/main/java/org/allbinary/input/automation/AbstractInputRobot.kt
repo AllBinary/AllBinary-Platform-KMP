@@ -63,7 +63,7 @@ this.setHelpSet(helpSet)
 {
 var point = point
 this.mouseMove(point.x, point.y)
-logUtil!!.put("Moved Mouse To: x: " +point.x +" y: " +point.y, this, "moveMouse")
+this.logUtil!!.putF("Moved Mouse To: x: " +point.x +" y: " +point.y, this, "moveMouse")
 }
 
 
@@ -79,7 +79,7 @@ var y = y
     var point: Point = PointHelper.getCenterPoint(rectangle)!!
 
 this.mouseMove(point.x +x, point.y +y)
-logUtil!!.put("Moved Mouse To: x: " +point.x +" y: " +point.y +" in the middle of: " +rectangle, this, "moveMouseToTarget")
+this.logUtil!!.putF("Moved Mouse To: x: " +point.x +" y: " +point.y +" in the middle of: " +rectangle, this, "moveMouseToTarget")
 }
 
 

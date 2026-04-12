@@ -61,7 +61,7 @@ stringBuffer!!.append("Database HashMap: ")
 stringBuffer!!.append(databaseHashMap!!.toString())
 stringBuffer!!.append("\nProperties HashMap: ")
 stringBuffer!!.append(propertiesHashMap!!.toString())
-logUtil!!.put(stringBuffer!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
 
                                     }
                                 
@@ -82,7 +82,7 @@ var pageContext = pageContext
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Properties HashMap: " +propertiesHashMap!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
+                                    this.logUtil!!.putF("Properties HashMap: " +propertiesHashMap!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
 
                                     }
                                 

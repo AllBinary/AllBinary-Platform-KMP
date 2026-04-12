@@ -58,6 +58,8 @@ import org.allbinary.time.TimeDelayHelper
 
         }
             
+    private val logFormatUtil: LogFormatUtil = LogFormatUtil.getInstance()!!
+
     private var isFirstException: Boolean = true
 
     private var timeDelayHelper: TimeDelayHelper = TimeDelayHelper(200000)
@@ -71,7 +73,7 @@ private constructor ()
 
     private val stringBuffer: StringMaker = StringMaker()
 
-    /*actual*/ open fun put(log: Log)
+    /*actual*/ open fun putL(log: Log)
         //nullable = true from not(false or (false and false)) = true
 {
 var log = log
@@ -106,7 +108,7 @@ this.put(specialMessage, anyType, functionName, exception)
 }
 
 
-    /*actual*/ open fun put(specialMessage: String, anyType: Any, functionName: String)
+    /*actual*/ open fun putF(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var specialMessage = specialMessage

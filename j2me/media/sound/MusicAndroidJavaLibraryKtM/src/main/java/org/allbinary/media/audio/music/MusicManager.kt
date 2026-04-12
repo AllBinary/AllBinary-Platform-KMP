@@ -278,7 +278,7 @@ this.resourceUtil!!.getContext()!!.startService(this.currentIntent)
 
                                     }
                                 
-PreLogUtil.put(commonStrings!!.EXCEPTION_LABEL +resource, this, commonStrings!!.PROCESS, e)
+PreLogUtil.putOE(commonStrings!!.EXCEPTION_LABEL +resource, this, commonStrings!!.PROCESS, e)
 }
 
 }

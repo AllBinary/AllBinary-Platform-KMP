@@ -227,7 +227,7 @@ var colorRangeInterface = colorRangeInterface
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(CommonLabels.getInstance()!!.START +colorRangeInterface!!.toString(), this, commonStrings!!.PROCESS)
+this.logUtil!!.putF(CommonLabels.getInstance()!!.START +colorRangeInterface!!.toString(), this, commonStrings!!.PROCESS)
 
     var imageAnalysisResultsArray: Array<ImageAnalysisResults?> = arrayOfNulls(bufferedImageArray!!.size)
 

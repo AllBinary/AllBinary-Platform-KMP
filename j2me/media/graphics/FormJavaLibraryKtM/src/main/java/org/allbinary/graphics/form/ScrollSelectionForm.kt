@@ -232,7 +232,7 @@ stringBuffer!!.appendint(start)
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 stringBuffer!!.append(commonLabels!!.TOTAL_LABEL)
 stringBuffer!!.appendint(size)
-logUtil!!.put(stringBuffer!!.toString(), this, GET_SELECTED_INDEX)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, GET_SELECTED_INDEX)
 
     var item: CustomItemInterface
 
@@ -292,7 +292,7 @@ stringBuffer!!.append(item.getLabel())
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 stringBuffer!!.append(commonLabels!!.INDEX_LABEL)
 stringBuffer!!.appendint(index)
-logUtil!!.put(stringBuffer!!.toString(), this, GET_SELECTED_INDEX)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, GET_SELECTED_INDEX)
 
 
 
@@ -487,7 +487,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, GET_SELECTED_INDEX)
                         if(rectangleCollisionUtil!!.isInside(x, y -halfBorder, this.rectangle.getMaxX() +border, this.rectangle.getMaxY() +border, point.getX(), point.getY()))
                         
                                     {
-                                    logUtil!!.put(StringMaker().
+                                    this.logUtil!!.putF(StringMaker().
                             append(StringUtil.getInstance()!!.toString(point))!!.append(INSIDE_FORM)!!.toString(), this, IS_IN_FORM)
 
 

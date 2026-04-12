@@ -91,7 +91,7 @@ public constructor (abeClientInformation: AbeClientInformationInterface, command
 
                             //For kotlin this is before the body of the constructor.
                     
-logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 
     
                         if(helpPaintable == 
@@ -180,7 +180,7 @@ var keyCode = keyCode
 var repeated = repeated
 
         try {
-            logUtil!!.put(StringMaker().
+            this.logUtil!!.putF(StringMaker().
                             append("Raw Device Key Code: ")!!.append(Integer.toHexString(keyCode))!!.toString(), this, this.gameInputStrings!!.ADD_KEY_EVENT)
 
     var gameKey: GameKey = this.inputToGameKeyMapping!!.getInstance(this, keyCode)!!
@@ -191,7 +191,7 @@ var repeated = repeated
 this.process(gameKey, input)
 } catch(e: Exception)
             {
-logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
+this.logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
 }
 
 }
@@ -211,7 +211,7 @@ stringBuffer!!.append("Start Passed GameKey: ")
 stringBuffer!!.append(this.stringUtil!!.toString(gameKey))
 stringBuffer!!.append(" Input: ")
 stringBuffer!!.append(this.stringUtil!!.toString(input))
-logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.PROCESS)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.PROCESS)
 
     
                         if(this.selectedGameKey != NONE)
@@ -233,7 +233,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.PROCESS)
         //nullable = true from not(false or (false and false)) = true
 {
 var gameKey = gameKey
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append("Selected GameKey: ")!!.append(this.stringUtil!!.toString(gameKey))!!.toString(), this, "setSelectedAction")
 this.selectedGameKey= gameKey
 this.selectedInput= NONE
@@ -256,7 +256,7 @@ stringBuffer!!.append("Start GameKey: ")
 stringBuffer!!.append(this.stringUtil!!.toString(this.selectedGameKey))
 stringBuffer!!.append(" Input: ")
 stringBuffer!!.append(this.stringUtil!!.toString(this.selectedInput))
-logUtil!!.put(stringBuffer!!.toString(), this, "gameActionCrud")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "gameActionCrud")
 
     
                         if(this.selectedInput == NONE)
@@ -273,7 +273,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "gameActionCrud")
                         if(isInputAlreadyMappedToSelectedAction)
                         
                                     {
-                                    logUtil!!.put(StringMaker().
+                                    this.logUtil!!.putF(StringMaker().
                             append("Already Mapped Input: ")!!.append(this.stringUtil!!.toString(input))!!.toString(), this, "gameActionCrud")
 this.selectedInput= input
 this.helpPaintable!!.update(this.selectedGameKey, this.selectedInput)
@@ -316,7 +316,7 @@ this.repaintBehavior!!.onChangeRepaint(this)
 
     var METHOD_NAME: String = "addNewMapping"
 
-logUtil!!.put(commonStrings!!.START, this, METHOD_NAME)
+this.logUtil!!.putF(commonStrings!!.START, this, METHOD_NAME)
 
     var isInputAlreadyMapped: Boolean = inputMapping!!.getInputMapping()!!.isMapped(input)!!
 
@@ -332,7 +332,7 @@ stringBuffer!!.append("Add Key Mapping : GameKey: ")
 stringBuffer!!.append(this.stringUtil!!.toString(this.selectedGameKey))
 stringBuffer!!.append(" Input: ")
 stringBuffer!!.append(this.stringUtil!!.toString(this.selectedInput))
-logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_NAME)
 inputMapping!!.getInputMapping()!!.add(this.selectedGameKey, input)
 this.selectedInput= input
 this.update()
@@ -340,7 +340,7 @@ this.update()
                                     }
                                 
                         else {
-                            logUtil!!.put("Unable to add Mapping since one already exists or is MENU, HOME, or BACK key and setting selected action to what it is already mapped to", this, METHOD_NAME)
+                            this.logUtil!!.putF("Unable to add Mapping since one already exists or is MENU, HOME, or BACK key and setting selected action to what it is already mapped to", this, METHOD_NAME)
 this.setSelectedAction(gameKey)
 
                         }
@@ -372,7 +372,7 @@ stringBuffer!!.append("Remove Key Mapping: GameKey: ")
 stringBuffer!!.append(stringUtil!!.toString(this.selectedGameKey))
 stringBuffer!!.append(" Input: ")
 stringBuffer!!.append(stringUtil!!.toString(this.selectedInput))
-logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_NAME)
 inputMapping!!.getInputMapping()!!.remove(this.selectedGameKey, this.selectedInput)
 this.selectedInput= NONE
 this.update()
@@ -380,7 +380,7 @@ this.update()
                                     }
                                 
                         else {
-                            logUtil!!.put("Can't Remove Last Key Mapping", this, METHOD_NAME)
+                            this.logUtil!!.putF("Can't Remove Last Key Mapping", this, METHOD_NAME)
 
                         }
                             

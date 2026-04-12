@@ -42,13 +42,13 @@ import org.allbinary.string.CommonStrings
     //var specialMessage = specialMessage
     //var anyType = anyType
     //var functionName = functionName
-put(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
+putOE(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
 }
 
 
     private val LOG_SUCCESS: String = "org.allbinary: "
 
-    /*actual*/ open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)
+    /*actual*/ open fun putOE(specialMessage: String, anyType: Any, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
 {
     //var specialMessage = specialMessage
@@ -78,7 +78,7 @@ System.out.println(message)
 }
 
 
-    /*actual*/ open fun put(specialMessage: String, className: String, functionName: String, exception: Any)
+    /*actual*/ open fun putSE(specialMessage: String, className: String, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 var specialMessage = specialMessage

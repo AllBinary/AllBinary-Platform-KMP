@@ -158,7 +158,7 @@ this.propertiesJPanel!!.set(this.workAreaJTreeJPanel)
                         if(LOGGING.contains(LOGGING.LOADINGERROR))
                         
                                     {
-                                    logUtil!!.put("Constructor Error", this, "WorkAreaJPanel", e)
+                                    this.logUtil!!.put("Constructor Error", this, "WorkAreaJPanel", e)
 
                                     }
                                 

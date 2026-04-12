@@ -108,7 +108,7 @@ this.weblisketSession= WeblisketSession(hashMap, pageContext)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "isBasketEmpty()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "isBasketEmpty()", e)
 
                                     }
                                 

@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.string.CommonStrings
+import tags.TagStrings
 
 open public class ModifyTable
             : Object
@@ -39,6 +40,8 @@ open public class ModifyTable
             }            
         
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
+
+    val tagStrings: TagStrings = TagStrings.getInstance()!!
 
                 @Throws(Exception::class)
             

@@ -131,7 +131,7 @@ dataOutputStream!!.writeUTF(DatabaseEncoder.encode(licenseServerCrypted))
 
 } catch(e: Exception)
             {
-logUtil!!.put("Command Failed: " +INITFILENAME, this, "write", e)
+this.logUtil!!.put("Command Failed: " +INITFILENAME, this, "write", e)
 FileStreamFactory.getInstance()!!.delete(this.filePath, INITFILENAME)
 
 
@@ -177,7 +177,7 @@ var initializeCounter = initializeCounter
                                 
 
         try {
-            logUtil!!.put("LicenseInitInfo File: " +INITFILENAME, this, METHOD_NAME)
+            this.logUtil!!.putF("LicenseInitInfo File: " +INITFILENAME, this, METHOD_NAME)
 
     var fileStreamFactory: FileStreamFactory = FileStreamFactory.getInstance()!!
 
@@ -225,7 +225,7 @@ decodedByteArray= DatabaseEncoder.decode(iData!!.readUTF())
 licenseServerDecoded= decodedByteArray.decodeToString()
 initInfo!!.setServer(WeakCrypt(3).
                             decrypt(licenseServerDecoded), index)
-logUtil!!.put(NEXT_FILE +initInfo!!.getServer(index), this, METHOD_NAME)
+this.logUtil!!.putF(NEXT_FILE +initInfo!!.getServer(index), this, METHOD_NAME)
 }
 
 
@@ -248,10 +248,10 @@ logUtil!!.put(NEXT_FILE +initInfo!!.getServer(index), this, METHOD_NAME)
             {
 
         try {
-            logUtil!!.put("Command Failed: " +INITFILENAME, this, METHOD_NAME, e)
-} catch(se: Exception)
+            this.logUtil!!.put("Command Failed: " +INITFILENAME, this, METHOD_NAME, e)
+} catch(e2: Exception)
             {
-logUtil!!.put("LicenseInitInfo Read Retry: " +INITFILENAME, this, "readAgain()", se)
+this.logUtil!!.put("LicenseInitInfo Read Retry: " +INITFILENAME, this, "readAgain()", e2)
 }
 
 

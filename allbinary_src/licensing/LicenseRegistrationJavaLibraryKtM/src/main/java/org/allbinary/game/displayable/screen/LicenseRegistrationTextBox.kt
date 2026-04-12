@@ -92,7 +92,7 @@ this.setCommandListener(cmdListener)
 virtualKeyboardEventHandler!!.fireEvent(virtualKeyboardEventHandler!!.SHOW_EVENT)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "open", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "open", e)
 }
 
 super.open()
@@ -112,7 +112,7 @@ this.repaint()
 virtualKeyboardEventHandler!!.fireEvent(virtualKeyboardEventHandler!!.HIDE_EVENT)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "open", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "open", e)
 }
 
 this.paintable= this.pleaseWaitPaintable

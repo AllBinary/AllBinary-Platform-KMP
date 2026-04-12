@@ -98,7 +98,7 @@ this.softwareInformation= softwareInformation
 {
     //var gameInfo = gameInfo
     //var highScoresResultsListener = highScoresResultsListener
-logUtil!!.put("Getting Remote/Local HighScores", this, FETCH)
+this.logUtil!!.putF("Getting Remote/Local HighScores", this, FETCH)
 this.fetchHighScores(gameInfo, highScoresResultsListener, true)
 }
 
@@ -116,8 +116,11 @@ SecondaryThreadPool.getInstance()!!.runTask(object: ARunnable()
         //nullable = true from not(false or (false and true)) = true
 {
 
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+
         try {
-            logUtil!!.put(commonStrings!!.START, this, FETCH)
+            logUtil!!.putF(commonStrings!!.START, this, FETCH)
 highScoresArray[0]= RecordStoreHighScores.getInstance(abeClientInformation, gameInfo, TOP, PERSONAL_HIGH_SCORES, SCORES, ScoreComparator(true))
 
     var gameType: GameType = gameInfo!!.getGameType()!!
@@ -147,7 +150,7 @@ highScoresArray[0]= RecordStoreHighScores.getInstance(abeClientInformation, game
                                     }
                                 
 highScoresArray[1]= RemoteHighScores.getInstance(abeClientInformation, softwareInformation, gameInfo2, WORLD_TOP_SCORES, SCORES, BooleanFactory.getInstance()!!.FALSE, preload)
-logUtil!!.put(commonStrings!!.END, this, FETCH)
+logUtil!!.putF(commonStrings!!.END, this, FETCH)
 LastFetchHighScoresFactory.getInstance()!!.highScoresArray= highScoresArray
 highScoresResultsListener!!.setHighScoresArray(highScoresArray)
 } catch(e: Exception)

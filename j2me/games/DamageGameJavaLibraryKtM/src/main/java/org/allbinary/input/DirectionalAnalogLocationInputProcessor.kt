@@ -74,7 +74,7 @@ this.rightTriggerGameKeyEvent= GameKeyEventFactory.getInstance()!!.getInstance(t
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
 }
@@ -162,7 +162,7 @@ customGPoint= analogLocationInput!!.getCustomGPoint()
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put("Unable to process analog input", this, commonStrings!!.PROCESS, e)
+this.logUtil!!.put("Unable to process analog input", this, commonStrings!!.PROCESS, e)
 }
 
 }

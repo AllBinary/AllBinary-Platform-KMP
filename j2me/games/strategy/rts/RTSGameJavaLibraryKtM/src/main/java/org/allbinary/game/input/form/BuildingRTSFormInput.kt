@@ -211,7 +211,7 @@ this.buildFromMotionInput(rtsPlayerLayerInterface, layerManager, item, itemIndex
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.START, this, "buildFromMotionInput")
+this.logUtil!!.putF(commonStrings!!.START, this, "buildFromMotionInput")
 
     
                         if(layerManager == 
@@ -359,7 +359,7 @@ this.attemptBuild(rtsPlayerLayerInterface, layerManager, rtsLayer, itemIndex)
     //var layerManager = layerManager
     //var layerInterface = layerInterface
     //var itemIndex = itemIndex
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append("Layer: ")!!.append(StringUtil.getInstance()!!.toString(layerInterface))!!.toString(), this, "attemptBuild")
 
     var geographicMapCellPositionArea: GeographicMapCellPositionAreaBase = layerInterface!!.geographicMapCellPositionAreaBase
@@ -440,7 +440,7 @@ stringBuffer!!.append(" for: $")
 stringBuffer!!.appendint(cost)
 stringBuffer!!.append(" with ")
 stringBuffer!!.appendint(capital.getTotalMoney())
-logUtil!!.put(stringBuffer!!.toString(), this, "attemptBuild")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "attemptBuild")
 
     
                         if(cost <= capital.getTotalMoney())
@@ -635,7 +635,7 @@ stringBuffer!!.append(" surroundSize: ")
 stringBuffer!!.appendint(surroundSize)
 stringBuffer!!.append(" surroundList: ")
 stringBuffer!!.append(StringUtil.getInstance()!!.toString(surroundList))
-logUtil!!.put(stringBuffer!!.toString(), this, "isSurroundingCellsOffMap")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "isSurroundingCellsOffMap")
 
     var isSurroundOffMap: Boolean = false
 

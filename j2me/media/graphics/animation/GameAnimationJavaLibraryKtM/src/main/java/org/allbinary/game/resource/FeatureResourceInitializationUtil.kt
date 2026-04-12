@@ -66,7 +66,7 @@ var level = level
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.START, this, commonStrings!!.INIT)
+this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.INIT)
 
     var featuredResourceFactory: FeaturedResourceFactory = FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!
 

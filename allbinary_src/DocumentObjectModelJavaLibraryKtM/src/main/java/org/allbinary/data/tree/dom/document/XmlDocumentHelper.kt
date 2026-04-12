@@ -104,7 +104,7 @@ transformer.setOutputProperty(OutputKeys.INDENT, booleanFactory!!.YES)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }
 
 }

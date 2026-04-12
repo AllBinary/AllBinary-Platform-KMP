@@ -47,6 +47,9 @@ open public class ConcurrentImageLoadingProcessor : BaseImageLoadingProcessor {
         //nullable = true from not(false or (false and true)) = true
 {
 
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+
         try {
             this.setRunning(true)
 imageCache!!.waitForLoadNow()

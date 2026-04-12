@@ -60,7 +60,7 @@ abFileArray[index]= AbFile(files[index]!! as File)
                         return abFileArray
 } catch(e: Exception)
             {
-PreLogUtil.put("Exception Wrapping Files", "FileWrapperUtil", "wrapFiles", e)
+PreLogUtil.putSE("Exception Wrapping Files", "FileWrapperUtil", "wrapFiles", e)
 
 
 
@@ -84,7 +84,7 @@ var file = file
                         return AbFile(file)
 } catch(e: Exception)
             {
-PreLogUtil.put("Exception Wrapping File", "FileWrapperUtil", "wrapFile", e)
+PreLogUtil.putSE("Exception Wrapping File", "FileWrapperUtil", "wrapFile", e)
 
 
 

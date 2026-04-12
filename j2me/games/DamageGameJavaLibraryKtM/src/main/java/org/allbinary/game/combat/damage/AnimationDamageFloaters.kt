@@ -131,7 +131,7 @@ animationInterface!!.nextFrame()
 
     var canvasStrings: CanvasStrings = CanvasStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, canvasStrings!!.PAINT, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, canvasStrings!!.PAINT, e)
 }
 
 }

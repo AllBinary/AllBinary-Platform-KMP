@@ -744,7 +744,7 @@ layerInterface!!.onMovementFound(this.getTrackingEvent())
                                 
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "onMovement", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "onMovement", e)
 }
 
 }
@@ -1608,7 +1608,7 @@ this.getUnitWaypointBehavior()!!.addBuildingChase(allbinaryLayer, cellPosition)
                                 
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "move", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "move", e)
 }
 
 }
@@ -1723,7 +1723,7 @@ this.damageFloaters!!.add(damage)
         //nullable = true from not(false or (false and false)) = true
 {
     //var destroyed = destroyed
-logUtil!!.put(commonStrings!!.START, this, "setDestroyed")
+this.logUtil!!.putF(commonStrings!!.START, this, "setDestroyed")
 super.setDestroyed(destroyed)
 
     

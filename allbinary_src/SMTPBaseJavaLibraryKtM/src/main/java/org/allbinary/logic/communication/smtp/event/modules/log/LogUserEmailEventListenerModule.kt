@@ -56,7 +56,7 @@ var userEmailInfoEvent = userEmailInfoEvent
                                     
     var message: String = "Logging EmailEvent - Temporary Listener for debugging.\n\n" +userEmailInfoEvent!!.toString()
 
-logUtil!!.put(message, this, "onEmailSendRequest")
+this.logUtil!!.putF(message, this, "onEmailSendRequest")
 
                                     }
                                 

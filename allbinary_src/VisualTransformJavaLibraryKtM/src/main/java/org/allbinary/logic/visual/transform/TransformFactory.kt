@@ -84,7 +84,7 @@ private constructor ()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
-                                    logUtil!!.put("Creating Transform: " +viewName, this, commonStrings!!.GET_INSTANCE)
+                                    this.logUtil!!.putF("Creating Transform: " +viewName, this, commonStrings!!.GET_INSTANCE)
 
                                     }
                                 
@@ -120,7 +120,7 @@ transformInfoInterface!!.setChild()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
-                                    logUtil!!.put("Created Transform: " +viewName, this, commonStrings!!.GET_INSTANCE)
+                                    this.logUtil!!.putF("Created Transform: " +viewName, this, commonStrings!!.GET_INSTANCE)
 
                                     }
                                 
@@ -136,7 +136,7 @@ transformInfoInterface!!.setChild()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
 
                                     }
                                 
@@ -167,7 +167,7 @@ transformInfoInterface!!.setChild()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
-                                    logUtil!!.put("Creating Transform: " +propertiesHashMap!!.get(transformInfoData!!.NAME), this, commonStrings!!.GET_INSTANCE)
+                                    this.logUtil!!.putF("Creating Transform: " +propertiesHashMap!!.get(transformInfoData!!.NAME), this, commonStrings!!.GET_INSTANCE)
 
                                     }
                                 
@@ -201,7 +201,7 @@ transformInfoInterface!!.setChild()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
-                                    logUtil!!.put("Created Transform: " +propertiesHashMap!!.get(transformInfoData!!.NAME), this, commonStrings!!.GET_INSTANCE)
+                                    this.logUtil!!.putF("Created Transform: " +propertiesHashMap!!.get(transformInfoData!!.NAME), this, commonStrings!!.GET_INSTANCE)
 
                                     }
                                 
@@ -223,7 +223,7 @@ transformInfoInterface!!.setChild()
 stringBuffer!!.append("Failed To Get Instance: ")
 stringBuffer!!.append(propertiesHashMap!!.get(TransformInfoData.getInstance()!!.NAME) as String)
 stringBuffer!!.append("->TransformFactory")
-logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE, e)
+this.logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE, e)
 
                                     }
                                 
@@ -250,7 +250,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE, e)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
-                                    logUtil!!.put("Creating Transform: " +transformInfoInterface!!.getName(), this, "getInstance(TransformInfoInterface)")
+                                    this.logUtil!!.putF("Creating Transform: " +transformInfoInterface!!.getName(), this, "getInstance(TransformInfoInterface)")
 
                                     }
                                 
@@ -262,7 +262,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE, e)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
-                                    logUtil!!.put("Created Transform: " +transformInfoInterface!!.getName(), this, "getInstance(TransformInfoInterface)")
+                                    this.logUtil!!.putF("Created Transform: " +transformInfoInterface!!.getName(), this, "getInstance(TransformInfoInterface)")
 
                                     }
                                 
@@ -278,7 +278,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE, e)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getInstance(TransformInfoInterface)", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "getInstance(TransformInfoInterface)", e)
 
                                     }
                                 

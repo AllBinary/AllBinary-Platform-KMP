@@ -56,7 +56,7 @@ var weblisketSession = weblisketSession
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Using Session StoreName: " +storeName, this, this.commonStrings!!.CONSTRUCTOR)
+                                    this.logUtil!!.putF("Using Session StoreName: " +storeName, this, this.commonStrings!!.CONSTRUCTOR)
 
                                     }
                                 
@@ -70,7 +70,7 @@ this.getBaseNode()!!.appendChild(RequestParams(pageContext!!.getRequest() as Htt
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR, e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR, e)
 
                                     }
                                 
@@ -101,7 +101,7 @@ this.getBaseNode()!!.appendChild(searchRequest!!.getParams()!!.getParamsNode(thi
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR, e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR, e)
 
                                     }
                                 

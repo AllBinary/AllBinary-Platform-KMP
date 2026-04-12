@@ -55,6 +55,8 @@ companion object {
 
     private val abCryptUtil: AbCryptUtil = AbCryptUtil.getInstance()!!
 
+    private val LOAD_CLASS: String = "loadClass"
+
     private val ENCRYPTED_EXTENSION: String = AbPathData.getInstance()!!.EXTENSION_SEP +"abc"
 
     private var key: String
@@ -148,15 +150,15 @@ var resolve = resolve
                                 
 } catch(e: ClassNotFoundException)
             {
-logBuffer!!.add(LogFactory.getInstance("Failed to Load Class: " +name +"\nwith: " +loadedWith, this, "loadClass", e))
+logBuffer!!.add(LogFactory.getInstance("Failed to Load Class: " +name +"\nwith: " +loadedWith, this, this.LOAD_CLASS, e))
 }
  catch(e: Exception)
             {
-logBuffer!!.add(LogFactory.getInstance("Failed to Load Class: " +name +"\nwith: " +loadedWith, this, "loadClass", e))
+logBuffer!!.add(LogFactory.getInstance("Failed to Load Class: " +name +"\nwith: " +loadedWith, this, this.LOAD_CLASS, e))
 }
  catch(e: NoClassDefFoundError)
             {
-logBuffer!!.add(LogFactory.getInstance("NoClassDefFoundError Failed Loaded Class: " +name +"\nwith: " +loadedWith, this, "loadClass"))
+logBuffer!!.add(LogFactory.getInstanceF("NoClassDefFoundError Failed Loaded Class: " +name +"\nwith: " +loadedWith, this, this.LOAD_CLASS))
 }
 
 
@@ -196,7 +198,7 @@ classes.put(name, myClass::class.java)
                                     }
                                 
                         else {
-                            logBuffer!!.add(LogFactory.getInstance("Already Loaded: " +name +"\nwith: " +loadedWith, this, "loadClass"))
+                            logBuffer!!.add(LogFactory.getInstanceF("Already Loaded: " +name +"\nwith: " +loadedWith, this, this.LOAD_CLASS))
 
                         }
                             
@@ -214,7 +216,7 @@ resolveClass(myClass::class.java)
                         
                                     {
                                     logBuffer!!.logAll()
-logUtil!!.put("Failure loading: " +name +"\nwith: " +loadedWith, this, "loadClass", e)
+this.logUtil!!.put("Failure loading: " +name +"\nwith: " +loadedWith, this, this.LOAD_CLASS, e)
 
                                     }
                                 
@@ -259,7 +261,7 @@ in= FileInputStream(cname)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
-                                    logUtil!!.put("(Before LogBuffer Output) Failure loading Encrypted: " +name +" File: " +cname, "AbeClassLoader", "loadClassBytes", e)
+                                    this.logUtil!!.put("(Before LogBuffer Output) Failure loading Encrypted: " +name +" File: " +cname, "AbeClassLoader", "loadClassBytes", e)
 
                                     }
                                 
@@ -275,7 +277,7 @@ StreamUtil.getInstance()!!.close(in)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
-                                    logUtil!!.put("(Before LogBuffer Output) Failed to Loaded Class: " +name +" File: " +cname +"\nwith: " +loadedWith, this, "loadClassBytes", e)
+                                    this.logUtil!!.put("(Before LogBuffer Output) Failed to Loaded Class: " +name +" File: " +cname +"\nwith: " +loadedWith, this, "loadClassBytes", e)
 
                                     }
                                 
@@ -290,7 +292,7 @@ StreamUtil.getInstance()!!.close(in)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
-                                    logUtil!!.put("(Before LogBuffer Output) NoClassDefFoundError Failed Loaded Class: " +name +" File: " +cname +"\nwith: " +loadedWith, this, "loadClassBytes")
+                                    this.logUtil!!.putF("(Before LogBuffer Output) NoClassDefFoundError Failed Loaded Class: " +name +" File: " +cname +"\nwith: " +loadedWith, this, "loadClassBytes")
 
                                     }
                                 
@@ -355,7 +357,7 @@ var resolve = resolve
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADER))
                         
                                     {
-                                    logUtil!!.put("Failed Loaded Class: " +name +" with: " +loadedWith, this, "loadClass")
+                                    this.logUtil!!.putF("Failed Loaded Class: " +name +" with: " +loadedWith, this, this.LOAD_CLASS)
 
                                     }
                                 
@@ -367,7 +369,7 @@ var resolve = resolve
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADER))
                         
                                     {
-                                    logUtil!!.put("Failed Loaded Class: " +name +" with: " +loadedWith, this, "loadClass")
+                                    this.logUtil!!.putF("Failed Loaded Class: " +name +" with: " +loadedWith, this, this.LOAD_CLASS)
 
                                     }
                                 
@@ -379,7 +381,7 @@ var resolve = resolve
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADER))
                         
                                     {
-                                    logUtil!!.put("Failed Loaded Class: " +name +" with: " +loadedWith, this, "loadClass")
+                                    this.logUtil!!.putF("Failed Loaded Class: " +name +" with: " +loadedWith, this, this.LOAD_CLASS)
 
                                     }
                                 
@@ -428,7 +430,7 @@ classes.put(name, myClass::class.java)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADER))
                         
                                     {
-                                    logUtil!!.put("Already Loaded: " +name +" with: " +loadedWith, this, "loadClass")
+                                    this.logUtil!!.putF("Already Loaded: " +name +" with: " +loadedWith, this, this.LOAD_CLASS)
 
                                     }
                                 
@@ -448,7 +450,7 @@ resolveClass(myClass::class.java)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
-                                    logUtil!!.put("Failure loading: " +name, "AbeClassLoader", "loadClass", e)
+                                    this.logUtil!!.put("Failure loading: " +name, "AbeClassLoader", this.LOAD_CLASS, e)
 
                                     }
                                 

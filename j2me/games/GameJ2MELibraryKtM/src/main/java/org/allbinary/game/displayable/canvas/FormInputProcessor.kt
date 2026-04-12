@@ -86,7 +86,7 @@ this.allBinaryGameCanvas= allBinaryGameCanvas
 downKeyEventHandler!!.fireEvent(gameKeyEvent)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
 }
 
 }
@@ -123,7 +123,7 @@ upGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
                                 
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
 }
 
 }

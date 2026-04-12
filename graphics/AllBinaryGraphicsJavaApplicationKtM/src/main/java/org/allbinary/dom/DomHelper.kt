@@ -353,7 +353,7 @@ var nodeList = nodeList
 
     var node: Node = nodeList!!.item(index)!!
 
-logUtil!!.put("NodeName: " +node.getNodeName(), this, "searchNodeList")
+this.logUtil!!.putF("NodeName: " +node.getNodeName(), this, "searchNodeList")
 
     
                         if(node.getNodeName()!!.compareTo(nodeName) == 0)
@@ -396,7 +396,7 @@ var nodeList = nodeList
 
     var node: Node = nodeList!!.get(index) as Node
 
-logUtil!!.put("NodeName: " +node.getNodeName(), this, "searchNodeList")
+this.logUtil!!.putF("NodeName: " +node.getNodeName(), this, "searchNodeList")
 
     
                         if(node.getNodeName()!!.compareTo(nodeName) == 0)

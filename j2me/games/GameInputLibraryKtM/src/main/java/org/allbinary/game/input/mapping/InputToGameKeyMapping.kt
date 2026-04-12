@@ -54,7 +54,7 @@ companion object {
 
     private val platformToGameKeyMapping: Array<GameKey?> = arrayOfNulls(InputFactory.getInstance()!!.MAX)
 public constructor (){
-logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 this.clear()
 }
 
@@ -147,7 +147,7 @@ this.set(input, mappedToInput)
 {
 var input = input
 var mappedToInput = mappedToInput
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(CommonLabels.getInstance()!!.START_LABEL)!!.append(StringUtil.getInstance()!!.toString(input))!!.append(" == ")!!.append(StringUtil.getInstance()!!.toString(mappedToInput))!!.toString(), this, "InputToGameKeyMapping::remove")
 super.remove(input, mappedToInput)
 this.set(input, gameKeyFactory!!.NONE)
@@ -271,7 +271,7 @@ var gameKey = gameKey
                                     }
                                 
                         else {
-                            PreLogUtil.put(StringMaker().
+                            PreLogUtil.putOE(StringMaker().
                             append(gameKey!!.toString())!!.append(CommonSeps.getInstance()!!.COLON_SEP)!!.appendint(key)!!.toString(), this, commonStrings!!.INIT, Exception())
 
                         }
@@ -372,7 +372,7 @@ this.init(canvas, mappedGameKeys[index]!!)
 
 } catch(t: Throwable)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, t)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, t)
 }
 
 }

@@ -71,7 +71,7 @@ private constructor ()
         //nullable = true from not(false or (false and false)) = true
 {
     //var classLoader = classLoader
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append("Resource Loader: ")!!.append(classLoader!!::class.toString()!!)!!.toString(), this, "setClassLoader")
 ResourceUtil.classLoader= classLoader
 }

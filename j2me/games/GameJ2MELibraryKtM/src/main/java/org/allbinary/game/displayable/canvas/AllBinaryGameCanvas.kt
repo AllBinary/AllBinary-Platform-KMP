@@ -134,6 +134,7 @@ import org.allbinary.input.motion.button.TouchButtonsPaintableFactory
 import org.allbinary.input.motion.button.TouchScreenFactory
 import org.allbinary.input.motion.gesture.observer.BasicMotionGesturesHandler
 import org.allbinary.logic.communication.log.ForcedLogUtil
+import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
@@ -427,7 +428,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
             this.menuBehavior!!.onDisplayChangeEvent(this, displayChangeEvent)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT, e)
 }
 
 }
@@ -547,7 +548,7 @@ this.setPopupMenuInputProcessor(PopupMenuInputProcessor(BasicArrayList(),  -1, t
             this.menuBehavior!!.initMenu(this)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "initMenu", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "initMenu", e)
 }
 
 }
@@ -623,7 +624,7 @@ this.closeMenu()
             this.menuBehavior!!.updateMenu(this)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "initMenu", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "initMenu", e)
 }
 
 }
@@ -690,7 +691,7 @@ System.gc()
     override fun unPause()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put(commonStrings!!.START, this, gameStrings!!.UNPAUSE)
+this.logUtil!!.putF(commonStrings!!.START, this, gameStrings!!.UNPAUSE)
 this.closeMenu()
 System.gc()
 super.unPause()
@@ -754,7 +755,7 @@ this.gameKeyEventHandler!!.addListener(this.mainMenuInputProcessor)
     override fun toggleMenu()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put(commonStrings!!.START, this, this.gameStrings!!.TOGGLE_MENU)
+this.logUtil!!.putF(commonStrings!!.START, this, this.gameStrings!!.TOGGLE_MENU)
 
     
                         if(this.getMenuPaintable() == this.getOpenMenuPaintable())
@@ -849,7 +850,7 @@ this.setLayerManager(gameLayerManager)
                                     
     var BUFF_MESSAGE: String = "XXX Not Buffering Causes Concurrency Issues XXX"
 
-logUtil!!.put(BUFF_MESSAGE, this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(BUFF_MESSAGE, this, commonStrings!!.CONSTRUCTOR)
 
                                     }
                                 
@@ -963,7 +964,7 @@ GameInitializationUtil.getInstance()!!.initGame(abeClientInformation, this, game
                                     
     var features: Features = Features.getInstance()!!
 
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append("Sound Changing To: ")!!.appendboolean(features.isFeature(gameFeatureFactory!!.SOUND))!!.toString(), this, "initConfigurable")
 this.mediaInit()
 changedGameFeatureListener!!.remove(gameFeatureFactory!!.SOUND)
@@ -1176,7 +1177,7 @@ var item = item
             
     var itemLabel: String = item.getLabel()!!
 
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(commonLabels!!.ITEM_LABEL)!!.append(itemLabel)!!.toString(), this, "itemStateChanged")
 
     
@@ -1209,7 +1210,7 @@ this.updateScreenButtonPaintable()
 this.sensorGameUpdateProcessor!!.sendNotifications(this.gameLayerManager)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "itemStateChanged", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "itemStateChanged", e)
 }
 
 }
@@ -1346,7 +1347,7 @@ this.highScoreSubmitted= highScoreSubmitted
 
                                     }
                                 
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append("isHighScoreSubmitted: ")!!.appendboolean(highScoreSubmitted)!!.toString(), this, "setHighScoreSubmitted")
 }
 
@@ -1368,7 +1369,7 @@ logUtil!!.put(StringMaker().
         //nullable = true from not(false or (false and false)) = true
 {
     //var gameState = gameState
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(this.gameStrings!!.GAME_STATE)!!.append(this.stringUtil!!.toString(gameState))!!.toString(), this, this.gameStrings!!.SET_GAME_STATE)
 this.gameState= gameState
 this.gameStateTimeHelper!!.setStartTime()
@@ -1434,7 +1435,7 @@ this.gameBehavior!!.removeAllGameKeyInputListeners(this)
     open fun removeAllGameKeyInputListeners2()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put("Remove PlayerInput Listeners", this, "removeAllGameKeyInputListeners")
+this.logUtil!!.putF("Remove PlayerInput Listeners", this, "removeAllGameKeyInputListeners")
 
 
 
@@ -1505,7 +1506,7 @@ this.gameBehavior!!.updateEndGameProcessor(this)
     open fun cleanupGame()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put(commonStrings!!.START, this, this.commonStrings!!.CLEANUP)
+this.logUtil!!.putF(commonStrings!!.START, this, this.commonStrings!!.CLEANUP)
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
@@ -1631,13 +1632,13 @@ this.setInitialized(true)
                         if(this.getCustomCommandListener() == NullCommandListener.NULL_COMMAND_LISTENER)
                         
                                     {
-                                    logUtil!!.put("Show Game Paintable in DemoCanvas Thread", this, BUILD_GAME)
+                                    this.logUtil!!.putF("Show Game Paintable in DemoCanvas Thread", this, BUILD_GAME)
 this.gameCanvasStartListener!!.showGamePaintable()
 
                                     }
                                 
                         else {
-                            logUtil!!.put("No GameCanvasStartListener", this, BUILD_GAME)
+                            this.logUtil!!.putF("No GameCanvasStartListener", this, BUILD_GAME)
 
                         }
                             
@@ -1694,7 +1695,7 @@ this.gameCanvasStartListener= gameCanvasStartListener
     open fun loadState()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put(commonStrings!!.START, this, commonStrings!!.LOAD)
+this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.LOAD)
 
     var hashtable: Hashtable<Any, Any> = getLoadStateHashtable()!!
 
@@ -1726,7 +1727,7 @@ gameInfo!!.setCurrentLevel(level)
     override fun getLoadStateHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(commonLabels!!.START_LABEL)!!.append(this.stringUtil!!.toString(this.hashtable))!!.toString(), this, "getLoadStateHashtable")
 
 
@@ -1740,7 +1741,7 @@ logUtil!!.put(StringMaker().
         //nullable = true from not(false or (false and false)) = true
 {
     //var hashtable = hashtable
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(commonLabels!!.START_LABEL)!!.append(this.stringUtil!!.toString(hashtable))!!.toString(), this, "setLoadStateHashtable")
 this.hashtable= hashtable
 }
@@ -1756,7 +1757,7 @@ this.hashtable= hashtable
     var level: Int = this.gameLayerManager!!.getGameInfo()!!.getCurrentLevel()!!
 
 hashtable.put(GameInfo.LEVEL_NAME.toString(), level.toString())
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append("End: ")!!.append(this.stringUtil!!.toString(hashtable))!!.toString(), this, "getCurrentStateHashtable")
 
 
@@ -2066,7 +2067,7 @@ Thread.sleep(YIELD_SLEEP)
 {
 
         try {
-            logUtil!!.put(commonStrings!!.START_RUNNABLE, this, commonStrings!!.RUN)
+            this.logUtil!!.putF(commonStrings!!.START_RUNNABLE, this, commonStrings!!.RUN)
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
@@ -2100,10 +2101,10 @@ this.open()
 gameAdState!!.init()
 gameAdState!!.setGameIsReady(true)
 this.gameBehavior!!.run(this)
-logUtil!!.put(commonStrings!!.END_RUNNABLE, this, commonStrings!!.RUN)
+this.logUtil!!.putF(commonStrings!!.END_RUNNABLE, this, commonStrings!!.RUN)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
 
 }
@@ -2127,7 +2128,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
                         if(features.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD))
                         
                                     {
-                                    logUtil!!.put(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD.getName(), this, commonStrings!!.RUN)
+                                    this.logUtil!!.putF(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD.getName(), this, commonStrings!!.RUN)
 
                                     }
                                 
@@ -2136,7 +2137,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
                         if(J2MEUtil.isHTML())
                         
                                     {
-                                    logUtil!!.put(GraphicsStrings.getInstance()!!.HTML, this, commonStrings!!.RUN)
+                                    this.logUtil!!.putF(GraphicsStrings.getInstance()!!.HTML, this, commonStrings!!.RUN)
 
                                     }
                                 
@@ -2154,7 +2155,7 @@ OpenGLThreadUtil.getInstance()!!.onResume()
                         if(features.isDefault(openGLFeatureFactory!!.OPENGL_AND_GAME_HAVE_DIFFERENT_THREADS))
                         
                                     {
-                                    logUtil!!.put(openGLFeatureFactory!!.OPENGL_AND_GAME_HAVE_DIFFERENT_THREADS.getName(), this, commonStrings!!.RUN)
+                                    this.logUtil!!.putF(openGLFeatureFactory!!.OPENGL_AND_GAME_HAVE_DIFFERENT_THREADS.getName(), this, commonStrings!!.RUN)
 OpenGLThreadUtil.getInstance()!!.onResume()
 
         while(this.isRunning())
@@ -2167,7 +2168,7 @@ this.end()
                                     }
                                 
                         else {
-                            logUtil!!.put("this thread", this, commonStrings!!.RUN)
+                            this.logUtil!!.putF("this thread", this, commonStrings!!.RUN)
 
         while(this.isRunning())
         {
@@ -2238,7 +2239,7 @@ this.end()
                             
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, SET_RUNNING, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, SET_RUNNING, e)
 }
 
 }
@@ -2350,6 +2351,9 @@ open class SaveHighScoreRunnable
     override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
 
         try {
             

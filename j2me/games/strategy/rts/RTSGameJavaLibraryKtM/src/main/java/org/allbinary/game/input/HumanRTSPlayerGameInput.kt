@@ -300,7 +300,7 @@ stringBuffer!!.append(SPACE)
 stringBuffer!!.appendint(rectX2)
 stringBuffer!!.append(SPACE)
 stringBuffer!!.appendint(rectY2)
-logUtil!!.put(stringBuffer!!.toString(), this, METHOD)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD)
 
     var rtsLayer: RTSLayer
 
@@ -320,13 +320,13 @@ stringBuffer!!.append(AT)
 stringBuffer!!.appendint((rtsLayer!!.getViewPosition()!!.getX() +rtsLayer!!.getHalfWidth()))
 stringBuffer!!.append(SPACE)
 stringBuffer!!.appendint((rtsLayer!!.getViewPosition()!!.getY() +rtsLayer!!.getHalfHeight()))
-logUtil!!.put(stringBuffer!!.toString(), this, METHOD)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD)
 
     
                         if(rectangleCollisionUtil!!.isInside(rectX1, rectY1, rectX2, rectY2, rtsLayer!!.getViewPosition()!!.getX() +rtsLayer!!.getHalfWidth(), rtsLayer!!.getViewPosition()!!.getY() +rtsLayer!!.getHalfHeight()))
                         
                                     {
-                                    logUtil!!.put(StringMaker().
+                                    this.logUtil!!.putF(StringMaker().
                             append(ADDING)!!.append(rtsLayer!!.getName())!!.toString(), this, METHOD)
 rtsLayer!!.select()
 this.getSelectedBuildingPlayerGameInput()!!.addSelectedRTSLayer(rtsLayer)
@@ -463,7 +463,7 @@ getMotionGestureInputList()!!.clear()
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(CommonLabels.getInstance()!!.START)!!.append(StringUtil.getInstance()!!.toString(selectedRtsFormInput))!!.toString(), this, "setSelectedRtsFormInput")
 super.setSelectedRtsFormInput(selectedRtsFormInput)
 this.setSelectedRtsLayer(CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER)
@@ -589,7 +589,7 @@ gameCanvas!!.updateCurrentTouchInputFactory(endLevelTouchButtonsBuilder)
                                     }
                                 
                         else {
-                            logUtil!!.put("Set Player Default Form", this, "setSelectedRTSLayer")
+                            this.logUtil!!.putF("Set Player Default Form", this, "setSelectedRTSLayer")
 this.getRtsPlayerLayerInterface()!!.setCurrentScrollSelectionForm(this.getRtsPlayerLayerInterface()!!.getBuildingScrollSelectionForm())
 this.setSelectedRtsFormInput(this.getRtsPlayerLayerInterface()!!.getRTSFormInput())
 this.getSelectedBuildingPlayerGameInput()!!.setSelectedRTSLayer(CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER)

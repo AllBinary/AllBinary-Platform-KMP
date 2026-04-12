@@ -89,7 +89,7 @@ var os = os
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put("Ignoring Exception Returning NoHardware", this, commonStrings!!.GET_INSTANCE, e)
+this.logUtil!!.put("Ignoring Exception Returning NoHardware", this, commonStrings!!.GET_INSTANCE, e)
 
 
 

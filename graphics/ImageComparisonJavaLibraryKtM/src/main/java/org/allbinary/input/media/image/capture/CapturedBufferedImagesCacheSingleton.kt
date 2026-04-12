@@ -69,9 +69,9 @@ companion object {
 
 
         try {
-            logUtil!!.put(commonStrings!!.START, instance, STATIC_BLOCK)
+            logUtil!!.putF(commonStrings!!.START, instance, STATIC_BLOCK)
 cacheInterface= CacheInterfaceFactory.getInstance((), ()) as AutomaticCacheInterface
-logUtil!!.put(commonStrings!!.END, instance, STATIC_BLOCK)
+logUtil!!.putF(commonStrings!!.END, instance, STATIC_BLOCK)
 } catch(e: Exception)
             {
 logUtil!!.put(commonStrings!!.EXCEPTION, instance, STATIC_BLOCK, e)

@@ -52,7 +52,7 @@ var pageContext = pageContext
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
-                                    logUtil!!.put("Properties: " +hashMap!!.toString(), this, "StoreTagWorkFlowHelper()")
+                                    this.logUtil!!.putF("Properties: " +hashMap!!.toString(), this, "StoreTagWorkFlowHelper()")
 
                                     }
                                 
@@ -72,7 +72,7 @@ this.storeWorkFlowInterface= StoreTagWorkFlowFactory.getInstance()!!.getInstance
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
-                                    logUtil!!.put("Process", this, commonStrings!!.PROCESS)
+                                    this.logUtil!!.putF("Process", this, commonStrings!!.PROCESS)
 
                                     }
                                 
@@ -91,7 +91,7 @@ this.storeWorkFlowInterface= StoreTagWorkFlowFactory.getInstance()!!.getInstance
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "view()", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "view()", e)
 
                                     }
                                 

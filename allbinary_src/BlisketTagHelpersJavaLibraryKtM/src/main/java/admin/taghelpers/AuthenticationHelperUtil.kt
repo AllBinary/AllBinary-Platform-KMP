@@ -75,7 +75,7 @@ var filePath = filePath
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(CommonLabels.getInstance()!!.START +filePath, this, "isAuthorized()")
+                                    this.logUtil!!.putF(CommonLabels.getInstance()!!.START +filePath, this, "isAuthorized()")
 
                                     }
                                 
@@ -107,7 +107,7 @@ var filePath = filePath
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Authorized", this, "isAuthorized()")
+                                    this.logUtil!!.putF("Authorized", this, "isAuthorized()")
 
                                     }
                                 
@@ -125,7 +125,7 @@ var filePath = filePath
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Not Authorized: " +basicUserRole!!.toString(), this, "isAuthorized()")
+                                    this.logUtil!!.putF("Not Authorized: " +basicUserRole!!.toString(), this, "isAuthorized()")
 
                                     }
                                 

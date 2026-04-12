@@ -120,7 +120,7 @@ stringBuffer!!.append(RootTransformInfoData.NAME)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Root View Called with: " +viewVector!!.size, this, "get(transformInfoInterface)")
+                                    this.logUtil!!.putF("Root View Called with: " +viewVector!!.size, this, "get(transformInfoInterface)")
 
                                     }
                                 
@@ -173,7 +173,7 @@ stringBuffer!!.append("Replacing: ")
 stringBuffer!!.append(templateKey)
 stringBuffer!!.append(" with ")
 stringBuffer!!.append(templateValue)
-logUtil!!.put(stringBuffer!!.toString(), this, "get()")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "get()")
 
                                     }
                                 
@@ -188,7 +188,7 @@ rootView= replace.all(rootView)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("End: Result of a compound view: " +rootView, this, "get()")
+                                    this.logUtil!!.putF("End: Result of a compound view: " +rootView, this, "get()")
 
                                     }
                                 
@@ -216,7 +216,7 @@ rootView= replace.all(rootView)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Template: " +completeTemplateViewBytes.decodeToString().
+                                    this.logUtil!!.putF("Template: " +completeTemplateViewBytes.decodeToString().
                             toString(), this, "createInputStream()")
 
                                     }

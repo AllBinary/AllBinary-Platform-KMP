@@ -56,7 +56,7 @@ import org.allbinary.logic.string.StringMaker
 }
 
 
-    /*actual*/ open fun put(log: Log)
+    /*actual*/ open fun putL(log: Log)
         //nullable = true from not(false or (false and false)) = true
 {
 var log = log
@@ -76,7 +76,7 @@ put(specialMessage, anyType, functionName, exception)
 }
 
 
-    /*actual*/ open fun put(specialMessage: String, anyType: Any, functionName: String)
+    /*actual*/ open fun putF(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
 {
 var specialMessage = specialMessage

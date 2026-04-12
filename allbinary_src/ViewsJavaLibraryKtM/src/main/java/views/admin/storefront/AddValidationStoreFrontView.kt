@@ -116,7 +116,7 @@ this.newStoreFrontInterface= StoreFront(this.getPageContext()!!.getRequest() as 
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put("Failed to validate form", this, commonStrings!!.IS_VALID, e)
+                                    this.logUtil!!.put("Failed to validate form", this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -199,7 +199,7 @@ stringBuffer!!.append(this.newStoreFrontInterface!!.getName())
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
+                                    this.logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
 
                                     }
                                 

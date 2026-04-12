@@ -139,7 +139,7 @@ var tableName = tableName
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(SAVING +tableName, this, this.METHOD_GET_OUTPUT_STREAM)
+                                    this.logUtil!!.putF(SAVING +tableName, this, this.METHOD_GET_OUTPUT_STREAM)
 
                                     }
                                 
@@ -175,7 +175,7 @@ backupFile!!.createNewFile()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    logUtil!!.put("Create File", this, this.METHOD_GET_OUTPUT_STREAM, e)
+                                    this.logUtil!!.put("Create File", this, this.METHOD_GET_OUTPUT_STREAM, e)
 
                                     }
                                 
@@ -229,7 +229,7 @@ stringBuffer!!.append(SAVING_BACKUP_PATH)
 stringBuffer!!.append(backupAbPath!!.toFileSystemString())
 stringBuffer!!.append(FILE_LABEL)
 stringBuffer!!.append(fileName)
-logUtil!!.put(stringBuffer!!.toString(), this, this.METHOD_BACKUP_FILE)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD_BACKUP_FILE)
 
                                     }
                                 
@@ -251,7 +251,7 @@ FileUtil.getInstance()!!.copy(path, backupAbPath)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.METHOD_BACKUP_FILE, e)
+                                    this.logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.METHOD_BACKUP_FILE, e)
 
                                     }
                                 
@@ -351,7 +351,7 @@ var abSqlTable = abSqlTable
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(ERROR_CREATING +path, this, this.METHOD_BACKUP_TABLE)
+                                    this.logUtil!!.putF(ERROR_CREATING +path, this, this.METHOD_BACKUP_TABLE)
 
                                     }
                                 
@@ -406,7 +406,7 @@ stringBuffer!!.append(END)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(APPENDING +sqlStatementLine, this, this.METHOD_BACKUP_TABLE)
+                                    this.logUtil!!.putF(APPENDING +sqlStatementLine, this, this.METHOD_BACKUP_TABLE)
 
                                     }
                                 
@@ -426,7 +426,7 @@ StreamUtil.getInstance()!!.close(outputStream)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    logUtil!!.put("Backup Table Failed\nSQL Statement", this, this.METHOD_BACKUP_TABLE, e)
+                                    this.logUtil!!.put("Backup Table Failed\nSQL Statement", this, this.METHOD_BACKUP_TABLE, e)
 
                                     }
                                 
@@ -472,7 +472,7 @@ var portion = portion
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.ERROR_CREATING +path, this, this.METHOD_RESTORE_TABLE)
+                                    this.logUtil!!.putF(this.ERROR_CREATING +path, this, this.METHOD_RESTORE_TABLE)
 
                                     }
                                 
@@ -523,7 +523,7 @@ stringBuffer!!.append(end)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(stringBuffer!!.toString(), this, this.METHOD_RESTORE_TABLE)
+                                    this.logUtil!!.putF(stringBuffer!!.toString(), this, this.METHOD_RESTORE_TABLE)
 
                                     }
                                 
@@ -563,7 +563,7 @@ stringBuffer!!.append(PORTION_RESTORED)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    logUtil!!.put("Restore Table Failed\nSQL Statement", this, this.METHOD_RESTORE_TABLE, e)
+                                    this.logUtil!!.put("Restore Table Failed\nSQL Statement", this, this.METHOD_RESTORE_TABLE, e)
 
                                     }
                                 

@@ -470,7 +470,10 @@ public constructor ()
 
                             //For kotlin this is before the body of the constructor.
                     
-logUtil!!.put(commonStrings!!.CONSTRUCTOR, this, commonStrings!!.CONSTRUCTOR)
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+logUtil!!.putF(commonStrings!!.CONSTRUCTOR, this, commonStrings!!.CONSTRUCTOR)
 }
 
 
@@ -493,7 +496,10 @@ runningTask= true
 startTask(task2)
 } catch(ex: InterruptedException)
             {
-logUtil!!.put(INTERRUPT_EXCEPTION, this, commonStrings!!.RUN)
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+logUtil!!.putF(INTERRUPT_EXCEPTION, this, commonStrings!!.RUN)
 break;
 
                     
@@ -517,6 +523,9 @@ completedTask(task2)
 runningTask= false
 } catch(e: Exception)
             {
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
 logUtil!!.put(StringMaker().
                             append(commonStrings!!.EXCEPTION_LABEL)!!.append(StringUtil.getInstance()!!.toString(task2))!!.toString(), this, commonStrings!!.RUN, e)
 }

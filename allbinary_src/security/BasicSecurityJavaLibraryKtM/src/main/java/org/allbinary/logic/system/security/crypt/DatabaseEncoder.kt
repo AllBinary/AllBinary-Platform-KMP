@@ -82,7 +82,7 @@ stringBuffer!!.append(array[index]!!.
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-PreLogUtil.put(commonStrings!!.EXCEPTION, "DatabaseEncoder", "decode", e)
+PreLogUtil.putOE(commonStrings!!.EXCEPTION, "DatabaseEncoder", "decode", e)
 
 
 
@@ -156,7 +156,7 @@ decodeIndex++
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-PreLogUtil.put(commonStrings!!.EXCEPTION, "DatabaseEncoder", "decode", e)
+PreLogUtil.putSE(commonStrings!!.EXCEPTION, "DatabaseEncoder", "decode", e)
 
 
 

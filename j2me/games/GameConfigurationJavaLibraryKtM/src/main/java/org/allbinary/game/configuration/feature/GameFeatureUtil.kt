@@ -92,7 +92,7 @@ var choiceGroup = choiceGroup
 
 stringBuffer!!.append("Multiple Total Choices: ")
 stringBuffer!!.appendint(total)
-logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_NAME)
 
     var features: Features = Features.getInstance()!!
 
@@ -111,7 +111,7 @@ stringBuffer!!.append(SELECTED_ARRAY_RETURN)
 stringBuffer!!.appendint(index)
 stringBuffer!!.append(SELECTED_SEP)
 stringBuffer!!.appendboolean(isSelected)
-logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_NAME)
 
     var selectedChoiceLabel: String = choiceGroup!!.getString(index)!!
 
@@ -165,7 +165,7 @@ var choiceGroup = choiceGroup
 
 stringBuffer!!.append("Multiple Total Choices: ")
 stringBuffer!!.appendint(total)
-logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_NAME)
 
     var features: Features = Features.getInstance()!!
 
@@ -184,7 +184,7 @@ stringBuffer!!.append(SELECTED_ARRAY_RETURN)
 stringBuffer!!.appendint(index)
 stringBuffer!!.append(SELECTED_SEP)
 stringBuffer!!.appendboolean(isSelected)
-logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_NAME)
 
     var selectedChoiceLabel: String = choiceGroup!!.getString(index)!!
 
@@ -240,7 +240,7 @@ var choiceGroup = choiceGroup
 
 stringBuffer!!.append("Exclusive Total Choices: 1==")
 stringBuffer!!.appendint(total)
-logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_NAME)
 
 
 
@@ -256,7 +256,7 @@ stringBuffer!!.append(SELECTED_ARRAY_RETURN)
 stringBuffer!!.appendint(index)
 stringBuffer!!.append(SELECTED_SEP)
 stringBuffer!!.appendboolean(isSelected)
-logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, METHOD_NAME)
 
     
                         if(isSelected)
@@ -316,7 +316,7 @@ var itemLabel = itemLabel
         //nullable = true from not(false or (false and false)) = true
 {
     //var selectedChoiceLabel = selectedChoiceLabel
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append(CommonLabels.getInstance()!!.ITEM_LABEL)!!.append(selectedChoiceLabel)!!.toString(), this, "updateExclusive")
 
     var gameFeature: Feature = Feature.getInstance(selectedChoiceLabel)!!

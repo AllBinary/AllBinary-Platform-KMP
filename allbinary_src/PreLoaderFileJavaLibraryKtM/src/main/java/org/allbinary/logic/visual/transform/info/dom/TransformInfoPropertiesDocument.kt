@@ -81,7 +81,7 @@ this.document= DomDocumentFileHelper.create(xmlFile)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Size: " +transformInfoNodeVector!!.size, this, "toTransformInfoPropertiesHashMap()")
+                                    this.logUtil!!.putF("Size: " +transformInfoNodeVector!!.size, this, "toTransformInfoPropertiesHashMap()")
 
                                     }
                                 
@@ -121,7 +121,7 @@ transformInfoPropertiesHashMap!!.put(transformInfoProperties!!.getName(), transf
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "toTransformInfoPropertiesHashMap()", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "toTransformInfoPropertiesHashMap()", e)
 
                                     }
                                 

@@ -49,6 +49,8 @@ import playn.core.PlayN
 
         }
             
+    private val logFormatUtil: LogFormatUtil = LogFormatUtil.getInstance()!!
+
     private val LOG_SUCCESS: String = "org.allbinary: "
 private constructor ()
             : super()
@@ -56,7 +58,7 @@ private constructor ()
 }
 
 
-    /*actual*/ open fun put(log: Log)
+    /*actual*/ open fun putL(log: Log)
         //nullable = true from not(false or (false and false)) = true
 {
     //var log = log
@@ -91,7 +93,7 @@ put(specialMessage, anyType, functionName, exception)
 }
 
 
-    /*actual*/ open fun put(specialMessage: String, anyType: Any, functionName: String)
+    /*actual*/ open fun putF(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
 {
     //var specialMessage = specialMessage
@@ -112,7 +114,7 @@ put(specialMessage, anyType, functionName, exception)
                                     }
                                 
 
-    var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage)!!
+    var message: String = logFormatUtil!!.getS(className, functionName, specialMessage)!!
 
 PlayN.log()!!.debug(LOG_SUCCESS +message)
 }
@@ -140,7 +142,7 @@ PlayN.log()!!.debug(LOG_SUCCESS +message)
                                     }
                                 
 
-    var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
+    var message: String = logFormatUtil!!.get(className, functionName, specialMessage, exception)!!
 
 
     

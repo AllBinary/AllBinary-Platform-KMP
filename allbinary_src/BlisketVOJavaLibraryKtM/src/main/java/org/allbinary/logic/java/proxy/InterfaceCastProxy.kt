@@ -70,7 +70,7 @@ var proxyArgs = proxyArgs
     var methodName: String = proxyMethod!!.getName()!!
 
 
-    var realMethod: Method = this.anyType!!.::class.getMethod(methodName, proxyMethod!!.getParameterTypes())!!
+    var realMethod: Method = this.anyType!!::class.getMethod(methodName, proxyMethod!!.getParameterTypes())!!
 
 
     

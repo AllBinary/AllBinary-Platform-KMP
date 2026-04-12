@@ -99,7 +99,7 @@ this.hashMap= HashMap<Any, Any>()
 
     var nodeList: NodeList = document.getElementsByTagName(GenericProfilesData.NAME)!!
 
-logUtil!!.put("Number Of Profiles Specified: " +nodeList!!.getLength(), this, "Contructor")
+this.logUtil!!.putF("Number Of Profiles Specified: " +nodeList!!.getLength(), this, "Contructor")
 
     
                         if(nodeList != 
@@ -119,12 +119,12 @@ logUtil!!.put("Number Of Profiles Specified: " +nodeList!!.getLength(), this, "C
 
                         }
                             
-logUtil!!.put("Loaded: " +this.hashMap!!.size +" Configuration Profile Actions", this, "Contructor")
+this.logUtil!!.putF("Loaded: " +this.hashMap!!.size +" Configuration Profile Actions", this, "Contructor")
 
                                     }
                                 
                         else {
-                            logUtil!!.put("No Generic Profile: " +fileName, this, "Contructor")
+                            this.logUtil!!.putF("No Generic Profile: " +fileName, this, "Contructor")
 
                         }
                             
@@ -199,7 +199,7 @@ var name = name
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put("No Generic Profile Named: " +name +" availability was: " +this.hashMap, this, commonStrings!!.GET)
+this.logUtil!!.putF("No Generic Profile Named: " +name +" availability was: " +this.hashMap, this, commonStrings!!.GET)
 
                                     }
                                 

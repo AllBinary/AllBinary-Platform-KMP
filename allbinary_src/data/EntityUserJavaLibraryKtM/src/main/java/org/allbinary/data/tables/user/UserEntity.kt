@@ -90,7 +90,7 @@ var values = values
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.SUCCESS, this, INSERT)
+                                    this.logUtil!!.putF(this.commonStrings!!.SUCCESS, this, INSERT)
 
                                     }
                                 
@@ -101,7 +101,7 @@ var values = values
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, INSERT, e)
+                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, INSERT, e)
 
                                     }
                                 
@@ -325,7 +325,7 @@ var value = value
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.SUCCESS, this, "deleteWhere")
+                                    this.logUtil!!.putF(this.commonStrings!!.SUCCESS, this, "deleteWhere")
 
                                     }
                                 
@@ -336,7 +336,7 @@ var value = value
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "deleteWhere", e)
+                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, "deleteWhere", e)
 
                                     }
                                 
@@ -375,7 +375,7 @@ var password = password
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put("Command Success but login failed for user: " +userName +" because user did not exist", this, "login")
+                                    this.logUtil!!.putF("Command Success but login failed for user: " +userName +" because user did not exist", this, "login")
 
                                     }
                                 
@@ -406,7 +406,7 @@ stringBuffer!!.append(PASSWORD_LABEL)
 stringBuffer!!.append(password)
 stringBuffer!!.append(EQUALS)
 stringBuffer!!.append(result)
-logUtil!!.put(stringBuffer!!.toString(), this, "login")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "login")
 
                                     }
                                 
@@ -436,7 +436,7 @@ stringBuffer!!.append(SuperCrypt(Integer(encryption).
 stringBuffer!!.append(NOT_EQUAL)
 stringBuffer!!.append(result)
 stringBuffer!!.append(END_QUOTES)
-logUtil!!.put(stringBuffer!!.toString(), this, "login")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "login")
 
                                     }
                                 
@@ -455,7 +455,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "login")
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "login", e)
+                                    this.logUtil!!.put(this.commonStrings!!.FAILURE, this, "login", e)
 
                                     }
                                 

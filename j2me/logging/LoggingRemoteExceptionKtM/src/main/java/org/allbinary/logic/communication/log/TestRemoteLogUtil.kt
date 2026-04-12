@@ -57,7 +57,7 @@ Globals.getInstance()!!.init(this::class.java.classLoader, PATH)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, "Test", "TestClass", Exception("Pretend Exception"))
+this.logUtil!!.put(commonStrings!!.EXCEPTION, "Test", "TestClass", Exception("Pretend Exception"))
 }
 
 

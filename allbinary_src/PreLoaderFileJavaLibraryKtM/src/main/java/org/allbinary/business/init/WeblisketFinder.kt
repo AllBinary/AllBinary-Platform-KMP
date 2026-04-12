@@ -92,7 +92,7 @@ private constructor ()
 var path = path
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, "findAll")
+            this.logUtil!!.putF(this.commonStrings!!.START, this, "findAll")
 
 
 
@@ -100,13 +100,13 @@ var path = path
                         return subDirectory!!.search(KEY, AbFile(path))
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "findAll", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "findAll", e)
 
     
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "findAll", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "findAll", e)
 
                                     }
                                 
@@ -157,7 +157,7 @@ var file = file
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getInstallationPath", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "getInstallationPath", e)
 
                                     }
                                 

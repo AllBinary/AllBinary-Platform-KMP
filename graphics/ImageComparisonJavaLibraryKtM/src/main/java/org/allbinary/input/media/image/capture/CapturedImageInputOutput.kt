@@ -64,7 +64,7 @@ var frame = frame
     var capturedBufferedImageCacheable: BufferedImageFrameCacheable = (
                                     (getInstance as AutomaticCacheInterface).get(frame) as Object as BufferedImageFrameCacheable)
 
-logUtil!!.put(("Saving: " +capturedBufferedImageCacheable!!.toString()), this, commonStrings!!.SAVE)
+this.logUtil!!.putF(("Saving: " +capturedBufferedImageCacheable!!.toString()), this, commonStrings!!.SAVE)
 save(capturedBufferedImageCacheable!!.getBufferedImage(), frame)
 }
 
@@ -89,7 +89,7 @@ filePathStringBuffer!!.append(MediaDataFactory.getInstance()!!.JPG.getExtension(
 
     var filePath: String = filePathStringBuffer!!.toString()!!
 
-logUtil!!.put(("Image File Path: " +filePath +imageUtil!!.toString(bufferedImage)), this, commonStrings!!.SAVE)
+this.logUtil!!.putF(("Image File Path: " +filePath +imageUtil!!.toString(bufferedImage)), this, commonStrings!!.SAVE)
 
     var imagePersistanceUtil: ImagePersistanceUtil = ImagePersistanceUtil.getInstance()!!
 

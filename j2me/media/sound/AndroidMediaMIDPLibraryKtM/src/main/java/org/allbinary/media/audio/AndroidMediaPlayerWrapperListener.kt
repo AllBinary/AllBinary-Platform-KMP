@@ -46,7 +46,7 @@ public constructor (androidMediaPlayerWrapper: AndroidMediaPlayerWrapper, listen
     //var listeningLevel = listeningLevel
 
         try {
-            logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
+            this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 this.androidMediaPlayerWrapper= androidMediaPlayerWrapper
 
     var mediaPlayer: MediaPlayer = androidMediaPlayerWrapper!!.getMediaPlayer()!!
@@ -70,7 +70,7 @@ this.androidMediaPlayerWrapper= androidMediaPlayerWrapper
                             
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
 }
@@ -81,7 +81,7 @@ public constructor (androidMediaPlayerWrapper: AndroidMediaPlayerWrapper)
     //var androidMediaPlayerWrapper = androidMediaPlayerWrapper
 
         try {
-            logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
+            this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 this.androidMediaPlayerWrapper= androidMediaPlayerWrapper
 
     var mediaPlayer: MediaPlayer = androidMediaPlayerWrapper!!.getMediaPlayer()!!
@@ -92,7 +92,7 @@ mediaPlayer!!.setOnPreparedListener(mOnPreparedListener)
 mediaPlayer!!.setOnErrorListener(mOnErrorListener)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
 }
@@ -218,7 +218,10 @@ open public inner class MediaPlayerOnCompletionListener
 {
     //var mediaPlayer = mediaPlayer
     //var i = i
-logUtil!!.put(StringMaker().
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+logUtil!!.putF(StringMaker().
                             append("Update buffer: ")!!.appendint(i)!!.append("%")!!.toString(), this, AndroidMediaPlayerWrapperListener.ON_BUFFERING_UPDATE)
 this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(PlayerListener.DEVICE_UNAVAILABLE)
 }
@@ -233,7 +236,10 @@ this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(Player
         //nullable = true from not(false or (false and false)) = true
 {
     //var mp = mp
-logUtil!!.put(commonStrings!!.START, this, AndroidMediaPlayerWrapperListener.ON_PREPARE)
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+logUtil!!.putF(commonStrings!!.START, this, AndroidMediaPlayerWrapperListener.ON_PREPARE)
 this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(PlayerListener.DEVICE_AVAILABLE)
 }
 
@@ -249,7 +255,10 @@ this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(Player
     //var mp = mp
     //var what = what
     //var extra = extra
-logUtil!!.put(StringMaker().
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+logUtil!!.putF(StringMaker().
                             append(CommonLabels.getInstance()!!.START_LABEL)!!.append("What: ")!!.appendint(what)!!.append(" Extra: ")!!.appendint(extra)!!.toString(), this, AndroidMediaPlayerWrapperListener.ON_ERROR)
 this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(PlayerListener.ERROR)
 
@@ -269,7 +278,10 @@ this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(Player
         //nullable = true from not(false or (false and false)) = true
 {
     //var mp = mp
-logUtil!!.put(commonStrings!!.START, this, AndroidMediaPlayerWrapperListener.ON_COMPLETE)
+
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+logUtil!!.putF(commonStrings!!.START, this, AndroidMediaPlayerWrapperListener.ON_COMPLETE)
 this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(PlayerListener.END_OF_MEDIA)
 }
 

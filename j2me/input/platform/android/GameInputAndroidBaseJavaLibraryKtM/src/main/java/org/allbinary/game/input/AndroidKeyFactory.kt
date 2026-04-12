@@ -266,7 +266,7 @@ open public class AndroidKeyFactory : ActivityFractureUtil {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put("Start/End", this, commonStrings!!.INIT)
+this.logUtil!!.putF("Start/End", this, commonStrings!!.INIT)
 }
 
 

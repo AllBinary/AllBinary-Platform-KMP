@@ -89,7 +89,7 @@ this.init(DEVICES)
             lineNumberReader= this.get(filePath)
 } catch(e: Exception)
             {
-logUtil!!.put("Hardware Data: " +this.toString(), this, commonStrings!!.INIT, e)
+this.logUtil!!.put("Hardware Data: " +this.toString(), this, commonStrings!!.INIT, e)
 
 
 
@@ -127,7 +127,7 @@ componentInterfaceVector= BasicArrayList()
 
     var lineNumberReader: LineNumberReader = LineNumberReader(pciFile)
 
-logUtil!!.put("File Found", this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF("File Found", this, commonStrings!!.CONSTRUCTOR)
 
     var nextLine: String = lineNumberReader!!.readLine()!!
 

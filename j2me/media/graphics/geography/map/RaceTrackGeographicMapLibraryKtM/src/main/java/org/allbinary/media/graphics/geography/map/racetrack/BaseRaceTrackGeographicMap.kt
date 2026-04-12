@@ -77,7 +77,7 @@ this.miniGeographicMap= miniGeographicMap
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR)
 
 
 
@@ -96,7 +96,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR)
 
 
 

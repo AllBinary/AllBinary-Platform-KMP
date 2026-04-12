@@ -84,7 +84,7 @@ private constructor (){
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put("Could Not Load Object Config", getInstance(), commonStrings!!.GET_INSTANCE, e)
+                                    this.logUtil!!.put("Could Not Load Object Config", getInstance(), commonStrings!!.GET_INSTANCE, e)
 
                                     }
                                 
@@ -154,7 +154,7 @@ var transformInfoInterface = transformInfoInterface
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, getInstance(), commonStrings!!.GET_INSTANCE, e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, getInstance(), commonStrings!!.GET_INSTANCE, e)
 
                                     }
                                 
@@ -225,7 +225,7 @@ var transformInfoInterface = transformInfoInterface
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, getInstance(), "getInstance(document)", e)
+                                    this.logUtil!!.put(commonStrings!!.EXCEPTION, getInstance(), "getInstance(document)", e)
 
                                     }
                                 

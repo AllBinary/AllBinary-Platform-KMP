@@ -105,7 +105,7 @@ outputStream= ByteArrayOutputStream()
                         if(fileItem!!.isFormField())
                         
                                     {
-                                    logUtil!!.put("FileItemStream FieldName: " +fileItem!!.getFieldName(), this, "write()")
+                                    this.logUtil!!.putF("FileItemStream FieldName: " +fileItem!!.getFieldName(), this, "write()")
 
                                     }
                                 
@@ -117,7 +117,7 @@ stringBuffer!!.append("Uploaded File FieldName: ")
 stringBuffer!!.append(fileItem!!.getFieldName())
 stringBuffer!!.append(" name = ")
 stringBuffer!!.append(fileItem!!.getName())
-logUtil!!.put(stringBuffer!!.toString(), this, "write()")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "write()")
 
                         }
                             

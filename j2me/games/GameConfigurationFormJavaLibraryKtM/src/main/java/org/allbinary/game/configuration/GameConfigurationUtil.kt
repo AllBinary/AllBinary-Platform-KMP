@@ -114,7 +114,7 @@ stringBuffer!!.append(FROM)
 stringBuffer!!.appendint(gameConfiguration!!.getValue()!!.toInt())
 stringBuffer!!.append(TO)
 stringBuffer!!.appendint(value.toInt())
-logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.UPDATE)
+this.logUtil!!.putF(stringBuffer!!.toString(), this, commonStrings!!.UPDATE)
 gameConfiguration!!.setValue(value)
 }
 
@@ -138,7 +138,7 @@ stringBuffer!!.append("Gauge Default: ")
 stringBuffer!!.append(gameConfiguration!!.getName())
 stringBuffer!!.append(TO)
 stringBuffer!!.appendint(gameConfiguration!!.getDefaultValue()!!.toInt())
-logUtil!!.put(stringBuffer!!.toString(), this, "setDefault")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "setDefault")
 gauge.setValue(gameConfiguration!!.getDefaultValue()!!.toInt() -gameConfiguration!!.getMinValue()!!.toInt())
 gameConfiguration!!.setValue(gameConfiguration!!.getDefaultValue())
 }
@@ -162,7 +162,7 @@ var gameConfiguration = gameConfiguration
                         if(gameConfiguration == gameConfigurationCentral!!.CHALLENGE_LEVEL)
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.START, this, "updateChallange")
+                                    this.logUtil!!.putF(commonStrings!!.START, this, "updateChallange")
 gameConfigurationCentral!!.COLLIDE_DAMAGE.setValue(gameConfiguration!!.getValue())
 gameConfigurationCentral!!.ATTACK_CHALLENGE_LEVEL.setValue(gameConfiguration!!.getValue())
 gameConfigurationCentral!!.DURABILITY_CHALLENGE_LEVEL.setValue(gameConfiguration!!.getValue())
@@ -246,7 +246,7 @@ gameConfigurationCentral!!.SPEED_CHALLENGE_LEVEL.setValue(gameConfiguration!!.ge
     open fun updateCompetitionValue()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put(commonStrings!!.START, this, "updateCompetitionValue")
+this.logUtil!!.putF(commonStrings!!.START, this, "updateCompetitionValue")
 
     var gameConfigurationCentral: GameConfigurationCentral = GameConfigurationCentral.getInstance()!!
 

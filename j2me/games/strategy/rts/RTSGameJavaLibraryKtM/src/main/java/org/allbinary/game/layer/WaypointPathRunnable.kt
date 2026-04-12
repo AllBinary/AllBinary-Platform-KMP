@@ -73,7 +73,7 @@ Thread.sleep(15.toLong() +(this.priorityP *2))
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 this.setRunning(false)
 }
 

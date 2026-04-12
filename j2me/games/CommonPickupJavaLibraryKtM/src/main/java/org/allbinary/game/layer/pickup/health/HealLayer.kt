@@ -68,7 +68,7 @@ var healthInterface = healthInterface
                                     }
                                 
                         else {
-                            logUtil!!.put("Heal attempt on dead: Does not currently occur", this, "visit")
+                            this.logUtil!!.putF("Heal attempt on dead: Does not currently occur", this, "visit")
 
                         }
                             

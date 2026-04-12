@@ -61,7 +61,7 @@ private constructor ()
         //nullable = true from not(false or (false and false)) = true
 {
 var currentGameState = currentGameState
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append("Current GameState: ")!!.append(StringUtil.getInstance()!!.toString(currentGameState))!!.toString(), this, "setCurrentGameState")
 this.currentGameState= currentGameState
 }

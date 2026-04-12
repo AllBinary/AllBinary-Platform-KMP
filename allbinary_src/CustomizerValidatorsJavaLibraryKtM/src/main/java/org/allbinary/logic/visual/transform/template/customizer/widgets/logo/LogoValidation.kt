@@ -109,7 +109,7 @@ stringBuffer!!.append("HashMap: ")
 stringBuffer!!.append(hashMap!!.toString())
 stringBuffer!!.append("\nLogoFileName: ")
 stringBuffer!!.append(this.logoFile)
-logUtil!!.put(stringBuffer!!.toString(), this, "getFormData()")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "getFormData()")
 
                                     }
                                 
@@ -132,7 +132,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "getFormData()")
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("LogoValidation", this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF("LogoValidation", this, commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -146,7 +146,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "getFormData()")
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("logoPath is invalid: " +this.logoAbPath!!.toString(), this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF("logoPath is invalid: " +this.logoAbPath!!.toString(), this, commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -168,7 +168,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "getFormData()")
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("logoFile is invalid: " +this.logoFile, this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF("logoFile is invalid: " +this.logoFile, this, commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -210,7 +210,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "getFormData()")
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Image File Is Not The Right Size. " +fileData!!.MINIMAGEFILESIZE +"< > " +fileData!!.MAXIMAGEFILESIZE, this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF("Image File Is Not The Right Size. " +fileData!!.MINIMAGEFILESIZE +"< > " +fileData!!.MAXIMAGEFILESIZE, this, commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -230,7 +230,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "getFormData()")
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Logo Validation: " +valid, this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF("Logo Validation: " +valid, this, commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -246,7 +246,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "getFormData()")
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put("Failed to validate form", this, commonStrings!!.IS_VALID, e)
+                                    this.logUtil!!.put("Failed to validate form", this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -281,7 +281,7 @@ stringBuffer!!.append("Logo is not valid.")
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
+                                    this.logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
 
                                     }
                                 
@@ -388,7 +388,7 @@ var document = document
 stringBuffer!!.append("Processing logoFile: ")
 stringBuffer!!.append(this.logoAbPath!!.toString())
 stringBuffer!!.append(this.logoFile)
-logUtil!!.put(stringBuffer!!.toString(), this, "processLogoFile()")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "processLogoFile()")
 
                                     }
                                 

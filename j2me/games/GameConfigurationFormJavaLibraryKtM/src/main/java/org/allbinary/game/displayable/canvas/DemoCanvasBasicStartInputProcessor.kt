@@ -70,7 +70,7 @@ var gameCanvas = gameCanvas
 
         {
 gameKeyEvent= list.objectArray[index]!! as GameKeyEvent
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append("Start GameKey: ")!!.append(StringUtil.getInstance()!!.toString(gameKeyEvent))!!.toString(), this, GameInputStrings.getInstance()!!.PROCESS_INPUT)
 }
 

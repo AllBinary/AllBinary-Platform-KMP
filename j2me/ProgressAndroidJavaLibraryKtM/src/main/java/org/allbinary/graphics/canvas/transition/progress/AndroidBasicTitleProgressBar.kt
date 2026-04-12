@@ -138,7 +138,7 @@ this.image= ImageCacheFactory.getInstance()!!.get(RESOURCE)
                                 
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }
 
 }
@@ -167,7 +167,7 @@ this.loadProgressImages()
 this.updateCurrent()
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }
 
 }
@@ -233,7 +233,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
                                 
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
 }
 
 }
@@ -257,7 +257,7 @@ var displayChangeEvent = displayChangeEvent
 this.updateCurrent()
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION_LABEL +ExceptionUtil.getInstance()!!.getStackTrace(e), this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT)
+this.logUtil!!.putF(commonStrings!!.EXCEPTION_LABEL +ExceptionUtil.getInstance()!!.getStackTrace(e), this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT)
 this.animation= NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
 }
 
@@ -294,12 +294,12 @@ this.animation= NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
                             
 } catch(e: IllegalArgumentException)
             {
-logUtil!!.put("IllegalArgumentException " +ExceptionUtil.getInstance()!!.getStackTrace(e), this, "loadProgressImages")
+this.logUtil!!.putF("IllegalArgumentException " +ExceptionUtil.getInstance()!!.getStackTrace(e), this, "loadProgressImages")
 this.animation= NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
 }
  catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION_LABEL +ExceptionUtil.getInstance()!!.getStackTrace(e), this, "loadProgressImages")
+this.logUtil!!.putF(commonStrings!!.EXCEPTION_LABEL +ExceptionUtil.getInstance()!!.getStackTrace(e), this, "loadProgressImages")
 this.animation= NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
 }
 
@@ -339,12 +339,12 @@ this.animation= NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
 {
 
         try {
-            logUtil!!.put(commonStrings!!.START, this, commonStrings!!.START_METHOD_NAME)
+            this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.START_METHOD_NAME)
 super.start()
 this.midletActivity!!.runOnUiThread(showTitleProgressBarRunnable)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME, e)
 }
 
 }
@@ -355,12 +355,12 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME
 {
 
         try {
-            logUtil!!.put(commonStrings!!.START, this, commonStrings!!.END_METHOD_NAME)
+            this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.END_METHOD_NAME)
 this.midletActivity!!.runOnUiThread(dismissTitleProgressBarRunnable)
 super.end()
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.END_METHOD_NAME, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.END_METHOD_NAME, e)
 }
 
 }
@@ -387,7 +387,7 @@ super.addEarlyPortion(value, text, index)
                                 
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
 }
 
 }
@@ -406,7 +406,7 @@ super.addPortion(value, text, index)
 this.midletActivity!!.runOnUiThread(titleProgressDialogPortionSetProgressRunnable)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
 }
 
 }
@@ -424,7 +424,7 @@ super.addPortion(value, text)
 this.midletActivity!!.runOnUiThread(titleProgressDialogPortionSetProgressRunnable)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
 }
 
 }
@@ -440,7 +440,7 @@ var value = value
 this.midletActivity!!.runOnUiThread(titleProgressDialogSetProgressRunnable)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, "setValue", e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, "setValue", e)
 }
 
 }
@@ -513,7 +513,7 @@ var lastHeight = lastHeight
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-logUtil!!.put(commonStrings!!.START, this, commonStrings!!.INIT)
+this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.INIT)
 this.image= GameFeatureImageCacheFactory.getInstance()!!.get(RESOURCE)
 
     var preResourceImageUtil: PreResourceImageUtil = PreResourceImageUtil.getInstance()!!
@@ -550,7 +550,7 @@ this.updateCurrent()
         //nullable = true from not(false or (false and false)) = true
 {
 var graphics = graphics
-logUtil!!.put(commonStrings!!.START, this, commonStrings!!.UPDATE)
+this.logUtil!!.putF(commonStrings!!.START, this, commonStrings!!.UPDATE)
 this.initOpenGL(graphics)
 this.image= GameFeatureImageCacheFactory.getInstance()!!.get(RESOURCE)
 
@@ -622,7 +622,7 @@ var graphics = graphics
 super.paint2(graphics)
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, canvasStrings!!.PAINT, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, canvasStrings!!.PAINT, e)
 }
 
 }

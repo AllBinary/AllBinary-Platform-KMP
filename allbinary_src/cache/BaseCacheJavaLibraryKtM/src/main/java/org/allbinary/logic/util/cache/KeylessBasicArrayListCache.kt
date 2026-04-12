@@ -74,7 +74,7 @@ var size = size
                         return list
 } catch(e: Exception)
             {
-logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET, e)
+this.logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET, e)
 
 
 

@@ -222,7 +222,7 @@ this.getList()!!.add(highScore)
         while(enumeration.hasMoreElements())
         {
 nextElement= enumeration.nextElement()!!
-logUtil!!.put("NextElement: " +nextElement, this, commonStrings!!.PROCESS)
+this.logUtil!!.putF("NextElement: " +nextElement, this, commonStrings!!.PROCESS)
 }
 
 

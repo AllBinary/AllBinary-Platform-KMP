@@ -72,7 +72,7 @@ this.user= NewUserFactory.getInstance(transformInfoInterface)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("User does not exist", this, commonStrings!!.IS_VALID)
+                                    this.logUtil!!.putF("User does not exist", this, commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -109,7 +109,7 @@ this.user= NewUserFactory.getInstance(transformInfoInterface)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put("Failed to validate", this, commonStrings!!.IS_VALID, e)
+                                    this.logUtil!!.put("Failed to validate", this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -143,7 +143,7 @@ this.user= NewUserFactory.getInstance(transformInfoInterface)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("User does not exist", this, "validationInfo()")
+                                    this.logUtil!!.putF("User does not exist", this, "validationInfo()")
 
                                     }
                                 
@@ -172,7 +172,7 @@ stringBuffer!!.append("Unable to update user that does not exist.<br />")
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
+                                    this.logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
 
                                     }
                                 

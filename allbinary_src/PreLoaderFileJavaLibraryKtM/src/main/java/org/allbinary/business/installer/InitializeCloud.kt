@@ -120,7 +120,7 @@ stringBuffer!!.append(" Section: ")
 stringBuffer!!.appendint(start)
 stringBuffer!!.append(" - ")
 stringBuffer!!.appendint(end)
-logUtil!!.put(stringBuffer!!.toString(), this, "initialize()")
+this.logUtil!!.putF(stringBuffer!!.toString(), this, "initialize()")
 
 
 
@@ -146,7 +146,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "initialize()")
                             
 }
 
-logUtil!!.put("Copied Files To Cloud", this, "initialize()")
+this.logUtil!!.putF("Copied Files To Cloud", this, "initialize()")
 
                                     }
                                 
@@ -157,7 +157,7 @@ logUtil!!.put("Copied Files To Cloud", this, "initialize()")
                         return true
 } catch(e: Exception)
             {
-logUtil!!.put("Unable to copy installer files into cloud", this, "initialize()", e)
+this.logUtil!!.put("Unable to copy installer files into cloud", this, "initialize()", e)
 
 
 

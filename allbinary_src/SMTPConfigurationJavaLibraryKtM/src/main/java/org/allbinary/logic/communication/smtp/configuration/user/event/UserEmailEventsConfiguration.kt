@@ -67,7 +67,7 @@ this.emailEventHashMap= HashMap<Any, Any>()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.CONSTRUCTOR, this, " Constructor")
+                                    this.logUtil!!.putF(this.commonStrings!!.CONSTRUCTOR, this, " Constructor")
 
                                     }
                                 
@@ -94,7 +94,7 @@ var userEmailEventConfigurationInterface = userEmailEventConfigurationInterface
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
-                                    logUtil!!.put("Adding: " +userEmailEventConfigurationInterface!!.log(), this, "addUserEmailEventConfiguration")
+                                    this.logUtil!!.putF("Adding: " +userEmailEventConfigurationInterface!!.log(), this, "addUserEmailEventConfiguration")
 
                                     }
                                 

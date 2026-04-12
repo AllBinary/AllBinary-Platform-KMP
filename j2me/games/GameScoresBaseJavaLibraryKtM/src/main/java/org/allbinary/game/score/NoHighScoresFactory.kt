@@ -59,7 +59,7 @@ private constructor (){
 {
     //var gameInfo = gameInfo
     //var highScoresResultsListener = highScoresResultsListener
-logUtil!!.put("Getting No HighScores", this, "fetchHighScores")
+this.logUtil!!.putF("Getting No HighScores", this, "fetchHighScores")
 highScoresResultsListener!!.setHighScoresArray(NO_HIGH_SCORES)
 }
 

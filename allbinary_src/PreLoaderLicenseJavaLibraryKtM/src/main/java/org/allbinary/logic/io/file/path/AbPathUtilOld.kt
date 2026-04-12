@@ -123,7 +123,7 @@ var filePath = filePath
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("FileExtension: " +extension, this, "getExtension()")
+                                    this.logUtil!!.putF("FileExtension: " +extension, this, "getExtension()")
 
                                     }
                                 
@@ -192,7 +192,7 @@ var filePath = filePath
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("FileWithoutExtension: " +pathWithoutExtension, this, "getWithoutExtension()")
+                                    this.logUtil!!.putF("FileWithoutExtension: " +pathWithoutExtension, this, "getWithoutExtension()")
 
                                     }
                                 

@@ -85,6 +85,9 @@ object: Thread()
         //nullable = true from not(false or (false and true)) = true
 {
 
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+
         try {
             
     var canvasTrimUtil: CanvasTrimUtil = CanvasTrimUtil.getInstance()!!
@@ -334,7 +337,7 @@ this.imageProcessorInput= imageProcessorInput
     //var generatedBufferedImage = generatedBufferedImage
     //var name = name
     //var index = index
-logUtil!!.put(commonStrings!!.VISIT, this, commonStrings!!.VISIT)
+this.logUtil!!.putF(commonStrings!!.VISIT, this, commonStrings!!.VISIT)
 this.result= generatedBufferedImage
 this.getParent()!!.repaint()
 
@@ -360,7 +363,7 @@ file= File(filePath)
 
     var isWritten: Boolean = ImageIO.write(this@CanvasImageJPanel.result as RenderedImage, imageStrings!!.PNG, file)!!
 
-logUtil!!.put(StringMaker().
+this.logUtil!!.putF(StringMaker().
                             append("File: ")!!.append(StringUtil.getInstance()!!.toString(file))!!.append(" Wrote: ")!!.appendboolean(isWritten)!!.toString(), this, commonStrings!!.RUN)
 }
 

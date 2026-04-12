@@ -378,7 +378,7 @@ var document = document
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
-                                    logUtil!!.put(StringMaker().
+                                    this.logUtil!!.putF(StringMaker().
                             append("filePath = ")!!.append(this.fileAbPath!!.toString())!!.append("\npath = ")!!.append(this.abPath!!.toString())!!.append("\ncategory = ")!!.append(this.category)!!.toString(), this, "log()")
 
                                     }

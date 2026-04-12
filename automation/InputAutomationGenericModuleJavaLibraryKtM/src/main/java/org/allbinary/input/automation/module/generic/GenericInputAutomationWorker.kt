@@ -65,7 +65,7 @@ public constructor (inputAutomationActionInterface: InputAutomationActionInterfa
 
                             //For kotlin this is before the body of the constructor.
                     
-logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 this.setCaptureWorker(GenericProfileCaptureWorkerFactory.getInstance(genericProfile))
 this.setInputAutomationActionInterface(inputAutomationActionInterface)
 this.setImageComparisonWorker(ImageComparisonWorker(imageComparatorConstraintsInterface))
@@ -87,7 +87,7 @@ this.setGenericProfile(genericProfile)
 
     var genericProfileDataWorkerType: GenericProfileDataWorkerType = vector.get(index) as GenericProfileDataWorkerType
 
-logUtil!!.put("Adding Listener: " +genericProfileDataWorkerType, this, this.commonStrings!!.CONSTRUCTOR)
+this.logUtil!!.putF("Adding Listener: " +genericProfileDataWorkerType, this, this.commonStrings!!.CONSTRUCTOR)
 
     
                         if(genericProfileDataWorkerType == GenericProfileDataWorkerType.COMPARISON)
@@ -116,7 +116,7 @@ logUtil!!.put("Adding Listener: " +genericProfileDataWorkerType, this, this.comm
     open fun processDataWorkerResults()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put(this.commonStrings!!.START, this, this.PROCESS_DATA_WORKER_RESULTS)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.PROCESS_DATA_WORKER_RESULTS)
 this.waitForDataWorkers()
 
     var cacheInterface: J2SECacheInterface = CapturedBufferedImagesCacheSingleton.getInstance() as J2SECacheInterface
@@ -129,21 +129,21 @@ this.waitForDataWorkers()
                         if(keyArray!!.size > 0)
                         
                                     {
-                                    logUtil!!.put("Image Available", this, this.PROCESS_DATA_WORKER_RESULTS)
+                                    this.logUtil!!.putF("Image Available", this, this.PROCESS_DATA_WORKER_RESULTS)
 setFrame(keyArray[keyArray!!.size -1]!! as Long)
 
     
                         if(getFrame() > lastFrame)
                         
                                     {
-                                    logUtil!!.put("Processing new frame: " +getFrame(), this, this.PROCESS_DATA_WORKER_RESULTS)
+                                    this.logUtil!!.putF("Processing new frame: " +getFrame(), this, this.PROCESS_DATA_WORKER_RESULTS)
 
     var hashMap: HashMap<Any, Any> = this.getGenericProfile()!!.getGenericProfileActions()!!.getHashMap()!!
 
 
     var set: Set = hashMap!!.keys!!
 
-logUtil!!.put("Processing " +set.size() +"Actions", this, this.PROCESS_DATA_WORKER_RESULTS)
+this.logUtil!!.putF("Processing " +set.size() +"Actions", this, this.PROCESS_DATA_WORKER_RESULTS)
 
     var actionNameArray: Array<Any?> = set.toArray()!!
 
@@ -161,7 +161,7 @@ logUtil!!.put("Processing " +set.size() +"Actions", this, this.PROCESS_DATA_WORK
 
     var actionNameString: String = actionNameArray[index]!! as String
 
-logUtil!!.put("Processing Action: " +actionNameString, this, this.PROCESS_DATA_WORKER_RESULTS)
+this.logUtil!!.putF("Processing Action: " +actionNameString, this, this.PROCESS_DATA_WORKER_RESULTS)
 
     var genericProfileAction: GenericProfileAction = hashMap!!.get(actionNameString as Object) as GenericProfileAction
 
@@ -182,7 +182,7 @@ lastFrame= getFrame()
                                     }
                                 
                         else {
-                            logUtil!!.put("Image Not Available", this, this.PROCESS_DATA_WORKER_RESULTS)
+                            this.logUtil!!.putF("Image Not Available", this, this.PROCESS_DATA_WORKER_RESULTS)
 
                         }
                             
@@ -194,7 +194,7 @@ lastFrame= getFrame()
     open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
-logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.PROCESS)
+this.logUtil!!.putF(this.commonStrings!!.START, this, this.commonStrings!!.PROCESS)
 this.startDataWorkers()
 this.processDataWorkerResults()
 }

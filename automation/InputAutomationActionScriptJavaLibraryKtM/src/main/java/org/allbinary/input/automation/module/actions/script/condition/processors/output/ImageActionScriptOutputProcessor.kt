@@ -51,7 +51,7 @@ companion object {
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-logUtil!!.put("Start - Processing at: " +imageActionScriptOutputInterface!!.toString(), "ImageActionScriptOutputProcessor", commonStrings!!.PROCESS)
+logUtil!!.putF("Start - Processing at: " +imageActionScriptOutputInterface!!.toString(), "ImageActionScriptOutputProcessor", commonStrings!!.PROCESS)
 
     var imageTypes: ImageTypes = imageActionScriptOutputInterface!!.getImageTypes()!!
 
