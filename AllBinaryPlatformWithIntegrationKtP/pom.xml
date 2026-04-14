@@ -33,27 +33,31 @@
 
         <!--
         -->
-        <module>../../AllBinary-Platform-Integration</module>
+        <module>../../AllBinary-Platform-Integrationkt</module>
         
         <module>../j2me/games/platform/j2se/AllBinaryOnJ2SEBasePlatformJavaLibraryKtM</module>
         <module>../j2me/games/platform/j2se/AllBinaryOnJ2SEPlatformJavaLibraryKtM</module>
-        
-        <module>../j2me/FullScreenJavaLibraryKtM</module>
 
+<!--
+        <module>../j2me/FullScreenJavaLibraryKtM</module>
         <module>../j2me/SWTToJ2MELibraryKtM</module>
+-->
         
         <module>../j2me/media/graphics/ImageCacheOpenGLESJavaLibraryKtM</module>
         <module>../graphics/opengl/Min3dForNullJavaLibraryKtM</module>
         <module>../graphics/opengl/OpenGLESFileConfigurationJavaLibraryKtM</module>
         <module>../graphics/opengl/OpenGLESJavaLibraryKtM</module>
+        
+<!--        
         <module>../j2me/media/graphics/animation/image/ImageSwtJ2SEJavaLibraryKtM</module>
 
+-->
         <module>../j2me/media/graphics/layer/AllBinaryTiledLayerJavaLibraryKtM</module>        
         <module>../j2me/media/graphics/geography/map/GeographicMapLibraryKtM</module>
         <module>../j2me/media/graphics/geography/GeographicPathFindingLibraryKtM</module>
         <module>../j2me/media/graphics/geography/map/RaceTrackGeographicMapLibraryKtM</module>
         <module>../j2me/media/graphics/geography/map/BasicTopViewGeographicMapJavaLibraryKtM</module>
-        <module>../j2me/games/arcade/platformer/TopViewGameBehaviorJavaLibraryKtM</module>
+<!--        <module>../j2me/games/arcade/platformer/TopViewGameBehaviorJavaLibraryKtM</module>-->
 
         <module>../j2me/games/GameJ2MEOptionalLibraryPOKtM</module>
 

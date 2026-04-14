@@ -48,7 +48,7 @@
         <module>../data/DataJavaLibraryKtM</module>
         -->
 
-        <module>../licensing/TestServiceClientInfoJavaLibraryKtM</module>        
+        <module>../licensing/TestServiceClientInfoJavaLibraryKtM</module>
 
         <module>../data/DataTableInterfacesKtM</module>
         
