@@ -44,6 +44,8 @@
         <module>../../media/graphics/GameResourceNoneJavaLibraryKtM</module>
         <module>../../media/graphics/LazyGameResourceNoneJavaLibraryKtM</module>
 
+        <module>../../../graphics/opengl/OpenGLNoneJavaLibraryKtM</module>
+
         <!--
                 <module>../../../graphics/opengl/OpenGLESJavaLibraryKtM</module>
         -->
